@@ -103,11 +103,17 @@ document.getElementById('oracleBtn').addEventListener('click', function(e) {
             syllable.style.animation = 'breath 4s ease-in-out infinite';
         }, 500);
         
-        if(oracleTids.length > 0 && typeof openViewer === 'function') {
+        if(oracleTids.length > 0) {
             const randomTid = oracleTids[Math.floor(Math.random() * oracleTids.length)];
-            openViewer('threads/' + randomTid + '.html');
+            // 巧用系统已有的卷轴拦截器
+            let dummyLink = document.createElement('a');
+            dummyLink.className = 'thread-row';
+            dummyLink.href = 'threads/' + randomTid + '.html';
+            document.body.appendChild(dummyLink);
+            dummyLink.click();
+            dummyLink.remove();
         } else {
-            alert("时机未到，法界尚未回应，请检查刷新。");
+            alert("宗库法阵尚未凝结完成。");
         }
     }, 1300);
 });
