@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>过去庄严劫千佛名经（经集部） - 藏密修海典藏</title>
+<title>过去庄严劫千佛名经（经集部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">过去庄严劫千佛名经（经集部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2008-1-24 01:23</div><div class="post-body">[size=5][font=楷体_GB2312]  [size=4][font=宋体] 　　三劫三千佛缘起(出观药王药上经) <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2008-1-24 01:23</div><div class="post-body">[size=5][font=楷体_GB2312]  [size=4][font=宋体] 　　三劫三千佛缘起(出观药王药上经) <br/>
 <br/>
 宋畺良耶舍译 <br/>
 <br/>
@@ -107,7 +120,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 南无聚自在佛　南无坏结发佛　南无无胜写(乡象)最步佛　南无无为光佛　南无无为思惟佛　南无过倒见佛　南无名称王佛　南无胜根佛　南无日见佛　南无德聚威光佛　南无法力佛　南无慧持群萌佛　南无自在悦佛　南无自在佛　南无慧意佛　南无德山佛　南无以净音意佛　南无思最尊意佛　南无净德佛　南无戒自在佛　南无深嗅思惟佛　南无香像佛　南无寂进思惟佛　南无火光佛　南无勤群萌香佛　南无寂乐佛　南无德所至佛　南无大精进文佛　南无离疑佛　南无决偶佛　南无须弥山意佛　南无净身佛　南无尊威佛　南无上尊佛　南无大力佛　南无慧村佛　南无听(乡聪)彻意佛　南无如天悦佛　南无思惟度佛　南无月贤佛　南无大身佛　南无杂华佛　南无尊自在佛　南无尊上所敬佛　南无觉善香熏佛　南无尊王所敬佛　南无欢悦佛　南无莲华人佛　南无莲华意佛　南无自在德藏佛　南无人悦佛　南无尊意灯佛　南无威神所养佛　南无谛思惟佛　南无解脱慧佛　南无除三恶道佛　南无泽香忧冥佛　南无湍度佛　南无月光佛　南无意强自在佛　南无无畏娱乐佛　南无快觉佛　南无杀诸欲佛　南无胜华聚佛　南无大结髻佛　南无天自在六通音佛　南无如空佛　南无威神力佛　南无人名称柔佛　南无觉光佛　南无最音声佛　南无坚意佛　南无力通佛　南无眼如莲花趣无为佛　南无快断意佛　南无慧灯佛　南无喜音声佛　南无大思惟佛　南无无悦佛　南无意见佛　南无强精进佛　南无上光佛　南无德聚佛　南无无垢思惟佛　南无聚音佛　南无无量怨佛　南无功巧(一本德)舍恶趣佛　南无无为光丰佛　南无娱乐度佛　南无湍渡佛　南无调辩意佛　南无烦教佛　南无意车佛　南无德善光佛　南无坚华佛　南无聚意佛　南无尼拘类树王佛　南无无常中王佛　南无月盛佛　南无色如栴檀佛　南无日内佛　南无德藏佛　南无须弥力佛　南无摩尼珠佛　南无金刚王佛 <br/>
 <br/>
-一千佛(过去)过去庄严劫千佛名经[/font][/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">贡</div>贡却尼玛发表于 2008-11-22 22:15</div><div class="post-body">怎么跟现在劫和星宿劫千佛名经不太一样呢？有好多忏悔文在里面啊，谢谢师兄回答啊，呵呵 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2010-1-1 02:14</div><div class="post-body">[size=5][font=楷体_GB2312][b]愿常面见诸如来 及诸佛子众围绕 [/b][/font][/size] <br/>
+一千佛(过去)过去庄严劫千佛名经[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">贡</div>贡却尼玛发表于 2008-11-22 22:15</div><div class="post-body">怎么跟现在劫和星宿劫千佛名经不太一样呢？有好多忏悔文在里面啊，谢谢师兄回答啊，呵呵 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2010-1-1 02:14</div><div class="post-body">[size=5][font=楷体_GB2312][b]愿常面见诸如来 及诸佛子众围绕 [/b][/font][/size] <br/>
 [size=5][font=楷体_GB2312][b]于彼皆兴广大供 尽未来劫无疲厌 <br/>
 愿持诸佛微妙法 光显一切菩提行 [/b][/font][/size] <br/>
 [size=5][font=楷体_GB2312][b]究竟清净普贤道 尽未来劫常修习[/b][/font][/size] <br/>

@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>法句譬喻经（本缘部） - 藏密修海典藏</title>
+<title>法句譬喻经（本缘部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">法句譬喻经（本缘部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 16:36</div><div class="post-body">[font=楷体_GB2312][size=5][b]       法句譬喻经卷第一[/b][/size][/font] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 16:36</div><div class="post-body">[font=楷体_GB2312][size=5][b]       法句譬喻经卷第一[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　　　晋世沙门法炬共法立译[/size][/font] <br/>
 <br/>
 [font=楷体_GB2312][size=5]　    [b]   　无常品第一[/b][/size][/font] <br/>
@@ -92,7 +105,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]    王闻佛言叹曰。善哉诚如尊教。四人避对一人已死。禄命有分余复然矣。群臣从官莫不信受。 <br/>
 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 16:58</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　法句譬喻经教学品第二[/b] <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 16:58</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　法句譬喻经教学品第二[/b] <br/>
 <br/>
 昔佛在舍卫国祇树精舍。佛告诸比丘。当勤修道除弃阴盖。心明神定可免众苦。有一比丘志不明达。饱食入室闭房静眠。爱身快意不观非常。冥冥懈怠无复昼夜。却后七日其命将终。佛愍伤之。惧堕恶道即入其室。弹指觉曰。 <br/>
 <br/>
@@ -136,7 +149,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 两世受痛　　丧其本愿　　夫学有二 <br/>
 常亲多闻　　安谛解义　　虽困不耶 <br/>
 [/b] <br/>
-于是比丘闻偈。惭怖稽首悔过嘿思所行。天人闻偈心意欣悦逮得法眼。天人众会莫不奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:18</div><div class="post-body">[font=楷体_GB2312][size=5][b]　 　 法句譬喻经多闻品第三[/b] <br/>
+于是比丘闻偈。惭怖稽首悔过嘿思所行。天人闻偈心意欣悦逮得法眼。天人众会莫不奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:18</div><div class="post-body">[font=楷体_GB2312][size=5][b]　 　 法句譬喻经多闻品第三[/b] <br/>
 <br/>
 昔舍卫国有一贫家。夫妇悭恶不信道德。佛愍其愚现为贫凡沙门。诣门分卫。时夫不在其妇骂詈无有道理。沙门语曰。吾为道士乞丐自居。不得骂詈唯望一食耳。主人妇曰。若汝立死食尚叵得。况今平健欲望我食。但稽留时节不如早去。于是沙门住立其前。戴眼抒气便现死相。身体膖胀鼻口虫出。腹溃肠烂不净流漫。其妇见此恐怖失声。弃而舍走于是道人忽然舍去。去舍数里坐树下息。其夫来归道中见妇怪其惊怖。其妇语夫。有一沙门见怖如此。夫大嗔怒问为所在。妇曰。已去想亦未远。夫即执弓。带刀。寻迹往逐张弓拔刀。奔走直前欲斫道人。道人即化作琉璃小城以自围绕其人。绕城数匝不能得入。即问道人何不开门。道人曰。欲使开门弃汝弓刀。其人自念。当随其语。若当得入手拳加之。寻弃弓刀门故不开。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -196,7 +209,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 是故可舍痴　　离慢豪富乐 <br/>
 务学事闻者　　是名积聚德 <br/>
 [/b] <br/>
-于是五百人见佛光相重闻此偈。叩头归命克心悔过刀疮毒箭自然除愈。欢喜心开即受五戒。国界安宁莫不欢喜。[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:35</div><div class="post-body">[font=楷体_GB2312][size=5][b]　 　 法句譬喻经笃信品第四[/b] <br/>
+于是五百人见佛光相重闻此偈。叩头归命克心悔过刀疮毒箭自然除愈。欢喜心开即受五戒。国界安宁莫不欢喜。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:35</div><div class="post-body">[font=楷体_GB2312][size=5][b]　 　 法句譬喻经笃信品第四[/b] <br/>
 <br/>
 昔者舍卫国东南有大江。水既深而广。有五百余家居在岸边。未闻道德度世之行。习于刚强欺诈为务。贪利自恣快心极意。世尊常念其应度者当往度之。知此诸家福应当度。于是世尊往至水边坐一树下。村人见佛光相。奇异莫不惊肃。皆往礼敬或拜或揖问讯起居。佛命令坐为说经法。众人闻之而心不信。习于欺怠不信真言。佛便化作一人从江南来。足行水上正没其踝。来至佛前稽首礼佛。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -231,7 +244,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 内学止观　　无忘正智　　明哲守戒 <br/>
 内思正智　　行道如应　　自净除苦 <br/>
 [/b] <br/>
-化道人说此偈已。显现佛身光相之容。于是五沙门精神震叠。咸思惟戒即得阿罗汉道。[/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:38</div><div class="post-body">[font=楷体_GB2312][size=5]　　  [b]法句譬喻经惟念品第六 <br/>
+化道人说此偈已。显现佛身光相之容。于是五沙门精神震叠。咸思惟戒即得阿罗汉道。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:38</div><div class="post-body">[font=楷体_GB2312][size=5]　　  [b]法句譬喻经惟念品第六 <br/>
 [/b] <br/>
 昔佛在世时。弗加沙王与瓶沙王亲友。弗加沙王未知佛道。作七宝华以遗瓶沙。瓶沙王得之转奉上佛。白佛言。弗加沙王与我为友。遗我此华今已上佛。愿令彼王心开意解见佛闻法奉敬圣众。当以何物以报所遗。佛告瓶沙。写十二因缘经。送持与之。彼王得经心必信解。即写经卷。别书文曰。卿以宝华见遗。今以法华相上。详思其义果报深美。到便诵习以同道味。弗加沙王得经读之。寻省反覆亘然信解。喟然叹曰。道化真妙精义安神国荣。五欲忧恼之元。累劫习迷始今乃寤。顾视流俗无可贪乐。即召群臣国付太子。便自剃头行作沙门。法服持钵诣罗阅只城外在陶家窑中寄宿。明日当入城分卫。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -275,7 +288,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b]若人寿百岁　　勤事天下神 <br/>
 象马用祭祀　　不如行一慈[/b] <br/>
 <br/>
-佛说偈时即放光明烈照天地。三涂八难莫不欢喜。各得其所。国王和默闻说妙法。又睹光明甚大欢喜。即得道迹。病母闻法五情悦豫所患消除。二百梵志睹佛光相。重闻其言惭愧悔过。愿为弟子。佛尽受之。皆作沙门各得如愿。王及大臣请佛供养一月乃去。以法治正国遂兴隆。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:44</div><div class="post-body">[font=楷体_GB2312][size=5]　　  [b] 法句譬喻经言语品第八[/b] <br/>
+佛说偈时即放光明烈照天地。三涂八难莫不欢喜。各得其所。国王和默闻说妙法。又睹光明甚大欢喜。即得道迹。病母闻法五情悦豫所患消除。二百梵志睹佛光相。重闻其言惭愧悔过。愿为弟子。佛尽受之。皆作沙门各得如愿。王及大臣请佛供养一月乃去。以法治正国遂兴隆。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:44</div><div class="post-body">[font=楷体_GB2312][size=5]　　  [b] 法句譬喻经言语品第八[/b] <br/>
 <br/>
 昔弗加沙王入罗阅只城分卫。于城门中为新产牸牛所抵杀。牛主怖懅卖牛转与他人。其人牵牛欲饮之。牛从后复抵杀其主。其主有子嗔恚取牛杀之。于市卖肉。有田舍人买取牛头。贯担持归去舍里余。坐树下息。以牛头挂树枝上。须臾绳断牛头来下正堕人上。牛角刺人即时命终。一日之中凡杀三人。瓶沙王闻之怪其如此。即与群臣行诣佛所。到作礼毕却坐王位。叉手白佛言。大可怪。世尊。一头牸牛而杀三人。将有变故愿闻其意。佛告瓶沙王。罪对有原。非适今也。王曰。愿闻其由。佛言。往昔有贾客三人。到他国治生。寄住孤独老母舍。应雇舍直。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -338,7 +351,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 不觉成恶　　贤夫染人　　如附香熏 <br/>
 进智习善　　行成芳洁[/b] <br/>
 <br/>
-七十沙门重闻此偈。知家欲为秽薮。妻子为桎梏。执信坚固往至精舍。摄意惟行。得罗汉道。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:49</div><div class="post-body">[font=楷体_GB2312][size=5]　　  [b]法句譬喻经放逸品第十 <br/>
+七十沙门重闻此偈。知家欲为秽薮。妻子为桎梏。执信坚固往至精舍。摄意惟行。得罗汉道。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:49</div><div class="post-body">[font=楷体_GB2312][size=5]　　  [b]法句譬喻经放逸品第十 <br/>
 [/b] <br/>
 昔佛在世时。有五百贾客从海中出。大持七宝还归本国。经历深山为恶鬼所迷不能得出。粮食乏尽穷顿困厄遂皆饿死。所赍宝货散在山间。时有沙门在山中学。见其如此便起想念。吾勤苦学道积已七年不能得道又复贫穷无以自济。此宝物无主取之。持归用立门户。于是下山拾取宝物。藏着一处讫便出山。求呼兄弟负驰持归。方到道半。佛念比丘应当得度。佛便化作一比丘尼。剃头法服庄面画眉金银璎珞。随谷入山道逢沙门。头面作礼问讯起居。道人呵比丘尼曰。为道之法应得尔不。剃头着法衣。云何复庄面画眉璎珞身体也。比丘尼答曰。沙门之法为应尔不。辞亲学道山居静志。云何复取非其财物。贪欲忘道快心放意。不计无常。生世如寄罪报延长。于是比丘尼为说偈言。 <br/>
 <br/>
@@ -384,7 +397,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 见身如沫　　幻法自然　　断魔华敷 <br/>
 不现死生 <br/>
 [/b] <br/>
-于是诸女闻佛此偈。愿学真道为比丘尼。头发自堕法衣具足。思惟寂定即得罗汉道。阿难白佛言。今此诸女素有何德。乃令世尊就而度之。一闻说法出家得道也。佛告阿难。昔迦叶佛时有大长者。财富无数夫人婇女有五百人。其性妒恶门不妄开。夫人婇女欲往见佛。终不肯听。后日国王请诸大臣。上殿宴会会辄竟日。时夫人婇女见长者入会。便共至佛所稽首作礼。小坐听经各发愿言。令我世世莫与恶人共相遭遇。所生之处恒与道德圣人相值。闻来世有佛名释迦文。愿与相值出家学道奉持训诲。佛语阿难。尔时夫人婇女五百人者。今此五百比丘尼是。本愿恳恻。今应得度。是以世尊就度之耳。佛说是时莫不欢喜。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:54</div><div class="post-body">[font=楷体_GB2312][size=5]          [b]   法句譬喻经卷第二[/b] <br/>
+于是诸女闻佛此偈。愿学真道为比丘尼。头发自堕法衣具足。思惟寂定即得罗汉道。阿难白佛言。今此诸女素有何德。乃令世尊就而度之。一闻说法出家得道也。佛告阿难。昔迦叶佛时有大长者。财富无数夫人婇女有五百人。其性妒恶门不妄开。夫人婇女欲往见佛。终不肯听。后日国王请诸大臣。上殿宴会会辄竟日。时夫人婇女见长者入会。便共至佛所稽首作礼。小坐听经各发愿言。令我世世莫与恶人共相遭遇。所生之处恒与道德圣人相值。闻来世有佛名释迦文。愿与相值出家学道奉持训诲。佛语阿难。尔时夫人婇女五百人者。今此五百比丘尼是。本愿恳恻。今应得度。是以世尊就度之耳。佛说是时莫不欢喜。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:54</div><div class="post-body">[font=楷体_GB2312][size=5]          [b]   法句譬喻经卷第二[/b] <br/>
 晋世沙门法炬共法立译 <br/>
 [/size][/font] <br/>
 [font=楷体_GB2312][size=5]       [b]     　　喻华香品之二[/b] <br/>
@@ -443,7 +456,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 罪成炽然　　愚所望处　　不谓适苦 <br/>
 临堕厄地　　乃知不善　[/b] <br/>
 <br/>
-佛告大王。尔时长者妇。今王女金刚是。五百侍女今度胜等五百伎女是。罪福追人久无不彰。善恶随人如影随形。说是法时国内大小。信伏欢喜咸归三尊。皆受五戒即得道迹。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:56</div><div class="post-body">[font=楷体_GB2312][size=5]　　 [b]  法句譬喻经明哲品第十四[/b] <br/>
+佛告大王。尔时长者妇。今王女金刚是。五百侍女今度胜等五百伎女是。罪福追人久无不彰。善恶随人如影随形。说是法时国内大小。信伏欢喜咸归三尊。皆受五戒即得道迹。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:56</div><div class="post-body">[font=楷体_GB2312][size=5]　　 [b]  法句譬喻经明哲品第十四[/b] <br/>
 <br/>
 昔有梵志其年二十。天才自然事无大小过目则能。自以聪哲而自誓曰。天下技术要当尽知。一艺不通则非明达也。于是游学无师不造。六艺杂术天文地理。医方镇压山崩地动。摴蒱博奕妓乐博撮。裁割衣裳文绣绫绮。厨膳切割调和滋味。人间之事无不兼达。心自念曰。丈夫如此。谁能及者。试游诸国摧伏抵对。奋名四海技术冲天。然后载功竹帛垂勋百代。于是游行往至一国。入市观视见有一人坐作角弓析筋治角。用手如飞作弓调快。买者诤前即自念曰。少来所学自以具足。邂逅自轻不学作弓。若彼斗技吾则不如矣。当从受学耳。遂从弓师求为弟子。尽心受学月日之中。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -488,7 +501,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 彼乐空闲　　众人不能　　快哉无望 <br/>
 无所欲求 <br/>
 [/b] <br/>
-佛说偈已主人及王益加欢喜。供养七日得须陀洹道。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:59</div><div class="post-body">[font=楷体_GB2312][size=5]　　  [b] 法句譬喻经述千品第十六[/b] <br/>
+佛说偈已主人及王益加欢喜。供养七日得须陀洹道。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 17:59</div><div class="post-body">[font=楷体_GB2312][size=5]　　  [b] 法句譬喻经述千品第十六[/b] <br/>
 <br/>
 昔佛在舍卫国。有一长老比丘字般特。新作比丘禀性闇塞。佛令五百罗汉日日教之。三年之中不得一偈。国中四辈皆知其愚冥。佛愍伤之即呼着前授与一偈。守口摄意身莫犯非。如是行者得度世。时般特感佛慈恩。欢欣心开诵偈上口。佛告之曰。汝今年老。方得一偈人皆知之不足为奇。今当为汝解说其义。一心谛听。般特受教而听。佛即为说身三口四意三所由。观其所起察其所灭。三界五道轮转不息。由之升天由之堕渊由之得道。涅槃自然分别为说无量妙法。时般特[火*霍]然心开。即得罗汉道。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -525,7 +538,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 能善行礼节　　常敬长老者 <br/>
 四福自然增　　色力寿而安 <br/>
 [/b] <br/>
-于是其人闻佛此偈。欢喜信解稽首作礼。重白佛言。罪垢所蔽积罪九年。幸赖慈化今得开解。唯愿世尊听为沙门。佛言。善来比丘。头发自堕即成沙门。内思安般即得罗汉道。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:04</div><div class="post-body">[font=楷体_GB2312][size=5]　　   [b]法句譬喻经恶行品第十七[/b] <br/>
+于是其人闻佛此偈。欢喜信解稽首作礼。重白佛言。罪垢所蔽积罪九年。幸赖慈化今得开解。唯愿世尊听为沙门。佛言。善来比丘。头发自堕即成沙门。内思安般即得罗汉道。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:04</div><div class="post-body">[font=楷体_GB2312][size=5]　　   [b]法句譬喻经恶行品第十七[/b] <br/>
 <br/>
 昔佛在罗阅只国。遣一罗汉名曰须漫。持佛发爪至罽宾南。山中作佛图寺。五百罗汉常止其中。旦夕烧香绕塔礼拜。时彼山中有五百猕猴。见诸道人供养塔寺。即便相将至深涧边。负辇泥石效作佛图。竖木立刹币幡系头。旦夕礼拜亦如道人。时山水瀑涨五百猕猴一时漂没。魂神即生第二忉利天上。七宝殿舍衣食自然。各自念言从何所来得生天上。即以天眼自见本形。猕猴之身效诸道人戏作塔寺。虽身漂没神得生天。今当下报故尸之恩。各将侍从华香伎乐临故尸上。散华烧香绕之七匝。时山中有五百婆罗门。外学邪见不信罪福。见诸天人散华作乐绕猕猴尸。怪而问曰。诸天光影巍巍乃尔。何故屈意供养此尸。诸天人言。此尸是吾等故身。昔在此间效诸道人戏立塔寺。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -579,7 +592,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 奈疑结何　　不伐杀烧　　亦不求胜 <br/>
 仁爱天下　　所适无怨 <br/>
 [/b] <br/>
-五百梵志闻偈欢喜。皆作沙门得应真道。美音宗等逮得法眼。诸比丘白佛言。五百梵志及长者等。本行何德得道何速。世尊告曰。过去久远时。世有佛名曰迦叶。为诸弟子说法。当来五浊之时。时有梵志长者千人。同发是言令我遭见释迦文佛。尔时梵志者今此等梵志是。尔时长者今美音等是。从是因缘见我便解。比丘欢喜作礼奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:08</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]     法句譬喻经卷第三[/size][/b] <br/>
+五百梵志闻偈欢喜。皆作沙门得应真道。美音宗等逮得法眼。诸比丘白佛言。五百梵志及长者等。本行何德得道何速。世尊告曰。过去久远时。世有佛名曰迦叶。为诸弟子说法。当来五浊之时。时有梵志长者千人。同发是言令我遭见释迦文佛。尔时梵志者今此等梵志是。尔时长者今美音等是。从是因缘见我便解。比丘欢喜作礼奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:08</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]     法句譬喻经卷第三[/size][/b] <br/>
 晋世沙门法炬共法立译 <br/>
 [/size] <br/>
 [font=楷体_GB2312][size=5]   　[b]　喻老耄品第十九[/b] <br/>
@@ -638,7 +651,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 恶自受罪　　善自受福　　亦各须熟 <br/>
 彼不相代　　习善得善　　亦如种甜 <br/>
 [/b] <br/>
-佛说偈已。五百梵志意自开解。即前礼佛五体投地叉手白佛言。顽愚不及未达圣训。唯愿愍育得为沙门。佛即听受皆为沙门。村人大小见佛变化莫不欢欣。皆得道迹称之贤圣。无复屠儿之名。佛食毕讫即还精舍。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:15</div><div class="post-body">[font=楷体_GB2312][size=5]　　  [b]  法句譬喻经世俗品第二十一[/b] <br/>
+佛说偈已。五百梵志意自开解。即前礼佛五体投地叉手白佛言。顽愚不及未达圣训。唯愿愍育得为沙门。佛即听受皆为沙门。村人大小见佛变化莫不欢欣。皆得道迹称之贤圣。无复屠儿之名。佛食毕讫即还精舍。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:15</div><div class="post-body">[font=楷体_GB2312][size=5]　　  [b]  法句譬喻经世俗品第二十一[/b] <br/>
 <br/>
 昔有婆罗门国王名多味写。其王奉事异道九十六种。王忽一日发于善心欲大布施。如婆罗门法。积七宝如山持用布施。有来乞者听令自取重一撮去。如是数日其积不减。佛知是王宿福应度化作梵志。往到其国。王出相见共相礼问起居曰。何所求索莫自疑难。梵志答言。吾从远来。欲乞珍宝持作舍宅。王言。大善。自取重一撮去。梵志取一撮行七步。还着故处。王问。何故不取。梵志答曰。此才足作舍庐耳。复当娶妇俱不足用。是以不取。王言。更取三撮。梵志即取行七步复还着故处。王问梵志何以复尔。答曰。此足娶妇。复无田地奴婢牛马。计复不足是以息意也。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -692,7 +705,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 佛说偈已告诸比丘。往昔久远无数世。时有五通比丘名精进力。在山中树下闲寂求道。时有四禽依附左右常得安隐。一者鸽二者乌三者毒蛇四者鹿。是四禽者昼行求食暮则来还。四禽一夜自相问言。世间之苦何者为重。乌言饥渴最苦。饥渴之时身羸目冥神识不宁。投身罗网不顾锋刃。我等丧身莫不由之。以此言之饥渴为苦。鸽言淫欲最苦。色欲炽盛无所顾念。危身灭命莫不由之。毒蛇言嗔恚最苦。毒意一起不避亲疏。亦能杀人复能自杀。鹿言惊怖最苦我游林野心恒怵惕。畏惧猎师及诸豺狼。仿佛有声奔投坑岸。母子相捐肝胆悼悸。以此言之惊怖为苦。比丘闻之即告之曰。[/size][/font] <br/>
 [font=楷体_GB2312][size=5] [/size][/font] <br/>
-[font=楷体_GB2312][size=5]汝等所论是其末耳。不究苦本。天下之苦无过有身。身为苦器忧畏无量。吾以是故舍俗学道。灭意断想不贪四大。欲断苦原志存泥洹。泥洹道者寂灭无形。忧患永毕尔乃大安。四禽闻之心即开解。佛告比丘尔时五通比丘则吾身是。时四禽者今汝四人是也。前世已闻苦本之义。如何今日方复云尔。比丘闻之惭愧自责。即于佛前得罗汉道。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:18</div><div class="post-body">[font=楷体_GB2312][size=5]　　[b]   法句譬喻经好喜品第二十四[/b] <br/>
+[font=楷体_GB2312][size=5]汝等所论是其末耳。不究苦本。天下之苦无过有身。身为苦器忧畏无量。吾以是故舍俗学道。灭意断想不贪四大。欲断苦原志存泥洹。泥洹道者寂灭无形。忧患永毕尔乃大安。四禽闻之心即开解。佛告比丘尔时五通比丘则吾身是。时四禽者今汝四人是也。前世已闻苦本之义。如何今日方复云尔。比丘闻之惭愧自责。即于佛前得罗汉道。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:18</div><div class="post-body">[font=楷体_GB2312][size=5]　　[b]   法句譬喻经好喜品第二十四[/b] <br/>
 <br/>
 昔佛在舍卫精舍。时有四新学比丘。相将至奈树下坐禅行道。奈华荣茂色好且香。因相谓曰。世间万物何者可爱以快人情。一人言。仲春之月日木荣华游戏原野此最为乐。一人言。宗亲吉会觞酌交错。音乐歌舞此最为乐。一人言。多积财宝所欲即得。车马服饰与众有异。出入光显行者瞩目此最为乐。一人言妻妾端正彩服鲜明。香熏芬馥恣意纵情此最为乐。佛知四人应可化度。而走意六欲不惟无常。即呼四人而问之曰。属坐树下共论何事。四人以实具白所乐。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -735,7 +748,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b]　  垢中之垢　　莫甚于痴　　学当舍此 <br/>
 比丘无垢　[/b] <br/>
 <br/>
-其人闻偈自知憍痴。即承佛教欢喜还归。思惟偈义改悔自新。孝事父母尊敬师长。诵习经道勤修居业。奉戒自摄非道不行。宗族称孝乡党称悌。善名遐布国内称贤。三年之后还至佛所。五体作礼恳恻自陈。尊敬至真得全形骸。弃恶为善上下蒙庆。愿垂大慈接度为道。佛言善哉。须发寻落即成沙门。内思止观四谛正道。精进日登得罗汉道。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:24</div><div class="post-body">[font=楷体_GB2312][size=5]　　  [b]法句譬喻经奉持品第二十七 <br/>
+其人闻偈自知憍痴。即承佛教欢喜还归。思惟偈义改悔自新。孝事父母尊敬师长。诵习经道勤修居业。奉戒自摄非道不行。宗族称孝乡党称悌。善名遐布国内称贤。三年之后还至佛所。五体作礼恳恻自陈。尊敬至真得全形骸。弃恶为善上下蒙庆。愿垂大慈接度为道。佛言善哉。须发寻落即成沙门。内思止观四谛正道。精进日登得罗汉道。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:24</div><div class="post-body">[font=楷体_GB2312][size=5]　　  [b]法句譬喻经奉持品第二十七 <br/>
 [/b] <br/>
 昔有长老婆罗门。名萨遮尼犍。才明多智国中第一。有五百弟子。贡高自大不顾天下。以铁鍱鍱腹。人问其故答曰恐智溢出故也。闻佛出世道化明达。心怀妒嫉寤寐不安。语诸弟子。吾闻瞿昙沙门自称为佛。今当往问深妙之事。令其心悸不知所陈。即与弟子往到祇洹列住门外。遥见世尊威光赫奕如日初出。五情腾踊喜惧交错。于是径前为佛作礼。佛命就座坐讫尼犍问佛言。何谓为道。何谓为智。何谓为长老。何谓为端正。何谓为沙门。何谓为比丘。何谓为仁明。何谓为有道何谓为奉戒。若能解答愿为弟子。于是世尊观其所应以偈答言。 <br/>
 <br/>
@@ -814,7 +827,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 意倚贪身　　更苦无端　　慧人见苦 <br/>
 是以弃身　　灭意断欲　　爱尽无生 <br/>
 [/b] <br/>
-王重闻偈欣然意解。即发无上正真道意。听者无数皆得法眼。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:26</div><div class="post-body">[font=楷体_GB2312][size=5]　   [b]　法句譬喻经地狱品第三十[/b][/size][/font] <br/>
+王重闻偈欣然意解。即发无上正真道意。听者无数皆得法眼。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:26</div><div class="post-body">[font=楷体_GB2312][size=5]　   [b]　法句譬喻经地狱品第三十[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]    昔舍卫国有婆罗门师。名富兰迦叶。与五百弟子相随。国王人民先共奉事。佛初得道与诸弟子从罗阅只至舍卫国。身相显赫道教弘美。国王中宫率土人民莫不奉敬。于是富兰迦叶起嫉妒意。欲毁世尊独望敬事。即将弟子见波斯匿王而自陈曰。吾等长老先学国之旧师。沙门瞿昙后出求道。实无神圣自称为佛。而王舍我欲专奉之。今欲与佛捔试道德。知谁为胜。胜者王便终身奉之。王言大善。王即严驾往到佛所。礼毕白言。富兰迦叶欲与世尊捔尽道力现神变化。不审世尊为可尔不。佛言大佳。结期七日当捔变化。王于城东平广好地立二高座。高四十丈七宝庄校。施设幢幡整顿座席。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -872,7 +885,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 不如自调　　彼不能适　　人所不至 <br/>
 唯自调者　　能到调方　[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]    居士闻偈喜庆难量。内情解释即得法眼。听者无数皆得道迹。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:50</div><div class="post-body">[font=楷体_GB2312][size=5]　  　[b]法句譬喻经爱欲品第三十二 <br/>
+[font=楷体_GB2312][size=5]    居士闻偈喜庆难量。内情解释即得法眼。听者无数皆得道迹。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:50</div><div class="post-body">[font=楷体_GB2312][size=5]　  　[b]法句譬喻经爱欲品第三十二 <br/>
 [/b] <br/>
 昔佛在罗阅只国耆阇崛山精舍之中。为天人龙鬼转大法-轮。时有一人舍家妻子来至佛所。为佛作礼求为沙门。佛即受之令作沙门。命令树下坐思惟道德。比丘受教便入深山。去精舍百余里。独坐树间思道三年。心不坚固意欲退还。自念舍家求道勤苦不如早归见我妻子。作此念已便起出山。佛以圣达见此比丘。应当得道愚故还归。佛以神足化作沙门。便往逆之道路相见。化人即问所从来也。此地平坦可共坐语。于是二人便坐息语。即答化人吾舍家妻子求作沙门处此深山不能得道。与妻子别不如本愿。唐丧我命劳而无获。今欲悔还见我妻子。快相娱乐后更作计。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -912,7 +925,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 与世无诤　　戒具常快　　使贤居快 <br/>
 如亲亲会　　近仁智者　　多闻高远 <br/>
 [/b] <br/>
-于是七人说此偈已。及诸梵志愿为弟子。佛即受之。皆为沙门得罗汉道。国王臣民咸各修道。天寻大雨国丰民宁。道化兴隆莫不乐闻。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:56</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]       法句譬喻经卷第四[/size][/b] <br/>
+于是七人说此偈已。及诸梵志愿为弟子。佛即受之。皆为沙门得罗汉道。国王臣民咸各修道。天寻大雨国丰民宁。道化兴隆莫不乐闻。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 18:56</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]       法句譬喻经卷第四[/size][/b] <br/>
 晋世沙门法炬共法立译 <br/>
 <br/>
 [b]　喻爱欲品第三十二之二 <br/>
@@ -987,7 +1000,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 虽有天欲慧舍不贪 <br/>
 乐离恩爱为佛弟子 <br/>
 [/b] <br/>
-佛告大王。人行罪福各有本性。所受影报万倍不同。若行六德持斋福多。诸佛所誉终生梵天福乐自然。佛说是时王及夫人婇女大臣。一切心解皆得道迹。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 21:32</div><div class="post-body">[font=楷体_GB2312][size=5]　　  [b]  法句譬喻经沙门品第三十四[/b] <br/>
+佛告大王。人行罪福各有本性。所受影报万倍不同。若行六德持斋福多。诸佛所誉终生梵天福乐自然。佛说是时王及夫人婇女大臣。一切心解皆得道迹。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 21:32</div><div class="post-body">[font=楷体_GB2312][size=5]　　  [b]  法句譬喻经沙门品第三十四[/b] <br/>
 <br/>
 昔佛在舍卫国精舍之中。为天龙鬼神国王人民说法。时有一年少比丘。晨旦着衣服柱杖持钵至大村中分卫。时大道边有官菜园。外面种黍穄。其田外草中施张发箭。若有虫兽盗贼来者。触网箭发中箭则死。有一端正年少女子独守此园。人欲往者遥唤示道乃得入园。不知道者必为发箭所杀。而此女子独守悲歌。其声妖亮听者莫不顿车止马回旋蹀蹑。而欲趣之盘桓不去皆坐声响。时此比丘分卫行还道闻歌声。侧耳听音五情逸豫。心迷意乱贪着不舍。想是女人必大端正。思想欲见坐起言语便旋往趣。未到中间意志恍惚。手失锡杖肩失衣钵殊不自觉。佛以三达见此比丘。小复前行为箭所杀。福应得道为愚所迷欲盖所覆。怜愍其愚欲度脱之。自化作白衣往到其边。以偈呵之曰。 <br/>
 <br/>
@@ -1051,7 +1064,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b]　  利胜不足恃　　虽胜犹复苦 <br/>
 当自求胜法　　已胜无所生 <br/>
 [/b] <br/>
-雨舍承相闻佛说偈即得道迹。时会大小皆得须陀洹道。公即从坐起。白佛言。国事烦多欲还请辞。佛言。可宜知是时。即从坐起礼佛而去。还至具事白王。即止不攻。持佛严教以化国内。越只国人即来顺命。上下相奉国遂兴隆。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 21:40</div><div class="post-body">[font=楷体_GB2312][size=5]　  　  [b]法句譬喻经生死品第三十七[/b] <br/>
+雨舍承相闻佛说偈即得道迹。时会大小皆得须陀洹道。公即从坐起。白佛言。国事烦多欲还请辞。佛言。可宜知是时。即从坐起礼佛而去。还至具事白王。即止不攻。持佛严教以化国内。越只国人即来顺命。上下相奉国遂兴隆。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 21:40</div><div class="post-body">[font=楷体_GB2312][size=5]　  　  [b]法句譬喻经生死品第三十七[/b] <br/>
 <br/>
 昔佛在舍卫国祇洹精舍。为天人国王大臣广说妙法。有一梵志长者居在路侧财富无数。正有一子其年二十。新为娶妇未满七日。夫妇相敬言语相顺。妇语其夫欲至后园中看戏。为得尔不。上春三月夫妇相将至后园中。有一奈树高大华好。妇欲得华无人与取。夫知妇意欲得奈华。即便上树正取一华。复欲得一展转上树乃至细枝。枝折堕地伤中即死。居家大小奔波跳走往趣儿所。呼天伤哭断绝复苏。中外宗族来者无数。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -1143,7 +1156,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b]　  今我上体首　　白生为被盗 <br/>
 已有天使召　　时正宜出家　[/b] <br/>
 <br/>
-复召群臣立太子为王。即行作沙门入山修道。毕人之寿。复生天上为天帝释。前天帝释。毕天之寿。下生世间。为圣王作太子。此三圣主更为父子。上为天帝。下为圣主。中为太子。各各三十六反。数千万岁。终而复始。行此三事。自致得佛。尔时父者。今我身是也。太子者。舍利弗是也。王孙者。阿难是也。更相从生展转为王以化天下。是以特尊三界无比。佛说是时。国王太子并诸太子。皆大欢喜受佛五戒。为优婆塞得须陀洹道。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 21:44</div><div class="post-body">[font=楷体_GB2312][size=5]　　   [b]法句譬喻经吉祥品第三十九[/b] <br/>
+复召群臣立太子为王。即行作沙门入山修道。毕人之寿。复生天上为天帝释。前天帝释。毕天之寿。下生世间。为圣王作太子。此三圣主更为父子。上为天帝。下为圣主。中为太子。各各三十六反。数千万岁。终而复始。行此三事。自致得佛。尔时父者。今我身是也。太子者。舍利弗是也。王孙者。阿难是也。更相从生展转为王以化天下。是以特尊三界无比。佛说是时。国王太子并诸太子。皆大欢喜受佛五戒。为优婆塞得须陀洹道。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 21:44</div><div class="post-body">[font=楷体_GB2312][size=5]　　   [b]法句譬喻经吉祥品第三十九[/b] <br/>
 <br/>
 昔佛在罗阅只耆阇崛山中为天人龙鬼转三乘法-轮。时山南恒水岸边有尼揵梵志。先出耆旧博达多知。德向五通明识古今。所养门徒有五百人。教化指授皆悉通达天文地理星宿人情。无不瞻察观略内外。吉凶祸福丰俭出没。皆包知之。梵志弟子先佛所行应当得道。欻自相将至水岸边。屏坐论语自共相问。世间诸国人民所行。以何等事为世吉祥。徒等不了。往到师所为师作礼。叉手白言。弟子等学久所学已达。不闻诸国以何为吉祥。尼揵告曰。善哉问也。阎浮利地有十六大国。八万四千小国。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>

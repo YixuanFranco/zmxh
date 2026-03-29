@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>藏族传统绘画艺术的奇葩——唐卡 - 藏密修海典藏</title>
+<title>藏族传统绘画艺术的奇葩——唐卡 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">藏族传统绘画艺术的奇葩——唐卡</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-6-7 22:32</div><div class="post-body">[font=楷体_GB2312][size=5]    藏族是中国具有悠久历史和灿烂文化的民族，是中华民族大家庭中重要的一员。历史上她曾创造了古老的阿里文化，藏南的雅砻文化，藏东贡布文化和东北部康巴文化，藏北草原羌塘文化，日喀则为中心的后藏文化和举世闻名的拉萨圣地文化等。如果说整个藏族文化就有如西藏雅鲁藏布江的滔滔江水，那么这些文化就是它的支脉，最后都汇集流入中华民族传统文化的海洋。藏族的传统绘画艺术——唐卡(喀)，从某种意义上讲，真实地记录和弘扬了藏族优秀的传统文化。 <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-6-7 22:32</div><div class="post-body">[font=楷体_GB2312][size=5]    藏族是中国具有悠久历史和灿烂文化的民族，是中华民族大家庭中重要的一员。历史上她曾创造了古老的阿里文化，藏南的雅砻文化，藏东贡布文化和东北部康巴文化，藏北草原羌塘文化，日喀则为中心的后藏文化和举世闻名的拉萨圣地文化等。如果说整个藏族文化就有如西藏雅鲁藏布江的滔滔江水，那么这些文化就是它的支脉，最后都汇集流入中华民族传统文化的海洋。藏族的传统绘画艺术——唐卡(喀)，从某种意义上讲，真实地记录和弘扬了藏族优秀的传统文化。 <br/>
 <br/>
 唐卡是藏语音译，意为布画。其分类方法较多，按大小和张挂方法，可以分画片唐卡和卷轴唐卡；按色泽可分为彩(色)唐，金(色)唐，黑(色)唐，红(色)唐，淡(色)唐，浅(色)唐六种；按制作方法又可分为绘画唐卡、堆绣唐卡、刺绣唐卡、印刷唐卡、织锦唐卡和缂丝唐卡六类。但总的来说，卷轴唐卡类的彩色绘画唐卡数量居多。卷轴唐卡上有天杆、下有地轴、地轴两端有轴头。唐卡画芯一般都用彩缎装裱，画面上多用大小相同的丝帛覆盖，丝帛上端连于天杆，悬挂唐卡时将其掀起。丝帛盖面在卷起唐卡时，能有效保护画芯不被磨损。 <br/>
 <br/>
@@ -69,7 +82,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 织锦是用一色经线(多为素色)交织不同的彩色纬线制作而成的。缂丝是我国特有的将绘画移植于丝织品上的特种工艺，织锦是“经纬交织”，缂丝是“通经断纬”。这两种工艺用于唐卡制作，发展出织锦和缂丝唐卡。织锦和缂丝唐卡，质地细密，花纹精致，色彩明快，富有很强的艺术感染力。西藏的织锦和缂丝唐卡，多为在内地定做，以明代为多。因这两种唐卡制作数量少，故留存的已不多。 <br/>
 [/size][/size] <br/>
-[font=楷体_GB2312][size=5]　　印刷着色唐卡，是将画好的图像雕刻成板，用墨印于薄绢或细布上(如同内地古代的雕版印刷)，然后再着色装裱而成。这种唐卡，笔画纤细，刀法道劲，层次分明，独具特色。以四川德格地区的为代表。北京民族文化宫博物馆收藏的一张印刷着色唐卡《释迦牟尼像》，是由四川康区600年前的木雕板印制，非常珍贵。[/size][/size][/size][/size][/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">莲</div>莲花盛放发表于 2006-8-22 00:09</div><div class="post-body">我有一幅唐卡，是我曾经很爱的藏族小伙带给我的，后来从藏族师妹那里得知，原来唐卡是不轻易送人的，很感动，也很感谢他的祝福，虽然不能在一起，还是希望佛祖保佑他…… </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">纽</div>纽固修发表于 2007-3-31 21:27</div><div class="post-body">[font=楷体_GB2312][size=5]    [color=red]唐卡（Thang-ga）也叫唐嘎，唐喀，[/color]系藏文音译，是藏族文化中一种独具特色的绘画艺术形式。它类似于汉族地区的卷轴画，多画于布或纸上，然后用绸缎缝制装裱，上端横轴有细绳便于悬挂，下轴两端饰有精美轴头。画面上覆有薄丝绢及双条彩带。涉及佛教的唐卡画成装裱后，一般还要请喇嘛念经加持，并在背面盖上喇嘛的金汁或朱砂手印。也有极少量的缂丝、刺绣和珍珠唐卡。唐卡的绘制极为复杂，用料极其考究，颜料全为天然矿植物原料，色泽艳丽，经久不退，具有浓郁的雪域风格。唐卡在内容上多为西藏宗教、历史、文化艺术和科学技术等，凝聚着藏族人民的信仰和智慧，记载着西藏的文明、历史和发展，寄托着藏族人民对佛祖的无可比拟的情感和对雪域家乡的无限热爱。 [/color] <br/>
+[font=楷体_GB2312][size=5]　　印刷着色唐卡，是将画好的图像雕刻成板，用墨印于薄绢或细布上(如同内地古代的雕版印刷)，然后再着色装裱而成。这种唐卡，笔画纤细，刀法道劲，层次分明，独具特色。以四川德格地区的为代表。北京民族文化宫博物馆收藏的一张印刷着色唐卡《释迦牟尼像》，是由四川康区600年前的木雕板印制，非常珍贵。[/size][/size][/size][/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">莲</div>莲花盛放发表于 2006-8-22 00:09</div><div class="post-body">我有一幅唐卡，是我曾经很爱的藏族小伙带给我的，后来从藏族师妹那里得知，原来唐卡是不轻易送人的，很感动，也很感谢他的祝福，虽然不能在一起，还是希望佛祖保佑他…… </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div>纽固修发表于 2007-3-31 21:27</div><div class="post-body">[font=楷体_GB2312][size=5]    [color=red]唐卡（Thang-ga）也叫唐嘎，唐喀，[/color]系藏文音译，是藏族文化中一种独具特色的绘画艺术形式。它类似于汉族地区的卷轴画，多画于布或纸上，然后用绸缎缝制装裱，上端横轴有细绳便于悬挂，下轴两端饰有精美轴头。画面上覆有薄丝绢及双条彩带。涉及佛教的唐卡画成装裱后，一般还要请喇嘛念经加持，并在背面盖上喇嘛的金汁或朱砂手印。也有极少量的缂丝、刺绣和珍珠唐卡。唐卡的绘制极为复杂，用料极其考究，颜料全为天然矿植物原料，色泽艳丽，经久不退，具有浓郁的雪域风格。唐卡在内容上多为西藏宗教、历史、文化艺术和科学技术等，凝聚着藏族人民的信仰和智慧，记载着西藏的文明、历史和发展，寄托着藏族人民对佛祖的无可比拟的情感和对雪域家乡的无限热爱。 [/color] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]唐卡是藏语的音译，指用彩缎装裱后悬挂供奉的宗教卷轴画。题材内容涉及藏族的历史、政治、文化和社会生活等诸多领域，堪称藏民族的百科全书。传世唐卡大都是藏传佛教和苯教作品，现已成为海内外文物收藏的新热点。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -200,7 +213,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5]曼鲁派是曼娘和曼萨尔画派的总称。[/size][/font] <br/>
 <br/>
 [font=楷体_GB2312][size=5][曼萨尔派][/size][/font] <br/>
-[font=楷体_GB2312][size=5]曼萨尔派的创始人是藏巴·曲洋嘉措，该派与曼娘派的画风相近，特点是线条粗犷，面相威猛，上色较重，身量略高，画工精细等。[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">邬</div>邬扎拉拓发表于 2011-1-4 13:21</div><div class="post-body">最上三寶我皈依，一切罪業皆懺悔 <br/>
+[font=楷体_GB2312][size=5]曼萨尔派的创始人是藏巴·曲洋嘉措，该派与曼娘派的画风相近，特点是线条粗犷，面相威猛，上色较重，身量略高，画工精细等。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">邬</div>邬扎拉拓发表于 2011-1-4 13:21</div><div class="post-body">最上三寶我皈依，一切罪業皆懺悔 <br/>
 眾生善根盡隨喜，正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽，直至菩提我皈依 <br/>

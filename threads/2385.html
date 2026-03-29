@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>如意宝梯——菩提道次第实修引导 - 藏密修海典藏</title>
+<title>如意宝梯——菩提道次第实修引导 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/加行实修入正道.html">加行实修入正道</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">如意宝梯——菩提道次第实修引导</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:04</div><div class="post-body">[align=center][font=楷体_GB2312][size=5][size=6][b]如意宝梯[/b][/size] <br/>
+<div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:04</div><div class="post-body">[align=center][font=楷体_GB2312][size=5][size=6][b]如意宝梯[/b][/size] <br/>
 夏坝仁波切 <br/>
 <br/>
 菩提道次第实修引导之一 <br/>
@@ -62,7 +75,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 因此，修一切善法之前提，乃为对依止善知识生起任运觉受的证悟。故而，根据行者根器的差别，为得到殊胜教授的加持力，及能够完备无倒地了知实修次第，本书分别依照第四世班禅大师的《菩提道次第直授•安乐道》和第五世班禅大师的《菩提道次第直授•速疾道》的内容，依照教授，原文不动的引用，作为实修主题；并且把第五世DL喇嘛的《文殊口授》相关教授和帕邦喀大师《掌中解脱》之教授，以及兰仁巴大师相关教授等诸大德们的心法要义，作为补充，从而编著了《菩提道次第实修引导•如意宝梯》的第一册《依止善知识》，以便内地劳于生计的信众，在得到道次第的教授后，不用劳尽心思，自己另行寻找实修法则，能够直捷而方便地马上进入到道次第的实修中来。这些心法要义，都有着各自独到的殊胜之处，故而古往今来，实修道次第而生起圆满证悟的诸大德们，再再教诫，要以《乐道》、《速道》为实修基础，以《文殊口授》的要义等作为实修中的殊胜方便，如此定能速疾生起圆满成就。因此，本书中并不曾由己意臆造文辞，而是摘用了诸大德的殊胜教授原文。 <br/>
 <br/>
-切记，于此等心法，万勿执为文字游戏，应认真地体味诸大德们由实修体验而发出的种种苦口婆心的教诲，如此方能获令诸佛欢喜之证悟。[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:09</div><div class="post-body">[font=楷体_GB2312][size=5][b]    上师加持力的大小，并不在于上师的功德，而全在于自己，自己若无报恩心及深深的信心，即使文殊菩萨、观世音菩萨亲临加持，也不会对自己有什么义利。但如果心存感恩及敬信心，上师功德虽不圆满，自己也会得到极大的加持，最关键的是自己的感恩及敬信心![/b] <br/>
+切记，于此等心法，万勿执为文字游戏，应认真地体味诸大德们由实修体验而发出的种种苦口婆心的教诲，如此方能获令诸佛欢喜之证悟。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:09</div><div class="post-body">[font=楷体_GB2312][size=5][b]    上师加持力的大小，并不在于上师的功德，而全在于自己，自己若无报恩心及深深的信心，即使文殊菩萨、观世音菩萨亲临加持，也不会对自己有什么义利。但如果心存感恩及敬信心，上师功德虽不圆满，自己也会得到极大的加持，最关键的是自己的感恩及敬信心![/b] <br/>
 <br/>
 [align=center][b]上篇•《速道》之教授[/b] <br/>
 <br/>
@@ -124,7 +137,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 如是祈祷后，观顶上上师佛身支分中降下五彩光明甘露，注入自他一切有情身心之中，无始所集的一切罪障，尤其能障碍心中对依止善知识八大功德生起殊胜证德的罪障皆得净化，自他一切有情心中皆生起如是殊胜的证德。 <br/>
 <br/>
-重要提示：以上为依止善知识之利益的正行所修。根据时间，每一座澍注甘露净治罪障七次或更多，座座如是行之，直到生起相应觉受为止，然后转入下一所缘不依止及不如法依止之过患。此处要说明的是，依据帕邦喀大师《菩提道次第前加行六法实修轨理•胜乘幻化车》的教授，生起觉受分三阶段，第一阶段熟习所缘，为熟习此所缘的相关经论、正理、比喻、典故等；第二阶段生起造作觉受，为通过上述经论、正理、比喻、典故等反复串习，以种种方便转变自心故，心中生起强烈的定解；第三阶段生起任运觉受，为使已生的强烈定解趋于坚固，每次以种种方便生起强烈定解后，即刻以止住修住于此定解中，如是反复串习，直至生起任运觉受。详细解说请参阅《成就盛宴》仪轨中的正行修法说明。[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:15</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第二节　不依止及不如法依止善知识之过患[/align] <br/>
+重要提示：以上为依止善知识之利益的正行所修。根据时间，每一座澍注甘露净治罪障七次或更多，座座如是行之，直到生起相应觉受为止，然后转入下一所缘不依止及不如法依止之过患。此处要说明的是，依据帕邦喀大师《菩提道次第前加行六法实修轨理•胜乘幻化车》的教授，生起觉受分三阶段，第一阶段熟习所缘，为熟习此所缘的相关经论、正理、比喻、典故等；第二阶段生起造作觉受，为通过上述经论、正理、比喻、典故等反复串习，以种种方便转变自心故，心中生起强烈的定解；第三阶段生起任运觉受，为使已生的强烈定解趋于坚固，每次以种种方便生起强烈定解后，即刻以止住修住于此定解中，如是反复串习，直至生起任运觉受。详细解说请参阅《成就盛宴》仪轨中的正行修法说明。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:15</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第二节　不依止及不如法依止善知识之过患[/align] <br/>
 <br/>
 在《掌中解脱》中说：不依止的过患，正好与上述八种依止利益相反，也就是不能趋近佛位等等。 <br/>
 <br/>
@@ -235,7 +248,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 如是祈祷后，观顶上上师佛身支分中降下五彩光明甘露，注入自他一切有情身心之中，无始所集的一切罪障，尤其能障碍心中对不依止及不如法依止善知识之过患生起殊胜证德的罪障皆得净化，自他一切有情心中皆生起如是殊胜的证德。 <br/>
 <br/>
-根据时间，每一座澍注甘露净治罪障七次或更多，座座如是行之，直到生起相应觉受为止，然后转入下一所缘等如前。[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:22</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第三节　意乐依止之一修信为根本[/align] <br/>
+根据时间，每一座澍注甘露净治罪障七次或更多，座座如是行之，直到生起相应觉受为止，然后转入下一所缘等如前。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:22</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第三节　意乐依止之一修信为根本[/align] <br/>
 <br/>
 在《掌中解脱》中说：在上师的德相中，分别有毗奈耶中所说的阿阇黎德相、大乘共同道善知识德相和密宗金刚阿阇黎德相。此处主要讲大乘共同道上师的德相。《经庄严论》中说，上师应该具足以下十种功德： <br/>
 <br/>
@@ -399,7 +412,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 如是祈祷后，观顶上上师佛身支分中降下五彩光明甘露，注入自他一切有情身心之中，无始所集的一切罪障，尤其能障碍心中生起极大净信，及障碍对善知识一切所行见为功德，特别是障碍对自所见相无法决定生起证德的罪障皆得净化，自他一切有情心中皆生起如是殊胜的证德。 <br/>
 <br/>
-根据时间，每一座澍注甘露净治罪障七次或更多，座座如是行之，直到生起相应觉受为止，然后转入下一所缘等如前。[/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:25</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第四节   意乐依止之二随念深恩[/align] <br/>
+根据时间，每一座澍注甘露净治罪障七次或更多，座座如是行之，直到生起相应觉受为止，然后转入下一所缘等如前。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:25</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第四节   意乐依止之二随念深恩[/align] <br/>
 <br/>
 随念深恩分二：说法恩；师恩胜佛。 <br/>
 <br/>
@@ -499,7 +512,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 如是祈祷后，观顶上上师佛身支分中降下五彩光明甘露，注入自他一切有情身心之中，无始所集的一切罪障，尤其能障碍随念善知识深恩，特别是障碍念师恩胜佛的罪障得到清净，自他一切有情心中皆生起如是殊胜的证德。 <br/>
 <br/>
-根据时间，每一座澍注甘露净治罪障七次或更多，座座如是行之，直到生起相应觉受为止，然后转入下一所缘等如前。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:27</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第五节　加行依止法[/align] <br/>
+根据时间，每一座澍注甘露净治罪障七次或更多，座座如是行之，直到生起相应觉受为止，然后转入下一所缘等如前。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:27</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第五节　加行依止法[/align] <br/>
 <br/>
 <br/>
 《掌中解脱》中说： <br/>
@@ -567,7 +580,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 这样祈祷以后，观顶上上师佛身支分中降下五彩光明甘露，注入自他一切有情身心之中，无始所集的一切罪障，尤其能障碍如理以加行依止善知识的罪障皆得净化，自他一切有情心中皆生起如此殊胜的证德。 <br/>
 <br/>
-根据时间，每一座澍注甘露净治罪障七次或更多，座座如是行之，直到生起相应觉受为止，然后转入下一所缘等如前。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:30</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第二章   多个所缘串修[/align] <br/>
+根据时间，每一座澍注甘露净治罪障七次或更多，座座如是行之，直到生起相应觉受为止，然后转入下一所缘等如前。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:30</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第二章   多个所缘串修[/align] <br/>
 <br/>
 依止善知识多个所缘串修之不共加行： <br/>
 [b] <br/>
@@ -621,7 +634,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 根据时间，每一座澍注甘露净治罪障七次或更多，座座如是行之，直到生起相应觉受为止。 <br/>
 <br/>
-座中如此净修意乐，座间应尽自所能随时随处实行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:33</div><div class="post-body">[font=楷体_GB2312][size=5][b]    修行中最主要的是：我们必须经常忆念上师的殊胜品质，尤其是上师对我们的慈悲。藉由反覆生起对上师的信心、感恩心和恭敬心，终有一天，只要想起上师或提起上师的名字，就可以停止我们所有的凡夫认知，我们将明白上师即为佛！[/b] <br/>
+座中如此净修意乐，座间应尽自所能随时随处实行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 21:33</div><div class="post-body">[font=楷体_GB2312][size=5][b]    修行中最主要的是：我们必须经常忆念上师的殊胜品质，尤其是上师对我们的慈悲。藉由反覆生起对上师的信心、感恩心和恭敬心，终有一天，只要想起上师或提起上师的名字，就可以停止我们所有的凡夫认知，我们将明白上师即为佛！[/b] <br/>
 <br/>
 [align=center][b]下篇•《乐道》之教授[/b][/align] <br/>
 <br/>
@@ -662,7 +675,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 依止善知识利益之不共结行： <br/>
 <br/>
-以祈请故，观顶上上师本尊之身降澍五色甘露、光明，灌入自他一切有情身心，无始以来所积一切罪障，尤其障碍能对依止善知识利益生起殊胜证德的罪、障、病、魔悉皆净除，身成澄明光体，寿命、福泽等功德悉皆增长；尤其自他相续中对依止善知识的利益生起殊胜证德。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 22:52</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第二节　不依止及不如法依止善知识之过患[/align] <br/>
+以祈请故，观顶上上师本尊之身降澍五色甘露、光明，灌入自他一切有情身心，无始以来所积一切罪障，尤其障碍能对依止善知识利益生起殊胜证德的罪、障、病、魔悉皆净除，身成澄明光体，寿命、福泽等功德悉皆增长；尤其自他相续中对依止善知识的利益生起殊胜证德。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 22:52</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第二节　不依止及不如法依止善知识之过患[/align] <br/>
 <br/>
 不依止及不如法依止善知识过患之不共加行： <br/>
 <br/>
@@ -696,7 +709,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 不依止及不如法依止善知识过患之不共结行： <br/>
 <br/>
-以祈请故，观顶上上师本尊之身降澍五色甘露、光明，灌入自他一切有情身心，无始以来所积一切罪障，尤其障碍能对不依止及不如法依止善知识之过患生起殊胜证德之罪、障、病、魔悉皆净除，身成澄明光体，寿命、福泽等功德悉皆增长；尤其自他相续中生起对不依止及不如法依止善知识之过患的殊胜证德。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 22:54</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第三节　意乐依止善知识之一根本修信[/align] <br/>
+以祈请故，观顶上上师本尊之身降澍五色甘露、光明，灌入自他一切有情身心，无始以来所积一切罪障，尤其障碍能对不依止及不如法依止善知识之过患生起殊胜证德之罪、障、病、魔悉皆净除，身成澄明光体，寿命、福泽等功德悉皆增长；尤其自他相续中生起对不依止及不如法依止善知识之过患的殊胜证德。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 22:54</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第三节　意乐依止善知识之一根本修信[/align] <br/>
 <br/>
 根本修信分二： <br/>
 <br/>
@@ -751,7 +764,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 自所见相不能决定之不共结行： <br/>
 <br/>
-以祈请故，观顶上上师本尊之身降澍五色甘露、光明，灌入自他一切有情身心，无始以来所积一切罪障，尤其障碍能对于此诸善知识不起刹那观过之心，障碍顺易生起见师所作悉为功德之大信心之罪、障、病、魔悉皆净除，身成澄明光体，寿命、福泽等功德悉皆增长；尤其自他相续中于此诸善知识不起刹那观过之心，顺易生起见师所作悉为功德之大信心的殊胜证德。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 22:56</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第四节　意乐依止善知识之二念恩生敬[/align] <br/>
+以祈请故，观顶上上师本尊之身降澍五色甘露、光明，灌入自他一切有情身心，无始以来所积一切罪障，尤其障碍能对于此诸善知识不起刹那观过之心，障碍顺易生起见师所作悉为功德之大信心之罪、障、病、魔悉皆净除，身成澄明光体，寿命、福泽等功德悉皆增长；尤其自他相续中于此诸善知识不起刹那观过之心，顺易生起见师所作悉为功德之大信心的殊胜证德。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 22:56</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第四节　意乐依止善知识之二念恩生敬[/align] <br/>
 <br/>
 念恩生敬之不共加行： <br/>
 <br/>
@@ -774,7 +787,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 念恩生敬之不共结行： <br/>
 <br/>
-以祈请故，观顶上上师本尊之身降澍五色甘露、光明，灌入自他一切有情身心，无始以来所积一切罪障，尤其障碍能对随念此诸善知识恩德生起殊胜证德之罪、障、病、魔悉皆净除，身成澄明光体，寿命、福泽等功德悉皆增长；尤其自他相续中生起随念此诸善知识恩德之大恭敬的殊胜证德。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 22:57</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第五节　加行依止善知识[/align] <br/>
+以祈请故，观顶上上师本尊之身降澍五色甘露、光明，灌入自他一切有情身心，无始以来所积一切罪障，尤其障碍能对随念此诸善知识恩德生起殊胜证德之罪、障、病、魔悉皆净除，身成澄明光体，寿命、福泽等功德悉皆增长；尤其自他相续中生起随念此诸善知识恩德之大恭敬的殊胜证德。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 22:57</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第五节　加行依止善知识[/align] <br/>
 <br/>
 加行依止之不共加行： <br/>
 <br/>
@@ -797,7 +810,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 加行依止之不共结行： <br/>
 <br/>
-以祈请故，观顶上上师本尊之身降澍五色甘露、光明，灌入自他一切有情身心，无始以来所积一切罪障，尤其障碍能对以加行如法依止善知识生起殊胜证德之罪、障、病、魔悉皆净除，身成澄明光体，寿命、福泽等功德悉皆增长；尤其自他相续中生起令诸善知识生起喜悦的三种悦师之行的殊胜证德。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 22:59</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第二章　多个所缘串修[/align] <br/>
+以祈请故，观顶上上师本尊之身降澍五色甘露、光明，灌入自他一切有情身心，无始以来所积一切罪障，尤其障碍能对以加行如法依止善知识生起殊胜证德之罪、障、病、魔悉皆净除，身成澄明光体，寿命、福泽等功德悉皆增长；尤其自他相续中生起令诸善知识生起喜悦的三种悦师之行的殊胜证德。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 22:59</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]第二章　多个所缘串修[/align] <br/>
 <br/>
 依止善知识多个所缘串修之不共加行： <br/>
 <br/>
@@ -840,7 +853,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 依止善知识多个所缘串修之不共结行： <br/>
 <br/>
-以祈请故，观顶上上师本尊之身降澍五色甘露、光明，灌入自他一切有情身心，无始以来所积一切罪障，尤其障碍能对如理依止善知识生起殊胜证德之罪、障、病、魔悉皆净除，身成澄明光体，寿命、福泽等功德悉皆增长；尤其自他相续中生起如理依止善知识的殊胜证德。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 23:12</div><div class="post-body">[font=楷体_GB2312][size=5][b]    观想所有愉快的事都是上师的加持；所有痛苦的事都是上师的慈悲。重要的是，要利用此种经验增强对上师的忠心和恭敬心，而不必到别处去寻找痛苦的解药。[/b] <br/>
+以祈请故，观顶上上师本尊之身降澍五色甘露、光明，灌入自他一切有情身心，无始以来所积一切罪障，尤其障碍能对如理依止善知识生起殊胜证德之罪、障、病、魔悉皆净除，身成澄明光体，寿命、福泽等功德悉皆增长；尤其自他相续中生起如理依止善知识的殊胜证德。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 23:12</div><div class="post-body">[font=楷体_GB2312][size=5][b]    观想所有愉快的事都是上师的加持；所有痛苦的事都是上师的慈悲。重要的是，要利用此种经验增强对上师的忠心和恭敬心，而不必到别处去寻找痛苦的解药。[/b] <br/>
 <br/>
 附　录 <br/>
 <br/>
@@ -1113,7 +1126,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 善男子，以要言之，菩萨摩诃萨若能随顺善知识教，得十不可说百千亿那由他功德，净十不可说百千亿那由他深心，长十不可说百千亿那由他菩萨根，净十不可说百千亿那由他菩萨力，断十不可说百千亿阿僧祇障，超十不可说百千亿阿僧祇魔境，入十不可说百千亿阿僧祇法门，满十不可说百千亿阿僧祇助道，修十不可说百千亿阿僧祇妙行，发十不可说百千亿阿僧祇大愿。 <br/>
 <br/>
-善男子，我复略说，一切菩萨行，一切菩萨波罗蜜，一切菩萨地，一切菩萨忍，一切菩萨总持门，一切菩萨三昧门，一切菩萨神通智，一切菩萨回向，一切菩萨愿，一切菩萨成就佛法，皆由善知识力。以善知识而为根本，依善知识生，依善知识出，依善知识长，依善知识住，善知识为因缘，善知识能发起。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 23:40</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]附录二•《菩提道次第广论》摘录 <br/>
+善男子，我复略说，一切菩萨行，一切菩萨波罗蜜，一切菩萨地，一切菩萨忍，一切菩萨总持门，一切菩萨三昧门，一切菩萨神通智，一切菩萨回向，一切菩萨愿，一切菩萨成就佛法，皆由善知识力。以善知识而为根本，依善知识生，依善知识出，依善知识长，依善知识住，善知识为因缘，善知识能发起。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 23:40</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]附录二•《菩提道次第广论》摘录 <br/>
 广论•亲近善士[/align] <br/>
 <br/>
 〔科〕乙四     如何正以教授引导学徒之次第分二 <br/>
@@ -1525,7 +1538,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [b]    “依尊重时，恐有所失。”[/b] <br/>
 <br/>
-谓若不知依止轨理而依止者，不生利益反致亏损。故此依止知识法类，较余一切极为重要。见是究竟欲乐根本，故特引诸无垢经论，并以易解，能动心意，符合经义，诸善士语，而为庄严，将粗次第，略为建设。广如余处，应当了知。我等烦恼极其粗重，多不了知依师道理，知亦不行，诸闻法者，反起无量依师之罪，即于此罪亦难发生悔防等心。故应了知如前所说，胜利过患，数数思惟，于昔多生，未能如法依止诸罪，应由至心而悔，多发防护之心。自应励备法器诸法，数思圆满德相知识，积集资粮，广发大愿，为如是师，乃至未证菩提以来摄受之因。若如是者，不久，当如志力希有常啼佛子，及求知识不知厌足善财童子。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 23:50</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]附录三•《菩提道次第略论》摘录 <br/>
+谓若不知依止轨理而依止者，不生利益反致亏损。故此依止知识法类，较余一切极为重要。见是究竟欲乐根本，故特引诸无垢经论，并以易解，能动心意，符合经义，诸善士语，而为庄严，将粗次第，略为建设。广如余处，应当了知。我等烦恼极其粗重，多不了知依师道理，知亦不行，诸闻法者，反起无量依师之罪，即于此罪亦难发生悔防等心。故应了知如前所说，胜利过患，数数思惟，于昔多生，未能如法依止诸罪，应由至心而悔，多发防护之心。自应励备法器诸法，数思圆满德相知识，积集资粮，广发大愿，为如是师，乃至未证菩提以来摄受之因。若如是者，不久，当如志力希有常啼佛子，及求知识不知厌足善财童子。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-18 23:50</div><div class="post-body">[font=楷体_GB2312][size=5][align=center]附录三•《菩提道次第略论》摘录 <br/>
 略论•甲四之乙初 <br/>
 依止善知识法为道之根本[/align] <br/>
 <br/>
@@ -1712,7 +1725,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [b] “依师时恐有所失而折本。”[/b] <br/>
 <br/>
-盖不知依止法，将无利而有亏损。此依师法，比较余法尤为重要，以其为究竟利乐之根本故。我辈烦恼粗重，又不知事法师，或知而不行，多生众罪，此须努力忏改防护。诚能如是，不久当如常啼菩萨，及求善知识无厌足之善财矣。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2008-6-28 10:07</div><div class="post-body">一切如来之所说 <br/>
+盖不知依止法，将无利而有亏损。此依师法，比较余法尤为重要，以其为究竟利乐之根本故。我辈烦恼粗重，又不知事法师，或知而不行，多生众罪，此须努力忏改防护。诚能如是，不久当如常啼菩萨，及求善知识无厌足之善财矣。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2008-6-28 10:07</div><div class="post-body">一切如来之所说 <br/>
 光明炽盛威神力 <br/>
 菩提勇识精进力 <br/>
 我今所愿皆成就 <br/>

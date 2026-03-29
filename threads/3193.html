@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>印光大师关于印造流通经像的利益功德介绍（节录） - 藏密修海典藏</title>
+<title>印光大师关于印造流通经像的利益功德介绍（节录） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">印光大师关于印造流通经像的利益功德介绍（节录）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">司</div>司马司发表于 2008-5-4 16:13</div><div class="post-body">[size=3]印光大师关于印造流通经像的利益功德介绍（节录） <br/>
+<div class="post"><div class="post-header"><div class="avatar">司</div>司马司发表于 2008-5-4 16:13</div><div class="post-body">[size=3]印光大师关于印造流通经像的利益功德介绍（节录） <br/>
 <br/>
 ---转载--- <br/>
 <br/>
@@ -39,7 +52,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 夙生吝于教导，以及肆口谤法，肆意毁谤有德之人者，沉重罪毕受后，还得多生蠢愚无知报。夙生为贪口腹，恣杀牲禽，以及曾为渔夫屠夫，猎户庖丁，与曾操制造凶器火器毒药等权，助成他人凶杀之业者，沉沦重罪毕受后，还得多生恶疾残废报。夙生贪欲无厌，止知剥人以肥己，悭吝鄙啬，不肯周急而解囊者，沉沦重罪毕受后，还得多生贫穷困厄报。夙生知见狭劣，心存谄曲，巧言令色，掩饰行欺，逐境攀援，容量浅窄，因循怠惰，倚赖性成。烦恼垢重，怨愤易发，妒忌心深，情欲炽盛者，沉沦重罪毕受后，九、永离恶道，受生善道。相貌端正，天资超越，福禄殊胜：一切含灵，舍身受身，往返六道，如车转轮。千生万劫，常在梦境。作善不已，罪毕斯升。骄纵忘本，种堕落因。作恶多端，福削寿倾。百千万倍，恶报堪惊。地狱饿鬼，以及畜生，堕三恶道，万劫沉沦。难得易失，如此人身。作十善业，修五戒行。生人天道，夙福非轻。诸佛如来，悲悯同深。广为说法，首重摄心。正念无作，离垢超尘。是故印造经像，上契佛心。仅此微愿，已种福因。自是厥后，作再来人。诸福圆具，出类超群。十、能为一切众生，种植善根。以众生心，作大福田，获无量胜果。所生之处，常得见佛闻法。直至三慧宏开，六通亲证，速得成佛： 佛世有一城人众难于摄化。佛言此辈人众，与目连有缘。因遣目连往。全城人众，果皆倾心向化。诸弟子问佛因缘。佛言目连往劫，曾为樵夫。一日入山伐木，惊起无数乱蜂。其势汹汹，欲来相犯。目连戒勿行凶，且慰之曰：汝等皆有佛性，他年我若成道，当来度汝等。今此城人众，乃当日群蜂之后身也。因目连曾发一普度之念，故与有缘。种因于多劫之前，一旦机缘成熟，而收此不可思议之胜果。由此观之，吾人生生所经过之时代，在在所接触之万类，一一皆与我有缘。一一众生至灵妙之心地，皆可作为自他兼利之无上福田。我既于一一众生心田中，散播福德种子。一一众生，皆与我有大缘。一一众生心田中，所结无量大数之福果，虽谓此无量大数生生不已之福果，即为播因者，道果成熟时期之妙庄严品，亦无不可。且吾人能先行洁净治自己之心田，接受十方三世诸佛如来之无上法宝，作为脱胎换骨，转凡成圣之种子。吾身即与十方三世诸佛如来，有大因缘。诸佛愿海胜功德，一一摄于我心中。我愿与佛无差别，诸佛慈愿互相摄。因该果海，果彻因源。无边胜福，即缔造于此日印造经像，宏法利生之一真心中矣。普愿现在未来一切有缘，善觅福田，善结胜缘。勿任妙用现前之大好光阴，如滔滔逝水之在眼前足底飞过也。 回向文愿所有法施功德，回向赞助、见闻、随喜、流通者，及皆悉回向尽法界、虚空界一切众生，依佛菩萨威德力、法施功德力，普愿消除一切罪障，福慧具足，常得安乐，无诸病苦。欲行恶法，皆悉不成。所修善业，皆速成就。关闭一切诸恶趣门，开示人天涅盘正路。家门清吉，身心安康，先亡祖* ，历劫怨亲，俱蒙佛慈，获本妙心。兵戈永息，礼让兴行，人民安乐，天下太平。四恩总报，三有齐资，今生来世脱离一切外道天魔之缠缚，生生世世永离恶道，离一切苦得究竟乐，得遇佛菩萨、正法、清净善知识，临终无一切障碍而往生有缘之佛净土，同证究竟圆满之佛果。 <br/>
 <br/>
-愿以此功德 庄严佛净土 上报四重恩 下济三涂苦 普愿尽法界 沈溺诸有情 悉发菩提心 尽此一报身 同生极乐国 [/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">一</div>一杯菠萝蜜发表于 2012-1-6 21:12</div><div class="post-body">我能深入于未来  尽一切劫为一念 <br/>
+愿以此功德 庄严佛净土 上报四重恩 下济三涂苦 普愿尽法界 沈溺诸有情 悉发菩提心 尽此一报身 同生极乐国 [/size] </div></div><div class="post"><div class="post-header"><div class="avatar">一</div>一杯菠萝蜜发表于 2012-1-6 21:12</div><div class="post-body">我能深入于未来  尽一切劫为一念 <br/>
 三世所有一切劫  为一念际我皆入 <br/>
 我于一念见三世  所有一切人师子 <br/>
 亦常入佛境界中  如幻解脱及威力 <br/>

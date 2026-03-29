@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>妙法圣念处经（经集部） - 藏密修海典藏</title>
+<title>妙法圣念处经（经集部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">妙法圣念处经（经集部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 20:23</div><div class="post-body">[font=楷体_GB2312][size=24pt][size=5]　　妙法圣念处经卷第一[/size][font=楷体_GB2312] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 20:23</div><div class="post-body">[font=楷体_GB2312][size=24pt][size=5]　　妙法圣念处经卷第一[/size][font=楷体_GB2312] <br/>
 [size=5][font=楷体_GB2312]  大宋西天中印度摩伽陀国那烂陀寺三藏传教大师赐紫沙门臣法天奉　诏译[/font][/font] <br/>
 [font=楷体_GB2312][size=24pt][size=5][/size][/size] <br/>
 [size=5][font=楷体_GB2312]　如是我闻。一时世尊。在大众中。天人围繞。瞻仰尊颜。目不暂舍。时诸大众。即于佛前。而说偈言[/font][/font] <br/>
@@ -192,7 +205,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [size=5][font=楷体_GB2312]        轮回三界内  往来如蚁环[/font][/font] <br/>
 [size=5][font=楷体_GB2312]        业果互为缘  相续无穷尽[/font][/font][/b] <br/>
 [font=楷体_GB2312][size=24pt][size=5][/size][/size] <br/>
-[size=5][font=楷体_GB2312]　　尔时世尊。说此偈已。告诸苾刍。若获圣果。方免轮回。无所系属。自在安乐。业及业果。不能倾动。若复有人。起贪瞋惑。及造诸非。堕于地狱。猛焰焚烧。一切身体。受种种苦。发声号哭。思惟方便。不能得脱。如是苦涩。不善之业。愚迷自造。譬如猛火焚烧林野。一切草木无由得免。恶业亦尔。轮回地狱。受诸苦恼。不能远离。若复有人。舍离恶友。不造诸非。了悟因果。离诸疑谤。修习正见。信乐真如。寂静安乐。远离轮回。及诸苦恼。最上无比。无相无为。离妄颠倒。常乐我净。自在无碍。离诸系缚。善不善业。皆悉远离。[/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 20:30</div><div class="post-body">[font=楷体_GB2312][size=5][size=6]　　妙法圣念处经卷第二[/size] <br/>
+[size=5][font=楷体_GB2312]　　尔时世尊。说此偈已。告诸苾刍。若获圣果。方免轮回。无所系属。自在安乐。业及业果。不能倾动。若复有人。起贪瞋惑。及造诸非。堕于地狱。猛焰焚烧。一切身体。受种种苦。发声号哭。思惟方便。不能得脱。如是苦涩。不善之业。愚迷自造。譬如猛火焚烧林野。一切草木无由得免。恶业亦尔。轮回地狱。受诸苦恼。不能远离。若复有人。舍离恶友。不造诸非。了悟因果。离诸疑谤。修习正见。信乐真如。寂静安乐。远离轮回。及诸苦恼。最上无比。无相无为。离妄颠倒。常乐我净。自在无碍。离诸系缚。善不善业。皆悉远离。[/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 20:30</div><div class="post-body">[font=楷体_GB2312][size=5][size=6]　　妙法圣念处经卷第二[/size] <br/>
 大宋西天中印度摩伽陀国那烂陀寺三藏传教大师赐紫沙门臣法天奉　诏译 <br/>
 [/size] <br/>
 [font=楷体_GB2312][size=5]　　尔时会中诸苾刍等。闻佛所说。地狱焚烧。受苦无量。悲啼雨泪。礼敬佛足。而白佛言。此诸地狱。受罪有情。修何因行免于未来诸苦痛恼。不被缠缚。速得解脱。唯愿慈悲。利益未来。敷演斯事。 <br/>
@@ -280,7 +293,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 轮回恶趣中        业尽方能出[/b] <br/>
 <br/>
 尔时佛告诸比丘言。若复有人。于诸顺情妙触之境。而起染着。恒非舍离。应作坚硬苦涩等想。无常败坏体不究竟。如电如梦。自性非有。于诸妙触。皆悉远离。比丘应知。于诸欲境。勿起爱着。及诸世间。过去未来。所有可爱。染欲尘境。应当舍离。 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 20:39</div><div class="post-body">[font=楷体_GB2312][size=5]　[size=6]　妙法圣念处经卷第三 <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 20:39</div><div class="post-body">[font=楷体_GB2312][size=5]　[size=6]　妙法圣念处经卷第三 <br/>
 [/size]　　大宋西天中印度摩伽陀国那烂陀寺三藏传教大师赐紫沙门臣法天奉　诏译 <br/>
 [/size] <br/>
 [font=楷体_GB2312][size=5]　　尔时佛告诸比丘言。若复有人。于未来世。求生人天。厌离苦果。应当远离诸业烦恼暴恶淫逸。及离妄语破坏损恼一切有情。修诸善业。渐令增长。相续恒时。获报安乐。舍离苦恼。尔时世尊。即说偈言 <br/>
@@ -423,7 +436,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 光明恒照耀        不舍利他心[/b] <br/>
 <br/>
 尔时帝释。说此偈已。合掌恭敬。在一面立。佛告天帝。三乘净法。汝应修习。离诸系缚。平等清白。能离险隘。绝诸黑暗。光明无染。犹如珍宝。体性清净。诸天欢喜。爱乐最胜。寂静修习。奉持不舍。又于戒施及三摩地。观察爱乐。亦如诸天。敬事天主。远离过非。尊仰瞻奉。及诸有情。柔软和美。若生天上。获身净妙。远离贪恚。息除尘垢。及诸境界。贪忿因缘。解脱沈溺。破坏诸有。亲族朋寮。互相憎嫉。五欲淤泥。悉皆远离。处诸有情。谦敬和顺。安住恒时。善离诸染。威仪有轨。抖擞烦恼。降伏魔罗。智慧安住。最胜清净。善护三业。恒习静虑。弃舍恶友。及非梵行。永离系缚。恒处诸天。良友知识。劝发大心。速登彼岸。 <br/>
-[/size][/size][/size] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 20:45</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]　　妙法圣念处经卷第四[/size] <br/>
+[/size][/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 20:45</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]　　妙法圣念处经卷第四[/size] <br/>
 [/b]　　大宋西天中印度摩伽陀国那烂陀寺三藏传教大师赐紫沙门臣法天奉　诏译 <br/>
 [/size] <br/>
 [font=楷体_GB2312][size=5]　　尔时世尊。四众围绕。乐闻深法。瞻仰踊跃。时诸苾刍白世尊言。若复有人。爱乐诸天。受胜妙乐。不堕三涂。修何因行。获此胜报。愿佛演说。利益未来。[/size][/size] <br/>
@@ -506,7 +519,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 复次比丘。应当观察。轮回诸苦。众多逼迫。应当厌离。审谛观察。彼非究竟。无常败坏。如梦如焰。芭蕉非实。乃至色界。及无色界。所有境界。虚幻不实。而非究竟。应当厌离。不应封着。妄为最胜。令心爱乐。 <br/>
 <br/>
 佛告比丘。圆寂安乐。远离诸相。体非一异。亦非三世。彼此俱非。离诸系缚。究竟圆满。汝当趣求。勿应弃舍。自在无碍。寂静无染。应当速证。 <br/>
-[/size][/size][/size] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 20:54</div><div class="post-body">[font=楷体_GB2312][size=5][size=6][b]     妙法圣念处经卷第五[/b][/size] <br/>
+[/size][/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 20:54</div><div class="post-body">[font=楷体_GB2312][size=5][size=6][b]     妙法圣念处经卷第五[/b][/size] <br/>
 大宋西天中印度摩伽陀国那烂陀寺三藏传教大师赐紫沙门臣法天奉　诏译 <br/>
 [/size] <br/>
 [font=楷体_GB2312][size=5]　　尔时天主帝释。而白众言。汝所作善。守护增长。如意欢喜。即说伽陀曰。[/size][/size][font=楷体_GB2312][size=5] <br/>
@@ -787,7 +800,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 增长于五力        四念与正勤 <br/>
 及彼四神足        如是而不退 <br/>
 必至涅盘城        恒受寂灭乐 <br/>
-[/b][/size][/size][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 21:41</div><div class="post-body">[font=楷体_GB2312][size=5][size=6][b]　　妙法圣念处经卷第六[/b][/size] <br/>
+[/b][/size][/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 21:41</div><div class="post-body">[font=楷体_GB2312][size=5][size=6][b]　　妙法圣念处经卷第六[/b][/size] <br/>
 西天中印度摩伽陀国那烂陀寺三藏传教大师赐紫沙门臣法天奉　诏译 <br/>
 [/size] <br/>
 [font=楷体_GB2312][size=5][b]        于罪不怖畏        彼人无智慧 <br/>
@@ -1095,7 +1108,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 若彼智者        平等宣说        德与无德 <br/>
 一切执我        为苦乐根        如我世尊 <br/>
 伽他书典        离欲清净        获益安乐 <br/>
-[/size][/b][/size][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 22:05</div><div class="post-body">[b][font=楷体_GB2312][size=6]　　妙法圣念处经卷第七 <br/>
+[/size][/b][/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 22:05</div><div class="post-body">[b][font=楷体_GB2312][size=6]　　妙法圣念处经卷第七 <br/>
 [/size][/size][/b][font=楷体_GB2312][size=5]　　西天中印度摩伽陀国那烂陀寺三藏传教大师赐紫沙门臣法天奉　诏译 <br/>
 <br/>
 [/size][/size][font=楷体_GB2312][size=5]　　尔时有飞禽。名未曾有见。彼行不散乱。而说颂曰。 <br/>
@@ -1433,7 +1446,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 愚迷不信因        无因亦无果 <br/>
 如觅水中酥        不受于安乐 <br/>
 迷罪心行暗        非善非安乐 <br/>
-烦恼互相增        见彼未曾有[/b][/size][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 22:26</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]　　妙法圣念处经卷第八[/size] <br/>
+烦恼互相增        见彼未曾有[/b][/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-22 22:26</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]　　妙法圣念处经卷第八[/size] <br/>
 [/b]　　西天中印度摩伽陀国那烂陀寺三藏传教大师赐紫沙门臣法天奉　诏译 <br/>
 [/size] <br/>
 [font=楷体_GB2312][size=5]　　又复宣说轮回颂曰 <br/>

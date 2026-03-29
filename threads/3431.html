@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>格鲁派不共三愿 - 藏密修海典藏</title>
+<title>格鲁派不共三愿 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">格鲁派不共三愿</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">火</div>火天焱泽发表于 2008-7-15 18:02</div><div class="post-body">[font=楷体_GB2312][size=5]格鲁派不共三愿 <br/>
+<div class="post"><div class="post-header"><div class="avatar">火</div>火天焱泽发表于 2008-7-15 18:02</div><div class="post-body">[font=楷体_GB2312][size=5]格鲁派不共三愿 <br/>
 <br/>
 [size=4]        帕绷喀大师造 <br/>
 法尊法师、仁钦曲扎汉译 <br/>
@@ -66,7 +79,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 护教施主威力洪 善慧佛教愿增长 <br/>
 [/b] <br/>
 后跋： <br/>
-本文因意乐境上，智慧广大之笠增巴洛桑丹巴劝请，复见宗咯巴大士之圣教现今总体上已如为医师所弃元气耗尽的病者，故不杂少分我执而作祈愿，若能稍加延续岂不善哉！出家师贡却丹贝准美敬书。[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">火</div>火天焱泽发表于 2008-7-15 18:03</div><div class="post-body">[font=楷体_GB2312][size=5]二、值遇三界法王大宗咯巴圣教愿文---摄受悲心之皈依施 <br/>
+本文因意乐境上，智慧广大之笠增巴洛桑丹巴劝请，复见宗咯巴大士之圣教现今总体上已如为医师所弃元气耗尽的病者，故不杂少分我执而作祈愿，若能稍加延续岂不善哉！出家师贡却丹贝准美敬书。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">火</div>火天焱泽发表于 2008-7-15 18:03</div><div class="post-body">[font=楷体_GB2312][size=5]二、值遇三界法王大宗咯巴圣教愿文---摄受悲心之皈依施 <br/>
 [b]静猛文殊诸佛父 善慧父子传承师 <br/>
 愿皆发起大悲力 令我众愿速圆满 <br/>
 愿我一切生世中 终不堕落无暇处 <br/>
@@ -122,7 +135,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/b] <br/>
 后跋： <br/>
 此《值遇三界法王大宗咯巴圣教愿文•摄受悲心之皈依施》者，因格鲁派施主森泄扎沃巴地方头人班觉索朗旺秋与持多闻修行幢善知识阿旺索巴二位先前馈赠厚礼而作劝请。我本人因为值遇文殊怙主大宗咯巴圣教少分别故，对此具有不退转随法行之猛力信心，亦极欲造一如是愿文，然而因远行多麦且忙于其他讲著无暇顾及而未果，最后于殊胜周火牛年觜宿月上弦第二欢喜妙日，化名帕繃喀者于自寝室阿兰若扎西曲林圆满造讫。缮写者为邓曲科寺僧比丘洛桑多杰。以此善根之力令自他并相关者生生不离文殊怙主上师圣教，愿如是成就！ <br/>
-（此愿文除后跋外，颂文乃沿用法尊法师原译）[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">火</div>火天焱泽发表于 2008-7-15 18:04</div><div class="post-body">[font=楷体_GB2312][size=5]三、全圆道断除错乱愿文---深义心要摩尼 <br/>
+（此愿文除后跋外，颂文乃沿用法尊法师原译）[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">火</div>火天焱泽发表于 2008-7-15 18:04</div><div class="post-body">[font=楷体_GB2312][size=5]三、全圆道断除错乱愿文---深义心要摩尼 <br/>
 [b]诸皈依处尽所有 金刚坛城合一舞 <br/>
 恩师三密诸加持 吉祥垂赐我三门 <br/>
 如实教诫师悲音 显密道次深义精 <br/>
@@ -192,10 +205,10 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 后跋： <br/>
 此格鲁派不共三愿是由帕繃喀管家呈烈达吉出资刻板，而帕繃喀为其作善根回向偈，愿众生利益增上。 <br/>
 经板乃于昌都玛尔塘米拉康与道次第广论同刻，善哉！ <br/>
-吉祥圆满[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">大</div>大地修行者发表于 2009-3-9 13:53</div><div class="post-body">静猛文殊诸佛父 善慧父子传承师 <br/>
+吉祥圆满[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大地修行者发表于 2009-3-9 13:53</div><div class="post-body">静猛文殊诸佛父 善慧父子传承师 <br/>
 愿皆发起大悲力 令我众愿速圆满 <br/>
 愿我一切生世中 终不堕落无暇处 <br/>
-恒受大乘四轮身 值遇善慧胜者教 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">密</div>密海明灯发表于 2009-11-23 19:25</div><div class="post-body">愿令众生常得安乐。无诸病苦。欲行恶法皆悉不成。所修善业。皆速成就。关闭一切诸恶趣门。开示人天涅盘正路。若诸众生。因其积集诸恶业故。所感一切极重苦果。我皆代受。令彼众生悉得解脱。究竟成就无上菩提。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">结</div>结交新朋友发表于 2012-7-25 17:35</div><div class="post-body">成就悉源释尊金刚持 <br/>
+恒受大乘四轮身 值遇善慧胜者教 </div></div><div class="post"><div class="post-header"><div class="avatar">密</div>密海明灯发表于 2009-11-23 19:25</div><div class="post-body">愿令众生常得安乐。无诸病苦。欲行恶法皆悉不成。所修善业。皆速成就。关闭一切诸恶趣门。开示人天涅盘正路。若诸众生。因其积集诸恶业故。所感一切极重苦果。我皆代受。令彼众生悉得解脱。究竟成就无上菩提。 </div></div><div class="post"><div class="post-header"><div class="avatar">结</div>结交新朋友发表于 2012-7-25 17:35</div><div class="post-body">成就悉源释尊金刚持 <br/>
 无缘大悲宝藏观世音 <br/>
 无垢胜慧智王妙吉祥 <br/>
 魔军无余摧行秘密主 <br/>

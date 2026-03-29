@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大乘瑜伽金刚性海曼殊室利千臂千钵大教王经 - 藏密修海典藏</title>
+<title>大乘瑜伽金刚性海曼殊室利千臂千钵大教王经 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大乘瑜伽金刚性海曼殊室利千臂千钵大教王经</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2012-12-9 06:12</div><div class="post-body">[size=5]大乘瑜伽金刚性海曼殊室利千臂千钵大教王经卷第一(并序) <br/>
+<div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2012-12-9 06:12</div><div class="post-body">[size=5]大乘瑜伽金刚性海曼殊室利千臂千钵大教王经卷第一(并序) <br/>
 大兴善寺三藏沙门大广智不空奉　诏译 <br/>
 叙曰。大唐开元二十一年。岁次癸酉。 <br/>
 正月一日辰时。于荐福寺道场内。 <br/>
@@ -317,7 +330,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 云何疾得入此方便而证此观。是时持世菩萨。 即当自心眼应当观照。入自心性性体法界。 得见自性心体。证于如来金刚圣性。 洞达法空无边觉智。大寂慧空观其大智。 入心心空证空复空。心如虚空同于法界。 了了见性名证自性圣智法体是本心性。 神用自在清虚一静法同法性真如实际。 若达此性则名本源自性真实圣智无性。是故持世菩萨摩诃萨。 往昔因地当本大愿。 共毘卢遮那如来令度一切菩萨及一切众生。 同入此愿诸佛圣性金刚菩提大愿修行佛三藐三摩地甚深法忍波罗蜜多。住于清净法身实性观者。 速成正觉无上正等菩提。当得阿耨多罗疾当成佛。 <br/>
 是故释迦牟尼如来。深叹持世菩萨摩诃萨。 汝曾久远供养诸佛菩萨。 今说如来金刚秘密甚深菩提不可思议。是时诸大菩萨。 见如来叹持世菩萨摩诃萨。大众欢喜信受奉行。 <br/>
 <br/>
-大乘瑜伽金刚性海曼殊室利千臂千钵大教王经卷第三[/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2012-12-9 06:13</div><div class="post-body">[size=5]大乘瑜伽金刚性海曼殊室利千臂千钵大教王经卷第四 <br/>
+大乘瑜伽金刚性海曼殊室利千臂千钵大教王经卷第三[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2012-12-9 06:13</div><div class="post-body">[size=5]大乘瑜伽金刚性海曼殊室利千臂千钵大教王经卷第四 <br/>
 大兴善寺三藏沙门大广智不空奉　诏译 <br/>
 是时如来令普明菩萨。 说无尽法藏真际观门。 <br/>
 三者有东方无极日耀世界普明菩萨摩诃萨菩提萨埵。对于如来大众前。 复为现在一切诸大菩萨摩诃萨。 陈说秘密真如性净法藏真际观。 亦令当来一切菩萨及一切众生。 修入诸佛一切般若波罗蜜海藏三摩地。 <br/>
@@ -501,7 +514,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 是时释迦牟尼如来。于舍卫国中祇园精舍大道场会中。 告诸大菩萨摩诃萨。 一切大梵诸天王帝释天众。龙神八部修罗鬼神夜叉众。 四部弟子比丘比丘尼。善男子善女人众。 尔时释迦如来在大众中。 入金刚寂智无心定三摩地三昧。从三昧起放大慈大悲法性神光。 遍照三千大千世界大梵诸天众。 菩萨摩诃萨四部众等比丘比丘尼及诸天龙修罗鬼神众及一切众生等。如来告示。 普令志求无上正等菩提者。是故世尊告语诸大菩萨。 应是修学如来大乘瑜伽秘密金刚三摩地法教。 行人更须入此道场。 修入一切佛心金刚大智秘密法门观。 如是一切修行菩萨四部众等比丘比丘尼等。先当持钵乞食。 于四威仪详序而行次第乞已。于施主家供养食讫。 还至本处澡浴清净。复入道场不得懒堕睡眠。 懈怠不勤断绝休废。如是菩萨及四部众等。 不依此法受师教戒者。 则不得成无上菩提诸佛道果故。 <br/>
 是时释迦牟尼如来在大众会中。 告诸菩萨言。 吾今说诸佛如来瑜伽金刚秘密圣性菩提三摩地法教者。 如来起大悲智救摄有情。 令一切菩萨修习圣性金刚菩提法观。是时一切大众诸大菩萨。 四部人众天龙八部等。闻佛所说踊跃欢喜。 赞叹如来演不思议教法。深生惭愧得未曾有信受奉行。 <br/>
 <br/>
-大乘瑜伽金刚性海曼殊室利千臂千钵大教王经卷第六[/size] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2012-12-9 06:14</div><div class="post-body">[size=5]大乘瑜伽金刚性海曼殊室利千臂千钵大教王经卷第七 <br/>
+大乘瑜伽金刚性海曼殊室利千臂千钵大教王经卷第六[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2012-12-9 06:14</div><div class="post-body">[size=5]大乘瑜伽金刚性海曼殊室利千臂千钵大教王经卷第七 <br/>
 大兴善寺三藏沙门大广智不空奉　诏译 <br/>
 尔时释迦牟尼如来。说菩萨修行次位。 第四云何次第得入净土门。 一者入左字观本净妙行义。观自在王如来说妙观理趣净土门。 就此门六品。 <br/>
 一者先演不思议法界圣道如来真如法藏自在圣智第七品。 二者后说有三贤菩萨入法位次第修行回向菩提第八品。如来次第先当且说圣智品法义门。 是时世尊说一切菩萨修学大乘。 求无上正等菩提者。 入四十二位修证三贤十圣地等觉妙觉佛地者。菩萨于大乘法中。 广发大愿行菩萨道。修入如来圣行菩提。 从地前次第而学。从此修习凡有二义。云何有二。 一者外凡。二者内凡。云何名为外凡。 所谓菩萨持五戒十善。修诸业行。 学习六波罗蜜散心修持得生天上。亦生人间成有为福受。 有漏快乐故。二者云何内凡。 所谓菩萨学习菩提无为无漏福。次第修行位中学有三等。 何者为三。一者下贤。二者中贤。三者上贤。 且初下贤菩萨入十信者。修学十信行得十住行。 扶接引为信成就故。 次有中贤菩萨入十住者。修学十住行得十回向。 相扶接引名为解行成就故。三者上贤菩萨入十回向者。 于加行位中修持十回向。学耎顶忍世第一法。 名为次第修证。成就圣胎渐登圣位。 进修菩提成就故。已下三贤菩萨位。纯在有漏修学故。 如来次第说十圣位等妙二地。 菩萨有四等上中下及最上等。云何为四。 一者且下等六地已下位菩萨。修学三密三摩地者。 名为随相行。用修行入定半有漏半无漏。 入定即无漏出定则有漏故。 二者次有中等七地位菩萨。修学三密三摩地者。名为无相用。 修持入定者住于三昧。 则得分证无漏圣道渐证修行入。菩提道次第成就故。 三者上等八地位菩萨摩诃萨乃至法云地菩萨。 修学三密三摩地者。是名无功用定。 住是三昧得名纯无漏道。证入金刚圣性运通。 无为自在神力无相。无功用任运成就。 得登佛地进成菩提故。四者次有最上殊胜等觉妙觉二位菩萨。 修入佛地住如来三摩地故。得三种意生身。 证金刚法界圣性三昧。与真如同无相无念。 一念慧得金刚喻定。同佛不坏金刚性。 入无为圣智道圣性相应。 则成无上正等菩提智身法身满足故。名为如来。 是故释迦牟尼如来。说一切菩萨及一切众生。 修学如来无上菩提者。 依一切诸佛金刚圣觉智修行得入佛地。云何入圣觉智得入佛地。 菩萨修入圣智者则是觉也。觉者佛也。 觉诸有情圣智相应。是名众生本自觉也。 觉本心源即名了见烦恼性者。是名菩提性也。 菩提性者则是法身佛也。是故世尊言告诸菩萨摩诃萨。 所有一切众生求于无上菩提者。 菩萨常当修持如来一切觉。一切觉者是名一觉。 觉诸情识空寂无生。何以故决定本性本无动摇。 佛言一切境界本自是空。一切识识本来空性。 一切境识。本即是空。如何言见。佛言见即为妄。 何以故一切万有本自于空。 无生无相本来不有。本不自名悉皆空寂。 一切法相亦复如是。一切众生身亦如是。身尚不久云何有见。 佛言本来清净故是名本觉。 觉本净性清彻无处。是故名为法身智身满足故。 佛言一切众生当用觉观。觉本心性体静无生。 离众生垢故。觉本无寂离涅盘性故。 觉应诸法于一切法无住动故。无动无住如菩提故。 譬如毘楞伽宝随色而应。同为一体无有分别。 如来佛性随情皆有悉应清净。 众生德感亦复如是。菩萨若证心无所住无有出入。 得同唵摩罗清净佛识故。佛言告语诸菩萨摩诃萨。 四部弟子比丘比丘尼善男子善女人等。 修行如来金刚三密秘密圣性菩提者。 则得迅疾玄入通证如来佛心。 速得阿耨多罗三藐三菩提故。 是故如来告诸一切大众菩萨摩诃萨。应当修学。 <br/>

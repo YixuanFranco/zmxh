@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>萨迦大威德怖畏金刚 - 藏密修海典藏</title>
+<title>萨迦大威德怖畏金刚 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/诸佛如来本尊坛.html">诸佛如来本尊坛</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">萨迦大威德怖畏金刚</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2005-11-28 21:07</div><div class="post-body">[img]http://www.zmxh.com/bbs/UploadFile/2005-11/200511282142139658.jpg[/img] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2007-9-30 14:18</div><div class="post-body">[font=宋体][size=12pt][font=楷体_GB2312][size=5]在西藏密法传承中，从时间以及修持体系来说，主要分两大传承：旧密和新密。旧密主要是莲花生大师所传之大圆满等法，新密是后宏期萨迦、嘎举、格鲁等教派所传之密法。后宏期所传密法也是种类繁多，本尊各异，无上密通常所见一般有时轮金刚、密集金刚、大威德金刚、胜乐金刚、喜金刚、大轮手金刚等等。在所有无上密本尊中，格鲁派最重视三大本尊，即密集金刚、胜乐金刚和怖畏金刚。 <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2005-11-28 21:07</div><div class="post-body">[img]http://www.zmxh.com/bbs/UploadFile/2005-11/200511282142139658.jpg[/img] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2007-9-30 14:18</div><div class="post-body">[font=宋体][size=12pt][font=楷体_GB2312][size=5]在西藏密法传承中，从时间以及修持体系来说，主要分两大传承：旧密和新密。旧密主要是莲花生大师所传之大圆满等法，新密是后宏期萨迦、嘎举、格鲁等教派所传之密法。后宏期所传密法也是种类繁多，本尊各异，无上密通常所见一般有时轮金刚、密集金刚、大威德金刚、胜乐金刚、喜金刚、大轮手金刚等等。在所有无上密本尊中，格鲁派最重视三大本尊，即密集金刚、胜乐金刚和怖畏金刚。 <br/>
 在近几十年来，学习藏传佛教者对大威德金刚应该不会很陌生了。自能海法师进藏学法并翻译仪轨、经论，在内地建立僧团后，弟子中够格者大都修习大威德金刚本尊。 <br/>
 在藏地，大威德金刚一般是怖畏金刚、红雅曼达嘎和黑雅曼达嘎的总称，这三尊的本续都属于无上密的父续，而且兼具母续修法要点。虽然都属于大威德，但文武合修之怖畏金刚后来得到格鲁派宗喀巴大师的极力尊崇和推荐，在格鲁派内非常流行。 <br/>
 大威德（梵文Vajra Bhairava 藏文Dorje Jigje）法系来源是这样的。最初是由印度大成就者拉里达在念诵《文殊真实名经》的时候，读到经中有“怖畏金刚施怖畏”、“金刚王者六面怖”及“雅曼德迦障中王”等句，便思考这些含义，而猜测到一定有一种称为怖畏金刚的密法。于是他前往印度各大师及班智达处访求这一法门。 <br/>
@@ -57,35 +70,35 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 法理本源九部经所明法理为如幻俗谛义与如虚空胜谛义，其所摄之道为三十七道品，其道之核心现证实义之法有十六种性空见，其现证方便之道乃与大乐相结合也。其道之成果是世间八成就与出世间不共八成就，其终极目标是盖障根除之涅槃。因此对于恐怖之怖畏金刚本尊，应如此领悟身相之清净义。 <br/>
 三十四手所执手帜法器之象征如下： <br/>
 钺刀象征砍断无明愚痴，镖枪象征戳破能所二取执著，捣杵象征降伏失念，鱼刀象征割断生死轮回，矛枪象征摧破三门过失，钺斧象征破除有情之障碍习气，戈枪象征破除邪见，箭象征刺穿分别之苦恼，铁钩象征钩召智尊与魔类，颅杖象征降伏业障，天杖象征转化为大乐菩提心之自性，剑轮象征转法-轮，五钴金刚象征五智自性，金刚鎚象征降伏贪吝之障，剑象征宝剑等悉地，手鼓象征以妙乐音声召唤诸佛，满血颅器象征还净毁坏之誓句，梵天头颅象征以大悲心饶益有情，盾牌象征战胜诸魔，人足象征行者迈向正觉佛境，套索象征以正慧系缚心相续，弓象征战胜三界，人肠象征通达诸法无有自性，铃象征弘扬般若波罗密多之法音，人臂象征息灾等事业，裹尸布象征去除有碍证空之障垢，人尸幢象征由通达诸法究竟空寂现证空性，三角火灶象征一切诸法之明性，带发颅器象征大悲甘露充满心相续，结期克印之人手象征威吓诸魔，三角幡象征三门之空性悉为一体，护摩风布象征一切诸法如幻，象皮象征摧破无明。 <br/>
-[/size][/font][/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">居</div>居扎发表于 2007-10-31 08:22</div><div class="post-body">格鲁派独雄大威德,名字叫胜魔,是 杰仁波切自己主修的不共本尊.一般在格鲁中的步骤是,先大威德,再胜乐轮,之后是那洛康卓,尤其在近代帕帮喀流传系统里更是如此.大威德的翻译从清皇室开始降至近代到现在,一直很昌隆.民国里古洗里恭却多吉喇嘛和能海上师先后各自比较完整翻译其次第. </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">炫</div>炫烨发表于 2007-11-11 14:51</div><div class="post-body">顶礼大威德怖畏金刚！！！ <br/>
+[/size][/font][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">居</div>居扎发表于 2007-10-31 08:22</div><div class="post-body">格鲁派独雄大威德,名字叫胜魔,是 杰仁波切自己主修的不共本尊.一般在格鲁中的步骤是,先大威德,再胜乐轮,之后是那洛康卓,尤其在近代帕帮喀流传系统里更是如此.大威德的翻译从清皇室开始降至近代到现在,一直很昌隆.民国里古洗里恭却多吉喇嘛和能海上师先后各自比较完整翻译其次第. </div></div><div class="post"><div class="post-header"><div class="avatar">炫</div>炫烨发表于 2007-11-11 14:51</div><div class="post-body">顶礼大威德怖畏金刚！！！ <br/>
 顶礼大威德怖畏金刚！！！ <br/>
-顶礼大威德怖畏金刚！！！ </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">六</div>六面古素发表于 2008-6-13 01:03</div><div class="post-body">无上法 甚深  微妙 <br/>
+顶礼大威德怖畏金刚！！！ </div></div><div class="post"><div class="post-header"><div class="avatar">六</div>六面古素发表于 2008-6-13 01:03</div><div class="post-body">无上法 甚深  微妙 <br/>
 大本尊 无比  神威 <br/>
 我今顶礼  赞叹 <br/>
-威德    王   无上法  难得  得闻 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2008-6-28 22:42</div><div class="post-body">南无古汝贝 <br/>
+威德    王   无上法  难得  得闻 </div></div><div class="post"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2008-6-28 22:42</div><div class="post-body">南无古汝贝 <br/>
 南无布达亚 <br/>
 南无达摩亚 <br/>
 南无桑噶亚 <br/>
-顶礼大威德怖畏金刚！！！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2008-7-25 19:16</div><div class="post-body">顶礼大威德怖畏金刚！！！ <br/>
+顶礼大威德怖畏金刚！！！ </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2008-7-25 19:16</div><div class="post-body">顶礼大威德怖畏金刚！！！ <br/>
 顶礼大威德怖畏金刚！！！ <br/>
-顶礼大威德怖畏金刚！！！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金铃发表于 2009-2-22 12:06</div><div class="post-body">顶礼大威德怖畏金刚！ <br/>
+顶礼大威德怖畏金刚！！！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金铃发表于 2009-2-22 12:06</div><div class="post-body">顶礼大威德怖畏金刚！ <br/>
 顶礼大威德怖畏金刚！ <br/>
 顶礼大威德怖畏金刚！ <br/>
 顶礼大威德怖畏金刚！ <br/>
-顶礼大威德怖畏金刚！！！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">密</div>密海明灯发表于 2009-12-5 22:49</div><div class="post-body">顶礼大威德怖畏金刚！ <br/>
+顶礼大威德怖畏金刚！！！ </div></div><div class="post"><div class="post-header"><div class="avatar">密</div>密海明灯发表于 2009-12-5 22:49</div><div class="post-body">顶礼大威德怖畏金刚！ <br/>
 顶礼大威德怖畏金刚！ <br/>
 顶礼大威德怖畏金刚！ <br/>
 顶礼大威德怖畏金刚！ <br/>
-顶礼大威德怖畏金刚！！！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">小</div>小生发表于 2009-12-14 11:42</div><div class="post-body">顶礼文殊师利菩萨 <br/>
+顶礼大威德怖畏金刚！！！ </div></div><div class="post"><div class="post-header"><div class="avatar">小</div>小生发表于 2009-12-14 11:42</div><div class="post-body">顶礼文殊师利菩萨 <br/>
 顶礼大威德金刚 <br/>
-顶礼大威德金刚坛城一切本尊、空行、护法众！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-23 17:28</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
+顶礼大威德金刚坛城一切本尊、空行、护法众！ </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-23 17:28</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
 眾生善根盡隨喜 正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽 直至菩提我皈依 <br/>
 所為利益自他故 我今即發菩提心 <br/>
 <br/>
 既發最上菩提心 饒益一切諸有情 <br/>
-菩提妙行皆修作 為利眾生願成佛 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-3 16:12</div><div class="post-body">顶礼萨迦大威德怖畏金刚！愿弟子可修此成就！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">幻</div>幻化网发表于 2023-2-13 15:44</div><div class="post-body">顶礼大威德怖畏金刚！ <br/>
+菩提妙行皆修作 為利眾生願成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-3 16:12</div><div class="post-body">顶礼萨迦大威德怖畏金刚！愿弟子可修此成就！ </div></div><div class="post"><div class="post-header"><div class="avatar">幻</div>幻化网发表于 2023-2-13 15:44</div><div class="post-body">顶礼大威德怖畏金刚！ <br/>
 顶礼大威德怖畏金刚！ <br/>
 顶礼大威德怖畏金刚！ <br/>
 顶礼大威德怖畏金刚！ <br/>

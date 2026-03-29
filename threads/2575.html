@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>天边的阿里：旅游全攻略——阿里朝圣必看 - 藏密修海典藏</title>
+<title>天边的阿里：旅游全攻略——阿里朝圣必看 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/圣地游览贴图区.html">圣地游览贴图区</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">天边的阿里：旅游全攻略——阿里朝圣必看</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-6-28 17:19</div><div class="post-body">天边的阿里：旅游全攻略 <br/>
+<div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-6-28 17:19</div><div class="post-body">天边的阿里：旅游全攻略 <br/>
 <br/>
 阿里概况 <br/>
 <br/>
@@ -95,7 +108,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 南线帕羊的桥已修好，不用再走渡口了。东风最好，一路睡将过去，不过十人多了些，在车上最多睡六人，司机就睡驾使室。如果人多，只好搭帐蓬，要花较多时间。在车厢内睡最好有防潮垫，一般的羽绒睡袋即可，至少六百克/80%绒。沿途都有小村落（县城也多似村落），可以解决住宿吃饭，吉普车走只好如此。 <br/>
 <br/>
-冒险固然刺激，然而安全更加重要。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-6-28 17:21</div><div class="post-body">阿里旅游详细攻略 <br/>
+冒险固然刺激，然而安全更加重要。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-6-28 17:21</div><div class="post-body">阿里旅游详细攻略 <br/>
 <br/>
 一、携带物品 <br/>
 <br/>
@@ -173,7 +186,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 4、在拉萨的最后一个晚上，从住地徒步到布达拉宫吧，走完心中最后一段朝圣路。踏上布达拉宫街区，一抬头，一朵七彩祥云呈现在宫殿西天，瑞丽祥和，真得是七彩祥云，有生以来第一次见到，就象壁画中西天佛祖的乘云，始知古人不欺余也。不信？有杨薇MM做证。 <br/>
 <br/>
-好了，我要说的都说完了，恭喜你可以上路了，祝愿你一路吉星高照，平安归来！ </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-6-28 17:22</div><div class="post-body">西藏阿里行路攻略 <br/>
+好了，我要说的都说完了，恭喜你可以上路了，祝愿你一路吉星高照，平安归来！ </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-6-28 17:22</div><div class="post-body">西藏阿里行路攻略 <br/>
 <br/>
 从拉萨去阿里的路，分为南线和北线，其中北线分为大北线和小北线。通常都是南线进，小北线出，大北线因为走的人和车少，相对危险性大一些。 <br/>
 <br/>
@@ -220,7 +233,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 这次我们的阿里之行，原本有四辆车，V8自动挡大切，车龄不到一年；A6A自动挡切诺基车龄不到一年；手四电切诺基，车龄应在7年以上；刚装了四驱的7250切诺基，车龄不详，应该很老。其中，7250到纳木错四驱就挂不上了，由于车的综合指数太差，决定留车在拉萨，出发时是三辆车，但在到达萨噶前，A6A水泵出现问题，被迫把车留在萨噶，V8和手四电坚持走完了全程。V8除减震胶套融化，后保险杠被溅起的石子划掉漆外，没有出现任何问题，手四电在老爷车夫的精心养护以及高超的修理技术和驾驶经验下，虽然历经两度焊接排气管，自加工改制马达碳刷，焊接四驱传动杆，以及开锅等状况，还是胜利返航，沿途没有大事故发生，也没有影响一点行程，让大家不得不佩服老爷车夫的身手。换了别人，一定搁菜了。相比其他车队，我们所遇到的车的状况是最少的，幸运是一方面，人的经验和技术是起了决定性作用的，所以说事在人为啊！！！！ <br/>
 <br/>
-建议打算去阿里的TX们，一定要多做调查研究，该带的配件一定要带，路上没有能修小切的地方，最多只能帮你换件，千万要清楚自己的车的状况和自己的水平，不然就只能搁车了。用我们装备车的藏族司机的话说：向北京人学习，这儿搁一辆，那儿搁一辆。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-6-29 04:33</div><div class="post-body">[size=6][b]阿里地区外事旅游局提醒您 [/b][/size] <br/>
+建议打算去阿里的TX们，一定要多做调查研究，该带的配件一定要带，路上没有能修小切的地方，最多只能帮你换件，千万要清楚自己的车的状况和自己的水平，不然就只能搁车了。用我们装备车的藏族司机的话说：向北京人学习，这儿搁一辆，那儿搁一辆。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-6-29 04:33</div><div class="post-body">[size=6][b]阿里地区外事旅游局提醒您 [/b][/size] <br/>
 <br/>
 ◇准备工作 <br/>
 <br/>
@@ -325,7 +338,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 阿里地区旅游公司　　　　狮泉河镇　　电话：０８９７－２８２１８４６ <br/>
 <br/>
-文章来源: 中国西藏信息中心阿里通讯组 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-6-29 04:34</div><div class="post-body">[b][size=5]中国境内需办理边防证进入的地方[/size][/b] <br/>
+文章来源: 中国西藏信息中心阿里通讯组 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-6-29 04:34</div><div class="post-body">[b][size=5]中国境内需办理边防证进入的地方[/size][/b] <br/>
 <br/>
 边防证 全称为“中华人民共和国边境管理区通行证”。最好出发前在当地公安机关办理，需持单位证明和本人照片，填入的时间应该与计划逗留的时间一致。到边境地也可以再办理，但控制较严、费用也更高。 <br/>
 <br/>

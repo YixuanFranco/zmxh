@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>过去现在因果经（本缘部） - 藏密修海典藏</title>
+<title>过去现在因果经（本缘部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">过去现在因果经（本缘部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-22 10:58</div><div class="post-body">[font=楷体_GB2312][size=5]　　　　　[b]过去现在因果经卷第一[/b] <br/>
+<div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-22 10:58</div><div class="post-body">[font=楷体_GB2312][size=5]　　　　　[b]过去现在因果经卷第一[/b] <br/>
 宋天竺三藏求那跋陀罗译 <br/>
 如是我闻.一时佛在舍卫国.只树给孤独园.尔时世尊.与诸比丘.住于竹林.是诸比丘.于晨朝时.着衣持钵.入城乞食.还归所住.食竟澡漱.各摄衣钵.集在讲堂.悉欲共说过去因缘.尔时世尊.以净天耳超于世间.闻诸比丘语论之声.即从座起.到讲堂上.于众中坐.问诸比丘.汝等共集.欲说何法.时诸比丘.即白佛言.世尊.我等食竟澡漱已讫故.共集此各欲闻说过去因缘.是时世尊.语诸比丘.汝等乐闻过去因缘者.谛听谛听.善思念之.今为汝说.比丘白言.唯然世尊.愿乐欲闻.佛言比丘.过去无数阿僧祇劫.尔时有一仙人.名曰善慧.净修梵行.求一切种智.为欲成就此大智故.乐处生死.周遍五道.一身死坏.复受一身.生死无量.譬尽天下草木.斩以为筹.数其故身.不能穷尽.夫极天地之始终.谓之一劫.而其经天地成坏者.不可称载也.所以感伤群生耽惑爱欲沈流苦海.起慈悲心.欲拔济之.又作此念.今诸众生.没于生死.不能自出.皆由贪欲嗔恚愚痴.乐着色声香味触法故.我当决定断其此病.虽生诸趣.不忘斯念.于诸众生.怨亲平等.以布施摄贫穷.持戒摄毁禁.忍辱摄嗔恚.精进摄懈怠.禅定摄乱意.智慧摄愚痴.如是长夜.增益众生.普为一切.而作归依.于诸如来.恭敬供养.乐欲听法.亦为他说.常以四事.奉给众僧.于佛法众.尊重守护.如是诸行.不可称数.尔时有王.名曰灯照.城名提播婆底.其国人民.寿八万岁.安隐丰乐.极为炽盛.所欲自在.犹如诸天.时彼国王.正法治世.不抂人民.无有杀戮楚挞之苦.视诸人民.有如一子.时灯照王.始生太子.端严无比.威德具足.有三十二相八十种好.初生之日.四方皆明.日月珠火.不复为用.王见太子有如此瑞.即召诸臣.共集议言.太子初生.有此奇特.当为太子.作何等名.诸臣答言.应名太子以为普光.又召相师而占相之.相师答言.今观太子.若在家者.为转轮王.统四天下.若出家者.为天人尊.成萨婆若.王及夫人后宫婇女.闻相师言.于此太子.深生爱念.亦为天龙夜又乾闼婆阿修罗迦楼罗紧那罗摩睺罗伽人非人等.供养恭敬.尊重赞叹.是时太子.在于后宫.为夫人婇女.说种种法.太子年至二万九千岁.舍转轮王位.启其父母.求欲出家.既不听已.乃至三请.犹尚不许.太子慈悲.志存拯济.忍其小违.以成大顺.即便往诣山林树下.剃除须发.被着法服.勤修苦行.满六千岁.成阿耨多罗三藐三菩提.为诸天人.及八部众.转于法-轮.此轮微妙.一切世间.天人魔梵.所不能转.以三乘法.教化众生.所可利益.不可称数.尔时父王.及其夫人.后宫婇女.闻太子普光成阿耨多罗三藐三菩提.心大欢喜.踊跃无量.尔时群臣国内人民.婆罗门等.闻太子道成.心各念言.太子普光.舍转轮王位.剃除须发.被着法服.出家修道.得成正觉.我等今者.亦当出家.作此念已.悉皆往诣普光佛所.尔时普光如来.即观其心.随其因缘.而为说法.大臣婆罗门等.有四千人.成阿罗汉.国中人民.及余四方诸来会众.有八万人.亦得无著法忍.尔时普光如来.与八万四千诸阿罗汉.往诣国界.游行教化.父王闻已.心大欢喜.即敕国中.平治道路.香水洒地.悬诸缯彩宝幢幡盖.散众名华.如是庄严.满十二逾阇那.又复击鼓唱令国内.诸有华者.不得私卖.悉输与王.并敕人民.不得先我供养于佛.即遣大臣.并作伎乐.烧香散华.而往请彼普光如来.尔时善慧仙人.在于山中.得五奇特梦.一者梦卧大海.二者梦枕须弥.三者梦海中一切众生.入其身内.四者梦手执日.五者梦手执月.得此梦已.即大惊悟.心自念言.我今此梦.非为小缘.当以问谁.宜入城内.问诸智者.作是念已.披鹿皮衣.手执水瓶及杖伞盖.行入城邑.路过外道所止住处.有五百人.而为上首.善慧念言.我今当以所梦问之.并得观其所修之业.即共诸人.讲论道义.破其异见.时五百人.即便受屈.求为弟子.于善慧所深生恭敬.各以银钱一枚而以上之.复有五百外道.既见善慧辩才聪明.亦生随喜.时诸外道.自共议言.今普光如来.出兴于世.善慧仙人.闻斯语已.举体毛竖.心大欢喜.踊跃无量.便与外道.分别而去.外道问言.师何所趣.答言.我今当往普光佛所.欲施供养.外道白言.师若去者.愿乐随从.善慧答曰.我今有缘.宜应先行.尔时善慧.赍五百银钱.随路而去.诸外道众.悲恋懊恼.辞别而归.善慧至前.见王家人.平治道路.香水洒地.列幢幡盖.种种庄严.即便问言.何因缘故.而作是事.王人答言.世有佛兴.名曰普光.今灯照王.请来入城.所以匆匆庄严道路.善慧即复问彼路人.汝知何处有诸名花.答言道士.灯照大王.击鼓唱令国内.名花皆不得卖.悉以输王.善慧闻已.心大懊恼.意犹不息.苦访花所.俄尔即遇王家青衣.密持七茎青莲花过.畏王制令.藏着瓶中.善慧至诚.感其莲花踊出瓶外.善慧遥见.即追呼曰.大姊且止.此花卖不.青衣闻已.心大惊愕.而自念言.藏花甚密.此何男子.乃见我花.求索买耶.顾看其瓶.果见花出.生奇特想.答言.男子.此青莲花当送宫内.欲以上佛.不可得也.善慧又言.请以五百银钱.雇五茎耳.青衣意疑.复自念言.此花所直不过数钱.而今男子.乃以银钱五百.求买五茎.即问之言.欲持此花用作何等.善慧答言.今有如来.出兴于世.灯照大王.请来入城.故须此花.欲以供养.大姊当知.诸佛如来.难可值遇.如优昙钵花时乃一现.青衣又问.供养如来.为求何等.善慧答曰.为欲成就一切种智.度脱无量苦众生故.尔时青衣.得闻此语.心自念言.今此男子.颜容端正.披鹿皮衣.才蔽形体.乃尔至诚.不惜钱宝.即语之曰.我今当以此花相与.愿我生生.常为君妻.善慧答言.我修梵行.求无为道.不得相许生死之缘.青衣即言.若当不从我此愿者.花不可得.善慧又曰.汝若决定不与我花.当从汝愿.我好布施.不逆人意.若使有来从我乞求头目髓脑.及与妻子.汝莫生阂坏吾施心.青衣答言.善哉善哉.敬从来命.今我女弱不能得前请寄二花以献于佛.使我生生不失此愿.好丑不离.必置心中.令佛知之。 <br/>
 <br/>

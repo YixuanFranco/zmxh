@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>无上智准提三昧行法 - 藏密修海典藏</title>
+<title>无上智准提三昧行法 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/准提佛母成就法.html">准提佛母成就法</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">无上智准提三昧行法</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-9-24 21:55</div><div class="post-body">[img]http://www.zmxh.com/pics/cunb1_20070524004814.jpg[/img] <br/>
+<div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-9-24 21:55</div><div class="post-body">[img]http://www.zmxh.com/pics/cunb1_20070524004814.jpg[/img] <br/>
 <br/>
 [font=楷体_GB2312][size=5][b]无上智准提三昧行法 <br/>
 <br/>
@@ -248,7 +261,7 @@ om bhrum <br/>
 密秘所持功德海   回向法界众成佛 <br/>
 准提佛母大悲力   善巧回向自欢喜 <br/>
 愿住法界真实相   如母成就住佛地 <br/>
-一切罪障体性无   如实现观证全佛[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-9-24 22:01</div><div class="post-body">[b]准提菩萨[/b] <br/>
+一切罪障体性无   如实现观证全佛[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-9-24 22:01</div><div class="post-body">[b]准提菩萨[/b] <br/>
 [size=5] <br/>
 准提咒 <br/>
 稽首皈依苏悉帝。 <br/>
@@ -302,7 +315,7 @@ om嗡  震动 起升 清静 圆满成就 <br/>
 <br/>
 准提观音的福德智慧无量。而于《准提陀罗尼经》所载，佛陀为了悲念未来的薄福恶业众生，所以入于准提三摩地，宣说过去七俱胝（千万）佛所说的准提咒。而准提咒的修学并没有限制，是不分任何身分者，都可以修学诵持的，依此也可见到这位菩萨的慈悲。 <br/>
 <br/>
-经中说若是诵持此咒，则能生起菩提分的根芽，决定能成就无上菩提。持诵者亦可祈求聪明、辩论胜利、夫妇敬爱、使他人敬爱、求儿、延命、治病、灭罪、降雨、脱离拘禁、离恶鬼恶贼之难…等种种的愿望。所有世、出世间的祈愿无不满足。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-10-1 17:01</div><div class="post-body">敬礼体性大悲海   法界七七俱胝佛 <br/>
+经中说若是诵持此咒，则能生起菩提分的根芽，决定能成就无上菩提。持诵者亦可祈求聪明、辩论胜利、夫妇敬爱、使他人敬爱、求儿、延命、治病、灭罪、降雨、脱离拘禁、离恶鬼恶贼之难…等种种的愿望。所有世、出世间的祈愿无不满足。 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-10-1 17:01</div><div class="post-body">敬礼体性大悲海   法界七七俱胝佛 <br/>
 刹那总持大日现   准提金刚大佛母 <br/>
 法尔现空法性悲   理事双运遍照界 <br/>
 无上智顶胜利佛   寂灭功德无所得 <br/>
@@ -316,53 +329,53 @@ om嗡  震动 起升 清静 圆满成就 <br/>
 稽首清净金刚王   持明密主胜海会 <br/>
 广大无边华藏界   寂灭行中会本然 <br/>
 无间持明遍咒身   心风体性不离初 <br/>
-三密现成入我入   佛海相映摩尼树 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 16:52</div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
+三密现成入我入   佛海相映摩尼树 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 16:52</div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
 众生善根尽随喜  正觉菩提意中持 <br/>
 正觉妙法及僧伽  直至菩提我皈依 <br/>
 所为利益自他故  我今即发菩提心 <br/>
 既发最上菩提心  饶益一切诸有情 <br/>
-菩提妙行皆修作  为利众生愿成佛 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 17:03</div><div class="post-body">我今持诵大准提，即发菩提广大愿 <br/>
+菩提妙行皆修作  为利众生愿成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 17:03</div><div class="post-body">我今持诵大准提，即发菩提广大愿 <br/>
 愿我定慧速圆明，愿我功德皆成就 <br/>
 愿我胜福遍庄严，愿共众生成佛道 <br/>
 我昔所造诸恶业，皆由无始贪嗔痴 <br/>
 从身语意之所生，一切我今皆忏悔 <br/>
 愿我临欲命终时，尽除一切诸障碍 <br/>
-面见彼佛阿弥陀，即得往生安乐剎 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 17:13</div><div class="post-body">我今持诵大准提，即发菩提广大愿 <br/>
+面见彼佛阿弥陀，即得往生安乐剎 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 17:13</div><div class="post-body">我今持诵大准提，即发菩提广大愿 <br/>
 愿我定慧速圆明，愿我功德皆成就 <br/>
 愿我胜福遍庄严，愿共众生成佛道 <br/>
 我昔所造诸恶业，皆由无始贪嗔痴 <br/>
 从身语意之所生，一切我今皆忏悔 <br/>
 愿我临欲命终时，尽除一切诸障碍 <br/>
-面见彼佛阿弥陀，即得往生安乐剎 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 17:36</div><div class="post-body">稽首皈依苏悉帝，头面顶礼七俱胝， <br/>
-我今称赞大准提，惟愿慈悲垂加护。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">汪</div>汪波发表于 2010-11-8 00:23</div><div class="post-body">不知哪位大德所作，随喜赞叹！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-12-4 20:24</div><div class="post-body">顶礼上师本尊！！！ <br/>
+面见彼佛阿弥陀，即得往生安乐剎 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 17:36</div><div class="post-body">稽首皈依苏悉帝，头面顶礼七俱胝， <br/>
+我今称赞大准提，惟愿慈悲垂加护。 </div></div><div class="post"><div class="post-header"><div class="avatar">汪</div>汪波发表于 2010-11-8 00:23</div><div class="post-body">不知哪位大德所作，随喜赞叹！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-12-4 20:24</div><div class="post-body">顶礼上师本尊！！！ <br/>
 那摩古如呗  皈依上师 <br/>
 那摩布达呀  皈依佛 <br/>
 那摩达嘛呀  皈依法 <br/>
 那摩僧嘎呀  皈依僧 <br/>
 弟子精进修行！ <br/>
 于诸佛前法供养！！！ <br/>
-随喜赞叹！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-12-4 20:25</div><div class="post-body">顶礼上师本尊！！！ <br/>
+随喜赞叹！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-12-4 20:25</div><div class="post-body">顶礼上师本尊！！！ <br/>
 那摩古如呗  皈依上师 <br/>
 那摩布达呀  皈依佛 <br/>
 那摩达嘛呀  皈依法 <br/>
 那摩僧嘎呀  皈依僧 <br/>
 弟子精进修行！ <br/>
 于诸佛前法供养！！！ <br/>
-随喜赞叹！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-12-4 20:26</div><div class="post-body">顶礼上师本尊！！！ <br/>
+随喜赞叹！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-12-4 20:26</div><div class="post-body">顶礼上师本尊！！！ <br/>
 那摩古如呗  皈依上师 <br/>
 那摩布达呀  皈依佛 <br/>
 那摩达嘛呀  皈依法 <br/>
 那摩僧嘎呀  皈依僧 <br/>
 弟子精进修行！ <br/>
 于诸佛前法供养！！！ <br/>
-随喜赞叹！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-12-4 20:27</div><div class="post-body">顶礼上师本尊！！！ <br/>
+随喜赞叹！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-12-4 20:27</div><div class="post-body">顶礼上师本尊！！！ <br/>
 那摩古如呗  皈依上师 <br/>
 那摩布达呀  皈依佛 <br/>
 那摩达嘛呀  皈依法 <br/>
 那摩僧嘎呀  皈依僧 <br/>
 弟子精进修行！ <br/>
 于诸佛前法供养！！！ <br/>
-随喜赞叹！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-12-4 20:28</div><div class="post-body">顶礼上师本尊！！！ <br/>
+随喜赞叹！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-12-4 20:28</div><div class="post-body">顶礼上师本尊！！！ <br/>
 那摩古如呗  皈依上师 <br/>
 那摩布达呀  皈依佛 <br/>
 那摩达嘛呀  皈依法 <br/>

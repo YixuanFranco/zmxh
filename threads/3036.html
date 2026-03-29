@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>听经三载得人身：梁武帝的轮回 - 藏密修海典藏</title>
+<title>听经三载得人身：梁武帝的轮回 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">听经三载得人身：梁武帝的轮回</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2008-1-29 22:33</div><div class="post-body">[font=楷体_GB2312][size=5]　　华夏5,000年的历史长河中，君主帝王芸芸。除了历史上的三武一宗灭法事件外，没有哪个君王不尊佛崇道。并且，有不少的帝王在推动促进佛道的兴盛上，起了很大的作用。南北朝时期的南朝皇帝梁武帝萧衍（464－549）就是其中最著名的一位。 <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2008-1-29 22:33</div><div class="post-body">[font=楷体_GB2312][size=5]　　华夏5,000年的历史长河中，君主帝王芸芸。除了历史上的三武一宗灭法事件外，没有哪个君王不尊佛崇道。并且，有不少的帝王在推动促进佛道的兴盛上，起了很大的作用。南北朝时期的南朝皇帝梁武帝萧衍（464－549）就是其中最著名的一位。 <br/>
 萧衍是汉代相国萧何的后代，在位48年，寿86岁，是秦始皇以来中国历史上第二长寿皇帝，仅次于清朝的乾隆。萧衍是中国历史上少有的文武都精专的帝王。《资治通鉴》说梁武帝“博学能文，阴阳、卡篮、骑射、声律、草隶、围棋元不精妙。”而其天生就具备的文采和军事才能，在他7、8岁时就给他带来了显赫的声誉。 <br/>
 萧衍在佛教兴盛的历史上，作用极大。他不但自己勤修不辍，还热衷于弘扬佛法。汉地僧人戒荤腥吃素的戒律，就是在他专门写了《断酒肉文》后，极力提倡并大力推行的。僧人头上留戒疤，也是渊源于梁武帝。他为了超度其下了地狱的妻子而写下的《梁皇宝忏》一直在佛教徒中盛行不衰。佛教徒超度孤魂野鬼的盂兰盆节也是源自他的带头作用。盂兰盆大斋就是普食的意思。据说地狱里的罪人，因梁武帝设斋造经二事，得消一切罪业，地狱一度曾为此一空。据说在他的统治区域内，佛法最鼎盛的时候几乎有近五成的百姓出家！他在位期间用过的年号也很特别：天监、普通、大通、中大通、大同、中大同、天清。 <br/>
 南朝梁武帝萧衍留下了许多传奇，采撷史料，这里有一些关于他和自己的子民们轮回转生的故事。 <br/>
@@ -63,7 +76,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 因为榼头的事情，武帝一连好几天闷闷不乐。沈约看出了他的心思，于是派人四处探访高僧。闻得都城10里外就有一个法号叫道林支的高僧在结庐修行，于是赶紧报告给了梁武帝。武帝听了很高兴，就大起銮舆，旗幡鼓吹的一齐出城去那茅庵里来迎支公。支公已先知了，庵里都收拾停当准备起行了。武帝与沈约到庵里，武帝屈尊下拜，尊支公为师。行礼已毕，支公说道：“陛下请坐，受小僧的拜。”武帝说道：“哪曾见师拜徒？”支公答道：“亦不曾见妻抗夫。”只这一句话，武帝听了，就如提一桶冷水，从顶门上浇下来，遍身酥麻，心不知怎地豁然洞彻，就省悟了前世黄复仁、童小姐之事。原来那童小姐投生在支家。二人一笑解意。武帝就请支公一同回朝，支公住在便殿斋阁里。武帝每日退朝便到阁中与支公切磋。支公与武帝道：“我在此终是不便，与陛下别了，仍到庵里去住吧。”武帝道：“离此间30里，有个白鹤山，最是清幽仙境之所。朕去建造个寺刹，请您到那里去住。”支公应允了。武帝差官资费百万督造这个山寺，极土木之美，殿刹禅房数千百间，僧人千百余。取名同泰寺，夫妇同登佛地之意。 <br/>
 东魏的叛将侯景投奔梁朝，可不久又举兵反梁。这时江陵地方有一居士叫陆法和，在侯景遣将进攻江陵的时候，陆法和与他的弟子800多人，把侯景击败了；欲协助武帝讨伐侯景，武帝恐怕他作乱，不听，陆法和对武帝说：“我一个修佛的人，怎么会垂涎你的王位？只不过与你有缘，知道你正在遭宿报，所以才打算救你。既然你不相信我，那你和侯景之间当是定业，不可转移。” <br/>
 侯景杀进了建业，侯景自称丞相。时年已86岁的梁武帝被困于台城。一日武帝梦见榼头笑眯眯地向他走来，醒来后懊恼地说：“唉，真是报应啊！我如果不是误杀了榼头大师的话，佛祖将让我活到百岁开外的，区区侯景又何足道哉！我既已修佛，却又嗜棋，这不是对佛最大的不敬么？” <br/>
-一日武帝觉得嘴里极苦，叫内侍找蜜也找不到，口中已经不能说话，于是“荷荷”中死于文德殿。同时那道林支法师也在同泰寺中坐化而去了。[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">一</div>一杯菠萝蜜发表于 2012-1-6 21:10</div><div class="post-body">我能深入于未来  尽一切劫为一念 <br/>
+一日武帝觉得嘴里极苦，叫内侍找蜜也找不到，口中已经不能说话，于是“荷荷”中死于文德殿。同时那道林支法师也在同泰寺中坐化而去了。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">一</div>一杯菠萝蜜发表于 2012-1-6 21:10</div><div class="post-body">我能深入于未来  尽一切劫为一念 <br/>
 三世所有一切劫  为一念际我皆入 <br/>
 我于一念见三世  所有一切人师子 <br/>
 亦常入佛境界中  如幻解脱及威力 <br/>

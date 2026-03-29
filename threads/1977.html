@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>宝云经（经集部） - 藏密修海典藏</title>
+<title>宝云经（经集部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">宝云经（经集部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-20 17:14</div><div class="post-body">[font=楷体_GB2312][size=5][b]      宝云经卷第一[/b][/size][/font] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-20 17:14</div><div class="post-body">[font=楷体_GB2312][size=5][b]      宝云经卷第一[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　　　梁扶南三藏曼陀罗仙译[/size][/font] <br/>
 <br/>
 [font=楷体_GB2312][size=5]    如是我闻。一时佛在伽耶山顶。与大比丘僧七万人俱。所作已办舍诸重担其心自在。尽诸有结正见解脱。皆如大龙善解法界。是法王子能舍利养。善具出家善受具戒。意所欲者悉得满足住涅盘道。唯除阿难在于学地。诸大菩萨八万四千人俱。皆是一生补处。向一切智无有退转。志求佛地近于彼岸。得阿僧祇诸陀罗尼。逮得诸禅首楞严三昧。游戏神通。大慈大悲遍满十方乃至无量无边佛土行空境界。除诸盖障尽三毒根。善游无相室宅。恒欲救济一切众生。善知诸佛世界。得无碍智。心如虚空深广如海。犹如须弥八风不动。心如莲华不着尘水。意如真宝内外明彻。如净真金中无瑕秽。其名曰宝光菩萨。宝掌菩萨。宝印手菩萨。宝天冠菩萨。宝鬘菩萨。宝积菩萨。宝藏菩萨。宝山顶菩萨。宝幢菩萨。金刚胎菩萨。金胎菩萨。宝胎菩萨。功德胎菩萨。净无垢胎菩萨。如来胎菩萨。智胎菩萨。日胎菩萨。三昧胎菩萨。莲华胎菩萨。解脱月菩萨。普月菩萨。观世音菩萨。普贤菩萨。普眼菩萨。莲花眼菩萨。大眼菩萨。普威仪菩萨。普端严菩萨。普行菩萨。知定意菩萨。法意菩萨。胜意菩萨。增长意菩萨。金刚意菩萨。师子神通菩萨。大音声王菩萨。师子吼意菩萨。深音声菩萨。无染污菩萨。离一切垢菩萨。月光菩萨。日光菩萨。智光菩萨。智功德菩萨。月功德菩萨。莲花功德菩萨。宝功德菩萨。文殊师利菩萨。跋陀婆罗等十六贤士。贤劫千菩萨摩诃萨等。弥勒最为上首。四天王诸天等。四天王最为上首。忉利诸天等。帝释最为上首。焰摩天焰摩天王最为上首。兜率陀天兜率陀天王最为上首。化乐诸天化乐天王最为上首。他化自在诸天他化自在天王最为上首。善党诸天萨陀最为上首。一切诸梵天王大梵最为上首。首陀会诸天摩酰首罗最为上首。毗摩质多罗阿修罗王。婆稚阿修罗王。罗睺阿修罗王等。无量百千亿阿修罗王。阿那婆达多龙王。摩那斯龙王。娑伽罗龙王。难陀龙王。和修吉龙王。德叉迦龙王。如是等百千亿诸龙及诸龙子诸龙彩女。如是等百千万亿众。天龙夜叉乾闼婆阿修罗迦楼罗紧那罗摩睺罗伽人非人等。百千亿众皆来集会。尔时伽耶山顶方四由旬。微尘针锋虚空及地大众充满。悉敷师子座。庄严光显高一由旬。严饰第一广半由旬。八千天衣遍布其上。地悉平正变为金刚。悬诸缯幡香汁洒地。无量天花遍满在中。其座左右生诸莲花大如车轮。百千万叶真金为茎。皆以绀琉璃为台。因陀尼为鬘。香洁适意触时快乐。如是妙花以供养佛。彼师子座于其四角各生宝树。高十五里。其树荫盖及半由旬。如是庄严师子之座。佛坐其上心意清净。善转法-轮降伏魔怨。不为八法之所污染。得无所畏智辩无滞。心无怯弱犹如师子。意行清净如明渊池。深广如海能出众宝。犹如须弥处于大海。如日盛明照于一切。如月盛满悉令清净。雨大法雨如彼龙王。处众高显如大梵天。无量弟子悉皆调顺。无量释梵四天王等。瞻仰观佛心无高下。能令大众温光如日众宝庄严。尔时世尊身色熙怡。如日温照一切大众。如宝庄严。顶上放光名曰周遍。普照百千世界。无量诸光以为眷属。俱照十方绕佛三匝。光从口入而口无异相。譬如净月明照虚空。然于虚空亦无异相。光从口入亦复如是。譬如沙聚苏油注中不见增损。佛光入口亦复如是[/size][/font] <br/>
@@ -115,7 +128,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5]    善男子。菩萨摩诃萨。复有十法能净于忍。何等为十。内忍。外忍。法忍。随佛教忍。无方所忍。修处处忍。非所为忍。不逼恼忍。悲心忍。誓愿忍。云何名菩萨内忍。菩萨饥渴寒热忧悲疼痛身心楚切。能自忍受不为苦恼。是名菩萨内忍。云何名菩萨外忍。菩萨从他闻恶言骂詈毁辱诽谤。或毁辱父母兄弟姊妹眷属和上阿阇梨师徒同学。或闻毁佛法僧有。如是种种毁訾菩萨。忍辱不生嗔恚。是名菩萨外忍。云何名菩萨法忍。佛于诸经说微妙义。诸法寂静诸法寂灭。如涅盘相不惊不怖。菩萨作是念言。我若不解是经不知是法。终不得阿耨多罗三藐三菩提。是故菩萨勤求谘问读诵。是名菩萨法忍。云何名菩萨随佛教忍。菩萨嗔恼毒心起时。作是思惟。此身从何而生从何而灭。从我生者何者是我。从彼生者何者是彼。法相如是从何因缘起。菩萨作是思惟时。不见所从生亦不见所缘起。亦不见从我生。亦不见从彼起。亦不见从因缘生。作是思惟。亦不嗔亦不恼亦不毒。嗔怒之心即便减少。是名菩萨随佛教忍。云何名菩萨无方所忍。或有夜忍昼不忍。或昼忍夜不忍。或彼方忍此方不忍。或此方忍彼方不忍。或知识边忍不知识边不忍。或不知识边忍知识边不忍。菩萨不尔。于一切时一切方常生忍心。是名菩萨无方所忍。云何名菩萨修处处忍。有人于父母师长夫妻男女大小内外如是中生忍。余则不忍。菩萨忍者则不如是。如父母边生忍。旃陀罗边生忍亦尔。是名菩萨修处处忍。云何名菩萨非所为忍。不以事故生忍。不以利故生忍。不以畏故生忍。不以受他恩故生忍。不以相亲友故生忍。不以愧赧故生忍。菩萨常修于忍。是名菩萨非所为忍。善男子。云何名菩萨不逼恼忍若嗔因缘烦恼未起不名为忍。若遇嗔因缘时。拳打刀杖手脚蹴蹋恶口骂詈。于如是中心不动者则名为忍。菩萨若有人来起发嗔恚亦忍。不起发嗔恚亦忍。是名菩萨不逼恼忍。云何名菩萨悲心忍。尔时菩萨。若作王若王等有大功业。为苦众生而作其主。是苦众生若来骂辱触恼之时。菩萨不以我是主故而生嗔恚。如是众生我当拔济常为拥护。云何而得生于嗔恼。是故我今悲心怜愍不生忿恚。是名菩萨悲心忍。云何名菩萨誓愿忍。菩萨作是念。我先于诸佛前曾作师子吼发誓愿言。我当成佛于一切生死淤泥中为拔诸苦众生。我今欲拔不应嗔恚而恼于彼。若我不忍尚不自度况利众生。善男子。譬如良医善知治眼。见诸众生多有患目。或患眼翳或患眼膜。种种患眼不可称计。是医若言。我欲疗治众生眼患。彼时医师后自盲冥。佛言。如此医师能治他眼不。除盖障菩萨摩诃萨白佛言。不也世尊。佛告除盖障菩萨摩诃萨。欲除一切众生无明冥者。应先自除暗障后及于人。若内无智慧能治他疾。是义不然。以是因缘。当修于忍不应生嗔。是名菩萨大誓愿忍。善男子。具此十事是名菩萨能净于忍。善男子。菩萨复有十法。名为精进满足。何等为十。如金刚精进。无等精进。处中精进。显胜精进。炽盛精进。常恒精进。清净精进。不共二乘精进。不轻贱精进。不退转精进。云何菩萨如金刚精进。未解者令解。未涅盘者令得涅盘。未安者令安。未度者令度。未得阿耨多罗三藐三菩提者。当令得阿耨多罗三藐三菩提。若作如是修行精进时。天魔波旬来谓菩萨言。汝今何故作如是精进。徒自勤苦终无所获。何以故。我亦曾作如是精进。未解者令解。未涅盘者令得涅盘。未安者令安。未度者令度。未得阿耨多罗三藐三菩提者。当令悉得如是等事。皆是妄语但诳凡愚无有真实。我未曾见如是精进而得阿耨多罗三藐三菩提者。善男子。我曾见无量众生如是精进有得阿罗汉涅盘。如是精进有得辟支佛涅盘。魔王复言。善男子。虽行精进未有得阿耨多罗三藐三菩提。汝今思惟疾舍是心。空无所获徒自劳苦。汝今速求二乘。可得早离生死。菩萨即作是念。此是魔说欲坏我心。汝但少事而自忧己。莫为多事反忧我耶。随所造业各得受报。依止于业业为亲友。汝亦有此随业受报。依止于业业为亲属。恶魔波旬。汝今速疾复道还去。汝恼我故当长夜受苦。魔即惭愧隐形而去。是名菩萨如金刚精进魔不能坏。云何名菩萨无等精进。尔时菩萨所行精进。超诸菩萨百千万亿算数譬喻所不能及。况余声闻二乘学者而能及乎。一切诸佛善法。以精进力故悉能摄取。一切恶法无不舍离。是则名为无等精进。云何名菩萨处中精进。勤不过分亦不懈退。如是精进名为处中精进。云何名菩萨高胜精进。菩萨发大精进。愿使现身如佛色相。若我得佛。无见顶相圆光一寻。佛之相好无碍智慧大自在者愿我悉得。是名高胜精进。云何名菩萨炽盛精进。譬如真金摩尼珠宝无有垢秽。光明炽盛端严殊显。真金精曜无量焰炽。摩尼宝珠焕然炳彻。菩萨精进亦复如是。无诸垢秽。何者是精进垢。何者是精进翳。懈怠是精进垢。懒堕是精进翳。食不知足是精进垢。贪嗜睡眠是精进翳。好乐亲近是精进垢。不见无我是精进障。如是名为精进垢精进障。除如是垢障。是名菩萨炽盛精进。善男子。云何名菩萨常恒精进。举动威仪不离精进。行住坐卧不曾休废身心不懈。是名菩萨常恒精进。云何名菩萨清净精进。如上常恒精进。有所起恶不善之业能障道法能作衰损。皆悉除断一切善法于涅盘因不作障碍。能助道法安止道处。皆悉修广增长炽盛。乃至微细一念之恶不令得起况复大恶。是名菩萨清净精进。云何名菩萨不共二乘精进。菩萨摩诃萨。周遍十方。如恒河沙数世界满中阿鼻地狱猛火炽盛。如此世界外。有极苦众生无依无救。乃至若一众生如是苦恼。菩萨能忍大火。过无量恒河沙世界。拔济成熟一众生苦。为一尚尔。况多众生而不救济。一切外道二乘学人所不能及。是名菩萨不共二乘精进。云何名菩萨不自轻贱精进。菩萨作是思惟。三世诸佛。皆从微少精进修无量德。乃能久积苦行成等正觉。是故我今因少精进渐殖德本。不久亦应得佛不疑。是名菩萨不自轻贱精进。云何名菩萨不退转精进。菩萨不以己身精进微薄。不以贫穷又少财宝而生舍心。常修精进向阿耨多罗三藐三菩提。过去未来现在三世诸佛。皆以积善微细精进悉得菩提。我今不以微贱而自轻毁。以微精进故。为一切众生积集众善。成阿耨多罗三藐三菩提。不为己乐而入涅盘。宁为众生久处地狱。是名菩萨不退转精进。善男子。具此十事。是名菩萨满足精进。[/size][/font] <br/>
 <br/>
 [font=楷体_GB2312][size=5]宝云经卷第一 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-20 17:22</div><div class="post-body">[font=楷体_GB2312][size=5][b]     宝云经卷第二[/b][/size][/font] <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-20 17:22</div><div class="post-body">[font=楷体_GB2312][size=5][b]     宝云经卷第二[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　　　梁扶南三藏曼陀罗仙译[/size][/font] <br/>
 <br/>
 [font=楷体_GB2312][size=5]    善男子。菩萨摩诃萨。复有十法名具禅波罗蜜。何等为十。多集福德深厌诸恶。能勤精进具于多闻。不颠倒解解法向法。利根聪明有纯善心。善解定智不着禅相。云何名为多集福德。久于大乘积集善根。在所生处常护持善戒遇善知识。世世恒生种族剎利大姓婆罗门大家居士。生处恒生正见家增长善法。忆所修善方便不舍。常不离善知识菩萨诸佛。渐渐增长观察诸法。世间大苦常为灾患之所逼恼。无有暂停长为众苦。无明所盲皆因爱欲欲为根本。我今不应同于凡夫亲近于欲。欲者诸佛世尊说从妄想生。无量因缘毁訾过患。譬如以木贯人心肾。欲如利戟欲如剑刃欲如毒蛇欲如锋焰。欲如脓烂不可触近。欲如聚沫欲如热焰。欲如幻化欲如梦想。欲为不净令人臭秽。欲如熟痈欲如腐败烂肉。作如是厌恶欲想。剃除须发舍离产业。出家学道被服法衣。而作沙门。正法出家信家非家。出家学道发大精进。未得善法者能令使得。未得智者能令得智。未得证者当令得证。如是因如是缘。以是事故即得多闻。于世谛第一义谛悉能宣说。善知世谛即第一义谛。善知不颠倒法如法体相。何者是善知法相。正见正志正语正业正命正方便正念正定。得见正道。利根转胜心常在道。以利根故多生厌恶。远离大众愦闹之处。远离欲觉贪嗔邪见残害之心。远离眷属。远离名闻利养。远离一切身心。常念自观察己心。为念善不善无记。若念善应念胜善。念胜善者。心生欢喜起发信乐。云何是胜善心。三十七品。云何是三十七品。四念处四正勤四如意足。五根五力。七觉分八正道法是名胜善是真道支。心犹不善极生厌恶多作观察。勤行方便断于不善。何等不善。贪欲嗔恚愚痴。贪欲有三种上中下。何者是上贪欲。欲心逼身正见衰损。离欲心少离于惭愧。云何离惭愧心。若摄身静念独处林野。尔时思惟欲觉增长炽盛。贵于欲觉赞叹欲觉。以欲觉故。作是思惟时。无有愧心。云何无惭。以欲业欲作欲因缘。于父母所生怼恨语。于尊重处而无畏难。亦不羞愧自现有德。以是欲故命终之时堕于恶趣。是名上欲。云何名为中欲。若受欲已心生厌离或起悔心。是名中欲。云何名为下欲。若摩触之时欲想即息。或共言语。虽有染想生念即灭。或见欲时欲想亦息。是名下欲。欲者一切衣服饮食供身之具悉名为欲。嗔恚亦有三种上中下。何者为上嗔。若恼彼时深生忿怒或作五逆。或五逆中作一一逆。或诽谤正法等。如是之罪。非算数譬喻之所能及。身坏命终堕大地狱受罪。余报得生人中。肤体黑瘦两目皆赤。志逞常怒多怀扰害。以是义故名为上嗔。云何名为中嗔。所作诸恶速疾变悔。即修对治之法。是名中嗔。云何名为下嗔。或出恶言或起讥诃。或集微恶业。或时时起发寻生对治。是名下嗔。愚痴亦有三种上中下。何者为上痴。作恶不悔不生惭愧心无厌时。如是名为上痴。云何名为中痴。身作恶时寻生变悔。于同梵行边发露忏悔不显己德。是名中痴。云何名为下痴。依如来所制非性重罪少有所犯。是故名为下痴。菩萨摩诃萨。善心起时。能回贪嗔痴能除欲爱。能除欲乐能除欲着。以善心故令欲不起。云何名为无记心。此心起时不缘外不缘内。不缘善不缘不善。不从定不从智。如从眠起目视不了。不缘善恶名为无记。若无记心生时。菩萨方便自策发起善心。令生欢喜安住于善。是名菩萨得于善心。以善心故观察一切诸法。如幻如梦如热时焰如呼声响。此是善法此非善法。此法迹乘此法不迹乘。菩萨摩诃萨。观于一切法发起善心。以法为想心为先导。当善持其心调顺其心。善持诸法调伏诸法。见正法已。以是缘故便得寂定。心为境界以心系心渐入寂定。以心住心正住三昧。心寂定故便能专一。心专一故次第无间。得定心故心常寂静。心寂静故心生喜乐。便除欲爱诸恶不善。有觉有观定生喜乐成就初禅。无觉少观定生喜乐成就二禅。除喜得乐念舍得第三禅。离喜乐行舍心得第四禅。除我见离忧喜舍苦乐净念舍行四禅。一切解脱离色相如虚空。众生心相虚空相等作一解脱观。以是故色相灭空相生。恼坏相已灭无边虚空相成。从无边虚空相以次观识。识无边故虚空相灭。观识渐损乃至少识。名为不用处。复观此识若有若无。是名非想非非想处。灭诸想受是名灭定。菩萨虽入灭定。而不舍教化众生。亦不永乐灭定以为寂静。不舍灭定而能慈悲普覆众生。于灭定中乃至起悲喜舍心亦复如是。菩萨尔时便获五神通。而不以十二门禅五神通等以为自足。方求上法阿耨多罗三藐三菩提。庄严之具功德满足。善男子。具此十事。是名菩萨具禅波罗蜜。[/size][/font] <br/>
@@ -139,7 +152,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]    善男子。菩萨复有十法心如虚空。何等为十。若心所喜乐亦不着。心不喜乐亦不嗔。于色声香味触亦不着不嗔。乃至于一切法亦不着不嗔。于利衰毁誉称讥苦乐。于此四法亦不着不嗔。善男子。具此十事。是名菩萨心如虚空。善男子。菩萨复有十法犹如满月。何等为十。能使一切众生得清凉乐。见者爱乐。能使善法日日渐增。能令恶法日日损减。如月盛满。体相胜妙体性清净。得无上乘。常自庄严。得法喜乐。乘第一乘。有大神通威德自在。云何名菩萨能与一切众生作清凉乐。如月天子初出之时。悉与众生清净快乐。而众乐观心无疲厌。菩萨之月亦复如是。除其烦恼郁蒸之热。皆令众生得清凉乐欢喜爱乐。是名菩萨能与一切众生作清凉乐。云何名菩萨见者爱乐。如月初出众生喜见利快乐。菩萨之月亦复如是。初出之时众生喜见无不悦乐。诸根寂定如水澄清威仪具足。是名菩萨见者爱乐。云何名菩萨能使善法日日增长。如月初出日日圆满。菩萨之月亦复如是。从初发心渐渐增长。乃至菩提坐道树下功德满足。是名菩萨能使善法日日增长。云何名菩萨能令恶法日日损减。譬如黑月圆满光明以渐损减。至月尽时光明悉灭隐蔽不现。菩萨一切众恶次第渐灭。乃至菩提悉皆除尽。是名菩萨能令恶法日日损减。云何名菩萨如月盛满。如从月初至盛满时众所瞻仰。剎利婆罗门城邑聚落一切男女无不称赞。菩萨之月亦复如是。常为天人一切众生皆悉称赞。是名菩萨如月盛满。云何名菩萨体相清净。如月天子身相清净。是本业果报。菩萨摩诃萨亦复如是。无垢清净从化而生。不由父母精气而生。从法而生。是名菩萨体相清净。云何名菩萨得无上乘。如月天子乘于净乘照四天下。菩萨摩诃萨亦复如是。乘于大乘。能使无量百千万亿世界众生悉皆照明。是名菩萨得无上乘。云何名菩萨常自庄严。如月天子华鬘显现。菩萨摩诃萨亦复如是。常以功德璎珞而自庄严。是名菩萨常自庄严。云何名菩萨得法喜乐。如月天子游戏五欲心常乐着。菩萨亦复如是。游戏诸法心常喜乐不染五欲。是名菩萨得法喜乐。云何名菩萨有大神通威德自在。如月天子有大威德。菩萨亦复如是。具诸功德自在智慧神通变化随意无碍。是名菩萨有大神通。善男子。具此十事。是名菩萨如月天子。[/size][/font] <br/>
 <br/>
-[font=楷体_GB2312][size=5]宝云经卷第二[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-20 17:26</div><div class="post-body">[font=楷体_GB2312][size=5][b]        宝云经卷第三[/b] <br/>
+[font=楷体_GB2312][size=5]宝云经卷第二[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-20 17:26</div><div class="post-body">[font=楷体_GB2312][size=5][b]        宝云经卷第三[/b] <br/>
 <br/>
 梁扶南三藏曼陀罗仙译 <br/>
 <br/>
@@ -190,7 +203,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 善男子。菩萨复有十法名离八难。何等为十。离恶业不善。如来所制禁戒终不毁犯除贪嫉。于过去佛所种诸善根。恒修福业智慧具足。善知方便善知发愿。多厌恶心能勤精进。菩萨不造恶业而入地狱。虽处地狱终不受于地狱苦报。所不喜者亦不能恼。虽堕地狱而不久处。亦复不生恼害之心。菩萨志性调柔恒修十善。以十善故不堕地狱。菩萨不毁佛戒堕畜生中。虽现畜生而不受于畜生之苦。菩萨不起贪嫉堕饿鬼中。虽现饿鬼而不受于饿鬼之苦。菩萨终不生邪见家。虽生邪见处必遇善知识。何以故。己于过去修诸善故。亦于过去佛久植善根故。常生正见家具善因缘。具善因缘故功德增广。菩萨终不诸根毁缺。若根减少不任法器。菩萨积德久远修福不倦。于诸形像塔寺及法僧中。处处修福心常不懈。以常修故诸根具足无有阙少堪为法器。菩萨终不生边地愚騃聋哑诸恶之处。譬如白羊愚痴无智。而不能识善恶义趣。不任法器。亦复不识沙门婆罗门。菩萨生于中国聪慧利根有大智见。又心信乐亲近有智。而于善恶善知分别堪为法器。深信沙门婆罗门。何以故。菩萨本修智慧力故。菩萨不生长寿天。若生长寿天。不睹佛出世。远离道果。不能成熟众生。是故菩萨生于欲界佛出世时。必当遭遇能化众生。以何因缘善方便故。菩萨终不生于无佛世界。亦不生于不闻法处。乃至不生无众僧可供养处。菩萨生处必遇三宝。何以故。本誓愿力故。菩萨生处必有厌恶。心不憍慢而自贡高。若闻八难诸恶之处。必生厌离心不喜乐。勤修精进具诸善法除灭恶法。善男子。具此十事。是名菩萨离于八难。 <br/>
 <br/>
 <br/>
-宝云经卷第三[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-20 17:29</div><div class="post-body">[font=楷体_GB2312][size=5][b]     宝云经卷第四[/b] <br/>
+宝云经卷第三[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-20 17:29</div><div class="post-body">[font=楷体_GB2312][size=5][b]     宝云经卷第四[/b] <br/>
 <br/>
 梁扶南三藏曼陀罗仙译 <br/>
 <br/>
@@ -212,7 +225,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 善男子。菩萨复有十法。名受取三衣。何等为十。少欲知足不多贪求不多积聚。无积聚故离诸过患。无失坏故离诸忧恼。离忧恼故离众苦聚集。离众苦聚集故无有爱欲。无爱欲故能尽诸漏。少欲菩萨。趣得为足。知足之人少得而足。以少欲故无多所求。离所求故无多积聚。离积聚故无恼失苦。无恼失苦故无有忧愁。无有忧愁故无有苦恼。无有苦恼故无有受用。无有受用故便得漏尽。善男子。具此十事。是名菩萨受持三衣。 <br/>
 <br/>
-宝云经卷第四[/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-20 17:32</div><div class="post-body">[font=楷体_GB2312][size=5][b]宝云经卷第五[/b] <br/>
+宝云经卷第四[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-20 17:32</div><div class="post-body">[font=楷体_GB2312][size=5][b]宝云经卷第五[/b] <br/>
 <br/>
 梁扶南三藏曼陀罗仙译 <br/>
 <br/>
@@ -249,7 +262,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 善男子。菩萨复有十法。名摧伏憍慢。何等为十。菩萨或时出家作是思惟。父母眷属已舍出家。犹如被弃坏烂死尸。云何于中当起憍慢。我今剃除须发。毁形向道节身知足。着坏色衣改先所好。修出家法舍俗威仪。云何当起憍慢之心。剃头持钵而行乞食。作乞丐想不应憍慢。当自卑下如旃陀罗子。我今乞丐由他济命。云何憍慢而自毁伤。是故思惟摧伏憍慢。我今受乞食法为他所贱。人与食时如似舍弃。如是思惟云何憍慢。我今于一切众生。恒如和上阿阇梨想。应加谦敬摧伏憍慢。我与诸同学同梵行者。善护威仪常念顺行。不应到于非律仪处。当使诸同梵行者见我欢喜。如此思惟时摧伏憍慢。我未曾得行佛法今得修行。于嗔恚恼害众生中当念忍辱。如是思惟时摧伏憍慢。善男子。具此十事。是名菩萨摧伏憍慢。 <br/>
 <br/>
 <br/>
-宝云经卷第五[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-20 17:34</div><div class="post-body">[font=楷体_GB2312][size=5][b]      宝云经卷第六[/b] <br/>
+宝云经卷第五[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-20 17:34</div><div class="post-body">[font=楷体_GB2312][size=5][b]      宝云经卷第六[/b] <br/>
 <br/>
 梁扶南三藏曼陀罗仙译 <br/>
 <br/>
@@ -265,7 +278,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 善男子。菩萨复有十法名胎不染污。何等为十。作诸形像。如来塔寺若有毁坏严饰修治。复以诸香泥涂于佛塔如来形像。常以香汤洗浴于如来塔涂扫清净。于父母所躬自供养。于和上阿阇梨同梵行者。心常恭敬供养不为财利。以此善根回与一切众生。愿令皆得胎不染污。心常殷重如是思惟。善男子。具此十事。是名菩萨胎不染污。善男子。菩萨复有十法名舍家出家。何等为十。无所受用。于可染处终不亲近。背于五欲。除诸爱渴。于如来所制禁戒终不毁犯。少欲知足。衣服饮食床敷卧具。趣得支命终不贪积。于五欲所常生畏怖。恒念厌离修集善法。善男子。具此十事。是名菩萨舍家出家。 <br/>
 <br/>
-宝云经卷第六[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-20 17:37</div><div class="post-body">[font=楷体_GB2312][size=5][b]    宝云经卷第七[/b] <br/>
+宝云经卷第六[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-20 17:37</div><div class="post-body">[font=楷体_GB2312][size=5][b]    宝云经卷第七[/b] <br/>
 <br/>
 梁扶南三藏曼陀罗仙译 <br/>
 <br/>

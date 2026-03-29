@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>观世音菩萨普门品 - 藏密修海典藏</title>
+<title>观世音菩萨普门品 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">观世音菩萨普门品</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-22 23:29</div><div class="post-body">妙法莲华经观世音菩萨普门品 <br/>
+<div class="post"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-22 23:29</div><div class="post-body">妙法莲华经观世音菩萨普门品 <br/>
 姚秦三藏法师鸠摩罗什译 <br/>
 尔时无尽意菩萨即从座起，偏袒右肩，合掌向佛而作是言：&quot;世尊，观世音菩萨以何因缘名观世音？&quot; <br/>
 佛告无尽意菩萨：&quot;善男子，若有无量百千万亿众生，受诸苦恼，闻是观世音菩萨，一心称名，观世音菩萨即时观其音声皆得解脱。若有持是观世音菩萨名者，设入大火，火不能烧，由是菩萨威神力故；若为大水所漂，称其名号，即得浅处；若有百千万亿众生，为求金、银、琉璃、砗磲、玛瑙、珊瑚、琥珀真珠等宝，入于大海，假使黑风吹其船舫，漂坠罗刹鬼国，其中若有乃至一人称观世音菩萨名者，是诸人等皆得解脱罗刹之难。以是因缘，名观世音。若复有人临当被害，称观世音菩萨名者，彼所执刀杖，寻段段坏，而得解脱。若三千大千国土，满中夜叉、罗刹，欲来恼人，闻其称观世音菩萨名者，是诸恶鬼尚不能以恶眼视之，况复加害；设复有人，若有罪、若无罪，扭械枷锁检系其身，称观世音菩萨名者，皆悉断坏，即得解脱；若三千大千国土，满中怨贼，有一商主将诸商人，赍持重宝，经过险路，其中一人作是唱言，诸善男子，勿得恐怖，汝等应当一心称观世音菩萨名号，是菩萨能以无畏施于众生，汝等若称名者，于此怨贼，当得解脱。众商人闻具发声言，南无观世音菩萨。称其名故，即得解脱。无尽意，观世音菩萨摩诃萨威神之力，巍巍如是。若有众生多于淫欲，常念恭敬观世音菩萨，便得离欲；若多嗔恚，常念恭敬观世音菩萨，便得离嗔；若多愚痴，常念恭敬观世音菩萨，便得离痴。无尽意，观世音菩萨有如是等大威神力，多所饶益，是故众生常应心念。若有女人，设欲求男，礼拜供养观世音菩萨，便生福德智慧之男；设欲求女，便生端正有相之女，宿植德本，众人爱敬。无尽意，观世音菩萨有如是力。若有众生恭敬礼拜观世音菩萨，福不唐捐。是故众生皆应受持观世音菩萨名号。无尽意，若有人受持六十二亿恒河沙菩萨名字，复尽形供养饮食衣服卧具医药，于汝意云何？是善男子、善女人功德多不？&quot;无尽意言：&quot;甚多世尊。&quot;佛言：&quot;若复有人受持观世音菩萨名号，乃至一时礼拜供养，是二人福，正等无异，于百千万亿劫不可穷尽。无尽意，受持观世音菩萨名号，得如是无边福德之利。&quot;无尽意菩萨白佛言：&quot;世尊，观世音菩萨云何游此娑婆世界&quot;云何而为众生说法？方便之力，其事云何？&quot;佛告无尽意菩萨：&quot;善男子，若有国土众生，应以佛身得度者，观世音菩萨即现佛身而为说法，应以辟支佛身得度者，即现辟支佛身而为说法；应以声闻身得度者，即现声闻身而为说法；应以梵王身得度者，即现梵王身而为说法；应以帝释身得度者，即现帝释身而为说法；应以自在天身得度者，即现自在天身而为说法；应以大自在天身得度者，即现大自在天身而为说法；应以天大将军身得度者，即现天大将军身而为说法；应以毗沙门身得度者，即现毗沙门身而为说法；应以小王身得度者，即现小王身而为说法；应以长者身得度者，即现长者身而为说法；应以居士身得度者，即现居士身而为说法；应以宰官身得度者，即现宰官身而为说法；应以婆罗门身得度者，即现婆罗门身而为说法；应以比丘、比丘尼、优婆塞、优婆夷身得度者，即现比丘、比丘尼、优婆塞、优婆夷身而为说法；应以长者居士、宰官、婆罗门妇女身得度者，即现妇女身而为说法；应以童男童女身得度者，即现童男童女身而为说法；应以天、龙、夜叉、乾闼婆、阿修罗、迦楼罗、紧那罗、摩喉罗伽、人、非人等身得度者，即现之而为说法。应以执金刚神得度者，即现执金刚神而为说法；无尽意，是观世音菩萨成就如是功德，以种种形游诸国土，度脱众生，是故汝等应当一心供养观世音菩萨。是观世音菩萨摩诃萨，于怖畏急难之中，能施无畏，是故此娑婆世界，皆号之为施无畏者。&quot;无尽意菩萨白佛言：&quot;世尊，我今当供养观世音菩萨。&quot;即解颈众宝珠璎珞，价值百千两金，而以予之。作是言：&quot;仁者受此法施珍宝璎珞。&quot;时观世音菩萨不肯受之。无尽意复白观世音菩萨言：&quot;仁者愍我等故，受此璎珞。&quot;尔时佛告观世音菩萨：&quot;当愍此无尽意菩萨及四众、天、龙、夜叉、乾闼婆、阿修罗、迦楼罗、紧那罗、摩喉罗伽、人、非人等故，受是璎珞。&quot;即时观世音菩萨愍诸四众，及于天、龙、人、非人等，受其璎珞，分作二分，一分奉释迦牟尼佛，一分奉多宝佛塔。&quot;无尽意。观世音菩萨有如是自在神力，游于娑婆世界。&quot;尔时无尽意菩萨以偈问曰： <br/>
@@ -94,8 +107,8 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 瓶中甘露时常洒 手内杨柳不计秋 <br/>
 千处祁求千处现 苦海常作度人舟 <br/>
 南无普陀琉璃世界大慈大悲观世音菩萨 <br/>
-</div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-22 23:44</div><div class="post-body">大慈大悲大喜大捨 <br/>
-嗡嘛呢叭咪吽捨 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">菩</div>菩提萨埵发表于 2011-10-23 12:07</div><div class="post-body">米麥只尾得清今惹舍 <br/>
+</div></div><div class="post"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-22 23:44</div><div class="post-body">大慈大悲大喜大捨 <br/>
+嗡嘛呢叭咪吽捨 </div></div><div class="post"><div class="post-header"><div class="avatar">菩</div>菩提萨埵发表于 2011-10-23 12:07</div><div class="post-body">米麥只尾得清今惹舍 <br/>
 直比清彼汪波降彼陽 <br/>
 獨巴馬魯均者商尾當 <br/>
 剛井克比左近宗喀巴 <br/>

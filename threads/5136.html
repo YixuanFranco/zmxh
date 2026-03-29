@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>佛说陀罗尼集经 - 藏密修海典藏</title>
+<title>佛说陀罗尼集经 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">佛说陀罗尼集经</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 03:47</div><div class="post-body">[size=5][font=楷体_GB2312][b]佛说陀罗尼集经[/b] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 03:47</div><div class="post-body">[size=5][font=楷体_GB2312][b]佛说陀罗尼集经[/b] <br/>
 <br/>
 [size=4]佛说陀罗尼集经翻译序 <br/>
 <br/>
@@ -420,7 +433,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 佛顶法竟从此以下明诸佛法 <br/>
 <br/>
-佛说陀罗尼集经卷第一[/font][/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 04:13</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第二(佛部卷下) <br/>
+佛说陀罗尼集经卷第一[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 04:13</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第二(佛部卷下) <br/>
 <br/>
 大唐天竺三藏阿地瞿多译 <br/>
 <br/>
@@ -840,7 +853,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 能诵得者皆悉成就最胜灵验。由是金刚跋折啰杵威神力故。于后若欲用跋折啰。如法捧杵。未用以前诵军茶利大心咒。满一七遍已。即以此杵如护身法。然后便作大结界法。一切时中加意护净以为常则。方行法事所作皆验。若疗病。用跋折啰时。不得越分。并须护净。如法用者。于咒师身常好安。隐已说跋折啰法功能竟 <br/>
 <br/>
-佛说陀罗尼集经卷第二(佛部卷下)[/font][/size] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 14:54</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第三 <br/>
+佛说陀罗尼集经卷第二(佛部卷下)[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 14:54</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第三 <br/>
 <br/>
 大唐天竺三藏阿地瞿多译 <br/>
 <br/>
@@ -1185,7 +1198,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 然后请诸佛菩萨金刚天等。作花座印。随法所须。烧着炉中供养。供养已。还坐本处。口云此无香花饮食惭愧。然后发遣。房内数数烧香。日日诵不动佛陀罗尼。无量寿佛陀罗尼等。灭除身中五逆四重等一切罪障。若欲得生无量寿佛国。日日作此供养。诵陀罗尼法。常作此法。一切事业皆得成就。死已生无量寿佛国。若日日供养功德甚大。不可具说。念佛功德非是挍量。其诵真言功德力。状如日月之光。念佛功德同夜灯之光。不得其比。若日日供养诵明兼念佛功德。如须弥之高大海之深。若空念佛不兼诵明功德。如香山之小。如阿耨达池之细。不可挍量。若日日供养诸佛诵明。灭罪如火烧草木。罪灭亦尔。若能日别三时供养。念佛诵明。比空念佛不可比挍。口不能宣。功德利益不可思议。当知般若功德成就。赞莫能尽 <br/>
 <br/>
 <br/>
-佛说陀罗尼集经卷第三[/font][/size] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 15:17</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第四(观世音卷上) <br/>
+佛说陀罗尼集经卷第三[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 15:17</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第四(观世音卷上) <br/>
 <br/>
 大唐天竺三藏阿地瞿多译 <br/>
 <br/>
@@ -1715,7 +1728,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 已上十一面观世音神咒 <br/>
 <br/>
-佛说陀罗尼集经卷第四[/font][/size] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 15:42</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第五(观世音卷中) <br/>
+佛说陀罗尼集经卷第四[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 15:42</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第五(观世音卷中) <br/>
 <br/>
 大唐天竺三藏阿地瞿多译 <br/>
 <br/>
@@ -2254,7 +2267,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 又法咒石蜜七遍。掷着水中。即取此水作曼茶罗结界。于中诵咒。一切师子大虫禽兽水牛白象啰阇朱啰水等皆不能害。毘俱知印咒及功能法略说已竟 <br/>
 <br/>
-佛说陀罗尼集经卷第五[/font][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 15:52</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第六(观世音等诸菩萨卷下) <br/>
+佛说陀罗尼集经卷第五[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 15:52</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第六(观世音等诸菩萨卷下) <br/>
 <br/>
 大唐天竺三藏阿地瞿多译 <br/>
 <br/>
@@ -2532,7 +2545,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 尔时观世音菩萨摩诃萨等。从是佛会各出本意。而说法印咒品功德大威神力不可思议。诸佛赞言善哉善哉。汝等能为善护念故。设此方便威神自在。广救众生离诸贪着。除其罪障去诸烦恼。发大慈悲。殷懃教诲感悟发觉。我成印可尔时会众皆悉欢喜作礼而去 <br/>
 <br/>
-佛说陀罗尼集经卷第六(观世音等诸菩萨法卷下)[/font][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 16:19</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第七(金刚部卷上) <br/>
+佛说陀罗尼集经卷第六(观世音等诸菩萨法卷下)[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 16:19</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第七(金刚部卷上) <br/>
 <br/>
 大唐天竺三藏阿地瞿多译 <br/>
 <br/>
@@ -2986,7 +2999,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 时金刚藏王满其愿已。忽然不现。行者当时即得其验。供养毕已。次第取其坛中水罐。出道场外。诣水坛上。次第灌其受法人顶。各灌顶已。着新净衣。引入道场顶礼佛已。与作护身一如上法。发遣金刚藏王菩萨扫除处所。残食散施一切众生。尔时佛告金刚藏等菩萨摩诃萨众言。汝等眷属今献诸咒。微妙甚深希有秘密法藏。得有如是利益之事。我亦从昔已来。曾学是法皆得成就。汝等亦须坚持梵行常无退转。得无生法忍归佛法僧。恒巡六道而作护念。劝发菩提莫辞劳惮。由是汝等誓愿力故。我等赞成一切欢喜。时诸大众闻佛印可。皆大欢喜作礼而去 <br/>
 <br/>
-佛说陀罗尼集经卷第七[/font][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 16:34</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第八(金刚部中卷) <br/>
+佛说陀罗尼集经卷第七[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 16:34</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第八(金刚部中卷) <br/>
 <br/>
 大唐天竺三藏阿地瞿多译 <br/>
 <br/>
@@ -3318,7 +3331,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 又一切起尸恶鬼作病。烧安悉香咒黑羊毛。作索结已系其项上。又咒病人耳孔之时。即得解脱。若其不差。又以瞋心咒金刚杖。以杖打地。其作病鬼皆来首伏。合掌乞命云。更莫打。今日身心五支碎痛。但乞放舍更不敢来。又欲得学一切经论一切伎艺。日日旦起诵咒一遍。系心不绝其法即成。一日诵得五百偈经。一切所求但瞋怒诵。无不谐允其金刚杵横九指长。若用赤铜若白檀作。若枣木心随一皆得。其中紫檀最为第一。跋折啰咤诃娑功能如此。所治之病如汤沃雪。亦如猛火烧诸干草 <br/>
 <br/>
-佛说陀罗尼集经卷第八[/font][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 16:47</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第九(金刚部卷下) <br/>
+佛说陀罗尼集经卷第八[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-12-31 16:47</div><div class="post-body">[size=5][font=楷体_GB2312]佛说陀罗尼集经卷第九(金刚部卷下) <br/>
 <br/>
 大唐天竺三藏阿地瞿多译 <br/>
 <br/>
@@ -3777,7 +3790,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 苏利摩利摩摩利摩利苏苏利莎诃 <br/>
 <br/>
-佛说陀罗尼集经卷第九[/font][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2010-1-1 00:51</div><div class="post-body">[font=楷体_GB2312][size=5]佛说陀罗尼集经卷第十(诸天卷上) <br/>
+佛说陀罗尼集经卷第九[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2010-1-1 00:51</div><div class="post-body">[font=楷体_GB2312][size=5]佛说陀罗尼集经卷第十(诸天卷上) <br/>
 <br/>
 大唐天竺三藏阿地瞿多译 <br/>
 <br/>
@@ -4068,7 +4081,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 又法须取谷麦小豆。咒之一遍掷着火中。令满一千八遍。一日三时。如是满足四十五日。一切家中谷麦豆。自然色别皆来聚集。又法欲除家内一切灾祸。取伽罗树枝。若无此木。取石榴枝。寸截。涂酥酪蜜咒之一遍。着火中烧满一千八遍。一切灾祸自然除灭。又法为除家内一切灾障。每月八日十五日。炭灰二物和酪。咒之一百八遍散宅四方。当宅中立诵咒一千八遍。一切恶鬼不敢前进。咒师欲得天女欢喜者。于像前作四肘水坛。坛中心穿一肘火坑。深七寸。画作十二叶莲华形。于中烧紫檀木桑木。柴长一肘。各一束。如是每日三度。于像前烧之。种种供养。并烧酥酪粳。米华荞麦华。诵大身咒至十万遍。依如此法。天女欢喜恒具大验。诵此咒不得行欲。诵此咒者得无所畏。若阿须轮鬼神龙神无能害者。说此咒已。阿难及诸比丘。皆前为佛作礼而退。此功德天女法竟 <br/>
 <br/>
-佛说陀罗尼集经卷第十[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2010-1-1 01:30</div><div class="post-body">[size=5][font=楷体_GB2312]   佛说陀罗尼集经卷第十一(诸天卷下) <br/>
+佛说陀罗尼集经卷第十[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2010-1-1 01:30</div><div class="post-body">[size=5][font=楷体_GB2312]   佛说陀罗尼集经卷第十一(诸天卷下) <br/>
 <br/>
 大唐天竺三藏阿地瞿多译 <br/>
 <br/>
@@ -4487,7 +4500,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 尔时诸佛。见是天龙八部诸鬼神王药叉罗剎乾闼婆阿素洛等。各献神咒多诸利益。成就希有大功德已。而告众言我皆印可。不违本愿任为方便。护持正法。不得轻慢我等正教。怜愍一切众生之类。尔时诸天王等蒙佛印可。皆大欢喜一时作礼。心无退转成就第一最胜功德 <br/>
 <br/>
-佛说陀罗尼集经卷第十一[/font][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2010-1-1 01:41</div><div class="post-body">[font=楷体_GB2312][size=5]佛说陀罗尼集经卷第十二 <br/>
+佛说陀罗尼集经卷第十一[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2010-1-1 01:41</div><div class="post-body">[font=楷体_GB2312][size=5]佛说陀罗尼集经卷第十二 <br/>
 <br/>
 大唐天竺三藏阿地瞿多译 <br/>
 <br/>

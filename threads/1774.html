@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>贤愚经（本缘部） - 藏密修海典藏</title>
+<title>贤愚经（本缘部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">贤愚经（本缘部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 21:44</div><div class="post-body">[font=楷体_GB2312][size=5]     [b][size=6]       贤愚经卷第一[/size][/b] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 21:44</div><div class="post-body">[font=楷体_GB2312][size=5]     [b][size=6]       贤愚经卷第一[/size][/b] <br/>
 <br/>
 元魏凉州沙门慧觉等在高昌郡译 <br/>
 <br/>
@@ -108,7 +121,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]又雨天华而以供养。尔时帝释还复本形。住在王前。语大王曰。今作如是难及之行。欲求何等。汝今欲求转轮圣王帝释魔王。三界之中欲求何等。菩萨答言。我所求者。不期三界尊荣之乐。所作福报欲求佛道。天帝复言。汝今坏身。乃彻骨髓。宁有悔恨意耶。王言无也。天帝复曰。虽言无悔。谁能知之。我观汝身。战掉不停。言气断绝。言无悔恨。以何为证。王即立誓。我从始来乃至于今。无有悔恨大如毛发。我所求愿。必当果获。至诚不虚如我言者。令吾身体即当平复。作誓已讫。身便平复。倍胜于前。天及世人。叹未曾有。欢喜踊跃。不能自胜。尸毗王者今佛身是也。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]世尊。往昔为于众生不顾身命。乃至如是。今者世尊。法海已满法幢已立。法鼓已建。法炬已照。润益成立。今正得时。云何欲舍一切众生。入于涅槃而不说法。尔时梵王。于如来前。合掌赞叹。说于如来先身求法。为于众生凡有千首。世尊尔时受梵王请。即便往诣波罗奈国鹿野苑中转于法-轮。三宝因是乃现于世。时诸人天诸龙鬼神。八部之众。闻说是已。莫不欢喜。顶戴奉行 。[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 21:50</div><div class="post-body">[font=楷体_GB2312][size=5]　　（二）摩诃萨埵以身施虎品第二 <br/>
+[font=楷体_GB2312][size=5]世尊。往昔为于众生不顾身命。乃至如是。今者世尊。法海已满法幢已立。法鼓已建。法炬已照。润益成立。今正得时。云何欲舍一切众生。入于涅槃而不说法。尔时梵王。于如来前。合掌赞叹。说于如来先身求法。为于众生凡有千首。世尊尔时受梵王请。即便往诣波罗奈国鹿野苑中转于法-轮。三宝因是乃现于世。时诸人天诸龙鬼神。八部之众。闻说是已。莫不欢喜。顶戴奉行 。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 21:50</div><div class="post-body">[font=楷体_GB2312][size=5]　　（二）摩诃萨埵以身施虎品第二 <br/>
 <br/>
 如是我闻。一时佛在舍卫国祇树给孤独园。尔时世尊。乞食时到。著衣持钵。独将阿难。入城乞食。时有一老母。唯有二男。偷盗无度。财主捕得。便将诣王。平事案律。其罪应死。即付旃陀罗。将至杀处。遥见世尊。母子三人。俱共向佛。叩头求哀。唯愿天尊。垂济苦厄。救我子命。诚心款笃。甚可怜愍。如来慈矜。即遣阿难。诣王请命。王闻佛教。即便放之。得脱此厄。感戴佛恩。欣踊无量。寻诣佛所。头面礼足。合掌白言。蒙佛慈恩。得济余命。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -136,7 +149,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]求舍此身。愿索八关斋法。用遗于我。若其相违。吾覆汝国。用作大海。园监于是。奉果于王。因复说龙所嘱之变。王闻此已。甚用不乐。所以者何。时世无佛法。又灭尽八关斋文今不可得。若不称之。恐见危害。惟念此理。是故愁悒。王有大臣。最所敬重。王告臣曰。神龙从我。求索斋法。仰卿得之。当用寄与。大臣对言。今世无法。云何可得。王又告曰。汝今不获。吾当杀卿。大臣闻此。甚怀惆怅。往至自舍。此臣有父。年老耆旧。每从外来。和颜悦色。以慰父意。当于是时。父见其子。面色改常。即便问之。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]何由乃尔。于时大臣。便向其父。委曲自说。其父答曰。吾家堂柱。每现光明。试破看之。傥有异物。奉父言教。令他拖伐取而斩析。得经二卷。一是十二因缘经。二是八关斋文。大臣即持。奉上于王。王得欢喜。不能自胜。便以此经。著金盘上。自送与龙。龙获此经。大用欣庆。便用好宝。赠遗于王。受持八斋。勤而奉行。命终之后。生于天宫。人王亦复修奉斋法。寿尽生天。共同一处。昨夜俱来。咨禀法化。应时寻得须陀洹果。永息三涂。游人天道。从是已往。毕得涅槃。佛说是时。一切众会。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 21:55</div><div class="post-body">[font=楷体_GB2312][size=5]　　（四）波罗奈人身贫供养品第四 <br/>
+[font=楷体_GB2312][size=5]何由乃尔。于时大臣。便向其父。委曲自说。其父答曰。吾家堂柱。每现光明。试破看之。傥有异物。奉父言教。令他拖伐取而斩析。得经二卷。一是十二因缘经。二是八关斋文。大臣即持。奉上于王。王得欢喜。不能自胜。便以此经。著金盘上。自送与龙。龙获此经。大用欣庆。便用好宝。赠遗于王。受持八斋。勤而奉行。命终之后。生于天宫。人王亦复修奉斋法。寿尽生天。共同一处。昨夜俱来。咨禀法化。应时寻得须陀洹果。永息三涂。游人天道。从是已往。毕得涅槃。佛说是时。一切众会。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 21:55</div><div class="post-body">[font=楷体_GB2312][size=5]　　（四）波罗奈人身贫供养品第四 <br/>
 <br/>
 如是我闻。一时佛在舍卫国祇树给孤独园。是时国中有大长者。生一男儿。面首端政。既生数日。复能言语。问其父母。世尊在不。答曰故在。复更问曰。尊者舍利弗阿难等。悉为在不。答言悉在。父母见子生便能言。谓其非人。深怪所以。便往问佛。佛言。此儿有福。不足疑也。父母欢喜。还归其家。儿又启曰。唯愿二亲。为我请佛及比丘僧。父母告曰。请佛及僧。当须供具。非卒可办。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -170,7 +183,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]何缘乃尔。其傍诸人。具列事状。臣曰且停。待我见王。大臣进入。启白王言。彼人之罪。不至深重。何以杀之。虽和其音。而不见形。既无交通奸淫之事。幸愿垂矜。丐其生命。王不能违赦不刑戮。其人得脱。奉事大臣。勤谨无替。如是承给。经历多年。便自思惟。淫欲伤人。利于刀剑。我今困厄。皆由欲故。即语大臣。听我出家遵修道业。大臣答曰。不敢相违。学若成道。还来相见。即诣山泽。专思妙理。精神开悟。成辟支佛。还来城邑。造大臣家。大臣欢喜。请供养之。甘膳妙服。四事无乏。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]时辟支佛。于虚空中。现神变化。身出水火。放大光明。大臣见之。欣然无量。便立誓愿。由吾恩故。命得全济。使我世世富贵长寿。殊胜奇特。数千万倍。令我智德相与共等。佛告王曰。时彼大臣。救活一人。令得道者。今恒伽达是。由是因缘。所生之处。命不中夭。今值我时。逮致应真。佛说此已。诸在会者。信敬欢喜。顶受奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 21:58</div><div class="post-body">[font=楷体_GB2312][size=5]　　（七）须阇提品第七 <br/>
+[font=楷体_GB2312][size=5]时辟支佛。于虚空中。现神变化。身出水火。放大光明。大臣见之。欣然无量。便立誓愿。由吾恩故。命得全济。使我世世富贵长寿。殊胜奇特。数千万倍。令我智德相与共等。佛告王曰。时彼大臣。救活一人。令得道者。今恒伽达是。由是因缘。所生之处。命不中夭。今值我时。逮致应真。佛说此已。诸在会者。信敬欢喜。顶受奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 21:58</div><div class="post-body">[font=楷体_GB2312][size=5]　　（七）须阇提品第七 <br/>
 <br/>
 如是我闻。一时佛在罗阅只竹园精舍。尔时世尊。而与阿难。著衣持钵。入城乞食。时有老翁老母。两目既盲。贫穷孤苦。无止住处。止宿门下。唯有一子。年始七岁。常行乞丐以养父母。得好果菜。其美好者。供养父母。余残酸涩。臭秽恶者。便自食之。尔时阿难。见此小儿。虽为年小。恭敬孝顺。心怀爱念。佛乞食已。还到精舍。尔时世尊为诸大众。演说经法。阿难于时长跪叉手。前白佛言。向与世尊。入城分卫。见一小儿。慈心孝顺。共盲父母。住城门下。东西乞丐所得之物。饭食菜果。其美好者。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -192,7 +205,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]缘是功德。自致作佛。尔时众会。闻佛自说宿世本缘。尔时会者。皆各悲叹感佛奇特慈孝之行。其中有得须陀洹者。斯陀含者。[/size][/font][font=楷体_GB2312][size=5]阿那含者。阿罗汉者。有发无上正真道者。有住不退地者。一切众会。皆大欢喜。顶戴奉行 <br/>
 <br/>
-贤愚经卷第一[/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 22:01</div><div class="post-body">[font=楷体_GB2312][size=5][b]               贤愚经卷第二[/b] <br/>
+贤愚经卷第一[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 22:01</div><div class="post-body">[font=楷体_GB2312][size=5][b]               贤愚经卷第二[/b] <br/>
 <br/>
 元魏凉州沙门慧觉等在高昌郡译 <br/>
 [/size][/font] <br/>
@@ -222,7 +235,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]于时金财。即剃须发。身著袈裟。便成沙弥。年已满足。任受大戒。即令众僧当受具足。临坛众僧。次第为礼。其作礼时。两手拍地。当手拍处。有二金钱。如是次第。一切为礼。随所礼处。皆有金钱。受戒已竟。精勤修习。得罗汉道。阿难白佛。不审世尊。此金财比丘。本造何福。自生已来。手把金钱。唯愿世尊。当见开示。佛告阿难。汝当善思。我今说之。阿难对曰如是。诺当善听。佛言。乃往过去九十一劫时。世有佛名毗婆尸。出现于世。政法教化。度脱众生。不可称数。佛与众僧。游行国界。时诸豪富长者子等。施设饭食。供养彼佛及弟子众。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]尔时有一贫人。乏于财货。常于野泽。取薪卖之。值时取薪卖得两钱。见佛及僧受王家请。欢喜敬心。即以两钱。施佛及僧。佛愍此人。即为受之。佛告阿难。尔时贫人。以此二钱。施佛及僧故。九十一劫。恒把金钱。财宝自恣。无有穷尽。尔时贫人者。金财比丘是也。正使其人未得道者。未来果报。亦复无量。是故阿难。一切众生。皆应精勤布施为业。尔时阿难。及众会者。闻佛所说。皆悉信解。有得须陀洹果者。斯陀含。阿那含。阿罗汉者。有发无上正真道意者。复有得住不退地者。一切众会。闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 22:06</div><div class="post-body">[font=楷体_GB2312][size=5]　　（一○）华天因缘品第十 <br/>
+[font=楷体_GB2312][size=5]尔时有一贫人。乏于财货。常于野泽。取薪卖之。值时取薪卖得两钱。见佛及僧受王家请。欢喜敬心。即以两钱。施佛及僧。佛愍此人。即为受之。佛告阿难。尔时贫人。以此二钱。施佛及僧故。九十一劫。恒把金钱。财宝自恣。无有穷尽。尔时贫人者。金财比丘是也。正使其人未得道者。未来果报。亦复无量。是故阿难。一切众生。皆应精勤布施为业。尔时阿难。及众会者。闻佛所说。皆悉信解。有得须陀洹果者。斯陀含。阿那含。阿罗汉者。有发无上正真道意者。复有得住不退地者。一切众会。闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 22:06</div><div class="post-body">[font=楷体_GB2312][size=5]　　（一○）华天因缘品第十 <br/>
 <br/>
 如是我闻。一时佛在舍卫国祇树给孤独园。与大比丘众千二百五十人俱。尔时国内。有豪富长者。生一男儿。面首端政。其儿生已。家内自然。天雨众华。积满舍内。即字此儿。名弗波提婆。晋言花天儿年转大。往至佛所。见佛颜容相好无比。见已欢喜。心自思惟。我生处世。得值圣尊。今当请佛及诸众僧。即前白佛言。唯愿世尊。及与众僧。明日屈意。临适鄙家。受少蔬食。因见福庆佛知其根。即时受请。于时华天。还至其家。明日食时。佛与众僧。往至其家。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -256,7 +269,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]佛告之曰。过去久远阿僧祇劫。此阎浮提。有大国王。名弥佉罗拔罗。晋言慈力。领阎浮提八万四千小国王。有二万夫人一万大臣。王有慈悲。具四等心。恒愍一切。未曾懈厌。常以十善。教诲民庶。四方钦慕王所化治。国土安乐。莫不庆赖。诸疫鬼辈。恒啖人血气。用自济活。尔时人民。摄身口意。敦从十善。众邪恶疫。不敢侵近。饥羸困乏。瘦悴无力。时五夜叉。来至王所。我等徒类。仰人血气。得全身命。由王教导。咸持十善。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]我等自是无复饮食。饥渴顿乏。求活无路。大王慈悲。岂不矜愍。王闻是语。甚怀哀伤。即自放脉。刺身五处。时五夜叉。各自持器。来承血饮。饮血饱满。咸赖王恩。欣喜无量。王复告曰。汝若充足。念修十善。我今以身血。济汝饥渴。令得安隐。后成佛时。当以法身戒定慧血。除汝三毒诸欲饥渴。安置涅槃安隐之处。阿难。欲知尔时慈力王者。今我身是。五夜叉者。今憍陈如等五比丘是。我世世誓愿。许当先度。是故我初说法。闻便解脱。时尊者阿难。及诸众会。闻佛所说。咸增敬仰。欢喜奉行 。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 22:25</div><div class="post-body">[font=楷体_GB2312][size=5]　　（一四）降六师品第十四 <br/>
+[font=楷体_GB2312][size=5]我等自是无复饮食。饥渴顿乏。求活无路。大王慈悲。岂不矜愍。王闻是语。甚怀哀伤。即自放脉。刺身五处。时五夜叉。各自持器。来承血饮。饮血饱满。咸赖王恩。欣喜无量。王复告曰。汝若充足。念修十善。我今以身血。济汝饥渴。令得安隐。后成佛时。当以法身戒定慧血。除汝三毒诸欲饥渴。安置涅槃安隐之处。阿难。欲知尔时慈力王者。今我身是。五夜叉者。今憍陈如等五比丘是。我世世誓愿。许当先度。是故我初说法。闻便解脱。时尊者阿难。及诸众会。闻佛所说。咸增敬仰。欢喜奉行 。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 22:25</div><div class="post-body">[font=楷体_GB2312][size=5]　　（一四）降六师品第十四 <br/>
 <br/>
 如是我闻。一时佛在王舍城竹园之中。与千二百五十比丘俱。时洴沙王。已得初果。信敬之心倍复隆厚。常设上妙四事所须。供养于佛及比丘僧。乐人同善。志兼劝导。国有六师。富兰那等。先素出世。邪见倒说。诳惑民庶。迷冥之徒。信服邪教。众类广布。恶党遍满。时王有弟。敬奉六师。信惑邪倒。谓其有道。竭家之货。供给与之。佛日初出。慧流肇润。无心拔擢。没在重网。兄王洴沙。甚爱重之。殷勤方便。晓令奉佛。弟执邪理。不从王教。数数敕令请佛供养。弟白兄王。我自有师。不能复往奉事瞿昙。然王有教理无有违。当设大会不限来众。若其自至。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -332,7 +345,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]福德报故。作转轮王。食福四域。五欲从心。善恶之业。其报不朽。是故一切。当念道要。慎身口意。遵修道行。佛说是时。洴沙王等。诸王臣民。四辈之众。天龙鬼神。闻佛所说。有得须陀洹斯陀含阿那含阿罗汉者。有种辟支佛善根本者。有发无上大道心者。或有迁住不退地者一切欢喜。礼敬奉行。 <br/>
 <br/>
-贤愚经卷第二[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 22:35</div><div class="post-body">[font=楷体_GB2312][size=5][b]             贤愚经卷第三[/b] <br/>
+贤愚经卷第二[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 22:35</div><div class="post-body">[font=楷体_GB2312][size=5][b]             贤愚经卷第三[/b] <br/>
 元魏凉州沙门慧觉等在高昌郡译 <br/>
 <br/>
 （一五）锯陀身施品第十五 <br/>
@@ -371,7 +384,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]小妇懊恼。气绝复稣。疑是大妇妒杀我子。即问大妇。汝之无状。怨杀我子。大妇即时。自咒誓曰。若杀汝子。使我世世夫为毒蛇所杀。有儿子者。水漂狼食。身见生埋。自啖其子。父母大小。失火而死。何为谤我。何为谤我。当于尔时。谓无罪福反报之殃。前所咒誓。今悉受之。无相代者。欲知尔时大妇者。则我身是。诸比丘尼。重复问曰。复有何庆。得睹如来。就迎之耶。得在道堂免于生死。微妙答曰。昔波罗奈国。有一大山。名曰仙山。其中恒有辟支佛声闻外道神仙。无有空缺。彼时缘觉。入城分卫。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]有长者妇。见之欢喜。即供养之。缘觉食已。飞升虚空。身出水火。坐卧空中。妇时见之。即发誓言。使我后世得道如是。尔时妇者。则我身是。缘是之故。得见如来。心意开解。成罗汉道。今日我身。虽得罗汉。恒热铁针。从顶上入。于足下出。昼夜患此。无复竟已。殃福如是。无有朽败。尔时五百贵姓比丘尼。闻说是法。心意悚然。观欲之本。犹如炽火。贪欲之心。永不复生。在家之苦。甚于牢狱。诸垢消尽。一时入定。或阿罗汉道。各共齐心。白微妙曰。我等缠绵系著淫欲。不能自拔。今蒙仁恩导。得度生死。时佛叹曰。快哉微妙。夫为道者。能以法教。转相教诫。可谓佛子。众会闻说莫不欢喜。稽首奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 22:49</div><div class="post-body">[font=楷体_GB2312][size=5]　　（一七）阿输迦施土品第十七(丹本此品在第四卷为第二十二) <br/>
+[font=楷体_GB2312][size=5]有长者妇。见之欢喜。即供养之。缘觉食已。飞升虚空。身出水火。坐卧空中。妇时见之。即发誓言。使我后世得道如是。尔时妇者。则我身是。缘是之故。得见如来。心意开解。成罗汉道。今日我身。虽得罗汉。恒热铁针。从顶上入。于足下出。昼夜患此。无复竟已。殃福如是。无有朽败。尔时五百贵姓比丘尼。闻说是法。心意悚然。观欲之本。犹如炽火。贪欲之心。永不复生。在家之苦。甚于牢狱。诸垢消尽。一时入定。或阿罗汉道。各共齐心。白微妙曰。我等缠绵系著淫欲。不能自拔。今蒙仁恩导。得度生死。时佛叹曰。快哉微妙。夫为道者。能以法教。转相教诫。可谓佛子。众会闻说莫不欢喜。稽首奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 22:49</div><div class="post-body">[font=楷体_GB2312][size=5]　　（一七）阿输迦施土品第十七(丹本此品在第四卷为第二十二) <br/>
 <br/>
 如是我闻。一时佛在舍卫国祇树给孤独园。尔时世尊。晨与阿难。入城乞食。见群小儿于道中戏。各聚地土。用作宫舍。及作仓藏财宝五谷。有一小儿。遥见佛来。见佛光相。敬心内发。欢喜踊跃。生布施心。即取仓中名为谷者。即以手掬。欲用施佛。身小不逮。语一小儿。我登汝上。以谷布施。小儿欢喜。报言可尔。即蹑肩上。以土奉佛。佛即下钵。低头受土。受之已讫授与阿难语言。持此涂污我房。乞食既得。还诣祇洹。阿难以土。涂佛房地。齐污一边。其土便尽。污已。整衣服。具以白佛。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -407,7 +420,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]云我分身。生五百子。身体安隐。具腾我情。令知消息。差摩如言。顺道而去见阿蓝婆。即出问讯。说其蓝婆。情事委曲。生五百子。皆悉安隐。时阿蓝婆。闻之欢喜。问妇人曰。今汝字何。女人答言。我字差摩。罗刹闻之。亦用欢悦。我姊分身。复得安隐。汝字复好。何其善也。今此住处。有一釜金。我用赐卿。来时念取。又问之曰。汝欲何至。差摩答言。为王担食。至彼人所。阿蓝婆曰。我有一弟。字分那奇。住在前路。为吾问讯。因腾姊意。即复共辞。顺道而进。到前如意。见分那奇。为其二姊。具说意状。云彼大姊。生五百子。身轻安隐。无有不祥。时分那奇。闻其二姊平安消息。心用欢喜。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]复问差摩。汝字何等。妇人答曰。我字差摩。其鬼答言。汝字安隐。复传我姊平安消息。倍何快耶。即语差摩言。我此住处。有金一釜。以用遗卿。来时念取。辞别已竟。引路而去。忆识故处。至彼人所。与食已讫。还来本处。取金三釜持至其家。复于王家。得赏金千两。其家于是。拔贫即富。国中庶民见其家内财宝饶多各各慕及。乐为营从。来至其家。承给使令。王闻是人福德如是。即召至宫。拜为大臣。既蒙王禄。其家又富。信心诚笃广殖福业。请佛及僧。施设大檀。佛与徒众。悉受其请。饮食已讫。佛为说法。心意开解。成须陀洹时诸会者阿难之等闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 22:57</div><div class="post-body">[font=楷体_GB2312][size=5]　　（二○）贫女难陀品第二十(丹本此品在第十一卷为五十三) <br/>
+[font=楷体_GB2312][size=5]复问差摩。汝字何等。妇人答曰。我字差摩。其鬼答言。汝字安隐。复传我姊平安消息。倍何快耶。即语差摩言。我此住处。有金一釜。以用遗卿。来时念取。辞别已竟。引路而去。忆识故处。至彼人所。与食已讫。还来本处。取金三釜持至其家。复于王家。得赏金千两。其家于是。拔贫即富。国中庶民见其家内财宝饶多各各慕及。乐为营从。来至其家。承给使令。王闻是人福德如是。即召至宫。拜为大臣。既蒙王禄。其家又富。信心诚笃广殖福业。请佛及僧。施设大檀。佛与徒众。悉受其请。饮食已讫。佛为说法。心意开解。成须陀洹时诸会者阿难之等闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 22:57</div><div class="post-body">[font=楷体_GB2312][size=5]　　（二○）贫女难陀品第二十(丹本此品在第十一卷为五十三) <br/>
 <br/>
 如是我闻。一时佛在舍卫国祇树给孤独园。尔时国中。有一女人名曰难陀。贫穷孤独。乞丐自活。见诸国王臣民大小。各各供养佛及众僧。心自思惟。我之宿罪。生处贫贱。虽遭福田。无有种子。酸切感伤。深自咎悔。便行乞丐。以俟微供。竟日不休。唯得一钱。持诣油家。欲用买油。油家问曰。一钱买油。少无所逮。用作何等。难陀具以所怀语之。油主怜愍。增倍与油。得已欢喜。足作一灯。担向精舍。奉上世尊。置于佛前众灯之中。自立誓愿。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -425,7 +438,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]佛告阿难。尔时比丘阿梨蜜者。岂异人乎。乃往过去定光佛是。王女牟尼。岂异人乎。我身是也。因由昔日灯明布施。从是已来。无数劫中。天上世间受福自然。身体殊异超绝余人。至今成佛。故受此诸灯明之报。时诸大会闻佛所说。有得初果乃至四果。或种缘觉善根之者。有发无上正真道意。慧命阿难。及诸众会。咸共顶戴。踊跃奉行。 <br/>
 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 23:04</div><div class="post-body">[font=楷体_GB2312][size=5] [b]       贤愚经卷第三[/b] <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-8 23:04</div><div class="post-body">[font=楷体_GB2312][size=5] [b]       贤愚经卷第三[/b] <br/>
 <br/>
 （二一）大光明王始发道心缘品第十六 <br/>
 <br/>
@@ -443,7 +456,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]王即问言。颇复有人。亦能调身。兼调心不。白言大王。有佛世尊。既能调身。亦能调心。时光明王。闻佛名已。心惊毛竖。告言散阇。所言佛者。何种性生。散阇答言。佛世尊者。二种性生。一者智慧。二者大悲。勤行六事。所谓六波罗蜜。功德智慧。悉具足已。号之为佛。既自能调。亦调众生。王闻是已。悚然踊跃。即起入宫。洗浴香汤。更著新衣。上高阁上。四向作礼。于一切众生起大悲心。烧香誓愿。愿我所有功德。回向佛道。我成佛已。自调其心。亦当调伏一切众生。若以一众生故。在于阿鼻地狱。住经一劫。有所益者。当入是狱。终不舍于菩提之心。作是誓已。六种震动。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]诸山大海。[跳-兆+叵][跳-兆+我]踊没。虚空之中。自然乐声。无量诸天。作天妓乐。歌叹菩萨。而作是言。如汝所作。得佛不久。成佛道已。愿度我等。我等于此清净法会。亦应有分。佛告诸比丘。欲知尔时白象吞铁丸者。难陀是也。时象师者。舍利弗是也。光明王者。我身是也。我于尔时。见是象调顺故。始发道心。求于佛道尔时大会。闻佛苦行如是。有得四道果者。有发大道心者。有出家修道者。莫不欢喜。顶戴奉行。以是因缘。强志勇故。由小因缘能办大事。懒惰懈怠。虽遇大缘。无所能成。是故行者。当勤精进趣向佛道。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 07:15</div><div class="post-body">[font=楷体_GB2312][size=5][b]                  贤愚经卷第四[/b] <br/>
+[font=楷体_GB2312][size=5]诸山大海。[跳-兆+叵][跳-兆+我]踊没。虚空之中。自然乐声。无量诸天。作天妓乐。歌叹菩萨。而作是言。如汝所作。得佛不久。成佛道已。愿度我等。我等于此清净法会。亦应有分。佛告诸比丘。欲知尔时白象吞铁丸者。难陀是也。时象师者。舍利弗是也。光明王者。我身是也。我于尔时。见是象调顺故。始发道心。求于佛道尔时大会。闻佛苦行如是。有得四道果者。有发大道心者。有出家修道者。莫不欢喜。顶戴奉行。以是因缘。强志勇故。由小因缘能办大事。懒惰懈怠。虽遇大缘。无所能成。是故行者。当勤精进趣向佛道。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 07:15</div><div class="post-body">[font=楷体_GB2312][size=5][b]                  贤愚经卷第四[/b] <br/>
 元魏凉州沙门慧觉等在高昌郡译 <br/>
 <br/>
 （二二）摩诃斯那优婆夷品第二十一(丹本无此品) <br/>
@@ -488,7 +501,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]时会四众。有得须陀洹者。有得斯陀含阿那含阿罗汉者。有发大道心者。一切大小。莫不欢喜。时有众人畏生死者。各作是念。今此女人。乃能如是。自割身肉。以供沙门。甚为奇特。我等若舍聚落田宅。岂足为难。便各弃舍聚落家属。出家求道。勤修精进。断诸结漏。成阿罗汉道。时此聚落。佛法信行。广阐流布。以是缘故。有强志者。乃至女人。读诵经法。不惜身肉。得诸道果。况于丈夫勤心道业。当不成者乎。是因缘故。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]诸善男子。当勤善法畏于生死。便得结使微薄离于生死。虽于此末法之中不能得度。缘此功德。当于人天受无穷福。弥勒世尊。不久五十六亿十千万岁。来此成佛。当为汝等广说妙法。汝于其中。随愿所求成三乘道。悉得解脱。顶戴奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 07:22</div><div class="post-body">[font=楷体_GB2312][size=5]　（二三）出家功德尸利苾提品第二十二(丹本此品在第七卷三十三) <br/>
+[font=楷体_GB2312][size=5]诸善男子。当勤善法畏于生死。便得结使微薄离于生死。虽于此末法之中不能得度。缘此功德。当于人天受无穷福。弥勒世尊。不久五十六亿十千万岁。来此成佛。当为汝等广说妙法。汝于其中。随愿所求成三乘道。悉得解脱。顶戴奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 07:22</div><div class="post-body">[font=楷体_GB2312][size=5]　（二三）出家功德尸利苾提品第二十二(丹本此品在第七卷三十三) <br/>
 <br/>
 如是我闻。一时佛在摩伽陀国王舍城迦兰陀竹园中。尔时世尊。赞叹出家。功德因缘其福甚多。若放男女。若放奴婢。若听人民。若自己身。出家入道者。功德无量。布施之报。十世受福。六天人中。往返十到。犹故不如放人出家及自出家功德为胜。何以故。布施之报。福有限极。出家之福。无量无边。又持戒果报。五通神仙。受天福报。极至梵世。于佛法中。出家果报。不可思议。乃至涅槃。福故不尽。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -538,7 +551,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]又欲显此老比丘德。于大众中。呼福增言。汝来福增。汝今日往大海边耶。福增白言。实往世尊。汝所见者。今可说之。福增比丘。具白世尊如所见事。佛言。善哉善哉。福增比丘。如汝所见事实如是。汝今已离生死之苦。得涅槃乐。应受一切人天供养。比丘所应作事。汝已具足。年少比丘。闻佛是语。深怀忧悔。如是智慧贤善之人。我等无智。恶心刺弄。我等云何受此罪报。时诸比丘。即从坐起。至福增所。五体投地。而作是言。诸善人生。与悲俱生。大德今生。亦应当与大悲俱生。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]唯愿于我生怜愍心。受我悔过。福增答言。我于诸人。无不善心可尔悔过。尸利苾提。见诸年少心怀恐怖。即为说法。诸比丘。闻厌生死法。精勤修集。断结尽漏。得阿罗汉道。福增因缘善名流布遍王舍城。诸人咸言。甚奇甚特。此长老者。于此城中。老耄无施。今于佛法。出家成道。显说如是希有妙法。时城中人。多发净心。或有听放男女奴婢人民令出家者。或自出家者。莫不欢喜相劝出家。以是因缘。出家功德。无量无边。福增百岁。方乃出家。成就如是诸大功德。况诸盛年。欲求妙胜大果报者。应勤修法出家学道。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 07:39</div><div class="post-body">[font=楷体_GB2312][size=5]     [b]        贤愚经卷第五 <br/>
+[font=楷体_GB2312][size=5]唯愿于我生怜愍心。受我悔过。福增答言。我于诸人。无不善心可尔悔过。尸利苾提。见诸年少心怀恐怖。即为说法。诸比丘。闻厌生死法。精勤修集。断结尽漏。得阿罗汉道。福增因缘善名流布遍王舍城。诸人咸言。甚奇甚特。此长老者。于此城中。老耄无施。今于佛法。出家成道。显说如是希有妙法。时城中人。多发净心。或有听放男女奴婢人民令出家者。或自出家者。莫不欢喜相劝出家。以是因缘。出家功德。无量无边。福增百岁。方乃出家。成就如是诸大功德。况诸盛年。欲求妙胜大果报者。应勤修法出家学道。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 07:39</div><div class="post-body">[font=楷体_GB2312][size=5]     [b]        贤愚经卷第五 <br/>
 [/b]    　　　　元魏凉州沙门慧觉等在高昌郡译 <br/>
 [/size][/font] <br/>
 [font=楷体_GB2312][size=5]   　（二四）沙弥守戒自杀品第二十三(丹本此品在第七卷为三十四) <br/>
@@ -581,7 +594,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]若有死事。犹望不违。嘱此小事。直作一言。当不相从。我用活为。若不见随。我先杀儿。然后自杀。长者闻此。譬如人噎既不得咽亦不得吐。自念我唯有此一子。若其当死。财无所付。若从是语。今则不为人所信用。将来当受无量苦恼。迫蹴不已。即便可之。其妇欢喜。语估客言。长者已许。估客闻之。欣悦还家。严一大象。众宝庄校。著大宝衣。乘象入市。长者子见。心喜念言。是人必富。服乘乃尔。我得财矣。即往语曰。萨薄当知。先所负钱。今宜见偿。估客惊言。我都不忆。何时负君。若相负者。明人是谁。长者子言。若干日月。我父及我。手付汝钱。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]平事为我明人。何缘言不。估客子言。我今不念。苟有事实。当还相偿。寻共相将。至平事所。长者子言。此人往日。亲从我父。举若干钱。伯为明人。我时亦见。事为尔不。答言不知。其侄惊曰。伯父尔时。审不见闻。不作是语。此事可尔。不以手足。指是财耶。答言不尔。侄子恚曰。以伯忠良。王令平事。国人信用。我亲弟子。非法犹尔。况于外人。抂者岂少。此之虚实。后世自知。佛告长者。欲知尔时平事长者。今曼慈毗梨无有耳目浑沌者是。由于尔时一妄语故。堕大地狱。多受苦毒。从地狱出。五百世中。常受浑沌之身。由于尔时好布施故。常生豪富得为财主。善恶之报。虽久不败。是故汝等。当勤精进。摄身口意。莫妄造恶。时诸大众。闻佛所说。有得初果至四果者。有发无上菩提心者莫不欢喜。顶戴奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 07:50</div><div class="post-body">[font=楷体_GB2312][size=5]　　（二六）贫人夫妇叠施得现报品第二十五(丹本为三十六) <br/>
+[font=楷体_GB2312][size=5]平事为我明人。何缘言不。估客子言。我今不念。苟有事实。当还相偿。寻共相将。至平事所。长者子言。此人往日。亲从我父。举若干钱。伯为明人。我时亦见。事为尔不。答言不知。其侄惊曰。伯父尔时。审不见闻。不作是语。此事可尔。不以手足。指是财耶。答言不尔。侄子恚曰。以伯忠良。王令平事。国人信用。我亲弟子。非法犹尔。况于外人。抂者岂少。此之虚实。后世自知。佛告长者。欲知尔时平事长者。今曼慈毗梨无有耳目浑沌者是。由于尔时一妄语故。堕大地狱。多受苦毒。从地狱出。五百世中。常受浑沌之身。由于尔时好布施故。常生豪富得为财主。善恶之报。虽久不败。是故汝等。当勤精进。摄身口意。莫妄造恶。时诸大众。闻佛所说。有得初果至四果者。有发无上菩提心者莫不欢喜。顶戴奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 07:50</div><div class="post-body">[font=楷体_GB2312][size=5]　　（二六）贫人夫妇叠施得现报品第二十五(丹本为三十六) <br/>
 <br/>
 如是我闻。一时佛在舍卫国祇树给孤独园祇洹精舍。与大比丘众。围绕说法。尔时国中。有一长者。其妇怀妊。月满生女。端正姝妙。容貌少双。其初生时。细软白叠。裹身而生。父母怪之。召师占相。师曰甚吉。有大福德。因为作字。名曰叔离(秦言白也)。叔离长大。叠随身大。此女瑰玮。国内远近。竞来娉求。父母念言。女年已大。宜当嫁处。即使工师为作璎珞。叔离问父。锻是金银。用作何等。父告之言。汝年已大。欲嫁处汝。故作环玔。女白父言。我欲出家。不乐嫁去。父母爱念。不违其志。寻为出叠。欲作五衣。女见复问。欲作何等。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -615,7 +628,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]正欲供养。无有财宝。虽有空意。不遂其愿。妇语婿言。今汝可往至本舍中。于故藏内推觅财宝。若苟得之。当用供养。时夫如言。至故藏中。遍行推觅。得一金钱。持至妇所。于时其妇。有一明镜。即共合心。当用布施。置一新瓶。盛满净水。以此金钱著瓶水中。以镜著上。持至僧所。到已至心用布施僧。于时众僧即为受之。各各取水。而用洗钵。复有取水而饮之者。时彼夫妇。欢喜情悦。作福已竟。遇疾命终。生忉利天。佛告阿难。尔时贫人持一瓶水。布施僧者。今此金天夫妇是也。由其前世持此一金钱。及一瓶水并此明镜。施众僧故。世世端正。身体金色。容仪晃昱殊妙无比。九十一劫。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]恒常如是。由于尔时。有信敬故得离生死。逮得应真。阿难当知。一切福德。不可不作。如彼贫人。以少施故。乃获如是无量福报。尔时阿难。及诸众会。闻佛所说。咸兴施心。勤加福业。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 07:53</div><div class="post-body">[font=楷体_GB2312][size=5]　　（二九）重姓品第二十八(丹本为二十六) <br/>
+[font=楷体_GB2312][size=5]恒常如是。由于尔时。有信敬故得离生死。逮得应真。阿难当知。一切福德。不可不作。如彼贫人。以少施故。乃获如是无量福报。尔时阿难。及诸众会。闻佛所说。咸兴施心。勤加福业。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 07:53</div><div class="post-body">[font=楷体_GB2312][size=5]　　（二九）重姓品第二十八(丹本为二十六) <br/>
 <br/>
 如是我闻。一时佛在舍卫国祇树给孤独园。尔时国中。有豪长者。财富无量。唯无子姓。每怀悒迟。祷祠神祇。求索一子。精诚款笃。妇便怀妊。日月满足。生一男儿。其儿端正。世所希有。父母宗亲。值时[飢-几+燕]会。共相合集。诣大江边。饮酒自娱。父母持儿。诣其会所。父爱此儿。顺坐担舞。父舞已竟。母复担之。历坐擎腾。欢娱自乐。临到河边。意卒散乱。执之不固。失儿堕水。寻时博撮。竟不能得。于时父母。怜念此儿。爱著伤怀。绝而复苏。其儿福德。竟复不死。至河水中。随水沉浮。时有一鱼。吞此小儿。虽在鱼腹。犹复不死。时有小村。而在下流。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -645,7 +658,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]是时五百作食之人念言。斯之所获果实之报。将由斯等大士之恩。我等云何。恶言向彼。即往其所。请求改悔。大士听之。悔过已竟。复立誓言。愿使我等于将来世。遭值贤圣。蒙得解脱。由此之故。五百世中。常作乞儿。因其改悔复立誓故。今遭我世。蒙得过度。太子当知。尔时大富散檀宁者。岂异人乎。我身是也。是藏臣者。今须达是也。日日往白时到人者。优填王是。时狗子者。由其吠故。世世好音。美音长者是也。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]尔时五百作食之人。今此五百阿罗汉是也。尔时祇陀。及众会者。睹其神变。感佛功德。克心精勤。有得初果及第四果者。复有专修快士行者。复有兴心求佛道者。各各精勤。求遂本心。欢喜踊跃。顶戴奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 07:58</div><div class="post-body">[font=楷体_GB2312][size=5][b]                  贤愚经卷第六 <br/>
+[font=楷体_GB2312][size=5]尔时五百作食之人。今此五百阿罗汉是也。尔时祇陀。及众会者。睹其神变。感佛功德。克心精勤。有得初果及第四果者。复有专修快士行者。复有兴心求佛道者。各各精勤。求遂本心。欢喜踊跃。顶戴奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 07:58</div><div class="post-body">[font=楷体_GB2312][size=5][b]                  贤愚经卷第六 <br/>
 [/b]    　　　　元魏凉州沙门慧觉等在高昌郡译 <br/>
 <br/>
 （三一）月光王头施品第三十(丹本此品却在五卷为二十八) <br/>
@@ -690,7 +703,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]宛转于地。时婆罗门。嫌王头臭。即便掷地。脚蹋而去。或复有人。语婆罗门。汝之酷毒。剧甚乃尔。既不中用。何乃索之。于时婆罗门。进道而去。人见便责。无给食者。饥饿委悴。困苦极理。道中有人。因问消息。知毗摩羡王。已复命终。失于所望。懊恼愦愦。心裂七分。吐血而死。毗摩羡王及劳度差。命终皆堕阿鼻泥犁。其余臣民。思念王恩。感结死者。皆得生天。如是阿难。欲知尔时月光王者。今我身是。毗摩羡王。今波旬是。时劳度差婆罗门者。今调达是。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]时树神者。今目连是。时大月大臣者。今舍利弗是。当于尔时。不忍见我死。而先我前死。乃至今日。不忍见我入于涅槃。而先灭度。佛说是已。贤者阿难。及诸弟子。闻佛所说。悲喜交集。异口同音。咸共嗟叹。如来功德奇特之行。咸共专修。有得四道果者。有发无上正真道意者。皆大欢喜。敬戴奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 08:02</div><div class="post-body">[font=楷体_GB2312][size=5]                [b]贤愚经卷第六 <br/>
+[font=楷体_GB2312][size=5]时树神者。今目连是。时大月大臣者。今舍利弗是。当于尔时。不忍见我死。而先我前死。乃至今日。不忍见我入于涅槃。而先灭度。佛说是已。贤者阿难。及诸弟子。闻佛所说。悲喜交集。异口同音。咸共嗟叹。如来功德奇特之行。咸共专修。有得四道果者。有发无上正真道意者。皆大欢喜。敬戴奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 08:02</div><div class="post-body">[font=楷体_GB2312][size=5]                [b]贤愚经卷第六 <br/>
 [/b] <br/>
 （三二）快目王眼施缘品第二十七 <br/>
 <br/>
@@ -726,7 +739,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]复当令汝得慧眼见。将婆罗门。入宝藏中。恣取一担。发遣去还到本国。波罗陀跋弥。自出迎之。已见先问。得眼不耶。答言得眼。我今用视。复问言曰。彼王今者。为存为亡。答言诸天来下。寻即誓愿。眼还平复。眼好于前。波罗陀跋弥。以闻此语。恼闷愤结。心裂而死。佛告阿难。欲知尔时须提罗王。今我身是。波罗陀跋弥。今调达是。时乞我眼婆罗门者。今此会中。盲婆罗门得道者是。先世之时。我与其眼。乃至今日。由见我故。既得肉眼。复得慧眼。我为汝曹。世世苦行。积功累德。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]今日致佛。汝等应当勤求出要。佛说是语时。诸在会者。感念佛恩。内身克厉。有得须陀洹斯陀含阿那含阿罗汉者。有发无上道意者。贤者阿难。及诸会者。闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 08:04</div><div class="post-body">[font=楷体_GB2312][size=5]    　　（三三）五百盲儿往返逐佛缘品第二十八 <br/>
+[font=楷体_GB2312][size=5]今日致佛。汝等应当勤求出要。佛说是语时。诸在会者。感念佛恩。内身克厉。有得须陀洹斯陀含阿那含阿罗汉者。有发无上道意者。贤者阿难。及诸会者。闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 08:04</div><div class="post-body">[font=楷体_GB2312][size=5]    　　（三三）五百盲儿往返逐佛缘品第二十八 <br/>
 <br/>
 如是我闻。一时佛。住舍卫国祇树给孤独园。尔时毗舍离国。有五百盲人。乞丐自活。时闻人言。如来出世。甚奇甚特。其有众生睹见之者。癃残百病。皆蒙除愈。盲视聋听。哑语偻伸。拘躄手足。狂乱得正。贫施衣食。愁忧苦厄。悉能解免。时诸盲人。闻此语已。还共议言。我曹罪积。苦毒特兼。若当遇佛。必见救济。便问人言。世尊今者。为在何国。人报之曰。在舍卫国。闻此语已。共于路侧。卑言求哀。谁有慈悲。愍我等者。愿见将导。到舍卫国。至于佛所。唤倩经时。无有应者。时五百人。复共议曰。空手倩人。人无应者。今共行乞。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -736,7 +749,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]尔时阿难。见诸盲人。肉眼明净。又尽诸漏。成阿罗汉。长跪合掌。前白佛言。世尊出世。实复奇特。所为善事。不可思议。又此诸盲人。特蒙殊泽。肉眼既明。复获慧眼。世尊出世。正为此等。佛告阿难。我非但今日。除其冥闇。乃往久远。无量劫时。亦为此等。除大黑闇。阿难白佛。不审世尊。过去世中。为此除闇。其事云何。佛告阿难。乃昔久远。无量无数。阿僧祇劫。此阎浮提。五百贾客。共行旷野。经由险路。大山谷中。极为黑闇。时诸商人。迷闷愁忧。恐失财物。此处多贼。而复怖畏。咸共同心。向于天地日月山海一切神祇。啼哭求哀。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]时萨薄主。愍诸商客迷闷之苦。便告言曰。汝等莫怖。各自安意。吾当为汝作大照明。是时萨簿。即以白[疊*毛]。自缠两臂。酥油灌之。然用当炬。将诸商人。经于七日。乃越此闇。时诸贾客感戴其恩。慈敬无量。各获安隐。喜不自胜。佛告阿难。尔时萨薄。岂异人乎。我身是也。我从昔来。国城妻子。及以肉血。恒施众生。以是之故。今致特尊。尔时五百诸贾客者。岂异人乎。今此五百比丘是也。过去世时。以生死力。施其光明。今得成佛。亦施无漏慧眼。尔时众会。闻佛所说。有得须陀洹斯陀含阿那含阿罗汉。有种辟支佛善根。或发无上道意度者甚多。慧命阿难。及诸众会。闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 08:08</div><div class="post-body">[font=楷体_GB2312][size=5]　　      （三四）富那奇缘品第二十九 <br/>
+[font=楷体_GB2312][size=5]时萨薄主。愍诸商客迷闷之苦。便告言曰。汝等莫怖。各自安意。吾当为汝作大照明。是时萨簿。即以白[疊*毛]。自缠两臂。酥油灌之。然用当炬。将诸商人。经于七日。乃越此闇。时诸贾客感戴其恩。慈敬无量。各获安隐。喜不自胜。佛告阿难。尔时萨薄。岂异人乎。我身是也。我从昔来。国城妻子。及以肉血。恒施众生。以是之故。今致特尊。尔时五百诸贾客者。岂异人乎。今此五百比丘是也。过去世时。以生死力。施其光明。今得成佛。亦施无漏慧眼。尔时众会。闻佛所说。有得须陀洹斯陀含阿那含阿罗汉。有种辟支佛善根。或发无上道意度者甚多。慧命阿难。及诸众会。闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 08:08</div><div class="post-body">[font=楷体_GB2312][size=5]　　      （三四）富那奇缘品第二十九 <br/>
 <br/>
 如是我闻。一时佛在舍卫国祇树给孤独园。尔时放钵国。有一长者。名昙摩羡(此言法军)。于彼国中。巨富第一。时长者妻。生一男儿。值出军征伐余国。因字其儿。号曰羡那(此言军也)。后复生儿。值王出军征讨得胜。复字其儿比耆陀羡那(此言胜军)。二子长大。各为娶妻。尔时长者。遇疾困笃。数召诸医。瞻养其病。看视医师。甘膳尽供。医贪利养。欲遣残病。逆怀奸诈。更与余药。使病不瘥。时有一婢。供养长者。饮食汤药。恒知时宜。白长者言。从今以去。此诸医师。不足更唤。恶意相误。病更不瘥。今我自当。如前法度。随病所须。更莫唤医。婢便看养。长者得瘥。于是其婢。白长者言。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -784,7 +797,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]佛告阿难。乃往过去迦叶佛时。有一长者。财富无数。为佛众僧。兴僧伽蓝。衣服饮食。病瘦医药四事供办。供给一切无有乏短。尔时长者遇疾命终。其后一儿出家学道。其父死后佛图供具。皆悉转少。众僧罢散。其寺荒坏。无人住止。其儿比丘。勤力招合檀越知识。积聚钱财。修补缺落。复合众僧。还继供养。于时多众。住在其寺。勤精专修。具诸道者。时彼道人。作僧自在。时有罗汉道人。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]次知日直。扫除草土。积在中庭。不时除弃。于时比丘。恶心呵叱。今此比丘。如奴无异。虽知扫地。不能除弃。阿难当知。彼时比丘。大自在者。今富那奇比丘是也。由其恶心呵得道人比之为奴。由此一言。五百世中。恒为奴身。复由兴立劝合众人供养众僧。偿罪已毕。复遭我世。蒙得过度。今此国中。受化之人。皆是往昔劝助之众。缘是果报。皆得度脱。阿难之等。及与众会。闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 12:31</div><div class="post-body">[font=楷体_GB2312][size=5]　　（三五）尼提度缘品第三十 <br/>
+[font=楷体_GB2312][size=5]次知日直。扫除草土。积在中庭。不时除弃。于时比丘。恶心呵叱。今此比丘。如奴无异。虽知扫地。不能除弃。阿难当知。彼时比丘。大自在者。今富那奇比丘是也。由其恶心呵得道人比之为奴。由此一言。五百世中。恒为奴身。复由兴立劝合众人供养众僧。偿罪已毕。复遭我世。蒙得过度。今此国中。受化之人。皆是往昔劝助之众。缘是果报。皆得度脱。阿难之等。及与众会。闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 12:31</div><div class="post-body">[font=楷体_GB2312][size=5]　　（三五）尼提度缘品第三十 <br/>
 <br/>
 如是我闻。一时佛在舍卫国祇树给孤独园。尔时舍卫城中。人民众多。居止隘迮。厕溷鲜少。大小便利。多往出城。或有豪尊。不能去者。便利在器中。雇人除之。时有一人。名曰尼提。极贫至贱。无所趣向。仰客作除粪。得价自济。尔时世尊。即知其应度。独将阿难。入于城内。欲拔济之。到一里头。正值尼提。持一瓦器。盛满不净。欲往弃之。遥见世尊。极怀鄙愧。退从异道。隐屏欲去。垂当出里。复见世尊。倍用鄙耻。回趣余道。复欲避去。心意匆忙。以瓶打壁。瓶即破坏。屎尿浇身。深生惭愧。不忍见佛。是时世尊。就到其所。语尼提言。欲出家不。尼提答言。 <br/>
 <br/>
@@ -796,7 +809,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/size] <br/>
 [font=楷体_GB2312][size=5]唯愿世尊。敷演分别。佛告王曰谛听善持。吾当解说令汝开悟。乃往过去。迦叶如来。出现世间。灭度之后。有比丘僧凡十万人。中有一沙门。作僧自在。身有疾患服药自下。憍骜恃势。不出便利。以金银澡槃。就中盛尿令一弟子担往弃之。然其弟子。是须陀洹。由在彼世。不能谦顺。自恃多财。秉捉僧事。暂有微患。懒不自起。驱役圣人。令除粪秽。以是因缘。流浪生死。恒为下贱五百世中。为人除粪。乃至于今。由其出家。持戒功德。今值我世。闻法得道。佛告大王。欲知尔时僧自在者。今尼提比丘是。波斯匿王。白世尊言。如来出世。实为奇特。利益无量苦恼众生。[/size][/size] <br/>
 [font=楷体_GB2312][size=5][/size][/size] <br/>
-[font=楷体_GB2312][size=5]佛告大王。善哉善哉。如汝所言。佛又告曰。三界轮转。无有定品。积善仁和。生于豪尊。习恶放恣。便生卑贱。王大欢喜。无有慢心。即起长跪。执尼提足。而为作礼。忏悔自谢。愿除罪咎。世尊尔时。因为广说法微妙之义。所谓论者。施论戒论。生天之论。欲不净想。出要为乐。尔时大会。闻佛所说。各获道证。信受奉行。[/size][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 12:33</div><div class="post-body">[font=楷体_GB2312][size=5]               [b]贤愚经卷第七 <br/>
+[font=楷体_GB2312][size=5]佛告大王。善哉善哉。如汝所言。佛又告曰。三界轮转。无有定品。积善仁和。生于豪尊。习恶放恣。便生卑贱。王大欢喜。无有慢心。即起长跪。执尼提足。而为作礼。忏悔自谢。愿除罪咎。世尊尔时。因为广说法微妙之义。所谓论者。施论戒论。生天之论。欲不净想。出要为乐。尔时大会。闻佛所说。各获道证。信受奉行。[/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 12:33</div><div class="post-body">[font=楷体_GB2312][size=5]               [b]贤愚经卷第七 <br/>
 [/b] <br/>
 元魏凉州沙门慧觉等在高昌郡译 <br/>
 <br/>
@@ -814,7 +827,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]恭敬于佛。即得解脱。生人天中。畜生中者。见佛光明。贪欲嗔毒。皆得消除。痴心朦冥。寻得醒悟。皆悉欢喜。信敬于佛。即得解脱。生人天中。地狱中者。见佛光明。寒则熅暖。热则清凉。苦痛之处。即得休息。身心踊跃。慈敬于佛。即得解脱。生人天中。尔时摩诃劫宾宁王。金地诸王。见斯变已。其心信伏。远尘离垢得法眼净。万八千王。一时皆然。须曳之顷。佛摄神力。还复本形。诸比丘僧。前后围绕。金地王众。求索出家。佛即听许。须发自堕。袈裟在体。思惟妙法。尽得阿罗汉果。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]阿难白佛。此金地王。宿种何德。生在豪尊。功德巍巍。遭值佛世。逮成无漏。佛告阿难。众生由行受其果报。乃往过去。有迦叶佛。般涅槃后。有一长者。为起塔庙。造作堂阁。四供养具。岁月渐久。而塔崩落。床褥衣食。亦复断绝。其主长者。有子比丘。便行劝化人民之类。各令减割用治斯塔。又设饮食床卧之具。诸人同心。咸共供承。因发誓愿。当来之世。富贵长寿值佛出世。闻法获证。行报无遗。皆令果成。佛告阿难。尔时长者子比丘者。今金地王摩诃劫宾宁是。其诸人民受道化者。今万八千诸王是也。佛说是法。众会闻者。逮得道证。发心不退受持至教。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 12:36</div><div class="post-body">[font=楷体_GB2312][size=5]　　（三七）梨耆弥七子品第三十二(丹本此品在第四卷为第二十) <br/>
+[font=楷体_GB2312][size=5]阿难白佛。此金地王。宿种何德。生在豪尊。功德巍巍。遭值佛世。逮成无漏。佛告阿难。众生由行受其果报。乃往过去。有迦叶佛。般涅槃后。有一长者。为起塔庙。造作堂阁。四供养具。岁月渐久。而塔崩落。床褥衣食。亦复断绝。其主长者。有子比丘。便行劝化人民之类。各令减割用治斯塔。又设饮食床卧之具。诸人同心。咸共供承。因发誓愿。当来之世。富贵长寿值佛出世。闻法获证。行报无遗。皆令果成。佛告阿难。尔时长者子比丘者。今金地王摩诃劫宾宁是。其诸人民受道化者。今万八千诸王是也。佛说是法。众会闻者。逮得道证。发心不退受持至教。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 12:36</div><div class="post-body">[font=楷体_GB2312][size=5]　　（三七）梨耆弥七子品第三十二(丹本此品在第四卷为第二十) <br/>
 <br/>
 如是我闻。一时佛在舍卫国祇树给孤独园。尔时波斯匿王。有一大臣。名梨耆弥。家居大富。生七男儿。为其娶妻。已至于六。残第七子。当为求妇。自思惟言。吾年衰迈。唯余一儿。为之纳妇。要令殊胜。时此长者。有一亲厚婆罗门。来共相见。因议语曰。今我欲为小儿求婚。未能知处。卿自昔来。游行诸国。今欲烦君。为我推觅。若见有女端政贤智。性命相宜。适我子意。乃当求之。时婆罗门。即便然可。遍行看觅。到特叉尸利国。见有五百童女。群行游戏。采取好花。用作拂饰。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -860,7 +873,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]因立誓言。今此国人。饥羸无食。我舍此身。愿为大鱼。以我身肉。充济一切。即上树端。自投于地。即时命终。于大河中。为化生鱼。其身长大。五百由旬。尔时国中。有木工五人。各赍斤斧。往至河边。规斫材木。彼鱼见已。即作人语而告之曰。汝等若饥。欲须食者。来取我肉。若复食饱。可赍持去。汝今先食我肉。而得充饱。后成佛时。当以法食济脱汝等。汝可并告国人大小。有须食者。悉各来取。五人欢喜。寻各斫取。食饱赍归。因以其事具语国人。于是人民。展转相语。遍阎浮提。悉皆来集。啖食其肉。一胁肉尽。即自转身。复取一胁。皆复食尽。故处还生。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]复转身与之。如是翻覆。恒以身肉。给济一切。经十二年其诸众生。食其肉者。皆生慈心。命终之后。得生天上。阿难。欲知尔时设头罗健宁王者。则我身是。时五木工。先食我肉者今憍陈如等五比丘是。其诸人民后食肉者。今八万诸天。及诸弟子。得度者是。我于尔时。先以身肉。充彼五人。令得济活。是故今日最初说法。度彼五人。以我法身少分之肉。除彼三毒饥乏之苦。贤者阿难及诸会者。闻佛所说。且悲且喜。顶戴奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 12:40</div><div class="post-body">[font=楷体_GB2312][size=5]     [b]        贤愚经卷第八[/b] <br/>
+[font=楷体_GB2312][size=5]复转身与之。如是翻覆。恒以身肉。给济一切。经十二年其诸众生。食其肉者。皆生慈心。命终之后。得生天上。阿难。欲知尔时设头罗健宁王者。则我身是。时五木工。先食我肉者今憍陈如等五比丘是。其诸人民后食肉者。今八万诸天。及诸弟子。得度者是。我于尔时。先以身肉。充彼五人。令得济活。是故今日最初说法。度彼五人。以我法身少分之肉。除彼三毒饥乏之苦。贤者阿难及诸会者。闻佛所说。且悲且喜。顶戴奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 12:40</div><div class="post-body">[font=楷体_GB2312][size=5]     [b]        贤愚经卷第八[/b] <br/>
 元魏凉州沙门慧觉等在高昌郡译 <br/>
 <br/>
 （三九）盖事因缘品第三十四(丹本为三十八) <br/>
@@ -889,7 +902,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/size] <br/>
 [font=楷体_GB2312][size=5]时彼国中。有一萨薄。名曰阿利耶蜜罗。晋言圣友。时辟支佛。往告其家。陈病所由。从其乞乳。萨薄欢喜。便请供养。日给其乳。经于三月。三月已竟。身病得差。感其善意。欲使主人获大利益。踊在空中。坐卧行立。身出水火。或现大身。满虚空中。又复现小入秋毫之里。如是种种。现十八变。于是圣友。极怀欢喜。复从空下。重受其供经。于数时。乃入涅槃。萨薄悲悼。追念无量。阇维其身。收取舍利。盛以宝瓶。用起鋀婆。香花伎乐。种种妙物。持用供养。所捉大盖。[/size][/size] <br/>
 [font=楷体_GB2312][size=5][/size][/size] <br/>
-[font=楷体_GB2312][size=5]以置其上。尽其形寿。供养此塔。由其供养一辟支佛。四事供养。因此福报。无量世中。或生天上。或处人中。尊豪挺特。世之少双。又告阿难。一切众生。在家出家。皆应修福。生生之中。获如是利。尔时阿难。及诸会众。闻佛所说。欢喜奉行。[/size][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 12:49</div><div class="post-body">[font=楷体_GB2312][size=5]　　（四○）大施抒海品第三十五(丹本为三十九) <br/>
+[font=楷体_GB2312][size=5]以置其上。尽其形寿。供养此塔。由其供养一辟支佛。四事供养。因此福报。无量世中。或生天上。或处人中。尊豪挺特。世之少双。又告阿难。一切众生。在家出家。皆应修福。生生之中。获如是利。尔时阿难。及诸会众。闻佛所说。欢喜奉行。[/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 12:49</div><div class="post-body">[font=楷体_GB2312][size=5]　　（四○）大施抒海品第三十五(丹本为三十九) <br/>
 <br/>
 如是我闻。一时佛。在罗阅只耆阇崛山中。与尊弟子千二百五十人俱。尔时世尊。念须侍者。诸尊弟子。憍陈如等。各共观察。知佛所念。时憍陈如从坐而起。偏袒右肩。合掌长跪白佛。贪得侍近捉衣持钵。唯愿垂愍。赐教听许。佛告之曰。汝年老迈。自须给侍。何忍使汝复见供事。时憍陈如。知佛不听。礼已还坐。摩诃迦叶。舍利弗。目揵连。及诸弟子。五百人等。次第白佛。皆求给侍。佛皆不听。时阿那律。试观佛意。见佛志趣。心在阿难。如日在东照于舍宅。光从东牖。直至西壁。世尊志意亦复如是。诸大弟子。皆亦观知。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -959,7 +972,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]尔时一切阎浮提内。既蒙大恩慈泽沾润。各思何方。仰酬至德。又蒙优教。敕使修善。咸皆慕义。专习慈敬。制身口意。不妄犯非。命终之后。皆得生天。如是舍利弗。欲知尔时父婆罗门尼拘楼陀者。今现我父净饭王是。尔时母者。今现我母摩诃摩耶是。时大施者。今我身是。银城中龙者。今舍利弗是。琉璃城中龙者。今目犍连是。金城中龙者。今阿难是。时海神者。今离越是。阿难为龙王时。奉事于我。善知时宜。乃至今日。素自知时。阿难。欲得此三愿者。随从其意。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]阿难闻此。欢喜踊跃。从座处起。长跪白佛。当尽形寿为佛侍者。时诸会者。闻佛所说。感念大恩。专心克励。思惟四谛诸法出要。有得须陀洹斯陀含阿那含阿罗汉者。有种辟支佛善根因缘者。有发无上正真道意者。有得住不退地者。咸共欢喜。顶戴奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 12:58</div><div class="post-body">[font=楷体_GB2312][size=5]            [b]     贤愚经卷第九 <br/>
+[font=楷体_GB2312][size=5]阿难闻此。欢喜踊跃。从座处起。长跪白佛。当尽形寿为佛侍者。时诸会者。闻佛所说。感念大恩。专心克励。思惟四谛诸法出要。有得须陀洹斯陀含阿那含阿罗汉者。有种辟支佛善根因缘者。有发无上正真道意者。有得住不退地者。咸共欢喜。顶戴奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 12:58</div><div class="post-body">[font=楷体_GB2312][size=5]            [b]     贤愚经卷第九 <br/>
 [/b]    　　　　元魏凉州沙门慧觉等在高昌郡译 <br/>
 <br/>
 （四一）净居天请佛洗品第三十六 <br/>
@@ -1048,7 +1061,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]汝等已得一切所须供身之事。无所乏少。若能感识如是之恩。当摄身口意修十善道。尔时一切。阎浮提内。感念太子无极之施。人闻其令。克励其心。奉行十善。不犯众恶。命终之后。皆得生天。佛告阿难。欲知尔时迦良那伽梨太子者。今我身是。尔时我父勒那跋弥。今现我父净饭王是。尔时母者。今现我母摩诃摩耶是。时梨师跋王。摩诃迦叶是。尔时妻者。今瞿夷是。尔时波婆伽梨者。今提婆达多是。阎浮提人。蒙我恩者。我初得道。八万诸天。及我弟子。得授记者。如此等是。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]阿难。我于尔时。为彼所害。辛苦极理。犹以慈心。而矜爱之。况我今日。得成佛道。烦恼都除。慈悲广布。被彼少害。岂不慈愍。佛说是已。时诸会者。闻佛所说。感念世尊。为于群生。经涉剧苦。而不退废。叹未曾有。悲喜交怀。克心励志。思惟妙法。有得须陀洹斯陀含阿那含阿罗汉者。种辟支佛善根者。有发无上正真道意者。咸共敬戴。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:01</div><div class="post-body">[font=楷体_GB2312][size=5]　　（四三）摩诃令奴缘品第四十八 <br/>
+[font=楷体_GB2312][size=5]阿难。我于尔时。为彼所害。辛苦极理。犹以慈心。而矜爱之。况我今日。得成佛道。烦恼都除。慈悲广布。被彼少害。岂不慈愍。佛说是已。时诸会者。闻佛所说。感念世尊。为于群生。经涉剧苦。而不退废。叹未曾有。悲喜交怀。克心励志。思惟妙法。有得须陀洹斯陀含阿那含阿罗汉者。种辟支佛善根者。有发无上正真道意者。咸共敬戴。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:01</div><div class="post-body">[font=楷体_GB2312][size=5]　　（四三）摩诃令奴缘品第四十八 <br/>
 <br/>
 如是我闻。一时佛。在迦维罗卫国。尼拘卢陀僧伽蓝。佛初还国。于时诸释。观佛威仪。相好殊异。身体金色。三十二相。视之无厌。各共群聚街陌市里。异口同音。叹说如来。于此众中。无有俦类。实可敬哉。时诸比丘。闻是论已。并共白佛。说其诸人叹咏之词。于时世尊。告诸比丘。汝等当知。吾乃往昔。于此众中。最尊最妙。不但今日。时诸比丘。各共白佛。不审世尊。过去世时。于此众中。最尊最妙。其事云何。尔时世尊。告诸比丘。谛听谛听。善著心中。吾当为汝。具足解释。过去世事。对曰唯然。愿乐欲闻。佛便为说。过去无量。不可思议。阿僧祇劫。此阎浮提。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -1076,7 +1089,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]种种食出。百味具足。咸共承接。各得饱满。斫第三枝。出诸妙衣。种种备具。斫第四枝。种种宝物。悉皆具足。庄严悉备。所须尽办。恶求后到。众人如前。尽得充足。便自念言。今此树枝。能出如是种种好物。况复其根。今当伐之。足得极妙佳好之物。思惟心定。令人伐之。是时善求。闻如是语。怀愤懊恼。语恶求言。我等饥乏。命在旦夕。蒙此树恩。得济余命云何怀此弊恶之心。而欲伐之。尔时恶求。不用其言。即掘其根。善求感佩。不忍见之。领众归家。伐树已竟。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]有五百罗刹。取此恶求及众贾人。悉皆啖之。财物伴侣。一切丧失。佛告阿难。尔时善求者。今我身是。尔时父者。今现我父净饭王是。尔时母者。今现我母摩诃摩耶是也。时恶求者。今提婆达多是。阿难。提婆达多。非但今日作不善事。贪利养故。世世常造。我于往昔。常与相值。恒教善法。而不用之。反更以我为怨。尔时阿难。及四部众。闻佛所说。悲喜交集。咸自劝励。顶戴奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:08</div><div class="post-body">[size=5][font=楷体_GB2312][b]            贤愚经卷第十 <br/>
+[font=楷体_GB2312][size=5]有五百罗刹。取此恶求及众贾人。悉皆啖之。财物伴侣。一切丧失。佛告阿难。尔时善求者。今我身是。尔时父者。今现我父净饭王是。尔时母者。今现我母摩诃摩耶是也。时恶求者。今提婆达多是。阿难。提婆达多。非但今日作不善事。贪利养故。世世常造。我于往昔。常与相值。恒教善法。而不用之。反更以我为怨。尔时阿难。及四部众。闻佛所说。悲喜交集。咸自劝励。顶戴奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:08</div><div class="post-body">[size=5][font=楷体_GB2312][b]            贤愚经卷第十 <br/>
 [/b]    　　　　元魏凉州沙门慧觉等在高昌郡译 <br/>
 <br/>
 （四五）阿难总持品第三十八(丹本为四十三) <br/>
@@ -1101,7 +1114,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/size] <br/>
 [font=楷体_GB2312][size=5]沙弥答言。我向与师。至彼乞食。日暮还时。师行小迟。我时恐怖。故急推之。推之手急。扑师著地。我师于时。即死道中。时诸比丘。呵责沙弥。汝大恶人。杀父杀师。即以白佛。佛告之曰。此师虽死。不以恶意。即问沙弥。汝杀师不。沙弥答言。我实排之。不以恶意而杀父也。佛可其语。如是沙弥。我知汝心无有恶意。过去世时。亦复如是。无有恶意。而相杀害。时诸比丘。闻佛语已。即共白佛。不审世尊。过去世时。斯人父子。有何因缘。而便相杀。[/size][/size] <br/>
 [font=楷体_GB2312][size=5][/size][/size] <br/>
-[font=楷体_GB2312][size=5]佛言谛听。吾当说之。过去无量阿僧祇劫时。父子二人。共住一处。时父病极。于时睡卧。多有虻蝇。数来恼触。父即令儿遮逐其蝇。望得安眠以解疲劳。时儿急遮。蝇遂数来。数来不止。儿便嗔恚。即持大杖。伺蝇当杀。时诸虻蝇。竞来父额。以杖打之。即杀其父。当于尔时。亦非恶意。比丘当知。尔时父者。此沙弥是。时儿以杖打父额者。今彼死比丘是。由于尔时无有恶心。以杖打父杀之。不以恶意。今还相报。亦非故杀。于时沙弥。渐渐修学。勤加不懈。遂得罗汉。尔时诸比丘。闻佛所说。心悉信解。欢喜奉行。[/size][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:11</div><div class="post-body">[font=楷体_GB2312][size=5]　　（四八）须达起精舍品第四十一(丹本为四十六) <br/>
+[font=楷体_GB2312][size=5]佛言谛听。吾当说之。过去无量阿僧祇劫时。父子二人。共住一处。时父病极。于时睡卧。多有虻蝇。数来恼触。父即令儿遮逐其蝇。望得安眠以解疲劳。时儿急遮。蝇遂数来。数来不止。儿便嗔恚。即持大杖。伺蝇当杀。时诸虻蝇。竞来父额。以杖打之。即杀其父。当于尔时。亦非恶意。比丘当知。尔时父者。此沙弥是。时儿以杖打父额者。今彼死比丘是。由于尔时无有恶心。以杖打父杀之。不以恶意。今还相报。亦非故杀。于时沙弥。渐渐修学。勤加不懈。遂得罗汉。尔时诸比丘。闻佛所说。心悉信解。欢喜奉行。[/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:11</div><div class="post-body">[font=楷体_GB2312][size=5]　　（四八）须达起精舍品第四十一(丹本为四十六) <br/>
 <br/>
 如是我闻。一时佛在王舍城竹园中止。尔时舍卫国王波斯匿。有一大臣。名曰须达。居家巨富。财宝无限。好喜布施。赈济贫乏及诸孤老。时人因行。为其立号。名给孤独。尔时长者。生七男儿。年各长大。为其纳娶。次第至六。其第七儿。端政殊异。偏心爱念。当为娶妻。欲得极妙容姿端政有相之女。为儿求之。即语诸婆罗门言。谁有好女相貌备足。当为我儿往求索之。诸婆罗门。便为推觅。展转行乞。到王舍城。王舍城中。有一大臣。名曰护弥。财富无量。信敬三宝。时婆罗门。到家从乞。国法施人。要令童女。持物布施。护弥长者。时有一女。威容端正。颜色殊妙。即持食出。施婆罗门。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -1143,7 +1156,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]唯愿大王。遣使请佛。时王闻已。即遣使者。诣王舍城。请佛及僧。唯愿世尊。临覆舍卫。尔时世尊。与诸四众。前后围绕。放大光明震动大地。至舍卫国。所经客舍。悉于中止。道次度人。无有限量。渐渐来近舍卫城边。一切大众。持诸供具。迎待世尊。世尊到国。至广博处。放大光明。遍照三千大千世界。足指按地。地皆震动。城中伎乐。不鼓自鸣。盲视聋听。哑语偻申。癃[病-丙+淺]拘癖。皆得具足。一切人民男女大小。睹斯瑞应。欢喜踊跃。来诣佛所。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]十八亿人。都悉集聚。尔时世尊。随病投药。为说妙法。宿缘所应。各得道迹。有得须陀洹斯陀含阿那含阿罗汉者。有种辟支佛因缘者。有发无上正真道意者。各各欢喜。奉行佛语。佛告阿难。今此园地。须达所买。林树华果。祇陀所有。二人同心。共立精舍。应当与号太子祇树给孤独园。名字流布。传示后世。尔时阿难。及四部众。闻佛所说。顶戴奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:14</div><div class="post-body">[font=楷体_GB2312][size=5]　　（四九）大光明始发无上心品第四十二(丹本为四十七) <br/>
+[font=楷体_GB2312][size=5]十八亿人。都悉集聚。尔时世尊。随病投药。为说妙法。宿缘所应。各得道迹。有得须陀洹斯陀含阿那含阿罗汉者。有种辟支佛因缘者。有发无上正真道意者。各各欢喜。奉行佛语。佛告阿难。今此园地。须达所买。林树华果。祇陀所有。二人同心。共立精舍。应当与号太子祇树给孤独园。名字流布。传示后世。尔时阿难。及四部众。闻佛所说。顶戴奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:14</div><div class="post-body">[font=楷体_GB2312][size=5]　　（四九）大光明始发无上心品第四十二(丹本为四十七) <br/>
 <br/>
 如是我闻。一时佛在罗阅只迦兰陀竹园。尔时阿难。在林树间。静坐思惟。欻生此念。如来正觉。诸根具足。功德慧明。殊妙难量。世尊先昔。本何因缘。发此大乘无上之心。修习何事。而得如是胜妙之利。作是念已。即从禅起。往诣佛所。头面作礼。前白佛言。如诸世尊。于诸世间人天之中。最尊最妙。功德慧明。巍巍无量。不审世尊。先昔以何因缘。发此大乘无上之心。佛告阿难。汝欲知者。善思念之。吾当为汝。具分别说。阿难白佛。诺当善听。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -1175,7 +1188,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]我问彼人。悉能分别。彼人问我。我不能知。因是事故。未与他等。母复告曰。自今已往。若共谈论。傥不如时。便可骂辱。迦毗梨言。出家沙门。无复过罪。云何骂之。答言但骂。卿当得胜。时迦毗梨。不忍违母。后日更论。理若短屈。即便骂言。汝等愚騃。无所识别。剧于畜生。知晓何法。诸百兽头。皆用比之。如是数数。非一非二。缘是果报。今受鱼身。而有百头。阿难问佛。何时当得脱此鱼身。佛告阿难。此贤劫中。千佛过去。犹故不脱。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]尔时阿难。及于众人。闻佛所说。怅然不乐。悲伤交怀。咸共同声。而作是言。身口意行。不可不慎。时捕鱼人。及牧牛人。一时俱共合掌向佛。求索出家。净修梵行。佛即言可。善来比丘。须发自落。法衣在体。便成沙门。是时世尊。为说妙法。种种苦切。漏尽结解。成阿罗汉。复为众会广说诸法。分别四谛苦集灭道。有得初果乃至第四果。有发大道意者。其数甚多。尔时四众闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:43</div><div class="post-body">[font=楷体_GB2312][size=5][b]              贤愚经卷第十一[/b] <br/>
+[font=楷体_GB2312][size=5]尔时阿难。及于众人。闻佛所说。怅然不乐。悲伤交怀。咸共同声。而作是言。身口意行。不可不慎。时捕鱼人。及牧牛人。一时俱共合掌向佛。求索出家。净修梵行。佛即言可。善来比丘。须发自落。法衣在体。便成沙门。是时世尊。为说妙法。种种苦切。漏尽结解。成阿罗汉。复为众会广说诸法。分别四谛苦集灭道。有得初果乃至第四果。有发大道意者。其数甚多。尔时四众闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:43</div><div class="post-body">[font=楷体_GB2312][size=5][b]              贤愚经卷第十一[/b] <br/>
 元魏凉州沙门慧觉等在高昌郡译 <br/>
 [/size][/font] <br/>
 [font=楷体_GB2312][size=5]    　　（五二）无恼指鬘品第四十五(丹本为五十一) <br/>
@@ -1250,7 +1263,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]尔时阿难长跪白佛。鸯仇摩罗。宿有何庆。身力雄壮。力士之力。健捷轻疾。走及飞鸟。复得值佛。越度生死。唯愿垂哀。为众会说。佛告阿难。汝等善听。乃往过去迦叶佛时。有一比丘。为僧执事。将僧人畜。载致谷米。道中逢雨。隐避无处。谷米囊物。悉被浇浸。时彼比丘。思欲疾过。力少行迟。无方从意。心怀悒迟。即立誓言。愿我后生。力敌千人。身轻行速。走疾飞鸟。将来有佛释迦牟尼。使我得见永脱生死。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]如是阿难。尔时执事比丘者。今鸯仇摩罗是。由彼世时。出家持戒。因营僧事。立愿之故。自从是来。世世端正猛力轻疾。悉如其愿。复遇见我。得度生死。尔时阿难。及诸比丘。王及臣民。一切会者。闻佛所说因缘行报。皆悉感厉。思惟四谛。有得须陀洹斯陀含阿那含阿罗汉者。有种辟支佛善根本者。有发无上正真道意者。或有得住不退转者。皆护身口克心从善。闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:46</div><div class="post-body">[font=楷体_GB2312][size=5]　　（五三）檀腻羁品第四十六(丹本为五十二) <br/>
+[font=楷体_GB2312][size=5]如是阿难。尔时执事比丘者。今鸯仇摩罗是。由彼世时。出家持戒。因营僧事。立愿之故。自从是来。世世端正猛力轻疾。悉如其愿。复遇见我。得度生死。尔时阿难。及诸比丘。王及臣民。一切会者。闻佛所说因缘行报。皆悉感厉。思惟四谛。有得须陀洹斯陀含阿那含阿罗汉者。有种辟支佛善根本者。有发无上正真道意者。或有得住不退转者。皆护身口克心从善。闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:46</div><div class="post-body">[font=楷体_GB2312][size=5]　　（五三）檀腻羁品第四十六(丹本为五十二) <br/>
 <br/>
 如是我闻。一时佛在舍卫国祇树给孤独园。尔时国内。有婆罗门宾头卢埵阇。其妇丑恶。两眼复青。纯有七女。无有男儿。家自贫困。诸女亦穷。妇性弊恶。恒骂其夫。女等更互来求所须。比未称给。嗔目啼哭。其七女夫瑧集其舍。承待供给。恐失其意。田有熟谷。未见践治。从他借牛。将往践之。守牛不谨。于泽亡失。时婆罗门。坐自思惟。我种何罪。酸毒兼至。内为恶妇所骂。七女所切。女夫来集。无以承当。复失他牛。不知所在。广行推觅。形疲心劳。愁闷恼悸。偶到林中。值见如来坐于树下。诸根寂定。静然安乐。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -1272,7 +1285,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]我不自知何缘有是。王答之言。所以然者。从穴出时。无有众恼。心情和柔。身亦如是。蛇由在外。鸟兽诸事。触娆其身。嗔恚隆盛。身便粗大。是以入时。碍穴难前。卿可语之。若汝在外。持心不嗔。如初出时则无此患。复白王言。道见女人。倩我白王。我在夫家。念父母舍。若在父舍。复念夫家。不知所以何缘乃尔。王复答言。卿可语之。由汝邪心。于父母舍更畜傍婿。汝在夫家念彼傍人。至彼小厌。还念正婿。是以尔耳。卿可语之。汝若持心。舍邪就正则无此患。又白王言。道边树上。见有一雉。倩我白王。我在余树。鸣声不好。若在此树。鸣声哀和。不知其故何缘如是。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]王告彼人。所以尔者。由彼树下有大釜金。是以于上。鸣声哀好。余处无金。是以住上。音声不好。王告檀腻羁。卿之多过。吾已释汝。汝家贫穷困苦理极。树下釜金。应是我有。就用与汝。卿可掘取。奉受王教。一一答报。掘取彼金。贸易田业。一切所须。皆无乏少。便为富人。尽世快乐。佛告阿难。尔时大王。阿婆罗提目佉者。岂异人乎。我身是也。尔时婆罗门檀腻羁者。今婆罗门宾头卢埵阇是。我往昔时。免其众厄。施以珍宝。令其快乐。吾今成佛。复拔彼苦。施以无尽法藏宝财。尊者阿难。及诸众会。闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:50</div><div class="post-body">[font=楷体_GB2312][size=5]        [b]      贤愚经卷第十二[/b] <br/>
+[font=楷体_GB2312][size=5]王告彼人。所以尔者。由彼树下有大釜金。是以于上。鸣声哀好。余处无金。是以住上。音声不好。王告檀腻羁。卿之多过。吾已释汝。汝家贫穷困苦理极。树下釜金。应是我有。就用与汝。卿可掘取。奉受王教。一一答报。掘取彼金。贸易田业。一切所须。皆无乏少。便为富人。尽世快乐。佛告阿难。尔时大王。阿婆罗提目佉者。岂异人乎。我身是也。尔时婆罗门檀腻羁者。今婆罗门宾头卢埵阇是。我往昔时。免其众厄。施以珍宝。令其快乐。吾今成佛。复拔彼苦。施以无尽法藏宝财。尊者阿难。及诸众会。闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:50</div><div class="post-body">[font=楷体_GB2312][size=5]        [b]      贤愚经卷第十二[/b] <br/>
 元魏凉州沙门慧觉等在高昌郡译 <br/>
 （五四）师质子摩头罗世质品第四十七(丹本为五十四) <br/>
 [/size][/font] <br/>
@@ -1314,7 +1327,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]恒在目前。舍卫国人。闻有金象。竞集观之。匆闹不静。妨废行道。时诸比丘。以意白佛。佛告象护。因此象故。致有烦愦。卿今可疾遣象令去。象护白佛。久欲遣之。然不肯去。佛复告曰。汝可语之。我今生分已尽。更不用汝。如是至三。象当灭矣。尔时象护。奉世尊教。向象三说。吾不须汝。是时金象。即入地中。时诸比丘。咸共奇怪。白世尊言。象护比丘。本修何德。于何福田。种此善根。乃获斯报巍巍如是。佛告阿难及诸比丘。若有众生。于三宝福田之中。种少少之善。得无极果。乃往过去。迦叶佛时。时彼世人。寿二万岁。彼佛教化周讫。迁神泥洹。分布灵骨。多起塔庙。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]时有一塔。中有菩萨本从兜率天所乘。象来下入母胎时像。彼时象身。有少剥破。时有一人。值行绕塔。见象身破。便自念言。此是菩萨所乘之象。今者损坏。我当治之。取泥用补。雌黄污涂。因立誓愿。使我将来恒处尊贵财用无乏。彼人寿终。生于天上。尽天之命。下生人间。常生尊豪富乐之家。颜貌端正。与世有异。恒有金象。随时侍卫。佛告阿难。欲知尔时治象人者。今象护是。由于彼世治象之故。从是以来。天上人中。封受自然。缘其敬心。奉三尊故今遭值我。禀受妙化。心垢都尽。逮阿罗汉。慧命阿难及诸众会。闻佛所说。莫不开解。各得其所。有得须陀洹斯陀含阿那含阿罗汉者。有发无上正真道意者。有证不退位者。莫不欢喜敬戴奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:55</div><div class="post-body">[font=楷体_GB2312][size=5]　　（五七）波婆离品第五十(丹本为五十七) <br/>
+[font=楷体_GB2312][size=5]时有一塔。中有菩萨本从兜率天所乘。象来下入母胎时像。彼时象身。有少剥破。时有一人。值行绕塔。见象身破。便自念言。此是菩萨所乘之象。今者损坏。我当治之。取泥用补。雌黄污涂。因立誓愿。使我将来恒处尊贵财用无乏。彼人寿终。生于天上。尽天之命。下生人间。常生尊豪富乐之家。颜貌端正。与世有异。恒有金象。随时侍卫。佛告阿难。欲知尔时治象人者。今象护是。由于彼世治象之故。从是以来。天上人中。封受自然。缘其敬心。奉三尊故今遭值我。禀受妙化。心垢都尽。逮阿罗汉。慧命阿难及诸众会。闻佛所说。莫不开解。各得其所。有得须陀洹斯陀含阿那含阿罗汉者。有发无上正真道意者。有证不退位者。莫不欢喜敬戴奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:55</div><div class="post-body">[font=楷体_GB2312][size=5]　　（五七）波婆离品第五十(丹本为五十七) <br/>
 <br/>
 如是我闻。一时佛在王舍城鹫头山中。与尊弟子千二百五十人俱。尔时波罗奈王。名波罗摩达。王有辅相。生一男儿。三十二相。众好备满。身色紫金。姿容挺特。辅相见子。倍增怡悦。即召相师。令占相之。相师披看。叹言奇哉。相好毕满。功德殊备。智辩通达。出逾人表。辅相益喜。因为立字。相师复问。自从生来。有何异事。辅相答言。甚怪异常。其母素性。不能良善。怀妊已来。悲矜苦厄。慈润黎元。等心护养。相师喜言。此是儿志。因为立字。号曰弥勒。父母喜庆。心无有量。其儿殊称。合土宣闻。国王闻之。怀惧言曰。念此小儿。名相显美。傥有高德。必夺我位。曼其未长。当豫除灭。久必为患。作是计已。即敕辅相。闻汝有子。容相有异。汝可将来。吾欲得见。时宫内人。闻儿晖问。知王欲图。甚怀汤火。其儿有舅。名波婆梨。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -1368,7 +1381,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]我会当习此慈三昧。作是愿已。志慕慈定。意甚柔濡。更无害心。即时请佛及比丘僧。唯愿回神。往至大国。佛即许可克日当往。波塞奇王。闻佛欲往至大王国。甚怀恋恨。愁悸无憀。心自念言。若当令我是大王者。如来则当常住我国。由我小故不得自在。念是事已。即问佛言。诸王之中。何者最大。佛告之曰转轮王大波塞奇王。因自作愿愿我由来。供养佛及众僧。持此功德。誓愿将来世世。常作转轮之王。如是阿难。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]尔时大王昙摩留支者。今弥勒是。始于彼世。发此慈心。自此以来。常字弥勒。彼波塞奇王。今祇陀是。乃于彼中。常作转轮王。自是以来。世世恒作。乃至今日。功德不尽。是以今日。复求索作。时穿珠。师闻说是已。寻发无上正真道意。其余会者。闻佛所说。有得须陀洹斯陀含阿那含阿罗汉者。有发无上正真道意者。有得迁住不退地者。各皆敬戴。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:57</div><div class="post-body">[font=楷体_GB2312][size=5]　　（五八）二鹦鹉闻四谛品第五十一(丹本为五十八) <br/>
+[font=楷体_GB2312][size=5]尔时大王昙摩留支者。今弥勒是。始于彼世。发此慈心。自此以来。常字弥勒。彼波塞奇王。今祇陀是。乃于彼中。常作转轮王。自是以来。世世恒作。乃至今日。功德不尽。是以今日。复求索作。时穿珠。师闻说是已。寻发无上正真道意。其余会者。闻佛所说。有得须陀洹斯陀含阿那含阿罗汉者。有发无上正真道意者。有得迁住不退地者。各皆敬戴。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 13:57</div><div class="post-body">[font=楷体_GB2312][size=5]　　（五八）二鹦鹉闻四谛品第五十一(丹本为五十八) <br/>
 <br/>
 如是我闻。一时佛在舍卫国祇树给孤独园。尔时长者须达。敬信佛法。为僧檀越。一切所须。悉皆供给。时诸比丘。随其所须。日日往来。说法教诲。须达家内。有二鹦鹉。一名律提。二名赊律提。禀性黠慧。能知人语。诸比丘往来。每先告语家内闻知。拂整敷具。欢喜迎逆。是时阿难。往到其家。见鸟聪黠。爱之在心。而语之言。欲教汝法。二鸟欢喜。授四谛法。教令诵习。而说偈言 <br/>
 <br/>
@@ -1386,7 +1399,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 如是我闻。一时佛在舍卫国祇树给孤独园。尔时于林树间。有一比丘。坐禅行道。食后经行。因尔诵经。音声清雅妙好无比。时有一鸟。敬爱其声。飞在树上。听其音响。时有猎师。以箭射杀。缘兹善心。即生第二忉利天中。父母膝上。忽然长大。如八岁儿。面貌端正。殊异光相。昉然无有伦匹。即自念言。我以何福。得生此中天福果报。便识宿命。观见故身。本是禽鸟。蒙彼比丘诵经福报得生此中。即持天华。诣阎浮提。到比丘所。礼敬问讯。以天华香。供散其上。比丘问言。汝是何神。答言。我本是鸟。爱尊音声。来此听经承。为猎师所杀。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]因此善心。生忉利天。比丘欢喜。即命令坐。为其说法种种妙善。天人开解。得须陀洹果。欢喜踊跃。即还天上。佛告阿难。如来出世。饶益甚多。所说诸法。实为深妙。乃至飞鸟。缘爱法声。获福无量。岂况于人信心坚固受持之者。所获果报。难以为比。尔时阿难及诸大众。闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 14:00</div><div class="post-body">[font=楷体_GB2312][size=5][b]              贤愚经卷第十三 <br/>
+[font=楷体_GB2312][size=5]因此善心。生忉利天。比丘欢喜。即命令坐。为其说法种种妙善。天人开解。得须陀洹果。欢喜踊跃。即还天上。佛告阿难。如来出世。饶益甚多。所说诸法。实为深妙。乃至飞鸟。缘爱法声。获福无量。岂况于人信心坚固受持之者。所获果报。难以为比。尔时阿难及诸大众。闻佛所说。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 14:00</div><div class="post-body">[font=楷体_GB2312][size=5][b]              贤愚经卷第十三 <br/>
 [/b]    　　　　元魏凉州沙门慧觉等在高昌郡译 <br/>
 <br/>
 （六○）五百雁闻佛法生天品第五十三(丹本为六十) <br/>
@@ -1419,7 +1432,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]云何世尊。受彼少施。酬以大报。作是念已。各为如来。破损好[(畾/且)*毛]。作种种衣。持用奉佛。阿难问佛。世尊先昔造何善行。能令一切奉施衣服。愿佛为说。令得开解。世尊告曰。谛听著心。当为汝说过去因缘。阿难曰诺。我当善听。佛告阿难乃往过去无量无数阿僧祇劫。尔时有佛。名毗钵尸。出现于世。与其徒众九万人俱。彼时有王。名曰槃头。有一大臣。请佛及僧。三月供养。佛即许可。既蒙可已。还至其家。办具所须。时槃头王。亦欲供养佛及众僧。往至佛所。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]而白佛言。贪得如来及比丘僧三月供养。佛告槃头。吾先已受彼大臣请。大人之法。不宜中违。王即还宫。告其臣曰。佛处我国。吾欲供养。云卿已请。今可避我。我供养讫。卿乃请之。臣答王言。若使大王保我身命。复保如来常住于此。复令国土常安无灾。若使能保此诸事者。我乃息意。放王先请。王自念言。斯事叵办。复更晓曰。卿请一日。我复一日。臣便可之。更互设会。各满所愿。尔时大臣。为彼如来。办具三衣。皆悉丰足。复为九万诸比丘众。作七条衣。人与一领。阿难当知。尔时大臣。以上衣服。施佛及僧供养之者。岂异人乎。则我身是。我乃世世。殖福无厌。今悉自得。终不唐捐。时阿难等。闻说是已。欢喜勤修。造诸福业。心怀踊跃。顶戴奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 14:06</div><div class="post-body">[font=楷体_GB2312][size=5]　　（六三）佛始起慈心缘品第五十六(丹本为六十三) <br/>
+[font=楷体_GB2312][size=5]而白佛言。贪得如来及比丘僧三月供养。佛告槃头。吾先已受彼大臣请。大人之法。不宜中违。王即还宫。告其臣曰。佛处我国。吾欲供养。云卿已请。今可避我。我供养讫。卿乃请之。臣答王言。若使大王保我身命。复保如来常住于此。复令国土常安无灾。若使能保此诸事者。我乃息意。放王先请。王自念言。斯事叵办。复更晓曰。卿请一日。我复一日。臣便可之。更互设会。各满所愿。尔时大臣。为彼如来。办具三衣。皆悉丰足。复为九万诸比丘众。作七条衣。人与一领。阿难当知。尔时大臣。以上衣服。施佛及僧供养之者。岂异人乎。则我身是。我乃世世。殖福无厌。今悉自得。终不唐捐。时阿难等。闻说是已。欢喜勤修。造诸福业。心怀踊跃。顶戴奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 14:06</div><div class="post-body">[font=楷体_GB2312][size=5]　　（六三）佛始起慈心缘品第五十六(丹本为六十三) <br/>
 <br/>
 如是我闻。一时佛在舍卫国祇树给孤独园。尔时诸比丘。夏安居竟。往至佛所。礼敬问讯。佛以慈心。慰喻抚恤。汝等住彼。得无苦耶。慈心矜笃。极怀怜愍。阿难见之。而白佛言。世尊。慈愍垂矜特隆。不审世尊。发如是心。为远近耶。佛告阿难。若欲知之。当为汝说。过去久远。不可称计阿僧祇劫。有二罪人。共在地狱。卒驱之。使挽铁车。剥取其皮。用作车鞅。复以铁棒。打令奔走。东西驰骋。无有休息。时彼一人。筋力鲜薄。狱卒逼之。躄地便起。疲极困乏。绝死复苏。彼共对者。见其困苦。兴发慈心。怜愍此人。顾白狱卒。唯愿听我躬代是人。独挽此车。狱卒嗔恚。以棒打之。应时即死。生忉利天。阿难当知。尔时狱中慈心人者。我身是也。我乃尔时。于彼地狱受罪之时。初发如是慈矜之心。于一切人。未曾退舍。至于今日。故乐修行慈愍一切。尔时阿难。闻佛所说。欢喜奉行。 <br/>
 <br/>
@@ -1441,7 +1454,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]时阿修罗王。兴军上天。与帝释斗。帝释不如。退军入城。顶生复出。吹贝扣弓。阿修罗王。即时崩坠。顶生自念。我力如是。无有等者。今与帝释。共坐何为。不如害之。独霸为快。恶心已生。寻即堕落。当本殿前。委顿欲死诸人来问。若后世人。问顶生王云何命终。何以报之。王对之曰。若有此问。便可答之。顶生王者。由贪而死。统领四域。四十亿岁。七日雨宝。及在二天。而无厌足。故致坠落。是故比丘。夫利养者。实为大患。当思远离深求道真。阿难白佛。此顶生王。宿殖何福。而获如此无量大报。佛告之曰。乃往过去。不可计劫。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]时世有佛。号曰弗沙。与其徒众。游化世间。时婆罗门子。适欲娶妇。手把大豆。当用散妇。是其曩世。俗家之礼。于道值佛。心意欢喜。即持此豆。奉散于佛。四粒入钵。一粒住顶。由此因缘。受无极福。四粒入钵。王四天下。一粒在顶。受乐二天。尔时诸弟子。闻佛所说。有得初果二果三果及阿罗汉者。不可称数。受持佛语。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 14:12</div><div class="post-body">[font=楷体_GB2312][size=5]　　（六五）苏曼女十子品第五十八(丹本为六十五) <br/>
+[font=楷体_GB2312][size=5]时世有佛。号曰弗沙。与其徒众。游化世间。时婆罗门子。适欲娶妇。手把大豆。当用散妇。是其曩世。俗家之礼。于道值佛。心意欢喜。即持此豆。奉散于佛。四粒入钵。一粒住顶。由此因缘。受无极福。四粒入钵。王四天下。一粒在顶。受乐二天。尔时诸弟子。闻佛所说。有得初果二果三果及阿罗汉者。不可称数。受持佛语。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 14:12</div><div class="post-body">[font=楷体_GB2312][size=5]　　（六五）苏曼女十子品第五十八(丹本为六十五) <br/>
 <br/>
 如是我闻。一时佛在舍卫国祇树给孤独园。尔时须达长者。末下小女。字曰苏曼。面首端正。容貌最妙。其父怜爱。特于诸子。若游行时。每将共去。于是长者。将至佛所。其女见佛。情倍欣踊。愿得好香。涂佛住室。斯女手中。有宾婆果。佛从索之。奉教便与。佛寻于上。书香种稷。还以与之。女共其父。还归城里。便行推买种种妙香。如佛所须。持诣祇洹。躬自捣磨。日日如是。于时持叉尸利国王。遣其一儿。使到舍卫。初适他土广行观看。渐渐展转。复至精舍。见苏曼女在中磨香。爱其姿容。欲得为妻。即往入城。启波斯匿王。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -1485,7 +1498,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]是时尊者。成道已后。所化众生。得四果者。一人一筹。筹长四寸。如此之筹。满于一房。房高六丈。纵广亦尔。于是众人白尊者言。尊者福德。实为弘博。化度群萌。不可称数。尊者告曰。吾为畜生时。亦化众生。使得圣果。何况今日。众会白言。不审先世。所度云何。尊者告曰。乃往过去。波罗奈国。有一仙山。五百辟支佛。止住其中。时有猕猴。日来供养。奉觐仪容。诸辟支佛。后尽涅盘。复有五百梵志。续在中止。诸梵志等。或事日月。或复事火。事日月者。翘脚向之。其事火者。朝夕燃之。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]时彼猕猴。见其翘脚。便取挽下。见其燃火。便取灭之。猕猴于时。端坐思惟。诸梵志见。自相谓言。此猕猴者。将为我曹示兹威仪。寻各整身。谛察真理。心意开解。尽得辟支佛道。彼猕猴者。我身是也。众会复白。以何因缘。受猕猴身。尊者告曰。乃往过去九十一劫。有毗婆尸佛。出现于世。有诸比丘。在波罗奈仙山中住。时有应真。登上山巅。放脚轻疾。有一年少道人。而作是言。彼行飘速。正似猕猴。由此因缘。五百世中。常作猕猴。以是之故。凡在四辈。应自护口勿妄出言。尊者优波鞠提。说此法时。一切大会。有得须陀洹斯陀含阿那含阿罗汉者。种缘觉善根者。发大乘心逮不退者。不可称计。信受其教。欢喜奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 14:15</div><div class="post-body">[font=楷体_GB2312][size=5]　　（六八）汪水中虫品第六十一(丹本为六十八) <br/>
+[font=楷体_GB2312][size=5]时彼猕猴。见其翘脚。便取挽下。见其燃火。便取灭之。猕猴于时。端坐思惟。诸梵志见。自相谓言。此猕猴者。将为我曹示兹威仪。寻各整身。谛察真理。心意开解。尽得辟支佛道。彼猕猴者。我身是也。众会复白。以何因缘。受猕猴身。尊者告曰。乃往过去九十一劫。有毗婆尸佛。出现于世。有诸比丘。在波罗奈仙山中住。时有应真。登上山巅。放脚轻疾。有一年少道人。而作是言。彼行飘速。正似猕猴。由此因缘。五百世中。常作猕猴。以是之故。凡在四辈。应自护口勿妄出言。尊者优波鞠提。说此法时。一切大会。有得须陀洹斯陀含阿那含阿罗汉者。种缘觉善根者。发大乘心逮不退者。不可称计。信受其教。欢喜奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-9 14:15</div><div class="post-body">[font=楷体_GB2312][size=5]　　（六八）汪水中虫品第六十一(丹本为六十八) <br/>
 <br/>
 如是我闻。一时佛在罗阅只耆阇崛山中。尔时城边。有一汪水。污泥不净。多诸粪秽。屎尿臭处。国中人民。凡鄙之类。恒以瑕秽。投归其中。有一大虫。其形像蛇。加有四足。于其汪水。东西驰走。或没或出。经历年载。常处其中。受苦无量。尔时世尊。将诸比丘。前后围绕。至彼坑所。问诸比丘。汝等颇识此虫宿缘所造行不。时诸比丘。咸皆思量。无有能知斯所造行。俱共白佛。皆云不知。时佛告曰。汝等当听。吾当为汝说斯所造行。过去有佛。名毗婆尸。出现于世。教化已周。迁神涅槃。彼佛法中。有十万比丘。净修梵行。闲居乐静。依于一山。其山左右。有好林树。华果茂盛蓊郁无比。其诸树间。流泉浴池。清凉可乐。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -1501,7 +1514,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]舍利弗言。我无沙弥。闻卿有子。当用见与。婆罗门言。我有一子字曰均提。年既孩幼。不任使令。比前长大。当用相与。时舍利弗。闻彼语已。即戢在心。还至祇洹至年七岁。复来求之。时婆罗门。即以其儿。付舍利弗。令使出家。时舍利弗。便受其儿。将至祇洹。听为沙弥。渐为具说种种妙法。心意开解。得阿罗汉。六通清彻。功德悉备。时均提沙弥。始得道已。自以智力。观过去世。本造何行。来受此形。得遭圣师。而获果证。观见前身。作一饿狗。蒙我和上舍利弗恩。今得人身。并获道果。欣心内发。而自念言。我蒙师恩。得脱诸苦。今当尽身供给所须。永作沙弥。不受大戒。尔时阿难。而白佛言。不审此人。曩昔之时。兴何恶行。受此狗身。造何善根。而得解脱。佛告阿难。乃往过去迦叶佛时。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]有诸比丘。集在一处时年少比丘。音声清雅。善巧赞呗。人所乐听。有一比丘。年高耆老。音声浊钝。不能经呗。每自出声。而自娱乐其老比丘。已得罗汉。沙门功德。皆悉具足。于时年少妙音比丘。见老沙门音声钝浊。自恃好声。而呵之言。今汝长老。声如狗吠。轻呵已竟。时老比丘。便呼年少。汝识我不。年少答言。我大识汝。是迦叶佛时比丘。上座答曰。我今已得阿罗汉道。沙门仪式。悉具足矣。时年少比丘。闻其所说。心惊毛竖。惶怖自责。即于其前。忏悔过咎。时老比丘。即听忏悔。由其恶言。五百世中。常受狗身。由其出家持净戒故。今得见我。蒙得解脱。尔时阿难。闻佛所说。欢喜信受。顶戴奉行。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">邬</div>邬扎拉拓发表于 2011-1-4 12:59</div><div class="post-body">最上三寶我皈依，一切罪業皆懺悔 <br/>
+[font=楷体_GB2312][size=5]有诸比丘。集在一处时年少比丘。音声清雅。善巧赞呗。人所乐听。有一比丘。年高耆老。音声浊钝。不能经呗。每自出声。而自娱乐其老比丘。已得罗汉。沙门功德。皆悉具足。于时年少妙音比丘。见老沙门音声钝浊。自恃好声。而呵之言。今汝长老。声如狗吠。轻呵已竟。时老比丘。便呼年少。汝识我不。年少答言。我大识汝。是迦叶佛时比丘。上座答曰。我今已得阿罗汉道。沙门仪式。悉具足矣。时年少比丘。闻其所说。心惊毛竖。惶怖自责。即于其前。忏悔过咎。时老比丘。即听忏悔。由其恶言。五百世中。常受狗身。由其出家持净戒故。今得见我。蒙得解脱。尔时阿难。闻佛所说。欢喜信受。顶戴奉行。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">邬</div>邬扎拉拓发表于 2011-1-4 12:59</div><div class="post-body">最上三寶我皈依，一切罪業皆懺悔 <br/>
 眾生善根盡隨喜，正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽，直至菩提我皈依 <br/>

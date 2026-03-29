@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>法集要颂经（本缘部） - 藏密修海典藏</title>
+<title>法集要颂经（本缘部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">法集要颂经（本缘部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:36</div><div class="post-body">[font=楷体_GB2312][size=6][b]法集要颂经有为品第一[/b][/size][/size] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:36</div><div class="post-body">[font=楷体_GB2312][size=6][b]法集要颂经有为品第一[/b][/size][/size] <br/>
 [font=楷体_GB2312][size=5]　　　　尊者法救集[/size][/size] <br/>
 [font=楷体_GB2312][size=4][b]   西天中印度惹烂驮啰国密林寺三藏明教大师赐紫沙门臣天息灾奉　诏译 <br/>
 [/b][/size][/font] <br/>
@@ -135,7 +148,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 剃发为苾刍　　宜应修止观 <br/>
 魔罗不能伺　　度生到彼岸 <br/>
 <br/>
-[/b][/size][/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:39</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]　法集要颂经爱欲品第二 <br/>
+[/b][/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:39</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]　法集要颂经爱欲品第二 <br/>
 [/size] <br/>
 欲我知汝根　　意以思想生 <br/>
 我不思惟汝　　则汝欲不有 <br/>
@@ -188,7 +201,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 此犹无厌足　　正觉尽能知 <br/>
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]　世间苦果报　　皆因于贪欲 <br/>
-智者善调伏　　应依此中学　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:42</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　[size=6]法集要颂经贪品第三[/size] <br/>
+智者善调伏　　应依此中学　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:42</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　[size=6]法集要颂经贪品第三[/size] <br/>
 <br/>
 极贪善显现　　有情怀疑虑 <br/>
 若复增贪意　　自作坚固缚 <br/>
@@ -241,7 +254,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 内箭亦如是　　爱箭伤有情 <br/>
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]　能觉知是者　　爱苦共生有 <br/>
-无欲无有想　　苾刍真度世　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:44</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　[size=6]法集要颂经放逸品第四[/size] <br/>
+无欲无有想　　苾刍真度世　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:44</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　[size=6]法集要颂经放逸品第四[/size] <br/>
 <br/>
 戒为甘露道　　放逸为死径 <br/>
 不贪则不死　　失道乃自丧 <br/>
@@ -344,7 +357,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 抖擞无常军　　如象出莲池 <br/>
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]　依此毗尼法　　不怀放逸行 <br/>
-消除生死轮　　永得尽苦恼　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:46</div><div class="post-body">[font=楷体_GB2312][size=5][b]　[size=6]　法集要颂经爱乐品第五[/size] <br/>
+消除生死轮　　永得尽苦恼　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:46</div><div class="post-body">[font=楷体_GB2312][size=5][b]　[size=6]　法集要颂经爱乐品第五[/size] <br/>
 <br/>
 爱处生忧愁　　爱处生怖畏 <br/>
 若无所爱乐　　何愁何怖畏 <br/>
@@ -407,7 +420,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][b]　教习使禀受　　制止非法行 <br/>
 善者之所念　　恶者当远离 <br/>
 善与不善者　　此二俱不别 <br/>
-善者生天上　　不善堕地狱　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:47</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　[size=6]法集要颂经持戒品第六[/size] <br/>
+善者生天上　　不善堕地狱　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:47</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　[size=6]法集要颂经持戒品第六[/size] <br/>
 <br/>
 智者能护戒　　福致三种报 <br/>
 现名闻得利　　终后生天上 <br/>
@@ -460,7 +473,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][b]　若人能持戒　　清净不放逸 <br/>
 正智得解脱　　是名安乐处 <br/>
 此道无有上　　消除禅定魔 <br/>
-贤圣德难量　　得达八正路　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:48</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　[size=6]法集要颂经善行品第七 <br/>
+贤圣德难量　　得达八正路　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:48</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　[size=6]法集要颂经善行品第七 <br/>
 [/size] <br/>
 守护身恶行　　自正护身行 <br/>
 守护身恶者　　常修身善行 <br/>
@@ -499,7 +512,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 苾刍护一切　　能尽诸苦际 <br/>
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]　护口意清净　　身终不为恶 <br/>
-能净此三业　　是道大仙说　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:50</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]　法集要颂经语言品第八 <br/>
+能净此三业　　是道大仙说　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:50</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]　法集要颂经语言品第八 <br/>
 [/size] <br/>
 妄语入地狱　　作之言不作 <br/>
 二罪后俱受　　是行自牵去 <br/>
@@ -543,7 +556,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]　谛说义如法　　是为立道本 <br/>
 如说佛言者　　是吉得灭度 <br/>
-为能断苦际　　是谓言中上　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:51</div><div class="post-body">[font=楷体_GB2312][size=5][b]　[size=6]　法集要颂经业品第九[/size] <br/>
+为能断苦际　　是谓言中上　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:51</div><div class="post-body">[font=楷体_GB2312][size=5][b]　[size=6]　法集要颂经业品第九[/size] <br/>
 <br/>
 应远离一法　　所谓妄语人 <br/>
 无恶不经历　　不免后世苦 <br/>
@@ -590,7 +603,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]　至恶知恶至　　受恶恶根源 <br/>
 如铁生翳垢　　反食其自身 <br/>
-恶生于自心　　还当坏其体　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:54</div><div class="post-body">[font=楷体_GB2312][size=5][b]　[size=6]　法集要颂经正信品第十[/size] <br/>
+恶生于自心　　还当坏其体　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:54</div><div class="post-body">[font=楷体_GB2312][size=5][b]　[size=6]　法集要颂经正信品第十[/size] <br/>
 <br/>
 信惭戒布施　　上士誉此法 <br/>
 斯道明智说　　得生于天界 <br/>
@@ -641,7 +654,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 远离无信者　　信仁应行之 <br/>
 <br/>
 无常及欲贪　　放逸与爱乐 <br/>
-戒善行语言　　业信为第十　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:55</div><div class="post-body">[font=楷体_GB2312][size=5][b]　[size=6]　法集要颂经沙门品第十一[/size] <br/>
+戒善行语言　　业信为第十　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:55</div><div class="post-body">[font=楷体_GB2312][size=5][b]　[size=6]　法集要颂经沙门品第十一[/size] <br/>
 <br/>
 断漏降伏他　　离欲名梵行 <br/>
 不犯牟尼戒　　无一愿不满 <br/>
@@ -684,7 +697,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 守护微细愆　　是名真梵行 <br/>
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]　所言沙门者　　息心灭意想 <br/>
-秽垢尽消除　　故说为出家　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:58</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经卷第二[/size] <br/>
+秽垢尽消除　　故说为出家　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:58</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经卷第二[/size] <br/>
 [/b]　　　　尊者法救集 <br/>
 [size=4][b]西天中印度惹烂驮啰国密林寺三藏明教大师赐紫沙门臣天息灾奉　诏译 <br/>
 [/b][/size] <br/>
@@ -745,7 +758,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/b][/size][/size] <br/>
 [font=楷体_GB2312][size=5][b]　快乐无穷尽　　积善得善行 <br/>
 赞叹得名誉　　逮贤圣八品 <br/>
-修道甘露果　[/b][/size][/size][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 23:02</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经利养品第十三[/size] <br/>
+修道甘露果　[/b][/size][/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 23:02</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经利养品第十三[/size] <br/>
 <br/>
 芭蕉以实死　　竹芦实亦然 <br/>
 駏驉坐妊终　　人为贪利丧 <br/>
@@ -793,7 +806,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 不邪命自活　　心善常思惟 <br/>
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]　微细病难忍　　利养最难离 <br/>
-供养心不动　　天龙致礼拜　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 23:03</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经怨家品第十四[/size] <br/>
+供养心不动　　天龙致礼拜　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 23:03</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经怨家品第十四[/size] <br/>
 <br/>
 不怨而兴怨　　不谤而造业 <br/>
 愚迷受轮回　　今世及后世 <br/>
@@ -828,7 +841,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][b]　学无同伴侣　　又不得亲友 <br/>
 宁独守善行　　不与愚人偕 <br/>
 乐戒学法行　　奚用伴侣为 <br/>
-如龙好深渊　　如象乐旷野　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 23:06</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经忆念品第十五[/size] <br/>
+如龙好深渊　　如象乐旷野　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 23:06</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经忆念品第十五[/size] <br/>
 <br/>
 入息出息念　　具满谛思惟 <br/>
 常依次第行　　按如佛所说 <br/>
@@ -901,7 +914,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 应当于昼夜　　一心念意乐 <br/>
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]　善知自觉者　　是能仁弟子 <br/>
-应当于昼夜　　一心念圆寂　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 23:07</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经清净品第十六[/size] <br/>
+应当于昼夜　　一心念圆寂　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 23:07</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经清净品第十六[/size] <br/>
 <br/>
 当念自觉悟　　作时勿虚妄 <br/>
 行要修亦安　　所造时真实 <br/>
@@ -956,7 +969,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 骨干以为城　　肉血而涂饰 <br/>
 门根尽开张　　结贼得纵逸 <br/>
 有缘则增苦　　观彼二因缘 <br/>
-[/b][/size][/font][font=楷体_GB2312][size=5][b]　灭之由贤众　　不从外愚除　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 06:51</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经水喻品第十七[/size] <br/>
+[/b][/size][/font][font=楷体_GB2312][size=5][b]　灭之由贤众　　不从外愚除　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 06:51</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经水喻品第十七[/size] <br/>
 <br/>
 净心常忆念　　无所有贪爱 <br/>
 已度愚痴渊　　如鹅守枯池 <br/>
@@ -991,7 +1004,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][b]　犹如深净泉　　表里甚清彻 <br/>
 智者闻妙法　　欢喜无穷尽 <br/>
 忍心如大地　　不动如虚空 <br/>
-闻法喻金刚　　获味免轮回　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 06:52</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经华喻品第十八[/size] <br/>
+闻法喻金刚　　获味免轮回　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 06:52</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经华喻品第十八[/size] <br/>
 <br/>
 何人能择地　　舍地狱取天 <br/>
 惟说善法句　　如采善妙华 <br/>
@@ -1064,7 +1077,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 苾刍到彼岸　　如蛇脱故皮 <br/>
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]　若无烦恼根　　获报善因果 <br/>
-苾刍到彼岸　　如蛇脱故皮　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 06:54</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经马喻品第十九[/size] <br/>
+苾刍到彼岸　　如蛇脱故皮　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 06:54</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经马喻品第十九[/size] <br/>
 <br/>
 譬马调能软　　随意如所行 <br/>
 信戒及精进　　定法要具足 <br/>
@@ -1107,7 +1120,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 亦如善象龙　　意念到彼岸 <br/>
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]　自师自卫护　　自归求自度 <br/>
-是故躬谨慎　　如商贾智马　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 06:55</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经嗔恚品第二十[/size] <br/>
+是故躬谨慎　　如商贾智马　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 06:55</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经嗔恚品第二十[/size] <br/>
 <br/>
 除嗔去我慢　　远离诸烦恼 <br/>
 不染彼名色　　冤家无有伴 <br/>
@@ -1159,7 +1172,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 是为善调御　　去冥入光明 <br/>
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]　沙门及正道　　利养怨忆念 <br/>
-清净水兼华　　马恚为第十　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 06:57</div><div class="post-body">[font=楷体_GB2312][size=5][b]　[size=6]法集要颂经如来品第二十一[/size] <br/>
+清净水兼华　　马恚为第十　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 06:57</div><div class="post-body">[font=楷体_GB2312][size=5][b]　[size=6]法集要颂经如来品第二十一[/size] <br/>
 <br/>
 自获正觉最无等　　一染世间一切法 <br/>
 具一切智力无畏　　自然无师亦无证 <br/>
@@ -1210,7 +1223,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 譬人立山顶　　遍见村落人 <br/>
 审观法如是　　如登楼观园 <br/>
 若人恒观察　　烦恼永不生 <br/>
-降甘露法雨　　连注无穷尽　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 06:58</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经多闻品第二十二[/size] <br/>
+降甘露法雨　　连注无穷尽　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 06:58</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经多闻品第二十二[/size] <br/>
 <br/>
 多闻善能行　　修善无烦恼 <br/>
 所行业障消　　沙门获妙果 <br/>
@@ -1263,7 +1276,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 彼不用智定　　速行放逸者 <br/>
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]　贤圣乐于法　　所行应于口 <br/>
-以忍思惟空　　闻意则牢固　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 06:59</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经己身品第二十三 <br/>
+以忍思惟空　　闻意则牢固　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 06:59</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经己身品第二十三 <br/>
 [/size] <br/>
 常习善语言　　沙门思坐起 <br/>
 一坐而所乐　　欲求于息心 <br/>
@@ -1318,7 +1331,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][b]　自己心为师　　不依他为师 <br/>
 自己为师者　　解脱一切苦 <br/>
 自己心为师　　不依他为师 <br/>
-自己为师者　　速证圆寂果　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:06</div><div class="post-body">[font=楷体_GB2312][size=5][b]      法集要颂经卷第三 <br/>
+自己为师者　　速证圆寂果　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:06</div><div class="post-body">[font=楷体_GB2312][size=5][b]      法集要颂经卷第三 <br/>
 [/b]　　　　西天中印度惹烂驮啰国密林寺三藏明教大师赐紫沙门臣天息灾奉　诏译 <br/>
 [b]　　法集要颂经广说品第二十四 <br/>
 <br/>
@@ -1405,7 +1418,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][b]　一念福无边　　胜彼终身祀 <br/>
 虽终百岁寿　　奉事祀火神 <br/>
 不如须臾间　　供养佛法僧 <br/>
-一念供养福　　胜彼终身祀　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:08</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经善友品第二十五[/size] <br/>
+一念供养福　　胜彼终身祀　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:08</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经善友品第二十五[/size] <br/>
 <br/>
 无信怀憎嫉　　斗乱彼此人 <br/>
 智者所弃嫌　　愚习以为乐 <br/>
@@ -1466,7 +1479,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]　当选择共居　　如与亲亲会 <br/>
 是故事多闻　　并及持戒者 <br/>
-如是人中上　　如月在众星　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:12</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经圆寂品第二十六 <br/>
+如是人中上　　如月在众星　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:12</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经圆寂品第二十六 <br/>
 [/size] <br/>
 如龟藏其六　　苾刍摄意想 <br/>
 无倚无害彼　　圆寂无言说 <br/>
@@ -1559,7 +1572,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][b]　知节不知节　　最胜舍有行 <br/>
 内自思惟行　　如卵坏其膜 <br/>
 众施法施胜　　众乐法乐上 <br/>
-众力忍力最　　爱尽圆寂乐　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:17</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6] 法集要颂经罪障品第二十八[/size] <br/>
+众力忍力最　　爱尽圆寂乐　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:17</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6] 法集要颂经罪障品第二十八[/size] <br/>
 <br/>
 诸恶业莫作　　诸善业奉行 <br/>
 自净其意行　　是名诸佛教 <br/>
@@ -1648,7 +1661,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 彼煮彼受报　　见行自有验 <br/>
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]　作福不作恶　　皆由宿行法 <br/>
-终不畏死径　　如船截流渡　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:20</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经相应品第二十九[/size] <br/>
+终不畏死径　　如船截流渡　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:20</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经相应品第二十九[/size] <br/>
 <br/>
 夜光照于冥　　至日未出间 <br/>
 日光布大明　　夜光便黤黮 <br/>
@@ -1777,7 +1790,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 若欲灭其想　　内外无诸因 <br/>
 亦无过色想　　四应不受生 <br/>
 舍前及舍后　　舍间越于有 <br/>
-一切尽皆舍　　不复受生老　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:23</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]  法集要颂经卷第四[/size] <br/>
+一切尽皆舍　　不复受生老　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:23</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]  法集要颂经卷第四[/size] <br/>
 [/b]　西天中印度惹烂驮啰国密林寺三藏明教大师赐紫沙门臣天息灾奉　诏译 <br/>
 <br/>
 [b]　忍胜则怨贼　　自负则自鄙 <br/>
@@ -1900,7 +1913,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][b]　如苾刍在定　　不着一切垢 <br/>
 众生遭苦乐　　而不能觉知 <br/>
 如来与多闻　　己身广善友 <br/>
-圆寂观罪障　　相应乐第十　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:26</div><div class="post-body">[b][font=楷体_GB2312][size=5][size=6]法集要颂经护心品第三十一 <br/>
+圆寂观罪障　　相应乐第十　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:26</div><div class="post-body">[b][font=楷体_GB2312][size=5][size=6]法集要颂经护心品第三十一 <br/>
 [/size] <br/>
 心轻难调伏　　为欲所居怀 <br/>
 降心则为善　　以降便轻安 <br/>
@@ -2020,7 +2033,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 有情心所误　　尽受地狱苦 <br/>
 降心则致乐　　护心勿复调 <br/>
 护心勿复调　　心为众妙门 <br/>
-护而不漏失　　便在圆寂道　[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:31</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经苾刍品第三十二[/size] <br/>
+护而不漏失　　便在圆寂道　[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:31</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经苾刍品第三十二[/size] <br/>
 <br/>
 苾刍若乞食　　以得勿积聚 <br/>
 天人所叹誉　　生净无瑕秽 <br/>
@@ -2182,7 +2195,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 有空乃行禅　　行空究其源 <br/>
 无为最为乐　　苾刍忍所忧 <br/>
 分别床卧具　　当习无放逸 <br/>
-断有爱无余　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:35</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经梵志品第三十三 <br/>
+断有爱无余　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:35</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]法集要颂经梵志品第三十三 <br/>
 [/size] <br/>
 所谓梵志者　　不但在裸形 <br/>
 居险卧荆棘　　而名为梵志 <br/>
@@ -2369,20 +2382,20 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 护心及苾刍　　梵志品在末 <br/>
 依次品而说　　具足三十二 <br/>
 <br/>
-圣尊者法救集诸佛法颂偈竟[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑚发表于 2006-12-9 10:45</div><div class="post-body">愿以大悲加持我 悯念我等而引导 <br/>
+圣尊者法救集诸佛法颂偈竟[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑚发表于 2006-12-9 10:45</div><div class="post-body">愿以大悲加持我 悯念我等而引导 <br/>
 密意加持令成就 能除我等诸障碍 <br/>
 外障魔碍于外除 内障魔碍于内除 <br/>
-密障魔碍悉消除 恭敬顶礼愿皈依 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑚发表于 2006-12-9 10:49</div><div class="post-body">喇嘛千诺！喇嘛千诺！喇嘛千诺！ <br/>
+密障魔碍悉消除 恭敬顶礼愿皈依 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑚发表于 2006-12-9 10:49</div><div class="post-body">喇嘛千诺！喇嘛千诺！喇嘛千诺！ <br/>
 <br/>
 永久善护其深誓，永久供养诸如来， <br/>
-永久供养阿阇黎，咕噜等同一切佛。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑚发表于 2006-12-9 10:50</div><div class="post-body">由闻知诸法， <br/>
+永久供养阿阇黎，咕噜等同一切佛。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑚发表于 2006-12-9 10:50</div><div class="post-body">由闻知诸法， <br/>
 由闻遮罪孽， <br/>
 由闻断无益， <br/>
-由闻获涅磐。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑚发表于 2006-12-9 10:52</div><div class="post-body">有情恋不息　　往来难出离 <br/>
+由闻获涅磐。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑚发表于 2006-12-9 10:52</div><div class="post-body">有情恋不息　　往来难出离 <br/>
 诸天及人民　　依爱而止住 <br/>
 爱往众结随　　刹那亦不停 <br/>
-时过复生忧　　入狱方自觉 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">c</div>carolwh发表于 2006-12-17 15:55</div><div class="post-body">因欲生烦恼　　因欲生怖畏 <br/>
-离欲得解脱　　无怖无烦恼 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">乐</div>乐空不二发表于 2008-1-23 11:12</div><div class="post-body">世尊真实语  安住于实法      由彼真实故  护持于此经 <br/>
+时过复生忧　　入狱方自觉 </div></div><div class="post"><div class="post-header"><div class="avatar">c</div>carolwh发表于 2006-12-17 15:55</div><div class="post-body">因欲生烦恼　　因欲生怖畏 <br/>
+离欲得解脱　　无怖无烦恼 </div></div><div class="post"><div class="post-header"><div class="avatar">乐</div>乐空不二发表于 2008-1-23 11:12</div><div class="post-body">世尊真实语  安住于实法      由彼真实故  护持于此经 <br/>
 大悲为甲胄  安住于大慈      由彼慈悲力  护持于此经 <br/>
 福资粮圆满  生起智资粮      由资粮满故  护持于此经 <br/>
 降伏一切魔  破灭诸邪论      断除恶见故  护持于此经 <br/>

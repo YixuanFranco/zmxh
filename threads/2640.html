@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>生死之轮——六道轮回图释义开示 - 藏密修海典藏</title>
+<title>生死之轮——六道轮回图释义开示 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">生死之轮——六道轮回图释义开示</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-23 21:52</div><div class="post-body">[font=楷体_GB2312][size=3][b]编者的话[/b] <br/>
+<div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-23 21:52</div><div class="post-body">[font=楷体_GB2312][size=3][b]编者的话[/b] <br/>
 <br/>
 生死之轮图亦称“五趣生死轮图”，于西藏佛教寺院外墙上常常能见到，其资料同时亦见于佛陀之本生故事及汉、藏《大藏经》中的戒律部分典著。此图色彩鲜明、形象生动而诡异，故一直以来吸引着参访藏传佛教寺院的旅游者、朝圣者及摄影爱好者的注意。然而，这种风格独特的图案并非西藏文化所产生的艺术品，而是古印度佛陀时代所创的一种教育工具，其内容包含了四圣谛、十二因缘、生死与中阴及六道轮回的法义在内。遗憾的是，在汉、藏佛学文库中，一直以来少见有对此法义绘图有深入阐释的独立文献。为填补这个空白，大藏寺基金会依据大藏寺祈竹仁宝哲于二零零一年五月份在佛教显密研修院香港分院应求所作之口述开示，配合同月中由法师于闲暇额外补充之口述，经翻译及编辑后编辑而成。 <br/>
 <br/>
@@ -53,7 +66,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 本来不信佛的优填王在恭敬地展开佛画后，便仔细地观看图中的内容及参想画中偈文的内义，同时亦在心中禅思十二因缘的顺逆流转过程、四谛及六道轮回之苦。由于佛陀的加持、优填王的过往善业力及因缘成熟，优填王在当下便证得了阿罗汉圣人的预流果位境界（注：一种修行的境界——小乘见道位）。此后，这位国王为佛教亦作了极大的贡献。他的生平故事，可见于《大藏经》中的戒律教法等典著中（注：汉文《大藏经》中之《佛说大乘造像功德经》、《阿含经》及《四分律》等，俱有有关优填王之章句片段）。衲在几年前曾往印尼的浮罗布多(Borobudur)大塔朝礼，留意到塔上的石刻中亦有极多有关此王生平的雕刻图像。 <br/>
 <br/>
-由上述典故可见，生死之轮图并非西藏人的发明，而是源自古印度佛陀的时代（注：在印度阿旃多石窟第十七号窟殿中，便存有古老之生死之轮图像）。在优填王看画证道后，古印度的佛教寺院（乃至后来的藏传佛教寺院）便开始有把这幅画绘于寺门外的传统，以令来访或路过的人见画而心念画内含藏的教义（注：见汉文《大藏经》之《根本说一切有部毘奈耶》卷三十四：“尔时世尊告阿难陀……是故我今敕诸苾刍，于寺门屋下画生死轮……应差苾刍于门屋下坐，为来往诸人婆罗门等，指示生死轮转因缘……”及《释氏要览》卷三：“毘奈耶云：给孤长者造寺后作念若不彩画，便不端严，即白佛。佛言，于门两颊……次一面，画五趣生死轮……”）。[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-23 22:06</div><div class="post-body"><br/>
+由上述典故可见，生死之轮图并非西藏人的发明，而是源自古印度佛陀的时代（注：在印度阿旃多石窟第十七号窟殿中，便存有古老之生死之轮图像）。在优填王看画证道后，古印度的佛教寺院（乃至后来的藏传佛教寺院）便开始有把这幅画绘于寺门外的传统，以令来访或路过的人见画而心念画内含藏的教义（注：见汉文《大藏经》之《根本说一切有部毘奈耶》卷三十四：“尔时世尊告阿难陀……是故我今敕诸苾刍，于寺门屋下画生死轮……应差苾刍于门屋下坐，为来往诸人婆罗门等，指示生死轮转因缘……”及《释氏要览》卷三：“毘奈耶云：给孤长者造寺后作念若不彩画，便不端严，即白佛。佛言，于门两颊……次一面，画五趣生死轮……”）。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-23 22:06</div><div class="post-body"><br/>
 <br/>
 [font=楷体_GB2312][size=5][b]《生死之轮》开示之科判[/b] <br/>
 <br/>
@@ -698,7 +711,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 生死之轮图的下方，由阎摩死主掌持的整个大轮，包含了苦谛及集谛这对因果关系。图的上方月亮、偈文及佛陀身相，则表义灭谛及道谛。所以，这幅小小的图包含了四圣谛教法在内。要想断除图下方所表义的这一对因果——苦及苦因，便要依循图上方所表义的另一对因果——灭谛及道谛。所以，弥勒祖师在论中教示：“先诊病，再寻因，要达致健康，便应依赖药物的救治。同样地，众生应先见苦，后寻其因，再依靠道谛来达致灭苦的境界！” <br/>
 <br/>
-这幅生死之轮图，虽然并不是用来作观想的，但我们应常常禅参其内所表达的教义，参想四谛及十二因缘，勤修三学，以达到脱出生死的境界。[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">微</div>微妙玄通发表于 2008-9-9 11:19</div><div class="post-body">脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！ </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">阿</div>阿天发表于 2008-11-10 08:47</div><div class="post-body">菩提心利众脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！ <br/>
+这幅生死之轮图，虽然并不是用来作观想的，但我们应常常禅参其内所表达的教义，参想四谛及十二因缘，勤修三学，以达到脱出生死的境界。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">微</div>微妙玄通发表于 2008-9-9 11:19</div><div class="post-body">脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！ </div></div><div class="post"><div class="post-header"><div class="avatar">阿</div>阿天发表于 2008-11-10 08:47</div><div class="post-body">菩提心利众脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！脱离轮回，永登极乐！！！ <br/>
 <br/>
 </div></div>
 </div>

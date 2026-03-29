@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>殊胜本尊大鹏金翅鸟 - 藏密修海典藏</title>
+<title>殊胜本尊大鹏金翅鸟 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/诸佛如来本尊坛.html">诸佛如来本尊坛</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">殊胜本尊大鹏金翅鸟</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2006-11-2 14:55</div><div class="post-body">[size=5][font=楷体_gb2312][img]http://www.zmxh.com/pics/6a___________1200_20060216213253.jpg[/img][/font][/size] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2006-11-2 14:55</div><div class="post-body">[size=5][font=楷体_gb2312][img]http://www.zmxh.com/pics/6a___________1200_20060216213253.jpg[/img][/font][/size] <br/>
 [size=5][font=楷体_gb2312][/font][/size] <br/>
 [font=宋体][size=4] 时轮金刚密续中记载，末法时期有无数的恶龙、地神、邪灵精鬼、，将会伤害众生，慈悲的金刚手菩萨化现大鹏金翅鸟，降伏度化一切将危害众生的恶龙。[/size][/font] <br/>
 <br/>
@@ -49,15 +62,15 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [font=宋体][size=4]【 胜义谛】～[/size][/font] <br/>
 [font=宋体][size=4]　　最究竟智慧力量的代表。无量无边，超越世俗的妄念和轮回。 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">大</div>大禹发表于 2006-11-8 10:29</div><div class="post-body">精进大铠慧极坚，不惜身命作承侍， <br/>
-谨遵师命不护已，唯以敬信得解脱。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2009-5-1 18:35</div><div class="post-body">礼智慧化身大鹏鸟！ <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大禹发表于 2006-11-8 10:29</div><div class="post-body">精进大铠慧极坚，不惜身命作承侍， <br/>
+谨遵师命不护已，唯以敬信得解脱。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2009-5-1 18:35</div><div class="post-body">礼智慧化身大鹏鸟！ <br/>
 一般而言，大鹏鸟有世间大鹏鸟、化身大鹏鸟与智慧大鹏鸟三类。 <br/>
 世间大鹏鸟即是所谓的金翅鸟，是一种飞禽动物。金翅鸟伸展天生铁的喙爪，翘着金刚钻石的角，顶上有奕奕放光的宝珠，金眼如同日月般闪烁，宛如宝剑般的翅膀在空中舞动，铜色利刃的翎羽缝隙中降下热沙雨，恒时居住在外海岸边的树上，以龙为食。 <br/>
 众所周知，这类大鹏鸟有胎生、卵生、湿生、化生四种。其中胎生大鹏只以胎生龙类为食；卵生大鹏可吃胎生与卵生龙类；湿生大鹏食用除化生龙类外的三种（即胎、卵、湿生的龙类）；化生大鹏四种龙均可捕食。此类众生异常凶狠残暴，因此当它死亡时，身上燃起熊熊烈火，不仅将自身所有的血肉骨骼焚为灰迹，而且能够焚烧周围的一切林园。据说大鹏鸟的心脏是一颗宝珠，死后坠入海底，被龙王获取，戴在顶上，依此可防护大鹏的威胁。世间大鹏的首领有金眼妙翅鸟王之称。一切经部中称之为金翅鸟，它亲见过世尊金颜，是得受过佛法的大居士。 <br/>
 化身大鹏鸟：是忿怒相本尊顶上的大鹏鸟，它是从忿怒主尊自性神变及大悲妙力中自然幻化，为了调化凶猛毒龙等众生的一类金翅鸟。 <br/>
 智慧大鹏鸟：诸佛菩萨为了调伏毒龙，于是安住在金翅等持中，身化现为大鹏形相而利益众生。曾在无量劫以前一位转轮王膝下有一千零三位太子，这一千零三位太子都发了殊胜菩提心，之后在佛陀前精心承侍，其中的一千位太子发愿为利一切有情而成佛。当时，剩余的三位太子中有一位发愿：我的兄弟们成为千佛时，我愿护持他们的教法并且降伏魔众；又一位太子发愿成为那时祈请转法-轮的施主；而最小的太子发愿成为调伏千佛刹土中的最凶戾众生者。后来，发愿千佛出世时护教、降魔的太子成为了金刚手菩萨；发愿作请转法-轮的施主者即是三千世界之主四面大梵天；发愿调化千佛刹土中的最凶戾众生者就是智慧大鹏鸟。所以说，智慧大鹏鸟是住地菩萨乘愿再来。千佛刹土中最为凶戾者莫过于龙类，智慧大鹏鸟之所以能降伏龙类完全是由于它往昔的愿力，它于千佛教法中镇伏龙类，待此贤劫结束时于上方世界中成佛，佛号为顶髻无尽智慧光源如来。 <br/>
 在整个印度、藏地现存有许多大鹏鸟修法，尤其前译持明传承无谬之伏藏品中的修法更为殊胜深奥，而这完全与特殊的缘起有关。昔日乌金莲花生大士来到藏地后降伏了大部分妖魔鬼怪，桑耶不变自成宫殿。殿刚刚峻工时，莲师想观察现在是否还有未调伏的鬼神，结果发现除了龙以外的所有鬼神都已调伏了，龙的身体已被调伏正在帮助建造经堂，语言也已被调伏而依教奉行，然而龙的心却未被调伏，仍在伺机制造各种违缘。莲师在桑耶青普地方小住七日，以等持力击中它们的要害，以致恶龙无法堪忍，化为十三个骑白马的白人去国王赤松德赞前呈禀：&quot;大王，请您向莲师求求情，放松我们一点吧，需要的木料我们可以供奉。&quot;当时正赶上建造数多经堂木料不足，于是国王赤松德赞立即亲自赶往莲师前，结果没有见到莲师，却看见一只红色的大鹏擒着两条大蛇，嘴叼着，爪抓着，那两条蛇发出刺耳的叫声。国王顶礼后说：&quot;请上师慈悲放松，有一个悉地。&quot;莲师立即松开蛇，渐渐现出自己的本面，问：&quot;是什么悉地呢？&quot;&quot;是木料的悉地。&quot;&quot;如果调伏了龙的心，那么会获得比木料更大的悉地，遗憾的是，却没有成功，如此会导致未来流行各种各样的龙病。&quot;为了恢复缘起、利益后代众生，应法王赤松德赞祈请，莲师造了许多大鹏鸟修法，随后伏藏在金刚磐岩、吉祥湖或坚固的宝箧中，并授记：&quot;到时间、缘起具足由化身的伏藏大师开取而利益众生。&quot;正因为有这样的缘起，各伏藏品中都有多种不同的大鹏修法，也出现了六种不同修法的分类等。其中白大鹏鸟是身部大鹏鸟；红色是语部大鹏鸟；蓝色是意部大鹏鸟；黄色是功德部大鹏鸟；绿色是事业部大鹏鸟；花色是殊胜智慧部大鹏鸟。此外，有大鹏分二十一类等的说法，同样也就有了不同部的修法，但在此不广述。 <br/>
-总之，无论哪一部大鹏，都是一切智慧忿怒的部主，也是成办事业的锐利武器。少量持诵它的心咒也会获得无碍的威力，堪为土地神祇及各种龙妖病的劲敌。对于各种癫疯昏厥等难以诊断、药物难以治疗的疾患有与众不同的功效，多次实践已证明了这一点。降伏一切发邪愿的鬼魅妖魔再没有胜过此法的了。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">大</div>大地修行者发表于 2010-2-5 22:25</div><div class="post-body"><br/>
+总之，无论哪一部大鹏，都是一切智慧忿怒的部主，也是成办事业的锐利武器。少量持诵它的心咒也会获得无碍的威力，堪为土地神祇及各种龙妖病的劲敌。对于各种癫疯昏厥等难以诊断、药物难以治疗的疾患有与众不同的功效，多次实践已证明了这一点。降伏一切发邪愿的鬼魅妖魔再没有胜过此法的了。 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大地修行者发表于 2010-2-5 22:25</div><div class="post-body"><br/>
 <br/>
 金翅鸟（梵文：Garuda;藏文：Khyung,mKhat-lding） <br/>
 <br/>
@@ -75,28 +88,28 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 五只一组的金翅鸟与五佛的颜色、五行、五智和五佛的特质相符。黄色（地）、白色（水）、红色（火）、黑色（风）和蓝色或彩色（空）。色彩斑斓的金翅鸟腰以下为黄色（地），从髀到脐为白色（水），从脐到喉是红色（火），从下颌到前额为黑色（风），其头为蓝色或绿色（智慧）。五彩金翅鸟的双翼是五种颜色的羽毛，其双翼可以把闪烁的彩虹光芒散发到十方大地，代表着“空”。有时，羽毛末端饰有金刚杵头。金翅鸟长有两只或三只眼睛，一般呈金黄色。 <br/>
 <br/>
-金翅鸟是不空成就如来的坐骑，不空成就如来是北方的绿色佛，也是羯磨部怙主。作为至高无上的金色太阳鸟，金翅鸟形象出现在甬道或佛陀菩提宝座的顶部。它展开金色双翅并将两条龙尾抓在爪中。其头顶上的弯月、太阳和烈焰构成的吉祥冠象征着进入中脉的阴阳两气的合一。其双角代表二谛，即：俗谛和真谛。其双翼代表着方便和智慧的结合。金翅鸟狂暴的形象象征着把毒物变成甘露。脏满羽毛的它从卵中“再生”象征着觉识的萌生。 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">普</div>普源发表于 2010-4-1 09:49</div><div class="post-body">顶礼金翅鸟  顶礼金翅鸟   顶礼金翅鸟 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-23 15:52</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
+金翅鸟是不空成就如来的坐骑，不空成就如来是北方的绿色佛，也是羯磨部怙主。作为至高无上的金色太阳鸟，金翅鸟形象出现在甬道或佛陀菩提宝座的顶部。它展开金色双翅并将两条龙尾抓在爪中。其头顶上的弯月、太阳和烈焰构成的吉祥冠象征着进入中脉的阴阳两气的合一。其双角代表二谛，即：俗谛和真谛。其双翼代表着方便和智慧的结合。金翅鸟狂暴的形象象征着把毒物变成甘露。脏满羽毛的它从卵中“再生”象征着觉识的萌生。 </div></div><div class="post"><div class="post-header"><div class="avatar">普</div>普源发表于 2010-4-1 09:49</div><div class="post-body">顶礼金翅鸟  顶礼金翅鸟   顶礼金翅鸟 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-23 15:52</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
 眾生善根盡隨喜 正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽 直至菩提我皈依 <br/>
 所為利益自他故 我今即發菩提心 <br/>
 <br/>
 既發最上菩提心 饒益一切諸有情 <br/>
-菩提妙行皆修作 為利眾生願成佛 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-11-24 09:42</div><div class="post-body">礼敬赞叹！ <br/>
+菩提妙行皆修作 為利眾生願成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-11-24 09:42</div><div class="post-body">礼敬赞叹！ <br/>
 功德随喜！ <br/>
 不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，证得大贪波罗蜜，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">莫</div>莫逆发表于 2011-2-12 13:00</div><div class="post-body">一些增益本尊的坐骑好像也有大鹏金翅鸟 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">踏</div>踏雪发表于 2011-2-25 08:25</div><div class="post-body">精进大铠慧极坚，不惜身命作承侍， <br/>
-谨遵师命不护已，唯以敬信得解脱。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">文</div>文殊勇士发表于 2012-4-12 21:26</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">莫</div>莫逆发表于 2011-2-12 13:00</div><div class="post-body">一些增益本尊的坐骑好像也有大鹏金翅鸟 </div></div><div class="post"><div class="post-header"><div class="avatar">踏</div>踏雪发表于 2011-2-25 08:25</div><div class="post-body">精进大铠慧极坚，不惜身命作承侍， <br/>
+谨遵师命不护已，唯以敬信得解脱。 </div></div><div class="post"><div class="post-header"><div class="avatar">文</div>文殊勇士发表于 2012-4-12 21:26</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
 眾生善根盡隨喜 正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽 直至菩提我皈依 <br/>
 所為利益自他故 我今即發菩提心 <br/>
 <br/>
 既發最上菩提心 饒益一切諸有情 <br/>
-菩提妙行皆修作 為利眾生願成 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">苦</div>苦心发表于 2012-5-3 23:49</div><div class="post-body">顶礼一切护法！顶礼一切深具大慈悲心者！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">大</div>大威德明王发表于 2015-11-7 20:27</div><div class="post-body">精进大铠慧极坚，不惜身命作承侍， <br/>
+菩提妙行皆修作 為利眾生願成 </div></div><div class="post"><div class="post-header"><div class="avatar">苦</div>苦心发表于 2012-5-3 23:49</div><div class="post-body">顶礼一切护法！顶礼一切深具大慈悲心者！ </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大威德明王发表于 2015-11-7 20:27</div><div class="post-body">精进大铠慧极坚，不惜身命作承侍， <br/>
 谨遵师命不护已，唯以敬信得解脱。 <br/>
 <br/>
 </div></div>

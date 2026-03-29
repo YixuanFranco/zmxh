@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>布施众生即供养诸佛：无比殊胜的慈悲施食和火供 - 藏密修海典藏</title>
+<title>布施众生即供养诸佛：无比殊胜的慈悲施食和火供 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">布施众生即供养诸佛：无比殊胜的慈悲施食和火供</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">司</div>司马司发表于 2008-12-6 16:27</div><div class="post-body">（转帖：观世音胜妙罗网--施食专栏） <br/>
+<div class="post"><div class="post-header"><div class="avatar">司</div>司马司发表于 2008-12-6 16:27</div><div class="post-body">（转帖：观世音胜妙罗网--施食专栏） <br/>
 <br/>
 布施众生即供养诸佛：无比殊胜的慈悲施食和火供 <br/>
 <br/>
@@ -88,7 +101,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 实际上，我每天都是以施食为主，做火供只能择日出行，一星期一到二次。我很感谢雪居士，为我提供的信息反馈，令我不断地改进、完善，比开始时做得好多了，改进的是请招请文和回向文，以及火供和施食过程中的具体、细节上的做法。火供、施食仪规以海涛法师的仪规为蓝本，大体不变。在野外僻静地方，喜欢怎么做都行，没人干扰，有需要时可以大声念招请文和咒语。在这我总结几个细节上的做法供师兄们参考：1、念招请文和咒语时不要低头，眼睛平视或略向上，初学者可以随意，我开始时是拿着一张纸对着念的；2、心意识略微上扬、不宜向下，这样心意识就不会下沉了；3、身体不要紧张、放松一些，招请和念咒时效果会更好；4、做仪规不必担心起妄想，认真做就行了，不过妄想多对上供会有点影响的，对下施影响相对少一点；5、当作如是想：我布施的都是无始劫以来的亲恩眷属、怨亲债主，都是未来佛。 <br/>
 不管施食还是火供，受施的众生都是佛菩萨引领而来的，吃完后就跟佛菩萨走了。龙、天、善神、护法则是自己来的。据雪居士的说法，佛菩萨打着一种手势引领来的，接众生走时也打着手势。我猜想佛菩萨应该是结手印接引众生。有时做施食、火供，会顺便招请同修朋友们的亲恩眷属、怨亲债主、堂上祖先，如果在火供、施食时，对这些受施过的众生再次招请，他们都会前来，但已经不饿了，会领受一点施物或不领受施物，说：“我们已吃过都饱了，谢谢。”然后就走了。雪居士称这一类众生为家神，、、、、、又回家去了。有一次我做火供时想：以前受我施食的众生是不是已得温饱、安乐了？于是就这样招请：“、、、、、、、、、招请过去一切受我所施者，以三宝威神力故，速现我前。”念咒后，马上来了很多，会领受一点施物或不领受施物，说：“我们已吃过都饱了，谢谢。”这可能是我自己能力的原因、部分众生尚未超升；或许是众生的业力，不是所有的众生都能生人天中去的，仍在鬼神道，不过再不会饥渴交逼，受诸剧苦了。雪居士教他们念“南无观世音菩萨”，这些众生大部分还是不能信受。 <br/>
-师兄们看这么一大篇的施食、火供经历，一定会觉得很神奇吧？我想、师兄们如法地去做，施惠众生的情形应该是差不多的，只是不能看见。我从来都没看见过什么或者感应，连梦里也没有显示过什么。说句笑话，我是弄死了也不会出神通的，可能是个人的个性和气质使然。心佛众生三无差别，度人即度已，是否有感应对于我来说并不重要。经云：“布施众生即是供养诸佛。”我把这句话记在心上。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">一</div>一杯菠萝蜜发表于 2012-1-6 21:21</div><div class="post-body">我能深入于未来  尽一切劫为一念 <br/>
+师兄们看这么一大篇的施食、火供经历，一定会觉得很神奇吧？我想、师兄们如法地去做，施惠众生的情形应该是差不多的，只是不能看见。我从来都没看见过什么或者感应，连梦里也没有显示过什么。说句笑话，我是弄死了也不会出神通的，可能是个人的个性和气质使然。心佛众生三无差别，度人即度已，是否有感应对于我来说并不重要。经云：“布施众生即是供养诸佛。”我把这句话记在心上。 </div></div><div class="post"><div class="post-header"><div class="avatar">一</div>一杯菠萝蜜发表于 2012-1-6 21:21</div><div class="post-body">我能深入于未来  尽一切劫为一念 <br/>
 三世所有一切劫  为一念际我皆入 <br/>
 我于一念见三世  所有一切人师子 <br/>
 亦常入佛境界中  如幻解脱及威力 <br/>

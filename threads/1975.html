@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大悲经（宝积部·涅槃部） - 藏密修海典藏</title>
+<title>大悲经（宝积部·涅槃部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大悲经（宝积部·涅槃部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-19 12:59</div><div class="post-body">[font=楷体_GB2312][size=5]    [b] 大悲经卷第一[/b][/size][/font] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-19 12:59</div><div class="post-body">[font=楷体_GB2312][size=5]    [b] 大悲经卷第一[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　　　高齐天竺三藏那连提耶舍译[/size][/font] <br/>
 <br/>
 [font=楷体_GB2312][size=5]　　[b] 梵天品第一[/b][/size][/font] <br/>
@@ -53,7 +66,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5]　　[b]大悲经帝释品第三[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]    尔时释提桓因往诣佛所。到已顶礼退住一面而白佛言。唯愿世尊。教敕于我云何修行。世尊。昔于一时。四大阿修罗王。严驾着铠将诸眷属。来诣三十三天所欲共斗战。当于尔时圣者目连仍住在世。如是诸天共阿修罗对阵之时。圣者目连到四阿修罗所。以如法伏之。如是诸天及诸阿修罗悉得安隐。无复斗战之苦共相违反毁呰诤论。世尊。是大目连既已灭度。如来今复欲般涅盘。我等如是于后数数当复斗战共相违反。愿垂教敕。若四阿修罗王与我战时。我于彼等作何方计。佛告释提桓因言。憍尸迦。止。莫忧悲莫愁莫虑。若持戒者所愿必成。唯净戒者成。非不净戒。梵行者非不梵行。离欲者非不离欲。离嗔者非不离嗔。离痴者非不离痴。智慧者。非不智慧。而得成也。憍尸迦。我从今后当作加被。憍尸迦。乃至我之正法未灭。若有诸天阿修罗等共相斗战。随其时节称我名故诸天得胜。尔时四大阿修罗王。闻佛说是加护声已。其心忿恨毛竖怖畏来诣佛所。到已顶礼却住一面白佛言。世尊。何故如来作是加护。佛告四大阿修罗言。汝等。莫忧莫虑。有时汝等得大自在。过彼三十三天。无复斗战。无诤无竞无相违反。是故汝等。慎莫斗战。莫相毁呰莫相诤论。勿作违反心。当作慈心愍心。得众欲具足。诸仁者。命不久停。为自在主亦复无常。诸仁者。世间所有具足合会必归离散。诸仁者。当观如来穷无常际。于诸众生无所怨雠。无违无竞常为和合。一切众生平等发心。何况汝等薄少善根。彼此迭相乐斗诤者。诸仁者。若有发心恼害他者。是人长夜还得恼害。诸仁者。若人喜杀。是人还得短寿之报。若喜斗诤。是人常有怖畏死报。不具大眷属。无大势力。诸仁者。善恶二业终不败亡。是故汝等。从今已后各住慈心。住身业慈口业慈意业慈。莫斗莫竞莫相毁呰。以是因缘。汝等长夜得利益安乐。后则不悔。作是语已。四阿修罗王白佛言。世尊。如是婆伽婆。如是修伽陀。我等如是依如来教。如是修如是住。世尊。我从今后。一切当舍斗战之具各修慈心。尔时释提桓因。闻佛涅盘为忧箭所射极大愁恼。悲泣流泪而白佛言。世尊。我从今日乃至法住。不受五欲。不入内宫。不着异衣。大德婆伽婆。譬如家长丧亡。是人知识得恩养者。心生苦恼忆念旧恩。念恩养故悲泣流泪专持孝道。世尊。我亦如是乃至法住。随其时节悲泣流泪专持孝道。不行五欲。不入内宫。不着异衣。何以故。无上导师明当别离。不可得见更不合会。释提桓因作是语已。即便伏面啼哭而住。[/size][/font] <br/>
-[font=楷体_GB2312][size=5][b]大悲经卷第一[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-19 13:02</div><div class="post-body">[font=楷体_GB2312][size=5][b]    大悲经卷第二[/b][/size][/font][font=楷体_GB2312][size=5]　　　　高齐天竺三藏那连提 那舍译[/size][/font] <br/>
+[font=楷体_GB2312][size=5][b]大悲经卷第一[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-19 13:02</div><div class="post-body">[font=楷体_GB2312][size=5][b]    大悲经卷第二[/b][/size][/font][font=楷体_GB2312][size=5]　　　　高齐天竺三藏那连提 那舍译[/size][/font] <br/>
 <br/>
 [font=楷体_GB2312][size=5]　[b]　罗睺罗品第四[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -77,7 +90,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5]　[b]　大悲经舍利品第七[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]    尔时世尊复告阿难。我灭度后。若有善男子善女人。若在家若出家。乃至供养我之舍利如芥子等。恭敬尊重谦下供养。我说是人以此善根一切皆当得涅盘果尽涅盘际。阿难。若我灭后。所有善男子善女人心生敬信。为我造立形像塔庙。阿难。应生深信慎莫疑惑。我说是人以此善根一切皆当得涅盘果尽涅盘际。阿难。且置现在供养我者。且置我灭度后供养如芥子等舍利者。且置为我造立形像及塔庙者。阿难。若有信心念佛功德。乃至一花散于空中。我说是人以此善根一切皆当得涅盘果尽涅盘际。阿难。若复有人见佛世尊神通威力。为供养故。乃至一花散于空中。犹能得涅盘果。何况亲承如来而供养者。及我灭后供养舍利者。阿难。诸佛境界不可思议。若复有人能供养者。所得福德亦不可思议。阿难。若人念佛乃至一花散于空中。我以佛智见知是人所得果报不可思议。汝应当信。何况未来所有佛子。深得敬信思惟佛功德求佛智者。尔时阿难闻佛语已。心怀踊跃生大欢喜而白佛言。希有婆伽婆。希有修伽陀。今正是时。唯愿世尊。说其念佛乃至一花散于空中而供养者所得果报。诸比丘等从佛所闻读诵受持。以是当得怜愍世间。利益安乐诸天人故。于现在世及未来世。所有众生从彼闻者。复得数数种诸善根。心生敬信得大称意。彼作是念。释迦牟尼。于释种中无上法王大慈悲者。怜愍世间者。劝喻我等令我生念发大精进。作是语已。佛告阿难。谛听谛听。善思念之。吾当为汝分别解说所得果报。阿难白言。如是世尊。愿乐欲闻。佛告阿难。若有众生。以念佛故。乃至一花散于空中。如是福德所得果报不可穷尽。阿难。如是众生从前际来。劫数长远生死流转不可得知。于未来际亦复如是。若有众生以至诚心念佛功德。乃至一花散于空中。于未来世当得释天王梵天王转轮圣王。于其福报亦不能尽。以其善根福报边际不可尽故。要当入般涅盘。何以故。阿难。施佛福田不以有为果报所能尽边。我说是人必得涅盘尽涅盘际。阿难。且置亲承供养我者。且置供养我如芥子等舍利者。且置为我造立形像及诸塔庙而供养者。且置以念佛故乃至一花散于空中而供养者。若复有人。在于室内以念佛故。乃至一花散于空中。阿难。我说是人当得涅盘。得第一涅盘。尽涅盘际。最胜涅盘。妙涅盘。清净涅盘。安住涅盘。阿难。以是因缘。诸福田中佛为最佛为王。何以故。施佛田者。非谓世间果报所能尽也。以是因缘。于佛福田为最第一。阿难。诸佛如来顺正道者。能作无上究竟福田。于佛福田所有施者。必穷尽涅盘际。得第一涅盘。阿难。且置如是以花散佛所得功德。若复有人但心念佛一生敬信。我说是人亦当得涅盘果尽涅盘际。阿难。且置人中念佛功德。若有畜生于佛世尊能生念者。我亦说其善根福报。当得涅盘尽涅盘际。阿难。汝今当观诸佛世尊。与诸众生作福田者。能令众生当得如是神通威力。是故阿难。汝莫忧悲。若有善男子善女人。乃至畜生诸众生等于佛生信。当得如是神通果报广大功德。譬如甘露第一甘露尽甘露际。阿难。汝以身口慈孝如来。无量安乐心无有二。无嗔无恨无有怨雠。阿难。若有三千大千世界满中须陀洹斯陀含阿那含阿罗汉。如甘蔗竹[竺-二+韦]若麻若草。若有善男子善女人。若一劫若减一劫。以诸称意一切乐具。恭敬尊重谦下供养。阿难。于意云何。是善男子善女人。所得福德宁为多不。阿难言。甚多婆伽婆。甚多修伽陀。佛言。阿难。若复有人。于诸佛所但一合掌一称名。如是福德比前福德。百分不及一。千分不及一。百千亿分不及一。数分不及一。迦罗分不及一。何以故。阿难。以佛如来诸福田中为最无上。是故施佛成大功德神通威力。阿难。且置三千大千世界所有声闻阿罗汉等。若复三千大千世界满中辟支佛。如甘蔗竹[竺-二+韦]若麻若草。若有善男子善女人。若一劫若减一劫。以诸称意一切乐具。恭敬尊重谦下供养彼辟支佛。若辟支佛灭度后起七宝塔。若有善男子善女人。乃至尽形以诸香花涂香末香衣服卧具宝幢幡盖。恭敬尊重谦下供养。阿难。于意云何。是人于彼所得福德宁为多不。阿难言。甚多婆伽婆。甚多修伽陀。佛言。阿难。若复有人。于如来所起一净信思惟信解。作如是言。诸佛智慧不可思议。以此信解善根功德。比前供养彼辟支佛所得功德。迦罗分不及一。乃至优婆尼沙陀分不及一。何以故。阿难。诸佛世尊。无量大慈。无量大悲。无量戒。无量定。无量慧。无量解脱。无量解脱知见。无量修集。无量达证。阿难。诸佛世尊智慧不可思议。诸佛境界亦不可思议。若有供养不可思议者。当得不可思议报。阿难。汝莫忧悲。汝当得大神通功德利益。何以故。阿难。汝以身口意慈。供养我来过二十年。受持如来八万四千诸法宝聚。于诸多闻最为第一。巧言辩慧问答中最。正智得道多闻无畏。持修多罗。持毗尼。持摩多罗迦。于诸四众说法不倦。阿难。我灭度后汝共大德摩诃迦叶。当作第一最大导师大作佛事。阿难。汝莫忧悲。汝当得大神通功德利益。[/size][/font] <br/>
-[font=楷体_GB2312][size=5]大悲经卷第二[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-19 13:06</div><div class="post-body">[font=楷体_GB2312][size=5][b]    大悲经卷第三[/b][/size][/font] <br/>
+[font=楷体_GB2312][size=5]大悲经卷第二[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-19 13:06</div><div class="post-body">[font=楷体_GB2312][size=5][b]    大悲经卷第三[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5]  高齐天竺三藏那连提耶舍译[/size][/font] <br/>
 <br/>
 [font=楷体_GB2312][size=5] [b]礼拜品第八[/b][/size][/font] <br/>
@@ -207,7 +220,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 我已显示安隐道 未来诸佛及声闻 <br/>
 若欲救度诸苦者 应当修习我德行　[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5]大悲经卷第三 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-19 13:08</div><div class="post-body">[font=楷体_GB2312][size=5][b]    大悲经卷第四[/b] [/size][/font][font=楷体_GB2312][size=5]　　　　 高齐天竺三藏那连提 耶舍译 [/size][/font] <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-19 13:08</div><div class="post-body">[font=楷体_GB2312][size=5][b]    大悲经卷第四[/b] [/size][/font][font=楷体_GB2312][size=5]　　　　 高齐天竺三藏那连提 耶舍译 [/size][/font] <br/>
 <br/>
 [font=楷体_GB2312][size=5]　[b]　以诸譬喻付嘱正法品第十二[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -233,7 +246,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]    复次阿难。譬如灌顶刹利大王。唯有一子远行不在。其刹利王身遇重病。既得病已。以诸宝藏种种杂物。持往寄付大臣长者。作如是言。若我子还。汝当置立令绍王位。以诸库藏悉皆付之。诸臣长者。各各别受彼王所寄。既受寄已王便命终。王命终已其子行还即绍王位。既登位已具得自在。诸臣长者。而不还彼宝藏财物。作如是言。善哉大王。正法治化以此宝物赐与我等。阿难于意云何。其所受寄大臣长者。于彼王所有过不耶。阿难言。如是婆伽婆。如是修伽陀。彼有过也。佛言。阿难。其远行者。喻五道众生。病者。喻佛欲入涅盘。多宝藏者。喻三十七助道善法。大臣长者。喻诸阿罗汉。付宝物者。喻我以此亿那由他阿僧祇劫所习法宝付嘱于汝。乃至如是为彼未来诸弟子故。阿难。当来之世有诸众生。我于往昔所成熟者。以恶业故生于地狱畜生饿鬼。我灭度后于彼命终得生人中。所有诸根增长成熟。于我法中心生敬信。有得出家者。有在家者。有得须陀洹者。乃至有得阿罗汉者。有于学地而命终者。有于佛地发深信者。有种人天诸善根者。如是当得具足利益。有得如是敬信心者。作如是言。彼世间父善付我等。复得生于增上敬信。阿难。我为彼故。以此法宝付嘱于汝。乃至令彼得闻如是法宝藏故。是故阿难。汝当以我大法宝藏。令彼净信诸善男子善女人等而得闻也。阿难。若不令彼而得闻者。汝于如来则为有过。何以故。阿难。彼善男子善女人等。若闻如是大法宝藏。或有得成殊胜之行。或有得生大爱乐心。或有闻时流泪毛竖。阿难。若复有人闻是法门。念佛功德流泪毛竖者。我记彼等。以此善根皆得涅盘。[/size][/font] <br/>
 [font=楷体_GB2312][size=5]大悲经卷第四[/size][/font][font=楷体_GB2312][size=5] <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-19 13:11</div><div class="post-body">[font=楷体_GB2312][size=5][b]    大悲经卷第五[/b][/size][/font][font=楷体_GB2312][size=5]   高齐天竺三藏那连提耶舍译 [/size][/font] <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-11-19 13:11</div><div class="post-body">[font=楷体_GB2312][size=5][b]    大悲经卷第五[/b][/size][/font][font=楷体_GB2312][size=5]   高齐天竺三藏那连提耶舍译 [/size][/font] <br/>
 <br/>
 [font=楷体_GB2312][size=5]　[b]　殖善根品第十三[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>

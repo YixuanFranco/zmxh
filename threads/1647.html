@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大树紧那罗王所问经（经集部） - 藏密修海典藏</title>
+<title>大树紧那罗王所问经（经集部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大树紧那罗王所问经（经集部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-23 08:20</div><div class="post-body">[font=黑体][size=10][size=6]大树紧那罗王所问经四卷[/size] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-23 08:20</div><div class="post-body">[font=黑体][size=10][size=6]大树紧那罗王所问经四卷[/size] <br/>
 [font=楷体_GB2312][size=5]   姚秦三藏法师鸠摩罗什译[/size][/size][size=5][font=楷体_GB2312][font=Verdana][size=10] [/size][font=黑体][size=10][/size][font=Verdana][size=10][/size][/size][/size][font=黑体][size=10] <br/>
 [font=楷体_GB2312][size=5][font=黑体][size=6]大树紧那罗王所问经卷第一[/size][/size] <br/>
 [/size][/size][/size] <br/>
@@ -199,7 +212,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 <br/>
 <br/>
-[/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-23 08:44</div><div class="post-body">[font=楷体_GB2312][size=5]大树紧那罗王所问经卷第二 <br/>
+[/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-23 08:44</div><div class="post-body">[font=楷体_GB2312][size=5]大树紧那罗王所问经卷第二 <br/>
 [/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　尔时天冠菩萨白言。世尊。未曾有也。而是大树紧那罗王。成就如是不思议法。世尊。是紧那罗王。乃能成就如是胜妙神通之力。复能演说甚深法忍。世尊。紧那罗王。于几佛所种诸善根有如是辩。佛言。善男子。假使能数恒河沙等世界星宿。不能数是紧那罗王所事如来应正遍觉。善男子。是人已于尔许佛所修行梵行。集于无上正真之道。是故得有如是辩才。尔时天冠问紧那罗王。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -345,7 +358,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]方便菩萨为未得正位欲涅槃者。于是人前现如来像。为令其人住菩提故。紧那罗王。是为菩萨三十二法具方便波罗蜜。说是诸波罗蜜时。大树紧那罗王诸眷属中。九十万六千众生。发于无上正真道心。如来众中八千菩萨。得无生法忍。大树紧那罗王。得智灯三昧。是时大树紧那罗王。从佛闻法示教利喜已。欢喜踊跃得未曾有。以无价衣供上世尊。菩萨声闻各各施衣。以所住园林及中所有一切奉施供佛如来。尔时大树紧那罗王。有八千子。以众宝花庄严。八千微妙盖以奉供如来。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]当奉盖时佛神力故。令诸宝盖在虚空中。合为一盖覆百由旬时紧那罗王八千诸子。见佛神力欢喜踊跃。得未曾有专心志意。发阿耨多罗三藐三菩提心。坚不退转。各发心已白言。世尊。愿与我等助菩提法。我等闻已当修行之。[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-23 09:03</div><div class="post-body">[font=楷体_GB2312][size=5][size=6][b]大树紧那罗王所问经卷第三[/b][/size] <br/>
+[font=楷体_GB2312][size=5]当奉盖时佛神力故。令诸宝盖在虚空中。合为一盖覆百由旬时紧那罗王八千诸子。见佛神力欢喜踊跃。得未曾有专心志意。发阿耨多罗三藐三菩提心。坚不退转。各发心已白言。世尊。愿与我等助菩提法。我等闻已当修行之。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-23 09:03</div><div class="post-body">[font=楷体_GB2312][size=5][size=6][b]大树紧那罗王所问经卷第三[/b][/size] <br/>
 [/size] <br/>
 [font=楷体_GB2312][size=5]　　尔时世尊。知紧那罗王诸子之心所欲乐已。上升虚空高七多罗树。放大光明。是光遍照于此三千大千世界。欲界诸天所有伎乐。乾闼婆紧那罗等所有伎乐。不鼓自鸣出微妙音。香山王中所有树木。亦皆悉出微妙乐音。尔时世尊。复于身上诸毛孔中。各放无量万亿光明。一一光端各有莲花一一花中各有菩萨。三十二相而自庄严坐花台中。于时世尊以神通力。令诸伎乐演出智偈问诸所疑。令诸花台所有菩萨。以一一偈。答其所问。 <br/>
 [/size][/font] <br/>
@@ -720,7 +733,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 尔时世尊。告紧那罗王子无垢眼。贤士自尔已去。我当护汝令诸伎乐出六十四。护助菩提妙法之音。何等六十四。所谓演出布施之声。戒声。忍声。进声。禅声。智慧之声。慈声。悲声。喜声。舍声。四摄法声。不忘无上菩提心声。不厌生死声。集善根声。佛声。法声。比丘僧声。念处声。正断声。神足声。根声。力声。觉声。道声。定声。慧声。无常声。苦声。无我声。寂声。无行声。静声。无生声。无起声。如声。法性声。实际声。无我声。无众生声。无命声。无丈夫声无人声。无来声。无去声。无处声。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]无住声。空声。无相声。无愿声。离声。灭声。无所有声。因缘声。无物声。无聚声。无依声。护正法声。降魔声。善方便声。教化众生声。如幻如化如电水月梦响之声。法界破坏声。如说如作声。集诸善根而不忘失无放逸声。如是贤士当令汝等诸乐音中出如是等六十四种护助菩提道法之声当令汝等得不放逸满助菩提法。[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-23 09:17</div><div class="post-body">[font=楷体_GB2312][b][size=6]大树紧那罗王所问经卷第四 <br/>
+[font=楷体_GB2312][size=5]无住声。空声。无相声。无愿声。离声。灭声。无所有声。因缘声。无物声。无聚声。无依声。护正法声。降魔声。善方便声。教化众生声。如幻如化如电水月梦响之声。法界破坏声。如说如作声。集诸善根而不忘失无放逸声。如是贤士当令汝等诸乐音中出如是等六十四种护助菩提道法之声当令汝等得不放逸满助菩提法。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-23 09:17</div><div class="post-body">[font=楷体_GB2312][b][size=6]大树紧那罗王所问经卷第四 <br/>
 <br/>
 [/size][/b][size=5]　　尔时一切大众得未曾有。合掌礼佛作如是言。希有世尊。如来乃能善护念诸菩萨摩诃萨。以神通力而护持之。佛言。如是如是。如汝所言。如来护念于诸菩萨。何以故。护念诸菩萨。即是护念一切众生。汝诸正士。若佛如来护诸菩萨。即便为护一切众生。何以故。是菩萨为一切众生发大庄严。大庄严已。令无量众生离生死饿。拔出安置令住正道。诸正士。是故汝等我涅槃后。应当守护于诸菩萨。若护菩萨当知则护诸众生已。[/size][/size] <br/>
 [font=楷体_GB2312][size=5][/size][/size] <br/>

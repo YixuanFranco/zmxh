@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>供灯的哪些功德？ - 藏密修海典藏</title>
+<title>供灯的哪些功德？ - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/加行实修入正道.html">加行实修入正道</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">供灯的哪些功德？</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">司</div>司马司发表于 2008-12-24 12:52</div><div class="post-body">供灯的哪些功德？ <br/>
+<div class="post"><div class="post-header"><div class="avatar">司</div>司马司发表于 2008-12-24 12:52</div><div class="post-body">供灯的哪些功德？ <br/>
 <br/>
 <br/>
 《佛为首迦长者说业报差别经》里面宣讲了供灯的十种功德。 <br/>
@@ -62,7 +75,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 宗师父在送我们佛卡的时候，也讲了一个故事。说在马来西亚一次10人的车祸中，9人丧生，唯一人生存，还没有受伤，后来一问那人说，大概是我妈妈送给我的在寺请的佛卡吧，我只是把他放在钱夹里，晚上有时间就拿出来拜一拜。这下寺的佛卡可出名了，马来西亚一下子就向寺要了15万张。所以人在顺境中的时候，感觉不到这些法宝的作用，只有业障来了，才知道确实不可思议。 <br/>
 <br/>
-我在寺的流通处也请了很多这些花呀、牌呀的，那几天可逗了，我自己没事呀，就把这些可爱的玩意倒出来摆弄一会，哎呀 ，真的都是宝啊，看也看不够，就向小时侯摆弄自己最心爱的物品。回来送给有缘人，看见那些带着小荷花的手机链，晶莹剔透的车牌，小巧精致的佛牌，栩栩如生的佛卡，他们都很高兴的。南无阿弥陀佛！真好 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2009-5-14 17:52</div><div class="post-body">供灯的十种功德： <br/>
+我在寺的流通处也请了很多这些花呀、牌呀的，那几天可逗了，我自己没事呀，就把这些可爱的玩意倒出来摆弄一会，哎呀 ，真的都是宝啊，看也看不够，就向小时侯摆弄自己最心爱的物品。回来送给有缘人，看见那些带着小荷花的手机链，晶莹剔透的车牌，小巧精致的佛牌，栩栩如生的佛卡，他们都很高兴的。南无阿弥陀佛！真好 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2009-5-14 17:52</div><div class="post-body">供灯的十种功德： <br/>
 一、照世如灯。供灯者生生世世如同世间的明灯， <br/>
 二、肉眼不坏。供灯者肉眼非常明亮， <br/>
 三、得于天眼。供灯者将来会获得五眼中的天眼。 <br/>
@@ -84,7 +97,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 人死的时候，最好在他头顶上摆着阿弥陀佛像或上师像，还有一些佛经，然后再供几盏灯，这样亡者就不会痛苦畏惧.《施灯功德经》中也说，临终时如果有灯，将得到四种光明，一是太阳的光明，二是月亮的光明，三是天人的光明，四是佛的光明。人死后会趋入可怕的黑暗境地，此时有一盏灯的话，真的是一种引路明灯。　对亡者来讲，即使不能为他做超度仪轨，49天供灯也是不能间断的，供灯越多，对亡者的利益越大。 <br/>
 <br/>
-供灯的功德不可思议，完全是一种佛的境界，佛教徒应该深信不疑。最重要的灯是智慧明灯，因地时如果经常供灯，未来就能获得佛陀的大智慧灯，《大集经》中说：“为令众生燃慧灯故。”《华严经》也说：“慧灯破诸暗，是彼之境界。”佛陀的慧灯能破除世间一切黑暗，这就是佛陀的真实境界。我们在因地时以种种因缘这样学修的话，最终也会得到这种功德。大家共同这样做善事的话，整个世界也会遍满光明。愿佛法的慧灯遣除世间的一切黑暗，每个众生都能获得智慧的明灯！ </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2009-12-4 19:45</div><div class="post-body">[size=1]&lt;佛为首迦长者说业报差别经&gt;： <br/>
+供灯的功德不可思议，完全是一种佛的境界，佛教徒应该深信不疑。最重要的灯是智慧明灯，因地时如果经常供灯，未来就能获得佛陀的大智慧灯，《大集经》中说：“为令众生燃慧灯故。”《华严经》也说：“慧灯破诸暗，是彼之境界。”佛陀的慧灯能破除世间一切黑暗，这就是佛陀的真实境界。我们在因地时以种种因缘这样学修的话，最终也会得到这种功德。大家共同这样做善事的话，整个世界也会遍满光明。愿佛法的慧灯遣除世间的一切黑暗，每个众生都能获得智慧的明灯！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2009-12-4 19:45</div><div class="post-body">[size=1]&lt;佛为首迦长者说业报差别经&gt;： <br/>
 <br/>
 若有众生奉施灯明，得十种功德： <br/>
 一者、照世如灯； <br/>

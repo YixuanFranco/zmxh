@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>文殊八字大威德陀罗尼咒 - 藏密修海典藏</title>
+<title>文殊八字大威德陀罗尼咒 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">文殊八字大威德陀罗尼咒</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">菩</div>菩提王子发表于 2009-3-14 17:05</div><div class="post-body">文殊八字大威德陀罗尼咒 <br/>
+<div class="post"><div class="post-header"><div class="avatar">菩</div>菩提王子发表于 2009-3-14 17:05</div><div class="post-body">文殊八字大威德陀罗尼咒 <br/>
 尔时世尊告金刚菩萨言.善男子凡欲念诵此八字陀罗尼.欲作结印法时.净洗其两手.取白檀郁金龙脑沉水等上妙好香.石上和水磨之.于后以用香泥涂于两手.熟揩使遣香气入肉.即于佛前胡跪合掌.广发大愿顶礼诸佛.而作是言 <br/>
 敬礼娑罗王佛(梵名)娑(引)礼捺啰啰(引)惹敬礼开敷华王佛(梵名)三矩苏(上声)弭多 敬礼宝幢佛(梵名)罗怛曩计都 敬礼阿弥陀佛(梵名)阿弭跢婆(去声)野 敬礼无量寿智佛(梵名)阿弭跢庾枳娘曩 敬礼山王佛(梵名)势礼捺啰惹 敬礼作日光佛(梵名)儞崩(去声)迦啰 敬礼极安隐佛(梵名)苏乞史么 敬礼善眼佛(梵名)苏(上声)宁怛啰 敬礼法幢佛(梵名)达么计都 敬礼光鬘佛(梵名)不吼婆(去声)么(引)里 <br/>
 已上十一佛名.至心称念运心顶礼.想本师释迦牟尼佛.及文殊五髻童子像.请乞加被.便结其大精进印.印曰两手合掌.八指相叉皆屈掌内.以二大指少屈相并.压着二头指屈节上.名曰大精进印.此是一切佛所说.欲念诵结印之时.咒用八字陀罗尼咒曰 <br/>
@@ -40,7 +53,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 唵 帝儒(二合)嚩罗萨婆逻吒(二合)娑陀迦悉地耶 悉地也真多摩呢啰多娜吽 <br/>
 若持诵八字陀罗尼人皆须用前两印诵前陀罗尼.然后结印.此印能广作一切事悉得成就.若欲身上庄严冠带之时.皆须咒衣七遍然后着之.即得拥护自身.常得一切人恭敬.若欲入阵战斗去时.所有器仗并咒一千单八遍.随身将入御敌.其贼恐怖无敢当锋.自然退散无停足者.又法若欲降伏一切怨敌恶人者.缘身所著衣服咒一千八遍.着于身上以就怨敌.其凶恶人并来降伏.又法以取珠珍或[王*勒][王*(鞨-人+乂)]诸杂宝等.咒一千八遍.安幢上或置军将身或安马象之上.随入战阵于前而行.彼贼遥见自然降伏.如是等法无量无边不可称数.其前二印常须依清净结用.以护其身得长命报.能除一切病.破一切毗那夜迦恶魔外道.及诸恶人不能作障.如法用印一切咒神时时现身.持诵之人速得悉地.亦得十方一切诸佛遥赞叹之.敕菩萨金刚并八部等.随逐拥护为助其力.文殊师利童子日夜随逐为伴.不舍其侧现种种身.同行事业为说胜法.不令修此法人退菩提果.其二印功能为众生除罪获福.唯佛能知非凡测度所明达处.作法之人用心勤功日夜不住.意勿余缘自当有证. <br/>
 善男子若有男子女人.发心能忆诵此陀罗尼一遍者.即能拥护自身.两遍能护同伴.三遍即能大拥护国王.住十地菩萨亦不能越过此陀罗尼力者.何况诸小天魔龙神鬼类恶众生等.而能障碍.若诵四遍即能拥护妻妾男女.若诵五遍拥护一切眷属.若诵六遍能护一切城邑村坊.若诵七遍能护一切众生.若欲着衣之时当咒衣七遍.能除一切内外恶毒及诸灾难.若洗手面时当咒水七遍.能令一切众人生贵重心.所有诸恶人见者悉当降伏.自当敬重日夜忆念.见即欢喜心无舍离.若人患身体支节疼痛.咒暖水一百八遍.洗浴即得除愈.若每日早朝以水一掬咒七遍饮之.在身所有恶报悉得消灭.何况无灾厄者.及诸三业者亦得除愈.并得寿命长远.若咒饮食吃者一切诸毒不能为损.若见恶人及有怨家.当须念诵此咒.所有怨家起恶心者.当自降伏.恶心即灭.慈心相向.有恐怖处当须摄心.念诵此咒即得除怖.若欲卧时当诵此咒一百八遍.即得好梦善知吉凶.若人或患疟病.持此咒者视患疟人面.切诵此咒一千八遍.其患即除.若欲入阵.当取牛黄书写此咒带于身上.一切刀仗弓-箭鉾槊不能为害.若入阵时.画文殊师利童子像.安于象马上当于三军前.先头而行引诸军众.彼凶愚贼自然退散.画像之法须作童子相貌.乘骑金色孔雀.若有一切众生见画像者.所有四重五逆等罪悉得消灭.常得面睹文殊圣者童子亲为教授.即得究竟解脱乃至佛果.于其中间不被三界烦恼痴心相应.是故劝念一切有情.行住坐卧当须念咒忆持不忘.时时每诵一百八遍勿令断绝.常得一切众生见者皆来归伏.恶人自当退散.若能每日三时念诵各一百八遍.所作称意所求诸愿悉得随心.一切皆得圆满具足.得大富贵所游无障.自在恣情受诸快乐.设临命终.即得圣者文殊师利童子亲现灵仪.为说大乘深妙法藏.闻法心大欢喜.即得普门三昧.得此三昧已.于烦恼生死当永隔别.即与文殊圣者及大菩萨同为眷属.位阶三地进修不退.住文殊圣者之位.同得佛智慧三摩地门.尔时佛告金刚菩萨言.善男子此文殊师利童子八字大威德力陀罗尼.若有国王王子妃后公主.及诸宰辅并凡庶类等.能书写此咒安于宅中.其家即得大富贵饶财常富.儿女聪明利智辩才.巧计相貌端严具好.人所爱乐.所出言音.众人所奉施行无违.象马畜类悉盛成群.奴婢宝货受用无尽.宅中灾祸自然消灭.善神护宅人福强盛鬼神无娆.设有鬼神皆是有福之鬼.皆护其人不求人短. <br/>
-此八字大威德陀罗尼者.乃往过去无量百千恒河沙诸佛所说.为拥护一切行十善国王.令得如意寿命长远.福德果报无比最胜.诸方兵甲悉皆休息国土安宁.王之所愿常得增长.此陀罗尼能大利益.怜愍一切有情诸众生故.能断诸三恶道.能为一切作法.如佛现在处世无异.此是文殊师利菩萨自身.为利诸众生故.自变其身为八字咒神像.能满一切有情意乐等事.若人能暂闻忆念此陀罗尼者.即能灭四重五逆等罪.何况常念诵者.设使一切诸天有大福德.及十地一生补处.于中二大威力人.亦不能夺其福德.所作事业不能为障持八字人福.何况余小天人.及无威德龙神鬼而作障难设我住世恒沙亿劫.说文殊师利童子菩萨八字陀罗尼.为诸有情除罪生福成就事业.具满一切众生诸愿之法.非口所宣能尽其福.勤心念诵证者乃知.于今略说.汝金刚菩萨于我灭后以汝神力.于赡部洲广宣流布.使薄福众生持此八字陀罗尼.同汝神力令速超于三界.加功不退勿就余法.日夜精勤.作法念诵不计日月.毕见文殊童子.为现其童子身.悉了一切事断一切苦果.于现身中超入六地.具六波罗蜜.即能悉舍一切.进修不退速入八地.任运自在分身百亿.随类教化众生悉满其愿.嘱付传受出家在家大悲淳厚.行菩萨行具四无量.慈愍一切不舍众生心者.如是大士乃可嘱受与之.声闻凡夫未发大意.不能堪受此法门故.亦不胜菩萨慈悲重担.小器之类岂能饶益有情.唯有大人能建大事.堪可受持此陀罗尼秘密之藏印信法门. </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">菩</div>菩提王子发表于 2009-3-14 17:07</div><div class="post-body">普巴金刚观修法 <br/>
+此八字大威德陀罗尼者.乃往过去无量百千恒河沙诸佛所说.为拥护一切行十善国王.令得如意寿命长远.福德果报无比最胜.诸方兵甲悉皆休息国土安宁.王之所愿常得增长.此陀罗尼能大利益.怜愍一切有情诸众生故.能断诸三恶道.能为一切作法.如佛现在处世无异.此是文殊师利菩萨自身.为利诸众生故.自变其身为八字咒神像.能满一切有情意乐等事.若人能暂闻忆念此陀罗尼者.即能灭四重五逆等罪.何况常念诵者.设使一切诸天有大福德.及十地一生补处.于中二大威力人.亦不能夺其福德.所作事业不能为障持八字人福.何况余小天人.及无威德龙神鬼而作障难设我住世恒沙亿劫.说文殊师利童子菩萨八字陀罗尼.为诸有情除罪生福成就事业.具满一切众生诸愿之法.非口所宣能尽其福.勤心念诵证者乃知.于今略说.汝金刚菩萨于我灭后以汝神力.于赡部洲广宣流布.使薄福众生持此八字陀罗尼.同汝神力令速超于三界.加功不退勿就余法.日夜精勤.作法念诵不计日月.毕见文殊童子.为现其童子身.悉了一切事断一切苦果.于现身中超入六地.具六波罗蜜.即能悉舍一切.进修不退速入八地.任运自在分身百亿.随类教化众生悉满其愿.嘱付传受出家在家大悲淳厚.行菩萨行具四无量.慈愍一切不舍众生心者.如是大士乃可嘱受与之.声闻凡夫未发大意.不能堪受此法门故.亦不胜菩萨慈悲重担.小器之类岂能饶益有情.唯有大人能建大事.堪可受持此陀罗尼秘密之藏印信法门. </div></div><div class="post"><div class="post-header"><div class="avatar">菩</div>菩提王子发表于 2009-3-14 17:07</div><div class="post-body">普巴金刚观修法 <br/>
 迦造（觉海）喇嘛译 <br/>
 敬礼嘿汝嘎尊前，宣说瑜伽道次第 <br/>
 一、        皈依 <br/>
@@ -68,14 +81,14 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 嗡 班杂 格列格拉亚 萨瓦比呢崩 吽呸 <br/>
 三、        回向 <br/>
 以此功德速令我，成就金刚童子尊， <br/>
-一切众生尽无余，惟愿安置彼佛刹。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-11-17 23:44</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
+一切众生尽无余，惟愿安置彼佛刹。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-11-17 23:44</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
 眾生善根盡隨喜 正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽 直至菩提我皈依 <br/>
 所為利益自他故 我今即發菩提心 <br/>
 <br/>
 既發最上菩提心 饒益一切諸有情 <br/>
-菩提妙行皆修作 為利眾生願成佛 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">蓮</div>蓮師金剛发表于 2012-5-11 20:37</div><div class="post-body">吽 <br/>
+菩提妙行皆修作 為利眾生願成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">蓮</div>蓮師金剛发表于 2012-5-11 20:37</div><div class="post-body">吽 <br/>
 邬金刹土西北隅　莲茎花胚之座上 <br/>
 稀有殊胜成就者　世称名号莲花生 <br/>
 空行眷属众围绕　我随汝尊而修持 <br/>

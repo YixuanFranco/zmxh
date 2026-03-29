@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>萨迦传承昆氏家族 - 藏密修海典藏</title>
+<title>萨迦传承昆氏家族 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">萨迦传承昆氏家族</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 17:34</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（一）[/color] <br/>
+<div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 17:34</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（一）[/color] <br/>
 萨迦传承是由西藏贵族「昆氏」家族建立与开创出来。昆氏家族在藏传佛教历史中最早可以追溯至藏王「赤松德赞时，藏区第一批跟从自印度来西藏传法的「寂护」出家的七觉士，其中「龙王护」就是昆族的，而後龙王护的弟弟传下今日以昆族血脉为主的萨迦传承，在昆贡秋嘉波（宝王）之前空族全为宁玛巴的弟子。 <br/>
 <br/>
 西元一零四零年，阿底峡尊者进入西藏某地时，预言萨迦这地区会出现最伟大的三大怙主化身且都将诞生于同一族姓中。觉卧杰·阿底峡尊者入藏后，在上部阿里等地住了三年，此后，仲·敦巴迎请他到前藏。在下山前往宗乌拉寨地方时，看见了本波日山，山前有两头大野牛正在吃草。 <br/>
@@ -44,7 +57,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/size] <br/>
 [/size][font=楷体_GB2312][size=5]      昆·贡秋嘉波是最初称为萨迦昆氏者，他生于阳木鼠年。年轻时，随从父及其兄听受许多密咒法，学习祖父之教法，贡秋嘉波随以青译师学习喜金刚密咒及密法，卓弥释益西授予了一部分修道次第等圣法，尤其是授予了三密乘部之广说。他又随从桂译师学习密集，随从邬金地方的班智达喜饶桑瓦学习五精要；随从玛尔巴译师学习胜乐和悉地之要义。 <br/>
 <br/>
-此外还依止梅译师、巴日译师、布散译师、南喀乌巴昆季、昆吉秋瓦、吉热阿森等大德学习发菩提心以及无数密咒修法，成为新旧密法之教主。并创建具吉祥萨迦寺，主持法座很长时间。昆贡秋嘉波为许多僧人灌顶、讲经，广兴佛教。在水马年即六十九岁时出现了许多奇有之预兆，圆寂于果如地方。 [/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 17:38</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（二） <br/>
+此外还依止梅译师、巴日译师、布散译师、南喀乌巴昆季、昆吉秋瓦、吉热阿森等大德学习发菩提心以及无数密咒修法，成为新旧密法之教主。并创建具吉祥萨迦寺，主持法座很长时间。昆贡秋嘉波为许多僧人灌顶、讲经，广兴佛教。在水马年即六十九岁时出现了许多奇有之预兆，圆寂于果如地方。 [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 17:38</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（二） <br/>
 [/color][/color] <br/>
 [/color][font=楷体_GB2312][size=5]2．萨迦派大师贡噶宁波 <br/>
 [/size] <br/>
@@ -99,7 +112,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/size][font=楷体_GB2312][size=5]      此外，随从尼泊尔班智达室利学习法相时轮论和许多密法；随从尼泊尔学者扎涅那则学习许多金刚瑜伽母之教法；从印度瑜伽师帕哈扎热胡获得许多密法；随从格西额闻习《般若释迦教法》、《般若二万颂本注》、《般若八千颂本注》、《现观论本注》、《集论本注》、《略摄般若八千颂本注》以及夏尼达巴之一部分经籍，全部融会贯通。 <br/>
 <br/>
 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 17:42</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（三） <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 17:42</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（三） <br/>
 [/color][/color] <br/>
 [/color][font=楷体_GB2312][size=5]      第二获得殊胜语诀之情况如下： <br/>
 [/size] <br/>
@@ -233,7 +246,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 <br/>
 <br/>
-[/size][/size] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 17:44</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（四）[/color] <br/>
+[/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 17:44</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（四）[/color] <br/>
 <br/>
 关于大慈悲贡噶宁波之后裔的情况是，喇嘛贡噶宁波娶有二妻。擦摩绒地方一尊者有二女，初妻其次女名觉嘉普摩为妻，于萨迦生长子贡噶拔。此后赴印度学习，精通五明，准备返回之时，因中暑病卧在床，二十二岁死于印度摩揭陀地方。 <br/>
 <br/>
@@ -294,7 +307,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 晓悟获得净信之追随者， <br/>
 祈求拯救无离之徒众。 <br/>
 <br/>
-[/font][/font][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 17:50</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（五） <br/>
+[/font][/font][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 17:50</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（五） <br/>
 [/color][/color] <br/>
 [/color][font=楷体_GB2312][size=5]4. 至尊仁波且扎巴坚赞 <br/>
 [/size] <br/>
@@ -364,7 +377,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 僧人之祈祷诗如大海中之波涛汹涌不断。 <br/>
 [/size] <br/>
-[size=5]      喇嘛至尊扎巴坚赞之弟贝钦沃波生于其父五十九岁之阳铁马年十月二十五日。他心性刚毅、沉着深远。勤奋精进。从父兄学习教法，精通诸语诀，尤喜医学，他发慈悲之心，普为众人治病。他的著作有《医学日光八小论》阴水猪年五月二十一日圆寂，享年五十四岁。[/size][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 17:54</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（六） <br/>
+[size=5]      喇嘛至尊扎巴坚赞之弟贝钦沃波生于其父五十九岁之阳铁马年十月二十五日。他心性刚毅、沉着深远。勤奋精进。从父兄学习教法，精通诸语诀，尤喜医学，他发慈悲之心，普为众人治病。他的著作有《医学日光八小论》阴水猪年五月二十一日圆寂，享年五十四岁。[/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 17:54</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（六） <br/>
 [/color][/color] <br/>
 [/color][font=楷体_GB2312][size=5]5. 法王萨迦班智达贡噶坚赞 <br/>
 [/size] <br/>
@@ -479,7 +492,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/font] <br/>
 此论释为，施舍等知差别即可加行吝啬和杂秽之戒律，其后阻断通各自加行之道，使诸教法证得解脱三门之自性，证悟之教法未有一点灰尘。得现观胜解信，使三智性之自性之地自然归于决定性之地，为一心专注地知一切境等佛法而敢于舍命，此即所谓四事部之道境。如是获得忍与智之一念顷之十六之集境。汇集证持世间者和不贪著现观者之后心。为精进适宜自果形等情分，即居于菩提勇士见道，具有永不消褪之法相性。此由教法亦可明知。 <br/>
 <br/>
-此外，心生教化众教徒之外身，居于持明之空，尼玛多沛王生有子，称为吉哇松杰托贝帕巴，实际就是正觉圆觉文殊佛陀之本性，所显示之智慧和证德皆为幻化者本人知晓。[/font][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 17:58</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（七）[/color] <br/>
+此外，心生教化众教徒之外身，居于持明之空，尼玛多沛王生有子，称为吉哇松杰托贝帕巴，实际就是正觉圆觉文殊佛陀之本性，所显示之智慧和证德皆为幻化者本人知晓。[/font][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 17:58</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（七）[/color] <br/>
 [/color] <br/>
 [/color][font=楷体_GB2312][size=5]      第三，如何利益教法和众生之事迹分为二部分，即：（一）大力宏扬贤者之三德行；（二）在北方蒙古地方大力宏扬佛法。大力宏扬贤者之三德行分为二部分。1、大力宏扬贤者之三德行之事迹；2、大做利他之各种事业。 <br/>
 <br/>
@@ -607,7 +620,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [/size][/font] <br/>
 <br/>
-[[i] 本帖最后由 金刚吉 于 2006-9-19 13:25 编辑 [/i]] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 18:01</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（八）[/color] <br/>
+[[i] 本帖最后由 金刚吉 于 2006-9-19 13:25 编辑 [/i]] </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 18:01</div><div class="post-body">[font=楷体_GB2312][size=5][color=darkorange]昆氏家族（八）[/color] <br/>
 [/color] <br/>
 [size=5]      蒙古的迎请使者携带邀请诏书前来，法王萨班想到若说年迈，信中已有不让推托之语，故不顾身体性命，于63岁时启程前往西夏故地之凉州地方。路途中，多康地方的敦巴洛追塞向其请教佛法，法王萨班清楚的回答了教法方面之问题，二人问答如下，敦巴洛追饶塞问：“观待洁问之盛行，我之触及而不明，此为增添极喜地。你之第一问难明藏中，所谓世间一切瓶，虽有声而自行消失。”答曰：“《三律仪品》云：‘空性亦有而无空，若有亦为普遍无永恒，吉祥法称已阐明。’此字义如是吉祥法称在寻思之时说的胜义所能发生作用，于此即有胜义，剩余为世俗，此为自共法相论。[/size] <br/>
 [size=5][/size] <br/>
@@ -696,7 +709,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [/size][/font] <br/>
 <br/>
-[[i] 本帖最后由 金刚吉 于 2006-9-19 13:25 编辑 [/i]] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 18:03</div><div class="post-body">[font=楷体_GB2312][size=5]    如是之斗诤时之第二遍知佛陀法王萨迦班智达至70岁之间讲论佛法，使无数众生成熟解脱，至于法王萨班去世前之简要情况，按大师比机得记载，如下所术，铁阴猪年，当法王正完成利他事业之时，于阴历九月出现十八-大征候，阴历九月八日发生大地震，我比机拉杰询问此原因，法王答：“此乃为大德们前去利他之预兆，我亦将追随诸大德之后。” <br/>
+[[i] 本帖最后由 金刚吉 于 2006-9-19 13:25 编辑 [/i]] </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-8-14 18:03</div><div class="post-body">[font=楷体_GB2312][size=5]    如是之斗诤时之第二遍知佛陀法王萨迦班智达至70岁之间讲论佛法，使无数众生成熟解脱，至于法王萨班去世前之简要情况，按大师比机得记载，如下所术，铁阴猪年，当法王正完成利他事业之时，于阴历九月出现十八-大征候，阴历九月八日发生大地震，我比机拉杰询问此原因，法王答：“此乃为大德们前去利他之预兆，我亦将追随诸大德之后。” <br/>
 <br/>
 二十九日半夜不断传来受用护身王之妙音，于是法王说：“当一面二手之白色身形来后，请你供香。”随后我供了香。黎明时，梦幻十一面观世音正加持，遂说：“请供香！”此后我即供了香。阴历十月六日，传出各种妙音，法王问：“我身边所以的人全部是到经堂供奉尊胜塔者吗？”我回答说：“是去经堂观瞻法幢的。”法王说：“他们如此行走，能闻何音，请你前去询问。”我问后，迎佛之众祭祀者说：“现在需要谋自利他利之事业。”此时，花雨布满了天空，但未降落于大地。 <br/>
 <br/>
@@ -730,7 +743,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 他在临去世时说：“我在后世要转到南方一座大草山的附近，为具缘弟子灌顶，使之专心修习秘密瑜伽之道。”他传承扎普巴的口耳相传密诀。如是之上师于五十六岁的阴土猪年（一二三九年）阴历十二月二十二日明见诸诤相，明见上师和本尊无别，对众人说：“你们的法主（指萨迦班智达）是真正的佛陀，要毫无疑惑地敬信感戴。”随即于拉堆降吉多堆绒之吉祥山去世。 <br/>
 <br/>
-遗言说：“我之尸体要火化于帕吉雪之巅，我的子孙后代将有管辖国土之因缘。”众人遂照此遗嘱而办。一些人说：“桑擦之母是达日绒地方人，家族贤善，父亲名叫桑吉觉色。她所生的儿子即桑擦索南坚赞。所以认为法王萨班与索南坚赞为一母所生是错误的，因为法王萨班不是桑擦。”杰尊著的《喀仁杰波校订之史籍》中未说他们不是同母。因此，说明他们是同一母亲所生。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">水</div>水木燊桂发表于 2016-5-12 11:40</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
+遗言说：“我之尸体要火化于帕吉雪之巅，我的子孙后代将有管辖国土之因缘。”众人遂照此遗嘱而办。一些人说：“桑擦之母是达日绒地方人，家族贤善，父亲名叫桑吉觉色。她所生的儿子即桑擦索南坚赞。所以认为法王萨班与索南坚赞为一母所生是错误的，因为法王萨班不是桑擦。”杰尊著的《喀仁杰波校订之史籍》中未说他们不是同母。因此，说明他们是同一母亲所生。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">水</div>水木燊桂发表于 2016-5-12 11:40</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
 眾生善根盡隨喜 正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽 直至菩提我皈依 <br/>

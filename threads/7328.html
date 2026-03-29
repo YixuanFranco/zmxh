@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>金刚亥母十三尊——修胜乐金刚和气脉明点所依的空行母 - 藏密修海典藏</title>
+<title>金刚亥母十三尊——修胜乐金刚和气脉明点所依的空行母 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/实证传承金刚藏.html">实证传承金刚藏</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">金刚亥母十三尊——修胜乐金刚和气脉明点所依的空行母</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-3-20 00:55</div><div class="post-body">[b][font=楷体_GB2312][size=5] <br/>
+<div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-3-20 00:55</div><div class="post-body">[b][font=楷体_GB2312][size=5] <br/>
 [b]金刚亥母十三尊——修胜乐金刚和气脉明点所依的空行母[/b] <br/>
 <br/>
 [img]http://www.zmxh.com/pics/________________20081109204349.jpg[/img] <br/>
@@ -78,7 +91,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [img]http://www.zmxh.com/pics/10_20120320004117.jpg[/img] <br/>
 枭面空行母 北门绿色（图片变色，此尊之蓝色应为绿色） <br/>
-[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚境发表于 2012-3-22 14:39</div><div class="post-body">[b][font=楷体_GB2312][size=5] <br/>
+[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚境发表于 2012-3-22 14:39</div><div class="post-body">[b][font=楷体_GB2312][size=5] <br/>
 金刚空行金刚母，自在任运妙旋舞； <br/>
 嗡啊吽咒金刚诵，明点虹光化坛城。 <br/>
 [/size][/font][/b] <br/>
@@ -145,7 +158,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 众生满足圣尊喜，获得受用依此成， <br/>
 世间以及出世间，尊众欢喜护遣障， <br/>
 现在以及未来时，不幸痛苦均远离， <br/>
-乐欲解脱均成就。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚海会发表于 2015-11-19 14:26</div><div class="post-body">[size=5]Aogula实证传承行者 <br/>
+乐欲解脱均成就。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚海会发表于 2015-11-19 14:26</div><div class="post-body">[size=5]Aogula实证传承行者 <br/>
 Aogula智丹 <br/>
 2014-11-17 <br/>
 礼佛诵经后，观修一面二臂红色金刚亥母，空行母面脑后有个三眼的愤怒猪面，右手持金刚钺刀、左手持颅器怀抱天杖，天杖底端半杵，顶上金刚杵干湿旧三种人首、宝瓶、十字杵贯穿，还挂着鼗鼓彩带空中飘扬。 <br/>
@@ -176,7 +189,7 @@ Aogula807 <br/>
 修金刚亥母持咒，原地舞动旋转钺刀、颅器，自身气脉运转中能量化为光明观自身成为金刚亥母，中脉通明心轮金刚杵旋转，发出阵阵虹彩光波，呼吸若有若无，持气深沉悠长，热流漩涡柔和顺畅，第三眼如宝石放光。 <br/>
 旋转法器舞动，自身中脉震动，金刚亥母三目放光，主面额头不断涌出亮白色热流，显现头戴五骷髅冠庄严，脑后右侧显现红得发黑的三眼野猪面獠牙愤怒相。自身每一个脉络如飘动的水草，纤细顺畅细腻柔和，整体如飘动的丝绸般顺滑。 <br/>
 观修一面两臂金刚亥母不停的旋转钺刀默念持咒，又修手持金刚杵的金刚亥母旋转金刚杵，全身火热，身姿柔软婀娜充满活力，脐轮光电轮快速旋转，海底轮红色莲花内吸，左右脉如柔和的飘带，修金刚诵嗡啊吽三字明咒感受中脉呼吸，脐轮如烈火燃烧，能量聚集成火球，在中脉顺时针平圆绕圈旋转，腰腹部能量顺时针旋转，中脉能量运转中，气脉能量升华化为摩尼宝珠形成火球旋转到到顶轮，又沿着中脉旋转到腹轮和海底轮，摩尼宝珠放光放电。全身气脉绵软柔和，气脉能量升华化为光明，修中脉呼吸感到中脉通明震动，本尊和坛城在光明火焰中自然显现，旋转金刚法器持咒不断而修。 <br/>
-[/size] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-7-10 17:34</div><div class="post-body">实修金刚亥母和金刚空行母深入本尊坛城 <br/>
+[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-7-10 17:34</div><div class="post-body">实修金刚亥母和金刚空行母深入本尊坛城 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula811 <br/>
@@ -201,7 +214,7 @@ Aogula811 <br/>
 种种业起各差别 毗卢遮那转法轮 <br/>
 《华严经 入法界品》 <br/>
 <br/>
-又修六种胜乐金刚，再修金刚持五方佛，修金刚萨埵补缺和忏悔罪堕，修玛哈嘎拉护法震动法器持咒，又震动手臂如击鼓式持诵《华严经 普贤三昧品》段落回向。 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">问</div>问道发表于 2022-6-3 21:40</div><div class="post-body">金刚空行金刚母，自在任运妙旋舞； <br/>
+又修六种胜乐金刚，再修金刚持五方佛，修金刚萨埵补缺和忏悔罪堕，修玛哈嘎拉护法震动法器持咒，又震动手臂如击鼓式持诵《华严经 普贤三昧品》段落回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">问</div>问道发表于 2022-6-3 21:40</div><div class="post-body">金刚空行金刚母，自在任运妙旋舞； <br/>
 嗡啊吽咒金刚诵，明点虹光化坛城。 <br/>
 <br/>
 <br/>

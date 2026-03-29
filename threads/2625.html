@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>金刚手菩萨念诵略轨·导修 - 藏密修海典藏</title>
+<title>金刚手菩萨念诵略轨·导修 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/显密传修胜宝鬘.html">显密传修胜宝鬘</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">金刚手菩萨念诵略轨·导修</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-21 10:34</div><div class="post-body">[img]http://www.zmxh.com/pics/______01_20060124135233_20070331192928.jpg[/img] <br/>
+<div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-21 10:34</div><div class="post-body">[img]http://www.zmxh.com/pics/______01_20060124135233_20070331192928.jpg[/img] <br/>
 [font=楷体_GB2312][size=5][b]金刚手菩萨念诵略轨[/b] <br/>
 <br/>
 大藏寺祈竹活佛所编 <br/>
@@ -44,7 +57,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 om vajra tsanda maha rokhana hum phat <br/>
 <br/>
 出有坏秘密主以及眷属 祈请降伏一切上、下、中病患障碍 祈请加持增长寿命功德财富吉祥 <br/>
-(各依自已所愿回向)[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-21 10:36</div><div class="post-body">[font=楷体_GB2312][size=5][b]金刚手菩萨念诵略轨导修 [/b] <br/>
+(各依自已所愿回向)[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-21 10:36</div><div class="post-body">[font=楷体_GB2312][size=5][b]金刚手菩萨念诵略轨导修 [/b] <br/>
 <br/>
 观音代表诸佛之悲心，文殊代表诸佛之智慧，而金刚手则为诸佛之力量化相。金刚手是八大菩萨之一，他有外、内及秘密相等多种不同化相。平时我们常见与观音及文殊并列为悲智力三怙主的金刚手化相，是其外相。今天要讲的是金刚手的内相。他的形象与其外相很接近，一面二臂，身兰色，但法器有少许不同。金刚手的内相右手持杵高举，左手持铃，而其外相之左手并不持铃。在他的顶、喉、心、脐及密轮五处，分别有白色、红色、兰色、黄色、及绿色的大鹏金翅鸟。这些大鹏金翅鸟十分小，位于金刚手身内的五脉轮中。这里的大鹏金翅鸟并非世俗的畜生，而是代表五方佛及五佛智。白大鹏金翅鸟代表大日如来，红大鹏金翅鸟代表弥陀，兰大鹏金翅鸟代表不动佛，黄大鹏金翅鸟代表宝生佛，绿大鹏金翅鸟代表不空成就佛。每只鸟皆双手持一蛇，并以鸟嘴叨着蛇身中央位置，蛇身与鸟身色同，亦即是说白鸟叨着白蛇，红鸟叨着红蛇。。。等等。 <br/>
 <br/>
@@ -73,17 +86,17 @@ om vajra tsanda maha rokhana hum phat <br/>
 <br/>
 在祈请后，我们各依自已所愿回向。这便完成了简单而完整的一座修持。 <br/>
 <br/>
-《金刚手灌顶续》讲及，对未受灌顶者，不应示以密法。今天大家求学这一尊法门，但却未受过灌顶，所以衲不宜深入教授。然而，对一般居士来说，以大信心修诵这个礼赞式的仪轨，可说是足够了。 [/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚境发表于 2007-8-11 20:41</div><div class="post-body">身命动摇如水泡，速疾坏灭当念死， <br/>
+《金刚手灌顶续》讲及，对未受灌顶者，不应示以密法。今天大家求学这一尊法门，但却未受过灌顶，所以衲不宜深入教授。然而，对一般居士来说，以大信心修诵这个礼赞式的仪轨，可说是足够了。 [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚境发表于 2007-8-11 20:41</div><div class="post-body">身命动摇如水泡，速疾坏灭当念死， <br/>
 死后如影随于形，黑白业果恒随逐。 <br/>
 获定解已于罪聚，虽诸小恶亦应除， <br/>
-勤修一切妙善聚，常不放逸祈加持。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-10-11 20:55</div><div class="post-body">我闻诸佛出生处。本从微妙秘密印 <br/>
+勤修一切妙善聚，常不放逸祈加持。 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-10-11 20:55</div><div class="post-body">我闻诸佛出生处。本从微妙秘密印 <br/>
 密印即是诸佛心。散入众生妄想梦 <br/>
 梦想若破诸佛现。犹如寒空见日光 <br/>
 若破众生烦恼云。现仗如来密咒力 <br/>
 持咒即持诸佛心。我心原是秘密咒 <br/>
 三缘会合本不二。是故一念悉具足 <br/>
 但能日用常现前。如子得母不舍离 <br/>
-佛心既入持咒心。不用求佛自解脱 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">慧</div>慧明金刚发表于 2008-10-26 07:06</div><div class="post-body">成就悉源释尊金刚持 <br/>
+佛心既入持咒心。不用求佛自解脱 </div></div><div class="post"><div class="post-header"><div class="avatar">慧</div>慧明金刚发表于 2008-10-26 07:06</div><div class="post-body">成就悉源释尊金刚持 <br/>
 无缘大悲主尊观世音 <br/>
 无垢胜慧主尊妙吉祥 <br/>
 魔军无余摧行秘密主 <br/>
@@ -91,12 +104,12 @@ om vajra tsanda maha rokhana hum phat <br/>
 三宝总体上师尊佛前 <br/>
 身语意三恭敬虔祈祷 <br/>
 自他成熟解脱祈加持 <br/>
-胜及共同成就祈垂赐 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">密</div>密海明灯发表于 2009-11-23 19:27</div><div class="post-body">愿令众生常得安乐。无诸病苦。欲行恶法皆悉不成。所修善业。皆速成就。关闭一切诸恶趣门。开示人天涅盘正路。若诸众生。因其积集诸恶业故。所感一切极重苦果。我皆代受。令彼众生悉得解脱。究竟成就无上菩提。 <br/>
+胜及共同成就祈垂赐 </div></div><div class="post"><div class="post-header"><div class="avatar">密</div>密海明灯发表于 2009-11-23 19:27</div><div class="post-body">愿令众生常得安乐。无诸病苦。欲行恶法皆悉不成。所修善业。皆速成就。关闭一切诸恶趣门。开示人天涅盘正路。若诸众生。因其积集诸恶业故。所感一切极重苦果。我皆代受。令彼众生悉得解脱。究竟成就无上菩提。 <br/>
 不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毗卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲实证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">邬</div>邬扎拉拓发表于 2012-5-14 18:27</div><div class="post-body">成就悉源释尊金刚持 <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">邬</div>邬扎拉拓发表于 2012-5-14 18:27</div><div class="post-body">成就悉源释尊金刚持 <br/>
 无缘大悲主尊观世音 <br/>
 无垢胜慧主尊妙吉祥 <br/>
 魔军无余摧行秘密主 <br/>
@@ -104,10 +117,10 @@ om vajra tsanda maha rokhana hum phat <br/>
 三宝总体上师尊佛前 <br/>
 身语意三恭敬虔祈祷 <br/>
 自他成熟解脱祈加持 <br/>
-胜及共同成就祈垂赐 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">花</div>花开见佛发表于 2024-5-29 01:30</div><div class="post-body">身命动摇如水泡，速疾坏灭当念死， <br/>
+胜及共同成就祈垂赐 </div></div><div class="post"><div class="post-header"><div class="avatar">花</div>花开见佛发表于 2024-5-29 01:30</div><div class="post-body">身命动摇如水泡，速疾坏灭当念死， <br/>
 死后如影随于形，黑白业果恒随逐。 <br/>
 获定解已于罪聚，虽诸小恶亦应除， <br/>
-勤修一切妙善聚，常不放逸祈加持。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">释</div>释子沙门发表于 2025-5-15 22:22</div><div class="post-body">感谢师兄开示，随喜赞叹。. <br/>
+勤修一切妙善聚，常不放逸祈加持。 </div></div><div class="post"><div class="post-header"><div class="avatar">释</div>释子沙门发表于 2025-5-15 22:22</div><div class="post-body">感谢师兄开示，随喜赞叹。. <br/>
 <br/>
 </div></div>
 </div>

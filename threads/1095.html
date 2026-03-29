@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>七系付法传 - 藏密修海典藏</title>
+<title>七系付法传 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">七系付法传</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-6-1 10:29</div><div class="post-body">[align=center][font=楷体_GB2312][size=5][b][size=6][color=red][u]七系付法传序[/u][/color][/size] [/b][/size][/font][/align][font=楷体_GB2312][size=5] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-6-1 10:29</div><div class="post-body">[align=center][font=楷体_GB2312][size=5][b][size=6][color=red][u]七系付法传序[/u][/color][/size] [/b][/size][/font][/align][font=楷体_GB2312][size=5] <br/>
 [b]　　经教开佛知见，广宣理论。若究即事而真，则坛场之庄严，曼佗罗之整肃，香花之鲜洁，灯烛之光明，无一不力求如法，故事上舍密乘莫可窥测佛境。[/b] <br/>
 <br/>
 [b]　　曩昔参加金光明法会，白尊者黎明入殿，梵呗声举，余顿入空乐三昧，驻足殿外许久，一心超凡希圣。迨班禅广惠大师，教授无量寿佛仪轨；大师高坐，堪布匍伏，喇嘛围绕，未曾见之法物，于崇敬中皆见之矣。其次，安钦上师传授大威德金刚灌顶，历时两日，亦极尊崇备至，回忆上师，慈容白髯，著白绸法衣，肩上绣有彩色种子花纹，恍在目前。诺先师则以神通示现，方便自在，随时传法，随地灌顶；著汉服，不设座，可谓大慈大悲者矣。贡噶上师传法比较紧严，一切务必遵照仪轨，而白教大法学人均奉持为稀有难得。缅怀往事，深知密乘在在就事显理，于以知佛法之高不可攀，深莫能测，惟密乘能标示耳。良以事理教相均圆融于中也，不参究者，又孰能知之哉？[/b] <br/>
@@ -53,7 +66,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 。 <br/>
 三 密乘诸师多依密行修证，未成就前被褐怀玉，即成就后隐身住世，故其生卒之年多无可考。提要中略就其兴化之迹，定其相对年代。印度古代无统一纪年，西藏前后宏之间，法教中绝，史年异说不一，详为考订，有待专篇。今兹所出年代，聊为知人论世之资而已。 <br/>
 <br/>
-四 诸师名号译音译义，均依晋唐古翻，故与时译多有不同，近代所译人名，多准方音，难为典要也。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:15</div><div class="post-body">[b][font=楷体_GB2312][size=5]第一系 大手印教授 <br/>
+四 诸师名号译音译义，均依晋唐古翻，故与时译多有不同，近代所译人名，多准方音，难为典要也。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:15</div><div class="post-body">[b][font=楷体_GB2312][size=5]第一系 大手印教授 <br/>
 一 大阿奢黎婆罗门罗睺罗（萨啰诃）公元前一世纪至公元后一世纪 <br/>
 二 阿奢黎龙树（公元一、二世纪） <br/>
 三 大成就者舍婆黎（小萨啰诃）公元三、四世纪 <br/>
@@ -162,7 +175,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 第七系 别传口诀传承 <br/>
 一、毗耶黎波 <br/>
 传遮哩波质波，彼传得成就者羯句质波，彼传弥那波，彼传摩亲陀啰，彼传瞿啰刹那佗，彼传得成就者羯拏黎波，彼传那瞿波，彼传瞿邻那佗，彼传邬俱啰那佗，彼传大智啰底崛多，彼传大成就自在者寂密，彼传阿奢黎甚深慧瑜伽母地那羯啰。 <br/>
-又传龙树，彼传舍波黎，彼传卢伊波。[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:19</div><div class="post-body">[font=楷体_GB2312][size=5][b]七系付法传 <br/>
+又传龙树，彼传舍波黎，彼传卢伊波。[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:19</div><div class="post-body">[font=楷体_GB2312][size=5][b]七系付法传 <br/>
 一名宝源录 又名神异记 <br/>
 <br/>
 西藏多罗那他大师原著 郭元兴译 <br/>
@@ -209,7 +222,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 注四 大乘契经之广演流布，始于此阿奢黎之世，师曾从邬祗累舍国王毗苏劫波听受金刚乘法。十万颂大般若经，及四续部密法，均于此时出世。 <br/>
 <br/>
-注五：师祖马鸣，当为与迦旃延同时之马鸣菩萨，非公元一世纪出世与迦腻色迦王同时之马鸣也。[/size][/size] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:28</div><div class="post-body">[font=楷体_GB2312][size=5][b]二 阿奢黎龙树[/b][/size][/font] <br/>
+注五：师祖马鸣，当为与迦旃延同时之马鸣菩萨，非公元一世纪出世与迦腻色迦王同时之马鸣也。[/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:28</div><div class="post-body">[font=楷体_GB2312][size=5][b]二 阿奢黎龙树[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5] <br/>
 [b]　　萨啰诃之弟子即龙树阿阇黎，师生于南方吠陀婆国婆罗门种姓家，诞生之时，诸相师言：“若宴百比丘百婆罗门百俗人者，分别可得七年七月七日寿命，否则别无他术，可令延生”。父母依行，迨预期时限将近，乃遣其携仆一人，漫游他国，后至那烂陀寺，遇亲教师罗睺罗，令诵无量寿明咒，遂得延寿。[/b] <br/>
 <br/>
@@ -249,13 +262,13 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 注七 由旬（踰缮那），长度名，合百俱卢舍，约七公里左右，北方加倍。俱卢舍合五百弓或二千肘，约九百公尺，北方加倍。 <br/>
 <br/>
-注八 师身首本分二处，因有复合之说，遂距离渐渐相近，待至复合，密乘便当大兴。今其迹已湮没不见，并传由以平为水库，圣迹不彰，至增感喟。[/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:29</div><div class="post-body">[b][font=楷体_GB2312][size=5]三 舍婆黎大师 <br/>
+注八 师身首本分二处，因有复合之说，遂距离渐渐相近，待至复合，密乘便当大兴。今其迹已湮没不见，并传由以平为水库，圣迹不彰，至增感喟。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:29</div><div class="post-body">[b][font=楷体_GB2312][size=5]三 舍婆黎大师 <br/>
 龙树之弟子为大成就者舍婆黎，当龙树住彭伽罗国（即今孟加拉）时，东方有优伶兄妹三人来献伎乐，入于室内，龙树知其为有缘人，乃示慧宝菩萨之像。三人请言，我等亦欲见此菩萨。龙树以镜示之，皆见自身在地狱中为火所烧，惊惧请言：“愿闻解脱之方。”[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [font=楷体_GB2312][size=5][b]   龙树乃授胜乐灌顶，依法观修，皆证实义。亲见慧宝菩萨，双运成就。龙树告言，汝当至南方山中，为猎兽人以利有情。二妹名洛计，及补尼，后世名为钵特摩袜底空行母。西藏则呼为恰钦达郭，及多哈切勘，即具莲具智之义。二妹与兄共住南方吉祥山中，行同猎人。后兄证得金刚持位，名为大成就者舍婆黎。此猎兽等事实，为胜行双运之行，不当作异解。此阿奢黎亦名小萨啰诃。 <br/>
 <br/>
 [/b]注一 布尼具多氏，印度佛教史则作瞿尼。 <br/>
-注二 师与笈多王朝第二世并世。师既以得道而寿蔽天地，传说谓其仍住吉祥山，初为猎人时，技艺超群，观自在尊为伏其我慢，乃为示现以一箭而射百蛇，师请学此艺，观自在尊以镜示之，见此乃地狱之因，遂收心入道，此又一传说也。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:31</div><div class="post-body">[b][font=楷体_GB2312][size=5]四 卢伊波 <br/>
+注二 师与笈多王朝第二世并世。师既以得道而寿蔽天地，传说谓其仍住吉祥山，初为猎人时，技艺超群，观自在尊为伏其我慢，乃为示现以一箭而射百蛇，师请学此艺，观自在尊以镜示之，见此乃地狱之因，遂收心入道，此又一传说也。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:31</div><div class="post-body">[b][font=楷体_GB2312][size=5]四 卢伊波 <br/>
 卢伊波者，为西方乌苌国王之一书记，本名普善。当得成就者小波啰诃舍婆黎波唱金刚歌时，与其相遇，乃授于灌顶教授。师修法时仍任原职，后至塚间入空行母会聚中，行庖炙传食之事，金刚亥母乃于幻化曼荼罗中为授灌顶，并教之言：“两足曲膝礼，永断生死役，金刚萨垛王，数数我礼请。”[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5] <br/>
 师知当无散乱专精修法，若任原职，仍逐散心，矧获果实，尚须精进，乞求斋供亦生贪瞋，当随缘为生。乃潜赴东方彭伽罗国，见恒河边鱼肠山积，乃于其处以鱼肠为食，经十二年，专修观行，证得大手印最胜悉地。后知调伏欧胝毗舍国王及大臣等时机已至，时值此王接见南方一国王，于国中设座，四衢道中满陈供物，国王之前则有唱吉祥赞诸婆罗门围绕前来，见其座上有青色人，蠛虱遍身，头发蓬竖，偃蹇而卧。 <br/>
@@ -268,7 +281,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 尔时阿奢黎（国王）即于其处为宣金刚乘法。某日振铃而作集会轮，会中有一千零十六女子与师俱生虚空，证得最胜悉地。妓女男友祈请授记，师（国王）言，城东有一石碑，上有一象口向东方，若每年以白芥子灌之，迨象口向西，即得成就。此师名陀梨迦波或陀梨波，乃‘妓女之仆’之义也。 <br/>
 <br/>
-其大臣则作卖酒女之奴，以磨米为缘，现观心之实相，一时于三昧中心神恍惚，未为鸽食，卖酒女詈之。异日唱金刚歌，众人闻之皆知其已得成就，遂广说金刚乘法，令无量众生皆得解脱，由于春米之征吉中而摄心故，得名为征吉波也。[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:33</div><div class="post-body">[b][font=楷体_GB2312][size=5]大宗师弥底梨波[/size][/font][/b] <br/>
+其大臣则作卖酒女之奴，以磨米为缘，现观心之实相，一时于三昧中心神恍惚，未为鸽食，卖酒女詈之。异日唱金刚歌，众人闻之皆知其已得成就，遂广说金刚乘法，令无量众生皆得解脱，由于春米之征吉中而摄心故，得名为征吉波也。[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:33</div><div class="post-body">[b][font=楷体_GB2312][size=5]大宗师弥底梨波[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5] <br/>
 舍婆黎之后世弟子为大宗师弥底梨波，其名为弥底梨多，彼为婆罗门外道之学者，后遇那洛波而入内道，请授灌顶及教授，于那烂陀寺出家，依止宝生寂等大德上师多人，得成大学者。其后住于超岩寺镇伏相精舍中，既示学者之相，又修成就之法，面见金刚瑜伽母，知已届有三昧助伴之时，乃密修内普行法。 <br/>
 <br/>
@@ -284,7 +297,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 四人为俱生金刚、空性三昧、啰摩波椤及金刚手。俱生金刚亦名宅伽，著有十真实释及依处摄二书;空性三昧亦名天生月，编有般若智慧明教一书;金刚手又名印度手，著有金刚勾集。此三师即身皆未得持明位。啰摩波椤传法于喜护，著有灌顶指示释。又其明妃得通力者，有瑜伽母大宝天女，与宗师本人知解同等，得持恒河一半果位（果位名）。 <br/>
 <br/>
-彼之种姓为刹帝利，生于南方羯那吒羯啰，幼即娴熟多种明处，十二岁时依止宗师弥底梨波，弥底梨波逝世后，即于吉祥德聚塔中为上师，三年不语，一心修行而住，迩后现证一切心要之义，多住南方饶益众生，大黑天赐予宝剑悉地，即此色身入地下吉祥门至阿修罗处，今尚在彼云。阿奢黎俱萨啰跋陀啰及阿悉多伽那二人，曾从之咨请大手印教授，智友亦亲从闻法也。大阿奢黎寂密一系诸师于弥底梨波亦深致赞叹，于阿摩那悉椤则颇有胜劣之差也。[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:37</div><div class="post-body">[font=楷体_GB2312][size=5][b]第二系 拙火传承 <br/>
+彼之种姓为刹帝利，生于南方羯那吒羯啰，幼即娴熟多种明处，十二岁时依止宗师弥底梨波，弥底梨波逝世后，即于吉祥德聚塔中为上师，三年不语，一心修行而住，迩后现证一切心要之义，多住南方饶益众生，大黑天赐予宝剑悉地，即此色身入地下吉祥门至阿修罗处，今尚在彼云。阿奢黎俱萨啰跋陀啰及阿悉多伽那二人，曾从之咨请大手印教授，智友亦亲从闻法也。大阿奢黎寂密一系诸师于弥底梨波亦深致赞叹，于阿摩那悉椤则颇有胜劣之差也。[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:37</div><div class="post-body">[font=楷体_GB2312][size=5][b]第二系 拙火传承 <br/>
 <br/>
 一 阿奢黎毗流波 <br/>
 第二付法传承为拙火（按拙火近代亦译忿怒母），拙火教授昔所未有，毗流波亦未从余师得闻此法。此派法要乃由阿奢黎毗流波，亲从金刚瑜伽母请求而得者。此阿奢黎为那烂陀寺一比丘学者，喜饮旨酒，与女行欲，为僧伽驱摈。而后至恒河滨呼一舟师令于渡船，舟师言：“当付船资。”时身无钱，即以期克印指恒河，应时河水逆流，迳越而过。[/b][/size][/font] <br/>
@@ -301,7 +314,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]    今日其处已无僧伽，其石像仍在一森林中，极难趋入。像身紫黑色，大张其口，肃然而住云。其后当啰摩波罗国王时，立名为悉洛波瑜伽师，至中印度，行利生事，以洗足水灌国王啰摩波罗乘象婆那斯佗，于战争中摧伏八回教王。其后东方瞿啰境中有大食王，师至其处，坐其枕上，王命投之于水，屡还原处，又令火焚，亦无所损，又以种种刀杖斫刺，刀杖皆坏，又以六斛毒物令服，一昼夜间多人守护，然阿奢黎色力愈增。[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5][b]    王知其为得成就者，问言“汝为谁”？答言“我为毗流波”。遂于其处，为数有缘宣说教授。由恭敬依止故，师为彼等说真实句，即有多人获得共同悉地。其后又至磐伽罗国住约四月，曾有多人亲见之也。其后不知师去何处。有谓师赴汉地，今仍在彼，有谓毘流波会三度出现人间，此乃第三度也。此阿奢黎亦名吉祥护法，当知于那烂陀寺之亲教师上座护法非一人也。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:40</div><div class="post-body">[b][font=楷体_GB2312][size=5]二 黑毗流波 <br/>
+[font=楷体_GB2312][size=5][b]    王知其为得成就者，问言“汝为谁”？答言“我为毗流波”。遂于其处，为数有缘宣说教授。由恭敬依止故，师为彼等说真实句，即有多人获得共同悉地。其后又至磐伽罗国住约四月，曾有多人亲见之也。其后不知师去何处。有谓师赴汉地，今仍在彼，有谓毘流波会三度出现人间，此乃第三度也。此阿奢黎亦名吉祥护法，当知于那烂陀寺之亲教师上座护法非一人也。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:40</div><div class="post-body">[b][font=楷体_GB2312][size=5]二 黑毗流波 <br/>
 毗流波之弟子为黑毗流波，生于邬胝毗舍国为婆罗门种姓，当其母怀孕时，诸婆罗门相师预言其当犯四罪，故名为黑。当七岁时，父母为令其四罪不生故，使其远游异邦。而后历时颇久，其母婆罗门女名洛乞史弥，因夫及公婆皆死，亦漂流异乡，失坏种姓，于邬胝毗舍东方为卖酒女。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]    其子后亦来至邬胝毗舍，至其母处，母子不识，子与母交。后就一镡中饮水，其实为酒，饮之而醉。怒投其镡，适中一牛而死，又欲隐杀牛事，乃于夜间，投牛喂狼，村首适有一婆罗门径行其处，夜间不见，误中其首而死。心中疑惧，乃问卖酒女往事，得悉此女即其生母。如是先所授记四种罪行皆应。[/size][/font][/b] <br/>
@@ -310,10 +323,10 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]    乃于其处，如前修法，七日之晨，金刚瑜伽母现身做童女形问言：“阿尸吒萨伊佉知，那波萨伊奢罗那，剑阿夷布恒啰，顿呬恭俱那摩啰拏”。意谓“海流八百，河流九百，吾子从何而来？汝将死于恭俱那耶？”师即答言：“阿夷摩多跋折啰瑜祗尼，帝哩萨啰拏”。意谓“慈母金刚瑜伽母，我来皈依汝也”。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
-[b][font=楷体_GB2312][size=5]    时金刚瑜伽母以手按其顶，即得殊胜三昧。告言：“汝于多生有缘者为累流波，现住摩啰贺吒，当往求之。”时毗流波于其处已得金刚颅结大印最胜悉地，往来塚间，修禁戒行。此师亦修金刚颅结，戴青色小帽，闻今尚未断绝身业，住于乌苌国中云。此大小毘流波二人，皆依焰曼德迦及亥母法而得成就。[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:41</div><div class="post-body">[b][font=楷体_GB2312][size=5]三 毗耶陀里波 <br/>
+[b][font=楷体_GB2312][size=5]    时金刚瑜伽母以手按其顶，即得殊胜三昧。告言：“汝于多生有缘者为累流波，现住摩啰贺吒，当往求之。”时毗流波于其处已得金刚颅结大印最胜悉地，往来塚间，修禁戒行。此师亦修金刚颅结，戴青色小帽，闻今尚未断绝身业，住于乌苌国中云。此大小毘流波二人，皆依焰曼德迦及亥母法而得成就。[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:41</div><div class="post-body">[b][font=楷体_GB2312][size=5]三 毗耶陀里波 <br/>
 小毗流波之弟子为毘耶陀里波，此师初为杀鸟种姓，其日见一鹦鹉口衔果实，飞翔空中，师问，汝何所往。答言：“此处有一得成就者名毗流波，今往供养。”师念，如此畜类亦有善心，况我为人，能不修善？乃取果实数品授彼鸟言：“愿汝持此往献彼得成就者。”鹦鹉即以此猎人之果奉献，毗流波不受，告言：“鹦鹉，此后勿将此罪人之物携来。”鹦鹉衔果还付猎人，猎人问言：“汝何故不献？”鹦鹉答言，彼得成就者曾如是言，即以其言告之。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
-[b][font=楷体_GB2312][size=5]    尔时猎人心生愧悔，欲忏其罪，乃数数周游林中寻求上师，后得相遇，授其灌顶及教授，遂一心观修。然仍忆念猎鸟之事，乃请于师，师言：“此等妄念极难断除，纵断亦难得三摩地，若尔，可和泥浆制为鸟形，割彼等颈而修三昧。”彼遂如是而修，终于十二年间证得大印最胜悉地。于诸城中示现种种杀鸟神变，并食鸟肉。众人嗤言，安有身形同瑜伽师而乃残杀有情者。前所杀鸟悉皆复活。如是十二年间作猎鸟业，修明禁行，其名亦号得成就者毗耶陀里波，毗耶陀里波乃猎鸟者之义也。此师传俱萨里跋陀啰为拙火传承之一派。[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:44</div><div class="post-body">[font=楷体_GB2312][size=5][b]四 种毗呬噜迦 <br/>
+[b][font=楷体_GB2312][size=5]    尔时猎人心生愧悔，欲忏其罪，乃数数周游林中寻求上师，后得相遇，授其灌顶及教授，遂一心观修。然仍忆念猎鸟之事，乃请于师，师言：“此等妄念极难断除，纵断亦难得三摩地，若尔，可和泥浆制为鸟形，割彼等颈而修三昧。”彼遂如是而修，终于十二年间证得大印最胜悉地。于诸城中示现种种杀鸟神变，并食鸟肉。众人嗤言，安有身形同瑜伽师而乃残杀有情者。前所杀鸟悉皆复活。如是十二年间作猎鸟业，修明禁行，其名亦号得成就者毗耶陀里波，毗耶陀里波乃猎鸟者之义也。此师传俱萨里跋陀啰为拙火传承之一派。[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:44</div><div class="post-body">[font=楷体_GB2312][size=5][b]四 种毗呬噜迦 <br/>
 复次，毘流波传种毗呬噜迦，此阿奢黎西藏相传为皮匠，其实乃东方底布梨一国王也。当阿奢黎毗流波至其国时，此王心生净信，请师摄受，遂授灌顶及诸教授，王即依之修习，生二次第证德，知已届作行事之时，当略修密行，乃依指示求一屠家女名有莲者依之修法，遂坏刹利帝种姓，为臣民等夺其王位，摈逐于外。而后修明禁行，游行诸国及森林间，得名种毗波王，言种跋者即屠夫也。[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]    彼等住于城外，杀鱼、鸟、兽而食，无肉卖时，即作歌舞、卖根果等邪恶之业，其行不净，乃劣种姓中尤卑贱者也。此阿奢黎本非屠种，以纳屠家女，故属屠种。名种毗者，乃有屠女之义。阿奢黎根性极利，自毘流波传法灌顶以迄被逐不迨六年，而后长时游行诸国，本国中疾疫流行，饥馑荐臻，苦难日深。诸占相师卜言，此乃有福德王被逐在外所致当速迎请。阿奢黎遂与明妃骑乘猛虎及母牦牛，手执毒蛇而返，众人见王，皆知其为得成就者，乃恭敬礼足。国中灾难皆息，国人之中诸具缘者请其摄受，遂传一切教授，即有多人证得悉地，成为胜成就者。[/b][/size][/font] <br/>
@@ -322,16 +335,16 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 而后至南方羯那吒迦国中于一林中与多眷属共修三摩地，又于阿吒吒贺萨塚中修行，国王三摩遮耶为施主，与五百瑜伽士女六月之间转会供轮（资粮轮），有一婆罗门种比丘不信资粮行，未求师许，即行外出，彼由破坏师教故，立即死亡。其余五百人无一不得悉地者。时其近旁有一外道国王，修建外道派塔一百八座，外道万人会聚开光，杀害种种食生之物，取其心识作为供品，积有三人之高，阿奢黎有一女侍来至其处为众所殴，阿奢黎乃示神力，黄昏之时所有诸塔悉皆倒立，一切供物散洒十方。翌日王及外道皆大惊惧，俱诣师所，请求宽恕，并求诸塔悉返原状。 <br/>
 <br/>
-尔时阿奢黎言：“汝等至今以后，不得为供神故再杀一生，若再杀者，所有诸塔皆当崩坏。”为示现佛法威力故，即言：“所有诸塔皆复原状。”诸塔即时矗立如前，谛观无异。后时其地一王又行牲祭，一百七塔皆分为二，或裂为三，迄今尚以铁箍之，所言外道之塔皆具迦陵（男根）者也。于是与彼长时利生，即此色身升虚空界，彼之弟子得成就者四人，为首即屠种瑜伽女、阿奢黎阿罗罗金刚、呬摩罗金刚（持金金刚）、中印度之啰多金刚（爱染金刚）四人也，其余复有阿吒婆迦、阿奢黎揭婆梨波、奢耶室利、难胜月、啰候罗金刚等，亦亲礼此阿奢黎之足而得少分悉地者也。此中由大成就者种毗波传屠女瑜伽女，彼传啰多金刚，彼传黑行，成为一派。又由屠女瑜伽女传行者，又成一派，此派乃拙火付法中之主系也。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:44</div><div class="post-body">[font=楷体_GB2312][size=5][b]五 屠女瑜伽女 <br/>
-屠女瑜伽女以四视法饶益有情，以修成四业真言及多种加行，凡有所作，威力极大，迄今尚存云。彼多咏金刚歌饶益有情，后生空界，彼乃呬噜迦对钟毗波师授记之印母也。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:49</div><div class="post-body">[font=楷体_GB2312][size=5][b]六 难胜月 <br/>
+尔时阿奢黎言：“汝等至今以后，不得为供神故再杀一生，若再杀者，所有诸塔皆当崩坏。”为示现佛法威力故，即言：“所有诸塔皆复原状。”诸塔即时矗立如前，谛观无异。后时其地一王又行牲祭，一百七塔皆分为二，或裂为三，迄今尚以铁箍之，所言外道之塔皆具迦陵（男根）者也。于是与彼长时利生，即此色身升虚空界，彼之弟子得成就者四人，为首即屠种瑜伽女、阿奢黎阿罗罗金刚、呬摩罗金刚（持金金刚）、中印度之啰多金刚（爱染金刚）四人也，其余复有阿吒婆迦、阿奢黎揭婆梨波、奢耶室利、难胜月、啰候罗金刚等，亦亲礼此阿奢黎之足而得少分悉地者也。此中由大成就者种毗波传屠女瑜伽女，彼传啰多金刚，彼传黑行，成为一派。又由屠女瑜伽女传行者，又成一派，此派乃拙火付法中之主系也。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:44</div><div class="post-body">[font=楷体_GB2312][size=5][b]五 屠女瑜伽女 <br/>
+屠女瑜伽女以四视法饶益有情，以修成四业真言及多种加行，凡有所作，威力极大，迄今尚存云。彼多咏金刚歌饶益有情，后生空界，彼乃呬噜迦对钟毗波师授记之印母也。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:49</div><div class="post-body">[font=楷体_GB2312][size=5][b]六 难胜月 <br/>
 难胜月者，亲从屠女瑜伽母请法，彼为极聪慧善巧之学者，曾从种毗学派中多人闻法，后唯就屠女瑜伽女一系中求传教授，于乌苌国专心修观，得遇钟毗波及其明母，授以诀要。乃于塚间以前颅骨筑一小舍，以一瑜伽女为修法役使，以一弟子送资生物，专精修行，终生殊胜证德，而见呬噜迦，获得共同悉地。其后一时作大会供轮，勾召一切空行母及·饰母（不能飞行）入会。[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]    洛护啰国有一美女将家中一切有果树木连根拔起捆来会供轮中，心知其夫夜间不在，实则隐于国中芒果树枝中也，此树亦为连根拔起捆来会中，时此会众正食大肉等，诸瑜伽士女共相受行，此人见已，于妻及会，心中不愉。阿奢黎言：“我等会中有密犯者，当解脱之。”翌晨此女复捆树木，还植本处，告其夫言：“汝已得阿奢黎苏突奢耶旃陀罗教命，汝已解脱。”言已其夫即死，是等神力无量无边。难胜月传法于其明妃苏部伽，彼传陀耶室利，彼传中金刚座，彼传俱萨黎。又有行者传僧伽罗瑜伽母，彼传难胜月。 <br/>
 <br/>
-[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:50</div><div class="post-body">[b][font=楷体_GB2312][size=5]七 啰睺罗金刚 <br/>
+[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:50</div><div class="post-body">[b][font=楷体_GB2312][size=5]七 啰睺罗金刚 <br/>
 难胜月传啰睺罗金刚，彼自幼年即见本尊，出生刹帝利种。为毗羯啰摩寺之博学比丘，即于寺中修习真言。上师告言：“当修普断行”。然我慢增上不从师教，暂未修普断行，后为净此罪，乃专精修法，然全无成就。上师俱拏阿羯啰教言：“当断汝舌及四肢”。遂断舌及四肢，即时观自在、金刚瑜伽母、大黑天、度母四尊现身加持。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
-[b][font=楷体_GB2312][size=5]    尔时上师若那婆羯啰教言：“汝当于此水中没身七日。”如言奉行，其身上血为极多水蛭所吮，几濒于死。由此二事遵上师教，罪障得净。后至南方修观，得证大印悉地，住于兴祗梨黑山岩隙中云。兴祗梨者非西藏蛮界，乃在印度南方也。此师传陀那室利。如上所说，此系唯传喜金刚之拙火也。啰睺罗金刚有谓其为那烂陀寺一学者，广传未说。又有随行小毗流波、黑行、种毗呬噜迦、难胜月、俱萨黎跋陀啰以次相承一派者，然其说不净。[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:53</div><div class="post-body">[b][font=楷体_GB2312][size=5]第三系 业印付法（羯摩） <br/>
+[b][font=楷体_GB2312][size=5]    尔时上师若那婆羯啰教言：“汝当于此水中没身七日。”如言奉行，其身上血为极多水蛭所吮，几濒于死。由此二事遵上师教，罪障得净。后至南方修观，得证大印悉地，住于兴祗梨黑山岩隙中云。兴祗梨者非西藏蛮界，乃在印度南方也。此师传陀那室利。如上所说，此系唯传喜金刚之拙火也。啰睺罗金刚有谓其为那烂陀寺一学者，广传未说。又有随行小毗流波、黑行、种毗呬噜迦、难胜月、俱萨黎跋陀啰以次相承一派者，然其说不净。[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:53</div><div class="post-body">[b][font=楷体_GB2312][size=5]第三系 业印付法（羯摩） <br/>
 <br/>
 一 因陀啰部底王 <br/>
 亲见佛面之大因陀啰部底王（大帝觉王），其本体即金刚手也，所有本具新证皆难思议，于此教法中为一切秘密真言之主。彼为乌苌国王，继王位后，安乐而住。时佛弟子诸阿罗汉，飞往余洲，往来过境。因陀啰部底王见之，以遥远故，不能细辨，乃问诸臣言：“此红鸟群为是何鸟？”诸臣答言：“陛下，此等非鸟，乃大仙人佛婆伽梵之声闻也。”王欲见佛，诸臣奏言：“路途遥远，不能抵达。”王即恳祷，翌日正午，佛及弟子五百声闻俱来乌苌，王遂广兴供养，请传成佛方便。[/size][/font][/b] <br/>
@@ -340,16 +353,16 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [font=楷体_GB2312][size=5][b]    即于其处出现无边大曼荼罗，为王灌顶，王立成就双运之身，世尊亦以一切续部付嘱于王，王亦为乌苌一切众生广宣法要，诸续部经集为经夹，后与妃众隐身不现成受用身，从一佛刹至一佛刹，结集一切密咒教法。其时不仅国王眷属，即乌苌国人民、部多、禽兽、旁生乃至虫蚁，所有一切，莫不皆依妙安乐道，而得悉地，证得虹身。 <br/>
 <br/>
-[/b]注 诺先师开示录云，释迦佛传印度王爷立地成佛之法亦是&#x27;汝是佛&#x27;一句话，王爷信得过，立时心地明白而成佛。当时释迦佛许多罗汉弟子均非常惊异，释迦佛乃对大众解释云：“汝们都是显教根基，王爷是密宗根基，各有因缘不同。”从此密宗法门即流布于人间，即指此因陀啰部底王也。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:54</div><div class="post-body">[b][font=楷体_GB2312][size=5]二 具德安乐游戏母 <br/>
+[/b]注 诺先师开示录云，释迦佛传印度王爷立地成佛之法亦是&#x27;汝是佛&#x27;一句话，王爷信得过，立时心地明白而成佛。当时释迦佛许多罗汉弟子均非常惊异，释迦佛乃对大众解释云：“汝们都是显教根基，王爷是密宗根基，各有因缘不同。”从此密宗法门即流布于人间，即指此因陀啰部底王也。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:54</div><div class="post-body">[b][font=楷体_GB2312][size=5]二 具德安乐游戏母 <br/>
 亲见大因陀啰部底王之空行母后仍住世者，为具德安乐游戏母，此与萨诃奢悉地，即俱生成就游戏母，乃异名同人也。此瑜伽母之事迹，如俱生成就释中所说，彼为乌仗那国中一小王之女，偶于一时与五百侍女俱游行林中，时乌仗那国一处有金刚手菩萨化身为仙人，名为安慰众生者，诸女遇之，见彼仙人头发蓬松可怖，以为妖魔，大惊遁逃，时嬉女告众女言：“汝等勿惧，我适见此人，心即生起殊胜喜乐三昧，此人乃大德也。”[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
-[b][font=楷体_GB2312][size=5]    即与五百侍女礼仙人足。仙人亦以手抚乐嬉女顶，遂能忆念往昔生中所得灌顶智慧，现证本身俱生心性，乃对眷属侍女宣说，故彼亦名大瑜伽母。此女传大莲花金刚，此人后传牧豕者无肢金刚，彼传中莲花金刚海生，彼传中因陀啰部底，彼传阇烂陀里波，彼传黑行，彼传善怙，彼传无量金刚，彼传俱萨罗跋陀罗。[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:55</div><div class="post-body">[font=楷体_GB2312][size=5][b]三 大莲花金刚传 <br/>
+[b][font=楷体_GB2312][size=5]    即与五百侍女礼仙人足。仙人亦以手抚乐嬉女顶，遂能忆念往昔生中所得灌顶智慧，现证本身俱生心性，乃对眷属侍女宣说，故彼亦名大瑜伽母。此女传大莲花金刚，此人后传牧豕者无肢金刚，彼传中莲花金刚海生，彼传中因陀啰部底，彼传阇烂陀里波，彼传黑行，彼传善怙，彼传无量金刚，彼传俱萨罗跋陀罗。[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:55</div><div class="post-body">[font=楷体_GB2312][size=5][b]三 大莲花金刚传 <br/>
 大莲花金刚者，生于摩噜国中一婆罗门种家，三藏及一切论典皆极善巧，后诣乌仗那国学秘密真言、外续部多种，亦称综练，遂修诸密法，获得夜叉女及丹药等共同悉地，然于真言实义犹未了达，乃游方乌仗那各处。遇一面见金刚萨垛之阿奢黎授以灌顶，遂见自性实相，其心念言：“虽手印灌顶智能显真言义，然何不可见唯诠此事之一部经藏。”乃专心谛求，感得乐嬉女与眷属多百千人俱来阿阇黎前，授以四印口诀及密集为主之无上续部多种。由现证如上诸法门义理故，即身证得大手印最胜悉地，终于十二月间得大金刚持果位。此师广宣诸教授，令乌仗那国无量众生皆得殊胜及共同悉地，传此师撰有秘密成就论云。 <br/>
 <br/>
-[/b]注 此大莲花金刚出世在莲师前，莲师得成就后，乌仗那人以其功德与此师同等，故袭此师之名而尊称莲师为莲花金刚，后世不究史传，以二师为一人者，误。据多氏印度佛教史所述，此师实与龙树之弟子提婆同时，行化时期为公元四世纪初叶。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:56</div><div class="post-body">[font=楷体_GB2312][size=5][b]四 无肢金刚传 <br/>
+[/b]注 此大莲花金刚出世在莲师前，莲师得成就后，乌仗那人以其功德与此师同等，故袭此师之名而尊称莲师为莲花金刚，后世不究史传，以二师为一人者，误。据多氏印度佛教史所述，此师实与龙树之弟子提婆同时，行化时期为公元四世纪初叶。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:56</div><div class="post-body">[font=楷体_GB2312][size=5][b]四 无肢金刚传 <br/>
 无肢金刚者，乃一下贱种姓而具有法缘者，此师虽已证入大手印最胜悉地，然念己身所作当禀阿奢黎命而行，乃请于师。师言：“汝当依止牧猪女，行牧猪事。当渐证得金刚萨垛之身。”彼虽遂至乌仗那国北方一城中，以牧猪行饶益众生与诸有缘者授以灌顶并宣四印教授，皆令成熟解脱。人共成为吉祥牧豕师。 <br/>
 <br/>
-[/b]　注 无肢金刚，著有般若智慧决定成就。其梵文原本已发现。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:59</div><div class="post-body">[b][font=楷体_GB2312][size=5]五 海生金刚传 <br/>
+[/b]　注 无肢金刚，著有般若智慧决定成就。其梵文原本已发现。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 10:59</div><div class="post-body">[b][font=楷体_GB2312][size=5]五 海生金刚传 <br/>
 无肢金刚之弟子为海生金刚。此师原名萨洛噜诃，即藏语海生之义也，师为刹帝利种姓，精娴一切明处，为大班祗多（大博士），通密咒续部多种。此师曾为一国王所供养，有无数弟子听其说法，时有樵薪老妪前来采薪，先笑后泣。后师至老妪之家而问因缘，老妪言：“先笑者，见汝说法形仪与金刚持说法无异，故笑也。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]    后泣者，以汝未说金刚持密义，故泣也。”师言：“若尔请断我疑。”老妪言：“断疑我所不能，汝当往求吉祥牧豕师。”师问言彼住何处，答言，彼住北方一恶城中。此阿奢黎乃前往寻求，与北方一城中，遇吉祥牧豕师驱一大群猪，一贱种女与之偕行，负一大捆柴。师知此等皆为表法，负柴担者，乃嗔恚不断当下清净之相；与贱女偕者，乃贪欲清净之相；驱群猪者，乃愚痴清净之相。即了知之遂求摄受，牧豕师又驱豕至一污秽猪圈岩洞中而住，师随至彼，入夜以首枕门限而卧。[/size][/font][/b] <br/>
@@ -364,18 +377,18 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]    王乃潜究，欲悉底蕴。然至晚间，王亦心迷头目晕眩，见其夫人合掌向天，腾空而去，翌晨又于宫中出现，不知从何而至。次晚，王及此女以黄丹末，令其尽力散洒，女如言散洒，翌晨王循黄丹末迹至阿奢黎前，王大嗔怒，与侍从俱欲治罚师，时阿奢黎修金刚曲刀加行旋转一陶瓶之颈，王及侍从皆转面向后不能复正。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
-[b][font=楷体_GB2312][size=5]    尔时王等怖畏敬礼，阿奢黎言：“汝当入于佛教，若不尔者，尔头当断。”王遂入于佛教，并建一呬噜迦殿威灵显著，加持极大。此阿奢黎曾行无量利生事业，证得喜金刚真实果位。此阿奢黎之弟子为中因陀啰部底王，彼即上述以火焚烧阿奢黎身者，此事兹不广开，另于毳衣传中详之。又一传承派别中，由因陀啰部底王亲传莲花生，莲花生传俱萨罗，俱萨罗传小俱萨罗跋陀罗。[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:00</div><div class="post-body">[font=楷体_GB2312][size=5][b]第四系 光明教授 <br/>
+[b][font=楷体_GB2312][size=5]    尔时王等怖畏敬礼，阿奢黎言：“汝当入于佛教，若不尔者，尔头当断。”王遂入于佛教，并建一呬噜迦殿威灵显著，加持极大。此阿奢黎曾行无量利生事业，证得喜金刚真实果位。此阿奢黎之弟子为中因陀啰部底王，彼即上述以火焚烧阿奢黎身者，此事兹不广开，另于毳衣传中详之。又一传承派别中，由因陀啰部底王亲传莲花生，莲花生传俱萨罗，俱萨罗传小俱萨罗跋陀罗。[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:00</div><div class="post-body">[font=楷体_GB2312][size=5][b]第四系 光明教授 <br/>
 <br/>
 一 大阿奢黎马胜传 <br/>
 此法乃由阿奢黎金刚铃于乌仗那国亲从金刚空行母请得者也。若据远传承而言，则有大阿奢黎马胜者，证大手印悉地，修习光明不可思议三摩地，于乌仗那国一城门旁结庵而住，国王及众人等常来戏弄侮慢此师。后于一时，以乌仗那之大，无间山河悉有马群充遍，尽食国中一切所有，王及众人驱逐马群，虽渐逼近终不能获，有数马逸入阿奢黎茅舍中，众人前来察观不见一马，乃知马皆幻化，亦知阿奢黎为得成就者，时阿阇黎已以如意神足飞往非人处矣。 <br/>
 <br/>
-[/b]注 据多氏印度佛教史所述，此师约于无著世亲同时，故其出世当在公元五世纪初叶，乌仗那即今之阿富汗西北部。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:01</div><div class="post-body">[b][font=楷体_GB2312][size=5]二 琵琶师传 <br/>
-后乌仗那王等从马胜弟子琵琶师请求教授。此阿奢黎本为刹帝利种，阿奢黎马胜为其灌顶并传教授，彼白师言：“我虽能舍王种事业，然不能舍琵琶之声，当云何修？”师遂传以依琵琶声而摄心之教授，由此证得不可思议悉地云。[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:02</div><div class="post-body">[b][font=楷体_GB2312][size=5]三 嬉女金刚传 <br/>
+[/b]注 据多氏印度佛教史所述，此师约于无著世亲同时，故其出世当在公元五世纪初叶，乌仗那即今之阿富汗西北部。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:01</div><div class="post-body">[b][font=楷体_GB2312][size=5]二 琵琶师传 <br/>
+后乌仗那王等从马胜弟子琵琶师请求教授。此阿奢黎本为刹帝利种，阿奢黎马胜为其灌顶并传教授，彼白师言：“我虽能舍王种事业，然不能舍琵琶之声，当云何修？”师遂传以依琵琶声而摄心之教授，由此证得不可思议悉地云。[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:02</div><div class="post-body">[b][font=楷体_GB2312][size=5]三 嬉女金刚传 <br/>
 琵琶师之弟子为卖酒女，嬉女金刚亦瑜伽母。此师乃为乌仗那国王之酿酒者也，当师十六岁时，阿奢黎钟毗呬噜迦来乌仗那说法，其王以喜外道故，未能调伏。阿奢黎乃至此卖酒女处咨以方便，此女告言,以蛇怖之则受化矣。于是阿奢黎用存想法化一毒蛇，具有触毒，围绕王宫。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [font=楷体_GB2312][size=5][b]    王大惊怖无皈依处，卖酒女言：“诸外道师既无力救，当求钟毗波师。”王遂至心祈请，时阿奢黎即至其处，所有毒蛇均入地下。王与眷属皆信佛法，长时供养阿奢黎。尔时见此卖酒女为法器故，钟毗波及琵琶师二人，均为灌顶并传教授，成为获得威力之瑜伽母，而吉祥夫人亦授以大乐教授，尤以阿奢黎毗拏波（琵琶师）传以不可思议之教授，故成为诸具光明金刚心瑜伽母之主，广行无量利生事业，亦号如意瑜伽母云。 <br/>
 <br/>
-[/b]注 吉祥夫人，即因陀啰部底王之妃。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:05</div><div class="post-body">[b][font=楷体_GB2312][size=5]四 金刚铃传 <br/>
+[/b]注 吉祥夫人，即因陀啰部底王之妃。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:05</div><div class="post-body">[b][font=楷体_GB2312][size=5]四 金刚铃传 <br/>
 嬉女金刚传法金刚铃。此阿阇黎为邬胝毗舍附近一刹帝利种，于那邻陀寺出家，得名慧藏吉祥，而后成为大智者，摧伏外道争论，敌者共称为尊胜天。传师曾一度为那邻陀寺之亲教师，而后遇得成就者陀里迦波，遂请求灌顶及传真实义，依之修观，师授记言：“若往往乌仗那者当生悉地。”遂前往乌仗那，于彼遇瑜伽母嬉女金刚，作牧猪女状。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]    嬉女金刚授以大手印不可思议大欲理趣，遂悟入一切真实义。后至东方邬胝毘舍一树林中修观，生起二次第殊胜证解。时此国王入林狩猎，见师心念比丘无活命物真可怜，即请师入城。阿奢黎言：“不应轻侮善知诸事智者等，较小草尖尤小受用彼不着，如于不绝滴酒之滨有巨象，身形粗壮细莲花丝不能系缚彼。”王心念言，此比丘辱我，我当以恶报之。[/size][/font][/b] <br/>
@@ -386,7 +399,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [font=楷体_GB2312][size=5][b]    尔时阿奢黎以号角口击地，地穿七穴，涌出大水，阿奢黎及母双身化为呬噜迦双身，童男童女化为铃杵，阿奢黎两手执持，腾空而起。时诸人等渐为水没，乃祈求阿奢黎，阿奢黎言：“当求观自在尊。”诸人皆诵敬礼观自在，是时水中自然现出观自在石像，其水即绕此像，然后复入地中，后阿奢黎即对此国人广宣金刚乘法，实得悉地之弟子无量无边云。 <br/>
 <br/>
-[/b]注  金刚铃师据传为清辨菩萨之后身，清辨为南天竺摩椤耶国刹帝利种，出家后至中印度，从龙友之弟子僧护学龙树论，后回南印，为五百僧伽蓝之主。此师以提婆弟子佛护所解中论诸作未惬密意，遂造般若灯掌尊等论成经部行中观自续派，据玄奘法师传说，师曾至摩揭陀欲与护法菩萨诤论空有两宗是非，护法菩萨拒而不见，未果所怀（前后九年）回本国后即修金刚手法，竭诚三年面见本尊，令入驮那羯磔迦国阿修罗窟待弥勒菩萨降生（见大唐西域记卷十驮那羯磔迦国条），奘师传说，师入修罗窟时，年甫二十八岁云（见成唯识论述记义演），提婆为龙树弟子，鸠摩罗什译有提婆传及提婆所造百论。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:08</div><div class="post-body">[b][font=楷体_GB2312][size=5]五 毳衣师传 <br/>
+[/b]注  金刚铃师据传为清辨菩萨之后身，清辨为南天竺摩椤耶国刹帝利种，出家后至中印度，从龙友之弟子僧护学龙树论，后回南印，为五百僧伽蓝之主。此师以提婆弟子佛护所解中论诸作未惬密意，遂造般若灯掌尊等论成经部行中观自续派，据玄奘法师传说，师曾至摩揭陀欲与护法菩萨诤论空有两宗是非，护法菩萨拒而不见，未果所怀（前后九年）回本国后即修金刚手法，竭诚三年面见本尊，令入驮那羯磔迦国阿修罗窟待弥勒菩萨降生（见大唐西域记卷十驮那羯磔迦国条），奘师传说，师入修罗窟时，年甫二十八岁云（见成唯识论述记义演），提婆为龙树弟子，鸠摩罗什译有提婆传及提婆所造百论。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:08</div><div class="post-body">[b][font=楷体_GB2312][size=5]五 毳衣师传 <br/>
 金刚铃传毳衣师。此阿阇黎为一王子，其乡土亦为乌仗那之一部，亦有谓为邬祗毘舍国者。师壮岁于一精舍出家，精娴三藏，后至东方遇阿奢黎金刚铃，于胜乐轮等曼荼罗中授以灌顶，遂依师教修观，得殊胜智。又诣西方乌仗那国空行母处，诸外道空行母以花鬘付其手中，师欲受取，时佛教空行母等现身告言：“子，受花非理，此乃外道空行母，若受其花当随彼行。”[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]    又言：“此处外道与内道空行母已有要契，先受谁花即当随行也。”尔时阿奢黎修定而住，迨夜半时，忽有大声惊心动魄，谛观乃诸外道空行母降霪石雨，师遂修生起次第，随师所修守护轮量，皆无损坏，师念生起次第威力若是，当更显示圆满次第威力，念已即入无相三摩地，一切大石皆于空中碎裂无余。由此诸空行母所作障碍不能为害。尔时师为乞食故，于城门前数数遇王，每遇王时王必询问,然师不置答。[/size][/font][/b] <br/>
@@ -403,7 +416,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [font=楷体_GB2312][size=5][b]     白言：“途程十二由旬何得不冷？”阿奢黎言：“汝当诵念‘因陀啰部底王若为真实修胜梵行，我当立即至国王前。诵已即可速至。’”此人心念，此阿奢黎乃一妄语者耳，似此与一切人现量相违之事，谁其信之。然仍依教而作，须臾之间即至国王前殿百千人众聚会之中，来献余羹，俱陈前事，并献俱单毗梨岩窟赤土，成就河中赤黄色水，医罗山上所有种种成就药物，伽舍佉祖啰树林之中三果，青果林中之三谷，成就湖中之莲花等种种真实凭据，以示诸人，皆生希有，方知国王亦为得成就者也，其后国王及阿奢黎二人，对乌仗那国诸人宣扬教授，皆得悉地，而成瑜伽师，乌仗那国如彼广大亦几空芜云。 <br/>
 <br/>
-[/b]注  事实西藏所传俱生成就释中所述少有不同，西藏原有之俱生成就释喻中则未述此事。有数梵本亦无此事，然梵土论典多有失载，且文词互有详略，青史等中已有抉择也。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:24</div><div class="post-body">[b][font=楷体_GB2312][size=5]六 奢烂达梨波传 <br/>
+[/b]注  事实西藏所传俱生成就释中所述少有不同，西藏原有之俱生成就释喻中则未述此事。有数梵本亦无此事，然梵土论典多有失载，且文词互有详略，青史等中已有抉择也。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:24</div><div class="post-body">[b][font=楷体_GB2312][size=5]六 奢烂达梨波传 <br/>
 阿奢黎因陀啰部底及毳衣二师，传光明及大乐教授于得成就者奢烂达梨波。此阿奢黎降生之地为西方辛头国那埚罗佗侘城，师生一首陀家，以福德力，受用丰饶，后于一僧寺出家为比丘，从毳衣阿奢黎请求教授，一意观修，时空中有声告言：“汝当诣乌仗那国修观，可得所求悉地。”乃往乌仗那国从因陀啰部底王、吉祥夫人羯遮波陀阿奢黎听闻一切续部教授。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]    后至尸林修法，于彼现见吉祥呬噜迦曼荼罗，众多金刚空行母为授灌顶，即身证得大手印最胜悉地果位。而后长时安住此国，随缘饶益其土众生，有一城名俱单婆啰，其城诸人对阿奢黎数兴谗谤，然阿奢黎从不起嗔，后于一时，城中有三豪贵人至四衢道，见阿奢黎于彼入定，其一人言：“此瑜伽师乃一盲人。”另一人言：“此人非瑜伽师，乃一哑者耳。”又一人言：“此乃一死尸耳。”[/size][/font][/b] <br/>
@@ -454,18 +467,18 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5] <br/>
 注二 此王约于毗瑟纽啰奢逝世顷出世，以妹嫁无垢月，生瞿毗旃陀罗，后者约于法称入灭之年，今考定在公元六零零年左右。 <br/>
 注三 相传阿奢黎奢烂达梨波，迄今已四度来人间矣。 <br/>
-注四 此阿奢黎弟子得成就者共传有如日月者二人，即先出世之黑行及后出世之佛智足二师也。余有大成就者膻底波、小毗流波、婆啰陀利王、瞿毗旃陀罗等无量弟子。尼波罗即今之尼泊尔。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:28</div><div class="post-body">[b][font=楷体_GB2312][size=5]七 黑行师传 <br/>
+注四 此阿奢黎弟子得成就者共传有如日月者二人，即先出世之黑行及后出世之佛智足二师也。余有大成就者膻底波、小毗流波、婆啰陀利王、瞿毗旃陀罗等无量弟子。尼波罗即今之尼泊尔。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:28</div><div class="post-body">[b][font=楷体_GB2312][size=5]七 黑行师传 <br/>
 <br/>
 此中奢烂达梨波弟子之首即黑行师。时轮续后分悬记云，手持佉吒网迦、骨骼严具、酒器、小鼓，名中有黑字，此黑行师之行迹。西藏旧说以师为生于羯那国，若据今日印度诸瑜伽师口传则师生于毗特耶那揭罗，然羯那与毗特耶那揭罗实乃邻国，应知前代之说亦从印度传来也。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [font=楷体_GB2312][size=5][b]    师之种姓，印度相传为婆罗门种，西藏旧说则为吠舍种。然师之度诃歌中有云‘婆罗门子踽踽行’，显为婆罗门种也。喇却饶译大黑续授记云，如是于乌鲁毘舍国中，有一士夫具大精进，其名为首类之首音，严以第一摩多，及七类之第四音（按即迦椤，意为黑也。）此瑜伽师当得八种悉地，瞻部洲中空前绝后无与等者，弟子六人皆当证得断舍身相大手印果。以茏经中国土、名号、悉地，弟子等皆已译说也，此大阿奢黎之行事，于另传详，可参阅之。 <br/>
 <br/>
-[/b]注 佛所悬记此阿奢黎之六弟子，即贤足、摩呬啰、婆陀啰、沙弥青捕波、陀摩波、度摩波等，有谓婆陀啰与跋陀啰波（贤者）为一人者。又瑜伽母有弥佉啰迦那佉啰、波那第波等，皆于阿奢黎住世之时即得最胜悉地。又大臣俱舍椤那陀，国王黎椤旃陀啰，无量金刚王子椤婆夷等亦得不可思议瑜伽自在之力。又婆罗门持吉祥等多人亦得面见本尊之悉地云。阿奢黎跋陀啰波即上文之贤足，传法于·啰波，彼传小黑行，彼传部婆黎波，彼传生于西藏部婆罗登，彼传小俱萨黎跋陀啰，衍为一派。又黑行师传法于共称为瞿呬耶波之贤足，此阿奢黎曾以神通游诸方土，寻求为师障碍之空行母（荼吉尼）婆呼黎不获，其后知其在提毗俱吒，化为一尘，隐于一与彼椤树干中，乃捉其发结自树干中曳出之，以修法成就之宝刀斫而戮之，此师传法于底黎波，西藏旧传则谓瞿呬耶波传案多哩伽，后由案传底黎波也。又黑行师传善怙，此师为大臣时密修观行，获得少分悉地，彼于王前侍立之时，以神通力遥见己佛堂中一酪供品为猫所吮，作势驱之，王问何故，具以实告，王知其已得成就，遂尊奉供养，历时不久，王亦证五神通，而此大臣成为瑜伽行大自在者，此师亦传法于底黎波云[b]。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:30</div><div class="post-body">[font=楷体_GB2312][size=5][b]九 底黎波传 <br/>
+[/b]注 佛所悬记此阿奢黎之六弟子，即贤足、摩呬啰、婆陀啰、沙弥青捕波、陀摩波、度摩波等，有谓婆陀啰与跋陀啰波（贤者）为一人者。又瑜伽母有弥佉啰迦那佉啰、波那第波等，皆于阿奢黎住世之时即得最胜悉地。又大臣俱舍椤那陀，国王黎椤旃陀啰，无量金刚王子椤婆夷等亦得不可思议瑜伽自在之力。又婆罗门持吉祥等多人亦得面见本尊之悉地云。阿奢黎跋陀啰波即上文之贤足，传法于·啰波，彼传小黑行，彼传部婆黎波，彼传生于西藏部婆罗登，彼传小俱萨黎跋陀啰，衍为一派。又黑行师传法于共称为瞿呬耶波之贤足，此阿奢黎曾以神通游诸方土，寻求为师障碍之空行母（荼吉尼）婆呼黎不获，其后知其在提毗俱吒，化为一尘，隐于一与彼椤树干中，乃捉其发结自树干中曳出之，以修法成就之宝刀斫而戮之，此师传法于底黎波，西藏旧传则谓瞿呬耶波传案多哩伽，后由案传底黎波也。又黑行师传善怙，此师为大臣时密修观行，获得少分悉地，彼于王前侍立之时，以神通力遥见己佛堂中一酪供品为猫所吮，作势驱之，王问何故，具以实告，王知其已得成就，遂尊奉供养，历时不久，王亦证五神通，而此大臣成为瑜伽行大自在者，此师亦传法于底黎波云[b]。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:30</div><div class="post-body">[font=楷体_GB2312][size=5][b]九 底黎波传 <br/>
 阿奢黎底黎波者，生于东方遮质伽保城一婆罗门家。年岁既长，晓了婆罗门宗一切论典，其后游诸方土行乞化时，于一僧寺见诸僧众，心生净信，于彼出家，通晓三藏理趣，于先崇信阿奢黎所，立曼荼罗，从受灌顶，思维修习一切教授。历时不久，生殊胜智，面见无边成就士夫，与共谈义，咨询所疑，得传诀要，常见吉祥呬噜迦及空行母众，得其加持，以此为缘，智慧辗转增长，后于其地一瑜伽母榨胡麻者之女合修，为诸僧众所摈，乃至市中作榨胡麻业。[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]    由先为婆罗门之般祗多（智者）而成比丘，难有大利养，恭敬亦渐衰损，以为榨胡麻女之主，故名底黎波，即榨胡麻者之义也。而后游诸方土，于乌仗那等国得诸空行母一切诀要。师以榨胡麻为业，如于胡麻中出油，依上师口诀，扼身之要，起具生智，现证本面，得胜悉地，顿见十方一切佛面。师以己所悟解为他宣说，异时于城中歌唱所悟，然一切人心生疑惑。于彭伽罗（孟加拉）一城中有多百千人来视阿奢黎见阿奢黎与其明妃住空约一人高而榨胡麻，众人竞问所疑，各以所悟作歌答之，尔时来会诸人皆悟实义，证得悉地，由此共称师为得成就者底黎波。[/b][/size][/font][font=楷体_GB2312][size=5][b]师饶益众生历时颇久，不舍肉身往诸空行刹土云。[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b] <br/>
-师之弟子有游戏金刚及那洛波二人，前者事迹于此不述，当于密多罗佐似系中详之。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:35</div><div class="post-body">[font=楷体_GB2312][size=5][b]十 那洛波传 <br/>
+师之弟子有游戏金刚及那洛波二人，前者事迹于此不述，当于密多罗佐似系中详之。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:35</div><div class="post-body">[font=楷体_GB2312][size=5][b]十 那洛波传 <br/>
 那洛波者，生于迦湿弥罗国一婆罗门家，幼即成为外道班祗多（智者），由修外道真言故，遂舍婆罗门种所行，名为阿嚩都底。一时入于一卖酒女家中，其处有一佛教小师以不堪忍那洛波气势，遂避而他去，遗一经书于其坐处，那洛波取而观之，于佛法深生信仰，乃诣中印，于佛教中出家，成为最大班祗多，为那邻陀寺、毘羯啰摩尸罗寺之北门守护者，师为折服外道等故，广作说法听法等事，然自心则搅牛乳顷亦未定住。[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]    每于夜间，常修胜乐轮，得多空行母现身警策云：“于东方有阿奢黎名底黎波，汝诣其前，可得悉地。”师遂往东方，遍诸方所寻求底黎波不获。后于一时有一僧寺僧众会食，门自内闭，适于其时，那洛波在厨房中见一青色人，污秽异常，取活鱼多条于火炉上烤之，于时那洛波遣之不得，后众僧至，大为忿恼，青色人言：“若汝等不喜者，可投之于水。”遂以熟鱼投水，皆调尾而逝。[/b][/size][/font] <br/>
@@ -488,12 +501,12 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [/b]注一  此阿奢黎之弟子有诤论世一切智人扇底波等护门班祗多、主尊阿底峡等佛教宗师多人，其不共弟子中有持释续者，精父续者四人，精母续者四人，共为八人。初四人为黑无畏金刚、毕卓诃度、奢耶迦椤、迦湿弥罗国阿羯啰悉地。后四人为摩那迦尸利、法意、大滂丁波、慧护，此诸人等亦皆证得真言威力也。有谓比卓诃度与法意为一人，而于前四人计入智藏，其得成就之四弟子为胜德钟毗波、黎黎波、建陀波、迦苏黎波，四人皆得悉地。以上乃西藏旧传之四十二大弟子也。[/size][/font] <br/>
 [font=楷体_GB2312][size=5] <br/>
-注二  那洛波大师为大手印宗最显赫之得成就者，西藏迦举派（白教）之祖译师玛尔巴即从其学法。其在世时间，西藏相传其生于丙辰年，而示寂于阿提沙入藏前之庚辰年，考其师底黎波于公元九世纪初入藏之胜友并世，则那洛波当生于公元八三六年之丙辰，又阿底峡于公元一零四二年至西藏之阿里，则那洛波当示寂于公元一零四零年之庚辰，盖住世二零五年矣。密乘诸祖以修法延寿，其事甚多，汉土先贤以有道而长寿者亦不乏其人，如荀子世寿即在一百六十以上，汉之张苍、唐之曹宪亦皆寿考百余岁，若魏文候乐人虞公年且二百数十岁，载在史传斑斑可考，故此亦无庸置疑也。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:36</div><div class="post-body">[b][font=楷体_GB2312][size=5]十一 胜德钟毗波传 <br/>
+注二  那洛波大师为大手印宗最显赫之得成就者，西藏迦举派（白教）之祖译师玛尔巴即从其学法。其在世时间，西藏相传其生于丙辰年，而示寂于阿提沙入藏前之庚辰年，考其师底黎波于公元九世纪初入藏之胜友并世，则那洛波当生于公元八三六年之丙辰，又阿底峡于公元一零四二年至西藏之阿里，则那洛波当示寂于公元一零四零年之庚辰，盖住世二零五年矣。密乘诸祖以修法延寿，其事甚多，汉土先贤以有道而长寿者亦不乏其人，如荀子世寿即在一百六十以上，汉之张苍、唐之曹宪亦皆寿考百余岁，若魏文候乐人虞公年且二百数十岁，载在史传斑斑可考，故此亦无庸置疑也。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:36</div><div class="post-body">[b][font=楷体_GB2312][size=5]十一 胜德钟毗波传 <br/>
 胜德钟毗波者，最初为国王之象奴，不识读诵，那洛波住于一僧寺时钟毘波心生渴仰，数献乳酥。尔时那洛波教以发心，并于喜金刚曼荼罗中为授灌顶，教修观法，彼亦如法修观，偶于一时落水漂没，为鱼所吞，于鱼腹中得见呬噜迦曼荼罗，无损而出。而后于阿奢黎前，修普断行，专心观想，证入最胜悉地，于一切法，尤以一切金刚乘法慧境日增，遂为众多弟子说法，皆得悉地。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [font=楷体_GB2312][size=5][b]    后因需撰论典多部，乃再学习文字，一切外道及内宗智者欲来侵凌，皆以法语折服，声名洋溢一切方所，为阿底峡之上师。西藏诸师则谓阿底峡实未亲炙，有谓不动胜义修法虽为阿底峡著，实从钟毗波闻也，然彼所著四论，现存阿底峡之释，其中颇存亲承之言，余曾遇印度诸智者，亲见此释之梵文原本，为阿奢黎涅磐吉祥所持有也。 <br/>
 <br/>
-[/b]注  此师又名小钟毗波[b]。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:39</div><div class="post-body">[b][font=楷体_GB2312][size=5]十二 小俱萨罗贤传 <br/>
+[/b]注  此师又名小钟毗波[b]。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:39</div><div class="post-body">[b][font=楷体_GB2312][size=5]十二 小俱萨罗贤传 <br/>
 小俱萨罗贤从阿奢黎小钟毗波闻法，此阿奢黎生于印度西方之寐婆啰，幼即精娴一切明处。就一个外道请求出家，未许，心念若尔当破坏一切外道之法，遂至吉祥金刚座师前出家，一切经藏皆善巧修学，后又于迦摩路国中伪为婆罗门，从外道宗师及婆罗门约六人精研外道一切宗义，凡迦摩路国之幻术、毗则企黎派之咒术多种、空行母之恶咒多种、尸央讥黎之咒法多种皆事学修。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]    后至西方原外道宗师处，请羯拏王主持会聚佛教瑜伽师及智者约两千人，外道约八千人，共举辩论。阿奢黎以娴明处，凡外道之所有因义皆一一破之，其后又较神变之力，一外道瑜伽师示现空中二星令其落地，作人头状，大如屋舍，阿奢黎知为障眼法，乃诵摧坏真言，二者皆成炭粒，众人乃悉其为障眼法也，有数外道于身上示现火焰等事，阿奢黎化水沃之，皆立澌灭，法悉为破。[/size][/font][/b] <br/>
@@ -504,10 +517,10 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [font=楷体_GB2312][size=5][b]    故与明妃二十人俱游诸方土，修有戏论行凡十三年，一切行者瑜伽师皆接足礼敬，最后安住提毘俱吒寺七十二年，传说此阿奢黎住世凡一百五十七年云。 <br/>
 <br/>
-[/b]注  此师辈份及在世时代均与西藏之弥拉日巴相当，成就亦相埒也。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:40</div><div class="post-body">[b][font=楷体_GB2312][size=5]十三 阿悉多伽那传 <br/>
+[/b]注  此师辈份及在世时代均与西藏之弥拉日巴相当，成就亦相埒也。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:40</div><div class="post-body">[b][font=楷体_GB2312][size=5]十三 阿悉多伽那传 <br/>
 小俱萨罗贤之弟子甚多，以阿悉多伽那最著，此师初为外道瑜伽师，生于波啰耶伽国，精娴声明及因明，修大自在天得成就汞水，遂诣于众多非人处所，身容不衰，又以母女及部多真言多种行降服事，因之我慢炽盛，后与一行者瑜伽师较量法力，其汞水悉地为行者瑜伽师法力所夺，其降服威力亦无所施，乃于佛教生起净信，从般祗多光胄、大阿奢黎宝护、毗部底旃陀罗及天生等多人请求教授，于胜乐、喜金刚、大威德、四座、密集五部续皆得传授，明悉法义。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
-[b][font=楷体_GB2312][size=5]    后遇阿奢黎小俱萨罗贤授以相承一切诀要，专心观修，以尘劳损心，遂至林中七年，修难苦行，于彼得见古昔等成就者卢伊波及毘耶陀黎波等多人，皆得诀要。彼等告言,汝可入城，修欲乐境。翌晨入城，于彼见有歌舞者多人歌舞嬉戏，以此为因，其心相续即得解脱，证得悉地。其后常以神通为诸众生宣示法要，于诸国土为诸有缘示现希有之相，宣说精要法义，诸人皆不可思议解脱。此阿奢黎现身住世约二百年，彼撰有证道歌，及续部论多种。[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:43</div><div class="post-body">[b][font=楷体_GB2312][size=5]十四 智友传 <br/>
+[b][font=楷体_GB2312][size=5]    后遇阿奢黎小俱萨罗贤授以相承一切诀要，专心观修，以尘劳损心，遂至林中七年，修难苦行，于彼得见古昔等成就者卢伊波及毘耶陀黎波等多人，皆得诀要。彼等告言,汝可入城，修欲乐境。翌晨入城，于彼见有歌舞者多人歌舞嬉戏，以此为因，其心相续即得解脱，证得悉地。其后常以神通为诸众生宣示法要，于诸国土为诸有缘示现希有之相，宣说精要法义，诸人皆不可思议解脱。此阿奢黎现身住世约二百年，彼撰有证道歌，及续部论多种。[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:43</div><div class="post-body">[b][font=楷体_GB2312][size=5]十四 智友传 <br/>
 阿悉多伽那传智友，此阿奢黎属首陀种姓，生于底布啰国，于东方奢伽陀啰精舍，依正量部出家，通晓本部毗奈耶藏及毗昙藏，复娴大乘教典多种，尤以亲近精娴真言密部之阿奢黎多人，故于密集、焰曼德迦、乐喜月密明点、大印明点、时轮等法皆善了知，又曾得摩诃摩耶及四座之法，如理修观之时，得遇得成就者阿悉多伽那，三系付法之诀要尽授无遗，其后心生圆满次第之殊胜证解，以白于师，师言：“今后十二年间，月洲有一智慧成就之阿奢黎出，汝以我之教授为因，以彼之教授为缘，当得大手印悉地。”[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]    此后十二年间修观，生起微妙证解，心念今可作一行者，又念然今日外道甚多，众人若见，必生戏谑，此于佛教有损，遂暂延搁。此时往诣月洲，有阿奢黎喜护由地下吉祥门出，亦来此洲，与师相遇，乃请传四印教授，尔后又为说大手印，得见上师智身，现证心性俱生大乐断一切疑，达法源底。阿奢黎喜护入吉祥门后，经百五十年出于东方，与阿悉多伽那遇，其后近二百年时于此阿奢黎相遇也。[/size][/font][/b] <br/>
@@ -516,7 +529,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [font=楷体_GB2312][size=5][b]    于是阿奢黎遂入其庙，作观画状久不作礼，庙祝以杖击之，阿奢黎乃吹号角，此奢伽那陀庙一切石像肢分根身皆为齑粉，灵异亦绝，昔日佛教一家又复兴盛，直至三王（印度）时代，约百年间，邬胝舍国佛教极盛，迄今仍有孑遗也。此阿奢黎亦于四视法无碍成就，饶益有情，尤以现证实相之义，广行说法，实于诤论之世为殿最也，由得等虚空之证解，故泯身归空云。弟子得共同悉地者甚多，其现证最胜悉地者，有阿奢黎达摩羯啰于铜洲得虹身，又有瑜伽母月光及瑜伽母婆奢噜噜为前三弟子，连后弟子寂密共四人也。 <br/>
 <br/>
-[/b]注 铜洲在锡兰之西南一岛。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:50</div><div class="post-body">[b][font=楷体_GB2312][size=5]第五系 生起次第 <br/>
+[/b]注 铜洲在锡兰之西南一岛。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:50</div><div class="post-body">[b][font=楷体_GB2312][size=5]第五系 生起次第 <br/>
 <br/>
 一 大阿奢黎佛智足 <br/>
 于中印佉毗国之内，有一大城名日多觉，有一婆罗门阿奢黎极为聪睿，彼于佛教生起正信，遂至那烂陀寺于大众部中出家，得名佛陀室利若那，即吉祥智。阿奢黎乃刹帝利种之教师，彼依阿奢黎师子贤善学大小乘一切法门，由功德友祈请，广造般若波罗密多摄颂释等论典多种,西藏相传此功德友乃一比丘尼。[/size][/font][/b] <br/>
@@ -548,15 +561,15 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 此阿奢黎为遮诸不信者故，每乘神通游行往来，常有非人来献供养，示现众多希有神变，亦造真言胜行论典多种，与声闻乘三藏亦无相违，若昔时于妙音菩萨化身具中脉行者毕竟不生疑者，则于现生可转依为虹身金刚身，然以曾生少许不敬分别故，享寿八十余，舍异熟身，始得双运身也。其弟子有现法涅磐弟子四人，住补处位一生所系中有成佛之具种姓者十八人，聪睿者及瑜伽师俱萨黎等不可数计。 <br/>
 <br/>
-又此阿奢黎之金刚弟兄而为弟子者恭建那国之法生及萨呬央山之顶髻金刚二人，此乃吉祥果金刚所说也。此中四上首弟子即燃灯贤、极寂友、大乐莲花生、刹帝利种罗睺罗。此大阿奢黎之直传弟子、再传弟子乃至三传弟子皆修染婆罗（即藏拔拉）法而得资具丰饶，及依持世菩萨（雨宝菩萨）法而得富厚自在，更依续中所出之法，以智力加被童男童女，令画曼荼罗，复能令尘彩曼荼罗现为真实曼荼罗，由真谛力所需尘彩皆能如言变现，此后至摩诃波罗王末叶，凡具比丘体相者，不许再现真言行，至时厥后，如此大师出世已不多矣。[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:54</div><div class="post-body">[font=楷体_GB2312][size=5][b]二 燃灯贤 <br/>
+又此阿奢黎之金刚弟兄而为弟子者恭建那国之法生及萨呬央山之顶髻金刚二人，此乃吉祥果金刚所说也。此中四上首弟子即燃灯贤、极寂友、大乐莲花生、刹帝利种罗睺罗。此大阿奢黎之直传弟子、再传弟子乃至三传弟子皆修染婆罗（即藏拔拉）法而得资具丰饶，及依持世菩萨（雨宝菩萨）法而得富厚自在，更依续中所出之法，以智力加被童男童女，令画曼荼罗，复能令尘彩曼荼罗现为真实曼荼罗，由真谛力所需尘彩皆能如言变现，此后至摩诃波罗王末叶，凡具比丘体相者，不许再现真言行，至时厥后，如此大师出世已不多矣。[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 11:54</div><div class="post-body">[font=楷体_GB2312][size=5][b]二 燃灯贤 <br/>
 燃灯贤者，降生于印度西方，于一切明处得无碍慧解，于大众部出家为比丘,彼于吉祥那邻陀寺为一切智者所敬重，曾遇阿奢黎佛智足，入一切瑜伽瑜祗曼荼罗，听受无量续部，然于口诀犹难获得，乃暂住南方诸国二三年，以真言续部加行饶益有情，于彼收受广大财物受用，遂尽封寄本师阿奢黎为供养物，计于阿奢黎前建净入密舍六十间，供养黄金千两，真珠颈饰三百串等无量资具，尤以奉献自己身为阿奢黎仆使，约经三年，乃至往城中为师取三昧耶物酒肉等事亦皆为之，于是阿奢黎遂授以一切口诀，乃往余方观修，生起殊胜证解后，又来阿奢黎前，师又为其灌顶，即于现身得大手印最胜悉地果位。[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]    此阿奢黎曾以降伏业用制服外道国王，其事如下：印度边境有国名辛头，师住彼时，彼国之王屡于阿奢黎之弟子施以恼害，兼于佛教亦大损坏，后王与道中遇阿奢黎，王以枪掷之，阿奢黎身竟无所损，阿奢黎乃以期克印指王，王之资具欻尔燃烧成灰，尔时王之臣民乐外道者，皆生怖畏，佥言，此薙发比丘威力乃尔。其后经历多世，尚于佛教寺宇，不敢损恼也。有说此王即突厥王部沙那，其时中印亦有突厥也。[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5][b]    又于西方摩腊婆国，有外道王奉大毗纽天为本尊，毁佛教庙宇多所，驱诸比丘至中印度，于诸居士亦加种种损恼，后阿奢黎来至其国，住于佛智足阿奢黎所加持之寺中，其王数来犯师，师后日间修观，令王及其妃嫔皆婴疾患。尔时有一外道大臣于道中遇师，告师言：“汝于国王行恶法，今当罚汝。”阿奢黎于腋下取布绘陵伽言：“此恶人尚未死耶？”乃撕裂此陵伽为碎片，时彼国王，亦躯体绽裂而死，阿奢黎又以真言咒彼大臣，其人立僵。又有一外道阿奢黎名娑羯啰难陀者，修成甚多邪魅明咒，偶于一时于仄巷中遇阿奢黎，互不相让，外道言：“明晨汝等若不死者，则我之法教为不真实。”乃诵恶咒而去，其夜阿奢黎所住之处果有盗劫，然阿奢黎深心入定，诸外道天庙及诸茅棚俱毁，其娑羯啰等弟子众，一时俱死，此娑羯啰者乃其时一切外道咒师之宗主也。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 12:00</div><div class="post-body">[b][font=楷体_GB2312][size=5]三 药足 <br/>
+[font=楷体_GB2312][size=5][b]    又于西方摩腊婆国，有外道王奉大毗纽天为本尊，毁佛教庙宇多所，驱诸比丘至中印度，于诸居士亦加种种损恼，后阿奢黎来至其国，住于佛智足阿奢黎所加持之寺中，其王数来犯师，师后日间修观，令王及其妃嫔皆婴疾患。尔时有一外道大臣于道中遇师，告师言：“汝于国王行恶法，今当罚汝。”阿奢黎于腋下取布绘陵伽言：“此恶人尚未死耶？”乃撕裂此陵伽为碎片，时彼国王，亦躯体绽裂而死，阿奢黎又以真言咒彼大臣，其人立僵。又有一外道阿奢黎名娑羯啰难陀者，修成甚多邪魅明咒，偶于一时于仄巷中遇阿奢黎，互不相让，外道言：“明晨汝等若不死者，则我之法教为不真实。”乃诵恶咒而去，其夜阿奢黎所住之处果有盗劫，然阿奢黎深心入定，诸外道天庙及诸茅棚俱毁，其娑羯啰等弟子众，一时俱死，此娑羯啰者乃其时一切外道咒师之宗主也。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 12:00</div><div class="post-body">[b][font=楷体_GB2312][size=5]三 药足 <br/>
 阿奢黎燃灯贤传法于药足，此阿奢黎生于边境婆罗门家，精娴外道法派，修威力法获得成就，后于佛教生信，乃至中印度那邻陀寺从阿奢黎燃灯贤及燃灯贤之师吉祥佛智二人学波罗密多及修密咒外内续部，师亦授以灌顶及一切口诀，尤以于密集及呬噜迦曼荼罗中灌顶时，投花中忿怒王哞迦啰，尔后长时观修，生起殊胜二次第三摩地，于六月中专精修持，知其将得悉地，然于其所修法物需一如青优波罗花色具足金刚部手印相之旃陀罗女一人，乃就一方寻求而得，遂从其父母乞舍此女，其父母言：“婆罗门阿奢黎癫耶？我乃旃陀罗种，汝于我等非不可接触者耶？”[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
-[b][font=楷体_GB2312][size=5]    师言：“我以所修法物需用此女，故不惧下种污损等事。”其父母言：“若尔，当需与此女身等量之金银。”尔时阿奢黎一刹那间即自地下伏藏中取出而许金银与其父母，其后阿奢黎与手印母俱至一岩窟中专修六月，于白分八日黎明，闻虚空中发大吽声，亲见吉祥呬噜迦等一切曼荼罗现前，得大手印最胜悉地果位。师后以密集为主之道饶益众多有情，亦后造论典，终如大金翅鸟王展翅腾空，即此色身迳往不动佛土云。传说此师与旧派所云阿奢黎哞迦罗为一人，然其降生之地为尼波罗，且于塞那累王时曾来西藏也。此师传法阿嚩都底波，彼传宝生寂，彼传大金刚座，彼传俱萨梨波。又药足传乌仗那国阿奢黎佛吉祥寂，彼传大金刚座，彼传金刚座，亦名扫梨波，亦名宝生密，亦名中金刚座也。[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 12:03</div><div class="post-body">[b][font=楷体_GB2312][size=5]莲花生大师法系[/size][/font][/b] <br/>
+[b][font=楷体_GB2312][size=5]    师言：“我以所修法物需用此女，故不惧下种污损等事。”其父母言：“若尔，当需与此女身等量之金银。”尔时阿奢黎一刹那间即自地下伏藏中取出而许金银与其父母，其后阿奢黎与手印母俱至一岩窟中专修六月，于白分八日黎明，闻虚空中发大吽声，亲见吉祥呬噜迦等一切曼荼罗现前，得大手印最胜悉地果位。师后以密集为主之道饶益众多有情，亦后造论典，终如大金翅鸟王展翅腾空，即此色身迳往不动佛土云。传说此师与旧派所云阿奢黎哞迦罗为一人，然其降生之地为尼波罗，且于塞那累王时曾来西藏也。此师传法阿嚩都底波，彼传宝生寂，彼传大金刚座，彼传俱萨梨波。又药足传乌仗那国阿奢黎佛吉祥寂，彼传大金刚座，彼传金刚座，亦名扫梨波，亦名宝生密，亦名中金刚座也。[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 12:03</div><div class="post-body">[b][font=楷体_GB2312][size=5]莲花生大师法系[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5] <br/>
 大阿奢黎佛智足传法于大阿奢黎莲花生，此师亦名后莲花金刚或小莲花金刚。师之行事广传中详，今此不赘（另有莲师史略可考）。所言大小莲花者，乃指时代先后而言也。阿奢黎莲花生传法于迦没路国中脉瑜伽师宝戒，由彼传法于老书记。 <br/>
 <br/>
@@ -573,7 +586,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 此大臣乃奉黄金六十两为养母之资，尔时阿奢黎乃于毗羯啰摩罗尸罗寺出家为比丘，通晓诸智者瑜伽师一切教授，于阿毗黎金刚座一切灌顶传承教授，悉善通达。其后长时为金刚座之亲教师，后师徒约三十人前往南印途径扫梨，扫梨国王于梦中见金刚座之大菩提树神告言：“勿令我之教法至于南方。” <br/>
 <br/>
-翌晨阿奢黎及弟子众为往南方请拨夫役运送经书及佛像等，王知此即梦境所示，遂坚请安住，阿奢黎悲心殷重乃留住扫梨，因又得名扫梨波，此阿奢黎究竟生起次第，面见众多本尊圣众，印度各地尚多传其教授也。此阿奢黎传法于阿奢黎一切智法贤吉祥，彼传佛称，彼传宝称，彼传啰底鞠多，诸师行迹，今姑不详。[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 12:10</div><div class="post-body">[b][font=楷体_GB2312][size=5]第六系 辞句传承 [/size][/font][/b] <br/>
+翌晨阿奢黎及弟子众为往南方请拨夫役运送经书及佛像等，王知此即梦境所示，遂坚请安住，阿奢黎悲心殷重乃留住扫梨，因又得名扫梨波，此阿奢黎究竟生起次第，面见众多本尊圣众，印度各地尚多传其教授也。此阿奢黎传法于阿奢黎一切智法贤吉祥，彼传佛称，彼传宝称，彼传啰底鞠多，诸师行迹，今姑不详。[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 12:10</div><div class="post-body">[b][font=楷体_GB2312][size=5]第六系 辞句传承 [/size][/font][/b] <br/>
 <br/>
 [b][font=楷体_GB2312][size=5]　　第六系付法为辞句传承者，即续释之传承也。此中有多种续部注释由那露波及弥勒波二师传出，有说龙树传圣提婆，彼传罗睺罗，彼传月称，彼传光生，彼传智称，彼传扇底波。有说，有续释多种由妙吉祥友（大圆满人间传承第二代）传婆罗门智金刚，由彼续传。又妙吉祥友传菩提金刚亦有一系传承也。又佛智足传极寂友，彼传吉祥军、资鲁波（时轮金刚法第一代祖师）、黑生、药足四人。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
@@ -596,7 +609,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=5]    众乃无诤，尔后师复随宜饶益众生，迨年百八岁时，始舍身入寂，诸弟子等共奉遗身至一寒林中欲行荼毗，方举火时，师之遗身忽隐不现，此阿奢黎曾以自力造续释多种，迨撰胜乐释时，金刚亥母竟不开许，方其至乌仗那国行资粮轮时，余得成就者约五十三人亦曾来集，共议法要也。又有中因陀啰部底王或称阿奢黎狗王，彼于日间为千犬说法，夜间则修三昧耶普行法，彼传法于阿奢黎莲花生，又彼所造续释虽有多种，然今日除诵习口传者外亦无多余矣。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]    又时轮等多种续部乃由毗卓波阿奢黎得金刚手授记，以神通力诣苫婆罗国所迎请者，彼于罗怛那企梨传弟子多人，毘卓波后得隐身悉地，大弟子六人，其中三人得金刚身隐没不现，比丘阿缚都底波、觉吉祥及那露波三人则宏扬其法，又阿缚都底波复传扫黎波（即中金刚座），毘卓波乃于摩呬波罗王时出世者也。[/size][/font][/b] <br/>
-[b][font=楷体_GB2312][size=5][/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 12:14</div><div class="post-body">[font=楷体_GB2312][size=5][b]无畏生密大师传 <br/>
+[b][font=楷体_GB2312][size=5][/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 12:14</div><div class="post-body">[font=楷体_GB2312][size=5][b]无畏生密大师传 <br/>
 如上一切上师传承法流悉皆汇于大阿奢黎浊世之佛无畏生密。此阿奢黎生于印度南方欧胝舍国邻近奢梨勘拏，父为刹帝利种，母为婆罗门种，师童稚之时已精吠陀及诸支分，声论因明亦极善巧，迨年即长，通晓外道一切续部及诸教典，于一园林中修诵明咒时，一美貌少女来现其前，告言：“我乃旃陀罗女，欲与汝合修。”师拒之言：“此何可为？我乃贵种，如此不将有恶声耶？去勿留此。”其女遂出。[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]    师再谛观，见诸门户原由己自内键，仍旧未动，心念：“此天女耶？抑夜叉女耶？究竟谁氏？”乃问其友一佛教瑜伽师，其人言：“此乃金刚瑜伽母也，汝不受其所赐悉地，实不佳妙，汝今当入佛教，前来东方。”师依其言，往东方彭伽罗国，精学一切经咒，就诸阿奢黎请授众多灌顶，遂成比丘大三藏法师，为一切持律之阿奢黎。偶于一时在一佛殿天井中，一少女现手持牛肉，鲜血淋漓，献阿奢黎言：“我为旃陀罗女，今为汝杀牛，请即食之。”师言：“我乃净行比丘，何得食此牛肉？”女即外出，下阶而隐。此乃金刚瑜伽母又赐悉地，师又拒之也。[/b][/size][/font][font=楷体_GB2312][size=5] <br/>
@@ -611,7 +624,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [b]    于西方一处建寺之时，曾以空钵自空中摄取饮食充满其中以为顺缘，此乃染婆罗（财神）所加持也。师又从牢狱中救脱数十万人，其弟子众综合印藏两地计之，为数难思。自师以降，印度一切大乘法师无不奉为圭臬也，师传轮波迦罗掬多（善生密），彼传十力。彼传称天，此师为彭伽罗国一极聪睿智者，曾诣那邻陀寺广求一切法要教授，虽其根本上师曾令其出家，然以爱欲极重故，终未出家，其后娶妻生子女三人，后梦观自在菩萨告言：“汝违上师教故，今后三年当生热病而死，死堕地狱。”[/b] <br/>
 <br/>
-[b]    尔时心大惊怖，遂闭关修本尊法，然菩萨悬记终于降临，满三年已，染热病而殁，此阿阇黎于自境中忽见阎摩使者以长绳牵引时，圣观自在五尊自空中来，马头明王击彼狱卒，圣观自在流泪言曰：“送还本身。”尔时圣众引其神识复还本身，自时厥复，常见观自在尊威力增长，得妙悟解，复得悉地，声誉日广。此师传迦湿弥罗智者释迦室利贤、佛吉祥贤及宝护等人，彼等复传牟尼吉祥贤，彼传悲吉祥贤，彼传释迦护，彼传妙生胄，彼传金毗罗一智者毗牟多提婆（解脱天），彼传奢那崛多，彼传啰底崛多，彼传今日大地之上无与等伦大成就者寂密大师。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 12:23</div><div class="post-body">[font=楷体_GB2312][size=5][b]第七系 口诀别传 <br/>
+[b]    尔时心大惊怖，遂闭关修本尊法，然菩萨悬记终于降临，满三年已，染热病而殁，此阿阇黎于自境中忽见阎摩使者以长绳牵引时，圣观自在五尊自空中来，马头明王击彼狱卒，圣观自在流泪言曰：“送还本身。”尔时圣众引其神识复还本身，自时厥复，常见观自在尊威力增长，得妙悟解，复得悉地，声誉日广。此师传迦湿弥罗智者释迦室利贤、佛吉祥贤及宝护等人，彼等复传牟尼吉祥贤，彼传悲吉祥贤，彼传释迦护，彼传妙生胄，彼传金毗罗一智者毗牟多提婆（解脱天），彼传奢那崛多，彼传啰底崛多，彼传今日大地之上无与等伦大成就者寂密大师。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 12:23</div><div class="post-body">[font=楷体_GB2312][size=5][b]第七系 口诀别传 <br/>
 <br/>
 此系为大成就者牛护之口诀付法传承。或谓，初弥那波修大自在天而得共同悉地，牛护从彼请得息风教授，依法修行，生起大手印自然智，此为通十二部经之佐计等所说，然无他据，故且舍置。今此唯依大成就者寂密等智者原有之说及我师佛密亲口所传而述，彼曾面见牛护上师教授宝藏尽得无余之成就者多人，具有无量威力加持力之阿奢黎，如阿奢黎津梁怙主、黑依怙、婆罗门怙等，此三人皆为牛护之随行者，我师所说与彼等符顺，且谓唯此应理也。[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -651,7 +664,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]    彼传大班胝多啰底崛多，此师降生于南方一商主家，成年后于佛教中出家，为说一切有部比丘，慧解极利，悉能忆持毗奈耶十万颂，大般若波罗密多十万颂，于外道明处亦极善巧。为求密咒金刚乘法，遂往东方及海中小洲，又往西方多处，遇大阿奢黎宝称，于十三曼荼罗中请受灌顶，又遇大阿奢黎智密，于六十曼荼罗中求受灌顶，又遇尼波罗国大班胝多十力，请传灌顶及教授多种，诸续注释亦从此三阿奢黎广事谘求。[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5][b]    其后印度东方有处行大庆会，有一状如外道之瑜伽师，褴褛异常，师于之共语，知其有他心通，师起心念：“汝为谁？”其人即言：“我为得成就者阿悉多伽那。”师遂依止约一月，听闻多种教授，其后又从得成就者奥俱啰那陀听受无量诀要。而后曾于南方噜卢罗底等国，为三十精舍之上座，师于生起次第已得坚固，所娴续部约五十部云。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 12:39</div><div class="post-body">[b][font=楷体_GB2312][size=5]大成就者寂密 <br/>
+[font=楷体_GB2312][size=5][b]    其后印度东方有处行大庆会，有一状如外道之瑜伽师，褴褛异常，师于之共语，知其有他心通，师起心念：“汝为谁？”其人即言：“我为得成就者阿悉多伽那。”师遂依止约一月，听闻多种教授，其后又从得成就者奥俱啰那陀听受无量诀要。而后曾于南方噜卢罗底等国，为三十精舍之上座，师于生起次第已得坚固，所娴续部约五十部云。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 12:39</div><div class="post-body">[b][font=楷体_GB2312][size=5]大成就者寂密 <br/>
 <br/>
 此阿奢黎生于南方奢曼荼罗城一刹帝利种姓家，幼即通达微妙明处多种，声明因明等，无不练达。其父亦为于觉受中面见至尊多罗之真言师，故从其父听受多罗之灌顶及修法，年二十二岁时至海边恭俱那国金幢寺，时彼寺中，僧相贤善，法舍广大，僧众约有五十人，于大法会时优婆塞以下千人来集，师于彼寺从亲教师啰底崛多受具戒，初学声闻三藏，次学中观唯识一切教典，皆极精娴，于般若波罗密多八千颂、唯识四经等一切圣典皆能忆持。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
@@ -757,7 +770,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [b]　　此书乃以己所亲闻印度相传事迹为主，楺以西藏诸阿奢黎可信之说汇集成书，多罗那他二十九岁时著于胜成就处吉祥打隆塘附近尊胜坚牢寺。 <br/>
 <br/>
-[/b]注 此书成于公元一六零三年，即明神宗万历三十一年。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 12:40</div><div class="post-body">[b][font=楷体_GB2312][size=5]跋 <br/>
+[/b]注 此书成于公元一六零三年，即明神宗万历三十一年。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 12:40</div><div class="post-body">[b][font=楷体_GB2312][size=5]跋 <br/>
 多罗那他生于明万历三年，示寂于明崇祯六年，为西藏觉囊派大师，壮岁周游印度，学法之余，博访旧史遗闻，回藏后，于二十九岁时（公元一六零三年）成七系付法传一书，以七系为纲，述印度密法传承源流。又于三十四岁时，成印度佛教史一书，以时代为次，述印度显密教法兴衰递邅之际。又于三十六岁时，成三信具足莲花生大士传一书，就大师一生行化事迹，依印度所传，加以考实。[/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]    莲师行迹西藏旧传有本生广传，乃明妃智慧海王（耶喜错甲）所著，密藏数百年，至乌苌洲大师始取出流通，本生广传，特详于莲师入藏后行化之迹，于印度行事，则综叙本生之事而不列。师则依印度相承之说，于莲师在印出生行化因缘，详为著录，于莲师求法之殷重，修法之艰苦，成就之卓绝，皆得证为信史。[/size][/font][/b] <br/>

@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>成就盛宴（广轨） - 藏密修海典藏</title>
+<title>成就盛宴（广轨） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/显密传修胜宝鬘.html">显密传修胜宝鬘</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">成就盛宴（广轨）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-19 22:47</div><div class="post-body">[color=DarkOrange][font=楷体_GB2312][size=5] <br/>
+<div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-19 22:47</div><div class="post-body">[color=DarkOrange][font=楷体_GB2312][size=5] <br/>
 菩提道次第直授日修引导易行仪轨·成就盛宴（广轨） <br/>
 [b]夏坝仁波切[/b][/size][/font][/color] <br/>
 [font=楷体_GB2312][size=5][b]一切时中顶礼皈依于与能仁金刚持无别之上师足下，伏请大悲摄受！[/b][/size][/font] <br/>
@@ -49,7 +62,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 下密院传轨的[b]《四大护法朵玛供略轨》、[/b] <br/>
 宗喀巴大师所造[b]《格鲁三大本尊愿》、[/b] <br/>
 贡唐大师所造[b]《甘丹圣教增长愿文》，[/b] <br/>
-以及格鲁巴五大愿等诸多经续所载的诵文和咒语。为自晨起到入睡为止的道次第每日四座修行的前行、正行、结行之座上圆满课程和座间修行的完整修法。行者若能依此精进修行，必将成办现前与究竟的广大利益。[/size][/font][/color] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-19 22:56</div><div class="post-body">[font=楷体_GB2312][size=5][b]前行修法[/b] <br/>
+以及格鲁巴五大愿等诸多经续所载的诵文和咒语。为自晨起到入睡为止的道次第每日四座修行的前行、正行、结行之座上圆满课程和座间修行的完整修法。行者若能依此精进修行，必将成办现前与究竟的广大利益。[/size][/font][/color] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-19 22:56</div><div class="post-body">[font=楷体_GB2312][size=5][b]前行修法[/b] <br/>
 <br/>
 [color=DarkRed]    每日清晨一觉即起。醒时即想：闻空行母摇鼓铃之声。随想在大乐法中、色身而立等相应法，依本部仪轨修之。提起精神，长叹： <br/>
 “啊！今日未死，得以醒来，乃上师三宝加持之恩。今日切不可虚度。不为性罪遮罪所染。二罪不染中，于甚深广大二门妙法精进修习，使暇满人身获大利益”。 <br/>
@@ -66,7 +79,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [b]    顶门空行入自身，二无分别得加被。[/b] <br/>
 <br/>
-[color=DarkRed]    如此，行者可避免和消除一切晦气、垢染、疾病等。[/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-19 23:03</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]    [b]第一加行法[/b]为洒扫住处、庄严安布身语意所依。洒扫住处，功德有五： <br/>
+[color=DarkRed]    如此，行者可避免和消除一切晦气、垢染、疾病等。[/color][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-19 23:03</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]    [b]第一加行法[/b]为洒扫住处、庄严安布身语意所依。洒扫住处，功德有五： <br/>
 一，令自心清净； <br/>
 二，令他心清净； <br/>
 三，令众天及本尊欢喜； <br/>
@@ -88,7 +101,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 此尘是痴非土尘，密说此痴为土尘， <br/>
 智者能除此痴毒，非是无惭放逸人。[/b] <br/>
 <br/>
-[color=DarkRed]    如是三偈。而后恭敬陈设身语意所依。上师本尊等像皆按资粮田各尊次序排列。身所依至少应具本师释迦牟尼佛像或宗喀巴大师像，陈设于中。语所依至少应具“般若经”或“菩提道次第”，置右。意所依至少应具一擦擦佛塔或更佳材质者，置左。此中之左右，为依行者而言，不依所缘境。譬如宗大师身像为身所依，左持般若经为语所依，右持智慧剑为意所依。或乐如《略论释》之教授，依所缘境厘定左右亦无不可。[/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-19 23:18</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed][b]    第二加行法[/b]为由无谄诳求诸供具，端严陈设。无谄诳者，谓物及动机皆无谄诳。物谄诳，谓以五邪命之法所得之物。五邪命者，谄媚奉承、旁敲侧击、赠微博厚、巧取讹索、诈现威仪。离此五垢，为物无谄诳。动机谄诳，谓奉献供养时掺杂以世间八法等垢染。端严陈设者，谓供品形状及排列方式皆应极尽美观，以成就行者未来成佛时所具相好之因。 <br/>
+[color=DarkRed]    如是三偈。而后恭敬陈设身语意所依。上师本尊等像皆按资粮田各尊次序排列。身所依至少应具本师释迦牟尼佛像或宗喀巴大师像，陈设于中。语所依至少应具“般若经”或“菩提道次第”，置右。意所依至少应具一擦擦佛塔或更佳材质者，置左。此中之左右，为依行者而言，不依所缘境。譬如宗大师身像为身所依，左持般若经为语所依，右持智慧剑为意所依。或乐如《略论释》之教授，依所缘境厘定左右亦无不可。[/color][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-19 23:18</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed][b]    第二加行法[/b]为由无谄诳求诸供具，端严陈设。无谄诳者，谓物及动机皆无谄诳。物谄诳，谓以五邪命之法所得之物。五邪命者，谄媚奉承、旁敲侧击、赠微博厚、巧取讹索、诈现威仪。离此五垢，为物无谄诳。动机谄诳，谓奉献供养时掺杂以世间八法等垢染。端严陈设者，谓供品形状及排列方式皆应极尽美观，以成就行者未来成佛时所具相好之因。 <br/>
 <br/>
 于三所依顶礼三拜后，口诵：[/color] <br/>
 [b]    十方一切诸佛菩萨垂念于我，我名菩萨某甲，身、财、受用、善根等，悉皆施舍于一切父母众生，而今我为饶益有情故，仍需受用衣、食、卧具等，并唯行利益众生之事业也。[/b][color=DarkRed]此文乃克珠昂旺多吉师徒所修之菩萨发愿文。[/color] <br/>
@@ -140,7 +153,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 发愿：[/color] <br/>
 <br/>
-[b]    愿由无过戒，具足清净戒，及无矜心戒，戒度得圆满。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-20 14:29</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed][b]    第三加行法[/b]为身具毗卢七法坐安乐座，从殊胜善心中修皈依发心等。安乐座者，谓座垫应后高前低，垫下设白色右旋万字，表羯摩金刚，以示随念佛陀于金刚座成佛之迹，其上铺设吉祥草，根外尖内。座垫软硬以行者自身舒适为度，以生安乐。 <br/>
+[b]    愿由无过戒，具足清净戒，及无矜心戒，戒度得圆满。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-20 14:29</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed][b]    第三加行法[/b]为身具毗卢七法坐安乐座，从殊胜善心中修皈依发心等。安乐座者，谓座垫应后高前低，垫下设白色右旋万字，表羯摩金刚，以示随念佛陀于金刚座成佛之迹，其上铺设吉祥草，根外尖内。座垫软硬以行者自身舒适为度，以生安乐。 <br/>
 毗卢七法，另增“数息观”，合为八法。 <br/>
 一者，双足结金刚跏趺或半跏趺而坐； <br/>
 二者，手结定印，右上左下，拇指相抵，置于脐间； <br/>
@@ -297,7 +310,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b]    我以虔诚所设之明灯，供养一切佛法僧三宝， <br/>
 以此功德来世智如炬，灭除众生垢暗尽无余。[/b] <br/>
 <br/>
-[color=DarkRed]    《贤愚经》中说，贫女难陀以此贤善之心供灯，得佛授记，于未来世当得作佛，名曰灯光。[/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-22 10:36</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed][b]    第四加行法[/b]为观资粮田，共有二种观法，为便于念诵，此处为《供养上师仪轨》中所载：[/color] <br/>
+[color=DarkRed]    《贤愚经》中说，贫女难陀以此贤善之心供灯，得佛授记，于未来世当得作佛，名曰灯光。[/color][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-22 10:36</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed][b]    第四加行法[/b]为观资粮田，共有二种观法，为便于念诵，此处为《供养上师仪轨》中所载：[/color] <br/>
 <br/>
 [img]http://www.zmxh.com/pics/Refuge_Field_of_Tsongkhapa_20070522055920.jpg[/img] <br/>
 <br/>
@@ -376,7 +389,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [color=DarkRed]请安住原位[/color] <br/>
 <br/>
 [b]    悲悯我与众生故，愿佛神变威德力， <br/>
-乃至我能供养时，世尊安住不离此。[/b] [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-22 11:18</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed][b]    第五加行法[/b]为摄集积净扼要——奉献七支及曼荼罗 <br/>
+乃至我能供养时，世尊安住不离此。[/b] [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-22 11:18</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed][b]    第五加行法[/b]为摄集积净扼要——奉献七支及曼荼罗 <br/>
 <br/>
 [b]1.礼敬支[/b][/color] <br/>
 <br/>
@@ -811,7 +824,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [color=DarkRed]以虔诚之心念诵三大事启请：[/color] <br/>
 <br/>
-[b]    皈依上师三宝，惟愿汝等加持我之相续。我与一切如母有情，从不恭敬善知识起，乃至执著二种我相，所有一切颠倒心，惟愿加持消灭；恭敬善知识等一切不颠倒心，惟愿加持顺易生起；惟愿加持息灭一切内外障缘。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-26 13:17</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed][b]    第六加行法[/b]为启请道次第传承上师，决定令与相续和合。[/color] <br/>
+[b]    皈依上师三宝，惟愿汝等加持我之相续。我与一切如母有情，从不恭敬善知识起，乃至执著二种我相，所有一切颠倒心，惟愿加持消灭；恭敬善知识等一切不颠倒心，惟愿加持顺易生起；惟愿加持息灭一切内外障缘。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-26 13:17</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed][b]    第六加行法[/b]为启请道次第传承上师，决定令与相续和合。[/color] <br/>
 <br/>
 [b]    吉祥大宝根本上师尊，安住于我顶上莲月座， <br/>
 由大恩德之门哀摄受，伏请赐予身语意悉地。 <br/>
@@ -972,7 +985,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 总摄一切僧伽上师尊，能仁金刚持前我启请。 <br/>
 总摄一切空行上师尊，能仁金刚持前我启请。 <br/>
 总摄一切护法上师尊，能仁金刚持前我启请。 <br/>
-总摄一切归处上师尊，能仁金刚持前我启请。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-26 13:21</div><div class="post-body">[font=楷体_GB2312][size=5][b]正行修法[/b] <br/>
+总摄一切归处上师尊，能仁金刚持前我启请。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-26 13:21</div><div class="post-body">[font=楷体_GB2312][size=5][b]正行修法[/b] <br/>
 <br/>
 [color=DarkRed]正修道次第 <br/>
 <br/>
@@ -1003,7 +1016,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 上述教授中，阐明了正修的方法。正修所缘之内容，详见道次第八大引导的正行部分,或特为《成就盛宴》的正行修法而编著的《速道》正行实修教材。此处要说明的是，帕绷喀大师教授中提到的完备所缘、单一所缘、多个所缘等三种修法，在本轨中从“能成众德之体具恩师”至“持金刚位唯愿稳速登”的每座修行，为完备所缘修法；不共加行后，如“依止善知识功德”等等，各个单一所缘别别修行者，为单一所缘修法；又如依止善知识四支所缘，一一生起相应觉受后，复将四支所缘串修者，为多个所缘修法。按《速道》传规，第一、二种修法座座必行，第三种是每一大类的支分所缘一一生起觉受后，继依和合串修令生起整体之觉受。 <br/>
 <br/>
-在每座中，修习后后之所缘时，不可放下前前已生起觉受的所缘，应适当复习，以免退失已生之觉受。比如，修“暇满”时，共同加行之后，先将“依止善知识”大类略修，而后修暇满之不共加行及正行等；若已修到“中士道”时，就把“依师”、“暇满”合修数次后，再依照次第别别略修下士道的四个支分，然后才进入中士道的不共加行及正行修法；到“上士道”时，由于前面之所缘众多，故可将“依师暇满”稍做合修，“下士道”稍做和修，再依照次第别别略修“中士道”的两个支分，然后才进入上士道的不共加行及正行修法；又如进入到“精进”所缘时，下士道以上如前所述，中士道稍做合修，七支因果与自他相换两种菩提心修法稍做合修，再依照次第别别略修布施、持戒、忍辱等所缘，然后进入精进之不共加行及正行等。奢摩他者，以定修方式修，而毗婆舍那者，以止观双运方式修。总之，由于前前所缘觉受生起已久，渐趋坚固，而近期所生之觉受，尚未坚固，故应多加串习。[/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-26 13:36</div><div class="post-body">[font=楷体_GB2312][size=5][b]结行修法[/b] <br/>
+在每座中，修习后后之所缘时，不可放下前前已生起觉受的所缘，应适当复习，以免退失已生之觉受。比如，修“暇满”时，共同加行之后，先将“依止善知识”大类略修，而后修暇满之不共加行及正行等；若已修到“中士道”时，就把“依师”、“暇满”合修数次后，再依照次第别别略修下士道的四个支分，然后才进入中士道的不共加行及正行修法；到“上士道”时，由于前面之所缘众多，故可将“依师暇满”稍做合修，“下士道”稍做和修，再依照次第别别略修“中士道”的两个支分，然后才进入上士道的不共加行及正行修法；又如进入到“精进”所缘时，下士道以上如前所述，中士道稍做合修，七支因果与自他相换两种菩提心修法稍做合修，再依照次第别别略修布施、持戒、忍辱等所缘，然后进入精进之不共加行及正行等。奢摩他者，以定修方式修，而毗婆舍那者，以止观双运方式修。总之，由于前前所缘觉受生起已久，渐趋坚固，而近期所生之觉受，尚未坚固，故应多加串习。[/color][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-26 13:36</div><div class="post-body">[font=楷体_GB2312][size=5][b]结行修法[/b] <br/>
 <br/>
 [color=DarkRed]修上师善慧能仁金刚持咒，诵：[/color] <br/>
 <br/>
@@ -1032,7 +1045,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b]    愿我承此善根力，速疾成就上师佛， <br/>
 一切众生尽无余，悉令安置师佛地。[/b] <br/>
 <br/>
-[color=DarkRed]    欲修密法者，从此处起修。受过上二部灌顶者，首先应每日修一次完整的六座上师瑜伽修法。若未受者，可修自所领受之本尊修法。未曾受过任何密法灌顶者，可直接修道次第回向文后结束。[/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-27 14:42</div><div class="post-body">[font=楷体_GB2312][size=5][b]六座上师瑜伽广法[/b] <br/>
+[color=DarkRed]    欲修密法者，从此处起修。受过上二部灌顶者，首先应每日修一次完整的六座上师瑜伽修法。若未受者，可修自所领受之本尊修法。未曾受过任何密法灌顶者，可直接修道次第回向文后结束。[/color][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-27 14:42</div><div class="post-body">[font=楷体_GB2312][size=5][b]六座上师瑜伽广法[/b] <br/>
 <br/>
 [color=DarkRed]    凡得瑜伽部以上灌顶者，当修习《六座瑜伽法》。纵如藏土中号为“金法”之甚深教授，亦不能与其少分相拟！[/color] <br/>
 <br/>
@@ -1251,7 +1264,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 总之以此所表尽所有，已积白善聚力我速疾， <br/>
 往生摩尼宝藏香拔拉，无上道诸次第愿究竟。 <br/>
 一切生中与诸清净师，永不乖离受用法吉祥， <br/>
-地道功德完全圆满已，金刚持位速疾愿获得。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-28 13:31</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]欲修薄伽梵吉祥金刚怖畏独勇极略成就法，诵：[/color] <br/>
+地道功德完全圆满已，金刚持位速疾愿获得。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-7-28 13:31</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]欲修薄伽梵吉祥金刚怖畏独勇极略成就法，诵：[/color] <br/>
 <br/>
 [b]    遍主妙音金刚降阎摩，诸佛体性至尊宗喀巴， <br/>
 父子传承一切上师前，恭敬启白请赐二悉地。 <br/>
@@ -1646,7 +1659,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 愿于一切生中恒不离，诸佛所赞叹之清净道。 <br/>
 <br/>
 若时我于最胜大乘中，如理精进修习十法行， <br/>
-尔时愿具力者恒助伴，吉祥大海周遍一切方。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-2 11:06</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]    若闭关修习道次第者，以上为晨时第一座，应于5－7时半之间进行，倘若一日欲修四座者，早餐后，于上午9时－11时半修第二座。应修从“自己正前方虚空中，有一八大狮子擎举高广宝座”至“吉祥大海周遍一切方”为止，将其中的广曼荼罗仪轨改为从“遍地香涂”至“尼日雅达雅弥”的略轨。其中的“大乘长净仪轨”、“兜率天上师瑜伽”、“水陆供”、“总忏悔文”、“三十五佛忏悔文”、“六座瑜伽”、“大威德略轨”和“四大护法朵玛供”略去不修。 <br/>
+尔时愿具力者恒助伴，吉祥大海周遍一切方。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-2 11:06</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]    若闭关修习道次第者，以上为晨时第一座，应于5－7时半之间进行，倘若一日欲修四座者，早餐后，于上午9时－11时半修第二座。应修从“自己正前方虚空中，有一八大狮子擎举高广宝座”至“吉祥大海周遍一切方”为止，将其中的广曼荼罗仪轨改为从“遍地香涂”至“尼日雅达雅弥”的略轨。其中的“大乘长净仪轨”、“兜率天上师瑜伽”、“水陆供”、“总忏悔文”、“三十五佛忏悔文”、“六座瑜伽”、“大威德略轨”和“四大护法朵玛供”略去不修。 <br/>
 <br/>
 下午2时半－5时，修第三座，内容同第二座。出家人或闭关者，以过午不食为善，若有特殊原因，则可在祈请开许后，于第三座后进食。晚上6时半－9时，修第四座，内容同上。 <br/>
 <br/>
@@ -1761,7 +1774,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 证得上妙二身果。 <br/>
 <br/>
 不须殷殷勤劳苦，摩尼大宝圆生树， <br/>
-饱满众生普愿欲，随心成就事业藏。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-2 11:32</div><div class="post-body">[size=5][font=楷体_GB2312][color=DarkRed]    座间闲暇时，可修噉食金刚黑芝麻方便火供 <br/>
+饱满众生普愿欲，随心成就事业藏。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-2 11:32</div><div class="post-body">[size=5][font=楷体_GB2312][color=DarkRed]    座间闲暇时，可修噉食金刚黑芝麻方便火供 <br/>
 <br/>
 （若为消业障而欲作噉食金刚黑芝麻方便火供者，先作预备，于自面前陈设黑芝麻与息灾等无罅之器，内燃无烟旺火）[/color] <br/>
 <br/>
@@ -1805,7 +1818,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 无伪上师三宝加持力，法界不变缘起无欺力， <br/>
 我之善愿悉皆成办已，速获遍智佛位愿吉祥！[/b] <br/>
 <br/>
-[color=DarkRed]    本法被盛赞为净治罪障、补足破损、回遮中断之大方便，乃金刚持所说之教授，宗喀巴上师视之为心髓殊胜金法。[/color][/font][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 15:59</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]或依金刚萨埵修法仪轨忏悔罪障者，如下：[/color] <br/>
+[color=DarkRed]    本法被盛赞为净治罪障、补足破损、回遮中断之大方便，乃金刚持所说之教授，宗喀巴上师视之为心髓殊胜金法。[/color][/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 15:59</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]或依金刚萨埵修法仪轨忏悔罪障者，如下：[/color] <br/>
 <br/>
 [b]    皈依佛法僧三宝，一切有情我解脱， <br/>
 咸令安住胜菩提，至诚发起菩提心。[/b]（三遍） <br/>
@@ -1855,7 +1868,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b]    我今以此之善根，速成金刚萨埵体， <br/>
 乃至一切诸有情，罪障无余愿清净。[/b] <br/>
 <br/>
-[color=DarkRed]    在座间，应随力阅读道次第当中正在修行部分的内容，以及相关的经论和引导教授等，不应阅读与当下修行次第无关的书籍。直到生起此修行的证悟力之后，再阅读下一内容。因为凡夫者一心不可二用，阅读的内容若过于繁杂，易分散注意力。同时，应正知正念、守护根门、饮食知量、不睡时勤习瑜伽，睡时依法而行，以及修习精进、沐浴、饮食等瑜伽。[/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 16:40</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]欲绕塔寺者，应对身语意三所依作真实想，诵：[/color] <br/>
+[color=DarkRed]    在座间，应随力阅读道次第当中正在修行部分的内容，以及相关的经论和引导教授等，不应阅读与当下修行次第无关的书籍。直到生起此修行的证悟力之后，再阅读下一内容。因为凡夫者一心不可二用，阅读的内容若过于繁杂，易分散注意力。同时，应正知正念、守护根门、饮食知量、不睡时勤习瑜伽，睡时依法而行，以及修习精进、沐浴、饮食等瑜伽。[/color][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 16:40</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]欲绕塔寺者，应对身语意三所依作真实想，诵：[/color] <br/>
 <br/>
 [b]    顶礼薄伽梵、如来、应、正等觉，大宝胜幢佛，那摩班嘎瓦帝  日阿纳给伊度日阿甲雅  达塔嘎达雅  阿日阿哈帝   桑木雅桑布达雅   达雅塔  嗡  冉内冉内   嘛哈冉内  冉内比甲耶  娑哈[/b] <br/>
 [color=DarkRed]    此为大宝胜幢佛咒，诵之绕佛、塔、寺，功德增长千倍。 <br/>
@@ -1889,7 +1902,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [b]    嗡  啊  木达尔  阿哈日伊碑娑哈[/b][color=DarkRed]（弹指一下） <br/>
 <br/>
-因苦修而身上有虱虮者，不可损其身命，应置于棉花等柔软物中送出。若佛堂、塔寺或家中为蛇鼠蝇蚁、蟑螂蚊虫等侵损，应不伤其身命，善巧送置他处。此《律三百颂》中说。[/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:05</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]    晚上第四座之前欲行烧香供施者，首先准备铜质或瓷质供炉一个（忌铁质），将无烟火炭一块置炉中，以匙取制成之食末，洒于火上，即出上妙香味，此时将炉置于户外，行者于户内依法念诵，以咒力故，即能化出无量数宝器，遍满虚空，四宾客各各安坐受食。食末做法：炒熟之面粉，加三白三甜。三白者，为牛奶、奶酪、酥油。三甜者，红糖、白糖、蜂蜜。调匀研末，再加六香（即竹黄、砂仁、红花、肉豆蔻、豆蔻及丁香，各等量共研为末）与三白三甜掺合，可另加具加持力之甘露丸等，和合为末，贮存器中。 <br/>
+因苦修而身上有虱虮者，不可损其身命，应置于棉花等柔软物中送出。若佛堂、塔寺或家中为蛇鼠蝇蚁、蟑螂蚊虫等侵损，应不伤其身命，善巧送置他处。此《律三百颂》中说。[/color][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:05</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]    晚上第四座之前欲行烧香供施者，首先准备铜质或瓷质供炉一个（忌铁质），将无烟火炭一块置炉中，以匙取制成之食末，洒于火上，即出上妙香味，此时将炉置于户外，行者于户内依法念诵，以咒力故，即能化出无量数宝器，遍满虚空，四宾客各各安坐受食。食末做法：炒熟之面粉，加三白三甜。三白者，为牛奶、奶酪、酥油。三甜者，红糖、白糖、蜂蜜。调匀研末，再加六香（即竹黄、砂仁、红花、肉豆蔻、豆蔻及丁香，各等量共研为末）与三白三甜掺合，可另加具加持力之甘露丸等，和合为末，贮存器中。 <br/>
 <br/>
 皈依发心，诵：[/color] <br/>
 <br/>
@@ -1979,7 +1992,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 第四座的道次第回向文前，应随力修习已受灌顶的诸本尊之仪轨或心咒、陀罗尼等，此外诸佛菩萨的赞颂、祈请文、发愿文以及经续等亦可于此处诵。然后发愿，诵：[/color] <br/>
 <br/>
 [b]    愿我承此善根力，速疾成就上师佛， <br/>
-一切众生尽无余，悉令安置师佛地。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:13</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]若有闲暇，可修格鲁五大愿如下： <br/>
+一切众生尽无余，悉令安置师佛地。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:13</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]若有闲暇，可修格鲁五大愿如下： <br/>
 <br/>
 [b]1.普贤行愿[/b]，诵：[/color] <br/>
 <br/>
@@ -2136,7 +2149,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 若人诵此普贤愿　　我说少分之善根 <br/>
 一念一切悉皆圆　　成就众生清净愿 <br/>
 我此普贤殊胜行　　无边胜福皆回向 <br/>
-普愿沉溺诸众生　　速往无量光佛刹[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:21</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed][b]2. 慈氏愿[/b]（出自大宝积经弥勒菩萨所问会第四十二  大唐三藏菩提流志译） <br/>
+普愿沉溺诸众生　　速往无量光佛刹[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:21</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed][b]2. 慈氏愿[/b]（出自大宝积经弥勒菩萨所问会第四十二  大唐三藏菩提流志译） <br/>
 <br/>
 阿难。复有十法能证菩提。云何为十。一者获戒功德。二者成就忍力。三者发起精进。四者得诸禅定。五者有大智慧。六者于诸众生常不舍离。七者于诸众生起平等心。八者于诸空法而常修习。九者善能成就真实空性。十者善能成就无相无愿。是名为十。我行此法。能得阿耨多罗三藐三菩提。阿难。弥勒菩萨往昔行菩萨道时。不能舍施手足头目。但以善巧方便安乐之道。积集无上正等菩提。尔时阿难白佛言。世尊。云何弥勒。往昔行菩萨道时。但以善巧方便安乐之道。而能积集无上菩提。佛告阿难。弥勒往昔行菩萨道。昼夜六时。偏袒右肩。右膝着地。合掌顶礼。于诸佛前。说是偈言[/color] <br/>
 <br/>
@@ -2218,7 +2231,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 愿受最初妙法甘露味，胜者妙行圆满尽无余。 <br/>
 <br/>
 从此命终承愿力，   即得上生兜率天， <br/>
-欣庆奉事慈氏尊，   速得承授菩提记。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:29</div><div class="post-body">[font=楷体_GB2312][size=5][b][color=DarkRed]3.入菩萨行论普皆回向品第十[/color] <br/>
+欣庆奉事慈氏尊，   速得承授菩提记。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:29</div><div class="post-body">[font=楷体_GB2312][size=5][b][color=DarkRed]3.入菩萨行论普皆回向品第十[/color] <br/>
 <br/>
 作此入菩萨行论　我今所有诸善根 <br/>
 悉以回向诸众生　愿速趣入菩萨行 <br/>
@@ -2377,7 +2390,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [color=DarkRed]摄颂云：[/color] <br/>
 <br/>
 [b]    闻思修等所有一切善，乃至礼敬供养少善根， <br/>
-恒流无尽辗转增长故，回向庄严咸令欢喜生。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:34</div><div class="post-body">[font=楷体_GB2312][size=5][b][color=DarkRed]4.初中后善愿[/color] <br/>
+恒流无尽辗转增长故，回向庄严咸令欢喜生。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:34</div><div class="post-body">[font=楷体_GB2312][size=5][b][color=DarkRed]4.初中后善愿[/color] <br/>
 <br/>
 敬礼十方一切薄伽梵及佛子等。 <br/>
 <br/>
@@ -2454,7 +2467,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 愿诸有于此中愿，若见若闻若忆念， <br/>
 彼等无有怯退心，修心菩萨宏大愿！ <br/>
 愿我增上净意力，善立所发大愿力， <br/>
-毕竟圆满愿度已，满诸有情所希愿！[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:45</div><div class="post-body">[b][font=楷体_GB2312][size=5][color=DarkRed]5.极乐愿•开胜刹门[/color] <br/>
+毕竟圆满愿度已，满诸有情所希愿！[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:45</div><div class="post-body">[b][font=楷体_GB2312][size=5][color=DarkRed]5.极乐愿•开胜刹门[/color] <br/>
 <br/>
 那摩室利咕噜曼殊廓夏雅！ <br/>
 <br/>
@@ -2538,7 +2551,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 少菩萨行所表善，菩萨行障无余灭， <br/>
 一切顺缘资粮聚，心中略念愿获得！ <br/>
 释迦无量光观音，弥勒文殊秘密主， <br/>
-缘起无欺谛实力，此等诸愿愿速成！[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:47</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]欲修格鲁三大本尊愿者，如下： <br/>
+缘起无欺谛实力，此等诸愿愿速成！[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:47</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]欲修格鲁三大本尊愿者，如下： <br/>
 <br/>
 [b]密集金刚愿文[/b][/color] <br/>
 [b] <br/>
@@ -2630,7 +2643,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 如是稀有道之究竟者，如理修时不生诸中断， <br/>
 诸方时中弘扬且增长，众生以此妙法愿解脱！ <br/>
 <br/>
-一切吉祥！[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:49</div><div class="post-body">[b][font=楷体_GB2312][size=5][color=DarkRed]胜乐金刚愿文[/color] <br/>
+一切吉祥！[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:49</div><div class="post-body">[b][font=楷体_GB2312][size=5][color=DarkRed]胜乐金刚愿文[/color] <br/>
 <br/>
 善根虽弱若能为佛子，善巧方便胜愿所摄持， <br/>
 从下劣果亦将成最上，速当尽者亦将永无竭。 <br/>
@@ -2721,7 +2734,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 修彼法时无碍具力者，南瞻部洲廿四殊胜处， <br/>
 勇士瑜伽母众并眷属，恒常作我伴侣愿无怠！ <br/>
 <br/>
-一切吉祥！[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:51</div><div class="post-body">[b][font=楷体_GB2312][size=5][color=DarkRed]大威德金刚愿文[/color] <br/>
+一切吉祥！[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:51</div><div class="post-body">[b][font=楷体_GB2312][size=5][color=DarkRed]大威德金刚愿文[/color] <br/>
 <br/>
 清净心之月晶墙面上，以三摩地妙笔善构绘， <br/>
 世尊金刚怖畏曼荼罗，如帝释弓修供赞颂等， <br/>
@@ -2776,7 +2789,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 乃至空住具足五身性，七支和合果位现证已， <br/>
 一切众生于彼殊胜位，于刹那顷顺易愿安置！ <br/>
 <br/>
-一切吉祥！[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:55</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]次诵吉祥文[/color] <br/>
+一切吉祥！[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:55</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]次诵吉祥文[/color] <br/>
 <br/>
 [b]    诸位亲疏上师吉祥来，    诸位本尊天众吉祥来， <br/>
 诸位空行及母吉祥来，    诸位护法卫教吉祥来。 <br/>
@@ -2860,7 +2873,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b]    法王宗喀巴，圣教日兴隆， <br/>
 违缘俱消灭，顺缘悉增长。 <br/>
 自他三世善，回向二资粮， <br/>
-无垢亦无染，法炬常明耀。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:58</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]    一夜分三，上下二分修善绕塔等，中夜分，以右胁而卧，重叠左足于右足上，犹如狮子而正睡眠。入睡前应纠正动机，以六随念或随念三宝功德、菩提心等善心而入睡。一夜间善根持续增长。 <br/>
+无垢亦无染，法炬常明耀。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:58</div><div class="post-body">[font=楷体_GB2312][size=5][color=DarkRed]    一夜分三，上下二分修善绕塔等，中夜分，以右胁而卧，重叠左足于右足上，犹如狮子而正睡眠。入睡前应纠正动机，以六随念或随念三宝功德、菩提心等善心而入睡。一夜间善根持续增长。 <br/>
 <br/>
 若修行无上瑜伽密法者，以无上瑜伽密法之生起次第、圆满次第相应法而入睡。或如热罗大成就者说：[/color] <br/>
 <br/>
@@ -2871,7 +2884,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [b]    自身刹那成嘿如嘎，蓝色一面二臂，自身皮、肉、脉等如同脱衣，置于一旁。自身骨锁洁白无垢，乃安住于上下二嘎巴拉和合嘎乌中。二嘎巴拉合为一体，无缝无隙，坚固不摧，金刚体性也。[/b] <br/>
 <br/>
-[color=DarkRed]    以如是观想入睡。此乃不被死魔摧毁之最为殊胜长寿教授。[/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:59</div><div class="post-body">[color=DarkRed]    此《菩提道次第直授日修引导易行仪轨•成就盛宴》，以众多汉地弟子数年屡次祈请故，释迦比丘世称四世夏坝活佛格勒克珠•降白降措者，依照绛贝伦珠大师所造，《道次第六加行念诵仪轨》、达麻跋达惹大师所造，《日修全函》为主，添加格鲁巴传承诸大德所造，之各种实修仪规、念诵文等，摄取精要，善加编译。2006年1月2日星期一午时成于沈阳护国法-轮寺自舍。由此功德，愿甘丹圣教遍满十方！ <br/>
+[color=DarkRed]    以如是观想入睡。此乃不被死魔摧毁之最为殊胜长寿教授。[/color][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-8-3 17:59</div><div class="post-body">[color=DarkRed]    此《菩提道次第直授日修引导易行仪轨•成就盛宴》，以众多汉地弟子数年屡次祈请故，释迦比丘世称四世夏坝活佛格勒克珠•降白降措者，依照绛贝伦珠大师所造，《道次第六加行念诵仪轨》、达麻跋达惹大师所造，《日修全函》为主，添加格鲁巴传承诸大德所造，之各种实修仪规、念诵文等，摄取精要，善加编译。2006年1月2日星期一午时成于沈阳护国法-轮寺自舍。由此功德，愿甘丹圣教遍满十方！ <br/>
 <br/>
 本轨在编校过程中采用了诸多译师的汉译文本，在此表示诚挚的谢意，并深深随喜汉地数代译者一直以来对汉藏佛教互相沟通所做出的巨大贡献。 <br/>
 <br/>
@@ -2899,7 +2912,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 21.《烧香供如意成仪轨》四世班禅•洛桑确吉坚赞造，夏坝仁波切译。 <br/>
 22.《水陆供圆满广轨•一切种智温萨巴教授》四世班禅•洛桑确吉坚赞造，夏坝仁波切译。 <br/>
 23.《菩提道次第前加行六法实修轨理•胜乘幻化车》帕绷喀大师造，夏坝仁波切节译。 <br/>
-24.本仪规中所用“四大护法供”赞词部分采自能海法师所译《文殊护法供养仪规》等四大护法供养仪，谨识。[/color] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">钢</div>钢铁蚂蚁发表于 2009-2-23 18:59</div><div class="post-body">以最虔诚身心意 如虹怖畏曼查拉 於此观想三摩地 供养赞叹持法力 <br/>
+24.本仪规中所用“四大护法供”赞词部分采自能海法师所译《文殊护法供养仪规》等四大护法供养仪，谨识。[/color] </div></div><div class="post"><div class="post-header"><div class="avatar">钢</div>钢铁蚂蚁发表于 2009-2-23 18:59</div><div class="post-body">以最虔诚身心意 如虹怖畏曼查拉 於此观想三摩地 供养赞叹持法力 <br/>
 集积清净诸福祥 三世所有福德缘 愿於成就妙德师 至诚供养令观喜 <br/>
 了徹世界法如戏 三界味似毒蛇窟 为众生发菩提心 愿勤修习六度行 <br/>
 四灌顶水净三门 於四身种坚固子 如护本命以持戒 愿能速成二种道 <br/>
@@ -2942,7 +2955,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 广大世界诸金刚 清净空行扎机尼 大教王具显密德 净持以上诸僧众 <br/>
 所有胜福吉祥力 消诸不顺破败缘 而增安稳如满月 惟愿永延诸福喜 <br/>
 八大尸林周围绕 中基金刚交杵心 摩尼珍宝庄严顶 五智慧性无量殿 <br/>
-於昆虚清净本性 所有胜福吉祥力 超出不净轮回劫 惟愿清净佛国住 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">大</div>大地修行者发表于 2009-4-1 16:49</div><div class="post-body">以最虔诚身心意 如虹怖畏曼查拉 於此观想三摩地 供养赞叹持法力 <br/>
+於昆虚清净本性 所有胜福吉祥力 超出不净轮回劫 惟愿清净佛国住 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大地修行者发表于 2009-4-1 16:49</div><div class="post-body">以最虔诚身心意 如虹怖畏曼查拉 於此观想三摩地 供养赞叹持法力 <br/>
 集积清净诸福祥 三世所有福德缘 愿於成就妙德师 至诚供养令观喜 <br/>
 了徹世界法如戏 三界味似毒蛇窟 为众生发菩提心 愿勤修习六度行 <br/>
 四灌顶水净三门 於四身种坚固子 如护本命以持戒 愿能速成二种道 <br/>
@@ -2950,7 +2963,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 消除生死中阴暗 能以三身光明净 起修更以四度观 惟愿得证成修习 <br/>
 上师怖畏佛圣会 遍满虚空大福田 清净三轮虔供养 惟愿身心俱清净 <br/>
 二咒义是本空性 大乐自心性合一 以智慧力了生死 愿证光明道法身 <br/>
-神威妙严十金刚 围绕勤修三摩地 所有冤魔鬼怪类 愿於刹那俱除净 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">自</div>自性圆满发表于 2010-9-26 11:25</div><div class="post-body">得闻圣法，无限欢喜，随喜一切善功德！随喜一切善功德！ <br/>
+神威妙严十金刚 围绕勤修三摩地 所有冤魔鬼怪类 愿於刹那俱除净 </div></div><div class="post"><div class="post-header"><div class="avatar">自</div>自性圆满发表于 2010-9-26 11:25</div><div class="post-body">得闻圣法，无限欢喜，随喜一切善功德！随喜一切善功德！ <br/>
 <br/>
 </div></div>
 </div>

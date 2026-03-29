@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>阿姜苏美多《正念》 - 藏密修海典藏</title>
+<title>阿姜苏美多《正念》 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/定慧禅修成就法.html">定慧禅修成就法</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">阿姜苏美多《正念》</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-3-14 08:55</div><div class="post-body">正念：无死之路 <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-3-14 08:55</div><div class="post-body">正念：无死之路 <br/>
 （正念：涅槃之路） <br/>
 <br/>
 著者：阿姜苏美多 <br/>
@@ -104,7 +117,7 @@ Sucitto尊者 <br/>
 此修行是这样的，不管失败以及心跑到其他地方去多少次，只要注意到你是心烦意乱的，或者注意到正念及于此，或者注意到对“Buddho”厌烦了——“我不想这样做了。我宁可不做任何努力、放松地坐在这儿。不要感觉像在做着什么。”或者这个时候你的心想着其他事，游移在意识的边缘——那么注意这一点。注意此刻心中的情绪是什么——不要批评或气馁，只是平静地、冷静地注意是平静了下来，还是感到迟钝或者想睡；这次你是全想着这些困扰的念头还是全神贯注的。只是去明了。 <br/>
 专注练习的障碍是厌恶失败和对成功有难以置信的渴求。修行并非愿力之事，而是智慧之事、留意智慧之事。通过这一修行，你能学到弱点在哪里，哪里是会迷失的地方。你见证着在生活中发展了这么长时间的个性轨迹的种类，不要批评它们，而只是知道如何与它们相处，不为它们所奴役。这意味着一种对事物本来面目小心的、智慧的反应。不是不惜一切代价地避免它们，即使最丑陋肮脏的也要辨认之、观照之。这是一种容忍的品质。经常描述“涅槃”为“镇定的”。这听起来难道不装腔作势吗？但是这个形容有一定的意义。对什么镇定？涅槃是清爽的，不感情冲动而是抽离、警醒和平衡的。 <br/>
 你可以在生活中将 “Buddho” 发展为充满脑海的一个词，而不是充满担心和所有无技巧的习惯。理解这个词，看着它，聆听它：“Buddho！”它意味着那知者，佛陀，觉醒者，那醒着的人。可以在心中想象它。听你的心在说什么——各种废话。它们就像这样进行着，压抑的恐惧和厌恶的一种无止尽的排泄物。现在认出它。不将“Buddho”用来歼灭或者抵制什么，而是作为一个有技巧的手段。我们难道能用最好的工具去杀死或者伤害其他人吗？如果你想，你可以拿着最漂亮的佛像猛击某人的头!这不是我们所说的“佛随念”，对佛陀的反映，不是吗？我们可能会将“Buddho”这个词当作抵制那些想法或感受的一种方式而去这样做。这是一种没有技巧的运用。记住我们在这儿不是为了歼灭而是让事物渐隐。这是耐心将“Buddho”强加于思维的一种温和的实践，不是在出离愤怒的状态下，而是用一种平稳和审慎的方式。 <br/>
-世界难道不需要学习这样去做吗？——美国和苏联——不是用枪支、核武器歼灭挡道者；或相互说着污言秽语。甚至在我们自己的生活中也是在这样做，不是吗？你们有多少人最近曾经对其他人恶言，说令他人伤心的话，恶意批评，仅仅因为他们惹恼了你，挡了你的道，或者惊吓了你。所以我们只是实践一下在脑海中没有一点下流恼人愚蠢无聊的事情。我们不是将“Buddho”当作一根棍棒，而是一个放下的工具。现在接下来的15分钟，带着真言“Buddho”把注意力放回你的鼻尖上。看看如何运用以及与之相处。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-3-21 13:16</div><div class="post-body">努力和放松 <br/>
+世界难道不需要学习这样去做吗？——美国和苏联——不是用枪支、核武器歼灭挡道者；或相互说着污言秽语。甚至在我们自己的生活中也是在这样做，不是吗？你们有多少人最近曾经对其他人恶言，说令他人伤心的话，恶意批评，仅仅因为他们惹恼了你，挡了你的道，或者惊吓了你。所以我们只是实践一下在脑海中没有一点下流恼人愚蠢无聊的事情。我们不是将“Buddho”当作一根棍棒，而是一个放下的工具。现在接下来的15分钟，带着真言“Buddho”把注意力放回你的鼻尖上。看看如何运用以及与之相处。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-3-21 13:16</div><div class="post-body">努力和放松 <br/>
 <br/>
 努力只是做着你必须要去做的事情。它根据人们的个性和习惯而异。一些人有许多能量——如此之多以致于他们总是干劲十足，在找事做，所有时候都在将一切推向外部。在静修中，我们不是寻找任何事来做以作为一个逃避，而是发展内在的努力。我们观心，专注于客观对象上。 <br/>
 <br/>
@@ -140,11 +153,11 @@ Sucitto尊者 <br/>
 <br/>
 通过入出息念，现在认出如是之道，从这里开始：支撑注意力一点点增长，开始理解什么是定，下定决心。当你不是超人时不要作超人的决定。做入出息念，做10或者15分钟而不要认为你能做一整晚，“我要做入出息念从现在到清晨。”那么失败了你会生气。设置一个知道自己能做到的时间。实验，与心相处直到你理解如何努力，如何放松。 <br/>
 <br/>
-入出息念是一个中介。它带你内观——毗婆舍那。呼吸的无常特性不是你的，不是吗？自诞生以来，身体一直自己呼吸。出入息——一个制约着另一个。身体活多久就会如是多久。你控制不了任何事，呼吸属于自然，它不属于你，它是无我的。当你观照这个现象，你在做毗婆舍那，内观。这不是什么兴奋、令人神魂颠倒或者不悦的事。这是简单自然的。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-3-28 08:02</div><div class="post-body">正念地走（经行） <br/>
+入出息念是一个中介。它带你内观——毗婆舍那。呼吸的无常特性不是你的，不是吗？自诞生以来，身体一直自己呼吸。出入息——一个制约着另一个。身体活多久就会如是多久。你控制不了任何事，呼吸属于自然，它不属于你，它是无我的。当你观照这个现象，你在做毗婆舍那，内观。这不是什么兴奋、令人神魂颠倒或者不悦的事。这是简单自然的。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-3-28 08:02</div><div class="post-body">正念地走（经行） <br/>
 经行是凭籍脚步行走时专注于行走的一种实修。将注意力带进身体的行走中，从路的开始到结尾，转身以及站定。生起行走的意图，然后行走。注意道路的中间和结尾，停止，转身，站立，注意当心开始到处乱跑时使心安定的那些点。如果不注意，在经行时你可以计划一场革命或者其他什么事情！有多少革命是策划于散步之时……？所以，与其做像这样的事，要用这段时间来专注于确实进行的事情。这没有神魂颠倒的感觉，它们如此普通以致于我们不会真正注意到它们。注意它会带来一种努力以真正意识到事物的本来面目。 <br/>
 当心往外跑时，在你走在经行之路上时发现自己去了印度，那么要认出“哦！”在那一刻觉醒。醒来，然后在从这里走到那里的身体上确实发生的事情中再建心智。因为心到处乱跑，这是耐心中的训练。如果过去你有在经行时禅修的美好经历，你想：“最近一次经行我真的只是觉得身体在走动。我觉得没有我，觉得自己是有福的，哦，如果我能再有那样的经历……”注意这个根据一些以前快乐回忆来要达成什么的欲望。将之视为一个制约；这是一个障碍。完全放下它，是否有一个极乐时刻产生无关紧要。只是一步、下一步——这就是全部，一种放下，一种对极微的满足，而非试图达到某种经行时你曾达到的喜乐状态。越这样尝试试图达成什么，你的心越痛苦，因为你追随着根据记忆而来的一些可爱经历的欲望。满足于当下，不管它是什么。与当下和平共处，而非忙着去做些什么以得到你想要的状态。 <br/>
 一次一步——注意当你所有要做的是踏上一步时经行是多么的宁静。但是如果你认为从经行中产生了定，你的心到处乱跑，发生了什么？“我不能持久经行，从中得不到平静，我已经尝试练习得到这种没有身体的感受，我的心只是到处乱跑。”——因为你没有理解如何去经行，而心是观念性的，试图得到什么，而非只是成为。经行时你所有要做的只是走。一步，下一步——简单……但是这并不容易，不是吗？心是散的，试图指出要做什么，做错了什么以及为什么做不到。 <br/>
-在寺庙中我们所做的是在清早起床，念诵，冥想，坐着，清扫寺院，做饭，坐着，站着，行走，工作；无论什么，来了便做，一次做一件事。所以，与事件本来面目同在是不执着的，这带来平静和自在。生活改变，我们可以看着其改变，可以适应感官世界的变化，不管它是什么。快乐或者不快乐，我们可以总是忍受和处理生活，不管发生了什么。如果我们认识到这个真理，就认识到了内在的平静。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-4-4 09:17</div><div class="post-body">慈 <br/>
+在寺庙中我们所做的是在清早起床，念诵，冥想，坐着，清扫寺院，做饭，坐着，站着，行走，工作；无论什么，来了便做，一次做一件事。所以，与事件本来面目同在是不执着的，这带来平静和自在。生活改变，我们可以看着其改变，可以适应感官世界的变化，不管它是什么。快乐或者不快乐，我们可以总是忍受和处理生活，不管发生了什么。如果我们认识到这个真理，就认识到了内在的平静。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-4-4 09:17</div><div class="post-body">慈 <br/>
 在英语中“爱”这个词通常代表“某些我喜欢的东西”。比如，“我爱吃硬米饭”，“我爱吃甜芒果”。我们真正的意思是喜欢它。喜欢是执着于某种东西，诸如真正喜欢吃或者乐于吃的食物。我们不爱它。慈意味着爱你的敌人；这不意味着你喜欢敌人。如果某些人想杀你，你说：“我喜欢他们。”这是愚蠢的！但是我们能爱他们，这意味着能从任何伤害他们和消灭他们的的欲望中抵制不快乐的想法和报复心。尽管你可能不喜欢他们——他们是悲惨的、扭曲的人——你能继续善良、慷慨、慈悲地对待他们。如果现在有一位喝醉了的人进入这个房间，他散发出恶臭，令人厌恶，丑陋且有病，没有什么可以吸引人——说“我喜欢他”是荒谬的。但是可以爱他，不住于厌恶中，不被不高兴的反应所抓住。这是我们所说的慈。 <br/>
 有时有人不喜欢自己，但是慈表示不要被我们的念头、态度、问题、心的念头和感受所抓住。正念是一种迅即的训练。正念意味着慈待心中的害怕、生气、或者嫉妒。慈意味着不围绕存在的制约创造问题，允许它们渐渐褪去、止息。比如当心中出现恐惧时，可以慈对恐惧——表示你不对之建立厌恶，可以只是接受它的存在和允许它止息。你也可以通过认出它和每个人的、动物的恐惧是一样的，来最小化这个恐惧。这不是我的恐惧，不是一个人的，是非个人的恐惧。当我们理解了在自己的生活中卷入对恐惧的反应时——痛苦，当有人踢你时，被踢的身体痛苦——我们开始对其他生命有同情心。这种痛苦确定是和一只狗被踢时所感受到的痛苦是一样的，你能慈对痛苦，这表示一种不居于厌恶中的善意和耐心。我们能够带上所有情感上的问题，内在运作慈心：你想，“我想除掉它，它太糟糕了。”这对你自己是缺乏慈心，不是吗？认出欲除之心！不要执着于对存在的情感制约的厌恶中。你无须自称感觉赞成自己的缺点。你不会认为“我喜欢我的缺点”。一些人足以傻到说：“我的缺点让我有趣。因为我的缺点我是一个迷人的人。”慈心不是制约自己相信你喜欢那些一点都不喜欢的东西，它只是不住于厌恶中。对那些你喜欢的东西易于感到慈心——漂亮的小孩、成人，有礼貌的人，小狗，漂亮的花——当我们感觉好时，我们能对自己感到慈心。“现在我感觉快乐。”当事情进展得好时，易于对善、可爱和美丽的事物感觉仁慈。在这一点上我们会迷失。慈不只是善愿、可爱的多愁善感、高度注意的念头，它总是非常重实际的。 <br/>
 如果你是非常理想主义的，你恨某人，那么你会觉得“我不能恨任何人。佛教徒要仁慈对待所有有情。我要爱每个人。如果我是一个好的佛教徒我就会爱所有人。”所有这些想法来自于不实际的理想主义。慈待你感受到的厌恶、小心眼、嫉妒、羡慕——这意味着和平相处，不创造问题，不制造困难也不创造出现在生活中、我们心中和身体的困难之外的问题。 <br/>
@@ -152,11 +165,11 @@ Sucitto尊者 <br/>
 当你感到讨厌某人，可以注意开始添加的趋势：“他做这做那，他这样做不那样做。”当你真的喜欢某人，“他能做这做那。他是个善良的好人。”如果有人说：“这人真的很坏！”你会感到生气。如果恨某人而其他人夸奖他，你也会感觉生气。你不想听到说敌人是多么的好。当你充满愤怒时，不能想象所恨的某人有一些美德；即使他们做了一些善事，你能从不记得这些事。你只记得所有的坏事。当你喜欢某人，即使他的缺点也可以容忍——“无害的小缺点”。 <br/>
 在你的经历中认出这一点；观察喜欢和不喜欢的力量。耐心-善意，慈，是有用和有效的工具，用来处理头脑围绕着不高兴的经历建立起来的琐屑。慈对那些分辨的、非常批判性的头脑也是一个非常有用的方法。他们在一切中只看见错误，但是他们从不看自己，他们只看见“外面的”。 <br/>
 现在总是抱怨天气或者政府是非常常见的现象。个人自大令这些对一切的使人不快的评论得以产生；要么开始谈论一位不在场的人，非常聪明和非常客观地分裂他们。你是如此善于分析，确切地知道此人所需，他们要做什么和不做什么，为什么他们这样做和那样做。令人印象深刻的是有如此尖锐、批判性的头脑和知道他们应该做什么。你当然说：“真的，我比他们都要好。” <br/>
-慈不是让你无视一切事物中的错误与缺陷。你只是与它们和平共处。你不需求它们是其他的什么。所以慈有时需要忽略你以及其他一切的错误——这不意味着你不注意这些事情，而表示不围绕它们产生问题。 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-4-11 12:05</div><div class="post-body">日常生活中的正念 <br/>
+慈不是让你无视一切事物中的错误与缺陷。你只是与它们和平共处。你不需求它们是其他的什么。所以慈有时需要忽略你以及其他一切的错误——这不意味着你不注意这些事情，而表示不围绕它们产生问题。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-4-11 12:05</div><div class="post-body">日常生活中的正念 <br/>
 接下来的一小时我们要经行，视走路的动作为专注的客观对象，把注意力带到脚的移动上，以及脚踏地的压力上。也可以使用真言“Buddho” 作为经行路径的一个跨度——“ Bud”右脚，“dho”左脚。看看你能否完整做到对经行路径从头到尾的行走保持警觉。用一条平常的道路，这样你能据之减速或增速。发展一条标准路径，因为我们的禅修围绕着日常的事情而非特殊的事情运行。我们使用日常的呼吸，不是特殊的“呼吸实践”；坐姿，而非站在我们的头上；普通的行走，而非跑、颠动行进或者有系统地慢行——只是一种放松的步踱。因为将之视为理所当然，我们要围绕着最普通的事情禅修。现在要将注意力放在所有普通而未被注意的事情上，比如我们的心灵和身体。甚至接受了心理学和解剖学训练的医生都没有和他们的身体真正在一起。他们与身而卧，身体与生俱来，他们成长，与身体一起活着，喂养身体，运用身体，但是当他们谈到肝脏时却像它是在一个图表里一样。看着图表里的肝脏比你自己意识到它更容易，不是吗？所以我们看着这个世界好像我们不是它的一部分一样，而且错过那些最日常最普通的事情，因为我们看着那些不寻常的事情。 <br/>
 电视是不寻常的。人们可以在电视中播放各种有趣冒险浪漫的事情。它是不可思议的东西，所以易于受到关注。“电视” 会将你施以催眠。当身体变得不寻常时，比如病重，或者很痛苦，或者狂喜或者由此带来美好感觉，我们会注意到！但是只是踩在地面上的右脚的压力，只是呼吸，只是坐在椅子上的感受，当没有任何其他极端的感觉时——这就是我们现在要意识的东西。我们带引注意力到作为一种普通生活的事物本来面目上。 <br/>
 当生活变得极端或者不寻常，我们发现自己能很好地处理它。和平主义者和认真的客观主义者经常问这个有名的问题：“你不相信暴力，如果一个疯子攻击你的母亲，你会怎么做？”这种情况我认为是绝大多数人都不会考虑那么多的问题。这不是那种在一个人的生活中日常发生的事情。如果这样极端的情况发生，我相信我们会做一些适当的事情。即使最狂热的人也能在极端环境下保持正念。但是当在日常生活中没有任何极端情况发生时，当我们只是坐在这儿时，我们能完全狂热吗？巴帝摩卡中说我们僧侣不能打任何人。所以我坐在这儿担心如果有个疯子攻击我的母亲，我该做什么。当我坐在这儿，而母亲甚至不在这里时，我已经在日常情况中创建了一个巨大的道德问题。在所有这些年中，没有疯子（来自于加利福尼亚的司机们，是的！）给我母亲最轻微的威胁。我们能轻易回答的巨大道德问题要与具体的时间、地点相一致，现在，我们此时此处要正念。 <br/>
-把注意力带到人类生活的日常环境中；身体的呼吸；在经行之路上走来走去；以及快乐和痛苦的感受。当我们继续静修时，彻底检查一切所见，知其本来面目。这就是我们观的练习——知道事物的本来面目，而非根据我们制造的一些理念或者假设。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-4-18 07:15</div><div class="post-body">聆听念头 <br/>
+把注意力带到人类生活的日常环境中；身体的呼吸；在经行之路上走来走去；以及快乐和痛苦的感受。当我们继续静修时，彻底检查一切所见，知其本来面目。这就是我们观的练习——知道事物的本来面目，而非根据我们制造的一些理念或者假设。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-4-18 07:15</div><div class="post-body">聆听念头 <br/>
 在敞开心灵，或者“放下”中，我们把注意力带到仅仅看到的那一点，或者默观那意识到来与去者。通过这个观修，我们使用无常、无满足、无我这三个特性，来观照心理和生理现象。将心灵从盲目抑制中解脱出来，如果我们困扰于恐惧、怀疑、担心或者愤怒的琐碎念头，不需要去分析它。不必指出为什么会这样，而只要使其成为完全有意识的。 <br/>
 如果你真的害怕什么，意识到这害怕。不要只是逃避它，而是注意到试图清除它的意图。完全去害怕，非常仔细地想通它，聆听你的思想。这不是分析，而只是将恐惧带至其可笑的结尾，在那结尾处，它会变得如此荒谬，以至你能开始笑话它。聆听欲望，那疯狂的“我要这个，我要那个，我已经得到，我不知道如果没有得到它我会如何，还有我想要那个……”有时心灵能只是哀号着“我要这个！”跑开——你能聆听到它。 <br/>
 我在读着对峙，就是你们彼此哀号之处以及诸如此类之事，说出了你们心中所有压抑的事情；这是一种宣泄，但它缺乏智慧的反应。缺乏聆听那些哀号将之当作一个制约的技巧，并不只是一种“随他去”，还说出一个人真正所想。缺乏心的稳定，这样的心愿意忍受最糟糕的想法。用这个方法，我们不相信那些是个人问题，而是将心理上的恐惧和愤怒至一个荒谬的境地，在那里它们只是看起来是一个自然的思维过程。我们仔细考虑想起来害怕的所有事情，不是出于盲目地想，而是确实将之当作心灵的制约来观察和聆听它们，不把它当作个人的失败或者问题。 <br/>
@@ -178,7 +191,7 @@ Sucitto尊者 <br/>
 这就是去知道，知道什么是我们能知道的。这五个障碍是你的老师，因为他们并非画册上启发灵感、光芒四射的古鲁。他们会非常琐碎、小气、愚蠢、令人厌烦和强迫人。他们一直推动、打击、敲打着我们，直到我们给予他们合适的注意和理解，直到他们不再是麻烦。这就是为什么不得不非常耐心；必须用上所有的耐心与谦逊从这五位老师处学习。 <br/>
 我们学到什么呢？那就是这些只是心中的制约；它们生起又灭去；它们是不满足的，无我的。有时一个人的一生中有很重要的信息。我们倾向于相信这些信息，但是可以知道的是这些是变化中的制约；如果通过这些信息耐心容忍，那么事情会自动改变，我们有心的开放与清明来自发反应，而非对制约起反作用。经由无遮蔽的注意力，经由正念，事情自动发展，你无须清除某事，因为一切开始又结束。没有什么要清除，你只须对其耐心，允许事情自然发展进入停止。 <br/>
 当你是耐心的，允许事情自发至停止，你会明白止息——无言，空，明晰——心的清明与宁静。心仍然是有活力的，不是无记、压抑或者沉睡的，你能听到心的宁静。 <br/>
-允许止息意味着我们得非常善意，非常温和、耐心、谦逊，不要站在事情的任何一边，好的，坏的，快乐，或者痛苦。温和的辨识允许事情根据它们的天性来改变，没有打扰。这样我们学会不在感官对象中寻找关注。我们在心的空灵、清明、沉默中寻获平静。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-4-25 07:44</div><div class="post-body">空与色 <br/>
+允许止息意味着我们得非常善意，非常温和、耐心、谦逊，不要站在事情的任何一边，好的，坏的，快乐，或者痛苦。温和的辨识允许事情根据它们的天性来改变，没有打扰。这样我们学会不在感官对象中寻找关注。我们在心的空灵、清明、沉默中寻获平静。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-4-25 07:44</div><div class="post-body">空与色 <br/>
 当心平静时，聆听，可以听到心中的震动声——“寂静之声”。这是什么？是一种耳语或是外在的声音吗？是心声或是神经系统的声音，或是什么？答案是不是它是什么，它总在那儿，在冥想中可以用它来产生转变。 <br/>
 辨识所有生灭，我们开始观照到那不生不灭者，它一直在那儿。如果你开始试图思考那声音，为之命名，或宣称由之获得了什么，那么当然你是在错误地运用它。当你抵达心的极限，以及我们所能观察到的心的末端时，是不涉及什么标准的。从这个位置你可以开始观照。可以思考以及继续听那个声音（如果你仔细考虑，就是的），但是一当迷失在思维中，你会忘掉它，不再听到什么声音。所以如果你在思维中迷失，一当意识到又在思维了，就转向那个声音，长久地聆听它。在你被情感、困扰或者产生的阻碍带走前，你能通过对心之制约温和的、非常小心的反应来练习无我、苦、无常，然后让其逝去。这是一种温和的、精微的放下，不是对任何制约“砰”的抑制。所以态度、正确的理解比其他都更为重要。不要在那寂静之声外制造其他东西。人们变得兴奋，认为他们达到了什么或者发现了什么，但是在这其中是你围绕着寂静创造出的另一种制约。这是一种非常冷静的修行，不是兴奋的那一种；有技巧地运用它，温和地放下，不要把持着你所获得的某种景象！如果在冥想中有任何阻碍，那就是你们从中得到的境象。 <br/>
 现在，你能思考身心以及围绕着它们的制约。你可以通过身体以及辨识出感觉来肃清，诸如手和脚的振动，或者可以专注于身体的任何一个地方。感觉嘴里的舌头，触碰盘子，或者上嘴唇，或者只是觉知嘴里的湿润感，你所穿衣服的压力感——只是这些我们不会厌烦于注意的精微的感觉。反映这些精微的身体感受，专注于它们，你的身体将会放松。身体喜欢被关注。它喜欢被一种温和和宁静的方式来关注，但是如果你是不会照顾和仇恨身体的，刚开始这样做的确是难以忍受的。记住我们余生中都要生活在这个躯壳中。所以你最好学会如何以一种好的态度生活在其中。你说：“哦，身体没有问题，它只是个讨厌的东西，有老、病、死。身体没有问题，要考虑的是心。”在佛教徒中这样的思想多么普遍！但是确实要耐心专注于你的身体，而不是空无。空无是对人体的错用，不过这清除的意识是有用的。这不是强加一种自我感，而只是一种善念的行为和考虑到活生生的身体——无论如何你不是这身体。 <br/>
@@ -195,7 +208,7 @@ Sucitto尊者 <br/>
 慈心的修习意味着通过容忍你可能认为不能容忍的事物来运用一种柔和的善意。如果你有一颗困扰的心，它持续闲聊，唠叨不休，你会想清除它，越试着去压抑和清除它，它就会越严重。某个时候它停止了，你会想：“哦，我已经清除掉它了，它走了。”然后它又开始了，你会想：“哦不！我以为已经清除它了。”所以不管它来去多少次，也不管来的是什么，就让它保持原状。一次只走一步。当你愿意成为耐心面对伴随着存在之制约的一切的人时，你就能让它停息了。允许一切停息的原因是你开始体会到放松，你意识到没有背负着惯常围绕着你的事物。不知为何，通常让你生气的事情不再让你那么烦恼，这让你吃惊。你开始在你以前从未感到过放松的环境中感到自在，因为你允许事情停息，而非只是抓取，再创造出害怕与焦虑。甚至围绕着你的那些“不自在”也不能影响你。你不会通过让自己变得紧张来反应其他人的不自在。这来自于放下以及允许事情止息。 <br/>
 那么现在对你来讲，一般景象是拥有这内在的警觉，注意任何出现的令你困扰的事情。如果它们一直出现，那么明显的是你在用某种方式执着——或者是通过厌恶，或者是迷恋。你能开始认出执着，而非只是尝试清除它。一当你能理解它、放下它，就能回到心的寂静中，因为在那儿无他事可做。没有什么必要去保持或者坚持什么制约了。让它们停息。当我们对生起的现象产生反应，就创造了一个习性的轮回。一个习性就是一个轮回，它保持在循环中，没有办法停止。但是如果你放下，不去理睬，那生起来的就会灭去。它不会成为一个轮回。 <br/>
 所以空不是清除一切：不是完全空白，而是一种创造生灭的无限潜力，你不会被其迷惑。我之概念即创造者，我的艺术才能，表达了我自己——这是一个多么令人难以置信的个人主义的旅程，不是吗？“这是我所做，这是我的。”他们说：“哦，你非常有技巧，不是吗？你是个天才！”然而如此多的创造艺术倾向于充满人类的恐惧与欲望。这不是来自于一颗空的心，而是来自于自我，自我除了充满死亡与自私以外，没有真正的讯息给予他人。在普遍的水平上，除了“看着我！”作为一个人，一个自我以外，没有真正的讯息。然而空的心有创造的无限潜力。不要想着创造什么；而创造物会在无我中出现，没有人去创造——创造却发生了。 <br/>
-所以我们要将创造留给正法，而非去考虑要为创造负责。我们现在要做的，对我们而言有必要性的——常规来说，对人类，对人们——是放下；或者不执着。放下一切。行善，抑制恶，正念。这就是基础。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-5-5 07:16</div><div class="post-body">思考 <br/>
+所以我们要将创造留给正法，而非去考虑要为创造负责。我们现在要做的，对我们而言有必要性的——常规来说，对人类，对人们——是放下；或者不执着。放下一切。行善，抑制恶，正念。这就是基础。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2011-5-5 07:16</div><div class="post-body">思考 <br/>
 世界需要智慧 <br/>
 我们在这儿有共同的兴趣。今晚我们济济一堂因为我们都对实修正法有兴趣，而不是带着自己观点和意见的个人。许多人在这个周日晚上聚集在一起，开始看到人类存在的潜力，一个建基于对真理共同兴趣上的团体。我们汇合于正法中。生起的过去了，在这个过程中是平静。当我们放下习气和对制约现象的执着，我们开始意识到心的整体性和合一性。 <br/>
 因为人们不能在任何事情上达成统一意见，有如此多的争执与战争在继续，此时这是一个非常重要的思考。中国反对俄国，美国反对苏联等等。为什么反对？反对什么？这有关他们对世界的理解。“这是我的土地，我想通过这个方法要它。”“我想要这种政府，这种政治和经济体系。”如此不断下去，直到我们进行屠杀和相互折磨，破坏我们试图解放的土地，奴役或者拒绝所有我们试图解放的人民。为什么？因为没有理解事物的本来面目。 <br/>

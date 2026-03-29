@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>阿弥陀佛是怎样成佛的 - 藏密修海典藏</title>
+<title>阿弥陀佛是怎样成佛的 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/聊天广告资讯版.html">聊天广告资讯版</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">阿弥陀佛是怎样成佛的</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">般</div>般若密多发表于 2010-12-30 15:33</div><div class="post-body">[color=#000][font=Tahoma][size=16px][size=3]　　净土一宗，法门深广，三根普被，人人可修，若真是正信、切愿、实行，往生必定可期。《大集经》云：“末法亿亿人修行，罕一得道，唯依念佛，得度生死。”现在国内修学佛法的，除西藏外，百分之九十都是修净土宗的，然现在念佛者多，往生者少，也是一个事实。究其原因，有大德指出，或因信愿不切，或因新修不专，或因因地不正，唯求人天福报。另有一个原因即是神佛不分，将生西的责任全推在阿弥陀佛身上，以为阿弥陀佛是一个无所不能的神，只要念佛求佛,阿弥陀佛即有责任保佑我们，让我们现世得福，来世生西，把我们接引到西方极乐世界去；而自己不肯努力修持，除二时课诵外，日常生活中也不努力除习净心，一切依赖阿弥陀佛，寄望于临终之际阿弥陀佛的慈悲接引，哪怕下品下生，乃至边地疑城也好。[/size] <br/>
+<div class="post"><div class="post-header"><div class="avatar">般</div>般若密多发表于 2010-12-30 15:33</div><div class="post-body">[color=#000][font=Tahoma][size=16px][size=3]　　净土一宗，法门深广，三根普被，人人可修，若真是正信、切愿、实行，往生必定可期。《大集经》云：“末法亿亿人修行，罕一得道，唯依念佛，得度生死。”现在国内修学佛法的，除西藏外，百分之九十都是修净土宗的，然现在念佛者多，往生者少，也是一个事实。究其原因，有大德指出，或因信愿不切，或因新修不专，或因因地不正，唯求人天福报。另有一个原因即是神佛不分，将生西的责任全推在阿弥陀佛身上，以为阿弥陀佛是一个无所不能的神，只要念佛求佛,阿弥陀佛即有责任保佑我们，让我们现世得福，来世生西，把我们接引到西方极乐世界去；而自己不肯努力修持，除二时课诵外，日常生活中也不努力除习净心，一切依赖阿弥陀佛，寄望于临终之际阿弥陀佛的慈悲接引，哪怕下品下生，乃至边地疑城也好。[/size] <br/>
 [size=3]　　事实上，净土法门是自力与他力相结合的法门。就自力方面而言，《阿弥陀经》教我们要“执持名号”以至“一心不乱”，《楞严经·大势至菩萨念佛圆通章》要我们“都摄六根、净念相继”。《无量寿经》中记载的阿弥陀佛因地修行时发大誓愿，修菩萨道，积功累德以至圆满成佛的事迹，对我们念佛人也是个启示：念佛求佛何如念佛学佛，看看阿弥陀佛是怎样成佛的，我们向他学习，学他的愿，学他的行，不是更容易与阿弥陀佛感应道交，现世得福开慧，临终往生西方吗？从求佛到学佛，不更符合佛法福慧双修、自利利他的修学精神吗？[/size] <br/>
 [size=3]　　（一）为国捐王，力求正觉[/size] <br/>
 [size=3]　　在很久很久以前，阿弥陀佛也像我们一样，是一个世间的凡人。当时他是一个大国的国王，名为世饶王。其时有佛出世，名世间自在王佛。世间自在王佛在世界上教授佛法，为诸天及世间的人演说经文、讲论道要。世铙王听到佛的说法，顿然心开，明白了佛法的要义，非常欢喜，发起大菩提心，力求无上正觉，便舍弃了国土与王位，离世出家，成为比丘，法号为法藏。世饶王以国王身，放弃人间第一的富贵与荣华而出家求道，表现出真实的出离心。出离心正是修学佛法的基本。学佛人种种放不下，功名富贵、眷属恩爱、人我是非等等，究其根源，即是没有真实的出离心。[/size] <br/>

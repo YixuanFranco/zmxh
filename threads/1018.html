@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>圣者贤行愿王释义（普贤行愿品释）——章嘉游戏金刚 - 藏密修海典藏</title>
+<title>圣者贤行愿王释义（普贤行愿品释）——章嘉游戏金刚 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">圣者贤行愿王释义（普贤行愿品释）——章嘉游戏金刚</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-5-8 15:32</div><div class="post-body">[align=center][font=仿宋_GB2312][size=6][b]圣者贤行愿王释义[/b][/size][/size][/align][b][font=仿宋_GB2312][size=5][/size][/size][/b] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-5-8 15:32</div><div class="post-body">[align=center][font=仿宋_GB2312][size=6][b]圣者贤行愿王释义[/b][/size][/size][/align][b][font=仿宋_GB2312][size=5][/size][/size][/b] <br/>
 [align=right] <br/>
 [font=仿宋_GB2312][size=5][b]章嘉游戏金刚造 <br/>
 [/b][/size][/size][font=仿宋_GB2312][size=5][b]藏文汉译汤芗铭译[/b][/size][/size][/align][align=right][font=仿宋_GB2312][size=5][/size][/size][/align][align=left][font=仿宋_GB2312][size=5][b]贤行愿王（藏文汉译）[/b][/size][/size][/align][align=right][b][font=仿宋_GB2312][size=5][/size][/size][/b][/align][b][font=仿宋_GB2312][size=5][/size][/size][/b] <br/>
@@ -218,7 +231,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=仿宋_GB2312][size=4][b]四、本论属释经义之论，故名释义。内容概分：「经文」、「释义」二部分。为使眉目分明，经文部分全用正楷字体；释义本文则用明体字，科判另拣黑字标出，以开显纲目。[/b][/size][/size] <br/>
 [b][font=仿宋_GB2312][size=4][/size][/size][/b] <br/>
 [font=仿宋_GB2312][size=4][b]五、有几处译文，以（）号括出，酌加用字，为顺文气，并示有别。但惟恐有误，尚祈十方大德不吝赐正，是所至祷。[/b][/size][/size] <br/>
-[font=仿宋_GB2312][size=5][/size][/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-15 18:02</div><div class="post-body">[align=center][b][font=仿宋_GB2312][size=5]圣者贤行愿王释义译序[/size][/font][/b][/align][b][font=仿宋_GB2312][size=5] <br/>
+[font=仿宋_GB2312][size=5][/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-15 18:02</div><div class="post-body">[align=center][b][font=仿宋_GB2312][size=5]圣者贤行愿王释义译序[/size][/font][/b][/align][b][font=仿宋_GB2312][size=5] <br/>
 <br/>
 [/size][/font][/b][align=right][font=仿宋_GB2312][size=5][b]汤芗铭 [/b][/size][/font][/align][font=仿宋_GB2312][size=5][/size][/size] <br/>
 [font=仿宋_GB2312][size=5][b]此愿，梵名「贤行愿王」（1），其义详于释经题科。梵疏（2）所释，亦各不同，略举二说：[/b][/size][/size] <br/>
@@ -254,7 +267,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=仿宋_GB2312][size=5][b]牟尼密意深且细，以我愚夫极愚者；[/b][/size][/size] <br/>
 [font=仿宋_GB2312][size=5][b]当有颠倒传译过，至心露于菩萨所。[/b][/size][/size] <br/>
 [font=仿宋_GB2312][size=5][/size][/size] <br/>
-[align=right][font=仿宋_GB2312][size=5]民国壬午季春  蕲水汤芗铭志于北海公园正觉殿菩提学会[/size][/size][/align] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 18:08</div><div class="post-body">[font=仿宋_GB2312][size=5][b]圣者贤行愿王释义〔亦名演密〕 <br/>
+[align=right][font=仿宋_GB2312][size=5]民国壬午季春  蕲水汤芗铭志于北海公园正觉殿菩提学会[/size][/size][/align] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 18:08</div><div class="post-body">[font=仿宋_GB2312][size=5][b]圣者贤行愿王释义〔亦名演密〕 <br/>
 <br/>
 <br/>
 俱胝福善所庄严， 三界唯一最尊上； <br/>
@@ -293,7 +306,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 甲三、释所为相属 <br/>
 <br/>
-谓胜解行菩萨、住大地菩萨（4），一切菩萨功德及行有如大海，是此所诠。于彼一切作意其境而发愿已，增长大乘种性（5）气力，现前安处深厚熏习一切菩萨道之次第，后文所说愿中所有现时胜利，亦得现前，是名所为（6）。既发愿已，究竟胜利现大菩提，是名正为〔即华严五为中之第一为〕。又此正为依于所为，而其所为依于所诠，是名相属。此中所为相属之义，虽诸梵疏皆未有说，一类藏疏别有说法，然亦上说至为妙善。[/b][/size] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 18:18</div><div class="post-body">[font=仿宋_GB2312][size=5][b]甲四、释经义有三： <br/>
+谓胜解行菩萨、住大地菩萨（4），一切菩萨功德及行有如大海，是此所诠。于彼一切作意其境而发愿已，增长大乘种性（5）气力，现前安处深厚熏习一切菩萨道之次第，后文所说愿中所有现时胜利，亦得现前，是名所为（6）。既发愿已，究竟胜利现大菩提，是名正为〔即华严五为中之第一为〕。又此正为依于所为，而其所为依于所诠，是名相属。此中所为相属之义，虽诸梵疏皆未有说，一类藏疏别有说法，然亦上说至为妙善。[/b][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 18:18</div><div class="post-body">[font=仿宋_GB2312][size=5][b]甲四、释经义有三： <br/>
 <br/>
 [/b][size=4][b]（乙一、经中所明缘起理趣。乙二、梵土诸疏所释理趣。乙三、正释经义。） <br/>
 [/b][/size] <br/>
@@ -407,7 +420,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 第五十二事品：序说善财童子诣苏摩那城，思惟文殊师利菩萨，起深信心，住立门所。尔时文殊从一百一十由旬外，遥伸右手摩善财顶，赞叹慰谕，令其深入普贤行轮。 <br/>
 <br/>
-第五十三事品：序说善财童子由彼一切大善知识，次第开示海功德相，普令增长无边慧力。于彼圣者普贤菩萨现前生起胜恭敬时，便能睹见、将见普贤十种瑞相。于其觐见普贤时分，获得生起一切佛法光明无边慧力之眼，便见普贤在于毗卢遮那如来应正等觉前，坐莲华藏狮子之座，诸菩萨众所共围绕，一切毛孔示现三世剎海庄严种种色相，示现一切如来三世事业、一切法藏，如实睹见游戏庄严。如于毗卢遮那如来前示现如是不可思议游戏神通，十方一切如来之前，亦复如是游戏示现。十方刹海一一尘中，普遍充满解脱法界，广大虚空，现前观见。尔时善财获得十种清净智波罗蜜多行，既得是已，普贤菩萨伸其右手摩善财顶，令其证得深入一切佛剎极微尘数三摩地门，而得观见不可思议大解脱相。又为宣说一切众生但闻其名得不退转最胜功德一切法门。当是之时，善财童子获得能入普贤菩萨游戏通智，与普贤等，乃为说此贤行愿王。上来略述华严经义，亦即广说此贤行愿甚奇希有缘起理趣。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 18:24</div><div class="post-body">[font=仿宋_GB2312][size=5][b]乙二、梵土诸疏所释理趣有二： <br/>
+第五十三事品：序说善财童子由彼一切大善知识，次第开示海功德相，普令增长无边慧力。于彼圣者普贤菩萨现前生起胜恭敬时，便能睹见、将见普贤十种瑞相。于其觐见普贤时分，获得生起一切佛法光明无边慧力之眼，便见普贤在于毗卢遮那如来应正等觉前，坐莲华藏狮子之座，诸菩萨众所共围绕，一切毛孔示现三世剎海庄严种种色相，示现一切如来三世事业、一切法藏，如实睹见游戏庄严。如于毗卢遮那如来前示现如是不可思议游戏神通，十方一切如来之前，亦复如是游戏示现。十方刹海一一尘中，普遍充满解脱法界，广大虚空，现前观见。尔时善财获得十种清净智波罗蜜多行，既得是已，普贤菩萨伸其右手摩善财顶，令其证得深入一切佛剎极微尘数三摩地门，而得观见不可思议大解脱相。又为宣说一切众生但闻其名得不退转最胜功德一切法门。当是之时，善财童子获得能入普贤菩萨游戏通智，与普贤等，乃为说此贤行愿王。上来略述华严经义，亦即广说此贤行愿甚奇希有缘起理趣。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 18:24</div><div class="post-body">[font=仿宋_GB2312][size=5][b]乙二、梵土诸疏所释理趣有二： <br/>
 <br/>
 （丙一、略述陈那菩萨所造贤行疏义。丙二、略述释迦知识所造疏义。） <br/>
 <br/>
@@ -700,7 +713,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 所余第二百四十一句至第二百五十二句三颂，释文不现。 <br/>
 <br/>
-上来略述陈那疏义，此与龙猛所造会疏、总义（纲领）、分释（节目）多分相同。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 22:39</div><div class="post-body">[font=仿宋_GB2312][size=5][b]丙二、略述释迦知识所造疏义，此疏总标六门： <br/>
+上来略述陈那疏义，此与龙猛所造会疏、总义（纲领）、分释（节目）多分相同。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 22:39</div><div class="post-body">[font=仿宋_GB2312][size=5][b]丙二、略述释迦知识所造疏义，此疏总标六门： <br/>
 <br/>
 [size=4]（丁一、愿前方便。丁二、胜解行地愿。丁三、增上意乐清净地愿。丁四、果。丁五、愿胜利。丁六、暂一诵持愿文善根，回向胜利。） <br/>
 [/size] <br/>
@@ -1315,7 +1328,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 <br/>
 <br/>
-[/b][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 22:56</div><div class="post-body">[font=仿宋_GB2312][size=4][b]圣者贤行愿王释义 <br/>
+[/b][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-15 22:56</div><div class="post-body">[font=仿宋_GB2312][size=4][b]圣者贤行愿王释义 <br/>
 <br/>
 〔自序注释〕 <br/>
 <br/>
@@ -1687,7 +1700,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 （151）方便为悲，般若为慧；慧悲双转，不舍有情。 <br/>
 <br/>
-（152）如身礼拜等。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-15 23:00</div><div class="post-body">:loveliness: <br/>
+（152）如身礼拜等。[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-15 23:00</div><div class="post-body">:loveliness: <br/>
 <br/>
 [font=宋体][size=6][color=darkred][b]要常诵常听，增长福慧积聚资粮。[/b][/color][/size][/font] <br/>
 <br/>

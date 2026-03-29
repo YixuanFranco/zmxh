@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>纳木错”意为天湖、灵湖或神湖，是藏传佛教的著名圣地 - 藏密修海典藏</title>
+<title>纳木错”意为天湖、灵湖或神湖，是藏传佛教的著名圣地 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/圣地游览贴图区.html">圣地游览贴图区</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">纳木错”意为天湖、灵湖或神湖，是藏传佛教的著名圣地</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-10-18 22:49</div><div class="post-body">[font=楷体_GB2312][size=5]     [/size][/size][font=Verdana][size=3] [/size][/font] <br/>
+<div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-10-18 22:49</div><div class="post-body">[font=楷体_GB2312][size=5]     [/size][/size][font=Verdana][size=3] [/size][/font] <br/>
 [font=楷体_GB2312][size=5]   “纳木错”意为天湖、灵湖或神湖，是藏传佛教的著名圣地，信徒们尊其为四大威猛湖之一，传为密宗本尊胜乐金刚的道场，位于拉萨市当雄县和那曲地区班戈县之间。它的东南部是直插云宵，终年积雪的念青唐古拉山的主峰，北侧倚偎着和缓连绵的高原丘陵，广阔的草原绕湖四周，天湖象一面巨大宝镜，镶嵌在藏北的草原上。湛兰的天、碧蓝色的湖、白雪、绿草、牧民的牛毛帐篷及五颜六色的山花，交相辉映，组成一幅大自然美丽、动人的画面，身临其境，无不感到心旷神怡。[/size][/size] <br/>
 [font=楷体_GB2312][size=5][/size][/size] <br/>
 [font=楷体_GB2312][size=5]    湖面海拔4718米，从湖东岸到西岸全长70多公里，由南岸到北岸宽30多公里，总面积为1900多平方公里，是我国的第二大咸水湖，也是世界上海拔最高的咸水湖，最深处约33米以上。纳木错湖水靠念青唐古拉山的冰雪融化后补给，沿湖有不少大小溪流注入，湖水清澈透明，湖面呈天蓝色，水天相融，浑然一体，闲游湖畔，似有身临仙境之感。 [/size][/size] <br/>
@@ -43,10 +56,10 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/size] <br/>
 [font=楷体_GB2312][size=5]    纳木错是第三世纪未和第四世纪初，喜马拉雅山运动凹陷而形成的巨大肖盆，后因西藏高原气候逐渐干燥，纳木错面积大为缩减，现存的古湖岩线有三道，最高一道距现在的湖面约80余米，湖滨平原牧草良好，是天然的牧场。每当夏初，成群的野鸭飞来栖息，繁殖后代。湖泊周围常有狗熊、野牦牛、野驴、岩羊、狐狸、獐子、旱獭等野生动物栖居，湖中盛产高原的细鳞鱼和无鳞鱼类，湖区还产虫草、贝母、雪莲等名贵药材。 [/size][/size] <br/>
 <br/>
-[font=楷体_GB2312][size=5]    纳木错，在公元十二世纪末，藏传佛教达隆嘎举派创始人人达隆塘巴扎西贝等高僧，曾到湖上修习密宗要法，并认为是胜乐金刚的道场，始创羊年环绕纳木灵湖之举。信徒传说，每到羊年，诸佛、菩萨、扩法神集会在纳木湖设坛大兴法会，如人此时前往朝拜，转湖念经一次，胜过平时朝礼转湖念经十万次，其福无量。所以每到羊年僧谷信徒不惜长途跋涉，前往转湖一次就感到心满意足，得到了莫大的安慰和幸福，这一活动，每到藏历羊年的四月十五达到高潮，届时僧俗去集，先后历时数月。[/size][/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">三</div>三不领主发表于 2008-9-27 20:01</div><div class="post-body">神奇的天湖，迷人的景色。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">莲</div>莲生发表于 2009-9-20 20:30</div><div class="post-body"><br/>
+[font=楷体_GB2312][size=5]    纳木错，在公元十二世纪末，藏传佛教达隆嘎举派创始人人达隆塘巴扎西贝等高僧，曾到湖上修习密宗要法，并认为是胜乐金刚的道场，始创羊年环绕纳木灵湖之举。信徒传说，每到羊年，诸佛、菩萨、扩法神集会在纳木湖设坛大兴法会，如人此时前往朝拜，转湖念经一次，胜过平时朝礼转湖念经十万次，其福无量。所以每到羊年僧谷信徒不惜长途跋涉，前往转湖一次就感到心满意足，得到了莫大的安慰和幸福，这一活动，每到藏历羊年的四月十五达到高潮，届时僧俗去集，先后历时数月。[/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">三</div>三不领主发表于 2008-9-27 20:01</div><div class="post-body">神奇的天湖，迷人的景色。 </div></div><div class="post"><div class="post-header"><div class="avatar">莲</div>莲生发表于 2009-9-20 20:30</div><div class="post-body"><br/>
 <br/>
 美丽的纳木错 <br/>
-我和龙王交换了礼物！ </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">纳</div>纳木错发表于 2009-10-13 17:16</div><div class="post-body">[size=2][color=silver][b] <br/>
+我和龙王交换了礼物！ </div></div><div class="post"><div class="post-header"><div class="avatar">纳</div>纳木错发表于 2009-10-13 17:16</div><div class="post-body">[size=2][color=silver][b] <br/>
 <br/>
 <br/>
 <br/>

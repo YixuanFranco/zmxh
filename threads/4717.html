@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>清定上师年谱 - 藏密修海典藏</title>
+<title>清定上师年谱 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">清定上师年谱</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">大</div>大眼发表于 2009-7-15 02:30</div><div class="post-body">大寶（清）定公，俗名鄭全山，字有藏。 <br/>
+<div class="post"><div class="post-header"><div class="avatar">大</div>大眼发表于 2009-7-15 02:30</div><div class="post-body">大寶（清）定公，俗名鄭全山，字有藏。 <br/>
 <br/>
 ⊙清光緒二十九年舊曆冬月十七彌陀聖誕，生於浙江三門高梘鄉一个秀才家庭，家世信佛。 <br/>
 <br/>
@@ -114,7 +127,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 ⊙1995年，九十三歲。師晚年三大願（落成圓通寶殿，結集海公全集，繼承海公遺願重修龍興塔）相繼圓滿，遂重點最大一願，培養接班人。嗣後三年，夏结成都，冬临南粤。頻繁出行传法，时示恶疾警人。 <br/>
 <br/>
-⊙1999年，九十七岁。夏舊曆五月十日戊時，示寂成都龍泉。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">大</div>大眼发表于 2009-7-15 02:30</div><div class="post-body">母（郑李氏）常对我说：“全山，我生你的那天是大晴天，太阳很大。很奇怪，生你前的第一天晚上,我做了个梦。一个身材高大的军人，身着黄军装，骑着一匹白黄花马到咱家门口，把马拴在门前的一棵大柏树上，要进我家借宿。当时我在门口大着肚子站着，军人对我说：“大嫂，行行好，今晚在你家借住一宿吧”。我对军人说：“对不起，我家房间少，没有住房，你另找别家吧。”那军人再次对我说：“唉！我们当兵的，还不如当和尚的，和尚能找个庙子安居，当兵的却找不到一间房子借住一夜。多么可怜呀！大嫂方便方便吧，就让我在你家院子里借住一夜吧。”这时你爸爸回家正走到家门口，我对他说了这件事。你爸爸同意晚上和军人睡，让那军人住在我们家。第二天，军人早早的便骑着马，到三门县一个古庙里出家了，剃了头发，身上披着袈裟，这时我的梦醒了。第二天早晨正是冬月十七日，吃早饭时，我就生下了你。全山啊！你刚生下来哭声很大，小眼睛东转转、西望望，充满了好奇的目光。”母亲那个时候已经28岁了，我生下来没有几天，母亲就没有乳给我吃了，只好天天做米粉汤喂我吃。为了养育我，母亲起早睡晚，日夜不眠，受了许多苦。这个梦是我读小学时母亲告诉我的。我们只有兄弟三人，没有姐姐、妹妹。我的哥哥名叫郑济时，比我大三岁，弟弟名叫郑克天（法名清惠，已圆寂了）比我小七岁。1909年9月，我未满7岁便上学了，父亲送到我当地有名的三门县小学校读书。 <br/>
+⊙1999年，九十七岁。夏舊曆五月十日戊時，示寂成都龍泉。 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大眼发表于 2009-7-15 02:30</div><div class="post-body">母（郑李氏）常对我说：“全山，我生你的那天是大晴天，太阳很大。很奇怪，生你前的第一天晚上,我做了个梦。一个身材高大的军人，身着黄军装，骑着一匹白黄花马到咱家门口，把马拴在门前的一棵大柏树上，要进我家借宿。当时我在门口大着肚子站着，军人对我说：“大嫂，行行好，今晚在你家借住一宿吧”。我对军人说：“对不起，我家房间少，没有住房，你另找别家吧。”那军人再次对我说：“唉！我们当兵的，还不如当和尚的，和尚能找个庙子安居，当兵的却找不到一间房子借住一夜。多么可怜呀！大嫂方便方便吧，就让我在你家院子里借住一夜吧。”这时你爸爸回家正走到家门口，我对他说了这件事。你爸爸同意晚上和军人睡，让那军人住在我们家。第二天，军人早早的便骑着马，到三门县一个古庙里出家了，剃了头发，身上披着袈裟，这时我的梦醒了。第二天早晨正是冬月十七日，吃早饭时，我就生下了你。全山啊！你刚生下来哭声很大，小眼睛东转转、西望望，充满了好奇的目光。”母亲那个时候已经28岁了，我生下来没有几天，母亲就没有乳给我吃了，只好天天做米粉汤喂我吃。为了养育我，母亲起早睡晚，日夜不眠，受了许多苦。这个梦是我读小学时母亲告诉我的。我们只有兄弟三人，没有姐姐、妹妹。我的哥哥名叫郑济时，比我大三岁，弟弟名叫郑克天（法名清惠，已圆寂了）比我小七岁。1909年9月，我未满7岁便上学了，父亲送到我当地有名的三门县小学校读书。 <br/>
 <br/>
 </div></div>
 </div>

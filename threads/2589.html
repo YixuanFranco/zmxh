@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>中阴救度密法（对应所依本尊法相） - 藏密修海典藏</title>
+<title>中阴救度密法（对应所依本尊法相） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/往生佛土普超度.html">往生佛土普超度</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">中阴救度密法（对应所依本尊法相）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:13</div><div class="post-body">[font=楷体_GB2312][size=4]中阴救度密法重译述缘 <br/>
+<div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:13</div><div class="post-body">[font=楷体_GB2312][size=4]中阴救度密法重译述缘 <br/>
 <br/>
 夫三界如火宅，众生没在苦，我能仁世尊，以一大事因缘，出兴于世。其一大事因缘者，最简单言之，无非拯拔群伦，出秽若愚迷之轮回生死，登常乐我净之涅槃智岸。 <br/>
 已既利济，还当同样利济他人而已。 <br/>
@@ -81,7 +94,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 区区鄙怀，亦不过以其有亟宜提供于吾国佛化界之必要耳。 <br/>
 世之达者，倘能细心取原书，更治译之，使臻美善，曷欣盛欤！ <br/>
 <br/>
-中华民国第一乙亥丙子重译草成 张莲菩提金刚正时客于荆沙[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:21</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][b]获此法本于中阴救度密法有大因缘 <br/>
+中华民国第一乙亥丙子重译草成 张莲菩提金刚正时客于荆沙[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:21</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][b]获此法本于中阴救度密法有大因缘 <br/>
 如要修习仍请觅求上师传授灌顶方为如法[/b][/font] <br/>
 <br/>
 [b][size=6][b]    中阴救度密法 西藏度亡经 上卷　[/b][/size][/b] <br/>
@@ -125,7 +138,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 第二步--命终已后，中阴现前，作法导示提醒灵识使之趣入实相光明； <br/>
 第三步--既已深入中阴，上胜能度脱之机会已过，妄心炽然又复求生，作法导示其灵识令醒悟补救，即生亦导示其如何避下劣而上胜，有闭胎择胎入胎等法。 <br/>
 <br/>
-本书上卷详第一二两步，下卷专述第三步及结述分。[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:28</div><div class="post-body">[font=楷体_GB2312][size=5]第一步 将欲命终入观实相 <br/>
+本书上卷详第一二两步，下卷专述第三步及结述分。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:28</div><div class="post-body">[font=楷体_GB2312][size=5]第一步 将欲命终入观实相 <br/>
 <br/>
 有人于佛法唯曾听闻，而不认识信受；亦有人虽认识信受，而不甚真切。 <br/>
 <br/>
@@ -225,7 +238,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 则一者提醒死者之识神，犹如上师所导示于彼之入观实相法； <br/>
 二者足使死者认证其本己心性与妙明净光体者元本非一非异； <br/>
-三者本来面目既已当前明了，即可究竟合体于法界体性之智身，而安住彼岸矣！[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:31</div><div class="post-body">[font=楷体_GB2312][size=5]第二步 中阴现前入观实相 <br/>
+三者本来面目既已当前明了，即可究竟合体于法界体性之智身，而安住彼岸矣！[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:31</div><div class="post-body">[font=楷体_GB2312][size=5]第二步 中阴现前入观实相 <br/>
 <br/>
 (甲) 中阴初期 (七七日之前三日半或四日，藏文名此期曰“几海 ”中阴) <br/>
 <br/>
@@ -340,7 +353,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 又下述之第一日者，须知非由死时算起，乃由死后之三日半或四日之时为始。 <br/>
 <br/>
-通常死者于此时如从睡梦醒觉，确知已死，然其妄想未除；又亟欲求生之妄念，即于此时将发轫也。[/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:33</div><div class="post-body">[font=楷体_GB2312][size=5]第一日之作法 <br/>
+通常死者于此时如从睡梦醒觉，确知已死，然其妄想未除；又亟欲求生之妄念，即于此时将发轫也。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:33</div><div class="post-body">[font=楷体_GB2312][size=5]第一日之作法 <br/>
 <br/>
 [img]http://www.zmxh.com/bbs/attachments/20070705_37d8b91b03181db514b7oWCgUME01TFe.jpg[/img][img]http://www.zmxh.com/bbs/attachments/20070705_a8ed5473053a7511af4boOj6JMB4DXjr.jpg[/img][img]http://www.zmxh.com/bbs/attachments/20070705_809f541495f788c15d6axAfN4UEhY6a3.jpg[/img] <br/>
 毗卢遮那如来父母双尊     毗卢遮那如来         法界自在母 <br/>
@@ -363,7 +376,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 毗卢遮那世尊 愿为我之前导 无上空性佛母 为我拥护于后 <br/>
 中阴险隘道中 度我安然而过 住入圆满一切 清净佛性界中[/b] <br/>
 <br/>
-如上祈愿，汝当反复诚恳念持，则汝可为毗卢遮那心中证得法身佛性，住入中央密严净土。 ”[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:35</div><div class="post-body">[font=楷体_GB2312][size=5]第二日之作法 <br/>
+如上祈愿，汝当反复诚恳念持，则汝可为毗卢遮那心中证得法身佛性，住入中央密严净土。 ”[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:35</div><div class="post-body">[font=楷体_GB2312][size=5]第二日之作法 <br/>
 <br/>
 [img]http://www.zmxh.com/bbs/attachments/20070705_a7bdf089cded788e4646Xph5pV59C9nd.jpg[/img][img]http://www.zmxh.com/bbs/attachments/20070705_e0da4e4ef54bd10cbd0dHGRTonTaD3Bl.jpg[/img][img]http://www.zmxh.com/bbs/attachments/20070705_31539766a3bebdb132e2uPffhGL31w0R.jpg[/img] <br/>
 金刚萨埵不动如来父母双尊  金刚萨埵不动如来      玛嘛几母 <br/>
@@ -398,7 +411,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 圣玛嘛几佛母 其为我之后护 中阴险隘道中 <br/>
 度我安然而过 住入圆满一切 清净佛性界中[/b] <br/>
 <br/>
-如上祈愿，汝当反复诚恳持念，则汝可为摄入金刚部主心中，证得报身佛性，住入于东方上胜妙乐土。 ”[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:37</div><div class="post-body">[font=楷体_GB2312][size=5]第三日之作法 <br/>
+如上祈愿，汝当反复诚恳持念，则汝可为摄入金刚部主心中，证得报身佛性，住入于东方上胜妙乐土。 ”[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:37</div><div class="post-body">[font=楷体_GB2312][size=5]第三日之作法 <br/>
 <br/>
 [img]http://www.zmxh.com/bbs/attachments/20070705_14a365a30141dc937eddrVfadBIeAooo.jpg[/img][img]http://www.zmxh.com/bbs/attachments/20070705_123a9d12a9bc2a70275b4a9NkdbT00QF.jpg[/img][img]http://www.zmxh.com/bbs/attachments/20070705_3d74d866b0b872e69390H6hvxVcaeU51.jpg[/img] <br/>
 宝生如来父母双尊         宝生如来               佛眼母 <br/>
@@ -433,7 +446,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 佛眼佛母圣尊 其为我之后护 中阴险隘道中 <br/>
 度我安然而过 住入圆满一切 清净佛性界中[/b] <br/>
 <br/>
-恭敬虔诚，如上祈愿，汝将为宝生如来尊圣双身之圆光聚所摄受，证得报身佛性，住入于南方众宝庄严佛土。 [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:39</div><div class="post-body">[font=楷体_GB2312][size=5]第四日之作法 <br/>
+恭敬虔诚，如上祈愿，汝将为宝生如来尊圣双身之圆光聚所摄受，证得报身佛性，住入于南方众宝庄严佛土。 [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:39</div><div class="post-body">[font=楷体_GB2312][size=5]第四日之作法 <br/>
 <br/>
 [img]http://www.zmxh.com/bbs/attachments/20070705_ea279c35728d6317439bBS94xPNdYXtm.jpg[/img][img]http://www.zmxh.com/bbs/attachments/20070705_7e91267b7fbde6265932n6YGsk28gteP.jpg[/img][img]http://www.zmxh.com/bbs/attachments/20070705_31b0ac3996acff68a410KoYn9qCTBRyQ.jpg[/img] <br/>
 无量光如来父母双尊         无量光如来           白衣母 <br/>
@@ -474,7 +487,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 白衣尊圣佛母 其为我之后护 中阴险隘道中 <br/>
 度我安然而过 住入圆满一切 清净佛性界中[/b] <br/>
 <br/>
-恭敬虔诚，如上祈愿，汝将为阿弥陀佛尊圣双身圆光聚所摄受而证得报身佛性，住入西方极乐佛土。 ”[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:40</div><div class="post-body">[font=楷体_GB2312][size=5]第五日之作法 <br/>
+恭敬虔诚，如上祈愿，汝将为阿弥陀佛尊圣双身圆光聚所摄受而证得报身佛性，住入西方极乐佛土。 ”[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:40</div><div class="post-body">[font=楷体_GB2312][size=5]第五日之作法 <br/>
 <br/>
 [img]http://www.zmxh.com/bbs/attachments/20070705_f887d9707b36ba03ce9cpUWbT69Ouuh3.jpg[/img][img]http://www.zmxh.com/bbs/attachments/20070705_76499f697bdcd5349350CQvk42kRPyLN.jpg[/img][img]http://www.zmxh.com/bbs/attachments/20070705_edbdf3c5eb85849afb049IXZ1YnCmHD7.jpg[/img] <br/>
 不空成就如来父母双尊       不空成就如来        三昧耶多罗母 <br/>
@@ -509,7 +522,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 多罗圣救度母 其为我之后护 中阴险隘道中 <br/>
 度我安然而过 住入圆满一切 清净佛性界中[/b] <br/>
 <br/>
-恭敬虔诚，如上祈愿，汝当为不空成就佛尊圣双身之圆光聚所摄受，证得报身佛性，住入于北方无上妙行成就之佛土。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:42</div><div class="post-body">[font=楷体_GB2312][size=5]第六日之作法 <br/>
+恭敬虔诚，如上祈愿，汝当为不空成就佛尊圣双身之圆光聚所摄受，证得报身佛性，住入于北方无上妙行成就之佛土。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:42</div><div class="post-body">[font=楷体_GB2312][size=5]第六日之作法 <br/>
 <br/>
 [img]http://www.zmxh.com/bbs/attachments/20070705_e6ea8777104cdcec713062YnnX063c8u.jpg[/img][img]http://www.zmxh.com/bbs/attachments/20070705_92fbaee6aea6cc98fc95qmU0kmDymjWa.jpg[/img][img]http://www.zmxh.com/bbs/attachments/20070705_f4f92aff7d564720d424IOvt9iDaUUcK.jpg[/img] <br/>
 1                   2                     3 <br/>
@@ -624,7 +637,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 即属根性下劣者，专念此偈，亦能仗此威力，闭塞六道之门，豁然心开，了了于四净智和合光明，摄入于金刚萨埵之真空妙智海中，而登正觉。 <br/>
 <br/>
-如此者，虽有多众；但有最极下劣之根性，宿业极重，于圣教徒不生信随喜，且于戒多犯，则此辈因其业力太重自障过深，一时仍莫能认识，纵经如上所述这祥明导示，仍自迷离不辩，徘徊迁延，遂不免落后而每况愈下矣！[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:45</div><div class="post-body">[font=楷体_GB2312][size=5]第七日之作法 <br/>
+如此者，虽有多众；但有最极下劣之根性，宿业极重，于圣教徒不生信随喜，且于戒多犯，则此辈因其业力太重自障过深，一时仍莫能认识，纵经如上所述这祥明导示，仍自迷离不辩，徘徊迁延，遂不免落后而每况愈下矣！[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:45</div><div class="post-body">[font=楷体_GB2312][size=5]第七日之作法 <br/>
 <br/>
 [img]http://www.zmxh.com/bbs/attachments/20070705_0c01b18d3fc61b58793aZDHLHg1Zf8P2.jpg[/img] <br/>
 清净空行刹土持明诸尊圣众 <br/>
@@ -681,7 +694,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 恭敬虔诚，如上祈愿者，不久即得举体合入，大圆光聚中，持明主尊之心内，往生净智乐土，可无疑也。 <br/>
 <br/>
-即使十恶五逆，邪执重炽已极者，但能于此日，如实认识，亦能于此得度。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:50</div><div class="post-body">[font=楷体_GB2312][size=5]次七期中入观忿怒部诸尊 <br/>
+即使十恶五逆，邪执重炽已极者，但能于此日，如实认识，亦能于此得度。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:50</div><div class="post-body">[font=楷体_GB2312][size=5]次七期中入观忿怒部诸尊 <br/>
 <br/>
 概说 <br/>
 <br/>
@@ -739,7 +752,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 已上概说“脱卓”法之殊胜竟。 <br/>
 <br/>
-以下当述“踵倚”中阴之后段自第八日至第十四日期中，忿怒饮血诸尊现前时，逐日导示死者之法。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:55</div><div class="post-body">[font=楷体_GB2312][size=5]第八日之作法 <br/>
+以下当述“踵倚”中阴之后段自第八日至第十四日期中，忿怒饮血诸尊现前时，逐日导示死者之法。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:55</div><div class="post-body">[font=楷体_GB2312][size=5]第八日之作法 <br/>
 <br/>
 作法者呼死者之名，如下导示之曰： <br/>
 “善信某某：一心谛听！ <br/>
@@ -756,7 +769,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 此皆从汝脑之中央所出生者，了了放光向汝照射，勿怖勿畏。 <br/>
 须知此即汝之自识所变现，体无有二，即汝之本尊怙主，故勿怖畏。 <br/>
 且此实即毗卢遮那如来及佛母之清净双身相，勿生恐惧。 <br/>
-汝若认之，即得俱时解脱，而证入佛之胜妙报身。 ”[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:56</div><div class="post-body">[font=楷体_GB2312][size=5]第九日之作法 <br/>
+汝若认之，即得俱时解脱，而证入佛之胜妙报身。 ”[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:56</div><div class="post-body">[font=楷体_GB2312][size=5]第九日之作法 <br/>
 <br/>
 惟于上述中央佛部变化忿怒身，如生恐怖心，妄想引避，未得证入之者。 <br/>
 <br/>
@@ -769,7 +782,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 此之双身忿怒尊，由汝脑中东隅出生，放光向汝，汝勿怖畏。 <br/>
 须知此皆汝之自识变现，体无有二，亦即汝之本尊怙主，勿生怖畏。 <br/>
 且此实即金刚萨埵及佛母之清净双身，汝勿恐惧，如实认识之，即得俱时解脱。 <br/>
-又汝既识知即汝之本尊怙主，当如是称念之，即得与之证合一体，而成就佛道。 ”[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:58</div><div class="post-body">[font=楷体_GB2312][size=5]第十日之作法 <br/>
+又汝既识知即汝之本尊怙主，当如是称念之，即得与之证合一体，而成就佛道。 ”[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:58</div><div class="post-body">[font=楷体_GB2312][size=5]第十日之作法 <br/>
 <br/>
 如为业惑力所障，于上述金刚萨埵变现之饮血忿怒尊，亦生恐怖，妄想引避而未得证入之者。 <br/>
 <br/>
@@ -781,7 +794,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 须知此皆汝之自识所变，体无有二，即汝之本尊怙主，故勿怖畏。 <br/>
 且此实即南方宝生如来及其佛母之清净双身，勿生恐怖。 <br/>
 汝如认识，则汝之解脱，同时而得。 <br/>
-汝既知其为汝之本尊怙主，则一心称念之，汝即得证合一体，而佛道成矣！”[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:59</div><div class="post-body">[font=楷体_GB2312][size=5]第十一日之作法 <br/>
+汝既知其为汝之本尊怙主，则一心称念之，汝即得证合一体，而佛道成矣！”[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:59</div><div class="post-body">[font=楷体_GB2312][size=5]第十一日之作法 <br/>
 <br/>
 虽经如上导示，仍有妄执，生恐怖心，引避而未证入之者。 <br/>
 <br/>
@@ -792,7 +805,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 此清净双身圣像，由汝脑中西隅出生，放光向汝，勿怖勿畏。 <br/>
 须知此为汝自识变现，体无有二，又即汝之本尊怙主，故勿怖畏。 <br/>
 且此实即西方阿弥它佛及佛母之清净双身，汝应信乐，勿生恐惧，如是认识，汝即得俱生之解脱。 <br/>
-又既知其为汝之本尊怙主，汝当敬信之，一心称念之，即得证合一体，成就佛道。 ”[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:59</div><div class="post-body">[font=楷体_GB2312][size=5]第十二日之作法 <br/>
+又既知其为汝之本尊怙主，汝当敬信之，一心称念之，即得证合一体，成就佛道。 ”[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 06:59</div><div class="post-body">[font=楷体_GB2312][size=5]第十二日之作法 <br/>
 <br/>
 纵令如上导示，若仍为幻执牵使恐惧退避，未得证入之者。 <br/>
 <br/>
@@ -811,7 +824,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 因其为汝本元妙明净心之所出发，有彼光明惟未照射，谓之‘母’清净光。 <br/>
 今由母生子，即发生彼‘子’清净光。 <br/>
 有‘子’愈显‘母’，故子母两光，同时出现无二无别，是谓‘俱生’净光。 <br/>
-其根本原来不外汝之自识，故云汝但认知即能证合一体，无二无别，即得解脱矣。 ”[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:02</div><div class="post-body">[font=楷体_GB2312][size=5]第十三日之作法 <br/>
+其根本原来不外汝之自识，故云汝但认知即能证合一体，无二无别，即得解脱矣。 ”[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:02</div><div class="post-body">[font=楷体_GB2312][size=5]第十三日之作法 <br/>
 <br/>
 倘经如上详示，仍有未能认证之者，则纵属不无善行之人，亦甚堪虞其不免于为恶业幻执，牵使退堕，沦入生死海中之苦途。 <br/>
 <br/>
@@ -842,7 +855,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 西北隅者，黑色、大乌鸦首，右手持刀，左手持人脑盖骨碗，内满贮心肺而食啖之； <br/>
 东北隅者，大枭鸟首，右手持杵，左手持刀，插入肉而食之。 <br/>
 以上八忿怒饮血尊，围绕于第二外周，形相极凶猛，汝切不可恐怖。 <br/>
-须知亦皆汝自识所变现者，一一认识之，自可得度。 ”[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:07</div><div class="post-body">[font=楷体_GB2312][size=5]第十四日之作法 <br/>
+须知亦皆汝自识所变现者，一一认识之，自可得度。 ”[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:07</div><div class="post-body">[font=楷体_GB2312][size=5]第十四日之作法 <br/>
 <br/>
 “善信！此第十四日者，汝之脑中又复出生有四门守护之女身异类首之忿怒尊者，现前映射，汝皆勿生恐怖。 <br/>
 其守东门者，白色虎首持捧，左手且持贮血之人脑盖骨碗； <br/>
@@ -961,7 +974,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 若竟有虽经如此导示，仍为恶业邪惑迁延，则其再将降下而入之中阴名曰“悉罢”中阴。 <br/>
 <br/>
-虽彼中沦入生死苦趣之险，更有堪虞，但仍有法令其得度，或避下劣而趋上胜之生途，此之种种作法，详于下卷中。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:08</div><div class="post-body">[font=楷体_GB2312][size=5]跋述“脱卓”法之重要 <br/>
+虽彼中沦入生死苦趣之险，更有堪虞，但仍有法令其得度，或避下劣而趋上胜之生途，此之种种作法，详于下卷中。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:08</div><div class="post-body">[font=楷体_GB2312][size=5]跋述“脱卓”法之重要 <br/>
 <br/>
 无论于圣教何宗修行者之程度如何--或为广博、或为狭浅--，于其死时及死后，多少不免有其业惑发生。 <br/>
 <br/>
@@ -987,7 +1000,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 以上为“于中阴界中导示入观实相法”，亦名“从闻得度及依止得度于中阴之妙法”。 <br/>
 <br/>
-解脱救度密法“上卷”完[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:09</div><div class="post-body">[font=楷体_GB2312][size=5]　　(附录) <br/>
+解脱救度密法“上卷”完[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:09</div><div class="post-body">[font=楷体_GB2312][size=5]　　(附录) <br/>
 <br/>
 念 无 常 颂 <br/>
 能海法师译 <br/>
@@ -1013,7 +1026,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 奔赴苦思维 伤情拭眼泪 病苦困床席 避逃冤家类 <br/>
 <br/>
 老年多衰病 久忧长不死 清净好时光 百年中又几 <br/>
-智人善观察 应当勤戒定 死王何时来 不先与我信[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:11</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]    中阴救度密法 西藏度亡经 下卷[/size][/b] <br/>
+智人善观察 应当勤戒定 死王何时来 不先与我信[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:11</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]    中阴救度密法 西藏度亡经 下卷[/size][/b] <br/>
 <br/>
 第三步 已入中阴作法救度皈敬偈 <br/>
 <br/>
@@ -1022,7 +1035,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 上卷“巴多脱卓”法，详至中阴名“踵倚”； <br/>
 <br/>
-其后“悉罢”中阴者，今当开演救度法。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:19</div><div class="post-body">[font=楷体_GB2312][size=5]一、死后之境界 <br/>
+其后“悉罢”中阴者，今当开演救度法。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:19</div><div class="post-body">[font=楷体_GB2312][size=5]一、死后之境界 <br/>
 <br/>
 于此中阴救度密法之上卷中，已述种种导示之法。 <br/>
 <br/>
@@ -1240,7 +1253,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 或者，汝曾修何本尊，此时即一心长久观想汝之本尊。 <br/>
 观汝本尊，虽真实本空，而其圣相宛然如生，犹如术人所变幻法之相，此所谓‘净幻观’也；次观想本尊身形，由外围而中心，渐渐隐没，隐至于空无所见；次观想汝身，入于一大光明而空寂之境中，住此境少时；次复观想本尊身形，现而复隐；次又观自身入光明空寂境及住彼境少时。 <br/>
 如上所述之法，反复作之数次。 <br/>
-末乃观汝住空之身心亦均由外而内，渐皆隐没，亦复隐至空无所见；如是，空无尽处，心量无尽，心量无尽处，即法身无尽，而善巧安住于此无尽之法身界，是即本不生界，得住此界，即得无生，而圆满觉道，即此得证矣！”[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:27</div><div class="post-body">[font=楷体_GB2312][size=5]二、转生之方式 <br/>
+末乃观汝住空之身心亦均由外而内，渐皆隐没，亦复隐至空无所见；如是，空无尽处，心量无尽，心量无尽处，即法身无尽，而善巧安住于此无尽之法身界，是即本不生界，得住此界，即得无生，而圆满觉道，即此得证矣！”[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:27</div><div class="post-body">[font=楷体_GB2312][size=5]二、转生之方式 <br/>
 <br/>
 (一)避免生死及闭息胎门 <br/>
 <br/>
@@ -1469,7 +1482,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 见彼妙宝宫殿、堂皇宅舍，乃至妙美园林，放心直入其中，无所顾虑。 <br/>
 若是者汝自得生于善道也。 ” <br/>
 <br/>
-如是导示，七反已，即举诵：“请诸佛菩萨普加被偈”、“祈求护免中阴险难偈”、“六种中阴境界警策偈”、“护免中阴恐怖总愿偈”等均见[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:34</div><div class="post-body">[font=楷体_GB2312][size=5]附编 <br/>
+如是导示，七反已，即举诵：“请诸佛菩萨普加被偈”、“祈求护免中阴险难偈”、“六种中阴境界警策偈”、“护免中阴恐怖总愿偈”等均见[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:34</div><div class="post-body">[font=楷体_GB2312][size=5]附编 <br/>
 <br/>
 彼善解脱死者色身之“答卓”咒本，亦当持诵一遍；又彼“解业集颂”此书藏名‘却觉巴甲让卓’意云自能解除业习法亦诵一遍。 <br/>
 <br/>
@@ -1715,7 +1728,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 妙吉祥光无有量 愿充满于诸世间 <br/>
 亦愿此书致吉祥 福慧庄严悉圆满 <br/>
 <br/>
-中阴救度密法附编 (完)　[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:36</div><div class="post-body">[font=楷体_GB2312][size=5]特传六字大明简法 <br/>
+中阴救度密法附编 (完)　[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-5 07:36</div><div class="post-body">[font=楷体_GB2312][size=5]特传六字大明简法 <br/>
 <br/>
 (一) 普通念诵 <br/>
 此咒神妙殊胜。 <br/>
@@ -1830,7 +1843,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 盖此六字大明神咒。 <br/>
 能救世人一切病因。 <br/>
 诚离苦得乐之无上良方也。 <br/>
-(莲菩提敬劝学佛者于“大乘庄严宝王经”应请备常读则自知其上妙矣)[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-24 23:13</div><div class="post-body">最上三寶我皈依，一切罪業皆懺悔 <br/>
+(莲菩提敬劝学佛者于“大乘庄严宝王经”应请备常读则自知其上妙矣)[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-24 23:13</div><div class="post-body">最上三寶我皈依，一切罪業皆懺悔 <br/>
 眾生善根盡隨喜，正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽，直至菩提我皈依 <br/>

@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>歷代漢文大藏經概述（李圓淨） - 藏密修海典藏</title>
+<title>歷代漢文大藏經概述（李圓淨） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">歷代漢文大藏經概述（李圓淨）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2007-1-1 16:10</div><div class="post-body">佛在世時師佛，佛入滅後師法，只要法寶常存，即與親教無別。大藏經者，就是將一切佛教經典有組織有系統地匯集起來。由是法行得建立，法典得流傳，佛學有所依，佛教有所詮；可見得這個文字法寶的一大總匯，實在是如來正法所系，眾生慧命所寄，關系重大，非言可喻！在佛法東來一千八百年間，漢譯經典即時有增益，歷代即常有重修必要，國內可考的，宋及遼金八次、元二次、明四次、清一次（清代另有頻伽本與百衲本）；國外可考的，高麗三次，日本七次（日本另有聖語本宮本）。我國刊布大藏，創始于北宋開寶的蜀刻，所以修藏史是要從宋起敘的。宋前佛經刻本僅屬單行，雖不易發現，但寫在紙上和刻在石上的也早有了。今先將西晉以後的寫經和隋唐年間的石經略說之︰ <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2007-1-1 16:10</div><div class="post-body">佛在世時師佛，佛入滅後師法，只要法寶常存，即與親教無別。大藏經者，就是將一切佛教經典有組織有系統地匯集起來。由是法行得建立，法典得流傳，佛學有所依，佛教有所詮；可見得這個文字法寶的一大總匯，實在是如來正法所系，眾生慧命所寄，關系重大，非言可喻！在佛法東來一千八百年間，漢譯經典即時有增益，歷代即常有重修必要，國內可考的，宋及遼金八次、元二次、明四次、清一次（清代另有頻伽本與百衲本）；國外可考的，高麗三次，日本七次（日本另有聖語本宮本）。我國刊布大藏，創始于北宋開寶的蜀刻，所以修藏史是要從宋起敘的。宋前佛經刻本僅屬單行，雖不易發現，但寫在紙上和刻在石上的也早有了。今先將西晉以後的寫經和隋唐年間的石經略說之︰ <br/>
 <br/>
 清光緒二十六年（西元1900），甘肅敦煌縣鳴沙石室中，發見大量古代寫經，當時被英人斯坦因和法人伯希和運去了不少；遺余的殘卷，由北平圖書館保存起來，也還有數百種。據日本昭和法寶目錄記載，和北平、大連、巴黎三處圖書館，旅順、倫敦兩處博物院，日本的大谷龍谷兩大學藏書樓，和正倉院聖語藏中所存，再將各私家所有的一並計入，起自西晉元康（291-299）下及宋代太平興國（976-984），古代寫本幸存的數目也很可觀了。至于河北房山縣雲居石室中的刻經，是隋朝大業年間（605-617）僧智苑發心創立的；他鑿岩為室，磨壁刻經，又將方石各面磨刻，每一室滿，以石塞門，鎔鐵封錮，這種艱巨工作，直到唐貞觀十三年智公入寂時，已滿七室。此後師資相承，凡歷五代，亦僅刻及華嚴涅槃寶積般若四大部之半。遼時在王室倡導下，完成了大乘四大部，再刻其他佛經八十四部，又在雲居寺西南造十一層磚塔，下面也埋藏了無數的石經。智公為防法滅，發此大願，以視敦煌石室的埋藏，此中動機，並可想見，這種事業，較之木刻，更為艱苦；與近代活字排印比，困難何止百倍。我們于驚嘆先人偉業之余，且又生逢浩劫，我們現在應當作的什麼事，是可深長思了！ <br/>
 <br/>
@@ -320,7 +333,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 └ 宮　本 ︱ <br/>
 └ 系以北宋時東禪寺本與開元寺本合成全藏。 <br/>
 <br/>
-我國歷代所刻的大藏，只有龍藏版片尚存，餘都毀失；至于大藏的印本，除明之南北藏嘉興藏與清之龍藏外，也都不全，即此僅存的印本也很少見了；而民國三十多年來，還沒有一部新修的大藏經，冷落至此，何以對先人？自龍藏刊布後，百衲藏不過是各處流通本的大雜會，頻伽藏只是依弘教藏而刪去校勘記的，此外僅做了點影印現成的工作，如影印卍字續藏和磧砂藏。但各處佛教逸典與經疏遺著時有發現，敦煌寫本和趙城金藏也先後出現，我們還能夠等待下去麼？對于近年在上海已經成立而頗有成績的民國增修大藏經會，還能夠袖手旁觀麼？一般錯覺，以為世變日亟，無暇及此，如能對歷代國勢和佛教的關系稍一留意，應可釋然。我國國運，唐為最強，而有唐一代，譯業昌隆，前後無比，是中華佛教的黃金時代，也是中華民族的鼎盛時代。自唐以來，歷代國勢的盛衰竟與佛教的盛衰成了正比例︰如唐武宗破佛，不久唐朝即滅；周世宗再毀法，五代之局遂終；宋太祖極尊法寶，國家元氣漸復；明代諸帝多知維護佛法，國勢亦尚可觀；元代清初，推崇佛教，國威頗盛，至于國外情形，也相彷彿︰印度在阿育王時代，國勢最隆盛，佛法也最發達；降至近世，佛教衰微到極，印度也完了。日本素重佛教，當國運鼎盛之時，正大法興隆之日；自是蒙受法化之益。高麗先後受契丹與蒙古兩次侵略，藉顯宗高宗先後發願刻大藏經初雕本與再雕本而得保全，這是歷史上刻經保國最顯明的事例。總之，佛教盛，則天下治；佛教衰，則天下亂；我國自唐宋以來，無不皆然；推之國外，亦莫不然。曠觀古今中外，應知合力推行修藏，為今日急不容緩之舉；惟此法寶，足以啟良善之心，成利濟之業，種多福之因，獲大有之果，因緣會遇，豈可交臂失之？ </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">一</div>一杯菠萝蜜发表于 2012-1-6 21:04</div><div class="post-body">我能深入于未来  尽一切劫为一念 <br/>
+我國歷代所刻的大藏，只有龍藏版片尚存，餘都毀失；至于大藏的印本，除明之南北藏嘉興藏與清之龍藏外，也都不全，即此僅存的印本也很少見了；而民國三十多年來，還沒有一部新修的大藏經，冷落至此，何以對先人？自龍藏刊布後，百衲藏不過是各處流通本的大雜會，頻伽藏只是依弘教藏而刪去校勘記的，此外僅做了點影印現成的工作，如影印卍字續藏和磧砂藏。但各處佛教逸典與經疏遺著時有發現，敦煌寫本和趙城金藏也先後出現，我們還能夠等待下去麼？對于近年在上海已經成立而頗有成績的民國增修大藏經會，還能夠袖手旁觀麼？一般錯覺，以為世變日亟，無暇及此，如能對歷代國勢和佛教的關系稍一留意，應可釋然。我國國運，唐為最強，而有唐一代，譯業昌隆，前後無比，是中華佛教的黃金時代，也是中華民族的鼎盛時代。自唐以來，歷代國勢的盛衰竟與佛教的盛衰成了正比例︰如唐武宗破佛，不久唐朝即滅；周世宗再毀法，五代之局遂終；宋太祖極尊法寶，國家元氣漸復；明代諸帝多知維護佛法，國勢亦尚可觀；元代清初，推崇佛教，國威頗盛，至于國外情形，也相彷彿︰印度在阿育王時代，國勢最隆盛，佛法也最發達；降至近世，佛教衰微到極，印度也完了。日本素重佛教，當國運鼎盛之時，正大法興隆之日；自是蒙受法化之益。高麗先後受契丹與蒙古兩次侵略，藉顯宗高宗先後發願刻大藏經初雕本與再雕本而得保全，這是歷史上刻經保國最顯明的事例。總之，佛教盛，則天下治；佛教衰，則天下亂；我國自唐宋以來，無不皆然；推之國外，亦莫不然。曠觀古今中外，應知合力推行修藏，為今日急不容緩之舉；惟此法寶，足以啟良善之心，成利濟之業，種多福之因，獲大有之果，因緣會遇，豈可交臂失之？ </div></div><div class="post"><div class="post-header"><div class="avatar">一</div>一杯菠萝蜜发表于 2012-1-6 21:04</div><div class="post-body">我能深入于未来  尽一切劫为一念 <br/>
 三世所有一切劫  为一念际我皆入 <br/>
 我于一念见三世  所有一切人师子 <br/>
 亦常入佛境界中  如幻解脱及威力 <br/>

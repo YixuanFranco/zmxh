@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>菩萨善戒经（中观部·瑜伽部） - 藏密修海典藏</title>
+<title>菩萨善戒经（中观部·瑜伽部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">菩萨善戒经（中观部·瑜伽部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-20 22:48</div><div class="post-body">[font=楷体_GB2312][size=5][/size][/font] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-20 22:48</div><div class="post-body">[font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=黑体][size=6][color=darkorange]菩萨善戒经卷第一[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　　　宋罽宾三藏求那跋摩译[/size][/font] <br/>
 <br/>
@@ -305,7 +318,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][font=楷体_GB2312][size=5]以遍知故得大自在。得自在故能化众生。众生受已修集善法。是名现在义。若菩萨摩诃萨退失善法修集三昧以修定故还得善法。是名现在义。若菩萨摩诃萨客尘烦恼故造作众罪。作已深观定当得果。即生悔心惭愧不作现坏恶业。是名现在义。若以恶业因缘力故。或为他骂或嗔恚打身受楚毒。名现在义。若菩萨摩诃萨修集禅定。以是因缘身受安乐。是名现在义。若菩萨摩诃萨身得自在常乐我净。是名现在义。若菩萨摩诃萨修八圣道。以是因缘获得涅槃。是名现在义。如菩萨众生亦尔。[/size][/font][/size][/font] <br/>
 [font=楷体_GB2312][size=5][font=楷体_GB2312][size=5][/size][/font][/size][/font] <br/>
 [font=楷体_GB2312][size=5][font=楷体_GB2312][size=5]云何他世义。以现因缘受他世身。是名他世义。现在他世义是名内外义。云何为毕竟义。欲界福德非毕竟义。色无色界世间福德虽得自在非毕竟义。如诸菩萨修八圣道获得涅槃。其身无碍无有边际。善法无量名毕竟义。毕竟有三事。何等为三。一者性毕竟。二者退毕竟。三者报尽毕竟。不毕竟亦尔。性毕竟者是名涅槃性。不毕竟名有为法。退毕竟者名声闻缘觉所修八道。不退毕竟者名阿毗跋致。报尽毕竟者世间所有福德果报。报不尽毕竟者谓无上道果。是名十义。菩萨摩诃萨常应修集教化众生。如过去世诸菩萨学。现在未来亦复如是。若菩萨摩诃萨不能修学是十法者。则不能得菩萨禁戒[/size][/font] <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:42</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][size=6][color=darkorange]菩萨善戒经卷第二[/color][/size][/font] <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:42</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][size=6][color=darkorange]菩萨善戒经卷第二[/color][/size][/font] <br/>
 宋罽宾三藏求那跋摩译[/color][/size][/font] <br/>
 [font=黑体][size=6]　　[color=darkorange]菩萨地真实义品第五[/color][/color] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -408,7 +421,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]如来悉知一切众生无量烦恼无量对治。是名为细。行者名为六通六波罗蜜法性自生不可思议。是名为行。界者一切世间无碍智慧。是名为界。是名不共不可思议。声闻神通齐二千世界。缘觉神通齐三千大千世界。诸佛菩萨通达无量无边世界。是名不共。共者除上三事余一切法。是名为共。是故声闻辟支佛等。尚不得与佛菩萨共。况凡夫人天外道邪见。菩萨摩诃萨六波罗蜜法性共生不共生。声闻缘觉共法不共法。是名不可思议 <br/>
 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:52</div><div class="post-body">[font=楷体_GB2312][size=5]菩萨善戒经卷第三 <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:52</div><div class="post-body">[font=楷体_GB2312][size=5]菩萨善戒经卷第三 <br/>
 宋罽宾三藏求那跋摩译 <br/>
 <br/>
 菩萨地调伏品第七 <br/>
@@ -503,7 +516,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]则能疾得声闻菩提缘觉菩提。得阿耨多罗三藐三菩提。是名菩萨教也。善方便者。菩萨摩诃萨一切所有身口意业。悉为调伏一切众生。是名善方便。善方便者有四种。一者惠施。二者软语。三者利益。四者同义。菩萨摩诃萨能施众生衣服饮食房舍卧具病瘦医药。受施之人既受施已。于菩萨所生爱念心。至心听说闻已受持。以受持故菩萨则以软语赞叹。以赞叹故受者欢喜。以欢喜故能坏恶心受持善法。坏恶心故菩萨复言。我已具信戒闻施慧。汝亦当具。菩萨若不具足五事。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]则不能教一切众生。众生亦言。汝自不具。云何教他令具足那。是故菩萨具足五事。是名菩萨以善方便教化众生。方便者。所谓善调伏。善调伏者所谓不弃不转不退。是名善方便[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:54</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][size=6][color=darkorange]菩萨善戒经卷第四[/color][/size][/font] <br/>
+[font=楷体_GB2312][size=5]则不能教一切众生。众生亦言。汝自不具。云何教他令具足那。是故菩萨具足五事。是名菩萨以善方便教化众生。方便者。所谓善调伏。善调伏者所谓不弃不转不退。是名善方便[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:54</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][size=6][color=darkorange]菩萨善戒经卷第四[/color][/size][/font] <br/>
 宋罽宾三藏求那跋摩译 <br/>
 <br/>
 [size=6][color=darkorange]　菩萨地施品第十 <br/>
@@ -594,7 +607,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]若无神通为彼不信说菩萨戒得无量罪。无量罪者于无量世受。是名无量。虽有五逆未足为喻。何以故。五逆罪者则可移转。如阿阇世王。彼不信者罪不可转。五逆罪者极至一世。不信者罪无量世受。是故我言。不可为喻。若取佛物法物僧物现前僧物。如是罪报亦不得喻。何以故。如是罪报极至一世。不信者罪至无量世。如十恒河沙等众生发菩提心。假使有人能令如是恒沙众生退菩提心。教以邪见。如是罪报及不信者罪等无差别。复令如是恒沙众生皆住五地。假使有人尽夺其眼。如是罪报。不信者罪亦复如是。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]若复有人能破一切诸佛塔庙。杀害一切诸佛弟子。焚烧一切诸佛经典。如是罪报。为不信者说菩萨戒所得罪报。亦复如是。何以故。从因故生地狱。从因故入涅槃。因于说者得无量苦。是故说者得无量罪。虽知大众无量众生堪任能作人天善业及发信心。于是众中若有一人心无信者。亦不可说。是名菩萨利益众生善戒。[/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:55</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][size=6][color=darkorange]菩萨善戒经卷第五[/color][/size][/font] <br/>
+[font=楷体_GB2312][size=5]若复有人能破一切诸佛塔庙。杀害一切诸佛弟子。焚烧一切诸佛经典。如是罪报。为不信者说菩萨戒所得罪报。亦复如是。何以故。从因故生地狱。从因故入涅槃。因于说者得无量苦。是故说者得无量罪。虽知大众无量众生堪任能作人天善业及发信心。于是众中若有一人心无信者。亦不可说。是名菩萨利益众生善戒。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:55</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][size=6][color=darkorange]菩萨善戒经卷第五[/color][/size][/font] <br/>
 宋罽宾三藏求那跋摩译 <br/>
 <br/>
 [font=黑体][size=6][color=darkorange]菩萨地忍品第十二[/color][/size][/font] <br/>
@@ -693,7 +706,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]能坏众生邪法邪见。自所修学善根增长。至心观察善行功德。一切邪见不能沮坏。终不求于转轮王身释身魔身及以梵身。不求恩报利养名誉长寿身乐。菩萨修集如是等法。则得具足檀波罗蜜乃至般若波罗蜜。是名同利。菩萨摩诃萨修同利时心不动坏。清净寂静大明无翳。菩萨摩诃萨住净心地。具足成就无上善法光明善法。光明善法者。菩萨摩诃萨所行善法。一切无有能呰毁者。菩萨摩诃萨心不动者。所修善法无有动转。日夜增长如初生月。寂静善法者。菩萨所得三昧寂静同于如来。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]垂近阿耨多罗三藐三菩提菩萨摩诃萨一切施戒一切四摄因缘故。得金刚身。得法身果。菩萨摩诃萨难施难戒因缘故。获得如来不可思议功德妙果。一切自施戒因缘故。得诸人天所奉供养果。善人施戒因缘故。于众生中为无有上。一切行施戒因缘故。获得如来三十二相八十种好。除施除戒因缘故。得坐道场菩提树下。魔王眷属不能倾动。自利利他施戒因缘故。获得如来常乐解脱。寂静施戒因缘故得四寂静果。所谓身寂静缘寂静心寂静智寂静。十力四无所畏大悲三念处五智三昧。为众生故数有十八不共之法。利智慧故乃有无量不共法数。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:55</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][size=6][color=darkorange]菩萨善戒经卷第六 <br/>
+[font=楷体_GB2312][size=5]垂近阿耨多罗三藐三菩提菩萨摩诃萨一切施戒一切四摄因缘故。得金刚身。得法身果。菩萨摩诃萨难施难戒因缘故。获得如来不可思议功德妙果。一切自施戒因缘故。得诸人天所奉供养果。善人施戒因缘故。于众生中为无有上。一切行施戒因缘故。获得如来三十二相八十种好。除施除戒因缘故。得坐道场菩提树下。魔王眷属不能倾动。自利利他施戒因缘故。获得如来常乐解脱。寂静施戒因缘故得四寂静果。所谓身寂静缘寂静心寂静智寂静。十力四无所畏大悲三念处五智三昧。为众生故数有十八不共之法。利智慧故乃有无量不共法数。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:55</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][size=6][color=darkorange]菩萨善戒经卷第六 <br/>
 [/color][/size][/font]　　　　宋罽宾三藏求那跋摩译 <br/>
 <br/>
 [font=黑体][size=6][color=darkorange]　　菩萨地供养三宝品第十七 <br/>
@@ -772,7 +785,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]远离诸恶修集善法似菩萨心。是名相似方便。报恩者。菩萨若受檀越衣服饮食卧具病药房舍。若多若少。或遭恐怖有人救解。或遭病苦有疗治者。或闻说法破坏疑心。菩萨摩诃萨以念恩故。悉教是等行于善法。是名报恩。菩萨说法众生闻已。即能供养三宝父母师长沙门婆罗门等。持戒精进。是名报恩寂静者。菩萨摩诃萨安住毕竟菩提地中。修集寂静菩提之道生兜术天。当知不久下阎浮提得阿耨多罗三藐三菩提。众生闻已悉发愿言。如是菩萨成佛之时。我等当于是佛法中出家学道。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]尔时菩萨下阎浮提。托生刹利婆罗门家。为众生故舍五欲乐。出家学道修行苦行。为苦行者生于恭敬。破苦心故。修苦行已。得阿耨多罗三藐三菩提。坏声闻缘觉菩提心故。既成道已默然而住。释梵天王来劝请故。梵天启请。为令众生于正法中生尊重故。尔时世尊即以佛眼观诸众生然后说法。佛眼观者为破恶名故。所谓众生说言。如来但为梵王劝请非为怜愍。若以佛眼观于众生转法-轮者。为破众生邪恶轮故。转法-轮已集众制戒。为令众生得解脱故。是名菩萨寂静方便。为令众生得信心故。未入佛法者令得入故。未熟众生令得熟故。已熟众生得解脱故。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:57</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][size=6][color=darkorange]菩萨善戒经卷第七[/color][/size][/font] <br/>
+[font=楷体_GB2312][size=5]尔时菩萨下阎浮提。托生刹利婆罗门家。为众生故舍五欲乐。出家学道修行苦行。为苦行者生于恭敬。破苦心故。修苦行已。得阿耨多罗三藐三菩提。坏声闻缘觉菩提心故。既成道已默然而住。释梵天王来劝请故。梵天启请。为令众生于正法中生尊重故。尔时世尊即以佛眼观诸众生然后说法。佛眼观者为破恶名故。所谓众生说言。如来但为梵王劝请非为怜愍。若以佛眼观于众生转法-轮者。为破众生邪恶轮故。转法-轮已集众制戒。为令众生得解脱故。是名菩萨寂静方便。为令众生得信心故。未入佛法者令得入故。未熟众生令得熟故。已熟众生得解脱故。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:57</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][size=6][color=darkorange]菩萨善戒经卷第七[/color][/size][/font] <br/>
 宋罽宾三藏求那跋摩译 <br/>
 <br/>
 [font=黑体][size=6][color=darkorange]　菩萨地助菩提数法余品第十九[/color][/size][/font] <br/>
@@ -866,7 +879,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 世术方便为破邪论。菩萨受持菩萨禁戒。终不毁犯。设犯随忏。善发愿方便随所欲事即能得之。菩萨三乘方便随根说法。是故菩萨如是十种方便能作五事。以五事故具足必定。能得世间一切之事。若现在若他世。云何菩萨利益于他。如四摄品中说。云何菩萨善发愿。菩萨所作一切善业。若过去未来现在不求余果。唯求无上菩提道果。是名善发愿。如来若为出家在家说戒。一切摄取如是四事。若出家在家菩萨。若过去未来现在。受持菩萨戒悉得阿耨多罗三藐三菩提。 <br/>
 <br/>
-出家菩萨胜于在家。何以故。出家菩萨获得一切菩萨禁戒。在家菩萨不得菩萨一切禁戒。出家菩萨能行寂静清净梵行。在家菩萨不能修行寂静梵行。出家菩萨能行三十七品。在家菩萨不能修行三十七品。出家菩萨解脱一切世间之事。在家菩萨为世间事之所系缚。[/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:58</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][size=6][color=darkorange]菩萨善戒经卷第八[/color][/size][/font] <br/>
+出家菩萨胜于在家。何以故。出家菩萨获得一切菩萨禁戒。在家菩萨不得菩萨一切禁戒。出家菩萨能行寂静清净梵行。在家菩萨不能修行寂静梵行。出家菩萨能行三十七品。在家菩萨不能修行三十七品。出家菩萨解脱一切世间之事。在家菩萨为世间事之所系缚。[/color][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:58</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][size=6][color=darkorange]菩萨善戒经卷第八[/color][/size][/font] <br/>
 宋罽宾三藏求那跋摩译 <br/>
 <br/>
 [font=黑体][size=6][color=darkorange]　　如法住定心品第三[/color][/size][/font] <br/>
@@ -973,7 +986,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5]又作邪见婆罗门身。或复示作贪五欲身。先随其心示受诸有。为令众生离恶业故。虽受有身不作恶业。若彼作时自终不造。众生见已亦效不作。以善方便破坏众生所有恶业是名随心行有。胜有者。菩萨生时胜诸众生。若姓若色若命若果报。果报如自利利他品说。是名胜有自在有者。修初喜行至十二行。菩萨尔时所示受身。名为自在。自在者即是愿力。从性地乃至十二行。受转轮王身自在天身。乃至阿迦尼吒天身。及过阿迦尼吒一切诸有。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
-[font=楷体_GB2312][size=5]于诸有中得无上身。以愿力业力故。是名自在有。菩萨后有者。菩萨最后身名菩萨有。具足成就庄严菩提。若生婆罗门种。若生刹利种。得阿耨多罗三藐三菩提作一切佛事。是名菩萨后有。过去菩萨摩诃萨亦受如是五有。现在未来诸菩萨等亦复如是。因是五有得阿耨多罗三藐三菩提果。若有菩萨修行示受是五有者。即得阿耨多罗三藐三菩提。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:59</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][size=6][color=darkorange]菩萨善戒经卷第九[/color][/size][/font] <br/>
+[font=楷体_GB2312][size=5]于诸有中得无上身。以愿力业力故。是名自在有。菩萨后有者。菩萨最后身名菩萨有。具足成就庄严菩提。若生婆罗门种。若生刹利种。得阿耨多罗三藐三菩提作一切佛事。是名菩萨后有。过去菩萨摩诃萨亦受如是五有。现在未来诸菩萨等亦复如是。因是五有得阿耨多罗三藐三菩提果。若有菩萨修行示受是五有者。即得阿耨多罗三藐三菩提。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-21 13:59</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][size=6][color=darkorange]菩萨善戒经卷第九[/color][/size][/font] <br/>
 宋罽宾三藏求那跋摩译 <br/>
 <br/>
 [font=黑体][size=6][color=darkorange]　毕竟地摄取品第二[/color][/size][/font] <br/>

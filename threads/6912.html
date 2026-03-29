@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>时轮坛城本尊全图 - 藏密修海典藏</title>
+<title>时轮坛城本尊全图 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/诸佛如来本尊坛.html">诸佛如来本尊坛</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">时轮坛城本尊全图</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">踏</div>踏雪发表于 2011-3-28 16:40</div><div class="post-body">[size=5][font=楷体_GB2312][font=楷体_GB2312]佛陀的法教是愿一切众生离苦得乐。佛陀教导了许多不同的法门，在不同的教示中，藏佛佛教的密续是很高深的，而时轮金刚坛城则是佛陀传授的密续之一，也是佛教修行体系中最近步又最复杂的法教之一，如同所有的佛法教示一样，时轮金刚密续提供了成佛之道，是透过不绝的口头传承一代又一代的传承下来。时轮金刚是最后从印度传到西藏的密续系统之一，最为深奥。 <br/>
+<div class="post"><div class="post-header"><div class="avatar">踏</div>踏雪发表于 2011-3-28 16:40</div><div class="post-body">[size=5][font=楷体_GB2312][font=楷体_GB2312]佛陀的法教是愿一切众生离苦得乐。佛陀教导了许多不同的法门，在不同的教示中，藏佛佛教的密续是很高深的，而时轮金刚坛城则是佛陀传授的密续之一，也是佛教修行体系中最近步又最复杂的法教之一，如同所有的佛法教示一样，时轮金刚密续提供了成佛之道，是透过不绝的口头传承一代又一代的传承下来。时轮金刚是最后从印度传到西藏的密续系统之一，最为深奥。 <br/>
 <br/>
 佛陀当初所传授的大部分密续都是针对个别的弟子，但是时轮金刚密续开始是传授给一个团体——香巴拉王国的子民，因此时轮金刚灌顶都是针对一群人传授的。“香格里拉”是人间仙境的代名词，这个名词缘于香巴拉，时轮金刚传承有一个非常引人的故事。 <br/>
 <br/>
@@ -291,7 +304,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 有七个可见的星体：太阳、月亮、水星、金星、火星、木星、土星。另外三个在西藏的系统是慧星、罗睺、卡拉尼（在印度系统称为开免（Ketu））。分别在月亮轨迹的南中心点和北中心点。慧星不是用来占星的，但是阴历的节日野茫茫是预测日蚀和月蚀的。内时轮在内时轮中，强调的是人身体的功能以及粗糙的微细意识。对于一个学习时轮金刚的弟子而言，了解内在气体的流动是很重要的，就好像行星运动一样。这就是为什么一个研究时轮金刚密续的行者必须先学外时轮的道理，它详述了月亮和太阳的运行。这两个星体在密续里的重要性，由时轮金刚本尊（月亮）和佛母（太阳）的代表强调出来。 <br/>
 修行时轮金刚的目的——获得如本尊一样的清净，必须要让内在和宇宙的结构和谐才可能达成。在内时轮中，太阳和月亮等于是（或主宰）人体的左脉和右脉。因此必须要知道太阳日和太阴日，并知道如何计算日月能量的有效运作，可以影响人体的气脉。时轮金刚如同其他的佛教密续以及西藏的医学，身体的微细能量是透过气和脉来推动。虽然这些观念与西方的医学没有直接关联，但是藏医告诉我们气脉是神经系统的一部分。脉分为左脉（Kyangma）和右脉（roma），等于阳性和阴性两个极性，在西藏天文体系中，太阳是阴性，月亮则是阳性。这两极的引力使得我们经验不同的能量、心情和身心平衡的状态。时轮金刚本尊有三个彩色的脖子，代表三条气脉。右脉是红色的，受太阳影响，是太阳气通过的脉道；白色的脖子是左脉，受月亮的影响，是月亮气通过的脉道；蓝色的脖子是中脉。 <br/>
 中脉等于罗睺和卡拉尼，中脉的气称为喇呼气，它并不常出现，修行时轮金刚生起次第和圆满次第时十分重要，通常只有禅修成就者才能体验到。时轮金刚灌顶就是提供一个强化的能量，使得左右脉的气能融入中脉。一个行者若能成功控制体内不断移动的气，尤其是微细的气息，他就能够使得变动不居的心静止下来。 <br/>
-在此之前，气不断扰动心意识。中枢和体液的平衡也受到星球移动的影响。例如，红色、女性体液、血都是受太阳的影响；白色、男性体液、精液都是受月亮的影响。别时轮当我们谈到别时轮的时候，通常是指它的灌顶、生起、次第、圆满次第而言。这文章里我们谈到比较多关于灌顶的细节。别时轮是转化的道次第。灌顶形成了实修的基楚。在生起次第，行者观自身为时轮金刚，观得非常清晰，包括他的居住时轮金刚坛城。在最初的时候只能观个大略，但是行者继续努力直到他能够对整个坛城观得清清楚楚，即使坛城像豆子一般大，细节也会遗漏，而且要观多久就多久。接着生起次第，提供了圆满次第的基楚。一旦行者能够自如的观自身为坛城本身形，他就能运用进一步的技巧，将观想现实化。这需要经过生理过程的操作，包手掌控气脉和内分泌系统。经过这样的修行，了解了心的状况，但还没有成道，这不过是成佛十二阶段的初步而已。这就很清楚了，为什么时轮金刚是密积最高层次的修行法门之一，它需要专注的修行，这又植基于紧定的发心。这也是为什么喇嘛说，在我们达到世界和平之前，必须先得到内在的平静，经过要激发利益一切众生的热望。我们必须超越自已只是一个个体的幻象，只能受着生理机能的支配。时轮金刚密续很清楚的说明，觉悟不只影响我们的内心、身体、星球，最终是整个宇宙。我们每一个人都是互相关系宇宙的一部分，是一个整体——时轮金刚坛城。人类真正的存活有赖于我们对这个真理的了悟。[/font][/font][/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">踏</div>踏雪发表于 2011-3-28 17:10</div><div class="post-body">在生起次第，行者观自身为时轮金刚，观得非常清晰，包括他的居住时轮金刚坛城。在最初的时候只能观个大略， </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">踏</div>踏雪发表于 2011-3-30 13:16</div><div class="post-body">时轮金刚坛城有722位本尊 <br/>
+在此之前，气不断扰动心意识。中枢和体液的平衡也受到星球移动的影响。例如，红色、女性体液、血都是受太阳的影响；白色、男性体液、精液都是受月亮的影响。别时轮当我们谈到别时轮的时候，通常是指它的灌顶、生起、次第、圆满次第而言。这文章里我们谈到比较多关于灌顶的细节。别时轮是转化的道次第。灌顶形成了实修的基楚。在生起次第，行者观自身为时轮金刚，观得非常清晰，包括他的居住时轮金刚坛城。在最初的时候只能观个大略，但是行者继续努力直到他能够对整个坛城观得清清楚楚，即使坛城像豆子一般大，细节也会遗漏，而且要观多久就多久。接着生起次第，提供了圆满次第的基楚。一旦行者能够自如的观自身为坛城本身形，他就能运用进一步的技巧，将观想现实化。这需要经过生理过程的操作，包手掌控气脉和内分泌系统。经过这样的修行，了解了心的状况，但还没有成道，这不过是成佛十二阶段的初步而已。这就很清楚了，为什么时轮金刚是密积最高层次的修行法门之一，它需要专注的修行，这又植基于紧定的发心。这也是为什么喇嘛说，在我们达到世界和平之前，必须先得到内在的平静，经过要激发利益一切众生的热望。我们必须超越自已只是一个个体的幻象，只能受着生理机能的支配。时轮金刚密续很清楚的说明，觉悟不只影响我们的内心、身体、星球，最终是整个宇宙。我们每一个人都是互相关系宇宙的一部分，是一个整体——时轮金刚坛城。人类真正的存活有赖于我们对这个真理的了悟。[/font][/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">踏</div>踏雪发表于 2011-3-28 17:10</div><div class="post-body">在生起次第，行者观自身为时轮金刚，观得非常清晰，包括他的居住时轮金刚坛城。在最初的时候只能观个大略， </div></div><div class="post"><div class="post-header"><div class="avatar">踏</div>踏雪发表于 2011-3-30 13:16</div><div class="post-body">时轮金刚坛城有722位本尊 <br/>
 <br/>
 </div></div>
 </div>

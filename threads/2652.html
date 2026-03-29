@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>佛说大孔雀咒王经（密教部） - 藏密修海典藏</title>
+<title>佛说大孔雀咒王经（密教部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">佛说大孔雀咒王经（密教部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-26 04:01</div><div class="post-body">[size=5][font=楷体_GB2312][b]佛说大孔雀咒王经卷上(前方便法)[/b] <br/>
+<div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-26 04:01</div><div class="post-body">[size=5][font=楷体_GB2312][b]佛说大孔雀咒王经卷上(前方便法)[/b] <br/>
 <br/>
 唐三藏法师义净奉　制译 <br/>
 <br/>
@@ -54,7 +67,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 诸如是等一切天神。咸当受此香花饮食。皆发欢喜心。拥护我某甲(若为国家或为余人而读诵者即须称说彼人名字下皆准此)并诸眷属。于一切时恐怖之处。一切厄。难一切疾病。一切忧恼一切饥馑。狱囚系缚等处悉得解脱。寿命百岁得见百秋。咒力成就莎诃(此一部经须知大例。 <br/>
 <br/>
-若是寻常字体傍加口者。即须弹舌道之。但为此方无字故借音耳。自余唯可依字直说。不得漫为声势致失本音。又但是底字皆作丁里音道。不得依字即唤便乖梵韵。又读咒时。声含长短字有重轻。看注四声而读。终须师授方能惬当。又须粗识字义。呼召始可随情。若至我某甲处。咸须具述所求之事然此咒。经有大神力。求者皆验。五天之地南海十洲。及北方土货罗等二十余国。无问道俗大乘小乘。皆共尊敬。读诵求请咸蒙福利交报不虚。但为旧经译文有阙。致使神州不多流布。虽遭厄难读者尚希。故今综寻诸部梵本。勘令委的重更详审译成三卷。并画像坛场轨式。利益无边传之永代)[/font][/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-26 04:20</div><div class="post-body">[font=楷体_GB2312][size=5][b]佛说大孔雀咒王经卷上[/b] <br/>
+若是寻常字体傍加口者。即须弹舌道之。但为此方无字故借音耳。自余唯可依字直说。不得漫为声势致失本音。又但是底字皆作丁里音道。不得依字即唤便乖梵韵。又读咒时。声含长短字有重轻。看注四声而读。终须师授方能惬当。又须粗识字义。呼召始可随情。若至我某甲处。咸须具述所求之事然此咒。经有大神力。求者皆验。五天之地南海十洲。及北方土货罗等二十余国。无问道俗大乘小乘。皆共尊敬。读诵求请咸蒙福利交报不虚。但为旧经译文有阙。致使神州不多流布。虽遭厄难读者尚希。故今综寻诸部梵本。勘令委的重更详审译成三卷。并画像坛场轨式。利益无边传之永代)[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-26 04:20</div><div class="post-body">[font=楷体_GB2312][size=5][b]佛说大孔雀咒王经卷上[/b] <br/>
 <br/>
 如是我闻。一时薄伽梵。在室罗伐城逝多林给孤独园。与大苾刍众千二百五十人俱。于此住处有一苾刍名曰莎底。年少出家未久。新受圆具学毗柰耶教。为众破樵营澡浴事。有大黑蛇从朽木孔。忽然而出螫彼苾刍右足拇指。毒气遍身闷绝于地。口中煦沫两目翻上。 <br/>
 <br/>
@@ -303,7 +316,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 恒用戒香涂莹体 常持定服以资身 <br/>
 菩提妙花遍庄严 随所住处常安药[/b] <br/>
 <br/>
-佛说大孔雀咒王经卷上[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-26 05:02</div><div class="post-body">[font=楷体_GB2312][size=5][b]佛说大孔雀咒王经卷中[/b] <br/>
+佛说大孔雀咒王经卷上[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-26 05:02</div><div class="post-body">[font=楷体_GB2312][size=5][b]佛说大孔雀咒王经卷中[/b] <br/>
 <br/>
 复次阿难陀。汝当受持所有诸大药叉军主名字。差别如是应知所谓 <br/>
 <br/>
@@ -993,7 +1006,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 诸有清净婆罗门　能除一切诸恶业　如是等众我归礼　愿拥护我并眷属。天阿苏罗药叉等　来听法者应至心　拥护佛法使长存　各各勤行世尊教　诸有听徒来至此　或在地上或居空　常于人世起慈心　日夜自身依法住　愿诸世界常安隐　无边福智益群生　所有罪业并消除　远离众苦归圆寂　恒用戒香涂莹体　常持定服以资身　菩提妙花遍庄严　随所住处常安乐 <br/>
 <br/>
-大孔雀咒王经卷中[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-26 05:33</div><div class="post-body">[font=楷体_GB2312][size=5][b]佛说大孔雀咒王经卷下[/b] <br/>
+大孔雀咒王经卷中[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-26 05:33</div><div class="post-body">[font=楷体_GB2312][size=5][b]佛说大孔雀咒王经卷下[/b] <br/>
 <br/>
 阿难陀此孔雀咒王。是毗钵尸如来正遍知者随喜宣说。即说咒曰 <br/>
 <br/>
@@ -1233,15 +1246,15 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 恒用戒香涂莹体　　常持定服以资身 <br/>
 菩提妙华遍庄严　　随所住处常安乐[/b] <br/>
 <br/>
-佛说大孔雀咒王经卷下[/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 20:50</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+佛说大孔雀咒王经卷下[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 20:50</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 21:00</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 21:00</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">邬</div>邬扎拉拓发表于 2011-1-18 01:22</div><div class="post-body">最上三寶我皈依，一切罪業皆懺悔 <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">邬</div>邬扎拉拓发表于 2011-1-18 01:22</div><div class="post-body">最上三寶我皈依，一切罪業皆懺悔 <br/>
 眾生善根盡隨喜，正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽，直至菩提我皈依 <br/>

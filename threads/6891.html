@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>祈竹仁宝哲文集（三） - 藏密修海典藏</title>
+<title>祈竹仁宝哲文集（三） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">祈竹仁宝哲文集（三）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:24</div><div class="post-body">祈竹仁宝哲文集（三） <br/>
+<div class="post"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:24</div><div class="post-body">祈竹仁宝哲文集（三） <br/>
 编者的话 <br/>
 <br/>
 近年来，在汉地修学藏传佛教的佛子日益增多。由于语言之障碍，不少人面对着有仪轨而不懂修持或听过西藏法师之修持开示，却苦无汉译仪轨文本之局面，因而令修持无从入手。 <br/>
@@ -270,7 +283,7 @@ Tayatha om bhekhanzhai bhekhanzhai maha bhekhanzhai bhekhanzhai randza samugate 
 回向 <br/>
 礼拜作供持七佛洪名　所积功德令因缘具足 <br/>
 七佛四十四本愿誓言　于我与众生中即报现 <br/>
-此仪轨乃由彭措达玛巴达拉依达孜南卡飘笙及固沙里法金刚所说撮要而成，愿普善增扬！ </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:27</div><div class="post-body">编者的话 <br/>
+此仪轨乃由彭措达玛巴达拉依达孜南卡飘笙及固沙里法金刚所说撮要而成，愿普善增扬！ </div></div><div class="post"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:27</div><div class="post-body">编者的话 <br/>
 <br/>
 金刚萨埵忏罪法门为藏传佛教加行基础之一，对认真的修行者来说十分重要，也是僧众日修的一个主要法门。西藏各个派别各有其仪轨传承，而且单只格律派宗喀巴祖师之传承内已有不同之化相及仪轨，各依其所属密续而有所分别，唯修行重点则大致一样。 <br/>
 这里纪录了大藏寺祈竹仁宝哲（亦即世界各地佛教显密研修院之创院法师）于一九九五年在澳洲雪梨之口传开示。开示内容及依开示所印之短本仪轨念诵次第而作的讲解，读者宜把仪轨之各部分诵文与上师之开示讲解配合研修熟习。 <br/>
@@ -478,7 +491,7 @@ om vajrasattva samaya manupalaya vajrasattva teno patista drido me bhava suto ka
 <br/>
 回向 <br/>
 祈愿修此所积诸圆德　利益于我有恩父母众 <br/>
-有需如母有情普众生　恩师以及三昧耶眷亲 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:27</div><div class="post-body">编者的话 <br/>
+有需如母有情普众生　恩师以及三昧耶眷亲 </div></div><div class="post"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:27</div><div class="post-body">编者的话 <br/>
 <br/>
 熏烟供养法是种能积集无量功德的简便修法，仪轨虽然只有三数页，但恒久修持所能带来的利益却是无穷无尽、不可思议地广大。在西藏的寺院中，每天都有僧人定时修持这个短略的仪轨以作供养，更有发愿终生每天三次修供的行者。在汉地，自清朝末年以来，此仪轨被广泛流传，单只译本已有多种，修持者众多，其利益殊妙亦被广大佛子所赞叹。 <br/>
 这份导修笔记是依大藏寺祈竹仁宝哲应马来西亚弟子请求，依据班禅善慧法幢大师所著之仪轨在一九九六年七月间之阐释而恭录的。对此法门生起信心而欲作修持者可依开示而持诵。日后若能寻得明师而求授口传则更为如法。 <br/>
@@ -664,7 +677,7 @@ om gandhe gama kuna puja idam khakha khahikhahi <br/>
 莲华藏蕊中化生　愿能受生彼刹中 <br/>
 <br/>
 他呀他　唵　班吱　格力呀　阿华　仆打尼　疏哈 <br/>
-tadyatha om panji griya awa bodhani soha </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:28</div><div class="post-body">白珍巴拉水供仪轨导修开示 <br/>
+tadyatha om panji griya awa bodhani soha </div></div><div class="post"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:28</div><div class="post-body">白珍巴拉水供仪轨导修开示 <br/>
 <br/>
 在这里开示的是土观罗笙却吉尼玛大师所撰之“乘龙白珍巴拉五尊水供法”仪轨的修持要点。在西藏，有所谓“五财尊”之法门，但这里所开示之传承并不属于上述较常听见之“五财尊”法门，而是由印度佛教大师阿底峡祖师所传的一个财尊法门。这个殊胜法门也属于一种观音菩萨的法门，其来源是这样的：约在九百多年前，阿底峡祖师住世的时间，有一天祖师正在入城途中，见到路边有一个乞丐因为饥渴而倒在地上，面临死亡。阿底峡祖师见到这样的情况，心料即使飞奔进城，待带回食物来到原地时，乞丐也必已断气，故此拿出了僧人随身带备的剃发刀，割下自己一块肉，用来救助乞丐。但垂死之乞丐却回答说：“我地位虽极为低下，但绝不敢做出啖食人肉的事情，何况食用一位受具足戒之功德比丘身上的肉？师父之心意我心领了，生死就由天吧！请师父勿为我残伤身体呀！”。阿底峡祖师心中生起了甚深微妙之大悲心，念及无量众生因其业力受贫苦所迫，涓滴饮食亦不能得，如何能救度这些众生免于贫苦呢？祖师心念处于此悲心中，同时迫切地向观音祈请不断。彼时天上忽然现出妙光及传来奇妙之声音，祖师仰头即见观音在面前上空化现，祖师马上连连恳求大士传授一个护持众生免于饥渴贫乏之法门，这时，观音大士因听到了祖师所述之乞丐的惨况，也心念众生之痛苦，眼中流出了悲泪。此时，由观音之左眼所流出之一颗泪珠化生出六臂相之摩诃黑怙主护法（梵文Mahakala），而右眼所流出之一颗泪珠变化成为了我们这里所将开示之白色身相乘龙珍巴拉财尊（梵文Dzambhala）。白珍巴拉发愿：“由我来助你救度众生免于贫困吧！”。六臂摩诃黑怙主则发愿：“由我来息除众生之障碍吧！”。这两尊一个是赐令免于贫苦之财尊，一个是护持正教之护法。但其实都是由观音之悲心所化现的种种不同形相，体性就是观音大士。 <br/>
 修持白珍巴拉法门有三项殊胜功德： <br/>
@@ -801,7 +814,7 @@ om payma droda arya dzambhala hridaya hum phat <br/>
 om payma droda arya dzambhala hridaya sapariwara(argham/ padyam/pupe/dupe/aloke/gandhe/niude/shabda) praticcha hum soha <br/>
 虹霓缠绕水晶熔液聚　具足九种舞态乐叉王 <br/>
 需求悉地如雨降澍者　吉祥珍巴拉前我敬礼 <br/>
-若有所依，则请智慧尊坚住，三昧耶尊摄入自身。若无所依，则请智慧尊返回。以大拇指及无名指取水置自舌上受取悉也，并于四方弹洒少许。复诵百字明。剩水勿弃而作受用。 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:28</div><div class="post-body">编者的话 <br/>
+若有所依，则请智慧尊坚住，三昧耶尊摄入自身。若无所依，则请智慧尊返回。以大拇指及无名指取水置自舌上受取悉也，并于四方弹洒少许。复诵百字明。剩水勿弃而作受用。 </div></div><div class="post"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:28</div><div class="post-body">编者的话 <br/>
 <br/>
 很多初学藏传佛教的汉人弟子，一直有一种误解，以为格律派唯尊创派初祖宗喀巴大师，而并不依止莲华生祖师，此实乃一大谬。藏传佛教弟子，多视初弘佛法于西藏的莲华生大师、中兴藏传佛教的阿底峡大师及复兴藏地正法传统之宗喀巴大师为同一心识之先后应缘化现，故有赞文曰“持明成就莲华生，五百师首燃灯智(阿底峡)，金刚持王善慧称(宗喀巴)，顶礼大师各化身”格律派大藏寺法台祈竹仁宝哲亦曾说：“莲华生大师并非只是宁玛派的祖师，而是全个西藏地区的佛法祖师！”自1997年始，祈竹仁宝哲曾先后在加拿大卡加里及温哥华、香港及新加坡等地，多次弘扬密相马头明王法门。此本尊法门即为格律派内流传甚广，而源自莲华生大师传承之一个殊胜法门。 <br/>
 本书乃取祈竹仁宝哲分别于1999、2001、2003年在香港及印度所作之口授开示，结集合并编辑而成。 <br/>
@@ -1049,7 +1062,7 @@ a-ah ei-eih ou-ouh re-reh li-lih ae-aeh oh-ohh am-ah ka-kha ga-gah nga tsa-tsaa 
 持以上种子字一遍。自身融入空性，复现本尊之相。 <br/>
 <br/>
 以此功德愿速证　忿马头王证悟境 <br/>
-以能解脱普有情　悉达尔同等证境 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:29</div><div class="post-body">秘密主三身合一忿怒尊仪轨导修开示 <br/>
+以能解脱普有情　悉达尔同等证境 </div></div><div class="post"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:29</div><div class="post-body">秘密主三身合一忿怒尊仪轨导修开示 <br/>
 <br/>
 在座的各位，应该心存庆幸，因为我们都具备了暇满人身，又得遇上佛法，更有机会修持佛法。修持佛法者，首先必须学习佛法，再加以思考，最后把佛法实修。在这佛法的闻、思、修三过程中，我们必定会遇上各种人与非人、物质与非物质的障碍，干扰我们的修行。在世俗的生活中，我们也肯定会遭遇到形形式式的逆缘。为了令修持正法的人能免于和消除各种修行上及生活中的障碍，十方诸佛圣众化现为我们今天所讲及的三身合一忿怒尊。他们的身化成了大鹏金翅鸟。他们的语化成了马头明王。他们的意化为金刚手。所以，这位三身合一忿怒尊不但是大鹏金翅鸟、马头明王及金刚手三尊合一，而实际上更是十方所有佛等圣众的身、语、意之总体合一身。 <br/>
 世间及修行上的障碍有多种，包括身心病患、自己的罪业、魔障、鬼类加害、邪术、星象或地形之不祥、天灾、地神加害、龙族加害及人类的侵害等等，不胜枚举。如果我们把这些障碍归纳的话，它们可以被划为来自天上、地面及地底的外、内及密障碍。今天衲所教的三身合一忿怒尊，便正是对治天上、地面及地底一切所有障碍的殊胜本尊。大家能学这个历代辗转相传下来的法门，应该心生欢喜，并在听法后尽力多修。衲今天只会简略地讲解此法门，但在精简之余，衲会确保所教的内容是完整无缺的。 <br/>
@@ -1159,7 +1172,7 @@ Om Vajrapani Hayagriva Garuda Hum Phat <br/>
 <br/>
 回向 <br/>
 以此功德净除诸障碍　降灭魔军如法成所愿 <br/>
-为利遍空有情速圆证　诸佛圆满无别智悲力 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:29</div><div class="post-body">六臂玛哈嘎拉护法祈请文导修开示 <br/>
+为利遍空有情速圆证　诸佛圆满无别智悲力 </div></div><div class="post"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:29</div><div class="post-body">六臂玛哈嘎拉护法祈请文导修开示 <br/>
 <br/>
 在佛教里，有很多尊不同的护法。其中分为世间护法与出世间护法。世间护法是世间的有力众生，他们有些是自愿发心护持佛法及奉持正法的众生，有些则是受过往各大师降伏而以誓约所缚，命其护持佛法的世间众生。在承负护法之责任前，世间护法本为龙族、魔众等“非人”众生。出世间之护法则为佛陀之悲心化现所出之忿怒形相。上述两种护法之性质完全不同。 <br/>
 护法的工作是协助奉持正法的行者，为他们安排修行之顺缘及消灭内外的修持障碍。对修行者而言，外在的障碍只是其次，最主要的是降伏内心的障碍，所以我们必须倚重出世间护法之支持。对世间之护法，我们可以供养及祈请他们协助，但不可以依止他们。对出世间之护法，我们可以去依止，因为他们是诸佛之化相。世间与出世间护法二者之间的分别，我们必须清楚，二者与修行人的关系幷不一样。 <br/>
@@ -1239,7 +1252,7 @@ Om Vajrapani Hayagriva Garuda Hum Phat <br/>
 怙主上师无别尊　行者至心作依止 <br/>
 请除我与有情众　一切逆缘障碍等 　 (以上八句诵三遍) <br/>
 以此功德回向未来生　愿能受持胜者妙法流 <br/>
-逆缘尽除得一切顺缘　证得无别上师怙主境 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:30</div><div class="post-body">狮面智慧空行母仪轨导修开示 <br/>
+逆缘尽除得一切顺缘　证得无别上师怙主境 </div></div><div class="post"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:30</div><div class="post-body">狮面智慧空行母仪轨导修开示 <br/>
 <br/>
 今天衲应求讲授狮面空行母的简单修法。 <br/>
 狮面空行母的梵文叫Simhavaktra Dakini，藏文是mKhah-hGro Seng-gehi gDong-can。这是一个很殊胜的法门。在座中有不少听者对藏传佛教有一定的了解，都知道在藏传佛教中，尤其是在藏传佛教的宁玛派中，有许多称为“岩传”和“伏藏”的传承法门或仪轨。这些法门的经书和仪轨等，是由先代圣者埋在山洞等秘密地方，留待后世因缘成熟时，由有缘人取出而弘扬的。在西藏，莲华生大师曾留下极多的伏藏。有些人误以为，藏传佛教中的格律派并不修伏藏法门。也有些人误以为，唯独西藏有伏藏而印度没有。其实这些都是误解。今天所教的狮面空行母法门，便正是格律派信众也修的一个源自伏藏的传承。这个伏藏，是少数几支印度的伏藏传承，它是在印度中部近佛陀成道之处取出的。 <br/>
@@ -1375,7 +1388,7 @@ akasamaraja sadarasa maraya phat <br/>
 任凭桀傲凡夫辈　以诸恶咒夺我乐 <br/>
 一切回遮尽消灭　正教讲修令弘扬 <br/>
 我愿以此善功德　成就智慧空行尊 <br/>
-十方一切诸众生　咸令果证尽无余 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:33</div><div class="post-body">度母修持中轨 <br/>
+十方一切诸众生　咸令果证尽无余 </div></div><div class="post"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:33</div><div class="post-body">度母修持中轨 <br/>
 大藏寺善慧义成比丘  编 <br/>
 <br/>
 行者皈依直至成正觉　佛陀正法以及圣僧众 <br/>
@@ -1574,7 +1587,7 @@ om barum soha <br/>
 om barum soha <br/>
 <br/>
 以此功德愿速能　成就尊胜母之境 <br/>
-并将一切诸众生　安立于同等果境 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:34</div><div class="post-body">妙音母仪轨导修开示 <br/>
+并将一切诸众生　安立于同等果境 </div></div><div class="post"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:34</div><div class="post-body">妙音母仪轨导修开示 <br/>
 <br/>
 今天要讲授的是妙音母法门，听者应具备闻法的三器六想，以欲利益一切众生之动机来听闻。 <br/>
 妙音母（注：汉文亦译作“妙音佛母”、“声音佛母”及“妙音天女”等）的梵名是Saraswati，其藏名为Yangchenma，他是一位示女性身相的智慧本尊。在女性本尊里面，度母是最著名的。度母有许多化相，如延寿度母、事业度母、赐财度母、忿怒除障度母及智慧度母等。赐财的度母的另一种相即为财续母，忿怒除障的度母之另一种相即为吉祥天母护法。妙音母正是赐予智慧的度母。在二十一度母化相中，其中一尊虽不直接称妙音母之名，但其实正是妙音母。事实上，妙音母还有多种不同的名号、称呼。 <br/>
@@ -1638,7 +1651,7 @@ om barum soha <br/>
 hrim <br/>
 <br/>
 以此功德愿速能　成就白妙音母境 <br/>
-并将一切诸众生　安立于同等果境 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:35</div><div class="post-body">光明母仪轨导修开示 <br/>
+并将一切诸众生　安立于同等果境 </div></div><div class="post"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:35</div><div class="post-body">光明母仪轨导修开示 <br/>
 <br/>
 今天晚上衲应求讲授光明母法门之简易修持方法。在现今之年代，常有许多病毒、瘟疫等灾害，个人也常常遇上形形式式的危难。光明母是一位女相除障本尊，她的法门对这个灾劫年代的众生特别有帮助，能令行者免于战乱、魔劫、盗贼、非人加害、猛兽侵击及各种天灾等。在西藏的上密院及下密院中，学僧每天早上皆会私下诵修光明母法。格律派中的僧人，亦大半会在每天修诵此本尊的咒。衲自十一岁起便开始每天修诵这位本尊的仪轨，至今已五十七年了。衲曾经拥有一本汇集许多光明母的旁支法门之珍本经典，里面有极多不同功能的光明母法，但在1959年的变动中，衲不幸遗失了此书，至今仍感到十分可惜。本来衲可以教授许多光明母之旁支法门、事业方法及闭关成就方法等等，但有鉴于在座听众未曾受此本尊之灌顶，同时又是初学者，若在此情况下教授上述内容，是不太恰当的。故此，今晚衲将会教授适合普传的简略修持法，让未曾受光明母灌顶的人亦可修诵此殊胜法门。 <br/>
 光明母（注：汉译名亦作“光明天母”、“光明佛母”、“积光佛母”、“具光佛母”、“摩利支天”及“摩利支母”等）的梵名是Marici，其藏文名是Wodzer Chanma，他有二十五种主要的化相，包括立相的、坐相的、骑猪的、坐在车上的、一面二臂的、三面六臂的及三面八臂的化相等等，但其原本现相是今天所教的三面八臂相。这个化相骑在一辆由七头野猪所拉的金车上。其它光明母化相，与这尊是同一体性的，只是在身相上及传承上有不同而已。此外，衲听说在日本佛教内，也十分盛行光明母法门，其身相与藏传佛教中所描述的基本相同。 <br/>
@@ -1763,7 +1776,7 @@ om pisha tsi parna shawari sarwa zora prasha manaye soha <br/>
 Om Pisha Tsi Parna Shawari Sarwa Zora Prasha Manaye Soha <br/>
 <br/>
 以此功德愿速能　成就叶衣母之境 <br/>
-并将一切诸众生　安立于同等果境 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:36</div><div class="post-body">财续母仪轨导修开示 <br/>
+并将一切诸众生　安立于同等果境 </div></div><div class="post"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:36</div><div class="post-body">财续母仪轨导修开示 <br/>
 <br/>
 财续母的藏名为nor rgyun ma（注：汉译亦作“增禄天母”、“财续佛母”及“财续天母”等），他是一位赐予财富的本尊，亦可说是珍巴拉财尊的女性版本。 <br/>
 现今的人，都以财富为首要，宁可要钱财而不要命。在古印度的佛教传统中，可不是这样的。在古印度，认真的修行人都先修长寿本尊法，如白度母或无量寿佛等（注：有关无量寿佛延寿法门，见法师著作《寿份无量》）。次修增智能法，例如妙音母或文殊法门等，在成功地增长了智慧后，他们便修财尊法门，例如财续母或珍巴拉法门等。古印度行者修延寿法并非因为世俗的怕死之心，而是为了确保自己有足够长的寿命以学法及修持。他们修财尊法，并非为了想发财而享乐，而是为了要有足够资财以作供养、布施予苦难众生及作为修持之顺缘。在印度中部佛陀成道圣地附近之古印度石雕上，可见到许多财尊形相，足可见证古代行者对财尊法门之重视。 <br/>
@@ -1948,7 +1961,7 @@ tayatha（om）gate gate paragate parasamgate bodhi soha <br/>
 Tayatha（Om）Gate Gate Paragate Para Sam Gate Bodhi Soha <br/>
 <br/>
 以此功德愿速能　成就般若母之境 <br/>
-并将一切诸众生　安立于同等果境 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:37</div><div class="post-body">噶登派四本尊法门导修开示前言 <br/>
+并将一切诸众生　安立于同等果境 </div></div><div class="post"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:37</div><div class="post-body">噶登派四本尊法门导修开示前言 <br/>
 <br/>
 从今晚开始一连数晚，衲将会讲解噶登派四本尊法门的简略修持方法。 <br/>
 衲是格律派（Gelugpa）的僧人。格律派又称“新噶登派”，这是指我派继承了旧噶登派之宗风的意思。旧的噶当派（Kadampa）乃由印度阿底峡大师（Atisha）所创立。 <br/>
@@ -2198,7 +2211,7 @@ om mani padme hum　随力念诵 <br/>
 <br/>
 祈请一切善愿成就 <br/>
 以此功德愿速能　成就观世音之境 <br/>
-并将一切诸众生　安立于同等果境 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:37</div><div class="post-body">噶登四本尊——度母法门导修开示 <br/>
+并将一切诸众生　安立于同等果境 </div></div><div class="post"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:37</div><div class="post-body">噶登四本尊——度母法门导修开示 <br/>
 <br/>
 现在所教授的，是一个简单的度母仪轨。 <br/>
 度母有许多种化相，其中有摩诃无上瑜伽密部的，亦有事密部及其它密部的。今天所教乃事密部之度母。 <br/>
@@ -2319,7 +2332,7 @@ namo ratna trayaya namah aryavalokiteshvaraya bodhisattvaya mahasattvaya mahakar
 <br/>
 作阿根至夏达等八供养 祈请回向一切善愿早成就 <br/>
 以此功德愿速能　成就圣度母之境 <br/>
-并将一切诸众生　安立于同等果境 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:38</div><div class="post-body">噶登四本尊——不动明王法门导修开示 <br/>
+并将一切诸众生　安立于同等果境 </div></div><div class="post"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-22 08:38</div><div class="post-body">噶登四本尊——不动明王法门导修开示 <br/>
 <br/>
 现在讲授噶登四本尊中的最后一尊——不动明王。 <br/>
 四本尊中的其它三尊，都显现为寂静相，不动明王却为忿怒护法相。我们要知道，护法分为世间与出世间护法两类。世间护法是六道中的有力众生。他们虽然有能力协助修行人得到顺缘及排除逆缘，但却并不能协助我们的未来生，而他们自己亦未脱出六道，所以我们不应依止他们，只可供养他们。出世间的护法，是佛陀等的化身，例如著名的玛哈嘎拉（梵名Mahakala）便是观音的护法化相之一。这类护法，是佛陀的显现，所以我们可以皈依他们。 <br/>

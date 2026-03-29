@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>世出世间真谛论——秋英多杰仁波切 - 藏密修海典藏</title>
+<title>世出世间真谛论——秋英多杰仁波切 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/定慧禅修成就法.html">定慧禅修成就法</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">世出世间真谛论——秋英多杰仁波切</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-2 23:29</div><div class="post-body">[font=楷体_GB2312][size=5][/size][/font] <br/>
+<div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-2 23:29</div><div class="post-body">[font=楷体_GB2312][size=5][/size][/font] <br/>
 <br/>
 [font=楷体_GB2312][size=5]译者绪言 <br/>
 <br/>
@@ -113,7 +126,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 <br/>
 [align=right]译者谨识 <br/>
-二00三年十一月二十五日[/align][/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-2 23:36</div><div class="post-body">[font=楷体_GB2312][b][size=5]秋英多杰瑜伽士著 <br/>
+二00三年十一月二十五日[/align][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-2 23:36</div><div class="post-body">[font=楷体_GB2312][b][size=5]秋英多杰瑜伽士著 <br/>
 <br/>
 第一章[/size][/b][/font] <br/>
 [font=楷体_GB2312][b][size=5] <br/>
@@ -1096,7 +1109,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 藉此殊胜之缘起，文殊幻化时轮法， <br/>
 惟愿如火燃十方，惟愿如火燃十方！ <br/>
 [/align][align=right] <br/>
-达多堪布    译汉 [/size][/b][/font][/align] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-3 01:23</div><div class="post-body">[font=楷体_GB2312][size=5][b]秋英多杰仁波切在中国藏语高级佛学院就藏传密宗与该院院长教授作的经验交流纪要[/b] <br/>
+达多堪布    译汉 [/size][/b][/font][/align] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-3 01:23</div><div class="post-body">[font=楷体_GB2312][size=5][b]秋英多杰仁波切在中国藏语高级佛学院就藏传密宗与该院院长教授作的经验交流纪要[/b] <br/>
 <br/>
 2000年5月2日，秋英多杰仁波切受中国藏语高级佛学院的邀请，来到北京与该院诸位院长教授等人，进行了有关藏传密宗方面的经验交流和探讨。 <br/>
 当日，仁波切莅临中国藏语高级佛学院，受到了该院副院长曹先生、副院长那仓仁波切、该院教授索加堪布与萨迦寺寺管会主任兼西藏自治区佛教协会副会长巴德东永等人的热烈欢迎。宾主互表敬意，欢聚一堂。 <br/>
@@ -1158,12 +1171,12 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 接着，那仓仁波切介绍了中国藏语高级佛学院。中国藏语高级佛学院创办于1987年9月1日，由十世班禅大师和中国佛教协会会长赵朴初先生亲自倡导与规划，由党中央和国务院批准设立。该佛学院是全国藏传佛教的最高学府，这里云集了藏传各大教派的转世活佛与格西。十世班禅大师生前曾亲任该院院长。学院让学生对藏传佛教进行普遍的闻思，并按宁玛、萨迦、噶举与格鲁诸法系分别进行授课到目前为止，虽未有苯教法系的授课，但也欢迎苯教法系的人员参加。该学院汇集了四大教派的活佛，是培养爱国爱教骨干堪布与活佛之中心。这里所需的经费开支均由国家支付。学院严格预防和制止各教派间发生的相互争执诽谤等现象。 <br/>
 那仓仁波切又说：“现在有一些人，他们并不知自己法系的特点，却对别的法系进行种种非议。”对此，他强调说：“我对他们讲，你们很多人就连自己法系的要义殊胜之处，也未必能全面地讲述出来，却对别的教派评头论足，为此，应当放弃对别的法系的种种指责。你们应该深思。” <br/>
 听到这里时，秋英多杰仁波切非常高兴，并合掌而言：“这说得真对!我们佛教不是没有真理，上师三宝也并非不真实。我们显密二宗和教派间的门户之见，相互偏执诽谤等现象，才是造成显密正法加持力和威德力削弱的根本原因。” <br/>
-“这种现象，使得佛教的寺院、活佛、密修者、出家人以及一切僧俗，在其修证的道路上生起了恶缘。使得上师与僧众间逐渐产生不和与分歧，也使得信众之间的仇视和矛盾加大，更会造成寺院间的隔阂，造成村落间发生冲突的危险。这也是不符合国家法律与政策的。[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2008-6-28 11:31</div><div class="post-body">至尊秋英多杰尊者是当今少有的大成就者！！！ <br/>
+“这种现象，使得佛教的寺院、活佛、密修者、出家人以及一切僧俗，在其修证的道路上生起了恶缘。使得上师与僧众间逐渐产生不和与分歧，也使得信众之间的仇视和矛盾加大，更会造成寺院间的隔阂，造成村落间发生冲突的危险。这也是不符合国家法律与政策的。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2008-6-28 11:31</div><div class="post-body">至尊秋英多杰尊者是当今少有的大成就者！！！ <br/>
 <br/>
 <br/>
 这两天刚刚看完至尊秋英多杰尊者的两本书，昨天刚刚到这儿就又看到尊者的开示，真是殊胜的缘起啊！！ <br/>
 <br/>
-顶礼至尊秋英多杰尊者！！！ </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2008-7-31 14:17</div><div class="post-body">给娑婆世界的一封信 <br/>
+顶礼至尊秋英多杰尊者！！！ </div></div><div class="post"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2008-7-31 14:17</div><div class="post-body">给娑婆世界的一封信 <br/>
 <br/>
 秋英多杰仁波切著 <br/>
 <br/>
@@ -1287,7 +1300,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 愿将此文，献给这整个娑婆世界。 <br/>
 <br/>
-本文为益西多杰老者所作，善哉！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">阿</div>阿天发表于 2008-11-14 10:05</div><div class="post-body">善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 08:42</div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
+本文为益西多杰老者所作，善哉！ </div></div><div class="post"><div class="post-header"><div class="avatar">阿</div>阿天发表于 2008-11-14 10:05</div><div class="post-body">善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！善哉！ </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 08:42</div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
 众生善根尽随喜  正觉菩提意中持 <br/>
 正觉妙法及僧伽  直至菩提我皈依 <br/>
 所为利益自他故  我今即发菩提心 <br/>

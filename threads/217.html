@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>拜佛：消除业障，开发潜能 [大礼拜] - 藏密修海典藏</title>
+<title>拜佛：消除业障，开发潜能 [大礼拜] - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/加行实修入正道.html">加行实修入正道</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">拜佛：消除业障，开发潜能 [大礼拜]</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">喜</div>喜鹊七子发表于 2005-11-18 20:10</div><div class="post-body">[font=楷体_GB2312][size=5]拜佛：消除业障，开发潜能 [大礼拜] <br/>
+<div class="post"><div class="post-header"><div class="avatar">喜</div>喜鹊七子发表于 2005-11-18 20:10</div><div class="post-body">[font=楷体_GB2312][size=5]拜佛：消除业障，开发潜能 [大礼拜] <br/>
 道证法师 <br/>
 <br/>
 拜佛：消除业障，开发潜能 <br/>
@@ -97,18 +110,18 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 慢慢地，我感觉到原来一千拜、一万拜都不过是眼前一拜而已，根本不需要去挂碍，更不必费心去想下一拜，享受眼前这一刹那和佛面对面的时光就好，古人说：‘万古长空，一朝风月。’万古以来广阔的天空，就是眼前你，看到这一时的风月，每一个一朝风月都是万古长空。 <br/>
 <br/>
-所谓‘永远快乐无忧’就是每一个‘现在’都快乐无忧。假如现在不能够开心欢喜地发挥生命造福大家，那么说实在，争取明天也没有用，争取更长的生命也没有用。我还是喜欢一句老话—‘即使明天是世界末日，今夜我仍要在园中种满莲花，以清风明月的胸怀，歌咏阿弥陀佛’。[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-4-25 23:58</div><div class="post-body">最简单的修法最容易实践，最简单的修法最容易见效，最简单的修法易于掌握不会出偏差。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">怒</div>怒放发表于 2006-4-27 23:34</div><div class="post-body">关于手的放置方法与另一篇文章的方法有些许的出入，不知何为正。 <br/>
+所谓‘永远快乐无忧’就是每一个‘现在’都快乐无忧。假如现在不能够开心欢喜地发挥生命造福大家，那么说实在，争取明天也没有用，争取更长的生命也没有用。我还是喜欢一句老话—‘即使明天是世界末日，今夜我仍要在园中种满莲花，以清风明月的胸怀，歌咏阿弥陀佛’。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-4-25 23:58</div><div class="post-body">最简单的修法最容易实践，最简单的修法最容易见效，最简单的修法易于掌握不会出偏差。 </div></div><div class="post"><div class="post-header"><div class="avatar">怒</div>怒放发表于 2006-4-27 23:34</div><div class="post-body">关于手的放置方法与另一篇文章的方法有些许的出入，不知何为正。 <br/>
 [url]http://www.zmxh.com/bbs/viewthread.php?tid=222&amp;extra=page%3D1[/url] <br/>
 引用内容如下： <br/>
-（一）五体投地顶礼式：身之四肢（两掌两膝）及额间五部，完全着地，若仅四肢着地，而头额间不着地，如《菩提道次第修习加行六法妙道入门经注》及《兜率天赞叹经三修道根本常演中道修法妙语明证经注》云，顶礼时头额不着地，将来堕在悬头地狱，若生人中，则受驼背残疾之若，又五体投地后，同时全身旋即起立，愈速愈妙，不可伏地久停，起时两手不可向背后伸展，依《赞叹经》注，引据《丹巴戒索》大师云，头伏地久停不起，将来生畜生道中，得鳄鱼身，如生人中，身不美观，愚而无智，起时两手若向背后伸展，则生边地，不闻佛名，又闻诸上师云，五体投地后，两手掌落地同时身体应即起立，切不可两手向上一翻，使两手掌朝天，以经中及藏地礼仪，均无翻手之理，每见汉地磕头，皆翻其两手，掌心向上，不知系据何经典，若谓掌心向上，系顶礼佛足之意，按诸经典，虽有顶礼佛足之说，但其仪式，并不如此，兹据《授比丘戒仪轨》云，佛住世时，说法讲经，座下诸众若有启请右绕三匝，顶礼佛足，系以两手抱佛菩萨之双足，头触其膝，下小腿相并之间，为最敬之礼，于佛涅槃以后，凡受圆满具足戒时，仍然行此大礼，今汉地磕头，以翻手为顶礼佛足者，或即由于传讹，亦未可知也。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-4-28 07:30</div><div class="post-body">最好按藏传佛教的大礼拜修法进行修持，看加行实修引导 <br/>
-[url]http://www.zmxh.com/bbs/forumdisplay.php?fid=16[/url] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">普</div>普为发表于 2008-3-17 14:02</div><div class="post-body">我每次做108个，虽然没有天天如此，但是也起码有3年了。感觉很不错的！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">圣</div>圣建发表于 2008-12-26 17:05</div><div class="post-body">俗话说，光说不练假把式。 我这就拜去，从今天开始入手。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2012-12-19 15:36</div><div class="post-body">四肢伸开复又回缩力，愿得四种羯摩速自成， <br/>
+（一）五体投地顶礼式：身之四肢（两掌两膝）及额间五部，完全着地，若仅四肢着地，而头额间不着地，如《菩提道次第修习加行六法妙道入门经注》及《兜率天赞叹经三修道根本常演中道修法妙语明证经注》云，顶礼时头额不着地，将来堕在悬头地狱，若生人中，则受驼背残疾之若，又五体投地后，同时全身旋即起立，愈速愈妙，不可伏地久停，起时两手不可向背后伸展，依《赞叹经》注，引据《丹巴戒索》大师云，头伏地久停不起，将来生畜生道中，得鳄鱼身，如生人中，身不美观，愚而无智，起时两手若向背后伸展，则生边地，不闻佛名，又闻诸上师云，五体投地后，两手掌落地同时身体应即起立，切不可两手向上一翻，使两手掌朝天，以经中及藏地礼仪，均无翻手之理，每见汉地磕头，皆翻其两手，掌心向上，不知系据何经典，若谓掌心向上，系顶礼佛足之意，按诸经典，虽有顶礼佛足之说，但其仪式，并不如此，兹据《授比丘戒仪轨》云，佛住世时，说法讲经，座下诸众若有启请右绕三匝，顶礼佛足，系以两手抱佛菩萨之双足，头触其膝，下小腿相并之间，为最敬之礼，于佛涅槃以后，凡受圆满具足戒时，仍然行此大礼，今汉地磕头，以翻手为顶礼佛足者，或即由于传讹，亦未可知也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-4-28 07:30</div><div class="post-body">最好按藏传佛教的大礼拜修法进行修持，看加行实修引导 <br/>
+[url]http://www.zmxh.com/bbs/forumdisplay.php?fid=16[/url] </div></div><div class="post"><div class="post-header"><div class="avatar">普</div>普为发表于 2008-3-17 14:02</div><div class="post-body">我每次做108个，虽然没有天天如此，但是也起码有3年了。感觉很不错的！ </div></div><div class="post"><div class="post-header"><div class="avatar">圣</div>圣建发表于 2008-12-26 17:05</div><div class="post-body">俗话说，光说不练假把式。 我这就拜去，从今天开始入手。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2012-12-19 15:36</div><div class="post-body">四肢伸开复又回缩力，愿得四种羯摩速自成， <br/>
 一切筋脉伸张缩转力，愿开一切脉结悉无余。 <br/>
 <br/>
 脊骨中脉屈曲伸直力，愿诸气入中脉悉无余， <br/>
 两手按地向上起立力，不住轮回愿得解脱道， <br/>
 <br/>
 如是种种一切顶礼力，愿不住息救拔诸众生， <br/>
-我等全身委地之善力，现在无病长寿得圆满， </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">y</div>ysjhd发表于 2026-2-22 20:34</div><div class="post-body">我也去拜 南无观世音菩萨 <br/>
+我等全身委地之善力，现在无病长寿得圆满， </div></div><div class="post"><div class="post-header"><div class="avatar">y</div>ysjhd发表于 2026-2-22 20:34</div><div class="post-body">我也去拜 南无观世音菩萨 <br/>
 <br/>
 </div></div>
 </div>

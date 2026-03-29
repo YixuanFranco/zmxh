@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大方广佛华严经入不思议解脱境界普贤行愿品（华严部） - 藏密修海典藏</title>
+<title>大方广佛华严经入不思议解脱境界普贤行愿品（华严部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大方广佛华严经入不思议解脱境界普贤行愿品（华严部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">绛</div>绛巴嘉措发表于 2005-12-19 17:34</div><div class="post-body">[align=center][font=楷体_GB2312][size=5]大方广佛华严经入不思议解脱境界普贤行愿品 <br/>
+<div class="post"><div class="post-header"><div class="avatar">绛</div>绛巴嘉措发表于 2005-12-19 17:34</div><div class="post-body">[align=center][font=楷体_GB2312][size=5]大方广佛华严经入不思议解脱境界普贤行愿品 <br/>
 [size=4]唐罽宾国三藏般若奉诏译[/size]  [/size][/font][/align][font=楷体_GB2312][size=5] <br/>
 <br/>
 尔时普贤菩萨摩诃萨。称叹如来胜功德已。告诸菩萨及善财言。善男子。如来功德。假使十方一切诸佛经不可说不可说佛刹极微尘数劫。相续演说不可穷尽。若欲成就此功德门。应修十种广大行愿。何等为十。 <br/>
@@ -142,7 +155,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 尔时普贤菩萨摩诃萨。于如来前。说此普贤广大愿王清净偈已。善财童子。踊跃无量。一切菩萨皆大欢喜。如来赞言。善哉善哉。尔时世尊。与诸圣者菩萨摩诃萨。演说如是不可思议解脱境界胜法门时。文殊师利菩萨而为上首。诸大菩萨。及所成熟。六千比丘。弥勒菩萨而为上首。贤劫一切诸大菩萨。无垢普贤菩萨而为上首。一生补处住灌顶位诸大菩萨。及余十方种种世界。普来集会。一切刹海极微尘数诸菩萨摩诃萨众。大智舍利弗。摩诃目犍连等。而为上首。诸大声闻。并诸人天一切世主。天、龙、夜叉、乾闼婆、阿修罗、迦楼罗、紧那罗、摩迦罗伽、人、非人等一切大众。闻佛所说。皆大欢喜。信受奉行。 <br/>
 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">福</div>福喜发表于 2006-1-14 23:05</div><div class="post-body">[color=Red][size=6]若人于此普贤愿 ， <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">福</div>福喜发表于 2006-1-14 23:05</div><div class="post-body">[color=Red][size=6]若人于此普贤愿 ， <br/>
 读诵受持及演说， <br/>
 果报唯佛能证知， <br/>
 决定获胜菩提道！[/size][/color] <br/>
@@ -151,7 +164,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 每日都应该多听多诵！ <br/>
 <br/>
 顶礼上师金刚持！ <br/>
-顶礼上师本尊空行护法！ </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">善</div>善知识发表于 2006-3-16 14:26</div><div class="post-body">诸佛如来。以大悲心而为体故。因于众生。而起大悲。因于大悲。生菩提心。因菩提心。成等正觉 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-4-15 23:18</div><div class="post-body">[size=4]愿令众生常得安乐。无诸病苦。欲行恶法皆悉不成。所修善业。皆速成就。关闭一切诸恶趣门。开示人天涅盘正路。若诸众生。因其积集诸恶业故。所感一切极重苦果。我皆代受。令彼众生悉得解脱。究竟成就无上菩提。[/size] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2007-4-24 00:57</div><div class="post-body">所有十方世界中 三世一切人师子 我以清净身语意 一切遍礼尽无余 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">海</div>海冬青发表于 2007-7-17 21:34</div><div class="post-body">[b][font=楷体_GB2312][size=5]于一尘中尘数佛 各处菩萨众会中 [/size][/font][/b] <br/>
+顶礼上师本尊空行护法！ </div></div><div class="post"><div class="post-header"><div class="avatar">善</div>善知识发表于 2006-3-16 14:26</div><div class="post-body">诸佛如来。以大悲心而为体故。因于众生。而起大悲。因于大悲。生菩提心。因菩提心。成等正觉 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-4-15 23:18</div><div class="post-body">[size=4]愿令众生常得安乐。无诸病苦。欲行恶法皆悉不成。所修善业。皆速成就。关闭一切诸恶趣门。开示人天涅盘正路。若诸众生。因其积集诸恶业故。所感一切极重苦果。我皆代受。令彼众生悉得解脱。究竟成就无上菩提。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2007-4-24 00:57</div><div class="post-body">所有十方世界中 三世一切人师子 我以清净身语意 一切遍礼尽无余 </div></div><div class="post"><div class="post-header"><div class="avatar">海</div>海冬青发表于 2007-7-17 21:34</div><div class="post-body">[b][font=楷体_GB2312][size=5]于一尘中尘数佛 各处菩萨众会中 [/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]无尽法界尘亦然 深信诸佛皆充满 <br/>
 各以一切音声海 普出无尽妙言辞 [/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]尽于未来一切劫 赞佛甚深功德海 <br/>
@@ -161,7 +174,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 最胜衣服最胜香 末香烧香与灯烛 [/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]一一皆如妙高聚 我悉供养诸如来[/size][/font] <br/>
 <br/>
-[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-9-30 08:31</div><div class="post-body">所有十方世界中 三世一切人师子 我以清净身语意 一切遍礼尽无余 <br/>
+[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-9-30 08:31</div><div class="post-body">所有十方世界中 三世一切人师子 我以清净身语意 一切遍礼尽无余 <br/>
 普贤行愿威神力 普现一切如来前 一身复现刹尘身 一一遍礼刹尘佛 <br/>
 于一尘中尘数佛 各处菩萨众会中 无尽法界尘亦然 深信诸佛皆充满 <br/>
 各以一切音声海 普出无尽妙言辞 尽于未来一切劫 赞佛甚深功德海 <br/>
@@ -174,20 +187,20 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 十方一切诸众生 二乘有学及无学 一切如来与菩萨 所有功德皆随喜 <br/>
 十方所有世间灯 最初成就菩提者 我今一切皆劝请 转于无上妙法-轮 <br/>
 诸佛若欲示涅盘 我悉至诚而劝请 唯愿久住刹尘劫 利乐一切诸众生 <br/>
-所有礼赞供养福 请佛住世转法-轮 随喜忏悔诸善根 回向众生及佛道 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑚发表于 2007-10-13 11:23</div><div class="post-body">我以广大胜解心，深信一切三世佛；悉以普贤行愿力，普遍供养诸如来！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-10-13 17:32</div><div class="post-body">我于一念见三世 所有一切人师子 亦常入佛境界中 如幻解脱及威力 <br/>
+所有礼赞供养福 请佛住世转法-轮 随喜忏悔诸善根 回向众生及佛道 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑚发表于 2007-10-13 11:23</div><div class="post-body">我以广大胜解心，深信一切三世佛；悉以普贤行愿力，普遍供养诸如来！ </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-10-13 17:32</div><div class="post-body">我于一念见三世 所有一切人师子 亦常入佛境界中 如幻解脱及威力 <br/>
 于一毛端极微中 出现三世庄严刹 十方尘刹诸毛端 我皆深入而严净 <br/>
 所有未来照世灯 成道转法悟群有 究竟佛事示涅盘 我皆往诣而亲近 <br/>
-速疾周遍神通力 普门遍入大乘力 智行普修功德力 威神普覆大慈力 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚乐发表于 2007-12-15 09:08</div><div class="post-body">我于一念见三世 所有一切人师子 亦常入佛境界中 如幻解脱及威力 <br/>
+速疾周遍神通力 普门遍入大乘力 智行普修功德力 威神普覆大慈力 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚乐发表于 2007-12-15 09:08</div><div class="post-body">我于一念见三世 所有一切人师子 亦常入佛境界中 如幻解脱及威力 <br/>
 于一毛端极微中 出现三世庄严刹 十方尘刹诸毛端 我皆深入而严净 <br/>
 所有未来照世灯 成道转法悟群有 究竟佛事示涅盘 我皆往诣而亲近 <br/>
-速疾周遍神通力 普门遍入大乘力 智行普修功德力 威神普覆大慈力 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚铭发表于 2008-5-26 10:42</div><div class="post-body">菩萨若能随顺众生。则为随顺供养诸佛。若于众生。尊重承事。则为尊重承事如来。若令众生生欢喜者。则令一切如来欢喜。何以故。诸佛如来。以大悲心而为体故。因于众生。而起大悲。因于大悲。生菩提心。因菩提心。成等正觉。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">大</div>大地修行者发表于 2008-12-12 13:29</div><div class="post-body">所有十方世界中 三世一切人师子 我以清净身语意 一切遍礼尽无余 <br/>
+速疾周遍神通力 普门遍入大乘力 智行普修功德力 威神普覆大慈力 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚铭发表于 2008-5-26 10:42</div><div class="post-body">菩萨若能随顺众生。则为随顺供养诸佛。若于众生。尊重承事。则为尊重承事如来。若令众生生欢喜者。则令一切如来欢喜。何以故。诸佛如来。以大悲心而为体故。因于众生。而起大悲。因于大悲。生菩提心。因菩提心。成等正觉。 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大地修行者发表于 2008-12-12 13:29</div><div class="post-body">所有十方世界中 三世一切人师子 我以清净身语意 一切遍礼尽无余 <br/>
 普贤行愿威神力 普现一切如来前 一身复现刹尘身 一一遍礼刹尘佛 <br/>
 于一尘中尘数佛 各处菩萨众会中 无尽法界尘亦然 深信诸佛皆充满 <br/>
-各以一切音声海 普出无尽妙言辞 尽于未来一切劫 赞佛甚深功德海 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-6-4 22:40</div><div class="post-body">[size=4]我是三世一切如来的弟子， <br/>
+各以一切音声海 普出无尽妙言辞 尽于未来一切劫 赞佛甚深功德海 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-6-4 22:40</div><div class="post-body">[size=4]我是三世一切如来的弟子， <br/>
 我是一切正等觉者的弟子， <br/>
 皈命顶礼一切上师金刚持， <br/>
 祈请恩师加持弟子心相应， <br/>
-我与母众同证恩师圣功德！[/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2009-6-25 15:04</div><div class="post-body">无边众生誓愿度 <br/>
+我与母众同证恩师圣功德！[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2009-6-25 15:04</div><div class="post-body">无边众生誓愿度 <br/>
 无边烦恼誓愿断 <br/>
 无边佛法誓愿学 <br/>
 无边福智誓愿集 <br/>

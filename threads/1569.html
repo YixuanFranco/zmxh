@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>《藏传佛教噶举派史略》 - 藏密修海典藏</title>
+<title>《藏传佛教噶举派史略》 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">《藏传佛教噶举派史略》</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-14 19:06</div><div class="post-body">[b][font=仿宋_GB2312][/font][/b] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-14 19:06</div><div class="post-body">[b][font=仿宋_GB2312][/font][/b] <br/>
 [b][font=仿宋_GB2312][/font][/b] <br/>
 [b][font=仿宋_GB2312][/font][/b] <br/>
 [b][font=仿宋_GB2312][size=6]           《藏传佛教噶举派史略》[/size][/font][/b] <br/>
@@ -117,7 +130,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 第二节 略义与贺词 <br/>
 <br/>
-出版贺词（赛仓•罗桑华丹）[/font][/b][/size][/font][/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-14 23:09</div><div class="post-body">[font=楷体_GB2312][size=5]                    [size=6] [b][font=黑体][size=5]书首礼赞与立宗[/size][/font][/b] <br/>
+出版贺词（赛仓•罗桑华丹）[/font][/b][/size][/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-14 23:09</div><div class="post-body">[font=楷体_GB2312][size=5]                    [size=6] [b][font=黑体][size=5]书首礼赞与立宗[/size][/font][/b] <br/>
 <br/>
 [/size][/font][font=黑体][b]南无室芒古茹帕雅(梵音[/b][/font]) <br/>
 [font=黑体][b]敬礼具德上师(汉义)[/b][/font][/font] <br/>
@@ -364,7 +377,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [26] 十二大苦行：是指印度佛学家那若巴遵其师底洛巴之命修行的，十二大苦行： 1．居高跳远；2．竹签穿腰；3．跳入火坑；4．吞食污泥；5．窍米食宴；6．夺王之妃；7．盗臣之妻；8．娶妻；9．金刚击身；10．献妻于师；11．水蛭河中以躯代桥；12．旷原献曼陀罗。 <br/>
 <br/>
 <br/>
-[/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 00:05</div><div class="post-body">[b][font=楷体_GB2312][size=5]      [font=黑体]第一章 关于即此道统大宝于藏地最初如何开宗的情况 [/font][/font][/b] <br/>
+[/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 00:05</div><div class="post-body">[b][font=楷体_GB2312][size=5]      [font=黑体]第一章 关于即此道统大宝于藏地最初如何开宗的情况 [/font][/font][/b] <br/>
 [font=楷体_GB2312][size=5][font=黑体] <br/>
 [/font] <br/>
 [b] 此中，开宗祖师尊者玛尔巴•却季洛追、[/b] <br/>
@@ -639,7 +652,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 <br/>
 <br/>
-[/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 03:33</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]         第二节 讲说由大成就者米拉日巴传出的情况 [/font][/font][/b] <br/>
+[/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 03:33</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]         第二节 讲说由大成就者米拉日巴传出的情况 [/font][/font][/b] <br/>
 [font=楷体_GB2312][size=5][font=黑体] <br/>
 [/font] <br/>
 [b]本来离垢晶供炷， <br/>
@@ -795,7 +808,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 <br/>
 <br/>
-[/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 03:48</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][b]           第三节 讲说由无匹塔布拉杰传出的情况 <br/>
+[/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 03:48</div><div class="post-body">[font=楷体_GB2312][size=5][font=黑体][b]           第三节 讲说由无匹塔布拉杰传出的情况 <br/>
 [/b][/font] <br/>
 [b]乳海见修行理论， <br/>
 搅提智慧以神树， <br/>
@@ -955,7 +968,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [22] 七马：太阳的异名。 <br/>
 <br/>
 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 04:11</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]          第二章 讲说继持者噶举“四大八小”的源流 <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 04:11</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]          第二章 讲说继持者噶举“四大八小”的源流 <br/>
 <br/>
 [/font]实相大印加持流， <br/>
 辗转传承得成就， <br/>
@@ -1174,7 +1187,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [53] 蚌日：在青海省玉树藏族自治州曲麻莱县境内。 <br/>
 [54] 朱冈：在四川省甘孜藏族自治州炉霍县境内。 <br/>
 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 04:18</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]二、鲍绒噶举 <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 04:18</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]二、鲍绒噶举 <br/>
 [/font] <br/>
 三毒恶云不接近， <br/>
 功德宝聚遍盈满， <br/>
@@ -1232,7 +1245,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [11] 廊仓巴：全名廊仓巴•衮布多吉(1186—1258)，是主巴噶举派的一个支系上主巴的创始人。因他在后藏协噶尔的廊仓地方建立寺院，故被称为廊仓巴。 <br/>
 <br/>
 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:39</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]三、蔡巴噶举[/font] <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:39</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]三、蔡巴噶举[/font] <br/>
 <br/>
 急赴恶趣某些士， <br/>
 汝悲心使命解脱， <br/>
@@ -1378,7 +1391,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [38] 大司徒•强秋坚赞：(1302——1364)他在1351年建译当寺，任该寺座主。1354年以武力推翻萨迦统治，兼并了卫藏。 <br/>
 <br/>
-[39] 灭累：灭累佛，拘留孙佛，贤劫第一佛，七佛之第四佛。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:42</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]　　　　　　　第二节 噶举“八小”支系的源流 <br/>
+[39] 灭累：灭累佛，拘留孙佛，贤劫第一佛，七佛之第四佛。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:42</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]　　　　　　　第二节 噶举“八小”支系的源流 <br/>
 [/font] <br/>
 [font=黑体]　一、止贡噶举[/font] [/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5] <br/>
@@ -1463,7 +1476,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [13] 类乌齐寺：类乌齐是地名，在昌都地区，与青海省连境。桑吉温在此地于1276年倡建了类乌齐寺，是达隆噶举在康区的母寺。 <br/>
 <br/>
-[14] 达隆•阿旺扎巴：(1418—1473)，为达隆巴法嗣，继任法座第十二任。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:43</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]三、主巴噶举[/font] [/font][/font][/b] <br/>
+[14] 达隆•阿旺扎巴：(1418—1473)，为达隆巴法嗣，继任法座第十二任。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:43</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]三、主巴噶举[/font] [/font][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5] <br/>
 <br/>
 不随上流傲情面， <br/>
@@ -1634,7 +1647,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [18] 羊孜哇•仁钦森格：羊孜是寺名。仁钦森格是超浦森巴钦布之子。羊孜哇的弟子即布敦大师。 <br/>
 <br/>
-[/font][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:45</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]五、玛仓噶举 [/font][/font][/font][/b] <br/>
+[/font][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:45</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]五、玛仓噶举 [/font][/font][/font][/b] <br/>
 [font=楷体_GB2312][size=5][font=黑体] <br/>
 [/font][b]　　玛仓噶举始创于多康玛巴•朱妥益希森格(得成就者智狮子)。他的法嗣出现了杰瓦漾贡巴•益希坚赞(智幢)[1]、仁钦林巴、邦堪钦•维赛喇嘛(光师)和卓贡•辛廓热巴(世怙•车首布衣行者)。后来被达隆寺诸师继承了法统，这一支系就全和康区白玉地的宁玛派合流传承了。[/b] <br/>
 [b] <br/>
@@ -1882,7 +1895,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [24] 母子会：母光明与子光明相会。 <br/>
 [25] 便解：方便与解脱。 <br/>
 <br/>
-[/font][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:46</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]　　　　　　　　第二节 略分见修的立论而说 [/font][/font][/font][/b] <br/>
+[/font][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:46</div><div class="post-body">[b][font=楷体_GB2312][size=5][font=黑体]　　　　　　　　第二节 略分见修的立论而说 [/font][/font][/font][/b] <br/>
 [font=楷体_GB2312][size=5][font=黑体] <br/>
 [/font] <br/>
 [b]　　无比达布仁波齐讲道：“所依，人身是第一大宝。”既然有情皆是觉者的实体，那么，是否以那落迦[1]等其他众生之身也能修成佛呢？不然。所谓人身大宝，是说唯此身具暇满[2]，心具三信[3]者才是修成解脱和一切种智之所依的补特伽罗。因此，经中是将此称作第一所依身。其中生于瞻部洲的暇满圆满之所依身，较余者善恶之力更大，所以是第一中的第一。[/b] <br/>
@@ -1990,7 +2003,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [8] 四想：于正法作药物想、于自己作病者想、于如来作正士想、于教法作长住想。 <br/>
 <br/>
 <br/>
-[/font][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:50</div><div class="post-body">[b][font=楷体_GB2312][size=5]一、讲说何为所闻所思的对境 <br/>
+[/font][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:50</div><div class="post-body">[b][font=楷体_GB2312][size=5]一、讲说何为所闻所思的对境 <br/>
 <br/>
 <br/>
 (一)总说辨认正法的方法 <br/>
@@ -2140,7 +2153,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [17] 《三菩萨释》：即金刚手所著《胜乐经首品释》、金刚手菩萨所著《金刚心释》和白莲法王所著《时轮经无垢光释》。 <br/>
 <br/>
-[18] 二胜六庄严：六庄严是龙树、圣天、无著、世来、陈那和法称。二胜是精通佛教最胜根本即戒律学的两大论师释迦光和功德光二位。[/size][/font][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:51</div><div class="post-body">[b][font=楷体_GB2312][size=5](二)分说转经教法-轮的情形 <br/>
+[18] 二胜六庄严：六庄严是龙树、圣天、无著、世来、陈那和法称。二胜是精通佛教最胜根本即戒律学的两大论师释迦光和功德光二位。[/size][/font][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:51</div><div class="post-body">[b][font=楷体_GB2312][size=5](二)分说转经教法-轮的情形 <br/>
 <br/>
 此中有因位显乘产生的情况和果位密咒金刚乘产生的情况二项。因位显乘产生的情况。总略而讲，称做法-轮。即凡是本师所讲的任何正法皆能摧伏异品。此复，诸分别说一切有部[1]师唯将见道[2]承许为法-轮。《俱舍论》中有颂说：“见道为法-轮，速行具辐故……。”即是说，由于八圣道支[3]与轮相同，所以主张说见道是法-轮。诸经部[4]师将能开示彼见道、修道[5]和无学道[6]的法数，承许为法-轮。[/size][/size][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
@@ -2834,7 +2847,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [88] 持密：金刚手的异名。 <br/>
 [89] 鹿目女：美女的异名。 <br/>
 <br/>
-[/size][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:53</div><div class="post-body">[b][font=楷体_GB2312][size=5]二、讲说如何进行闻思的方法 <br/>
+[/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:53</div><div class="post-body">[b][font=楷体_GB2312][size=5]二、讲说如何进行闻思的方法 <br/>
 <br/>
 (一)外道宗派的教义[/size][/size][/b] <br/>
 [font=楷体_GB2312][size=5] <br/>
@@ -2880,7 +2893,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [13] 色法：指无生物，没有知觉的东西。 <br/>
 <br/>
-[/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:55</div><div class="post-body">[b][font=楷体_GB2312][size=5](二)内道佛教派 <br/>
+[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:55</div><div class="post-body">[b][font=楷体_GB2312][size=5](二)内道佛教派 <br/>
 <br/>
 甲、总述。那承认三宝为清净皈依处和承认四法印的补特伽罗，就是内道宗派，因为觉沃这样讲道：“内道外道皈依殊。”这在当时有许多不同的主张：有以祖师、教法和见地等三者来区分内外道的差别的，又有应以祖师、见、修、行和果等五种理由来区分的等主张颇多。但是，自宗则是如无匹大觉沃的主张。[/size][/size][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/size][/b] <br/>
@@ -3369,7 +3382,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [61] 根本与后得位：根本位和后得位。修定之中和出定以后。 <br/>
 [62] 非福：不善。 <br/>
 <br/>
-[/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:57</div><div class="post-body">[b][font=楷体_GB2312][size=5]三、特别正说即此道统大宝的宗规 [/size][/size][/b] <br/>
+[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:57</div><div class="post-body">[b][font=楷体_GB2312][size=5]三、特别正说即此道统大宝的宗规 [/size][/size][/b] <br/>
 [b][font=楷体_GB2312][size=5] <br/>
 <br/>
 特别正说即此道统大宝的宗规分二：[/size][/size][/b] <br/>
@@ -3722,7 +3735,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [7] 孤沙利：善士。虔成修行者。 <br/>
 <br/>
-[/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:59</div><div class="post-body">[table][tr][td][size=15px][b][font=楷体_GB2312][size=5](二)别说显密证悟和之规的见修方法 [/size][/size][/b][/size] <br/>
+[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 12:59</div><div class="post-body">[table][tr][td][size=15px][b][font=楷体_GB2312][size=5](二)别说显密证悟和之规的见修方法 [/size][/size][/b][/size] <br/>
 [size=15px][font=楷体_GB2312][size=5] <br/>
 <br/>
 [b]此中分二：(甲)解说“大手印”的决定；(乙)解脱抉择自心实相的方法。 <br/>
@@ -3877,7 +3890,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [11] 业相：业行现分。业力引发的生死轮回不净现分。[/size][/size][/size] <br/>
 <br/>
 [/td][/tr] <br/>
-[font=楷体_GB2312][size=5][/size][/td][/tr][/table] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 13:01</div><div class="post-body">[b][font=楷体_GB2312][size=5](三)讲说果位金刚乘之不共的方便解脱的教授 <br/>
+[font=楷体_GB2312][size=5][/size][/td][/tr][/table] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 13:01</div><div class="post-body">[b][font=楷体_GB2312][size=5](三)讲说果位金刚乘之不共的方便解脱的教授 <br/>
 <br/>
 正说果位金刚乘的方便解脱的教授分二：1，解说方便道《六法》的教授；2．解说解脱道“大手印”的教授。 <br/>
 <br/>
@@ -4009,7 +4022,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 特别在最后，《三补止》中所讲的“故由此何为，简言唯成佛， <br/>
 凡以无数劫，皆是以圣乐，此生汝证得。”就是说，由于以第一方便大乐为差别，所以能现世成就双运金刚身，特别由于如理依止了他身，所以在现阶段能身体健壮、容光焕发、延年益寿、空行母聚会、智敏聪明又三昧增长。最终如由圣人的水银变铁块为黄金一样，由于脉、明点和风息三者的精华增长，诸浊垢渐减后，身幻身——现空无别圆受身和心光明——乐空无别法身的密意便现前而成佛。所以唯是如此能成就。 <br/>
-[/size][/size][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 13:03</div><div class="post-body">[b][font=楷体_GB2312][size=5]二、解说发挥道效力幻身。[/size][/size][/b] <br/>
+[/size][/size][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 13:03</div><div class="post-body">[b][font=楷体_GB2312][size=5]二、解说发挥道效力幻身。[/size][/size][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]此中分二：(一)总说词义与区分的建立；(二)别说所修义。 <br/>
 (一)总说词义与区分的建立。由于有境大乐本身能发挥对境现如幻化的作用，所以发挥道的效力者就是身。其词义，由于虽无行相但能执种种行相或者虽然显现但无自性，所以称做幻身。幻身总的区分，说成了譬喻幻身、现分幻身、梦境幻身、中有幻身、光明幻身、变化幻身和智慧幻身等七种。[/size][/size][/b] <br/>
@@ -4102,7 +4115,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 此由修能得。”如若实修此法，就是修学我与一切有情之三门无二无别三金刚及其不可摧毁的元音字母——二禅定的入起加行，以灭除有依明点所摄的二障现行所乘的业风后，光明便现起，犹如秋日晴空又如远离了能染者三缘的黎明虚空，对此彻底串习而使忆持坚实。 <br/>
 <br/>
 3．果位光明。由于将自身本有的基原始光明法性经上师指点，以昼夜光明转为道用，所以本义实相的证悟便达到究竟。这就是果位光明。这与双运的次第是一样的。《后分迦白》中所讲的“由光明现前，现起双运身。”就是将究竟光明说成了双运。对此分位，玛尔巴尊者讲道：“譬喻光明是依止他身智慧母之智。胜义光明乃至得相不散，都是阿赖耶识溶入光明之智。光明的体性是一切佛的遍空菩提金刚。光明的功德是由于得相暗垢全净，故而脱离一切粗重而成就不住于有寂的法身。”此说言简意骸，故是圆满开示了光明基、道、果位之身。 <br/>
-[/size][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 13:05</div><div class="post-body">[b][font=楷体_GB2312][size=5]五、解说道的断心中有瑜伽。[/size][/size][/b] <br/>
+[/size][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 13:05</div><div class="post-body">[b][font=楷体_GB2312][size=5]五、解说道的断心中有瑜伽。[/size][/size][/b] <br/>
 [b][font=楷体_GB2312][size=5][/size][/font][/b] <br/>
 [b][font=楷体_GB2312][size=5]此中分二：(一)总说词义与区分的建立；(二)别说所修义。 <br/>
 (一)总说词义与区分的建立。由于是在中有世界由光明和幻身中断了心识，以现起双运，因此称做道的断心瑜伽。因为不堕于二类或因为住于前后二者之间，故而称做中有。此中项目的分合甚多：至尊米拉定为胜义法性的中有、自性道位的中有、现分生死的中有、梦境睡眠的中有、最后有的中有和经过生的中有等六种。[/size][/size][/b][b][font=楷体_GB2312][size=5]他又分成了见、修、行、梦境、生圆、末摩、三身和果等的八种中有后，讲给了岗布瓦。[/size][/size][/b] <br/>
@@ -4283,7 +4296,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [68] 八自在：身自在、语自在、意自在、神变自在、遍行自在、随欲自在、事业自在和功德自在。 <br/>
 <br/>
-[/size][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 13:06</div><div class="post-body">[b][font=楷体_GB2312][size=5]2．解说解脱道“大手印”道的次第(“大手印”的教授) <br/>
+[/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 13:06</div><div class="post-body">[b][font=楷体_GB2312][size=5]2．解说解脱道“大手印”道的次第(“大手印”的教授) <br/>
 <br/>
 此中分三：1．总述显密宗规；2．别说三宗的修持；3．讲说所传授的语旨传规类别以总括要义。 <br/>
 1．总述显密宗规。经中所讲的“又此普遍流传的无匹塔布噶举，非唯语传而是一种究竟义传。”的意思是在说：由于证悟无污大手印的传承是连续不断的，所以，任何弟子，纵然是根本上师对那种从大手印的任何证悟中的所得而进行的实践传统至今无哀犹存，因此，称此传承大宝为有名的教授——“大手印”。[/size][/size][/b] <br/>
@@ -4406,7 +4419,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [15] 自然智：无师自然妙智。众生相续中具有的空智无别之慧。 <br/>
 <br/>
 <br/>
-[/size][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 13:08</div><div class="post-body">[font=楷体_GB2312][size=5][b][font=黑体]                       第四章 附则[/font] <br/>
+[/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 13:08</div><div class="post-body">[font=楷体_GB2312][size=5][b][font=黑体]                       第四章 附则[/font] <br/>
 <br/>
 第一节 诠说香巴噶举派源流 <br/>
 南无古茹班杂惹雅(梵音) <br/>
@@ -4541,7 +4554,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [13] 智者应备的三事：讲经、辨论和著作。 <br/>
 [14] 有缘四宝弟子：指噶举派祖师玛尔巴的四大著名弟子。即：俄敦•却古多吉、粗敦•旺安、麦顿•村波和米拉日巴。 <br/>
 <br/>
-[/size][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 13:10</div><div class="post-body">[font=楷体_GB2312][size=5]三、正说道次第 [/size][/font] <br/>
+[/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚吉发表于 2006-9-15 13:10</div><div class="post-body">[font=楷体_GB2312][size=5]三、正说道次第 [/size][/font] <br/>
 [font=楷体_GB2312][size=5]正说道次第， <br/>
 此中分二：(一)总述不同的道次第；(二)别说正行的修持。 <br/>
 (一)总说不同的道次第。由善巧成就王·琼布的语旨传规所产生的诸香巴噶举派系有数不胜记的显密讲修宗规，并广泛进行了讲闻修证的功业。这些若亦概括，就归总为讲解、辩证和修行等三次第。其情况如上面所讲。此等之中的后者修行的道次第，就是现存的妮谷、乐成、金刚座主、梅哲哇和罗喉罗等的五法类，以及零散的诀窍。而这些也主要是归纳为部类的名称建立，并非琼布所受学的全部法类，因为既然从最初起一种传规就不可能达到完全，何况现在。[/size][/font] <br/>

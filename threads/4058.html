@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>象王妙舞金刚诵 - 藏密修海典藏</title>
+<title>象王妙舞金刚诵 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/金刚菩提遍庄严.html">金刚菩提遍庄严</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">象王妙舞金刚诵</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">高</div>高野龟泽发表于 2009-1-15 08:37</div><div class="post-body">[size=5] <br/>
+<div class="post"><div class="post-header"><div class="avatar">高</div>高野龟泽发表于 2009-1-15 08:37</div><div class="post-body">[size=5] <br/>
 象王妙舞金刚诵 <br/>
 [b][font=楷体_GB2312] <br/>
 象鼻财神部众主 具大威势瑜伽王 <br/>
@@ -78,7 +91,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 鱼尾象头护法 <br/>
 <br/>
-</div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">大</div>大地修行者发表于 2009-1-15 18:35</div><div class="post-body">[size=5][font=楷体_GB2312]金刚诵 <br/>
+</div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大地修行者发表于 2009-1-15 18:35</div><div class="post-body">[size=5][font=楷体_GB2312]金刚诵 <br/>
 <br/>
 金刚诵修法主要念诵(嗡)、(啊)、(吽)三个咒字，配合观想气的入、住、出，做到观气与咒音无二无别。与诸佛如来身语意三金刚相应。嗡、啊、吽三字十分重要．没有一个咒语不包含这三个咒字．它是一切咒语之王。嗡字是金刚身的种子，啊字是金刚声的种子，吽字是金刚心的种子。 <br/>
 <br/>
@@ -144,7 +157,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 (5)决行气金刚诵 <br/>
 观想自己成为金刚萨埵 本尊．心间中脉内有白色(吽)字等如法。 <br/>
-观想身上诸脉根植于中脉，脉尖在_一切毛孔内．中空如筒，从毛孔内入之气，为嗡字音；气入中脉后成啊字音而住；气从毛孔外出时为吽字音。 [/font][/size] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">自</div>自性圆满发表于 2010-6-7 22:35</div><div class="post-body">[size=5] <br/>
+观想身上诸脉根植于中脉，脉尖在_一切毛孔内．中空如筒，从毛孔内入之气，为嗡字音；气入中脉后成啊字音而住；气从毛孔外出时为吽字音。 [/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">自</div>自性圆满发表于 2010-6-7 22:35</div><div class="post-body">[size=5] <br/>
 嗡啊吽 <br/>
 这是三世一切如来的真实身语意，堪为三世佛陀所说的一切咒语之王、一切咒语之本，念诵此咒，能成就所有咒语。 <br/>
 无论是什么咒语，开头加上“嗡啊吽”，都会变成智慧咒，使一切未成办之事得以成办，一切不吉祥变为吉祥，一切罪业荡然无存。 <br/>
@@ -240,36 +253,36 @@ Aogula303 <br/>
 Aogula实证传承行者 <br/>
 Aogula303 <br/>
 2014.12.20 <br/>
-动中禅修，自然站立，原地自然晃动脊柱舞动手臂，持咒修一面四臂象头护法，本尊手持大萝卜，摩尼宝珠，金刚斧，念珠，手心热流很厚，有热风团在旋转并不断变大，自身观为四臂象头护法任运作舞，有热风团在两手之间围绕旋转，气脉能量和热流在全身涌动，身体有厚实感，感到自身与象头护法合为一体，感觉到自己完全成为象头护法的样子，生动立体真实清晰显现，本尊庄严稳重，自然具有厚力和定力，感到自身象头护法的象鼻变长与中脉相应，呼吸之气贯通中脉，象鼻在悠然自得的自在摆动，中脉随着象鼻的运转收缩晃动和扭转，中脉内有金色的明点宝珠在上下滚动，观修象头护法，身心中自然不断涌现禅修的内在震动和充满禅定的安稳喜乐。[/size] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-24 23:23</div><div class="post-body">[size=5]最上三宝我皈依  一切罪业皆忏悔 <br/>
+动中禅修，自然站立，原地自然晃动脊柱舞动手臂，持咒修一面四臂象头护法，本尊手持大萝卜，摩尼宝珠，金刚斧，念珠，手心热流很厚，有热风团在旋转并不断变大，自身观为四臂象头护法任运作舞，有热风团在两手之间围绕旋转，气脉能量和热流在全身涌动，身体有厚实感，感到自身与象头护法合为一体，感觉到自己完全成为象头护法的样子，生动立体真实清晰显现，本尊庄严稳重，自然具有厚力和定力，感到自身象头护法的象鼻变长与中脉相应，呼吸之气贯通中脉，象鼻在悠然自得的自在摆动，中脉随着象鼻的运转收缩晃动和扭转，中脉内有金色的明点宝珠在上下滚动，观修象头护法，身心中自然不断涌现禅修的内在震动和充满禅定的安稳喜乐。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-24 23:23</div><div class="post-body">[size=5]最上三宝我皈依  一切罪业皆忏悔 <br/>
 众生善根尽随喜  正觉菩提意中持 <br/>
 正觉妙法及僧伽  直至菩提我皈依 <br/>
 所为利益自他故  我今即发菩提心 <br/>
 既发最上菩提心  饶益一切诸有情 <br/>
 菩提妙行皆修作  为利众生愿成佛 <br/>
-[/size] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-7-13 22:35</div><div class="post-body">世出世间诸利乐 一切唯仗师恩生 如此深恩永难报 务令师喜励力行 <br/>
+[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-7-13 22:35</div><div class="post-body">世出世间诸利乐 一切唯仗师恩生 如此深恩永难报 务令师喜励力行 <br/>
 如农播种于良田 于师最胜福田中 宁不精勤事利敬 由此速满福资粮 <br/>
 供养教授无谬道 上师身中一毛孔 佛说由此所生福 胜于称供一切佛 <br/>
 菩萨声缘诸圣众 那洛密勒仲敦巴 萨迦班禅渣宇哇 众多成就瑜伽士 <br/>
 <br/>
 宁舍身命财受用 供养师长善功德 是尔当由身语业 精勤称赞敬承事 <br/>
 摩搓洗浴起立礼 以自珍爱作供养 师极欢喜胜三门 昼夜不懈精勤修 <br/>
-圆满无谬道次第 是尔当如教奉行 以法供养令师喜 愿能成办求加持 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-20 23:20</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+圆满无谬道次第 是尔当如教奉行 以法供养令师喜 愿能成办求加持 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-20 23:20</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲实证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚境发表于 2011-5-19 10:51</div><div class="post-body">最上三宝我皈依，一切罪业皆忏悔 <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚境发表于 2011-5-19 10:51</div><div class="post-body">最上三宝我皈依，一切罪业皆忏悔 <br/>
 众生善根尽随喜，正觉菩提意中持 <br/>
 <br/>
 正觉妙法及僧伽，直至菩提我皈依 <br/>
 所为利益自他故，我今即发菩提心 <br/>
 <br/>
 即发最上菩提心，饶益一切诸有情 <br/>
-菩提妙行皆修作，为利众生愿成佛 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚境发表于 2013-3-7 13:16</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
+菩提妙行皆修作，为利众生愿成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚境发表于 2013-3-7 13:16</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
 象鼻财神部众主 具大威势瑜伽王 <br/>
 嗡啊吽咒金刚诵 象鼻中脉成一体 <br/>
 任运作舞动中定 群象起舞遍作舞 <br/>
 旋转震动金刚杵 自成本尊入三昧 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">风</div>风火时轮发表于 2018-4-13 21:15</div><div class="post-body">Aogula实证传承行者 <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">风</div>风火时轮发表于 2018-4-13 21:15</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 <br/>
 2018.2.2 <br/>
@@ -281,7 +294,7 @@ Aogula808 <br/>
 原地舞动旋转法器修象头财神护法，象鼻越来越灵动柔韧又有力量感，在舞动中，象鼻会时而变粗变长，时而变短变细，象鼻的这种长短粗细的变化，与中脉能量呼应相连，带动全身气脉能量如脉搏一样更加有力的涌动震动。 <br/>
 持续观修，象头护法显现成黄色，身体上挂了很多珠宝，手里也持有很多宝珠，境界中也有一些这样的本尊和天女，把各种珍宝抛撒出去，布施给各种众生，境界中也有一些吐宝鼠欢快地跑来跑去，显得非常祥瑞喜悦。 <br/>
 持续观修，象鼻的甩动和呼吸，连通中脉带动全身气脉运行，感觉全身大小脉络都越来越粗壮通畅，气脉能量在全身顺畅的循环往复，身体气脉中显现大小明点以及大小宝珠。身心格外舒畅。 <br/>
-修完象头，再修其他本尊，感觉自身脉络粗壮通畅，气脉能量顺畅有力，多修象头，修行者会更能提升能量、清净离欲，增长定力，实修更有后力。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-4-11 06:40</div><div class="post-body">Aogula实证传承行者 <br/>
+修完象头，再修其他本尊，感觉自身脉络粗壮通畅，气脉能量顺畅有力，多修象头，修行者会更能提升能量、清净离欲，增长定力，实修更有后力。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-4-11 06:40</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 QQ群：289578411 <br/>
 <br/>
@@ -304,7 +317,7 @@ QQ群：289578411 <br/>
 <br/>
 修观音，自身气脉能量显现成观音形象，本尊十一个面颜色不同，表情各异，七面忿怒，四面寂静。行进中，尾椎处有明点暖热震荡，热流从此明点出发，震荡上升，通过脊柱，到达脑脉和顶轮，躯干气脉热流延伸处体外，形成了多双手臂，一圈圈一层层，每个手心有一只智慧眼，手里拿着各种法器。有些手臂持法器不动，有些手臂不断翻转，行进中手心足心热流旋转，通过四肢，不断进入中脉，在从躯干延伸出体外，本尊的手臂和法器越来越多。中脉笔直粗壮，中脉热流充盈，自身气脉能量循环往复，暖热舒适。 <br/>
 <br/>
-静坐修释迦牟尼佛，本尊左手托钵置于小腹前，右手镇地印，感受自身呼吸，手足心热流旋转，螺旋形通过四肢汇聚于中脉，中脉膨胀收缩，有暖热震动感，全身气脉能量汇聚于小腹，形成一个横着的金刚杵，呼吸中，自身中脉变粗变长，身体变高变大，中脉形成一个竖立的金刚杵。每一次呼吸，都触动全身皮肤震动酥酥麻麻，每个毛孔都在开合呼吸，全身暖热舒适，身心宁静喜悦，处于此禅定中，长时间修持，不愿停止。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-4-11 09:49</div><div class="post-body">Aogula实证传承行者 <br/>
+静坐修释迦牟尼佛，本尊左手托钵置于小腹前，右手镇地印，感受自身呼吸，手足心热流旋转，螺旋形通过四肢汇聚于中脉，中脉膨胀收缩，有暖热震动感，全身气脉能量汇聚于小腹，形成一个横着的金刚杵，呼吸中，自身中脉变粗变长，身体变高变大，中脉形成一个竖立的金刚杵。每一次呼吸，都触动全身皮肤震动酥酥麻麻，每个毛孔都在开合呼吸，全身暖热舒适，身心宁静喜悦，处于此禅定中，长时间修持，不愿停止。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-4-11 09:49</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 QQ群：289578411 <br/>
 <br/>
@@ -320,7 +333,7 @@ QQ群：289578411 <br/>
 修龙头大鹏，显现人身龙背龙头鹏翅鹏爪的大鹏入定，自身又自然显现成彩色光明能量体的凤凰，在空中飞舞，全身气脉热流随着这种动感，在脊柱里螺旋形旋转荡漾，在脉轮中任运奔腾，循环往复。而后，逐渐变化成菩萨面人身凤翅凤尾凤爪，三面六臂的凤凰本尊，立于莲台上舞动，本尊持杵铃、弓-箭、钩索，六种法器的旋转、震动、颤动，甩动，有酥麻震颤的电流感，通过手臂，传入中脉，中脉中有气脉热流，冲撞激荡，形成闪电，伴随吽吽吽的风雷之声，酥麻暖热震动感一圈圈一层层从中脉传遍全身，本尊身体更加明亮高大，显现本尊全身凤鳞，凤鳞是形状像羽毛的麟片，背部长着凤鳍，翅膀美丽灵动，凤爪上也有鳞片。全身释放着彩色的光明能量，显得非常祥瑞。 <br/>
 境界里有凤凰和其他各种各样的鸟，全都围着人面人身的凤凰本尊，形成彩色、绚丽、灵动的坛城境界。 <br/>
 <br/>
-再修金刚萨埵、千手观音、毗卢遮那五方佛、玛哈嘎拉，右臂震动如击鼓式持诵《大方广佛华严经 普贤三昧品》段落回向。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-5-10 15:49</div><div class="post-body">Aogula实证传承行者 <br/>
+再修金刚萨埵、千手观音、毗卢遮那五方佛、玛哈嘎拉，右臂震动如击鼓式持诵《大方广佛华严经 普贤三昧品》段落回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-5-10 15:49</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula321 <br/>
 QQ群：289578411 <br/>
 <br/>
@@ -333,7 +346,7 @@ QQ群：289578411 <br/>
 脸部显示为六牙象脸，左三右三白象牙翘起，象鼻上翘摆动，感受象鼻呼吸，自然与中脉能量相应，呼气吸气整动全身气脉能量运转，身体自然而动，象鼻内显示有两条黄色能量流在呼吸时沿左右象鼻孔经过象头脑部接入自身的左右脉，左右脉与中脉并排（左右脉显现为黄色），左右脉的能量在海底轮处汇入中脉，中脉能量往上涌，至头顶处化出一朵粉红色的绽放莲花，中脉能量再向前涌流，最后到达象鼻尖处，与左右鼻孔的左右脉能量合为一体。 <br/>
 左手心热风团旋转中化为金刚铃，右手心热风团旋转中化为金刚杵，左右肩膀各长出二臂膀，左二臂一手持金刚叉，另一手托莲花，莲花上显现旋转的阴阳双鱼球，球在旋转中化为一对象头人身的小象，都右拿萝卜左手持宝珠，并排坐在莲花台上，悠然摆动双脚，玩耍嬉戏。 <br/>
 右二臂一手持金刚斧，另一手托莲花，莲花上也显现旋转的阴阳双鱼球，球在旋转中化为一对互相拥抱着的雌雄象头人身象，雌雄象也右拿萝卜左手持宝珠，在莲花台上旋转发光放出金光。 <br/>
-双脚下踩有金毛吐宝兽，吐宝兽下有莲花，莲花在空中，感觉自身稳定处于空中，观空中周围，有天女飞舞，一片祥和温馨的景象。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-5-10 16:18</div><div class="post-body">Aogula实证传承行者 <br/>
+双脚下踩有金毛吐宝兽，吐宝兽下有莲花，莲花在空中，感觉自身稳定处于空中，观空中周围，有天女飞舞，一片祥和温馨的景象。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-5-10 16:18</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula321 <br/>
 QQ群：289578411 <br/>
 <br/>
@@ -346,7 +359,7 @@ QQ群：289578411 <br/>
 左边三手分别持金刚铃、金刚叉、莲花，莲花上并排坐有两象宝宝，摆动双脚，象鼻互绕嬉戏。右边三手分别持旋转着的金刚杵、金刚斧、莲花，莲花上有大的透明宝球，球内有一对双身拥抱的白黄雌雄象头护法象，右拿萝卜左手持宝珠，宝球在莲花上旋转。 <br/>
 中脉能量与象鼻相应，吸气入中脉，象鼻上翘，雄壮威武。气脉能量运行，背部长出二翅膀。 <br/>
 脚下踩金毛吐宝兽，吐宝兽下有大莲花，莲花定悬于空中，显现在空中的象头护法前面有凤凰神鸟飞翔，瑞兽安坐，右侧天空有天龙护法，近远处有白色祥云和五彩宫殿。 <br/>
-持续动中禅修摆动手臂，感到中脉通明能量震动，自身与象头护法合一，身心安住于三昧禅定中，悠然安逸，喜悦静定。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-10-3 06:38</div><div class="post-body">Aogula实证传承行者 <br/>
+持续动中禅修摆动手臂，感到中脉通明能量震动，自身与象头护法合一，身心安住于三昧禅定中，悠然安逸，喜悦静定。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-10-3 06:38</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula Rotate <br/>
 <br/>
 2021.10.3 <br/>
@@ -359,7 +372,7 @@ Aogula Rotate <br/>
 瑞狮有三眼也会长出翅膀，会变得更加高大明亮，自身象头本尊也会更大更亮。时而如同仙鹤翅，轻柔美丽，时而大鹏翅，雄壮有力，瑞狮一边缓慢前行，一边发出嘶吼声。有时显现瑞狮立于山崖之上，低头雄视着山下的芸芸众生。有时瑞狮腾空而起，载着象头本尊在空中飞腾，时时发出雄厚的狮吼声。 <br/>
 象头护法在狮背上，显现各种体式，也在不断变幻着各种法器，象头护法和瑞狮一体相应，释放着光明能量。自身身心舒适喜悦，法喜充满。 <br/>
 <br/>
-又修了大鹏、文殊、观音、金刚萨埵、五方佛和玛哈嘎拉护法，再震动手臂如击鼓式持诵《普贤行愿品》段落回向。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-10-7 15:00</div><div class="post-body">Aogula实证传承行者 <br/>
+又修了大鹏、文殊、观音、金刚萨埵、五方佛和玛哈嘎拉护法，再震动手臂如击鼓式持诵《普贤行愿品》段落回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-10-7 15:00</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula Rotate <br/>
 <br/>
 2021.10.5 <br/>
@@ -371,7 +384,7 @@ Aogula Rotate <br/>
 象头财神一面四臂，手持杵、铃、摩尼宝、金刚斧，象鼻随着中脉能量的涌动震动，以及螺旋上升的动感而抡动扭动甩动，两个耳朵也随着动感呼呼啦啦地动，三对长象牙外露猛厉，手中法器随着自身气脉能量的动感而旋转震动涌动波动，放出彩色的光明能量，手心手臂都酥麻暖热，连通脊柱和全身。腹轮有摩尼宝珠滚转，内在能量的旋转涌动自然产生幸福满足感和持续的舒适喜乐感。 <br/>
 修象头财神护法，本尊会变幻成三面多臂、五面多臂，也能长出翅膀，或翱翔或踱步于云端，自身本尊光明为体，向外释放着层层彩色光芒。周围有五方佛化现的象头本尊，都持五方佛法器，形象、服饰和颜色都略有不同。外围下方有各种半人半动物的本尊护法以及各种瑞鸟瑞兽围绕，境界光明殊胜。 <br/>
 <br/>
-又修观音、金刚萨埵、五方佛、玛哈嘎拉护法，轻轻震动手臂持诵《普贤行愿品》段落回向。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-5-12 12:10</div><div class="post-body">Aogula实证传承行者 <br/>
+又修观音、金刚萨埵、五方佛、玛哈嘎拉护法，轻轻震动手臂持诵《普贤行愿品》段落回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-5-12 12:10</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula807 <br/>
 <br/>
 实修鱼尾象头护法 <br/>
@@ -382,15 +395,15 @@ Aogula807 <br/>
 <br/>
 <br/>
 <br/>
-</div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-5-22 14:28</div><div class="post-body">Aogula实证传承行者 <br/>
+</div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-5-22 14:28</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula807 <br/>
 <br/>
 象头护法 实修笔记 <br/>
 2022.5.22 <br/>
 修一面、三面、五面、七面、多面象头护法，随呼吸默念“嗡啊吽”三字明咒，手中百股金刚棒和法器变多，象头护法双脚火热踏地，脚心里多交杵宝珠旋转，宝珠里金刚杵越来越清晰，显现杵尖喷火热流上涌；腹部能量旋转，旋转变成火热的多个象鼻光柱，心轮金刚杵旋转震动，杵中有杵，前面的杵变成虹光颗粒的氤氲光明，后面又显现新的金刚杵，每个象鼻都有多交杵宝珠旋转，各脉轮能量连通象鼻，手臂火热透明，手心宝轮旋转震动，象鼻呼吸发力，带动能量涌动震动，带动中脉能量自然涌动，多个象鼻涌动呼吸，手指尖冒出热气，一丝丝热流环绕，手中金刚法器不断放光震动，打开不同的境界。 <br/>
 象头三面、五面、七面变成多个、百个、上千、上万个，全身能量涌动颤动，与中脉脊柱的力量相应，运转身体内在的能量，腰腹到足心热流来回震动，脉轮像火圈翻转，腿化为百股金刚杵腿，随咒音呼吸开合，手中百股金刚杵棒和法器不断变多，全身气脉能量震动涌动；象头三目圆睁，眼睛里多交杵宝珠旋转，象头显现口鼻喷火，心轮金刚杵火热燃烧。 <br/>
-象头护法俯仰晃动，变成三面五面七面多面反复变化，奔腾跳跃飞舞，有时腿化为长长的龙尾舞动扭动摆动，龙鳞随咒音呼吸开合，全身气脉能量震动涌动，象鼻与龙尾能量运转一体，带动全身热流能量涌动震动，手持金刚法器变多，持续而修，在自身热流能量涌动中感到身心安稳静定。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">花</div>花开见佛发表于 2024-1-20 09:42</div><div class="post-body">三世如来上师金刚持，法宝总集上师金刚持； <br/>
-僧宝总体上师金刚持，实证传承上师金刚持！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2025-3-10 05:25</div><div class="post-body">修象头护法 实修笔记 <br/>
+象头护法俯仰晃动，变成三面五面七面多面反复变化，奔腾跳跃飞舞，有时腿化为长长的龙尾舞动扭动摆动，龙鳞随咒音呼吸开合，全身气脉能量震动涌动，象鼻与龙尾能量运转一体，带动全身热流能量涌动震动，手持金刚法器变多，持续而修，在自身热流能量涌动中感到身心安稳静定。 </div></div><div class="post"><div class="post-header"><div class="avatar">花</div>花开见佛发表于 2024-1-20 09:42</div><div class="post-body">三世如来上师金刚持，法宝总集上师金刚持； <br/>
+僧宝总体上师金刚持，实证传承上师金刚持！ </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2025-3-10 05:25</div><div class="post-body">修象头护法 实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>

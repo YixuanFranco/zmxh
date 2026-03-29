@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>多罗尊者见闻记•见而有益 - 藏密修海典藏</title>
+<title>多罗尊者见闻记•见而有益 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">多罗尊者见闻记•见而有益</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 12:59</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]多罗尊者见闻记•见而有益 <br/>
+<div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 12:59</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]多罗尊者见闻记•见而有益 <br/>
 大自在瑜伽证果者朝苏嘉色•多吉东登仁波切[/color][/color][/color] <br/>
 [font=楷体_GB2312][size=5][color=navy]洛珠嘉措　译[/color][/color][/color] <br/>
 [font=楷体_GB2312][size=5][color=navy]　　洛珠嘉措　译 [/color][/color][/color] <br/>
@@ -100,7 +113,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/b]　　我得到了圆满的人生。承蒙大恩大德的根本上师和善知识们的恩德得到了来世前往刹土的深奥诀窍。大圆满法瑜伽师我达到了本来清净的险要地段, 证悟了究竟四相的智慧。得到观世音菩萨的亲见。得到了预言和赞誉。进行了引导一切众生前往空行刹土的伟大事业。特别是对雪域众生施予了无畏的依怙和正法, 尽力做了利他事业。六十一岁时, 即藏历水猪阴年（ 1923 ）, 二月十三日午间午时, 我因身患重病, 医治和祈祷均都无效, 所以为消除众弟子的烦恼, 在生命即将结束时讲述了以下诀窍。 <br/>
 <br/>
 <br/>
-[/color][/color][/color] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:18</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy][b]埃玛伙！ <br/>
+[/color][/color][/color] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:18</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy][b]埃玛伙！ <br/>
 我亲爱的弟子请听好 <br/>
 为解除脱离身心的疾苦 <br/>
 请恩德无比的上师 <br/>
@@ -262,7 +275,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 把这些众生引至解脱之道 <br/>
 嗡嘛呢贝弥轰 <br/>
 [/b]　　并转动了三次法-轮, 大声念诵了三遍嘛呢, 使许多曾经做过善事的众生发现这是幻觉, 因而不再停留中有, 得到了解脱。 <br/>
-[/color][/color][/color] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:31</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]此时, 基位光明和道位光明二者象母子相见一般, 出现自然俱生智慧,并在较长的时间内存在着, 同时, 法界中有变为轮回, 一切景象都显[/color][/size][/font] <br/>
+[/color][/color][/color] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:31</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]此时, 基位光明和道位光明二者象母子相见一般, 出现自然俱生智慧,并在较长的时间内存在着, 同时, 法界中有变为轮回, 一切景象都显[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]为佛身, 天空变得湛蓝。在中间方明点遍存的刹土, 薄伽梵毗卢遮那等五性佛、男女菩萨。四大忿怒明王、六位化身佛等, 分别坐于五彩虹光[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]中。另外还有从清净界里来的无数的持明和勇士空行。五种智慧的光芒充满天宇。佛陀赫如嘎等五性饮血金刚、护门四天母、自在母等也坐于[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]光和火之中, 万物都变得晃晃悠悠、动荡不定, 法界中有就这样结束了。 [/color][/size][/font] <br/>
@@ -351,7 +364,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 要懂得地狱是色究竟天 <br/>
 阎王本是普贤佛 ,狱卒都是忿怒神 <br/>
 愿你们认清这一真理 <br/>
-[/b]　　并转动了法-轮, 大声念了三遍嘛呢, 地狱中立刻出现彩虹和光明,消除了众生的暂时痛苦, 出现了暂时的安乐。 [/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:35</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]这个时候。汹涌称等十万狱卒, 同天子和持供物者们一道, 随着音乐声徐徐而来, 天子说: [/color][/size][/font] <br/>
+[/b]　　并转动了法-轮, 大声念了三遍嘛呢, 地狱中立刻出现彩虹和光明,消除了众生的暂时痛苦, 出现了暂时的安乐。 [/color][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:35</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]这个时候。汹涌称等十万狱卒, 同天子和持供物者们一道, 随着音乐声徐徐而来, 天子说: [/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]　　“埃玛伙！　　奇异的金刚持士夫啊！ <br/>
 你姓氏高贵可比天　　我们前来欢迎你 <br/>
 恭请大士到我处　　埃玛伙！ <br/>
@@ -434,7 +447,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][color=navy]过, 而是毫无顾忌的做黑业, 其罪孽大如须弥山, 将在地狱异熟地里承受异熟的痛苦。带着罪孽是无法去极乐世界等净土的, 所以黑魔你把他[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]们带到地狱去, 在那里各自服刑吧。于是, 黑魔给那些有罪者套上绳索, 让狱卒连打带踢的带往地狱, 那些有罪者在痛苦的哭嚎声中走向地狱[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]。 <br/>
-[/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:36</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]阎王又说: “根本的上师觉沃扎西然丹去等活地狱等地狱游方, 由牛头狱卒做向导。我见到如此多的众生在忍受极大的痛苦后, 心情十分[/color][/size][/font] <br/>
+[/color][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:36</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]阎王又说: “根本的上师觉沃扎西然丹去等活地狱等地狱游方, 由牛头狱卒做向导。我见到如此多的众生在忍受极大的痛苦后, 心情十分[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]悲伤。哎呀, 象我这样恶运的人, 见到如此多的恶业众生, 却无法引导他们解脱, 怎么办？我因此以极度悲伤的心情向观世音菩萨作祈祷: [/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]　　哎呀！如此恶业的众生 <br/>
 罪孽自作自受 <br/>
@@ -601,7 +614,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][color=navy]整个下身彼火焚烧, 同时还被许多长着铁齿的罗刹女咬吃。蛇头狱卒也把具有嗔恨形象的燃烧着的铁甲穿在这些众生身上, 并用各种凶器刺他[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]们的身体。猪头狱卒用具有愚昧形象的燃烧的铁管穿刺在这些众生身上, 让身体被烈火焚烧, 经受着极度的痛苦。我的身体也被火烧着了一些, [/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]我准备承受这一痛苦, 但业障很快就消失了。 <br/>
-[/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:37</div><div class="post-body">[font=楷体_GB2312][size=5]在这里, 我见到了我的一些施主和一些认识的死者。他们对我说: 永断轮回的上师啊, 请您赐予我们加持。我问狱卒: “哎呀, 这些恶运[/size][/font] <br/>
+[/color][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:37</div><div class="post-body">[font=楷体_GB2312][size=5]在这里, 我见到了我的一些施主和一些认识的死者。他们对我说: 永断轮回的上师啊, 请您赐予我们加持。我问狱卒: “哎呀, 这些恶运[/size][/font] <br/>
 [font=楷体_GB2312][size=5]的众生, 为何要受这般痛苦？狱卒说: 这些人在人间时, 曾经是僧人, 但他们不接受佛陀的戒律, 因三毒而造了很多罪孽, 不穿佛陀规定的袈[/size][/font] <br/>
 [font=楷体_GB2312][size=5]裟, 却去穿俗人的衣服, 用武器当装饰品等, 所以还要在此间经受五百年的痛苦。我又问名叫森格绕丹的威猛狮头大狱卒: 有无忏悔异熟的办[/size][/font] <br/>
 [font=楷体_GB2312][size=5]法？他说: 三根本的上师觉沃扎西然丹, 您将转动永断轮回的法-轮, 您有引导他们的缘份。我因此向这些众生广泛地介绍了中有, 并做了如下[/size][/font] <br/>
@@ -676,7 +689,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5]誓言, 违背了因其它原因所发的誓言, 或随意发誓, 所以异熟于此。[/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　我回想起自己在嘉拉土司属地米压时，也曾向上师和母亲发誓绝不骑乘牲畜, 但最终也违背了誓言, 为此我地石头上刻了许多忏悔经, 因[/size][/font] <br/>
 [font=楷体_GB2312][size=5]而罪孽的异熟消失了。 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:38</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]我又见许多狱卒将众生赶入一口大铁锅内。锅内红彤彤的铁水沸腾, 火焰熊熊, 黑烟滚滚。众生在沸腾融化的铁水中，被煮得四肢和皮肉全部[/color][/color][/color] <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:38</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]我又见许多狱卒将众生赶入一口大铁锅内。锅内红彤彤的铁水沸腾, 火焰熊熊, 黑烟滚滚。众生在沸腾融化的铁水中，被煮得四肢和皮肉全部[/color][/color][/color] <br/>
 [font=楷体_GB2312][size=5][color=navy]脱离, 痛苦无比。在这些人当中, 有我认识的施主索南旺姆、窝措，阿措、色卓玛等。我问狱卒: 哎哟, 这些恶运的众生为何要受这般折磨？[/color][/color][/color] <br/>
 [font=楷体_GB2312][size=5][color=navy]狱卒说: 他们因为绮语和玩笑而违背了誓言, 结果异熟到了这里。还会有千千万万的众生来此受苦。[/color][/color][/color] <br/>
 [font=楷体_GB2312][size=5][color=navy]　　我又问: 有无消除这一异熟的办法，狱卒说: 他们还将在很长时间内承受这一异熟, 今后还会生在众合地狱, 继续受苦。觉沃您回到人间[/color][/color][/color] <br/>
@@ -756,7 +769,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 愿众生生于色究竟天的刹土 <br/>
 生于普贤菩萨座前 <br/>
 成为普贤菩萨的弟子 <br/>
-并大声念了三遍陀罗尼嘛呢, 转动了永断轮回的法-轮, 介绍了认识幻觉的密诀, 把善根回向给了利他事业, 使无数众生得到了解脱。 [/color][/color][/color] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:39</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]我又往前走, 看到一片燃烧的铁质大地, 中间有一个形似巨碗, 有一逾缮那那么大的凹坑。无数的众生被狱卒们赶入坑内,手足都已陷入地[/color][/size][/font] <br/>
+并大声念了三遍陀罗尼嘛呢, 转动了永断轮回的法-轮, 介绍了认识幻觉的密诀, 把善根回向给了利他事业, 使无数众生得到了解脱。 [/color][/color][/color] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:39</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]我又往前走, 看到一片燃烧的铁质大地, 中间有一个形似巨碗, 有一逾缮那那么大的凹坑。无数的众生被狱卒们赶入坑内,手足都已陷入地[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]中, 在烈火的焚烧中, 发出一丝丝如苍蝇声音般的喊声。狱卒们把这些众生一个个抓起来,活活地生剥其皮肤, 然后用锐利的铁梳子在身上来回[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]梳刮, 使众生痛苦无比。这就是所谓的杀马地狱。 [/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]　　在那里, 我见到了许许多多我认识或不认识的众生, 他们都在叫喊自己的父母、亲属和福田上师的名字, 到处是凄厉的哭声、我问宝生佛[/color][/size][/font] <br/>
@@ -895,7 +908,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 在此地狱的西方, 有个狱卒在喊我的名字, 他说：觉沃, 请您到这儿来。”我随声寻去, 但见一座燃烧的铁房子内, 有我的一位名叫嘎尔[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]玛的亲属, 在房内承受无限的痛苦。我问他: 你为何会生在此地？他说: 我在人间时, 曾掠夺僧伽的资具, 因而异熟于此, 请您帮我得到解脱[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]。说完便放声大哭起来。于是我为他作了祈祷和回向，以无限的悲心作了往生, 使他受到了观世音菩萨的加持, 得到了解脱。 <br/>
-[/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:40</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]在铁狼食地狱的附近, 一片燃烧的铁质大地上, 一个形似罗刹女的铁女人, 正把一些喇嘛和一删曾人、俗男俗女吸入其阴道内。由于铁女[/color][/color][/color] <br/>
+[/color][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:40</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]在铁狼食地狱的附近, 一片燃烧的铁质大地上, 一个形似罗刹女的铁女人, 正把一些喇嘛和一删曾人、俗男俗女吸入其阴道内。由于铁女[/color][/color][/color] <br/>
 [font=楷体_GB2312][size=5][color=navy]人的体内燃烧着熊熊火焰,而这些众生将承受无比的痛苦, 时间长达五百年。待这些众生从铁女人的嘴里出来后, 又会有很多可怕的毒蛇从他们[/color][/color][/color] <br/>
 [font=楷体_GB2312][size=5][color=navy]的鼻孔钻入, 吸干他们的脑汁, 而后从口中爬出来。狱卒们也会手持各种武器, 刺打这些恶运众生, 并往他们的嘴和鼻孔里灌滚烫的铁水，使[/color][/color][/color] <br/>
 [font=楷体_GB2312][size=5][color=navy]他们的眼和脑汁都被铁水烧尽, 身体象于柴一般燃烧起来。 [/color][/color][/color] <br/>
@@ -1034,7 +1047,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][color=navy]去。于是, 狱卒将他们三个带往了众合地狱。 [/color][/color][/color] <br/>
 [font=楷体_GB2312][size=5][color=navy]　　这时, 俱生天子和众多狱卒,从一道白色的虹光明中请来了一位年逾百岁的尼姑, 她手持经筒和海螺念珠, 来到阎王跟前。阎王微笑着对她[/color][/color][/color] <br/>
 [font=楷体_GB2312][size=5][color=navy]说: 您的到来实在稀奇, 您的母亲罪孽深重, 故在极热地狱受苦, 现在她的罪孽已经减轻了, 请你将她带往解脱之路。于是, 这位尼姑将她母[/color][/color][/color] <br/>
-[font=楷体_GB2312][size=5][color=navy]亲为首的七十余万地狱众主带上了解脱之道。 [/color][/color][/color] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:42</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]我问俱生天子: 在地狱中, 除有罪者之外, 积善事者极少, 这位尼姑是从哪里来的？出于什么氏族, 俱生天子说: “她来自哲姜地区的桑[/color][/size][/font] <br/>
+[font=楷体_GB2312][size=5][color=navy]亲为首的七十余万地狱众主带上了解脱之道。 [/color][/color][/color] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:42</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]我问俱生天子: 在地狱中, 除有罪者之外, 积善事者极少, 这位尼姑是从哪里来的？出于什么氏族, 俱生天子说: “她来自哲姜地区的桑[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]保仓家族, 父亲叫觉觉达瓦, 是一位虔诚的佛教徒；母亲叫阿吉达瓦桑姆。她的外祖父是一个喜爱罪孽的人, 受其影响, 她的母亲不让女儿入[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]佛门, 而将女儿强行嫁给了一名叫贡保的屠夫的哥哥,女儿因此逃婚到大得道者唐东杰布处, 在那里听取了深奥的正法, 并经过实践, 得到殊胜[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]的成就。今天她来到这里, 是为了引导她那个罪孽深重的母亲, 同时也是为了引导地狱的其他众生。她表面上是一位人间女子, 实际上是绿度[/color][/size][/font] <br/>
@@ -1177,7 +1190,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][color=navy]　　阎王听了我的话后说: 哦, 三根本的上师觉沃扎西然丹, 您在这个地狱世界的利他事业已经完成, 现在可以回到佛陀出世的那个人间, 转[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]动永断轮回的法-轮, 作广泛的利他。应向人间的众生讲述您在地狱的所见所闻, 尤其应该讲述地狱的痛苦。要尽量做好善恶取舍, 广泛地转动[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]法-轮, 这样就会出现大量利他事业, 来世会主往空行刹土，会有大如天宇般的利他事业。 <br/>
-[/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:43</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]阎王话音刚落, 俱生天子便奏起了音乐, 四周都弥漫着浓郁的香味, 在一道彩虹架成的道路上, 我被送到了人间。其间, 我出现了短暂的[/color][/size][/font] <br/>
+[/color][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 13:43</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]阎王话音刚落, 俱生天子便奏起了音乐, 四周都弥漫着浓郁的香味, 在一道彩虹架成的道路上, 我被送到了人间。其间, 我出现了短暂的[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]昏-迷, 醒来后发现自己对面的天空中, 莲花生大师驾乘彩虹和云雾, 右手持箭，左手握长寿宝瓶, 为我做了不死长寿坛城的灌顶, 并授予了长[/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]寿的深奥灌顶。他说: [/color][/size][/font] <br/>
 [font=楷体_GB2312][size=5][color=navy]　　依怙薄伽梵智慧无量寿 <br/>

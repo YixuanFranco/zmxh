@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>佛说如来不思议秘密大乘经（宝积部·涅槃部） - 藏密修海典藏</title>
+<title>佛说如来不思议秘密大乘经（宝积部·涅槃部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">佛说如来不思议秘密大乘经（宝积部·涅槃部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-26 06:03</div><div class="post-body">[font=楷体_GB2312][size=5][b]佛说如来不思议秘密大乘经[/b] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-26 06:03</div><div class="post-body">[font=楷体_GB2312][size=5][b]佛说如来不思议秘密大乘经[/b] <br/>
 <br/>
 西天译经三藏朝散大夫试光禄卿传梵大师赐紫沙门臣法护等奉　诏译 <br/>
 <br/>
@@ -180,7 +193,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 应以菩萨身可度者。即现其身而为化度。 <br/>
 应以如来身可度者。即现其身而为化度。非可现者谓除无色。[/b] <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第一[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-26 06:16</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第二 <br/>
+佛说如来不思议秘密大乘经卷第一[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-26 06:16</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第二 <br/>
 <br/>
 菩萨身密品第一之二 <br/>
 <br/>
@@ -243,7 +256,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 又复菩萨能于十方现诸魔身。于有现中现无对碍。于无现中现无对碍。由如是故。无见无闻无觉无知。诸有所现但为成熟一切有情。菩萨于其身念处中亦无增减。菩萨虽复知身无常知身是苦知身无我。然为有情示现其身作利乐事。菩萨知身法尔寂静。为有情故起分别身作诸利乐。菩萨又复了知因缘能成其身。然于彼彼因缘法中如实而观。亦无作者亦无受者。又复能观是身无知如草木瓦砾。菩萨身业虽已清净。然为有情示现其身。寂慧当知。释迦菩萨始从然灯佛所发菩提心。身语心业皆悉清净。且身业者具有无量无边功德。假使过于殑伽沙数等劫。或如来说或我所说。菩萨所有身密身业。广大清净不可穷尽。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第二[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-26 06:23</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第三 <br/>
+佛说如来不思议秘密大乘经卷第二[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-26 06:23</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第三 <br/>
 <br/>
 菩萨语密品第二 <br/>
 <br/>
@@ -394,7 +407,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 寂慧菩萨言。云何名为随顺觉了。复何名为差别分别。金刚手菩萨言。无有少法而可得者。此名随顺觉了。以觉了故即是差别分别。是故法中作此二说。寂慧。当知此等名为菩萨心密心业清净。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第三[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-26 06:29</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第四 <br/>
+佛说如来不思议秘密大乘经卷第三[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-26 06:29</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第四 <br/>
 <br/>
 菩萨心密品第三之余 <br/>
 <br/>
@@ -496,7 +509,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 时彼世尊无边功德宝众庄严王如来。知彼持国转轮圣王来佛会中乐欲听法。佛即如应为说妙法示教利喜。佛言大王。汝今当知有四种法。若如理修行者。即能安住大乘趣向胜道。所有善法而无坏失。何等为四。大王。一者信法能向胜道。复何名信。谓有信故而能随顺诸贤圣种。所不应作而悉不作。二者尊重能向胜道。以尊重故于诸圣者所说妙法而能听受。谛受法故耳无外听。三者无慢能向胜道。以无慢故即能于彼一切贤圣恭信顶礼。四者精进能向胜道。以精进故若身若心悉得轻安。所作善法皆能成办。大王。此等四法。若如理修行者。即能安住大乘趣向胜道。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第四[/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-26 06:37</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第五 <br/>
+佛说如来不思议秘密大乘经卷第四[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-26 06:37</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第五 <br/>
 <br/>
 持国轮王先行品第五之余 <br/>
 <br/>
@@ -621,7 +634,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 寂慧。当知彼时持国转轮圣王者岂异人乎。即是然灯如来应供正等正觉。往昔因中居轮王位时。彼轮王千太子者。即是此贤劫之中千佛如来。从俱留孙如来。至乐欲如来(古经不译但云楼至)彼时法思童子。于无毁宫女坐中化生者。即是金刚手大秘密主菩萨摩诃萨神力所化。彼时法慧童子。于无比宫女坐中化生者。即是尸弃梵王。寂慧。彼时持国转轮圣王诸宫嫔者。即是今此会中诸菩萨众。彼诸宫嫔。尔时得王千子成熟化度。而悉不退转于阿耨多罗三藐三菩提心安住大乘。彼诸宫嫔。次第当于此贤劫中受菩提记。寂慧。汝复应观缘生之法理不相违。善根诸因及发心胜行果无坏失。今此会中诸菩萨大士。皆能增长最胜意乐。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第五[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-26 06:51</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第六 <br/>
+佛说如来不思议秘密大乘经卷第五[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-26 06:51</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第六 <br/>
 <br/>
 菩提道品第六 <br/>
 <br/>
@@ -787,7 +800,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 寂慧当知如是等说。是即名为如来秘密。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第六[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-28 02:11</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第七 <br/>
+佛说如来不思议秘密大乘经卷第六[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-28 02:11</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第七 <br/>
 <br/>
 如来身密不思议品第七之余 <br/>
 <br/>
@@ -899,7 +912,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 时彼世尊光明王如来。告尊者大目干连言。汝自今而往。勿复再起是心欲度如来声轮分量。谓以如来清净音声。无其分量不可度量故。假使以汝威势神力。极西方分经于殑伽沙数等劫。毕竟不能得彼世尊释迦牟尼如来音声妙轮分量边际。以佛如来音声妙轮无分量故。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第七[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-28 02:39</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第八 <br/>
+佛说如来不思议秘密大乘经卷第七[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-28 02:39</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第八 <br/>
 <br/>
 如来语密不思议品第八之余 <br/>
 <br/>
@@ -1063,7 +1076,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 金刚手菩萨大秘密主。说是如来语秘密主。会中有三万二千众生发阿耨多罗三藐三菩提心。十方一切诸佛刹中。所有贤劫诸菩萨众。各各在彼佛世尊所修梵行者。是诸菩萨为供养佛及金刚手菩萨大秘密主故。垂诸宝盖散以妙花。是花槃旋来此会中。散于佛上及金刚手菩萨之身。乃至遍散一劫众会。其诸宝盖旋复空中住佛顶上。而诸宝盖出妙音声。作如是言。我等贤劫诸菩萨众。遣此奉用供养。世尊及金刚手菩萨大秘密主。惟愿摄受。随佛如来向所。宣说未曾有法。一切众会皆悉闻已。各复增胜发希有心。即向金刚手菩萨大秘密主。虔伸顶礼极生最上信重之想。咸作是言。大秘密主。我等今时快得善利。获闻金刚手菩萨宣说如来语密不思议法门。若诸众生闻此所说信解无疑。是诸众生所得人身功不唐弃。即为如来所应化度。彼得不退转于阿耨多罗三藐三菩提。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第八[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:29</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第九 <br/>
+佛说如来不思议秘密大乘经卷第八[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:29</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第九 <br/>
 <br/>
 如来语密不思议品第八之余 <br/>
 <br/>
@@ -1160,7 +1173,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 寂慧当知。此名菩萨大智积集大悲方便解入不思议甚深理法降伏一切邪魔外道入苦行智清净法门。又复寂慧菩萨于六年中。成办如是所应。示现极难行事。过六年已往泥连河。随顺世间澡沐作净。既沐身已住于岸侧。是时有一聚落中女。其名善生。构以百牛成乳糜粥净心捧持。诣菩萨所而以上之。是时复有六十俱胝天龙夜叉乾闼婆阿修罗迦楼罗紧那罗摩睺罗伽等众。各各办造上妙饮食。持奉菩萨。咸作是言。惟愿菩萨大士受我饮食。惟愿大士受我饮食。寂慧是时菩萨。最先受彼善生女人所施乳糜。其彼六十俱胝天龙夜叉乾闼婆等。所施饮食亦悉受之。互不相见各各皆谓。菩萨受我所施饮食。菩萨受已。当证阿耨多罗三藐三菩提果。菩萨普为所施诸众。成熟阿耨多罗三藐三菩提善根法故。寂慧。此即是为菩萨苦行超胜。以受食缘成熟众生。方便胜行。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第九[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:31</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十 <br/>
+佛说如来不思议秘密大乘经卷第九[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:31</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十 <br/>
 <br/>
 菩萨诣菩提场品第十二 <br/>
 <br/>
@@ -1339,7 +1352,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 复次寂慧。是时菩萨持以净草诣菩提场。到已即于金刚座上。自布其草然后乃向菩提树王。恭敬顶礼右绕七匝。菩萨布草之后。是时即有八万四千天子。持以八万四千妙好。庄严师子之座。奉上菩萨。其座高广严好殊丽众宝庄饰。覆以宝网及真珠网。复垂珠璎而为交络。妙巧施设无数百千上妙衣服。菩萨尔时即现其身。各各安处八万四千师子座上。彼诸天子互不相见。皆谓菩萨在我所施师子座中。菩萨坐已。成证阿耨多罗三藐三菩提果。是诸天子。咸生欢喜清净之心。皆悉不退转于阿耨多罗三藐三菩提。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第十[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:32</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十一 <br/>
+佛说如来不思议秘密大乘经卷第十[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:32</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十一 <br/>
 <br/>
 降魔品第十三 <br/>
 <br/>
@@ -1448,7 +1461,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 尔时尸弃梵王。知佛世尊默然受请。即于波罗奈国仙人堕处鹿野苑中。为佛世尊。敷设妙好师子之座。高四万二千由旬。殊妙严饰胜相具足。众所乐观安置于地。如其尸弃梵王。初设妙好师子座已。即时复有十俱胝梵天王众。十俱胝帝释天众。十俱胝大菩萨众。皆为世尊施设妙好师子之座。殊妙严饰胜相具足。众所乐观。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第十一[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:33</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十二 <br/>
+佛说如来不思议秘密大乘经卷第十一[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:33</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十二 <br/>
 <br/>
 转法-轮品第十四之二 <br/>
 <br/>
@@ -1560,7 +1573,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 若舍所缘即离诸违顺成办一切众生事业心住。 <br/>
 若四摄法所缘即起成熟一切众生心住。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第十二[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:34</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十三 <br/>
+佛说如来不思议秘密大乘经卷第十二[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:34</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十三 <br/>
 <br/>
 所缘品第十五之二 <br/>
 <br/>
@@ -1701,7 +1714,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 寂慧当知。彼佛如来所住世界。具如是等及余无量胜功德事。是故名为普净世界。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第十三[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:34</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十四 <br/>
+佛说如来不思议秘密大乘经卷第十三[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:34</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十四 <br/>
 <br/>
 金刚手菩萨大秘密主授记品第十六之余 <br/>
 <br/>
@@ -1817,7 +1830,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 尔时金刚手菩萨大秘密主。于其定中安布如是殊妙胜相。施设庄严师子座已。从定而起过于夜分至明旦时。严办最上清净食已。深心清净将欲供养世尊如来菩萨大众。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第十四[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:34</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十五 <br/>
+佛说如来不思议秘密大乘经卷第十四[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:34</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十五 <br/>
 <br/>
 入旷野大城受食品第十八之余 <br/>
 <br/>
@@ -1883,7 +1896,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 是时旷野大城所居一切夜叉罗刹必舍左等。各各谛诚瞻仰世尊合掌虔恭归命顶礼。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第十五[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:35</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十六 <br/>
+佛说如来不思议秘密大乘经卷第十五[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:35</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十六 <br/>
 <br/>
 护世品第十九之一 <br/>
 <br/>
@@ -1986,7 +1999,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 复次大秘密主。勤行不放逸深固作意菩萨。于有于无如实了知。世间一切智者许可。如实知已。虽行于有而不取着。虽行于无亦不取着。即能通达诸佛世尊所说实义。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第十六[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:35</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十七 <br/>
+佛说如来不思议秘密大乘经卷第十六[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:35</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十七 <br/>
 <br/>
 护世品第十九之二 <br/>
 <br/>
@@ -2150,7 +2163,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 尔时世尊于金刚手菩萨宫中住经七日。广为无量一切众生作利益已。乃至旷野大城一切情品。广大周遍无不蒙益。即离本宫还处空中。菩萨声闻人天大众恭敬围绕。复有无数百千夜叉罗刹阿修罗迦楼罗等。前后导从。梵王帝释护世天等。布光明网奏妙音乐雨众异花。时诸刹土皆悉振动。以佛威德神通势力。加持神变及威仪事。譬如鹅王游戏自在。渐吹还诣鹫峰山中。金刚手菩萨大秘密主。以佛威神而随佛后。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第十七[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:35</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十八 <br/>
+佛说如来不思议秘密大乘经卷第十七[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:35</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十八 <br/>
 <br/>
 勇力菩萨先行品第二十一 <br/>
 <br/>
@@ -2199,7 +2212,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 八者见佛塔庙形像涂饰圆净。 <br/>
 九者出欢喜言安慰众生。 <br/>
 十者见彼负重疲困苦恼众生为除重担。菩萨若具如是十法。即能获得如是最胜之力。[/b] <br/>
-佛说如来不思议秘密大乘经卷第十八[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:36</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十九 <br/>
+佛说如来不思议秘密大乘经卷第十八[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:36</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第十九 <br/>
 <br/>
 阿阇世王问答品第二十二之二 <br/>
 <br/>
@@ -2309,7 +2322,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 尔时寂慧菩萨白贤王天子言。仁者。汝今快得善利。能善称赞如来无量无边功德。时贤王天子白寂慧菩萨言。善男子。胜义谛中无有少法可得称赞。何以故。法无有相非形显色。是故功德不能称赞得其边际。若形显色中决定有相者。即可以言词宣说称赞。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第十九[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:36</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第二十 <br/>
+佛说如来不思议秘密大乘经卷第十九[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚灯发表于 2007-5-29 04:36</div><div class="post-body">[font=楷体_GB2312][size=5]佛说如来不思议秘密大乘经卷第二十 <br/>
 <br/>
 总持功德赞说譬喻无尽品第二十四之二 <br/>
 <br/>
@@ -2475,7 +2488,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 佛说此经已。金刚手菩萨大秘密主。及寂慧等诸菩萨众。贤王等诸天子众。阿阇世王等诸大国王。并余菩萨。及阿难等诸大声闻。乃至一切世间天人阿修罗乾闼婆等。闻佛所说。皆大欢喜信受奉行。 <br/>
 <br/>
-佛说如来不思议秘密大乘经卷第二十[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚樑发表于 2021-12-22 00:39</div><div class="post-body">真实变化大势身，大身坚牢能破他，如日坏劫大炽燃，菩萨圆光亦如是。 <br/>
+佛说如来不思议秘密大乘经卷第二十[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚樑发表于 2021-12-22 00:39</div><div class="post-body">真实变化大势身，大身坚牢能破他，如日坏劫大炽燃，菩萨圆光亦如是。 <br/>
 功德清净大宝海，善能安住佛刹中，时我一心归命礼，降伏部多最上王。 <br/>
 <br/>
 </div></div>

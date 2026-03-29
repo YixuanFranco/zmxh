@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>《亲近观音 体验自在》节录 - 藏密修海典藏</title>
+<title>《亲近观音 体验自在》节录 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/大悲观音成就法.html">大悲观音成就法</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">《亲近观音 体验自在》节录</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:03</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
+<div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:03</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
 常在娑婆补陀山 成就大悲解脱门 <br/>
 常在娑婆补陀山　昼夜六变观世间 本愿因缘利一切 <br/>
 <br/>
@@ -79,7 +92,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 -------------------------------------------------------------------------------- <br/>
 <br/>
 [1]《观世音菩萨往生净土本缘经》失译，附西晋录，收在《卍续藏》，No.12。 <br/>
-[2]《大唐西域记》十二卷，收在《金藏》圣贤传集中国撰述，千字文编次疑、星，No.1069 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:05</div><div class="post-body">[font=楷体_GB2312][size=5]童子拜观音 <br/>
+[2]《大唐西域记》十二卷，收在《金藏》圣贤传集中国撰述，千字文编次疑、星，No.1069 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:05</div><div class="post-body">[font=楷体_GB2312][size=5]童子拜观音 <br/>
 <br/>
 说到大悲法门，自然要说到善财童子参访观音的故事。 <br/>
 <br/>
@@ -110,7 +123,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 我们跟随观音菩萨学习大悲法门，应当从平实处入手，从人类本能的同情心、爱心入手，从身边的小事入手，通过行动，比如按着观音教给我们的布施、爱语、利行、同事等四种方法，传达我们的爱心。然后，让范围逐渐扩大，让我们的心也扩大起来。这种方法，可以灭除我们心中的嗔恚之火。如果我们连最基本的同情心和爱心都没有，何谈发起无伪的菩提心！ [/size][/font] <br/>
 -------------------------------------------------------------------------------- <br/>
 <br/>
-[1]见弘赞《观音慈林集》卷一。全书三卷，收于《卍续藏》，No. 1644。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:08</div><div class="post-body">[font=楷体_GB2312][size=5]随类示现 <br/>
+[1]见弘赞《观音慈林集》卷一。全书三卷，收于《卍续藏》，No. 1644。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:08</div><div class="post-body">[font=楷体_GB2312][size=5]随类示现 <br/>
 <br/>
 我们再回到《首楞严经》，观世音菩萨说：“由我供养观音如来，蒙彼如来，授我如幻闻熏闻修，金刚三昧。与佛如来同慈力故，令我身成三十二应，入诸国土。” <br/>
 <br/>
@@ -208,7 +221,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 -------------------------------------------------------------------------------- <br/>
 <br/>
 [1]《正法念处经》卷十八〈畜生品〉载，龙王摄属于畜生趣，乃愚痴、嗔恚之人所受的果报。 <br/>
-[2]参见阿德《紧那罗王考》一文。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:11</div><div class="post-body">[font=楷体_GB2312][size=5]大悲代受苦 <br/>
+[2]参见阿德《紧那罗王考》一文。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:11</div><div class="post-body">[font=楷体_GB2312][size=5]大悲代受苦 <br/>
 <br/>
 三十二应及三十三身都没有明确注明现地狱身。无刹不现身的大悲观音，怎么会舍弃地狱众生！ <br/>
 <br/>
@@ -251,7 +264,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [3]《观音义疏》二卷，天台智者大师说，灌顶记，《金藏》帙号亩，No.1555。 <br/>
 [4]《释论》即《大智度论》，该论卷三十九曾说：“若以佛身入地狱者，则阎罗王诸鬼神不遮碍。” <br/>
 [5]《请观音经》一卷，东晋竺难提译，收在《金藏》大乘经-五大部外重、单译经，帙号知，No.350。 <br/>
-[6]于罗刹城救度五百商人的故事，对应下一章“八难无畏”的第四罗刹难无畏。 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:12</div><div class="post-body">[font=楷体_GB2312][size=5]施无畏者 <br/>
+[6]于罗刹城救度五百商人的故事，对应下一章“八难无畏”的第四罗刹难无畏。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:12</div><div class="post-body">[font=楷体_GB2312][size=5]施无畏者 <br/>
 <br/>
 有幅对子说得好： <br/>
 <br/>
@@ -282,7 +295,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 众生的怕，是恶果出来之后的怕，众生不能做到提前有效的预防，因此常在不知不觉中种下恶因。结果，恶报现前，才知道害怕。 <br/>
 <br/>
-对修行者来说，知道怕，才能精进修法。最可怕的是，有的人，心性险狠，贪赃枉法，不知戒律，于杀盗淫妄种种恶事，无不为之；对于因果之事根本不信，什么下地狱、堕恶道，根本不信不怕，是以流转生死。这是无知者的无畏，是愚痴者的无畏，与菩萨所施的无畏根本不相干。对这种人，只有让他真正怕点什么，才有法可治。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:13</div><div class="post-body">[font=楷体_GB2312][size=5]观音的名号 <br/>
+对修行者来说，知道怕，才能精进修法。最可怕的是，有的人，心性险狠，贪赃枉法，不知戒律，于杀盗淫妄种种恶事，无不为之；对于因果之事根本不信，什么下地狱、堕恶道，根本不信不怕，是以流转生死。这是无知者的无畏，是愚痴者的无畏，与菩萨所施的无畏根本不相干。对这种人，只有让他真正怕点什么，才有法可治。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:13</div><div class="post-body">[font=楷体_GB2312][size=5]观音的名号 <br/>
 <br/>
 观世音菩萨为何名观世音？在《普门品》中，无尽意菩萨也这样问过释迦牟尼佛：“世尊！观世音菩萨以何因缘名观世音？” <br/>
 <br/>
@@ -308,7 +321,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [1]见《悲华经》卷三〈诸菩萨本授记品〉。 <br/>
 [2]《观世音菩萨授记经》一卷，宋昙无竭译，《金藏》帙号必，No.373。 <br/>
 [3]见《大方广佛华严经疏》卷第五十七。 <br/>
-[4]郑僧一著，郑振煌译《观音──半个亚洲的信仰》 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:17</div><div class="post-body">[font=楷体_GB2312][size=5]八难无畏 <br/>
+[4]郑僧一著，郑振煌译《观音──半个亚洲的信仰》 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:17</div><div class="post-body">[font=楷体_GB2312][size=5]八难无畏 <br/>
 <br/>
 回到十四无畏功德。古德将十四无畏功德细分为四类：八难无畏、三毒无畏、二求无畏、持名无畏。 <br/>
 <br/>
@@ -414,7 +427,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [1]参见黄念祖居士《大佛顶首楞严经观世音菩萨耳根圆通章举要》 <br/>
 [2]《高僧传》十四卷，梁会稽嘉祥寺沙门释惠皎撰，《金藏》帙号广、内，No.1077。 <br/>
 [3]参见《圆悟佛果禅师语录》卷第十三。 <br/>
-[4]药叉、乾闼婆、龙，参见上一章的相关介绍。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:19</div><div class="post-body">[font=楷体_GB2312][size=5]离三毒 <br/>
+[4]药叉、乾闼婆、龙，参见上一章的相关介绍。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:19</div><div class="post-body">[font=楷体_GB2312][size=5]离三毒 <br/>
 <br/>
 贪瞋痴，能毒害法身慧命，故名三毒，对修行者甚是可怕。 <br/>
 <br/>
@@ -497,7 +510,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 此十四施无畏力，如与《普门品》相对应，八难众生，身罹苦难，畏其性命不保，但能持圣号，即蒙观音菩萨以无畏力，福德周备，而全性命；三毒众生，惑业深重，畏其将来堕落，但能持圣号，即蒙观音菩萨以无畏力，福德周备令得离毒；二求众生，无有后嗣，畏其老死无靠，但能持圣号，即蒙观音菩萨以无畏力，福广周备令生男女；持名众生，持念一名，畏其福德缺少，但能得一心，即蒙观音菩萨以无畏力，福德周备，令等无异。故十方世界众生，皆称观世音为施无畏者。[/size][/font] <br/>
 -------------------------------------------------------------------------------- <br/>
 <br/>
-[1]《十一面观世音神咒经》一卷，北周耶舍崛多译，《金藏》帙号才，No.310。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:20</div><div class="post-body">[font=楷体_GB2312][size=5]常应心念，一心供养 <br/>
+[1]《十一面观世音神咒经》一卷，北周耶舍崛多译，《金藏》帙号才，No.310。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:20</div><div class="post-body">[font=楷体_GB2312][size=5]常应心念，一心供养 <br/>
 <br/>
 修学“一心称名”的观音法 门，《普门品》中的两句话非常重要。 <br/>
 <br/>
@@ -550,7 +563,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 -------------------------------------------------------------------------------- <br/>
 <br/>
 [1]印光《文鈔三編·復秉初和尚書》。 <br/>
-[2] 《印光法师文钞》续编卷下，《新编观音灵感录》序。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:24</div><div class="post-body">[font=楷体_GB2312][size=5]谛观为助 <br/>
+[2] 《印光法师文钞》续编卷下，《新编观音灵感录》序。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:24</div><div class="post-body">[font=楷体_GB2312][size=5]谛观为助 <br/>
 <br/>
 对于西方净土行人，称念观音菩萨名号，也是净土法门的一个重要组成部分，并通于净土宗的持名念佛法门。《大乘庄严宝王经》中说：“于此世界，若有人能忆念观自在菩萨摩诃萨名者，是人当来远离生老病死轮回之苦，犹如鹅王随风而去，速得往生极乐世界，面见无量寿如来，听闻妙法。”《千手千眼观世音菩萨广大圆满无碍大悲心陀罗尼经》中说：“专称（观世音菩萨）名号，得无量福，灭无量罪，命终往生阿弥陀佛国。” <br/>
 <br/>
@@ -627,7 +640,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [4]又作释迦毗楞伽宝、毗楞伽宝。释迦毗楞伽，译作帝释持，即帝释天所有；又译作能胜、离垢。摩尼，为宝珠之总称。 <br/>
 [5]阎浮檀金，指产于阎浮捺陀河流中的沙金。 <br/>
 [6]见弘赞《观音慈林集》上卷。 <br/>
-[7]见《净土五会念佛略法事仪赞》，《大正藏》第47册，No1983。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:26</div><div class="post-body">[font=楷体_GB2312][size=5]如是三请 <br/>
+[7]见《净土五会念佛略法事仪赞》，《大正藏》第47册，No1983。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:26</div><div class="post-body">[font=楷体_GB2312][size=5]如是三请 <br/>
 <br/>
 修称名法门的，常配合请观音法，本章将重点介绍这一法门。 <br/>
 <br/>
@@ -671,7 +684,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 三约证请。证请者，如其修念佛三昧现前时，十方诸佛悉皆现前。虽不标心，而证理时自见观音也。证请位在六根及初住。 <br/>
 <br/>
-身业既具此三请，口意亦尔。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:27</div><div class="post-body">[font=楷体_GB2312][size=5]救护众生神咒 <br/>
+身业既具此三请，口意亦尔。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:27</div><div class="post-body">[font=楷体_GB2312][size=5]救护众生神咒 <br/>
 <br/>
 根据《请观音经》的记载，佛住毗舍离国大林精舍时，其国人民遇大恶病，良医耆婆尽其道术所不能救。一者眼赤如血，二者两耳出脓，三者鼻中流血，四者舌噤无声，五者所食之物化为粗涩，六识闭塞犹如醉人。有五夜叉名讫拏迦罗，面黑如墨而有五眼，狗牙上出吸人精气。 <br/>
 <br/>
@@ -698,7 +711,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 多耶他　呜呼腻　摸呼腻　斗婆腻　耽婆腻　安荼詈　盘荼詈　首埤帝　般般荼啰啰　婆私腻　多绖他　伊梨　寐梨　鞮首梨　迦婆梨　佉鞮端耆　旃陀梨摩蹬耆　勒叉勒叉　萨婆萨埵　萨婆婆　耶啤娑诃　多荼咃　伽帝伽帝　腻伽帝　修留毘　修留毘　勒叉勒叉　萨婆萨埵　萨婆婆耶啤　娑诃 <br/>
 <br/>
-如此神咒，乃是十方三世无量诸佛之所宣说。诵持此咒者，常为诸佛诸大菩萨之所护持免离怖畏刀杖毒害，及与疾病令得无患。说是语时，毘舍离人平复如本。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:29</div><div class="post-body">[font=楷体_GB2312][size=5]消伏毒害陀罗尼 <br/>
+如此神咒，乃是十方三世无量诸佛之所宣说。诵持此咒者，常为诸佛诸大菩萨之所护持免离怖畏刀杖毒害，及与疾病令得无患。说是语时，毘舍离人平复如本。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:29</div><div class="post-body">[font=楷体_GB2312][size=5]消伏毒害陀罗尼 <br/>
 <br/>
 尔时，世尊怜愍众生覆护一切，重请观世音菩萨，说消伏毒害陀罗尼咒。尔时观世音菩萨，大悲熏心承佛神力，而说破恶业障消伏毒害陀罗尼咒： <br/>
 <br/>
@@ -722,7 +735,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 此咒功德，三障永尽，免三界狱火不受众苦，四百四病一时不起。设有众生入阵斗战，临当被害，诵念此咒，称于大悲观世音菩萨名，如鹰隼飞，即得解脱。 <br/>
 <br/>
-（此节经文，可与《普门品》及《首楞严经》的相关文字相互印证。参见“一心称名”一章：施无畏者   八难无畏   离三毒   求男得男，求女得女   持名无畏  ）[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:31</div><div class="post-body">[font=楷体_GB2312][size=5]六字章句毕定吉祥 <br/>
+（此节经文，可与《普门品》及《首楞严经》的相关文字相互印证。参见“一心称名”一章：施无畏者   八难无畏   离三毒   求男得男，求女得女   持名无畏  ）[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:31</div><div class="post-body">[font=楷体_GB2312][size=5]六字章句毕定吉祥 <br/>
 <br/>
 随后世尊又说大吉祥六字章句救苦神咒。 <br/>
 <br/>
@@ -802,7 +815,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 三，使六根安定。见下节。[/size][/font] <br/>
 -------------------------------------------------------------------------------- <br/>
 <br/>
-[1]参见《摩诃止观》卷第二。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:33</div><div class="post-body">[font=楷体_GB2312][size=5]欲得现身，当知数息 <br/>
+[1]参见《摩诃止观》卷第二。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:33</div><div class="post-body">[font=楷体_GB2312][size=5]欲得现身，当知数息 <br/>
 <br/>
 也有不以为然者称：经中所说三章句之第一章句，有“安荼詈 般荼詈”之六字；又第二章句，有此六字；时第三章句，为释尊自说，咒之首句，置“多绖他”（说咒曰）之语，直下曰“安荼詈般荼詈”。可知以此六字为真言之体，余句皆为转释此六字者。安荼詈般荼詈即安那般那观，入出之数息观也。依此数息而定止一心，故得除灭一切之灾厄[1] 。 <br/>
 <br/>
@@ -843,7 +856,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [4]五门禅，又称五停心观，指不净观、慈悲观、因缘观、界分别观、数息观。《五门禅经要用法》中以念佛观取代界分别观。（参阅《佛医我心》相关章节。） <br/>
 [5]参见《摩诃止观》卷第二。 <br/>
 [6]能以智慧离一切烦恼障，而未得灭尽定者，称为慧解脱。兼以灭尽定力而得之解脱，称为俱解脱。 <br/>
-[7]生死之苦果，缚我而不使解脱，曰果缚。招此苦果之业因缚我，曰子缚。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:36</div><div class="post-body">[font=楷体_GB2312][size=5]观音忏法 <br/>
+[7]生死之苦果，缚我而不使解脱，曰果缚。招此苦果之业因缚我，曰子缚。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:36</div><div class="post-body">[font=楷体_GB2312][size=5]观音忏法 <br/>
 <br/>
 《请观音经》的大意已简述如上。 <br/>
 <br/>
@@ -961,7 +974,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 -------------------------------------------------------------------------------- <br/>
 <br/>
 [1]参见《华雨集》第四册“经忏法事”。 <br/>
-[2]参见《佛祖统纪》卷第九、《隋天台智者大师别传》、《续高僧传》卷第十七。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:38</div><div class="post-body">[font=楷体_GB2312][size=5]杨枝净水 <br/>
+[2]参见《佛祖统纪》卷第九、《隋天台智者大师别传》、《续高僧传》卷第十七。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:38</div><div class="post-body">[font=楷体_GB2312][size=5]杨枝净水 <br/>
 <br/>
 依《请观音经》祈祷观音的方法，也称为杨枝净水法。 <br/>
 <br/>
@@ -992,7 +1005,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [1]湛然《止观辅行传弘决》卷二之二。 <br/>
 [2]参见智圆《请观音经疏阐义钞》卷第三 <br/>
-[3]《龙舒增广净土文》，南宋龙舒郡人王日休撰，有关往生西方净土信仰的入门书。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:43</div><div class="post-body">[font=楷体_GB2312][size=5]能说无边秘密神咒 <br/>
+[3]《龙舒增广净土文》，南宋龙舒郡人王日休撰，有关往生西方净土信仰的入门书。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:43</div><div class="post-body">[font=楷体_GB2312][size=5]能说无边秘密神咒 <br/>
 <br/>
 请观音法属于修忏法门，特色在于数息，但通过对三个神咒的持诵，由此也就过渡到了陀罗尼门。 <br/>
 <br/>
@@ -1071,7 +1084,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 -------------------------------------------------------------------------------- <br/>
 <br/>
 [1]谢于教《准提净业》卷二，《卍续藏》No.1077。 <br/>
-[2]参见霍韬晦《般若波罗蜜多心经》梵本语译。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:54</div><div class="post-body">[font=楷体_GB2312][size=5]六字大明咒 <br/>
+[2]参见霍韬晦《般若波罗蜜多心经》梵本语译。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 12:54</div><div class="post-body">[font=楷体_GB2312][size=5]六字大明咒 <br/>
 <br/>
 我最先接触的咒语，就是六字大明咒。 <br/>
 <br/>
@@ -1207,7 +1220,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [6]《金刚顶经》译本有三种。《金刚顶瑜伽中略出念诵经》四卷，唐金刚智译，《金藏》帙号诗，No.426；《金刚顶一切如来真实摄大乘现证大教王经》三卷，唐不空译，《金藏》帙号侈，No.1289；《一切如来真实摄大乘现证三昧教王经》三十卷，北宋施护译，《金藏》帙号绮～汉，No.1468。 <br/>
 [7]《佛说一切如来金刚三业最上秘密大教王经》七卷，《金藏》帙号阜，No.1420。 <br/>
 [8]《大悲空智金刚大教王仪轨经》五卷，《大正藏》第18册，No.892。 <br/>
-[9]参见黄明信《汉藏大藏经目录异同研究——至元法宝勘同总录及其藏译本笺证》。《至元录》，收在《大正藏》法宝总目录第二册。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:00</div><div class="post-body">[font=楷体_GB2312][size=5]班禅大师的开示 <br/>
+[9]参见黄明信《汉藏大藏经目录异同研究——至元法宝勘同总录及其藏译本笺证》。《至元录》，收在《大正藏》法宝总目录第二册。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:00</div><div class="post-body">[font=楷体_GB2312][size=5]班禅大师的开示 <br/>
 <br/>
 久居内地的九世班禅曲吉尼玛，曾于上世纪30年代初，在江苏省句容县宝华山隆昌寺，宣讲六字真言。以下为大师讲话的记录： <br/>
 <br/>
@@ -1412,7 +1425,7 @@ Oom  ma  net  beh  meh  hone <br/>
 宝源度母，黄色。如意度母，绿黄色。[/size][/font] <br/>
 -------------------------------------------------------------------------------- <br/>
 <br/>
-[1]参见索南坚赞《西藏王统记》刘立千译，第五章。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:03</div><div class="post-body">[font=楷体_GB2312][size=5]准提咒 <br/>
+[1]参见索南坚赞《西藏王统记》刘立千译，第五章。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:03</div><div class="post-body">[font=楷体_GB2312][size=5]准提咒 <br/>
 <br/>
 在汉地，有许多持诵观音名号者，也兼持准提菩萨的准提咒。此咒行持方便，不问在家出家，不拣净秽。上世纪80年代末，气功热席卷大陆，此咒以佛家气功的身份在民间传播。我也是在那段时间第一次听到这个咒子。咒曰： <br/>
 <br/>
@@ -1430,7 +1443,7 @@ Oom  ma  net  beh  meh  hone <br/>
 <br/>
 准提法在元明清三代流行于僧俗儒道各界。佛门之中禅、净、台、贤、密各宗均有受持。明代高僧云栖袾宏（1535～1615）、憨山德清（1546～1623），著名居士袁了凡均曾受持此法。袁了凡居士所著《了凡四训》中载，云谷禅师教了凡记功过格，“且教持准提咒”：“无记无数，不令间断，持得纯熟，於持中不持，於不持中持。到得念头不动，则灵验矣。” <br/>
 <br/>
-藏传佛教中的准提佛母法，多以四臂为主。现在汉地也有传承。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:05</div><div class="post-body">[font=楷体_GB2312][size=5]陀罗尼有相貌乎 <br/>
+藏传佛教中的准提佛母法，多以四臂为主。现在汉地也有传承。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:05</div><div class="post-body">[font=楷体_GB2312][size=5]陀罗尼有相貌乎 <br/>
 <br/>
 在汉地，流传最广的长咒是大悲咒。我第一次知道有大悲咒，还是缘于那位让我背《心经》的居士。但真正持诵大悲咒，则是很久以后的事了。我曾将此咒推荐给我岳母。她老人家喜好书法，一有时间就抄写大悲咒。抄一遍下来，往往是大汗淋淋。如此坚持数年，直至撒手西去。现在，一听到大悲咒，我就会想到她老人家。 <br/>
 <br/>
@@ -1469,7 +1482,7 @@ Oom  ma  net  beh  meh  hone <br/>
 -------------------------------------------------------------------------------- <br/>
 <br/>
 [1]见唐西天竺沙门伽梵达摩译《千手千眼观世音菩萨广大圆满无碍大悲心陀罗尼经》。 <br/>
-[2]许止净《观世音菩萨本迹感应颂》卷三。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:07</div><div class="post-body">[font=楷体_GB2312][size=5]发愿持咒与天台教观 <br/>
+[2]许止净《观世音菩萨本迹感应颂》卷三。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:07</div><div class="post-body">[font=楷体_GB2312][size=5]发愿持咒与天台教观 <br/>
 <br/>
 持诵大悲咒，应先发愿。 <br/>
 <br/>
@@ -1577,7 +1590,7 @@ Oom  ma  net  beh  meh  hone <br/>
 -------------------------------------------------------------------------------- <br/>
 <br/>
 [1]本节知礼所言，均引自《千手眼大悲心咒行法》。 <br/>
-[2]见周克复《观音经持验记》序，《卍续藏》No. 1542。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:09</div><div class="post-body">[font=楷体_GB2312][size=5]千眼照见，千手护持 <br/>
+[2]见周克复《观音经持验记》序，《卍续藏》No. 1542。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:09</div><div class="post-body">[font=楷体_GB2312][size=5]千眼照见，千手护持 <br/>
 <br/>
 前面曾提到，观音菩萨修证耳根圆通，获得四种不思议无作妙德，其中的第一种就是能现众多妙容，由一首三首，乃至八万四千烁迦罗首；由二臂四臂，乃至八万四千母陀罗臂；由二目三目，乃至八万四千清净宝目，或慈或威，或定或慧，救护众生，得大自在。 <br/>
 <br/>
@@ -1616,7 +1629,7 @@ Oom  ma  net  beh  meh  hone <br/>
 千佛共同所赞叹，教化边地佛所记， <br/>
 随缘教化利有情，敬礼尊者观世音。 <br/>
 <br/>
-如是赞已。为教化雪域众生，观音亦现众多化身，使一切有情，皆得成熟解脱。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:12</div><div class="post-body">[font=楷体_GB2312][size=5]四十手施无不尽 <br/>
+如是赞已。为教化雪域众生，观音亦现众多化身，使一切有情，皆得成熟解脱。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:12</div><div class="post-body">[font=楷体_GB2312][size=5]四十手施无不尽 <br/>
 <br/>
 现存的千手千眼观音圣像，虽然有少数完全具足一千手眼，但大多数都用四十手眼来代表千手千眼。但也有在四十手之外只加甘露手而成四十一手者。手在这里做手印讲。有两掌相成一手印的，如合掌手、总持千臂手。 <br/>
 <br/>
@@ -1726,7 +1739,7 @@ Oom  ma  net  beh  meh  hone <br/>
 铁钩手钩召观音、顶上化佛手灌顶观音、数珠手念珠观音、宝螺手持螺观音、 <br/>
 宝箭手速值观音、宝箧手见隐观音、髑髅手缚鬼观音、五色云手仙云观音。 <br/>
 <br/>
-这四十观音的形像、手印及真言，详见《千光眼观自在菩萨秘密法经》。经中在此四十手之外，另有甘露手。经云：若为一切饥渴有情及诸饿鬼得清凉者，当于甘露手。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:14</div><div class="post-body">[font=楷体_GB2312][size=5]二十八部众常随卫护 <br/>
+这四十观音的形像、手印及真言，详见《千光眼观自在菩萨秘密法经》。经中在此四十手之外，另有甘露手。经云：若为一切饥渴有情及诸饿鬼得清凉者，当于甘露手。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:14</div><div class="post-body">[font=楷体_GB2312][size=5]二十八部众常随卫护 <br/>
 <br/>
 根据《千手千眼观世音菩萨广大圆满无碍大悲心陀罗尼经》的记载，观音菩萨在讲述此大悲陀罗尼及其相貌后说道：若善男子善女人，诵持此神咒者，发广大菩提心，誓度一切众生，身持斋戒，于诸众生起平等心，常诵此咒，莫令断绝，住于净室，澡浴清净，著净衣服，悬旛然灯香华百味饮食以用供养，制心一处，更莫异缘，如法诵持，是时当有日光菩萨、月光菩萨与无量神仙，来为作证，益其效验。我时当以千眼照见千手护持。从是以往所有世间经书悉能受持，一切外道法术韦陀[1] 与籍亦能通达。诵持此神咒者，世间八万四千种病，悉皆治之无不差（愈）者。……若能如法诵持，于诸众生起慈悲心者，我时当敕一切善神、龙王、金刚密迹，常随卫护，不离其侧，如护眼睛，如护已命。 <br/>
 <br/>
@@ -1808,7 +1821,7 @@ Oom  ma  net  beh  meh  hone <br/>
 二十八，毘舍阇，即毗舍阇，啖精气，食人及五谷精气的恶鬼，大目瞋怒形，黑赤色，左手火玉。[/size][/font] <br/>
 -------------------------------------------------------------------------------- <br/>
 <br/>
-[1]韦陀，此处指吠陀，婆罗门所传经典之名。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:16</div><div class="post-body">[font=楷体_GB2312][size=5]持咒合药 <br/>
+[1]韦陀，此处指吠陀，婆罗门所传经典之名。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:16</div><div class="post-body">[font=楷体_GB2312][size=5]持咒合药 <br/>
 <br/>
 持诵大悲咒有治病的功效，是经里反复说明的，本人对此也是深信不疑，并曾从中获益。 <br/>
 <br/>
@@ -1831,7 +1844,7 @@ Oom  ma  net  beh  meh  hone <br/>
 <br/>
 经中记载，观世音菩萨摩诃萨告诸大众言：“若比丘比丘尼，优婆塞优婆夷，善男子善女人等，若能受持此疗治法救众生苦者，当知是即我化身。以大悲心救众生故，必我到其所，作诸法令有胜验。是人受持大悲心随心自在陀罗尼神妙章句能救世间苦，是人如我无异我身也。” <br/>
 <br/>
-尔时，释迦牟尼佛赞观世音菩萨言：“善哉善哉大士，如是如是如汝所说，若有善士善女等，以一分药施疾病者，现在得福灭罪，于当来世福报无尽，生生世世受无病身受诸快乐，天上人中受诸胜利，天上人中寿命无量，得道不久。”[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:21</div><div class="post-body">[font=楷体_GB2312][size=5]大悲咒像解的真与伪 <br/>
+尔时，释迦牟尼佛赞观世音菩萨言：“善哉善哉大士，如是如是如汝所说，若有善士善女等，以一分药施疾病者，现在得福灭罪，于当来世福报无尽，生生世世受无病身受诸快乐，天上人中受诸胜利，天上人中寿命无量，得道不久。”[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:21</div><div class="post-body">[font=楷体_GB2312][size=5]大悲咒像解的真与伪 <br/>
 <br/>
 我最初接触大悲咒时，曾见到过一本《大悲咒像解》，顾名思义，每一句咒语都配有相应的图画及解释，当时虽不明就里，却非常喜爱。时过境迁，又多出了几个新的版本，且大都在互联网上流通起来，查阅起来又多了一层方便。只是相关的争执也通过网络放大了。如“《大悲咒84句像解图》是伪造的，不能够相信”这样的话，广为流传。 <br/>
 <br/>
@@ -1865,7 +1878,7 @@ Oom  ma  net  beh  meh  hone <br/>
 此外，按着印光大师的教导，第三十四句以下可以不必持诵。大师说：“ 大悲咒，摩摩下之所加，不必用，用则反成隔碍。古德持诵通不加，虽经中有之，非属咒文，固无不可不用之典[1] 。”[/size][/font] <br/>
 -------------------------------------------------------------------------------- <br/>
 <br/>
-[1]《印光法师文钞》三编卷四“复卓智立居士书七” </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:23</div><div class="post-body">[font=楷体_GB2312][size=5]略说仪轨 <br/>
+[1]《印光法师文钞》三编卷四“复卓智立居士书七” </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:23</div><div class="post-body">[font=楷体_GB2312][size=5]略说仪轨 <br/>
 <br/>
 《补陀洛迦山传[1] 》中有一段话概括了观音陀罗尼门的特点：“藏教密乘经中所载，观自在菩萨，为莲华部主，现诸神变。忿怒则称马首明王，救度则圣多罗尊，满诸愿则大准提尊，及如意轮王、不空罥索乃至师子吼，并毘俱胝、一髻青项、白衣叶衣、千首千臂，皆有仪轨。” <br/>
 <br/>
@@ -1890,7 +1903,7 @@ Oom  ma  net  beh  meh  hone <br/>
 [4]《佛说一切佛摄相应大教王经圣观自在菩萨念诵仪轨》一卷，宋代法贤译，《金藏》帙号高，No.1225。 <br/>
 [5]《十一面观自在菩萨心密言念诵仪轨经》三卷，不空译，《金藏》帙号富，No.1301。 <br/>
 [6]《观自在菩萨如意轮念诵仪轨》一卷，不空译，《金藏》帙号策，No.1338。 <br/>
-[7]《佛说不空罥索陀罗尼仪轨经》二卷，阿目佉译。系三十卷《不空罥索神变真言经》一二两卷之异译。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:24</div><div class="post-body">[font=楷体_GB2312][size=5]入坛灌顶 <br/>
+[7]《佛说不空罥索陀罗尼仪轨经》二卷，阿目佉译。系三十卷《不空罥索神变真言经》一二两卷之异译。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:24</div><div class="post-body">[font=楷体_GB2312][size=5]入坛灌顶 <br/>
 <br/>
 受学仪轨，要从灌顶开始。灌顶是修密者受学密法必先进行的仪式。 <br/>
 <br/>
@@ -1961,7 +1974,7 @@ Oom  ma  net  beh  meh  hone <br/>
 [1]《大日经疏》二十卷，善无畏讲解，一行笔录，《大正藏》第39册，No.1796。 <br/>
 [2]《秘藏记》二卷，《大正藏》第86册。 <br/>
 [3]参见李冀诚《藏密曼荼罗的哲学意义》载于《西藏民族学院学报》1994年第2期。 <br/>
-[4]参见谈锡永《西藏密宗的仪轨》，载于《现代佛教学术丛刊》第74集；吐登喇嘛《藏密坛场通常礼仪及观诵密义》，孙景风译，《藏密修法秘典》第一卷。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:26</div><div class="post-body">[font=楷体_GB2312][size=5]入坛行法 <br/>
+[4]参见谈锡永《西藏密宗的仪轨》，载于《现代佛教学术丛刊》第74集；吐登喇嘛《藏密坛场通常礼仪及观诵密义》，孙景风译，《藏密修法秘典》第一卷。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:26</div><div class="post-body">[font=楷体_GB2312][size=5]入坛行法 <br/>
 <br/>
 如上所述，密宗修持离不开坛场。千手观音属于密部，自然也有相应的坛城。汉传的千手观音经典中至少有四种曼荼罗。现在接上一章，继续讲千手观音的内容。 <br/>
 <br/>
@@ -2019,7 +2032,7 @@ Oom  ma  net  beh  meh  hone <br/>
 <br/>
 《千手千眼观世音菩萨姥陀罗尼身经》和《千眼千臂观世音菩萨陀罗尼神咒经》均认为，已曾入大都会三曼荼罗金刚大道场者，不须作曼荼罗。《千眼千臂观世音菩萨陀罗尼神咒经》称“唯须结印诵咒”即可。而本经认为要用水坛来代替，“唯作水坛结印诵咒，无愿不果速当成佛。” <br/>
 <br/>
-所谓水坛，不同于以土筑坛的土坛。无须多日择地、掘地、治地，仅须洒水净地，依观想施行，于一日中即可建坛，称为水坛。还有一种解释，水坛表示无场所限制，能自由持行，如水的流动自在。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:27</div><div class="post-body">[font=楷体_GB2312][size=5]十一面观音曼荼罗 <br/>
+所谓水坛，不同于以土筑坛的土坛。无须多日择地、掘地、治地，仅须洒水净地，依观想施行，于一日中即可建坛，称为水坛。还有一种解释，水坛表示无场所限制，能自由持行，如水的流动自在。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:27</div><div class="post-body">[font=楷体_GB2312][size=5]十一面观音曼荼罗 <br/>
 <br/>
 上节说到，汉译经典中曾说：已曾入大都会三曼荼罗金刚大道场者，不须作曼荼罗。 <br/>
 <br/>
@@ -2080,7 +2093,7 @@ Oom  ma  net  beh  meh  hone <br/>
 <br/>
 [1]见《五灯会元》“金陵宝志禅师”。 <br/>
 [2]见《唐大荐福寺故寺主翻经大德法藏和尚传》。 <br/>
-[3]《十一面神咒心经》一卷，唐玄奘译，《金藏》帙号才，No. 309。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:31</div><div class="post-body">[font=楷体_GB2312][size=5]金胎两部中的观音 <br/>
+[3]《十一面神咒心经》一卷，唐玄奘译，《金藏》帙号才，No. 309。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:31</div><div class="post-body">[font=楷体_GB2312][size=5]金胎两部中的观音 <br/>
 <br/>
 在纯密的体系里，都会坛曼荼罗指的则是大日如来为中心的金胎两部大法之大曼荼罗。 <br/>
 <br/>
@@ -2175,7 +2188,7 @@ Oom  ma  net  beh  meh  hone <br/>
 [2]参见持松《密教通关》。 <br/>
 [3]参见《大唐故大德赠司空大辨正广智不空三藏行状》卷一，《大正藏》第50册，No.2056。 <br/>
 [4]《大毘卢遮那成佛神变加持经莲华胎藏悲生曼荼罗广大成就仪轨供养方便会》二卷，《大正藏》第18册，No.852。 <br/>
-[5]参见日本元杲《胎藏界三部秘释》，《大正藏》第78册，No.2472。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:37</div><div class="post-body">[font=楷体_GB2312][size=5]如意轮曼荼罗 <br/>
+[5]参见日本元杲《胎藏界三部秘释》，《大正藏》第78册，No.2472。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:37</div><div class="post-body">[font=楷体_GB2312][size=5]如意轮曼荼罗 <br/>
 <br/>
 在法门寺地宫中，有一六臂观音的形象出现在第四重宝涵上，它就是如意轮观音。 <br/>
 <br/>
@@ -2221,7 +2234,7 @@ Oom  ma  net  beh  meh  hone <br/>
 [3]《别尊杂记》五十七卷，日本心觉著，《大正藏》第88册。 <br/>
 [4]《七星如意轮秘密要经》一卷，不空译，《大正藏》第20册，No.1091。 <br/>
 [5]藏传佛教史籍《青史》，著者噶举派大德廓诺·迅鲁伯（即著名的桂译师迅努白，1392～1481），汉译郭和卿。其中的第十四辑，专辑记述了大悲观音法门在藏地的传承情况。 <br/>
-[6]参见索南才让《西藏密教史》附录“十六明点法”。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:38</div><div class="post-body">[font=楷体_GB2312][size=5]净土曼荼罗中的观音 <br/>
+[6]参见索南才让《西藏密教史》附录“十六明点法”。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:38</div><div class="post-body">[font=楷体_GB2312][size=5]净土曼荼罗中的观音 <br/>
 <br/>
 有一种从显教经典的变相中演化出来的佛教美术，也被称为曼荼罗。如“观经曼荼罗”，即是根据《观无量寿经》所说而描绘的净土变相。这种曼荼罗，主要流传于日本，其中最著名的为当麻曼荼罗。 <br/>
 <br/>
@@ -2239,7 +2252,7 @@ Oom  ma  net  beh  meh  hone <br/>
 -------------------------------------------------------------------------------- <br/>
 <br/>
 [1] 参见前面《一心称名》之“谛观为助”一节。 <br/>
-[2] 本节内容摘自《佛光大辞典》相关词条。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:41</div><div class="post-body">[font=楷体_GB2312][size=5]亦实亦幻的镜坛 <br/>
+[2] 本节内容摘自《佛光大辞典》相关词条。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:41</div><div class="post-body">[font=楷体_GB2312][size=5]亦实亦幻的镜坛 <br/>
 <br/>
 以《佛说大乘观想曼拏罗净诸恶趣经[1]》为代表的许多经典，在行各种曼荼罗法的时候，无需实地筑坛也不用各种画像，而仅凭观想而成就各种曼荼罗。然而，直接凝想作观不是一件容易的事，对初学者而言还是要依靠各种现成的曼荼罗图案或模型，才能顺利的进入观想曼荼罗的世界。 <br/>
 <br/>
@@ -2307,7 +2320,7 @@ Oom  ma  net  beh  meh  hone <br/>
 [4] 受登《准提三昧行法》，《卍续藏》No.1481。 <br/>
 [5] 见前“六字大明咒”一节。 <br/>
 [6] 谢于教《准提净业》“准提净业引”。 <br/>
-[7] 参见索南坚赞《西藏王统记》刘立千译，第十七章。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:42</div><div class="post-body">[font=楷体_GB2312][size=5]观音与大手印 <br/>
+[7] 参见索南坚赞《西藏王统记》刘立千译，第十七章。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-12-4 13:42</div><div class="post-body">[font=楷体_GB2312][size=5]观音与大手印 <br/>
 <br/>
 在观世音菩萨的无量法门中，我新近又接触到了传自萨迦派的《大悲观音与大手印合修法》。 <br/>
 <br/>
@@ -2337,12 +2350,12 @@ Oom  ma  net  beh  meh  hone <br/>
 -------------------------------------------------------------------------------- <br/>
 <br/>
 [1] 《萨迦世系史》，阿旺贡噶索南著，陈庆英、高禾福、周润年译。 <br/>
-[2] 《大悲观音大手印双修行持理趣》，法护译，中国藏密萨迦佛学研究会，2002年。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 16:31</div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
+[2] 《大悲观音大手印双修行持理趣》，法护译，中国藏密萨迦佛学研究会，2002年。 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 16:31</div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
 众生善根尽随喜  正觉菩提意中持 <br/>
 正觉妙法及僧伽  直至菩提我皈依 <br/>
 所为利益自他故  我今即发菩提心 <br/>
 既发最上菩提心  饶益一切诸有情 <br/>
-菩提妙行皆修作  为利众生愿成佛 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 16:36</div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
+菩提妙行皆修作  为利众生愿成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 16:36</div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
 众生善根尽随喜  正觉菩提意中持 <br/>
 正觉妙法及僧伽  直至菩提我皈依 <br/>
 所为利益自他故  我今即发菩提心 <br/>

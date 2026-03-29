@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>（转帖）细谈护摩 - 藏密修海典藏</title>
+<title>（转帖）细谈护摩 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/护摩内外密火供.html">护摩内外密火供</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">（转帖）细谈护摩</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">大</div>大自在发表于 2011-7-27 17:18</div><div class="post-body">[size=5]细谈护摩（一） <br/>
+<div class="post"><div class="post-header"><div class="avatar">大</div>大自在发表于 2011-7-27 17:18</div><div class="post-body">[size=5]细谈护摩（一） <br/>
 莲花居士 今天跟大家细谈一下护摩。护摩在密教里面占很重要的位置，这「护摩法」在成就方面是列为三分之一的成就。在密教里面有三大成就﹕一个是「持明成就」，是持咒方面的成就﹔还有一个是「三摩地成就」，就是禅定产生一种力量的成就，叫「三摩地成就」，另外一个成就，就是「护摩成就」。 <br/>
 <br/>
 护摩是梵文，实际上，它就是火供。在密教里面是一个很重要的成就，属于供养的成就。那这个成就在我个人来讲，我觉得护摩火供是可以改变一个人的命运，不只是改变一个人的命运，真正做大护摩的时候，甚至于可以改变一个国家的命运。大家想一想，一个国家的命运，用密教的护摩法力都可以改变的话，这个护摩法的成就，真的是非常的伟大跟超胜。所以不能小看护摩﹔以为这个只是一种供养，不是的，它一样有高深的学理在里面。曾经有人做护摩，用护摩法改变命运。大家知道空海大师，祂在筑水坝防洪水泛滥的时候﹔曾经连续一直做护摩、一直持咒﹔使那个水坝在限期之内能够完成，这个就是护摩的力量。护摩可以改变命运﹔甚至可以改变国家的命运。密教里面的护摩，跟一般的供养，真的差别很大。所以密教里面的护摩，不只是一个仪式，它有很高深的学理在里面。护摩有称为「外护摩」、「内护摩」。所谓「外护摩」，就是烧火供天。烧这些供品、食物，或者很多东西，都可以下炉去供养诸天、佛菩萨、金刚护法。也有叫做「内护摩的」，什么叫做「内护摩」？就是借用这个火，把自己身体里面的烦恼、身体里面的业障烧除。用火来把自己身体里面的烦恼跟业障，通通消除掉，这个就叫做「内护摩」。「内护摩」就很高深，业障能够消除，烦恼能够消除的话，你等于成圣、成为菩萨，等于是一个非常清净的行者，一下子你的身心都变清净了，这种护摩就叫做「内护摩」。「外护摩」就是火供，「内护摩」就是清净自己的业障，跟清净自己的烦恼。我记得释迦牟尼佛的弟子，都有修持这种「火光三昧法」。其实就是燃起自己身体的内火﹔把自己的业障跟烦恼消除的方法。燃起自己的内火﹔把自己的烦恼跟业障消除，其实讲起来就是密教的「内护摩」，叫做「火光三昧」。护摩本身讲起来，有「外护摩」，这是做供养的。有「内护摩」，就是「火光三昧」。佛陀时代有很多行者修成火光三昧，这种修行实在是很伟大的，所以不能小看护摩，因为它是属于三大成就之一。一般来讲，密教的护摩坛城，在彩虹山庄有密教的护摩坛城，很庄严，那是日本密宗，属于东密的火坛。也有藏密的火坛，藏密的火坛就是做的比较粗糙一点，用砖围起来的一个坛。东密的火供方式跟藏密的火供方式不大一样。东密的布置比较庄严，在藏密的做法，是注重内心的做法。东密注重坛城的庄严，坛城弄得非常的庄严、漂亮。坛城非常的庄严，但是也用心的力量去做，是三者加起来。所以我们的护摩火供，非常好的，感应非常的神速。做火供往住有很多的奇验，奇啊！就是不可能改变的命运，都可以把它扭转过来。所以我常常跟弟子讲，有什么灾难来了，你要多作火供。因为我觉得，火供在召请佛菩萨方面，祂都会降临，因为你做供养嘛！这个供养比显教的供养好的多了。显教那个供养只不过把供品摆上佛案，礼拜一下、点一下香就结束了。我们密教的供养有很长的仪轨，要念咒、要观想、要结手印，这样子做，很客易让佛菩萨、诸天全部降下来。你能够很客易召请佛菩萨、诸天下降的话，你这种供养就变成一种有力量的、有法力的。今天先介绍到这里。 嗡嘛呢呗咪吽一九九六年九月廿日 <br/>

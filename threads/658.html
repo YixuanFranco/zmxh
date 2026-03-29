@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>菩提道次第直授•趣入一切种智速疾道 - 藏密修海典藏</title>
+<title>菩提道次第直授•趣入一切种智速疾道 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">菩提道次第直授•趣入一切种智速疾道</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-3-2 23:42</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　菩提道次第直授•趣入一切种智速疾道 <br/>
+<div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-3-2 23:42</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　菩提道次第直授•趣入一切种智速疾道 <br/>
 [/b] <br/>
 第五世班禅大师洛桑耶喜 <br/>
 [b]　　敬礼大宝上师能仁! <br/>
@@ -190,7 +203,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　莫觉巴说：「勤修解脱犹可疑，敬信解脱无可疑。』（仅靠勤苦地修行，能否解脱犹存疑虑，若能敬信上师，那么解脱就勿庸置疑了。）又说：『观音菩萨若是白色，我之上师亦是白色，佛母若是红色，我之上师亦是红色，欢喜金刚若是蓝色，我之上师亦是蓝色，我任住何处，从不与上师的显现分离，一生成佛的征相好象正在到来!』 <br/>
 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2006-10-13 13:22</div><div class="post-body">[font=楷体_GB2312][size=5]　　戊4、清晰观想资粮田，分为上师供资粮田与此处直授仪轨的资粮田两种，随一皆可。若是上师供资粮田，当观想面前的虚空中，有一颗广大的如意宝树，绿叶花果庄严，八大狮子擎举的高广宝座上，有不可思议的种种莲瓣，最下端的莲瓣向下略掩宝座，上面的莲瓣越来越细小，最上端四片莲瓣中心，种种莲花日月为垫，上坐自己的三恩根本上师，现为金刚持比丘相，身睡莲色，右手说法印，左手等持印，上托鉢盂甘露盈满，披著黄色法衣，顶戴黄色的班智达帽，相好庄严，以澄净的光明为体，金刚跏趺坐於自身所发的光蕴之中，心间有释迦牟尼佛，释迦佛的心中是金刚持佛。上师右边的莲瓣上是大威德金刚诸天众等，左边的莲瓣上是胜乐金刚诸天众，前面的莲瓣上是密集金刚诸天众，後面的莲瓣上是欢喜金刚诸天众等环绕。其下一层的莲瓣上有时轮金刚、黑敌、红阎摩敌等无上瑜珈部的诸天众围绕。再下一层为普明大日如来等瑜珈部的诸天众围绕。次为毗卢遮那现证佛等行部诸天众围绕。 <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2006-10-13 13:22</div><div class="post-body">[font=楷体_GB2312][size=5]　　戊4、清晰观想资粮田，分为上师供资粮田与此处直授仪轨的资粮田两种，随一皆可。若是上师供资粮田，当观想面前的虚空中，有一颗广大的如意宝树，绿叶花果庄严，八大狮子擎举的高广宝座上，有不可思议的种种莲瓣，最下端的莲瓣向下略掩宝座，上面的莲瓣越来越细小，最上端四片莲瓣中心，种种莲花日月为垫，上坐自己的三恩根本上师，现为金刚持比丘相，身睡莲色，右手说法印，左手等持印，上托鉢盂甘露盈满，披著黄色法衣，顶戴黄色的班智达帽，相好庄严，以澄净的光明为体，金刚跏趺坐於自身所发的光蕴之中，心间有释迦牟尼佛，释迦佛的心中是金刚持佛。上师右边的莲瓣上是大威德金刚诸天众等，左边的莲瓣上是胜乐金刚诸天众，前面的莲瓣上是密集金刚诸天众，後面的莲瓣上是欢喜金刚诸天众等环绕。其下一层的莲瓣上有时轮金刚、黑敌、红阎摩敌等无上瑜珈部的诸天众围绕。再下一层为普明大日如来等瑜珈部的诸天众围绕。次为毗卢遮那现证佛等行部诸天众围绕。 <br/>
 [/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　其次为能仁誓言三尊等事部诸天众围绕。其下有贤劫千佛、三十五佛等围绕安住。其下有八大菩萨等诸菩萨众围绕安住。其下为十二缘觉等围绕。又下为十六罗汉等诸大声闻围绕。最下为诸护法众围绕安住。外围有寻香众围绕着持国天王，瓶腹夜叉围绕着增长天王，诸龙众围绕着广目天王，夜叉众围绕着多闻天王，安住於四方，守护遮止自己的障难。 <br/>
 [/size][/font] <br/>
@@ -371,7 +384,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 有一次玛尔巴尊者睡在那若巴上师前，黎明时上师在天空中变化出喜金刚本尊能依所依的坛城，对玛尔巴说：『法智我的孩子，不要睡了，快起来!你的本尊喜金刚能依所依的坛城在面前空中，你是向我顶礼还是向本尊顶礼呢?』当玛尔巴向本尊喜金刚坛城顶礼时，那若巴上师说：『无有上师前，佛名亦不闻，千劫一切佛，依师而出生，本尊乃师化!』说完，坛城融入心间，上师说：『由此缘起，你的世系传承不会长远，但这也是众生的因缘所致。』 <br/>
 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2006-10-13 13:28</div><div class="post-body">[font=楷体_GB2312][size=5]　　另外，诸佛还会应我们各自的善根示现种种身形，《宝积经父子相见会》中：『或现释梵王，亦或现魔相，饶益诸有情，世间不能了。或现为女人，亦或现畜生，无贪示有贪，无畏示恐惶，无痴痴呆现，无癫示癫狂，非残残暴行。变化种种相，调伏诸有情。』所以，祈求上师天加持我及一切如母有情，将这些善知识视为真实的能仁金刚持! <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2006-10-13 13:28</div><div class="post-body">[font=楷体_GB2312][size=5]　　另外，诸佛还会应我们各自的善根示现种种身形，《宝积经父子相见会》中：『或现释梵王，亦或现魔相，饶益诸有情，世间不能了。或现为女人，亦或现畜生，无贪示有贪，无畏示恐惶，无痴痴呆现，无癫示癫狂，非残残暴行。变化种种相，调伏诸有情。』所以，祈求上师天加持我及一切如母有情，将这些善知识视为真实的能仁金刚持! <br/>
 [/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　这样祈祷後，观顶上上师天身分中降下五彩甘露，进入自他一切有情身心之中，无始所集的一切罪障，尤其障碍见善知识为真实能仁金刚持的一切罪障皆得清净，自身变为莹澈的光明之体，一切福寿教证功德增长广大，自他一切有情心中皆得生起视善知识为真实能仁金刚持的殊胜证悟。 <br/>
 [/size][/font] <br/>
@@ -497,7 +510,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　总之，这个身体可以生起三种律仪，能在浊世短短的一生中成办佛果，因而偶尔得获的这一次极为难得具有极大意义的暇满之身，不可无义空费，应当依之受取心要，祈愿上师天加持令我能如此而行!祈祷後，思维上师天身分中降下五彩光明甘露，注入自他一切有情身心之中，自他一切罪障皆得净除，尤其能障心中生起暇满义大殊胜证悟的一切罪障皆得净除，身体变为莹澈透明的光明之体，  一切福寿功德皆得增长，自他一切有情心中皆得生起暇满义大的殊胜证悟。 <br/>
 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2006-10-13 13:33</div><div class="post-body">[font=楷体_GB2312][size=5]　　己2、思维难得： <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2006-10-13 13:33</div><div class="post-body">[font=楷体_GB2312][size=5]　　己2、思维难得： <br/>
 [/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　观上师天住於顶上，住此态中思维：暇满之身意义极大，又极为难得。《调伏本事》中说：  『从恶趣及善趣死後，生於恶趣者如大地土那样无量多，而生於善趣者却如指甲上的土，如此稀少。』《四百颂》中：  『诸人多受持，非胜妙之品，是故诸异生，多定往恶趣。』这里是说，大多数的人作着十不善业等，这些不善业障碍着获得暇满之身。要想获得暇满具足的清净身体，需要以净戒作为基础，布施等作为助伴，结合以无垢的善愿。然而修习此因的人极为稀少，所以能获得暇满人身之果的也仅极少数。非但如此，虽同为善趣，然而获得暇满具足之身的也极稀少，千百人中能拥有暇满具足之身的实在寥若晨星。下面以喻来说明： <br/>
 [/size][/font] <br/>
@@ -682,7 +695,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　由所依故力大者：具有三种戒律者，随作善恶其力都非常强大。对於以上所说生起深刻的信心，於十善等乃至极微细的善业也努力去作，即使十不善中极微细的恶业也努力防护不令三门沾染，精勤地弃恶修善。惟愿上师天加持令我能如是而行!这样祈祷以後，思维顶上上师天身分中降下五彩光明甘露，注入自他一切有隋身心之中，自他一切罪障皆得净除，尤其能障碍心中生起深信业果的一切罪障皆得清净，自他一切有情心中生起深信业果的殊胜证悟。 <br/>
 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2006-10-13 13:40</div><div class="post-body">[font=楷体_GB2312][size=5]　　依靠守持戒律、舍弃十不善，虽可获得善趣之身，然而若能成就一个具有八种异熟功德的殊胜依身而修习一切种智，修道的进程速度是其他所无法相比的。所以首先当了知八种异熟功德，作用如何以及它的因。 <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2006-10-13 13:40</div><div class="post-body">[font=楷体_GB2312][size=5]　　依靠守持戒律、舍弃十不善，虽可获得善趣之身，然而若能成就一个具有八种异熟功德的殊胜依身而修习一切种智，修道的进程速度是其他所无法相比的。所以首先当了知八种异熟功德，作用如何以及它的因。 <br/>
 [/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　八种异熟功德为：寿量圆满，形色圆满，种姓圆满，自在圆满，信言圆满，具足大势名称，具丈夫性，具足大力。它们的作用者，寿长可以长时积集善根；形色圆满可以摄诸所化，自己所说，他所乐闻；由於种族高贵，自己所吩咐的事他人不会违背；由自在故，可以摄受众多有情，令其成熟：信言则自己之言为他「信受」，大势名称则他人速受教化：具丈夫性有大无畏，且少障碍：具足大力则任作何事常生欢喜，速发神通。[/size][/font] <br/>
 [font=楷体_GB2312][size=5][/size][/font] <br/>
@@ -899,7 +912,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　修习慈心的功德：此生中若缘於赡部洲修习慈心，将会生为瞻部洲的转轮王，若缘二洲生起慈心，则生为铜轮王，若於三洲生起慈心，则生为银轮王，若缘四洲生起慈心则生为金轮王，若缘三千大干世界生起慈心，则当生为大梵天王，若缘小千世界中千世界生起慈心，则将生为小千和中千世界之主。如果缘尽虚空界的有情生起慈心，则其果报唯是圆满的佛陀。虽然业是自己的，然而慈力特别的超胜，若真实生起慈心，则可以利益他人，就象经中所说的慈力王一样。因此，若非仅浮於口面而是真实地生起慈心，这将是自己最胜的守护铠甲，世尊就是住於慈心三摩地而调伏了亿万魔军。京俄瓦大师说：『真实地说来，能摧伏对方的唯有慈心。』还说：『因此，听到慈的名字，我的心中就非常清朗。』慈心的利益，如经说：「遍於无边俱胝刹，尽其无量诸供品，以此常供诸胜士，不及慈心一数分。』怙主龙树菩萨说：「心悦多安乐，毒刀不能害，无劳事得成，得慈心八法，设未解脱者，当生梵世间。』及『每日三时施，三百罐饮食，然不及须臾，修慈福一分。』 <br/>
 <br/>
-[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2006-10-13 14:03</div><div class="post-body">[font=楷体_GB2312][size=5]　　其後修悲之法：观上师天住於顶上，住此态中，先当缘想为痛苦所逼无助可怜的众生，譬如待宰的羔羊，在面前清晰地观想起它们的行相：四肢被绑，胸前皮被剖开，屠夫的手伸入胸膛，它清楚地知道即将丧命，万般辛酸，惟有眼睛直勾勾地盯着屠夫的脸，充满着痛苦的悲哀与无助。他们若能远离一切痛苦和痛苦因该有多好惟愿他们能远离痛苦及痛苦因!我当令他们远离痛苦及痛苦因!惟愿上师天加持令我能如是而行!在生起觉受後，缘想那些肆无忌惮地盗用僧财者、破戒者、谤法者、邪见者、以及损害有情造作种种罪恶不善而无所顾忌的众生，在面前清晰地观想他们的形相：他们如今这样的行为，不但今生没有快乐，死後必将立刻堕入恶趣备尝种种长时剧烈的大苦，他们若能远离一切痛苦及痛苦因该有多好!惟愿他们远离一切痛苦及痛苦因!我当令他们远离一切痛苦及痛苦因!惟愿上师天加持令我能如是而行! <br/>
+[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2006-10-13 14:03</div><div class="post-body">[font=楷体_GB2312][size=5]　　其後修悲之法：观上师天住於顶上，住此态中，先当缘想为痛苦所逼无助可怜的众生，譬如待宰的羔羊，在面前清晰地观想起它们的行相：四肢被绑，胸前皮被剖开，屠夫的手伸入胸膛，它清楚地知道即将丧命，万般辛酸，惟有眼睛直勾勾地盯着屠夫的脸，充满着痛苦的悲哀与无助。他们若能远离一切痛苦和痛苦因该有多好惟愿他们能远离痛苦及痛苦因!我当令他们远离痛苦及痛苦因!惟愿上师天加持令我能如是而行!在生起觉受後，缘想那些肆无忌惮地盗用僧财者、破戒者、谤法者、邪见者、以及损害有情造作种种罪恶不善而无所顾忌的众生，在面前清晰地观想他们的形相：他们如今这样的行为，不但今生没有快乐，死後必将立刻堕入恶趣备尝种种长时剧烈的大苦，他们若能远离一切痛苦及痛苦因该有多好!惟愿他们远离一切痛苦及痛苦因!我当令他们远离一切痛苦及痛苦因!惟愿上师天加持令我能如是而行! <br/>
 [/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　在生起觉受後，清晰地缘念母亲等亲人就在眼前：他们尽其一生为了怨亲的生计，忙忙碌碌地劳累了一辈子，受尽了辛苦。无时不受着苦苦和坏苦的煎熬，心中没有一丝快乐。而终生所忙的又唯是恶业，没有生起善心，死後一定会立刻堕入恶趣，备尝种种长时剧烈的大苦，他们若能远离一切的痛苦及痛苦之因该有多好!惟愿他们远离一切痛苦及痛苦因!我当令他们远离一切痛苦及痛苦因!惟愿上师天加持令我能如是而行! <br/>
 [/size][/font] <br/>
@@ -1107,7 +1120,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　子2、抉择无为法无自性：以虚空为例，虚空由四方四隅及中间等多分而成。若非唯於其上分别假立，而是有一能独立自有的虚空，那么它与方隅等为一为异?若是一，应与彼等成无方分。则东方虚空应与西方虚空成一，那么东方空中下雨西方也应下雨。有这样多种过失，因此为一不能成立。若为异，那么除去那些虚空之外，应还有一虚空可以指出来『这就是虚空』，然而无法指出来。所以自体成就的虚空根本不存在。这样思维观察引生无谛实的定解而修习。 <br/>
 [/size][/font] <br/>
-[font=楷体_GB2312][size=5]　　总之，我、蕴、屋、须弥山等世出世间的一切诸法，不是唯由分别假立而自体成就的，即使尘许也没有。於此获得决定的定解後，一心专注，於根本定中修习如虚空瑜珈；於後得时了知一切显现的境都是依因缘聚合而起，无有谛实、性即虚假，修习後得如幻瑜珈。善巧修习这两种 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2006-10-13 14:04</div><div class="post-body">[font=楷体_GB2312][size=5]　　其後修悲之法：观上师天住於顶上，住此态中，先当缘想为痛苦所逼无助可怜的众生，譬如待宰的羔羊，在面前清晰地观想起它们的行相：四肢被绑，胸前皮被剖开，屠夫的手伸入胸膛，它清楚地知道即将丧命，万般辛酸，惟有眼睛直勾勾地盯着屠夫的脸，充满着痛苦的悲哀与无助。他们若能远离一切痛苦和痛苦因该有多好惟愿他们能远离痛苦及痛苦因!我当令他们远离痛苦及痛苦因!惟愿上师天加持令我能如是而行!在生起觉受後，缘想那些肆无忌惮地盗用僧财者、破戒者、谤法者、邪见者、以及损害有情造作种种罪恶不善而无所顾忌的众生，在面前清晰地观想他们的形相：他们如今这样的行为，不但今生没有快乐，死後必将立刻堕入恶趣备尝种种长时剧烈的大苦，他们若能远离一切痛苦及痛苦因该有多好!惟愿他们远离一切痛苦及痛苦因!我当令他们远离一切痛苦及痛苦因!惟愿上师天加持令我能如是而行! <br/>
+[font=楷体_GB2312][size=5]　　总之，我、蕴、屋、须弥山等世出世间的一切诸法，不是唯由分别假立而自体成就的，即使尘许也没有。於此获得决定的定解後，一心专注，於根本定中修习如虚空瑜珈；於後得时了知一切显现的境都是依因缘聚合而起，无有谛实、性即虚假，修习後得如幻瑜珈。善巧修习这两种 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2006-10-13 14:04</div><div class="post-body">[font=楷体_GB2312][size=5]　　其後修悲之法：观上师天住於顶上，住此态中，先当缘想为痛苦所逼无助可怜的众生，譬如待宰的羔羊，在面前清晰地观想起它们的行相：四肢被绑，胸前皮被剖开，屠夫的手伸入胸膛，它清楚地知道即将丧命，万般辛酸，惟有眼睛直勾勾地盯着屠夫的脸，充满着痛苦的悲哀与无助。他们若能远离一切痛苦和痛苦因该有多好惟愿他们能远离痛苦及痛苦因!我当令他们远离痛苦及痛苦因!惟愿上师天加持令我能如是而行!在生起觉受後，缘想那些肆无忌惮地盗用僧财者、破戒者、谤法者、邪见者、以及损害有情造作种种罪恶不善而无所顾忌的众生，在面前清晰地观想他们的形相：他们如今这样的行为，不但今生没有快乐，死後必将立刻堕入恶趣备尝种种长时剧烈的大苦，他们若能远离一切痛苦及痛苦因该有多好!惟愿他们远离一切痛苦及痛苦因!我当令他们远离一切痛苦及痛苦因!惟愿上师天加持令我能如是而行! <br/>
 <br/>
 [/size][/font][font=楷体_GB2312][size=5]　　在生起觉受後，清晰地缘念母亲等亲人就在眼前：他们尽其一生为了怨亲的生计，忙忙碌碌地劳累了一辈子，受尽了辛苦。无时不受着苦苦和坏苦的煎熬，心中没有一丝快乐。而终生所忙的又唯是恶业，没有生起善心，死後一定会立刻堕入恶趣，备尝种种长时剧烈的大苦，他们若能远离一切的痛苦及痛苦之因该有多好!惟愿他们远离一切痛苦及痛苦因!我当令他们远离一切痛苦及痛苦因!惟愿上师天加持令我能如是而行! <br/>
 [/size][/font] <br/>

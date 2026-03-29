@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>佛说十地经（法华部·华严部） - 藏密修海典藏</title>
+<title>佛说十地经（法华部·华严部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">佛说十地经（法华部·华严部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 14:35</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
+<div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 14:35</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
 佛说十地经 <br/>
 <br/>
 大唐国僧法界从中印度持此梵本 <br/>
@@ -182,7 +195,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 以心所缘界尽。以智入佛所行界尽。以世间转法-轮智转界尽。若有情界有断尽者。是大誓愿乃有断尽。乃至若智转界有断尽者。是大誓愿乃有断尽。然有情界终无断尽。此诸善根愿无断尽。乃至智转界终无断尽。此诸善根亦无断尽。 <br/>
 <br/>
-佛说十地经卷第一[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 18:35</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
+佛说十地经卷第一[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 18:35</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
 佛说十地经卷第二 <br/>
 大唐于阗三藏沙门尸罗达摩于北庭龙兴寺译 <br/>
 <br/>
@@ -286,7 +299,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 若愿自在力   过是数无量   我于地义中   略述其少分 <br/>
 <br/>
 若欲广分别   亿劫不能尽   菩萨最胜道   利益诸群生 <br/>
-如是初地法   我今已说竟[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 18:40</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
+如是初地法   我今已说竟[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 18:40</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
 菩萨离垢地第二 <br/>
 <br/>
 诸菩萨闻此   最胜微妙法   其心尽清净   一切皆欣庆 <br/>
@@ -366,7 +379,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 菩萨离垢地第二竟 <br/>
 <br/>
-佛说十地经卷第二[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 19:28</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
+佛说十地经卷第二[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 19:28</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
 佛说十地经卷第三 <br/>
 大唐于阗三藏沙门尸罗达摩于北庭龙兴寺译 <br/>
 菩萨发光地第三 <br/>
@@ -457,7 +470,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 见百千佛相严身 若具愿力复过是 一切有情普利乐 彼诸菩萨最上行 <br/>
 如是所有第三地 我依其义已解释 <br/>
 <br/>
-菩萨发光地第三竟[/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 19:32</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
+菩萨发光地第三竟[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 19:32</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
 菩萨焰慧地第四 <br/>
 <br/>
 佛子闻此广大行 可乐深妙殊胜法 心皆勇悦大欢喜 普散众花供养佛 <br/>
@@ -525,7 +538,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 若以愿智力所为 过于此数无能算 如是菩萨第四地 所行精进微妙道 <br/>
 功德义智共相应 我为佛子已宣说 <br/>
 <br/>
-佛说十地经卷第三[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 19:35</div><div class="post-body">[font=楷体_GB2312][size=5]佛说十地经卷第四 <br/>
+佛说十地经卷第三[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 19:35</div><div class="post-body">[font=楷体_GB2312][size=5]佛说十地经卷第四 <br/>
 大唐于阗三藏尸罗达摩于北庭龙兴寺译 <br/>
 菩萨难胜地第五 <br/>
 <br/>
@@ -615,7 +628,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 难字注音： <br/>
 婇cai <br/>
-湑xu[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 19:38</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
+湑xu[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 19:38</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
 菩萨现前地第六之一 <br/>
 <br/>
 菩萨既闻诸胜行 其心欢喜雨妙花 放净光明散宝珍 供养如来称善说 <br/>
@@ -670,7 +683,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 于彼菩提分法未圆满。菩萨住此现前地中。名入空性三摩地而现在前。自性空性三摩地。胜义空性三摩地。最上空性三摩地。大空性三摩地。相应空性三摩地。引发空性三摩地。如理无分别空性三摩地。有顾恋空性三摩地。离不离空性三摩地。而悉现前。此菩萨如是上首于空性门。百万三摩地而现在前。如是于无相门百万三摩地。于无愿门百万三摩地皆现在前 <br/>
 <br/>
-佛说十地经卷第四[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 19:45</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
+佛说十地经卷第四[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 19:45</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
 佛说十地经卷第五 <br/>
 大唐于阗三藏尸罗达摩于北庭龙兴寺译 <br/>
 <br/>
@@ -721,7 +734,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 此地精勤获百千 俱胝菩萨三摩地 亦见若干无量佛 譬如盛夏空中日 <br/>
 甚深微妙难见知 声闻独觉无能了 如是菩萨第六地 我为佛子已宣说 <br/>
 <br/>
-菩萨现前地第六竟[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 20:03</div><div class="post-body">[font=楷体_GB2312][size=5]菩萨远行地第七 <br/>
+菩萨现前地第六竟[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-17 20:03</div><div class="post-body">[font=楷体_GB2312][size=5]菩萨远行地第七 <br/>
 <br/>
 是时大众心欢喜 散宝成云在空住 普发种种妙音声 白于最胜清净者 <br/>
 了达胜义智自在 成就功德百千亿 人中莲花无所著 为利群生演深行 <br/>
@@ -827,7 +840,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 百千俱胝那庾多 愿力自在复过是 此是菩萨远行地 方便智慧清净道 <br/>
 一切世间天及人 声闻独觉无能测 <br/>
 <br/>
-菩萨远行地第七竟[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 10:00</div><div class="post-body">[font=楷体_GB2312][size=5]佛说十地经卷第六 <br/>
+菩萨远行地第七竟[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 10:00</div><div class="post-body">[font=楷体_GB2312][size=5]佛说十地经卷第六 <br/>
 大唐于阗三藏沙门尸罗达摩于北庭龙兴寺译 <br/>
 菩萨不动地第八 <br/>
 <br/>
@@ -955,7 +968,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 菩萨不动地第八竟 <br/>
 <br/>
-佛说十地经卷第六[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 10:07</div><div class="post-body">[font=楷体_GB2312][size=5]佛说十地经卷第七 <br/>
+佛说十地经卷第六[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 10:07</div><div class="post-body">[font=楷体_GB2312][size=5]佛说十地经卷第七 <br/>
 大唐于阗三藏沙门尸罗达摩于北庭龙兴寺译 <br/>
 菩萨善慧地第九 <br/>
 <br/>
@@ -1087,7 +1100,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 菩萨善慧地第九竟 <br/>
 <br/>
-佛说十地经卷第七[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 10:15</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
+佛说十地经卷第七[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 10:15</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
 佛说十地经卷第八 <br/>
 大唐于阗三藏沙门尸罗达摩于北庭龙兴寺译 <br/>
 菩萨法云地第十之一 <br/>
@@ -1188,7 +1201,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 或于自身现十方界一切光明摩尼宝珠日月星宿云电等光。靡不皆现。以口嘘气能动十方无量世界。而不令彼有情惊怖。复现十方风灾火灾及以水灾。随意随欲悉能加持。一切有情色身严好。或自身中示现佛身。或佛身中示现自身。或佛身中现已刹土。或已刹土示现佛身。佛子菩萨安住法云地已。能现如是及余无量百千俱胝那庾多数神变游戏 <br/>
 <br/>
-佛说十地经卷第八[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 10:24</div><div class="post-body">[font=楷体_GB2312][size=5]　佛说十地经卷第九 <br/>
+佛说十地经卷第八[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 10:24</div><div class="post-body">[font=楷体_GB2312][size=5]　佛说十地经卷第九 <br/>
 大唐于阗三藏沙门尸罗达摩于北庭龙兴寺译 <br/>
 菩萨法云地之余 <br/>
 尔时会中。一类菩萨天龙药叉健达缚阿素洛竭路茶紧捺洛牟呼洛伽。释梵护世摩酰首罗净居天众。各起是念。若时菩萨神通行相智力境界。如是无量佛复云何。尔时解脱月菩萨。知诸众会心所念已。白金刚藏菩萨言。佛子今此大众。闻其菩萨神通智力堕在疑网。善哉仁者为断彼疑。当少示现菩萨神变庄严之事。 <br/>

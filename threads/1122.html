@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>萨迦哦巴领袖禄顶堪仟仁波切 - 藏密修海典藏</title>
+<title>萨迦哦巴领袖禄顶堪仟仁波切 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/金刚上师金刚持.html">金刚上师金刚持</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">萨迦哦巴领袖禄顶堪仟仁波切</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-6-4 21:54</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-6-4 21:54</div><div class="post-body">[font=楷体_GB2312][size=5] <br/>
 <br/>
 法王禄顶堪仟仁波切是‘萨迦’传承中‘哦巴’支派的领导者。仁波切于1931年出生于哦耶旺寺附近的山腰名为的地方，为禄顶巴族。禄顶巴族以育出各个不同的佛教派别的大学者及大成就者而驰名西藏。 <br/>
 <br/>
@@ -52,13 +65,13 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 额啊依多杰洛本萨迦贡玛 <br/>
 额啊依匝维喇嘛禄顶仁波切 <br/>
 额啊依多杰钟塔萨迦巴 <br/>
-[/font][/size][/b] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-6-4 21:58</div><div class="post-body">尊贵的萨迦哦巴领袖禄顶堪仟仁波切法相： <br/>
+[/font][/size][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-6-4 21:58</div><div class="post-body">尊贵的萨迦哦巴领袖禄顶堪仟仁波切法相： <br/>
 <br/>
 <br/>
 <br/>
 <br/>
 <br/>
-</div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-6-6 15:59</div><div class="post-body">[font=楷体_GB2312][size=5]禄顶堪仟仁波切简介 <br/>
+</div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-6-6 15:59</div><div class="post-body">[font=楷体_GB2312][size=5]禄顶堪仟仁波切简介 <br/>
 ——萨迦哦巴支派第七十五任领袖 <br/>
 <br/>
 <br/>
@@ -96,7 +109,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 1992年，禄顶堪仟仁波切首度莅台弘法，传授了汉地自元朝以来的第一次“道果”教授，这也是有史以来第一次中文的“道果”讲授，和现任萨迦天津法王以英文传授该法要加起来，是“道果”传承自印度毗瓦巴祖师传出并保存于西藏后，第四次以藏文以外语言传授，实在稀有能得。这次的珍贵教授长达四十天，使有幸参与盛会的弟子们，真正了解到萨迦法要的深广精义，一改过去大家对“道果”法要的推测与错误认识。仁波切此行同时传授了上乐金刚、萨迦十三金法中的三红尊、及不共护法等等的许多灌顶教授，均为中土所未曾有，利益了无量无边的人与非人。 <br/>
 <br/>
 <br/>
-禄顶堪仟仁波切是位解行并重、名实具足的金刚上师，其传承从金刚持以降乃迄于仁波切，一切显密戒体清净无染，传承证量国持无有间断、衰损，是当今住世的稀有大师，萨迦派传承具足戒的大戒师之一，每年从印度、尼泊尔、不丹、锡金、西藏、青海、西康乃至世界各地，前来求戒者不计其数，而仁波切座下剃度之比丘更逾万人之多。禄顶堪仁波切在显密教法的弘扬上贡献极大，曾多次给予“道果”、金刚瑜珈母之灌顶教授，与喜金刚之因、道灌顶，实是众生真正的福田、具德之金刚上师，而仁波切着重实修，精勤戒行，一身肩挑印度、尼泊尔、不丹、锡金、拉达克等二十余座哦巴寺院之指导、照顾，无暇常赴海外弘法，若能一睹其尊颜，必是多生积德修善者，愿仁波切能长久住世，转大 法-轮。[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">仙</div>仙莲发表于 2009-7-30 01:45</div><div class="post-body"><br/>
+禄顶堪仟仁波切是位解行并重、名实具足的金刚上师，其传承从金刚持以降乃迄于仁波切，一切显密戒体清净无染，传承证量国持无有间断、衰损，是当今住世的稀有大师，萨迦派传承具足戒的大戒师之一，每年从印度、尼泊尔、不丹、锡金、西藏、青海、西康乃至世界各地，前来求戒者不计其数，而仁波切座下剃度之比丘更逾万人之多。禄顶堪仁波切在显密教法的弘扬上贡献极大，曾多次给予“道果”、金刚瑜珈母之灌顶教授，与喜金刚之因、道灌顶，实是众生真正的福田、具德之金刚上师，而仁波切着重实修，精勤戒行，一身肩挑印度、尼泊尔、不丹、锡金、拉达克等二十余座哦巴寺院之指导、照顾，无暇常赴海外弘法，若能一睹其尊颜，必是多生积德修善者，愿仁波切能长久住世，转大 法-轮。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">仙</div>仙莲发表于 2009-7-30 01:45</div><div class="post-body"><br/>
 祿頂堪千仁波切長壽祈請文 <br/>
 H.E. Luding Khenchen Rinpoche&#x27;s Long&amp;nbsp <br/>
 <br/>
@@ -160,47 +173,42 @@ This long life prayer was composed by Sharpa Khenpo, named &quot;Manju&quot;, in
 <br/>
 顶礼法王禄顶堪仟仁波切！ <br/>
 <br/>
-顶礼法王禄顶堪仟仁波切！ </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">密</div>密海明灯发表于 2009-11-18 12:15</div><div class="post-body">顶礼法王禄顶堪仟仁波切！ <br/>
+顶礼法王禄顶堪仟仁波切！ </div></div><div class="post"><div class="post-header"><div class="avatar">密</div>密海明灯发表于 2009-11-18 12:15</div><div class="post-body">顶礼法王禄顶堪仟仁波切！ <br/>
 <br/>
 顶礼法王禄顶堪仟仁波切！ <br/>
 <br/>
-顶礼法王禄顶堪仟仁波切！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">密</div>密海明灯发表于 2009-11-18 12:16</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+顶礼法王禄顶堪仟仁波切！ </div></div><div class="post"><div class="post-header"><div class="avatar">密</div>密海明灯发表于 2009-11-18 12:16</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-23 15:37</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-23 15:37</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
 眾生善根盡隨喜 正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽 直至菩提我皈依 <br/>
 所為利益自他故 我今即發菩提心 <br/>
 <br/>
 既發最上菩提心 饒益一切諸有情 <br/>
-菩提妙行皆修作 為利眾生願成佛 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-7-18 23:17</div><div class="post-body">身命动摇如水泡，速疾坏灭当念死， <br/>
+菩提妙行皆修作 為利眾生願成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-7-18 23:17</div><div class="post-body">身命动摇如水泡，速疾坏灭当念死， <br/>
 死后如影随于形，黑白业果恒随逐。 <br/>
 获定解巳于罪聚，虽诸小罪亦应除， <br/>
-勤修一切妙善聚，常不放逸祈加持. </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">踏</div>踏雪发表于 2011-2-25 08:24</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+勤修一切妙善聚，常不放逸祈加持. </div></div><div class="post"><div class="post-header"><div class="avatar">踏</div>踏雪发表于 2011-2-25 08:24</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-23 17:39</div><div class="post-body">[b] [url=http://www.zmxh.com/bbs/redirect.php?goto=findpost&amp;pid=2185&amp;ptid=1122]3#[/url] [i]誓言三昧耶[/i] [/b] <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-23 17:39</div><div class="post-body">[b] [url=http://www.zmxh.com/bbs/redirect.php?goto=findpost&amp;pid=2185&amp;ptid=1122]3#[/url] [i]誓言三昧耶[/i] [/b] <br/>
 顶礼法王禄顶堪仟仁波切！ <br/>
 <br/>
 顶礼法王禄顶堪仟仁波切！ <br/>
 <br/>
-顶礼法王禄顶堪仟仁波切！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-23 17:40</div><div class="post-body">[b] [url=http://www.zmxh.com/bbs/redirect.php?goto=findpost&amp;pid=2185&amp;ptid=1122]3#[/url] [i]誓言三昧耶[/i] [/b] <br/>
-<br/>
-顶礼法王禄顶堪仟仁波切！ <br/>
-<br/>
-顶礼法王禄顶堪仟仁波切！ <br/>
-<br/>
-顶礼法王禄顶堪仟仁波切！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-23 17:40</div><div class="post-body">[b] [url=http://www.zmxh.com/bbs/redirect.php?goto=findpost&amp;pid=2185&amp;ptid=1122]3#[/url] [i]誓言三昧耶[/i] [/b] <br/>
-<br/>
+顶礼法王禄顶堪仟仁波切！ </div></div><div class="post"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-23 17:40</div><div class="post-body">[b] [url=http://www.zmxh.com/bbs/redirect.php?goto=findpost&amp;pid=2185&amp;ptid=1122]3#[/url] [i]誓言三昧耶[/i] [/b] <br/>
 <br/>
 顶礼法王禄顶堪仟仁波切！ <br/>
 <br/>
 顶礼法王禄顶堪仟仁波切！ <br/>
 <br/>
-顶礼法王禄顶堪仟仁波切！ <br/>
+顶礼法王禄顶堪仟仁波切！ </div></div><div class="post"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-23 17:40</div><div class="post-body">[b] [url=http://www.zmxh.com/bbs/redirect.php?goto=findpost&amp;pid=2185&amp;ptid=1122]3#[/url] [i]誓言三昧耶[/i] [/b] <br/>
+<br/>
+<br/>
 顶礼法王禄顶堪仟仁波切！ <br/>
 <br/>
 顶礼法王禄顶堪仟仁波切！ <br/>
@@ -210,13 +218,12 @@ This long life prayer was composed by Sharpa Khenpo, named &quot;Manju&quot;, in
 <br/>
 顶礼法王禄顶堪仟仁波切！ <br/>
 <br/>
-顶礼法王禄顶堪仟仁波切！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-23 17:41</div><div class="post-body">[b] [url=http://www.zmxh.com/bbs/redirect.php?goto=findpost&amp;pid=2185&amp;ptid=1122]3#[/url] [i]誓言三昧耶[/i] [/b] <br/>
-<br/>
+顶礼法王禄顶堪仟仁波切！ <br/>
 顶礼法王禄顶堪仟仁波切！ <br/>
 <br/>
 顶礼法王禄顶堪仟仁波切！ <br/>
 <br/>
-顶礼法王禄顶堪仟仁波切！ <br/>
+顶礼法王禄顶堪仟仁波切！ </div></div><div class="post"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-23 17:41</div><div class="post-body">[b] [url=http://www.zmxh.com/bbs/redirect.php?goto=findpost&amp;pid=2185&amp;ptid=1122]3#[/url] [i]誓言三昧耶[/i] [/b] <br/>
 <br/>
 顶礼法王禄顶堪仟仁波切！ <br/>
 <br/>
@@ -228,25 +235,31 @@ This long life prayer was composed by Sharpa Khenpo, named &quot;Manju&quot;, in
 <br/>
 顶礼法王禄顶堪仟仁波切！ <br/>
 <br/>
-顶礼法王禄顶堪仟仁波切！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-23 17:43</div><div class="post-body">[quote]最上三宝我皈依 一切罪业皆忏悔 <br/>
+顶礼法王禄顶堪仟仁波切！ <br/>
+<br/>
+顶礼法王禄顶堪仟仁波切！ <br/>
+<br/>
+顶礼法王禄顶堪仟仁波切！ <br/>
+<br/>
+顶礼法王禄顶堪仟仁波切！ </div></div><div class="post"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-23 17:43</div><div class="post-body">[quote]最上三宝我皈依 一切罪业皆忏悔 <br/>
 眾生善根盡隨喜 正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽 直至菩提我皈依 <br/>
 所為利益自他故 我今即發菩提心 <br/>
 <br/>
 既發最上菩提心 饒益一切諸有情 <br/>
-菩提妙行皆修作 為利眾生願成佛 ... </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-23 17:45</div><div class="post-body">[b] [url=http://www.zmxh.com/bbs/redirect.php?goto=findpost&amp;pid=19961&amp;ptid=1122]9#[/url] [i]踏雪[/i] [/b] <br/>
+菩提妙行皆修作 為利眾生願成佛 ... </div></div><div class="post"><div class="post-header"><div class="avatar">观</div>观世音菩萨发表于 2011-10-23 17:45</div><div class="post-body">[b] [url=http://www.zmxh.com/bbs/redirect.php?goto=findpost&amp;pid=19961&amp;ptid=1122]9#[/url] [i]踏雪[/i] [/b] <br/>
 <br/>
 <br/>
 不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2011-12-15 08:01</div><div class="post-body">顶礼法王禄顶堪仟仁波切！ <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2011-12-15 08:01</div><div class="post-body">顶礼法王禄顶堪仟仁波切！ <br/>
 <br/>
 顶礼法王禄顶堪仟仁波切！ <br/>
 <br/>
-顶礼法王禄顶堪仟仁波切！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">苦</div>苦心发表于 2012-5-3 23:35</div><div class="post-body">顶礼法王禄顶堪仟仁波切！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">王</div>王福发表于 2012-8-22 11:38</div><div class="post-body">随喜赞叹！阿弥陀佛 佛家说每个人都有三世因果的存在，所以无论什么时候我们都要记得行善，为自己记得。我记得以前我就喜欢去乌霞寺听僧人说一些因果报应的故事 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2013-6-29 22:28</div><div class="post-body">文殊勇猛大智辯藏聚 <br/>
+顶礼法王禄顶堪仟仁波切！ </div></div><div class="post"><div class="post-header"><div class="avatar">苦</div>苦心发表于 2012-5-3 23:35</div><div class="post-body">顶礼法王禄顶堪仟仁波切！ </div></div><div class="post"><div class="post-header"><div class="avatar">王</div>王福发表于 2012-8-22 11:38</div><div class="post-body">随喜赞叹！阿弥陀佛 佛家说每个人都有三世因果的存在，所以无论什么时候我们都要记得行善，为自己记得。我记得以前我就喜欢去乌霞寺听僧人说一些因果报应的故事 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2013-6-29 22:28</div><div class="post-body">文殊勇猛大智辯藏聚 <br/>
 妙音喜女所聚於一春 <br/>
 佛教通寶根除世間暗 <br/>
 啟請大乘法日享天年 <br/>
@@ -265,7 +278,7 @@ This long life prayer was composed by Sharpa Khenpo, named &quot;Manju&quot;, in
 以一心啟請之香山風 <br/>
 從於慈憫藍雲聚憾動 <br/>
 降二成究甘露明點鬘 <br/>
-祈賜成熟四勝身妙果 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">老</div>老楡树西倾发表于 2013-9-17 12:17</div><div class="post-body">顶礼法王禄顶堪仟仁波切！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">禅</div>禅发表于 2013-11-8 15:46</div><div class="post-body">金刚妙歌相应故 即得金刚妙歌咏 <br/>
+祈賜成熟四勝身妙果 </div></div><div class="post"><div class="post-header"><div class="avatar">老</div>老楡树西倾发表于 2013-9-17 12:17</div><div class="post-body">顶礼法王禄顶堪仟仁波切！ </div></div><div class="post"><div class="post-header"><div class="avatar">禅</div>禅发表于 2013-11-8 15:46</div><div class="post-body">金刚妙歌相应故 即得金刚妙歌咏 <br/>
 金刚旋舞法相应 普能供养一切佛 <br/>
 <br/>
 <br/>
@@ -277,11 +290,11 @@ This long life prayer was composed by Sharpa Khenpo, named &quot;Manju&quot;, in
 坚固菩提心出生 我此观想于诸佛 <br/>
 歌音妙乐供养故 由普供养得妙爱 <br/>
 坚固菩提心出生 我此观想于诸佛 <br/>
-我以旋舞供养故 尚得诸佛为供养 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">邬</div>邬扎拉拓发表于 2014-2-13 08:28</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+我以旋舞供养故 尚得诸佛为供养 </div></div><div class="post"><div class="post-header"><div class="avatar">邬</div>邬扎拉拓发表于 2014-2-13 08:28</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2024-2-22 23:59</div><div class="post-body">文殊勇猛大智辯藏聚 <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2024-2-22 23:59</div><div class="post-body">文殊勇猛大智辯藏聚 <br/>
 妙音喜女所聚於一春 <br/>
 佛教通寶根除世間暗 <br/>
 啟請大乘法日享天年 <br/>

@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>三脉七轮 - 藏密修海典藏</title>
+<title>三脉七轮 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">三脉七轮</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2007-4-29 02:03</div><div class="post-body">[font=楷体_GB2312][size=5][/size][/font] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2007-4-29 02:03</div><div class="post-body">[font=楷体_GB2312][size=5][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]    中脉[/b]：位于脊柱中，沿脊柱走向，粗如麦秆，上端经头顶百会穴，开窍于头顶，即所谓“莲花顶”。向前弯下至眉间，下端经脐下开口于外生殖器。实际就是由顶下至海底。海底即肛门前一片三角形地带，印度瑜伽密教与瑜伽昆仑达尼派称为生法宫，女性海底就是子宫。中脉是白色。中脉为人生命之中枢，但多扁缩不通，每人身中皆有“俱生智”，此智自吾人入胎后，被父精母血之浊垢气所薰，形成一种有形无质之脉根。一条智慧脉——“胜义智脉”。[/size][/font] <br/>
 [font=楷体_GB2312][size=5] <br/>
 左右二脉，即[b]左脉[/b]与[b]右脉[/b]：左右二脉夹持中脉，距中脉约二指。其上端经两耳后，分别开窍于左右鼻孔。即左脉自左向右盘旋，开窍于右鼻孔，右脉自右向左盘旋，开窍于左鼻孔。左脉下通右睾丸，右脉下通左睾丸，女性则通子宫。其下端在脐下四指处(相当于中医的气海穴)与中脉会合。左脉为红色，右脉为兰色。左右二脉分别为精血运行的中枢轨道。因为气脉是交叉的，它的路线与神经有关，所以右边病时则左边痛，左边病时则右边痛。 <br/>
@@ -52,11 +65,11 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [b]脊根轮[/b](座轮、海底轮、力源轮)：此轮和生殖器官、排泄器官联系，在人体上，此轮的触发点是尾骨，即脊柱基座末端的小骨头．此轮具有无穷的潜力潜能，故称为力源轮，有时又叫“生命之气发源地”。 <br/>
 <br/>
-除以上七轮外，还有额顶上挽发髻高处的空轮，即顶轮处四指之外的上方空处，顶髻轮，乃头顶光辐射之处，又名梵穴轮。红外线摄影，证明任何物体都能发光。据实验证明，当我们离开坐过的地方三小时后，红外线摄影仍可摄到我们残留在那里的光。除上所述八轮外，还有头颅后边最高部位，即传统留着长绺头发的地方，名为太阴轮，梵名宾都，意为“一滴精液”，故此轮又名精滴轮，与人的性能量有很重要的直接关系，对修拙火驱赶军荼利蛇有重大作用。还有人体后腭根部的甘露轮。人体精华精液由此轮留下，故名甘露轮。[/size][/font][/align] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">杨</div>杨求悟发表于 2007-10-11 12:48</div><div class="post-body">我之上师诸尊者，即是清净佛陀身。五气清净狮座上，五脉清净莲花座， <br/>
+除以上七轮外，还有额顶上挽发髻高处的空轮，即顶轮处四指之外的上方空处，顶髻轮，乃头顶光辐射之处，又名梵穴轮。红外线摄影，证明任何物体都能发光。据实验证明，当我们离开坐过的地方三小时后，红外线摄影仍可摄到我们残留在那里的光。除上所述八轮外，还有头颅后边最高部位，即传统留着长绺头发的地方，名为太阴轮，梵名宾都，意为“一滴精液”，故此轮又名精滴轮，与人的性能量有很重要的直接关系，对修拙火驱赶军荼利蛇有重大作用。还有人体后腭根部的甘露轮。人体精华精液由此轮留下，故名甘露轮。[/size][/font][/align] </div></div><div class="post"><div class="post-header"><div class="avatar">杨</div>杨求悟发表于 2007-10-11 12:48</div><div class="post-body">我之上师诸尊者，即是清净佛陀身。五气清净狮座上，五脉清净莲花座， <br/>
 五界清净日月垫，心性空寂上师身，金刚持佛智慧身，具足六通谛洛巴， <br/>
 大幻化网那诺巴，无比恩德马尔巴师，常住我顶不舍离！汝若具信诚尊敬， <br/>
 眼前即见我师尊，与金刚持无差别！若能至诚敬启请，大悲慈云风涌集， <br/>
-立降加持甘露雨。若能勤修作供养，一切成就宝藏开！” </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">阿</div>阿天发表于 2008-11-10 08:40</div><div class="post-body">谢谢！阿弥陀佛 <br/>
+立降加持甘露雨。若能勤修作供养，一切成就宝藏开！” </div></div><div class="post"><div class="post-header"><div class="avatar">阿</div>阿天发表于 2008-11-10 08:40</div><div class="post-body">谢谢！阿弥陀佛 <br/>
 <br/>
 顶礼上师本尊空行护法众！ <br/>
 <br/>
@@ -65,11 +78,11 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 喇嘛千诺！喇嘛千诺！喇嘛千诺！ <br/>
 <br/>
 永久善护其深誓，永久供养诸如来， <br/>
-永久供养阿阇黎，咕噜等同一切佛。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">蓮</div>蓮師金剛发表于 2010-1-14 12:46</div><div class="post-body">我之上师诸尊者，即是清净佛陀身。五气清净狮座上，五脉清净莲花座， <br/>
+永久供养阿阇黎，咕噜等同一切佛。 </div></div><div class="post"><div class="post-header"><div class="avatar">蓮</div>蓮師金剛发表于 2010-1-14 12:46</div><div class="post-body">我之上师诸尊者，即是清净佛陀身。五气清净狮座上，五脉清净莲花座， <br/>
 五界清净日月垫，心性空寂上师身，金刚持佛智慧身，具足六通谛洛巴， <br/>
 大幻化网那诺巴，无比恩德马尔巴师，常住我顶不舍离！汝若具信诚尊敬， <br/>
 眼前即见我师尊，与金刚持无差别！若能至诚敬启请，大悲慈云风涌集， <br/>
-立降加持甘露雨。若能勤修作供养，一切成就宝藏开！” </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">邬</div>邬扎拉拓发表于 2010-11-22 05:12</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+立降加持甘露雨。若能勤修作供养，一切成就宝藏开！” </div></div><div class="post"><div class="post-header"><div class="avatar">邬</div>邬扎拉拓发表于 2010-11-22 05:12</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>

@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>关于大藏 - 藏密修海典藏</title>
+<title>关于大藏 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/藏汉对照诸法本.html">藏汉对照诸法本</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">关于大藏</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2008-9-14 18:05</div><div class="post-body">[size=5][font=楷体_GB2312]               关于大藏 <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2008-9-14 18:05</div><div class="post-body">[size=5][font=楷体_GB2312]               关于大藏 <br/>
 法护 <br/>
 [/font][/size] <br/>
 [size=5][font=楷体_GB2312]　 我们是欣慕佛法的佛弟子，亦是藏传佛教的学习者，鉴于过去求学历程，与大多数同修师兄相同，往往受限于环境及语言的隔阂，付出心血获得教授，却苦无第一手数据可供深入实修，凭一些一知半解的信息摸索前进，当时便愿有朝一日能帮助自己及有缘同修跨越鸿沟。 <br/>
@@ -42,11 +55,11 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 再者我们所出的经典，皆为流通甚广或大师们不忍孤本湮灭而嘱汉译之法宝，睽诸欧美语系大量已译或正译各类藏典，就算带有一些种族我慢执着也好，我们不欲见汉人向以佛教文化古国自居，未来除向藏僧大师求法之外，还要向金发碧眼的洋人求法。 <br/>
 <br/>
-台湾有二千三百万人口，每年出版36000种以上的新书，2006年创下最多出版社倒闭，50%退书率的最大衰退，百分之七十的书不到1000本的销售金额（全国新书信息月刊96.1号）再加上阅读人口锐减，新世代中文程度不佳，一本佛教专业用的书籍，在藏传四大教派的区分下，先除以四，能有多少市场？再加上物价工资飞涨，中国大陆盗版猖獗，能有多少利润？我们从未对外募款，也无任何授权收入，为了维持独立选书翻译出版工作继续，只是凭热忱兴趣努力维持而已，虽然出版进度缓慢，我们仍会坚持翻译，让真正实修深入的师兄弟，以合理的代价取得一生修持的经典，其余物议，无暇挂怀。[/font][/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">我</div>我是谁发表于 2009-8-23 16:09</div><div class="post-body">你们太了不起了！！我非常的敬佩你们这些修行者！！你们是我的榜样，我以后也要向你们一样呀！继续努力！你们不是一个人，有许许多多的诸佛菩萨们在看这你们的努力！！包括我们呀！ 记住永远不要放弃！！！ </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">幻</div>幻法无相发表于 2009-8-23 17:58</div><div class="post-body">强烈支持   佛祖在世都未宣讲秘法  我们遇到乃是做了无数善行 和福德所致   如不珍惜则错过摆脱轮回的机会 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">土</div>土登南杰发表于 2009-9-17 14:19</div><div class="post-body">佛法依托处 <br/>
+台湾有二千三百万人口，每年出版36000种以上的新书，2006年创下最多出版社倒闭，50%退书率的最大衰退，百分之七十的书不到1000本的销售金额（全国新书信息月刊96.1号）再加上阅读人口锐减，新世代中文程度不佳，一本佛教专业用的书籍，在藏传四大教派的区分下，先除以四，能有多少市场？再加上物价工资飞涨，中国大陆盗版猖獗，能有多少利润？我们从未对外募款，也无任何授权收入，为了维持独立选书翻译出版工作继续，只是凭热忱兴趣努力维持而已，虽然出版进度缓慢，我们仍会坚持翻译，让真正实修深入的师兄弟，以合理的代价取得一生修持的经典，其余物议，无暇挂怀。[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">我</div>我是谁发表于 2009-8-23 16:09</div><div class="post-body">你们太了不起了！！我非常的敬佩你们这些修行者！！你们是我的榜样，我以后也要向你们一样呀！继续努力！你们不是一个人，有许许多多的诸佛菩萨们在看这你们的努力！！包括我们呀！ 记住永远不要放弃！！！ </div></div><div class="post"><div class="post-header"><div class="avatar">幻</div>幻法无相发表于 2009-8-23 17:58</div><div class="post-body">强烈支持   佛祖在世都未宣讲秘法  我们遇到乃是做了无数善行 和福德所致   如不珍惜则错过摆脱轮回的机会 </div></div><div class="post"><div class="post-header"><div class="avatar">土</div>土登南杰发表于 2009-9-17 14:19</div><div class="post-body">佛法依托处 <br/>
 众生方便地 <br/>
 默默漫耕耘 <br/>
 深播菩提意 <br/>
-赞叹您们的行止   随喜您们的功德 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">林</div>林登发表于 2011-1-7 20:13</div><div class="post-body">晋宋齐梁唐代间，高僧求法离长安； <br/>
+赞叹您们的行止   随喜您们的功德 </div></div><div class="post"><div class="post-header"><div class="avatar">林</div>林登发表于 2011-1-7 20:13</div><div class="post-body">晋宋齐梁唐代间，高僧求法离长安； <br/>
 去人成百归无十，后者安知前者难？ <br/>
 路遥碧天唯冷结，沙河遮日力疲殚； <br/>
 后贤如未谙斯旨，往往将经容易看！ <br/>

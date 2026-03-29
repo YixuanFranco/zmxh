@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大乘大集地藏十輪經（大集部） - 藏密修海典藏</title>
+<title>大乘大集地藏十輪經（大集部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大乘大集地藏十輪經（大集部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">绛</div>绛巴嘉措发表于 2006-4-3 19:32</div><div class="post-body">[size=5][font=楷体_GB2312] <br/>
+<div class="post"><div class="post-header"><div class="avatar">绛</div>绛巴嘉措发表于 2006-4-3 19:32</div><div class="post-body">[size=5][font=楷体_GB2312] <br/>
 大乘大集地藏十輪經 <br/>
 大乘大集地藏十轮经 <br/>
 大乘大集地藏十轮经序品第一 <br/>
@@ -266,7 +279,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 (弘福寺沙门文备证义　蒲洲栖岩寺沙门神泰证义) <br/>
 (廓洲法讲寺沙门道深证义　宝昌寺沙门法祥证义) <br/>
 (罗汉寺沙门慧贵证义　实际寺沙门道明证义) <br/>
-(大总持寺沙门道洪证义　大慈恩寺沙门玄奘奉诏译)[/font][/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:44</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经卷第二 <br/>
+(大总持寺沙门道洪证义　大慈恩寺沙门玄奘奉诏译)[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:44</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经卷第二 <br/>
 三藏法师玄奘奉　诏译 <br/>
 十轮品第二 <br/>
 尔时地藏菩萨摩诃萨。从座而起整理衣服。顶礼佛足偏袒一肩。右膝着地合掌恭敬。而白佛言 <br/>
@@ -404,7 +417,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 摧灭一切诸有情类犹如金刚坚固烦恼。随其所乐安立一切有力众生令住三乘不退转位。尔时会中一切菩萨摩诃萨众一切声闻一切天龙广说乃至一切羯咤布怛那众人非人等。皆大欢喜同唱善哉。雨大香雨雨大花雨雨众宝雨雨大衣雨。一切大地皆悉震动。闻说如是十种佛轮。于众会中有八十四百千那庾多菩萨摩诃萨得无生法忍。复有无量菩萨摩诃萨获得种种诸陀罗尼三摩地忍。复有无量无数有情初发无上正等觉心得不退转。复有无量无数有情逮得果证 <br/>
 <br/>
-大乘大集地藏十轮经卷第二 [/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:46</div><div class="post-body">[font=楷体_GB2312][size=5]　　大乘大集地藏十轮经卷第三 <br/>
+大乘大集地藏十轮经卷第二 [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:46</div><div class="post-body">[font=楷体_GB2312][size=5]　　大乘大集地藏十轮经卷第三 <br/>
 三藏法师玄奘奉　诏译 <br/>
 无依行品第三之一 <br/>
 尔时会中有大梵天名曰天藏。久殖善根住第十地具诸菩萨摩诃萨德。即从座起合掌礼佛。而说颂言 <br/>
@@ -511,7 +524,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 时优波离复白佛言。世尊。若彼破戒恶行苾刍。僧众和合共驱摈已。彼恶苾刍。以财宝力或多闻力或词辩力或以种种巧方便力。令彼国王大臣欢喜。皆住破戒非法朋中。以威势力凌逼僧众还令如是破戒苾刍与僧共住。尔时僧众当复云何。佛言。优波离。尔时僧中有能悔愧持戒苾刍。为护戒故不应嗔骂破戒苾刍。但应告白国王大臣。或恐凌逼而不告白。应舍本居别往余处 <br/>
 <br/>
-大乘大集地藏十轮经卷第三[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:47</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经卷第四 <br/>
+大乘大集地藏十轮经卷第三[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:47</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经卷第四 <br/>
 三藏法师玄奘奉　诏译 <br/>
 无依行品第三之二 <br/>
 尔时地藏菩萨摩诃萨复白佛言。大德世尊。颇有佛土。五浊恶世空无佛时。其中众生烦恼炽盛习诸恶行。愚痴佷戾难可化不。谓刹帝利旃荼罗。宰官旃荼罗。居士旃荼罗。长者旃荼罗。沙门旃荼罗。婆罗门旃荼罗。如是等人善根微少无有信心。谄曲愚痴怀聪明慢。不见不畏后世苦果。离善知识乃至趣向无间地狱。如是等人为财利故。与诸破戒恶行苾刍相助共为非法朋党。皆定趣向无间地狱。若有是处我当住彼以佛世尊如来法王利益安乐一切有情无上微妙甘露法味方便化导令得受行。拔济如是刹帝利旃荼罗乃至婆罗门旃荼罗令不趣向无间地狱 <br/>
@@ -689,7 +702,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 置十酒坊罪 等彼一屠坊 <br/>
 置彼十屠坊 罪等王等一 <br/>
 <br/>
-大乘大集地藏十轮经卷第四[/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:47</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经卷第五 <br/>
+大乘大集地藏十轮经卷第四[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:47</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经卷第五 <br/>
 三藏法师玄奘奉　诏译 <br/>
 无依行品第三之三 <br/>
 尔时地藏菩萨摩诃萨。复白佛言。大德世尊。若有真善刹帝利真善宰官真善居士真善长者真善沙门真善婆罗门。如是等人能自善护亦善护他善护后世善护佛法。出家之人若是法器若非法器下至无戒剃除须发被袈裟者普善守护恭敬供养。又能善护声闻乘法缘觉乘法及大乘法。恭敬听闻信受供养。于住大乘具戒富德精勤修行乃至住果补特伽罗。能善守护助其势力。谘问听受欢喜谈论。 <br/>
@@ -856,7 +869,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 善男子。如是破戒恶行苾刍非法器者。种种诳惑真善法器诸有情等。令执恶见。彼由颠倒诸恶见故。破坏真善刹帝利王乃至真善戌达罗等若男若女所有净信戒闻舍慧。转刹帝利成旃荼罗。乃至茷舍戌达罗等成旃荼罗。此非法器破戒苾刍并刹帝利旃荼罗等。师及弟子俱断善根。乃至当堕无间地狱。善男子。如人死尸膖胀烂臭。诸来见者皆为臭熏。随所触近烂臭死尸。或与交翫随被臭秽之所熏染。如是真善刹帝利王乃至真善戍达罗等若男若女。随所亲近破戒恶行非法器僧。或与交游或共住止或同事业。随被恶见臭秽熏染。如是如是。令彼真善刹帝利王乃至真善戍达罗等若男若女退失净信戒闻舍慧成旃荼罗师及弟子俱断善根。乃至当堕无间地狱 <br/>
 <br/>
-大乘大集地藏十轮经卷第五[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:48</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经卷第六 <br/>
+大乘大集地藏十轮经卷第五[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:48</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经卷第六 <br/>
 三藏法师玄奘奉　诏译 <br/>
 有依行品第四之二 <br/>
 善男子。汝观如是刹帝利等无量有情。亲近如是破戒恶行非法器僧。退失一切所有善法。乃至当堕无间地狱。是故欲得上妙生天涅盘乐者。皆应亲近承事供养胜道沙门谘禀听闻三乘要法或求示道命道沙门。若无如是三道沙门。当于污道沙门中求。虽复戒坏而有正见具足意乐及加行者。应往亲近承事供养谘禀听闻三乘要法。不应亲近承事供养加行意乐及见坏者。彼虽戒坏而无邪见。意乐加行见具足故。应诣其所谘禀听闻声闻乘法独觉乘法及大乘法不应轻毁。 <br/>
@@ -998,7 +1011,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 普为除灭一切众生大无明闇大怖畏事一切衰损得大光明及大名称。如实觉悟一切智智。为他说法。声闻独觉少分律仪。但为灭除自无明闇得小光明及小名称如实觉悟少分法智。为他说法。善男子。声闻独觉无有于他实怀顾念。无有于他实怀悲恻。无有于他实不轻弄。无有于他实为利益。无有于他实为拔济。无有于他实行荐举。无有于他实欲称叹。无有于他实无谄曲而行赞美。无有于他不顾己身令彼安乐。无有于他不起误失身语意业。善男子住大乘者。无有于己实怀顾念。广说乃至无有于他发起误失身语意业 <br/>
 <br/>
-大乘大集地藏十轮经卷第六 [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:49</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经卷第七 <br/>
+大乘大集地藏十轮经卷第六 [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:49</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经卷第七 <br/>
 三藏法师玄奘奉　诏译 <br/>
 有依行品第四之三 <br/>
 复次善男子。有诸众生禀性暴恶言辞麁犷。实是愚痴怀聪明慢。不断杀生乃至邪见。于他所得利养恭敬世所称誉深生嫉妒。常自追求利养恭敬世所称誉。曾无厌倦。恒自赞誉轻毁于他。不自防护身语意业常乐习行一切恶行。内行碜毒无有悲愍。无惭无愧喜触恼他于诸福田好简胜劣。于归我法诸出家人。常乐伺求所有瑕隙。纔得少相未审真虚即便轻毁呵骂谪罚。其心刚强佷戾迷乱。常喜触恼诸出家人。不省己过念讥他阙。虽闻赞叹大乘功德发意趣求。而心好为诸重恶事。 <br/>
@@ -1119,7 +1132,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 于佛所说三乘相应诸出要法恭敬听受。既听受已精进修行法随法行。于我三乘贤圣弟子恭敬供养亲近承事。于大乘中誓愿坚固终无疑难退屈之心。亦常劝导安置众生令于大乘信受修学。此刹帝利旃荼罗王及余种种富贵尊位旃荼罗王。过去诸佛皆共听许处帝王位及余种种富贵尊位。虽复受用种种国土城邑聚落胜大财业。而得免堕无间地狱及余恶趣。我亦听许处帝王位及余种种富贵尊位。虽复受用种种国土执邑聚落。而得免堕无间地狱及诸恶趣。若诸有情欲得忏悔除灭一切诸恶业障令无余者。于我所说如是法门。当勤修学勿令废忘。有能如此现前大众惭愧忏悔诸恶业者。先世所造一切恶业。皆得销灭无有遗余 <br/>
 <br/>
-大乘大集地藏十轮经卷第七[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:49</div><div class="post-body">[font=楷体_GB2312][size=5]　大乘大集地藏十轮经卷第八 <br/>
+大乘大集地藏十轮经卷第七[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:49</div><div class="post-body">[font=楷体_GB2312][size=5]　大乘大集地藏十轮经卷第八 <br/>
 三藏法师玄奘奉　诏译 <br/>
 善业道品第六 <br/>
 尔时金刚藏菩萨摩诃萨复白佛言。大德世尊。菩萨摩诃萨云何于声闻乘得无误失。云何于声闻乘补特伽罗得无误失。云何于独觉乘得无误失。云何于独觉乘补特伽罗得无误失。云何于大乘得无误失。云何于大乘补特伽罗得无误失。云何常能炽然三宝种姓云何于诸如来出家弟子若是法器若非法器下至一切被片袈裟剃须发者得无误失。云何于大乘法常得升进无有退转。 <br/>
@@ -1190,7 +1203,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 善男子。是名菩萨摩诃萨第八远离贪欲轮也。菩萨摩诃萨成就此轮故。于声闻乘得无误失。于声闻乘补特伽罗得无误失。于独觉乘得无误失。于独觉乘补特伽罗得无误失。于其大乘得无误失。于其大乘补特伽罗得无误失。常能炽然三宝种姓。于诸如来出家弟子若是法器若非法器下至一切被片袈裟剃须发者得无误失。于大乘法常得升进无有退转。利慧胜福常得增长。于一切定诸陀罗尼诸忍诸地。速得自在无有退转。常得值遇诸善知识随顺而行。常得不离见一切佛及诸菩萨声闻弟子不离闻法不离亲近供养众僧。于诸善根常精进求心无厌足。常于菩提种种行愿心无厌足。所得果报广说如前 <br/>
 <br/>
-大乘大集地藏十轮经卷第八[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:50</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经卷第九 <br/>
+大乘大集地藏十轮经卷第八[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:50</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经卷第九 <br/>
 三藏法师玄奘奉　诏译 <br/>
 善业道品第六之二 <br/>
 复次善男子。若菩萨摩诃萨能尽形寿远离嗔恚。一切众生常所爱重。其心清净离诸垢秽。由此善根速得成熟。所有前际轮转五趣没生死河。因嗔恚故。造身语意诸恶业障诸烦恼障诸有情障一切法障诸无明障。自作教他见闻随喜。由此远离嗔恚轮故。皆悉辗坏摧灭无余不受果报。于现身中诸人天等皆共亲爱无所猜虑。其心清净离诸垢秽。将命终时身心不为忧苦逼切。所爱妻子眷属围绕。临命终时不见可怖剡魔王使。唯见可意成调善法具戒富德真实福田为善知识。身心欢悦深生敬信。既命终已还生人中。 <br/>
@@ -1371,7 +1384,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 为解诸有缚 令住无畏城 <br/>
 修行寂止定 是名摩诃萨[/b] <br/>
 <br/>
-大乘大集地藏十轮经卷第九 [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:51</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经卷第十 <br/>
+大乘大集地藏十轮经卷第九 [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:51</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经卷第十 <br/>
 三藏法师玄奘奉　诏译 <br/>
 福田相品第七之二 <br/>
 复次善男子。菩萨摩诃萨复有般若大甲胄轮。若菩萨摩诃萨成就此轮。从初发心一切五欲皆能除断。超胜一切声闻独觉。普为一切声闻独觉作大福田。一切声闻独觉乘等。皆应供养承事守护。云何般若大甲胄轮。善男子。菩萨般若有二种相。一者世间。二者出世间。云何菩萨世间般若。谓诸菩萨唯依读诵书写听闻。为他演说三乘正法。欲求除灭一切众生无明黑暗。欲求发起一切众生大慧光明。谓于如来所说种种与声闻乘相应正法精勤读诵听闻书写为他演说劝正修行。 <br/>
@@ -1493,7 +1506,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 善男子。若诸有情于此法门。有能读诵思惟其义。为他解说住正行者。汝当为彼勤加守护如是十法令于长夜利益安乐。时虚空藏菩萨摩诃萨白佛言。唯然世尊。我当受持如是法门广令流布。若诸有情于此法门。有能读诵思惟其义为他解说住正行者。我当为彼守护十法。令于长夜利益安乐 <br/>
 <br/>
 时薄伽梵说是经已。于众会中虚空藏菩萨摩诃萨．地藏菩萨摩诃萨．金刚藏菩萨摩诃萨．好疑问菩萨摩诃萨．天藏大梵等及诸天．龙．夜叉．乾达婆．阿修罗．迦楼罗．紧那罗．摩迦罗伽．人．非人等一切大众闻佛所说。皆大欢喜信受奉行 <br/>
-大乘大集地藏十轮经卷第十 [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:51</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经序 <br/>
+大乘大集地藏十轮经卷第十 [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-27 19:51</div><div class="post-body">[font=楷体_GB2312][size=5]大乘大集地藏十轮经序 <br/>
 昔者旭照高山。天宫御一乘之驾。流晖原隰。鹿苑转四谛之轮。虽复发轸分逵。而涂无乱辙。一云普洽。而卉木各茂。自鹄林变色慧日寝光。达学电谢以息肩。真人长往而寂虑。且前贤述圣。难令各解。后进孤陋。更异亲承。况乎正法既往。久当像末。定慧与福德异时。醇化与浇风殊运。然则一乘三乘之驾。安可以同其辙哉。若识时来在数药性勿违。然后可以清沈痼之宿疾。 <br/>
 <br/>
 体权实之同归矣。十轮经者。则此土末法之教也。何以明之。佛以末法恶时去圣浸远败根比之坏器。空见借喻生盲。沈醉五欲。类石田之不苗。放肆十恶。似臭身之垢秽。故此经能濯臭身开盲目陶坏器沃石田。是以菩萨示声闻之形。象王敬出家之服。以此幢相化彼无惭。显二事之护持成三乘之道果。故经曰。为令此土三宝种姓威德炽盛久住世故。又曰。摧灭一切诸众生类犹如金刚坚固烦恼。 <br/>
@@ -1502,7 +1515,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 涉数万之艰难。果能竭溟渤。以索亡珠。蹈龙宫而穷秘藏。吞法流于智海。瓶写无遗。受道气于檀林。香风更馥。至于因明三量声论八音。莫不究立破之源。穷字转之本。如来所说菩萨所传。已来未来一朝备集。昉以薄业不偶真应。幸达圣制乱于未肇。后贤传灯于既夕。遂使定死余命。冀反魂于法药。昏野迷方。期还辕于觉道。于是染翰操纸杜绝外虑务详至教释彼纷执。畴谘法主重启梵文。 <br/>
 <br/>
-粤以永徽二年岁次辛亥正月乙未。尽其年十二月甲寅翻译始毕。凡八品十卷。以今所翻比诸旧本。旧本已有今更详明。旧本所无斯文具载。于是处座伉谈者。响法雷而吐辩。静虑通微者。镜玄波而照心顶火暴腹之徒。戢萤晖于慧日。喜足谦怀之侣。腾高节于清风矣前佛既往。后佛未兴。庶此教长悬。永济来者。弘道之士。如何勿思大乘大集地藏十轮经卷十[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">大</div>大地修行者发表于 2009-3-9 14:08</div><div class="post-body">世尊真实语  安住于实法      由彼真实故  护持于此经 <br/>
+粤以永徽二年岁次辛亥正月乙未。尽其年十二月甲寅翻译始毕。凡八品十卷。以今所翻比诸旧本。旧本已有今更详明。旧本所无斯文具载。于是处座伉谈者。响法雷而吐辩。静虑通微者。镜玄波而照心顶火暴腹之徒。戢萤晖于慧日。喜足谦怀之侣。腾高节于清风矣前佛既往。后佛未兴。庶此教长悬。永济来者。弘道之士。如何勿思大乘大集地藏十轮经卷十[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大地修行者发表于 2009-3-9 14:08</div><div class="post-body">世尊真实语  安住于实法      由彼真实故  护持于此经 <br/>
 大悲为甲胄  安住于大慈      由彼慈悲力  护持于此经 <br/>
 福资粮圆满  生起智资粮      由资粮满故  护持于此经 <br/>
 降伏一切魔  破灭诸邪论      断除恶见故  护持于此经 <br/>
@@ -1510,7 +1523,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 护世并释梵  乃至阿苏罗      龙神药叉等  护持于此经 <br/>
 地上及虚空  久住于斯者      奉持佛教故  护持于此经 <br/>
 四梵住相应  四圣谛严饰      降伏四魔故  护持于此经 <br/>
-虚空成质碍  质碍成虚空      诸佛所护持  无能倾动者 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 20:59</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+虚空成质碍  质碍成虚空      诸佛所护持  无能倾动者 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 20:59</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>

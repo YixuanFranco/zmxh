@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大圆满之门*秋吉林巴新岩藏法 - 藏密修海典藏</title>
+<title>大圆满之门*秋吉林巴新岩藏法 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/加行实修入正道.html">加行实修入正道</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大圆满之门*秋吉林巴新岩藏法</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-4-26 16:46</div><div class="post-body">[size=5]大圆满之门——秋吉林巴新岩藏法 <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-4-26 16:46</div><div class="post-body">[size=5]大圆满之门——秋吉林巴新岩藏法 <br/>
 <br/>
 大圆满之门 <br/>
 ——贝诺法王赐中译本序 <br/>
@@ -58,7 +71,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 这些教法总共超过十大册，如同《巴却昆些》（Barchey Kunsel）——《遣除一切障碍者》一样著名。 <br/>
 <br/>
-《大圆满之门》一书中所编选的法本，系为初修者的日常修习基础，任何对莲花生大士生起殊胜觉受的弟子，均可在具德传承上师的指导下修习之。 [/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">绛</div>绛巴嘉措发表于 2006-4-26 16:55</div><div class="post-body">[size=5]《巴却昆些》严藏法教授简介 <br/>
+《大圆满之门》一书中所编选的法本，系为初修者的日常修习基础，任何对莲花生大士生起殊胜觉受的弟子，均可在具德传承上师的指导下修习之。 [/size] </div></div><div class="post"><div class="post-header"><div class="avatar">绛</div>绛巴嘉措发表于 2006-4-26 16:55</div><div class="post-body">[size=5]《巴却昆些》严藏法教授简介 <br/>
 <br/>
 第一世蒋扬钦哲旺波（1820～1892）指出《巴却昆些》一系列的教法如下： <br/>
 <br/>
@@ -98,7 +111,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 在本书《大圆满之门》中前行法的解释，是由第一世蒋扬钦哲旺波为准备使行者进入更高层次金刚乘修法而安排。对初学者，莲花生大士也慈悲地授予一个浓缩整个《巴却昆些》法为一简短修法的仪轨，即&lt;日修简轨&gt;，简轨中把上师的三身（法、报、化）与十二化身（本尊）合于同一坛城中。 <br/>
 <br/>
-《巴却昆些》岩藏法传承简介[/size] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:13</div><div class="post-body">[size=5]   《巴却昆些》教法是由秋吉林巴自己，和几个接受他这个岩传法的主要人物，如第一世蒋扬钦哲旺波，十四世噶玛巴秋多杰，（Thekchok Dojre，一七九八——一八六八），锡杜贝玛宁确（一七七四——一八五三），锡杜贝玛昆桑（Kunsang），第一世蒋贡康慈（一八一三——一八九九），杰炯仁波切（Jedrung Rinpoche），达桑仁波切（Dabzang），第九世巴渥仁波切（Pawo Rinpoche），白玉嘉楚（Pallyul Gyatrul），秋吉林巴的两个儿子——旺秋多杰（Wangchuk Dorje）和侧旺诺布（Sewang Norbu），卡米堪布，美娘一地的贝玛秋给（Pema Chogyal of Menyag，莲花法王）与其他许多人所传开来。其中第二代的传承持有者，多为现今噶举、萨迦和宁玛派的大成就者，根本上师，包括有十六世噶玛巴，法王敦珠仁波切，祖古桑顿嘉梭（Samten Gyatso）及第二世宗萨钦哲秋吉罗卓。 <br/>
+《巴却昆些》岩藏法传承简介[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:13</div><div class="post-body">[size=5]   《巴却昆些》教法是由秋吉林巴自己，和几个接受他这个岩传法的主要人物，如第一世蒋扬钦哲旺波，十四世噶玛巴秋多杰，（Thekchok Dojre，一七九八——一八六八），锡杜贝玛宁确（一七七四——一八五三），锡杜贝玛昆桑（Kunsang），第一世蒋贡康慈（一八一三——一八九九），杰炯仁波切（Jedrung Rinpoche），达桑仁波切（Dabzang），第九世巴渥仁波切（Pawo Rinpoche），白玉嘉楚（Pallyul Gyatrul），秋吉林巴的两个儿子——旺秋多杰（Wangchuk Dorje）和侧旺诺布（Sewang Norbu），卡米堪布，美娘一地的贝玛秋给（Pema Chogyal of Menyag，莲花法王）与其他许多人所传开来。其中第二代的传承持有者，多为现今噶举、萨迦和宁玛派的大成就者，根本上师，包括有十六世噶玛巴，法王敦珠仁波切，祖古桑顿嘉梭（Samten Gyatso）及第二世宗萨钦哲秋吉罗卓。 <br/>
 <br/>
 当第一世蒋贡康慈编纂他的名著——《仁钦德珠》（Rinchen Terdzo，珍贵心髓教法合集）时，他将《巴却昆些》岩传法的主要部分列入其中。由于本书《大圆满之门》中的“前行法”和“日修上师仪轨”均被含括在其中，因此任何接受《仁钦德珠》教法的人，便自然地持有此一传承。 <br/>
 <br/>
@@ -135,7 +148,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 注(8)　此法名为&lt;日修简轨&gt;，见英译本八十九页（中译本第六章）。 <br/>
 <br/>
-注(9)　简短叙述中包括皈依、发菩提心在&lt;日修简轨&gt;中。金刚萨垛修法也一样，但省略了一个忏悔文；供曼达则是以英译本第十八页的五行祈请文，上师相应法就是英译本十九页的观想，在三宝后，有金刚上师心咒，及接受四种灌顶的四支文，并保持在自性状态中。回向，发愿和赞颂则与日修简轨一致（以上参阅中译本第二章）。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:16</div><div class="post-body">[size=5]大圆满之门——中译本序 <br/>
+注(9)　简短叙述中包括皈依、发菩提心在&lt;日修简轨&gt;中。金刚萨垛修法也一样，但省略了一个忏悔文；供曼达则是以英译本第十八页的五行祈请文，上师相应法就是英译本十九页的观想，在三宝后，有金刚上师心咒，及接受四种灌顶的四支文，并保持在自性状态中。回向，发愿和赞颂则与日修简轨一致（以上参阅中译本第二章）。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:16</div><div class="post-body">[size=5]大圆满之门——中译本序 <br/>
 <br/>
 由莲师与依喜措嘉所埋藏守护的岩藏法，为藏传佛教宁玛巴派所特有之秘密法要，拥有极近、极清净、圆满与广大的加持力，是速得成就的稀世法要。在历来许许多多的德童之中，无异莲师的宁玛派伟大取宝者秋吉林巴，是与萨迦派宗萨蒋扬钦哲仁波切、噶玛噶举派蒋贡康慈仁波切并称的西藏近代三大成就者。虽然其法要在宁玛、噶举派中被广泛的传持著，而且此法脉主要传承持有者均以高超的证量著称，然因在台弘化活动几稀，相关的文史著作也一直付阙，以致汉地识者不多殊为遗憾。 <br/>
 <br/>
@@ -153,7 +166,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 <br/>
 黄英杰 <br/>
-[/size] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:19</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第一章　四种心的转化与四种修行法之前行教授[/size][/b] <br/>
+[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:19</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第一章　四种心的转化与四种修行法之前行教授[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]前行法及日修上师相应法仪轨[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
@@ -193,7 +206,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　自身的五顺缘第一是身为人身；第二是生在“中国”——即有佛法传扬的地方；第三是五官完整具足；第四是正业入道；第五是具足信心皈依佛法僧三宝。有了这五项，身的五顺缘即具足。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　现在我们具足了自他的五种顺缘。没有生在八无暇的境地中，并且得十种助缘，是真正的殊胜人生，如同如意宝珠般珍贵。藉此身，此珍贵人生，我们有幸得以修法。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:20</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]二、生死无常[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　现在我们具足了自他的五种顺缘。没有生在八无暇的境地中，并且得十种助缘，是真正的殊胜人生，如同如意宝珠般珍贵。藉此身，此珍贵人生，我们有幸得以修法。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:20</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]二、生死无常[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　虽然我们获得了珍贵的人身，但这人身如同持有一个旧瓷器在手中，一碰便彻底粉碎，不再完整无缺。我常引用“生命是因缘的聚合，并非永恒”，来说明生命是无常的。外在宇宙（器世间）应将在此劫之最后，被七个太阳的热力所毁灭。宇宙的毁灭并不是唯一被肯定的，殊胜的个人也是无常。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　为何佛菩萨在过去出世？并且金转轮圣王统治四大部洲，银转轮圣王统治三大洲，铜转轮圣王统治两大洲，铁转轮圣王统治南胆部洲——这些六神通众生现在在哪？[/size][/b] <br/>
@@ -228,7 +241,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　身体对触觉的执着，如同掉入泥淖中的大象。大象相当重，当它走进大池中，它很可能无法爬出而死在其中。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　如上述所说，一个人若执着于五种感官对象，它们即成为敌人般。因此，必须认定它们是不重要和无益、徒劳的。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:22</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　三、因果业报[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　如上述所说，一个人若执着于五种感官对象，它们即成为敌人般。因此，必须认定它们是不重要和无益、徒劳的。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:22</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　三、因果业报[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　若你认为没有因果存在，你对善行、恶行便缺乏了解。而这是必须要了解的。善有善报，因此可进入上三道，甚至能达到解脱和成佛。若种下恶因，为五毒所缚，便会漂泊在三恶道的轮回中。因果不坏，如影随形。业力随身也如影随形般。造白业是要修习正法的。造黑业便是从事不善行。结果历历不爽。你必须经验业力——你自己的行为的结果，你必须真正了解这点。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　透过强烈的自制，努力于接受和拒绝因果。所谓“接受”意为：尽力多做白（善）业；“拒绝”意为：放弃黑（不善、恶）业。努力于此，白业归于十善：身三善，语四善，意三善。我们应行此十善。不修十善行，一个人的行为会自动地变成十不善行。个人无须开发或鼓励恶行，它便会自动地发生。我们必须克制十不善行并立刻放弃它们，十不善行是会自动产生的。放弃了十不善行，即是行十善。[/size][/b] <br/>
@@ -247,7 +260,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　过去在西藏，有个从朗若塘（Langrothang）来的人，一生都沮丧著脸。他的面孔从未有哀伤以外的其他表情。为什么呢？因为他警觉到生命的消逝，所以他被称为朗若塘的黑脸。我们也应认定无常和痛苦，不仅是个单纯的理论。我们应自动将无常铭记在心。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　２、四种修行法[/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　关于修行，为净化一切恶行和个人无始以来由身所造作、积聚的障碍，我们要皈依并礼敬诸佛。为净化语业的不净化，我们修金刚菩萨垛禅修及念诵法。为净化我们心的不净，并积聚资粮，我们供曼达。为净化身、语、意的不净，我们修上师相应法。据说，当恶业被清净时，了悟将自然地生起。因此我们应忏罪集资。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:23</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第二章　殊胜正觉的种子[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　关于修行，为净化一切恶行和个人无始以来由身所造作、积聚的障碍，我们要皈依并礼敬诸佛。为净化语业的不净化，我们修金刚菩萨垛禅修及念诵法。为净化我们心的不净，并积聚资粮，我们供曼达。为净化身、语、意的不净，我们修上师相应法。据说，当恶业被清净时，了悟将自然地生起。因此我们应忏罪集资。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:23</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第二章　殊胜正觉的种子[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]《拉昧突竹巴却昆些》前行法的注解[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　　　　　　　　　　　（莲师心要修法——遣除一切障碍者）[/b] <br/>
@@ -278,7 +291,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　我将圆满自利利他[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　祈请您，上师与空行眷属们[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　降下您的加持予我三门[/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　然后吐出浊气三次[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:24</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　二、共加行[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　然后吐出浊气三次[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:24</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　二、共加行[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　为修共加行，我们应生起热切的出离心，虔信心和大慈悲心。藉此变成出离的态度。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
@@ -314,7 +327,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　即使是小小的修持，也有广大功德的业报。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　因此，以此意乐我将立刻从事善行。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　以此赞颂，藉之培养、耕耘你的心意识流的田野，和自己撒种——特殊行的种子，在此田地上。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:25</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]三、不共加行[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　以此赞颂，藉之培养、耕耘你的心意识流的田野，和自己撒种——特殊行的种子，在此田地上。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:25</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]三、不共加行[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　分为五支：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　（一）皈依，解脱道的根本。[/b] <br/>
@@ -355,7 +368,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　皈依上师、佛、法、僧，本尊、空行、勇父与护法，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　以及一切具足大菩提心者。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　尽量持诵，愈多愈好，结束时，说：[/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　以皈依对象所放之光，所有自他恶行和障碍皆被清净。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:26</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]（二）生起愿成佛之菩提心，这是佛法道路的精髓。[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　以皈依对象所放之光，所有自他恶行和障碍皆被清净。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:26</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]（二）生起愿成佛之菩提心，这是佛法道路的精髓。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　分为三支：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　Ａ、生起菩提心之热望[/b] <br/>
@@ -400,7 +413,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　并愿众生常住平等法性。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　在结束时说：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　所有积聚之功德化成光并融入自身，[/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　自他一切众生皆远离苦痛与轮回的畏惧。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:27</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]（三）修金刚萨垛禅定和念诵法[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　自他一切众生皆远离苦痛与轮回的畏惧。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:27</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]（三）修金刚萨垛禅定和念诵法[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　首先观想本尊——支持的力量[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　阿[/b] <br/>
@@ -437,7 +450,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　藉此祈请，金刚萨垛十分欢喜。以满脸笑容而说：“圣族之子，你的一切恶业、障碍，和堕落皆已清净。”如此赦免我，本尊化光融入自身。如此，我与本尊金刚萨垛无二无别。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　如此观想，你的一切恶业与障碍皆被清净与转化，于三昧耶之阙犯亦补足。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:29</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]（四）供曼达以圆满积聚资粮与顺缘[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　如此观想，你的一切恶业与障碍皆被清净与转化，于三昧耶之阙犯亦补足。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:29</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]（四）供曼达以圆满积聚资粮与顺缘[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　观想藉光积聚资粮对象，说：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　在我面前虚空之净土，[/b] <br/>
@@ -507,7 +520,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　所有功德福田化入巨大光明中。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　融入自他一切众生，无二无别。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　愿福慧两种功德圆满，[/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　所有福田融入自身。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:33</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]（五）修上师相应法，以取得加持力，是金刚乘的究竟部分[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　所有福田融入自身。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:33</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]（五）修上师相应法，以取得加持力，是金刚乘的究竟部分[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　分为三支。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
@@ -582,7 +595,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　祈愿护法与守护神清除所有障碍，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　祈愿幸运地证得共与不共之成就。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　回向所有根本功德给无上正等正觉，保证圆满修正确发心与训练修法，在你的活动中，皆令与佛法一致。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:34</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　　后记[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　回向所有根本功德给无上正等正觉，保证圆满修正确发心与训练修法，在你的活动中，皆令与佛法一致。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:34</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　　后记[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　乌金法王与其法子，因时地之殊胜而以无可置疑的发心与行为，写下此法。它是由完全成熟与自在的传承而组合呈现，并解释阅读此道，如供曼达给许多伟大、殊胜众生和不同传承的法侣。这些都被安排成一个祈愿文以便阅读，依钦哲旺波——莲师的一个快乐侍者的《金刚宝瓶岩藏根本仪轨》。我有幸得以无漏地接受此完美的秘密岩藏法要，乃因乌秋吉德钦林巴这位伟大上师与掘宝者的慈悲。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
@@ -592,7 +605,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [font=楷体_GB2312][size=16pt][b]　　[/b]注(1)　全文请见英译本一一八页（中译本第九章），&lt;忏悔我执之魔密续的哀痛忏悔文&gt;。 <br/>
 [font=楷体_GB2312][size=16pt]　　注(2)　Clearing the Obstacles of the Path，文见英译本一二二页（中译本第九章，&lt;驱遣修道障碍祈请文&gt;）。 <br/>
-[font=楷体_GB2312][size=16pt]　　注(3)　传承请文选集包括在(2)中。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:35</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第三章　殊胜的大圆满之门[/b] <br/>
+[font=楷体_GB2312][size=16pt]　　注(3)　传承请文选集包括在(2)中。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:35</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第三章　殊胜的大圆满之门[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]《拉昧突竹巴却昆些》加行之导读书[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　　　　　　　　　　（莲师心要修法，遣除所有障碍者）[/b] <br/>
@@ -633,7 +646,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　为引导有幸弟子得以藉此岩藏法迅速解脱并证得佛果，它分为三个主题：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　一、透过历史叙述生起无比信心。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　二、经由灌顶使之成熟。（略）[/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　三、以口诀引导而解脱。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:54</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]一、透过历史叙述生起无比信心[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　三、以口诀引导而解脱。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:54</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]一、透过历史叙述生起无比信心[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　我现在要依仪轨之文字来说明一点有关《指导心之证悟的满愿珠》（Sheldam Nyingang Yishin Norbu，些顿宁将移辛诺布）——此岩藏之根本仪轨的历史，以使大众生起确定本法法源之清净与值得信赖：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
@@ -653,7 +666,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　我们如此的祈问，莲花生大士回答说：[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　“虽然想要正确修习稀有佛法的人，会生起种种不同的障碍，唯一的遣除方法便是殷切祈请上师加被。如此的殊胜教导即使是过去、现在、未来三世诸佛法均未曾教，当障碍遣除时，自然圆满成就。在此基础上，修行之路也将可顺利通过。因此，最重要的是，首先祈请上师以转移外、内、密之障碍。”[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:55</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]    在此殊胜时机，被不可思议的宿世清净善业之力与渴望所动，王子依喜若帕侧由（Yeshe Rolpa Tsal）供养了一个饰以一堆闪亮绿松耳石的巨大黄金曼达，他恭敬地顶礼多次然后说：[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　“虽然想要正确修习稀有佛法的人，会生起种种不同的障碍，唯一的遣除方法便是殷切祈请上师加被。如此的殊胜教导即使是过去、现在、未来三世诸佛法均未曾教，当障碍遣除时，自然圆满成就。在此基础上，修行之路也将可顺利通过。因此，最重要的是，首先祈请上师以转移外、内、密之障碍。”[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:55</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]    在此殊胜时机，被不可思议的宿世清净善业之力与渴望所动，王子依喜若帕侧由（Yeshe Rolpa Tsal）供养了一个饰以一堆闪亮绿松耳石的巨大黄金曼达，他恭敬地顶礼多次然后说：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　“请倾听啊！伟大的上师！一般而言，我们一切愿求都透过向上师的祈祷而满足，这是确定的。今天我们应造一个祈请文——一切愿求的精要浓缩。莲师啊！为了转化所有外、内与秘密障碍，请教导我们一个特殊的方法来向你祈请吧！”[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
@@ -673,7 +686,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　这个圆满与广博的教授，被安排在四个主要教法中(2)。其历史已在此叙述，以创出意乐的启示，然后你应该被以广、中、简之根本灌顶法与附属的灌顶而成熟、具器，并以尊贵的根本与附属成就法之口诀导引为引导法轨来解脱。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]二、经由灌顶使之成熟（略）[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:57</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]三、以口诀导引而解脱[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]二、经由灌顶使之成熟（略）[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:57</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]三、以口诀导引而解脱[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　在这根本仪轨中分为加行、正行与结束部分[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
@@ -695,7 +708,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　（二）成为具器法子之加行法[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　已获殊胜有暇与资粮，并具足畏惧无常的出离心，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　以强烈的自制努力来接受与拒绝相关的因果。[/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　如此，为共与不共之加行。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:59</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]共加行[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　如此，为共与不共之加行。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 19:59</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]共加行[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　共加行法分为四部分，当凝思於：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　１、能够有暇与财富之困难。[/b] <br/>
@@ -742,7 +755,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　如今你已得到这个极难得之，具有八种自由和好的品质之珍贵人身。你应做此想：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　若我不能修行真实的佛法，以证得无漏与永恒的快乐，那么将来要再获得如此大利益的自由之身极为困难。假如我投生到下三道去，将无法思惟佛法，由于无法取决何者应为与不为，我无止尽的堕於三恶道，因此我要从这一刻起驱策自己。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　如此思惟，一再反覆并修三支胜道：生起菩提心的前行，无概念的正行，与回向的总结。这应以真心而行。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:02</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]２、生命的无常[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　如此思惟，一再反覆并修三支胜道：生起菩提心的前行，无概念的正行，与回向的总结。这应以真心而行。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:02</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]２、生命的无常[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　三界如同秋天的云一样的无常，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　生死如同看场舞蹈般。[/b] <br/>
@@ -774,7 +787,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　“西藏的佛法修行者中，似乎没有任何一个人认为他自己将死了。然而，我没有见到任何一个不死的人。由於他们乐於穿戴黄金服饰与积聚财富，想著我是否可以饮食和财富去贿赂死神？让此方法堆聚财富后，想著这是否可贿赂他们而出地狱？看看这些西藏修行人的想法多可笑，哈哈！学得最少反而最骄傲，最好的禅定者积聚饮食和财富。闭关独居的人反而最分心。抛弃自己家园的人一点也不感羞耻。这些人沈浸於恶业中，如此的错误，而毫不知觉即将死於见到其他人死亡时。”？[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　如莲师所说，培养无常心，此为任何一位修习佛法者开启加行之门。因此，你应驱策自己，藉沈思与修习此殊胜之父所教之一切方法，步步行之，直到生起特殊觉受於无常，使无常心真实生於你心中。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:03</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]３、业报因果之沈思[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　如莲师所说，培养无常心，此为任何一位修习佛法者开启加行之门。因此，你应驱策自己，藉沈思与修习此殊胜之父所教之一切方法，步步行之，直到生起特殊觉受於无常，使无常心真实生於你心中。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:03</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]３、业报因果之沈思[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　持诵此文：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　当时光迫近时，国王驾崩，[/b] <br/>
@@ -803,7 +816,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　即使见地高於天，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　因缘果报比面粉还细——丝毫不爽。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　因此，你了解的见地愈多、了解自性境界的意义愈多，就更要小心因果。在所有时间和一切环境下，应谨慎的细察你的自心做出什么该做和不该做的。了知因果业报的要点所在，就是别让你的见地与行为分开了。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:04</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]４、轮回的俱生错谬与过患[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　因此，你了解的见地愈多、了解自性境界的意义愈多，就更要小心因果。在所有时间和一切环境下，应谨慎的细察你的自心做出什么该做和不该做的。了知因果业报的要点所在，就是别让你的见地与行为分开了。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:04</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]４、轮回的俱生错谬与过患[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　持诵此文：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　三世发出老死的悲惨，[/b] <br/>
@@ -834,7 +847,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　拥有信心与慈悲，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　愿在此生得共与不共成就者，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　应以灌顶使其心识成熟，[/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　并保持三昧耶戒的纯净。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:06</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　  如上，共有四个重点：Ａ、信心。Ｂ、慈悲。Ｃ、灌顶。Ｄ、三昧耶戒。[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　并保持三昧耶戒的纯净。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:06</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　  如上，共有四个重点：Ａ、信心。Ｂ、慈悲。Ｃ、灌顶。Ｄ、三昧耶戒。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　Ａ、信心[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　[/b] <br/>
@@ -883,7 +896,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　由于我缺乏那么做的能力，我将在一位具德上师的面前，寻求圆满、殊胜的佛法之路，证得佛果，我将安置一切众生于涅盘妙乐中。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　把极度的慈悲心彻底吸收于你自身十分重要，慈悲心更甚于任何语言。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:09</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]Ｃ、灌顶[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　把极度的慈悲心彻底吸收于你自身十分重要，慈悲心更甚于任何语言。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:09</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]Ｃ、灌顶[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　具德的上师与精神上的朋友——法侣是解脱与成佛之道的真实导引。因此，你应该尊敬地侍奉他。一个不适合追随的上师，在《燃夏密续》（Rangishar）中是如此描写：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　无知与极端骄傲，[/b] <br/>
@@ -999,7 +1012,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　赐予加持与灌顶。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　如此，你将获得四灌顶与大圆满之本来面目（the thatness of the fourth），一切坛城的殊胜精髓。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　依照旧译派，有四种系列、渐进的灌顶。依据新译派的《金刚瑜珈女加持法》则有能熟——也就是将这些灌顶的智慧植於你身上，使你能够去从事他们修持的灌顶[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:11</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]Ｄ、三昧耶戒[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　依照旧译派，有四种系列、渐进的灌顶。依据新译派的《金刚瑜珈女加持法》则有能熟——也就是将这些灌顶的智慧植於你身上，使你能够去从事他们修持的灌顶[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:11</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]Ｄ、三昧耶戒[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　在《昆都》（Kundu）中说：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　已圆满接受所有灌顶[/b] <br/>
@@ -1018,7 +1031,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　跟随这所谓的三昧耶戒，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　教授使成为你自己的见地。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　三昧耶戒是你一切所需的来源，如同如意宝珠般，就像是所有不同能力的生命力量。违犯自己所持三昧耶戒的人就像只破瓶，无法容置任何东西在其中。他的所有真言道之修持将成徒劳。因为三昧耶像是大地，是德行的基础，是完成圆满佛法王国的所有圣众之不可或缺基础。它因此应被每个人珍视地持有，在此我已简单的陈述。你可在其他密续和仪轨中找到详细的开示。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:14</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]２、五种特殊的修持：[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　三昧耶戒是你一切所需的来源，如同如意宝珠般，就像是所有不同能力的生命力量。违犯自己所持三昧耶戒的人就像只破瓶，无法容置任何东西在其中。他的所有真言道之修持将成徒劳。因为三昧耶像是大地，是德行的基础，是完成圆满佛法王国的所有圣众之不可或缺基础。它因此应被每个人珍视地持有，在此我已简单的陈述。你可在其他密续和仪轨中找到详细的开示。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:14</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]２、五种特殊的修持：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　Ａ、皈依是一切解脱道的根本。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　Ｂ、生起愿成佛之菩提心　成佛之道的精要所在。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　Ｃ、金刚萨垛法——禅修和念诵金刚萨垛。[/b] <br/>
@@ -1062,7 +1075,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　在他们周围是金刚持的授记传承持明上师，和大成就的口耳传承上师，他们是被数以百万的此三传承之持明者、上师和成就者所聚集围绕。他们应被观想成座位互相紧连，而下面的不会碰到上面的人。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　在莲花月轮上，宝座的右、左侧面分别是满达拉瓦（Mandarava）与依喜措嘉两位佛母。满达拉瓦身著女神盛装。手持系以丝带之箭和长寿宝瓶。依喜措嘉以红内衣，绿外衣，橘色丝装饰，头上以绿松石顶饰而为庄严，双手捧盖杯。她们皆坐以亲切的态度。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:17</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]    在他们周围你应观想此不共传承的上师。首先是那千桑杰依喜（Nupchen Sangye Yeshe）他的头发结了髻，身著茶色衣服，左手持金刚杵呈刺穿状。嘉华却扬译师，著僧袍，右手中有一根棒子，在他顶上有一个会发出马嘶声的马头。南开宁波僧者，两手分持铃杵，崔美达夏，著僧袍，载三藏帽（Tripitaka）持一个充满甘露的盖杯。页秋就涅，朗卓译师（Langdro），著僧袍，戴班智达帽和持一本经书。[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　在莲花月轮上，宝座的右、左侧面分别是满达拉瓦（Mandarava）与依喜措嘉两位佛母。满达拉瓦身著女神盛装。手持系以丝带之箭和长寿宝瓶。依喜措嘉以红内衣，绿外衣，橘色丝装饰，头上以绿松石顶饰而为庄严，双手捧盖杯。她们皆坐以亲切的态度。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:17</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]    在他们周围你应观想此不共传承的上师。首先是那千桑杰依喜（Nupchen Sangye Yeshe）他的头发结了髻，身著茶色衣服，左手持金刚杵呈刺穿状。嘉华却扬译师，著僧袍，右手中有一根棒子，在他顶上有一个会发出马嘶声的马头。南开宁波僧者，两手分持铃杵，崔美达夏，著僧袍，载三藏帽（Tripitaka）持一个充满甘露的盖杯。页秋就涅，朗卓译师（Langdro），著僧袍，戴班智达帽和持一本经书。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　密乘行者多杰杜炯，身著密宗行者盛装，戴头颅（raksha）念珠，持一个普巴匕首。毗卢遮那大译师身著僧袍，顶戴班智达帽，双手持经书。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
@@ -1129,7 +1142,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　千万魔军亦不能伤[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　虽然他可能违背他的律条并不良的心，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　将来他亦必可出於轮回之外。[/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　如此与其他经典中所描述，皈依有著无量的利益。因此，你应及早修习皈依——一切教法之基础。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:19</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]Ｂ、生起愿成佛之菩提心　成佛之道的精要所在[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　如此与其他经典中所描述，皈依有著无量的利益。因此，你应及早修习皈依——一切教法之基础。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:19</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]Ｂ、生起愿成佛之菩提心　成佛之道的精要所在[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　本章共分三部分：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
@@ -1200,7 +1213,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　持诵此文愈多愈好，维持这态度与观想，并反覆修持“给予、取得”使之和自己出入息之结合。最后，住于无分别意识中——即使连皈依的对象，授予皈依者，或其间的关系，接着，回向功德。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　所有这些部分系一般大乘前行与金刚乘共加行之结合。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:21</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]Ｃ、金刚萨垛法　禅修和念诵金刚萨垛[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　所有这些部分系一般大乘前行与金刚乘共加行之结合。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:21</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]Ｃ、金刚萨垛法　禅修和念诵金刚萨垛[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　在金刚乘的不共前行中，静坐并持诵金刚萨垛百字明咒为第一，特别用以清净不利的环境、恶行与障碍。如下所述：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　所有恶行与障碍，经验了悟的不利环境条件，[/size][/b] <br/>
@@ -1238,7 +1251,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　即使你念诵一劫也毫无结果，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　正如投入海洋中的玉石般。(6)[/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　如果你一次持诵了一百零八遍一切忏悔之王的百字明——所有诸佛的精髓，将净化所有违犯和概念上的障碍，所有你的违誓犯戒被补正，而你将从堕入的三涂中被救起。对此下定决心并将持诵此法列为每日修持的瑜伽行者，将被视为三世一切佛之心子。即使在此生中，他们也将持续地置他于诸佛护佑下。无疑地在他临命终时，他会成为所有诸佛的长子。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:23</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]Ｄ、供曼达以增加顺缘与福、慧两种资粮[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　如果你一次持诵了一百零八遍一切忏悔之王的百字明——所有诸佛的精髓，将净化所有违犯和概念上的障碍，所有你的违誓犯戒被补正，而你将从堕入的三涂中被救起。对此下定决心并将持诵此法列为每日修持的瑜伽行者，将被视为三世一切佛之心子。即使在此生中，他们也将持续地置他于诸佛护佑下。无疑地在他临命终时，他会成为所有诸佛的长子。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:23</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]Ｄ、供曼达以增加顺缘与福、慧两种资粮[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　为圆满顺缘、积聚功德和智慧，需献曼达以圆满资粮、顺缘。如前所述，供曼达被称誉为殊胜、不可思议的方法来圆满功德、智慧两种资粮与顺缘，某经中说：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　只要你尚未圆满两种殊胜资粮，[/b] <br/>
@@ -1287,7 +1300,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　藉此外、内与秘密曼达法，你将圆满积聚功德——概念的方便，和特殊智慧的资粮——非概念的智慧。藉此，道上必须的殊胜功德之缘和提升你的存在层次，将很快实现。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　供曼达时最重要的是纯净的发心、保持供品的清洁并使他们愉快。除了你自身修持献曼达法以积聚资粮外。修持的紧要点在于，不应于持续的道上中断、放弃了。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:49</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]Ｅ、禅修上师瑜珈加持法，乃金刚乘之道的根本[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　供曼达时最重要的是纯净的发心、保持供品的清洁并使他们愉快。除了你自身修持献曼达法以积聚资粮外。修持的紧要点在于，不应于持续的道上中断、放弃了。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:49</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]Ｅ、禅修上师瑜珈加持法，乃金刚乘之道的根本[/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　特别地，所有道路的精髓，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　乃在应用上师瑜珈的信心要点。[/b] <br/>
@@ -1391,7 +1404,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　如上所说，持诵《巴却昆些》：“嗡　阿　[/size][/b][b][font=宋体][size=16pt]吽[/size][/b][b][font=楷体_GB2312][size=16pt]　班杂　咕鲁　贝玛　悉地　[/size][/b][b][font=宋体][size=16pt]吽[/size][/b][b][font=楷体_GB2312][size=16pt]”请除道上的障碍。法身无量光佛，我祈请您，等等。持诵它一百、一千、一万、或十万遍。尽力多持诵。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/size][/b][b][font=楷体_GB2312][size=16pt][/size][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　所有祈请的总结，六金刚句，起于“三世佛——莲花生大士”，你应一起加以持诵十万遍。在每一座之后，尽力多持，如一百遍等等，唱传承祈请赞亦同。[/b][/size][/size][/size][/size][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:59</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]（２）内，念诵与领受灌顶修持法[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　所有祈请的总结，六金刚句，起于“三世佛——莲花生大士”，你应一起加以持诵十万遍。在每一座之后，尽力多持，如一百遍等等，唱传承祈请赞亦同。[/b][/size][/size][/size][/size][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 20:59</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]（２）内，念诵与领受灌顶修持法[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　以此法祈请后，虹光与身中光环，种子字与其属性（attributes）由其具足庄严像之三门出现。他们如同阳光照射中无量地微尘般，并融入自身。观想你藉此而得到所有的灌顶、加持和成就。然后，尽力持诵金刚上师心咒为你唯一的祈请、哀求。每一个咒字精确地念四十万遍。依时间之适合，再加上长的或短的祈请文。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　在结束祈请和念诵的修持时，无论为数多少次，恳请时时思及根本的传承上师的特质。藉此，三根本的聚集融入传承上师们——所有的皈依处的化身。然后他们再融入乌金净土的珍贵善巧尊——莲花生大士。[/size][/b] <br/>
@@ -1402,7 +1415,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　然后，天蓝色流从上师心中涌前融入你的心中。如此净化了如错误见地，或其他由心的障碍所引起的心的业障。你获得了智慧灌顶并被授权修持双运之道（phonya path）。观想你因此而获致法身境地的成果已建立在身上。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　然后，杂色的五彩光由上师脐部的“啥”字放出，并融入你的脐中。如此净化了你三门合集的障碍。你获得了四灌，并被授灌修习大圆满法。观想法界体性身（Svabhavikakays）境界成就之星的幸运已建立在你身中。以此方法于禅修定中领受了这些灌顶。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:03</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]（３）密，在行动中实修上师瑜珈的简要方法[/size][/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　然后，杂色的五彩光由上师脐部的“啥”字放出，并融入你的脐中。如此净化了你三门合集的障碍。你获得了四灌，并被授灌修习大圆满法。观想法界体性身（Svabhavikakays）境界成就之星的幸运已建立在你身中。以此方法于禅修定中领受了这些灌顶。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:03</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]（３）密，在行动中实修上师瑜珈的简要方法[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　赞颂“伟大的莲花生大士”等等。由于你对上师深广的虔信心，他以相对的大慈悲心关注你。如此，他以笑脸与热情、喜爱的注目，愉悦的融入你身上。寻视你的身心与上师的心无二无别，觉悟和空性的内在、本来面目是远离过去、现在、未来三世的分别思惟结构。换言之，你的心解脱于心理结构即是法身。光明的醒觉解脱执着即是报身。如种种的示现即为化身无碍的基础。此无可分别之精髓、自性与功用被阿奢梨理拉瓦加拉描述为：[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
@@ -1448,7 +1461,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　或者是，心中上师放光碰触外器世界，将世界观为水晶宫殿。然后世界化成光，如监融于水中，并融化居住于外器世界之内者，你观一切为本尊。然后他们融入你，你再融入你心中的上师。接着上师也融入非对待的光明中。然后休息于内在的光明境界，不被其他念头所打扰，此境界即空性、赤裸、无隐匿的真实溶入。若你由此境中而出，立断其意识流，住于敏锐微妙精细的无散乱或梦中。维持此全部充满、遍及和自性光辉的光明。藉此你将获得梦幻光明的境界和知梦的成就。此后，修习晨起瑜珈（如前已释意），和剩下的四支修法。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　一般而言，即使当修习主要部分(8)时，前行仍然绝不可抛弃。当修持生起和圆满次第时，藉上师瑜珈的领受四种灌顶法，在每个阶段、时间都是极重要的。简而言之，藉简单地圆满前行法的部分——以纯净的虔敬心和三昧耶戒，你将被保证步至猫牛洲（Chamara）的荣耀山，即使不依赖本尊法或大圆满的修持。经由四种持明者之道在那纯净的领域，你将达到殊胜金刚总持佛的境界，较日、月的进行还要迅速是一定的。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:06</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　　后记[/size][/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　一般而言，即使当修习主要部分(8)时，前行仍然绝不可抛弃。当修持生起和圆满次第时，藉上师瑜珈的领受四种灌顶法，在每个阶段、时间都是极重要的。简而言之，藉简单地圆满前行法的部分——以纯净的虔敬心和三昧耶戒，你将被保证步至猫牛洲（Chamara）的荣耀山，即使不依赖本尊法或大圆满的修持。经由四种持明者之道在那纯净的领域，你将达到殊胜金刚总持佛的境界，较日、月的进行还要迅速是一定的。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:06</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　　后记[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　我写下这简明的指导书，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　为藉此前行法而成就殊胜佛果的部分，[/b] <br/>
@@ -1473,7 +1486,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=16pt]注(6)　玉石内部永远不会湿。 <br/>
 [font=楷体_GB2312][size=16pt]注(7)　见译者序。 <br/>
 [font=楷体_GB2312][size=16pt]注(8)　此处的主要修法指本尊法或大圆满的修持。 <br/>
-[font=楷体_GB2312][size=16pt]注(9)　详细了解桑登嘉措（Samten Gyatso）和他母亲贡秋帕种（Konchok Paldron），请见Rangjung Yeshe出版社的《秋吉林巴的生平与教法》一书。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:11</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第四章　晨起修持法[/b] <br/>
+[font=楷体_GB2312][size=16pt]注(9)　详细了解桑登嘉措（Samten Gyatso）和他母亲贡秋帕种（Konchok Paldron），请见Rangjung Yeshe出版社的《秋吉林巴的生平与教法》一书。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:11</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第四章　晨起修持法[/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]    乌金祖古仁波切讲[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
@@ -1516,7 +1529,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　并加持我，令我自然地满愿。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　（SAMP LHUNGYI DRUBPA JINGYI LOB）[/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　经由此加持力，无论你求什么，如共与不共成就，都会自然地完成。事实上，当障碍被净除，成就便自然地完成。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:18</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]   《巴却昆些》系就被包含在《听列宁波——口耳教授心要手册》（Essence Manual of Oral Instructinos）。这心要已浓缩入此祈愿文“三世之佛，莲花生大士”之中。想要得到共与不共成就者，必须全心全意地祈求，没有任何疑惑，下定决心，除上师外没有任何希望或皈依处。[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　经由此加持力，无论你求什么，如共与不共成就，都会自然地完成。事实上，当障碍被净除，成就便自然地完成。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:18</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]   《巴却昆些》系就被包含在《听列宁波——口耳教授心要手册》（Essence Manual of Oral Instructinos）。这心要已浓缩入此祈愿文“三世之佛，莲花生大士”之中。想要得到共与不共成就者，必须全心全意地祈求，没有任何疑惑，下定决心，除上师外没有任何希望或皈依处。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　在西藏，“神圣、荣耀”一语，被视为已了悟法身而能自利者的荣耀，与报身、化身（rupakaya）同为利他的荣耀化现。这是两方面利益。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
@@ -1540,7 +1553,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　在醒来的那一刹那，行者应想著莲师与所有勇父、空行母，歌唱的声音和环饰的庄严；他们摇晃著手鼓和铃，以珠宝和首饰为庄严。“这就是叫醒我的场面”。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　行者应如此觉醒来，而非仅以普通方法，这是由睡眠起身的旨趣。由于他们的慈悲和力量，行者被叫醒，并不单由普通睡眠中醒来，而是从睡眠的无明中觉醒。所以“现在我已觉醒进入觉悟智慧的空间中”。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:22</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第五章　莲花之心庄严[/size][/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　行者应如此觉醒来，而非仅以普通方法，这是由睡眠起身的旨趣。由于他们的慈悲和力量，行者被叫醒，并不单由普通睡眠中醒来，而是从睡眠的无明中觉醒。所以“现在我已觉醒进入觉悟智慧的空间中”。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:22</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第五章　莲花之心庄严[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]  金刚祈请文之释意[/size][/b][b][font=楷体_GB2312][size=16pt]（The mind Ornament of Padma）[/b][b][font=楷体_GB2312][size=16pt]　　　　　　　　　　　　　　　　　　　　　　　　　　　　　                      敦珠法王著[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
@@ -1615,7 +1628,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　并能自利利他而满愿，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　愿安乐、吉祥增长。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　因具知识女子茶天[/size][/b][b][font=宋体][size=16pt]•[/size][/b][b][font=楷体_GB2312][size=16pt]玉、垛玛之探询和问法，这是无畏金刚智吉卓、移喜、多杰（敦珠法王），於不丹国帕若塔仓（[/size][/b][b][font=楷体_GB2312][size=16pt]Paro Taktsang[/size][/b][b][font=楷体_GB2312][size=16pt]）之满愿狮洞所写。[/size][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:25</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第六章　修法简轨[/size][/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　因具知识女子茶天[/size][/b][b][font=宋体][size=16pt]•[/size][/b][b][font=楷体_GB2312][size=16pt]玉、垛玛之探询和问法，这是无畏金刚智吉卓、移喜、多杰（敦珠法王），於不丹国帕若塔仓（[/size][/b][b][font=楷体_GB2312][size=16pt]Paro Taktsang[/size][/b][b][font=楷体_GB2312][size=16pt]）之满愿狮洞所写。[/size][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:25</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第六章　修法简轨[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　依《拉昧突竹巴却昆些》[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　　　　　　　　（莲师心要修法——遣除一切障碍者）[/b] <br/>
@@ -1684,7 +1697,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　所有障碍将被清除并圆满成就。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　[color=red]三昧耶戒，守秘密！守秘密！守秘密！[/color][/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　这是化身转世的伟大掘宝者——秋吉德钦林巴的圆满岩传佛法之圆满心髓。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:28</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第七章　胜义精髓[/size][/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　这是化身转世的伟大掘宝者——秋吉德钦林巴的圆满岩传佛法之圆满心髓。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:28</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第七章　胜义精髓[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]《突竹》日修仪轨之观想步骤[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　　　　　　　　　卡美堪布仁钦达吉[/b] <br/>
@@ -1745,7 +1758,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　在四门，四种阶级的勇父：白色，黄色、红色和绿色，持噶巴拉和弯刀，弯刀分别饰以金刚杵的、珠宝的、莲花的、十字金刚杵的把手。他们著虎皮裙、骨饰庄严；颅冠，丝绸彩带，并以弯曲和伸展舞姿之脚站立。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　他们全都是本初和自然地展现。他们的本性是不可分离的三昧耶和智慧。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:31</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]净化自他众生之观想[/size][/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　他们全都是本初和自然地展现。他们的本性是不可分离的三昧耶和智慧。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:31</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]净化自他众生之观想[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　在尊贵部主长寿佛的心中，是种子字啥字和咒轮在月轮上，从此放出五色光——首先是红色。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
@@ -1777,10 +1790,10 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　“‘悉地　[/size][/b][b][font=宋体][size=16pt]吽[/size][/b][b][font=楷体_GB2312][size=16pt]’祈愿成就。”此指息、增、怀、诛四种事业之外成之成就；内成就为八种悉地，密成就为殊胜悉地。或：外，精通生起次第这成就；内：气、脉柔软（[/size][/b][b][font=楷体_GB2312][size=16pt]pliability[/size][/b][b][font=楷体_GB2312][size=16pt]）之成就；密，于自心生起特殊了悟之成就；依秘密解，证到唯一尚未证到之成就。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　“此金刚真言将被趋进，事业浓缩入一，圆满所有事业。”此十二金刚字母浓缩了趋进、成就、令诸事业合一，圆满一切未圆满事业而无遗之意。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:32</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]结行[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　“此金刚真言将被趋进，事业浓缩入一，圆满所有事业。”此十二金刚字母浓缩了趋进、成就、令诸事业合一，圆满一切未圆满事业而无遗之意。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:32</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]结行[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　“在最后，祈请所有佛族化身之上师，并混融你的心和他的心。”当你独依于此法之教授，祈请“三宝”等等；并保任你的心性。在最后，为清除常见，融入本尊“[/size][/b][b][font=宋体][size=16pt]吽[/size][/b][b][font=楷体_GB2312][size=16pt]”字中；为清除断见，由呸（[/size][/b][b][font=楷体_GB2312][size=16pt]PHAT[/size][/b][b][font=楷体_GB2312][size=16pt]）字联合形显现出来。回向所积聚之功德，如同在《听列宁波》修法中般，并藉纯净的发愿，誓愿修行。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　罗桑尼玛（Lobsang Nyima），他是雅卓甘登（Yardrok Ganden）的勤勉修行者，同时仁千帕就桑波（Rechen Paljor Sangpo）转世传承的昆千贝玛嘎旺（Kunkhyen Padma Garwang）宝座持有者，持有昆千波洞巴（Kunkhyen Bodongpa）口耳传承的主要弟子，做了对《突竹巴却昆些日修仪轨》观想次第需求之请求。因此，这项工作被委由堪布卡玛拉那旺秋（Karma Ratna Wangchuk）所写，堪布是大岩藏掘宝者的一个弟子，本文即由他写于火年年的猴月十日，时当——丘吉林巴我在拉萨楚囊寺（桑耶寺）（Rasa Trulnang）为欢愉高贵和贫贱人民的剧本而困扰。愿它成为繁盛两种次第之因。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:37</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第八章　日修仪轨之注释[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　罗桑尼玛（Lobsang Nyima），他是雅卓甘登（Yardrok Ganden）的勤勉修行者，同时仁千帕就桑波（Rechen Paljor Sangpo）转世传承的昆千贝玛嘎旺（Kunkhyen Padma Garwang）宝座持有者，持有昆千波洞巴（Kunkhyen Bodongpa）口耳传承的主要弟子，做了对《突竹巴却昆些日修仪轨》观想次第需求之请求。因此，这项工作被委由堪布卡玛拉那旺秋（Karma Ratna Wangchuk）所写，堪布是大岩藏掘宝者的一个弟子，本文即由他写于火年年的猴月十日，时当——丘吉林巴我在拉萨楚囊寺（桑耶寺）（Rasa Trulnang）为欢愉高贵和贫贱人民的剧本而困扰。愿它成为繁盛两种次第之因。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:37</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第八章　日修仪轨之注释[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]    乌金祖古仁波切　讲[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
@@ -1853,7 +1866,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/size][/b][b][font=楷体_GB2312][size=16pt][/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　“这金刚真言将趋近、成就和事业应用都融缩于一，圆满所有事业”。在真言：“嗡　啊　[/size][/b][b][font=宋体][size=16pt]吽[/size][/b][b][font=楷体_GB2312][size=16pt]　班杂　咕鲁　贝玛　悉地　[/size][/b][b][font=宋体][size=16pt]吽[/size][/b][b][font=楷体_GB2312][size=16pt]”中所[/size][/b][b][font=楷体_GB2312][size=16pt]有修道、成就和事业应化都圆满。它满足一切无穷尽的事业。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　最后一段，当念诵结束时，祈请诸佛化身之上师，并将你的心和他的心混合为一。然后你才能念三宝祈请文。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:48</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]结行[/size][/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　最后一段，当念诵结束时，祈请诸佛化身之上师，并将你的心和他的心混合为一。然后你才能念三宝祈请文。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:48</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]结行[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　最后以回向功德和发愿结束修法。这归于藉观想莲师和本尊们、生起次第、持咒和休息于见地之境界。回向此功德是第三殊胜面，殊胜回向之结束是：[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
@@ -1877,7 +1890,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　国王赤松德贞是文殊化身，他育有三子。二子是十地菩萨叫慕儒天波（Murub Tsepo），伟大的岩藏取掘者秋吉德千林巴便是慕儒天波（Murub Tsepo）的转世。此岩传法是被秋吉林巴所发现的岩藏中的圆满心髓。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　如果此修法能被译成英文将会很好。若你希望仅修持一法和一个咒，这是足够的。因为所有的三根本都完全在这金刚莲师咒中，如果你不能够做不同的修法也无所谓。莲花生大士曾说此咒圆满一切事业。这是真实不虚的。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:51</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第九章　根本和传承上师祈请仪轨[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　如果此修法能被译成英文将会很好。若你希望仅修持一法和一个咒，这是足够的。因为所有的三根本都完全在这金刚莲师咒中，如果你不能够做不同的修法也无所谓。莲花生大士曾说此咒圆满一切事业。这是真实不虚的。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:51</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第九章　根本和传承上师祈请仪轨[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]                秋吉林巴著[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
@@ -2053,7 +2066,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　在阿卡尼须打的法界宫殿中，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　我在根本上师足下祈请，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　三世诸佛之精髓，[/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　直接出现我的心中如法身般。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:54</div><div class="post-body">[size=5][font=楷体_GB2312]&lt;忏悔我执之魔密续的哀痛忏悔文&gt; <br/>
+[b][font=楷体_GB2312][size=16pt]　　直接出现我的心中如法身般。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 21:54</div><div class="post-body">[size=5][font=楷体_GB2312]&lt;忏悔我执之魔密续的哀痛忏悔文&gt; <br/>
 <br/>
 嗡 <br/>
 大悲心的金刚萨垛， <br/>
@@ -2181,7 +2194,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 上师、护法，请允许皈依。 <br/>
 殊胜金刚持有者， <br/>
 具大悲心本性者， <br/>
-众生之引领者我皈依。[/font][/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:03</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　&lt;驱遣修道障碍祈请文&gt;[/b] <br/>
+众生之引领者我皈依。[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:03</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　&lt;驱遣修道障碍祈请文&gt;[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　嗡　阿　[/size][/b][b][font=宋体][size=16pt]吽[/size][/b][b][font=楷体_GB2312][size=16pt]　班杂　咕鲁　贝玛　悉地　[/size][/b][b][font=宋体][size=16pt]吽[/size][/b][b][font=楷体_GB2312][size=16pt][/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　法身阿弥陀佛，我祈请，[/b] <br/>
@@ -2411,7 +2424,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　嗡　阿　[/size][/b][b][font=宋体][size=16pt]吽[/size][/b][b][font=楷体_GB2312][size=16pt]　班杂　咕鲁　贝玛　悉[/size][/b][b][font=楷体_GB2312][size=16pt]地　[/size][/b][b][font=宋体][size=16pt]吽[/size][/b][b][font=楷体_GB2312][size=16pt][/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　拥有身、语、意，您是众生的光辉引导，[/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　已脱弃一切障碍，您清楚地理解三界。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:04</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]忏悔之精髓——[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　已脱弃一切障碍，您清楚地理解三界。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:04</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]忏悔之精髓——[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　净化之王，依无暇秘密金刚萨垛之教授[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　嗡[/b] <br/>
@@ -2472,7 +2485,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　莲花金刚了解不变究竟实义之无暇传承，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　愿您住世百劫并愿您广宏事业。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　这是由于之圣者佳萨（Gyaltsap）仁波切——贝玛南就（Padma Namgyal，顶果钦哲之上师）所作，愿一切吉祥[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:05</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　&lt;乌金祖古仁波切长寿祈请文&gt;[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　这是由于之圣者佳萨（Gyaltsap）仁波切——贝玛南就（Padma Namgyal，顶果钦哲之上师）所作，愿一切吉祥[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:05</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　&lt;乌金祖古仁波切长寿祈请文&gt;[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　藉无败（unfailing）莲师与其佛母之力量与加持，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　愿金刚总持乌金祖古仁波切寿命无量。[/b] <br/>
@@ -2511,7 +2524,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　愿此荣耀上师住世百劫，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　并愿教传与岩传教法的王国胜利。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　在成就无死的圣地玛拉底吉（Maratika）的《居措德萨》仪轨（Gyutrul Stekar）合集之修持时机，我感到撰写此文之灵感。稍后，当被许多现场的具信弟子～由我海外的弟子：艾瑞克贝玛昆桑和额索多杰（Osl Dorje）所带领所请求时，此文由虔敬之弟子第二世顶果钦哲仁波切所写下。愿得依我之祈请而满愿。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:05</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　&lt;尊贵的秋林仁波切长寿祈请文&gt;[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　在成就无死的圣地玛拉底吉（Maratika）的《居措德萨》仪轨（Gyutrul Stekar）合集之修持时机，我感到撰写此文之灵感。稍后，当被许多现场的具信弟子～由我海外的弟子：艾瑞克贝玛昆桑和额索多杰（Osl Dorje）所带领所请求时，此文由虔敬之弟子第二世顶果钦哲仁波切所写下。愿得依我之祈请而满愿。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:05</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]　&lt;尊贵的秋林仁波切长寿祈请文&gt;[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　嗡　萨瓦梯[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　一切诸佛之族冠，阿弥陀佛，[/b] <br/>
@@ -2556,7 +2569,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　愿修持传承之传统成熟如秋季收成，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　并愿有一功德良善开展之吉祥黄金时代。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　这是（敦珠法王——无畏金刚智）在遍喜年（1974）圆熟月（十月）的三善良满月日（十二日）为第七世嘎竹千（Gar Drubchen，龙树菩萨）化身之秋吉尼玛仁波切（意为：禅修感动显密教法之大日遍照）——，此位殊胜祖古之长寿功德愿望所作。愿此得圆满。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:07</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]智慧真言驾驭者——祈至莲花净土之愿文[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　这是（敦珠法王——无畏金刚智）在遍喜年（1974）圆熟月（十月）的三善良满月日（十二日）为第七世嘎竹千（Gar Drubchen，龙树菩萨）化身之秋吉尼玛仁波切（意为：禅修感动显密教法之大日遍照）——，此位殊胜祖古之长寿功德愿望所作。愿此得圆满。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:07</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]智慧真言驾驭者——祈至莲花净土之愿文[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　第一世萨迦宗萨蒋扬钦哲旺波作[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
@@ -2585,7 +2598,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　莲师之境界，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　并自然圆满自他两种财富资粮。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　此为金刚乘比丘，第一世蒋扬钦哲旺波所作。愿此得圆满。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:10</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第十章　&lt;莲花生大士生起次第仪轨——法界坛城祈愿文&gt;[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　此为金刚乘比丘，第一世蒋扬钦哲旺波所作。愿此得圆满。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:10</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第十章　&lt;莲花生大士生起次第仪轨——法界坛城祈愿文&gt;[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]顶礼上师[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　在猴年猴月十日，莲师作此愿文于桑耶寺，为绿松石所覆盖的中间房室，时值法界坛城显露之机缘。此后，国王和弟子们置此于日课中。并且一切未来众生应全心地以此为其修习。[/size][/b] <br/>
@@ -2673,7 +2686,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　（秋吉林巴）之传承，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　宇宙泰斗的显现岩藏之海，[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　遍及十方三世，[/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　并愿利益和幸福的支持胜利符号吉祥。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:12</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]《拉昧突竹巴却昆些》之加行法[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　并愿利益和幸福的支持胜利符号吉祥。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:12</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]《拉昧突竹巴却昆些》之加行法[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　　　　　　　　（莲师心要修法，遣除一切障碍者）[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　　　　　　　　　　　　　　　　　乌金祖古仁波切简释[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
@@ -2738,7 +2751,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　我开诚地承认一切身、语、意所违犯、所破之根本与支分三昧耶。请消除和净化一切所聚之恶行、障碍、堕落与染污。透过如此地祈请，令上师金刚萨垛欣喜。以微笑的面容说：“佛子，你的一切行为、障碍与堕落都被清净了。”如此而宽恕我，然后金刚萨垛化光并融入自身中。因此，我自己变成了荣耀的金刚萨垛之身。[/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　如此，观想你的一切恶行与障碍皆被清净，并且一切违犯三昧耶戒皆被补阙。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:14</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]＊曼达供[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　如此，观想你的一切恶行与障碍皆被清净，并且一切违犯三昧耶戒皆被补阙。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:14</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]＊曼达供[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　准备珍贵材质的曼达盘，香水、堆用物（米、谷……）等等。然后，相当地安排你的心理部分，念诵：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　“嗡　阿　[/size][/b][b][font=宋体][size=16pt]吽[/size][/b][b][font=楷体_GB2312][size=16pt][/size][/b] <br/>
@@ -2809,7 +2822,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　将全部的根本功德回向趋于殊胜正觉。誓愿以圆满、纯净之愿力修持，并训练在你活动休息的期间均依法而行。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　这秋吉林巴岩藏的极简短的加行法[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　——《吐竹巴切昆些》，系由噶玛乌金巴（祖古乌金仁波切）为初学者而写。于一九八九年六月，尊贵的祖古乌金仁波切第四度访问马来西亚时，由艾瑞克　贝玛　昆桑从燃将移些出版社的“大圆满之门”一书中所萃选出。[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:16</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]《听列宁波——事业精华》[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　——《吐竹巴切昆些》，系由噶玛乌金巴（祖古乌金仁波切）为初学者而写。于一九八九年六月，尊贵的祖古乌金仁波切第四度访问马来西亚时，由艾瑞克　贝玛　昆桑从燃将移些出版社的“大圆满之门”一书中所萃选出。[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:16</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]《听列宁波——事业精华》[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　秋吉林巴所发掘之莲花生大士仪轨[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
@@ -2846,7 +2859,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　[/size][/b][b][font=宋体][size=16pt]吽[/size][/b][b][font=楷体_GB2312][size=16pt]　[/size][/b][b][font=宋体][size=16pt]吽[/size][/b][b][font=楷体_GB2312][size=16pt]　[/size][/b][b][font=宋体][size=16pt]吽[/size][/b][b][font=楷体_GB2312][size=16pt][/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　嗡　沙耳瓦　布架　梅嘎　阿　[/size][/b][b][font=宋体][size=16pt]吽[/size][/b][b][font=楷体_GB2312][size=16pt][/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　（OM SARVA PUJA MEGHA AH HUNG）[/b] <br/>
-[b][font=楷体_GB2312][size=16pt]　　三昧耶。”[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:18</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第二，主要部分的瑜珈法：[/b] <br/>
+[b][font=楷体_GB2312][size=16pt]　　三昧耶。”[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:18</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]第二，主要部分的瑜珈法：[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　“阿[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　法身本然如虚空，是光明的永续。[/b] <br/>
@@ -3041,7 +3054,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt]　　秋吉德千林巴系于土猴年九月十日（一八四八年十一月七日）在丹移卡拉然勾的帕千嘿汝噶山脚下取出。并将它保密达八年之久。而在木兔年十月十日（一八五五年十一月十九日）在星座一地（Kartika），在时、地圆满下，由莲花生大士的喜悦侍仆——钦哲旺波将秋林所译出之智慧空行母的秘密符码写下。愿一切安乐！[/b] <br/>
 [b][font=楷体_GB2312][size=16pt][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　此珍贵法本系由艾瑞克　贝玛　库桑，依据祖古乌家侧旺却卓仁波切第三度访问马来西亚与兰吉贡巴之教授而译。愿它成为利益无量众生之因。[/b] <br/>
-[b][font=楷体_GB2312][size=16pt] [/size][/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:24</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]秋吉林巴略传[/b] <br/>
+[b][font=楷体_GB2312][size=16pt] [/size][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-24 22:24</div><div class="post-body">[b][font=楷体_GB2312][size=16pt]秋吉林巴略传[/b] <br/>
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　注：本文之丘吉林巴、丘林乃同指秋吉林巴，皆系音译。[/b] <br/>
 [b][font=楷体_GB2312][size=16pt]　　佛法在藏王拉托托里（Lha Thothori）的引进下进入西藏，并在松赞干布王时代得以弘扬，其后有赤松德贞迎请诸大成就者如莲师、贝玛拉密渣等人入藏弘法，使得佛教在藏地广为流传。[/b] <br/>
@@ -3151,11 +3164,11 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b][font=楷体_GB2312][size=16pt] [/size][/b] <br/>
 [size=4][font=楷体_GB2312][b](1)　心藏：莲师将法藏于特定的人的心识中，要以特别我法门将之开食而自心中自然升起明明白白。[/b][/font][/font] <br/>
 [size=4][font=楷体_GB2312][b](2)　由空行母持守的法藏。[/b][/font][/font] <br/>
-[b][font=楷体_GB2312][size=4](3)　毗卢遮那与赤松真王后曾有过节，当毗卢遮那为赤松德贞传法的时候，王后不断的来找麻烦，于是毗卢遮那祈求护法来降伏王后而使得王后受了六个月的头痛之苦，毗卢遮那也得以顺利的圆满予传法的事业，当他转生蒋贡康慈时得了因果病。[/size][/font] [/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">陈</div>陈明翰发表于 2009-2-20 22:14</div><div class="post-body">阿弥陀佛，可以结缘送一些共修的法本修持吗？大圆满之门——秋吉林巴新岩藏法 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">蓮</div>蓮師金剛发表于 2010-6-8 07:15</div><div class="post-body">吽 <br/>
+[b][font=楷体_GB2312][size=4](3)　毗卢遮那与赤松真王后曾有过节，当毗卢遮那为赤松德贞传法的时候，王后不断的来找麻烦，于是毗卢遮那祈求护法来降伏王后而使得王后受了六个月的头痛之苦，毗卢遮那也得以顺利的圆满予传法的事业，当他转生蒋贡康慈时得了因果病。[/size][/font] [/b] </div></div><div class="post"><div class="post-header"><div class="avatar">陈</div>陈明翰发表于 2009-2-20 22:14</div><div class="post-body">阿弥陀佛，可以结缘送一些共修的法本修持吗？大圆满之门——秋吉林巴新岩藏法 </div></div><div class="post"><div class="post-header"><div class="avatar">蓮</div>蓮師金剛发表于 2010-6-8 07:15</div><div class="post-body">吽 <br/>
 邬金刹土西北隅　莲茎花胚之座上 <br/>
 稀有殊胜成就者　世称名号莲花生 <br/>
 空行眷属众围绕　我随汝尊而修持 <br/>
-为赐加持祈降临　咕噜贝玛悉地吽 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-24 22:42</div><div class="post-body">最上三寶我皈依，一切罪業皆懺悔 <br/>
+为赐加持祈降临　咕噜贝玛悉地吽 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-24 22:42</div><div class="post-body">最上三寶我皈依，一切罪業皆懺悔 <br/>
 眾生善根盡隨喜，正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽，直至菩提我皈依 <br/>

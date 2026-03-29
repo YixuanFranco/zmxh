@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>修持准提法相应的必要条件 - 藏密修海典藏</title>
+<title>修持准提法相应的必要条件 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/准提佛母成就法.html">准提佛母成就法</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">修持准提法相应的必要条件</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2008-7-7 21:49</div><div class="post-body">一.要有清净的身心灵 <br/>
+<div class="post"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2008-7-7 21:49</div><div class="post-body">一.要有清净的身心灵 <br/>
 <br/>
 准提就是清净的意思,清净是我们的本性,亦是我们的本来面目,相应了清净心就是相应了准提佛母的心也就契合了我们的自性,故准提行者在一切处都应保持清净的身.心.灵,身体不要造作恶行,不去不正当的场所,要不间断的为众生做事,口语要清净持咒更不能间断并要专心,如此是最基本的,这样你才能入了咒心,入了咒心才能入了咒语的能量曼陀螺,得到最大的加持,此个咒心是什么,就是我们的法性清净性,如果杂念不断, 或口诵咒心不专,口诵心不诵,那只是自欺欺人,骗的了自己骗不了自性佛,无有意义的 ,大众须知,密咒乃诸佛修行的精华,更是一切能量的结晶,故持咒修法要专不要间断,心念更要清净 . 诗曰: <br/>
 <br/>
@@ -45,13 +58,13 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 三.要有舍身为道的奉献精神 <br/>
 <br/>
-行者行持六度波罗密,首重布施波罗密,布施乃重质不重量,多少在其次最重要的是我们的清净发心,一个人如果在布施后还不断的在心里滴咕,舍不得,那这样的布施就大打折扣,一个贫穷的人即使只布施一块钱,因为这一块钱是他的全部,就如佛陀所开示的:施主一粒米,大似须弥山,因为心意是无价的,不是人间物质可以比拟的.所以功德最大.为什么我要在此特别提及布施的重要性,记得尊贵的泰锡度仁波切曾开示:智能如材伙,福德如火花.如果修行要开智能,那就要有福德的火苗才能燃起.修行是要资本的!这个资本就是福德,一个人如果没有福德资粮,修行的障碍将不间断,想用功的时候家里就有事,想要好好的修一座法,电话的扞扰就来了!所以行者要好好的修行,就要努力的培值福德资粮!财施．法施．无畏施!皆应量力而为！再者行者最大的布施就是舍身为道！牺牲奉献！如果能够将自己全部的心力都供献，为了弘扬佛法而放下一切，那是最好不过的了，当然这须要因缘的！总之要心系众生！无为奉献！如此才能正己成人！噶玛巴千诺 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 17:08</div><div class="post-body">我今持诵大准提，即发菩提广大愿 <br/>
+行者行持六度波罗密,首重布施波罗密,布施乃重质不重量,多少在其次最重要的是我们的清净发心,一个人如果在布施后还不断的在心里滴咕,舍不得,那这样的布施就大打折扣,一个贫穷的人即使只布施一块钱,因为这一块钱是他的全部,就如佛陀所开示的:施主一粒米,大似须弥山,因为心意是无价的,不是人间物质可以比拟的.所以功德最大.为什么我要在此特别提及布施的重要性,记得尊贵的泰锡度仁波切曾开示:智能如材伙,福德如火花.如果修行要开智能,那就要有福德的火苗才能燃起.修行是要资本的!这个资本就是福德,一个人如果没有福德资粮,修行的障碍将不间断,想用功的时候家里就有事,想要好好的修一座法,电话的扞扰就来了!所以行者要好好的修行,就要努力的培值福德资粮!财施．法施．无畏施!皆应量力而为！再者行者最大的布施就是舍身为道！牺牲奉献！如果能够将自己全部的心力都供献，为了弘扬佛法而放下一切，那是最好不过的了，当然这须要因缘的！总之要心系众生！无为奉献！如此才能正己成人！噶玛巴千诺 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 17:08</div><div class="post-body">我今持诵大准提，即发菩提广大愿 <br/>
 愿我定慧速圆明，愿我功德皆成就 <br/>
 愿我胜福遍庄严，愿共众生成佛道 <br/>
 我昔所造诸恶业，皆由无始贪嗔痴 <br/>
 从身语意之所生，一切我今皆忏悔 <br/>
 愿我临欲命终时，尽除一切诸障碍 <br/>
-面见彼佛阿弥陀，即得往生安乐剎 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-8-24 22:23</div><div class="post-body">祈请一切诸上师 一切佛及诸佛子 <br/>
+面见彼佛阿弥陀，即得往生安乐剎 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-8-24 22:23</div><div class="post-body">祈请一切诸上师 一切佛及诸佛子 <br/>
 垂赐护念予加持 誓愿效学诸世尊 <br/>
 为利有情诸愿行 我今发心亦如是 <br/>
 先启无上菩提心 随修诸地菩萨行 <br/>

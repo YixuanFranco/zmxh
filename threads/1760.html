@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>我观察到我的皮肤开始呼吸,每一个细胞都在跳动 - 藏密修海典藏</title>
+<title>我观察到我的皮肤开始呼吸,每一个细胞都在跳动 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/般舟三昧成就法.html">般舟三昧成就法</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">我观察到我的皮肤开始呼吸,每一个细胞都在跳动</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2006-10-6 12:15</div><div class="post-body">[font=楷体_GB2312][size=5]　　二○○五年二月第一次到休士顿参加禅修班，这段时间我像剥了层皮一样，第一天静坐看见金色的光，而让我印象最深刻的事情是在上课时看见金色的光明，以及三月三日莲花湖禅堂的奠基典礼的当天，看见金色的光与能量笼罩在我们四周。 <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2006-10-6 12:15</div><div class="post-body">[font=楷体_GB2312][size=5]　　二○○五年二月第一次到休士顿参加禅修班，这段时间我像剥了层皮一样，第一天静坐看见金色的光，而让我印象最深刻的事情是在上课时看见金色的光明，以及三月三日莲花湖禅堂的奠基典礼的当天，看见金色的光与能量笼罩在我们四周。 <br/>
 <br/>
 认识师父后我就自动持续的发生一些状态和变化，到休士顿参加禅修班，给我的影响很大很重要。我清除放下过去学佛所遗留的不清楚、矛盾概念。回台湾以后发生了一些事情，更加持续不断的观察自己所有的起心动念，这样的过程像剥了几层皮一样，只有一直看自己，觉知中断就带回来，觉知中断就带回来，不断的把中断的觉知带回来，甚至于生气、发烧，也只是观察，我放弃所有一切作为，只是看自己，不做任何努力。 <br/>
 <br/>
@@ -60,7 +73,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 第七天: <br/>
 身体与外界没有界线，眼耳鼻舌身意似乎统一的只有剩下一根似的，身体很通透，耳朵能听见远处细微的声音，能看见远处的树上的每一片树叶。远处的声音就像在耳边一样。舌头能分辨食物细微中的品质。 <br/>
 <br/>
-七天之后师父说：状态不能超过七天，必须慢慢一点一点的恢复饮食，才依照师父说的做。我像剥了几层皮一样，知道原来我所知道所了解的理论并不只是理论，所有一切的理论和实际的行必须是一致的。[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚海澄发表于 2007-9-25 20:59</div><div class="post-body">咳,让我这个业障深重之人看了无地自容.呜呜呜. </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚铭发表于 2008-1-5 16:11</div><div class="post-body">死后难保不堕落，能救此畏唯三宝， <br/>
+七天之后师父说：状态不能超过七天，必须慢慢一点一点的恢复饮食，才依照师父说的做。我像剥了几层皮一样，知道原来我所知道所了解的理论并不只是理论，所有一切的理论和实际的行必须是一致的。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚海澄发表于 2007-9-25 20:59</div><div class="post-body">咳,让我这个业障深重之人看了无地自容.呜呜呜. </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚铭发表于 2008-1-5 16:11</div><div class="post-body">死后难保不堕落，能救此畏唯三宝， <br/>
 故应勤修正皈依，终不毁犯诸学处。 <br/>
 复应善思诸业果，如理取舍乃能办， <br/>
 至尊恩师如是修，欲解脱者如是行。 <br/>
@@ -68,12 +81,12 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 若未获得众德身，欲修胜道亦难达， <br/>
 故应学此圆满因，净修三业诸垢染。 <br/>
 忏悔业障尤切要，故应恒时依四力， <br/>
-至尊恩师如是修，欲解脱者如是行。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">戒</div>戒定慧发表于 2008-8-6 16:43</div><div class="post-body">赞叹~~刚刚入法，在修加行，磕大头，持咒，。赞叹师兄精进。。。 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">妙</div>妙禅发表于 2009-4-2 09:41</div><div class="post-body">身心变化这样大！赞叹！请问怎样才能看到师父的教法？网上可以吗？兴趣深厚，看了师兄的文章，就试着在室内意放脚底，走了几分钟，身心飘飘的，体内热流涌动。。。。。 <br/>
-热切期盼能得到师兄的指导 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 17:47</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+至尊恩师如是修，欲解脱者如是行。 </div></div><div class="post"><div class="post-header"><div class="avatar">戒</div>戒定慧发表于 2008-8-6 16:43</div><div class="post-body">赞叹~~刚刚入法，在修加行，磕大头，持咒，。赞叹师兄精进。。。 </div></div><div class="post"><div class="post-header"><div class="avatar">妙</div>妙禅发表于 2009-4-2 09:41</div><div class="post-body">身心变化这样大！赞叹！请问怎样才能看到师父的教法？网上可以吗？兴趣深厚，看了师兄的文章，就试着在室内意放脚底，走了几分钟，身心飘飘的，体内热流涌动。。。。。 <br/>
+热切期盼能得到师兄的指导 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 17:47</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2011-2-18 23:47</div><div class="post-body">诸法因缘生，如来说此因，彼法因缘尽，是大沙门说 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">陈</div>陈明翰发表于 2014-4-24 11:18</div><div class="post-body">默默赞叹     默默修行       随喜无量！ <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2011-2-18 23:47</div><div class="post-body">诸法因缘生，如来说此因，彼法因缘尽，是大沙门说 </div></div><div class="post"><div class="post-header"><div class="avatar">陈</div>陈明翰发表于 2014-4-24 11:18</div><div class="post-body">默默赞叹     默默修行       随喜无量！ <br/>
 <br/>
 </div></div>
 </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>佛说大意经（本缘部） - 藏密修海典藏</title>
+<title>佛说大意经（本缘部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">佛说大意经（本缘部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">崇</div>崇山发表于 2006-1-27 20:46</div><div class="post-body">[font=楷体_GB2312][size=5]卍佛说大意经 <br/>
+<div class="post"><div class="post-header"><div class="avatar">崇</div>崇山发表于 2006-1-27 20:46</div><div class="post-body">[font=楷体_GB2312][size=5]卍佛说大意经 <br/>
 <br/>
 宋天竺三藏求那跋陀罗译 <br/>
 <br/>
@@ -57,7 +70,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 阿难整衣服作。礼白佛言。是时大意以何功德。乃致是四宝城处处得供养。及获四明月珠。众宝随之 <br/>
 <br/>
-佛言。乃昔惟卫佛世。大意尝以四宝为佛起塔。供养三尊持斋七日。是时有五百人同时共起寺。或悬缯然灯者。或烧香散花者。或供养比丘僧者。或诵经讲道者。今皆来会此。阿难及四辈弟子。闻经欢喜前为佛作礼。[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">崇</div>崇山发表于 2006-1-27 20:46</div><div class="post-body">[font=楷体_GB2312][size=5]卍前世三转经 <br/>
+佛言。乃昔惟卫佛世。大意尝以四宝为佛起塔。供养三尊持斋七日。是时有五百人同时共起寺。或悬缯然灯者。或烧香散花者。或供养比丘僧者。或诵经讲道者。今皆来会此。阿难及四辈弟子。闻经欢喜前为佛作礼。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">崇</div>崇山发表于 2006-1-27 20:46</div><div class="post-body">[font=楷体_GB2312][size=5]卍前世三转经 <br/>
 <br/>
 西晋沙门法炬译 <br/>
 <br/>
@@ -85,7 +98,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b]　我之身心云何　　甚坚而不破碎 <br/>
 吾自在安乐处　　见勤苦诸人民　[/b] <br/>
 <br/>
-驰还白父母。我欲除须发行入山空处处树下。父母不听。所以者何。适有汝一子甚重爱之。我祷祠山川日月诸天。适得汝一子耳。我不见汝者便愁忧死。不肯听使去。子便委卧地一日二日至五日不食饮。诸亲厚知识闻此儿欲学道除须发。父母不听。委卧空地不食饮五日。诸亲厚知识皆共到其所谏晓言。童子。何以不起沐浴饮食庄严用除须发在树间乐道。童子亦不应。如是言者三日。诸亲厚共到父母所言。听使去学道。若乐者可数来往相见。不乐者便当来归。父母言诺。见听已子便自养视。六七日绕父母三匝为作礼。便入空闲坐行道已后。则往至余大丛树间。中有两道人坐得五神通。精诚求道离淫欲。童子便至其所问。此间作何等。报言。我在此间露坐禅念道。用人民故作勤苦行。童子言。我亦当用人民故露坐禅念道。二道人言。善童子。即于大丛树下坐禅。于中用人民故勤苦行道。即得五神通。精进踰于二道人。其人大圣上尊。其树间有虎妊娠。诸道人法树果自堕落者乃取食之。不从树摘取也。诸道人共行求果蓏。便见妊娠虎。童子道人语两道人言。此虎今不久当产。饥饿经日恐自啖其子。谁能持身食之者。弥勒菩萨言。我当持身食之。采果还已见虎乳饥饿欲取其子啖之。其道人语两道人言。虎已乳饥饿欲还啖其子。谁能持身食之。便共俱至饿虎所。虎开目张口向之。两道人俱畏惧。便飞上虚空中。其一人言。道人卿之至诚如是也。属者言。当持身食饿虎。今者何故飞上虚空也其一道人哀之泪出。左右顾视无所有。童子道人取利刀刺右臂流血。如是七处自刺。血入虎口中因饮之。便复自投身食饿虎则死。佛语阿难。欲知尔时上色淫女人者不。正是我身。时立为王者。亦是我身。时婆罗门子自投身餧饿虎者。亦是我身。两道人者。是迦叶弥勒菩萨。佛告阿难。我精进行道故。超越九劫出弥勒前。如是阿难。勤苦行道六十劫。布施手足鼻耳头目肌肉妇子男女好衣被饮食故。降伏六十亿魔。三十四亿得佛道。佛语阿难若使一切人知布施之福如我所知者。穷乏糊口得一食自饭继命。若不食此便死者。则当不自食与善人令受。阿难。我念昔世时所布施。用是故面色明好照曜。笑光从口出遍三千大千世界。佛说是经时。四千二百比丘起无余意得解脱。八十那术诸天人发无上正真道意。七万菩萨得无所从生法忍。佛说如是。贤者阿难及一切众会诸天龙鬼神世间人皆欢喜。前为佛作礼而去。[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">六</div>六面古素发表于 2007-7-16 00:26</div><div class="post-body">胜施金刚我敬礼 真实边际我敬礼 出现空性我敬礼 正觉菩提我敬礼 <br/>
+驰还白父母。我欲除须发行入山空处处树下。父母不听。所以者何。适有汝一子甚重爱之。我祷祠山川日月诸天。适得汝一子耳。我不见汝者便愁忧死。不肯听使去。子便委卧地一日二日至五日不食饮。诸亲厚知识闻此儿欲学道除须发。父母不听。委卧空地不食饮五日。诸亲厚知识皆共到其所谏晓言。童子。何以不起沐浴饮食庄严用除须发在树间乐道。童子亦不应。如是言者三日。诸亲厚共到父母所言。听使去学道。若乐者可数来往相见。不乐者便当来归。父母言诺。见听已子便自养视。六七日绕父母三匝为作礼。便入空闲坐行道已后。则往至余大丛树间。中有两道人坐得五神通。精诚求道离淫欲。童子便至其所问。此间作何等。报言。我在此间露坐禅念道。用人民故作勤苦行。童子言。我亦当用人民故露坐禅念道。二道人言。善童子。即于大丛树下坐禅。于中用人民故勤苦行道。即得五神通。精进踰于二道人。其人大圣上尊。其树间有虎妊娠。诸道人法树果自堕落者乃取食之。不从树摘取也。诸道人共行求果蓏。便见妊娠虎。童子道人语两道人言。此虎今不久当产。饥饿经日恐自啖其子。谁能持身食之者。弥勒菩萨言。我当持身食之。采果还已见虎乳饥饿欲取其子啖之。其道人语两道人言。虎已乳饥饿欲还啖其子。谁能持身食之。便共俱至饿虎所。虎开目张口向之。两道人俱畏惧。便飞上虚空中。其一人言。道人卿之至诚如是也。属者言。当持身食饿虎。今者何故飞上虚空也其一道人哀之泪出。左右顾视无所有。童子道人取利刀刺右臂流血。如是七处自刺。血入虎口中因饮之。便复自投身食饿虎则死。佛语阿难。欲知尔时上色淫女人者不。正是我身。时立为王者。亦是我身。时婆罗门子自投身餧饿虎者。亦是我身。两道人者。是迦叶弥勒菩萨。佛告阿难。我精进行道故。超越九劫出弥勒前。如是阿难。勤苦行道六十劫。布施手足鼻耳头目肌肉妇子男女好衣被饮食故。降伏六十亿魔。三十四亿得佛道。佛语阿难若使一切人知布施之福如我所知者。穷乏糊口得一食自饭继命。若不食此便死者。则当不自食与善人令受。阿难。我念昔世时所布施。用是故面色明好照曜。笑光从口出遍三千大千世界。佛说是经时。四千二百比丘起无余意得解脱。八十那术诸天人发无上正真道意。七万菩萨得无所从生法忍。佛说如是。贤者阿难及一切众会诸天龙鬼神世间人皆欢喜。前为佛作礼而去。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">六</div>六面古素发表于 2007-7-16 00:26</div><div class="post-body">胜施金刚我敬礼 真实边际我敬礼 出现空性我敬礼 正觉菩提我敬礼 <br/>
 正觉贪着我敬礼 正觉欲者我敬礼 正觉欢喜我敬礼 正觉戏论我敬礼 <br/>
 正觉微笑我敬礼 正觉笑者我敬礼 正觉语者我敬礼 正觉心者我敬礼 <br/>
 出现无者我敬礼 出现正觉我敬礼 出现虚空我敬礼 出现智者我敬礼 <br/>

@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>祈竹仁波切所传《黑文殊观修法广轨---》和导修讲解 - 藏密修海典藏</title>
+<title>祈竹仁波切所传《黑文殊观修法广轨---》和导修讲解 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">祈竹仁波切所传《黑文殊观修法广轨---》和导修讲解</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-19 12:04</div><div class="post-body">[img]http://www.zmxh.com/pics/_________1_20070720083014.jpg[/img] <br/>
+<div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-19 12:04</div><div class="post-body">[img]http://www.zmxh.com/pics/_________1_20070720083014.jpg[/img] <br/>
 <br/>
 [font=楷体_GB2312][size=5][b]黑文殊观修法广轨•至尊黑文殊修法要义普显吠琉璃液明镜[/b] <br/>
 <br/>
@@ -190,7 +203,7 @@ Om Mu[/b] <br/>
 希求教授且如取麝香  而将上师比为麝鹿想 <br/>
 现今恶性弟子赛猎手  故当隐匿珍财莫张扬 <br/>
 信敬财丰具器个别士  以饶益心略摄大德语 <br/>
-隐去过错次序巧安排  剖析扼要决择当珍惜[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-19 13:55</div><div class="post-body">黑文殊法门导修前言 <br/>
+隐去过错次序巧安排  剖析扼要决择当珍惜[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-19 13:55</div><div class="post-body">黑文殊法门导修前言 <br/>
 <br/>
 黑文殊师利法门是一个十分有用及有益的法门，衲自己也恒修此法门而深觉其应验不虚。在现今年代，常有各种新品种的怪症、绝症及其他外在的意外危险;我们在修行成佛的路上，又有各种外、内、密的障碍，修持此黑文殊法门可以除去、避免或化解这类违缘，所以此法门对自己修行及利生方便都有很大用处。认真修行的人，可以依赖黑文殊师利为我们终生的除障本尊，令我们的修行及世俗生活都顺利、无障。许多病都来自于非人和龙族，其中一些连医生都不明其原因，所以无法诊断和治疗。为什么这些非人、龙族会伤害我们呢？其实并不是无缘无故，而是有原因的，比如说我们挖了很深的山洞、砍了古树、在海底挖矿，都会损害非人、龙族的住所。有些非人、龙族身上布满毒水，其呼出的亦是毒气，他们一旦被我们经过以上的行为而伤害、得病，就会把这些毒水、毒气转给我们，使我们也得病、身体瘫痪等等。这种病是很可怕的，因为开始染病的时候看不出来，但它慢慢地在体内演变为各种各样的病，譬如说它可能演变成癌症。古代西藏医学是这样解释奇怪的病症，用现在的话来说，也可以叫这就是我们破坏大自然而导致的恶果。如果我们仅仅念诵黑文殊师利咒，就不会得这些稀奇古怪的病。也有一种牛非常易得的病，人也会得到这种病。在牛得到这个病的时候，牛角会掉下来，蹄会脱下来，这是很严重的一种病，念黑文殊咒对治这种病有很大的帮助，病者会慢慢康复。在修建新房屋动土或者拆掉旧房子时，如果没有妥善地进行，也可能会伤害到非人，然后我们就可能会生怪病。念黑文殊的咒，在砂子上面吹气，然后取一点砂子洒地，这样就会康复。如果我们的住处座向不好，譬如说下面有一条路冲着我们，或者对面的山形不吉祥、附近有坟墓等等，就可能会诸事不顺甚至生病。出现这类事情的时候，最好能自己修黑文殊仪轨及念本尊咒，否则也可以书写黑文殊的咒，在开光后贴起来，就能免除座向不好等的不良影响，同时也能除掉每个人一年里面的流年、月、日、时的障碍。此外。在接触尸体后，会有一种看不见、肮脏的不良影响。遇到这种肮脏的事情以后，有时会出现生病、诸事不顺等种种的情况，这时候我们也可以以黑文殊法门对治。黑文殊法也可以去除凶兆等问题。“凶兆”的意思就是你看到一些不好的、从来没看过的怪现象，比如说你看到什么动物把一条蛇拿到你家里来等等奇奇怪怪的、不吉祥的事情，这预兆着不好的事情将要发生了。如果看到这种情况，修黑文殊法门就会除掉障碍。总之，不论大家是住的地方有问题、出行的方向或者时间不吉利，或者做生意买卖、运气不好，如果修黑文殊的话，所有障碍、不吉祥都可以除掉。 <br/>
 这个法门最初由佛陀开示并传于金刚手大士，然后辗转传至金刚座的两位方丈大师等印度祖师。后来，西藏的班智达祖师远赴印度，用黄金求法，把这套法门的传承带到西藏，成为萨迦派最殊胜的十三金法之一。至再后来，这个法门也在格律派内同时传承。在格律、萨迦两派中，这法门传承历代以来从没有经历中断。衲在此法上的灌顶、教授及口传等传承，得自扎什伦布什寺的方丈卡钦洛桑素巴恩师的完整授予。如果从卡钦洛桑素巴往回一代一代地数，可以追溯到历代格律祖师、历代萨迦祖师、历代印度祖师，乃至金刚手大士，最终则追溯至佛陀。 <br/>
@@ -375,13 +388,13 @@ Om Mu <br/>
 自己蹲坐地上、双膝向上、双臂环抱双膝，右脚大拇趾压住左脚大拇趾，观想自己为黑文殊，念心咒一百遍、事业咒二十一遍，并观想威力慑伏三界，尤其压伏对自己作损害的一切仇怨魔障倒引于地，使彼丝毫不能动弹。于座间等，作其他事时，观想仇怨魔障被须弥山压着。 <br/>
 <br/>
 此乃《黑文殊观修法广轨•至尊黑文殊修法要义普显吠琉璃液明镜》教授。 <br/>
-[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-10-4 22:08</div><div class="post-body">我今以此之善根  速成胜尊黑文殊 <br/>
-乃至不余一有情  悉令同登妙音地 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2008-6-28 10:05</div><div class="post-body">三世诸佛三密摄一体  黑色肤光智悲大力藏 <br/>
+[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-10-4 22:08</div><div class="post-body">我今以此之善根  速成胜尊黑文殊 <br/>
+乃至不余一有情  悉令同登妙音地 </div></div><div class="post"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2008-6-28 10:05</div><div class="post-body">三世诸佛三密摄一体  黑色肤光智悲大力藏 <br/>
 惠施加持悉地天中天  文殊身语意前至诚赞 <br/>
 若人恭敬顶戴尊足尘  三种邪障魔军不得侵 <br/>
 破戒不祥垢染尽净化  加持宝藏尊前诚启白 <br/>
 一心皈命文殊无上尊  祈愿无缘大悲垂忆念 <br/>
-内外一切伤害永息灭  胜共悉地无余速成办 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2008-6-28 10:05</div><div class="post-body">三世诸佛三密摄一体  黑色肤光智悲大力藏 <br/>
+内外一切伤害永息灭  胜共悉地无余速成办 </div></div><div class="post"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2008-6-28 10:05</div><div class="post-body">三世诸佛三密摄一体  黑色肤光智悲大力藏 <br/>
 惠施加持悉地天中天  文殊身语意前至诚赞 <br/>
 若人恭敬顶戴尊足尘  三种邪障魔军不得侵 <br/>
 破戒不祥垢染尽净化  加持宝藏尊前诚启白 <br/>

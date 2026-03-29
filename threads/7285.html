@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>普贤行愿品讲记——广超法师 - 藏密修海典藏</title>
+<title>普贤行愿品讲记——广超法师 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">普贤行愿品讲记——广超法师</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:07</div><div class="post-body">[b][size=6]普贤行愿品讲记[/size][/b] <br/>
+<div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:07</div><div class="post-body">[b][size=6]普贤行愿品讲记[/size][/b] <br/>
 广超法师 <br/>
 <br/>
 目录 <br/>
@@ -50,7 +63,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 ·二、个别解释大愿 10、普皆回向 <br/>
 ·三、偈颂 <br/>
 ·四、总结 <br/>
-·后记 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:09</div><div class="post-body">[b][size=6]大方广佛华严经入不思议解脱境界普贤行愿品[/size][/b] <br/>
+·后记 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:09</div><div class="post-body">[b][size=6]大方广佛华严经入不思议解脱境界普贤行愿品[/size][/b] <br/>
 <br/>
 唐 三藏法师 般若 译 <br/>
 广超法师 主讲 <br/>
@@ -85,7 +98,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 至诚感谢佛菩萨的慈悲加被，感谢上广下超法师在百忙中为我批改与核对这些演讲稿，并增添了许多宝贵的教法，使这本讲记更具精辟、深广与圆融的法义。特此以诚敬的心，以笔录与流通此书的功德，愿法师菩提增长、所愿皆满、广度众生；愿一切法界众生皆共成佛道。同时，对发心排版的陈国义居士，发心协助改稿的苏伟林与苏玉莲二居士，其他从旁协助的道友，以及出资敬印此书的人士，我深深感谢。祈愿大家法喜充满、吉祥如意；但愿佛法常住世间。 <br/>
 <br/>
-二００一年二月三日 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:13</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　（一） 简介《大方广佛华严经》[/b] <br/>
+二００一年二月三日 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:13</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　（一） 简介《大方广佛华严经》[/b] <br/>
 <br/>
 今晚，我应净名佛学社的邀请，在这里为大家讲解《大方广佛华严经入不思议解脱境界普贤行愿品》，简称《普贤行愿品》，它出自《大方广佛华严经》，简称《华严经》。在《大藏经》中，《华严经》是属于大乘佛教经典，共有三个译本，即《八十华严》、《六十华严》和《四十华严》。《四十华严》是《入法界品》的详细解说，现在我所要讲的《普贤行愿品》，是其最后的一卷。 <br/>
 <br/>
@@ -209,7 +222,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 &quot;劫&quot;是代表时间，&quot;一劫&quot;是以娑婆世界众生的寿命来算的。根据佛法说，娑婆世界的人寿会增长，会减短，最初的人寿有八万四千岁。可是由于人心的每况愈下，就每过一百年，减少一岁，如是一直替减到人寿十岁，是为减劫。到了这个时候，人们各自觉得，这样长期下去，总归不是办法，于是回心向善。因为人心向善，人的寿命渐增，即每过一百年，增加一岁，如是一直替增到人寿八万四千岁，是为增劫。如此一增一减，总共一千六百八十万年，为一个小劫。二十个小劫合起来，成为一个中劫。四个中劫合起来，成为一个大劫。这样计算起来，一个大劫的时间是很长的。人类的寿命从八万四千岁减到一百岁的时候，释迦牟尼佛在娑婆世界的人间示现成佛。人类的寿命会继续减到十岁，然后会再增加，一直增加到二万多岁的时候，弥勒菩萨降生人间示现成佛。在这一增、一减，如此变化的悠久岁月中，诸佛赞叹其他诸佛的殊胜功德，都说不完。 <br/>
 <br/>
-&quot;[b]若欲成就此功德门，应修十种广大行愿[/b]&quot;，如果要成就这些功德门，就应该修习普贤十大行愿。[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:16</div><div class="post-body">[size=5][font=楷体_GB2312][b]　　一、正说大愿[/b] <br/>
+&quot;[b]若欲成就此功德门，应修十种广大行愿[/b]&quot;，如果要成就这些功德门，就应该修习普贤十大行愿。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:16</div><div class="post-body">[size=5][font=楷体_GB2312][b]　　一、正说大愿[/b] <br/>
 <br/>
 [b]　　经文：何等为十？一者，礼敬诸佛；二者，称赞如来；三者，广修供养；四者，忏悔业障；五者，随喜功德；六者，请转法-轮；七者，请佛住世；八者，常随佛学；九者，恒顺众生；十者，普皆回向。[/b] <br/>
 <br/>
@@ -257,7 +270,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [b]　　经文：善财白言：大圣，云何礼敬乃至回向？[/b] <br/>
 <br/>
-善财童子问：&quot;大圣，什么是礼敬诸佛，乃至普皆回向？&quot;[/font][/size] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:20</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　二、个别解释大愿 <br/>
+善财童子问：&quot;大圣，什么是礼敬诸佛，乃至普皆回向？&quot;[/font][/size] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:20</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　二、个别解释大愿 <br/>
 <br/>
 1、礼敬诸佛 <br/>
 <br/>
@@ -325,7 +338,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [b]　　经文：念念相续，无有间断，身语意业无有疲厌。[/b] <br/>
 <br/>
-我以普贤行愿之力，面对佛陀而行礼敬时，念念相续，没有间断，不会在身语意业上觉得疲厌。 [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:22</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　2、称赞如来 <br/>
+我以普贤行愿之力，面对佛陀而行礼敬时，念念相续，没有间断，不会在身语意业上觉得疲厌。 [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:22</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　2、称赞如来 <br/>
 <br/>
 经文：复次，善男子，言称赞如来者。[/b] <br/>
 <br/>
@@ -465,7 +478,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 如果一个人知道某某人过去是做什么的，这只不过是宿命通而已；根据佛经的记载，三千大千世界中过去、现在、未来任何的一滴雨水怎样发生，佛要知道，都能够知道，这就是能够知道过去、未来、现在无碍。这三种智慧称为正遍知，即一切无所不知。阿罗汉未必无所不知，而佛是无所不知，称为一切智智。 <br/>
 <br/>
-以上是佛的不共法，佛的不可思议功德，是一般众生、阿罗汉、菩萨都办不到的。佛值得我们赞叹的功德力、能力、不可思议的境界很多，是讲不完的，我只略讲到此。至于佛的种种果报，等下面的经文谈到时，我才为你们解说。 [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:25</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　3、广修供养 <br/>
+以上是佛的不共法，佛的不可思议功德，是一般众生、阿罗汉、菩萨都办不到的。佛值得我们赞叹的功德力、能力、不可思议的境界很多，是讲不完的，我只略讲到此。至于佛的种种果报，等下面的经文谈到时，我才为你们解说。 [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:25</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　3、广修供养 <br/>
 <br/>
 经文：复次，善男子，言广修供养者。[/b] <br/>
 <br/>
@@ -525,7 +538,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 供养大乘三宝，应以如说修行等为真供养。所有的佛都尊重法，按照佛的教导去修行，最后能够出生诸佛。释迦牟尼佛及十方诸佛，是因依法如说修行而成的，即法能够生佛。如果菩萨行法供养，即得到成就供养如来。意思是说，行法供养，就完成供养如来。 <br/>
 <br/>
-[b]　　经文：此广大最胜供养，虚空界尽，众生界尽，众生业尽，众生烦恼尽，我供乃尽；而虚空界乃至烦恼不可尽故，我此供养亦无有尽。念念相续，无有间断，身语意业无有疲厌。[/b] [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:27</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　4、忏悔业障 <br/>
+[b]　　经文：此广大最胜供养，虚空界尽，众生界尽，众生业尽，众生烦恼尽，我供乃尽；而虚空界乃至烦恼不可尽故，我此供养亦无有尽。念念相续，无有间断，身语意业无有疲厌。[/b] [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:27</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　4、忏悔业障 <br/>
 <br/>
 复次，善男子，言忏悔业障者。菩萨自念：我于过去无始劫中，由贪嗔痴发身口意，作诸恶业无量无边。 [/b] <br/>
 <br/>
@@ -561,7 +574,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 刚才我说业障有烦恼障和所知障，你要很恳切地对你现前所看到的一切，被无知障碍而做忏悔。佛法说，众生与佛本来平等，因为众生迷惑执著，造成不知道的东西很多，而执著现前的境界是众生最重的烦恼，所以要忏悔。别以为只需忏悔所造的恶业，你要忏悔执著现有身心的活动，要忏悔你迷惑于眼前的一切，这些都是过失，也就是所知障。你的烦恼又在现前的境界里执著，因此忏悔业障并不只是忏悔世间人认为善、恶行为中的恶行为罢了。因为障碍你的不只是现前恶的行为，还有过去无知恶业的行为，还未生起的烦恼，以及还没有现前的业报……所以都要忏悔。 <br/>
 <br/>
-我们可以通过忏悔业障把所有的业都忏除掉吗？一个迷惑的众生认为一切业都是过去，现在的心念是他的心，而过去所出现的全都是境界，其实一切都是心在作用。因为一切都是心在作用，所以忏悔就从心来转变，心一转变，业也就转变；当心真正放下烦恼，那一切业也就放下了。因为业是我们的心去&quot;抓&quot;出来用的。就是说，我过去有无量无边的业，我偏偏不干，就只干广超法师这一生；你们也是一样，偏偏不选别的，就选择这一生，这个样子来干。即是你有无量无边的业，你的烦恼执著去&quot;抓&quot;出来，如果你的烦恼执著不再去抓的话，这一切业就不能影响你了，所以业还是能够从心忏悔而转变。当心不再执著身心境界为实在的时候，心就转变了，因此业就通过这样来转变。如果你还是认为业有真正实在、外在的东西在作用，那任由你怎么忏悔，业还是忏除不完。 [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:30</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　5、随喜功德 <br/>
+我们可以通过忏悔业障把所有的业都忏除掉吗？一个迷惑的众生认为一切业都是过去，现在的心念是他的心，而过去所出现的全都是境界，其实一切都是心在作用。因为一切都是心在作用，所以忏悔就从心来转变，心一转变，业也就转变；当心真正放下烦恼，那一切业也就放下了。因为业是我们的心去&quot;抓&quot;出来用的。就是说，我过去有无量无边的业，我偏偏不干，就只干广超法师这一生；你们也是一样，偏偏不选别的，就选择这一生，这个样子来干。即是你有无量无边的业，你的烦恼执著去&quot;抓&quot;出来，如果你的烦恼执著不再去抓的话，这一切业就不能影响你了，所以业还是能够从心忏悔而转变。当心不再执著身心境界为实在的时候，心就转变了，因此业就通过这样来转变。如果你还是认为业有真正实在、外在的东西在作用，那任由你怎么忏悔，业还是忏除不完。 [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:30</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　5、随喜功德 <br/>
 <br/>
 经文：复次，善男子，言随喜功德者。 [/b] <br/>
 <br/>
@@ -603,7 +616,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [b]　　经文：如是虚空界尽，众生界尽，众生业尽，众生烦恼尽；我此随喜，无有穷尽。念念相续，无有间断，身语意业无有疲厌。[/b] <br/>
 <br/>
-我的随喜功德是只要有众生在的地方……有众生烦恼的地方，见到值得随喜的，我都随喜。 [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:31</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　6、请转法-轮 <br/>
+我的随喜功德是只要有众生在的地方……有众生烦恼的地方，见到值得随喜的，我都随喜。 [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:31</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　6、请转法-轮 <br/>
 <br/>
 经文：复次，善男子，言请转法-轮者。 [/b] <br/>
 <br/>
@@ -633,7 +646,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 经文中说：&quot;一一刹中，念念有不可说不可说……&quot;，即请转法-轮不只是刚才所讲的外在示现境界而已，它还跟心念有关系。如果你修到菩萨的某个果位，只要动一个念头，心观想见佛，佛就会出现成正等觉跟你说法。也就是任何人有能力摆脱六根的现前境界，达到有神通的菩萨境界，随时生起一念，就可以看到佛示现成等觉、说法。当菩萨有因缘应该得度的时候，佛就会出现在他的心中，让他看到佛不可思议的境界，让他听到佛说法。因此，当你动要请转法-轮的念头时，佛就能够让你看到佛在说法，你也就可以请佛说法了。一切佛在众生的念念中都在说法，佛没有不说法的时候，但是我们众生认为佛有说法的时候，也有不说法的时候，其实一切都是心的变现，佛很清楚，只要众生的心念一动，佛的心念就能跟众生相应，让众生看到了。 <br/>
 <br/>
-[b]　　经文：如是虚空界尽，众生界尽，众生业尽，众生烦恼尽；我常劝请一切诸佛转正法-轮，无有穷尽。念念相续，无有间断，身语意业无有疲厌。[/b] [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:33</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　7、请佛住世 <br/>
+[b]　　经文：如是虚空界尽，众生界尽，众生业尽，众生烦恼尽；我常劝请一切诸佛转正法-轮，无有穷尽。念念相续，无有间断，身语意业无有疲厌。[/b] [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:33</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　7、请佛住世 <br/>
 <br/>
 经文：复次，善男子，言请佛住世者。[/b] <br/>
 <br/>
@@ -657,7 +670,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 涅槃又有不生不灭的意思。我们认为世间有东西生起来，有东西消失，但是在涅槃的境界中，是没有东西生起来，没有东西消失，所以涅槃又叫做不生不灭。对于一个有生死轮回的世间人，我们说要修行，要入涅槃；对于一些已经解脱自在的菩萨们来说，他们所看到的并不是如此，其所见的一切都是心的变化，心变化出此世间，心变化世间里的一切境界。当我们凡夫看到自己的心在变化，就以为真的有一个众生在里面来回生死；当大菩萨知道是心的变化时，他们就知道没有所谓的&quot;我&quot;在里面，没有一个&quot;我&quot;在轮回。既然没有我在生死轮回，也没有所谓涅槃可以进入了。因此，在大菩萨的境界里，涅槃跟生死都不可得，但是对于一些执著有生死的人，他们就说：我要进入涅槃。当一个人修行证得阿罗汉果以后，他不会说：我要进入涅槃。因为他也看到生死跟涅槃是没有差别的。对于一个迷惑的人，他认为生死跟涅槃有差别，在这种境界里，我们就要请佛、菩萨、阿罗汉、一切善知识久住世间，其实这是我们的迷惑与执著。比方说，如果你对一个人有好感，或认为他对社群有贡献，当他死时，你会觉得很可惜，但是以佛法来说，没什么嘛，他有因缘到另外一个地方，继续利益众生嘛，为什么要长期跟你在一起呢？我们众生执著，一定要他留下来，既然如此，这些圣人更应该请住世间啰，所以我们要请佛不要入涅槃，请菩萨、声闻……不要入涅槃。 <br/>
 <br/>
-根据南传佛教的说法，涅槃可分为两种：有余涅槃和无余涅槃。阿罗汉已没有因烦恼而产生的苦，然而生、老、病、死的现象还在--行苦，这是他的苦报，不能避免。所以阿罗汉会在大热天流汗而发痒，也会难受而擦一擦汗，牙痛或给蚊子叮了，也会感受到痛。阿罗汉的身心还有活动，没有了结，还是有苦，叫做有余涅槃。当阿罗汉今生果报受尽，这一生死了，不再来受生，身心活动不再延续，将来不再受生死之苦，所以阿罗汉的死又叫做&quot;无生&quot;，那才是真正的一了百了，叫做无余涅槃。 [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:37</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　8、常随佛学 <br/>
+根据南传佛教的说法，涅槃可分为两种：有余涅槃和无余涅槃。阿罗汉已没有因烦恼而产生的苦，然而生、老、病、死的现象还在--行苦，这是他的苦报，不能避免。所以阿罗汉会在大热天流汗而发痒，也会难受而擦一擦汗，牙痛或给蚊子叮了，也会感受到痛。阿罗汉的身心还有活动，没有了结，还是有苦，叫做有余涅槃。当阿罗汉今生果报受尽，这一生死了，不再来受生，身心活动不再延续，将来不再受生死之苦，所以阿罗汉的死又叫做&quot;无生&quot;，那才是真正的一了百了，叫做无余涅槃。 [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:37</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　8、常随佛学 <br/>
 <br/>
 经文：复次，善男子，言常随佛学者。 [/b] <br/>
 <br/>
@@ -749,7 +762,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 不只要随世尊毗卢遮那修学，而且也要向如是尽法界、虚空界、十方三世一切佛刹所有尘中一切如来学习；于念念中，我都不断地随佛修学，学佛的修诸万行，学佛的教化众生，学佛的宣说妙法，学佛的一切一切……所以随诸佛学，是菩萨行者的一个重要课题。 <br/>
 <br/>
-[b]　　经文：如是虚空界尽，众生界尽，众生业尽，众生烦恼尽；我此随学无有穷尽。念念相续，无有间断，身语意业无有疲厌。[/b] [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:40</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　9、恒顺众生 <br/>
+[b]　　经文：如是虚空界尽，众生界尽，众生业尽，众生烦恼尽；我此随学无有穷尽。念念相续，无有间断，身语意业无有疲厌。[/b] [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:40</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　9、恒顺众生 <br/>
 <br/>
 经文：复次，善男子，言恒顺众生者。[/b] <br/>
 <br/>
@@ -821,7 +834,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 在此更进一步强调，众生跟心是平等的，即每个众生的心都是平等，没有高低的。我用一个比喻来说明：如果我们表演一场戏，有人在戏里扮演国王，有人扮演乞丐，但是那些演员本来是平等的。在我们这些众生当中，有些愚痴，有些有智慧，有些有福报，有些贫困，形形色色，各种各样，只是大家的心在演这场戏：你在演你这一生的戏，下一生你演另外一个角色；这一生你演穷人，下一生你可能演皇帝。所以不管你演穷人，或演皇帝，那也不过是你的心在做戏。你要知道心、佛、众生也是平等幻化的，你看到的这个众生的外貌，是他演出这个戏的形相罢了，不是确实、非永远如此的，一直变化，没有穷尽。当你如是知道后，则能成就圆满大悲。为什么呢？原来众生演这戏时，他迷在里面以为是真实的，在里面烦恼受苦。菩萨觉悟众生受苦非实，觉悟自他平等才能够圆满大悲心，若受苦是真实，则大悲心就无法解救。因为众生演这些戏都不是真实的，所以才能够度他。如果那个戏是真实的，你就度不了啰！就是说，我们的生死现象都是如幻如化，不真实的，大家都是一样平等，跟佛也是一样平等。所以说，如果你如此了知，就能够成就圆满大悲，以此圆满的大悲心随顺众生，你就能够成就供养如来。 <br/>
 <br/>
-[b]　　经文：菩萨如是随顺众生，虚空界尽，众生界尽，众生业尽，众生烦恼尽；我此随顺无有穷尽。念念相续，无有间断，身语意业无有疲厌。 [/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:46</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　10、普皆回向 <br/>
+[b]　　经文：菩萨如是随顺众生，虚空界尽，众生界尽，众生业尽，众生烦恼尽；我此随顺无有穷尽。念念相续，无有间断，身语意业无有疲厌。 [/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:46</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　10、普皆回向 <br/>
 <br/>
 经文：复次，善男子，言普皆回向者。[/b] <br/>
 <br/>
@@ -1021,7 +1034,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [b]　　经文：是诸人等，于一念中所有行愿皆得成就；所获福聚无量无边。能于烦恼大苦海中，拔济众生令其出离，皆得往生阿弥陀佛极乐世界。[/b] <br/>
 <br/>
-如此之人，在修普贤十大行愿的时候，每一念中都能够修获无量无边的福聚。能于烦恼大苦海中，有能力拔济众生，令其出离苦海，使众生都能往生阿弥陀佛的极乐世界。 [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:54</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=5]　　三、偈颂 [/size][/b] <br/>
+如此之人，在修普贤十大行愿的时候，每一念中都能够修获无量无边的福聚。能于烦恼大苦海中，有能力拔济众生，令其出离苦海，使众生都能往生阿弥陀佛的极乐世界。 [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:54</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=5]　　三、偈颂 [/size][/b] <br/>
 <br/>
 所谓偈诵，是佛教经典的一种体裁，佛教经典文字的体裁有两种，即长行与偈颂。以现代术语说，长行是散文的体裁，句子有长有短，如前面讲过的经文；偈颂是韵文的体裁，有四字一句，五字一句，七字一句的不同，四句合为一偈。 <br/>
 <br/>
@@ -1401,11 +1414,11 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 [b]　　经文：并诸人、天一切世主，天、龙、夜叉、乾闼婆、阿修罗、迦楼罗、紧那罗、摩睺罗伽，人非人等一切大众，闻佛所说，皆大欢喜，信受奉行。[/b] <br/>
 <br/>
-&quot;一切世主&quot;是指在世间称王，做领导的人，他有很大的福德，或是金轮王、铁轮王，但是绝对不是小国王。什么叫做&quot;轮王&quot;？轮王是转轮圣王的简称，为世间第一有福的人。根据佛法说，当一个人修行功德力很大的时候，他来到人间做王，不必东征西讨，其他的小国王都向他降服。为什么呢？因为他的福报很大，具有很多宝物，其中有一只任何野兽看到都会怕的象。古代两国发生战事，是骑着野兽来作战的，其他的野兽看到那只象，就不用打了。除此之外，轮王还有一辆会飞的战车。不但如此，金轮王的神通还能够上到忉利天。人间的世主就是金轮王。每一层天都有它的主人，即天的世主，在忉利天的天主就是帝释。还有天龙八部鬼神，人非人等一切大众，听到佛讲普贤行愿品，都非常高兴，发愿要去修行。 [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:55</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　四、总结 [/b] <br/>
+&quot;一切世主&quot;是指在世间称王，做领导的人，他有很大的福德，或是金轮王、铁轮王，但是绝对不是小国王。什么叫做&quot;轮王&quot;？轮王是转轮圣王的简称，为世间第一有福的人。根据佛法说，当一个人修行功德力很大的时候，他来到人间做王，不必东征西讨，其他的小国王都向他降服。为什么呢？因为他的福报很大，具有很多宝物，其中有一只任何野兽看到都会怕的象。古代两国发生战事，是骑着野兽来作战的，其他的野兽看到那只象，就不用打了。除此之外，轮王还有一辆会飞的战车。不但如此，金轮王的神通还能够上到忉利天。人间的世主就是金轮王。每一层天都有它的主人，即天的世主，在忉利天的天主就是帝释。还有天龙八部鬼神，人非人等一切大众，听到佛讲普贤行愿品，都非常高兴，发愿要去修行。 [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-6 17:55</div><div class="post-body">[font=楷体_GB2312][size=5][b]　　四、总结 [/b] <br/>
 <br/>
 《普贤行愿品》，就讲到这里结束。诸位如果要发心修持，就要具足信心。就是说，修持普贤行愿要在无量劫里修持，一直修得见阿弥陀佛，那么，佛就会为你们授记，这是修持普贤行愿的道路；释迦牟尼佛所走的修行道路就不一样，是燃灯佛为善慧菩萨（释迦牟尼佛的前世生）授记。当善慧菩萨得到燃灯佛授记时，就立刻会飞上天空，即他的业力成熟而神通又恢复、显现出来了。菩萨被一佛授记将来要成佛之后，还必须继续修行。 <br/>
 <br/>
-在普贤行愿中，他从发菩提心开始，就把所修得的功德回向给一切众生。如果你们要修持普贤行愿，就要有信心，学习普贤菩萨从发菩提心开始把所修的所有功德都回向给一切众生；然后，你们就能够在世间道得解脱；之后，你们就能够开始修普贤行。你们开始修持普贤十大行愿的时候是作观想，机缘成熟了，就慢慢都能够完成。因为这是个不可思议解脱境界，你们对它要很有信心，确实有这样的不可思议解脱境界，然后才有可能发心修持普贤行愿。如果你们连这个不可思议解脱境界都不懂，那么，你们的心量是很微小的；那很微小的心是不可能修持普贤行愿的，因为这是个很大很大的愿！ [/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-7 17:42</div><div class="post-body">大方广佛华严经•普贤行愿品 <br/>
+在普贤行愿中，他从发菩提心开始，就把所修得的功德回向给一切众生。如果你们要修持普贤行愿，就要有信心，学习普贤菩萨从发菩提心开始把所修的所有功德都回向给一切众生；然后，你们就能够在世间道得解脱；之后，你们就能够开始修普贤行。你们开始修持普贤十大行愿的时候是作观想，机缘成熟了，就慢慢都能够完成。因为这是个不可思议解脱境界，你们对它要很有信心，确实有这样的不可思议解脱境界，然后才有可能发心修持普贤行愿。如果你们连这个不可思议解脱境界都不懂，那么，你们的心量是很微小的；那很微小的心是不可能修持普贤行愿的，因为这是个很大很大的愿！ [/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-2-7 17:42</div><div class="post-body">大方广佛华严经•普贤行愿品 <br/>
 [url]http://www.zmxh.com/bbs/viewthread.php?tid=7163&amp;extra=page%3D1[/url] <br/>
 <br/>
 白话佛经——《普贤菩萨行愿品》 <br/>

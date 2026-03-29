@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>月灯三昧经（经集部） - 藏密修海典藏</title>
+<title>月灯三昧经（经集部） - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">月灯三昧经（经集部）</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:58</div><div class="post-body">[font=楷体_GB2312][size=6][b]      月灯三昧经卷第一[/b][/size][/font] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 07:58</div><div class="post-body">[font=楷体_GB2312][size=6][b]      月灯三昧经卷第一[/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5]　　　　       高齐天竺三藏那连提耶舍译[/size][/font] <br/>
 <br/>
 [font=楷体_GB2312][size=5]    如是我闻。一时婆伽婆住王舍城耆阇崛山。与大比丘众百千人俱。菩萨八十那由他皆一生补处。阿氏多菩萨摩诃萨而为上首。四天王释天王。娑婆世界主大梵天王。及余增上福德诸天。增上威势阿修罗王。龙王夜叉。乾闼婆紧陀罗摩睺罗伽人非人等。前后围绕瞻仰如来。时此众中有菩萨。名月光童子。已于过去供养诸佛。殖众善根自识宿命。信乐大乘安住大乘大悲相应。从坐而起偏袒右肩右膝着地而白佛言。世尊。我今于佛欲有所问。惟愿听许除我疑结。[/size][/font] <br/>
@@ -458,7 +471,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 如人虽持良妙药　　于自身病不能治 <br/>
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]  　是故应当知选择　　所谓求于胜三昧 <br/>
-戒闻布施常修习　　得是三昧则不难[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 13:10</div><div class="post-body">[size=5]      月灯三昧经卷第二 <br/>
+戒闻布施常修习　　得是三昧则不难[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 13:10</div><div class="post-body">[size=5]      月灯三昧经卷第二 <br/>
 高齐天竺三藏那连提耶舍译 <br/>
 <br/>
 尔时世尊告月光童子言。过去久远无量无边不可思议过阿僧祇劫。尔时有佛。号曰声德如来应正遍知明行足善逝世间解无上士调御丈夫天人师佛世尊。出现于世。童子。尔时声德如来应正遍知。于初会众集有八亿声闻。皆阿罗汉。诸漏已尽逮得己利。尽诸有结依于正教。心善解脱能到一切心自在岸。第二会集有七亿众。第三会集有六亿众。一切亦是大阿罗汉。诸漏已尽逮得己利。尽诸有结依于正教。心善解脱能到一切心自在岸。童子。尔时彼佛寿四万岁。时阎浮提安隐丰乐。人民炽盛普遍充满。 <br/>
@@ -1118,7 +1131,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 一切诸法各差别　　其体空寂性远离 <br/>
 菩萨云何能现证　　愿为我说是法母 <br/>
 于一切法到彼岸　　言说法句已修学 <br/>
-己自无疑除他疑　　为我显示佛菩萨[/b]　[/size] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 13:41</div><div class="post-body">[size=5]     月灯三昧经卷第三 <br/>
+己自无疑除他疑　　为我显示佛菩萨[/b]　[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 13:41</div><div class="post-body">[size=5]     月灯三昧经卷第三 <br/>
 高齐天竺三藏那连提耶舍译 <br/>
 <br/>
 尔时世尊。知月光童子心所默念而作偈问。告月光童子言。若菩萨与一法相应。皆悉能获最胜功德。速成阿耨多罗三藐三菩提。何谓一法。童子。若菩萨于一切法体性如实了知。童子。云何于一切法体性如实了知。所谓一切法远离于名。离于音声。离于语言。离于文字。离于生灭因相缘相攀缘相。所谓无相远离于相。非心远离于心而知诸法。尔时世尊。即说偈曰 <br/>
@@ -1748,7 +1761,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 于极贪爱及重嗔　　多愚痴人惛慢者 <br/>
 无惭无愧行不调　　汝于彼速起忍力 <br/>
 我今所说无量德　　比丘于此不安住 <br/>
-非但口言得菩提　　要须坚固行者得　[/size][/b] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 14:20</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]     月灯三昧经卷第四[/size][/b][/size] <br/>
+非但口言得菩提　　要须坚固行者得　[/size][/b] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 14:20</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]     月灯三昧经卷第四[/size][/b][/size] <br/>
 [font=楷体_GB2312][size=5][b][size=6]        －－(丹如来出城品第一之二)[/size][/b] <br/>
 高齐天竺三藏那连提耶舍译 <br/>
 <br/>
@@ -2183,7 +2196,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]  　专心求此胜三昧　　正为无上菩提故 <br/>
 童子若有诸菩萨　　欲得如此胜定者 <br/>
-精进勇猛不顾命　　应当学我勤精进　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 17:07</div><div class="post-body">[size=5]月灯三昧经卷第五 <br/>
+精进勇猛不顾命　　应当学我勤精进　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 17:07</div><div class="post-body">[size=5]月灯三昧经卷第五 <br/>
 高齐天竺三藏那连提耶舍译 <br/>
 <br/>
 佛复告月光童子言。若菩萨摩诃萨于此三昧经典。受持读诵为他解说如说修行。得四功德。何者为四。 <br/>
@@ -2884,7 +2897,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 于彼前功德　　十六不及一 <br/>
 <br/>
 我知佛智慧　　不思议利益 <br/>
-受持此三昧　　一切佛所行[/b]　[/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 17:25</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]     月灯三昧经卷第六[/size][/b] <br/>
+受持此三昧　　一切佛所行[/b]　[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 17:25</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]     月灯三昧经卷第六[/size][/b] <br/>
 高齐天竺三藏那连提耶舍译 <br/>
 <br/>
 <br/>
@@ -3595,7 +3608,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][b]  　受苦最尤剧　　那由劫乃尽 <br/>
 多劫毕罪已　　得为甘露因 <br/>
 末代可怖时　　近于无上道 <br/>
-护持我法藏　　记彼持是经　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 17:45</div><div class="post-body">[font=楷体_GB2312][size=5][size=6][b]     月灯三昧经卷第七[/b][/size] <br/>
+护持我法藏　　记彼持是经　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 17:45</div><div class="post-body">[font=楷体_GB2312][size=5][size=6][b]     月灯三昧经卷第七[/b][/size] <br/>
 高齐天竺三藏那连提耶舍译 <br/>
 <br/>
 <br/>
@@ -4444,7 +4457,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][b]  　诸佛悉授记　　终无有疑惑 <br/>
 彼速得成就　　证世自然智 <br/>
 闻于此经已　　说决定功德 <br/>
-于己不生着　　应学如是法　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 18:21</div><div class="post-body">[font=楷体_GB2312][size=5][size=6][b]         月灯三昧经卷第八[/b][/size] <br/>
+于己不生着　　应学如是法　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 18:21</div><div class="post-body">[font=楷体_GB2312][size=5][size=6][b]         月灯三昧经卷第八[/b][/size] <br/>
 高齐天竺三藏那连提耶舍译 <br/>
 <br/>
 <br/>
@@ -4860,7 +4873,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [font=楷体_GB2312][size=5][b]  　悉舍一切内外事　　安住实际法性中 <br/>
 护持禁戒善清净　　无穿无缺无秽浊 <br/>
 彼于净戒无间杂　　亦复无其羯磨法 <br/>
-智人弃舍于二边　　能悟无上大菩提　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 19:01</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]     月灯三昧经卷第九[/size] <br/>
+智人弃舍于二边　　能悟无上大菩提　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 19:01</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]     月灯三昧经卷第九[/size] <br/>
 [/b]     　　　　高齐天竺三藏那连提耶舍译 <br/>
 <br/>
 尔时世尊。即说偈言 <br/>
@@ -5507,7 +5520,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [/b][/size][/font] <br/>
 [font=楷体_GB2312][size=5][b]  　彼亦降伏于魔力　　已到无上胜菩提 <br/>
 我向所说诸功德　　及示无量百千过 <br/>
-应当离过修功德　　童子如是必得佛　[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 22:14</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]      月灯三昧经卷第十[/size][/b] <br/>
+应当离过修功德　　童子如是必得佛　[/b][/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-27 22:14</div><div class="post-body">[font=楷体_GB2312][size=5][b][size=6]      月灯三昧经卷第十[/size][/b] <br/>
 高齐天竺三藏那连提耶舍译 <br/>
 <br/>
 <br/>

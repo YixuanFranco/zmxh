@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大圆满法的主要内容和特点 - 藏密修海典藏</title>
+<title>大圆满法的主要内容和特点 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大圆满法的主要内容和特点</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 22:48</div><div class="post-body">[font=楷体_GB2312][size=5]大圆满法的主要内容和特点 <br/>
+<div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 22:48</div><div class="post-body">[font=楷体_GB2312][size=5]大圆满法的主要内容和特点 <br/>
 <br/>
 作者：索南才让（许得存） <br/>
 <br/>
@@ -112,7 +125,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 （3）君王法规续部口诀； <br/>
 （4）婆罗门法规续部口诀。 <br/>
 <br/>
-最高目标证得自然智。下面重点介绍阿底瑜伽。[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 22:50</div><div class="post-body">[font=楷体_GB2312][size=5]二、大圆满阿底瑜伽 <br/>
+最高目标证得自然智。下面重点介绍阿底瑜伽。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 22:50</div><div class="post-body">[font=楷体_GB2312][size=5]二、大圆满阿底瑜伽 <br/>
 <br/>
 <br/>
 1．心部大圆满 <br/>
@@ -238,7 +251,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 法有消障法 <br/>
 <br/>
 现出式讲授隐秘法 <br/>
-自然明了式解释[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 22:52</div><div class="post-body">[font=楷体_GB2312][size=5]三、大圆满娘提法 <br/>
+自然明了式解释[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 22:52</div><div class="post-body">[font=楷体_GB2312][size=5]三、大圆满娘提法 <br/>
 <br/>
 <br/>
 娘提法，属于阿底瑜伽的口诀部密法，是无上秘密法之一种。“娘提”(snvine thie)，是藏语的音译，意为“心滴”或“心髓”。分无垢友和莲花生两个传承，从法统说，莲花生所传实得自无垢友。无垢友从学于吉样狮子和班智达智经，勤于思考，深解词义，通过修炼究竟四证，成就了识转身。 <br/>
@@ -302,7 +315,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 噶玛娘提，是以噶玛噶举派第三世活佛让雄多杰（1284——1339)修炼大圆满娘提法而得名的。宇妥娘提，由香宇扎巴·卓哇贡波、宇妥·云丹贡波等人传下来的，故名。 <br/>
 <br/>
-《知识总汇》记载：“做出弘扬世间的事业，被称为噶玛娘提的甚深密法从意趣思想界提出；空行娘提传给遍知智美欧色，他根据普贤佛的思想著文阐释上师央提(yangthig极精髓）、甚深央提、空行央提，完成《七宝藏论》、《安息本论释》三部等，承法弟子很多。总之，实体之蕴修成光身之生秘密娘提之教是由隆庆饶绛桑波，即第二欢喜金刚所传扬”。⒀从这段记载看，大圆满及其所属的上师央提、甚深央提、空行央提等名称是隆庆饶绛巴正式确定下来的，以后逐渐得到认可。[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 22:58</div><div class="post-body">[font=楷体_GB2312][size=5]第四节  大圆满法的修持 <br/>
+《知识总汇》记载：“做出弘扬世间的事业，被称为噶玛娘提的甚深密法从意趣思想界提出；空行娘提传给遍知智美欧色，他根据普贤佛的思想著文阐释上师央提(yangthig极精髓）、甚深央提、空行央提，完成《七宝藏论》、《安息本论释》三部等，承法弟子很多。总之，实体之蕴修成光身之生秘密娘提之教是由隆庆饶绛桑波，即第二欢喜金刚所传扬”。⒀从这段记载看，大圆满及其所属的上师央提、甚深央提、空行央提等名称是隆庆饶绛巴正式确定下来的，以后逐渐得到认可。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 22:58</div><div class="post-body">[font=楷体_GB2312][size=5]第四节  大圆满法的修持 <br/>
 <br/>
 <br/>
 大圆满密法属于宁玛派的核心教法，它的修持具有严格的规定和限制。一般修炼大圆满法者身体必须达到五种圆满，即地圆满、师圆满、法圆满、时圆满和徒众圆满。前面已经介绍，凡修炼密法者必须接受灌顶，大圆满密法也不例外，这是密法修炼者的基本条件。 <br/>
@@ -408,7 +421,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 第四：随学口诀。“当境界出现时，不可执著相，当以心力相控，任其消失”。⑵ <br/>
 <br/>
-通过托噶修持能够打开自然身曼荼罗中如来的秘密门。[/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 23:10</div><div class="post-body">[font=楷体_GB2312][size=5]第五节  大圆满伏藏 <br/>
+通过托噶修持能够打开自然身曼荼罗中如来的秘密门。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2006-9-18 23:10</div><div class="post-body">[font=楷体_GB2312][size=5]第五节  大圆满伏藏 <br/>
 <br/>
 <br/>
 关于伏藏的形成问题，前面已经提到，它是印度佛教发展的产物，并非是莲花生的发明创造。《正法摄聚经》记载： <br/>
@@ -471,8 +484,8 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 ⑴ 藏文大藏经《甘珠尔》，德格印经院木刻本。 <br/>
 ⑵《西藏王臣记》，五世DL喇嘛著，郭和卿译，民族出版社1983年版。 <br/>
-⑶《莲花生传——赤铜洲遗教》，娘•尼玛威色著，四川民族出版社，1989年藏文版，第130——132页。[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">l</div>lvselianhua发表于 2006-9-19 11:25</div><div class="post-body">不错！！！ <br/>
-值得一看！！！！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">更</div>更雨新华发表于 2007-6-11 21:27</div><div class="post-body">详实、全面！受益良多！合十 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">杨</div>杨求悟发表于 2007-10-16 10:46</div><div class="post-body">谢谢！阿弥陀佛 <br/>
+⑶《莲花生传——赤铜洲遗教》，娘•尼玛威色著，四川民族出版社，1989年藏文版，第130——132页。[/size][/font] </div></div><div class="post"><div class="post-header"><div class="avatar">l</div>lvselianhua发表于 2006-9-19 11:25</div><div class="post-body">不错！！！ <br/>
+值得一看！！！！ </div></div><div class="post"><div class="post-header"><div class="avatar">更</div>更雨新华发表于 2007-6-11 21:27</div><div class="post-body">详实、全面！受益良多！合十 </div></div><div class="post"><div class="post-header"><div class="avatar">杨</div>杨求悟发表于 2007-10-16 10:46</div><div class="post-body">谢谢！阿弥陀佛 <br/>
 <br/>
 顶礼上师本尊空行护法众！ <br/>
 <br/>
@@ -481,15 +494,15 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 喇嘛千诺！喇嘛千诺！喇嘛千诺！ <br/>
 <br/>
 永久善护其深誓，永久供养诸如来， <br/>
-永久供养阿阇黎，咕噜等同一切佛。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-24 01:30</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+永久供养阿阇黎，咕噜等同一切佛。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-24 01:30</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-24 01:33</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-24 01:33</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-24 01:34</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-24 01:34</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
