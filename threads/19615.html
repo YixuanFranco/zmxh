@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>聖文殊名號真實宣說註釋·明顯名義不二密 藏汉 - 藏密修海典藏</title>
+<title>聖文殊名號真實宣說註釋·明顯名義不二密 藏汉 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">聖文殊名號真實宣說註釋·明顯名義不二密 藏汉</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-8 17:50</div><div class="post-body">[size=5]d2537 聖文殊名號真實宣說註釋·明顯名義不二密 達摩室利密札 法賢 <br/>
+<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-8 17:50</div><div class="post-body">[size=5]d2537 聖文殊名號真實宣說註釋·明顯名義不二密 達摩室利密札 法賢 <br/>
 D2537 <br/>
 ། །།རྒྱ་གར་གྱི་མཁན་པོ་དྷརྨ་ཤྲཱི་མི་ཏྲ་དང་། བོད་ཀྱི་ལོ་ཙཱ་བ་དགེ་སློང་ཆོས་ཀྱི་བཟང་པོས་མཛོད་ཀྱི་སྒོམ་པ་ཡེ་ཤེས་གྲགས་པའི་དོན་དུ་བསྒྱུར་བའོ།།[་]@##། །རྒྱ་གར་སྐད་དུ། ཨཱརྱ་མཉྫུ་ཤྲཱི་ནཱ་མ་སདྷཱི་ཏི་ཐི་ཏ་བཱ་ཏི་ནཱ་མ་ཀ་ར། བོད་སྐད་དུ། འཕགས་པ་འཇམ་དཔལ་གྱི་མཚན་ཡང་དག་པར་བརྗོད་པའི་འགྲེལ་པ། མཚན་དོན་གསལ་བར་བྱེད་པ་ཞེས་བྱ་བ། འཕགས་པ་འཇམ་དཔལ་ལ་ཕྱག་འཚལ་ལོ། །སྐུ་གསུམ་ངོ་བོ་ཉིད་ལྡན་པའི། །ཐབས་དང་ཤེས་རབ་གཉིས་ལྡན་པའི། །ལོག་རྟོག་དྲ་བ གཅོད་མཛད་པ།།ཡིད་བཞིན་ནོར་བུ་འཇམ་དཔལ་བསྟོད། །བླ་མེད་ཐེག་པ་ལམ་གྱི་དོན། །བླ་མའི་དྲིན་གྱིས་ཐོབ་ནས་བརྩམས། །གླེང་གཞི་དཀྱིལ་འཁོར་མཚན་གྱི་དོན། །སྔགས་དང་ཕན་ཡོན་མདོར་བསྡུས་པའོ། །དེ་ནས་དཔལ་ལྡན་རྡོ་རྗེ་འཆང་། །ཞེས་བྱ་བའི་དོན་ནི་ བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་དེ་དགའ་ལྡན་དུ་སྐྱེ་བ་བཞེས་ནས།དེ་ནས་འཆི་འཕོ་བ་མཛད་དེ་གླང་པོ་ཆེ་ཐལ་ཀར་མཆེ་བ་དྲུག་དང་ལྡན་པར་སྤྲུལ་ཏེ་ལྷུམས་སུ་ཞུགས་ནས། དེ་ཉིད་ཡེ་ཤེས་སེམས་དཔའ་མཐིང་ག་ཐལ་བའི་མདོག་གོ། །དེ་ཡང་མི་རྣམས་ཐེག་ཆེན་གྱི་ལམ་ ལ་ཞུགས་པའི་ཕྱིར་གླང་པོ་ཆེའོ།།འགྲོ་བ་དྲུག་གི་སྒོ་གཅོད་པའི་ཕྱིར་མཆེ་བ་དྲུག་ཞུ་ནས་ཞལ་དྲུག་པ་སྟོན་པས་ན་དཔལ་ལྡན་ནོ་ཞེས་བྱ་བའོ། །ཡུམ་གྱི་ཕོ་བྲང་དེ་ཉིད་ནས་འོད་ཟེར་ཕྱོགས་བཅུར་འཕྲོས་པས་སྐུའི་སྤྲུལ་པ་ཕྱག་ན་རྡོ་རྗེ་དཔག་ཏུ་མེད་པས་ བསྐོར་བས་ན་རྡོ་རྗེ་འཆང་ཞེས་བྱ་བའོ།།འཇིགས་བྱེད་ཀྱི་དོན་དེ་སྐུ་ལ་རྫོགས་པ་ཡང་ངོ་། །པདྨ་དཀར་པོ་རྒྱས་འདྲའི་སྤྱན། །པདྨ་རྒྱས་པའི་གདན་ལ་བཞུགས། །ཞེས་བྱ་བའི་དོན་ནི། པདྨ་ནི་ཡུམ་གྱི་མཁའ་གཞལ་ཡས་ཁང་གདན་དང་བཅས་པའོ། །དེ་ལྟར་སྣང་བ་ལས་ རྒྱལ་བ་རིགས་ལྔས་འོད་ཀྱིས་བསྐུལ་ཏེ།སྐུ་ཁྲོ་བོ་ཞུ་བ་ལས་ཕུང་པོ་ལྔ་རིགས་ལྔས་བྱིན་གྱིས་བརླབས་པའི་སྐུ་ལྔའོ། །ཡུམ་ལ་བསྟོད་ཅིང་ཉོན་མོངས་པ་དང་ཤེས་བྱ་སྤངས་པའི་རྟགས་སུ་པོ་ཏི་དང་རལ་གྲི་བསྣམས་པ། ཐམས་ཅད་མཉམ་པའི་ས་ལ་བཞུགས་པའི་རྟགས་ སུ་མཉམ་པའི་སྐྱིལ་ཀྲུང་དུ་བཞུགས་པའོ།།དེའི་ཕྱིར་ཡེ་ཤེས་ཡོངས་སུ་རྫོགས་ཤིང་རྒྱས་པས་ན་པདྨ་རྒྱས་པའི་གདན་ལ་བཞུགས་པའོ། །དེ་ཉིད་ཕྱི་ནང་མེད་པར་རྒྱས་པར་གསལ་བས་ཉོན་མོངས་པའི་དྲི་མ་དག་པས་ན། པདྨ་དཀར་པོ་རྒྱས་འདྲའི་སྤྱན་ནོ། །རིགས་ལྔས་ བྱིན་གྱིས་བརླབས་པའི་སྐུའོ། <br/>
 印度堪布達摩室利彌札和藏地譯師比丘法吉祥為藏經的修行者智慧名稱而翻譯。 <br/>
@@ -367,7 +380,7 @@ D2537 <br/>
 &quot; 以欲界、色界、無色界讚頌三界自在智慧身。 <br/>
 那麼，何為智慧身？ <br/>
 即讚頌彼三界中唯一童子身。 <br/>
-其義為智慧身降生於三界中。[/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-8 17:50</div><div class="post-body">[size=5]།ཇི་ལྟར་བལྟམས་པར་བྱེད་ཅེ་ན། ཡུམ་གྱི་སྐུ་བསྟོད། ཤེས་རབ་ཤིན་ཏུ་ཡངས་པ་དེར་འོད་ཀྱིས་འཇིག་རྟེན་གསུམ་གསལ་བར་མཛད་ནས། འཁོར་ཐམས་ཅད་བདེ་བའི་རང་བཞིན་དུ་ཚིམ་པར་བྱེད་པ་སྟེ། གནས་བརྟན་རྒན་པོ་སྐྱེ་དགུའི་བདག་པོ་ཚངས་པ་དང་། སུམ་ཅུ་རྩ་གཉིས་ཀྱི་བདག་པོ་ཡོན་ཏན་རྣམ་སྨིན་གྱི་མཚན་དང་ལྡན་པའི་བརྒྱ་བྱིན་གྱིས། འཇིག་རྟེན་སློབ་དཔོན་འཇིགས་པ་མེད། །མགོན་སྐྱབས་འཇིག རྟེན་ཡིད་གཅུགས་པ།།ཞེས་བྱ་བ་ནི་ཡོན་ཏན་དེ་དང་ལྡན་པའི་དབྱེར་མེད་ཀྱི་སྐུ་དེ་ཐབས་དང་ཤེས་རབ་གཉིས་ཀྱི་ཚུལ་དུ་བླངས་པའོ། །འོ་ན་དེའི་དོན་ཅི་ཞེ་ན། སྐྱབས་དང་སྐྱོབ་པ་བླ་ན་མེད། །ཅེས་པ་ནས། སྲིད་པའི་རི་བོ་འཇོམས་པ་པོ། །ཞེས་བྱ་བས་ནི་འཇིག་རྟེན་པའི་སྤྱོད་པ་ དང་བསྟུན་ནས།སྐྱེ་བས་འགྲོ་བ་ལ་སྐྱོབ་ཅིང་འདྲེན་པའི་རྟགས་སུ་ཕྱོགས་བཞིར་ནམ་མཁར་གོམ་པ་བདུན་གྱིས་པདྨ་བདུན་བདུན་ནོ། །མ་རིག་སྒོ་ངའི་སྦུབས་འབྱེད་པ། །སྲིད་པའི་དྲ་བ་འཇོམས་པ་པོ། །ཉོན་མོངས་མ་ལུས་ཞི་བྱེད་པ། །འཁོར་བའི་རྒྱ་མཚོ་ཕ་རོལ་ཕྱིན། །ཡེ་ཤེས་ དབང་བསྐུར་ཅོད་པན་ཅན།།རྫོགས་པའི་སངས་རྒྱས་རྒྱན་དུ་ཐོགས། །སྡུག་བསྔལ་གསུམ་གྱི་སྡུག་བསྔལ་ཞི། །གསུམ་སེལ་མཐའ་ཡས་གྲོལ་གསུམ་ཐོབ། །སྒྲིབ་པ་ཀུན་ལས་ངེས་པར་གྲོལ། །མཁའ་ལྟར་མཉམ་པ་ཉིད་ལ་གནས། །ཉོན་མོངས་དྲི་མ་ཀུན་ལས་འདས། ། དུས་གསུམ་དུས་མེད་རྟོགས་པ་པོ། །སེམས་ཅན་ཀུན་གྱི་ཀླུ་ཆེན་པོ། །ཡོན་ཏན་ཐོད་ཅན་རྣམས་ཀྱི་ཐོད། །ལུས་ཀུན་ལས་ནི་རྣམ་གྲོལ་ཞིང་། །ནམ་མཁའི་ལམ་ལ་རབ་ཏུ་གནས། །ཡིད་བཞིན་ནོར་བུ་ཆེན་པོ་འཆང་། །ཁྱབ་བདག་རིན་ཆེན་ཀུན་གྱི་མཆོག་།དཔག་བསམ་ཤིང ཆེན་རྒྱས་པ་སྟེ།།བུམ་པ་བཟང་པོ་ཆེ་བའི་མཆོག་།ཅེས་བྱ་བའི་དོན་ནི། མ་རིག་པའི་དྲི་མ་དང་། སྲིད་པའི་དྲ་བ་དང་། ཉོན་མོངས་པ་ཞི་བ་དང་། འཁོར་བའི་རྒྱ་མཚོ་ལས་བསྒྲལ་བའི་ཕྱིར་དབང་བསྐུར་ཞིང་ཁྲུས་གསོལ་བའོ། །གང་ལ་ཞེ་ན། ཡེ་ཤེས་ཀྱི་སྐུ་ དེ་ལའོ།།གང་དང་ལྡན་པས་ཤེ་ན། རྫོགས་པའི་སངས་རྒྱས་ཀྱིས་དེ་ཁོ་ན་དང་ལྡན་པ་དང་། སྡུག་བསྔལ་གསུམ་སྟེ། ལུས་ངག་ཡིད་གསུམ་གྱི་དྲི་མ་དག་པར་བྱེད་པས་སོ། །དེ་ཇི་ལྟར་དག་སྟེ། མི་དག་ཅེ་ན། མཁའ་ལྟར་མཉམ་པ་ཉིད་ལ་གནས། །ཉོན་མོངས་དྲི་མ་ ཀུན་ལས་འདས་པས་སོ།།ཇི་ལྟར་རྒྱུ་མཚན་ཅི་ཞེ་ན། དུས་གསུམ་དུས་མེད་རྟོགས་པའོ། །གང་གི་ལས་སུ་བྱས་ཤེ་ན། ཀླུ་ཆེན་པོས་སེམས་ཅན་གྱི་ཡེ་ཤེས་ཀྱི་སྐུ་དེ་ལའོ། །ཇི་ལྟར་མཛད་ཅེ་ན། ཡོན་ཏན་གྱི་རྒྱན་སྦྲུལ་མགོའི་གདེངས་ཀ་ཅན་གྱི་ཀླུའི་གཙོ་བོ་དགའ་བོ་དང་ འཇོག་པོའོ། <br/>
+其義為智慧身降生於三界中。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-8 17:50</div><div class="post-body">[size=5]།ཇི་ལྟར་བལྟམས་པར་བྱེད་ཅེ་ན། ཡུམ་གྱི་སྐུ་བསྟོད། ཤེས་རབ་ཤིན་ཏུ་ཡངས་པ་དེར་འོད་ཀྱིས་འཇིག་རྟེན་གསུམ་གསལ་བར་མཛད་ནས། འཁོར་ཐམས་ཅད་བདེ་བའི་རང་བཞིན་དུ་ཚིམ་པར་བྱེད་པ་སྟེ། གནས་བརྟན་རྒན་པོ་སྐྱེ་དགུའི་བདག་པོ་ཚངས་པ་དང་། སུམ་ཅུ་རྩ་གཉིས་ཀྱི་བདག་པོ་ཡོན་ཏན་རྣམ་སྨིན་གྱི་མཚན་དང་ལྡན་པའི་བརྒྱ་བྱིན་གྱིས། འཇིག་རྟེན་སློབ་དཔོན་འཇིགས་པ་མེད། །མགོན་སྐྱབས་འཇིག རྟེན་ཡིད་གཅུགས་པ།།ཞེས་བྱ་བ་ནི་ཡོན་ཏན་དེ་དང་ལྡན་པའི་དབྱེར་མེད་ཀྱི་སྐུ་དེ་ཐབས་དང་ཤེས་རབ་གཉིས་ཀྱི་ཚུལ་དུ་བླངས་པའོ། །འོ་ན་དེའི་དོན་ཅི་ཞེ་ན། སྐྱབས་དང་སྐྱོབ་པ་བླ་ན་མེད། །ཅེས་པ་ནས། སྲིད་པའི་རི་བོ་འཇོམས་པ་པོ། །ཞེས་བྱ་བས་ནི་འཇིག་རྟེན་པའི་སྤྱོད་པ་ དང་བསྟུན་ནས།སྐྱེ་བས་འགྲོ་བ་ལ་སྐྱོབ་ཅིང་འདྲེན་པའི་རྟགས་སུ་ཕྱོགས་བཞིར་ནམ་མཁར་གོམ་པ་བདུན་གྱིས་པདྨ་བདུན་བདུན་ནོ། །མ་རིག་སྒོ་ངའི་སྦུབས་འབྱེད་པ། །སྲིད་པའི་དྲ་བ་འཇོམས་པ་པོ། །ཉོན་མོངས་མ་ལུས་ཞི་བྱེད་པ། །འཁོར་བའི་རྒྱ་མཚོ་ཕ་རོལ་ཕྱིན། །ཡེ་ཤེས་ དབང་བསྐུར་ཅོད་པན་ཅན།།རྫོགས་པའི་སངས་རྒྱས་རྒྱན་དུ་ཐོགས། །སྡུག་བསྔལ་གསུམ་གྱི་སྡུག་བསྔལ་ཞི། །གསུམ་སེལ་མཐའ་ཡས་གྲོལ་གསུམ་ཐོབ། །སྒྲིབ་པ་ཀུན་ལས་ངེས་པར་གྲོལ། །མཁའ་ལྟར་མཉམ་པ་ཉིད་ལ་གནས། །ཉོན་མོངས་དྲི་མ་ཀུན་ལས་འདས། ། དུས་གསུམ་དུས་མེད་རྟོགས་པ་པོ། །སེམས་ཅན་ཀུན་གྱི་ཀླུ་ཆེན་པོ། །ཡོན་ཏན་ཐོད་ཅན་རྣམས་ཀྱི་ཐོད། །ལུས་ཀུན་ལས་ནི་རྣམ་གྲོལ་ཞིང་། །ནམ་མཁའི་ལམ་ལ་རབ་ཏུ་གནས། །ཡིད་བཞིན་ནོར་བུ་ཆེན་པོ་འཆང་། །ཁྱབ་བདག་རིན་ཆེན་ཀུན་གྱི་མཆོག་།དཔག་བསམ་ཤིང ཆེན་རྒྱས་པ་སྟེ།།བུམ་པ་བཟང་པོ་ཆེ་བའི་མཆོག་།ཅེས་བྱ་བའི་དོན་ནི། མ་རིག་པའི་དྲི་མ་དང་། སྲིད་པའི་དྲ་བ་དང་། ཉོན་མོངས་པ་ཞི་བ་དང་། འཁོར་བའི་རྒྱ་མཚོ་ལས་བསྒྲལ་བའི་ཕྱིར་དབང་བསྐུར་ཞིང་ཁྲུས་གསོལ་བའོ། །གང་ལ་ཞེ་ན། ཡེ་ཤེས་ཀྱི་སྐུ་ དེ་ལའོ།།གང་དང་ལྡན་པས་ཤེ་ན། རྫོགས་པའི་སངས་རྒྱས་ཀྱིས་དེ་ཁོ་ན་དང་ལྡན་པ་དང་། སྡུག་བསྔལ་གསུམ་སྟེ། ལུས་ངག་ཡིད་གསུམ་གྱི་དྲི་མ་དག་པར་བྱེད་པས་སོ། །དེ་ཇི་ལྟར་དག་སྟེ། མི་དག་ཅེ་ན། མཁའ་ལྟར་མཉམ་པ་ཉིད་ལ་གནས། །ཉོན་མོངས་དྲི་མ་ ཀུན་ལས་འདས་པས་སོ།།ཇི་ལྟར་རྒྱུ་མཚན་ཅི་ཞེ་ན། དུས་གསུམ་དུས་མེད་རྟོགས་པའོ། །གང་གི་ལས་སུ་བྱས་ཤེ་ན། ཀླུ་ཆེན་པོས་སེམས་ཅན་གྱི་ཡེ་ཤེས་ཀྱི་སྐུ་དེ་ལའོ། །ཇི་ལྟར་མཛད་ཅེ་ན། ཡོན་ཏན་གྱི་རྒྱན་སྦྲུལ་མགོའི་གདེངས་ཀ་ཅན་གྱི་ཀླུའི་གཙོ་བོ་དགའ་བོ་དང་ འཇོག་པོའོ། <br/>
 如何降生？ <br/>
 讚頌佛母身。在極其廣大的智慧中以光明照亮三界，使一切眷屬以安樂本性而滿足。 <br/>
 長老耆宿眾生主梵天和具足三十二功德異熟相的帝釋天說道： <br/>

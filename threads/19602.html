@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>（喜金剛續)吉祥大寶雨修法儀軌 吉祥智慧秘密 ﻿藏汉 N - 藏密修海典藏</title>
+<title>（喜金剛續)吉祥大寶雨修法儀軌 吉祥智慧秘密 ﻿藏汉 N - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">（喜金剛續)吉祥大寶雨修法儀軌 吉祥智慧秘密 ﻿藏汉 N</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-6 09:05</div><div class="post-body">[size=5]d1331 吉祥大寶雨修法儀軌 吉祥智慧秘密 n3.5s <br/>
+<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-6 09:05</div><div class="post-body">[size=5]d1331 吉祥大寶雨修法儀軌 吉祥智慧秘密 n3.5s <br/>
 D1331 <br/>
 ། །།གུར་གྱི་དོན་ཨ་ཤོ་ཀས་མན་ངག་ཏུ་བརྩམས་སོ།། @##། །རྒྱ་གར་སྐད་དུ། ཤྲཱི་མ་ཧཱ་རཏྣ་ཀཱ་ལ་ནཱ་མ་སཱ་དྷ་ནཾ་པ་ཡི་ཀཱ། བོད་སྐད་དུ། དཔལ་རིན་པོ་ཆེའི་ཆར་ཡང་ཞེས་བྱ་བའི་སྒྲུབ་པའི་ཐབས། དཔལ་རྡོ་རྗེ་སེམས དཔའ་ལ་ཕྱག་འཚལ་ལོ།།ཤར་བ་མ་ཡིན་ནུབ་པ་མིན། །དངོས་པོ་མེད་པ་རྟག་ཏུ་ཤར། །ཐམས་ཅད་ཀུན་ཁྱབ་བརྗོད་དུ་མེད། །རང་རིག་བདག་ཉིད་ཕྱག་འཚལ་ལོ། །རྣལ་འབྱོར་རྣམས་ཀྱིས་རྙེད་དཀའ་བ། །མཁས་པ་ཀུན་གྱིས་རྙེད་མི་ནུས། །གང་གི་དྲིན་གྱིས་རྙེད་སླར་ འགྱུར།།བླ་མའི་ཞབས་ལ་ཕྱག་འཚལ་ལོ། །མི་ཤོགས་ཁོལ་ནས་བཅིངས་པ་རྣམས། །རྡོ་རྗེ་རྐང་པའི་དབའ་རླབས་ཀྱིས། །ཕྱོགས་རྣམས་ཐམས་ཅད་ལ་ཁྱབ་པའི། །སུས་འདི་གཏིང་རིང་པ་ཡི་ཆུ། །གཏེར་གཏིང་དཔག་དཀའ་ཤིན་ཏུ་དཀའ། །དེ་ལ་གཟུང་བར་ ག་ལ་ནུས།།དེ་བས་དཔལ་ལྡན་ཐིག་ཆེན་པོའི། །ཐིག་ལེ་ཡི་ནི་ཆུ་ཡི་གཏེར། །དབུས་སུ་སྙོམས་པ་དེ་ལས་ནི། །ཡོན་ཏན་གཏེར་ནི་རིན་ཆེན་རྒྱལ། །ཤེས་རབ་དཔལ་གསང་བདག་གིས་ནི། །རིན་ཐང་ཆེན་པོ་དི་རིང་དྲང་། །རིམ་པ་གཉིས་ཀྱི་གོ་རིམས་ཀྱི། །ཡེ་ཤེས་ མཁའ་འགྲོ་བསྒོམ་པ་འདི།།བླ་མའི་ལུང་གིས་རང་གིས་མིན། །སྐལ་ལྡན་འགྲུབ་དོན་བདག་གིས་བརྩམ། །རྫོགས་པའི་ཡེ་ཤེས་མཁའ་འགྲོ་ལ། །དེ་ལ་བསྐྱེད་པ་གཞུང་མ་ཡིན། །ཕྱག་དང་གཟུགས་སོགས་བརྗོད་པ་ཡིས། །དེ་ལས་ཀུན་རྫོབ་སྐྱེ་བར་འགྱུར། ། དེ་ལ་ཀུན་རྫོབ་རིགས་མ་ཡིན། །དོན་དམ་པ་ལ་འགོག་པ་ཡིན། །གལ་ཏེ་བསྒོམ་པ་གོམས་པ་ལས། །ཀུན་རྫོབ་སྐྱོན་མེད་འོང་འགྱུར་ན། །དོན་དམ་པ་ཡིས་ཕྱོགས་ལ་ནི། །ཀུན་རྫོབ་དེ་ནི་སྐྱོན་དུ་འགྱུར། །བརྟན་པ་ལས་ནི་དོན་གྲུབ་ན། །ཐེ་ཚོམ མེད་པར་ལོག་པ་ཡིན།།དེ་ནི་དཔལ་རིན་རྡོར་ཞབས་ཀྱིས། །བདག་མེད་སྒྲུབ་ཐབས་གསུངས་པའོ། <br/>
 《帳篷的要義》阿育王所著的口訣 <br/>
@@ -348,7 +361,7 @@ D1331 <br/>
 &quot;由印度大堪布吉祥智慧秘密（Śrī Prajñāguhya）翻譯並校訂。&quot; <br/>
 這是一個典型的藏文典籍末尾的譯者記錄（藏文稱為 མཛད་བྱང་），而不是關於阿育王的內容。 <br/>
 其中： - རྒྱ་གར་གྱི་ 是&quot;印度的&quot; - མཁན་པོ་ཆེན་པོ་ 是&quot;大堪布&quot; - དཔལ་ཤེས་རབ་གསང་བ 是譯者的名字，意為&quot;吉祥智慧秘密&quot; - བསྒྱུར་ཅིང་གཏན་ལ་ཕབ་པ 意為&quot;翻譯並校訂&quot; <br/>
-這樣的譯跋通常出現在藏文佛典的結尾，用來記錄譯者資訊和翻譯完成的情況。[/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-6 09:27</div><div class="post-body">[size=5]d1331吉祥大寶雨修法儀軌吉祥智慧秘密 <br/>
+這樣的譯跋通常出現在藏文佛典的結尾，用來記錄譯者資訊和翻譯完成的情況。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-6 09:27</div><div class="post-body">[size=5]d1331吉祥大寶雨修法儀軌吉祥智慧秘密 <br/>
 <br/>
 D1331 <br/>
 ། །།གུར་གྱི་དོན་ཨ་ཤོ་ཀས་མན་ངག་ཏུ་བརྩམས་སོ།། @##། །རྒྱ་གར་སྐད་དུ། ཤྲཱི་མ་ཧཱ་རཏྣ་ཀཱ་ལ་ནཱ་མ་སཱ་དྷ་ནཾ་པ་ཡི་ཀཱ། བོད་སྐད་དུ། དཔལ་རིན་པོ་ཆེའི་ཆར་ཡང་ཞེས་བྱ་བའི་སྒྲུབ་པའི་ཐབས། དཔལ་རྡོ་རྗེ་སེམས དཔའ་ལ་ཕྱག་འཚལ་ལོ།།ཤར་བ་མ་ཡིན་ནུབ་པ་མིན། །དངོས་པོ་མེད་པ་རྟག་ཏུ་ཤར། །ཐམས་ཅད་ཀུན་ཁྱབ་བརྗོད་དུ་མེད། །རང་རིག་བདག་ཉིད་ཕྱག་འཚལ་ལོ། །རྣལ་འབྱོར་རྣམས་ཀྱིས་རྙེད་དཀའ་བ། །མཁས་པ་ཀུན་གྱིས་རྙེད་མི་ནུས། །གང་གི་དྲིན་གྱིས་རྙེད་སླར་ འགྱུར།།བླ་མའི་ཞབས་ལ་ཕྱག་འཚལ་ལོ། །མི་ཤོགས་ཁོལ་ནས་བཅིངས་པ་རྣམས། །རྡོ་རྗེ་རྐང་པའི་དབའ་རླབས་ཀྱིས། །ཕྱོགས་རྣམས་ཐམས་ཅད་ལ་ཁྱབ་པའི། །སུས་འདི་གཏིང་རིང་པ་ཡི་ཆུ། །གཏེར་གཏིང་དཔག་དཀའ་ཤིན་ཏུ་དཀའ། །དེ་ལ་གཟུང་བར་ ག་ལ་ནུས།།དེ་བས་དཔལ་ལྡན་ཐིག་ཆེན་པོའི། །ཐིག་ལེ་ཡི་ནི་ཆུ་ཡི་གཏེར། །དབུས་སུ་སྙོམས་པ་དེ་ལས་ནི། །ཡོན་ཏན་གཏེར་ནི་རིན་ཆེན་རྒྱལ། །ཤེས་རབ་དཔལ་གསང་བདག་གིས་ནི། །རིན་ཐང་ཆེན་པོ་དི་རིང་དྲང་། །རིམ་པ་གཉིས་ཀྱི་གོ་རིམས་ཀྱི། །ཡེ་ཤེས་ མཁའ་འགྲོ་བསྒོམ་པ་འདི།།བླ་མའི་ལུང་གིས་རང་གིས་མིན། །སྐལ་ལྡན་འགྲུབ་དོན་བདག་གིས་བརྩམ། །རྫོགས་པའི་ཡེ་ཤེས་མཁའ་འགྲོ་ལ། །དེ་ལ་བསྐྱེད་པ་གཞུང་མ་ཡིན། །ཕྱག་དང་གཟུགས་སོགས་བརྗོད་པ་ཡིས། །དེ་ལས་ཀུན་རྫོབ་སྐྱེ་བར་འགྱུར། ། དེ་ལ་ཀུན་རྫོབ་རིགས་མ་ཡིན། །དོན་དམ་པ་ལ་འགོག་པ་ཡིན། །གལ་ཏེ་བསྒོམ་པ་གོམས་པ་ལས། །ཀུན་རྫོབ་སྐྱོན་མེད་འོང་འགྱུར་ན། །དོན་དམ་པ་ཡིས་ཕྱོགས་ལ་ནི། །ཀུན་རྫོབ་དེ་ནི་སྐྱོན་དུ་འགྱུར། །བརྟན་པ་ལས་ནི་དོན་གྲུབ་ན། །ཐེ་ཚོམ མེད་པར་ལོག་པ་ཡིན།།དེ་ནི་དཔལ་རིན་རྡོར་ཞབས་ཀྱིས། །བདག་མེད་སྒྲུབ་ཐབས་གསུངས་པའོ། །དེ་ནི་གོ་རིམས་བདག་གིས་ནི། །ཅུང་ཟད་ཙམ་ནི་བཤད་པར་བྱ། །བསྒོམས་ལས་དེ་ནི་རྟོག་པ་སྟེ། །རྟོག་མེད་པ་ནི་གང་ནའང་མེད། །རྟོག་པ་མེད་པའི་ གང་མིང་ཅི།།ཐམས་ཅད་ཡང་དག་རྟོག་སྤངས་པ། །རྟོག་པ་མེད་ལས་གང་གཞན་ནི། །སྒོམ་པ་མཆོག་ནི་ཡོད་པའམ། །གལ་ཏེ་དེ་ལ་ཡོད་ན་ནི། །འཁྲུག་པ་མེད་པ་དེ་ལ་མིན། །སློབ་དཔོན་མཁས་པ་ཀམྤ་ལས། །སྣང་བའི་ཕྲེང་ལས་དེ་སྐད་གསུངས། ། བཟང་བ་དང་ནི་ངན་པ་ཡི། །རྟོག་པའི་བྱེ་བྲག་དེ་ལ་ཅི། །རྟེན་གྱི་བྱེ་བྲག་ཐ་དད་མེད། །མེ་ཡིས་ཚ་བའི་བྱ་བ་ལྟར། །ཙནྡན་རང་ནི་འབར་ན་ཡང་། །རེག་པ་བྱས་ན་འཚིག་པར་འགྱུར། །དེ་བས་རྟོག་པ་མཉམ་པ་ཡིན། །དེ་ལ་བྱེ་བྲག་ཅུང་ཟད་མེད། །རྟོག་པ་ཡིན ན་དེ་ཉིད་མེད།།དེ་ཉིད་ཡང་དག་རྟོག་པ་སྤངས། །དེ་ཉིད་མིན་པ་སྤང་དོན་དུ། །དེ་ཁོ་ན་ཉིད་གནས་པ་ལ། །བསྒོམ་པ་གཞན་ནི་བསྙེན་བྱེད་ན། །དེ་ནི་བསྒོམ་པ་ཇི་ལྟར་ཡིན། །དེ་བཞིན་ཨུ0f37ཉིད་ལ་བསྒོམ་པ་མེད། །དེ་ཉིད་མ་ཡིན་དེ་ཡིན་བསྒོམ། །དེ་ཉིད་མ་ཡིན་བསྒོམས་བསླབས་ལ ཨས།།དེ་ཉིད་མ་ཡིན་གསལ་བར་འགྱུར། །དེ་ཉིད་གསལ་བ་ག་ལ་སྟེ། །དེ་ནི་མཚན་མེད་དེ་ཡང་མིན། །དེ་ཉིད་མིན་པ་བསྒོམ་རིགས་པས། །དེ་ཁོ་ཉིད་ནི་བསྒོམ་བྱ་སྟེ། །དེ་ཉིད་བསྒོམ་པ་རིགས་པ་ཡིན། །བསྒོམ་པ་གཉིས་ནི་ངལ་བའི་དོན། །ཡང་ན་དེ་མེད་ཀྱིས་དེ་ནི། ། ནམ་ཡང་དེ་ནི་རྙེད་མ་ཡིན། །རྙེད་པའི་དོན་དུ་འབད་བྱས་ཏེ། །དེ་ལ་བསྒོམ་པའི་དོན་ཅིའི་ཕྱིར། །དེ་ནི་དཔལ་རིན་རྡོར་ཞབས་ཀྱིས། །དཔལ་བསྒོམ་རིམ་པའི་ནང་ནས་གསུངས། །གང་གིས་གང་དོན་རྙེད་དཀའ་བ། །དེ་ཡིས་ནམ་ཡང་རྙེད་མ་ཡིན། །ཇི་ལྟར་མགོན་མེད་མི་གཅིག་ནི། ། བདག་ནི་རྒྱལ་པོར་སྒོམ་བྱེད་པ། །ལོག་པའི་ཡེ་ཤེས་གཏི་མུག་གིས། །དེ་ཡིས་རྒྱལ་ས་རྙེད་མི་འགྱུར། །ིནྡྲ་བྷཱུ་ཏི་རྒྱལ་ཆེན་པོས། །ཡེ་ཤེས་གྲུབ་ལས་དེ་སྐད་གསུངས། །རྫོགས་པ་ཡི་ནི་རབ་བསྒོམ་ཡིས། །བསྐྱེད་པ་ཡི་ནི་སྒོམ་བྱེད་ན། །རྒྱུ་མེད་ལས་ནི་རྙེད་པ་མེད། །རྒྱུ་ཡི་ནང་ནས དོན་མི་འབྱུང་།།རང་ལས་མ་ཡིན་གཞན་ལས་མིན། །གཉི་ག་ལས་མིན་རྒྱུ་མེད་མིན། །ཡོད་མིན་མེད་མིན་ཡོད་མེད་མིན། །འོ་ན་གང་ནས་བྱུང་བ་ཡིན། །རྟེན་ཅིང་འབྲེལ་པ་དེ་ལས་ནི། །སྐྱེ་བར་སྒོམ་པ་བྱེད་པ་ན། །རྟེན་འབྲེལ་ལས་སྐྱེས་སྐྱེ་བ་མིན། །ཐམས་ཅད་མཁྱེན་པས་དེ་ སྐད་གསུངས།།ཀླུ་སྒྲུབ་སྙིང་པོའི་ཞལ་སྔ་ནས། །སྐྱེ་དང་མི་སྐྱེ་སྟོང་པར་གསུངས། །དེ་ལྟའི་གཞུང་ལུགས་ཡོད་ན་ཡང་། །དེ་བཞིན་བསྐྱེད་པ་གཞུང་ལུགས་སོ། །ནད་པ་སོས་པའི་ཐབས་དེ་ནི། །སྨྲ་བ་པོ་ནི་ཅི་ཡིན་རྟོག་།དེ་ཡི་ཐབས་ནི་མི་བྱེད་ན། །ནམ་ཡང་སོས་པར་མི་ འགྱུར་རོ།།རྗེས་སུ་སྨྲ་བ་རྫོགས་བྱས་དང་། །ཡོན་ཏན་ཡོད་པའི་སྨྲ་བ་པོ། །དེ་ཡི་སྨྲ་བ་ཉན་བྱེད་ན། །ཀུན་དུ་བཀྲ་ཤིས་འགྲུབ་པར་འགྱུར། །སྒོམ་པའི་རིམ་པ་མཛད་པ་ཡི། །དེ་ཡི་ཞལ་ནས་དེ་སྐད་གསུངས། །མངོན་སུམ་དང་ནི་རྗེས་སུ་དཔག་།སངས་རྒྱས་པ་ནི་དེ་གཟུང་ངོ་། །ངེས་པ་པ་དང་ རྗེས་སུ་དཔག་།བདེན་པ་དེ་ལས་རྙེད་པའོ། <br/>

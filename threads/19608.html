@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大樂甘露光吉祥智慧寶 N 藏汉 - 藏密修海典藏</title>
+<title>大樂甘露光吉祥智慧寶 N 藏汉 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大樂甘露光吉祥智慧寶 N 藏汉</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-6 17:32</div><div class="post-body">[size=5]d1343 大樂甘露光吉祥智慧寶 n3.5s <br/>
+<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-6 17:32</div><div class="post-body">[size=5]d1343 大樂甘露光吉祥智慧寶 n3.5s <br/>
 D1343 <br/>
 @##། །རྒྱ་གར་སྐད་དུ། མ་ཧཱ་སུ་ཁ་ཨ་མྲྀ་ཏ་པྲ་བྷ་ནཱ་མ། བོད་སྐད་དུ། བདེ་བ་ཆེན་པོའི་བདུད་རྩིའི་འོད་ཅེས་བྱ་བ། དཔལ་དགྱེས་པའི་རྡོ་རྗེ་ལ་ཕྱག་འཚལ་ལོ། །འཁོར་ལོ་པདྨ་རྒྱས་གང་བ། །རང་གི་གནས་ནི་ཉིད་དུ་འཁྱིལ། །སངས་རྒྱས་ཀུན་གྱི་གསང་བ་སྟེ། །འགྲོ་བ་ཀུན་ལ་རང་བཞིན གནས།།ཡང་དག་པ་དེ་རབ་ཏུ་བཤད། །ཡང་དག་པ་ཡང་རྣམ་པ་བཞི། །དེ་ནི་ལུས་ལ་རབ་ཏུ་གནས། །འདི་ལྟར་ཤེས་པའི་ལུས་ཉིད་ནི། །བདེ་བ་ཆེན་པོའི་སྐུ་ཞེས་བྱ། །ལྟེ་བ་གསང་བའི་དྲུག་ཅུ་བཞིའོ།། སྤྲུལ་པའི་ཡིག་འབྲུ་དཀར་པོ་བཀོད། །ཱ་ལི་ཀཱ་ལི་གཡས་དང་གཡོན། །ཡེ་ཤེས་ བཞི་ཡི་ཡི་གེ་ཨོཾ།།དབུས་ཀྱི་རི་བོང་འཛིན་པར་རོ། །སྤྲུལ་པའི་དཀྱིལ་འཁོར་ཞེས་སུ་བཤད། །སེམས་ཀྱི་གནས་སུ་སྐུ་སོགས་བརྒྱད། །ཁ་དོག་དཀར་པོ་ཡི་གེ་དགུ་། ཧཱུཾ་པྲཱུཾ་ཏྲཱཾ་ཧྲིཾ་ཁཾ་ཡིག་རྣམས། །དབུས་ནས་བྱང་དུ་རིམ་བཞིན་དགོད། །མཚམས་སུ་ལཾ་ལ་སོགས་པ་བཞི། །མཚན་མ་མེད་པའི་ སྐུ་ཞེས་བཤད།།ལོངས་སྤྱོད་རྫོགས་པའི་སྐུ་བཅུ་དྲུག་།མགྲིན་པའི་གནས་སུ་ཡང་དག་སྐྱེས། །དེ་ཡི་རི་བོང་འཛིན་པར་ཨོཾ། །ཡ་ཝ་ར་ལ་ཡི་གེ་རྣམས། །ཤར་ནས་བྱང་དུ་རིམ་བཞིན་ནོ། །རྟོགས་ཡུལ་བཅུ་རླུང་གཉིས་ཀྱི་གནས། །འབྱུང་བཞིའི་རྟགས་ནི་འཛིན་པར་བཤད། །ས་བོན་ཟླ་བ་ རྒྱས་འདྲ་བ།།བདེ་བ་ཆེན་པོའི་གནས་སུ་འཁྱིལ། །སུམ་ཅུ་རྩ་གཉིས་རང་བཞིན་གནས། །དེ་ཡི་གནས་ན་ཨཱ་ལི་གཉིས། །གཡས་དང་གཡོན་གཉིས་མགོ་དང་མཇུག་།གཅིག་ཏུ་ཕྲད་པས་བརྒྱན་པ་ཡིན། །དེ་དབུས་ཧཾ་ལས་སྲ་མ་ན། །ལོངས་སྤྱོད་མཁྱེན་ལ་བདེ་ཆེན་ཐུར། །ཐབས་ དང་ཤེས་རབ་ཚུལ་དུ་གནས།།ཆོས་དང་སྤྲུལ་པའང་དེ་བཞིན་ནོ། །ཀུན་གྱི་དབུས་ནས་རི་བོང་འཛིན། །འཁོར་ལོ་ཡི་གེ་ཁ་དོག་དཀར། །ཡཾ་ལས་འབྱུང་བ་རླུང་དཀྱིལ་འཁོར། །ཧ་གཉིས་གནས་སུ་བསམ་པར་བྱ། །དེ་སྟེང་རཾ་བྱུང་གྲུ་གསུམ་མེ། །རང་གི་གནས་སུ་བསམ་པར་བྱ། །དེ་ ལྟར་རང་བཞིན་ཀུན་ཤེས་ནས།།ཡེ་ཤེས་ཆེན་པོའི་བྱིན་རླབས་ལས། །རླུང་གིས་མེ་བུས་བཅུ་དྲུག་འབར། །དེ་ཉིད་ཡེ་ཤེས་མེ་ཞེས་བྱ། །ལྟེ་བར་གཏུམ་མོ་སྦར་བ་ཡིས། །དེ་བཞིན་གཤེགས་པ་ལྔ་བསྲེགས་ཏེ། །སྤྱན་ལ་སོགས་པ་ཡང་བསྲེགས་ནས། །ཀུན་གྱི་ལུས་བསྲེགས་མགོ་ གཅིག་བསམས།།ལོངས་སྤྱོད་གསུམ་སྐར་འབྱུང་བཞིའོ། <br/>
 梵文題目：Mahāsukha Amṛta Prabhā Nāma <br/>
@@ -72,7 +85,7 @@ D1343 <br/>
 諸佛宣說此秘密。 極其清凈善安住， 具器大士當受持。 身心安樂修習已， <br/>
 當依結生相應法。 我所著述甘露光， 如是三界一切法， 猶如樹木皆等同。 <br/>
 愿以真實樂養育。 <br/>
-瑜伽自在大尊者吉祥智慧寶所造圓滿。[/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-6 17:36</div><div class="post-body">[size=5]d1343大樂甘露光吉祥智慧寶 <br/>
+瑜伽自在大尊者吉祥智慧寶所造圓滿。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-6 17:36</div><div class="post-body">[size=5]d1343大樂甘露光吉祥智慧寶 <br/>
 D1343 <br/>
 @##།།རྒྱ་གར་སྐད་དུ།མ་ཧཱ་སུ་ཁ་ཨ་མྲྀ་ཏ་པྲ་བྷ་ནཱ་མ།བོད་སྐད་དུ།བདེ་བ་ཆེན་པོའི་བདུད་རྩིའི་འོད་ཅེས་བྱ་བ།དཔལ་དགྱེས་པའི་རྡོ་རྗེ་ལ་ཕྱག་འཚལ་ལོ།།འཁོར་ལོ་པདྨ་རྒྱས་གང་བ།།རང་གི་གནས་ནི་ཉིད་དུ་འཁྱིལ།།སངས་རྒྱས་ཀུན་གྱི་གསང་བ་སྟེ།།འགྲོ་བ་ཀུན་ལ་རང་བཞིནགནས།།ཡང་དག་པ་དེ་རབ་ཏུ་བཤད།།ཡང་དག་པ་ཡང་རྣམ་པ་བཞི།།དེ་ནི་ལུས་ལ་རབ་ཏུ་གནས།།འདི་ལྟར་ཤེས་པའི་ལུས་ཉིད་ནི།།བདེ་བ་ཆེན་པོའི་སྐུ་ཞེས་བྱ།།ལྟེ་བ་གསང་བའི་དྲུག་ཅུ་བཞིའོ།།སྤྲུལ་པའི་ཡིག་འབྲུ་དཀར་པོ་བཀོད།།ཱ་ལི་ཀཱ་ལི་གཡས་དང་གཡོན།།ཡེ་ཤེས་བཞི་ཡི་ཡི་གེ་ཨོཾ།།དབུས་ཀྱི་རི་བོང་འཛིན་པར་རོ།།སྤྲུལ་པའི་དཀྱིལ་འཁོར་ཞེས་སུ་བཤད།།སེམས་ཀྱི་གནས་སུ་སྐུ་སོགས་བརྒྱད།།ཁ་དོག་དཀར་པོ་ཡི་གེ་དགུ་།ཧཱུཾ་པྲཱུཾ་ཏྲཱཾ་ཧྲིཾ་ཁཾ་ཡིག་རྣམས།།དབུས་ནས་བྱང་དུ་རིམ་བཞིན་དགོད།།མཚམས་སུ་ལཾ་ལ་སོགས་པ་བཞི།།མཚན་མ་མེད་པའི་སྐུ་ཞེས་བཤད།།ལོངས་སྤྱོད་རྫོགས་པའི་སྐུ་བཅུ་དྲུག་།མགྲིན་པའི་གནས་སུ་ཡང་དག་སྐྱེས།།དེ་ཡི་རི་བོང་འཛིན་པར་ཨོཾ།།ཡ་ཝ་ར་ལ་ཡི་གེ་རྣམས།།ཤར་ནས་བྱང་དུ་རིམ་བཞིན་ནོ།།རྟོགས་ཡུལ་བཅུ་རླུང་གཉིས་ཀྱི་གནས།།འབྱུང་བཞིའི་རྟགས་ནི་འཛིན་པར་བཤད།།ས་བོན་ཟླ་བ་རྒྱས་འདྲ་བ།།བདེ་བ་ཆེན་པོའི་གནས་སུ་འཁྱིལ།།སུམ་ཅུ་རྩ་གཉིས་རང་བཞིན་གནས།།དེ་ཡི་གནས་ན་ཨཱ་ལི་གཉིས།།གཡས་དང་གཡོན་གཉིས་མགོ་དང་མཇུག་།གཅིག་ཏུ་ཕྲད་པས་བརྒྱན་པ་ཡིན།།དེ་དབུས་ཧཾ་ལས་སྲ་མ་ན།།ལོངས་སྤྱོད་མཁྱེན་ལ་བདེ་ཆེན་ཐུར།།ཐབས་དང་ཤེས་རབ་ཚུལ་དུ་གནས།།ཆོས་དང་སྤྲུལ་པའང་དེ་བཞིན་ནོ།།ཀུན་གྱི་དབུས་ནས་རི་བོང་འཛིན།།འཁོར་ལོ་ཡི་གེ་ཁ་དོག་དཀར།།ཡཾ་ལས་འབྱུང་བ་རླུང་དཀྱིལ་འཁོར།།ཧ་གཉིས་གནས་སུ་བསམ་པར་བྱ།།དེ་སྟེང་རཾ་བྱུང་གྲུ་གསུམ་མེ།།རང་གི་གནས་སུ་བསམ་པར་བྱ།།དེ་ལྟར་རང་བཞིན་ཀུན་ཤེས་ནས།།ཡེ་ཤེས་ཆེན་པོའི་བྱིན་རླབས་ལས།།རླུང་གིས་མེ་བུས་བཅུ་དྲུག་འབར།།དེ་ཉིད་ཡེ་ཤེས་མེ་ཞེས་བྱ།།ལྟེ་བར་གཏུམ་མོ་སྦར་བ་ཡིས།།དེ་བཞིན་གཤེགས་པ་ལྔ་བསྲེགས་ཏེ།།སྤྱན་ལ་སོགས་པ་ཡང་བསྲེགས་ནས།།ཀུན་གྱི་ལུས་བསྲེགས་མགོ་གཅིག་བསམས།།ལོངས་སྤྱོད་གསུམ་སྐར་འབྱུང་བཞིའོ།།བསྲེགས་ནས་གཡས་འབྱུང་སངས་རྒྱས་དང་།།སེམས་ཅན་ཀུན་བསྲེགས་དབུ་མ་གཡོན།།ཐིམ་སྟེ་བདེ་ཆེན་གཡོན་ནས་བསྐོར།།བསྲེགས་ནས་རྣ་བ་གཡས་སུ་འདུ།།མཁའ་འགྲོ་མ་ཀུན་བསྲེགས་གཅིག་བྱེད།།ཨ་བ་དྷཱུ་ཏཱིའི་གནས་ནས་བྱུང་།།སངས་རྒྱས་སེམས་ཅན་གཉིས་མེད་བསྲེགས།།སྟེང་གི་ཞབས་སུ་སྲ་མ་ན།།བདེ་བ་ཆེན་པོའི་ལུས་ཀྱང་སྐྱེས།།ཧཾ་དཀར་ལས་བྱུང་སེར་པོ་དཀར།།ལུས་སྐྱེས་མི་ལ་ཡེ་ཤེས་བསྐྱེད།།དེ་རུ་མ་ནུས་ཆུ་ཡི་རྩ།།གཡོན་གྱི་རྩ་ནས་སྤྲུལ་པ་རུ།།དེར་ནི་ཡངདག་རབ་ཏུ་གཟུང་།།དེ་རུ་མི་གནས་སམ་པོ་ཀ་།རྩ་བའི་རྡོ་རྗེ་ལམ་ནས་འགྲོ།།སམ་པོ་ཀ་ནས་ཆོས་སྐུའོ།།ལུས་རྣམས་ཡང་དག་སྐྱེ་བར་འགྱུར།།སྐྱེས་ནས་བསྐལ་པའི་བར་དུ་གནས།།ཆོས་ཀྱི་གནས་སུ་མ་སྐྱེས་ན།།ནིར་མ་ཀ་ཡི་གནས་སུ་བསམ།།ཡང་དང་ཡང་དུ་འདི་བཞིན་བྱ།།རྣམ་རྟོག་མེད་པའི་རྣལ་འབྱོར་སྐྱེ།།ཡར་གྱིས་བསྲེགས་ཤིང་མར་གྱིས་གསོ།།རྣལ་འབྱོར་མིག་གི་འོད་ཟེར་གྱིས།།རྟག་ཏུ་འདི་ལ་བལྟ་བར་བྱ།།ནམ་ཞིག་འདི་ལ་བརྟེན་གྱུར་ན།།མཚན་མ་ལྔ་འམ་ཡང་ན་གཡོ།།འབར་ཞིང་གཡོན་ཡིག་གོ་བཅད།།བཅད་པས་བཞིཔོ་ཡང་ཡང་ཞུ།།རྩ་བའི་རྡོ་རྗེ་ལམ་ནས་ནི།།ཏིལ་གྱི་འབྲུ་བཞིན་རྒྱས་པར་འབྱུང་།།རྣལ་འབྱོར་མཐར་ཕྱིན་འབྲས་བུ་སྟེ།།བདེ་བ་ཆེན་པོའི་སྐུ་ཞེས་བྱ།།གཞན་གྱི་དོན་སོགས་ཡོན་ཏན་རྣམས།།འབད་པ་མེད་པར་ལྷུན་གྱིས་གྲུབ།།བླ་ན་མེད་པའི་དགོངས་རྒྱུད་འདི།།དཔལ་གྱི་ཞབས་ཀྱིས་བདག་ལ་བསྟན།།རྐྱེན་དང་རྣལ་འབྱོར་གཉིས་སུ་འགྱུར།།བདེ་བ་ཆེན་པོ་ཞེས་སུ་བསྟན།།སྦྱོར་བའི་རྒྱུད་ནི་ཐམས་ཅད་ལས།།རྒྱལ་བ་རྣམས་ཀྱིས་སྦས་བ་བཤད།།ཤིན་ཏུ་སྦྱངས་ལ་རབ་གནས་པའི།།སྣོད་ལྡན་བདག་ཉིད་ཆེན་པོས་གཟུང་།།ལུས་སེམས་བདེ་བར་སྤྱད་ནས་ནི།།ཉིང་མཚམས་སྦྱོར་བ་བསྟེན་པར་བྱ།།བདག་གིས་བརྩམས་ཀྱི་བདུད་རྩི་འོད།།འདི་ལྟར་ཁམས་གསུམ་ཀུན་ཀྱང་དེ།།ཤིང་དང་འདྲ་བར་མཚུངས་པའོ།།ཡང་དག་བདེ་བས་འཚོ་བར་ཤོག་།རྣལ་འབྱོར་གྱི་དབང་ཕྱུག་ཆེན་པོ་དཔལ་ཡེ་ཤེས་རིན་པོ་ཆེའི་ཞལ་སྔ་ནས་མཛད་པ་རྫོགས་སོ། <br/>
 《大樂甘露光》 <br/>

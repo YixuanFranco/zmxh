@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>一切事業生起勝義集會後續續王  藏汉 - 藏密修海典藏</title>
+<title>一切事業生起勝義集會後續續王  藏汉 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">一切事業生起勝義集會後續續王  藏汉</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2025-12-20 00:26</div><div class="post-body">d0449一切事業生起勝義集會後續續王new c3.5s <br/>
+<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2025-12-20 00:26</div><div class="post-body">d0449一切事業生起勝義集會後續續王new c3.5s <br/>
 ﻿D449 d0449位於德格甘珠爾第81函, 沒有相當的大正藏所收譯經 @#། །རྒྱ་གར་སྐད་དུ། ས་མཱ་ཛ་པ་ར་མཱ་ཐ་སརྦ་ཀརྨོད་ཡ་ཨུཏྟ་རཏནྟྲ་རཱ་ཛ། བོད་སྐད་དུ། ཕྲིན་ལས་ཐམས་ཅད་འབྱུང་བ་འདུས་པ་དོན་དམ་པ་ལས་ཕྱི་མའི་རྒྱུད་ཀྱི་རྒྱལ་པོ། སྒྲོལ་མ་ལ་ཕྱག་འཚལ་ལོ། །དེ་ནས་བཅོམ་ལྡན་འདས་ཆེན་མོ། དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱི་བཙུན་མོའི་མཆོག་།དམ་ཚིག་སྒྲོལ་མ་ཞེས་བྱ་བ། དེ་བཞིན་གཤེགས་པ་དང་། རྡོ་རྗེ་དང་། རིན་པོ་ཆེ་དང་། པདྨ་དང་། ལས་ཀྱི་རིགས་ཐམས་ཅད་ཀྱི་བདག་པོ། རྒྱུ་བ་དང་མི་རྒྱུ་བའི་བྱེད་པ་པོ། བརྟན་པ་དང་གཡོ་བའི་རང བཞིན།གསང་བ་བས་ཆེས་ཤིན་ཏུ་གསང་བ། གསང་བ་ཆེན་པོས་དབང་ཕྱུག་མས། བདག་ཉིད་ཀྱི་རྡོ་རྗེའི་མིང་འདི་རྣམས། ཉིད་ཀྱི་སྐུ་དང་གསུང་དང་ཐུགས་རྡོ་རྗེ་ལས་ཕྱུང་ངོ་། །བཅོམ་ལྡན་འདས་ན་སྒྲོལ་མ། རྡོ་རྗེ་མ། དམ་ཚིག་སྒྲོལ་མ། རྡོ་རྗེ་རྣལ་འབྱོར་ མ་ཆེན་མོ།ཡེ་ཤེས་ལྔས་བརྒྱན་པ་མ། སངས་རྒྱས་ཐམས་ཅད་ཀྱིས་དབང་བསྐུར་མ། ཡེ་ཤེས་ཀྱི་དཀྱིལ་འཁོར། ཟླ་བའི་བདེ་མ། ངོ་མཚར་བདེ་མ། སྐུ་དང་གསུང་དང་ཐུགས་ཀྱི་འདོད་མ། ཕུང་པོའོ་བདག་མོ། སྐྱེ་མཆེད་ཀྱི་བདག་མོར་གྲུར་བ། འབྱུང་བ་རྣམས་ རབ་ཏུ་ཐོབ་པ།ཡུལ་དང་བྲལ་བའི་རང་བཞིན། རྒྱུད་ཀུན་གྱི་དབང་ཕྱུག་མ། ཡེ་ཤེས་རྣམ་པ་ལྔས་བྱང་ཆུབ་པ། རྡུལ་དང་བྲལ་བ། དྲི་མ་མེད་པ། གསང་སྔགས་ཆེན་པོ། ཤིན་ཏུ་ཕྲ་བ། མཚན་དང་དཔེ་བྱད་རྣམས་ཀྱིས་སྤྲས་པ། དག་བྱེད། དག་བྱེད་ཆེན་མོ། ལས་ཐམས་ཅད་འགྲུབ་པར་བྱེད་པ། འདོད་པ་ཐམས་ཅད་རབ་ཏུ་སྦྱིན་པ། ཡི་གེ་བཅུའི་སྒྲ་སྒྲོག་པ། སྒྲ་སྒྲོག་དགྱེས་མ། གདུང་མ། མྱུར་མ། རྣམ་པར་ཤེས་པ་ཡོངས་སུ་དག་པ། སྲ་ཞིང་བདེ་བ། ཡེ་ཤེས་སྙིང་པོ། བདེ་བ་ཆེན་མོའོ། དེ་ལ་འདི་ནི་རྣལ་འབྱོར མ་རྣམས་ཀྱི་དམ་ཚིག་གི་གནས་སོ།།དེ་སྐད་ཀྱང་བཀའ་བསྩལ་ཏོ། །དེ་ནས་ཧེ་རུ་ཀའི་དཀྱིལ་འཁོར། །འདོད་པ་ཐམས་ཅད་རབ་ཏུ་སྒྲུབ། །དཀྱིལ་འཁོར་རྣམས་ཀྱི་མཆོག་གྱུར་གསུངས། །མ་མོ་འདུས་པ་ཉམས་དགའི་གནས། །ཱ་ལི་ཟླ་བ་ཀཱ་ལི་ཉི། ། ཧཱུ~ཾ་གི་ཡེ་ཤེས་རྡོ་རྗེ་སེམས། །ཕྱོགས་བཅུའི་དཀྱིལ་འཁོར་རྣམས་སྤྲོ་བ། །སྔགས་འདིའི་མགོན་པོ་བསྐུལ་བར་བྱའོ། <br/>
 <br/>
 以下是完整的直譯： 印度語：薩瑪扎帕拉瑪塔薩瓦卡摩達亞烏塔拉坦特拉拉扎 藏語：一切事業生起勝義集會後續續王 禮敬度母。 然後，偉大的薄伽梵，一切如來妃子之尊，名為誓句度母，如來、金剛、寶、蓮花、事業諸部之主，動與不動之作者，堅固與動搖之自性，較秘密更極秘密，大秘密自在母，從自身金剛身語意中宣說這些自身金剛名號。 薄伽梵度母、金剛母、誓句度母、大金剛瑜伽母、五智莊嚴母、一切佛灌頂母、智慧壇城、月亮安樂母、稀有安樂母、身語意欲求母、蘊之主、成為處之主、善得諸界、離境自性、一切續自在母、五種智慧覺悟、離塵、無垢、大密咒、極細微、莊嚴相好、凈化者、大凈化者、成就一切事業、圓滿一切欲求、發出十字音、喜歡發聲者、熱惱者、迅速者、遍凈諸識、堅固安樂、智慧精華、大安樂。 這是瑜伽母們的誓句處。 如是宣說。 然後，赫魯嘎壇城， 圓滿一切欲求， 宣說諸壇城中最勝， 集會母眾歡喜處。 阿字月亮迦字日， 吽字智慧金剛薩埵， 放射十方壇城， 應當祈請此咒主。 <br/>

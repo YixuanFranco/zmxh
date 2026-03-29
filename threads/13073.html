@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>陈坤：我为什么一再推荐《西藏生死书》 - 藏密修海典藏</title>
+<title>陈坤：我为什么一再推荐《西藏生死书》 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">陈坤：我为什么一再推荐《西藏生死书》</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-22 09:30</div><div class="post-body">不了解死亡的人，不懂的敬畏生命。 <br/>
+<div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-22 09:30</div><div class="post-body">不了解死亡的人，不懂的敬畏生命。 <br/>
 关于死亡， <br/>
 听听陈坤怎么说。 <br/>
 以下是陈坤的自述文。 <br/>
@@ -55,7 +68,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 又是西藏，又是生死，坤哥你能不能聊点别的？也许朋友们更关心有趣的话题，很欣赏你们轻松的态度。 <br/>
 <br/>
-不过，在我十几、二十岁的时候，占据我青春大部分时间的事情是思考一个严肃的命题：我怎么才能不惧怕死亡。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-22 09:31</div><div class="post-body">01 <br/>
+不过，在我十几、二十岁的时候，占据我青春大部分时间的事情是思考一个严肃的命题：我怎么才能不惧怕死亡。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-22 09:31</div><div class="post-body">01 <br/>
 认识死亡 <br/>
 <br/>
 我人生的第一课，是从认识死亡开始。 <br/>
@@ -80,7 +93,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 都是**了衣服，死掉。 <br/>
 <br/>
 在死亡面前我们是平等的， <br/>
-这本就是世上最公平的一件事。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-22 09:32</div><div class="post-body">02 <br/>
+这本就是世上最公平的一件事。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-22 09:32</div><div class="post-body">02 <br/>
 理解生命 <br/>
 <br/>
 我从这本书里学会正视死亡，从对死亡的敬畏里重新理解生命。 <br/>
@@ -120,7 +133,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 如何从“死亡”这面镜子里看见人生。 <br/>
 死亡是每个人都会经历的，谁也逃不过，所以你必须去接受它。我从这本书里学会正视死亡，并且从对死亡的敬畏里重新理解生命。 <br/>
 <br/>
-对于一个演员来讲，更清楚地看到生命的实相，是格外有意义的，能让我在浮躁的环境中保持清醒。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-22 11:40</div><div class="post-body">03 <br/>
+对于一个演员来讲，更清楚地看到生命的实相，是格外有意义的，能让我在浮躁的环境中保持清醒。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-22 11:40</div><div class="post-body">03 <br/>
 思考死亡 <br/>
 <br/>
 思考死亡，是对生命的敬畏。 <br/>
@@ -152,7 +165,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 依然恐惧生重病； <br/>
 依然恐惧我最爱的亲人离去。 <br/>
 <br/>
-但我不觉得这是一种软弱。我认为，那是对生命的敬畏。 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-22 11:41</div><div class="post-body">04 <br/>
+但我不觉得这是一种软弱。我认为，那是对生命的敬畏。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-22 11:41</div><div class="post-body">04 <br/>
 超越死亡 <br/>
 那一刻，我悟出了：善念可以超越死亡。 <br/>
 <br/>
@@ -180,7 +193,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 你就不会“死”。 <br/>
 <br/>
 因为爱， <br/>
-生生不息，永不消逝。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-22 11:42</div><div class="post-body">05 <br/>
+生生不息，永不消逝。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-22 11:42</div><div class="post-body">05 <br/>
 西藏生死书，用生命去读 <br/>
 <br/>
 很多人以为死亡是很老的时候才发生的，不是！死亡随时会来，你真正面对它在面前的时候你才知道，那一刻才是真的。 <br/>
@@ -201,7 +214,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 尽管每年我都会重读，但一本好书就如同人生，无论怎样反复阅读，只要生命还在，谁也不能说真正读完了它。 <br/>
 <br/>
-我会一直读下去，它也会一直陪着我，直到死亡的那一天。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-22 11:44</div><div class="post-body">《西藏生死书》作者索甲仁波切 （Sogyal Rinpoche），英文名为：The Tibetan Book of Living and Dying，1992年出版。该书是索甲仁波切广受赞誉的精神经典之作，被誉为藏传佛教最完整、最权威的教义之一。《西藏生死书》是一本关于生死的手册，它来源于西藏传统的核心灵感；明晰地介绍了冥想的实践、心灵的本质、业力和重生、对临终者的慈悲关怀，以及精神道路上的考验和回报。该书以34种语言印刷了300多万册，并在80个国家发行。它已被医学和宗教院校、团体和机构采用，并被护士、医生和保健专业人员广泛使用。以上是我查阅网上资料对该书的评介。下面引用作者本人的介绍：May this book be a guide to liberation, ready by the living, to the dying, and for the dead. 愿此书能成为生者、濒临死亡者与死亡者的解脱指南。May it help all who read it and spur them on the journey to enlightment.愿此书能对所有读者有所助益，并引领他们迈向证悟的旅程。“What is it I hope for from this book? To inspire a quiet revolution in the whole way we look at death and care for the dying and the whole way we look at life, and care for the living.”“我希望从这本书中得到什么? 激发一场无声的革命，改变我们看待死亡、关心临终者的整个方式，改变我们看待生命、关心生者的整个方式。”谁是索甲仁波切？索甲仁波切1947年出生于西藏东部，由20世纪最受尊敬的大师蒋杨钦哲波切（Jamyang Khyentse Chökyi Lodrö）养育成人，后被认出是著名神秘主义者、圣人、他1971年在英国剑桥大学专修比较宗教，1974年开始红叶佛法。他洞察力敏锐，使教义适应现代生活，传法深受信众欢迎，被誉为“参透佛法精髓的上师”，成为许多国家佛教中心和佛教团体的负责人或指导者。他2019年在泰国圆寂，享年72岁。 <br/>
+我会一直读下去，它也会一直陪着我，直到死亡的那一天。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-22 11:44</div><div class="post-body">《西藏生死书》作者索甲仁波切 （Sogyal Rinpoche），英文名为：The Tibetan Book of Living and Dying，1992年出版。该书是索甲仁波切广受赞誉的精神经典之作，被誉为藏传佛教最完整、最权威的教义之一。《西藏生死书》是一本关于生死的手册，它来源于西藏传统的核心灵感；明晰地介绍了冥想的实践、心灵的本质、业力和重生、对临终者的慈悲关怀，以及精神道路上的考验和回报。该书以34种语言印刷了300多万册，并在80个国家发行。它已被医学和宗教院校、团体和机构采用，并被护士、医生和保健专业人员广泛使用。以上是我查阅网上资料对该书的评介。下面引用作者本人的介绍：May this book be a guide to liberation, ready by the living, to the dying, and for the dead. 愿此书能成为生者、濒临死亡者与死亡者的解脱指南。May it help all who read it and spur them on the journey to enlightment.愿此书能对所有读者有所助益，并引领他们迈向证悟的旅程。“What is it I hope for from this book? To inspire a quiet revolution in the whole way we look at death and care for the dying and the whole way we look at life, and care for the living.”“我希望从这本书中得到什么? 激发一场无声的革命，改变我们看待死亡、关心临终者的整个方式，改变我们看待生命、关心生者的整个方式。”谁是索甲仁波切？索甲仁波切1947年出生于西藏东部，由20世纪最受尊敬的大师蒋杨钦哲波切（Jamyang Khyentse Chökyi Lodrö）养育成人，后被认出是著名神秘主义者、圣人、他1971年在英国剑桥大学专修比较宗教，1974年开始红叶佛法。他洞察力敏锐，使教义适应现代生活，传法深受信众欢迎，被誉为“参透佛法精髓的上师”，成为许多国家佛教中心和佛教团体的负责人或指导者。他2019年在泰国圆寂，享年72岁。 <br/>
 <br/>
 </div></div>
 </div>

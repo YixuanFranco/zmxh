@@ -1,0 +1,358 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>聊天广告资讯版 - 藏密修海</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / 藏密修海佛友社区</div>
+<h1 style="margin-bottom: 10px; font-size: 32px;">目录：聊天广告资讯版</h1>
+<p style="color:var(--text-muted); margin-bottom:40px;">共收录 315 篇主题</p>
+<a href="../threads/9622.html" class="thread-row"><h2>金刚瑜伽母</h2><div class="th-meta">TID: 9622</div></a>
+<a href="../threads/9310.html" class="thread-row"><h2>奸臣堕落恶道常遭天雷打击</h2><div class="th-meta">TID: 9310</div></a>
+<a href="../threads/9222.html" class="thread-row"><h2>学佛与不学佛到底有什么差别？</h2><div class="th-meta">TID: 9222</div></a>
+<a href="../threads/9040.html" class="thread-row"><h2>人无所舍 必无所成</h2><div class="th-meta">TID: 9040</div></a>
+<a href="../threads/9019.html" class="thread-row"><h2>出售佛学、密宗正版图书,电话:15779930712</h2><div class="th-meta">TID: 9019</div></a>
+<a href="../threads/8696.html" class="thread-row"><h2>免费结缘《大圆满传承源流——蓝宝石》</h2><div class="th-meta">TID: 8696</div></a>
+<a href="../threads/8502.html" class="thread-row"><h2>法相清晰，太好啦！！！</h2><div class="th-meta">TID: 8502</div></a>
+<a href="../threads/8204.html" class="thread-row"><h2>猿猴与罗刹女的传说</h2><div class="th-meta">TID: 8204</div></a>
+<a href="../threads/8203.html" class="thread-row"><h2>敦煌的吐蕃历史文书</h2><div class="th-meta">TID: 8203</div></a>
+<a href="../threads/7972.html" class="thread-row"><h2>【国庆西藏朝圣召集】朝圣佛陀等身像，礼佛加持</h2><div class="th-meta">TID: 7972</div></a>
+<a href="../threads/7941.html" class="thread-row"><h2>【西藏朝圣召集】朝圣佛陀等身像，种下解脱的因缘</h2><div class="th-meta">TID: 7941</div></a>
+<a href="../threads/7920.html" class="thread-row"><h2>因果报应实录：毁佛损经遭报应</h2><div class="th-meta">TID: 7920</div></a>
+<a href="../threads/7919.html" class="thread-row"><h2>口业最伤人也最害己 当清净口业</h2><div class="th-meta">TID: 7919</div></a>
+<a href="../threads/7917.html" class="thread-row"><h2>危险的婚外情</h2><div class="th-meta">TID: 7917</div></a>
+<a href="../threads/7916.html" class="thread-row"><h2>明白了因果的道理，有什么用呢？</h2><div class="th-meta">TID: 7916</div></a>
+<a href="../threads/7911.html" class="thread-row"><h2>茶　灵</h2><div class="th-meta">TID: 7911</div></a>
+<a href="../threads/7902.html" class="thread-row"><h2>堕胎儿痛苦</h2><div class="th-meta">TID: 7902</div></a>
+<a href="../threads/7895.html" class="thread-row"><h2>荸荠解铜臭</h2><div class="th-meta">TID: 7895</div></a>
+<a href="../threads/7883.html" class="thread-row"><h2>谈练功人的“吉人天相”</h2><div class="th-meta">TID: 7883</div></a>
+<a href="../threads/7878.html" class="thread-row"><h2>甘蔗汁解酒醉不食</h2><div class="th-meta">TID: 7878</div></a>
+<a href="../threads/7877.html" class="thread-row"><h2>治烧伤迅速而且不留瘢痕</h2><div class="th-meta">TID: 7877</div></a>
+<a href="../threads/7875.html" class="thread-row"><h2>大藏治病药</h2><div class="th-meta">TID: 7875</div></a>
+<a href="../threads/7871.html" class="thread-row"><h2>《禅修前的准备》</h2><div class="th-meta">TID: 7871</div></a>
+<a href="../threads/7581.html" class="thread-row"><h2>杰美林巴著/刘兆麟译：隆钦大圆满心髓集要</h2><div class="th-meta">TID: 7581</div></a>
+<a href="../threads/7359.html" class="thread-row"><h2>药王菩萨圣诞，传递祝福，广结佛缘！</h2><div class="th-meta">TID: 7359</div></a>
+<a href="../threads/7353.html" class="thread-row"><h2>随缘助印结缘大庄严《八十八佛像》印一张88佛，就造了88个</h2><div class="th-meta">TID: 7353</div></a>
+<a href="../threads/7352.html" class="thread-row"><h2>免费结缘各种经书 法像 为寺院供养大藏经等活动</h2><div class="th-meta">TID: 7352</div></a>
+<a href="../threads/7347.html" class="thread-row"><h2>在【龙拉寺】法会挂经幡（免邮）</h2><div class="th-meta">TID: 7347</div></a>
+<a href="../threads/7331.html" class="thread-row"><h2>在宁玛三根本护法之愤怒【单坚护法神山】挂经幡（免邮）</h2><div class="th-meta">TID: 7331</div></a>
+<a href="../threads/7313.html" class="thread-row"><h2>世纪和生绘制  阿閦佛世界唐卡</h2><div class="th-meta">TID: 7313</div></a>
+<a href="../threads/7306.html" class="thread-row"><h2>2012年【藏历神变月】在西琼寺莲师闭关处挂经幡（免邮资）</h2><div class="th-meta">TID: 7306</div></a>
+<a href="../threads/7305.html" class="thread-row"><h2>菩提行愿行</h2><div class="th-meta">TID: 7305</div></a>
+<a href="../threads/7304.html" class="thread-row"><h2>苏州菩提树刺绣唐卡如理如法 艺术造诣一流</h2><div class="th-meta">TID: 7304</div></a>
+<a href="../threads/7303.html" class="thread-row"><h2>苏绣唐卡专题四：菩提树六道工序打造传世苏绣唐卡</h2><div class="th-meta">TID: 7303</div></a>
+<a href="../threads/7302.html" class="thread-row"><h2>苏绣唐卡专题三：苏州菩提树保护刺绣唐卡制作技艺</h2><div class="th-meta">TID: 7302</div></a>
+<a href="../threads/7296.html" class="thread-row"><h2>苏绣唐卡专题二：精品刺绣唐卡存世量稀少</h2><div class="th-meta">TID: 7296</div></a>
+<a href="../threads/7293.html" class="thread-row"><h2>苏绣唐卡专题一：珍稀的针线艺术</h2><div class="th-meta">TID: 7293</div></a>
+<a href="../threads/7283.html" class="thread-row"><h2>世纪和生绘制故宫唐卡 受到专家认可</h2><div class="th-meta">TID: 7283</div></a>
+<a href="../threads/7282.html" class="thread-row"><h2>苏州菩提树刺绣唐卡 被收藏家请购</h2><div class="th-meta">TID: 7282</div></a>
+<a href="../threads/7281.html" class="thread-row"><h2>苏州菩提树 密集金刚苏绣唐卡绣制完成</h2><div class="th-meta">TID: 7281</div></a>
+<a href="../threads/7280.html" class="thread-row"><h2>苏绣唐卡持国天王 绣制完成</h2><div class="th-meta">TID: 7280</div></a>
+<a href="../threads/7277.html" class="thread-row"><h2>最精美的苏绣观音护佑众生龙年平安</h2><div class="th-meta">TID: 7277</div></a>
+<a href="../threads/7273.html" class="thread-row"><h2>2012年首月于藏区第二圣地的莲师神山挂经幡（免邮）</h2><div class="th-meta">TID: 7273</div></a>
+<a href="../threads/7253.html" class="thread-row"><h2>2012年佛历笔记本-莲花池畔</h2><div class="th-meta">TID: 7253</div></a>
+<a href="../threads/7251.html" class="thread-row"><h2>青海玉树州萨迦结古寺2011年萨迦祈愿法会通告</h2><div class="th-meta">TID: 7251</div></a>
+<a href="../threads/7245.html" class="thread-row"><h2>恭迎农历十一月十七阿弥陀佛圣诞，随喜助印《阿弥陀经》</h2><div class="th-meta">TID: 7245</div></a>
+<a href="../threads/7235.html" class="thread-row"><h2>佛母加持化险为夷感应二三事</h2><div class="th-meta">TID: 7235</div></a>
+<a href="../threads/7218.html" class="thread-row"><h2>天降月在青海海南州【唐义寺】挂经幡（免邮）</h2><div class="th-meta">TID: 7218</div></a>
+<a href="../threads/7148.html" class="thread-row"><h2>在格萨尔王诞生地德格萨迦传承【康多寺】挂经幡(免邮)</h2><div class="th-meta">TID: 7148</div></a>
+<a href="../threads/7130.html" class="thread-row"><h2>9.26号水陆法会即将举行</h2><div class="th-meta">TID: 7130</div></a>
+<a href="../threads/7075.html" class="thread-row"><h2>8月29日地藏王菩萨诞辰，感恩结缘。南无地藏王菩萨！</h2><div class="th-meta">TID: 7075</div></a>
+<a href="../threads/7038.html" class="thread-row"><h2>修习准提法以来的体验</h2><div class="th-meta">TID: 7038</div></a>
+<a href="../threads/7029.html" class="thread-row"><h2>免费结缘《佛说大乘无量寿庄严清净平等觉经》</h2><div class="th-meta">TID: 7029</div></a>
+<a href="../threads/7028.html" class="thread-row"><h2>藏经阁佛教印经网  现倡印/结缘《十善业道经》</h2><div class="th-meta">TID: 7028</div></a>
+<a href="../threads/7023.html" class="thread-row"><h2>第二届日沐神山举行【以除障成就事业为核心】挂经幡</h2><div class="th-meta">TID: 7023</div></a>
+<a href="../threads/7014.html" class="thread-row"><h2>藏经阁佛教印经网 现倡印/结缘《玉历宝钞》</h2><div class="th-meta">TID: 7014</div></a>
+<a href="../threads/7000.html" class="thread-row"><h2>为父母祈福，劝他人行孝 百善孝为先 随喜助印《百孝篇》</h2><div class="th-meta">TID: 7000</div></a>
+<a href="../threads/6998.html" class="thread-row"><h2>藏经阁佛教印经网  现倡印/结缘《十善业道经》</h2><div class="th-meta">TID: 6998</div></a>
+<a href="../threads/6992.html" class="thread-row"><h2>共沐佛光</h2><div class="th-meta">TID: 6992</div></a>
+<a href="../threads/6991.html" class="thread-row"><h2>在石渠洛岭寺【莲师神山】挂经幡（免邮）</h2><div class="th-meta">TID: 6991</div></a>
+<a href="../threads/6988.html" class="thread-row"><h2>什么是外道？</h2><div class="th-meta">TID: 6988</div></a>
+<a href="../threads/6974.html" class="thread-row"><h2>西琼寺举行【跳格萨尔王金刚舞】挂经幡法会（免邮）</h2><div class="th-meta">TID: 6974</div></a>
+<a href="../threads/6971.html" class="thread-row"><h2>印刷佛书，疾病康复</h2><div class="th-meta">TID: 6971</div></a>
+<a href="../threads/6965.html" class="thread-row"><h2>募捐修建甘孜石渠县雅砻江大桥后期费用的倡议</h2><div class="th-meta">TID: 6965</div></a>
+<a href="../threads/6963.html" class="thread-row"><h2>发心护持佛法，功德很大，容易解脱</h2><div class="th-meta">TID: 6963</div></a>
+<a href="../threads/6962.html" class="thread-row"><h2>在家居士说出家师父过失有什么果报？——大安法师</h2><div class="th-meta">TID: 6962</div></a>
+<a href="../threads/6957.html" class="thread-row"><h2>迅速积累往生净业资粮的好方法</h2><div class="th-meta">TID: 6957</div></a>
+<a href="../threads/6949.html" class="thread-row"><h2>青海塔尔寺举行【增益福报、成就诸事业】挂经幡（免邮）</h2><div class="th-meta">TID: 6949</div></a>
+<a href="../threads/6945.html" class="thread-row"><h2>切莫亵渎佛经佛像</h2><div class="th-meta">TID: 6945</div></a>
+<a href="../threads/6938.html" class="thread-row"><h2>大福田---山东博山正觉寺仍在修建中（照片）</h2><div class="th-meta">TID: 6938</div></a>
+<a href="../threads/6919.html" class="thread-row"><h2>西藏的釋夢方法</h2><div class="th-meta">TID: 6919</div></a>
+<a href="../threads/6823.html" class="thread-row"><h2>法师关于“善护口业，不讥他过”的开示</h2><div class="th-meta">TID: 6823</div></a>
+<a href="../threads/6815.html" class="thread-row"><h2>廊坊古隆福寺钟楼筹铸幽冥铜钟</h2><div class="th-meta">TID: 6815</div></a>
+<a href="../threads/6739.html" class="thread-row"><h2>2011年神变月期间四川炉霍大型放生牦牛公告</h2><div class="th-meta">TID: 6739</div></a>
+<a href="../threads/6702.html" class="thread-row"><h2>洛桑达瓦活佛以不共伏藏大圆满传承火供超度堕胎婴灵公告</h2><div class="th-meta">TID: 6702</div></a>
+<a href="../threads/6701.html" class="thread-row"><h2>台灣 台南市藏密佛學會二月法會訊息1/30-2/27</h2><div class="th-meta">TID: 6701</div></a>
+<a href="../threads/6698.html" class="thread-row"><h2>2011年藏历神变月【西琼寺观音法会】挂经幡(免邮)</h2><div class="th-meta">TID: 6698</div></a>
+<a href="../threads/6677.html" class="thread-row"><h2>秀才第三次进京三个梦</h2><div class="th-meta">TID: 6677</div></a>
+<a href="../threads/6663.html" class="thread-row"><h2>准提法 光明照耀我的人生，佛母加持！</h2><div class="th-meta">TID: 6663</div></a>
+<a href="../threads/6653.html" class="thread-row"><h2>摩尼宝慈善组2010年全年放生总结暨</h2><div class="th-meta">TID: 6653</div></a>
+<a href="../threads/6651.html" class="thread-row"><h2>仗阿弥陀佛大慈悲愿力无不往生</h2><div class="th-meta">TID: 6651</div></a>
+<a href="../threads/6647.html" class="thread-row"><h2>阿弥陀佛是怎样成佛的</h2><div class="th-meta">TID: 6647</div></a>
+<a href="../threads/6630.html" class="thread-row"><h2>时间在等待观望中白白流逝</h2><div class="th-meta">TID: 6630</div></a>
+<a href="../threads/6629.html" class="thread-row"><h2>印光法师有关放生的开示</h2><div class="th-meta">TID: 6629</div></a>
+<a href="../threads/6552.html" class="thread-row"><h2>玉树州萨迦结古寺2010年萨迦祈愿法会通告</h2><div class="th-meta">TID: 6552</div></a>
+<a href="../threads/6528.html" class="thread-row"><h2>行菩萨道该怎么讲话? 怎么净修口业? ~ 华严经</h2><div class="th-meta">TID: 6528</div></a>
+<a href="../threads/6519.html" class="thread-row"><h2>外科医生发现的人生定律！</h2><div class="th-meta">TID: 6519</div></a>
+<a href="../threads/6484.html" class="thread-row"><h2>张嘴就爱反驳、挑人过，都是薄福薄命人。</h2><div class="th-meta">TID: 6484</div></a>
+<a href="../threads/6480.html" class="thread-row"><h2>世尊在莲华面经里面对后世乱相的预计。</h2><div class="th-meta">TID: 6480</div></a>
+<a href="../threads/6449.html" class="thread-row"><h2>孝养父母，最不可等待!!!</h2><div class="th-meta">TID: 6449</div></a>
+<a href="../threads/6447.html" class="thread-row"><h2>阿弥陀佛圣诞日供万盏酥油灯活动</h2><div class="th-meta">TID: 6447</div></a>
+<a href="../threads/6414.html" class="thread-row"><h2>惊讶 原来一念嗔心 就制造92种业障 所以不成就</h2><div class="th-meta">TID: 6414</div></a>
+<a href="../threads/6413.html" class="thread-row"><h2>两个死去的富人</h2><div class="th-meta">TID: 6413</div></a>
+<a href="../threads/6407.html" class="thread-row"><h2>观世音菩萨 对一切众生的十四种“无畏布施”</h2><div class="th-meta">TID: 6407</div></a>
+<a href="../threads/6404.html" class="thread-row"><h2>法布施的四十种广大功德</h2><div class="th-meta">TID: 6404</div></a>
+<a href="../threads/6383.html" class="thread-row"><h2>在没能感动天地之前，我们先试着感动身边的人……</h2><div class="th-meta">TID: 6383</div></a>
+<a href="../threads/6375.html" class="thread-row"><h2>为地藏王菩萨重建弘法道场，请帮助寺院修建!!!</h2><div class="th-meta">TID: 6375</div></a>
+<a href="../threads/6371.html" class="thread-row"><h2>三宝我永远的依怙.——吾师释迦世尊, 谢谢您！</h2><div class="th-meta">TID: 6371</div></a>
+<a href="../threads/6355.html" class="thread-row"><h2>佛法从恭敬中求</h2><div class="th-meta">TID: 6355</div></a>
+<a href="../threads/6327.html" class="thread-row"><h2>護持東不丹普巴金剛【竹千】息災除障甘露圓滿大法會</h2><div class="th-meta">TID: 6327</div></a>
+<a href="../threads/6326.html" class="thread-row"><h2>【四皈依经】经幡，获得三宝三根本加持</h2><div class="th-meta">TID: 6326</div></a>
+<a href="../threads/6313.html" class="thread-row"><h2>转经轮——修法必备法宝。见闻解脱宝物免费结缘！</h2><div class="th-meta">TID: 6313</div></a>
+<a href="../threads/6312.html" class="thread-row"><h2>烟供必备甘露丸免费结缘</h2><div class="th-meta">TID: 6312</div></a>
+<a href="../threads/6306.html" class="thread-row"><h2>多吉的儿子为师兄们运送经幡前往日沐神山，一路真实记</h2><div class="th-meta">TID: 6306</div></a>
+<a href="../threads/6304.html" class="thread-row"><h2>赵朴初先生主持助念送往生详细经过</h2><div class="th-meta">TID: 6304</div></a>
+<a href="../threads/6303.html" class="thread-row"><h2>纯正檀香品,台湾大师恭制,绝无化学香精!</h2><div class="th-meta">TID: 6303</div></a>
+<a href="../threads/6297.html" class="thread-row"><h2>【报恩月】为父母祖先祈福超荐，挂经幡活动</h2><div class="th-meta">TID: 6297</div></a>
+<a href="../threads/6290.html" class="thread-row"><h2>从心理学角度分析准提法体系内涵</h2><div class="th-meta">TID: 6290</div></a>
+<a href="../threads/6282.html" class="thread-row"><h2>康巴活佛和闭关中心喇嘛在日沐神山挂经幡（截止本月15号）</h2><div class="th-meta">TID: 6282</div></a>
+<a href="../threads/6278.html" class="thread-row"><h2>准提佛母加持中考高考如意祈福仪轨</h2><div class="th-meta">TID: 6278</div></a>
+<a href="../threads/6276.html" class="thread-row"><h2>俄萨曲尼多吉堪布8月1日在玛卿雪山安放地藏王菩萨宝瓶。</h2><div class="th-meta">TID: 6276</div></a>
+<a href="../threads/6268.html" class="thread-row"><h2>倡印《弟子规》</h2><div class="th-meta">TID: 6268</div></a>
+<a href="../threads/6254.html" class="thread-row"><h2>准提弟子的人生观之人生改善</h2><div class="th-meta">TID: 6254</div></a>
+<a href="../threads/6249.html" class="thread-row"><h2>由两大高僧加持开光的在线寺庙开通</h2><div class="th-meta">TID: 6249</div></a>
+<a href="../threads/6248.html" class="thread-row"><h2>提咒加持手掌，指纹大放光明</h2><div class="th-meta">TID: 6248</div></a>
+<a href="../threads/6223.html" class="thread-row"><h2>随喜赞叹学院的每月初十的火供</h2><div class="th-meta">TID: 6223</div></a>
+<a href="../threads/6222.html" class="thread-row"><h2>春师兄至今仍然坚持每月随喜学院火供。</h2><div class="th-meta">TID: 6222</div></a>
+<a href="../threads/6220.html" class="thread-row"><h2>准提行者即准提</h2><div class="th-meta">TID: 6220</div></a>
+<a href="../threads/6218.html" class="thread-row"><h2>佛力的加持真实不虚</h2><div class="th-meta">TID: 6218</div></a>
+<a href="../threads/6215.html" class="thread-row"><h2>我的利生火供佛缘</h2><div class="th-meta">TID: 6215</div></a>
+<a href="../threads/6211.html" class="thread-row"><h2>准提咒加持手掌实验</h2><div class="th-meta">TID: 6211</div></a>
+<a href="../threads/6209.html" class="thread-row"><h2>火供的巨大威力</h2><div class="th-meta">TID: 6209</div></a>
+<a href="../threads/6204.html" class="thread-row"><h2>7月七日俄萨曲尼多吉堪布与众多大德在青海湖放龙王宝瓶</h2><div class="th-meta">TID: 6204</div></a>
+<a href="../threads/6202.html" class="thread-row"><h2>地产大王郑家成的爱心教育</h2><div class="th-meta">TID: 6202</div></a>
+<a href="../threads/6182.html" class="thread-row"><h2>《菩提道次第广论》白话文喜结法缘</h2><div class="th-meta">TID: 6182</div></a>
+<a href="../threads/6179.html" class="thread-row"><h2>参加准提五一法会纪实</h2><div class="th-meta">TID: 6179</div></a>
+<a href="../threads/6162.html" class="thread-row"><h2>春风丝雨 之 五轮金刚准提咒的念诵 学习总结</h2><div class="th-meta">TID: 6162</div></a>
+<a href="../threads/6139.html" class="thread-row"><h2>观无量寿经心得</h2><div class="th-meta">TID: 6139</div></a>
+<a href="../threads/6130.html" class="thread-row"><h2>新到【百字明经幡】——获无量立即和究竟的利益</h2><div class="th-meta">TID: 6130</div></a>
+<a href="../threads/6128.html" class="thread-row"><h2>梦见华果</h2><div class="th-meta">TID: 6128</div></a>
+<a href="../threads/6114.html" class="thread-row"><h2>末法至宝涌出于世---大圣至尊如意万藏宝函</h2><div class="th-meta">TID: 6114</div></a>
+<a href="../threads/6111.html" class="thread-row"><h2>重要更正！关于神圣的雨露-热穹巴多杰扎巴唐卡画传艺术展</h2><div class="th-meta">TID: 6111</div></a>
+<a href="../threads/6100.html" class="thread-row"><h2>神圣的雨露------热穹巴多杰扎巴唐卡画传艺术展</h2><div class="th-meta">TID: 6100</div></a>
+<a href="../threads/6099.html" class="thread-row"><h2>龙桑问题 求解答</h2><div class="th-meta">TID: 6099</div></a>
+<a href="../threads/6094.html" class="thread-row"><h2>新译菩提道次第广论电子书。</h2><div class="th-meta">TID: 6094</div></a>
+<a href="../threads/6090.html" class="thread-row"><h2>“张大千临摹敦煌壁画展”在上海刘海粟美术馆开幕</h2><div class="th-meta">TID: 6090</div></a>
+<a href="../threads/6081.html" class="thread-row"><h2>南开诺布仁波切2010年5月4-9日金刚手法会各日主题</h2><div class="th-meta">TID: 6081</div></a>
+<a href="../threads/6075.html" class="thread-row"><h2>慈容遍法界 同归极乐土</h2><div class="th-meta">TID: 6075</div></a>
+<a href="../threads/6059.html" class="thread-row"><h2>三佛寺为玉树灾区举行祈福募捐法会</h2><div class="th-meta">TID: 6059</div></a>
+<a href="../threads/6058.html" class="thread-row"><h2>请帮助修缮地震中损毁的三佛禅院</h2><div class="th-meta">TID: 6058</div></a>
+<a href="../threads/6049.html" class="thread-row"><h2>永生源 玉树请不要哭泣</h2><div class="th-meta">TID: 6049</div></a>
+<a href="../threads/6041.html" class="thread-row"><h2>常福居士：做一件善事，就积一份功德</h2><div class="th-meta">TID: 6041</div></a>
+<a href="../threads/6019.html" class="thread-row"><h2>吉祥布达拉经幡：10面7种咒文（净障增福）多吉小店订制</h2><div class="th-meta">TID: 6019</div></a>
+<a href="../threads/5999.html" class="thread-row"><h2>伟大的回归之路与基进（彻底）领悟之道</h2><div class="th-meta">TID: 5999</div></a>
+<a href="../threads/5998.html" class="thread-row"><h2>南开诺布上师关于吃肉吃素、喝酒问题的开示（节选）</h2><div class="th-meta">TID: 5998</div></a>
+<a href="../threads/5986.html" class="thread-row"><h2>大圆满教法中的甚深、稀有教法：金刚舞简介</h2><div class="th-meta">TID: 5986</div></a>
+<a href="../threads/5975.html" class="thread-row"><h2>青海西宁、四川康定、湖南长沙3位师兄，愿意长期代挂经幡</h2><div class="th-meta">TID: 5975</div></a>
+<a href="../threads/5974.html" class="thread-row"><h2>装藏品功德 :流通塔像内藏装藏品(桑耶寺提供)</h2><div class="th-meta">TID: 5974</div></a>
+<a href="../threads/5967.html" class="thread-row"><h2>汉威铜佛像铸造厂</h2><div class="th-meta">TID: 5967</div></a>
+<a href="../threads/5966.html" class="thread-row"><h2>金刚铠甲佩戴解脱珍宝丸</h2><div class="th-meta">TID: 5966</div></a>
+<a href="../threads/5957.html" class="thread-row"><h2>“修持上师密意消除一切障难心髓如意宝祈请颂”经幡</h2><div class="th-meta">TID: 5957</div></a>
+<a href="../threads/5955.html" class="thread-row"><h2>【华藏香堂】清明节推荐用香，外赠超度法宝</h2><div class="th-meta">TID: 5955</div></a>
+<a href="../threads/5953.html" class="thread-row"><h2>迅速增长财富，获得五姓财神加持的方便法门——财神熏香</h2><div class="th-meta">TID: 5953</div></a>
+<a href="../threads/5950.html" class="thread-row"><h2>【千佛自解脱熏香】原价6元/袋现价3.8元/袋特惠新老顾客</h2><div class="th-meta">TID: 5950</div></a>
+<a href="../threads/5946.html" class="thread-row"><h2>藏族唐卡艺术</h2><div class="th-meta">TID: 5946</div></a>
+<a href="../threads/5940.html" class="thread-row"><h2>寻找香巴拉</h2><div class="th-meta">TID: 5940</div></a>
+<a href="../threads/5939.html" class="thread-row"><h2>香巴拉</h2><div class="th-meta">TID: 5939</div></a>
+<a href="../threads/5935.html" class="thread-row"><h2>吉祥八宝</h2><div class="th-meta">TID: 5935</div></a>
+<a href="../threads/5918.html" class="thread-row"><h2>菩萨的华服</h2><div class="th-meta">TID: 5918</div></a>
+<a href="../threads/5225.html" class="thread-row"><h2>准提行者回向的感悟</h2><div class="th-meta">TID: 5225</div></a>
+<a href="../threads/5204.html" class="thread-row"><h2>筑牢基础增信心 一门深入需躬行</h2><div class="th-meta">TID: 5204</div></a>
+<a href="../threads/5193.html" class="thread-row"><h2>我修准提法的几则感应</h2><div class="th-meta">TID: 5193</div></a>
+<a href="../threads/5173.html" class="thread-row"><h2>子欲养而亲不在 不要成为永远的忏悔</h2><div class="th-meta">TID: 5173</div></a>
+<a href="../threads/5171.html" class="thread-row"><h2>准提佛母不可思议的加持力：</h2><div class="th-meta">TID: 5171</div></a>
+<a href="../threads/5169.html" class="thread-row"><h2>菩康寺伏藏格萨尔王九菱如意宝袋汉地流通处</h2><div class="th-meta">TID: 5169</div></a>
+<a href="../threads/5168.html" class="thread-row"><h2>河北蔚县东五台山金河寺遗址</h2><div class="th-meta">TID: 5168</div></a>
+<a href="../threads/5148.html" class="thread-row"><h2>古格藏香坊与嘎绒寺推出契合汉地因缘的文殊占卜法本</h2><div class="th-meta">TID: 5148</div></a>
+<a href="../threads/5137.html" class="thread-row"><h2>修习准提法感应事迹</h2><div class="th-meta">TID: 5137</div></a>
+<a href="../threads/5127.html" class="thread-row"><h2>王爱德 之学习《五轮念诵》的总结</h2><div class="th-meta">TID: 5127</div></a>
+<a href="../threads/5126.html" class="thread-row"><h2>修学准提法以来的一些体会</h2><div class="th-meta">TID: 5126</div></a>
+<a href="../threads/5115.html" class="thread-row"><h2>经幡——增长福报、改变命运最简单的方法</h2><div class="th-meta">TID: 5115</div></a>
+<a href="../threads/5108.html" class="thread-row"><h2>准提行者即准提 行者生活即感应</h2><div class="th-meta">TID: 5108</div></a>
+<a href="../threads/5087.html" class="thread-row"><h2>流通质优价廉布达拉唐卡（共计13种）及其简介</h2><div class="th-meta">TID: 5087</div></a>
+<a href="../threads/5071.html" class="thread-row"><h2>一个准提佛子的内心独白</h2><div class="th-meta">TID: 5071</div></a>
+<a href="../threads/5069.html" class="thread-row"><h2>肖刚 之 准提法观想</h2><div class="th-meta">TID: 5069</div></a>
+<a href="../threads/5053.html" class="thread-row"><h2>准提咒五轮念法学习心得体会</h2><div class="th-meta">TID: 5053</div></a>
+<a href="../threads/5046.html" class="thread-row"><h2>免费结缘时轮精髓 南久旺丹/十相自在</h2><div class="th-meta">TID: 5046</div></a>
+<a href="../threads/5034.html" class="thread-row"><h2>护法度“鬼”的故事</h2><div class="th-meta">TID: 5034</div></a>
+<a href="../threads/5025.html" class="thread-row"><h2>装藏品功德，流通塔像内藏装藏品（桑耶寺提供）</h2><div class="th-meta">TID: 5025</div></a>
+<a href="../threads/5024.html" class="thread-row"><h2>桑巴伦助玛—莲师十三法经旗（莲师圆满心愿经旗）</h2><div class="th-meta">TID: 5024</div></a>
+<a href="../threads/5018.html" class="thread-row"><h2>小五台行记</h2><div class="th-meta">TID: 5018</div></a>
+<a href="../threads/5009.html" class="thread-row"><h2>古格藏香坊与嘎荣寺共同推出文殊占卜套装，欢迎迎请</h2><div class="th-meta">TID: 5009</div></a>
+<a href="../threads/5008.html" class="thread-row"><h2>古格藏香坊：秋耶仁波切带您领略藏香魅力</h2><div class="th-meta">TID: 5008</div></a>
+<a href="../threads/5001.html" class="thread-row"><h2>经幡——增长福报、改变命运最简单的方法</h2><div class="th-meta">TID: 5001</div></a>
+<a href="../threads/4988.html" class="thread-row"><h2>极为殊胜的文殊菩萨八字真言(转贴),敬请各位师兄能转贴</h2><div class="th-meta">TID: 4988</div></a>
+<a href="../threads/4949.html" class="thread-row"><h2>[真人真事] 殊胜的超度——来自亡者的感谢</h2><div class="th-meta">TID: 4949</div></a>
+<a href="../threads/4945.html" class="thread-row"><h2>此大劫之历代天主的轮回史</h2><div class="th-meta">TID: 4945</div></a>
+<a href="../threads/4935.html" class="thread-row"><h2>【警戒】诽谤嫉妒讽刺挖苦他人，五百生贫穷！</h2><div class="th-meta">TID: 4935</div></a>
+<a href="../threads/4931.html" class="thread-row"><h2>四川地震中放生的感应（放生与杀生的果报差别）</h2><div class="th-meta">TID: 4931</div></a>
+<a href="../threads/4918.html" class="thread-row"><h2>顿辉法师：地藏菩萨感应三记（真实语！大启发！）</h2><div class="th-meta">TID: 4918</div></a>
+<a href="../threads/4917.html" class="thread-row"><h2>香港西方寺方丈宽运法师简介</h2><div class="th-meta">TID: 4917</div></a>
+<a href="../threads/4915.html" class="thread-row"><h2>一个犯杀业和邪淫的女子的血泪忏悔！</h2><div class="th-meta">TID: 4915</div></a>
+<a href="../threads/4912.html" class="thread-row"><h2>修福大喜讯：陕西安康双溪寺正在翻新建设中，请中福田！</h2><div class="th-meta">TID: 4912</div></a>
+<a href="../threads/4910.html" class="thread-row"><h2>有个清静的地方可以修行</h2><div class="th-meta">TID: 4910</div></a>
+<a href="../threads/4909.html" class="thread-row"><h2>观世音菩萨救空难、车难等事迹，真人真事切勿错过！</h2><div class="th-meta">TID: 4909</div></a>
+<a href="../threads/4890.html" class="thread-row"><h2>作恶本应堕饿鬼，见财不贪，一念之善，力可回天</h2><div class="th-meta">TID: 4890</div></a>
+<a href="../threads/4884.html" class="thread-row"><h2>造业受报有一个转化过程</h2><div class="th-meta">TID: 4884</div></a>
+<a href="../threads/4871.html" class="thread-row"><h2>不要轻意惹父母生气、恶口，不然后果很严重啊</h2><div class="th-meta">TID: 4871</div></a>
+<a href="../threads/4865.html" class="thread-row"><h2>世上最厉害的果报</h2><div class="th-meta">TID: 4865</div></a>
+<a href="../threads/4864.html" class="thread-row"><h2>2009无上怙主萨迦法王生日．共修和放生结缘活动</h2><div class="th-meta">TID: 4864</div></a>
+<a href="../threads/4780.html" class="thread-row"><h2>铜佛像</h2><div class="th-meta">TID: 4780</div></a>
+<a href="../threads/4774.html" class="thread-row"><h2>圣者展现临终自在的几种方式</h2><div class="th-meta">TID: 4774</div></a>
+<a href="../threads/4763.html" class="thread-row"><h2>品味人生佛具定制，佛具加盟</h2><div class="th-meta">TID: 4763</div></a>
+<a href="../threads/4743.html" class="thread-row"><h2>【分享】抄写《药师经》，消灾延寿（实例）</h2><div class="th-meta">TID: 4743</div></a>
+<a href="../threads/4740.html" class="thread-row"><h2>广化法师：度鬼要有慈悲心</h2><div class="th-meta">TID: 4740</div></a>
+<a href="../threads/4707.html" class="thread-row"><h2>亲身经历的因果故事和念佛感应~~~令人不得不信佛</h2><div class="th-meta">TID: 4707</div></a>
+<a href="../threads/4685.html" class="thread-row"><h2>再穷的人也能因施得福</h2><div class="th-meta">TID: 4685</div></a>
+<a href="../threads/4678.html" class="thread-row"><h2>得人钱财反害人 冤家附身来要命</h2><div class="th-meta">TID: 4678</div></a>
+<a href="../threads/4675.html" class="thread-row"><h2>古格藏香坊联合嘎绒寺共同推出文殊占卜法本</h2><div class="th-meta">TID: 4675</div></a>
+<a href="../threads/4646.html" class="thread-row"><h2>菩萨送我返阳间  教念弥陀结净缘</h2><div class="th-meta">TID: 4646</div></a>
+<a href="../threads/4645.html" class="thread-row"><h2>近期隆重推出文殊占卜精品套装，开始接受预定了！</h2><div class="th-meta">TID: 4645</div></a>
+<a href="../threads/4639.html" class="thread-row"><h2>警钟长鸣——造口业，遭惨报，公案怖，鬼神惊！</h2><div class="th-meta">TID: 4639</div></a>
+<a href="../threads/4638.html" class="thread-row"><h2>冥报记（文白对照）</h2><div class="th-meta">TID: 4638</div></a>
+<a href="../threads/4629.html" class="thread-row"><h2>[转贴]佛顶尊胜陀罗尼与翡魂</h2><div class="th-meta">TID: 4629</div></a>
+<a href="../threads/4610.html" class="thread-row"><h2>助念与往生的关系？ （大安法师）</h2><div class="th-meta">TID: 4610</div></a>
+<a href="../threads/4606.html" class="thread-row"><h2>胡封翁公门好修行（西安广运放生团转）</h2><div class="th-meta">TID: 4606</div></a>
+<a href="../threads/4602.html" class="thread-row"><h2>最殊圣的福物宝物感应!</h2><div class="th-meta">TID: 4602</div></a>
+<a href="../threads/4595.html" class="thread-row"><h2>关于西方极乐之报土、九品、胎生</h2><div class="th-meta">TID: 4595</div></a>
+<a href="../threads/4588.html" class="thread-row"><h2>城东老母梦游记 / 当今三位奇人的故事</h2><div class="th-meta">TID: 4588</div></a>
+<a href="../threads/4582.html" class="thread-row"><h2>得佛加持，哑巴开口再说话（2007年真人真事）</h2><div class="th-meta">TID: 4582</div></a>
+<a href="../threads/4581.html" class="thread-row"><h2>放生功德有多大？/ 放生持戒师兄得福报的实例</h2><div class="th-meta">TID: 4581</div></a>
+<a href="../threads/4560.html" class="thread-row"><h2>佛度六道视听馆申请链接，阿弥陀佛</h2><div class="th-meta">TID: 4560</div></a>
+<a href="../threads/4559.html" class="thread-row"><h2>老母做噩梦急念佛 感应儿子死里逃生</h2><div class="th-meta">TID: 4559</div></a>
+<a href="../threads/4558.html" class="thread-row"><h2>舍财助人，凶相消失</h2><div class="th-meta">TID: 4558</div></a>
+<a href="../threads/4513.html" class="thread-row"><h2>莫叫福德从口中漏走----善护口业</h2><div class="th-meta">TID: 4513</div></a>
+<a href="../threads/4507.html" class="thread-row"><h2>身边几个杀生果报的事</h2><div class="th-meta">TID: 4507</div></a>
+<a href="../threads/4501.html" class="thread-row"><h2>美国富翁80％是靠利人利己起家 ！！</h2><div class="th-meta">TID: 4501</div></a>
+<a href="../threads/4484.html" class="thread-row"><h2>海涛法师开示：鬼道之苦（大苦大苦，我不能见）</h2><div class="th-meta">TID: 4484</div></a>
+<a href="../threads/4483.html" class="thread-row"><h2>令相貌美丽好看的传世神方</h2><div class="th-meta">TID: 4483</div></a>
+<a href="../threads/4475.html" class="thread-row"><h2>真实的地狱因果见证(死了又活、活了又死，又活又死)</h2><div class="th-meta">TID: 4475</div></a>
+<a href="../threads/4472.html" class="thread-row"><h2>大福德的人，都善能赞叹佛的功德</h2><div class="th-meta">TID: 4472</div></a>
+<a href="../threads/4470.html" class="thread-row"><h2>著名诗人作家陈所巨 预知时至，往生净土记</h2><div class="th-meta">TID: 4470</div></a>
+<a href="../threads/4463.html" class="thread-row"><h2>法师！不瞒你说，我是此地的山神</h2><div class="th-meta">TID: 4463</div></a>
+<a href="../threads/4435.html" class="thread-row"><h2>助生药师佛咒共修呼吁！！救助英雄！！</h2><div class="th-meta">TID: 4435</div></a>
+<a href="../threads/4432.html" class="thread-row"><h2>念佛怎样回向？（印光大师 开示）</h2><div class="th-meta">TID: 4432</div></a>
+<a href="../threads/4411.html" class="thread-row"><h2>鬼神与业障问答（海涛法师）</h2><div class="th-meta">TID: 4411</div></a>
+<a href="../threads/4404.html" class="thread-row"><h2>程晋林居士送往生报告介绍</h2><div class="th-meta">TID: 4404</div></a>
+<a href="../threads/4397.html" class="thread-row"><h2>行善为什么看不见善恶的报应呢？</h2><div class="th-meta">TID: 4397</div></a>
+<a href="../threads/4373.html" class="thread-row"><h2>兄虔诚勤修持为弟求福 弟愚痴贪口福丧命做犬</h2><div class="th-meta">TID: 4373</div></a>
+<a href="../threads/4366.html" class="thread-row"><h2>表哥的两次放生果报</h2><div class="th-meta">TID: 4366</div></a>
+<a href="../threads/4331.html" class="thread-row"><h2>菩康寺格萨尔王九棱如意宝袋流通</h2><div class="th-meta">TID: 4331</div></a>
+<a href="../threads/4301.html" class="thread-row"><h2>淫欲心重的可怕后果</h2><div class="th-meta">TID: 4301</div></a>
+<a href="../threads/4247.html" class="thread-row"><h2>哑子和尚摔下悬崖幸免于难</h2><div class="th-meta">TID: 4247</div></a>
+<a href="../threads/4241.html" class="thread-row"><h2>怨毒之财、位岂能安享</h2><div class="th-meta">TID: 4241</div></a>
+<a href="../threads/4116.html" class="thread-row"><h2>恶报无法逃避——佛陀如是说</h2><div class="th-meta">TID: 4116</div></a>
+<a href="../threads/4113.html" class="thread-row"><h2>报应——文革中的整人狂下场悲惨</h2><div class="th-meta">TID: 4113</div></a>
+<a href="../threads/4074.html" class="thread-row"><h2>沈世宁老居士往生记：</h2><div class="th-meta">TID: 4074</div></a>
+<a href="../threads/4016.html" class="thread-row"><h2>放生念佛神奇的感应---肝病不药而愈，钱越来越多</h2><div class="th-meta">TID: 4016</div></a>
+<a href="../threads/3998.html" class="thread-row"><h2>一切從惜福开始（防止自杀问题）</h2><div class="th-meta">TID: 3998</div></a>
+<a href="../threads/3973.html" class="thread-row"><h2>默声助念感应记</h2><div class="th-meta">TID: 3973</div></a>
+<a href="../threads/3962.html" class="thread-row"><h2>如何帮助亲人趋入佛道</h2><div class="th-meta">TID: 3962</div></a>
+<a href="../threads/3927.html" class="thread-row"><h2>皈依者应注意的事项</h2><div class="th-meta">TID: 3927</div></a>
+<a href="../threads/3910.html" class="thread-row"><h2>欧美研究实例：大恶之人，死后直堕地狱</h2><div class="th-meta">TID: 3910</div></a>
+<a href="../threads/3813.html" class="thread-row"><h2>亲戚的邪淫恶报事件：被判死刑，堕落地狱，无法超度！</h2><div class="th-meta">TID: 3813</div></a>
+<a href="../threads/3772.html" class="thread-row"><h2>报刊因果故事二则</h2><div class="th-meta">TID: 3772</div></a>
+<a href="../threads/3771.html" class="thread-row"><h2>浊世明灯－格萨尔王九菱如意转运财神宝袋流通</h2><div class="th-meta">TID: 3771</div></a>
+<a href="../threads/3770.html" class="thread-row"><h2>袁老太太念佛心静，预知未来</h2><div class="th-meta">TID: 3770</div></a>
+<a href="../threads/3754.html" class="thread-row"><h2>[注意]什么是舍法罪，如何对治</h2><div class="th-meta">TID: 3754</div></a>
+<a href="../threads/3753.html" class="thread-row"><h2>因果报应实录：毁佛损经遭报应</h2><div class="th-meta">TID: 3753</div></a>
+<a href="../threads/3743.html" class="thread-row"><h2>张隆慧居士往生纪实</h2><div class="th-meta">TID: 3743</div></a>
+<a href="../threads/3725.html" class="thread-row"><h2>起绰号辱骂僧众 遭果报形同绰号</h2><div class="th-meta">TID: 3725</div></a>
+<a href="../threads/3695.html" class="thread-row"><h2>大安法师谈先母郑根英老居士往生启示及生平行业</h2><div class="th-meta">TID: 3695</div></a>
+<a href="../threads/3693.html" class="thread-row"><h2>遇鬼差押人吓到晕 / 笔仙的真相</h2><div class="th-meta">TID: 3693</div></a>
+<a href="../threads/3679.html" class="thread-row"><h2>印祖文钞中关于“不能往生”的开示</h2><div class="th-meta">TID: 3679</div></a>
+<a href="../threads/3660.html" class="thread-row"><h2>念佛三天　群鬼退尽</h2><div class="th-meta">TID: 3660</div></a>
+<a href="../threads/3656.html" class="thread-row"><h2>禅密初体验</h2><div class="th-meta">TID: 3656</div></a>
+<a href="../threads/3640.html" class="thread-row"><h2>因果随行 慎勿为恶---命运改变的故事</h2><div class="th-meta">TID: 3640</div></a>
+<a href="../threads/3639.html" class="thread-row"><h2>汤慧振老居士往生记事: 趺坐往生 三天不倒 ！！！</h2><div class="th-meta">TID: 3639</div></a>
+<a href="../threads/3630.html" class="thread-row"><h2>因妒诬高僧 遭报而亡</h2><div class="th-meta">TID: 3630</div></a>
+<a href="../threads/3621.html" class="thread-row"><h2>法师忠告：自杀身亡者，生生世世可能再自杀，苦不堪言</h2><div class="th-meta">TID: 3621</div></a>
+<a href="../threads/3577.html" class="thread-row"><h2>屠夫临终念佛带业生西</h2><div class="th-meta">TID: 3577</div></a>
+<a href="../threads/3562.html" class="thread-row"><h2>超拔历代宗亲、冤亲债主之珍贵稀有之法:报恩供！！</h2><div class="th-meta">TID: 3562</div></a>
+<a href="../threads/3551.html" class="thread-row"><h2>邪淫的定义及大害</h2><div class="th-meta">TID: 3551</div></a>
+<a href="../threads/3535.html" class="thread-row"><h2>历劫残生，屠夫回首</h2><div class="th-meta">TID: 3535</div></a>
+<a href="../threads/3501.html" class="thread-row"><h2>&lt;感应篇汇编》白话本: — 淫欲过度</h2><div class="th-meta">TID: 3501</div></a>
+<a href="../threads/3499.html" class="thread-row"><h2>挺神秘的事：爱钓鱼的人易遭祸患</h2><div class="th-meta">TID: 3499</div></a>
+<a href="../threads/3491.html" class="thread-row"><h2>公益结缘专帖:全国大城市都有联系点,转经轮免费结缘!</h2><div class="th-meta">TID: 3491</div></a>
+<a href="../threads/3472.html" class="thread-row"><h2>李老居士放生念佛感应佛光接引及诸多瑞相：</h2><div class="th-meta">TID: 3472</div></a>
+<a href="../threads/3462.html" class="thread-row"><h2>出国念佛化冥途众生感应记</h2><div class="th-meta">TID: 3462</div></a>
+<a href="../threads/3440.html" class="thread-row"><h2>何东夫人念佛放强光往生西方</h2><div class="th-meta">TID: 3440</div></a>
+<a href="../threads/3427.html" class="thread-row"><h2>灵魂附体者如是解脱-----一则关于附体者真实传记</h2><div class="th-meta">TID: 3427</div></a>
+<a href="../threads/3392.html" class="thread-row"><h2>千万别杀动物！残杀惹灾祸——农村真实调查记实</h2><div class="th-meta">TID: 3392</div></a>
+<a href="../threads/3381.html" class="thread-row"><h2>二入地狱被罚记---真实！！！</h2><div class="th-meta">TID: 3381</div></a>
+<a href="../threads/3367.html" class="thread-row"><h2>纵欲带来灭顶之灾</h2><div class="th-meta">TID: 3367</div></a>
+<a href="../threads/3348.html" class="thread-row"><h2>世人临终时的三种爱（执著）</h2><div class="th-meta">TID: 3348</div></a>
+<a href="../threads/3346.html" class="thread-row"><h2>佛子感恩</h2><div class="th-meta">TID: 3346</div></a>
+<a href="../threads/3307.html" class="thread-row"><h2>以神通征服皇帝的著名高僧佛图澄</h2><div class="th-meta">TID: 3307</div></a>
+<a href="../threads/3300.html" class="thread-row"><h2>被鬼迷念地藏经救了她的命!</h2><div class="th-meta">TID: 3300</div></a>
+<a href="../threads/3287.html" class="thread-row"><h2>准提门下弟子地震大劫余生记</h2><div class="th-meta">TID: 3287</div></a>
+<a href="../threads/3284.html" class="thread-row"><h2>马邦良地府作阎罗发现的真相，令人毛发直竖</h2><div class="th-meta">TID: 3284</div></a>
+<a href="../threads/3276.html" class="thread-row"><h2>为灾区人民今后的幸福念诵绿度母经咒</h2><div class="th-meta">TID: 3276</div></a>
+<a href="../threads/3263.html" class="thread-row"><h2>佛教的生态智慧与可持续发展</h2><div class="th-meta">TID: 3263</div></a>
+<a href="../threads/3242.html" class="thread-row"><h2>观音救拔飓风难之感应</h2><div class="th-meta">TID: 3242</div></a>
+<a href="../threads/3202.html" class="thread-row"><h2>净天法师往生记实（瑞象神奇）</h2><div class="th-meta">TID: 3202</div></a>
+<a href="../threads/2954.html" class="thread-row"><h2>普贤闭关---长期举行闭关活动。免收费用。</h2><div class="th-meta">TID: 2954</div></a>
+<a href="../threads/2348.html" class="thread-row"><h2>无上密法器见即解脱宝---精美佛教曼荼罗小样画---免费结缘!!</h2><div class="th-meta">TID: 2348</div></a>
+<a href="../threads/2236.html" class="thread-row"><h2>安曲寺的厉鬼传说</h2><div class="th-meta">TID: 2236</div></a>
+<a href="../threads/2202.html" class="thread-row"><h2>噶玛----《大圆满经典总汇》</h2><div class="th-meta">TID: 2202</div></a>
+<a href="../threads/2128.html" class="thread-row"><h2>[原创]罕!! 灵验不可思议的实修法宝!!!</h2><div class="th-meta">TID: 2128</div></a>
+<a href="../threads/2056.html" class="thread-row"><h2>家族香火供奉与超度祖先的重要性</h2><div class="th-meta">TID: 2056</div></a>
+<a href="../threads/2054.html" class="thread-row"><h2>藏密悲智大護法最勝尊傳法灌頂法會</h2><div class="th-meta">TID: 2054</div></a>
+<a href="../threads/1948.html" class="thread-row"><h2>石女因缘</h2><div class="th-meta">TID: 1948</div></a>
+<a href="../threads/1861.html" class="thread-row"><h2>动物粪便有良药</h2><div class="th-meta">TID: 1861</div></a>
+<a href="../threads/1595.html" class="thread-row"><h2>锻炼忍耐力的船式---你能坚持多久?</h2><div class="th-meta">TID: 1595</div></a>
+<a href="../threads/1518.html" class="thread-row"><h2>西藏葬仪</h2><div class="th-meta">TID: 1518</div></a>
+<a href="../threads/1454.html" class="thread-row"><h2>石渠格萨尔文化探索之路</h2><div class="th-meta">TID: 1454</div></a>
+<a href="../threads/1442.html" class="thread-row"><h2>藏族哈达、哈达文化与献哈达常识</h2><div class="th-meta">TID: 1442</div></a>
+<a href="../threads/1305.html" class="thread-row"><h2>解读瑜珈断食</h2><div class="th-meta">TID: 1305</div></a>
+<a href="../threads/1287.html" class="thread-row"><h2>恐怖的西藏矮门与起尸秘俗</h2><div class="th-meta">TID: 1287</div></a>
+<a href="../threads/1158.html" class="thread-row"><h2>藏密修海网站的声明！</h2><div class="th-meta">TID: 1158</div></a>
+<a href="../threads/722.html" class="thread-row"><h2>&lt;西藏的神灵和鬼怪&gt;</h2><div class="th-meta">TID: 722</div></a>
+<a href="../threads/368.html" class="thread-row"><h2>提升家居卫浴间的风水运势</h2><div class="th-meta">TID: 368</div></a>
+<a href="../threads/364.html" class="thread-row"><h2>中国古28星宿 你是哪一宿？</h2><div class="th-meta">TID: 364</div></a>
+<a href="../threads/200.html" class="thread-row"><h2>藏医学简介</h2><div class="th-meta">TID: 200</div></a>
+<a href="../threads/167.html" class="thread-row"><h2>以佛法利益六亲眷属之经验谈</h2><div class="th-meta">TID: 167</div></a>
+
+</div></body></html>

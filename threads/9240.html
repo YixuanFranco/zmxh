@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>热呼拉护法实修笔记 - 藏密修海典藏</title>
+<title>热呼拉护法实修笔记 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/金刚菩提遍庄严.html">金刚菩提遍庄严</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">热呼拉护法实修笔记</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚海会发表于 2016-4-30 15:00</div><div class="post-body">[img]http://www.zmxh.com/pics/______01_20060118120935.jpg[/img] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚海会发表于 2016-4-30 15:00</div><div class="post-body">[img]http://www.zmxh.com/pics/______01_20060118120935.jpg[/img] <br/>
 <br/>
 [img]http://www.zmxh.com/pics/6a_______31_20060216222740.jpg[/img] <br/>
 <br/>
@@ -64,7 +77,7 @@ QQ1816528811 <br/>
 修热呼拉护法持咒原地舞动，热呼拉九面顶上乌鸦面，四臂持剑、花，弓、箭，双手旋转、舞动、摆动、震荡，手心热气旋转变成有形的气团，绵密厚实，带动全身气脉自然运转，手足气脉震动，手掌透明，腹轮像融进小太阳，腹轮里细密的红色热流能量贯通中脉和全身和手足脉络，光电球自然旋转，从各个角度到达手心，手心能量运转渐渐变成揉面团，在揉动中，越来越柔韧有弹性和力度，手心能量运转发热发光点燃，手心和腹轮同时显现蓝色夜明珠，一闪一闪发出金色光明，身体气脉沸腾，晶莹剔透的红色宝珠旋转，宝珠触电一样的碰撞，变成眼睛形旋转，热流运转中热呼拉龙形的尾巴上显现很多眼睛，在气雾状热流的里，火焰在燃烧。 <br/>
 观修自身为热呼拉护法，双手轻轻旋转舞动持咒，海底轮红色莲花内吸，腹轮气脉化为宝珠转动，眉心轮热流漩涡旋转，呼吸若有若无，心气定下来，中脉海底轮连接脐轮形成纤细的金刚线，中脉金刚线气脉震动连接海底轮和顶轮震动放电，脐轮脉络火热通畅生根旋转，自然呼吸中气脉能量自然升华化为本尊佛的光明坛城，热呼拉护法自然显现持咒怒吼舞动晃动，腰轮黄红色热流有力震动上涌，热呼拉腹部显现有一个愤怒脸，三目如电光旋转，显现九面口鼻喷火持咒不断吼叫。 <br/>
 修热呼拉护法，原地自在的舞动和任意摆动，手心热流越来越柔韧有力，舞动法器持咒，心轮显现黄白色氤氲热流，化为金刚杵旋转发出长长的金色闪电，手心和心轮金刚杵能量运转一致震动，双手摇动摆动旋转舞动法器，自身成为热呼拉护法，海底轮到顶轮气脉运转热流循环往复，中脉通明贯通，顶轮相应打开后脑呼吸融进月轮光明，手心和中脉能量呼应震动，中脉震动醇厚变大，变成虹彩光明的通天大道，背部红色热流滚滚，腹轮相应显现光电轮旋转，黄红色热流传遍全身，能量变成凌厉的金刚剑，一层蓝金色能量包围金刚法器，热流如烈火包围全身。 <br/>
-修热呼拉长时间晃动摆动舞动旋转法器持咒，中脉心轮金刚杵旋转，心轮腹轮能量合一，变成阴阳双鱼形宝珠旋转，海底轮和顶轮随气息呼应，中脉金刚线震动气脉能量自然通遍全身脉络，中脉金刚线有热流随咒音闪电震动，热呼拉龙尾摆动触电般翻转变大，发出宝珠和莲花，体外热流像彩云飘舞，感到自身与热呼拉护法合为一体，中脉通明通畅震动有力，随呼吸持咒，中脉金刚线发出一圈圈虹彩光波，全身气脉能量越来越柔韧有力，身心舒畅安稳如山，修热呼拉护法持咒不断而修。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-4-11 04:46</div><div class="post-body">Aogula实证传承行者 <br/>
+修热呼拉长时间晃动摆动舞动旋转法器持咒，中脉心轮金刚杵旋转，心轮腹轮能量合一，变成阴阳双鱼形宝珠旋转，海底轮和顶轮随气息呼应，中脉金刚线震动气脉能量自然通遍全身脉络，中脉金刚线有热流随咒音闪电震动，热呼拉龙尾摆动触电般翻转变大，发出宝珠和莲花，体外热流像彩云飘舞，感到自身与热呼拉护法合为一体，中脉通明通畅震动有力，随呼吸持咒，中脉金刚线发出一圈圈虹彩光波，全身气脉能量越来越柔韧有力，身心舒畅安稳如山，修热呼拉护法持咒不断而修。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-4-11 04:46</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 QQ群：289578411 <br/>
 <br/>
@@ -81,7 +94,7 @@ QQ群：289578411 <br/>
 <br/>
 在此实修中真实体证到华严经中随所说六种震动都是三昧禅定境界的显现，所谓:动、遍动、等遍动，起、遍起、等遍起，涌、遍涌、等遍涌，震、遍震、等遍震，吼、遍吼、等遍吼，击、遍击、等遍击。以上是Aogula实证传承行者实修亲证的六种震动，是佛法三昧禅定的内在相应觉受境界。 <br/>
 <br/>
-之后修了各种龙王菩萨和千手观音，再修金刚萨埵五方佛和玛哈嘎啦护法，以右手震动如击鼓式持诵《大方广佛华严经-普贤三昧品》段落并回向。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-7-10 17:26</div><div class="post-body">修热呼拉护法  觉受笔记 <br/>
+之后修了各种龙王菩萨和千手观音，再修金刚萨埵五方佛和玛哈嘎啦护法，以右手震动如击鼓式持诵《大方广佛华严经-普贤三昧品》段落并回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-7-10 17:26</div><div class="post-body">修热呼拉护法  觉受笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -94,7 +107,7 @@ Aogula321 <br/>
 持续观修，自身热呼拉能量形态自然变化。各手臂骨显现为交叉金刚杵球串，手中法器自然而动，金刚斧旋转如风车，金刚铃摇动中不断放出护法，金刚杵自转中杵尖放闪电，手托的莲花旋转不断，头顶乌鸦面时而变化为发光宝珠，时而变化为旋转半杵向天际喷电光。 <br/>
 全身眼睛眼珠显现为交叉金刚杵球，体内有一交叉金刚杵球闪着电流任运游走。体内心轮显现热呼拉，体外很多热呼拉遍布虚空。 <br/>
 <br/>
-修完热呼拉，再修时轮金刚、密集金刚和玛哈嘎拉护法。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-11-29 00:04</div><div class="post-body">行禅 修骑龙热呼拉 <br/>
+修完热呼拉，再修时轮金刚、密集金刚和玛哈嘎拉护法。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-11-29 00:04</div><div class="post-body">行禅 修骑龙热呼拉 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula303 <br/>
@@ -102,12 +115,12 @@ Aogula303 <br/>
 2021.11.26 <br/>
 诵经后行禅，经行走转五小时，手足心有热风团化为风轮旋转，脚下的风轮带动全身热流涌动旋转，腹轮热流海浪般起伏涌动，连通中脉七轮涌动震动，此时身心静定。 <br/>
 持咒修热呼拉护法，感受自身与热呼拉护法相应合一，九面四臂变成六臂八臂，手中持宝剑、摩羯幢、弓、箭，变成八臂手中有铃、杵、金刚斧、蛇。热呼拉下身龙尾摆动，龙尾上有很多眼睛放射出光电，肚子有愤怒脸，有一个张开的大嘴巴在念经。热呼拉骑在一条绿色的龙身上，龙长翅膀有千足，龙在祥云中翻腾起舞，姿态灵活，全身气脉随着龙翻涌起伏。 <br/>
-龙发出低吟声，这声音令中脉震动，坛城里有无数护法拥护，手持钺刀，发出阵阵怒吼。安住在此三昧禅定境界继续经行。 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚樑发表于 2021-12-11 23:18</div><div class="post-body"><br/>
+龙发出低吟声，这声音令中脉震动，坛城里有无数护法拥护，手持钺刀，发出阵阵怒吼。安住在此三昧禅定境界继续经行。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚樑发表于 2021-12-11 23:18</div><div class="post-body"><br/>
 <br/>
 <br/>
 平等空性希有界；行猛利事作依怙；九头四臂千眼炽；敬礼护法大遍入。 <br/>
 平等空性希有界；行猛利事作依怙；九头四臂千眼炽；敬礼护法大遍入。 <br/>
-平等空性希有界；行猛利事做依怙；九头四臂千眼炽；敬礼护法大遍入。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-12-16 20:03</div><div class="post-body">热呼拉护法  实修笔记 <br/>
+平等空性希有界；行猛利事做依怙；九头四臂千眼炽；敬礼护法大遍入。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-12-16 20:03</div><div class="post-body">热呼拉护法  实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -120,7 +133,7 @@ Aogula321 <br/>
 持续修热呼拉护法持咒，自然摆动手臂，龙尾粗长摆动，龙麟如麦浪般此起彼伏，右手抡动金刚斧，金刚斧上有摩羯头，摩羯头的舌头就成为斧刃，舌头时长时短，一时成为金刚斧，一时化为钩型成为金刚钩，反复自然变化，左手的莲花转动，在花瓣中放出金刚杵。 <br/>
 持咒不断，持续而修，自身热呼拉手臂变多，四臂变为六臂、八臂，各手自然变化显现持有不同金刚法器，金刚杵、金刚铃、智慧剑、摩羯幢、金刚钩、金刚索、金刚链、金刚斧、金刚棒、金刚锤、天杖、金刚拂尘等在手中轮番显现，金刚拂尘的手柄内有金刚杵串，任意挥动金刚拂尘，左手金刚拂尘的尘丝显现为白色光丝，右手的拂尘丝显现为金黄色光丝，拂尘的光丝与自身气脉能量相应，自然而动。 <br/>
 <br/>
-修完热呼拉护法，又修莲师、金刚萨埵、五方佛、玛哈嘎啦护法，持诵《普贤行愿品》段落回向。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-5-4 13:04</div><div class="post-body">热呼拉护法  实修笔记 <br/>
+修完热呼拉护法，又修莲师、金刚萨埵、五方佛、玛哈嘎啦护法，持诵《普贤行愿品》段落回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-5-4 13:04</div><div class="post-body">热呼拉护法  实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula807 <br/>

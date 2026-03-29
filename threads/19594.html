@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>勝樂金剛修法儀軌 曼殊室利智 N - 藏密修海典藏</title>
+<title>勝樂金剛修法儀軌 曼殊室利智 N - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">勝樂金剛修法儀軌 曼殊室利智 N</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-5 11:11</div><div class="post-body">[size=5]d1301 勝樂金剛修法儀軌 曼殊室利 智榮增達瑪跋陀羅譯n3.5s <br/>
+<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-5 11:11</div><div class="post-body">[size=5]d1301 勝樂金剛修法儀軌 曼殊室利 智榮增達瑪跋陀羅譯n3.5s <br/>
 D1301 <br/>
 ལོ་ཙཱ་བ་ཤཱ་ཀྱའི་དགེ་སློང་ཉི་མ་རྒྱལ་མཚན་དཔལ་བཟང་པོས།དཔལ་ཐར་པ་གླིང་གི་གཙུག་ལག་ཁང་ཆེན་པོར་ལེགས་པར་བསྒྱུར་ཅིང་གཏན་ལ་ཕབ་པའོ།།@##།།རྒྱ་གར་སྐད་དུ།ཧེ་བཛྲ་སཱ་དྷ་ནོ་པི་ཀ་།བོད་སྐད་དུ།ཀྱེའི་རྡོ་རྗེའི་སྒྲུབ་པའི་ཐབས།དཔལ་ཧེ་རུ་ཀ་ལཕྱག་འཚལ་ལོ།།ཡེ་ཤེས་གཉིས་མེད་རྒྱུ་དང་བྲལ།།དེ་བཞིན་ཚོགས་བྲལ་གང་གི་གནས།།དཔལ་ལྡན་ཁྲག་འཐུང་ཕྱག་འཚལ་ཏེ།།དེ་བསྟེན་ཆོ་ག་བསྟན་པར་བྱ།།གསང་བའི་དོན་ལྡན་སྒྲུབ་པ་པོས།།ཡང་དག་དོན་ལྡན་དམ་ཚིག་དང་།།ཕྱི་ནང་གསང་བའི་སྡོམ་པ་ཤེས།སློབ་དཔོན་གསང་དང་ཤེས་རབ་དང་།།དེ་བཞིན་བཞི་པའི་དབང་ལྡན་པས།།བསྒོམ་པའི་མཆོག་ནི་བསྒྲུབ་པར་འགྱུར།།ཤིང་གཅིག་དྲུང་ངམ་དུར་ཁྲོད་དུ།།བསྒོམ་པ་དག་ནི་དགེ་བར་གསུངས།།ཡང་ན་དབེན་ཞིང་དགོན་པ་དང་།།མ་མོའི་གནས་ལ་སོགས་དེབཞིན།།ཡང་ན་བདེ་ཞིང་ཉམས་དགའ་བར།།རང་གི་འདོད་པ་བསྒྲུབ་པར་བྱ།།དེར་ནི་བདེ་ཞིང་རྒྱ་ཆེ་བའི།།སྟན་ལ་རྣམ་པར་འདུག་ནས་ནི།།མེ་ཏོག་ལ་སོགས་བྱེ་བྲག་དང་།།བདུད་རྩི་ཡིས་ནི་བསང་གཏོར་བྱ།།རྡོ་རྗེས་མཁའ་སྙིང་དབུས་གནས་པར།།ཉི་མའི་དཀྱིལ་འཁོར་བསམ་པར་བྱ།།དེ་ལ་ཧཱུཾ་ཡིག་འབར་བ་ཡིས།།མཚོན་ཆ་མཆོག་ནི་སྤྲོ་བར་བྱ།།མཁའ་དབྱིངས་ཏིལ་གང་བཞིན་རྒྱས་པའི།།རང་གི་དཀྱིལ་འཁོར་མཆོག་བཀུག་སྟེ།།རང་སྙིང་ས་བོན་མཆོག་སྐྱེས་པའི།།ལྷ་མོ་རྣམས་ཀྱིས་མཆོད་པར་བྱ།།གཽ་རཱི་ཟླ་བའི་མཚན་མ་དང་།།ཙཽ་རཱི་ཉི་མའི་སྣོད་འཛིན་ཏེ།།བེ་ཏཱ་ལཱི་ཡི་ལག་ན་ཆུའོ།།གྷསྨ་རཱི་ནི་སྨན་འཛིན་ཏེ།།པུཀྐ་སཱི་ནི་རྡོ་རྗེའོ།།ས་བ་རཱི་ནི་དེ་བཞིན་བཅུད།།ཙཎྜལཱི་ནི་རྔེ་ཆུང་འཁྲོལ།།ཌོམྦི་ཆགས་ཆེན་རྗེས་ཆགས་པས།།སྙིང་གར་ཡོངས་སུ་འཁྱུད་པ་སྟེ།།འདི་རྣམས་ཀྱིས་ནི་གཙོ་བོ་མཆོད།།དེ་རྗེས་བསོད་ནམས་ཡན་ལག་གོ།།གསུམ་གྱི་སྐྱབས་འགྲོ་སོགས་བྱ་སྟེ།།འདི་ལྟར་ཕྱག་འཚལ་སྐྱབས་འགྲོ་དང་།།སྡིག་བཤགས་བསོད་ནམས་རྗེས་ཡི་རང་།།བྱང་ཆུབ་མཆོག་ཏུ་སེམས་བསྐྱེད་དང་།།དམ་བཅའ་བདག་ལུས་དབུལ་བར་བྱ།།དེ་ནས་དང་པོར་བྱམས་པ་སྟེ།།དེ་རྗེས་སྙིང་རྗེ་རྣམ་པར་བསྒོམ།།གསུམ་པར་དགའ་བ་བསྒོམ་པར་བྱ།།ཀུན་གྱི་ཐ་མར་བཏང་སྙོམས་སོ། <br/>
 譯文：譯師釋迦比丘尼瑪堅贊賢吉在殊勝解脫寺大殿中善加翻譯並校定。 <br/>
@@ -271,7 +284,7 @@ D1301 <br/>
 這是一個藏文標點符號&quot;་&quot;(tseg)，它在藏文中用來分隔音節。 <br/>
 這個符號本身沒有具體的語義內容需要翻譯。 <br/>
 在藏文寫作系統中，tseg是最基本的標點符號之一，用於分隔單詞中的音節。 <br/>
-它通常表現爲一個小圓點，位於字母的中間高度。[/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-5 11:24</div><div class="post-body">[size=5]d1301勝樂金剛修法儀軌 曼殊室利智 作者本人、榮增達瑪跋陀羅譯 <br/>
+它通常表現爲一個小圓點，位於字母的中間高度。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-5 11:24</div><div class="post-body">[size=5]d1301勝樂金剛修法儀軌 曼殊室利智 作者本人、榮增達瑪跋陀羅譯 <br/>
 D1301 <br/>
 ལོ་ཙཱ་བ་ཤཱ་ཀྱའི་དགེ་སློང་ཉི་མ་རྒྱལ་མཚན་དཔལ་བཟང་པོས།དཔལ་ཐར་པ་གླིང་གི་གཙུག་ལག་ཁང་ཆེན་པོར་ལེགས་པར་བསྒྱུར་ཅིང་གཏན་ལ་ཕབ་པའོ།།@##།།རྒྱ་གར་སྐད་དུ།ཧེ་བཛྲ་སཱ་དྷ་ནོ་པི་ཀ་།བོད་སྐད་དུ།ཀྱེའི་རྡོ་རྗེའི་སྒྲུབ་པའི་ཐབས།དཔལ་ཧེ་རུ་ཀ་ལཕྱག་འཚལ་ལོ།།ཡེ་ཤེས་གཉིས་མེད་རྒྱུ་དང་བྲལ།།དེ་བཞིན་ཚོགས་བྲལ་གང་གི་གནས།།དཔལ་ལྡན་ཁྲག་འཐུང་ཕྱག་འཚལ་ཏེ།།དེ་བསྟེན་ཆོ་ག་བསྟན་པར་བྱ།།གསང་བའི་དོན་ལྡན་སྒྲུབ་པ་པོས།།ཡང་དག་དོན་ལྡན་དམ་ཚིག་དང་།།ཕྱི་ནང་གསང་བའི་སྡོམ་པ་ཤེས།སློབ་དཔོན་གསང་དང་ཤེས་རབ་དང་།།དེ་བཞིན་བཞི་པའི་དབང་ལྡན་པས།།བསྒོམ་པའི་མཆོག་ནི་བསྒྲུབ་པར་འགྱུར།།ཤིང་གཅིག་དྲུང་ངམ་དུར་ཁྲོད་དུ།།བསྒོམ་པ་དག་ནི་དགེ་བར་གསུངས།།ཡང་ན་དབེན་ཞིང་དགོན་པ་དང་།།མ་མོའི་གནས་ལ་སོགས་དེབཞིན།།ཡང་ན་བདེ་ཞིང་ཉམས་དགའ་བར།།རང་གི་འདོད་པ་བསྒྲུབ་པར་བྱ།།དེར་ནི་བདེ་ཞིང་རྒྱ་ཆེ་བའི།།སྟན་ལ་རྣམ་པར་འདུག་ནས་ནི།།མེ་ཏོག་ལ་སོགས་བྱེ་བྲག་དང་།།བདུད་རྩི་ཡིས་ནི་བསང་གཏོར་བྱ།།རྡོ་རྗེས་མཁའ་སྙིང་དབུས་གནས་པར།།ཉི་མའི་དཀྱིལ་འཁོར་བསམ་པར་བྱ།།དེ་ལ་ཧཱུཾ་ཡིག་འབར་བ་ཡིས།།མཚོན་ཆ་མཆོག་ནི་སྤྲོ་བར་བྱ།།མཁའ་དབྱིངས་ཏིལ་གང་བཞིན་རྒྱས་པའི།།རང་གི་དཀྱིལ་འཁོར་མཆོག་བཀུག་སྟེ།།རང་སྙིང་ས་བོན་མཆོག་སྐྱེས་པའི།།ལྷ་མོ་རྣམས་ཀྱིས་མཆོད་པར་བྱ།།གཽ་རཱི་ཟླ་བའི་མཚན་མ་དང་།།ཙཽ་རཱི་ཉི་མའི་སྣོད་འཛིན་ཏེ།།བེ་ཏཱ་ལཱི་ཡི་ལག་ན་ཆུའོ།།གྷསྨ་རཱི་ནི་སྨན་འཛིན་ཏེ།།པུཀྐ་སཱི་ནི་རྡོ་རྗེའོ།།ས་བ་རཱི་ནི་དེ་བཞིན་བཅུད།།ཙཎྜལཱི་ནི་རྔེ་ཆུང་འཁྲོལ།།ཌོམྦི་ཆགས་ཆེན་རྗེས་ཆགས་པས།།སྙིང་གར་ཡོངས་སུ་འཁྱུད་པ་སྟེ།།འདི་རྣམས་ཀྱིས་ནི་གཙོ་བོ་མཆོད།།དེ་རྗེས་བསོད་ནམས་ཡན་ལག་གོ།།གསུམ་གྱི་སྐྱབས་འགྲོ་སོགས་བྱ་སྟེ།།འདི་ལྟར་ཕྱག་འཚལ་སྐྱབས་འགྲོ་དང་།།སྡིག་བཤགས་བསོད་ནམས་རྗེས་ཡི་རང་།།བྱང་ཆུབ་མཆོག་ཏུ་སེམས་བསྐྱེད་དང་།།དམ་བཅའ་བདག་ལུས་དབུལ་བར་བྱ།།དེ་ནས་དང་པོར་བྱམས་པ་སྟེ།།དེ་རྗེས་སྙིང་རྗེ་རྣམ་པར་བསྒོམ།།གསུམ་པར་དགའ་བ་བསྒོམ་པར་བྱ།།ཀུན་གྱི་ཐ་མར་བཏང་སྙོམས་སོ།།དེ་ནས་ཡེ་ཤེས་བལྟ་བའི་ཕྱིར།།ཕྱི་དང་ནང་གི་དངོས་འདི་ཀུན།།རྣམ་དག་སྟོང་པར་རྣམ་དཔྱད་དེ།།སྤྲིན་མེད་ནམ་མཁའ་ལྟར་བསམས་ནས།།གསང་སྔགས་འདི་ནི་བརྗོད་པར་བྱ།།ོཾ་ཤཱུ་ནྱ་ཏཱ་ཛྙཱ་ན་བཛྲ་སྭ་བྷཱ་ཨཱཏྨ་ཀོུ྅ཧཾ།།སེམས་བརྟན་བྱེད་པའི་གསང་སྔགས་འདིས།།སྟོང་པ་ཉིད་ལས་སེམས་ཀྱི་དངོས།།ཧཾ་ཨོ་དང་ལྡན་པ་ནི།།ོཾ་དབུས་ཧཾ་གིས་འབྲེལ་པ་ལས།།རཾ་ལ་ཉི་མ་བདུན་བསམས་ཏེ།།དེ་ལ་ཧཱུཾ་ལས་བྱུང་བ་ཡི།།སྣ་ཚོགས་རྡོ་རྗེ་བསྒོམ་པར་བྱ།།རྡོ་རྗེ་དེས་ཀྱང་ར་བ་དང་།།དྲ་བ་འཆིང་བའང་བསྒོམ་པར་བྱ།།དེ་དབུས་མཁའ་དབྱིངས་བདག་ཉིད་ཀྱིས།།ཤེས་རབ་ཨེ་གཟུགས་བསྒོམ་པར་བྱ།།དེ་སྟེང་ས་དང་ཆུ་དང་ནི།།མེ་དང་རླུང་གི་དཀྱིལ་འཁོར་རྣམས།།ལྗང་གུ་དཀར་པོ་དམར་པོ་དང་།།དུ་བའི་མདོག་ཏུ་བསམ་པར་བྱ།།གྲུ་བཞི་ཟླུམ་པོ་གྲུ་གསུམ་དང་།།ཟླ་ཁམ་དབྱིབས་སུ་རྣམ་པར་བསམ།།དེ་སྟེང་ཨོཾ་ལྡན་ཨ་ཧཾ་ནི།།བདག་ཉིད་ངོ་བོ་གནས་བསམས་ཏེ།།ེ་གཟུགས་ནས་ནི་ཨ་ཧཾ་བར།།ཐམས་ཅད་འདྲེས་གྱུར་འཁོར་ལོར་འགྱུར།།གྲུ་བཞི་པ་ལ་སྒོ་བཞི་པ།།ཀ་བ་བརྒྱད་ཀྱིས་ཉེ་བར་བརྒྱན།།དྲ་བ་དྲ་ཕྱེད་ཡང་དག་ལྡན།།རྡོ་རྗེ་ཐིག་གིས་ཡོངས་བརྒྱན་པའོ།།དེ་སྟེངས་ཆོས་དབྱིངས་བདག་ཉིད་ཀྱི།།རོ་ནི་མཁས་པས་རབ་བསྒོམས་ཏེ།།དེ་ལ་ཨཱ་ལི་ཀཱ་ལི་ལས།།འབྱུང་བ་ཉི་མ་ཟླ་བ་བསམ།།དེ་དག་རབ་ཏུ་ས་བོན་ནི།།དང་ཧཱུཾ་ལས་གྱུར་པ་ཡི།།རྡོ་རྗེ་གྲི་གུག་བསྒོམ་པར་བྱ།།དེ་ལ་རང་སེམས་བདག་ཉིད་ཀྱི།།ཧཾ་ཡོངས་སུ་ཞུགས་པ་ནི།།དམ་པའི་དགའ་བའི་རང་བཞིན་གྱིས།།སེམས་དཔར་འདི་དེ་བརྗོད་པའོ།།དེ་རྣམས་གཅིག་ཏུ་འདྲེས་པ་ལས།།ཡེ་ཤེས་ལྔ་ཡི་བདག་ཉིད་ཀྱི།།ཧེ་རུ་ཀར་ནི་རྣམ་པར་བསྒོམ།།ཟླ་བ་མེ་ལོང་ཡེ་ཤེས་ཏེ།།དེབཞིན་ཉི་མ་མཉམ་པ་ཉིད།།ས་བོན་ལས་བྱུང་མཚན་མ་ནི།།སོ་སོར་རྟོག་པར་གསུངས་པའོ།།དབྱེར་མེད་འདྲེས་པ་ནན་ཏན་ཏེ།།སྐུར་གྱུར་ཆོས་དབྱིངས་ཡེ་ཤེས་ཡིན།།སྐུ་མདོག་སྔོ་རེངས་ཤར་བའི་འོད།།བིནྡུ་དམར་པོ་འདྲ་བའི་སྤྱན།།དབུ་སྐྲ་ཁམ་པ་གྱེན་དུ་འཁྱིལ།།ཕྱག་རྒྱ་ལྔ་ཡིས་རྣམ་པར་བརྒྱན།།འཁོར་ལོ་སྙན་ཆ་ཕྱག་གདུབ་དང་།།མགུར་ཆུ་དང་ནི་སྐེ་རགས་རྣམས།།སངས་རྒྱས་ལྔར་ནི་དག་པ་ཡིས།།འདི་རྣམས་ཕྱག་རྒྱར་རབ་ཏུ་བསྒྲགས།།ལོ་གྲངས་བཅུ་དྲུག་ལྟ་བུ་ལ།།རབ་ཏུ་ཁྲོས་པའི་ལྟ་སྟངས་ཅན།།གཡོན་ན་རྡོ་རྗེ་ཐོད་པ་དང་།།གཉིས་པ་ཡུམ་གྱི་བདག་ཉིད་ཀྱིས།།ཁ་ཊྭཱཾ་ག་ཡང་འཁྱུད་པའོ། <br/>
 這是一段關於密宗修法儀軌的文字，我將直譯如下：譯者釋迦比丘尼瑪江參貝桑波在殊勝解脫寺的大殿中善加翻譯並校定。 <br/>

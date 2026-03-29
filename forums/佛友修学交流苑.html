@@ -1,0 +1,1283 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>佛友修学交流苑 - 藏密修海</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / 藏密修海佛友社区</div>
+<h1 style="margin-bottom: 10px; font-size: 32px;">目录：佛友修学交流苑</h1>
+<p style="color:var(--text-muted); margin-bottom:40px;">共收录 1240 篇主题</p>
+<a href="../threads/14116.html" class="thread-row"><h2>求解能看邪事的高人</h2><div class="th-meta">TID: 14116</div></a>
+<a href="../threads/14115.html" class="thread-row"><h2>莲池大师：明天到净土相见，现在我正忙着念佛呢</h2><div class="th-meta">TID: 14115</div></a>
+<a href="../threads/14114.html" class="thread-row"><h2>莲池大师：为何念佛得悟的人寥寥无几呢</h2><div class="th-meta">TID: 14114</div></a>
+<a href="../threads/14111.html" class="thread-row"><h2>请问法师，在俄乌战争中死伤的人类已近</h2><div class="th-meta">TID: 14111</div></a>
+<a href="../threads/14110.html" class="thread-row"><h2>殊胜共修</h2><div class="th-meta">TID: 14110</div></a>
+<a href="../threads/14106.html" class="thread-row"><h2>内外道在僧伽上的差别</h2><div class="th-meta">TID: 14106</div></a>
+<a href="../threads/14105.html" class="thread-row"><h2>没有什么羞辱大到让人无法忍受！</h2><div class="th-meta">TID: 14105</div></a>
+<a href="../threads/14103.html" class="thread-row"><h2>作恶之人和随喜恶业的人，谁的罪过更严重？</h2><div class="th-meta">TID: 14103</div></a>
+<a href="../threads/14102.html" class="thread-row"><h2>最上等的报恩</h2><div class="th-meta">TID: 14102</div></a>
+<a href="../threads/14101.html" class="thread-row"><h2>只考虑现世的人，来世有什么样的果报？</h2><div class="th-meta">TID: 14101</div></a>
+<a href="../threads/14099.html" class="thread-row"><h2>必须立即作回向，这非常重要</h2><div class="th-meta">TID: 14099</div></a>
+<a href="../threads/14097.html" class="thread-row"><h2>佛教是一种去发掘真理的系统和道路</h2><div class="th-meta">TID: 14097</div></a>
+<a href="../threads/14096.html" class="thread-row"><h2>佛陀是最伟大的现代者</h2><div class="th-meta">TID: 14096</div></a>
+<a href="../threads/14095.html" class="thread-row"><h2>没有一样事物会让我们完全得满意</h2><div class="th-meta">TID: 14095</div></a>
+<a href="../threads/14093.html" class="thread-row"><h2>如何面对无法控制的情绪风暴？</h2><div class="th-meta">TID: 14093</div></a>
+<a href="../threads/14089.html" class="thread-row"><h2>很多人都认为自己有菩提心</h2><div class="th-meta">TID: 14089</div></a>
+<a href="../threads/14087.html" class="thread-row"><h2>人类为什么无权处死自己？</h2><div class="th-meta">TID: 14087</div></a>
+<a href="../threads/14085.html" class="thread-row"><h2>哪种方法可以把自己往昔的恶业果即生转化为成佛之因</h2><div class="th-meta">TID: 14085</div></a>
+<a href="../threads/14083.html" class="thread-row"><h2>而是操心你的愿力，   愿力好了，   人就好了</h2><div class="th-meta">TID: 14083</div></a>
+<a href="../threads/14081.html" class="thread-row"><h2>若能忏悔，重罪也能清净</h2><div class="th-meta">TID: 14081</div></a>
+<a href="../threads/14078.html" class="thread-row"><h2>一生业梦</h2><div class="th-meta">TID: 14078</div></a>
+<a href="../threads/14075.html" class="thread-row"><h2>可以增加自己修行上的助缘和福报</h2><div class="th-meta">TID: 14075</div></a>
+<a href="../threads/14073.html" class="thread-row"><h2>【佛说八大菩萨经】</h2><div class="th-meta">TID: 14073</div></a>
+<a href="../threads/14072.html" class="thread-row"><h2>让菩提心不断增长的21条规则！</h2><div class="th-meta">TID: 14072</div></a>
+<a href="../threads/14071.html" class="thread-row"><h2>在痛苦时要如何修行呢？</h2><div class="th-meta">TID: 14071</div></a>
+<a href="../threads/14069.html" class="thread-row"><h2>印光大师去宁波阿育王寺拜佛舍利的故事</h2><div class="th-meta">TID: 14069</div></a>
+<a href="../threads/14068.html" class="thread-row"><h2>培养以真正欢喜面对痛苦的态度</h2><div class="th-meta">TID: 14068</div></a>
+<a href="../threads/14066.html" class="thread-row"><h2>来世的保单</h2><div class="th-meta">TID: 14066</div></a>
+<a href="../threads/14064.html" class="thread-row"><h2>大乘为何超胜小乘？</h2><div class="th-meta">TID: 14064</div></a>
+<a href="../threads/14063.html" class="thread-row"><h2>精勤于法，觉悟佛性的光芒</h2><div class="th-meta">TID: 14063</div></a>
+<a href="../threads/14062.html" class="thread-row"><h2>怎么才能利益众生？</h2><div class="th-meta">TID: 14062</div></a>
+<a href="../threads/14061.html" class="thread-row"><h2>你知道发心、发愿、发誓的区别吗？</h2><div class="th-meta">TID: 14061</div></a>
+<a href="../threads/14060.html" class="thread-row"><h2>所有善行以此三殊胜摄持是必不可少的</h2><div class="th-meta">TID: 14060</div></a>
+<a href="../threads/14058.html" class="thread-row"><h2>什么是“善念”？什么是“善根”？</h2><div class="th-meta">TID: 14058</div></a>
+<a href="../threads/14057.html" class="thread-row"><h2>开智慧的缘起</h2><div class="th-meta">TID: 14057</div></a>
+<a href="../threads/14055.html" class="thread-row"><h2>他是印光大师一生最崇敬且效法的人！</h2><div class="th-meta">TID: 14055</div></a>
+<a href="../threads/14054.html" class="thread-row"><h2>轮回中的快乐</h2><div class="th-meta">TID: 14054</div></a>
+<a href="../threads/14051.html" class="thread-row"><h2>修行的路上，减少“颠倒是非”的行为”！</h2><div class="th-meta">TID: 14051</div></a>
+<a href="../threads/14049.html" class="thread-row"><h2>妙莲老和尚开示破戒人临终时想念佛却念不出</h2><div class="th-meta">TID: 14049</div></a>
+<a href="../threads/14048.html" class="thread-row"><h2>憨山大师：事未至时莫妄生</h2><div class="th-meta">TID: 14048</div></a>
+<a href="../threads/14046.html" class="thread-row"><h2>愿力大于业力！修行人每天必发这六种愿！</h2><div class="th-meta">TID: 14046</div></a>
+<a href="../threads/14043.html" class="thread-row"><h2>这是出离心融入生活的方法</h2><div class="th-meta">TID: 14043</div></a>
+<a href="../threads/14041.html" class="thread-row"><h2>活着时贪执什么，中&#x27;阴时就会以九倍的程度贪执</h2><div class="th-meta">TID: 14041</div></a>
+<a href="../threads/14040.html" class="thread-row"><h2>修行人的日常生活</h2><div class="th-meta">TID: 14040</div></a>
+<a href="../threads/14039.html" class="thread-row"><h2>懂得如何发愿才是一名真正的学佛人</h2><div class="th-meta">TID: 14039</div></a>
+<a href="../threads/14038.html" class="thread-row"><h2>修持中遇到的障碍痛苦，是恶业快速得到清净的征兆</h2><div class="th-meta">TID: 14038</div></a>
+<a href="../threads/14037.html" class="thread-row"><h2>不要看轻了曾提升过自己的人 宗宙师</h2><div class="th-meta">TID: 14037</div></a>
+<a href="../threads/14036.html" class="thread-row"><h2>日常生活之中要“善用其心”</h2><div class="th-meta">TID: 14036</div></a>
+<a href="../threads/14033.html" class="thread-row"><h2>不动佛心咒太重要了，请大家多多转载，利益有缘众生！</h2><div class="th-meta">TID: 14033</div></a>
+<a href="../threads/14032.html" class="thread-row"><h2>佛说圣大乘三归依经</h2><div class="th-meta">TID: 14032</div></a>
+<a href="../threads/14031.html" class="thread-row"><h2>大小乘皈依时间之差别</h2><div class="th-meta">TID: 14031</div></a>
+<a href="../threads/14030.html" class="thread-row"><h2>三皈依，没有想象那么简单</h2><div class="th-meta">TID: 14030</div></a>
+<a href="../threads/14028.html" class="thread-row"><h2>志心修行大乘者皈依三宝时，应该如何正确发心？</h2><div class="th-meta">TID: 14028</div></a>
+<a href="../threads/14027.html" class="thread-row"><h2>他以清净心供佛，得到多大的福？</h2><div class="th-meta">TID: 14027</div></a>
+<a href="../threads/14026.html" class="thread-row"><h2>三种对治发怒的方法，什么是一个好修行人</h2><div class="th-meta">TID: 14026</div></a>
+<a href="../threads/14024.html" class="thread-row"><h2>在佛像等殊胜对境前发大善愿，将来就会实现！</h2><div class="th-meta">TID: 14024</div></a>
+<a href="../threads/14022.html" class="thread-row"><h2>为什么要尽力趣入大乘？</h2><div class="th-meta">TID: 14022</div></a>
+<a href="../threads/14020.html" class="thread-row"><h2>《俗语佛源》| 人生难得，大道难闻</h2><div class="th-meta">TID: 14020</div></a>
+<a href="../threads/14019.html" class="thread-row"><h2>蕅益大师：悲智相应，名菩提心</h2><div class="th-meta">TID: 14019</div></a>
+<a href="../threads/14018.html" class="thread-row"><h2>无上供养 —— 透过心念，观想供养</h2><div class="th-meta">TID: 14018</div></a>
+<a href="../threads/14017.html" class="thread-row"><h2>在家人很难获得解脱吗？</h2><div class="th-meta">TID: 14017</div></a>
+<a href="../threads/14016.html" class="thread-row"><h2>入大乘门的唯一标志——发菩提心</h2><div class="th-meta">TID: 14016</div></a>
+<a href="../threads/14015.html" class="thread-row"><h2>大乘种性很难栽培，但是栽培好以后一劳永逸</h2><div class="th-meta">TID: 14015</div></a>
+<a href="../threads/14014.html" class="thread-row"><h2>佛最为赞叹的三件事</h2><div class="th-meta">TID: 14014</div></a>
+<a href="../threads/14013.html" class="thread-row"><h2>佛源老和尚说过午不吃的功德</h2><div class="th-meta">TID: 14013</div></a>
+<a href="../threads/14012.html" class="thread-row"><h2>面对无法回避的死亡及痛苦</h2><div class="th-meta">TID: 14012</div></a>
+<a href="../threads/14010.html" class="thread-row"><h2>回向竟然比修行还要重要？</h2><div class="th-meta">TID: 14010</div></a>
+<a href="../threads/14008.html" class="thread-row"><h2>《大乘离文字普光明藏经》—财富心经</h2><div class="th-meta">TID: 14008</div></a>
+<a href="../threads/14007.html" class="thread-row"><h2>威力无比的《僧伽吒经》四句偈</h2><div class="th-meta">TID: 14007</div></a>
+<a href="../threads/14005.html" class="thread-row"><h2>学佛，成为家中最好的那个人</h2><div class="th-meta">TID: 14005</div></a>
+<a href="../threads/14003.html" class="thread-row"><h2>菩萨应精进不懈、百折不挠</h2><div class="th-meta">TID: 14003</div></a>
+<a href="../threads/14001.html" class="thread-row"><h2>情绪是我们累积的习惯</h2><div class="th-meta">TID: 14001</div></a>
+<a href="../threads/14000.html" class="thread-row"><h2>没有比菩萨戒更伟大的戒了</h2><div class="th-meta">TID: 14000</div></a>
+<a href="../threads/13998.html" class="thread-row"><h2>佛法的一切功德都是源于现前僧</h2><div class="th-meta">TID: 13998</div></a>
+<a href="../threads/13997.html" class="thread-row"><h2>出离心和菩提心</h2><div class="th-meta">TID: 13997</div></a>
+<a href="../threads/13996.html" class="thread-row"><h2>我们为什么要为众生活着？</h2><div class="th-meta">TID: 13996</div></a>
+<a href="../threads/13995.html" class="thread-row"><h2>讲经说法与转法轮二者有什么不同？</h2><div class="th-meta">TID: 13995</div></a>
+<a href="../threads/13993.html" class="thread-row"><h2>用菩提心判断道相是功德还是着魔</h2><div class="th-meta">TID: 13993</div></a>
+<a href="../threads/13988.html" class="thread-row"><h2>善根大小取决发心的高下</h2><div class="th-meta">TID: 13988</div></a>
+<a href="../threads/13986.html" class="thread-row"><h2>嗔心恶口，五百世中受毒龙身！</h2><div class="th-meta">TID: 13986</div></a>
+<a href="../threads/13983.html" class="thread-row"><h2>只要还在坚持，就是一种成功</h2><div class="th-meta">TID: 13983</div></a>
+<a href="../threads/13982.html" class="thread-row"><h2>感受欠债或被债务所扰的主因是贪</h2><div class="th-meta">TID: 13982</div></a>
+<a href="../threads/13976.html" class="thread-row"><h2>为什么发菩提心必须要依照仪轨？</h2><div class="th-meta">TID: 13976</div></a>
+<a href="../threads/13975.html" class="thread-row"><h2>法财”是唯一值得拥有的财富！</h2><div class="th-meta">TID: 13975</div></a>
+<a href="../threads/13973.html" class="thread-row"><h2>丑女供养佛塔之后</h2><div class="th-meta">TID: 13973</div></a>
+<a href="../threads/13972.html" class="thread-row"><h2>对剩菜剩饭念六字大明咒，是最简单的施食法！</h2><div class="th-meta">TID: 13972</div></a>
+<a href="../threads/13971.html" class="thread-row"><h2>不能查你们配偶的名册;我也不是菩萨，不能看到人过</h2><div class="th-meta">TID: 13971</div></a>
+<a href="../threads/13970.html" class="thread-row"><h2>使足劲好好学，苦短的人生才能万德庄严</h2><div class="th-meta">TID: 13970</div></a>
+<a href="../threads/13969.html" class="thread-row"><h2>弘一大师：修净土法门的人，第一必须发大菩提心</h2><div class="th-meta">TID: 13969</div></a>
+<a href="../threads/13968.html" class="thread-row"><h2>我们真正的敌人——贪嗔痴烦恼</h2><div class="th-meta">TID: 13968</div></a>
+<a href="../threads/13967.html" class="thread-row"><h2>一个没有你的明天，无疑将到来。～～佛陀</h2><div class="th-meta">TID: 13967</div></a>
+<a href="../threads/13966.html" class="thread-row"><h2>當悲心出現時，無害行自然地就會伴隨而來。</h2><div class="th-meta">TID: 13966</div></a>
+<a href="../threads/13965.html" class="thread-row"><h2>乃至有虚空，以及众生住。愿吾住世间，尽除众生苦。</h2><div class="th-meta">TID: 13965</div></a>
+<a href="../threads/13962.html" class="thread-row"><h2>佛陀所说的缘起见，是一种什么样的法呢？</h2><div class="th-meta">TID: 13962</div></a>
+<a href="../threads/13961.html" class="thread-row"><h2>我们需要发菩提心！</h2><div class="th-meta">TID: 13961</div></a>
+<a href="../threads/13960.html" class="thread-row"><h2>假如生起菩提心，罪障会很快清除！</h2><div class="th-meta">TID: 13960</div></a>
+<a href="../threads/13959.html" class="thread-row"><h2>每天晚上临睡前，我们都要随喜这个世上所有人的善行</h2><div class="th-meta">TID: 13959</div></a>
+<a href="../threads/13958.html" class="thread-row"><h2>佛说庄严菩提心经 | 大藏经 法华部·华严部 第307部</h2><div class="th-meta">TID: 13958</div></a>
+<a href="../threads/13957.html" class="thread-row"><h2>佛说出生菩提心经</h2><div class="th-meta">TID: 13957</div></a>
+<a href="../threads/13956.html" class="thread-row"><h2>发菩提心的重要</h2><div class="th-meta">TID: 13956</div></a>
+<a href="../threads/13955.html" class="thread-row"><h2>发菩提心</h2><div class="th-meta">TID: 13955</div></a>
+<a href="../threads/13954.html" class="thread-row"><h2>是内在智慧的太阳，它一直就存在于内心</h2><div class="th-meta">TID: 13954</div></a>
+<a href="../threads/13953.html" class="thread-row"><h2>我们总是陷在自我的境界里</h2><div class="th-meta">TID: 13953</div></a>
+<a href="../threads/13952.html" class="thread-row"><h2>《华严经》告诉我们，善知识的重要</h2><div class="th-meta">TID: 13952</div></a>
+<a href="../threads/13951.html" class="thread-row"><h2>师长的恩德</h2><div class="th-meta">TID: 13951</div></a>
+<a href="../threads/13950.html" class="thread-row"><h2>一世守戒，千万世的解脱</h2><div class="th-meta">TID: 13950</div></a>
+<a href="../threads/13949.html" class="thread-row"><h2>真正在佛法上努力的四种人</h2><div class="th-meta">TID: 13949</div></a>
+<a href="../threads/13948.html" class="thread-row"><h2>《华严经 · 净行品》经文全文</h2><div class="th-meta">TID: 13948</div></a>
+<a href="../threads/13947.html" class="thread-row"><h2>平凡我，不平凡的菩提心</h2><div class="th-meta">TID: 13947</div></a>
+<a href="../threads/13944.html" class="thread-row"><h2>这是观音菩萨最欢喜的事</h2><div class="th-meta">TID: 13944</div></a>
+<a href="../threads/13943.html" class="thread-row"><h2>《入菩萨行论》</h2><div class="th-meta">TID: 13943</div></a>
+<a href="../threads/13942.html" class="thread-row"><h2>积资净障 至关重要</h2><div class="th-meta">TID: 13942</div></a>
+<a href="../threads/13939.html" class="thread-row"><h2>享受欢乐，并不能让心获得满足</h2><div class="th-meta">TID: 13939</div></a>
+<a href="../threads/13937.html" class="thread-row"><h2>不可思议的《妙法莲华经》</h2><div class="th-meta">TID: 13937</div></a>
+<a href="../threads/13936.html" class="thread-row"><h2>真正的苦行</h2><div class="th-meta">TID: 13936</div></a>
+<a href="../threads/13934.html" class="thread-row"><h2>大乘非小乘佛法所能比的</h2><div class="th-meta">TID: 13934</div></a>
+<a href="../threads/13933.html" class="thread-row"><h2>佛前供养的供品如何发心的方法和注意事项！</h2><div class="th-meta">TID: 13933</div></a>
+<a href="../threads/13932.html" class="thread-row"><h2>【佛教基础】受五戒后有哪些护法神在保护？</h2><div class="th-meta">TID: 13932</div></a>
+<a href="../threads/13930.html" class="thread-row"><h2>修行人恒需隐秘的事！</h2><div class="th-meta">TID: 13930</div></a>
+<a href="../threads/13928.html" class="thread-row"><h2>这些都是最殊胜的供养</h2><div class="th-meta">TID: 13928</div></a>
+<a href="../threads/13926.html" class="thread-row"><h2>他人的苦乐</h2><div class="th-meta">TID: 13926</div></a>
+<a href="../threads/13925.html" class="thread-row"><h2>修行人，怎么才知道自己具“戒”？</h2><div class="th-meta">TID: 13925</div></a>
+<a href="../threads/13924.html" class="thread-row"><h2>印光大师：观世音菩萨，悲运同体，慈起无缘</h2><div class="th-meta">TID: 13924</div></a>
+<a href="../threads/13923.html" class="thread-row"><h2>憨山大师：水月观音赞</h2><div class="th-meta">TID: 13923</div></a>
+<a href="../threads/13922.html" class="thread-row"><h2>何为僧才</h2><div class="th-meta">TID: 13922</div></a>
+<a href="../threads/13920.html" class="thread-row"><h2>大乘修行人遇到烦恼不但不会害怕，反而会非常高兴！</h2><div class="th-meta">TID: 13920</div></a>
+<a href="../threads/13919.html" class="thread-row"><h2>听闻《法华经》的殊胜福报</h2><div class="th-meta">TID: 13919</div></a>
+<a href="../threads/13918.html" class="thread-row"><h2>善根之王---菩提心的十大超胜功德</h2><div class="th-meta">TID: 13918</div></a>
+<a href="../threads/13917.html" class="thread-row"><h2>发菩提心的功德利益</h2><div class="th-meta">TID: 13917</div></a>
+<a href="../threads/13915.html" class="thread-row"><h2>我们从无始以来到今天都在放松</h2><div class="th-meta">TID: 13915</div></a>
+<a href="../threads/13914.html" class="thread-row"><h2>实修之十法</h2><div class="th-meta">TID: 13914</div></a>
+<a href="../threads/13911.html" class="thread-row"><h2>《法华经》的“穷子喻”，就是佛与众生的关系</h2><div class="th-meta">TID: 13911</div></a>
+<a href="../threads/13910.html" class="thread-row"><h2>死亡没有偏好！</h2><div class="th-meta">TID: 13910</div></a>
+<a href="../threads/13909.html" class="thread-row"><h2>轮回的挑战，就是应佛陀的召唤，前往止静</h2><div class="th-meta">TID: 13909</div></a>
+<a href="../threads/13908.html" class="thread-row"><h2>精神层面的发展不容忽视</h2><div class="th-meta">TID: 13908</div></a>
+<a href="../threads/13907.html" class="thread-row"><h2>那么日常的经历都能成为净土...</h2><div class="th-meta">TID: 13907</div></a>
+<a href="../threads/13906.html" class="thread-row"><h2>一再地如此发愿，愿自己得以有用！</h2><div class="th-meta">TID: 13906</div></a>
+<a href="../threads/13905.html" class="thread-row"><h2>最好的礼物应该是菩提心</h2><div class="th-meta">TID: 13905</div></a>
+<a href="../threads/13904.html" class="thread-row"><h2>这个恰恰表示你的菩提心正在发芽、正在茁壮成长中</h2><div class="th-meta">TID: 13904</div></a>
+<a href="../threads/13902.html" class="thread-row"><h2>你的动机与发心扮演着非常重要的角色</h2><div class="th-meta">TID: 13902</div></a>
+<a href="../threads/13900.html" class="thread-row"><h2>菩提心是要让一切众生成佛</h2><div class="th-meta">TID: 13900</div></a>
+<a href="../threads/13899.html" class="thread-row"><h2>菩提心是一切问题的答案</h2><div class="th-meta">TID: 13899</div></a>
+<a href="../threads/13898.html" class="thread-row"><h2>分分秒秒都在累积福德，这是真的！</h2><div class="th-meta">TID: 13898</div></a>
+<a href="../threads/13897.html" class="thread-row"><h2>回向的甚深力量！</h2><div class="th-meta">TID: 13897</div></a>
+<a href="../threads/13896.html" class="thread-row"><h2>梦参老和尚 | 什么事都不要硬碰硬</h2><div class="th-meta">TID: 13896</div></a>
+<a href="../threads/13895.html" class="thread-row"><h2>印光大师复温光熹居士书：通道欲做惊天动地之事</h2><div class="th-meta">TID: 13895</div></a>
+<a href="../threads/13892.html" class="thread-row"><h2>中劫依靠什么结束呢？人寿十岁时出现三劫难</h2><div class="th-meta">TID: 13892</div></a>
+<a href="../threads/13881.html" class="thread-row"><h2>入行论 自他相换 殊胜窍诀：修嫉妒、修傲慢、修竞争</h2><div class="th-meta">TID: 13881</div></a>
+<a href="../threads/13880.html" class="thread-row"><h2>印光法师 | 沙健庵居士往生记</h2><div class="th-meta">TID: 13880</div></a>
+<a href="../threads/13879.html" class="thread-row"><h2>印光法师 | 汪含章夫人往生记</h2><div class="th-meta">TID: 13879</div></a>
+<a href="../threads/13878.html" class="thread-row"><h2>“死”字放在心头</h2><div class="th-meta">TID: 13878</div></a>
+<a href="../threads/13876.html" class="thread-row"><h2>我做的是卖酒的生意，需要改行吗？</h2><div class="th-meta">TID: 13876</div></a>
+<a href="../threads/13875.html" class="thread-row"><h2>道谛</h2><div class="th-meta">TID: 13875</div></a>
+<a href="../threads/13873.html" class="thread-row"><h2>资粮道</h2><div class="th-meta">TID: 13873</div></a>
+<a href="../threads/13872.html" class="thread-row"><h2>八万四千法门的精华</h2><div class="th-meta">TID: 13872</div></a>
+<a href="../threads/13871.html" class="thread-row"><h2>供灯</h2><div class="th-meta">TID: 13871</div></a>
+<a href="../threads/13870.html" class="thread-row"><h2>最简单级修福大法，人人可以轻松完成。</h2><div class="th-meta">TID: 13870</div></a>
+<a href="../threads/13869.html" class="thread-row"><h2>福报滚滚来的七种方法</h2><div class="th-meta">TID: 13869</div></a>
+<a href="../threads/13868.html" class="thread-row"><h2>几种特殊的修福方法</h2><div class="th-meta">TID: 13868</div></a>
+<a href="../threads/13867.html" class="thread-row"><h2>蕅益大师：最要二种，一发菩提心，二炽然作福</h2><div class="th-meta">TID: 13867</div></a>
+<a href="../threads/13863.html" class="thread-row"><h2>精简欲望，不留死角</h2><div class="th-meta">TID: 13863</div></a>
+<a href="../threads/13860.html" class="thread-row"><h2>正法之十种功德</h2><div class="th-meta">TID: 13860</div></a>
+<a href="../threads/13859.html" class="thread-row"><h2>一个有智慧的人具有哪些特点？</h2><div class="th-meta">TID: 13859</div></a>
+<a href="../threads/13858.html" class="thread-row"><h2>大聖文殊師利菩薩讚佛法身禮</h2><div class="th-meta">TID: 13858</div></a>
+<a href="../threads/13857.html" class="thread-row"><h2>我之法身，由师口生，从法化生！</h2><div class="th-meta">TID: 13857</div></a>
+<a href="../threads/13856.html" class="thread-row"><h2>梁宝志公禅师劝世念佛文</h2><div class="th-meta">TID: 13856</div></a>
+<a href="../threads/13855.html" class="thread-row"><h2>救度者</h2><div class="th-meta">TID: 13855</div></a>
+<a href="../threads/13853.html" class="thread-row"><h2>愿菩提心的学处三：他比自重</h2><div class="th-meta">TID: 13853</div></a>
+<a href="../threads/13852.html" class="thread-row"><h2>愿菩提心的学处二：自他交换</h2><div class="th-meta">TID: 13852</div></a>
+<a href="../threads/13851.html" class="thread-row"><h2>愿菩提心的学处一：自他平等</h2><div class="th-meta">TID: 13851</div></a>
+<a href="../threads/13850.html" class="thread-row"><h2>龙树菩萨讲人转生为各种恶道众生的因果</h2><div class="th-meta">TID: 13850</div></a>
+<a href="../threads/13849.html" class="thread-row"><h2>你成为佛教徒是为了证悟</h2><div class="th-meta">TID: 13849</div></a>
+<a href="../threads/13848.html" class="thread-row"><h2>佛法中最耀眼的就是皈依的修持</h2><div class="th-meta">TID: 13848</div></a>
+<a href="../threads/13846.html" class="thread-row"><h2>憨山大师：无量法门，穿凿之方</h2><div class="th-meta">TID: 13846</div></a>
+<a href="../threads/13845.html" class="thread-row"><h2>《俗语佛源》| 心心相印</h2><div class="th-meta">TID: 13845</div></a>
+<a href="../threads/13843.html" class="thread-row"><h2>不要轻视这种“祝福”的法门，它的威力非常强大！</h2><div class="th-meta">TID: 13843</div></a>
+<a href="../threads/13841.html" class="thread-row"><h2>缘起与空性圆融，才真正证悟了空性 [复制链接]</h2><div class="th-meta">TID: 13841</div></a>
+<a href="../threads/13840.html" class="thread-row"><h2>呜呼，世之最苦者莫过生死</h2><div class="th-meta">TID: 13840</div></a>
+<a href="../threads/13839.html" class="thread-row"><h2>顺境逆境，不忘往生西方！</h2><div class="th-meta">TID: 13839</div></a>
+<a href="../threads/13838.html" class="thread-row"><h2>没有菩提心什么都免谈</h2><div class="th-meta">TID: 13838</div></a>
+<a href="../threads/13837.html" class="thread-row"><h2>国学大师章太炎生前走阴差当判官</h2><div class="th-meta">TID: 13837</div></a>
+<a href="../threads/13836.html" class="thread-row"><h2>黄金般珍贵 字字珠玑</h2><div class="th-meta">TID: 13836</div></a>
+<a href="../threads/13835.html" class="thread-row"><h2>一定要在身语意上出现修行的验相！</h2><div class="th-meta">TID: 13835</div></a>
+<a href="../threads/13834.html" class="thread-row"><h2>他坚持迎娶双目失明的未婚妻，结果发生这样的奇事</h2><div class="th-meta">TID: 13834</div></a>
+<a href="../threads/13833.html" class="thread-row"><h2>坐飞机、坐火车，可以这样发愿，这是不可思议的力量</h2><div class="th-meta">TID: 13833</div></a>
+<a href="../threads/13832.html" class="thread-row"><h2>我们的口，会让我们堕入diyu……</h2><div class="th-meta">TID: 13832</div></a>
+<a href="../threads/13831.html" class="thread-row"><h2>如何皆好之十法</h2><div class="th-meta">TID: 13831</div></a>
+<a href="../threads/13830.html" class="thread-row"><h2>只要你有正确的动机和发心，在佛法里你可以做任何事情</h2><div class="th-meta">TID: 13830</div></a>
+<a href="../threads/13829.html" class="thread-row"><h2>要超越轮回与涅槃，我们需要空性与慈悲的两翼</h2><div class="th-meta">TID: 13829</div></a>
+<a href="../threads/13828.html" class="thread-row"><h2>没有让佛法深入濡染自己，是无意义的！</h2><div class="th-meta">TID: 13828</div></a>
+<a href="../threads/13827.html" class="thread-row"><h2>粮安天下，储存“今生来世”口粮的方法 | 世界粮食日</h2><div class="th-meta">TID: 13827</div></a>
+<a href="../threads/13826.html" class="thread-row"><h2>空性，是空掉你自己的捏造！</h2><div class="th-meta">TID: 13826</div></a>
+<a href="../threads/13825.html" class="thread-row"><h2>菩提心</h2><div class="th-meta">TID: 13825</div></a>
+<a href="../threads/13824.html" class="thread-row"><h2>敏公师：佛教是要靠自己的</h2><div class="th-meta">TID: 13824</div></a>
+<a href="../threads/13823.html" class="thread-row"><h2>《文殊菩萨十种无尽甚深大愿》</h2><div class="th-meta">TID: 13823</div></a>
+<a href="../threads/13822.html" class="thread-row"><h2>弘一法师：改习惯的重要性</h2><div class="th-meta">TID: 13822</div></a>
+<a href="../threads/13821.html" class="thread-row"><h2>烦恼与业力的关系</h2><div class="th-meta">TID: 13821</div></a>
+<a href="../threads/13820.html" class="thread-row"><h2>保持沉默</h2><div class="th-meta">TID: 13820</div></a>
+<a href="../threads/13818.html" class="thread-row"><h2>业果与缘起</h2><div class="th-meta">TID: 13818</div></a>
+<a href="../threads/13817.html" class="thread-row"><h2>做一个有菩提心的行者</h2><div class="th-meta">TID: 13817</div></a>
+<a href="../threads/13816.html" class="thread-row"><h2>把佛法和生活结合在一起的办法</h2><div class="th-meta">TID: 13816</div></a>
+<a href="../threads/13813.html" class="thread-row"><h2>《俗语佛源》| 水到渠成</h2><div class="th-meta">TID: 13813</div></a>
+<a href="../threads/13812.html" class="thread-row"><h2>蕅益大师：福慧二轮，不可暂废</h2><div class="th-meta">TID: 13812</div></a>
+<a href="../threads/13811.html" class="thread-row"><h2>《俗语佛源》| 一念</h2><div class="th-meta">TID: 13811</div></a>
+<a href="../threads/13809.html" class="thread-row"><h2>这种念头常驻自心，修行的“地”“道”都会很好</h2><div class="th-meta">TID: 13809</div></a>
+<a href="../threads/13808.html" class="thread-row"><h2>反复这么发愿，将来度化的众生数不胜数</h2><div class="th-meta">TID: 13808</div></a>
+<a href="../threads/13807.html" class="thread-row"><h2>一个最为殊胜的法</h2><div class="th-meta">TID: 13807</div></a>
+<a href="../threads/13806.html" class="thread-row"><h2>没有菩提心肯定不行！看看是不是修偏了！</h2><div class="th-meta">TID: 13806</div></a>
+<a href="../threads/13805.html" class="thread-row"><h2>佛前燃灯获得的福报</h2><div class="th-meta">TID: 13805</div></a>
+<a href="../threads/13803.html" class="thread-row"><h2>供灯的利益</h2><div class="th-meta">TID: 13803</div></a>
+<a href="../threads/13802.html" class="thread-row"><h2>能这样发心时，在你的世界里，痛苦就会无影无踪​​​​</h2><div class="th-meta">TID: 13802</div></a>
+<a href="../threads/13801.html" class="thread-row"><h2>做为佛教徒，你没有让全世界的人都改信佛教！</h2><div class="th-meta">TID: 13801</div></a>
+<a href="../threads/13800.html" class="thread-row"><h2>《三殊胜》</h2><div class="th-meta">TID: 13800</div></a>
+<a href="../threads/13799.html" class="thread-row"><h2>欲壑难填</h2><div class="th-meta">TID: 13799</div></a>
+<a href="../threads/13798.html" class="thread-row"><h2>教言</h2><div class="th-meta">TID: 13798</div></a>
+<a href="../threads/13797.html" class="thread-row"><h2>教言</h2><div class="th-meta">TID: 13797</div></a>
+<a href="../threads/13795.html" class="thread-row"><h2>倘若我们真诚和迫切地希望弘扬正法</h2><div class="th-meta">TID: 13795</div></a>
+<a href="../threads/13793.html" class="thread-row"><h2>《俗语佛源》| 世界</h2><div class="th-meta">TID: 13793</div></a>
+<a href="../threads/13791.html" class="thread-row"><h2>大恐怖原来是大机缘……</h2><div class="th-meta">TID: 13791</div></a>
+<a href="../threads/13780.html" class="thread-row"><h2>广大清净意乐菩提心</h2><div class="th-meta">TID: 13780</div></a>
+<a href="../threads/13779.html" class="thread-row"><h2>柔和是一种力量</h2><div class="th-meta">TID: 13779</div></a>
+<a href="../threads/13778.html" class="thread-row"><h2>这种慈悲，懦弱的人做不到</h2><div class="th-meta">TID: 13778</div></a>
+<a href="../threads/13777.html" class="thread-row"><h2>《俗语佛源》| 吉祥如意</h2><div class="th-meta">TID: 13777</div></a>
+<a href="../threads/13776.html" class="thread-row"><h2>蕅益大师：求真修福慧者，厥唯艰哉</h2><div class="th-meta">TID: 13776</div></a>
+<a href="../threads/13775.html" class="thread-row"><h2>《俗语佛源》| 见闻</h2><div class="th-meta">TID: 13775</div></a>
+<a href="../threads/13774.html" class="thread-row"><h2>《俗语佛源》| 世界</h2><div class="th-meta">TID: 13774</div></a>
+<a href="../threads/13772.html" class="thread-row"><h2>《俗语佛源》| 一瓣心香</h2><div class="th-meta">TID: 13772</div></a>
+<a href="../threads/13770.html" class="thread-row"><h2>强大的愿力会产生奇迹！</h2><div class="th-meta">TID: 13770</div></a>
+<a href="../threads/13769.html" class="thread-row"><h2>真心的修行是以全部的生命修行</h2><div class="th-meta">TID: 13769</div></a>
+<a href="../threads/13768.html" class="thread-row"><h2>生意就是生意，修行就是修行，要分得清清楚楚</h2><div class="th-meta">TID: 13768</div></a>
+<a href="../threads/13767.html" class="thread-row"><h2>法门虽多，其能为解脱因者有三</h2><div class="th-meta">TID: 13767</div></a>
+<a href="../threads/13766.html" class="thread-row"><h2>“我要做菩萨”，同学伴侣很重要！</h2><div class="th-meta">TID: 13766</div></a>
+<a href="../threads/13765.html" class="thread-row"><h2>佛法的核心是真修实证</h2><div class="th-meta">TID: 13765</div></a>
+<a href="../threads/13764.html" class="thread-row"><h2>戒法是佛陀的大加持</h2><div class="th-meta">TID: 13764</div></a>
+<a href="../threads/13763.html" class="thread-row"><h2>发起菩提心有那四种缘呢？</h2><div class="th-meta">TID: 13763</div></a>
+<a href="../threads/13762.html" class="thread-row"><h2>《大乘伽耶山顶经》：发菩提心有四种，是哪四种？</h2><div class="th-meta">TID: 13762</div></a>
+<a href="../threads/13760.html" class="thread-row"><h2>应当舍命而善护戒</h2><div class="th-meta">TID: 13760</div></a>
+<a href="../threads/13759.html" class="thread-row"><h2>业力就像是人生的总导演！</h2><div class="th-meta">TID: 13759</div></a>
+<a href="../threads/13758.html" class="thread-row"><h2>敏公师 | 末法时期，皈依最好念50万以上</h2><div class="th-meta">TID: 13758</div></a>
+<a href="../threads/13755.html" class="thread-row"><h2>菩提心的重要性</h2><div class="th-meta">TID: 13755</div></a>
+<a href="../threads/13754.html" class="thread-row"><h2>菩提心为什么那么重要？</h2><div class="th-meta">TID: 13754</div></a>
+<a href="../threads/13753.html" class="thread-row"><h2>要成佛仅需修持一法，就是菩提心！</h2><div class="th-meta">TID: 13753</div></a>
+<a href="../threads/13751.html" class="thread-row"><h2>发起菩提心有那四种缘呢？</h2><div class="th-meta">TID: 13751</div></a>
+<a href="../threads/13750.html" class="thread-row"><h2>菩提心是一切诸佛成佛之种子</h2><div class="th-meta">TID: 13750</div></a>
+<a href="../threads/13746.html" class="thread-row"><h2>菩提心是什么</h2><div class="th-meta">TID: 13746</div></a>
+<a href="../threads/13745.html" class="thread-row"><h2>为什么要尽力趣入大乘？</h2><div class="th-meta">TID: 13745</div></a>
+<a href="../threads/13744.html" class="thread-row"><h2>发菩提心的四因、四力</h2><div class="th-meta">TID: 13744</div></a>
+<a href="../threads/13743.html" class="thread-row"><h2>菩提心生起的四种因缘！</h2><div class="th-meta">TID: 13743</div></a>
+<a href="../threads/13742.html" class="thread-row"><h2>菩提心含义、生起菩提心的四种因</h2><div class="th-meta">TID: 13742</div></a>
+<a href="../threads/13741.html" class="thread-row"><h2>菩提心是一切问题的答案</h2><div class="th-meta">TID: 13741</div></a>
+<a href="../threads/13740.html" class="thread-row"><h2>菩提心是获致觉醒的不败法门</h2><div class="th-meta">TID: 13740</div></a>
+<a href="../threads/13739.html" class="thread-row"><h2>修菩提心之前必须要具备四个法</h2><div class="th-meta">TID: 13739</div></a>
+<a href="../threads/13738.html" class="thread-row"><h2>三种菩提心</h2><div class="th-meta">TID: 13738</div></a>
+<a href="../threads/13736.html" class="thread-row"><h2>菩提心的三个修法</h2><div class="th-meta">TID: 13736</div></a>
+<a href="../threads/13735.html" class="thread-row"><h2>什么是菩提心？</h2><div class="th-meta">TID: 13735</div></a>
+<a href="../threads/13734.html" class="thread-row"><h2>菩提心的八大功德利益</h2><div class="th-meta">TID: 13734</div></a>
+<a href="../threads/13733.html" class="thread-row"><h2>菩提心之妙德</h2><div class="th-meta">TID: 13733</div></a>
+<a href="../threads/13732.html" class="thread-row"><h2>菩萨的戒体有两种</h2><div class="th-meta">TID: 13732</div></a>
+<a href="../threads/13731.html" class="thread-row"><h2>发起菩提心，即便没有其余功德，也称为菩萨</h2><div class="th-meta">TID: 13731</div></a>
+<a href="../threads/13726.html" class="thread-row"><h2>戒律的意义</h2><div class="th-meta">TID: 13726</div></a>
+<a href="../threads/13725.html" class="thread-row"><h2>慧通老和尚能不为病痛所转，虚云老和尚在病中也自在</h2><div class="th-meta">TID: 13725</div></a>
+<a href="../threads/13723.html" class="thread-row"><h2>指自己的承擔力，不是外在的任何圖 案或者標籤</h2><div class="th-meta">TID: 13723</div></a>
+<a href="../threads/13722.html" class="thread-row"><h2>佛教徒可以给人做媒吗</h2><div class="th-meta">TID: 13722</div></a>
+<a href="../threads/13721.html" class="thread-row"><h2>若真正深信了这些道理，还敢造业吗?</h2><div class="th-meta">TID: 13721</div></a>
+<a href="../threads/13719.html" class="thread-row"><h2>烫伤秘方</h2><div class="th-meta">TID: 13719</div></a>
+<a href="../threads/13718.html" class="thread-row"><h2>培养七种布施，好运便会如影随形!</h2><div class="th-meta">TID: 13718</div></a>
+<a href="../threads/13717.html" class="thread-row"><h2>七月十五这天你供养众僧，七世父母都能脱三途之苦</h2><div class="th-meta">TID: 13717</div></a>
+<a href="../threads/13712.html" class="thread-row"><h2>缘起甚深</h2><div class="th-meta">TID: 13712</div></a>
+<a href="../threads/13711.html" class="thread-row"><h2>不要总是往自己心里装垃圾！</h2><div class="th-meta">TID: 13711</div></a>
+<a href="../threads/13710.html" class="thread-row"><h2>他的因果他承担，你的善良你负责</h2><div class="th-meta">TID: 13710</div></a>
+<a href="../threads/13708.html" class="thread-row"><h2>归依三宝修法——思维佛的语功德</h2><div class="th-meta">TID: 13708</div></a>
+<a href="../threads/13706.html" class="thread-row"><h2>如果你太随便了，对自己的修行缘起不好，这是在造业</h2><div class="th-meta">TID: 13706</div></a>
+<a href="../threads/13705.html" class="thread-row"><h2>警惕两种不正确的发心</h2><div class="th-meta">TID: 13705</div></a>
+<a href="../threads/13704.html" class="thread-row"><h2>为什么说这样的回向才是如理如法福慧无量的？</h2><div class="th-meta">TID: 13704</div></a>
+<a href="../threads/13703.html" class="thread-row"><h2>顺缘与违缘是同在的</h2><div class="th-meta">TID: 13703</div></a>
+<a href="../threads/13702.html" class="thread-row"><h2>《修心八颂》讲记：什么是修心</h2><div class="th-meta">TID: 13702</div></a>
+<a href="../threads/13701.html" class="thread-row"><h2>逆境是福田</h2><div class="th-meta">TID: 13701</div></a>
+<a href="../threads/13699.html" class="thread-row"><h2>这个人便发现到石头其实是金</h2><div class="th-meta">TID: 13699</div></a>
+<a href="../threads/13698.html" class="thread-row"><h2>发菩提心，就是给我们的心灵装上真正的宝藏</h2><div class="th-meta">TID: 13698</div></a>
+<a href="../threads/13696.html" class="thread-row"><h2>为什么有人学佛后吉祥如意，有人却依旧贫困艰苦？</h2><div class="th-meta">TID: 13696</div></a>
+<a href="../threads/13695.html" class="thread-row"><h2>当神通遇到业力</h2><div class="th-meta">TID: 13695</div></a>
+<a href="../threads/13694.html" class="thread-row"><h2>莲池大师与《竹窗随笔》</h2><div class="th-meta">TID: 13694</div></a>
+<a href="../threads/13693.html" class="thread-row"><h2>太虚大师：何为广义的孝？何为狭义的孝？</h2><div class="th-meta">TID: 13693</div></a>
+<a href="../threads/13692.html" class="thread-row"><h2>很多人以为这是对的，实际是外道见</h2><div class="th-meta">TID: 13692</div></a>
+<a href="../threads/13691.html" class="thread-row"><h2>慈悲和智慧，缺一不可</h2><div class="th-meta">TID: 13691</div></a>
+<a href="../threads/13690.html" class="thread-row"><h2>目犍连尊者最后的宿业</h2><div class="th-meta">TID: 13690</div></a>
+<a href="../threads/13689.html" class="thread-row"><h2>智慧决定方向</h2><div class="th-meta">TID: 13689</div></a>
+<a href="../threads/13688.html" class="thread-row"><h2>释迦牟尼佛曾说</h2><div class="th-meta">TID: 13688</div></a>
+<a href="../threads/13685.html" class="thread-row"><h2>轮回痛苦并不可怕，更不必为此而悲观失望！</h2><div class="th-meta">TID: 13685</div></a>
+<a href="../threads/13684.html" class="thread-row"><h2>应以什么样的心态处理供品</h2><div class="th-meta">TID: 13684</div></a>
+<a href="../threads/13683.html" class="thread-row"><h2>倓虚老法师决心出家前的一段心路历程</h2><div class="th-meta">TID: 13683</div></a>
+<a href="../threads/13682.html" class="thread-row"><h2>广钦老和尚：当我们论说他人是非时，是自家贼在劫功德财</h2><div class="th-meta">TID: 13682</div></a>
+<a href="../threads/13681.html" class="thread-row"><h2>众生会受烦恼支配，业力现前时要慢慢调整心态</h2><div class="th-meta">TID: 13681</div></a>
+<a href="../threads/13680.html" class="thread-row"><h2>什么是业力？</h2><div class="th-meta">TID: 13680</div></a>
+<a href="../threads/13679.html" class="thread-row"><h2>盂兰盆法会</h2><div class="th-meta">TID: 13679</div></a>
+<a href="../threads/13678.html" class="thread-row"><h2>那天那个真是罗汉</h2><div class="th-meta">TID: 13678</div></a>
+<a href="../threads/13674.html" class="thread-row"><h2>佛的身语意里面，功德最大的就是语的功德</h2><div class="th-meta">TID: 13674</div></a>
+<a href="../threads/13672.html" class="thread-row"><h2>内心习气决定了我们的世界观</h2><div class="th-meta">TID: 13672</div></a>
+<a href="../threads/13670.html" class="thread-row"><h2>生死的“发动机”</h2><div class="th-meta">TID: 13670</div></a>
+<a href="../threads/13669.html" class="thread-row"><h2>对他人怎么能生起爱他如自之心呢？</h2><div class="th-meta">TID: 13669</div></a>
+<a href="../threads/13668.html" class="thread-row"><h2>佛是自心，莫错礼拜</h2><div class="th-meta">TID: 13668</div></a>
+<a href="../threads/13667.html" class="thread-row"><h2>让内心生起善法，是远离业障最好的办法</h2><div class="th-meta">TID: 13667</div></a>
+<a href="../threads/13664.html" class="thread-row"><h2>这个世界能听闻到佛法的福报大到你无法想象！</h2><div class="th-meta">TID: 13664</div></a>
+<a href="../threads/13663.html" class="thread-row"><h2>增长慧力之窍诀</h2><div class="th-meta">TID: 13663</div></a>
+<a href="../threads/13661.html" class="thread-row"><h2>你可以更加慈悲！</h2><div class="th-meta">TID: 13661</div></a>
+<a href="../threads/13660.html" class="thread-row"><h2>我们的感受，因“我”而放大！</h2><div class="th-meta">TID: 13660</div></a>
+<a href="../threads/13658.html" class="thread-row"><h2>以三种安忍来面对修行中的一切困难</h2><div class="th-meta">TID: 13658</div></a>
+<a href="../threads/13657.html" class="thread-row"><h2>闻慧、思慧和修慧</h2><div class="th-meta">TID: 13657</div></a>
+<a href="../threads/13656.html" class="thread-row"><h2>正念，治疗轮回一切苦恼的基础！</h2><div class="th-meta">TID: 13656</div></a>
+<a href="../threads/13655.html" class="thread-row"><h2>“皈依”的真正意思是自己要成为一个救怙者</h2><div class="th-meta">TID: 13655</div></a>
+<a href="../threads/13654.html" class="thread-row"><h2>佛法的核心就是实修！</h2><div class="th-meta">TID: 13654</div></a>
+<a href="../threads/13653.html" class="thread-row"><h2>孝顺父母的人，会得到护法神的帮助！</h2><div class="th-meta">TID: 13653</div></a>
+<a href="../threads/13652.html" class="thread-row"><h2>真正的大道不需要任何神通与炫奇</h2><div class="th-meta">TID: 13652</div></a>
+<a href="../threads/13651.html" class="thread-row"><h2>面对『贤劫千佛』成佛的【金刚座】, 今天发个大愿吧 ~</h2><div class="th-meta">TID: 13651</div></a>
+<a href="../threads/13650.html" class="thread-row"><h2>学佛并不一定要痛苦才能够学佛！</h2><div class="th-meta">TID: 13650</div></a>
+<a href="../threads/13649.html" class="thread-row"><h2>为什么异端邪教比正统宗教信仰还要能影响人？</h2><div class="th-meta">TID: 13649</div></a>
+<a href="../threads/13647.html" class="thread-row"><h2>遇有严重违缘障碍时，应立即如是发愿。</h2><div class="th-meta">TID: 13647</div></a>
+<a href="../threads/13646.html" class="thread-row"><h2>不敬佛像的果报</h2><div class="th-meta">TID: 13646</div></a>
+<a href="../threads/13645.html" class="thread-row"><h2>身不离善行，口不离归依，心不离菩提心</h2><div class="th-meta">TID: 13645</div></a>
+<a href="../threads/13644.html" class="thread-row"><h2>佛前供花的功德 大到你无法想象</h2><div class="th-meta">TID: 13644</div></a>
+<a href="../threads/13643.html" class="thread-row"><h2>善待不懂规矩的新人</h2><div class="th-meta">TID: 13643</div></a>
+<a href="../threads/13642.html" class="thread-row"><h2>现在觉得学佛的人基本上</h2><div class="th-meta">TID: 13642</div></a>
+<a href="../threads/13641.html" class="thread-row"><h2>9岁童子身出家，为了修行般舟三昧，一天念10万声佛号</h2><div class="th-meta">TID: 13641</div></a>
+<a href="../threads/13640.html" class="thread-row"><h2>印光法师讲述了一个僧人念佛出现的奇迹</h2><div class="th-meta">TID: 13640</div></a>
+<a href="../threads/13639.html" class="thread-row"><h2>不止是白天，我们也可以在梦中修行！</h2><div class="th-meta">TID: 13639</div></a>
+<a href="../threads/13638.html" class="thread-row"><h2>这是修行的耻辱</h2><div class="th-meta">TID: 13638</div></a>
+<a href="../threads/13637.html" class="thread-row"><h2>如果你继续屈服于坏习惯，你将两手空空前往来世</h2><div class="th-meta">TID: 13637</div></a>
+<a href="../threads/13636.html" class="thread-row"><h2>比丘尼遇到的因果故事</h2><div class="th-meta">TID: 13636</div></a>
+<a href="../threads/13635.html" class="thread-row"><h2>遇到怨敌或病魔等对境，使用这个窍决当下就可平息嗔心！</h2><div class="th-meta">TID: 13635</div></a>
+<a href="../threads/13634.html" class="thread-row"><h2>一篇文章读懂业力</h2><div class="th-meta">TID: 13634</div></a>
+<a href="../threads/13633.html" class="thread-row"><h2>昙花一现 只为韦陀</h2><div class="th-meta">TID: 13633</div></a>
+<a href="../threads/13632.html" class="thread-row"><h2>法门无量誓愿学”这么多怎么学</h2><div class="th-meta">TID: 13632</div></a>
+<a href="../threads/13631.html" class="thread-row"><h2>佛法就是要将不调柔的心令调柔</h2><div class="th-meta">TID: 13631</div></a>
+<a href="../threads/13630.html" class="thread-row"><h2>佛和众生的差别</h2><div class="th-meta">TID: 13630</div></a>
+<a href="../threads/13627.html" class="thread-row"><h2>无常的意义</h2><div class="th-meta">TID: 13627</div></a>
+<a href="../threads/13626.html" class="thread-row"><h2>让人听到佛号也有大功德</h2><div class="th-meta">TID: 13626</div></a>
+<a href="../threads/13625.html" class="thread-row"><h2>消除瞋恨心的利器</h2><div class="th-meta">TID: 13625</div></a>
+<a href="../threads/13624.html" class="thread-row"><h2>念诵《地藏经·称佛名号品》的巨大利益</h2><div class="th-meta">TID: 13624</div></a>
+<a href="../threads/13623.html" class="thread-row"><h2>念佛求往生的好处</h2><div class="th-meta">TID: 13623</div></a>
+<a href="../threads/13622.html" class="thread-row"><h2>四圣谛</h2><div class="th-meta">TID: 13622</div></a>
+<a href="../threads/13621.html" class="thread-row"><h2>究竟的闭关</h2><div class="th-meta">TID: 13621</div></a>
+<a href="../threads/13620.html" class="thread-row"><h2>受持七佛名号所生功德经</h2><div class="th-meta">TID: 13620</div></a>
+<a href="../threads/13619.html" class="thread-row"><h2>要以法相见，不能以情相牵</h2><div class="th-meta">TID: 13619</div></a>
+<a href="../threads/13618.html" class="thread-row"><h2>真正的大道不需要任何神通与炫奇</h2><div class="th-meta">TID: 13618</div></a>
+<a href="../threads/13617.html" class="thread-row"><h2>登顶之美</h2><div class="th-meta">TID: 13617</div></a>
+<a href="../threads/13616.html" class="thread-row"><h2>从生到死有多远</h2><div class="th-meta">TID: 13616</div></a>
+<a href="../threads/13615.html" class="thread-row"><h2>听闻佛法前先要自检此三项</h2><div class="th-meta">TID: 13615</div></a>
+<a href="../threads/13614.html" class="thread-row"><h2>引导眷属专修净土，金台接引上品往生</h2><div class="th-meta">TID: 13614</div></a>
+<a href="../threads/13613.html" class="thread-row"><h2>印光法师文钞｜关于念佛所重在往生，念至极亦能见性</h2><div class="th-meta">TID: 13613</div></a>
+<a href="../threads/13612.html" class="thread-row"><h2>印光大师：一心念佛</h2><div class="th-meta">TID: 13612</div></a>
+<a href="../threads/13611.html" class="thread-row"><h2>蕅益大师：信得及，守得定</h2><div class="th-meta">TID: 13611</div></a>
+<a href="../threads/13610.html" class="thread-row"><h2>圆瑛大师：念佛是摄心修行之法</h2><div class="th-meta">TID: 13610</div></a>
+<a href="../threads/13609.html" class="thread-row"><h2>护法是以身语意护持佛法，而非口号的“演说家”</h2><div class="th-meta">TID: 13609</div></a>
+<a href="../threads/13608.html" class="thread-row"><h2>面对突如其来的困境，心中是烦恼，还是慈悲？</h2><div class="th-meta">TID: 13608</div></a>
+<a href="../threads/13607.html" class="thread-row"><h2>诸行无常</h2><div class="th-meta">TID: 13607</div></a>
+<a href="../threads/13605.html" class="thread-row"><h2>两位祖师告诉你~佛号应念四字还是六字？</h2><div class="th-meta">TID: 13605</div></a>
+<a href="../threads/13604.html" class="thread-row"><h2>愤怒会带来多大的伤害？</h2><div class="th-meta">TID: 13604</div></a>
+<a href="../threads/13601.html" class="thread-row"><h2>皈依之福德无量无边</h2><div class="th-meta">TID: 13601</div></a>
+<a href="../threads/13600.html" class="thread-row"><h2>世间法与出世间法</h2><div class="th-meta">TID: 13600</div></a>
+<a href="../threads/13599.html" class="thread-row"><h2>一切圣教都是大乘道的支分</h2><div class="th-meta">TID: 13599</div></a>
+<a href="../threads/13597.html" class="thread-row"><h2>安乐行境不可信赖之理</h2><div class="th-meta">TID: 13597</div></a>
+<a href="../threads/13591.html" class="thread-row"><h2>梁武帝萧衍 | 四度出家为僧 开创汉地素食先河</h2><div class="th-meta">TID: 13591</div></a>
+<a href="../threads/13588.html" class="thread-row"><h2>楚石禅师 | 休念功名唯念佛，但忧道业勿忧贫</h2><div class="th-meta">TID: 13588</div></a>
+<a href="../threads/13585.html" class="thread-row"><h2>因果故事 皇帝饶他命，鬼神不答应</h2><div class="th-meta">TID: 13585</div></a>
+<a href="../threads/13584.html" class="thread-row"><h2>生死攸关的选择</h2><div class="th-meta">TID: 13584</div></a>
+<a href="../threads/13583.html" class="thread-row"><h2>十种业得丑陋报</h2><div class="th-meta">TID: 13583</div></a>
+<a href="../threads/13581.html" class="thread-row"><h2>你所在乎的“我”，其实是假的</h2><div class="th-meta">TID: 13581</div></a>
+<a href="../threads/13580.html" class="thread-row"><h2>《佛说业报集（二）》 | 无畏与鼓声</h2><div class="th-meta">TID: 13580</div></a>
+<a href="../threads/13579.html" class="thread-row"><h2>生命匆匆</h2><div class="th-meta">TID: 13579</div></a>
+<a href="../threads/13577.html" class="thread-row"><h2>一切都依因缘而生</h2><div class="th-meta">TID: 13577</div></a>
+<a href="../threads/13576.html" class="thread-row"><h2>敦珠家族《智慧虹身解脱经》</h2><div class="th-meta">TID: 13576</div></a>
+<a href="../threads/13574.html" class="thread-row"><h2>《佛说护国尊者所问大乘经》</h2><div class="th-meta">TID: 13574</div></a>
+<a href="../threads/13572.html" class="thread-row"><h2>北京一护士的亲历：现代不可思议的地藏王菩萨救父真事～</h2><div class="th-meta">TID: 13572</div></a>
+<a href="../threads/13571.html" class="thread-row"><h2>民国时期江味农居士，是近代稀有大善知识！</h2><div class="th-meta">TID: 13571</div></a>
+<a href="../threads/13568.html" class="thread-row"><h2>改变命运靠的不是时间，而是想法和动机。</h2><div class="th-meta">TID: 13568</div></a>
+<a href="../threads/13567.html" class="thread-row"><h2>生气动怒，一刹那的嗔恨心就能消除你数劫积累的福报！</h2><div class="th-meta">TID: 13567</div></a>
+<a href="../threads/13566.html" class="thread-row"><h2>“七不杀”，世人不可不知啊！</h2><div class="th-meta">TID: 13566</div></a>
+<a href="../threads/13563.html" class="thread-row"><h2>众生是尊贵的福田</h2><div class="th-meta">TID: 13563</div></a>
+<a href="../threads/13562.html" class="thread-row"><h2>香之十德</h2><div class="th-meta">TID: 13562</div></a>
+<a href="../threads/13561.html" class="thread-row"><h2>有一天，你也会感谢逆境</h2><div class="th-meta">TID: 13561</div></a>
+<a href="../threads/13560.html" class="thread-row"><h2>星云大师：我最后的遗嘱</h2><div class="th-meta">TID: 13560</div></a>
+<a href="../threads/13559.html" class="thread-row"><h2>开心的为过去世的业买单</h2><div class="th-meta">TID: 13559</div></a>
+<a href="../threads/13557.html" class="thread-row"><h2>用菩提心工作</h2><div class="th-meta">TID: 13557</div></a>
+<a href="../threads/13556.html" class="thread-row"><h2>这种念头常驻自心，修行的“地”“道”都会很好</h2><div class="th-meta">TID: 13556</div></a>
+<a href="../threads/13555.html" class="thread-row"><h2>见闻录｜私藏救济款</h2><div class="th-meta">TID: 13555</div></a>
+<a href="../threads/13553.html" class="thread-row"><h2>修行的明灯</h2><div class="th-meta">TID: 13553</div></a>
+<a href="../threads/13552.html" class="thread-row"><h2>死亡的教育</h2><div class="th-meta">TID: 13552</div></a>
+<a href="../threads/13551.html" class="thread-row"><h2>看透世间苦</h2><div class="th-meta">TID: 13551</div></a>
+<a href="../threads/13549.html" class="thread-row"><h2>盛德感蝴蝶献瑞的女辈典范林夫人</h2><div class="th-meta">TID: 13549</div></a>
+<a href="../threads/13548.html" class="thread-row"><h2>生生世世愿做文殊菩萨眷属！</h2><div class="th-meta">TID: 13548</div></a>
+<a href="../threads/13545.html" class="thread-row"><h2>《佛说业报集（一）》 | 肉团饿鬼</h2><div class="th-meta">TID: 13545</div></a>
+<a href="../threads/13544.html" class="thread-row"><h2>恶业缠身的女性啊，你将你的虔诚心给了好色的男性……”</h2><div class="th-meta">TID: 13544</div></a>
+<a href="../threads/13543.html" class="thread-row"><h2>菩萨常行“爱语”</h2><div class="th-meta">TID: 13543</div></a>
+<a href="../threads/13540.html" class="thread-row"><h2>出离世间，才是大孝 | 莲池大师</h2><div class="th-meta">TID: 13540</div></a>
+<a href="../threads/13539.html" class="thread-row"><h2>如何使信心不坏</h2><div class="th-meta">TID: 13539</div></a>
+<a href="../threads/13535.html" class="thread-row"><h2>闻思修的不同阶段，佛语有不同利益</h2><div class="th-meta">TID: 13535</div></a>
+<a href="../threads/13533.html" class="thread-row"><h2>一切功德与善根 必须依赖于戒律才能得以增长</h2><div class="th-meta">TID: 13533</div></a>
+<a href="../threads/13530.html" class="thread-row"><h2>怎么理解“佛度有缘人”</h2><div class="th-meta">TID: 13530</div></a>
+<a href="../threads/13529.html" class="thread-row"><h2>让大悲心的种子发芽</h2><div class="th-meta">TID: 13529</div></a>
+<a href="../threads/13526.html" class="thread-row"><h2>人生一世真的如草木一秋吗？</h2><div class="th-meta">TID: 13526</div></a>
+<a href="../threads/13525.html" class="thread-row"><h2>《缁门崇行录》连载 | 高尚之行| 不赴俗筵</h2><div class="th-meta">TID: 13525</div></a>
+<a href="../threads/13522.html" class="thread-row"><h2>蕅益大师：念佛以深信力行为要</h2><div class="th-meta">TID: 13522</div></a>
+<a href="../threads/13521.html" class="thread-row"><h2>憨山大师：“不”字，金刚圈也</h2><div class="th-meta">TID: 13521</div></a>
+<a href="../threads/13520.html" class="thread-row"><h2>观音菩萨心咒加持一粒米一滴水，也会利益恒河沙数的饿鬼</h2><div class="th-meta">TID: 13520</div></a>
+<a href="../threads/13519.html" class="thread-row"><h2>不可思议，明朝袁宏道居士一家竟六人往生极乐世界！</h2><div class="th-meta">TID: 13519</div></a>
+<a href="../threads/13518.html" class="thread-row"><h2>增一阿含经 马血品～行善发愿的重要性</h2><div class="th-meta">TID: 13518</div></a>
+<a href="../threads/13517.html" class="thread-row"><h2>印光大师 : 不可求得圣境界现，及得种种神通</h2><div class="th-meta">TID: 13517</div></a>
+<a href="../threads/13516.html" class="thread-row"><h2>憨山大师于盘山千像峰初证色空之境界</h2><div class="th-meta">TID: 13516</div></a>
+<a href="../threads/13515.html" class="thread-row"><h2>用一个念佛法门就可以完全统摄无余的四个理由（一）</h2><div class="th-meta">TID: 13515</div></a>
+<a href="../threads/13514.html" class="thread-row"><h2>最大的善是忍辱</h2><div class="th-meta">TID: 13514</div></a>
+<a href="../threads/13513.html" class="thread-row"><h2>什么遮盖了智慧之眼？</h2><div class="th-meta">TID: 13513</div></a>
+<a href="../threads/13512.html" class="thread-row"><h2>《佛说业报集（一）》 | 驼背人</h2><div class="th-meta">TID: 13512</div></a>
+<a href="../threads/13511.html" class="thread-row"><h2>胜利之召唤：韦陀赞颂</h2><div class="th-meta">TID: 13511</div></a>
+<a href="../threads/13510.html" class="thread-row"><h2>像勇士一样去战斗</h2><div class="th-meta">TID: 13510</div></a>
+<a href="../threads/13509.html" class="thread-row"><h2>为什么一到学习佛法就没有时间了</h2><div class="th-meta">TID: 13509</div></a>
+<a href="../threads/13508.html" class="thread-row"><h2>学习真正佛法，拒绝毒鸡汤和伪佛学 ！</h2><div class="th-meta">TID: 13508</div></a>
+<a href="../threads/13507.html" class="thread-row"><h2>十大愿望若进一步浓缩的话，则是弘扬佛法、利益众生！</h2><div class="th-meta">TID: 13507</div></a>
+<a href="../threads/13506.html" class="thread-row"><h2>习惯无常</h2><div class="th-meta">TID: 13506</div></a>
+<a href="../threads/13504.html" class="thread-row"><h2>佛教对事物的认知</h2><div class="th-meta">TID: 13504</div></a>
+<a href="../threads/13502.html" class="thread-row"><h2>怀师｜这是念佛法门的要点，千万注意</h2><div class="th-meta">TID: 13502</div></a>
+<a href="../threads/13501.html" class="thread-row"><h2>法尊法师|《随念三宝经》浅说</h2><div class="th-meta">TID: 13501</div></a>
+<a href="../threads/13500.html" class="thread-row"><h2>轮回不是为你量身定制的</h2><div class="th-meta">TID: 13500</div></a>
+<a href="../threads/13499.html" class="thread-row"><h2>今生的善恶习性，多数来自前世的串习</h2><div class="th-meta">TID: 13499</div></a>
+<a href="../threads/13498.html" class="thread-row"><h2>修行不一定要抛弃一切，高度的觉察力，带到生活中</h2><div class="th-meta">TID: 13498</div></a>
+<a href="../threads/13496.html" class="thread-row"><h2>她整日吃素念佛，为何却被车轧死？</h2><div class="th-meta">TID: 13496</div></a>
+<a href="../threads/13494.html" class="thread-row"><h2>把世俗的爱，变成出世的慈悲！</h2><div class="th-meta">TID: 13494</div></a>
+<a href="../threads/13493.html" class="thread-row"><h2>无论是否愿意，你都必须面对痛苦！</h2><div class="th-meta">TID: 13493</div></a>
+<a href="../threads/13492.html" class="thread-row"><h2>利益他人而发心的特质！</h2><div class="th-meta">TID: 13492</div></a>
+<a href="../threads/13491.html" class="thread-row"><h2>：善知识未必就是你期待的那一位，而可能是任何人！</h2><div class="th-meta">TID: 13491</div></a>
+<a href="../threads/13487.html" class="thread-row"><h2>来果老和尚：逞强好胜，终非道人资格</h2><div class="th-meta">TID: 13487</div></a>
+<a href="../threads/13486.html" class="thread-row"><h2>蕅益大师：过午不食的十大好处</h2><div class="th-meta">TID: 13486</div></a>
+<a href="../threads/13484.html" class="thread-row"><h2>来世要下地狱，还以为占了便宜</h2><div class="th-meta">TID: 13484</div></a>
+<a href="../threads/13482.html" class="thread-row"><h2>百喻经故事（七十九）：为王负机喻</h2><div class="th-meta">TID: 13482</div></a>
+<a href="../threads/13481.html" class="thread-row"><h2>学佛后，重点的修行内容</h2><div class="th-meta">TID: 13481</div></a>
+<a href="../threads/13479.html" class="thread-row"><h2>做个具足德相的弟子</h2><div class="th-meta">TID: 13479</div></a>
+<a href="../threads/13478.html" class="thread-row"><h2>见闻录｜择日往生</h2><div class="th-meta">TID: 13478</div></a>
+<a href="../threads/13477.html" class="thread-row"><h2>佛法，以“信”求证</h2><div class="th-meta">TID: 13477</div></a>
+<a href="../threads/13475.html" class="thread-row"><h2>隆莲法师的书法</h2><div class="th-meta">TID: 13475</div></a>
+<a href="../threads/13474.html" class="thread-row"><h2>我们为什么会陷入轮回？</h2><div class="th-meta">TID: 13474</div></a>
+<a href="../threads/13473.html" class="thread-row"><h2>敏公师开示：逃命要紧</h2><div class="th-meta">TID: 13473</div></a>
+<a href="../threads/13472.html" class="thread-row"><h2>流浪世间</h2><div class="th-meta">TID: 13472</div></a>
+<a href="../threads/13471.html" class="thread-row"><h2>烦恼的过患</h2><div class="th-meta">TID: 13471</div></a>
+<a href="../threads/13470.html" class="thread-row"><h2>不读永明大师的书，是学佛人极大的损失！</h2><div class="th-meta">TID: 13470</div></a>
+<a href="../threads/13466.html" class="thread-row"><h2>对造作的思惟法义很陌生，试着学会建立串习和契入的暖度</h2><div class="th-meta">TID: 13466</div></a>
+<a href="../threads/13461.html" class="thread-row"><h2>“善根无尽”是什么意思？</h2><div class="th-meta">TID: 13461</div></a>
+<a href="../threads/13458.html" class="thread-row"><h2>因果的存在跟佛无关</h2><div class="th-meta">TID: 13458</div></a>
+<a href="../threads/13457.html" class="thread-row"><h2>趋吉，避凶</h2><div class="th-meta">TID: 13457</div></a>
+<a href="../threads/13455.html" class="thread-row"><h2>如何思维闻法的殊胜利益？</h2><div class="th-meta">TID: 13455</div></a>
+<a href="../threads/13454.html" class="thread-row"><h2>最大的善是忍辱</h2><div class="th-meta">TID: 13454</div></a>
+<a href="../threads/13453.html" class="thread-row"><h2>行者的需求</h2><div class="th-meta">TID: 13453</div></a>
+<a href="../threads/13452.html" class="thread-row"><h2>告诉你一个真实的饿鬼世界</h2><div class="th-meta">TID: 13452</div></a>
+<a href="../threads/13451.html" class="thread-row"><h2>人人都有财产三千亿</h2><div class="th-meta">TID: 13451</div></a>
+<a href="../threads/13450.html" class="thread-row"><h2>他平时不太信佛，但猝然遇到猛虎，他吓得大声念起佛来</h2><div class="th-meta">TID: 13450</div></a>
+<a href="../threads/13449.html" class="thread-row"><h2>印光大师~念佛三昧</h2><div class="th-meta">TID: 13449</div></a>
+<a href="../threads/13448.html" class="thread-row"><h2>释门法戒录：高唱华严 请师出狱</h2><div class="th-meta">TID: 13448</div></a>
+<a href="../threads/13447.html" class="thread-row"><h2>留不住的人生</h2><div class="th-meta">TID: 13447</div></a>
+<a href="../threads/13443.html" class="thread-row"><h2>因果的路牌</h2><div class="th-meta">TID: 13443</div></a>
+<a href="../threads/13442.html" class="thread-row"><h2>抉择细无常</h2><div class="th-meta">TID: 13442</div></a>
+<a href="../threads/13439.html" class="thread-row"><h2>什么是道场？</h2><div class="th-meta">TID: 13439</div></a>
+<a href="../threads/13437.html" class="thread-row"><h2>修习十二缘起，能苏醒宿世善习气</h2><div class="th-meta">TID: 13437</div></a>
+<a href="../threads/13436.html" class="thread-row"><h2>阿弥化身永明延寿大师，后身转为宋濂居士</h2><div class="th-meta">TID: 13436</div></a>
+<a href="../threads/13432.html" class="thread-row"><h2>善恶行为扩大的道理</h2><div class="th-meta">TID: 13432</div></a>
+<a href="../threads/13431.html" class="thread-row"><h2>“慈悲喜舍”是什么意思？</h2><div class="th-meta">TID: 13431</div></a>
+<a href="../threads/13425.html" class="thread-row"><h2>什么是“如所有”与“尽所有”</h2><div class="th-meta">TID: 13425</div></a>
+<a href="../threads/13423.html" class="thread-row"><h2>念佛法门的超胜之处</h2><div class="th-meta">TID: 13423</div></a>
+<a href="../threads/13422.html" class="thread-row"><h2>有什么方法可以直接开中脉？</h2><div class="th-meta">TID: 13422</div></a>
+<a href="../threads/13419.html" class="thread-row"><h2>八关斋戒｜五根、五力</h2><div class="th-meta">TID: 13419</div></a>
+<a href="../threads/13410.html" class="thread-row"><h2>觉知是神识的范畴，智慧之眼是智慧的范畴</h2><div class="th-meta">TID: 13410</div></a>
+<a href="../threads/13409.html" class="thread-row"><h2>修习是否有进步，不是比以前更快乐，而是比以前更坚强</h2><div class="th-meta">TID: 13409</div></a>
+<a href="../threads/13406.html" class="thread-row"><h2>扫地的法门！能增长福慧 消除垢染 证得果位</h2><div class="th-meta">TID: 13406</div></a>
+<a href="../threads/13404.html" class="thread-row"><h2>圣者怙主龙日嘉措勇列吉祥贤</h2><div class="th-meta">TID: 13404</div></a>
+<a href="../threads/13402.html" class="thread-row"><h2>二元非对立的智慧就是尽所有智</h2><div class="th-meta">TID: 13402</div></a>
+<a href="../threads/13401.html" class="thread-row"><h2>竹窗随笔 | 现报</h2><div class="th-meta">TID: 13401</div></a>
+<a href="../threads/13400.html" class="thread-row"><h2>竹窗随笔 | 天说余</h2><div class="th-meta">TID: 13400</div></a>
+<a href="../threads/13396.html" class="thread-row"><h2>竹窗随笔 | 天说</h2><div class="th-meta">TID: 13396</div></a>
+<a href="../threads/13394.html" class="thread-row"><h2>公案｜听闻正法需福德</h2><div class="th-meta">TID: 13394</div></a>
+<a href="../threads/13389.html" class="thread-row"><h2>水供</h2><div class="th-meta">TID: 13389</div></a>
+<a href="../threads/13385.html" class="thread-row"><h2>八关斋戒｜四神足</h2><div class="th-meta">TID: 13385</div></a>
+<a href="../threads/13384.html" class="thread-row"><h2>今生和来世的一项珍贵投资！</h2><div class="th-meta">TID: 13384</div></a>
+<a href="../threads/13380.html" class="thread-row"><h2>一切想中，无常死想是为第一</h2><div class="th-meta">TID: 13380</div></a>
+<a href="../threads/13377.html" class="thread-row"><h2>三宝在人间，这就是生命的希望</h2><div class="th-meta">TID: 13377</div></a>
+<a href="../threads/13375.html" class="thread-row"><h2>释迦牟尼佛五百大愿</h2><div class="th-meta">TID: 13375</div></a>
+<a href="../threads/13373.html" class="thread-row"><h2>阿弥陀佛加持日</h2><div class="th-meta">TID: 13373</div></a>
+<a href="../threads/13372.html" class="thread-row"><h2>因果和业果不一回事</h2><div class="th-meta">TID: 13372</div></a>
+<a href="../threads/13371.html" class="thread-row"><h2>不如法依师过患极大</h2><div class="th-meta">TID: 13371</div></a>
+<a href="../threads/13364.html" class="thread-row"><h2>憨山大师：如何是委曲相？</h2><div class="th-meta">TID: 13364</div></a>
+<a href="../threads/13359.html" class="thread-row"><h2>简单的往生净土法</h2><div class="th-meta">TID: 13359</div></a>
+<a href="../threads/13357.html" class="thread-row"><h2>如何将闻思与实修合而为一</h2><div class="th-meta">TID: 13357</div></a>
+<a href="../threads/13355.html" class="thread-row"><h2>公案｜圣僧超度咸丰母</h2><div class="th-meta">TID: 13355</div></a>
+<a href="../threads/13354.html" class="thread-row"><h2>梦参老和尚：“辗转施”的功德更大</h2><div class="th-meta">TID: 13354</div></a>
+<a href="../threads/13353.html" class="thread-row"><h2>关于【八关斋文】的传奇故事</h2><div class="th-meta">TID: 13353</div></a>
+<a href="../threads/13352.html" class="thread-row"><h2>2024年每日必修</h2><div class="th-meta">TID: 13352</div></a>
+<a href="../threads/13350.html" class="thread-row"><h2>将四圣谛落实于生活中</h2><div class="th-meta">TID: 13350</div></a>
+<a href="../threads/13345.html" class="thread-row"><h2>从当下开始修行</h2><div class="th-meta">TID: 13345</div></a>
+<a href="../threads/13344.html" class="thread-row"><h2>八关斋戒｜四念住</h2><div class="th-meta">TID: 13344</div></a>
+<a href="../threads/13342.html" class="thread-row"><h2>来到佛门圣地，要用心感受佛法与我们生命之间的链接关系</h2><div class="th-meta">TID: 13342</div></a>
+<a href="../threads/13339.html" class="thread-row"><h2>听经闻法，要发菩提心</h2><div class="th-meta">TID: 13339</div></a>
+<a href="../threads/13337.html" class="thread-row"><h2>要过年了，当生四种殊胜心</h2><div class="th-meta">TID: 13337</div></a>
+<a href="../threads/13330.html" class="thread-row"><h2>竹窗随笔 | 护法</h2><div class="th-meta">TID: 13330</div></a>
+<a href="../threads/13328.html" class="thread-row"><h2>将一切境遇都转为菩提道的助伴</h2><div class="th-meta">TID: 13328</div></a>
+<a href="../threads/13327.html" class="thread-row"><h2>如来共同咒</h2><div class="th-meta">TID: 13327</div></a>
+<a href="../threads/13326.html" class="thread-row"><h2>八关斋戒｜为令诸菩提分法圆满</h2><div class="th-meta">TID: 13326</div></a>
+<a href="../threads/13325.html" class="thread-row"><h2>最有灵验 · 大慧宗杲禅师《礼观音文》</h2><div class="th-meta">TID: 13325</div></a>
+<a href="../threads/13321.html" class="thread-row"><h2>《渊默雷鸣》| 你如果不超度他，他不知道再等到啥时候了</h2><div class="th-meta">TID: 13321</div></a>
+<a href="../threads/13319.html" class="thread-row"><h2>将法布施给一切众生</h2><div class="th-meta">TID: 13319</div></a>
+<a href="../threads/13318.html" class="thread-row"><h2>一名大乘修行人必须要发这样的愿</h2><div class="th-meta">TID: 13318</div></a>
+<a href="../threads/13316.html" class="thread-row"><h2>修行人，要每天去算自己的修行状态</h2><div class="th-meta">TID: 13316</div></a>
+<a href="../threads/13315.html" class="thread-row"><h2>祭拜的物品，亡者能收到吗？</h2><div class="th-meta">TID: 13315</div></a>
+<a href="../threads/13314.html" class="thread-row"><h2>《渊默雷鸣》| 这是佛的悲愿，是祖师的悲愿</h2><div class="th-meta">TID: 13314</div></a>
+<a href="../threads/13313.html" class="thread-row"><h2>不受戒，犯了错就不严重了？</h2><div class="th-meta">TID: 13313</div></a>
+<a href="../threads/13312.html" class="thread-row"><h2>教言</h2><div class="th-meta">TID: 13312</div></a>
+<a href="../threads/13310.html" class="thread-row"><h2>身口意清净功不唐捐</h2><div class="th-meta">TID: 13310</div></a>
+<a href="../threads/13309.html" class="thread-row"><h2>富贵的窍诀</h2><div class="th-meta">TID: 13309</div></a>
+<a href="../threads/13305.html" class="thread-row"><h2>忍辱不是忍受侮辱，一切不如意就是辱</h2><div class="th-meta">TID: 13305</div></a>
+<a href="../threads/13304.html" class="thread-row"><h2>人生中的“不自在”</h2><div class="th-meta">TID: 13304</div></a>
+<a href="../threads/13303.html" class="thread-row"><h2>公案｜相续中生起因果不虚的界限</h2><div class="th-meta">TID: 13303</div></a>
+<a href="../threads/13302.html" class="thread-row"><h2>慈悲也是要展现出来的</h2><div class="th-meta">TID: 13302</div></a>
+<a href="../threads/13301.html" class="thread-row"><h2>受皈依者能获四种功德</h2><div class="th-meta">TID: 13301</div></a>
+<a href="../threads/13300.html" class="thread-row"><h2>观自在菩萨的10个“自在”是什么？</h2><div class="th-meta">TID: 13300</div></a>
+<a href="../threads/13299.html" class="thread-row"><h2>面对衰老，多数人是措手不及</h2><div class="th-meta">TID: 13299</div></a>
+<a href="../threads/13297.html" class="thread-row"><h2>彼岸并不在彼处，净土也不仅在西方</h2><div class="th-meta">TID: 13297</div></a>
+<a href="../threads/13296.html" class="thread-row"><h2>瑞相</h2><div class="th-meta">TID: 13296</div></a>
+<a href="../threads/13294.html" class="thread-row"><h2>公案｜因果不昧 行善积福</h2><div class="th-meta">TID: 13294</div></a>
+<a href="../threads/13293.html" class="thread-row"><h2>《世间芬陀》赤子之心</h2><div class="th-meta">TID: 13293</div></a>
+<a href="../threads/13291.html" class="thread-row"><h2>八苦诗</h2><div class="th-meta">TID: 13291</div></a>
+<a href="../threads/13288.html" class="thread-row"><h2>父母兄弟在我们的前世是谁？</h2><div class="th-meta">TID: 13288</div></a>
+<a href="../threads/13287.html" class="thread-row"><h2>在病中体会什么是「身外之物</h2><div class="th-meta">TID: 13287</div></a>
+<a href="../threads/13286.html" class="thread-row"><h2>八关斋戒｜为诸有情义利</h2><div class="th-meta">TID: 13286</div></a>
+<a href="../threads/13284.html" class="thread-row"><h2>倘若在人间念他的名字作回向，马上即可脱离恶趣之身</h2><div class="th-meta">TID: 13284</div></a>
+<a href="../threads/13282.html" class="thread-row"><h2>《世间芬陀》人中龙凤</h2><div class="th-meta">TID: 13282</div></a>
+<a href="../threads/13280.html" class="thread-row"><h2>你知道“供香”的功德和意义吗？</h2><div class="th-meta">TID: 13280</div></a>
+<a href="../threads/13279.html" class="thread-row"><h2>死亡的教育</h2><div class="th-meta">TID: 13279</div></a>
+<a href="../threads/13278.html" class="thread-row"><h2>结缘类｜殊胜法本</h2><div class="th-meta">TID: 13278</div></a>
+<a href="../threads/13277.html" class="thread-row"><h2>每个当下好好用功，这就是一个优秀的修行者</h2><div class="th-meta">TID: 13277</div></a>
+<a href="../threads/13275.html" class="thread-row"><h2>佛菩萨的指点</h2><div class="th-meta">TID: 13275</div></a>
+<a href="../threads/13273.html" class="thread-row"><h2>消业障最快的方法</h2><div class="th-meta">TID: 13273</div></a>
+<a href="../threads/13272.html" class="thread-row"><h2>供养｜次第修习供养</h2><div class="th-meta">TID: 13272</div></a>
+<a href="../threads/13271.html" class="thread-row"><h2>极乐世界的“考试”，怎样才能合格？</h2><div class="th-meta">TID: 13271</div></a>
+<a href="../threads/13270.html" class="thread-row"><h2>诵经的诀窍与功德</h2><div class="th-meta">TID: 13270</div></a>
+<a href="../threads/13269.html" class="thread-row"><h2>憨山大师融贯诸法的境界</h2><div class="th-meta">TID: 13269</div></a>
+<a href="../threads/13267.html" class="thread-row"><h2>学佛修持人必看 | 憨山大师留下的肺腑之言</h2><div class="th-meta">TID: 13267</div></a>
+<a href="../threads/13265.html" class="thread-row"><h2>有一种帮助，是祈祷</h2><div class="th-meta">TID: 13265</div></a>
+<a href="../threads/13264.html" class="thread-row"><h2>净土宗历代祖师｜十二祖彻悟大师</h2><div class="th-meta">TID: 13264</div></a>
+<a href="../threads/13263.html" class="thread-row"><h2>佛法就是三藏和三学</h2><div class="th-meta">TID: 13263</div></a>
+<a href="../threads/13262.html" class="thread-row"><h2>大安法师：抓住散念，时时念佛</h2><div class="th-meta">TID: 13262</div></a>
+<a href="../threads/13260.html" class="thread-row"><h2>竹窗随笔 | 出谷喻</h2><div class="th-meta">TID: 13260</div></a>
+<a href="../threads/13259.html" class="thread-row"><h2>用修行面对一切</h2><div class="th-meta">TID: 13259</div></a>
+<a href="../threads/13258.html" class="thread-row"><h2>皈依后的学处有哪些？</h2><div class="th-meta">TID: 13258</div></a>
+<a href="../threads/13256.html" class="thread-row"><h2>为什么一定要修大乘道？</h2><div class="th-meta">TID: 13256</div></a>
+<a href="../threads/13254.html" class="thread-row"><h2>精进念佛后为什么家庭和事业更不顺？</h2><div class="th-meta">TID: 13254</div></a>
+<a href="../threads/13253.html" class="thread-row"><h2>为什么总感觉钱不够呢？</h2><div class="th-meta">TID: 13253</div></a>
+<a href="../threads/13252.html" class="thread-row"><h2>放下屠刀立地成佛，真的可以吗？</h2><div class="th-meta">TID: 13252</div></a>
+<a href="../threads/13251.html" class="thread-row"><h2>一定要记住自己的法名，命终时会有大用处</h2><div class="th-meta">TID: 13251</div></a>
+<a href="../threads/13250.html" class="thread-row"><h2>｜宽一分，民受赐不止一分；取一文，我为人不值一文</h2><div class="th-meta">TID: 13250</div></a>
+<a href="../threads/13249.html" class="thread-row"><h2>佛陀没有“保质期”，祂永远有效</h2><div class="th-meta">TID: 13249</div></a>
+<a href="../threads/13248.html" class="thread-row"><h2>腊八，让我们一起对佛陀做个 “ 语承事 ”。</h2><div class="th-meta">TID: 13248</div></a>
+<a href="../threads/13247.html" class="thread-row"><h2>佛教 || 我的宗教，是生死无悔。</h2><div class="th-meta">TID: 13247</div></a>
+<a href="../threads/13243.html" class="thread-row"><h2>释迦牟尼佛成道吉日 | 穿越千年，再次领受超越时空的加持</h2><div class="th-meta">TID: 13243</div></a>
+<a href="../threads/13242.html" class="thread-row"><h2>磕头的意义</h2><div class="th-meta">TID: 13242</div></a>
+<a href="../threads/13241.html" class="thread-row"><h2>失去财富，法律纠纷等，都源于我执，无一例外。</h2><div class="th-meta">TID: 13241</div></a>
+<a href="../threads/13239.html" class="thread-row"><h2>公案｜赤珍珠</h2><div class="th-meta">TID: 13239</div></a>
+<a href="../threads/13235.html" class="thread-row"><h2>公案｜十念成就</h2><div class="th-meta">TID: 13235</div></a>
+<a href="../threads/13234.html" class="thread-row"><h2>“解缚咒 ” 为我等今生，消尽一切烦恼、魔障之唯一宝剑！</h2><div class="th-meta">TID: 13234</div></a>
+<a href="../threads/13233.html" class="thread-row"><h2>福慧嘉言｜处逸乐而欲不放，居贫苦而志不倦</h2><div class="th-meta">TID: 13233</div></a>
+<a href="../threads/13232.html" class="thread-row"><h2>新年祈愿：两个珍贵的祈愿文（中英）</h2><div class="th-meta">TID: 13232</div></a>
+<a href="../threads/13230.html" class="thread-row"><h2>天天诵经、打坐，是不是在修持善法还要看有没有这个</h2><div class="th-meta">TID: 13230</div></a>
+<a href="../threads/13228.html" class="thread-row"><h2>土地神之供祈</h2><div class="th-meta">TID: 13228</div></a>
+<a href="../threads/13227.html" class="thread-row"><h2>佛陀开示狼狗的故事</h2><div class="th-meta">TID: 13227</div></a>
+<a href="../threads/13226.html" class="thread-row"><h2>什么是传承</h2><div class="th-meta">TID: 13226</div></a>
+<a href="../threads/13223.html" class="thread-row"><h2>游戏规则</h2><div class="th-meta">TID: 13223</div></a>
+<a href="../threads/13222.html" class="thread-row"><h2>竹窗随笔 | 四十二章经</h2><div class="th-meta">TID: 13222</div></a>
+<a href="../threads/13219.html" class="thread-row"><h2>我们一再错过机会</h2><div class="th-meta">TID: 13219</div></a>
+<a href="../threads/13218.html" class="thread-row"><h2>动机就决定三士道三皈依</h2><div class="th-meta">TID: 13218</div></a>
+<a href="../threads/13217.html" class="thread-row"><h2>欲界众生的欲乐本质上是什么？</h2><div class="th-meta">TID: 13217</div></a>
+<a href="../threads/13216.html" class="thread-row"><h2>能够冲破这一关，以后无论什么事就比较不会起烦恼 ！</h2><div class="th-meta">TID: 13216</div></a>
+<a href="../threads/13215.html" class="thread-row"><h2>有佛法就有办法</h2><div class="th-meta">TID: 13215</div></a>
+<a href="../threads/13214.html" class="thread-row"><h2>欺骗的伤害</h2><div class="th-meta">TID: 13214</div></a>
+<a href="../threads/13213.html" class="thread-row"><h2>是什么使得恩怨流转不息</h2><div class="th-meta">TID: 13213</div></a>
+<a href="../threads/13212.html" class="thread-row"><h2>对治烦恼就是对自己慈悲</h2><div class="th-meta">TID: 13212</div></a>
+<a href="../threads/13210.html" class="thread-row"><h2>佛家七种财，你拥有几种？</h2><div class="th-meta">TID: 13210</div></a>
+<a href="../threads/13208.html" class="thread-row"><h2>说话要“信言具足”</h2><div class="th-meta">TID: 13208</div></a>
+<a href="../threads/13205.html" class="thread-row"><h2>命运，就是一场因果轮回</h2><div class="th-meta">TID: 13205</div></a>
+<a href="../threads/13204.html" class="thread-row"><h2>必须立即作回向，这非常重要</h2><div class="th-meta">TID: 13204</div></a>
+<a href="../threads/13203.html" class="thread-row"><h2>一个修练慈悲心的方法</h2><div class="th-meta">TID: 13203</div></a>
+<a href="../threads/13202.html" class="thread-row"><h2>内心习气决定了我们的世界观</h2><div class="th-meta">TID: 13202</div></a>
+<a href="../threads/13201.html" class="thread-row"><h2>守持戒律并不难</h2><div class="th-meta">TID: 13201</div></a>
+<a href="../threads/13199.html" class="thread-row"><h2>真正的“心地善良”是什么？</h2><div class="th-meta">TID: 13199</div></a>
+<a href="../threads/13197.html" class="thread-row"><h2>最简单的增福除障法——供水</h2><div class="th-meta">TID: 13197</div></a>
+<a href="../threads/13196.html" class="thread-row"><h2>没有人拥有佛陀教法的版权，他们属于这个世界</h2><div class="th-meta">TID: 13196</div></a>
+<a href="../threads/13194.html" class="thread-row"><h2>从顽劣凡夫骤然摇身成为一代高僧的澍葊法师</h2><div class="th-meta">TID: 13194</div></a>
+<a href="../threads/13192.html" class="thread-row"><h2>脾气嘴巴不好，心地再好，也不能算好人</h2><div class="th-meta">TID: 13192</div></a>
+<a href="../threads/13191.html" class="thread-row"><h2>你这样治自己，治一两回就不忘了</h2><div class="th-meta">TID: 13191</div></a>
+<a href="../threads/13190.html" class="thread-row"><h2>净土宗历代祖师｜十祖截流大师</h2><div class="th-meta">TID: 13190</div></a>
+<a href="../threads/13189.html" class="thread-row"><h2>对修行人来说，吃肉是件需深思熟虑的事！</h2><div class="th-meta">TID: 13189</div></a>
+<a href="../threads/13188.html" class="thread-row"><h2>竹窗随笔 | 大鉴大通</h2><div class="th-meta">TID: 13188</div></a>
+<a href="../threads/13187.html" class="thread-row"><h2>觉知与慈悲</h2><div class="th-meta">TID: 13187</div></a>
+<a href="../threads/13186.html" class="thread-row"><h2>为什么总看别人这也不是那也不是？就是功夫没上正规！</h2><div class="th-meta">TID: 13186</div></a>
+<a href="../threads/13184.html" class="thread-row"><h2>龙中最尊 · 龙尊王佛咒</h2><div class="th-meta">TID: 13184</div></a>
+<a href="../threads/13183.html" class="thread-row"><h2>供赞 “ 龙王 ”，惩治污染海洋生态环境者</h2><div class="th-meta">TID: 13183</div></a>
+<a href="../threads/13181.html" class="thread-row"><h2>学会赞扬</h2><div class="th-meta">TID: 13181</div></a>
+<a href="../threads/13179.html" class="thread-row"><h2>修施舍心的目的是什么</h2><div class="th-meta">TID: 13179</div></a>
+<a href="../threads/13178.html" class="thread-row"><h2>公案｜念自性弥陀，还是念极乐弥陀？</h2><div class="th-meta">TID: 13178</div></a>
+<a href="../threads/13176.html" class="thread-row"><h2>有念佛的，和没念佛的，来到这里，我一看就知道了 ！</h2><div class="th-meta">TID: 13176</div></a>
+<a href="../threads/13175.html" class="thread-row"><h2>受三皈的道友们，晚上睡觉之前，一定要这样念十声</h2><div class="th-meta">TID: 13175</div></a>
+<a href="../threads/13174.html" class="thread-row"><h2>没有能力的情况下如何积福？</h2><div class="th-meta">TID: 13174</div></a>
+<a href="../threads/13173.html" class="thread-row"><h2>为什么会碰到这些红包大师？因为你自己想和佛法做生意！</h2><div class="th-meta">TID: 13173</div></a>
+<a href="../threads/13171.html" class="thread-row"><h2>学佛的基本原理</h2><div class="th-meta">TID: 13171</div></a>
+<a href="../threads/13170.html" class="thread-row"><h2>蕅益大师：淡世情</h2><div class="th-meta">TID: 13170</div></a>
+<a href="../threads/13169.html" class="thread-row"><h2>竹窗随笔 | 为父母杀生</h2><div class="th-meta">TID: 13169</div></a>
+<a href="../threads/13167.html" class="thread-row"><h2>奇！黑龙怪乞求授幽冥戒</h2><div class="th-meta">TID: 13167</div></a>
+<a href="../threads/13166.html" class="thread-row"><h2>此生，我们选择了皈依三宝</h2><div class="th-meta">TID: 13166</div></a>
+<a href="../threads/13165.html" class="thread-row"><h2>诸佛子等，若闻 “ 多宝如来 ” 名号，能令汝等具足财宝。</h2><div class="th-meta">TID: 13165</div></a>
+<a href="../threads/13164.html" class="thread-row"><h2>串习这个修法，烦恼就会越来越少</h2><div class="th-meta">TID: 13164</div></a>
+<a href="../threads/13163.html" class="thread-row"><h2>供灯，极容易让福报放大</h2><div class="th-meta">TID: 13163</div></a>
+<a href="../threads/13162.html" class="thread-row"><h2>不要把自己的未来推向悬崖</h2><div class="th-meta">TID: 13162</div></a>
+<a href="../threads/13161.html" class="thread-row"><h2>公案｜佛也度不了她</h2><div class="th-meta">TID: 13161</div></a>
+<a href="../threads/13159.html" class="thread-row"><h2>这种布施的结果是无量的</h2><div class="th-meta">TID: 13159</div></a>
+<a href="../threads/13157.html" class="thread-row"><h2>供灯发愿文</h2><div class="th-meta">TID: 13157</div></a>
+<a href="../threads/13156.html" class="thread-row"><h2>祈愿的动机</h2><div class="th-meta">TID: 13156</div></a>
+<a href="../threads/13154.html" class="thread-row"><h2>供养两位善知识给师兄们</h2><div class="th-meta">TID: 13154</div></a>
+<a href="../threads/13153.html" class="thread-row"><h2>什么是阳德和阴德，什么又是福德和功德？</h2><div class="th-meta">TID: 13153</div></a>
+<a href="../threads/13152.html" class="thread-row"><h2>以何种心态放生，能消宿世恶业</h2><div class="th-meta">TID: 13152</div></a>
+<a href="../threads/13150.html" class="thread-row"><h2>口业清净得大智慧</h2><div class="th-meta">TID: 13150</div></a>
+<a href="../threads/13149.html" class="thread-row"><h2>一位大阿罗汉谈自己宿世：一念之差91劫轮回与500世做狗</h2><div class="th-meta">TID: 13149</div></a>
+<a href="../threads/13148.html" class="thread-row"><h2>净土宗历代祖师｜九祖蕅益大师</h2><div class="th-meta">TID: 13148</div></a>
+<a href="../threads/13144.html" class="thread-row"><h2>世俗谛与胜义谛</h2><div class="th-meta">TID: 13144</div></a>
+<a href="../threads/13143.html" class="thread-row"><h2>忏悔很重要</h2><div class="th-meta">TID: 13143</div></a>
+<a href="../threads/13142.html" class="thread-row"><h2>如何思维死时唯有善法能利益自己？</h2><div class="th-meta">TID: 13142</div></a>
+<a href="../threads/13141.html" class="thread-row"><h2>恭迎阿弥陀佛圣诞｜阿弥陀佛像赞</h2><div class="th-meta">TID: 13141</div></a>
+<a href="../threads/13140.html" class="thread-row"><h2>大雁塔上的释迦牟尼足迹碑</h2><div class="th-meta">TID: 13140</div></a>
+<a href="../threads/13139.html" class="thread-row"><h2>布施一口水</h2><div class="th-meta">TID: 13139</div></a>
+<a href="../threads/13138.html" class="thread-row"><h2>透过练习我们的心，了解痛苦的情绪！</h2><div class="th-meta">TID: 13138</div></a>
+<a href="../threads/13137.html" class="thread-row"><h2>揭露内隐过患的法教，乃是最好的法教</h2><div class="th-meta">TID: 13137</div></a>
+<a href="../threads/13136.html" class="thread-row"><h2>公案｜月幢菩萨传八关斋戒救罪女</h2><div class="th-meta">TID: 13136</div></a>
+<a href="../threads/13135.html" class="thread-row"><h2>智慧慈悲本一体，观待角度善分析</h2><div class="th-meta">TID: 13135</div></a>
+<a href="../threads/13133.html" class="thread-row"><h2>接纳与改变</h2><div class="th-meta">TID: 13133</div></a>
+<a href="../threads/13131.html" class="thread-row"><h2>念咒时，观想将咒声与功德传遍法界！</h2><div class="th-meta">TID: 13131</div></a>
+<a href="../threads/13129.html" class="thread-row"><h2>普贤菩萨行忏悔时，都说了些什么？</h2><div class="th-meta">TID: 13129</div></a>
+<a href="../threads/13128.html" class="thread-row"><h2>智慧的财富</h2><div class="th-meta">TID: 13128</div></a>
+<a href="../threads/13127.html" class="thread-row"><h2>砍树和烧树叶可能会折寿</h2><div class="th-meta">TID: 13127</div></a>
+<a href="../threads/13126.html" class="thread-row"><h2>你要到何时才有空闲？</h2><div class="th-meta">TID: 13126</div></a>
+<a href="../threads/13125.html" class="thread-row"><h2>免费赠阅《净土》杂志</h2><div class="th-meta">TID: 13125</div></a>
+<a href="../threads/13124.html" class="thread-row"><h2>我们的常乐之铠</h2><div class="th-meta">TID: 13124</div></a>
+<a href="../threads/13120.html" class="thread-row"><h2>竹窗随笔 | 出家四料简</h2><div class="th-meta">TID: 13120</div></a>
+<a href="../threads/13116.html" class="thread-row"><h2>只要你堕过胎，这些事情早晚会发生在你的身上！</h2><div class="th-meta">TID: 13116</div></a>
+<a href="../threads/13115.html" class="thread-row"><h2>佛教里的&quot;慧&quot;是什么</h2><div class="th-meta">TID: 13115</div></a>
+<a href="../threads/13114.html" class="thread-row"><h2>净土宗历代祖师｜八祖莲池大师</h2><div class="th-meta">TID: 13114</div></a>
+<a href="../threads/13113.html" class="thread-row"><h2>闻思时的心态和实修时的心态完全不同</h2><div class="th-meta">TID: 13113</div></a>
+<a href="../threads/13111.html" class="thread-row"><h2>印光法师：凡供佛像 作真佛观</h2><div class="th-meta">TID: 13111</div></a>
+<a href="../threads/13110.html" class="thread-row"><h2>力倡修学《正法念处经》</h2><div class="th-meta">TID: 13110</div></a>
+<a href="../threads/13109.html" class="thread-row"><h2>一诚老和尚丨佛法二宝仰仗僧宝传承</h2><div class="th-meta">TID: 13109</div></a>
+<a href="../threads/13108.html" class="thread-row"><h2>修行人，以法自娱</h2><div class="th-meta">TID: 13108</div></a>
+<a href="../threads/13107.html" class="thread-row"><h2>百喻经故事：踏长者口喻</h2><div class="th-meta">TID: 13107</div></a>
+<a href="../threads/13106.html" class="thread-row"><h2>蕅益大师：昼夜弥陀十万声</h2><div class="th-meta">TID: 13106</div></a>
+<a href="../threads/13105.html" class="thread-row"><h2>竹窗随笔 | 出家利益</h2><div class="th-meta">TID: 13105</div></a>
+<a href="../threads/13104.html" class="thread-row"><h2>亲近三宝一定要柔软、虔诚</h2><div class="th-meta">TID: 13104</div></a>
+<a href="../threads/13103.html" class="thread-row"><h2>长相端正美丽是什么因缘</h2><div class="th-meta">TID: 13103</div></a>
+<a href="../threads/13102.html" class="thread-row"><h2>紫柏大师：学者求道，第一莫疑师</h2><div class="th-meta">TID: 13102</div></a>
+<a href="../threads/13101.html" class="thread-row"><h2>趁年轻努力且严格地修行</h2><div class="th-meta">TID: 13101</div></a>
+<a href="../threads/13099.html" class="thread-row"><h2>痛苦是你最好的老师！</h2><div class="th-meta">TID: 13099</div></a>
+<a href="../threads/13095.html" class="thread-row"><h2>把整年所修善业，做一个圆满的回向！</h2><div class="th-meta">TID: 13095</div></a>
+<a href="../threads/13094.html" class="thread-row"><h2>Merry Christmas</h2><div class="th-meta">TID: 13094</div></a>
+<a href="../threads/13093.html" class="thread-row"><h2>即使生起的瞋恨心很小，它所造成的业障也是很大的</h2><div class="th-meta">TID: 13093</div></a>
+<a href="../threads/13092.html" class="thread-row"><h2>必须要反复超度亡灵，改变你的不顺！</h2><div class="th-meta">TID: 13092</div></a>
+<a href="../threads/13090.html" class="thread-row"><h2>【法语 • 甘露】佛教里没有“灵魂”这个说法</h2><div class="th-meta">TID: 13090</div></a>
+<a href="../threads/13089.html" class="thread-row"><h2>谤法罪</h2><div class="th-meta">TID: 13089</div></a>
+<a href="../threads/13088.html" class="thread-row"><h2>此四个为何称为圣「谛」</h2><div class="th-meta">TID: 13088</div></a>
+<a href="../threads/13087.html" class="thread-row"><h2>佛法的四句总偈</h2><div class="th-meta">TID: 13087</div></a>
+<a href="../threads/13086.html" class="thread-row"><h2>《佛说入胎经》胎儿成长到出胎的过程</h2><div class="th-meta">TID: 13086</div></a>
+<a href="../threads/13083.html" class="thread-row"><h2>五台山罗睺寺罗睺罗真身</h2><div class="th-meta">TID: 13083</div></a>
+<a href="../threads/13082.html" class="thread-row"><h2>梦参老和尚：走到公园、动物园里，你这么做，就是度众生</h2><div class="th-meta">TID: 13082</div></a>
+<a href="../threads/13081.html" class="thread-row"><h2>我必须反复强调四圣谛与十二缘起</h2><div class="th-meta">TID: 13081</div></a>
+<a href="../threads/13080.html" class="thread-row"><h2>佛陀为何要讲四圣谛？</h2><div class="th-meta">TID: 13080</div></a>
+<a href="../threads/13076.html" class="thread-row"><h2>善友难遇，闻法是最胜友</h2><div class="th-meta">TID: 13076</div></a>
+<a href="../threads/13075.html" class="thread-row"><h2>引经论为证，这才是最增长福报的修行</h2><div class="th-meta">TID: 13075</div></a>
+<a href="../threads/13074.html" class="thread-row"><h2>引导他人安立皈依的重要性</h2><div class="th-meta">TID: 13074</div></a>
+<a href="../threads/13073.html" class="thread-row"><h2>陈坤：我为什么一再推荐《西藏生死书》</h2><div class="th-meta">TID: 13073</div></a>
+<a href="../threads/13072.html" class="thread-row"><h2>皈依体是无死甘露</h2><div class="th-meta">TID: 13072</div></a>
+<a href="../threads/13071.html" class="thread-row"><h2>八关斋戒｜全知和遍知的智慧怎么来的呢？</h2><div class="th-meta">TID: 13071</div></a>
+<a href="../threads/13070.html" class="thread-row"><h2>自作自受，与他人无关</h2><div class="th-meta">TID: 13070</div></a>
+<a href="../threads/13069.html" class="thread-row"><h2>对般若法门产生怀疑都需要福报</h2><div class="th-meta">TID: 13069</div></a>
+<a href="../threads/13068.html" class="thread-row"><h2>梦参老和尚：别小看为畜生授三皈，它来生就要亲近三宝</h2><div class="th-meta">TID: 13068</div></a>
+<a href="../threads/13067.html" class="thread-row"><h2>引导他人安立皈依的重要性</h2><div class="th-meta">TID: 13067</div></a>
+<a href="../threads/13066.html" class="thread-row"><h2>供水 · 为自己积累福报资粮</h2><div class="th-meta">TID: 13066</div></a>
+<a href="../threads/13065.html" class="thread-row"><h2>最好在睡梦中，都要记得念佛（圆瑛法师） [复制链接]</h2><div class="th-meta">TID: 13065</div></a>
+<a href="../threads/13064.html" class="thread-row"><h2>睡梦中念佛不断 咋做到的</h2><div class="th-meta">TID: 13064</div></a>
+<a href="../threads/13061.html" class="thread-row"><h2>不惜身命供养鲜花得佛授记</h2><div class="th-meta">TID: 13061</div></a>
+<a href="../threads/13060.html" class="thread-row"><h2>念头如同闯入一座空宅的小偷</h2><div class="th-meta">TID: 13060</div></a>
+<a href="../threads/13059.html" class="thread-row"><h2>是因果不虚，不是因果不空</h2><div class="th-meta">TID: 13059</div></a>
+<a href="../threads/13058.html" class="thread-row"><h2>学习大藏经</h2><div class="th-meta">TID: 13058</div></a>
+<a href="../threads/13057.html" class="thread-row"><h2>大乘修行之根本|三殊胜</h2><div class="th-meta">TID: 13057</div></a>
+<a href="../threads/13056.html" class="thread-row"><h2>免费结缘佛塔，长期</h2><div class="th-meta">TID: 13056</div></a>
+<a href="../threads/13042.html" class="thread-row"><h2>关于《三摩地王经》或者 《月灯请问等持经》</h2><div class="th-meta">TID: 13042</div></a>
+<a href="../threads/13040.html" class="thread-row"><h2>白度母像</h2><div class="th-meta">TID: 13040</div></a>
+<a href="../threads/13039.html" class="thread-row"><h2>黄色叶衣佛母</h2><div class="th-meta">TID: 13039</div></a>
+<a href="../threads/13037.html" class="thread-row"><h2>释迦牟尼佛礼赞文</h2><div class="th-meta">TID: 13037</div></a>
+<a href="../threads/13035.html" class="thread-row"><h2>酥油灯简介</h2><div class="th-meta">TID: 13035</div></a>
+<a href="../threads/13032.html" class="thread-row"><h2>六臂怙主的精要祈请文</h2><div class="th-meta">TID: 13032</div></a>
+<a href="../threads/13020.html" class="thread-row"><h2>祛湿化瘀方，铲除色身障碍</h2><div class="th-meta">TID: 13020</div></a>
+<a href="../threads/13019.html" class="thread-row"><h2>升阳除湿、填充髓海、为打开大乐轮做准备的妙方</h2><div class="th-meta">TID: 13019</div></a>
+<a href="../threads/13018.html" class="thread-row"><h2>祛湿助禅方（专为打坐祛湿设计，凌厉峻猛）</h2><div class="th-meta">TID: 13018</div></a>
+<a href="../threads/13017.html" class="thread-row"><h2>敬献轻安打坐第一方《独桂汤》</h2><div class="th-meta">TID: 13017</div></a>
+<a href="../threads/13016.html" class="thread-row"><h2>治疗肾阳不足及辅助打坐的古方</h2><div class="th-meta">TID: 13016</div></a>
+<a href="../threads/13015.html" class="thread-row"><h2>经典里一些药方的梵文名与中药的对照表</h2><div class="th-meta">TID: 13015</div></a>
+<a href="../threads/13014.html" class="thread-row"><h2>真言密教之念诵法</h2><div class="th-meta">TID: 13014</div></a>
+<a href="../threads/13003.html" class="thread-row"><h2>The Mythical Navagunjara</h2><div class="th-meta">TID: 13003</div></a>
+<a href="../threads/13000.html" class="thread-row"><h2>藏密各派对药师法门之推崇赞叹</h2><div class="th-meta">TID: 13000</div></a>
+<a href="../threads/12997.html" class="thread-row"><h2>大白伞盖佛母四句祈祷文</h2><div class="th-meta">TID: 12997</div></a>
+<a href="../threads/12968.html" class="thread-row"><h2>免费结缘经书手抄本</h2><div class="th-meta">TID: 12968</div></a>
+<a href="../threads/12967.html" class="thread-row"><h2>免费结缘经书手抄本</h2><div class="th-meta">TID: 12967</div></a>
+<a href="../threads/12966.html" class="thread-row"><h2>宁波大慈寺四月初八放生法会</h2><div class="th-meta">TID: 12966</div></a>
+<a href="../threads/12878.html" class="thread-row"><h2>修行人不要被魔灵附体</h2><div class="th-meta">TID: 12878</div></a>
+<a href="../threads/12544.html" class="thread-row"><h2>请问，如何能浏览私密板块？</h2><div class="th-meta">TID: 12544</div></a>
+<a href="../threads/9624.html" class="thread-row"><h2>金刚瑜伽母原图</h2><div class="th-meta">TID: 9624</div></a>
+<a href="../threads/9308.html" class="thread-row"><h2>季羡林亲历的奇异事件</h2><div class="th-meta">TID: 9308</div></a>
+<a href="../threads/9039.html" class="thread-row"><h2>感恩每个人才是真学佛</h2><div class="th-meta">TID: 9039</div></a>
+<a href="../threads/9026.html" class="thread-row"><h2>莲师对于本尊法的珍贵口授</h2><div class="th-meta">TID: 9026</div></a>
+<a href="../threads/8483.html" class="thread-row"><h2>转动手腕脚腕，能调动全身十二条经络所有的原穴</h2><div class="th-meta">TID: 8483</div></a>
+<a href="../threads/8315.html" class="thread-row"><h2>印度朝圣不为祈福 只为途中一路拜忏（感人学佛历程）</h2><div class="th-meta">TID: 8315</div></a>
+<a href="../threads/8295.html" class="thread-row"><h2>印度朝圣：释迦牟尼佛舍利产生前后及殊胜加持</h2><div class="th-meta">TID: 8295</div></a>
+<a href="../threads/8238.html" class="thread-row"><h2>挂经幡简略仪轨</h2><div class="th-meta">TID: 8238</div></a>
+<a href="../threads/8196.html" class="thread-row"><h2>双身本尊佛是独自观修在自身脉轮中的密法</h2><div class="th-meta">TID: 8196</div></a>
+<a href="../threads/8185.html" class="thread-row"><h2>青藏高原禅修大师：解   锁</h2><div class="th-meta">TID: 8185</div></a>
+<a href="../threads/8184.html" class="thread-row"><h2>修行与生活</h2><div class="th-meta">TID: 8184</div></a>
+<a href="../threads/8183.html" class="thread-row"><h2>内省训练方法（让身心气脉更灵敏）</h2><div class="th-meta">TID: 8183</div></a>
+<a href="../threads/8053.html" class="thread-row"><h2>《红楼梦》里看中医</h2><div class="th-meta">TID: 8053</div></a>
+<a href="../threads/8052.html" class="thread-row"><h2>光绪宿疾，荷叶神曲一剂除</h2><div class="th-meta">TID: 8052</div></a>
+<a href="../threads/8051.html" class="thread-row"><h2>【西藏朝圣分享】我们的西藏朝圣礼佛 祈福净心之旅</h2><div class="th-meta">TID: 8051</div></a>
+<a href="../threads/8049.html" class="thread-row"><h2>孝顺人生之福田</h2><div class="th-meta">TID: 8049</div></a>
+<a href="../threads/8048.html" class="thread-row"><h2>劝世人，莫淫邪</h2><div class="th-meta">TID: 8048</div></a>
+<a href="../threads/8044.html" class="thread-row"><h2>【朝圣佛陀—释迦牟尼佛12岁等身像，种下解脱的因缘】</h2><div class="th-meta">TID: 8044</div></a>
+<a href="../threads/8021.html" class="thread-row"><h2>佛菩萨的弟子不赌博、不吸毒（谨防新毒品槟榔）</h2><div class="th-meta">TID: 8021</div></a>
+<a href="../threads/8019.html" class="thread-row"><h2>求知</h2><div class="th-meta">TID: 8019</div></a>
+<a href="../threads/8018.html" class="thread-row"><h2>三身佛号是什么？</h2><div class="th-meta">TID: 8018</div></a>
+<a href="../threads/8017.html" class="thread-row"><h2>三身佛</h2><div class="th-meta">TID: 8017</div></a>
+<a href="../threads/7945.html" class="thread-row"><h2>青藏高原禅修大师：解锁</h2><div class="th-meta">TID: 7945</div></a>
+<a href="../threads/7939.html" class="thread-row"><h2>密教中的香</h2><div class="th-meta">TID: 7939</div></a>
+<a href="../threads/7938.html" class="thread-row"><h2>一起组团去斯里兰卡看佛牙节吧！</h2><div class="th-meta">TID: 7938</div></a>
+<a href="../threads/7934.html" class="thread-row"><h2>斯里兰卡佛牙节——世界规模最大的佛教嘉年华</h2><div class="th-meta">TID: 7934</div></a>
+<a href="../threads/7929.html" class="thread-row"><h2>世间因果的145种果报</h2><div class="th-meta">TID: 7929</div></a>
+<a href="../threads/7928.html" class="thread-row"><h2>一个震撼的故事——因果不虚</h2><div class="th-meta">TID: 7928</div></a>
+<a href="../threads/7927.html" class="thread-row"><h2>从一名女香客到坚定的修行者，磕大头20万的过程。</h2><div class="th-meta">TID: 7927</div></a>
+<a href="../threads/7926.html" class="thread-row"><h2>亲历饿鬼和地狱后学佛极其精进</h2><div class="th-meta">TID: 7926</div></a>
+<a href="../threads/7925.html" class="thread-row"><h2>受持《般若摄颂》功德不可思议</h2><div class="th-meta">TID: 7925</div></a>
+<a href="../threads/7924.html" class="thread-row"><h2>佛说佛医经</h2><div class="th-meta">TID: 7924</div></a>
+<a href="../threads/7923.html" class="thread-row"><h2>活佛藏药治牙神效方</h2><div class="th-meta">TID: 7923</div></a>
+<a href="../threads/7913.html" class="thread-row"><h2>檀香一皇者之气</h2><div class="th-meta">TID: 7913</div></a>
+<a href="../threads/7906.html" class="thread-row"><h2>近代科学的三个重大发现，与佛法道理一致</h2><div class="th-meta">TID: 7906</div></a>
+<a href="../threads/7882.html" class="thread-row"><h2>善恶吉凶在心念之间</h2><div class="th-meta">TID: 7882</div></a>
+<a href="../threads/7880.html" class="thread-row"><h2>丹火透热疗法</h2><div class="th-meta">TID: 7880</div></a>
+<a href="../threads/7747.html" class="thread-row"><h2>自我教言</h2><div class="th-meta">TID: 7747</div></a>
+<a href="../threads/7357.html" class="thread-row"><h2>第二届大连金刚萨埵法会</h2><div class="th-meta">TID: 7357</div></a>
+<a href="../threads/7339.html" class="thread-row"><h2>回向</h2><div class="th-meta">TID: 7339</div></a>
+<a href="../threads/7260.html" class="thread-row"><h2>西方著名特异功能者：业力就像回旋镖！</h2><div class="th-meta">TID: 7260</div></a>
+<a href="../threads/7254.html" class="thread-row"><h2>閉關及日常迴向文</h2><div class="th-meta">TID: 7254</div></a>
+<a href="../threads/7233.html" class="thread-row"><h2>祈观音退水灾，数邻户齐获救-</h2><div class="th-meta">TID: 7233</div></a>
+<a href="../threads/7232.html" class="thread-row"><h2>念佛号的神奇感应：令人惊叹</h2><div class="th-meta">TID: 7232</div></a>
+<a href="../threads/7198.html" class="thread-row"><h2>正在播放-佛教导航视频网  佛教电影：超越轮回</h2><div class="th-meta">TID: 7198</div></a>
+<a href="../threads/7161.html" class="thread-row"><h2>百练还需一颤：绝妙的振颤健身法</h2><div class="th-meta">TID: 7161</div></a>
+<a href="../threads/7104.html" class="thread-row"><h2>自力佛力、持之以恒、因缘际会、愿望显现</h2><div class="th-meta">TID: 7104</div></a>
+<a href="../threads/7102.html" class="thread-row"><h2>信心——找到属于自己的那颗星星</h2><div class="th-meta">TID: 7102</div></a>
+<a href="../threads/7092.html" class="thread-row"><h2>护法神：佛教徒的保护神</h2><div class="th-meta">TID: 7092</div></a>
+<a href="../threads/7091.html" class="thread-row"><h2>佛教八部护法天神，护佑佛教作用最大</h2><div class="th-meta">TID: 7091</div></a>
+<a href="../threads/7090.html" class="thread-row"><h2>大德开示：供赞护法有何必要？</h2><div class="th-meta">TID: 7090</div></a>
+<a href="../threads/7078.html" class="thread-row"><h2>净土九品体会</h2><div class="th-meta">TID: 7078</div></a>
+<a href="../threads/7073.html" class="thread-row"><h2>准提行者即准提 行者生活即感应</h2><div class="th-meta">TID: 7073</div></a>
+<a href="../threads/7060.html" class="thread-row"><h2>修行的缘起</h2><div class="th-meta">TID: 7060</div></a>
+<a href="../threads/7045.html" class="thread-row"><h2>缘起是不是因果关系</h2><div class="th-meta">TID: 7045</div></a>
+<a href="../threads/7042.html" class="thread-row"><h2>为人处世标准：佛陀说善生经</h2><div class="th-meta">TID: 7042</div></a>
+<a href="../threads/7039.html" class="thread-row"><h2>相同的遭遇、不同的人生</h2><div class="th-meta">TID: 7039</div></a>
+<a href="../threads/7037.html" class="thread-row"><h2>筑牢基础增信心 一门深入需躬行</h2><div class="th-meta">TID: 7037</div></a>
+<a href="../threads/7035.html" class="thread-row"><h2>快乐，真的很简单（高七师）</h2><div class="th-meta">TID: 7035</div></a>
+<a href="../threads/7030.html" class="thread-row"><h2>让我深思的准提理念短信</h2><div class="th-meta">TID: 7030</div></a>
+<a href="../threads/7022.html" class="thread-row"><h2>迦叶辩服外道教徒，使其归依佛门</h2><div class="th-meta">TID: 7022</div></a>
+<a href="../threads/7021.html" class="thread-row"><h2>不可亲近恭敬供奉诸外道，罪过大（大方广如来秘密藏经）</h2><div class="th-meta">TID: 7021</div></a>
+<a href="../threads/7019.html" class="thread-row"><h2>破斥外道的《长阿含经》，否定了各种教义派别的观点</h2><div class="th-meta">TID: 7019</div></a>
+<a href="../threads/7003.html" class="thread-row"><h2>绝好妙法：这样的大善事很容易做到，功德很大！</h2><div class="th-meta">TID: 7003</div></a>
+<a href="../threads/7001.html" class="thread-row"><h2>不要破归依，要常常念诵三归依，可积累功德</h2><div class="th-meta">TID: 7001</div></a>
+<a href="../threads/6990.html" class="thread-row"><h2>秽迹金刚像全图</h2><div class="th-meta">TID: 6990</div></a>
+<a href="../threads/6987.html" class="thread-row"><h2>一些佛经中破斥外道，不令异见损众生故</h2><div class="th-meta">TID: 6987</div></a>
+<a href="../threads/6985.html" class="thread-row"><h2>请教正确的金刚念诵法 谢。</h2><div class="th-meta">TID: 6985</div></a>
+<a href="../threads/6976.html" class="thread-row"><h2>麻烦各位师兄帮忙看下这尊佛像叫什么</h2><div class="th-meta">TID: 6976</div></a>
+<a href="../threads/6972.html" class="thread-row"><h2>助印佛经，恶疮痊愈----云鹤教授</h2><div class="th-meta">TID: 6972</div></a>
+<a href="../threads/6970.html" class="thread-row"><h2>冤亲债主能否临终障碍往生-- 大安法师</h2><div class="th-meta">TID: 6970</div></a>
+<a href="../threads/6960.html" class="thread-row"><h2>不要谈论或传播关于比丘戒律的问提</h2><div class="th-meta">TID: 6960</div></a>
+<a href="../threads/6953.html" class="thread-row"><h2>在家居士护持三宝的功德非常殊胜</h2><div class="th-meta">TID: 6953</div></a>
+<a href="../threads/6935.html" class="thread-row"><h2>一世修成</h2><div class="th-meta">TID: 6935</div></a>
+<a href="../threads/6923.html" class="thread-row"><h2>拆寺毁佛招来现世报---亲身经历</h2><div class="th-meta">TID: 6923</div></a>
+<a href="../threads/6922.html" class="thread-row"><h2>毁灭佛教的古今历史权臣名人--现世报</h2><div class="th-meta">TID: 6922</div></a>
+<a href="../threads/6914.html" class="thread-row"><h2>学佛之 三殊胜</h2><div class="th-meta">TID: 6914</div></a>
+<a href="../threads/6908.html" class="thread-row"><h2>因为无知毁庙，灾祸连连而丧生</h2><div class="th-meta">TID: 6908</div></a>
+<a href="../threads/6907.html" class="thread-row"><h2>三十年已经过去，可怕的报应依然存在</h2><div class="th-meta">TID: 6907</div></a>
+<a href="../threads/6906.html" class="thread-row"><h2>清末时期毁庙兴学，惹的神灵怒惩</h2><div class="th-meta">TID: 6906</div></a>
+<a href="../threads/6897.html" class="thread-row"><h2>常用咒</h2><div class="th-meta">TID: 6897</div></a>
+<a href="../threads/6893.html" class="thread-row"><h2>佛说贤者五福德经</h2><div class="th-meta">TID: 6893</div></a>
+<a href="../threads/6822.html" class="thread-row"><h2>传播诽谤他人的言谈，口业最重——法师开示</h2><div class="th-meta">TID: 6822</div></a>
+<a href="../threads/6821.html" class="thread-row"><h2>不能在网上传播诽谤他人，增长恶业很快...</h2><div class="th-meta">TID: 6821</div></a>
+<a href="../threads/6816.html" class="thread-row"><h2>祈竹仁波切：布施度</h2><div class="th-meta">TID: 6816</div></a>
+<a href="../threads/6814.html" class="thread-row"><h2>海螺脉</h2><div class="th-meta">TID: 6814</div></a>
+<a href="../threads/6793.html" class="thread-row"><h2>供养自己上师福德更殊胜</h2><div class="th-meta">TID: 6793</div></a>
+<a href="../threads/6750.html" class="thread-row"><h2>色登寺课诵集</h2><div class="th-meta">TID: 6750</div></a>
+<a href="../threads/6742.html" class="thread-row"><h2>为什么造口业的果报很严重？如何避免？</h2><div class="th-meta">TID: 6742</div></a>
+<a href="../threads/6741.html" class="thread-row"><h2>可怕的口业：在传播中不断增长，不要造口业！</h2><div class="th-meta">TID: 6741</div></a>
+<a href="../threads/6740.html" class="thread-row"><h2>不要造口业，果报会随着传播而增长---不可不知</h2><div class="th-meta">TID: 6740</div></a>
+<a href="../threads/6678.html" class="thread-row"><h2>世间之物为我所用，非我所有</h2><div class="th-meta">TID: 6678</div></a>
+<a href="../threads/6674.html" class="thread-row"><h2>大乘修行人不能以五种邪命过活</h2><div class="th-meta">TID: 6674</div></a>
+<a href="../threads/6672.html" class="thread-row"><h2>君子的风度---星云大师</h2><div class="th-meta">TID: 6672</div></a>
+<a href="../threads/6670.html" class="thread-row"><h2>在生活中修行的35个办法</h2><div class="th-meta">TID: 6670</div></a>
+<a href="../threads/6669.html" class="thread-row"><h2>勿以恶小而为之，勿以善小而不为</h2><div class="th-meta">TID: 6669</div></a>
+<a href="../threads/6667.html" class="thread-row"><h2>戒贪得自在</h2><div class="th-meta">TID: 6667</div></a>
+<a href="../threads/6664.html" class="thread-row"><h2>善恶念能改命：对福德加减乘除</h2><div class="th-meta">TID: 6664</div></a>
+<a href="../threads/6661.html" class="thread-row"><h2>关于藏传佛教的法王称呼的介绍</h2><div class="th-meta">TID: 6661</div></a>
+<a href="../threads/6660.html" class="thread-row"><h2>怎样持经修定——印光大师开示</h2><div class="th-meta">TID: 6660</div></a>
+<a href="../threads/6654.html" class="thread-row"><h2>法供养最殊胜</h2><div class="th-meta">TID: 6654</div></a>
+<a href="../threads/6644.html" class="thread-row"><h2>地藏菩萨的功德利益</h2><div class="th-meta">TID: 6644</div></a>
+<a href="../threads/6640.html" class="thread-row"><h2>佛说众生云何发菩提心</h2><div class="th-meta">TID: 6640</div></a>
+<a href="../threads/6639.html" class="thread-row"><h2>孝心可贵，孝道难得</h2><div class="th-meta">TID: 6639</div></a>
+<a href="../threads/6638.html" class="thread-row"><h2>对于持诵准提咒的体悟</h2><div class="th-meta">TID: 6638</div></a>
+<a href="../threads/6633.html" class="thread-row"><h2>人间万事——烦恼的原因---星云大师</h2><div class="th-meta">TID: 6633</div></a>
+<a href="../threads/6613.html" class="thread-row"><h2>放纵欲念及嗔心的后果</h2><div class="th-meta">TID: 6613</div></a>
+<a href="../threads/6555.html" class="thread-row"><h2>齐家治国需要佛教</h2><div class="th-meta">TID: 6555</div></a>
+<a href="../threads/6548.html" class="thread-row"><h2>佛为何说不可于父母所生恶心？</h2><div class="th-meta">TID: 6548</div></a>
+<a href="../threads/6541.html" class="thread-row"><h2>如何布施能够去除三毒，圆满六度？</h2><div class="th-meta">TID: 6541</div></a>
+<a href="../threads/6536.html" class="thread-row"><h2>修行人的二十种病气</h2><div class="th-meta">TID: 6536</div></a>
+<a href="../threads/6535.html" class="thread-row"><h2>尽心尽力第一</h2><div class="th-meta">TID: 6535</div></a>
+<a href="../threads/6533.html" class="thread-row"><h2>利人便是利己</h2><div class="th-meta">TID: 6533</div></a>
+<a href="../threads/6532.html" class="thread-row"><h2>阎罗王派到人间的五个使者，您都认识吗？</h2><div class="th-meta">TID: 6532</div></a>
+<a href="../threads/6531.html" class="thread-row"><h2>积善之家，必有余庆——看一个财富旺族的发家传奇</h2><div class="th-meta">TID: 6531</div></a>
+<a href="../threads/6529.html" class="thread-row"><h2>佛教的人生格言</h2><div class="th-meta">TID: 6529</div></a>
+<a href="../threads/6527.html" class="thread-row"><h2>苏格拉底关于人生的教诲！</h2><div class="th-meta">TID: 6527</div></a>
+<a href="../threads/6526.html" class="thread-row"><h2>上士无争，下士好争</h2><div class="th-meta">TID: 6526</div></a>
+<a href="../threads/6521.html" class="thread-row"><h2>如何持咒？——持咒心得</h2><div class="th-meta">TID: 6521</div></a>
+<a href="../threads/6518.html" class="thread-row"><h2>厚德载物，深厚的德行才能承载福报受用</h2><div class="th-meta">TID: 6518</div></a>
+<a href="../threads/6515.html" class="thread-row"><h2>世尊的开示：造了谤法业如何灭除，如何避免谤法业</h2><div class="th-meta">TID: 6515</div></a>
+<a href="../threads/6510.html" class="thread-row"><h2>何谓正见？世间正见和出世正见</h2><div class="th-meta">TID: 6510</div></a>
+<a href="../threads/6509.html" class="thread-row"><h2>[诸经辑要]夫妻如何相处?</h2><div class="th-meta">TID: 6509</div></a>
+<a href="../threads/6506.html" class="thread-row"><h2>佛经很多地方提到重罪轻受！如何识别和转重罪为轻受？</h2><div class="th-meta">TID: 6506</div></a>
+<a href="../threads/6505.html" class="thread-row"><h2>心想就事成，有求皆如意，的方法和注意事项</h2><div class="th-meta">TID: 6505</div></a>
+<a href="../threads/6504.html" class="thread-row"><h2>世尊的开示：不饮酒醉的5种善果和喜饮酒醉的36种恶果</h2><div class="th-meta">TID: 6504</div></a>
+<a href="../threads/6500.html" class="thread-row"><h2>如何护国保民行无畏布施</h2><div class="th-meta">TID: 6500</div></a>
+<a href="../threads/6498.html" class="thread-row"><h2>阿弥陀佛、观世音菩萨、大势至菩萨的相貌</h2><div class="th-meta">TID: 6498</div></a>
+<a href="../threads/6495.html" class="thread-row"><h2>世尊的开示：人死后若有来世，为何不见有人回来报告？</h2><div class="th-meta">TID: 6495</div></a>
+<a href="../threads/6493.html" class="thread-row"><h2>何为四重恩</h2><div class="th-meta">TID: 6493</div></a>
+<a href="../threads/6492.html" class="thread-row"><h2>为什么修法后会遇到逆缘？</h2><div class="th-meta">TID: 6492</div></a>
+<a href="../threads/6491.html" class="thread-row"><h2>佛关于小恶也要戒除的开示</h2><div class="th-meta">TID: 6491</div></a>
+<a href="../threads/6488.html" class="thread-row"><h2>何谓菩萨净于五眼——肉眼、天眼、慧眼、法眼、佛眼</h2><div class="th-meta">TID: 6488</div></a>
+<a href="../threads/6486.html" class="thread-row"><h2>谦——识得一字，胜过千金！——曾仕强教授讲解</h2><div class="th-meta">TID: 6486</div></a>
+<a href="../threads/6485.html" class="thread-row"><h2>准提法皈依</h2><div class="th-meta">TID: 6485</div></a>
+<a href="../threads/6482.html" class="thread-row"><h2>人间无处不道场，事事处处皆佛事。</h2><div class="th-meta">TID: 6482</div></a>
+<a href="../threads/6477.html" class="thread-row"><h2>念了1300万遍《准提神咒》的美国外交官！</h2><div class="th-meta">TID: 6477</div></a>
+<a href="../threads/6472.html" class="thread-row"><h2>永明大师：日行108件佛事 （清单）——大赞叹！</h2><div class="th-meta">TID: 6472</div></a>
+<a href="../threads/6471.html" class="thread-row"><h2>躬行于善，厚积在德</h2><div class="th-meta">TID: 6471</div></a>
+<a href="../threads/6470.html" class="thread-row"><h2>虚云大师关于末法时代的开示（全文）</h2><div class="th-meta">TID: 6470</div></a>
+<a href="../threads/6469.html" class="thread-row"><h2>何为忍辱？怎样忍辱？看世尊是怎样教导我们的</h2><div class="th-meta">TID: 6469</div></a>
+<a href="../threads/6467.html" class="thread-row"><h2>和气生财！恶口者，得贫穷现世报！</h2><div class="th-meta">TID: 6467</div></a>
+<a href="../threads/6466.html" class="thread-row"><h2>您想发财求安乐吗？布施是最好的一个办法！</h2><div class="th-meta">TID: 6466</div></a>
+<a href="../threads/6465.html" class="thread-row"><h2>为什么有的人 先富后贫,有的却 先贫后富?经上这样说</h2><div class="th-meta">TID: 6465</div></a>
+<a href="../threads/6462.html" class="thread-row"><h2>如何令一切如来欢喜。何为佛门供养中最为第一？</h2><div class="th-meta">TID: 6462</div></a>
+<a href="../threads/6461.html" class="thread-row"><h2>每当遇到惹我生气的人或事，我就在心中默念这三句话</h2><div class="th-meta">TID: 6461</div></a>
+<a href="../threads/6460.html" class="thread-row"><h2>菩萨四摄法（布施、爱语、利行、同事）详解</h2><div class="th-meta">TID: 6460</div></a>
+<a href="../threads/6457.html" class="thread-row"><h2>佛陀涅槃前遗训</h2><div class="th-meta">TID: 6457</div></a>
+<a href="../threads/6454.html" class="thread-row"><h2>烧香祈福的正确方法</h2><div class="th-meta">TID: 6454</div></a>
+<a href="../threads/6442.html" class="thread-row"><h2>善有善报 但有四种善事会获得恶果 您知道吗</h2><div class="th-meta">TID: 6442</div></a>
+<a href="../threads/6419.html" class="thread-row"><h2>世尊的开示：如何对待父母、妻子、丈夫、儿女？</h2><div class="th-meta">TID: 6419</div></a>
+<a href="../threads/6418.html" class="thread-row"><h2>佛说孝子经（怎样才算真正的孝子？）</h2><div class="th-meta">TID: 6418</div></a>
+<a href="../threads/6417.html" class="thread-row"><h2>布施佛法的三十二大类奇妙功德远胜布施财物</h2><div class="th-meta">TID: 6417</div></a>
+<a href="../threads/6416.html" class="thread-row"><h2>十不善道的果报——节录自《大方广佛华严经》</h2><div class="th-meta">TID: 6416</div></a>
+<a href="../threads/6395.html" class="thread-row"><h2>怎样布施、才能获得最佳“现世报”，乃至彻底扭转命运？</h2><div class="th-meta">TID: 6395</div></a>
+<a href="../threads/6393.html" class="thread-row"><h2>供僧福德,不可思议</h2><div class="th-meta">TID: 6393</div></a>
+<a href="../threads/6391.html" class="thread-row"><h2>犯邪淫后如何令邪淫的果报变小或者不一定受果报？</h2><div class="th-meta">TID: 6391</div></a>
+<a href="../threads/6388.html" class="thread-row"><h2>我们今生努力修行获得无量福德会怎么样？</h2><div class="th-meta">TID: 6388</div></a>
+<a href="../threads/6382.html" class="thread-row"><h2>诵经的窍诀（很快得加持、开智慧）</h2><div class="th-meta">TID: 6382</div></a>
+<a href="../threads/6380.html" class="thread-row"><h2>不要到别的宗教网站论坛去发有关佛法的帖子</h2><div class="th-meta">TID: 6380</div></a>
+<a href="../threads/6374.html" class="thread-row"><h2>修习正念，给我们带来七大奇迹！ （一行禅师）</h2><div class="th-meta">TID: 6374</div></a>
+<a href="../threads/6373.html" class="thread-row"><h2>十不善的果报</h2><div class="th-meta">TID: 6373</div></a>
+<a href="../threads/6369.html" class="thread-row"><h2>菩萨如何修集大悲（心）？</h2><div class="th-meta">TID: 6369</div></a>
+<a href="../threads/6368.html" class="thread-row"><h2>有何方法可以远离身内外种种障碍烦恼？</h2><div class="th-meta">TID: 6368</div></a>
+<a href="../threads/6360.html" class="thread-row"><h2>三种法施，三种果报</h2><div class="th-meta">TID: 6360</div></a>
+<a href="../threads/6359.html" class="thread-row"><h2>云何名大乘。有七种大故名为大乘---节录自《菩萨地持经》</h2><div class="th-meta">TID: 6359</div></a>
+<a href="../threads/6339.html" class="thread-row"><h2>请上师开示</h2><div class="th-meta">TID: 6339</div></a>
+<a href="../threads/6295.html" class="thread-row"><h2>此生，让我遇见您---准提佛母</h2><div class="th-meta">TID: 6295</div></a>
+<a href="../threads/6285.html" class="thread-row"><h2>学会利用零碎和余暇的时间来修行准提法</h2><div class="th-meta">TID: 6285</div></a>
+<a href="../threads/6199.html" class="thread-row"><h2>功德利益不可思议的护身金刚结（缘起、种类、功德）</h2><div class="th-meta">TID: 6199</div></a>
+<a href="../threads/6198.html" class="thread-row"><h2>长寿法与幻身修法</h2><div class="th-meta">TID: 6198</div></a>
+<a href="../threads/6184.html" class="thread-row"><h2>师兄的鬼故事</h2><div class="th-meta">TID: 6184</div></a>
+<a href="../threads/6163.html" class="thread-row"><h2>生死感应</h2><div class="th-meta">TID: 6163</div></a>
+<a href="../threads/6140.html" class="thread-row"><h2>救苦甘露滴解脱醍醐</h2><div class="th-meta">TID: 6140</div></a>
+<a href="../threads/6106.html" class="thread-row"><h2>终于将《普贤行愿品》背下来了！</h2><div class="th-meta">TID: 6106</div></a>
+<a href="../threads/6071.html" class="thread-row"><h2>佛教科学论</h2><div class="th-meta">TID: 6071</div></a>
+<a href="../threads/6063.html" class="thread-row"><h2>为何修佛的人受到灾难</h2><div class="th-meta">TID: 6063</div></a>
+<a href="../threads/6054.html" class="thread-row"><h2>南开诺布仁波切传承上师</h2><div class="th-meta">TID: 6054</div></a>
+<a href="../threads/6053.html" class="thread-row"><h2>遍智龙钦巴尊者全集目录</h2><div class="th-meta">TID: 6053</div></a>
+<a href="../threads/6051.html" class="thread-row"><h2>南开诺布上师界部教授目录</h2><div class="th-meta">TID: 6051</div></a>
+<a href="../threads/6050.html" class="thread-row"><h2>南开诺布上师界部教授目录</h2><div class="th-meta">TID: 6050</div></a>
+<a href="../threads/6039.html" class="thread-row"><h2>临睡念佛</h2><div class="th-meta">TID: 6039</div></a>
+<a href="../threads/6038.html" class="thread-row"><h2>&lt;&lt;激励心念之歌&gt;&gt;</h2><div class="th-meta">TID: 6038</div></a>
+<a href="../threads/6035.html" class="thread-row"><h2>大乘大集地藏十轮经精华修法：具足水火吉祥光明大记明咒</h2><div class="th-meta">TID: 6035</div></a>
+<a href="../threads/6034.html" class="thread-row"><h2>发心的重要</h2><div class="th-meta">TID: 6034</div></a>
+<a href="../threads/6033.html" class="thread-row"><h2>临睡念佛</h2><div class="th-meta">TID: 6033</div></a>
+<a href="../threads/6032.html" class="thread-row"><h2>大圆满教法总纲性教授《金刚歌之口传》目录</h2><div class="th-meta">TID: 6032</div></a>
+<a href="../threads/6028.html" class="thread-row"><h2>三宝福田想</h2><div class="th-meta">TID: 6028</div></a>
+<a href="../threads/6027.html" class="thread-row"><h2>三宝医生想</h2><div class="th-meta">TID: 6027</div></a>
+<a href="../threads/6026.html" class="thread-row"><h2>僧伽吒经之功德利益</h2><div class="th-meta">TID: 6026</div></a>
+<a href="../threads/6016.html" class="thread-row"><h2>心要珍宝（敦珠法王·无畏智慧金刚）</h2><div class="th-meta">TID: 6016</div></a>
+<a href="../threads/6012.html" class="thread-row"><h2>伟大的阿育空行母传记</h2><div class="th-meta">TID: 6012</div></a>
+<a href="../threads/6011.html" class="thread-row"><h2>南凯诺布上师于一九八五年和八六年期间所著的一段话</h2><div class="th-meta">TID: 6011</div></a>
+<a href="../threads/6010.html" class="thread-row"><h2>贡噶法狮子讲授《抉择见》</h2><div class="th-meta">TID: 6010</div></a>
+<a href="../threads/6008.html" class="thread-row"><h2>《当阿佐》-窍诀教诫藏目录</h2><div class="th-meta">TID: 6008</div></a>
+<a href="../threads/6007.html" class="thread-row"><h2>雍仲本教大圆满的来源--相似佛法的苯教很容易被混淆</h2><div class="th-meta">TID: 6007</div></a>
+<a href="../threads/6006.html" class="thread-row"><h2>简介宁玛文化丛书</h2><div class="th-meta">TID: 6006</div></a>
+<a href="../threads/6005.html" class="thread-row"><h2>《激励心念之歌》</h2><div class="th-meta">TID: 6005</div></a>
+<a href="../threads/6003.html" class="thread-row"><h2>觉囊派多罗那他尊者略传及著作全集目录</h2><div class="th-meta">TID: 6003</div></a>
+<a href="../threads/6002.html" class="thread-row"><h2>象雄地区的远古王朝</h2><div class="th-meta">TID: 6002</div></a>
+<a href="../threads/6001.html" class="thread-row"><h2>《大圆满法界光明空行心滴-龙萨法藏》简介</h2><div class="th-meta">TID: 6001</div></a>
+<a href="../threads/5989.html" class="thread-row"><h2>冈底斯山之光，象雄与西藏的历史</h2><div class="th-meta">TID: 5989</div></a>
+<a href="../threads/5988.html" class="thread-row"><h2>贡噶仁波切赐予南凯诺布仁波切的预言授记</h2><div class="th-meta">TID: 5988</div></a>
+<a href="../threads/5983.html" class="thread-row"><h2>（大圆满）觉性之杜鹃-----六金刚句与释论</h2><div class="th-meta">TID: 5983</div></a>
+<a href="../threads/5981.html" class="thread-row"><h2>大圆满之奇迹—毗卢遮那心部教授二</h2><div class="th-meta">TID: 5981</div></a>
+<a href="../threads/5980.html" class="thread-row"><h2>南开诺布上师开示：大圆满之奇迹—毗卢遮那心部教授一</h2><div class="th-meta">TID: 5980</div></a>
+<a href="../threads/5960.html" class="thread-row"><h2>世界龙族</h2><div class="th-meta">TID: 5960</div></a>
+<a href="../threads/5956.html" class="thread-row"><h2>佛教名词释义</h2><div class="th-meta">TID: 5956</div></a>
+<a href="../threads/5952.html" class="thread-row"><h2>选自印光大师文集－－基本做人之理</h2><div class="th-meta">TID: 5952</div></a>
+<a href="../threads/5948.html" class="thread-row"><h2>以佛陀的名义</h2><div class="th-meta">TID: 5948</div></a>
+<a href="../threads/5941.html" class="thread-row"><h2>香巴拉天国的故事</h2><div class="th-meta">TID: 5941</div></a>
+<a href="../threads/5938.html" class="thread-row"><h2>藏传佛教四大神山</h2><div class="th-meta">TID: 5938</div></a>
+<a href="../threads/5932.html" class="thread-row"><h2>文殊九宫八卦咒轮</h2><div class="th-meta">TID: 5932</div></a>
+<a href="../threads/5931.html" class="thread-row"><h2>南久旺丹</h2><div class="th-meta">TID: 5931</div></a>
+<a href="../threads/5929.html" class="thread-row"><h2>佛说“人有二十难”</h2><div class="th-meta">TID: 5929</div></a>
+<a href="../threads/5928.html" class="thread-row"><h2>佛教五戒的内容</h2><div class="th-meta">TID: 5928</div></a>
+<a href="../threads/5179.html" class="thread-row"><h2>求大师们一咒！好象有点长！</h2><div class="th-meta">TID: 5179</div></a>
+<a href="../threads/5142.html" class="thread-row"><h2>驅除鬼魔守護自宅法</h2><div class="th-meta">TID: 5142</div></a>
+<a href="../threads/5138.html" class="thread-row"><h2>感恩准提佛母慈悲加护事业有成</h2><div class="th-meta">TID: 5138</div></a>
+<a href="../threads/5089.html" class="thread-row"><h2>历代王朝有趣的因果现象</h2><div class="th-meta">TID: 5089</div></a>
+<a href="../threads/5086.html" class="thread-row"><h2>女众弟子如何以正确的心态依止上师</h2><div class="th-meta">TID: 5086</div></a>
+<a href="../threads/5085.html" class="thread-row"><h2>日常生活中怎样运用佛法</h2><div class="th-meta">TID: 5085</div></a>
+<a href="../threads/5047.html" class="thread-row"><h2>請教有關熱羅大師的大威德金剛傳承目前在何寺院?</h2><div class="th-meta">TID: 5047</div></a>
+<a href="../threads/5041.html" class="thread-row"><h2>让修行融入生活之中-不丹国师顶果钦哲仁波切开示</h2><div class="th-meta">TID: 5041</div></a>
+<a href="../threads/4962.html" class="thread-row"><h2>哑巴止恶 吐痰开言</h2><div class="th-meta">TID: 4962</div></a>
+<a href="../threads/4958.html" class="thread-row"><h2>佛菩萨加持，两次车祸死里逃生感应纪实</h2><div class="th-meta">TID: 4958</div></a>
+<a href="../threads/4957.html" class="thread-row"><h2>世尊告诉我们六件事损财，不可做！</h2><div class="th-meta">TID: 4957</div></a>
+<a href="../threads/4956.html" class="thread-row"><h2>放生狐狸，帝释加福</h2><div class="th-meta">TID: 4956</div></a>
+<a href="../threads/4952.html" class="thread-row"><h2>漫漫人生路-做生活中的强者</h2><div class="th-meta">TID: 4952</div></a>
+<a href="../threads/4926.html" class="thread-row"><h2>雨宝陀罗尼的修法---一切如来称赞雨宝陀罗尼略说</h2><div class="th-meta">TID: 4926</div></a>
+<a href="../threads/4922.html" class="thread-row"><h2>念三句佛号 救两条人命</h2><div class="th-meta">TID: 4922</div></a>
+<a href="../threads/4903.html" class="thread-row"><h2>人不贪色，处处与人为善，就是贵人，必得福报</h2><div class="th-meta">TID: 4903</div></a>
+<a href="../threads/4900.html" class="thread-row"><h2>憨山大师醒世歌</h2><div class="th-meta">TID: 4900</div></a>
+<a href="../threads/4895.html" class="thread-row"><h2>煮云法师 讲述 章嘉大师的神异轶事（大师舍利图）</h2><div class="th-meta">TID: 4895</div></a>
+<a href="../threads/4891.html" class="thread-row"><h2>【学习经典】布施佛法的三十二大类奇妙功德</h2><div class="th-meta">TID: 4891</div></a>
+<a href="../threads/4888.html" class="thread-row"><h2>布施蚂蚁和鱼的果报不可思议</h2><div class="th-meta">TID: 4888</div></a>
+<a href="../threads/4887.html" class="thread-row"><h2>发心供佛一朵花　功德菩萨说不尽</h2><div class="th-meta">TID: 4887</div></a>
+<a href="../threads/4862.html" class="thread-row"><h2>無染覺性直觀自行解脫之道</h2><div class="th-meta">TID: 4862</div></a>
+<a href="../threads/4860.html" class="thread-row"><h2>印光法语</h2><div class="th-meta">TID: 4860</div></a>
+<a href="../threads/4826.html" class="thread-row"><h2>蒂帕嬷——先成就内观再成就四禅八定和五神通的居士</h2><div class="th-meta">TID: 4826</div></a>
+<a href="../threads/4817.html" class="thread-row"><h2>施食饿鬼的诸功德利益</h2><div class="th-meta">TID: 4817</div></a>
+<a href="../threads/4816.html" class="thread-row"><h2>忍辱之道（海涛法师辑）</h2><div class="th-meta">TID: 4816</div></a>
+<a href="../threads/4806.html" class="thread-row"><h2>高僧披露轮回真相，让人如芒在背！</h2><div class="th-meta">TID: 4806</div></a>
+<a href="../threads/4802.html" class="thread-row"><h2>佛见群牛喻人</h2><div class="th-meta">TID: 4802</div></a>
+<a href="../threads/4801.html" class="thread-row"><h2>藏宝钵</h2><div class="th-meta">TID: 4801</div></a>
+<a href="../threads/4787.html" class="thread-row"><h2>求藏文大悲咒经文</h2><div class="th-meta">TID: 4787</div></a>
+<a href="../threads/4783.html" class="thread-row"><h2>证布施医药的果报，对《地藏经》起大信心</h2><div class="th-meta">TID: 4783</div></a>
+<a href="../threads/4761.html" class="thread-row"><h2>印光大师：带业往生之人要准备生实报土</h2><div class="th-meta">TID: 4761</div></a>
+<a href="../threads/4744.html" class="thread-row"><h2>本师释迦牟尼佛为什么不以神通度众生</h2><div class="th-meta">TID: 4744</div></a>
+<a href="../threads/4741.html" class="thread-row"><h2>巧合？移老树先断树根　市长右脚筋同时断</h2><div class="th-meta">TID: 4741</div></a>
+<a href="../threads/4719.html" class="thread-row"><h2>至尊雍增赤江仁波且：具 信 弟 子</h2><div class="th-meta">TID: 4719</div></a>
+<a href="../threads/4701.html" class="thread-row"><h2>吃素的四十八个理由</h2><div class="th-meta">TID: 4701</div></a>
+<a href="../threads/4691.html" class="thread-row"><h2>在日常生活中深信因果才能消灾免难</h2><div class="th-meta">TID: 4691</div></a>
+<a href="../threads/4687.html" class="thread-row"><h2>在家居士不受戒，只修戒，这样做能不能了脱生死？</h2><div class="th-meta">TID: 4687</div></a>
+<a href="../threads/4686.html" class="thread-row"><h2>文殊菩萨八字真言</h2><div class="th-meta">TID: 4686</div></a>
+<a href="../threads/4677.html" class="thread-row"><h2>初地菩萨有什么能耐？</h2><div class="th-meta">TID: 4677</div></a>
+<a href="../threads/4655.html" class="thread-row"><h2>冤亲债主：众恶莫为 不精进的时候看看，马上警醒</h2><div class="th-meta">TID: 4655</div></a>
+<a href="../threads/4652.html" class="thread-row"><h2>净界法师：印光大师说佛号的功能</h2><div class="th-meta">TID: 4652</div></a>
+<a href="../threads/4630.html" class="thread-row"><h2>因果报应实证(第二篇)</h2><div class="th-meta">TID: 4630</div></a>
+<a href="../threads/4628.html" class="thread-row"><h2>放生为求功德，为求福报，亦是大善！</h2><div class="th-meta">TID: 4628</div></a>
+<a href="../threads/4596.html" class="thread-row"><h2>海涛法师开示：放生的真实意义</h2><div class="th-meta">TID: 4596</div></a>
+<a href="../threads/4591.html" class="thread-row"><h2>世尊的开示：犯邪淫后如何令邪淫的果报变小或消除</h2><div class="th-meta">TID: 4591</div></a>
+<a href="../threads/4583.html" class="thread-row"><h2>不受戒，但依戒修习，能否成佛？</h2><div class="th-meta">TID: 4583</div></a>
+<a href="../threads/4570.html" class="thread-row"><h2>改悔孝亲 获福感应录 (八则)</h2><div class="th-meta">TID: 4570</div></a>
+<a href="../threads/4539.html" class="thread-row"><h2>我练双盘的经历和循序渐进双盘法（转）</h2><div class="th-meta">TID: 4539</div></a>
+<a href="../threads/4505.html" class="thread-row"><h2>《名为供养度母之四璊哲旯广仪轨令诸事成就之如意宝论》</h2><div class="th-meta">TID: 4505</div></a>
+<a href="../threads/4502.html" class="thread-row"><h2>太桥旦曾堪布：日常生活中怎样运用佛法</h2><div class="th-meta">TID: 4502</div></a>
+<a href="../threads/4480.html" class="thread-row"><h2>救人一方，父亲增寿二十年</h2><div class="th-meta">TID: 4480</div></a>
+<a href="../threads/4479.html" class="thread-row"><h2>诸佛世尊有十种广大佛事</h2><div class="th-meta">TID: 4479</div></a>
+<a href="../threads/4468.html" class="thread-row"><h2>闭关日记（诺那门下密幢一系贺嘉寅上师弟子慧庵法师）</h2><div class="th-meta">TID: 4468</div></a>
+<a href="../threads/4441.html" class="thread-row"><h2>佛说业报差别经：因果之长寿与短命</h2><div class="th-meta">TID: 4441</div></a>
+<a href="../threads/4424.html" class="thread-row"><h2>佛说守持不淫戒的五种功德利益（白话）</h2><div class="th-meta">TID: 4424</div></a>
+<a href="../threads/4402.html" class="thread-row"><h2>不可思议的布施不可思议的福报（精品）</h2><div class="th-meta">TID: 4402</div></a>
+<a href="../threads/4380.html" class="thread-row"><h2>文殊八字大威德陀罗尼仪轨</h2><div class="th-meta">TID: 4380</div></a>
+<a href="../threads/4363.html" class="thread-row"><h2>随佛游历　地狱净土</h2><div class="th-meta">TID: 4363</div></a>
+<a href="../threads/4354.html" class="thread-row"><h2>错用僧物 得饿鬼报</h2><div class="th-meta">TID: 4354</div></a>
+<a href="../threads/4350.html" class="thread-row"><h2>善无畏的神功，令唐玄宗深为震撼</h2><div class="th-meta">TID: 4350</div></a>
+<a href="../threads/4309.html" class="thread-row"><h2>好德--阴德和阳德（如何积德)</h2><div class="th-meta">TID: 4309</div></a>
+<a href="../threads/4308.html" class="thread-row"><h2>神奇的求财方法</h2><div class="th-meta">TID: 4308</div></a>
+<a href="../threads/4300.html" class="thread-row"><h2>【不邪淫善果】美色当前　悬崖勒马　得善果</h2><div class="th-meta">TID: 4300</div></a>
+<a href="../threads/4240.html" class="thread-row"><h2>杀生遭短命多难现世报三例：</h2><div class="th-meta">TID: 4240</div></a>
+<a href="../threads/4186.html" class="thread-row"><h2>妙慧童女十问佛(改变自己的命运)</h2><div class="th-meta">TID: 4186</div></a>
+<a href="../threads/4182.html" class="thread-row"><h2>随喜的重要性</h2><div class="th-meta">TID: 4182</div></a>
+<a href="../threads/4181.html" class="thread-row"><h2>藏传佛教不能叫“喇嘛教”</h2><div class="th-meta">TID: 4181</div></a>
+<a href="../threads/4125.html" class="thread-row"><h2>格萨尔王</h2><div class="th-meta">TID: 4125</div></a>
+<a href="../threads/4124.html" class="thread-row"><h2>——念佛重获生命的真实故事</h2><div class="th-meta">TID: 4124</div></a>
+<a href="../threads/4121.html" class="thread-row"><h2>受五戒后，坚定受持，就有25位护法神，真实不虚</h2><div class="th-meta">TID: 4121</div></a>
+<a href="../threads/4111.html" class="thread-row"><h2>谈谈守护神（魂魄）与中阴身的关系</h2><div class="th-meta">TID: 4111</div></a>
+<a href="../threads/4062.html" class="thread-row"><h2>地藏菩萨灵感新辑</h2><div class="th-meta">TID: 4062</div></a>
+<a href="../threads/4035.html" class="thread-row"><h2>六斋日天神伺察善恶，每持一戒有五善神守护</h2><div class="th-meta">TID: 4035</div></a>
+<a href="../threads/4023.html" class="thread-row"><h2>几年修行《地藏经》，不吐不快 / 作者：华山思过崖</h2><div class="th-meta">TID: 4023</div></a>
+<a href="../threads/4015.html" class="thread-row"><h2>发慈悲心，广积阴德</h2><div class="th-meta">TID: 4015</div></a>
+<a href="../threads/4013.html" class="thread-row"><h2>八关斋戒浅释</h2><div class="th-meta">TID: 4013</div></a>
+<a href="../threads/3996.html" class="thread-row"><h2>诚心行善改变风水及命运的两个真实案例</h2><div class="th-meta">TID: 3996</div></a>
+<a href="../threads/3995.html" class="thread-row"><h2>地藏菩萨之不可思议功德</h2><div class="th-meta">TID: 3995</div></a>
+<a href="../threads/3986.html" class="thread-row"><h2>受持德内丰严王佛名号，世世得这三种神通</h2><div class="th-meta">TID: 3986</div></a>
+<a href="../threads/3980.html" class="thread-row"><h2>诚念观世音 四次解危难　　作者：净琉璃</h2><div class="th-meta">TID: 3980</div></a>
+<a href="../threads/3979.html" class="thread-row"><h2>受三皈五戒都会有哪些善神卫护</h2><div class="th-meta">TID: 3979</div></a>
+<a href="../threads/3968.html" class="thread-row"><h2>佛说淫行必令仙人丧失五神通力</h2><div class="th-meta">TID: 3968</div></a>
+<a href="../threads/3957.html" class="thread-row"><h2>经典案例__持八关斋戒的现世报与伤害持戒人的地狱报</h2><div class="th-meta">TID: 3957</div></a>
+<a href="../threads/3947.html" class="thread-row"><h2>显密净土差别之开示  诺那上师</h2><div class="th-meta">TID: 3947</div></a>
+<a href="../threads/3936.html" class="thread-row"><h2>学李十方师兄用金漆抄《僧伽吒经》后的殊胜感应</h2><div class="th-meta">TID: 3936</div></a>
+<a href="../threads/3928.html" class="thread-row"><h2>持咒须知</h2><div class="th-meta">TID: 3928</div></a>
+<a href="../threads/3920.html" class="thread-row"><h2>光明大圆满发愿文</h2><div class="th-meta">TID: 3920</div></a>
+<a href="../threads/3909.html" class="thread-row"><h2>布施众生即供养诸佛：无比殊胜的慈悲施食和火供</h2><div class="th-meta">TID: 3909</div></a>
+<a href="../threads/3908.html" class="thread-row"><h2>善心不仅能救人命，还能救人心</h2><div class="th-meta">TID: 3908</div></a>
+<a href="../threads/3900.html" class="thread-row"><h2>人间所有的阴谋暗行，鬼神全部知道</h2><div class="th-meta">TID: 3900</div></a>
+<a href="../threads/3897.html" class="thread-row"><h2>造地藏菩萨像，亲人出饿鬼界的故事！</h2><div class="th-meta">TID: 3897</div></a>
+<a href="../threads/3876.html" class="thread-row"><h2>说僧尼是非过恶就是毁谤三宝，犯无量重罪</h2><div class="th-meta">TID: 3876</div></a>
+<a href="../threads/3873.html" class="thread-row"><h2>蓮師祈請頌·敦勸意密·怙諸怖畏--化身色德仁波切之伏藏</h2><div class="th-meta">TID: 3873</div></a>
+<a href="../threads/3870.html" class="thread-row"><h2>印光大师谈因果</h2><div class="th-meta">TID: 3870</div></a>
+<a href="../threads/3865.html" class="thread-row"><h2>印光大师论往生正因</h2><div class="th-meta">TID: 3865</div></a>
+<a href="../threads/3864.html" class="thread-row"><h2>色欲招病，断欲是药</h2><div class="th-meta">TID: 3864</div></a>
+<a href="../threads/3853.html" class="thread-row"><h2>印光大师论回向 附常用回向偈、回向文</h2><div class="th-meta">TID: 3853</div></a>
+<a href="../threads/3851.html" class="thread-row"><h2>慧律法师谈临终助念问题</h2><div class="th-meta">TID: 3851</div></a>
+<a href="../threads/3847.html" class="thread-row"><h2>古籍中亵渎佛法者遭报的十则故事</h2><div class="th-meta">TID: 3847</div></a>
+<a href="../threads/3846.html" class="thread-row"><h2>亡灵白日現身謝恩</h2><div class="th-meta">TID: 3846</div></a>
+<a href="../threads/3841.html" class="thread-row"><h2>拜八十八佛能消一切罪障!!!</h2><div class="th-meta">TID: 3841</div></a>
+<a href="../threads/3828.html" class="thread-row"><h2>鬼神破颜而笑----似曾相识的莲花</h2><div class="th-meta">TID: 3828</div></a>
+<a href="../threads/3814.html" class="thread-row"><h2>念佛的微妙道理</h2><div class="th-meta">TID: 3814</div></a>
+<a href="../threads/3812.html" class="thread-row"><h2>若要佛法兴　唯有僧赞僧</h2><div class="th-meta">TID: 3812</div></a>
+<a href="../threads/3805.html" class="thread-row"><h2>不动佛的法门利益</h2><div class="th-meta">TID: 3805</div></a>
+<a href="../threads/3803.html" class="thread-row"><h2>在日常生活中，如何做到显密兼修?</h2><div class="th-meta">TID: 3803</div></a>
+<a href="../threads/3789.html" class="thread-row"><h2>有袈裟所在，一切天龙善神皆会给予守护——海涛法师开示</h2><div class="th-meta">TID: 3789</div></a>
+<a href="../threads/3761.html" class="thread-row"><h2>佛说造立形像福报经</h2><div class="th-meta">TID: 3761</div></a>
+<a href="../threads/3736.html" class="thread-row"><h2>佛说观自在菩萨入阿鼻地狱救众生事迹</h2><div class="th-meta">TID: 3736</div></a>
+<a href="../threads/3734.html" class="thread-row"><h2>《佛顶尊胜陀罗尼经》---破除三恶道报</h2><div class="th-meta">TID: 3734</div></a>
+<a href="../threads/3732.html" class="thread-row"><h2>宝箧印咒和六道金刚咒超度附体恶鬼</h2><div class="th-meta">TID: 3732</div></a>
+<a href="../threads/3730.html" class="thread-row"><h2>海玉法师念观音菩萨的第六次感应</h2><div class="th-meta">TID: 3730</div></a>
+<a href="../threads/3713.html" class="thread-row"><h2>麦彭仁波切「意伏藏」: 给萨旗</h2><div class="th-meta">TID: 3713</div></a>
+<a href="../threads/3687.html" class="thread-row"><h2>女人造口业、谤三宝的恶报</h2><div class="th-meta">TID: 3687</div></a>
+<a href="../threads/3686.html" class="thread-row"><h2>诚念地藏经和圣号 感菩萨摩顶消宿业</h2><div class="th-meta">TID: 3686</div></a>
+<a href="../threads/3678.html" class="thread-row"><h2>能戒色，行善，就是贵人，必得福报！</h2><div class="th-meta">TID: 3678</div></a>
+<a href="../threads/3665.html" class="thread-row"><h2>十恶业的果报</h2><div class="th-meta">TID: 3665</div></a>
+<a href="../threads/3664.html" class="thread-row"><h2>大势至菩萨头顶宝瓶：大孝心的体现</h2><div class="th-meta">TID: 3664</div></a>
+<a href="../threads/3663.html" class="thread-row"><h2>女居士亲述少年时赴鬼门关经历</h2><div class="th-meta">TID: 3663</div></a>
+<a href="../threads/3650.html" class="thread-row"><h2>身边的因果故事和念佛感应</h2><div class="th-meta">TID: 3650</div></a>
+<a href="../threads/3632.html" class="thread-row"><h2>佩玛•秋卓如是说</h2><div class="th-meta">TID: 3632</div></a>
+<a href="../threads/3631.html" class="thread-row"><h2>佩玛秋卓小传</h2><div class="th-meta">TID: 3631</div></a>
+<a href="../threads/3623.html" class="thread-row"><h2>天眼看穿你的为人和行为</h2><div class="th-meta">TID: 3623</div></a>
+<a href="../threads/3616.html" class="thread-row"><h2>供奉《百宝座》、《轮王七珍》</h2><div class="th-meta">TID: 3616</div></a>
+<a href="../threads/3612.html" class="thread-row"><h2>因果故事 〖能转业尽早转成善业，戒杀的重要〗</h2><div class="th-meta">TID: 3612</div></a>
+<a href="../threads/3607.html" class="thread-row"><h2>堕阿鼻地狱的五无间罪、近无间罪及十恶轮</h2><div class="th-meta">TID: 3607</div></a>
+<a href="../threads/3597.html" class="thread-row"><h2>为什么念佛求生西方，叫做横超法门？</h2><div class="th-meta">TID: 3597</div></a>
+<a href="../threads/3584.html" class="thread-row"><h2>杀生 邪淫 的 现世果报 我的真实经历</h2><div class="th-meta">TID: 3584</div></a>
+<a href="../threads/3576.html" class="thread-row"><h2>白衣神咒</h2><div class="th-meta">TID: 3576</div></a>
+<a href="../threads/3569.html" class="thread-row"><h2>高僧观因缘：现代某作家已经转世成狗</h2><div class="th-meta">TID: 3569</div></a>
+<a href="../threads/3565.html" class="thread-row"><h2>不可以少善根福德因缘得生彼国净土</h2><div class="th-meta">TID: 3565</div></a>
+<a href="../threads/3555.html" class="thread-row"><h2>果缘法师传授的渡怨亲债主的妙法</h2><div class="th-meta">TID: 3555</div></a>
+<a href="../threads/3548.html" class="thread-row"><h2>幽冥世界的一颗明珠（地藏王菩萨）</h2><div class="th-meta">TID: 3548</div></a>
+<a href="../threads/3547.html" class="thread-row"><h2>仁焕法师：学习五大菩萨成就福德</h2><div class="th-meta">TID: 3547</div></a>
+<a href="../threads/3540.html" class="thread-row"><h2>宣传淫乱：25名&quot;花花公子&quot;女郎&quot;全部死于非命</h2><div class="th-meta">TID: 3540</div></a>
+<a href="../threads/3539.html" class="thread-row"><h2>印造佛像的功德利益！(末世修善，造像第一)</h2><div class="th-meta">TID: 3539</div></a>
+<a href="../threads/3537.html" class="thread-row"><h2>往生极乐的条件</h2><div class="th-meta">TID: 3537</div></a>
+<a href="../threads/3534.html" class="thread-row"><h2>什么是谤法？如何避免谤法？《大乘方广总持经》</h2><div class="th-meta">TID: 3534</div></a>
+<a href="../threads/3533.html" class="thread-row"><h2>受三皈得善神三十六大王护身</h2><div class="th-meta">TID: 3533</div></a>
+<a href="../threads/3525.html" class="thread-row"><h2>戒邪淫十三法</h2><div class="th-meta">TID: 3525</div></a>
+<a href="../threads/3516.html" class="thread-row"><h2>放生的功德利益</h2><div class="th-meta">TID: 3516</div></a>
+<a href="../threads/3511.html" class="thread-row"><h2>戒淫断欲圣典汇编（精品）</h2><div class="th-meta">TID: 3511</div></a>
+<a href="../threads/3502.html" class="thread-row"><h2>地藏菩萨神通力感应</h2><div class="th-meta">TID: 3502</div></a>
+<a href="../threads/3496.html" class="thread-row"><h2>怨天尤人堕入黑暗   思量善事转变命运！</h2><div class="th-meta">TID: 3496</div></a>
+<a href="../threads/3494.html" class="thread-row"><h2>持大悲咒有效验的体会</h2><div class="th-meta">TID: 3494</div></a>
+<a href="../threads/3489.html" class="thread-row"><h2>道证法师 预知时至 自在往生 瑞相不断</h2><div class="th-meta">TID: 3489</div></a>
+<a href="../threads/3463.html" class="thread-row"><h2>法布施的四十种广大功德</h2><div class="th-meta">TID: 3463</div></a>
+<a href="../threads/3449.html" class="thread-row"><h2>邪淫多欲的人为什么命运不好？ 佛如是说</h2><div class="th-meta">TID: 3449</div></a>
+<a href="../threads/3444.html" class="thread-row"><h2>戒杀与经常放生就有神灵随身保护！！！</h2><div class="th-meta">TID: 3444</div></a>
+<a href="../threads/3429.html" class="thread-row"><h2>四等无上瑜伽檀陀罗传承</h2><div class="th-meta">TID: 3429</div></a>
+<a href="../threads/3423.html" class="thread-row"><h2>念观音菩萨获救的一段真实经历</h2><div class="th-meta">TID: 3423</div></a>
+<a href="../threads/3420.html" class="thread-row"><h2>保持24小时念佛的“秘诀”——慧律法师开示</h2><div class="th-meta">TID: 3420</div></a>
+<a href="../threads/3400.html" class="thread-row"><h2>六道金刚咒神力超度猛鬼传奇...</h2><div class="th-meta">TID: 3400</div></a>
+<a href="../threads/3398.html" class="thread-row"><h2>改过迁善--持戒念佛的广化法师</h2><div class="th-meta">TID: 3398</div></a>
+<a href="../threads/3397.html" class="thread-row"><h2>念佛一声，地狱化莲池</h2><div class="th-meta">TID: 3397</div></a>
+<a href="../threads/3395.html" class="thread-row"><h2>一个比丘的轮回</h2><div class="th-meta">TID: 3395</div></a>
+<a href="../threads/3388.html" class="thread-row"><h2>妙莲老和尚开示念佛</h2><div class="th-meta">TID: 3388</div></a>
+<a href="../threads/3386.html" class="thread-row"><h2>纪晓岚记录因果故事</h2><div class="th-meta">TID: 3386</div></a>
+<a href="../threads/3380.html" class="thread-row"><h2>印光大师谈因果文摘：</h2><div class="th-meta">TID: 3380</div></a>
+<a href="../threads/3379.html" class="thread-row"><h2>鬼附女身闹全家 虚云威名令受戒</h2><div class="th-meta">TID: 3379</div></a>
+<a href="../threads/3366.html" class="thread-row"><h2>海涛法师对转经论的开示与整理</h2><div class="th-meta">TID: 3366</div></a>
+<a href="../threads/3364.html" class="thread-row"><h2>现金身带小孩游地狱极乐世界</h2><div class="th-meta">TID: 3364</div></a>
+<a href="../threads/3363.html" class="thread-row"><h2>口业最伤人也最害己 当清净口业</h2><div class="th-meta">TID: 3363</div></a>
+<a href="../threads/3354.html" class="thread-row"><h2>龙树菩萨对离淫欲的一段精妙开示</h2><div class="th-meta">TID: 3354</div></a>
+<a href="../threads/3353.html" class="thread-row"><h2>印光大师法语——摄心念佛法</h2><div class="th-meta">TID: 3353</div></a>
+<a href="../threads/3352.html" class="thread-row"><h2>福尽而死是真理 故当惜福少享福</h2><div class="th-meta">TID: 3352</div></a>
+<a href="../threads/3342.html" class="thread-row"><h2>出家人即使破戒了，仍然有无量功德！</h2><div class="th-meta">TID: 3342</div></a>
+<a href="../threads/3337.html" class="thread-row"><h2>南传佛教：《毁灭经》----嫖妓让人毁灭！</h2><div class="th-meta">TID: 3337</div></a>
+<a href="../threads/3333.html" class="thread-row"><h2>梵网经菩萨戒之杀戒——圣一法师讲</h2><div class="th-meta">TID: 3333</div></a>
+<a href="../threads/3326.html" class="thread-row"><h2>大悲咒制伏鬼神的故事四则 ！</h2><div class="th-meta">TID: 3326</div></a>
+<a href="../threads/3320.html" class="thread-row"><h2>戒邪淫的100条理由</h2><div class="th-meta">TID: 3320</div></a>
+<a href="../threads/3313.html" class="thread-row"><h2>地震中放生与杀生的果报差别</h2><div class="th-meta">TID: 3313</div></a>
+<a href="../threads/3309.html" class="thread-row"><h2>忍辱第一功德</h2><div class="th-meta">TID: 3309</div></a>
+<a href="../threads/3302.html" class="thread-row"><h2>纪晓岚写的因果故事</h2><div class="th-meta">TID: 3302</div></a>
+<a href="../threads/3301.html" class="thread-row"><h2>学佛信因果 立即断邪淫：</h2><div class="th-meta">TID: 3301</div></a>
+<a href="../threads/3296.html" class="thread-row"><h2>慈舟大师说淫戒</h2><div class="th-meta">TID: 3296</div></a>
+<a href="../threads/3292.html" class="thread-row"><h2>此戒邪淫帖子传四百人，子孙盛昌。传五百人，功名连绵</h2><div class="th-meta">TID: 3292</div></a>
+<a href="../threads/3289.html" class="thread-row"><h2>大悲咒与大悲忏法之殊胜功德利益</h2><div class="th-meta">TID: 3289</div></a>
+<a href="../threads/3286.html" class="thread-row"><h2>艳福非福而是祸 淫恶之报</h2><div class="th-meta">TID: 3286</div></a>
+<a href="../threads/3278.html" class="thread-row"><h2>仁波切的解释</h2><div class="th-meta">TID: 3278</div></a>
+<a href="../threads/3273.html" class="thread-row"><h2>八关斋戒传奇....龙王与国王</h2><div class="th-meta">TID: 3273</div></a>
+<a href="../threads/3264.html" class="thread-row"><h2>&quot;道根——亲近上师法&quot;之不尊敬上师的罪业</h2><div class="th-meta">TID: 3264</div></a>
+<a href="../threads/3262.html" class="thread-row"><h2>宝志公传奇故事</h2><div class="th-meta">TID: 3262</div></a>
+<a href="../threads/3240.html" class="thread-row"><h2>孝顺父母——世间第一福田</h2><div class="th-meta">TID: 3240</div></a>
+<a href="../threads/3228.html" class="thread-row"><h2>如意宝年龙上师所传八关斋戒仪规</h2><div class="th-meta">TID: 3228</div></a>
+<a href="../threads/3209.html" class="thread-row"><h2>邪淫的危害和戒邪淫应该注意的地方：</h2><div class="th-meta">TID: 3209</div></a>
+<a href="../threads/3201.html" class="thread-row"><h2>老槐树被砍伐以后发生的怪事：</h2><div class="th-meta">TID: 3201</div></a>
+<a href="../threads/3197.html" class="thread-row"><h2>谈感应与神通</h2><div class="th-meta">TID: 3197</div></a>
+<a href="../threads/3193.html" class="thread-row"><h2>印光大师关于印造流通经像的利益功德介绍（节录）</h2><div class="th-meta">TID: 3193</div></a>
+<a href="../threads/3183.html" class="thread-row"><h2>颅器、人头盖碗……</h2><div class="th-meta">TID: 3183</div></a>
+<a href="../threads/3177.html" class="thread-row"><h2>列让郎巴大师金刚橛传承祈请文</h2><div class="th-meta">TID: 3177</div></a>
+<a href="../threads/3173.html" class="thread-row"><h2>甚深猛咒</h2><div class="th-meta">TID: 3173</div></a>
+<a href="../threads/3132.html" class="thread-row"><h2>求教宝瓶气如何修炼</h2><div class="th-meta">TID: 3132</div></a>
+<a href="../threads/3122.html" class="thread-row"><h2>佛像的“装藏”</h2><div class="th-meta">TID: 3122</div></a>
+<a href="../threads/3121.html" class="thread-row"><h2>憨山大师梦境中的密宗人头盖法器</h2><div class="th-meta">TID: 3121</div></a>
+<a href="../threads/3036.html" class="thread-row"><h2>听经三载得人身：梁武帝的轮回</h2><div class="th-meta">TID: 3036</div></a>
+<a href="../threads/3015.html" class="thread-row"><h2>大圆满平等性自解脱义导引妙宝藏论</h2><div class="th-meta">TID: 3015</div></a>
+<a href="../threads/3014.html" class="thread-row"><h2>大圆满法性自解脱论导引文如意藏要</h2><div class="th-meta">TID: 3014</div></a>
+<a href="../threads/3000.html" class="thread-row"><h2>大唐西域记</h2><div class="th-meta">TID: 3000</div></a>
+<a href="../threads/2998.html" class="thread-row"><h2>七曜星辰別行法(自翼計者氐星不當房星當也)（密教部）</h2><div class="th-meta">TID: 2998</div></a>
+<a href="../threads/2986.html" class="thread-row"><h2>正经事儿：对西藏和藏传佛教一些错误概念的提醒或补充</h2><div class="th-meta">TID: 2986</div></a>
+<a href="../threads/2958.html" class="thread-row"><h2>普贤闭关实录</h2><div class="th-meta">TID: 2958</div></a>
+<a href="../threads/2957.html" class="thread-row"><h2>人体量能图</h2><div class="th-meta">TID: 2957</div></a>
+<a href="../threads/2938.html" class="thread-row"><h2>我的因果业缘故事一切原于真实（原创）</h2><div class="th-meta">TID: 2938</div></a>
+<a href="../threads/2935.html" class="thread-row"><h2>跪求大德高人给予指点</h2><div class="th-meta">TID: 2935</div></a>
+<a href="../threads/2932.html" class="thread-row"><h2>兜率天上师瑜伽修法仪轨(能海上师由藏译汉)</h2><div class="th-meta">TID: 2932</div></a>
+<a href="../threads/2928.html" class="thread-row"><h2>敦珠法王（日喋依谢多杰尊者）开示甘露法药殊胜功德</h2><div class="th-meta">TID: 2928</div></a>
+<a href="../threads/2920.html" class="thread-row"><h2>敦珠法王最后祈祷文</h2><div class="th-meta">TID: 2920</div></a>
+<a href="../threads/2919.html" class="thread-row"><h2>甘丹大手印根本颂</h2><div class="th-meta">TID: 2919</div></a>
+<a href="../threads/2892.html" class="thread-row"><h2>论中阴 ---净宗祖师印光法师</h2><div class="th-meta">TID: 2892</div></a>
+<a href="../threads/2891.html" class="thread-row"><h2>《聂达沃兹上师的梦---中阴界之旅》</h2><div class="th-meta">TID: 2891</div></a>
+<a href="../threads/2820.html" class="thread-row"><h2>咒轮图【分享】</h2><div class="th-meta">TID: 2820</div></a>
+<a href="../threads/2777.html" class="thread-row"><h2>萨迦格言</h2><div class="th-meta">TID: 2777</div></a>
+<a href="../threads/2659.html" class="thread-row"><h2>光明佛母铜像</h2><div class="th-meta">TID: 2659</div></a>
+<a href="../threads/2610.html" class="thread-row"><h2>中国僧服知多少</h2><div class="th-meta">TID: 2610</div></a>
+<a href="../threads/2561.html" class="thread-row"><h2>《玉歷寳鈔》——諸惡莫作，衆善奉行。</h2><div class="th-meta">TID: 2561</div></a>
+<a href="../threads/2436.html" class="thread-row"><h2>圣者吉美林巴大师光辉的伟大伏藏</h2><div class="th-meta">TID: 2436</div></a>
+<a href="../threads/2390.html" class="thread-row"><h2>玛哈嘎拉的形象</h2><div class="th-meta">TID: 2390</div></a>
+<a href="../threads/2267.html" class="thread-row"><h2>利美传承，也就是不分教派的传统</h2><div class="th-meta">TID: 2267</div></a>
+<a href="../threads/2255.html" class="thread-row"><h2>泰国僧人于定中看到地狱景象</h2><div class="th-meta">TID: 2255</div></a>
+<a href="../threads/2248.html" class="thread-row"><h2>三脉七轮</h2><div class="th-meta">TID: 2248</div></a>
+<a href="../threads/2131.html" class="thread-row"><h2>西方魔法之卡巴拉生命之树（很像瑜伽的脉轮图。。。）</h2><div class="th-meta">TID: 2131</div></a>
+<a href="../threads/2095.html" class="thread-row"><h2>前世功德归虚空，今世还需明灯照</h2><div class="th-meta">TID: 2095</div></a>
+<a href="../threads/2092.html" class="thread-row"><h2>西藏无人区，有一所活佛资助的孤儿学校</h2><div class="th-meta">TID: 2092</div></a>
+<a href="../threads/2071.html" class="thread-row"><h2>苏东坡的三世因果</h2><div class="th-meta">TID: 2071</div></a>
+<a href="../threads/2058.html" class="thread-row"><h2>藏族宗教信仰神祗</h2><div class="th-meta">TID: 2058</div></a>
+<a href="../threads/2049.html" class="thread-row"><h2>歷代漢文大藏經概述（李圓淨）</h2><div class="th-meta">TID: 2049</div></a>
+<a href="../threads/2048.html" class="thread-row"><h2>《赵城金藏》八百年沧桑记</h2><div class="th-meta">TID: 2048</div></a>
+<a href="../threads/2036.html" class="thread-row"><h2>高塔的玄機</h2><div class="th-meta">TID: 2036</div></a>
+<a href="../threads/2032.html" class="thread-row"><h2>苗族鬼师斗法法术</h2><div class="th-meta">TID: 2032</div></a>
+<a href="../threads/2030.html" class="thread-row"><h2>与泰国降头师的斗法</h2><div class="th-meta">TID: 2030</div></a>
+<a href="../threads/1931.html" class="thread-row"><h2>神秘的香波罗</h2><div class="th-meta">TID: 1931</div></a>
+<a href="../threads/1912.html" class="thread-row"><h2>证悟檀陀罗修行</h2><div class="th-meta">TID: 1912</div></a>
+<a href="../threads/1911.html" class="thread-row"><h2>初步的显宗修行</h2><div class="th-meta">TID: 1911</div></a>
+<a href="../threads/1901.html" class="thread-row"><h2>著名医家黄润田提倡的养生十大法</h2><div class="th-meta">TID: 1901</div></a>
+<a href="../threads/1897.html" class="thread-row"><h2>藏历火狗年／农历丙戊年龙日表</h2><div class="th-meta">TID: 1897</div></a>
+<a href="../threads/1880.html" class="thread-row"><h2>大藏寺祈竹仁波切关于往生和破瓦法的开示</h2><div class="th-meta">TID: 1880</div></a>
+<a href="../threads/1866.html" class="thread-row"><h2>一个比丘的轮回</h2><div class="th-meta">TID: 1866</div></a>
+<a href="../threads/1864.html" class="thread-row"><h2>介绍几种生旺及化煞植物</h2><div class="th-meta">TID: 1864</div></a>
+<a href="../threads/1829.html" class="thread-row"><h2>扎溪卡草原石刻文化揭述</h2><div class="th-meta">TID: 1829</div></a>
+<a href="../threads/1824.html" class="thread-row"><h2>某风水师讲的离奇故事</h2><div class="th-meta">TID: 1824</div></a>
+<a href="../threads/1622.html" class="thread-row"><h2>浅析西藏镇魔图</h2><div class="th-meta">TID: 1622</div></a>
+<a href="../threads/1590.html" class="thread-row"><h2>微缩的神佛世界——西藏擦擦</h2><div class="th-meta">TID: 1590</div></a>
+<a href="../threads/1546.html" class="thread-row"><h2>德格印经院：木与纸的朝圣</h2><div class="th-meta">TID: 1546</div></a>
+<a href="../threads/1529.html" class="thread-row"><h2>西藏的寺庙与藏传佛教文化</h2><div class="th-meta">TID: 1529</div></a>
+<a href="../threads/1504.html" class="thread-row"><h2>因果、业力和十善业</h2><div class="th-meta">TID: 1504</div></a>
+<a href="../threads/1486.html" class="thread-row"><h2>神奇如意左旋螺</h2><div class="th-meta">TID: 1486</div></a>
+<a href="../threads/1485.html" class="thread-row"><h2>藏传佛教艺术的历程</h2><div class="th-meta">TID: 1485</div></a>
+<a href="../threads/1469.html" class="thread-row"><h2>科学解释禅修中的光</h2><div class="th-meta">TID: 1469</div></a>
+<a href="../threads/1463.html" class="thread-row"><h2>藏族的山神信仰</h2><div class="th-meta">TID: 1463</div></a>
+<a href="../threads/1457.html" class="thread-row"><h2>《四部医典》内容简介</h2><div class="th-meta">TID: 1457</div></a>
+<a href="../threads/1456.html" class="thread-row"><h2>佛经中的风水术</h2><div class="th-meta">TID: 1456</div></a>
+<a href="../threads/1455.html" class="thread-row"><h2>从10亿光年到0.1飞米,再想想我们还争论什么？</h2><div class="th-meta">TID: 1455</div></a>
+<a href="../threads/1453.html" class="thread-row"><h2>月光行者游记</h2><div class="th-meta">TID: 1453</div></a>
+<a href="../threads/1447.html" class="thread-row"><h2>德格印经院：雪山下的文化瑰宝</h2><div class="th-meta">TID: 1447</div></a>
+<a href="../threads/1445.html" class="thread-row"><h2>揭开藏区最古老神秘印经院面纱</h2><div class="th-meta">TID: 1445</div></a>
+<a href="../threads/1443.html" class="thread-row"><h2>浅谈藏传佛教寺院在传播史诗《格萨尔》中的作用</h2><div class="th-meta">TID: 1443</div></a>
+<a href="../threads/1440.html" class="thread-row"><h2>施放天马</h2><div class="th-meta">TID: 1440</div></a>
+<a href="../threads/1436.html" class="thread-row"><h2>神山冈仁波齐</h2><div class="th-meta">TID: 1436</div></a>
+<a href="../threads/1432.html" class="thread-row"><h2>试述阿尼玛沁山神的形象及其在宗教万神殿中的归属</h2><div class="th-meta">TID: 1432</div></a>
+<a href="../threads/1429.html" class="thread-row"><h2>当代藏传佛教在国外</h2><div class="th-meta">TID: 1429</div></a>
+<a href="../threads/1428.html" class="thread-row"><h2>试述藏传佛教祈愿礼俗与健康的关系</h2><div class="th-meta">TID: 1428</div></a>
+<a href="../threads/1421.html" class="thread-row"><h2>七政四余星学---中国最早的天文学</h2><div class="th-meta">TID: 1421</div></a>
+<a href="../threads/1420.html" class="thread-row"><h2>世界藏文化宝库——德格印经院</h2><div class="th-meta">TID: 1420</div></a>
+<a href="../threads/1416.html" class="thread-row"><h2>佛经论典中宣说的谤法的业相</h2><div class="th-meta">TID: 1416</div></a>
+<a href="../threads/1413.html" class="thread-row"><h2>西藏医学源流及传授方法</h2><div class="th-meta">TID: 1413</div></a>
+<a href="../threads/1412.html" class="thread-row"><h2>藏医心理学</h2><div class="th-meta">TID: 1412</div></a>
+<a href="../threads/1378.html" class="thread-row"><h2>《活法》稻盛和夫</h2><div class="th-meta">TID: 1378</div></a>
+<a href="../threads/1325.html" class="thread-row"><h2>完全瑜伽十六要素</h2><div class="th-meta">TID: 1325</div></a>
+<a href="../threads/1323.html" class="thread-row"><h2>藏传佛教的重要节日</h2><div class="th-meta">TID: 1323</div></a>
+<a href="../threads/1318.html" class="thread-row"><h2>世间什么才是最珍贵的</h2><div class="th-meta">TID: 1318</div></a>
+<a href="../threads/1313.html" class="thread-row"><h2>西藏西部艺术的绝响</h2><div class="th-meta">TID: 1313</div></a>
+<a href="../threads/1312.html" class="thread-row"><h2>瑜伽经</h2><div class="th-meta">TID: 1312</div></a>
+<a href="../threads/1303.html" class="thread-row"><h2>《弟子规》原文及解说</h2><div class="th-meta">TID: 1303</div></a>
+<a href="../threads/1302.html" class="thread-row"><h2>传统瑜伽的经典理论---YAMAS</h2><div class="th-meta">TID: 1302</div></a>
+<a href="../threads/1228.html" class="thread-row"><h2>实相宝藏论本颂</h2><div class="th-meta">TID: 1228</div></a>
+<a href="../threads/1224.html" class="thread-row"><h2>大宝积经 概述</h2><div class="th-meta">TID: 1224</div></a>
+<a href="../threads/1139.html" class="thread-row"><h2>藏族传统绘画艺术的奇葩——唐卡</h2><div class="th-meta">TID: 1139</div></a>
+<a href="../threads/1090.html" class="thread-row"><h2>六道轮回的问题</h2><div class="th-meta">TID: 1090</div></a>
+<a href="../threads/1046.html" class="thread-row"><h2>食物相克与药物相克表</h2><div class="th-meta">TID: 1046</div></a>
+<a href="../threads/1035.html" class="thread-row"><h2>瑜珈不是宗教， 而是一种实践工具</h2><div class="th-meta">TID: 1035</div></a>
+<a href="../threads/1034.html" class="thread-row"><h2>善知识的标准与密乘金刚上师应具备的条件</h2><div class="th-meta">TID: 1034</div></a>
+<a href="../threads/979.html" class="thread-row"><h2>对治世间八法的方便</h2><div class="th-meta">TID: 979</div></a>
+<a href="../threads/901.html" class="thread-row"><h2>阳宅风水——结构宝鉴</h2><div class="th-meta">TID: 901</div></a>
+<a href="../threads/648.html" class="thread-row"><h2>风水住宅的面积和间数</h2><div class="th-meta">TID: 648</div></a>
+<a href="../threads/616.html" class="thread-row"><h2>利美运动与藏传“八大教派”的介绍</h2><div class="th-meta">TID: 616</div></a>
+<a href="../threads/566.html" class="thread-row"><h2>20世纪西藏密教研究综述</h2><div class="th-meta">TID: 566</div></a>
+<a href="../threads/451.html" class="thread-row"><h2>六道轮回从生至死到再生</h2><div class="th-meta">TID: 451</div></a>
+<a href="../threads/406.html" class="thread-row"><h2>藏医－走向现代</h2><div class="th-meta">TID: 406</div></a>
+<a href="../threads/401.html" class="thread-row"><h2>人有四事，不可恃怙！</h2><div class="th-meta">TID: 401</div></a>
+<a href="../threads/375.html" class="thread-row"><h2>西藏降伏术－－－召唤神灵和魔鬼</h2><div class="th-meta">TID: 375</div></a>
+<a href="../threads/367.html" class="thread-row"><h2>植物与风水</h2><div class="th-meta">TID: 367</div></a>
+<a href="../threads/342.html" class="thread-row"><h2>借这篇文章理解修行中需注意的事情</h2><div class="th-meta">TID: 342</div></a>
+<a href="../threads/333.html" class="thread-row"><h2>拉卜愣寺六大学院修习体制源考</h2><div class="th-meta">TID: 333</div></a>
+<a href="../threads/292.html" class="thread-row"><h2>卧房风水布局</h2><div class="th-meta">TID: 292</div></a>
+<a href="../threads/291.html" class="thread-row"><h2>瑜珈的分类</h2><div class="th-meta">TID: 291</div></a>
+<a href="../threads/279.html" class="thread-row"><h2>大乘瑜伽金刚性海曼殊室利千臂千钵大教王经</h2><div class="th-meta">TID: 279</div></a>
+<a href="../threads/271.html" class="thread-row"><h2>佛教故事--生死无常</h2><div class="th-meta">TID: 271</div></a>
+<a href="../threads/269.html" class="thread-row"><h2>圆寂复魂师地狱游记</h2><div class="th-meta">TID: 269</div></a>
+<a href="../threads/260.html" class="thread-row"><h2>藏医学介绍</h2><div class="th-meta">TID: 260</div></a>
+<a href="../threads/259.html" class="thread-row"><h2>西藏风马旗艺术</h2><div class="th-meta">TID: 259</div></a>
+<a href="../threads/251.html" class="thread-row"><h2>嘴里芹菜的香味</h2><div class="th-meta">TID: 251</div></a>
+<a href="../threads/250.html" class="thread-row"><h2>吐番王朝世系表</h2><div class="th-meta">TID: 250</div></a>
+<a href="../threads/242.html" class="thread-row"><h2>佛教宇宙人生观的四项基本观察</h2><div class="th-meta">TID: 242</div></a>
+<a href="../threads/221.html" class="thread-row"><h2>五行食物改运秘法</h2><div class="th-meta">TID: 221</div></a>
+<a href="../threads/173.html" class="thread-row"><h2>观天葬思无常</h2><div class="th-meta">TID: 173</div></a>
+<a href="../threads/157.html" class="thread-row"><h2>佛教的业力说</h2><div class="th-meta">TID: 157</div></a>
+<a href="../threads/134.html" class="thread-row"><h2>乐于睡眠二十种过</h2><div class="th-meta">TID: 134</div></a>
+<a href="../threads/117.html" class="thread-row"><h2>甚么是&#x27;根本上师&#x27;？一个人可以有多于一位&#x27;根本上师&#x27;吗？</h2><div class="th-meta">TID: 117</div></a>
+<a href="../threads/29.html" class="thread-row"><h2>十一世班禅的一天</h2><div class="th-meta">TID: 29</div></a>
+
+</div></body></html>

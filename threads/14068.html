@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>培养以真正欢喜面对痛苦的态度 - 藏密修海典藏</title>
+<title>培养以真正欢喜面对痛苦的态度 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,33 +8,46 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">培养以真正欢喜面对痛苦的态度</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-2 17:11</div><div class="post-body">转苦乐为菩提 <br/>
+<div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-2 17:11</div><div class="post-body">转苦乐为菩提 <br/>
 我们应该非常精确地理解：于此五浊恶世，有情众生之所以饱受诸多痛苦，就是因为他们的辨析能力实为浅薄。 <br/>
 因此，“不受敌人、疾病或魔怨力所致之障碍所害”，并非指疾病之类的事物能被驱除而永远不再出现。而是，这句话的意思单纯为：这些障碍无法阻挡我们在道上修行。 <br/>
-要做到这点，首先，需要去除这种丝毫不愿意面对任何痛苦的态度；再者，要培养以真正欢喜来面对痛苦的态度。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-2 17:14</div><div class="post-body">当一个人不太执着于诸如 赞扬、批评、得或失这类事情， 当一个人 不会因为被忽视而感到困扰， 也不会因为受到关注而过于激动，当一个人无需付出什么努力 便可以忆念佛法、上师 以及教法的各个方面， 那就表明这个人 在死亡的时候会有一点儿把握。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-3 08:38</div><div class="post-body">大乘的持戒是跟止观相配合的，它主要是不随妄转，不是说要你把淫欲的念头全部断掉。那怎么可能呢？菩萨戒，诸位看看菩萨戒，菩萨戒在断恶念是断相续，它不断那个瞥尔生起的，那个任运的现起它不断的。 <br/>
+要做到这点，首先，需要去除这种丝毫不愿意面对任何痛苦的态度；再者，要培养以真正欢喜来面对痛苦的态度。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-2 17:14</div><div class="post-body">当一个人不太执着于诸如 赞扬、批评、得或失这类事情， 当一个人 不会因为被忽视而感到困扰， 也不会因为受到关注而过于激动，当一个人无需付出什么努力 便可以忆念佛法、上师 以及教法的各个方面， 那就表明这个人 在死亡的时候会有一点儿把握。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-3 08:38</div><div class="post-body">大乘的持戒是跟止观相配合的，它主要是不随妄转，不是说要你把淫欲的念头全部断掉。那怎么可能呢？菩萨戒，诸位看看菩萨戒，菩萨戒在断恶念是断相续，它不断那个瞥尔生起的，那个任运的现起它不断的。 <br/>
 <br/>
 我们上次讲到菩萨戒有一个观念，说菩萨戒有一条是很重要的开缘，它说，菩萨“为断彼故，生起乐欲”，精勤对治而数数现行，这个是无违犯。这个菩萨他对于贪瞋痴的烦恼已经想要断除了，他已经安住在不生灭心了，但是烦恼还是不断地活动啊！但是他已经在对治了，不随妄转，他产生一种抗拒的力量了，这个时候菩萨戒已经不犯，不犯菩萨戒，因为你已经慢慢脱离它了。 <br/>
 <br/>
@@ -44,9 +57,9 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 ~~ 节选 净界法师 楞严经讲义 <br/>
 <br/>
-​ </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-3 09:15</div><div class="post-body">《守护国界主陀罗尼经》云：供养诸佛菩萨，一定要发无上的菩提心，其功德远远超过财物供养（翻译成白话）。大德教导说：“大家都应该做这样的法供养（指发菩提心）。所谓法供养，不一定非要背诵论典、讲经说法。发菩提心应该可以，这并不需要很高的智慧。” </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-3 10:07</div><div class="post-body">寂静，是少烦恼；调柔，是没有攻击性，温和、开放、有韧性。我们这里老一辈的人常说，判断一个人修行好不好，看他脾气好坏就知道。这话是有道理的。脾气好，并不只是简单的生性如此而已，脾气好的人内心更豁达清透，对人对事能包容有耐心，不纠结于达到某个固定的结果。 <br/>
+​ </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-3 09:15</div><div class="post-body">《守护国界主陀罗尼经》云：供养诸佛菩萨，一定要发无上的菩提心，其功德远远超过财物供养（翻译成白话）。大德教导说：“大家都应该做这样的法供养（指发菩提心）。所谓法供养，不一定非要背诵论典、讲经说法。发菩提心应该可以，这并不需要很高的智慧。” </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-3 10:07</div><div class="post-body">寂静，是少烦恼；调柔，是没有攻击性，温和、开放、有韧性。我们这里老一辈的人常说，判断一个人修行好不好，看他脾气好坏就知道。这话是有道理的。脾气好，并不只是简单的生性如此而已，脾气好的人内心更豁达清透，对人对事能包容有耐心，不纠结于达到某个固定的结果。 <br/>
 <br/>
-——— </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-3 18:58</div><div class="post-body">佛法的核心是菩提心，与菩提心直接相违的是杀生，希望大家避免直接或间接的杀生，比如点杀，请人吃饭或者别人请自己吃饭的时候要注意避免杀生。不杀生是最主要的一条戒律，不杀生的基础上，最好能从今天开始一点点减少吃肉，逐渐吃素、放生。吃素客观上减少了杀生，是间接的放生，也很有功德。现在很多人因为健康的考虑开始吃素，我们佛教徒更应该吃素！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-4 08:03</div><div class="post-body">有的人认为，我们基本上需要出离一切，到森林、山洞里，或者成为僧人，才能真正完美地修学佛法。这么想真的是局限了佛法。因为佛陀是那么地全知全能，他所教授的路径无限丰富。处于任何境况中的任何人都能找到合适的方式，无论是士兵、商人、国王、皇后，还是其他任何身份，认识到这一点是非常重要的。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-4 08:05</div><div class="post-body">问：我一直很脆弱，经常爲一些小事心里纠结，我怎样可以让自己的内心变得强大？ <br/>
+——— </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-3 18:58</div><div class="post-body">佛法的核心是菩提心，与菩提心直接相违的是杀生，希望大家避免直接或间接的杀生，比如点杀，请人吃饭或者别人请自己吃饭的时候要注意避免杀生。不杀生是最主要的一条戒律，不杀生的基础上，最好能从今天开始一点点减少吃肉，逐渐吃素、放生。吃素客观上减少了杀生，是间接的放生，也很有功德。现在很多人因为健康的考虑开始吃素，我们佛教徒更应该吃素！ </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-4 08:03</div><div class="post-body">有的人认为，我们基本上需要出离一切，到森林、山洞里，或者成为僧人，才能真正完美地修学佛法。这么想真的是局限了佛法。因为佛陀是那么地全知全能，他所教授的路径无限丰富。处于任何境况中的任何人都能找到合适的方式，无论是士兵、商人、国王、皇后，还是其他任何身份，认识到这一点是非常重要的。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-4 08:05</div><div class="post-body">问：我一直很脆弱，经常爲一些小事心里纠结，我怎样可以让自己的内心变得强大？ <br/>
 <br/>
 师答：如果你喜欢被表扬，不喜欢被批评，如果你只是想得到，害怕失去，如果你寻求被注意，憎恨被忽视，如果你过分寻找快乐，偏执地害怕，如果你深陷这八种状态，你就会变得脆弱。如果你不会，就将变得强大。例如：婴儿，在他们成熟前他们真的不在意那么多的表扬和批评，你告诉婴儿你太胖了，但他们不知道胖是什么意思。所以这些话不会打扰到他们。因此我认爲超越这八种状态你就会变得强大。 <br/>
 ​ <br/>

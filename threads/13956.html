@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>发菩提心的重要 - 藏密修海典藏</title>
+<title>发菩提心的重要 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">发菩提心的重要</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-25 08:58</div><div class="post-body">菩提心分“世俗菩提心”和“胜义菩提心”。“世俗菩提心”是依仪轨而生起的。行者透过善知识，经仪轨来受持，伴随自心种性的自然苏醒、功德的积聚、不断闻法與行持善业而获得世俗菩提心，这是透过仪轨来授持。“胜义菩提心”並非透过仪轨来授持，它只能通过禅定来获得。因此，行者首先必须积聚功德，才可进而积聚智慧资粮。智慧资粮指能了知並通达智慧。福德资粮可通过供养佛、修慈悲心等来积聚。通过这些，行者积聚广大功德，然後再经禅定修习，把方便和智慧两者结合，这样行者将能见到诸法实相，这称为“见道”。当到达“见道”的境界，即已通达胜义菩提心。世俗菩提心分两种 <br/>
+<div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-25 08:58</div><div class="post-body">菩提心分“世俗菩提心”和“胜义菩提心”。“世俗菩提心”是依仪轨而生起的。行者透过善知识，经仪轨来受持，伴随自心种性的自然苏醒、功德的积聚、不断闻法與行持善业而获得世俗菩提心，这是透过仪轨来授持。“胜义菩提心”並非透过仪轨来授持，它只能通过禅定来获得。因此，行者首先必须积聚功德，才可进而积聚智慧资粮。智慧资粮指能了知並通达智慧。福德资粮可通过供养佛、修慈悲心等来积聚。通过这些，行者积聚广大功德，然後再经禅定修习，把方便和智慧两者结合，这样行者将能见到诸法实相，这称为“见道”。当到达“见道”的境界，即已通达胜义菩提心。世俗菩提心分两种 <br/>
 <br/>
 世俗菩提心又分“願菩提心”和“行菩提心”。 <br/>
 <br/>
@@ -51,7 +64,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 须建立正确发心 <br/>
 <br/>
-行者首先必须建立正确的发心，若一个人以正确的发心和态度来闻法，那麼菩萨主要修持的六波罗蜜都已包含在其中。整个菩萨道的主要修持是六波罗蜜，如果凡事都以正确的发心和知见去做，即使只是聽闻佛法这行为本身，都已包含六波罗蜜的修持在其中。因此，应以正确的发心和态度来聽闻佛法教学。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-25 09:02</div><div class="post-body">七种方法增长菩提心 <br/>
+行者首先必须建立正确的发心，若一个人以正确的发心和态度来闻法，那麼菩萨主要修持的六波罗蜜都已包含在其中。整个菩萨道的主要修持是六波罗蜜，如果凡事都以正确的发心和知见去做，即使只是聽闻佛法这行为本身，都已包含六波罗蜜的修持在其中。因此，应以正确的发心和态度来聽闻佛法教学。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-25 09:02</div><div class="post-body">七种方法增长菩提心 <br/>
 <br/>
 一、依止善知识 这里是指你的上师或老师能够告诉你及指引你正确之道路。 <br/>
 <br/>
@@ -77,7 +90,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 四、不願意以善巧方便来作广大利生事业，反之，只作些次要的修持来希求达到圆满正觉。 <br/>
 <br/>
-五、不知诸佛菩萨的殊胜功德，因而对获得这些功德並无兴趣。 以上的五种法能使你退失菩提心。 对治退失菩提心的方法，是行者应思维诸佛菩萨的种种功德及其广大事业的善巧方便，内心对此应生起希求和热忱，来增长信心，並且爱护他人。通过修学佛法的热诚，行者可防止菩提心之退转。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-25 10:39</div><div class="post-body">我们要知道，修行能获得什么果位，关键在于发心；不同的发心，得到的果位也会不同。如果有良好的发心，则任何微小的行善止恶之行，都将获得无边的利益。 <br/>
+五、不知诸佛菩萨的殊胜功德，因而对获得这些功德並无兴趣。 以上的五种法能使你退失菩提心。 对治退失菩提心的方法，是行者应思维诸佛菩萨的种种功德及其广大事业的善巧方便，内心对此应生起希求和热忱，来增长信心，並且爱护他人。通过修学佛法的热诚，行者可防止菩提心之退转。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-25 10:39</div><div class="post-body">我们要知道，修行能获得什么果位，关键在于发心；不同的发心，得到的果位也会不同。如果有良好的发心，则任何微小的行善止恶之行，都将获得无边的利益。 <br/>
 如果发心是为了今生或来世的名声财富，观修生起次第的寂静本尊，最好的结果，也只能转生到欲界天；如果观修忿怒本尊，则会转生为魔。 <br/>
 即使修的是大圆满的立断和顿超法门，就算做到清净罪障、积累资粮，最多可以转生为天人；如果没有以清净罪障、积累资粮来配合，来世只会变成冬眠的动物。 <br/>
 冬眠时，这些动物也没有粗大的分别念，就像安住在无念的闭关中，仍然无法从轮回中解脱。 <br/>
@@ -85,7 +98,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 即使闭关九年，精进修行，果报也就只有世间的名利财富，除此之外，连后世解脱的种子也不会播下。菩提心，是所有修行中最殊胜的善巧，也是累积无量资粮的诀窍要门。 <br/>
 如果不能转变狭隘的心量，学过的法不会真正受用，即使闭关、止语、念诵或打坐等等，也只是装腔作势，没有任何意义。 <br/>
 很多人有机会接触佛法，但不清楚学佛的真实意义，获得的利益非常有限。所以，要时时反观自心。 <br/>
-不论是持诵一句咒语、一句佛号，或听闻深奥的佛法、顶礼诸佛菩萨、绕塔或绕佛时等等，一定要具备菩提心，这样才能累积广大的资粮，成熟无量的福报。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-25 12:56</div><div class="post-body">如果你有菩提心，那你就只需要菩提心；如果你没有菩提心，那你非得有菩提心不可，因为菩提心是不可或缺的。🌴 <br/>
+不论是持诵一句咒语、一句佛号，或听闻深奥的佛法、顶礼诸佛菩萨、绕塔或绕佛时等等，一定要具备菩提心，这样才能累积广大的资粮，成熟无量的福报。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-25 12:56</div><div class="post-body">如果你有菩提心，那你就只需要菩提心；如果你没有菩提心，那你非得有菩提心不可，因为菩提心是不可或缺的。🌴 <br/>
 <br/>
 </div></div>
 </div>

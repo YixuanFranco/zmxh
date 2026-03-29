@@ -1,0 +1,83 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>圣地游览贴图区 - 藏密修海</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / 藏密修海佛友社区</div>
+<h1 style="margin-bottom: 10px; font-size: 32px;">目录：圣地游览贴图区</h1>
+<p style="color:var(--text-muted); margin-bottom:40px;">共收录 40 篇主题</p>
+<a href="../threads/13005.html" class="thread-row"><h2>泰国三头象神博物馆</h2><div class="th-meta">TID: 13005</div></a>
+<a href="../threads/13004.html" class="thread-row"><h2>Navagunjara</h2><div class="th-meta">TID: 13004</div></a>
+<a href="../threads/13002.html" class="thread-row"><h2>卧佛寺－－释迦佛涅磐场景再现</h2><div class="th-meta">TID: 13002</div></a>
+<a href="../threads/9025.html" class="thread-row"><h2>欢迎来不丹旅游和朝圣^_^</h2><div class="th-meta">TID: 9025</div></a>
+<a href="../threads/8287.html" class="thread-row"><h2>【印度朝圣】佛陀诞生地—蓝毗尼</h2><div class="th-meta">TID: 8287</div></a>
+<a href="../threads/8047.html" class="thread-row"><h2>【西藏朝圣】之藏地明珠—布达拉宫（观音菩萨道场之一）</h2><div class="th-meta">TID: 8047</div></a>
+<a href="../threads/8032.html" class="thread-row"><h2>国庆西藏朝圣礼佛 祈福加持净心之旅</h2><div class="th-meta">TID: 8032</div></a>
+<a href="../threads/7988.html" class="thread-row"><h2>去印度朝圣做什么？追随佛法圣迹-印度尼泊尔朝圣</h2><div class="th-meta">TID: 7988</div></a>
+<a href="../threads/7986.html" class="thread-row"><h2>五台山小朝台 乾隆皇帝与黛螺顶</h2><div class="th-meta">TID: 7986</div></a>
+<a href="../threads/7985.html" class="thread-row"><h2>不可思议的桑耶寺——建筑版的佛经（微缩版的大千世界）</h2><div class="th-meta">TID: 7985</div></a>
+<a href="../threads/7984.html" class="thread-row"><h2>末朝圣在西藏 佛法润心佑全程</h2><div class="th-meta">TID: 7984</div></a>
+<a href="../threads/7940.html" class="thread-row"><h2>【朝圣的意义——嘉样堪布开示】</h2><div class="th-meta">TID: 7940</div></a>
+<a href="../threads/4724.html" class="thread-row"><h2>藏传佛教格鲁派之源-夏琼寺</h2><div class="th-meta">TID: 4724</div></a>
+<a href="../threads/4649.html" class="thread-row"><h2>山南贡嘎曲德寺——萨迦派察巴支派主寺(图)</h2><div class="th-meta">TID: 4649</div></a>
+<a href="../threads/3894.html" class="thread-row"><h2>西藏九大神山山神</h2><div class="th-meta">TID: 3894</div></a>
+<a href="../threads/2903.html" class="thread-row"><h2>五台山---中国佛教四大名山之一</h2><div class="th-meta">TID: 2903</div></a>
+<a href="../threads/2901.html" class="thread-row"><h2>婆罗浮屠---惊世奇迹婆罗浮屠 隐藏生命解脱秘法</h2><div class="th-meta">TID: 2901</div></a>
+<a href="../threads/2900.html" class="thread-row"><h2>斯里兰卡---佛国之旅</h2><div class="th-meta">TID: 2900</div></a>
+<a href="../threads/2583.html" class="thread-row"><h2>西藏各地区旅游图</h2><div class="th-meta">TID: 2583</div></a>
+<a href="../threads/2582.html" class="thread-row"><h2>西藏朝圣旅游全攻略(超级完整篇)</h2><div class="th-meta">TID: 2582</div></a>
+<a href="../threads/2581.html" class="thread-row"><h2>西藏朝圣旅游攻略之：冈仁布钦转山道路详述</h2><div class="th-meta">TID: 2581</div></a>
+<a href="../threads/2580.html" class="thread-row"><h2>走上第三极——走进西藏旅游朝圣指南之十全大补</h2><div class="th-meta">TID: 2580</div></a>
+<a href="../threads/2579.html" class="thread-row"><h2>西藏旅游全攻略之：走进西藏53个问答</h2><div class="th-meta">TID: 2579</div></a>
+<a href="../threads/2577.html" class="thread-row"><h2>进藏攻略</h2><div class="th-meta">TID: 2577</div></a>
+<a href="../threads/2576.html" class="thread-row"><h2>菜驴走西藏完全手册</h2><div class="th-meta">TID: 2576</div></a>
+<a href="../threads/2575.html" class="thread-row"><h2>天边的阿里：旅游全攻略——阿里朝圣必看</h2><div class="th-meta">TID: 2575</div></a>
+<a href="../threads/2168.html" class="thread-row"><h2>上海师兄弟西藏宁玛派朝圣兼旅游</h2><div class="th-meta">TID: 2168</div></a>
+<a href="../threads/2017.html" class="thread-row"><h2>揭开西藏十大神秘现象(图)</h2><div class="th-meta">TID: 2017</div></a>
+<a href="../threads/1872.html" class="thread-row"><h2>罗布林卡的壁画</h2><div class="th-meta">TID: 1872</div></a>
+<a href="../threads/1862.html" class="thread-row"><h2>青海塔尔寺</h2><div class="th-meta">TID: 1862</div></a>
+<a href="../threads/1828.html" class="thread-row"><h2>纳木错”意为天湖、灵湖或神湖，是藏传佛教的著名圣地</h2><div class="th-meta">TID: 1828</div></a>
+<a href="../threads/1827.html" class="thread-row"><h2>走近萨迦寺（图）</h2><div class="th-meta">TID: 1827</div></a>
+<a href="../threads/1826.html" class="thread-row"><h2>萨迦寺体验时光倒流</h2><div class="th-meta">TID: 1826</div></a>
+<a href="../threads/1825.html" class="thread-row"><h2>西藏塔王：白居寺</h2><div class="th-meta">TID: 1825</div></a>
+<a href="../threads/1807.html" class="thread-row"><h2>桑耶寺</h2><div class="th-meta">TID: 1807</div></a>
+<a href="../threads/1806.html" class="thread-row"><h2>朵得却巴——桑耶寺的经藏供养</h2><div class="th-meta">TID: 1806</div></a>
+<a href="../threads/1532.html" class="thread-row"><h2>西藏史前文化：神奇的藏式壁画（图）</h2><div class="th-meta">TID: 1532</div></a>
+<a href="../threads/1519.html" class="thread-row"><h2>莲花生大士开示-----尼泊尔满愿大佛塔之殊胜</h2><div class="th-meta">TID: 1519</div></a>
+<a href="../threads/815.html" class="thread-row"><h2>经幡</h2><div class="th-meta">TID: 815</div></a>
+<a href="../threads/331.html" class="thread-row"><h2>我的家乡－－西藏江孜</h2><div class="th-meta">TID: 331</div></a>
+
+</div></body></html>

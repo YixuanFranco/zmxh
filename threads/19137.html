@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>正法大圓滿三部中 密續本尊寂靜灌頂品 藏汉 - 藏密修海典藏</title>
+<title>正法大圓滿三部中 密續本尊寂靜灌頂品 藏汉 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">正法大圓滿三部中 密續本尊寂靜灌頂品 藏汉</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2025-12-22 15:02</div><div class="post-body">td2572_正法大圓滿三部中 密續本尊寂靜灌頂品.g2.0f <br/>
+<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2025-12-22 15:02</div><div class="post-body">td2572_正法大圓滿三部中 密續本尊寂靜灌頂品.g2.0f <br/>
 大寶伏藏TD2572དམ་ཆོས་རྫོགས་པ་ཆེན་པོ་སྡེ་གསུམ་ལས༔ གསང་སྐོར་ཡི་དམ་ཞི་བའི་དབང་བསྐུར་བཞུགས༔ 68-32-1a ༄༅། །དམ་ཆོས་རྫོགས་པ་ཆེན་པོ་སྡེ་གསུམ་ལས༔ གསང་སྐོར་ཡི་དམ་ཞི་བའི་དབང་བསྐུར་བཞུགས༔ ༄༅། །དམ་ཆོས་རྫོགས་པ་ཆེན་པོ་སྡེ་གསུམ་ལས༔ གསང་སྐོར་ཡི་དམ་ཞི་བའི་དབང་བསྐུར་བཞུགས༔ ན་མོ་གུ་རུ༔ གསང་སྐོར་ཡི་དམ་ཞི་སྒྲུབ་དབང་༔ དཀྱིལ་འཁོར་བཞེངས་ཤིང་སྒྲུབ་མཆོད་བྱ༔ སློབ་མ་མདུན་འཁོད་མཎྜལ་ཕུལ༔ བླ་མ་ཞི་ཁྲོའི་ལྷ་ཚོགས་དགོངས༔ བདག་ནི་མ་རིག་འཁྲུལ་པས་བསྒྲིབས༔ སྒྲིབ་པའི་ཚོགས་རྣམས་བསལ་བར་མཛོད༔ རྗེས་སུ་འཛིན་པར་མཛད་དུ་གསོལ༔ སློབ་དཔོན་གྱིས༔ དེ་ལྟར་ཡིན་ན་ཞི་ཁྲོ་ཡི༔ བླ་མེད་ཡང་གསང་དམ་ཚིག་རྣམས༔ སྲོག་གི་ཕྱིར་ཡང་མི་གཏང་བར༔ ཁྱོད་ཀྱིས་ཡང་དག་བྲོ་བོར་ཅིག༔ སློབ་མས༔ ཨི་དན་ན་ར་ཀན༔ སློབ་མ་མ་བཅོས་ཀློང་གསལ་ཀུན་ཏུ་བཟང་པོར་གསལ་བའི་ཐུགས་ཀར་ཡེ་ཤེས་ཀྱི་འཁོར་ལོ་དྲག་ཏུ་འཁོར་བས་རྒྱལ་བ་ཐམས་ཅད་བྱོན་ནས་ཐིམ་པས་བྱིན་གྱིས་བརླབས་པར་གྱུར༔ ཨཱ་བེ་ཤ་ཡ་ཨ་ཨཱ༔ བརྟན་པར་བྱ་ཞིང་བུམ་པ་གཟུང་༔ དེ་ཡང་དབང་ལ་རྣམ་གསུམ་སྟེ༔ དག་འགྱུར་མཆོག་དབང་བསྐུར་བ་འོ༔ ཧཱུྃ༔ བཀྲ་ཤིས་བུམ་པ་སྣོད་བཅུད་ཡོངས་སུ་རྫོགས༔ རིན་ཆེན་ཅོད་པན་རྒྱལ་བའི་དབང་བསྐུར་ཆེ༔ 68-32-1b ཡེ་ཤེས་རྡོ་རྗེ་དང་བཅས་རྒྱལ་བས་འཛིན༔ སངས་རྒྱས་གསུང་དབྱངས་དྲིལ་བུའི་སྒྲ་འཁྲོལ་ཞིང་༔ བཀྲ་ཤིས་མཚན་གྱི་སྙིང་པོས་མངའ་གསོལ་བས༔ རིག་པའི་དབང་ལྔ་དུས་གཅིག་རྫོགས་གྱུར་ཅིག༔ ཨཱོྃ་བོ་དྷི་ཙིཏྟ་མ་ཧཱ་སུ་ཁ་ཛྙཱ་ན་དྷཱ་ཏུ་ཨ་བྷི་ཥིཉྩ་ཨཱ༔ ཧཱུྃ༔ ཞེ་སྡང་རྣམ་དག་མི་བསྐྱོད་རྡོ་རྗེ་དང་༔ གཏི་མུག་རྣམ་དག་རྣམ་པར་སྣང་མཛད་དང་༔ ང་རྒྱལ་རྣམ་དག་རིན་ཆེན་འབྱུང་ལྡན་དང་༔ འདོད་ཆགས་རྣམ་དག་སྣང་བ་མཐའ་ཡས་དང་༔ ཕྲག་དོག་རྣམ་དག་དོན་ཡོད་གྲུབ་པ་སྟེ༔ རྒྱལ་བ་རིགས་ལྔའི་སྐུ་གསུང་ཐུགས་རྫོགས་ཤོག༔ ཧཱུྃ་ཨཱོྃ་ཏྲཱཾ་ཧྲཱིཿཨཱཿཨ་བྷི་ཥིཉྩ་ཨཱོྃ༔ ཧཱུྃ༔ ནམ་མཁའ་རྣམ་དག་ཡུམ་ཆེན་དབྱིངས་ཕྱུག་མ༔ ས་ཁམས་རྣམ་དག་ཡུམ་ཆེན་སངས་རྒྱས་སྤྱན༔ ཆུ་ཁམས་རྣམ་དག་ཡུམ་ཆེན་མཱ་མ་ཀཱི༔ མེ་ཁམས་རྣམ་དག་ཡུམ་ཆེན་གོས་དཀར་མོ༔ རླུང་ཁམས་རྣམ་དག་ཡུམ་ཆེན་དམ་ཚིག་སྒྲོལ༔ རིགས་ཀྱི་ཡུམ་གྱུར་རྣམས་ཀྱི་དབང་བསྐུར་རོ༔ མཱུྃ་ལཱྃ་མཱྃ་པཱྃ་ཏཱྃ་ཨ་བྷི་ཥིཉྩ་ཨཱོྃ༔ ཧཱུྃ༔ མིག་དབང་གནས་དག་སེམས་དཔའ་ས་ཡི་སྙིང་༔ 68-32-2a གཟུགས་ཡུལ་གནས་དག་སེམས་དཔའ་བྱམས་པ་མགོན༔ རྣ་དབང་གནས་དག་སེམས་དཔའ་ནམ་མཁའི་སྙིང་༔ སྒྲ་ཡུལ་གནས་དག་སེམས་དཔའ་སྒྲིབ་པ་སེལ༔ སྣ་དབང་གནས་དག་སེམས་དཔའ་སྤྱན་རས་གཟིགས༔ དྲི་ཡུལ་གནས་དག་སེམས་དཔའ་ཀུན་ཏུ་བཟང་༔ ལྕེ་དབང་གནས་དག་སེམས་དཔའ་རྡོ་རྗེ་འཛིན༔ རོ་ཡུལ་གནས་དག་སེམས <br/>
 <br/>
 【現代漢語翻譯】 大寶伏藏TD2572《甚深法大圓滿三部》之秘密儀軌寂靜本尊灌頂 甚深法大圓滿三部之秘密儀軌寂靜本尊灌頂 甚深法大圓滿三部之秘密儀軌寂靜本尊灌頂。頂禮 गुरु (藏文，梵文天城體，guru，上師)。秘密儀軌寂靜本尊修法灌頂： 設立壇城並進行修供。 弟子於前陳設曼扎。 觀想上師為寂靜忿怒本尊眾。 我為無明所障蔽，祈請消除一切障蔽，祈請攝受。 上師言：『若如是，則寂靜忿怒之無上甚深秘密誓言，縱舍性命亦不捨棄，汝當如實承諾。』 弟子言：『ཨི་དན་ན་ར་ཀན (藏文，梵文天城體，idanna ra kana，意義不明)』。 弟子于未造作之清凈虛空中，明觀為普賢王如來，于其心間，智慧輪猛烈旋轉，諸佛降臨融入，加持之。 ཨཱ་བེ་ཤ་ཡ་ཨ་ཨཱ (藏文，梵文天城體，ābeśaya ā ā，進入啊啊)。穩固之，並持寶瓶。 此灌頂有三種：清凈轉變之殊勝灌頂。 हुँ (藏文，梵文天城體，hūṃ，種子字，表示智慧)：吉祥寶瓶，內外圓滿，珍寶頂飾，乃諸佛之灌頂。 與智慧金剛一同為諸佛所持。 宣揚佛陀之語，鈴聲悅耳。 以吉祥名之精要加持，五種智慧一時圓滿。 嗡 菩提 चित्त (藏文，梵文天城體，citta，心) 摩訶 सुख (藏文，梵文天城體，sukha，樂) 智 ज्ञान (藏文，梵文天城體，jñāna，智慧) 界 धातु (藏文，梵文天城體，dhātu，界) 阿毗ಷིཉྩ (藏文，梵文天城體，abhiṣiñca，灌頂) 阿。 हुँ (藏文，梵文天城體，hūṃ，種子字，表示智慧)：嗔恨清凈為不動金剛，愚癡清凈為毗盧遮那佛，我慢清凈為寶生佛，貪慾清凈為無量光佛，嫉妒清凈為不空成就佛，愿五部如來之身語意圓滿。 हुँ (藏文，梵文天城體，hūṃ，種子字，表示智慧) 嗡 ཏྲཱཾ (藏文，梵文天城體，trāṃ，種子字，救度) 舍 ཧྲཱིཿ (藏文，梵文天城體，hrīḥ，種子字，大悲) 阿 阿 阿毗ಷིཉྩ (藏文，梵文天城體，abhiṣiñca，灌頂) 嗡。 हुँ (藏文，梵文天城體，hūṃ，種子字，表示智慧)：虛空清凈為大虛空藏母，地界清凈為佛眼佛母，水界清凈為摩摩枳佛母，火界清凈為白衣佛母，風界清凈為誓言度母，祈請諸部之佛母灌頂。 穆 লাম 媽 怕 塔 阿毗ಷིཉྩ (藏文，梵文天城體，abhiṣiñca，灌頂) 嗡。 हुँ (藏文，梵文天城體，hūṃ，種子字，表示智慧)：眼根清凈為地藏菩薩， <br/>

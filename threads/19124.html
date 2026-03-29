@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>吉祥飲血尊顯現續 藏汉 - 藏密修海典藏</title>
+<title>吉祥飲血尊顯現續 藏汉 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">吉祥飲血尊顯現續 藏汉</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2025-12-19 23:22</div><div class="post-body">d0374吉祥飲血尊顯現續new c3.5s <br/>
+<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2025-12-19 23:22</div><div class="post-body">d0374吉祥飲血尊顯現續new c3.5s <br/>
 ﻿D374 d0374位於德格甘珠爾第79函，沒有相當的大正藏所收譯經 @#། །རྒྱུད་འབུམ་ག་བ་བཞུགས་སོ། ། @##། །རྒྱ་གར་སྐད་དུ། ཤྲཱི་ཧེ་རུ་ཀཱ་བྷྱ་ད་ཡ་ནཱ་མ། བོད་སྐད་དུ། དཔལ་ཁྲག་འཐུང་མངོན་པར་འབྱུང་བ་ཞེས་བྱ་བ། དཔལ་ཧེ་རུ་ཀ་ལ་ཕྱག་འཚལ་ལོ། །དེ་ནས་ཡང་དག བཤད་བྱ་བ།།མཆོག་ཏུ་རྨད་བྱུང་གསེང་བ་ནི། །གང་ཞིག་མིས་ནི་ཡང་དག་རིག་།སྒྲུབ་པོ་དངོས་གྲུབ་ཐོབ་པར་འགྱུར། །ཚེས་གྲངས་མེད་ཅིང་སྐར་མའང་མེད། །སྨྱུང་བ་མེད་པར་ བརྗོད་བྱ་སྟེ།།དག་པ་དང་ནི་མི་གཙང་མེད། །མི་སྨྲ་ཆུ་ཡི་བྱ་བ་མེད། །དུས་དང་ཚོད་ལས་རྣམ་པར་གྲོལ། །གཙང་སྦྲའི་སྤྱོད་པ་རྣམ་པར་སྤངས། །དེ་ཡིས་གྲོང་པའི་ཆོས་མི་སྤྱད། ། རྩོད་ལྡན་དུས་སུ་དངོས་གྲུབ་འགྱུར། །རྫོགས་ལྡན་ཡོན་ཏན་གཅིག་འགྲུབ་སྟེ། །དེ་བཞིན་གསུམ་ལྡན་ཡོན་ཏན་གཉིས། །གཉིས་ལྡན་ཡོན་ཏན་གསུམ་དུ་གསུངས། །རྩོད་ལྡན ཡོན་ཏན་བཞི་ཉིད་དེ།།དངོས་གྲུབ་ཉིད་དུ་ཐེ་ཚོམ་མེད། །དཔལ་ཁྲག་འཐུང་མངོན་པར་འབྱུང་བ་ལས་འཇུག་པའི་ཆོ་གའི་ལེའུ་ཞེས་བྱ་བ་སྟེ་དང་པོའོ།། །།དེ་ནས་གཞན་ནི་ རབ་བཤད་བྱ།།རྒྱུད་རྣམས་ཀུན་ཏུ་སྦས་པ་སྟེ། །དཔལ་ལྡན་ཁྲག་འཐུང་རྒྱུད་ཆེན་དུ། །འདོད་པའི་དོན་ཀུན་སྒྲུབ་པར་བྱེད། །ས་ཡི་ཆ་མཉམ་ཡིད་འོང་བར། །དྲི་ཡི་ཆུ་ཡིས་ཉེར་བྱུགས་ཏེ། །སྣ་ཚོགས་སྤོས་ནི་ཡིད་ འོང་དང་།།མེ་ཏོག་སྣ་ཚོགས་གཅལ་དུ་བཀྲམ། །གཙང་ཞིང་དབེན་པའི་ས་ཕྱོགས་སུ། །སྔགས་ཤེས་པས་ནི་བསྲུང་བར་བྱ། །ཕྱོགས་ནི་བཅིང་བར་བྱ་བའོ། །དེ་ལྟར་ཆོ་ག་ཡང་དག་ལྡན། །མཁས་པས་དགོད་བྱ་དགོད་པར་བྱ། །སེམས་ནི་ ཤིན་ཏུ་དགའ་བ་ཡིས།།ཀུན་ནས་ཀུན་ཏུ་ཆོ་ག་བསམ། །བུད་མེད་ཕྱག་རྒྱ་གེ་སར་བཅས། །དང་པོའི་ཚེག་དྲག་རྗེས་དབྱངས་དང་། །རིང་དང་ཐུང་བར་རབ་ཏུ་གྲགས། །གྲུ་གསུམ་གཉིས་ནི་ཡང་དག་ལྡན། །དེ་བཞིན་མ་ནིང་བཞི་བོ་ དང་།།བུད་མེད་སྐྱེས་བུ་རྣམ་པ་བཞི། །དེ་བཞིན་གཉིས་པ་དང་པོའི་དབྱངས། །རིང་དང་ཐུང་བར་ཤེས་བྱ་སྟེ། །དབྱངས་ཀྱི་ཕྱི་མོ་དགོང་པར་བྱ། །དབྱངས་ཀྱི་སྡེ་ནི་དང་པོར་དགོད། །ལྕེ་རྩའི་དབྱངས་ནི་གཉིས་པར་དགོད། །ཚེག་དྲག་ དབྱངས་ནི་གསུམ་པར་རོ།།དབུས་སུ་པད་མ་བཞི་པར་རོ། <br/>
 <br/>
 以下是完整的直譯： 金剛乘續部嘎巴卷 梵語：Śrī Herukābhyudaya Nāma 藏語：དཔལ་ཁྲག་འཐུང་མངོན་པར་འབྱུང་བ་ཞེས་བྱ་བ། 漢語：吉祥飲血尊出現之名 禮敬吉祥飲血尊。 現在將要正確解說。 最為稀有的秘密， 若人能夠正確了知， 修行者將獲得成就。 無需計算日期星宿， 無需禁食而應宣說。 既無清凈亦無不凈， 無需沉默無需洗浴。 超越時間與時辰限， 完全捨棄清潔行為。 因此不行世俗之法， 爭鬥時代將得成就。 圓滿時代成就一德， 三德時代成就二德， 二德時代成就三德， 爭鬥時代成就四德， 無疑將獲得殊勝成就。 此為吉祥飲血尊出現續第一章入門儀軌品。 現在將要詳細解說， 諸續中所隱藏之義。 在吉祥飲血大續中， 能成就一切所欲事。 在平坦悅意的地方， 用香水仔細塗抹之。 各種悅意的香料和， 各種鮮花鋪滿地面。 在清凈幽靜的地方， 由懂咒語者作護持。 應當結界諸方位。 如是具足正確儀軌， 智者應當佈置法壇。 以極其歡喜的心意， 周遍思維一切儀軌。 女性手印具有花蕊， 第一輔音後加元音， 長音短音廣為人知。 兩個三角完全具足。 同樣四個中性音和， 四種女性與男性音。 同樣第二與第一元音， 應知為長音與短音。 元音之末應當省略。 元音類應置於首位。 舌根元音置於第二。 輔音元音置於第三。 中央蓮花置於第四。 <br/>

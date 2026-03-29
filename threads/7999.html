@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>在家居士律仪五百答 - 藏密修海典藏</title>
+<title>在家居士律仪五百答 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">在家居士律仪五百答</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-9-6 16:00</div><div class="post-body">[b][font=黑体][size=6]在家居士律仪五百答 [/size][/font][/b] <br/>
+<div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-9-6 16:00</div><div class="post-body">[b][font=黑体][size=6]在家居士律仪五百答 [/size][/font][/b] <br/>
 纯智法师  著 <br/>
 <br/>
 作者简介：养觉法师，字纯智，笔名漂泊。69年生，俗姓程，祖籍安徽桐城。92年完成学业后，礼上一下诚大和尚出家于江西永修云居山真如寺；95年受具足戒于山西五台山碧山寺；97年在宝山闭关学律，2000年出关。出关后，先后受聘为河北省佛学院等国内多所佛学院的教授、律学讲师。 <br/>
@@ -39,7 +52,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 自序 <br/>
 首先非常感谢学人的依止师，河北省佛学院院长上净下慧大和尚，在老人家大力推行的生活禅——“觉悟人生、奉献人生”理念的感招下，应邀从南方到北方来弘扬戒律（到省佛学院来授课），才有这个机缘。另外更加感谢学人的剃度师上一下诚大和尚，能够成就学人四处参学。而后由于弘法的需要，在基层与居士们的接触中，了解到绝大多数居士们，根本不明了佛教戒律。有两个极端：一是不愿守戒律，自由散漫，我行我素，这个样子跟没有学佛又有什么两样，甚至连最简单的“人”都没有做好，怎么能得到学佛的好处呢？二是左得出奇，大有唯我戒律“最”清净，自我感觉“高”人一等，故作神秘，疯疯癫癫，走火入魔，其实这是以身谤法，给人的印象是，没有学佛还可以，学佛后反而变坏变神经了。须知佛教戒律是最圆融、最中道、最民主、最自由自在的，如果学佛比做牢还辛苦，设想还有谁敢来信仰佛教呢？学人曾经在张家口，有一次乘车，驾驶员就问学人，“你们是佛教吗？”学人说“是的。”“你们佛教真好，可是我不敢信。”学人问他为什么？他说：“听你们教徒讲，你们佛教不准吃荤，又不准吃晚饭，那我可受不了。”你看，不懂戒律，不圆融明了戒律，就会造成这样，使许多世俗人不敢信仰佛教的严重后果。本书是学人在基层弘法时，由众居士的提问汇集而成，用最简洁明了的语言，向居士们回答复杂的戒律明相，由于学人的律学和文学知识有限，肯定有不如法的地方，请大德和读者们谅解。本书主要参考《南山四大部》、《优婆塞戒经》、《菩萨戒相》；弘一律师的《在家律学》、《在家备览》；圣严法师的《戒律学纲要》等。在整理本书时，得到了柏林寺首座明海法师及《禅》刊编辑黄明尧居士的大力帮助和支持，并提出了宝贵的修改意见。在此向帮助和支持本书出版的各位大德菩萨们，顶礼致谢。如果本书能有一点功德的话，就请回向给他们。 <br/>
 <br/>
-佛历二五四五年春公历二零零一年二月学人纯智整理于赵州祖庭柏林寺 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-9-6 16:01</div><div class="post-body">第一章  归依三宝 <br/>
+佛历二五四五年春公历二零零一年二月学人纯智整理于赵州祖庭柏林寺 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-9-6 16:01</div><div class="post-body">第一章  归依三宝 <br/>
 <br/>
 为什么要有戒律？ <br/>
 答：俗话说：“没有规矩，不成方圆。”守法与犯法的善恶界限，也仅仅是一念之差别。为了警策公民，不要犯错误，所以要制定法律。主要是保护合法的公民，不受伤害。佛教之有戒律也是如此。因为我们毕竟是凡夫，有这样那样的习气毛病，而修行的道路是漫长的，稍微不留意就会犯错误，那么就永远不能了生死，所以就一定需要有戒律来，时时刻刻提醒自己，少犯错误直至不犯错误。特别是在现世，修行人的根基差，若没有戒律来约束，那后果是难以想象的。因此戒律至于修行人——是生命，是必不可少的。 <br/>
@@ -340,7 +353,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 三十四，弥栗头波利那（善藏）——主嫉妒； <br/>
 三十五，弥栗头固陀那（善音）——主咒骂； <br/>
 三十六，弥栗头韦驮罗（善妙）——主厌祷。 <br/>
-以上摘录于《灌顶三归五戒带佩护身神咒》。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-9-6 16:44</div><div class="post-body">第二章  五戒十善 <br/>
+以上摘录于《灌顶三归五戒带佩护身神咒》。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-9-6 16:44</div><div class="post-body">第二章  五戒十善 <br/>
 <br/>
 什么是戒、什么是律？ <br/>
 答：戒字的含义，说文解字说是“警也”，是警觉的意思。不能做的做不得的事，就不要去做，结晶水戒，实际也就是一种道德标准的限制。比喻通常说的戒烟、戒赌、戒酒等等，便是一种约束的行为。戒律两字的意义，也是各有所指：戒是有所不为，律是有所当为；戒是不能如此，律应当如此；戒是各人的持守，律是团体的活动。所以在梵文中，戒叫做Sila(尸罗)，律叫做Vinay(比奈)。其实，有时也将戒律两字通用。我们应该明白，凡是有利于人类的任何高级宗教，它就不能违反人类的道德标准。我们佛教的戒律，由于层层的发挥，而超出一切宗教之上。有人曾经作了这样的比喻：儒家偏重于形而下，也就是注重现实人间的；道教偏重于形而上，也就是注重于死后升天而不注重现实人间；而佛教却出世而不离世，是极其中道的。 <br/>
@@ -685,7 +698,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 答：每持一戒，就有五位善神，随身保护，若持五戒，就有二十五位善神，随身保护，能使人出入起居，都能逢凶化吉。 <br/>
 <br/>
 五戒有什么功德？ <br/>
-答：受了五戒，只要如法奉行，绝对可保不堕三途：地狱、饿鬼、畜生。五戒的功德，可以保住人身，甚至可以上生天道，为天人。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-9-6 16:54</div><div class="post-body">第三章 八关斋戒 <br/>
+答：受了五戒，只要如法奉行，绝对可保不堕三途：地狱、饿鬼、畜生。五戒的功德，可以保住人身，甚至可以上生天道，为天人。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-9-6 16:54</div><div class="post-body">第三章 八关斋戒 <br/>
 <br/>
 什么是渐次戒？ <br/>
 答：是指在家的三归五戒；出家的沙弥、沙弥尼戒，比丘、比丘尼戒。不受三归——不能受五戒；不受三归五戒——不能受沙弥、沙弥尼戒；不受沙弥、沙弥尼戒——不能受比丘、比丘尼戒。因为这需要逐次上升，级级增加，所以叫渐次戒。 <br/>
@@ -760,7 +773,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 答：八关斋戒只能一人一人地单独向八戒师求受，因为人多混杂，心不专一。独受则心不他缘，法无通滥。八戒师必须是过午不食，出家十年以上的出家人，否则就不能为八戒师。(亦有开缘，如果是农禅结合丛林的僧众，为了劳作，必须要过午食，这些僧众，虽然过午食了，但是他们是为了服务长住，所以他们完全有资格任八戒师。) <br/>
 <br/>
 受戒后不想守如何舍？ <br/>
-答：本来八戒是一日一夜受，其实也无所谓舍戒，如果因为逆缘，或者因为烦恼，或者由于饥饿难忍时，只要向一个懂事懂话的人一说，我舍某戒，便算舍戒。不能受持，千万不要勉强，应该舍戒，以后要受，忏悔之后，仍然可以再受。 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-9-6 22:31</div><div class="post-body">第四章 威仪 <br/>
+答：本来八戒是一日一夜受，其实也无所谓舍戒，如果因为逆缘，或者因为烦恼，或者由于饥饿难忍时，只要向一个懂事懂话的人一说，我舍某戒，便算舍戒。不能受持，千万不要勉强，应该舍戒，以后要受，忏悔之后，仍然可以再受。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-9-6 22:31</div><div class="post-body">第四章 威仪 <br/>
 <br/>
 什么是居士？ <br/>
 答：是指虔诚信仰佛教，并且受了三归五戒的，优婆塞(男)优婆夷(女)的统称。在习惯上(不管你有没有受过五戒)，对所有男女在家信众，都称为居士或者护法。而实际上，只受了归依，没有受五戒的男女在家信众，只能称为信士。 <br/>
@@ -1642,7 +1655,7 @@ B  犯六重下轻        方便  责心忏 <br/>
 注：主要参考了《菩萨优婆塞戒经》，但是也适当地参考了《梵网经》、《璎珞经》忏悔的方法。 <br/>
 <br/>
 受了在家菩萨戒也要定期诵戒吗？ <br/>
-答：是的。新学菩萨，需要半月布萨(诵戒)，以便忏罪而得清净，以便诵戒而长养功德。对诵戒一事，不限制于半月一次，而是可以日日诵，甚至时时诵。但是，最少不得少过半月一次。如果不诵，那就“非菩萨，非佛子”了。另外，《义寂戒疏》中说：“在家菩萨，如果家内有净室，半月应自诵；如果家内没有干净的房间，由附近(大约二十至三十里)寺舍作菩萨布萨，则应该往听，如果都不诵听，犯轻垢罪。如果自己家里喧闹不干净，然而附近又没有菩萨布萨会集诵戒，不诵听不犯戒。” </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-9-7 20:09</div><div class="post-body">第五章 菩萨戒 <br/>
+答：是的。新学菩萨，需要半月布萨(诵戒)，以便忏罪而得清净，以便诵戒而长养功德。对诵戒一事，不限制于半月一次，而是可以日日诵，甚至时时诵。但是，最少不得少过半月一次。如果不诵，那就“非菩萨，非佛子”了。另外，《义寂戒疏》中说：“在家菩萨，如果家内有净室，半月应自诵；如果家内没有干净的房间，由附近(大约二十至三十里)寺舍作菩萨布萨，则应该往听，如果都不诵听，犯轻垢罪。如果自己家里喧闹不干净，然而附近又没有菩萨布萨会集诵戒，不诵听不犯戒。” </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-9-7 20:09</div><div class="post-body">第五章 菩萨戒 <br/>
 <br/>
 为什么戒具有这样的重要性？ <br/>
 答：《大涅槃经》中说：“戒是一切善法的阶梯，亦是一切善法的根本，如地总是一切树木所生之本；戒是诸善根之最导者，如彼商主导诸商人；戒是一切善法胜幢，如天帝释所立胜幢；戒是永断一切恶业及三恶道，能疗恶病犹如药树；戒是生死险道资粮；戒是催结恶贼铠仗；戒是灭结毒蛇良咒；戒是度恶业行桥梁。”从这里可以看出，不论行善断恶，不论离苦得乐，不论断惑证真，戒都起着决定性的作用，没有戒，这一切都谈不上。因此，戒是最重要的，也是不能忽视的。如人之双眼，失去就会眼前一片黑暗一样。 <br/>

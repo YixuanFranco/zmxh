@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>聖者金剛手著藍衣續釋 龍智 藏汉 - 藏密修海典藏</title>
+<title>聖者金剛手著藍衣續釋 龍智 藏汉 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">聖者金剛手著藍衣續釋 龍智 藏汉</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-1 20:44</div><div class="post-body">[size=5]d2200聖者金剛手著藍衣續釋龍智 <br/>
+<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-1 20:44</div><div class="post-body">[size=5]d2200聖者金剛手著藍衣續釋龍智 <br/>
 D2200 <br/>
 @##།།རྒྱ་གར་སྐད་དུ།ནཱི་ལཱཾ་བ་ར་དྷ་ར་བཛྲ་པཱ་ནཎི་ཨཱརྱ་ནཱ་མ་ཏནྟྲ་ཊཱི་ཀཱ།བོད་སྐད་དུ།འཕགས་པ་ལག་ན་རྡོ་རྗེ་གོས་སྔོན་པོ་ཅན་ཞེས་བྱ་བའི་རྒྱུད་ཀྱི་རྣམ་པར་བཤད་པ།སངས་རྒྱས་དང་བྱང་ཆུབ་སེམས་དཔའ་ཐམས་ཅད་ལ་ཕྱག་འཚལ་ལོ།།བདེན་པ་གཉིས་ལ་རབགནས་ཤིང་།།ཐབས་དང་ཤེས་རབ་ཟུང་འབྲེལ་པའི།།མགོན་པོ་སྒྲིབ་པ་ཀུན་སྤངས་ཡོན་ཏན་མ་ལུས་ཀུན་གྱི་བདག་པོ་དེ།།ཤེས་རབ་ཐབས་ཀྱིས་མྱ་ངན་མཐའ་སྤངས་ནས།།སྙིང་རྗེ་ཆེན་པོས་སེམས་ཅན་མུན་འཐིབས་པ།།མུན་མ་མཐོང་སྒོམ་རྩ་བ་ཉོན་མོངས་ཞི་མཛད་པ།།གསང་སྔགས་སྡུད་མཛད་མི་གཡོ་བཅོམ་ལྡན་འདས།།ཐུགས་རྗེ་བསྙེལ་བ་མེད་ལ་ཕྱག་འཚལ་ལོ།།གང་གིས་གསལ་བར་བྱས་པ་དེ་རྣམས་བྱས་པ་མ་ཡིན་ཚིག་དོན་སྐྱོན་དང་ལྡན།།དེ་ནས་འདིར་ནི་གསང་བ་དོན་ལས་དགའ་བ་སྐྱེས།།ཚིག་གི་སྐྱོན་བྲལ་མན་ངག་ཉམསདང་ལྡན།།ཤཱཀྱའི་རིགས་ཀྱི་མན་ངག་དོན་ལྡན་རྒྱས་པར་བསྟན་པ་ལས།།ཤེས་རབ་དམིགས་མ་ཕྱེད་པས་བཤད་ཟིན་བསྟན་པ་དག་།དེ་དག་སྨན་འགྱུར་འདིར་ནི་གསལ་བར་བྱས།།དེས་ནི་ཉི་ཟླ་དག་དང་མཐུན་པའི་དམ་ཆོས་འདི།།ཐུགས་རྗེ་ཉེ་བར་བསྔོས་པ་ཡིས།།སྙིང་རྗེ་ལྡན་པའི་སེམས་ཀྱིས་སུ།།རྩ་རྒྱུད་མན་ངག་བཤད་པར་བྱ།།རྩ་རྒྱུད་རང་བཞིན་དོན་རྣམས་ལ།།སྡེ་ཚན་ལྔ་ལྔ་ཉི་ཤུ་ལྔ།།ཡ་ཤ་མཐའ་བཅས་རྩ་བ་ལྡན།།ཐབས་དང་ཤེས་རབ་ཡི་གེ་གཉིས་ལྡན་གསུམ་དུ་འདུས།།བརྗོད་བྱ་རྟོགས་བྱེད་ཚིག་གི་དོན།།རྩ་བ་བཤད་དངཚིག་གི་དོན་ཕྱིར་མ།།ཕྱི་མ་མཆོག་དང་མ་ལོག་བཞི་རུ་སྟོན།།བཅོམ་ལྡན་རྡོ་རྗེ་འཆང་ཆེན་པོས།།འོག་མིན་ཆོས་དབྱིངས་ཕ་བྲང་དུ།།རྫོགས་པའི་སངས་རྒྱས་དེར་སངས་རྒྱས།།སྤྲུལ་པ་པོ་ནི་འདིར་སངས་རྒྱས།།མ་ལུས་པ་ཡི་སྟོབས་ཀྱིས་སུ།།སྐུ་དེ་རྣམ་པ་གསུམ་གྱི་དོན།།ཐོབ་བྱེད་རྒྱུ་འབྲས་གཉིས་ཀྱི་ལམ།།དངོས་བྱེད་འབྲས་བུའི་ལམ་ཡིན་ཏེ།།རྒྱུ་ནི་ཚིག་དེ་དྲན་སོགས་པའི།།ཕྱིར་ཞིང་དྲོ་བའི་རང་བཞིན་ཏེ།།ཉོན་མོངས་མ་ཚིག་ཞི་རྩེ་མོའོ།།ཕྱིར་མི་ལྡོག་དང་འཇིག་རྟེན་མཐར་སྟོབས་ལྔ།།དབང་པོ་ལྔ་ཡི་རང་བཞིན་ནོ།།བྱང་ཆུབ་ཡན་ལག་བདུན་པོ་ནི།།མཐོང་ལམ་སྐད་ཅིག་བཅུ་དྲུག་གོ།།ས་དང་བསྒོམ་ལམ་མཐར་ཕྱིན་འབྲས་བུའོ།།དངོས་བྱེད་ལམ་ནི་འབྲས་བུ་སྔགས།།བྱེན་གྱིས་བརླབས་པས་སྔགས་མཐུ་ཡོན་ཏན་ནོ། <br/>
 梵語：NīlāmbaradharaVajrapāṇiĀryaNāmaTantraṬīkā <br/>
@@ -335,7 +348,7 @@ oṃsarvatathāgatanīlāṃbaradharaśuddhaḥśuddho&#x27;haṃ）。 <br/>
 此具種種加持相，此定成就無可疑。 <br/>
 又云：&quot;手印密咒心相應&quot;，即應知此也可配合密灌、第三灌、第四灌、脈風明點、菩提心及五次第等修持。 <br/>
 &quot;自他聖眾及上師，極勝上師作供養，悉地速疾得生起。 <br/>
-&quot;此說自己或他人對三寶或自己殊勝本尊作實際或意幻供養。[/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-1 20:45</div><div class="post-body">[size=5] <br/>
+&quot;此說自己或他人對三寶或自己殊勝本尊作實際或意幻供養。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-1 20:45</div><div class="post-body">[size=5] <br/>
 །བླ་མ་ནི་སྡེ་སྣོད་གསུམ་སྟོན་པའི་བླ་མ་སྟེ།བྱིན་གྱིས་རློབ་པ་དང་འདྲེན་པ་ཡང་ཡོངས་སུ་གསུང་ངོ་།།ཤིན་ཏུ་བླ་མ་དམ་པ་ནི་གསང་བ་བླ་ན་མེད་པའི་སློབ་དཔོན་ཏེ།དེ་ལ་དངོས་སམ་ཡིད་ཀྱིས་མཆོད་ན།འདོད་པའི་དོན་མྱུར་ཞེས་པའོ།།ཚིག་གསུམ་གྱིས་ནི་བསྐྱེད་པའི་སྐབས་སུ།ཚོགས་པའི་ཆོ་ག་བསྟན་ཏོ།།གལ་ཏེ་གཞན་ལ་ཕན་འདོགས་ན།།སྐུ་དེ་སྣ་ཚོགས་སྐུ་རུ་སྣང་།།སྣང་བ་སྒྱུ་མའི་སྐུ་ཡིན་ཏེ།།ཞེས་པ་ལ།གཞན་ལ་ཕན་འདོགས་པ་ནི་སྤྲུལ་སྐུའོ།།སྐུ་དེ་སྣ་ཚོགས་སྐུ་རུ་སྣང་།།ཞེས་པ་ལ།གང་དང་གང་འདུལ་བ་དེ་དང་དེ་རུ་སྣངསྟེ།དེས་དེའི་དོན་བྱེད་ཅེས་པའི་དོན་ཏོ།།ལྷའི་དཀྱིལ་འཁོར་དུ་སྣང་བ་ཡོད་པ་མ་ཡིན་ཏེ།སྒྱུ་མའམ་རྨི་ལམ་དུ་སྣང་གིས་དོན་དམ་པ་ལ་མེད་ཅེས་བྱའོ།།འོ་ན་སྒོ་མེད་ན་སྣང་བར་མི་རིགས་སོ་སྙམ་ན།གདུག་པ་འདུལ་ཕྱིར་རགས་པའི་སྐུར་སྟོན་ཏོ།།སྣ་ཚོགས་དེ་ཉིད་བསམ་བྲལ་བས།།དངོས་གཞི་ཐར་པར་ཡང་དག་གཅིག་།ཅེས་པ་ལ།སྣ་ཚོགས་དངོས་པོའི་དོན་ཏོ།།བསམ་པ་ནི་ཤེས་པའོ།།ངོ་བོ་ནི་སྣ་ཚོགས་པར་སྣང་བའོ།།དེ་ཡང་ལུང་ལས།ཆུ་རྡུལ་འཛའ་ཡི་སྣང་བ་བཞིན།།སེམས་ཉིད་དངོས་པོ་ཡུལ་དུ་སྣང་།།ཞེས་པའོ།།འོ་ན་སེམས་ཉིད་དངོས་པོར་བདེན་ནམ་སྙམ་པ་ལ་ཤེས་པར་སྣང་ཡང་ཤེས་པར་མི་བདེན་ཏེ།རིགས་པས་བརྟགས་ན་སྣང་བ་ཉིད།།དངོས་པོ་སྟོང་པ་ཉིད་ཅེས་གསུངས་སོ།།སྟོང་པ་ཡང་བདེ་བ་དང་སྣང་བའོ།།སྣང་བ་ཡང་བདེ་སྟོང་དེ་བཞིན་ཉིད།ཐར་པར་ཡང་གཅིག་ནི་བདེན་པ་ཉིད་ལས་འདས་ཏེ་དངོས་པོ་ལ་བདེན་པ་གཉིས་པོ་ཡང་མ་བསྟན་ཅེས་བྱའོ།།གཉིས་སམ་གཅིག་ཏུ་ཡང་མ་གྲུབ་པ་སྟེ།།གཉིས་མེད་བསམ་བྲལ་དངོས་ཀྱི་དོན།།ཞེས་གསུངས་སོ།།དེས་ན།སྣ་ཚོགས་སེམས་ཀྱི་ཆོ་འཕྲུལ་ཏེ།།སེམས་ལས་མ་གཏོགས་ཆོས་གཞན་མེད།།ཆོས་སུ་སྣང་བ་འཁྲུལ་པའི་སེམས།།སེམས་ཉིད་དེ་ཡང་སྐྱེ་མེད་ཕྱིར།།ཡོད་མེད་མཐའ་ལས་འདས་པའོ།།བསམ་དུ་མེད་དེ་བརྗོད་དུ་མེད།།མིང་མེད་ཚིག་མེད་ཡི་གེ་མེད།།ཅེས་གསུངས་སོ།།ལེའུ་གཉིས་པ་ནི་གྲངསཀྱི་གཉིས་པའོ།།ལག་ན་རྡོ་རྗེ་རྩ་བའི་རྒྱུད་ལས་ལེའུ་གཉིས་པའི་བཤད་པའོ།།།།དེ་ལྟར་ལེའུ་གཉིས་པར་བདག་དོན་དང་གཞན་དོན་བསྟན་ཡང་།གོས་སྔོན་པོ་ཅན་གྱི་རྩ་བའི་སྔགས་དང་།མཐའ་སྒྱུར་མ་ཤེས་ན།གྲུབ་པར་མི་འགྱུར་བས།དེའི་ཕྱིར་དེ་ལ་དེ་སྟོན་ཏོ། <br/>
 上師是教授三藏的上師，即加持和引導者。 <br/>
 極勝上師即無上密乘的阿阇黎，對其作實際或意幻供養，則速得所愿。 <br/>

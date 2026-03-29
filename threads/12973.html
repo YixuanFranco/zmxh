@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>行禅实修体证 泰国佛教护法三十三头祥瑞大象王 - 藏密修海典藏</title>
+<title>行禅实修体证 泰国佛教护法三十三头祥瑞大象王 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/与神合一瑜伽行.html">与神合一瑜伽行</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">行禅实修体证 泰国佛教护法三十三头祥瑞大象王</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-4 17:58</div><div class="post-body">Aogula实证传承行者 <br/>
+<div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-4 17:58</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula811 <br/>
 <br/>
 2021.2.28 <br/>
@@ -64,7 +77,7 @@ Aogula811 <br/>
 <br/>
 简要回向文： <br/>
 愿消内外密障难，恒积福慧诸资粮； <br/>
-无病长寿得自在，速证无上大菩提。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-4 18:35</div><div class="post-body">Aogula实证传承行者 <br/>
+无病长寿得自在，速证无上大菩提。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-4 18:35</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula811 <br/>
 <br/>
 2021.3.2 <br/>
@@ -111,7 +124,7 @@ Aogula811 <br/>
 众会处所、众会居止、 <br/>
 众会成熟、众会调伏、 <br/>
 众会威德，如是一切悉皆明见。 <br/>
-《华严经 十定品》 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-6 16:41</div><div class="post-body">Aogula实证传承行者 <br/>
+《华严经 十定品》 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-6 16:41</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula811 <br/>
 <br/>
 2021.3.5 <br/>
@@ -168,7 +181,7 @@ Aogula811 <br/>
 依四念处行禅，经行走转中，念自身化为三头象王或三十三头祥瑞大象王经行禅修，这个修法在泰国一直都有佛法的实修传承，三头象王和三十三头祥瑞大象王都是帝释天主的化身，是南传泰国佛教的护法。 <br/>
 又修一面四臂、三面四臂、三面六臂、八臂和五面多臂的象头财神护法旋转震动金刚法器，随息默念嗡啊吽三字明咒持续而修。 <br/>
 <br/>
-再修四臂大鹏、金刚萨埵、五方佛、普明大日如来三十七尊，又修玛哈嘎拉护法震动法器持咒，再震动手臂如击鼓式持诵《华严经 十定品》段落回向。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-8 14:03</div><div class="post-body">Aogula实证传承行者 <br/>
+再修四臂大鹏、金刚萨埵、五方佛、普明大日如来三十七尊，又修玛哈嘎拉护法震动法器持咒，再震动手臂如击鼓式持诵《华严经 十定品》段落回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-8 14:03</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula816 <br/>
 <br/>
 2021.3.8 <br/>
@@ -214,7 +227,7 @@ Aogula816 <br/>
 随见一切诸佛国土， <br/>
 菩萨亦自成是国土， <br/>
 是名修是首楞严三昧。 <br/>
----佛说首楞严三昧经 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-13 23:17</div><div class="post-body">Aogula实证传承行者 <br/>
+---佛说首楞严三昧经 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-13 23:17</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula303 <br/>
 <br/>
 2021.3.10 <br/>
@@ -226,7 +239,7 @@ Aogula303 <br/>
 于如来身入正定 诸天身中从定出 <br/>
 诸天身中入正定 大龙身中从定出 <br/>
 大龙身中入正定 夜叉身中从定出 <br/>
-《华严经  贤首品》 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-20 20:50</div><div class="post-body">Aogula实证传承行者 <br/>
+《华严经  贤首品》 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-20 20:50</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula807 <br/>
 QQ号：1816528811 <br/>
 <br/>
@@ -267,7 +280,7 @@ QQ号：1816528811 <br/>
 <br/>
 这是实修祥瑞象王的三昧正定。 <br/>
 <br/>
-</div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-23 15:14</div><div class="post-body">佛子！ <br/>
+</div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-23 15:14</div><div class="post-body">佛子！ <br/>
 譬如伊罗钵那象王，住金胁山七宝窟中， <br/>
 其窟周围悉以七宝而为栏楯， <br/>
 宝多罗树次第行列，真金罗网弥覆其上； <br/>
@@ -299,7 +312,7 @@ QQ号：1816528811 <br/>
 建大法幢，鸣大法钟，大悲为窟， <br/>
 坚固大愿以为其牙，智慧无畏犹如师子， <br/>
 法缯系顶，开示秘密，到诸菩萨行愿彼岸。 <br/>
-《华严经 十定品》 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-26 18:12</div><div class="post-body">[b]时天帝释，告御臣曰：贤士，汝往告彼伊罗婆那六头白象，具足一切大龙功德。我乘此象，摧阿修罗。[/b] <br/>
+《华严经 十定品》 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-26 18:12</div><div class="post-body">[b]时天帝释，告御臣曰：贤士，汝往告彼伊罗婆那六头白象，具足一切大龙功德。我乘此象，摧阿修罗。[/b] <br/>
 <br/>
 当时，天帝释告诉御臣说：“贤士，你去告诉那伊罗婆那六头白象，具足一切大龙的功德者，我将乘着这个宝象，摧败阿修罗军。” <br/>
 <br/>
@@ -343,7 +356,7 @@ QQ号：1816528811 <br/>
 <br/>
 当时，天帝释随即而作变化时，阿修罗们见到伊罗婆那白象王，每一个头上有一千位帝释，都手持着千刃金刚、各种的器仗。现出的莲花池的景象，如前所说，在那莲花池当中，见到无量千位帝释天王。伊罗婆那化成十个头，每一个头上有一千个浴池，每一个浴池里有一千朵莲花，每一朵莲花上有一百个花台，每一个花台上各有一千片花叶。像这样，象头、花台上面，总的有百千亿位帝释天王，拿着亿那由他数的种种武器、金刚宝剑，没有空隙之处。 <br/>
 <br/>
-[b]正法念处经卷第二十一[/b] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-26 18:45</div><div class="post-body">尔时帝释又复化作八亿伊罗龙象。 <br/>
+[b]正法念处经卷第二十一[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-26 18:45</div><div class="post-body">尔时帝释又复化作八亿伊罗龙象。 <br/>
 一一龙象有八亿头。一一象头各有六牙。 <br/>
 一一牙上有七花池。一一池中有七莲花。 <br/>
 一一莲花皆有千叶。一一叶中有七天女。 <br/>
@@ -355,7 +368,7 @@ QQ号：1816528811 <br/>
 迦迦罗婆花。摩诃迦迦罗花金花银花。毘琉璃花。 <br/>
 种种杂色波咤梨花如是化作一切种种胜妙宝花而散佛上。 <br/>
 彼天童女或作音乐。或歌或舞。或动其身。 <br/>
----《大宝积经》 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-13 18:20</div><div class="post-body">Aogula实证传承行者 <br/>
+---《大宝积经》 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-13 18:20</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula811 <br/>
 <br/>
 2021.4.13 <br/>
@@ -382,14 +395,14 @@ Aogula811 <br/>
 《华严经 贤首品》 <br/>
 这是修习行禅和伊罗钵那象王体证三昧正定的实修觉受。 <br/>
 <br/>
-又修多头龙王、长翅膀的龙王菩萨、文殊语自在，金刚持五方佛，再修玛哈嘎拉护法震动法器持咒，又轻轻震动手臂如击鼓式持诵《华严经 华藏世界品》段落回向。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-25 23:28</div><div class="post-body">Aogula实证传承行者 <br/>
+又修多头龙王、长翅膀的龙王菩萨、文殊语自在，金刚持五方佛，再修玛哈嘎拉护法震动法器持咒，又轻轻震动手臂如击鼓式持诵《华严经 华藏世界品》段落回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-25 23:28</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula807 <br/>
 <br/>
 2021.4.22 <br/>
 动中禅修，经行绕佛，又长时间原地踱步自然摆动手臂，修伊罗钵那象王，鼻翼轻轻抽动，像在广袤的花海里嗅花香那样轻轻吸气，仿佛进入熟睡中，鼻孔里无数光电球滚动，互相碰撞放电，鼻脉粗大柔润的气根摆动抽动，头上毛孔围绕脑脉层层打开，脉络象花一样舒展开，多头象王的象鼻伸向空中呼吸，头部轻松舒适充满能量，眉心轮显现巨大的本尊佛坛城，在不断延伸，像宝石质感的三眼转动，全身气脉相应翻转变大，双耳自动呼吸轻松震动，耳脉晃动抽动旋转，耳内有光电球碰撞噼噼啪啪放光放电，身体脉轮震动扩大，温馨喜乐的感受充满身心。 <br/>
 动中禅修经行走转，就像熟睡越来越深入，喉轮自然有柔润清凉的宝珠旋转，体内热流涌动上下贯通。多头象王高大光明，头部显现众多象头扭动摆动，每个象头都有六个白亮尖利的金刚牙，牙上挂着各种法宝法器，琳琅满目种类繁多，观察每个法器时，气脉都有不同的感受。象鼻摆动甩动的能量与中脉能量一体相应，中脉火热显现连串的金刚杵，感觉心轮金刚杵中又有金刚杵层层展开，发出一圈圈虹彩光明，感到身心舒适静定喜悦。中脉金刚线是一连串的金刚杵，每个金刚杵像在呼吸那样的频率，互相传递能量震动中脉和全身脉轮，感到自身脊柱能量沸腾，后腰发烫。 <br/>
 多头象王扭动摆动跳跃奔腾，尾部末梢显现猛利的摩羯头，三目是三个耀眼的明珠，精光外露，张牙舞爪随时爆发的神态，中脉显现成连串的金刚杵发出吽吽吽的震动之声，感到全身热流能量涌动震动，象王的心轮、脐轮、腹轮都有一条象腿，和四肢一起形成七腿，感受心轮的腿与心轮相应有爆发力，有时用尽全身力气不断踢腿，有时候重重的踩下去，脐轮的腿有力的趋势震动，腹轮的腿与腹轮相应有内在的持续后力，七腿像坚固的光柱落地，象足巨大，趾尖变得尖锐。 <br/>
-动中禅修与修伊罗钵那多头象王相应合一，感到大气磅礴轻安静定，身心安稳静定又生机勃勃，如此动中禅修，安住禅定。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-28 22:35</div><div class="post-body">Aogula实证传承行者 <br/>
+动中禅修与修伊罗钵那多头象王相应合一，感到大气磅礴轻安静定，身心安稳静定又生机勃勃，如此动中禅修，安住禅定。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-28 22:35</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula811 <br/>
 <br/>
 2021.4.28 <br/>
@@ -411,7 +424,7 @@ Aogula811 <br/>
 菩萨众会共围绕，演说普贤之胜行。 <br/>
 《华严经 如来现相品》 <br/>
 <br/>
-又修金刚萨埵五方佛、玛哈嘎拉大护法，手臂震动如击鼓式持诵《大方广佛华严经  如来现相品》段落后回向。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-29 14:47</div><div class="post-body">Aogula实证传承行者 <br/>
+又修金刚萨埵五方佛、玛哈嘎拉大护法，手臂震动如击鼓式持诵《大方广佛华严经  如来现相品》段落后回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-29 14:47</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula811 <br/>
 <br/>
 2021.4.29 <br/>
@@ -429,7 +442,7 @@ Aogula811 <br/>
 本尊左手托的金刚轮，在旋转震动中，形成了一个由三个金刚轮纵横竖相互交叉的立体金刚轮，每个轮都在自旋和立旋，有光明烈焰包裹，在震动中产生呼呼呼的风声和烈火燃烧之声，本尊的颜色也会金色和白色交替变化。 <br/>
 本尊右手金刚杵震动发出吽吽吽声音、顶轮和中脉震动产生的嗡嗡嗡声以及金刚轮旋转产生的风声和烈火燃烧之声，交织在一起，触动和激发自身内外能量不断震动波动涌动，不断加强。 <br/>
 <br/>
-继续修五面八臂的五方佛，再修金刚萨埵、供修玛哈嘎拉护法。手臂震动如击鼓式持诵《佛说阿弥陀经》后回向。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-5-6 02:22</div><div class="post-body">动中禅修 伊罗钵那大象王初步觉受笔记 <br/>
+继续修五面八臂的五方佛，再修金刚萨埵、供修玛哈嘎拉护法。手臂震动如击鼓式持诵《佛说阿弥陀经》后回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-5-6 02:22</div><div class="post-body">动中禅修 伊罗钵那大象王初步觉受笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -445,7 +458,7 @@ Aogula321 <br/>
 持续行走入定观修，象头从三个化为五个、七个、十一个、三十三个象头，各象头摆动，象鼻翘动，脐轮、腹轮的象腿随象鼻的呼吸而伸缩。随定力增长，所修象头变多，从八十一头象修到千头、万头象王，象王已经越来越巨大，又修象头从一万增加到500万个头时，象王前面莲花上显现一尊站立的阿弥陀佛，佛的身体瞬间变高大，使得伊罗钵那大象王瞬间显得细小，此时的伊罗钵那大象王高度只及阿弥陀佛的脚背。 <br/>
 阿弥陀佛心中放出旋转卍字状的吉祥海云，吉祥海云由无数的金色光明点组成，观其中一个明点，里面呈现为宇宙空间无比广大，内有很多螺旋状的星系及众多星系组成的星系团，才知大象王并不小，只因阿弥陀佛所现身形太宏伟。 <br/>
 阿弥陀佛眉心眼放出亿万道金光，光明遍布虚空十方法界，光中化现出无数化身佛和佛国净土坛城，无量诸佛菩萨眷属和龙天护法围绕。 <br/>
-如此动中禅修，经行走转，感到心中喜悦、超脱、宁静，安住此定境持续经行而修。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-9-24 14:08</div><div class="post-body">动中禅修 伊罗钵那大象王觉受笔记 <br/>
+如此动中禅修，经行走转，感到心中喜悦、超脱、宁静，安住此定境持续经行而修。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-9-24 14:08</div><div class="post-body">动中禅修 伊罗钵那大象王觉受笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -455,7 +468,7 @@ Aogula321 <br/>
 经行走转观修自身为伊罗钵那大象王，象王的脖子内显现为由交叉金刚杵组成的立体金刚轮宝，脊柱和尾巴为交叉金刚杵串，脊柱和尾巴的能量相应，尾巴持续左右摆动，末端的摩羯头口鼻吐火焰。 <br/>
 心轮、脐轮、腹轮三处都显现向前滚动转动的金刚轮，与三轮对应的下面位置各长出一条象腿，共有七条腿，与自身脉轮能量相应。 <br/>
 持续行走中观修自身象王，心轮、脐轮、腹轮三处金刚轮滚动带动能量往脖子和头部输送，脖子变大，象头变多，由一个变三个、五个、七个、到八十一个，每个象头的象鼻都各自任意摆动，挂在象牙上的金刚杵、金刚铃随之摇动，铃音清脆。 <br/>
-修完伊罗钵那大象王，再修玛哈嘎拉、千手观音、金刚萨埵等。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-9-24 14:09</div><div class="post-body">象头金刚王护法  观修觉受笔记 <br/>
+修完伊罗钵那大象王，再修玛哈嘎拉、千手观音、金刚萨埵等。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-9-24 14:09</div><div class="post-body">象头金刚王护法  观修觉受笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>

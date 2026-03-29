@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大白伞盖佛母实修笔记 - 藏密修海典藏</title>
+<title>大白伞盖佛母实修笔记 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/实证传承金刚藏.html">实证传承金刚藏</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大白伞盖佛母实修笔记</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-8-28 23:29</div><div class="post-body">[img]http://www.zmxh.com/pics/___________________20080222014044.jpg[/img] <br/>
+<div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-8-28 23:29</div><div class="post-body">[img]http://www.zmxh.com/pics/___________________20080222014044.jpg[/img] <br/>
 <br/>
 [img]http://www.zmxh.com/pics/____________01_20060224215959.jpg[/img] <br/>
 <br/>
@@ -88,7 +101,7 @@ Aogula321 <br/>
 行走中观自己为四面二臂毗卢遮那佛本尊，自身能量与毗卢遮那佛相应，感到自身与佛融为一体，自身毗卢遮那佛安坐在由金刚杵构成的莲台上，双手于腹部前抱金刚轮，宝相庄严。 <br/>
 腹内金刚摩尼宝珠在旋转燃烧，火焰热能传遍全身，脐轮腰部的火焰宝珠持续环绕，同时金刚轮也在腹轮与心轮之间反复循环升降，金刚轮自然变大变小，自在变化。 <br/>
 经行走转中观修毗卢遮那佛本尊，能量自然增长，身形变高大，由安坐变站立，脸变多，喉咙肚脐变多，二足变多足，臂膀变宽，二臂臂膀处化现出很多手臂，千手万手，每只手臂内都有金刚法宝，每只手中都持金刚轮，金刚轮旋转放光不断变化，转动方式各异，自下而上、自左至右、自右至左，转动中上升下降，胸前的金刚轮旋转中不断向外放出更多金刚轮，放出的金刚轮转动中又放出很多金刚杵，金刚杵旋转放光，光化莲花，花中化佛。 <br/>
-此时，修毗卢遮那感到佛身本尊变大，心轮中金刚轮变巨大，轮中又有金刚轮，内轮在内自在旋转，外轮竖立自左向右转动，带动周围能量产生阵阵拂拂风声，风声和嗡声中有持续的吽声咒音。心轮中金刚轮带动全身能量旋转震动，金刚轮旋转放出电虹彩，光中自然显现本尊坛城境界变化，如此安住三昧禅定。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-8-28 23:31</div><div class="post-body">Aogula实证传承行者 <br/>
+此时，修毗卢遮那感到佛身本尊变大，心轮中金刚轮变巨大，轮中又有金刚轮，内轮在内自在旋转，外轮竖立自左向右转动，带动周围能量产生阵阵拂拂风声，风声和嗡声中有持续的吽声咒音。心轮中金刚轮带动全身能量旋转震动，金刚轮旋转放出电虹彩，光中自然显现本尊坛城境界变化，如此安住三昧禅定。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-8-28 23:31</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula807 <br/>
 <br/>
 2021/8/28 <br/>
@@ -96,7 +109,7 @@ Aogula807 <br/>
 <br/>
 持诵大白伞盖佛母咒，感到自身成为能量体，与大白伞盖佛母相应合一，本尊身形高大，千面千臂千足，很多喉咙很多肚脐，手中各种金刚法器放光震动变多，手中大白伞华美壮观，璎珞宝珠色彩缤纷，咒音随风飘动，佛母威严又慈悲，身形随内在能量不断震动充满能量；体内热流像一圈圈金色闪电螺旋状旋转震动，发出嗡嗡嗡的声音，手足肢体的筋脉能量旋转滚动，随着热流涌动，本尊身形变得更加高大，手中各种金刚法器变多旋转震动。 <br/>
 手心热流里，毛孔不断冒出交叉金刚杵旋转，金刚杵聚合形成金刚莲花，佛母手中旋转舞动金刚法器，与全身脉轮能量一体呼应涌动震动；脐轮随呼吸震动，脐轮有热流涌动旋转，腹轮黄色火焰宝珠旋转，发出啊字的咒音；佛母足心也有旋转的火球宝珠，佛母本尊腰部火球宝珠环绕旋转，能量涌动与千臂手中各种金刚法器一体呼应而动，一个有交叉金刚杵的大白伞放光照耀法界众生众生，大白伞能量与自身中脉一体震动，发出吽吽吽的咒音声， <br/>
-佛母身形不断变大，热流波浪涌动此起彼伏。感到自身与佛母相应合一，充满动感，千臂舞动法器放光震动，感受千面变化持咒震吼，千足脚踏三有世间，持咒中经行绕转，感到全身内外整体涌动共振，如此进入三昧禅定。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-9-1 22:46</div><div class="post-body">大白伞盖佛母 实修觉受笔记 <br/>
+佛母身形不断变大，热流波浪涌动此起彼伏。感到自身与佛母相应合一，充满动感，千臂舞动法器放光震动，感受千面变化持咒震吼，千足脚踏三有世间，持咒中经行绕转，感到全身内外整体涌动共振，如此进入三昧禅定。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-9-1 22:46</div><div class="post-body">大白伞盖佛母 实修觉受笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -109,7 +122,7 @@ Aogula321 <br/>
 经行走转中修大白伞盖母持咒不断，腹轮脐轮的金刚摩尼宝显现火焰，中脉发热震动，心轮、喉轮都显现火焰莲花向四周扩展为更多叶的能量莲花。 <br/>
 感到自身与大白伞盖佛母相应合一，千面千臂千足，遍身都有智慧眼，喉咙和肚脐变多。佛母的千面与千喉轮显现为外内相应的圆锥形态，下大上小。 <br/>
 海底轮能量到心轮后其能量向臂膀方向发散传导，化现千道电光，相应千手万手，各手心都显现旋转金刚轮，手足肢体内都有交叉杵金刚杵，各手持有金刚法器法宝：金刚宝伞、金刚宝幢、金刚杵，金刚轮、金刚宝、金刚莲花，白莲花、红莲花、黄莲花、金刚交杵、金刚斧、智慧宝剑、天杖、弓-箭、金刚钩、金刚绳索，等等，千臂手持法器自在舞动、抖动、转动、震动放光。 <br/>
-修完大白伞盖佛母，又修二臂四面、多面多臂毗卢遮那如来。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-9-7 23:16</div><div class="post-body">动中禅修 大白伞盖佛母 和毗卢遮那如来 实修体验笔记 <br/>
+修完大白伞盖佛母，又修二臂四面、多面多臂毗卢遮那如来。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-9-7 23:16</div><div class="post-body">动中禅修 大白伞盖佛母 和毗卢遮那如来 实修体验笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>

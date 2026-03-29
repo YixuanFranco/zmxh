@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>佛说圣大乘三归依经 - 藏密修海典藏</title>
+<title>佛说圣大乘三归依经 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">佛说圣大乘三归依经</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-15 11:34</div><div class="post-body">佛说圣大乘三归依经兰山智昭国师沙门得慧奉诏译奉天显道耀武宣文神谋睿智制义去邪惇睦懿恭皇帝详定 <br/>
+<div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-15 11:34</div><div class="post-body">佛说圣大乘三归依经兰山智昭国师沙门得慧奉诏译奉天显道耀武宣文神谋睿智制义去邪惇睦懿恭皇帝详定 <br/>
 如是我闻，一时佛在舍卫国祇树给孤独园，与大比丘众千二百五十人俱。 <br/>
 尔时，具寿舍利子独居静处，入定之时，作是念言：若善男子、善女人，以虔诚心归依佛、法、僧者，获福若干不能知量？今佛现在，我当往于善逝法王之前请问此义。 <br/>
 作是念已，时具寿舍利子至于后饷，从定而起，往诣佛所，顶礼佛足，退坐一面而白佛言：“世尊，我居静处入定之时，起是心念：若善男子、善女人，以虔诚心归依佛、法、僧者，获福若干不知其量？唯愿世尊以大慈悲，愿垂演说。” <br/>
@@ -45,8 +58,8 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 御 制 发 愿 文 <br/>
 朕闻，能仁开导，允为三界之师，圣教兴行，永作群生之福。欲化迷真之辈，俾知入圣之因。故高悬慧日于昏衢，广运慈航于苦海，仗斯秘典脱彼尘笼，含生若恳于修持，至圣必垂于感应。用开未喻，以示将来，覩兹妙法之希逢，念此人身之难保，若匪依慿三宝，何以救度四生？ <br/>
 恭惟《圣大乘三归依经》者，释门秘印，觉路真乘，诚振溺之要津，乃指迷之捷径。具寿舍利独居静处以归依，善逝法王广设譬喻，而演说较量，福力以难尽，穷究功能而转深。诵持者，必免于轮回，佩戴者，乃超于生死，劝诸信士敬此真经。 朕适逢本命之年，特发利生之愿，恳命国师、法师、禅师，暨副判、提点、承旨、僧录、座主、众僧等，逐乃烧施、结坛、摄瓶、诵呪，作广大供养，放千种施食，读诵大藏等尊经，讲演上乘等妙法，亦致打截截、作忏悔、放生命、喂囚徒、饭僧、设贫，诸多法事，仍勑有司印造斯经：番汉五万一千余卷彩画，功德大小五万一千余帧数珠不等，五万一千余串普施臣吏僧民，每日诵持供养。 所获福善伏愿：皇基永固，宝运弥昌。艺祖、神宗冀齐登于觉道；崇考、皇妣祈早往于净方；中宫永保于寿龄，圣嗣长增于福履，然后满朝臣庶，共沐慈光，四海存亡，俱蒙善利。 <br/>
-时白高大夏国干佑十五年岁次甲辰九月十五日奉天显道耀武宣文神谋睿智制义去邪惇睦懿恭皇帝施 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-15 11:39</div><div class="post-body">大乘皈依的证法是什么呢？是戒定慧三学。但相较小乘的证法有所不同：小乘的戒学是别解脱戒，大乘的戒学是菩萨戒；小乘的定学是以人无我的见解修持的禅定，大乘的定学是以人无我、法无我的见解修持的禅定；小乘现前的是人无我的智慧，大乘现前的是人无我、法无我的智慧。这是在证法方面的差别，是大乘所皈依的证法宝。大乘所皈依的僧宝是什么呢？小乘皈依的是证得小乘圣果的圣僧，大乘所皈依的对境是文殊菩萨、普贤菩萨、观音菩萨等这样证得人无我、法无我的大乘菩萨圣僧。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-15 11:41</div><div class="post-body">如同《普贤行愿品》中所说：“速诣菩提大树王，坐已降服诸魔众，成正等觉转法轮。”意为从现在起，直至在菩提大树王下依靠智慧降伏四魔而最后现前正等觉菩提果，并行持利生事业之间，这就是大乘皈依的时间 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-15 11:47</div><div class="post-body">问：小乘皈依与大乘皈依有何异同？ <br/>
-答：小乘和大乘之皈依，所依赖的对境，没有丝毫之区别，都是佛法僧三宝。为何形成小乘和大乘之区别呢，这些都在于发心之上。比如说，今天我们在受皈依戒的时候，为了独自从轮回苦海之中获得解脱而受皈依戒，称之为小乘皈依戒，因为发心非常狭隘。那么，想到三界六趣一切众生，都能从轮回苦海之中获得解脱而受皈依戒，由于发心广大，称之为大乘皈依戒。 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-15 11:50</div><div class="post-body">中士道的皈依有出离心的基础，但是没有菩提心。为了自己能够获得声闻、缘觉和罗汉的果位，为了自己能够得到寂静涅槃的果位而皈依，也不究竟。上士道的皈依是上等根基人的皈依，不是为了自己，而是为了救度众生而发誓成佛，为了成佛而皈依上师三宝。他的相续中有菩提心，所以这个皈依是大乘佛法的皈依。 <br/>
+时白高大夏国干佑十五年岁次甲辰九月十五日奉天显道耀武宣文神谋睿智制义去邪惇睦懿恭皇帝施 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-15 11:39</div><div class="post-body">大乘皈依的证法是什么呢？是戒定慧三学。但相较小乘的证法有所不同：小乘的戒学是别解脱戒，大乘的戒学是菩萨戒；小乘的定学是以人无我的见解修持的禅定，大乘的定学是以人无我、法无我的见解修持的禅定；小乘现前的是人无我的智慧，大乘现前的是人无我、法无我的智慧。这是在证法方面的差别，是大乘所皈依的证法宝。大乘所皈依的僧宝是什么呢？小乘皈依的是证得小乘圣果的圣僧，大乘所皈依的对境是文殊菩萨、普贤菩萨、观音菩萨等这样证得人无我、法无我的大乘菩萨圣僧。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-15 11:41</div><div class="post-body">如同《普贤行愿品》中所说：“速诣菩提大树王，坐已降服诸魔众，成正等觉转法轮。”意为从现在起，直至在菩提大树王下依靠智慧降伏四魔而最后现前正等觉菩提果，并行持利生事业之间，这就是大乘皈依的时间 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-15 11:47</div><div class="post-body">问：小乘皈依与大乘皈依有何异同？ <br/>
+答：小乘和大乘之皈依，所依赖的对境，没有丝毫之区别，都是佛法僧三宝。为何形成小乘和大乘之区别呢，这些都在于发心之上。比如说，今天我们在受皈依戒的时候，为了独自从轮回苦海之中获得解脱而受皈依戒，称之为小乘皈依戒，因为发心非常狭隘。那么，想到三界六趣一切众生，都能从轮回苦海之中获得解脱而受皈依戒，由于发心广大，称之为大乘皈依戒。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-15 11:50</div><div class="post-body">中士道的皈依有出离心的基础，但是没有菩提心。为了自己能够获得声闻、缘觉和罗汉的果位，为了自己能够得到寂静涅槃的果位而皈依，也不究竟。上士道的皈依是上等根基人的皈依，不是为了自己，而是为了救度众生而发誓成佛，为了成佛而皈依上师三宝。他的相续中有菩提心，所以这个皈依是大乘佛法的皈依。 <br/>
 <br/>
 </div></div>
 </div>

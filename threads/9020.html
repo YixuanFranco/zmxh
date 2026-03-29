@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>法界语自在本尊坛城实修笔记 - 藏密修海典藏</title>
+<title>法界语自在本尊坛城实修笔记 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/实证传承金刚藏.html">实证传承金刚藏</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">法界语自在本尊坛城实修笔记</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚海会发表于 2015-12-29 13:43</div><div class="post-body">[img]http://www.zmxh.com/pics/039_20120123194617.jpg[/img] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚海会发表于 2015-12-29 13:43</div><div class="post-body">[img]http://www.zmxh.com/pics/039_20120123194617.jpg[/img] <br/>
 <br/>
 [img]http://www.zmxh.com/pics/_________________________20071004201939.jpg[/img] <br/>
 <br/>
@@ -86,7 +99,7 @@ Aogula303 <br/>
 Aogula实证传承行者 <br/>
 Aogula303 <br/>
 2014.8.11 <br/>
-行禅走转经行五小时，观修自身为文殊语自在金刚本尊缓慢经行走转，心轮迅速发热，宝珠围绕心轮一圈圈流畅的旋转，心轮的热感传到了全身，身体暖烘烘的，心轮具有感知力，能感应到自身与本尊合一的境界，本尊身无比透明，心轮与其他各脉轮紧密相连，海底轮深红色热流猛力旋转，喜乐感充满海底轮，海底轮的能量一直通到顶轮，顶轮震动并旋转，中脉发出一阵阵吽吽吽的声音如风雷响彻空中，各脉轮在风雷声中震动，后脑有清凉感和呼吸感，在一张一合的收缩，禅定的喜乐感一浪接一浪，气脉深处涌起，从内向外的渗透和蔓延.身体经脉和细胞像被清洗了一样，非常清净的感觉.脐轮如转经轮，在不停右旋，脐轮深广如海洋，热流起伏像平稳的波涛，幅度不大的在荡漾，脐轮的能量也通顶轮，中脉七轮都是通的.任何一轮的能量都与其他轮息息相通.一呼一吸间，中脉有节奏的收缩律动，腹部有大量的明点，各种颜色如璀璨的宝珠.都变成法器和本尊坛城，中脉黄色能量光柱中显现一个金刚杵在右旋放光，金刚杵不断变大，中脉光柱一直穿透顶轮，冲到出顶轮，形成扇形，笼罩全身，无数金刚杵从顶轮喷涌而出，如火树银花.金刚杵转动，喉轮有明点在跳动，发出清透的蓝色光，喉轮细胞震动.蓝色莲花开放，喉轮变得非常广阔，无边无际，万千坛城自然显现，感觉此轮非常美妙，红色宝珠不停围绕脉轮旋转，上升至眉心轮，此轮有无尽的时空，非常神秘，各色光映照，在不停震动，眉心轮的广阔和深远无法测度，顶轮千瓣红色莲花盛开，热力很大，宝珠围绕顶轮旋转，此轮的震动感很强，震动的时候，整个中脉七轮都被带动了，吽吽吽的直颤，在坚持每次五小时不断的经行中，能越来越快的与本尊相应，自身与本尊合为一体，体内的宝珠不停以各种路线转动，有与本尊心灵相应的感觉.每当中脉响起风雷声的时候，就会感应到有无数和本尊围绕在自己身边，非常真实，感应到本尊和坛城强烈的加持力，对于初修者，经常五小时的经行也是非常重要的一门功课，经行中听经咒佛乐，不断培养菩提心和正念正知，亲近佛菩萨，开气脉，增强定力，随着定力的增强和走路的累积，会发现自己一走就能入定，走路也同样是在禅修，达到这种状态，就能随时深入禅定三昧了，本尊坛城就能随时在自己心中，与之完全相应，自然能随时显现诸佛国土和极乐世界的光明庄严。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">风</div>风火时轮发表于 2018-4-13 20:47</div><div class="post-body">Aogula实证传承行者 <br/>
+行禅走转经行五小时，观修自身为文殊语自在金刚本尊缓慢经行走转，心轮迅速发热，宝珠围绕心轮一圈圈流畅的旋转，心轮的热感传到了全身，身体暖烘烘的，心轮具有感知力，能感应到自身与本尊合一的境界，本尊身无比透明，心轮与其他各脉轮紧密相连，海底轮深红色热流猛力旋转，喜乐感充满海底轮，海底轮的能量一直通到顶轮，顶轮震动并旋转，中脉发出一阵阵吽吽吽的声音如风雷响彻空中，各脉轮在风雷声中震动，后脑有清凉感和呼吸感，在一张一合的收缩，禅定的喜乐感一浪接一浪，气脉深处涌起，从内向外的渗透和蔓延.身体经脉和细胞像被清洗了一样，非常清净的感觉.脐轮如转经轮，在不停右旋，脐轮深广如海洋，热流起伏像平稳的波涛，幅度不大的在荡漾，脐轮的能量也通顶轮，中脉七轮都是通的.任何一轮的能量都与其他轮息息相通.一呼一吸间，中脉有节奏的收缩律动，腹部有大量的明点，各种颜色如璀璨的宝珠.都变成法器和本尊坛城，中脉黄色能量光柱中显现一个金刚杵在右旋放光，金刚杵不断变大，中脉光柱一直穿透顶轮，冲到出顶轮，形成扇形，笼罩全身，无数金刚杵从顶轮喷涌而出，如火树银花.金刚杵转动，喉轮有明点在跳动，发出清透的蓝色光，喉轮细胞震动.蓝色莲花开放，喉轮变得非常广阔，无边无际，万千坛城自然显现，感觉此轮非常美妙，红色宝珠不停围绕脉轮旋转，上升至眉心轮，此轮有无尽的时空，非常神秘，各色光映照，在不停震动，眉心轮的广阔和深远无法测度，顶轮千瓣红色莲花盛开，热力很大，宝珠围绕顶轮旋转，此轮的震动感很强，震动的时候，整个中脉七轮都被带动了，吽吽吽的直颤，在坚持每次五小时不断的经行中，能越来越快的与本尊相应，自身与本尊合为一体，体内的宝珠不停以各种路线转动，有与本尊心灵相应的感觉.每当中脉响起风雷声的时候，就会感应到有无数和本尊围绕在自己身边，非常真实，感应到本尊和坛城强烈的加持力，对于初修者，经常五小时的经行也是非常重要的一门功课，经行中听经咒佛乐，不断培养菩提心和正念正知，亲近佛菩萨，开气脉，增强定力，随着定力的增强和走路的累积，会发现自己一走就能入定，走路也同样是在禅修，达到这种状态，就能随时深入禅定三昧了，本尊坛城就能随时在自己心中，与之完全相应，自然能随时显现诸佛国土和极乐世界的光明庄严。 </div></div><div class="post"><div class="post-header"><div class="avatar">风</div>风火时轮发表于 2018-4-13 20:47</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 <br/>
 2018.2.9 <br/>
@@ -104,7 +117,7 @@ Aogula808 <br/>
 普令众生欢喜三昧雷声。 <br/>
 无尽功德藏三昧雷声。 <br/>
 不坏解脱阿罗汉三昧雷声。 <br/>
----大方广佛华严经 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">风</div>风火时轮发表于 2018-4-13 20:57</div><div class="post-body">Aogula实证传承行者 <br/>
+---大方广佛华严经 </div></div><div class="post"><div class="post-header"><div class="avatar">风</div>风火时轮发表于 2018-4-13 20:57</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 <br/>
 2018.2.17 <br/>
@@ -115,7 +128,7 @@ Aogula808 <br/>
 持续观修，金刚杵显现在金刚萨埵佛的右手，自身也顿然化为金刚萨埵佛的形象，本尊右手托着金刚杵立于胸前，左手转动摇铃振铃，本尊天衣宝冠众宝璎珞庄严，金刚萨埵佛左手不断摇铃振铃，震动全身脉轮热流涌动遍身经络到皮肤毛孔都酥酥麻麻，犹如通电一样。气脉能量涌动波动震动，热流一圈圈一层层，在自身内外游走，身心暖乐舒适。自身本尊中脉里有一条明亮的金刚线，贯穿中脉连通顶轮和海底轮，七轮的每个轮都有一个宝珠震动，持咒自然呼吸中，自身脉络到皮肤酥酥麻麻，身体反复膨胀收缩，交替变化，手指脚趾有拉长收缩感，手掌足掌，四肢，脊柱到全身都有拉长收缩的交替变化。随着鼻息，眉心轮宝珠旋转与中脉相应，自然产生吽吽吽的风雷之声，带动全身脉轮和经络微细脉由内而外，由外而内的酥麻震动，热流在身体内外一层层的涌动游走，感到暖热轻安，身心舒畅喜悦。 <br/>
 观自身为大威德金刚，本尊九面三十四臂十六足，感到自身与本尊合一，自身化为能量体清晰逼真地显现成本尊形象，气脉能量同步发生变化，感觉九个面是自身脑脉能量拉伸变化成的，脑脉向左扩散，显现出左边烟色、白色、蓝黑色三面，脑脉向右扩散，显现成黄、蓝、红三面，脑脉向上拉升，显现出红色的面和最顶上的黄色文殊面。主面是牛面，犄角长而尖锐，獠牙猛厉，红色的舌头，本尊的九个面庄严而有威慑力。自身躯干部的能量向两边和周围延伸，显现出一圈三十四只手臂，本尊舞动法器震动旋转钺刀颅器，全身气脉震动，旋转震动舞动金刚杵铃，轮番显现挥舞各种法器，三十四种法器都清晰逼真很有动感。本尊十六足踩着八天八兽，八阿修罗八禽，有时感觉如在旷野中任运奔跑，有时感觉在山河大地上舞动。自身气脉能量在腰部一圈圈游走，显现有青龙在腰间缠绕，带动带脉能量更加顺畅的运行，手臂上热流涌动同时显现金龙盘绕，带动气脉能量更加有力地在全身循环往复。脚下的莲台持续不断旋转。自身本尊舞动中，多对肩膀高低起伏变化，各种法器舞动，气脉能量很舒畅的在全身游走，心中生起一层层的喜悦感。境界中有六面六臂，三面六臂，一面六臂，一面四臂，一面二臂的各种大威德本尊，围绕着自身本尊。 <br/>
 又修文殊语自在金刚本尊，自身化为能量体显现成文语自在金刚的形象，清晰逼真智慧威仪动感十足，本尊三面六臂，红黄色，手持杵铃、弓-箭、剑花舞动，自身气脉能量随着本尊手中法器的舞动与中脉能量呼应一体，热流在全身脉轮涌动运转，有时气脉能量如丝般缠绕游走，有时候如飘带般在体表和体内荡来荡去，皮肤酥麻震动，如通了电。有时感觉中脉能量坚韧厚实，整个中脉显现成龙的形象，身体会更加灵动有力。有时脊柱能量会向两边拉伸，显现出一对翅膀。本尊有时候会显现成三面八臂，又持钩索。境界中也会显现各种颜色和持各种法器的四面八臂语自在金刚本尊。也有各种天女持不同法器，有龙和大鹏、瑞鸟瑞兽在境界中飞来腾去。 <br/>
-修完本尊，震动手臂如击鼓式持诵《圣妙吉祥真实名经》和《普贤行愿品》回向。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-4-11 04:52</div><div class="post-body">Aogula实证传承行者 <br/>
+修完本尊，震动手臂如击鼓式持诵《圣妙吉祥真实名经》和《普贤行愿品》回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-4-11 04:52</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 QQ群：289578411 <br/>
 <br/>
@@ -126,7 +139,7 @@ QQ群：289578411 <br/>
 持续而修，日月山河大地和各种众生境界都在本尊庄严坛城境界中显现。这一切境界的显现都与自身中脉七轮能量一起震动，在中脉通明震动中显现一切内外境界深入本尊坛城境界的三昧禅定。 <br/>
 感到自身和语自在金刚本尊合为一体，本尊中脉能量震动贯通到毛孔指尖和手中的金刚法器，文殊语自在本尊放光变高变大，顶天立地，显现成文殊如来的法象，结跏趺坐于莲台之上，文殊如来本尊的辉光一圈圈一层层辐射，照亮了整个世界。 <br/>
 <br/>
-再修金刚萨埵五方佛和玛哈嘎啦护法，以右手震动如击鼓式持诵《大方广佛华严经-普贤三昧品》段落并回向。 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2024-3-24 00:45</div><div class="post-body">修文殊语自在金刚 实修笔记 <br/>
+再修金刚萨埵五方佛和玛哈嘎啦护法，以右手震动如击鼓式持诵《大方广佛华严经-普贤三昧品》段落并回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2024-3-24 00:45</div><div class="post-body">修文殊语自在金刚 实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -145,7 +158,7 @@ Aogula321 <br/>
 <br/>
 如实记录实修感受 <br/>
 于马来西亚 槟城 <br/>
-2024年3月23日 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2024-10-8 02:43</div><div class="post-body">修文殊语自在金刚 实修笔记 <br/>
+2024年3月23日 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2024-10-8 02:43</div><div class="post-body">修文殊语自在金刚 实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>

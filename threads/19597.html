@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>空行母金剛帳五種空行修法儀軌 不空月莊嚴 蓮花金剛 藏汉 N - 藏密修海典藏</title>
+<title>空行母金剛帳五種空行修法儀軌 不空月莊嚴 蓮花金剛 藏汉 N - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">空行母金剛帳五種空行修法儀軌 不空月莊嚴 蓮花金剛 藏汉 N</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-5 22:08</div><div class="post-body">[size=5]d1321 空行母金剛帳五種空行修法儀軌 不空月莊嚴 蓮花金剛 索南堅贊n3.5s <br/>
+<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-5 22:08</div><div class="post-body">[size=5]d1321 空行母金剛帳五種空行修法儀軌 不空月莊嚴 蓮花金剛 索南堅贊n3.5s <br/>
 D1321 <br/>
 @##།།རྒྱ་གར་སྐད་དུ།ཌཱ་ཀི་ནཱི་བཛྲ་པཉྫ་ར་པཉྩ་ཌཱ་ག་སཱ་དྷ་རྣ་ནཱ་མ།བོད་སྐད་དུ།མཁའ་འགྲོ་མ་རྡོ་རྗེ་གུར་གྱི་མཁའ་འགྲོ་རྣམ་པ་ལྔའི་སྒྲུབ་པའི་ཐབས་ཞེས་བྱ་བ།དཔལ་རྡོ་རྗེ་སེམས་དཔའ་ལ་ཕྱག་འཚལ་ལོ།།འཁོར་བ་གང་ཞིག་ཤིང་ཆེན་པོ་ཡི་ཡལ་གའི་ཚོགས་དང་མཚུངས་པའདི་རྣམས་ནི།།ཞེ་སྡང་གཙོ་བོའི་ཉོན་མོངས་རྣམས་ཏེ་འགྲོ་དྲུག་རྣམས་ཀྱི་སྐྱེ་ལས་རྒྱལ།།གང་དེ་ཐུབ་དཀའི་བརྩོན་འགྲུས་ལ་གནས་རྣམ་པ་ལྔ་ཡི་སྐུ་འཆང་བ།།དུས་དགྲ་རྡོ་རྗེ་སེམས་དཔའ་བཅོམ་ལྡན་འདས་ལ་རྟག་ཏུ་འདུད།།འགྲོ་བ་མ་ལུས་པ་ཡི་འདོད་པ་མི་གཅོད་ཅིང་།།བྱང་ཆུབ་ལ་ནི་ངེས་པར་འཇུག་པ་ལྔའི།།འཁོར་ལོ་རྣམས་ནི་དྲང་བར་ལྡན་པ་བྲི།།དེ་དག་ཀྱང་ནི་བསོད་ནམས་ལྡན་པའི་རྒྱུར།།ཆུ་དང་འབྲས་བུ་རྙེད་སླ་བ་དང་ཕུག་རྣམས་དང་།།གང་ཡང་རུང་བར་འཇམ་པའི་སྟན་གནས་ཏེ།།སྔགས་པས་གཞན་གྱི་དབང་དུ་རྒྱལ་བ་བསྒོམ།།བློ་ཡི་བསམ་བྱ་བསམ་པར་བྱ་བ་ནི།།ཧཱུཾ་ཨོཾ་ཏྲཾ་ཡ་ཁཾ་འདི་དག་ནི།།སྙིང་གར་ཇི་ལྟའི་གདན་ལ་བསམ།།བླ་མ་རྡོ་རྗེ་མཆོད་པ་དང་།།བདུན་པོ་རྣམ་པར་དག་པར་བྱ།།སྡིག་པ་བཤགས་པར་བྱ་བ་དང་།།ཡང་ན་བྱེད་པར་སྡོམ་པའོ།།སངས་རྒྱས་བྱང་ཆུབ་སེམས་དཔའ་ཡི།།བསོད་ནམས་དག་ལ་རྗེས་ཡི་རང་།།དེ་དག་ཡོངས་སུ་བསྔོ་བར་བྱ།།དཀོན་མཆོག་གསུམ་ལ་ཡང་དག་བརྟེན།།བྱང་ཆུབ་སེམས་ནི་བསྐྱེད་པ་དང་།།ལམ་ལ་བརྟེན་ཏེ་དེ་ནས་ནི།།ཚང་པའི་གནས་བཞི་རྣམ་བསྒོམས་ནས།།སྣ་ཚོགས་སྟོང་པར་བསྒོམ་པར་བྱ།།དངོས་པོ་བདེན་བརྫུན་རྣམ་དཔྱད་པས།།བརྟགསཔས་དམིགས་སུ་མེད་པ་སྟེ།།དེས་ནི་འདི་ལྟར་གཟུགས་བརྙན་བཞིན།།དངོས་པོ་ཐམས་ཅད་བསྒོམ་པར་བྱ།།ོཾ་ཤཱུ་ནྱ་ཏཱ་ཛྙཱ་ན་བཛྲ་སྭ་བྷཱ་ཝ་ཨཏྨ་ཀོུ྅ཧཾ།མདུན་དུ་ར་ཕ་ལས་ནི་ཉི་མ་རྣམ་པར་བསྒོམ།།ཉི་མ་དེར་ནི་ཧཱུཾ་བྱུང་སྣ་ཚོགས་རྡོ་རྗེ་སྟེ།རྡོ་རྗེ་དེ་ཉིད་ཀྱིས་ནི་རབ་དང་གུར་བཅིང་པ་ཡང་ནགོ་།།ནམ་མཁའི་ཁམས་ཀྱི་དབུས་གནས་པར།།སྣ་ཚོགས་རྡོ་རྗེ་བསྒོམ་པར་བྱ།།དེར་ནི་ཧཱུཾ་ཡིག་ལས་བྱུང་བ།།སྲུང་བའི་འཁོར་ལོ་བསམ་པར་བྱ།།འཁོར་ཞིང་རབ་ཏུ་མི་གཡོ་བ།།འཇིག་པའི་དུས་ཀྱི་མེ་དང་མཚུངས།།ཧཱུཾ་ཡིག་བཅུ་ཡི་སྦྱོར་བ་ལས།།ཁྲོ་བོ་བཅུ་ནི་རིམ་བཞིན་དགོད།།ཤར་དུ་གཤིན་རྗེ་གཤེད་པོ་བསམ།།ཤེས་རབ་མཐར་བྱེད་ཡང་ནི་ལྷོར།།པདྨ་མཐར་བྱེད་ཆུ་བདག་སྟེ།།བྱང་དུ་བདུད་རྩི་འཁྱིལ་པའོ། <br/>
 梵文題目：Ḍākinī-vajra-pañjara-pañca-ḍāka-sādhana-nāma <br/>
@@ -241,7 +254,7 @@ Oṃśūnyatājñānavajrasvabhāvaatmako&#x27;haṃ <br/>
 <br/>
 不空月語所莊嚴五空行修法儀軌終。 <br/>
 །།།རྒྱ་གར་མཁན་པོ་ལི་ལ་བཛྲ་དང་།བོད་ཀྱི་ལོ་ཙཱ་བསོད་ནམས་་རྒྱལ་མཚན་གྱིས།་ <br/>
-印度堪布利拉班扎與藏地譯師索南嘉參翻譯。[/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-5 22:32</div><div class="post-body">[size=5]d1321空行母金剛帳 五種空行修法儀軌 不空月莊嚴 蓮花金剛 索南堅贊 <br/>
+印度堪布利拉班扎與藏地譯師索南嘉參翻譯。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-5 22:32</div><div class="post-body">[size=5]d1321空行母金剛帳 五種空行修法儀軌 不空月莊嚴 蓮花金剛 索南堅贊 <br/>
 D1321 <br/>
 @##།།རྒྱ་གར་སྐད་དུ།ཌཱ་ཀི་ནཱི་བཛྲ་པཉྫ་ར་པཉྩ་ཌཱ་ག་སཱ་དྷ་རྣ་ནཱ་མ།བོད་སྐད་དུ།མཁའ་འགྲོ་མ་རྡོ་རྗེ་གུར་གྱི་མཁའ་འགྲོ་རྣམ་པ་ལྔའི་སྒྲུབ་པའི་ཐབས་ཞེས་བྱ་བ།དཔལ་རྡོ་རྗེ་སེམས་དཔའ་ལ་ཕྱག་འཚལ་ལོ།།འཁོར་བ་གང་ཞིག་ཤིང་ཆེན་པོ་ཡི་ཡལ་གའི་ཚོགས་དང་མཚུངས་པའདི་རྣམས་ནི།།ཞེ་སྡང་གཙོ་བོའི་ཉོན་མོངས་རྣམས་ཏེ་འགྲོ་དྲུག་རྣམས་ཀྱི་སྐྱེ་ལས་རྒྱལ།།གང་དེ་ཐུབ་དཀའི་བརྩོན་འགྲུས་ལ་གནས་རྣམ་པ་ལྔ་ཡི་སྐུ་འཆང་བ།།དུས་དགྲ་རྡོ་རྗེ་སེམས་དཔའ་བཅོམ་ལྡན་འདས་ལ་རྟག་ཏུ་འདུད།།འགྲོ་བ་མ་ལུས་པ་ཡི་འདོད་པ་མི་གཅོད་ཅིང་།།བྱང་ཆུབ་ལ་ནི་ངེས་པར་འཇུག་པ་ལྔའི།།འཁོར་ལོ་རྣམས་ནི་དྲང་བར་ལྡན་པ་བྲི།།དེ་དག་ཀྱང་ནི་བསོད་ནམས་ལྡན་པའི་རྒྱུར།།ཆུ་དང་འབྲས་བུ་རྙེད་སླ་བ་དང་ཕུག་རྣམས་དང་།།གང་ཡང་རུང་བར་འཇམ་པའི་སྟན་གནས་ཏེ།།སྔགས་པས་གཞན་གྱི་དབང་དུ་རྒྱལ་བ་བསྒོམ།།བློ་ཡི་བསམ་བྱ་བསམ་པར་བྱ་བ་ནི།།ཧཱུཾ་ཨོཾ་ཏྲཾ་ཡ་ཁཾ་འདི་དག་ནི།།སྙིང་གར་ཇི་ལྟའི་གདན་ལ་བསམ།།བླ་མ་རྡོ་རྗེ་མཆོད་པ་དང་།།བདུན་པོ་རྣམ་པར་དག་པར་བྱ།།སྡིག་པ་བཤགས་པར་བྱ་བ་དང་།།ཡང་ན་བྱེད་པར་སྡོམ་པའོ།།སངས་རྒྱས་བྱང་ཆུབ་སེམས་དཔའ་ཡི།།བསོད་ནམས་དག་ལ་རྗེས་ཡི་རང་།།དེ་དག་ཡོངས་སུ་བསྔོ་བར་བྱ།།དཀོན་མཆོག་གསུམ་ལ་ཡང་དག་བརྟེན།།བྱང་ཆུབ་སེམས་ནི་བསྐྱེད་པ་དང་།།ལམ་ལ་བརྟེན་ཏེ་དེ་ནས་ནི།།ཚང་པའི་གནས་བཞི་རྣམ་བསྒོམས་ནས།།སྣ་ཚོགས་སྟོང་པར་བསྒོམ་པར་བྱ།།དངོས་པོ་བདེན་བརྫུན་རྣམ་དཔྱད་པས།།བརྟགསཔས་དམིགས་སུ་མེད་པ་སྟེ།།དེས་ནི་འདི་ལྟར་གཟུགས་བརྙན་བཞིན།།དངོས་པོ་ཐམས་ཅད་བསྒོམ་པར་བྱ།།ོཾ་ཤཱུ་ནྱ་ཏཱ་ཛྙཱ་ན་བཛྲ་སྭ་བྷཱ་ཝ་ཨཏྨ་ཀོུ྅ཧཾ།མདུན་དུ་ར་ཕ་ལས་ནི་ཉི་མ་རྣམ་པར་བསྒོམ།།ཉི་མ་དེར་ནི་ཧཱུཾ་བྱུང་སྣ་ཚོགས་རྡོ་རྗེ་སྟེ།རྡོ་རྗེ་དེ་ཉིད་ཀྱིས་ནི་རབ་དང་གུར་བཅིང་པ་ཡང་ནགོ་།།ནམ་མཁའི་ཁམས་ཀྱི་དབུས་གནས་པར།།སྣ་ཚོགས་རྡོ་རྗེ་བསྒོམ་པར་བྱ།།དེར་ནི་ཧཱུཾ་ཡིག་ལས་བྱུང་བ།།སྲུང་བའི་འཁོར་ལོ་བསམ་པར་བྱ།།འཁོར་ཞིང་རབ་ཏུ་མི་གཡོ་བ།།འཇིག་པའི་དུས་ཀྱི་མེ་དང་མཚུངས།།ཧཱུཾ་ཡིག་བཅུ་ཡི་སྦྱོར་བ་ལས།།ཁྲོ་བོ་བཅུ་ནི་རིམ་བཞིན་དགོད།།ཤར་དུ་གཤིན་རྗེ་གཤེད་པོ་བསམ།།ཤེས་རབ་མཐར་བྱེད་ཡང་ནི་ལྷོར།།པདྨ་མཐར་བྱེད་ཆུ་བདག་སྟེ།།བྱང་དུ་བདུད་རྩི་འཁྱིལ་པའོ།།འདོད་པའི་རྒྱལ་པོ་དབང་ལྡན་དུའོ།།མེ་ཉིད་དུ་ནི་དབྱུག་སྔོན་ཅན།།བདེན་བྲལ་དུ་ནི་མི་གཡོ་བསམ།།རླུང་ཉིད་དུ་ཡང་སྟོབས་པོ་ཆེ།།གཙུག་ཏོར་སྟེང་དུ་བསམ་པར་བྱ།།འོག་ཏུ་གནོད་མཛེས་རྣམ་པར་བསྒོམ།།ཀུན་ཀྱང་ཞལ་གཅིག་ཕྱག་གཉིས་ཏེ།།རྡོ་རྗེ་ཁྲོ་བོ་དྲག་ཆེན་པོ།།སྙིང་གར་ཁུ་ཚུར་སྡིགས་མཛུབ་སྟེ།།གཡས་པ་རང་གི་མཚོན་ཆ་འཕྱར།།གཤིན་རྗེ་འཇོམས་པའི་ཐོ་བ་སྟེ།།དབྱུག་པ་རྡོ་རྗེ་གཞན་མིཐུབ།།རྟ་མགྲིན་གྱི་ནི་པདྨ་དམར།།བདུད་རྩི་འཁྱིལ་པའི་རྡོ་རྗེའོ།།འདོད་པའི་རྒྱལ་པོ་ལྕགས་ཀྱུ་སྟེ།།དབྱུག་པ་སྔོན་པོ་རང་མིང་ཅན།།སྟོབས་རྒྱལ་གྱི་ནི་ཏྲི་ཤཱུ་ལ།།མི་གཡོ་བ་ཡི་རྡོ་རྗེའོ།།གཙུག་ཏོར་འཁོར་ལོས་སྒྱུར་རྒྱལ་གྱི།།ཆོས་ཀྱི་འཁོར་ལོ་བསམ་པར་བྱ།།གཏུན་ཤིང་རྡོ་རྗེས་འོག་གིའོ།།གཡོན་བརྐྱང་བ་ཡི་ཞབས་ཀྱིས་གནས།།ིནྡྲ་ནཱི་ལ་མཚུངས་པའི་མདོག་།གཤིན་རྗེ་གཤེད་པོ་བསྒོམ་པར་བྱ།།གཞན་གྱིས་མི་ཐུབ་ཅེས་བྱ་བ།།ཟླ་བའི་འོད་ཟེར་དང་མཚུངས་པའོ།།པདྨའི་ཁྲོ་བོ་དམར་ཆེན་པོ།།བདུད་རྩི་འཁྱིལ་པ་ནག་པོ་སྟེ།།མཚམས་ཀྱི་ཁྲོ་བོ་ནག་པོ་ཆེ།།སྤྱི་བོར་རྡོ་རྗེ་འཆང་བ་འཛིན།།གཤིན་རྗེ་རྣམ་པར་སྣང་མཛད་ཉིད།།རྡོ་རྗེ་སེམས་དཔའ་དབྱུག་པ་ལའོ།།པདྨ་ཞེས་བྱ་འཇིག་རྟེན་སྤྱན།།བདུད་རྩི་འཁྱིལ་པ་སེམས་དཔའོ།།ཁྲོ་བོའི་འཁོར་ལོ་དབུས་གནས་སུ།།བདུད་ལས་རྒྱལ་བ་བསམ་པར་བྱ།།འོག་ཏུ་པདྨ་བསམ་བྱས་ལ།།ཁྲོ་བོ་བཅུ་ནི་བསྒོམ་པར་བྱ།།དཔག་ཚད་བརྒྱར་ནི་འཇུག་པ་ཡིས།།བགེགས་རྣམས་སྐྲོད་པར་བསམ་པར་བྱ།།ནམ་མཁའི་ཁམས་ཀྱི་དབུས་གནས་པར།།རླུང་གི་དཀྱིལ་འཁོར་བསྒོམ་པར་བྱ།།རླུང་གི་དཀྱིལ་འཁོར་དབུས་གནས་པར།།མེ་ཡི་དཀྱིལ་འཁོར།བསྒོམ་པར་བྱ།མེ་ཡི་དཀྱིལ་འཁོར་དབུས་གནས་པར།།བརྟུལ་ཞུགས་ཅན་གྱིས་ཆུ་བསམ་བྱ།།དབང་ཆེན་གྱི་ནི་དཀྱིལ་འཁོར་ཉིད།།དེ་ཡི་སྟེང་དུ་བསམ་པར་བྱ།།དབང་ཆེན་དཀྱིལ་འཁོར་སྟེང་དུ་ནི།།དབང་ཉིད་བསམ་པར་བྱ་བ་ཡི།།བུཾ་ཡིག་སངས་རྒྱས་རྣམ་པར་ལྔ།།གནས་ལྔ་རུ་ནི་བསམ་པར་བྱ།།རྡོ་རྗེ་ཅན་དང་རྟག་པ་ཉིད།།གསུམ་པ་རྡོ་རྗེ་ཉི་མའོ།།བཞི་པ་འདོད་ཆགས་རྡོ་རྗེ་ཡི།།ལྔ་པ་རྟ་མཆོག་རྒྱལ་པོའོ།།སངས་རྒྱས་དཀྱིལ་འཁོར་ཟླུམ་པོ་སྟེ།།རྡོ་རྗེ་ཅན་གྱི་ཟླ་ཕྱེད་འདྲ།།ཆོས་ཀྱི་རྡོ་རྗེ་པདྨ་མཚུངས།།ཉི་མ་ཡིད་བཞིན་ནོར་བུམཚུངས།།རྟ་མཆོག་དཔལ་ནི་ཞེས་བྱ་སྟེ།།གྲུ་གསུམ་ཀུན་དུ་དེ་ཡིའོ། <br/>
 梵文題目：Ḍākinī-vajra-pañjara-pañca-ḍāka-sādhana-nāma <br/>

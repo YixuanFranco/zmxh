@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>悲华经 - 藏密修海典藏</title>
+<title>悲华经 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">悲华经</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:06</div><div class="post-body">[size=5]悲华经卷第一 <br/>
+<div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:06</div><div class="post-body">[size=5]悲华经卷第一 <br/>
 北凉天竺三藏昙无谶译 <br/>
 <br/>
 转法-轮品第一 <br/>
@@ -402,7 +415,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 亦各于前有一化佛，三十二相、八十种好庄严其身，以见佛故皆得快乐，各作是念：“蒙是人恩，令我得乐。”于化佛所心得欢喜，叉手恭敬。 <br/>
 尔时，世尊令彼众生得见宿命罪业因缘，寻自悔责，以是善根于中命终生天人中，畜生众生亦复如是。 <br/>
 尔时，世尊为诸天人示宿世因缘故，有无量无边众生来至佛所，头面作礼，却坐一面，听受妙法。 <br/>
-尔时，有不可计诸天及人发阿耨多罗三藐三菩提心，无数菩萨摩诃萨得陀罗尼三昧忍辱。[/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:19</div><div class="post-body">[size=5]悲华经卷第二 <br/>
+尔时，有不可计诸天及人发阿耨多罗三藐三菩提心，无数菩萨摩诃萨得陀罗尼三昧忍辱。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:19</div><div class="post-body">[size=5]悲华经卷第二 <br/>
 北凉天竺三藏昙无谶译 <br/>
 <br/>
 大施品第三之一 <br/>
@@ -766,7 +779,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 善男子，尔时梵志作是念已，有五阿修罗王到梵志所，乃至百千无量亿那由他阿修罗男子、女人、童男、童女，如梵志教发阿耨多罗三藐三菩提心，至于佛所听受妙法。 <br/>
 “善男子，尔时宝海梵志复作是念：‘ <br/>
 若我当来必成阿耨多罗三藐三菩提，所愿成就得己利者，复当教化天魔波旬，令发阿耨多罗三藐三菩提心。’ <br/>
-善男子，时魔波旬即知梵志心之所念，寻与百千无量亿那由他男子、女人、童男、童女，至梵志所敬如教敕，发阿耨多罗三藐三菩提心，乃至听法亦复如是。”[/size] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:22</div><div class="post-body">[size=5]悲华经卷第三 <br/>
+善男子，时魔波旬即知梵志心之所念，寻与百千无量亿那由他男子、女人、童男、童女，至梵志所敬如教敕，发阿耨多罗三藐三菩提心，乃至听法亦复如是。”[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:22</div><div class="post-body">[size=5]悲华经卷第三 <br/>
 北凉天竺三藏昙无谶译 <br/>
 <br/>
 大施品第三之二 <br/>
@@ -977,7 +990,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 世界大地， 六种震动， <br/>
 众生满足， 受于快乐。’ <br/>
 <br/>
-“善男子，尔时文殊师利闻是偈已，心生欢喜，即起合掌，前礼佛足，去佛不远，复坐听法。[/size] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:29</div><div class="post-body">[size=5]悲华经卷第四 <br/>
+“善男子，尔时文殊师利闻是偈已，心生欢喜，即起合掌，前礼佛足，去佛不远，复坐听法。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:29</div><div class="post-body">[size=5]悲华经卷第四 <br/>
 北凉天竺三藏昙无谶译 <br/>
 <br/>
 诸菩萨本受记品第四之二 <br/>
@@ -1336,7 +1349,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 两手各得， 天千辐轮， <br/>
 净意当来， 为天人尊。’ <br/>
 <br/>
-“善男子，尔时阿閦菩萨闻是偈已，心大欢喜，即起合掌，前礼佛足，去佛不远，复坐听法。[/size] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:38</div><div class="post-body">[size=5]悲华经卷第五 <br/>
+“善男子，尔时阿閦菩萨闻是偈已，心大欢喜，即起合掌，前礼佛足，去佛不远，复坐听法。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:38</div><div class="post-body">[size=5]悲华经卷第五 <br/>
 北凉天竺三藏昙无谶译 <br/>
 <br/>
 诸菩萨本受记品第四之三 <br/>
@@ -1765,7 +1778,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 所坐宝床持与水龙， <br/>
 所用宝杖与虚空龙， <br/>
 纯金澡罐与妙音龙， <br/>
-如是与已，作是言：‘童子，汝今可持此物供养佛及众僧，发阿耨多罗三藐三菩提心。’[/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:45</div><div class="post-body">[size=5]悲华经卷第六 <br/>
+如是与已，作是言：‘童子，汝今可持此物供养佛及众僧，发阿耨多罗三藐三菩提心。’[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:45</div><div class="post-body">[size=5]悲华经卷第六 <br/>
 北凉天竺三藏昙无谶译 <br/>
 <br/>
 诸菩萨本受记品第四之四 <br/>
@@ -2047,7 +2060,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 世尊，是诸众生若临终时，我不在其前为演说法令心净者，我于未来终不成阿耨多罗三藐三菩提。 <br/>
 若彼众生命终之后堕三恶道，不生我国受人身者，我之所知无量正法悉当灭失，所有佛事皆不成就，事那罗延者亦复如是。 <br/>
 “‘世尊，我成阿耨多罗三藐三菩提已，愿令他方世界所有五逆之人，乃至行诸邪道，登涉罪山，如是众生临命终时，悉来集聚生我世界。 <br/>
-随其本相所受身色，艾白无润，面目丑陋如毗舍遮，失念破戒，臭秽短命，以此诸恶损减其身，资生所须常不供足，为是众生故，于娑婆世界诸四天下，一时之中从兜术下现处母胎，乃至童子学诸技艺、出家、苦行、破坏诸魔、成无上道、转正法-轮、般涅槃后流布舍利，如是示现种种佛事，悉皆遍满如是百亿诸四天下。[/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:52</div><div class="post-body">[size=5]悲华经卷第七 <br/>
+随其本相所受身色，艾白无润，面目丑陋如毗舍遮，失念破戒，臭秽短命，以此诸恶损减其身，资生所须常不供足，为是众生故，于娑婆世界诸四天下，一时之中从兜术下现处母胎，乃至童子学诸技艺、出家、苦行、破坏诸魔、成无上道、转正法-轮、般涅槃后流布舍利，如是示现种种佛事，悉皆遍满如是百亿诸四天下。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:52</div><div class="post-body">[size=5]悲华经卷第七 <br/>
 北凉天竺三藏昙无谶译 <br/>
 <br/>
 诸菩萨本受记品第四之五 <br/>
@@ -2450,7 +2463,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 “尔时，北方过九万百千亿世界，彼有世界名胜真宝，有佛号世间尊王如来，今现在为诸菩萨说大乘法。有二菩萨，一名不动住，二名得智慧世间尊王。是二菩萨白佛言：‘ <br/>
 世尊，何因缘故，地六种动？’余如上说。北方无量世界亦如是。 <br/>
 “尔时，下方过九万八千百千亿那由他世界，有世界名离暗雾，有佛号离恐怖围绕音，今现在为四部众说三乘法。有二菩萨，一名日尊，二名虚空日。是二菩萨白佛言：‘ <br/>
-世尊，何因缘故，地六种动？’余如上说。下方世界亦复如是。[/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:58</div><div class="post-body">[size=5]悲华经卷第八 <br/>
+世尊，何因缘故，地六种动？’余如上说。下方世界亦复如是。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 00:58</div><div class="post-body">[size=5]悲华经卷第八 <br/>
 北凉天竺三藏昙无谶译 <br/>
 <br/>
 诸菩萨本受记品第四之六 <br/>
@@ -2743,7 +2756,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 有如尔三昧，入是三昧，于诸法中不见作与不作； <br/>
 有无身三昧，入是三昧，于诸法中不见有身。 <br/>
 <br/>
-诸菩萨得如是等诸三昧门，口业清净如虚空，于诸法中不见口业，犹如虚空无有障碍。大悲，是名修学大乘菩萨摩诃萨诸三昧门。[/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 01:19</div><div class="post-body">[size=5]悲华经卷第九 <br/>
+诸菩萨得如是等诸三昧门，口业清净如虚空，于诸法中不见口业，犹如虚空无有障碍。大悲，是名修学大乘菩萨摩诃萨诸三昧门。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 01:19</div><div class="post-body">[size=5]悲华经卷第九 <br/>
 北凉天竺三藏昙无谶译 <br/>
 <br/>
 檀波罗蜜品第五之二 <br/>
@@ -3021,7 +3034,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 如是遍满此网世界，利益一切在在处处无量众生安住三乘，闭三恶道，通天人路；复为如是世界病者，请诸天龙神仙之人，集毗罗山修毗陀咒，令此世界无量无边阿僧祇人，悉得离病受于快乐。 <br/>
 如此世界，乃至十方如恒河沙等五浊恶世亦复如是。’ <br/>
 “善男子，我于尔时在网世界，乃至十方恒河沙五浊恶世，诸所作愿皆得成就。 <br/>
-善男子，汝今当知，即是如来为菩萨时，增益智慧修菩萨道。是名如来爱护三业善根种子。”[/size] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 01:32</div><div class="post-body">[size=5]悲华经卷第十 <br/>
+善男子，汝今当知，即是如来为菩萨时，增益智慧修菩萨道。是名如来爱护三业善根种子。”[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2022-8-22 01:32</div><div class="post-body">[size=5]悲华经卷第十 <br/>
 北凉天竺三藏昙无谶译 <br/>
 <br/>
 檀波罗蜜品第五之三 <br/>

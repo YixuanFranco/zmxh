@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>庫如庫列修法儀軌 毗摩 云奴沃譯 n3.5s 藏汉 - 藏密修海典藏</title>
+<title>庫如庫列修法儀軌 毗摩 云奴沃譯 n3.5s 藏汉 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">庫如庫列修法儀軌 毗摩 云奴沃譯 n3.5s 藏汉</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-5 20:13</div><div class="post-body">[size=5]d1318 庫如庫列修法儀軌 毗摩 云奴沃譯 n3.5s <br/>
+<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-5 20:13</div><div class="post-body">[size=5]d1318 庫如庫列修法儀軌 毗摩 云奴沃譯 n3.5s <br/>
 D1318 <br/>
 །སློབ་དཔོན་ཆེན་ཌོ་མྦི་ཧེ་རུ་ཀས་མཛད་པ་རྫོགས་སོ།། @##། །རྒྱ་གར་སྐད་དུ། ཀུ་རུ་ཀུ་ལླེ་སཱ་དྷ་ནཾ། བོད་སྐད་དུ། ཀུ་རུ་ཀུལླེའི་སྒྲུབ་པའི་ཐབས། ཨོཾ་བཅོམ་ལྡན་འདས་འཕགས་མ་ལྷ་མོ་སྒྲོལ་མ་ལ་ཕྱག་འཚལ་ལོ། །རེ་ཞིག་དང་པོ་ཁོ་ནར་སེམས་ དཔའི་སྐྱིལ་ཀྲུང་བཅས་ལ།བགེགས་བསལ་བར་བྱའོ། །སྔགས་ནི་འདི་ཡིན་ཏེ། ཨོཾ་ཨ་མྲྀ་ཏི་ཧཱུཾ་ཕཊ་སྭཱ་ཧཱ། དེ་ནས་སངས་རྒྱས་དང་བྱང་ཆུབ་སེམས་དཔའ་ནམ་མཁའི་དཀྱིལ་དུ་དམིགས་ལ། དེ་མ་ཐག་ཏུ་སྐྱབས་སུ་འགྲོ་བར་བྱ་སྟེ། ཨོཾ་རཏྣ་ཏྲ་ཡཾ་སྨ་ཤ་ར་ནཾ་ཀྲི་ཏྭ། ཨོཾ་སྭ་བྷཱ་བ་ཤུདྡྷཿ་སརྦ་ དྷརྨཱཿ་སྭ་བྷཱ་ཝ་ཤུདྷོུ྅ཧཾ།ོཾ་ཤཱུ་ནྱ་ཏཱ་ཛྙཱ་ན་བཛྲ་སྭ་བྷཱ་ཝ་ཨཱཏྨ་ཀོུ྅ཧཾ། དེ་ནས་ཡི་གེ་པཾ་ལས་པདྨ། དེའི་སྟེང་དུ་ཡི་གེ་ཨ་ལས་ཟླ་བའི་དཀྱིལ་འཁོར། དེ་ལ་ཡི་གེ་ཏཱཾ་དེ་ཡོངས་སུ་གྱུར་པ་ལས་ཨུཏྤལ། དེའི་རྗེས་ལ་སྤྱན་དྲང་བར་བྱ་སྟེ། ཨོཾ་བྷ་ག་ཝ་ཏི་ས་མ་ཡ་ཤྭ་རེ་སརྦོ་ཏྟ་མ་ཏི་ཏ་ཛཿ་ཨ་དྷི་ཥྛ་ནཾ་མ ཨི་ཀུ་རུ་སྭཱ་ཧཱ།དེ་ལས་བཅོམ་ལྡན་འདས་མ་ཞལ་གསུམ་པ་ཕྱག་དྲུག་མ། གཡས་པ་དང་གཡོན་པ་ཡང་རྩ་བའི་ཞལ་ནི་གནག་པ་དང་སེར་བ་དང་དམར་བའོ། །གཡས་པའི་ཕྱག་རྣམས་ཀྱི་དང་པོ་མི་འཇིགས་པ་སྦྱིན་པ་ལ་འཁོར་ལོ་དཀར་པོས་མཚན་པའོ། །གཉིས་པ་ལ་མདའ། གསུམ་པ་ལ་ ལྕགས་ཀྱུའོ།།ཕྱག་གཡོན་པ་རྣམས་ཀྱི་དང་པོ་ལ་ཨུཏྤལ་དམར་པོ་རིན་པོ་ཆེའི་སྙེ་མ་དང་བཅས་པའོ། །གཉིས་པ་ལ་གཞུ། གསུམ་པ་ལ་ཞགས་པའོ། །སྐུ་མདོག་དམར་པོ་པདྨ་དམར་པོའི་གདན་ལ་བཞུགས་པ། དེ་བཞིན་གཤེགས་པ་ལྔའི་ཅོད་པན་ཅན། སྐུ་ལ་རྒྱན་ཐམས་ཅད་ཀྱིས་ བརྒྱན་པ།ཤར་གྱི་ཕྱོགས་སུ་གསལ་བའི་སྒྲོལ་མ། ལྷོ་རུ་རྫོགས་བྱེད་སྒྲོལ་མ། ནུབ་ཏུ་སྣང་བྱེད་སྒྲོལ་མ། བྱང་དུ་ཀརྞ་སྒྲོལ་མ། མེའི་མཚམས་སུ་རིན་ཆེན་སྒྲོལ་མ། བདེན་བྲལ་གྱི་མཚམས་སུ་རྒྱལ་བ་སྒྲོལ་མ། རླུང་གི་མཚམས་སུ་དཀར་མོ་སྒྲོལ་མ། དབང་ལྡན་གྱི་མཚམས་སུ་དཔའ་བོའི་ སྒྲོལ་མའོ།།འདི་རྣམས་ནི་ཕྱག་བཞི་པ་མཆོག་སྦྱིན་པ་དང་། ཨུཏྤལ་དང་མདའ་དང་གཞུ་བསྣམས་པའོ། །སྐུ་མདོག་དམར་པོ་པདྨ་དམར་པོའི་གདན་ལ་བཞུགས་པ། དེ་བཞིན་གཤེགས་པ་ལྔའི་ཅོད་པན་ཅན། སྐུ་ལ་རྒྱན་ཐམས་ཅད་ཀྱིས་བརྒྱན་པའོ། <br/>
 大阿阇黎蕩毗黑魯迦所作圓滿。 <br/>
@@ -127,7 +140,7 @@ D1318 <br/>
 送駕咒： <br/>
 嗡布拉薩納尼斯潘布拉帝布拉嘎拉納瑪尼匝雅古熱薩維熱達拉威達列根達熱薩班匝哈斯達巴拉吉達誒嘎匝當納瑪米嗡達拉達拉涅吽哈拉哈拉娑婆訶 <br/>
 （Oṃ prasanna nispanna prati prakarana mane jaya gure savire tarave tale gandhare sa vajra hasta parājita ekajāṭaṃ namaḥ oṃ tara taraṇe hūṃ hara hara svāhā） <br/>
-以左手持最上等牛角泥土誦二十一遍后塗抹，即能降伏。[/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-5 20:28</div><div class="post-body">[size=5]d1318庫如庫列修法儀軌毗摩、云奴沃譯 <br/>
+以左手持最上等牛角泥土誦二十一遍后塗抹，即能降伏。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-5 20:28</div><div class="post-body">[size=5]d1318庫如庫列修法儀軌毗摩、云奴沃譯 <br/>
 D1318 <br/>
 །སློབ་དཔོན་ཆེན་ཌོ་མྦི་ཧེ་རུ་ཀས་མཛད་པ་རྫོགས་སོ།། @##། །རྒྱ་གར་སྐད་དུ། ཀུ་རུ་ཀུ་ལླེ་སཱ་དྷ་ནཾ། བོད་སྐད་དུ། ཀུ་རུ་ཀུལླེའི་སྒྲུབ་པའི་ཐབས། ཨོཾ་བཅོམ་ལྡན་འདས་འཕགས་མ་ལྷ་མོ་སྒྲོལ་མ་ལ་ཕྱག་འཚལ་ལོ། །རེ་ཞིག་དང་པོ་ཁོ་ནར་སེམས་ དཔའི་སྐྱིལ་ཀྲུང་བཅས་ལ།བགེགས་བསལ་བར་བྱའོ། །སྔགས་ནི་འདི་ཡིན་ཏེ། ཨོཾ་ཨ་མྲྀ་ཏི་ཧཱུཾ་ཕཊ་སྭཱ་ཧཱ། དེ་ནས་སངས་རྒྱས་དང་བྱང་ཆུབ་སེམས་དཔའ་ནམ་མཁའི་དཀྱིལ་དུ་དམིགས་ལ། དེ་མ་ཐག་ཏུ་སྐྱབས་སུ་འགྲོ་བར་བྱ་སྟེ། ཨོཾ་རཏྣ་ཏྲ་ཡཾ་སྨ་ཤ་ར་ནཾ་ཀྲི་ཏྭ། ཨོཾ་སྭ་བྷཱ་བ་ཤུདྡྷཿ་སརྦ་ དྷརྨཱཿ་སྭ་བྷཱ་ཝ་ཤུདྷོུ྅ཧཾ།ོཾ་ཤཱུ་ནྱ་ཏཱ་ཛྙཱ་ན་བཛྲ་སྭ་བྷཱ་ཝ་ཨཱཏྨ་ཀོུ྅ཧཾ། དེ་ནས་ཡི་གེ་པཾ་ལས་པདྨ། དེའི་སྟེང་དུ་ཡི་གེ་ཨ་ལས་ཟླ་བའི་དཀྱིལ་འཁོར། དེ་ལ་ཡི་གེ་ཏཱཾ་དེ་ཡོངས་སུ་གྱུར་པ་ལས་ཨུཏྤལ། དེའི་རྗེས་ལ་སྤྱན་དྲང་བར་བྱ་སྟེ། ཨོཾ་བྷ་ག་ཝ་ཏི་ས་མ་ཡ་ཤྭ་རེ་སརྦོ་ཏྟ་མ་ཏི་ཏ་ཛཿ་ཨ་དྷི་ཥྛ་ནཾ་མ ཨི་ཀུ་རུ་སྭཱ་ཧཱ།དེ་ལས་བཅོམ་ལྡན་འདས་མ་ཞལ་གསུམ་པ་ཕྱག་དྲུག་མ། གཡས་པ་དང་གཡོན་པ་ཡང་རྩ་བའི་ཞལ་ནི་གནག་པ་དང་སེར་བ་དང་དམར་བའོ། །གཡས་པའི་ཕྱག་རྣམས་ཀྱི་དང་པོ་མི་འཇིགས་པ་སྦྱིན་པ་ལ་འཁོར་ལོ་དཀར་པོས་མཚན་པའོ། །གཉིས་པ་ལ་མདའ། གསུམ་པ་ལ་ ལྕགས་ཀྱུའོ།།ཕྱག་གཡོན་པ་རྣམས་ཀྱི་དང་པོ་ལ་ཨུཏྤལ་དམར་པོ་རིན་པོ་ཆེའི་སྙེ་མ་དང་བཅས་པའོ། །གཉིས་པ་ལ་གཞུ། གསུམ་པ་ལ་ཞགས་པའོ། །སྐུ་མདོག་དམར་པོ་པདྨ་དམར་པོའི་གདན་ལ་བཞུགས་པ། དེ་བཞིན་གཤེགས་པ་ལྔའི་ཅོད་པན་ཅན། སྐུ་ལ་རྒྱན་ཐམས་ཅད་ཀྱིས་ བརྒྱན་པ།ཤར་གྱི་ཕྱོགས་སུ་གསལ་བའི་སྒྲོལ་མ། ལྷོ་རུ་རྫོགས་བྱེད་སྒྲོལ་མ། ནུབ་ཏུ་སྣང་བྱེད་སྒྲོལ་མ། བྱང་དུ་ཀརྞ་སྒྲོལ་མ། མེའི་མཚམས་སུ་རིན་ཆེན་སྒྲོལ་མ། བདེན་བྲལ་གྱི་མཚམས་སུ་རྒྱལ་བ་སྒྲོལ་མ། རླུང་གི་མཚམས་སུ་དཀར་མོ་སྒྲོལ་མ། དབང་ལྡན་གྱི་མཚམས་སུ་དཔའ་བོའི་ སྒྲོལ་མའོ།།འདི་རྣམས་ནི་ཕྱག་བཞི་པ་མཆོག་སྦྱིན་པ་དང་། ཨུཏྤལ་དང་མདའ་དང་གཞུ་བསྣམས་པའོ། །སྐུ་མདོག་དམར་པོ་པདྨ་དམར་པོའི་གདན་ལ་བཞུགས་པ། དེ་བཞིན་གཤེགས་པ་ལྔའི་ཅོད་པན་ཅན། སྐུ་ལ་རྒྱན་ཐམས་ཅད་ཀྱིས་བརྒྱན་པའོ། །དེ་རྣམས་ཀྱི་སྔགས་ནི། ཨོཾ་ཀུ་རུ་ ཀུལླེ་ཧཱུཾ་ཧྲཱིཾ་སྭཱ་ཧཱ།ོཾ་པྲ་སནྣ་ཏཱ་རི་ཧཱུཾ་ཧྲཱིཾ་སྭཱ་ཧཱ། ཨོཾ་ནེ་སནྣ་ཏཱ་རི་ཧཱུཾ་ཧྲཱིཾ་སྭཱ་ཧཱ། ཨོཾ་དཱི་པ་ཏཱ་རི་ཧཱུཾ་ཧྲཱིཾ་སྭཱ་ཧཱ། ཨོཾ་ཀརྞ་ཏཱ་རི་ཧཱུཾ་ཧྲཱིཾ་སྭཱ་ཧཱ། ཨོཾ་མ་ཎི་ཏཱ་རི་ཧཱུཾ་ཧྲཱིཾ་སྭཱ་ཧཱ། ཨོཾ་ཛ་ཡ་ཏཱ་རི་ཧཱུཾ་ཧྲཱིཾ་སྭཱ་ཧཱ། ཨོཾ་གཽ་རཱི་ཏཱ་རི་ཧཱུཾ་ཧྲཱིཾ་སྭཱ་ཧཱ། ཨོཾ་ཝཱི་ར་ཏཱ་རི་ཧཱུཾ་ཧྲཱིཾ་སྭཱ་ཧཱ། ཤར་ཕྱོགས་ཀྱི་སྒོར་ནི་རྡོ་རྗེ་རོ་ལངས་མ། །མཆེ་བ་ རྣམ་པར་གཙིགས་པ།ཞལ་རྣམ་པར་འགྱུར་བ། འཇིགས་སུ་རུང་པའི་ཆ་བྱད་ཅན། །ཕྱག་བཞི་པ་ལ། མདའ་དང་གཞུ་དང་རྡོ་རྗེ་ལྕགས་ཀྱུ་དང་ཞགས་པ་པི་ཝང་བསྣམས་པ། མི་བསྐྱོད་པའི་ཅོད་པན་ཅན། ལྷོའི་སྒོར་ནི་རྡོ་རྗེ་དྲི་འཛིན་མ། །ཞལ་རྣམ་པར་གཙིགས་པ། དབུ་སྐྲ་ འཁྱིལ་བ།གསུས་པ་འཕྱང་བ། ཕྱག་བཞི་པ། རྡོ་རྗེ་དང་དྲིལ་བུ་དང་ལྕགས་ཀྱུ་དང་ཞགས་པ་བསྣམས་པ། རིན་ཆེན་འབྱུང་ལྡན་གྱི་ཅོད་པན་ཅན་ནོ། །ནུབ་ཀྱི་སྒོ་རུ་གཞན་གྱིས་མི་ཐུབ་པ། དབུ་སྐྲ་གྱེན་དུ་བརྫེས་པ། གསུས་པ་འཕྱང་བ། ཕྱག་བཞི་པ། སྡིགས་མཛུབ་དང་། ལྕགས་ཀྱུ་ དང་།ཞགས་པ་བསྣམས་པ། སྣང་བ་མཐའ་ཡས་ཀྱི་དབུ་རྒྱན་ཅན། བྱང་གི་སྒོར་ནི་རལ་པ་གཅིག་མ། དབུ་སྐྲ་གྱེན་དུ་བརྫིས་པ། གསུས་པ་འཕྱང་བ། ཕྱག་བཞི་པ། ཐོ་བ་དང་། རྡོ་རྗེ་དང་། དགྲ་སྟ་དང་། ཞགས་པ་བསྣམས་པ། དོན་ཡོད་གྲུབ་པའི་དབུ་རྒྱན་ཅན། གཡས་བརྐྱང་ གཡོན་བསྐུམ་གྱིས་གནས་པས་བཞུགས་པ།སྒོ་མ་བཞི་པོ་རྣམས་སྐུ་མདོག་དམར་བ་པདྨའི་གདན་ལ་བཞུགས་པའོ། །འདི་རྣམས་ཀྱི་སྔགས་ནི། ཨོཾ་བཛྲ་ཝ་ཏི་ལི་ཧཱུཾ་ཕཊ། ཨོཾ་བཛྲ་གྷནྡྷ་རི་ཧཱུཾ་ཕཊ། ཨོཾ་བཛྲ་ཨ་པ་རཱི་ཛི་ཏ་ཧཱུཾ་ཕཊ། ཨོཾ་བཛྲ་ཨེ་ཀ་ཛ་ཊཱ་ཧཱུཾ་ཕཊ། ཨོཾ་ཨཱརྱཱ་བ་ལོ་ཀི་ཏེ་ཤྭ་རཱ་ཡ་བོ་དྷི་ས་ཏྭཱ་ ཡ།མ་ཧཱ་ས་ཏྭཱ་ཡ། མ་ཧཱ་ཀཱ་རུ་ཎི་ཀཱ་ཡ། ཏ་དྱ་ཐཱ། ཨོཾ་ཨཱ་གཙྪ་ཨཱ་གཙྪ། བྷ་ག་ཝ་ཏི་ཏཱ་རི་ཨཱརྱཱ་བ་ལི་ཀི་ཏེ་ཤྭ་ར་ས་ཏྱེ་ན་སྭཱ་ཧཱ། གུ་གུལ་གྱི་སྤོས་ལ་ལན་བདུན་ཡོངས་སུ་བཟླས་ནས་སྤྱན་དྲང་བར་བྱའོ། །ན་མཿ་ཨཱརྱཱ་བ་ལོ་ཀི་ཏེ་ཤྭ་རཱ་ཡ། ཏ་དྱ་ཐཱ། ཨོཾ་སོ་རི་སོ་ར་བ་ཏེ་ཧེ་ར་ཧེ་ར་ སྭཱ་ཧཱ།རྒྷའི་སྔགས་སོ། །ན་མཿ་ཨཱརྱཱ་བ་ལོ་ཀི་ཏེ་ཤྭ་རཱ་ཡ། ཏ་དྱ་ཐཱ། ཨོཾ་ཏ་རི་ཏ་རི་བ་ཏི་སརྦ་ཙ་ཏུརྠ་སཱ་དྷ་ནེ་ཏ་ཥྛ་ཏིཥྛ། ཡད་ཀརྱཱཾ་སིདྡྷི་མེ་ཀུ་རུ་སྭཱ་ཧཱ། མེ་ཏོག་གི་སྔགས་སོ། །ན་མཿ་ཨཱརྱཱ་བ་ལོ་ཀི་ཏེ་ཤྭ་རཱ་ཡ། ཏདྱ་ཐཱ། མེ་གྷ་མེ་གྷ་སྭཱ་རི་དོ་ག་སྭཱ་ཀུ་རུ་ཀུ་རུ་བྷ་ར་བྷ་ར་སྭཱ་ཧཱ། བདུག་སྤོས་ཀྱི་སྔགས་སོ། ། ན་མཿ་ཨཱརྱཱ་པ་ལི་ཀི་ཏེ་ཤྭ་རཱ་ཡ། ཏ་དྱ་ཐཱ། ཨོཾ་བོཀྐ་བོཀྐ་བྷ་མ་ནེ་ཛྭཱ་ལ་ཛཱ་ལ་དཱི་པ་སྭཱ་ཧཱ། མར་མེའི་སྔགས་སོ། <br/>
 大阿阇黎蕩毗黑魯迦所作圓滿。 <br/>

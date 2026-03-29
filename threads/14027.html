@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>他以清净心供佛，得到多大的福？ - 藏密修海典藏</title>
+<title>他以清净心供佛，得到多大的福？ - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">他以清净心供佛，得到多大的福？</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-13 21:17</div><div class="post-body">&quot;土地变金地 &quot;Worship Buddha <br/>
+<div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-13 21:17</div><div class="post-body">&quot;土地变金地 &quot;Worship Buddha <br/>
 <br/>
 世尊告曰：这是他前世和今世的两种因缘。 <br/>
 他是一位婆罗门的儿子，长大后出家了，临终时他发愿：我在迦叶佛的教法下出家，虽然没有得到什么境界，但愿我来世在释迦佛的教法下，令佛欢喜，出家证得罗汉果。以此往昔的愿力今已成熟故，在我教法下出家证得罗汉果位。 <br/>
@@ -50,7 +63,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 刚发愿毕，以其清净心供养之功德力和佛陀不可思议的加持力，他田地里的庄稼全变成了黄金，夫妻二人欣喜若狂，不知该如何是好。这时贤慧的妻子对农夫说：“现在，地里全变成了黄金的愿果真实现了，这固然是很好，但我们应该先得到萨迦国王的开许，否则，我们不一定能享受到这些黄金。您先去宫中禀告国王并献给国王一份黄金，这样比较好通融。”于是农夫就去了宫中，将田地变成了黄金的事实禀告了国王，并说：“现在，我们的田地全变成了黄金，这就供养国王一份，请国王笑纳。”听了这话，国王有点不相信，心想：这个农夫可能精神有问题，但仔细观察他，又是个正常人，就半信半疑地问农夫：“真有这样的事吗？”农夫说：“确实是事实，若不相信，那就请陛下亲自去看一下。”国王就专门派人去观察一下真假，可所派的这个人怎么也看不到黄金，只看到一般的田地庄稼，他回禀国王：“我没见到什么黄金？”但农夫又祈求：“国王陛下，请您最好亲自去看一下，在我们的眼前田地确确实实已变成了黄金，与市上流通的黄金一样。”对世尊很具信心的萨迦国王想了想，问农夫：“你是造了极大的福报，还是遇到了很殊胜的福田？”农夫说：“我是遇上了殊胜的福田。”国王才觉得可信。就随农夫去田地里，亲自去观察确实是真的。农夫就献给国王一块，国王拿着黄金仔细看了看，诚觉稀有，便问：“你能现前这样的福报，究竟是怎样的因缘？”农夫如实地回答说：“是中午我们供养释迦牟尼佛并至诚发愿而得到的。”明达的萨迦国王听了，告诉农夫：“不必担心，这都是你自己供养发愿的功德力所得的福报，你自己有权享用，不过，我希望你能上供下施，这个很重要。”（译者：由此大家要知道对上师三宝以清净心供养少少的食物，其果报也是不可思议的！）农夫心想：国王所说的，颇有道理。现在的富裕全是世尊加持而来的，我应该报佛恩——上供下施。于是，他就在三个月中以饮食供养佛陀及僧众，并以其它的物品供养他们。世尊为他传了法，闻法后，他以智慧金刚摧毁了二十个萨迦耶见，证得了预流果位。尔后，他于世尊前祈求出家，出家后，他守持清净的比丘戒，勇猛精进，摧毁了三界烦恼，证得了罗汉果位。 <br/>
 时诸比丘请问：“世尊，以何因缘农夫的田地变成了黄金，最后，他又在佛的教法下出家获证罗汉果位？唯愿为说，吾等欲闻。” <br/>
 世尊告曰：“这是他前世和今世的两种因缘。前世的因缘是在贤劫人寿两万岁时，人天导师、如来正等觉迦叶佛出世，他是一位婆罗门的儿子，长大后出家了，临终时他发愿：我在迦叶佛的教法下出家，虽然没有得到什么境界，但愿我来世在释迦佛的教法下，令佛欢喜，出家证得罗汉果。以此往昔的愿力今已成熟故，在我教法下出家证得罗汉果位。这是前世的愿力。现世的因缘是他作农夫时，平时见到我时数数心生欢喜，并以清净心对我供养，以他清净心供养的功德力和我的加持力，使他的田地变成了黄金。”世尊如是言。 <br/>
-——敬录《百业经》 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:08</div><div class="post-body">如果你观察病人听你提醒念佛等等的话，已经很烦躁乃至生气了，那么就不要再烦他了，让他安安静静的。否则反而会使得他的投生不好（如投生到听不到佛法的地方）。 <br/>
+——敬录《百业经》 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:08</div><div class="post-body">如果你观察病人听你提醒念佛等等的话，已经很烦躁乃至生气了，那么就不要再烦他了，让他安安静静的。否则反而会使得他的投生不好（如投生到听不到佛法的地方）。 <br/>
 <br/>
 类似的，如果病人已经不想进食喝水，你却勉强他进食喝水，那么他若生起我再也不要喝水吃东西、（甚至）我要去一个连水的名字都听不到的地方的想法，那么他就有可能投生到连水和食物的名字都听不到的地方，即饿鬼道。 <br/>
 <br/>
@@ -59,7 +72,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 对于一个不信仰佛法的人，临终时怎么帮助他？应设法使他生起慈悲心，这回对他下一生的投生很有帮助。 <br/>
 <br/>
 为什么这样说？对于一个平时就习惯串习慈悲心的人，他平时遇到困难时马上就会想：希望别人不要遭受我这样的困难。而临终时他正遇到一个很大的困难，他的心会自然导向同一个思维：现在我这么辛苦，希望别人不要这么辛苦。这个想法就能使他来世投生到好的地方。 <br/>
-​ </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:12</div><div class="post-body">师父说“如果一直停留在三恶道圈子的认知里，顽固的停留，那就不可能上升到三善道的圈子”，师父这样的讲述，一定有很多人感觉师父在讲神话。 <br/>
+​ </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:12</div><div class="post-body">师父说“如果一直停留在三恶道圈子的认知里，顽固的停留，那就不可能上升到三善道的圈子”，师父这样的讲述，一定有很多人感觉师父在讲神话。 <br/>
 <br/>
 好吧，师父讲一个小时候听过的小故事。而且，这个小故事大家都知道： <br/>
 <br/>
@@ -69,13 +82,13 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 哎哟，这下好懂了吧！ <br/>
 <br/>
-~~~ 崇慈法师 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:14</div><div class="post-body">我觉得修行是否有进步，就是看看自己“是否比以前还坚强”，而不是比以前还快乐。当你遇到困难时，比以前更坚强，比以前更有勇气去面对事实，或许这就是修行进步的征兆。 <br/>
+~~~ 崇慈法师 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:14</div><div class="post-body">我觉得修行是否有进步，就是看看自己“是否比以前还坚强”，而不是比以前还快乐。当你遇到困难时，比以前更坚强，比以前更有勇气去面对事实，或许这就是修行进步的征兆。 <br/>
 <br/>
 有些人觉得自己修行很好，是因为梦到什么梦，或是运气很好、财源滚滚等等。这其实是不一定的，但如果自己变得更坚强、更有耐心，无坚不摧，慢慢这样你就会变成真正的修行人。 <br/>
 <br/>
-~~~ </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:15</div><div class="post-body">我们要串习这种愿意和别人分享的一种心态，越是分享就越多。比如你对你的财产应该有越是分享就越多的这种想法，而不要想成是越少了；你的智慧、你的知识越分享也会变得越多。有这样良好的心态，你的智慧和财富都会增长。 <br/>
+~~~ </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:15</div><div class="post-body">我们要串习这种愿意和别人分享的一种心态，越是分享就越多。比如你对你的财产应该有越是分享就越多的这种想法，而不要想成是越少了；你的智慧、你的知识越分享也会变得越多。有这样良好的心态，你的智慧和财富都会增长。 <br/>
 <br/>
-~~~ 智敏师 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:18</div><div class="post-body">轮回里遇见谁 <br/>
+~~~ 智敏师 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:18</div><div class="post-body">轮回里遇见谁 <br/>
 都不稀罕，遇见谁 <br/>
 都只是遇见。 <br/>
 能遇见一个 <br/>
@@ -84,11 +97,11 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 而且他已经用了愿和力 <br/>
 慈悲等候了你多年。 <br/>
 <br/>
-~~~ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:21</div><div class="post-body">推动大乘佛法，这里面经的重要性，不能执着只是一经一论，或者一个师父的一种观念，要多听闻正法、学习教理、看经典，然后你慢慢就懂得佛法当中的所谓是非。不是说我们人我是非，谁讲的正确，谁讲的不正确，你进行比较，经典里面有没有这样说。你了解了，你的知见就圆满了，然后这样来取其长去其短，修学上就圆满。要听闻正法，闻具足。 <br/>
+~~~ </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:21</div><div class="post-body">推动大乘佛法，这里面经的重要性，不能执着只是一经一论，或者一个师父的一种观念，要多听闻正法、学习教理、看经典，然后你慢慢就懂得佛法当中的所谓是非。不是说我们人我是非，谁讲的正确，谁讲的不正确，你进行比较，经典里面有没有这样说。你了解了，你的知见就圆满了，然后这样来取其长去其短，修学上就圆满。要听闻正法，闻具足。 <br/>
 <br/>
-~~~ 界诠法师 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:24</div><div class="post-body">对于想要获得证悟的人而言，虽然听闻佛法是不可或缺的方式，但它并不容易，因为听闻一系列的话语是一件事，而要全然了解所听闻的内容，又是另一件事，这完全要依赖自己到底积聚了多少福德而定。 <br/>
+~~~ 界诠法师 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:24</div><div class="post-body">对于想要获得证悟的人而言，虽然听闻佛法是不可或缺的方式，但它并不容易，因为听闻一系列的话语是一件事，而要全然了解所听闻的内容，又是另一件事，这完全要依赖自己到底积聚了多少福德而定。 <br/>
 <br/>
-~~~ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:27</div><div class="post-body">听经！短期内令人刮目相看 <br/>
+~~~ </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-14 08:27</div><div class="post-body">听经！短期内令人刮目相看 <br/>
 <br/>
 净界法师 <br/>
 <br/>

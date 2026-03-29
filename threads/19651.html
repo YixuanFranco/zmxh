@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>持金剛藍衣者壇城儀軌空性三昧 阿目伽金剛 - 藏密修海典藏</title>
+<title>持金剛藍衣者壇城儀軌空性三昧 阿目伽金剛 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">持金剛藍衣者壇城儀軌空性三昧 阿目伽金剛</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-14 08:08</div><div class="post-body">[size=5]d2899 持金剛藍衣者壇城儀軌空性三昧 阿目伽金剛 仁欽扎巴 <br/>
+<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-14 08:08</div><div class="post-body">[size=5]d2899 持金剛藍衣者壇城儀軌空性三昧 阿目伽金剛 仁欽扎巴 <br/>
 D2899 <br/>
 ། །།རྒྱ་གར་གྱི་མཁན་པོ་ནག་པོ་པ་དང་། ཚུལ་ཁྲིམས་རྒྱལ་བས་བསྒྱུར་ཅིང་གཏན་ལ་ཕབ་པའོ།།[་]@##། །རྒྱ་གར་སྐད་དུ། ནཱི་ལཱཾ་བར་དྷ་ར་བཛྲ་པཱ་ཎི་མཎྜ་ལ་བི་དྷི་ནཱ་མ། བོད་སྐད་དུ། ཕྱག་ན་རྡོ་རྗེ་གོས་སྔོན་པོ་ཅན་གྱི་དཀྱིལ་འཁོར་གྱི་ཆོ་ག་ཞེས་བྱ་བ། སངས་རྒྱས་དང་བྱང་ཆུབ་སེམས་དཔའ་ཐམས་ཅད་ལ་ཕྱག་འཚེལ་ལོ། །བཅོམ་ལྡན་འདས་ཕྱག་ན་རྡོ་རྗེ་གོས་སྔོན་ཅན་ལ་ཕྱག་འཚལ་ལོ། <br/>
 印度堪布那措巴和祖勒金杰（法勝）翻譯並校訂。 <br/>
@@ -200,7 +213,7 @@ D2899 <br/>
 嗡班扎烏底叉，嗡班扎毗嘎札瑪吽。 <br/>
 補足遺漏已， 當供世尊花。 爾後開門出， 初行三摩地， <br/>
 安住放諸天。 各處生座已， 自心種子字， 月日種放光， <br/>
-彼等各標記， 由彼觀圓滿， 召請空輪已。[/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-14 08:08</div><div class="post-body">[size=5]ནམ་མཁའི་དཀྱིལ་འཁོར་བཀུག་ནས་ནི། །དཀྱིལ་འཁོར་གཅིག་ཏུ་ བསྒོམ་པར་བྱ།།བདག་གི་ཐུགས་ཀའི་ས་བོན་ལས། །ནམ་མཁར་རྒྱལ་བ་སྤྱན་དྲངས་ལ། །མཆོད་བསྟོད་གསོལ་བཏབ་དབང་བསྐུར་བ། །ཀུན་གྱི་དབུ་ལ་མི་བསྐྱོད་པ། །ལྷ་རྣམས་ཀུན་གྱི་གནས་གསུམ་དུ། །དེ་ཉིད་གསུམ་གྱིས་བྱིན་བརླབ་བྱ། །དེ་ནས་མེ་ཏོག་ལ་སོགས་པའི། །མཆོད་ པ་རྣམས་ཀྱིས་མཆོད་བསྟོད་བྱ།།ཕྱོགས་སྐྱོང་ལ་སོགས་གདོན་ཚོགས་ལ། །གཏོར་མ་རྒྱ་ཆེན་སྦྱིན་པར་བྱ། །དེ་ནས་ཞི་བའི་ཐབ་ཁུང་དུ། །ལྷ་རྣམས་སྦྱིན་སྲེག་གིས་ཚིམ་བྱ། །དེ་ནས་བུམ་པ་སོ་སོ་ལ། །སྔར་བཞིན་བཟླས་པས་མཉེས་པར་བྱས། །དེ་ནས་སློབ་དཔོན་བདག་ཉིད་ནི། ། འཇུག་དང་དབང་བསྐུར་བ་ཡི་རིམ། །སློབ་མའི་རང་བཞིན་འདིར་སྤྱད་བྱ། །དེ་ནས་སློབ་མ་གཞུག་དོན་དུ། །བདེན་པའི་བྱིན་རླབས་བརྗོད་པར་བྱ། །ནམ་མཁའ་སྐྱེ་བ་མཚན་ལྡན་ཕྱིར། །ཐོག་མ་ཐ་མ་མེད་པའི་མཆོག་།སེམས་དཔའི་རྡོ་རྗེ་ཆེ་རང་བཞིན། །རྡོ་རྗེ་སེམས་དཔར་བདག་འགྲུབ མཛོད།།ཀུན་མཆོག་དངོས་གྲུབ་ཆེན་པོ་སྟེ། །དབང་ཕྱུག་ཆེན་པོ་ལྷག་པའི་ལྷ། །རྡོ་རྗེ་འཛིན་པ་ཀུན་གྱི་རྒྱལ། །མི་འགྱུར་མཆོག་ཏུ་བདག་གྲུབ་མཛོད། །ཉེས་པ་མི་མངའ་རྟག་པ་ཁྱོད། །འདོད་ཆགས་ཀུན་གྱི་རྗེས་ཆགས་པ། །འདོད་ཆགས་ཆེན་པོ་དགའ་བ་ཆེ། །བཅོམ་ལྡན་དེ་ཉིད་ ཀྱིས་གྲུབ་མཛོད།།ཤིན་ཏུ་དགའ་བ་ཀུན་གྱི་མཆོག་།གདོད་ནས་གྲོལ་བ་དེ་བཞིན་གཤེགས། །ཀུན་དུ་བཟང་པོ་ཀུན་བདག་ཉིད། །བྱང་ཆུབ་སེམས་དཔའ་བདག་གྲུབ་མཛོད། །དངོས་གྲུབ་ཆེན་པོ་ཀུན་གྱི་མཆོག་།དབང་ཕྱུག་ཆེན་པོ་ཕྱག་རྒྱའི་མཆོག་།གྲུབ་པའི་རྡོ་རྗེ་ཆེར་བསྟོད་པ། །རྡོ་རྗེ་ སྙེམས་བདག་བདག་མཛོད་ཅིག་།སེམས་ཅན་ཀུན་གྱི་ཡིད་ཁྱབ་ཅིང་། །སེམས་ཅན་ཀུན་གྱི་སྙིང་ལ་ཞུགས། །སེམས་ཅན་ཀུན་གྱི་ཡབ་གྱུར་ཞིང་། །འདོད་ཆགས་དམ་ཚིག་གྱུར་པའོ། <br/>
+彼等各標記， 由彼觀圓滿， 召請空輪已。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-2-14 08:08</div><div class="post-body">[size=5]ནམ་མཁའི་དཀྱིལ་འཁོར་བཀུག་ནས་ནི། །དཀྱིལ་འཁོར་གཅིག་ཏུ་ བསྒོམ་པར་བྱ།།བདག་གི་ཐུགས་ཀའི་ས་བོན་ལས། །ནམ་མཁར་རྒྱལ་བ་སྤྱན་དྲངས་ལ། །མཆོད་བསྟོད་གསོལ་བཏབ་དབང་བསྐུར་བ། །ཀུན་གྱི་དབུ་ལ་མི་བསྐྱོད་པ། །ལྷ་རྣམས་ཀུན་གྱི་གནས་གསུམ་དུ། །དེ་ཉིད་གསུམ་གྱིས་བྱིན་བརླབ་བྱ། །དེ་ནས་མེ་ཏོག་ལ་སོགས་པའི། །མཆོད་ པ་རྣམས་ཀྱིས་མཆོད་བསྟོད་བྱ།།ཕྱོགས་སྐྱོང་ལ་སོགས་གདོན་ཚོགས་ལ། །གཏོར་མ་རྒྱ་ཆེན་སྦྱིན་པར་བྱ། །དེ་ནས་ཞི་བའི་ཐབ་ཁུང་དུ། །ལྷ་རྣམས་སྦྱིན་སྲེག་གིས་ཚིམ་བྱ། །དེ་ནས་བུམ་པ་སོ་སོ་ལ། །སྔར་བཞིན་བཟླས་པས་མཉེས་པར་བྱས། །དེ་ནས་སློབ་དཔོན་བདག་ཉིད་ནི། ། འཇུག་དང་དབང་བསྐུར་བ་ཡི་རིམ། །སློབ་མའི་རང་བཞིན་འདིར་སྤྱད་བྱ། །དེ་ནས་སློབ་མ་གཞུག་དོན་དུ། །བདེན་པའི་བྱིན་རླབས་བརྗོད་པར་བྱ། །ནམ་མཁའ་སྐྱེ་བ་མཚན་ལྡན་ཕྱིར། །ཐོག་མ་ཐ་མ་མེད་པའི་མཆོག་།སེམས་དཔའི་རྡོ་རྗེ་ཆེ་རང་བཞིན། །རྡོ་རྗེ་སེམས་དཔར་བདག་འགྲུབ མཛོད།།ཀུན་མཆོག་དངོས་གྲུབ་ཆེན་པོ་སྟེ། །དབང་ཕྱུག་ཆེན་པོ་ལྷག་པའི་ལྷ། །རྡོ་རྗེ་འཛིན་པ་ཀུན་གྱི་རྒྱལ། །མི་འགྱུར་མཆོག་ཏུ་བདག་གྲུབ་མཛོད། །ཉེས་པ་མི་མངའ་རྟག་པ་ཁྱོད། །འདོད་ཆགས་ཀུན་གྱི་རྗེས་ཆགས་པ། །འདོད་ཆགས་ཆེན་པོ་དགའ་བ་ཆེ། །བཅོམ་ལྡན་དེ་ཉིད་ ཀྱིས་གྲུབ་མཛོད།།ཤིན་ཏུ་དགའ་བ་ཀུན་གྱི་མཆོག་།གདོད་ནས་གྲོལ་བ་དེ་བཞིན་གཤེགས། །ཀུན་དུ་བཟང་པོ་ཀུན་བདག་ཉིད། །བྱང་ཆུབ་སེམས་དཔའ་བདག་གྲུབ་མཛོད། །དངོས་གྲུབ་ཆེན་པོ་ཀུན་གྱི་མཆོག་།དབང་ཕྱུག་ཆེན་པོ་ཕྱག་རྒྱའི་མཆོག་།གྲུབ་པའི་རྡོ་རྗེ་ཆེར་བསྟོད་པ། །རྡོ་རྗེ་ སྙེམས་བདག་བདག་མཛོད་ཅིག་།སེམས་ཅན་ཀུན་གྱི་ཡིད་ཁྱབ་ཅིང་། །སེམས་ཅན་ཀུན་གྱི་སྙིང་ལ་ཞུགས། །སེམས་ཅན་ཀུན་གྱི་ཡབ་གྱུར་ཞིང་། །འདོད་ཆགས་དམ་ཚིག་གྱུར་པའོ། <br/>
 召請空中壇城已， 觀想為一罈城中。 從自心間種子字， 空中迎請諸勝者， <br/>
 供贊祈請作灌頂。 一切頂上不動佛， 諸天三處皆安住， 三真實相作加持。 <br/>
 其後以諸花等物， 作諸供養與讚頌。 方位護法諸魔眾， 當施廣大諸食子。 <br/>

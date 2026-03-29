@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>藏密气功日月和合 - 藏密修海典藏</title>
+<title>藏密气功日月和合 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/金刚菩提遍庄严.html">金刚菩提遍庄严</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">藏密气功日月和合</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-8 15:00</div><div class="post-body"><br/>
+<div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-8 15:00</div><div class="post-body"><br/>
 [b]持明大师比卢遮那[/b] <br/>
 <br/>
 [b]出版说明[/b] <br/>
@@ -116,7 +129,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 1、除障 ………………………………………………………（156） <br/>
 2、结行教诫 ………………………………………………（160） <br/>
 3、回向净善 ………………………………………………（160） <br/>
-注释 …………………………………………………………… （164） </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-8 15:17</div><div class="post-body">[size=7]藏密气功日月和合[/size] <br/>
+注释 …………………………………………………………… （164） </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-8 15:17</div><div class="post-body">[size=7]藏密气功日月和合[/size] <br/>
 [size=5]毗卢遮那 著 <br/>
 万果  佘万治   译   [/size] <br/>
 <br/>
@@ -429,7 +442,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 受用天成大圆满，幻化藏究竟要点。 <br/>
 祝愿众生因此善，解脱业惑错分别， <br/>
 获得光焰自然智，普贤初佛之果位。 <br/>
-[/b] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-8 15:36</div><div class="post-body">[b]序  言[/b] <br/>
+[/b] </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-8 15:36</div><div class="post-body">[b]序  言[/b] <br/>
 雪域藏地无与伦比的大译师，遍知显密二宗的大学者，现证任运大圆满法本性的持明大圣，以上述三种权威而地位显赫的毗卢遮那大师[color=Sienna][size=2]（1）[/size][/color]所著气功著作《日月和合》是藏地流传的多数气功著作之源，它同世尊圆满成就王（指 四噜迦）的怛特罗之甚深秘诀相随，是耳传金刚桥典籍中的佼佼者。 <br/>
 《气功日月和合》及其教诫自大圣毗卢遮那和大圣宇扎宁波师徒以此甚深教诫摄益有缘所化之时到现今，密诀之耳传未曾中断，加持之效力未曾消散，成就之露珠未曾洒落。 <br/>
 同大瑜伽诸怛特罗相联系的各类气功，尤其是《气功日月和合》是致力于世尊吉祥圆满王 四噜迦甚深瑜伽的瑜伽行者入定瑜伽的条件。它确属深密的无上瑜伽部；但是，无论任何人，修习瑜伽，特别是修持任运大圆满法必须的前提是，修行者相应调伏自己的三门[color=Sienna][size=2]（2）[/size][/color]，而调伏三门的重要条件是，真切与其人三门之作用相联系的气功诸次第。如是，不能认定所谓的诸种气功仅仅是修习猛厉火瑜伽等深密法类的条件，应该认识到，任何人调伏其三门，修持它是不可缺少的；或者，纵然进行任何修持，它是不可缺少的准备。因为自心是否正常，依赖于其气息是否正常，而气息是否正常，依赖于金刚身之状况。因此，与金刚身之动作相联系的气功形成多种。换句话说，凭依与金刚身动作相联系的诸种功法，使修持者的气息正常，气息正常方能滋养组成身体的大种，身体健安，而大种的作用调和，则违缘灭寂，幸福美满齐备。自心正常，方能心生甚深等持[color=Sienna][size=2]（3）[/size][/color]，故必能生暂时和永久的不可思议之功德。所以，不应仅观其是不是密咒瑜伽行者，凡是不祓三门之作迷惑的人均应注意和希求修炼气功，这是极为重要的。 <br/>
@@ -437,7 +450,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 值得庆幸的是我自幼就获得长期与阿章•竹钦的亲弟子叔父朵丹沃坚丹增亲近的缘分，通过修行，获得日月和合功的传承，有机会通达甚深殊胜功法的诸要点，并取得体验。对书中不甚明白之处，及诸多难点，给予修习身教者是竹塞•久美多吉、竹仓的及门弟子师尊仁增绛秋多吉和杰塞•久美坚赞活佛师徒等，凭依他们的恩德，我方能从疑网中全部解脱出来。 <br/>
 最近，考虑到为了使甚深功法日月和合不断传承于世、虔诚的后辈们能够恰到好处地修习，我甘受辛苦，依据朵丹沃坚丹增等宏恩无比的先师们之传承——所有经过千锤百炼的草稿，再增添本人修习所得的各种体验，撰此通俗易懂之注释。在介绍与气息修炼和功法相联系的特殊气息修炼的段落之处，还列表注明了气息修炼的刻分。 <br/>
 总之，我尽量详细注释，使读者能直接领悟《气功日月和合》之要义。愿所有众生借此获得暂时和永久利乐之种子。 <br/>
-南喀诺布 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-8 15:39</div><div class="post-body">[b]一 书首礼赞[/b] <br/>
+南喀诺布 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-8 15:39</div><div class="post-body">[b]一 书首礼赞[/b] <br/>
 <br/>
 吽吽吽吽吽吽吽吽吽，毗卢耳传教诫珍宝主， <br/>
 浊世瑜伽王者阿章巴，仁增仲杜巴沃多吉师， <br/>
@@ -468,7 +481,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 [b]2、排浊气[/b] <br/>
 “封毗卢印排浊气&quot; <br/>
 身体封以毗卢法印，即脚结跏趺，两手放置膝上、舌抵上腭、眼、唇齿等自然闭合、脊椎正直、鼻和脐间端直如箭、挺胸、身体各部分放松，但又不散。首先深吸气，从脐下向上次第满息。肩头和右手肘关节上举，圆满入息。继之，用右手无名指按右鼻孔，由左鼻孔缓而深长地排浊气。左手做同样的动作，由右鼻孔排浊气。左右鼻孔轮流各呼气三次，再由两鼻孔同时排气。其后，脊椎保持正直，向前下俯，额触地铺，呼出全部浊气。脊椎上仰，保持端直，深沉吸气、缓而长地排浊气如此反复做三次。以上吐纳共计九次，叫做九节排浊气。呼气时无声息；用力呼出时，从鼻孔排出的气力要达到脐间。有声呼气是紧闭喉头，呼气时带有明显的喉音，除从鼻孔排出热气外，无气力之感。同呼出时一样，入息也有径直入息和带声入息，两者差别甚大。了知各次吐纳次序不容凌乱极为重要。 <br/>
-</div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-8 15:39</div><div class="post-body">[b]3、修身[/b] <br/>
+</div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-8 15:39</div><div class="post-body">[b]3、修身[/b] <br/>
 修身分三点：锻炼关节、涤荡气息、调治脉道。 <br/>
 [b]1)锻炼关节[/b] <br/>
 “修身前行要点是，四肢以及五根门。” <br/>
@@ -492,7 +505,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 端坐，曲腿，脚掌相对，双手分别放在膝盖上。两手伸直迅速上举，双脚迅速朝前伸直挺胸，猛吸气。右手握左膝，左手握左脚掌，猛吐气。伸直左腿向上举，猛吸气。扭左脚掌至髋骨右侧，脚掌朝下，猛吐气。抬左脚至右膝盖，猛吸气。从髋骨左侧向后拉左脚，猛吐气三次。同样，右脚的动作，按上文所述做三次。最后，两腿朝前伸直，两手伸直上举，猛吸气。手握脚趾，二者俱朝下，额触膝盖，猛吐气。修炼较为熟练时，同时举两脚朝向心间，吐气。举至乳根与肩头之间吸气，分别向髋骨两侧后抛，吐气。 <br/>
 功效：“推脱消除腰和肾，关节下行气之疾。” <br/>
 如上所说，此功能祛除腰部、肾脏、关节的疾病，以及下行气引发之疾病。 <br/>
-</div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-14 16:51</div><div class="post-body">[b]&lt;4&gt;侧倾[/b] <br/>
+</div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-14 16:51</div><div class="post-body">[b]&lt;4&gt;侧倾[/b] <br/>
 “跪地叉掌扭腰倾。” <br/>
 跪地，双手同时放于膝上。手掌交叉掌心朝下举至头顶，不触及头部，肘部和肩膀后张，猛吸气。然后向左扭上体，猛吐气。脊椎恢复原状，挺胸，吸气。向右扭转，吐气。恢复原状，吸气。挺胸，头和肘关节保持法印，上体向左侧下倾，吐气。恢复原状，上体正直，吸气。向右侧倾上体吐气。恢复原状，上体正直，吸气。向左侧倾上体，吐气。如此反复三次。最后，双手放在前面地铺上，前额触膝，吐气。双手伸直迅速上举，臀部坐地，吸气。双腿朝前伸直，手握脚趾，手指、脚趾朝下，额触膝盖，猛吐气。 <br/>
 功效。《除隘法》云：“上体腰肾脊髓病，等住气患此功除。” <br/>
@@ -572,7 +585,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 图17  调治脉道 <br/>
 双腿结跏趺，脊椎伸直，右手无名指按右鼻孔，伴随喉音右鼻孔猛呼粗气。继之，右手大拇指按右鼻孔，由左鼻孔缓而长地吸入柔和气息。如是反复做三次或七次。流动的气转移至左鼻孔，因而分别心易于受阻，产生美满幸福。女性应相反地用左手无名指按右鼻孔，由左鼻孔出粗气，从右鼻孔吸入柔和气息。 <br/>
-其后，守持缓峻平等与日月气均匀的中性气息遍布全身，随即练功。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-14 18:20</div><div class="post-body">[b]   第二，练功[/b] <br/>
+其后，守持缓峻平等与日月气均匀的中性气息遍布全身，随即练功。 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-14 18:20</div><div class="post-body">[b]   第二，练功[/b] <br/>
 [b]    &lt;1&gt;按摩：[/b] <br/>
 “击掌磨擦头和身，对伸‘哈’声排浊气。” <br/>
 坐地，两脚斜伸，呈八字形，嗒嗒击掌，手掌相互用力磨擦，至发热时，掌心向内，从眼、脸，抚摸至脚趾。继之，掌心向外，用手背磨擦踝关节至左右腋窝。手掌调转方向，向上磨擦至勃颈，向下磨擦至脚趾。反复做三次或七次，达到能守持气息之量。按摩全身之后，手脚对称平行并 <br/>
@@ -652,7 +665,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 侧的脚掌，用力拉曳。再次按正行功法入息、舒息。向右扭转上体，动作相反如上文类推。最后，按照正行程式结行入息、舒息。是为发挥效力。功法的正行及其支分，每遍修炼与练气七节的要点相联系。是为压抑气息的次第。 <br/>
 功效。《除隘法》云：“海螺式祛腰肾病、胆虚气痛[color=Sienna][size=2]（15）[/size][/color]筋络疾、六腑阳衰[color=Sienna][size=2]（16）[/size][/color]下行乱，练功生效相关联。” <br/>
 如上所说，海螺功可除肾病、腰病、同腰部关联的筋络病症、胆虚、风痛关节炎，可除胃、小肠、大肠、胆囊、膀胱、精囊等六腑病症和涎液阳衰。尤为胜者，能祛下行气失调而引发的疾病。 <br/>
-</div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-14 19:00</div><div class="post-body">[b] 火焰式[/b] <br/>
+</div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-14 19:00</div><div class="post-body">[b] 火焰式[/b] <br/>
 火焰式倒立憋气： <br/>
 [b]      第一，正行；[/b] <br/>
 “仰卧全入抬脚臀，两手辅胯胫骨抖，后颈和肩支体重，姿如火焰闪闪动。” <br/>
@@ -749,7 +762,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 加行的入息和舒息同于正行。双手向两肋伸展。入息一细竹，两脚胫骨贴地，用力伸展脚掌，同时上体后仰，随顺各自修习的熟练程度满息，头和肩头后仰，紧缩身体。舒息一细竹，两手伸直，迅速上举。舒息一细竹，坐地，两脚朝前伸直，前额触膝，双手握脚趾，手指、脚趾向下。是为发挥效力。七节齐全地修炼以上每一步骤，是满息之次第。 <br/>
 功效。《除隘法》云：“蛇式可祛四肢筋，背脊关节脏腑疾，五气衰退等疾病，修习生效如上述。” <br/>
 如上所说，此功可除脊椎、脊髓、大小关节、四肢筋络，心、肺、肝、脾、肾等五脏以及胃、小肠、大肠、胆囊、膀胱、精囊等六腑之病，能除持命气、上行气、等住气、下行气、遍行气等五气功能衰退之疾病。 <br/>
-</div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-16 12:09</div><div class="post-body">[b]      弯刀式[/b] <br/>
+</div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-16 12:09</div><div class="post-body">[b]      弯刀式[/b] <br/>
 弯刀式压气： <br/>
 [b]第一，正行；[/b] <br/>
 “右脚蹬地左脚盘，右手绕背右膝前，左手背后握手腕，左扭压气弯刀般。” <br/>
@@ -852,7 +865,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 加行的入息、满息同于正行。俯卧，双手用力向头顶方向伸展然后触地。入息一细竹，头后仰，双手经肩头后伸，两脚背向弯曲，两手大指握脚拇趾。随顺各自修习的熟练程度满息，手脚伸展形如引弓，紧缩身体。舒息一细竹，跪坐，头和双手分别贴膝。入息一细竹，同时站立，双手用力上举。舒息一细竹，前额贴膝，双手分别握脚掌。是为发挥效力。认真修习，因各个分解动作同七节练气相联系，故为满息之次第。 <br/>
 功效。《除隘法》云：“背脊腰部关节痛，筋络脏腑胃口败，积食五气病症除，修炼生效如上述。” <br/>
 如上所说，与脊椎、脊髓和肾脏相联系的腰部关节疼痛、躯体和五体筋络的病症，心、肺、肝、脾、肾等五脏，以及胃、大小肠、膀胱、胆囊、精囊等六腑之疾病，食欲不振，新老积食不化，持命气、上行气、等住气、下行气、遍行气等五气功能衰退或混乱等症，修炼弓式均可祛除。 <br/>
-</div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-16 14:49</div><div class="post-body">[b]      月牙式[/b] <br/>
+</div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-16 14:49</div><div class="post-body">[b]      月牙式[/b] <br/>
 月牙式压气： <br/>
 [b]第一，正行；[/b] <br/>
 “撇脚举入放舒息，直入欠身压气息，指趾相连如新月，右侧动作以此推。” <br/>
@@ -959,7 +972,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 加行的入息、舒息同于“施展技能”一节。入息一细竹，膝部向上抛抬，臂膀正直，手掌触地，支撑体重。随顺各自修炼的熟练程度满息，头后仰，两脚和大小腿伸直，向头顶前方挺起。入息一细竹，膝部、前额和两手掌触地，臀坐后踵。结行的次第同于“施展技能”一节。是为发挥效力。修炼以上各个分解动作同练气七节的要点相联系，是为满息之次第。 <br/>
 功效。《除隘法》云：“满息蝗虫式祛除，腰疾瘫痪和肠炎，等住下行遍行疾，修炼生效如上述。” <br/>
 如上所说，此功祛除腰部疼痛或筋脉疼痛使坐地移行或两脚瘫痪、消除大小肠发炎的寒热病等。此外，祛除等住气、下行气、遍行气功能衰退或混乱等病症。 <br/>
-</div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-16 15:20</div><div class="post-body">[b]      鸽式[/b] <br/>
+</div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-16 15:20</div><div class="post-body">[b]      鸽式[/b] <br/>
 鸽式压气： <br/>
 [b]第一，正行；[/b] <br/>
 “坐地伸曲踵贴胯，两手叉腰入息仰，挺胸压气肘朝后，仰头细竹似鸽子。” <br/>
@@ -1077,7 +1090,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 入息一细竹，臀部上抬，伸腰，双手用力伸向头顶方向。舒息一细竹，按鼓式“施展技能’’一节所述，手指朝向后踵，脚掌手掌并贴，两肘关节触地。吸气两细卡，腰部上抬，头顶朝向后踵。随顺各自修炼的熟练程度满息，腰背弯曲如车轮，呈现圆形，紧缩身体。舒息一细竹，腰背下放，落地；双手用力伸直贴胯侧。入息一细竹，坐地，两手用力向上举，两脚前伸，前额触地，双手拉脚掌。是为发挥效力。 <br/>
 修炼以上各分解动作均与练气七节相联系，为开口满息的次第。 <br/>
 功效。《除隘法》云：“腰脊关节五体筋，僵直萎缩和腰疼，遍行气病轮功除，修炼生效如上述。” <br/>
-如上所说，腰椎、脊髓、腰等大小关节和头、手足等五体的筋络僵直、萎缩等诸种风寒病，遍行气功能衰退或失调所引发的病症，车轮式均可祛除。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-16 16:05</div><div class="post-body">[b]      大鹏式；[/b] <br/>
+如上所说，腰椎、脊髓、腰等大小关节和头、手足等五体的筋络僵直、萎缩等诸种风寒病，遍行气功能衰退或失调所引发的病症，车轮式均可祛除。 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-16 16:05</div><div class="post-body">[b]      大鹏式；[/b] <br/>
 大鹏式压气： <br/>
 [b]第一，正行[/b] <br/>
 “左脚右扭触地铺，右手左膝向右绕，背后左手搂右腰，扭转形如大鹏倨。” <br/>
@@ -1162,7 +1175,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 第三组五功之三狮子式憋气、之四灵鹫式运气之五法基式空闭气息等，修炼以上诸功时双脚对张，分别贴胳膊，前额向前下俯，舒息一细竹。 <br/>
 <br/>
 “诸功分作加正结，吐纳细竹正行义，满压憋引空闭气，七节要点皆相联。” <br/>
-所有五功的五种主要功及其“施展技能”和“发挥效力”等，所有步骤均有加行、正行和结行等三次第。加行的入息和舒息各一细竹，结行的入息和舒息也各一细竹。如斯等等，应完整修炼之。正行的含义是满息、压抑气息、憋气、运气、空息等，无论与何种修气相联系，每种功都应七节齐全地修气。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-16 16:39</div><div class="post-body">[b]全入[/b] <br/>
+所有五功的五种主要功及其“施展技能”和“发挥效力”等，所有步骤均有加行、正行和结行等三次第。加行的入息和舒息各一细竹，结行的入息和舒息也各一细竹。如斯等等，应完整修炼之。正行的含义是满息、压抑气息、憋气、运气、空息等，无论与何种修气相联系，每种功都应七节齐全地修气。 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-16 16:39</div><div class="post-body">[b]全入[/b] <br/>
 全入有与气息七要点相联系的七种妙莲功。 <br/>
 [b]（1）七种妙莲功[/b] <br/>
 <br/>

@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>为什么要尽力趣入大乘？ - 藏密修海典藏</title>
+<title>为什么要尽力趣入大乘？ - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">为什么要尽力趣入大乘？</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-12 17:51</div><div class="post-body">【是故能生自他一切利乐本源，能除一切衰恼妙药，一切智士所行大路，见闻念触悉能长益一切众生，由行利他兼成自利，无所缺少，具足广大善权方便。有此大乘可趣入者，当思希哉，我今所得诚为善得，当尽所有士夫能力趣此大乘。】 <br/>
+<div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-12 17:51</div><div class="post-body">【是故能生自他一切利乐本源，能除一切衰恼妙药，一切智士所行大路，见闻念触悉能长益一切众生，由行利他兼成自利，无所缺少，具足广大善权方便。有此大乘可趣入者，当思希哉，我今所得诚为善得，当尽所有士夫能力趣此大乘。】 <br/>
 这段首先显明大乘的殊胜功德，其次教诫有这样的大乘可以趣入时，理应发起希有心励力趣入。这段是一个长句子，从“是故”到“善权方便”之间都是修饰大乘，有如是功德的大乘可以趣入的话，就要像下面这样思维。 <br/>
 （一）大乘功德 <br/>
 首先说大乘功德。这要按祖师引导来观察，只有认识了功德，才会发起信心恭敬而殷重趣入，如果不知功德，觉得稀松平常，即便大乘道摆在面前也很难得利。这也是道次第引导的善巧，每段修法的最初都会先说功德等，引导学人趣入，上士道也不例外。 <br/>
@@ -85,18 +98,18 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 1. 《中观宝鬘论》：“诸佛之色身，由福资所成，法身若摄略，由慧资所生。是故此二资，获得正觉因，如此总言之，恒依此福智。” <br/>
 <br/>
 <br/>
-恭摘｜归乡法师《菩提道次第广论讲记》 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-30 11:06</div><div class="post-body">圆瑛法师 <br/>
+恭摘｜归乡法师《菩提道次第广论讲记》 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-30 11:06</div><div class="post-body">圆瑛法师 <br/>
 <br/>
 “华严经”云：忘失菩提心修诸善法，是名魔业。忘失尚尔，况未发乎?故知欲学如来乘必先具发菩萨愿，不可缓也。　此引经作证。‘华严经’，是释迦如来初成正觉，如日初出，先照高山。为大根众生，转无上根本法轮。说心佛众生，三无差别之理，圆融无碍，举一即三，全三即一。如举一心字，佛及众生，皆悉在内。迷此心者，乃为众生。悟此心者，当下成佛。如举一佛字，心及众生，亦皆在内。佛即是心，佛原从众生修成。如举一众生，心佛亦皆在内。众生莫不有心，凡有心者，皆当作佛。即是心佛及众生，是三无差别。 <br/>
 <br/>
 经中有云：忘失菩提心，修诸善法，是名魔业。有一菩萨，往昔遇佛，已发菩提心。后在世间修行，将前所发菩提心忘失，并不记忆。如是，则所修无论世间善，出世间善，皆名魔业。 <br/>
 <br/>
-问：出世善法，何名魔业?答：‘楞严经’中，声闻缘觉，皆列五十种阴魔之内，据此可知。又波旬魔王，因中亦修十善，及未到地定。此定亦云未至定，未至初禅离生喜乐地之根本定，但修近分定(只能伏惑)，故名未到地定。因不发菩提心，故报生欲界顶天，而为魔王。　忘失尚尔，况未发乎?此以轻况重。意以修行必要发真正菩提心，否则，因地不真，果招纡曲。 故知欲学如来乘，必先具发菩萨愿，不可缓也;此结心愿为本。故字承上转结之词。乘字去声，佛教共有五乘：一人天乘，说五戒十善之法。二声闻乘，说四谛法。三缘觉乘，说十二因缘法。四菩萨乘，说六度万行法。五最上一佛乘，惟说一心法。如来乘，即最上一佛乘。众生欲学此乘，必先具发菩萨四弘誓愿。具发者，完全而发，不可或阙，即上求下度智悲并运者也。过现诸佛，并无不发菩萨愿，而得菩提道。故发愿，为修行不可缓之事。如普贤发十大愿王，观音发十二大愿，弥陀因中发四十八愿，可为修行之模范也。先叙修行心愿为本竟。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 07:29</div><div class="post-body">▲印光祖师 <br/>
+问：出世善法，何名魔业?答：‘楞严经’中，声闻缘觉，皆列五十种阴魔之内，据此可知。又波旬魔王，因中亦修十善，及未到地定。此定亦云未至定，未至初禅离生喜乐地之根本定，但修近分定(只能伏惑)，故名未到地定。因不发菩提心，故报生欲界顶天，而为魔王。　忘失尚尔，况未发乎?此以轻况重。意以修行必要发真正菩提心，否则，因地不真，果招纡曲。 故知欲学如来乘，必先具发菩萨愿，不可缓也;此结心愿为本。故字承上转结之词。乘字去声，佛教共有五乘：一人天乘，说五戒十善之法。二声闻乘，说四谛法。三缘觉乘，说十二因缘法。四菩萨乘，说六度万行法。五最上一佛乘，惟说一心法。如来乘，即最上一佛乘。众生欲学此乘，必先具发菩萨四弘誓愿。具发者，完全而发，不可或阙，即上求下度智悲并运者也。过现诸佛，并无不发菩萨愿，而得菩提道。故发愿，为修行不可缓之事。如普贤发十大愿王，观音发十二大愿，弥陀因中发四十八愿，可为修行之模范也。先叙修行心愿为本竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 07:29</div><div class="post-body">▲印光祖师 <br/>
 <br/>
 <br/>
 光一向不主张于佛菩萨诞期，及各朔望好日期放生。此事已成铁案。捕生者特为放生者多捕，则买而放者，亦多有因放而捕来耳。然人情多好名，此各日放生则有名。又人情多以因循了事，若不于此各日放，则便不肯特为买放矣。光虽为人如此说，究亦只成空谈。又生亦不可乱放。放之于江，则无不可。放之于池，凡害鱼之鱼亦放其中，是放贼于人民之聚处，则群鱼皆为彼之食料。然欲一一如法，实难做到。是宜极力提倡戒杀吃素，以为根本解决之法。其于放生略为举行，以期人各体会放之之意而已。若尽量放而设法未能合法，则亦只功过不相掩耳。 <br/>
 <br/>
-《印光大师文钞》 复罗智声居士书一 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 08:41</div><div class="post-body">如果你懈怠的时候，你发觉你做的梦会不一样，就是这个粗重性会出现，就是你感暗钝、忧愁、恐怖等等，在恐怖的时候就不得了了，你要注意了，它是一个征兆。 <br/>
+《印光大师文钞》 复罗智声居士书一 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 08:41</div><div class="post-body">如果你懈怠的时候，你发觉你做的梦会不一样，就是这个粗重性会出现，就是你感暗钝、忧愁、恐怖等等，在恐怖的时候就不得了了，你要注意了，它是一个征兆。 <br/>
 <br/>
 如果你在用功的时候，你梦境当中出现都是光明相、安乐相，虽然这个果报都还没出现，但是[山雨欲来风满楼]，事实上它有征兆的，你从这个征兆，尤其是修忏的人，我们讲忏悔法门，你要判定你的罪灭之相，往往都是从梦境来判断──见好相。 <br/>
 <br/>
@@ -106,7 +119,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 但是等到你这个烦恼罪业转变过来，轻安相的时候，他就鼓励你解行并重，就可以看经了。老人家是这样的教导方式，就是刚开始先对治粗重相，这个也是很重要的关键。 <br/>
 <br/>
-~~~ ​净界法师 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 08:44</div><div class="post-body">你修行要靠你暂时的五蕴身心。但是你不要忘了，你这布施，比如说你今天拿一百块给某甲，你为什么会有福报，你知道吗？如果你认为说，我给他十块，因为我给他所以我产生一个善业，因为这个善业的力量反馈给我。那你这个不是修首楞严王三昧，你这种思考模式修行非常慢，要进步很慢。 <br/>
+~~~ ​净界法师 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 08:44</div><div class="post-body">你修行要靠你暂时的五蕴身心。但是你不要忘了，你这布施，比如说你今天拿一百块给某甲，你为什么会有福报，你知道吗？如果你认为说，我给他十块，因为我给他所以我产生一个善业，因为这个善业的力量反馈给我。那你这个不是修首楞严王三昧，你这种思考模式修行非常慢，要进步很慢。 <br/>
 <br/>
 你要达到那种返妄归真，要“销我亿劫颠倒想”，要成就“诸菩萨万行首楞严”，你很难很难。你应该这样想：我布施给某甲，我是假借这个影像，我是在自性中修学。因为布施，所以把自性的功德开显出来。 <br/>
 <br/>
@@ -114,7 +127,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 你帮助众生，其实你就在你的现前一念心性里面造作嘛。帮助众生的当下，你产生一种善的功能，你自己存在你的见性当中，以后它就产生善的能量，它就显现一个好的五蕴身心出来。 <br/>
 <br/>
-~~~ 净界法师 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 08:51</div><div class="post-body">广钦老和尚自述 <br/>
+~~~ 净界法师 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 08:51</div><div class="post-body">广钦老和尚自述 <br/>
 <br/>
 <br/>
 一九七四年七月八日 <br/>
@@ -147,25 +160,25 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 度眾生沒有那麼簡單，須有佛緣及福報，自己修到有功夫，福慧具足時，自然護法菩薩會擁護；不然想要度人，人卻不讓你度。今天我能度這麼多眾生，都是護法韋陀菩薩擁護。 <br/>
 <br/>
-度人須度量大，別人問東問西我都耐心地說，沒有起煩惱，人見我歡喜。我自己也不曉得怎麼會度眾、蓋道場，我雖不會講經，但有點苦行內功，可說得出，直示西方途徑。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 08:55</div><div class="post-body">夢參老和尚 有一位道友跟我說：“要念文殊心咒——嗡阿ra巴扎那地，念一億聲，計算一下，一天念一萬五千，還得念二十年。” <br/>
+度人須度量大，別人問東問西我都耐心地說，沒有起煩惱，人見我歡喜。我自己也不曉得怎麼會度眾、蓋道場，我雖不會講經，但有點苦行內功，可說得出，直示西方途徑。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 08:55</div><div class="post-body">夢參老和尚 有一位道友跟我說：“要念文殊心咒——嗡阿ra巴扎那地，念一億聲，計算一下，一天念一萬五千，還得念二十年。” <br/>
 我說：“你能不能把這個數字變一下？” <br/>
 他說：“怎麼變呢？” <br/>
 我說：“念一聲‘嗡阿ra巴扎那地’，把它觀想成遍滿整個娑婆世界，其它的世界你沒看到的，無論石頭、大海，乃至一粒微塵都是‘嗡阿ra巴扎那地’，這個數字就多了，以心力的關係。” <br/>
 時間並沒有過去、未來、現在，無始終，什麼時候開始的，你找不到。所以佛經講就講“無始”，因此才能夠“一毫端現寶王剎”——一個毫毛的尖，就能見三千大千世界的佛國土。這個道理得具足信心，好好參。 <br/>
 我們不能達到這種目的，沒有這種神通，沒有這種妙有，完全是心裡有妄、有染污、不真實，被這些障礙障住了。 <br/>
-夢參老和尚《占察善惡業報經》講記 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 08:59</div><div class="post-body">基本法hui(puja)的其中一个元素就是供养( Offer)。 <br/>
+夢參老和尚《占察善惡業報經》講記 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 08:59</div><div class="post-body">基本法hui(puja)的其中一个元素就是供养( Offer)。 <br/>
 我们做供养(Offer)是为了要累积福德，“福德”英文是Merit这个字。Merit不是一个最准确的词。还有一个词，梵文kusala或者 akusala通常被翻译成“善”和“不善”。这主要是为了能够累积能力。 <br/>
 能力在生活中是至关重要的。我想，这也是我们为什么会去上学、找工作、结婚，甚至结婚后离婚的原因。基本上，所有这些都是为了通过能力去获得我们所追求的东西。 <br/>
 <br/>
 当你结婚的时候，你获得了某种能力，但是当你离婚的时候，你又获得了另外一种能力。所以对人类的生活来说，能力很重要。就像你能够在一个豪宅里生活，或者是你能够只靠一个行李箱就能生活，这都是一种能力。 <br/>
 是否能够享受生菜沙拉，或是接受臭豆腐的味道，这也是一种能力。再者，生活中我们还可以理解为一种能力的差异:有些人对一切都非常自在，而有些人则对任何事情都容易感到厌烦或愤怒;有些人对很多事情可以很放松，而有些人则显得格外偏执。 <br/>
-当然作为佛陀的追随者，我们不是要去寻求那些世俗的能力，我们要寻求的是:能够了知实相的能力，那才是我们要获得的一种能力。了知实相是我们最重要的目标。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 09:10</div><div class="post-body">情绪不一定是坏事，对于我们刚开始修行的凡夫来说，不可能没有情绪，也不可能如如不动， <br/>
+当然作为佛陀的追随者，我们不是要去寻求那些世俗的能力，我们要寻求的是:能够了知实相的能力，那才是我们要获得的一种能力。了知实相是我们最重要的目标。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 09:10</div><div class="post-body">情绪不一定是坏事，对于我们刚开始修行的凡夫来说，不可能没有情绪，也不可能如如不动， <br/>
 关键是你要会利用每一个粗大的情绪或是细微的念头。 <br/>
 比如嗔心起时，马上觉知，然后忏悔并转化为菩提心，这样嗔心就成了功德。 <br/>
 相反，如果一个人看似没什么情绪，总是呆呆地在那里，像晒太阳的垂暮老人，也不是什么好事，这样下去如何解脱? <br/>
-所以不要害怕情绪，出现什么就利用什么。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 09:19</div><div class="post-body">立身行己之道，志欲刚，气欲柔。志不刚不足成千古品格，气不柔不足陶多生习气。夫众生所以沦苦海者，无他，任情适意，好顺恶逆，不深求出要故也。书云，言逆汝，必求诸道。言逊汝，必求诸非道。为君尚然，况出世丈夫者乎？ <br/>
+所以不要害怕情绪，出现什么就利用什么。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 09:19</div><div class="post-body">立身行己之道，志欲刚，气欲柔。志不刚不足成千古品格，气不柔不足陶多生习气。夫众生所以沦苦海者，无他，任情适意，好顺恶逆，不深求出要故也。书云，言逆汝，必求诸道。言逊汝，必求诸非道。为君尚然，况出世丈夫者乎？ <br/>
 <br/>
-出世丈夫，以佛祖自期，以四弘为券，以六度万行为家常茶饭，以自利利他为的。发一言，不足自利利他，勿言也。举一步，作一念，不足自利利他，勿举也，勿念也。事苟益身心，裨法化，必黾勉为之。虽劬劳困苦，勿恤也。否虽有浮名幻利，弗屑也。凝神定志，拓度虚怀，人皆可以为尧舜，满街都是圣人。谓我不能成佛，是自弃也。知可成佛，而不肯力行佛行，是自暴也。不自弃则志刚，不自暴则气柔。志刚则本立道生，气柔则深造自得。志刚可上求佛道，气柔可下化众生。志刚可荷负众生，气柔可承事诸佛。易曰，天行健，君子以自强不息。用九，见群龙无首，吉。刚而柔也。地势坤，君子以厚德载物。用六，利永贞。柔而刚也。刚柔合德，定慧力庄严，此世出世法之正印也。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 09:28</div><div class="post-body">皈依的意义 <br/>
+出世丈夫，以佛祖自期，以四弘为券，以六度万行为家常茶饭，以自利利他为的。发一言，不足自利利他，勿言也。举一步，作一念，不足自利利他，勿举也，勿念也。事苟益身心，裨法化，必黾勉为之。虽劬劳困苦，勿恤也。否虽有浮名幻利，弗屑也。凝神定志，拓度虚怀，人皆可以为尧舜，满街都是圣人。谓我不能成佛，是自弃也。知可成佛，而不肯力行佛行，是自暴也。不自弃则志刚，不自暴则气柔。志刚则本立道生，气柔则深造自得。志刚可上求佛道，气柔可下化众生。志刚可荷负众生，气柔可承事诸佛。易曰，天行健，君子以自强不息。用九，见群龙无首，吉。刚而柔也。地势坤，君子以厚德载物。用六，利永贞。柔而刚也。刚柔合德，定慧力庄严，此世出世法之正印也。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-31 09:28</div><div class="post-body">皈依的意义 <br/>
 皈是皈向，皈敬，皈宿；依是依托，依靠，依赖。如游子归家，依靠父母；如浪子回头，找寻安全的归宿。又如学生信赖老师，随从学习；或信赖任何主义，任何宗教，皆名皈依。问题的关键在于我们所归向依靠的对象，是否真实可靠，能否给人正确的指示与辅导，抑或令人迷失自己，误入歧途。因此，当我们开始归依任何宗教，信赖任何主义之前，都要提高理智，慎重考虑。否则，信赖邪知邪见的人，或信仰导人迷信的宗教，皆有害无益。即使是教人行善，志在生天的信仰，亦得益不大。因为天福享尽，还会堕落，并非真正皈依处。佛教的真理，纯正究竟，纯善无恶，能令人出离三界，解脱生死，永享无穷的福乐。我们皈依三宝，由事相三宝的启示，远离邪恶，抛弃烦恼，了脱生死，走向离苦得乐的菩提觉道，回归自性三宝的家乡，亲证一体三宝的理体，才是真正的皈依处。印光大师在三皈五戒十善文中说：“归者归投，依者依托，如人堕海，忽有船来，即便趋向，是归投义。上船安坐，是依托义。生死为海，三宝为船，众生归依，即登彼岸。”该是皈依意义最好的说明。 <br/>
 皈依的功德 <br/>
 归依三宝的功德殊胜。 <br/>

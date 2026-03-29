@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>【佛说八大菩萨经】 - 藏密修海典藏</title>
+<title>【佛说八大菩萨经】 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,35 +8,48 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">【佛说八大菩萨经】</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-10 10:49</div><div class="post-body">西天译经三藏朝散大夫试光禄卿明教大师臣法贤奉 诏译 <br/>
+<div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-10 10:49</div><div class="post-body">西天译经三藏朝散大夫试光禄卿明教大师臣法贤奉 诏译 <br/>
 如是我闻：一时，佛在舍卫国祇树给孤独园，与大苾刍众千二百五十人俱，复有八大菩萨摩诃萨，其名曰：妙吉祥菩萨摩诃萨、圣观自在菩萨摩诃萨、慈氏菩萨摩诃萨、虚空藏菩萨摩诃萨、普贤菩萨摩诃萨、金刚手菩萨摩诃萨、除盖障菩萨摩诃萨、地藏菩萨摩诃萨，以为上首。 <br/>
 <br/>
 复有诸大菩萨摩诃萨，其名曰：无能胜菩萨摩诃萨、龙相菩萨摩诃萨、喜意菩萨摩诃萨、无垢藏菩萨摩诃萨、无垢称菩萨摩诃萨、智王菩萨摩诃萨、无边军菩萨摩诃萨、智光菩萨摩诃萨、慧光菩萨摩诃萨、慧灯菩萨摩诃萨、智灯菩萨摩诃萨、梵授菩萨摩诃萨、天冠菩萨摩诃萨。如是等诸大菩萨，皆来会坐。 <br/>
 <br/>
-尔时世尊告舍利弗：汝今谛听。过东方恒河沙数世界，有一佛剎名无能胜，彼土有佛，名善精进吉祥如来、应、正等觉，现为众生说微妙法。复次，舍利弗！又过东方十恒河沙世界，有一佛剎名曰无我，彼土有佛，号普照如来、应供、正等觉，现为众生说微妙法。复次，舍利弗！又过东方三恒河沙数世界，有一佛剎名曰善爱，彼土有佛，号吉祥如来、应供、正等觉，现为众生说微妙法。复次，舍利弗！又过东方三十四恒河沙世界，有一佛剎名寂静藏，彼土有佛，号印捺【nà】囉【luo】计覩【dǔ】特嚩【pó】惹王如来、应供、正等觉，现为众生说微妙法。复次，舍利弗！又过东方五恒河沙世界，有一佛剎名曰离尘，彼土有佛，号喜功德光自在王如来、应供、正等觉，现为众生说微妙法。佛告舍利弗：若有善男子、善女人等，于此经中闻是诸佛如来名号，一心谛听，或自忆念，或书写读诵、为他解说，彼人命终不堕恶趣，不生边地、邪见、诸恶律仪、下贱族中，亦不生于长寿天中，亦不生于五浊恶世、飢馑、疾病、刀兵劫中，亦无王难、水难、火难、贼盗、虎狼等难；常生佛剎及天上人间，身相端严，诸根具足，眷属圆满，得宿命智，具六波罗蜜，行四无量法，通达一切甚深法藏，成最上道。佛说此经已，诸大菩萨，舍利弗及诸苾刍，天、人、阿修罗等，闻佛所说，皆大欢喜，信受奉行。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-10 11:51</div><div class="post-body">西天译经三藏朝散大夫试光禄卿明教大师臣法贤奉 诏译 <br/>
+尔时世尊告舍利弗：汝今谛听。过东方恒河沙数世界，有一佛剎名无能胜，彼土有佛，名善精进吉祥如来、应、正等觉，现为众生说微妙法。复次，舍利弗！又过东方十恒河沙世界，有一佛剎名曰无我，彼土有佛，号普照如来、应供、正等觉，现为众生说微妙法。复次，舍利弗！又过东方三恒河沙数世界，有一佛剎名曰善爱，彼土有佛，号吉祥如来、应供、正等觉，现为众生说微妙法。复次，舍利弗！又过东方三十四恒河沙世界，有一佛剎名寂静藏，彼土有佛，号印捺【nà】囉【luo】计覩【dǔ】特嚩【pó】惹王如来、应供、正等觉，现为众生说微妙法。复次，舍利弗！又过东方五恒河沙世界，有一佛剎名曰离尘，彼土有佛，号喜功德光自在王如来、应供、正等觉，现为众生说微妙法。佛告舍利弗：若有善男子、善女人等，于此经中闻是诸佛如来名号，一心谛听，或自忆念，或书写读诵、为他解说，彼人命终不堕恶趣，不生边地、邪见、诸恶律仪、下贱族中，亦不生于长寿天中，亦不生于五浊恶世、飢馑、疾病、刀兵劫中，亦无王难、水难、火难、贼盗、虎狼等难；常生佛剎及天上人间，身相端严，诸根具足，眷属圆满，得宿命智，具六波罗蜜，行四无量法，通达一切甚深法藏，成最上道。佛说此经已，诸大菩萨，舍利弗及诸苾刍，天、人、阿修罗等，闻佛所说，皆大欢喜，信受奉行。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-10 11:51</div><div class="post-body">西天译经三藏朝散大夫试光禄卿明教大师臣法贤奉 诏译 <br/>
 如是我闻：一时，佛在舍卫国祇树给孤独园，与大苾刍众千二百五十人俱，复有八大菩萨摩诃萨，其名曰：妙吉祥菩萨摩诃萨、圣观自在菩萨摩诃萨、慈氏菩萨摩诃萨、虚空藏菩萨摩诃萨、普贤菩萨摩诃萨、金刚手菩萨摩诃萨、除盖障菩萨摩诃萨、地藏菩萨摩诃萨，以为上首。复有诸大菩萨摩诃萨，其名曰：无能胜菩萨摩诃萨、龙相菩萨摩诃萨、喜意菩萨摩诃萨、无垢藏菩萨摩诃萨、无垢称菩萨摩诃萨、智王菩萨摩诃萨、无边军菩萨摩诃萨、智光菩萨摩诃萨、慧光菩萨摩诃萨、慧灯菩萨摩诃萨、智灯菩萨摩诃萨、梵授菩萨摩诃萨、天冠菩萨摩诃萨。如是等诸大菩萨，皆来会坐。 <br/>
 <br/>
 尔时世尊告舍利弗：汝今谛听。过东方恒河沙数世界，有一佛剎名无能胜，彼土有佛，名善精进吉祥如来、应、正等觉，现为众生说微妙法。 <br/>
@@ -52,7 +65,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 复次，舍利弗！又过东方五恒河沙世界，有一佛剎名曰离尘，彼土有佛，号喜功德光自在王如来、应供、正等觉，现为众生说微妙法。 <br/>
 <br/>
 <br/>
-佛告舍利弗：若有善男子、善女人等，于此经中闻是诸佛如来名号，一心谛听，或自忆念，或书写读诵、为他解说，彼人命终不堕恶趣，不生边地、邪见、诸恶律仪、下贱族中，亦不生于长寿天中，亦不生于五浊恶世、飢馑、疾病、刀兵劫中，亦无王难、水难、火难、贼盗、虎狼等难；常生佛剎及天上人间，身相端严，诸根具足，眷属圆满，得宿命智，具六波罗蜜，行四无量法，通达一切甚深法藏，成最上道。佛说此经已，诸大菩萨，舍利弗及诸苾刍，天、人、阿修罗等，闻佛所说，皆大欢喜，信受奉行。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-10 19:13</div><div class="post-body">其实，证悟了的人最重要的特点是什么呢？是会在不刻意追求、不造作的情况下自然地生起强烈的慈悲，看到别人痛苦难受的时候， 自己也会感觉痛苦难受。而我们现在不是这样的，现在我们只有在生起一点点造作的慈悲心之后看到众生受苦才会觉得痛苦。　　这是什么样的造作的慈悲呢？现在我们首先需要思维某个人是不是痛苦的，是一种什么样的痛苦，是生病的痛苦还是被人伤害的痛苦，或者是因为别的事而痛苦，我们需要先找到他痛苦的原因，然后再努力观想，这样才能生起一点点慈悲。所以，我们现在的一点点慈悲心是在刻意努力观修之后才生起的，这就是造作的慈悲。　　但是，一旦证悟了空性，慈悲心就不再是这样造作的了，那个时候不需要再去刻意追求和造作，自然就会明白众生是很痛苦的，所以会自然而然地对众生生起强烈的慈悲心。而且，这样自然而然地生起慈悲心以后，他们会努力地想办法度化众生、利益众生。我们现在是初学阶段，需要先刻意调整好发心，先思维好，然后才能做出利益众生的行动。而且，我们还有一个明显的困难，那就是我们现在去利益众生的时候总会遇到很多违缘障碍，做起事来很困难， 但证悟以后就不会再有这样多的违缘和困难了。我们现在也许要花一天的时间才能完成的一件事，证悟后一瞬间就可以做好，可以很快利益到无数的众生。　　比如说我们今天念了一百零八遍《普贤行愿品》，那我们的发心和发愿是什么样的呢？是在我执的基础上发心发愿的，所以功德和加持很有限。一旦证悟了，就算一天只念一遍《普贤行愿品》，也是在没有我执和执著的情况下、在空性智慧的境界中发心念诵的，发心和发愿的力量会非常大，所以现在念诵一百零八遍《普贤行愿品》也比不上证悟后念诵一遍的功德和力量，二者是完全不同的。　　因此，我们应该好好发愿这一生就证悟空性，断除我执，解脱轮回。如果没有证悟空性的境界，又没有以出离心和菩提心摄持，那我们所作的一切善根都将是轮回的正因，这样一来我们这个宝贵的人身也就白白浪费掉了，实在可惜！ </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-11 08:35</div><div class="post-body">没有福报，是不会开智慧的。智慧固然受听闻修行而来，可是你没有足够的福报，听一样的话，人家能开悟，你不能开悟。但是，福报是在相应于佛法的立场上需要，这样子修的才是福报，不是说捐捐钱、盖盖什麽医院，那些都是人天的福，不一定与你的解脱相应。你看看，世间有一堆人，他很有福报，钱赚得也很多；甚至有人庙也盖得很大，但这不等于有福报。你看他脑满肠肥的，没有一点智慧，这个就不叫做福能够润慧。 <br/>
+佛告舍利弗：若有善男子、善女人等，于此经中闻是诸佛如来名号，一心谛听，或自忆念，或书写读诵、为他解说，彼人命终不堕恶趣，不生边地、邪见、诸恶律仪、下贱族中，亦不生于长寿天中，亦不生于五浊恶世、飢馑、疾病、刀兵劫中，亦无王难、水难、火难、贼盗、虎狼等难；常生佛剎及天上人间，身相端严，诸根具足，眷属圆满，得宿命智，具六波罗蜜，行四无量法，通达一切甚深法藏，成最上道。佛说此经已，诸大菩萨，舍利弗及诸苾刍，天、人、阿修罗等，闻佛所说，皆大欢喜，信受奉行。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-10 19:13</div><div class="post-body">其实，证悟了的人最重要的特点是什么呢？是会在不刻意追求、不造作的情况下自然地生起强烈的慈悲，看到别人痛苦难受的时候， 自己也会感觉痛苦难受。而我们现在不是这样的，现在我们只有在生起一点点造作的慈悲心之后看到众生受苦才会觉得痛苦。　　这是什么样的造作的慈悲呢？现在我们首先需要思维某个人是不是痛苦的，是一种什么样的痛苦，是生病的痛苦还是被人伤害的痛苦，或者是因为别的事而痛苦，我们需要先找到他痛苦的原因，然后再努力观想，这样才能生起一点点慈悲。所以，我们现在的一点点慈悲心是在刻意努力观修之后才生起的，这就是造作的慈悲。　　但是，一旦证悟了空性，慈悲心就不再是这样造作的了，那个时候不需要再去刻意追求和造作，自然就会明白众生是很痛苦的，所以会自然而然地对众生生起强烈的慈悲心。而且，这样自然而然地生起慈悲心以后，他们会努力地想办法度化众生、利益众生。我们现在是初学阶段，需要先刻意调整好发心，先思维好，然后才能做出利益众生的行动。而且，我们还有一个明显的困难，那就是我们现在去利益众生的时候总会遇到很多违缘障碍，做起事来很困难， 但证悟以后就不会再有这样多的违缘和困难了。我们现在也许要花一天的时间才能完成的一件事，证悟后一瞬间就可以做好，可以很快利益到无数的众生。　　比如说我们今天念了一百零八遍《普贤行愿品》，那我们的发心和发愿是什么样的呢？是在我执的基础上发心发愿的，所以功德和加持很有限。一旦证悟了，就算一天只念一遍《普贤行愿品》，也是在没有我执和执著的情况下、在空性智慧的境界中发心念诵的，发心和发愿的力量会非常大，所以现在念诵一百零八遍《普贤行愿品》也比不上证悟后念诵一遍的功德和力量，二者是完全不同的。　　因此，我们应该好好发愿这一生就证悟空性，断除我执，解脱轮回。如果没有证悟空性的境界，又没有以出离心和菩提心摄持，那我们所作的一切善根都将是轮回的正因，这样一来我们这个宝贵的人身也就白白浪费掉了，实在可惜！ </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-11 08:35</div><div class="post-body">没有福报，是不会开智慧的。智慧固然受听闻修行而来，可是你没有足够的福报，听一样的话，人家能开悟，你不能开悟。但是，福报是在相应于佛法的立场上需要，这样子修的才是福报，不是说捐捐钱、盖盖什麽医院，那些都是人天的福，不一定与你的解脱相应。你看看，世间有一堆人，他很有福报，钱赚得也很多；甚至有人庙也盖得很大，但这不等于有福报。你看他脑满肠肥的，没有一点智慧，这个就不叫做福能够润慧。 <br/>
 <br/>
 什麽样子的福才能够润慧？在修行的过程当中，你乐意地培养别人修道的因缘，成就别人修道的因缘，这个才叫做福能够润慧。有哪一种福才能够成就人家修道的因缘，只有一种，在道场当中成就的。 <br/>
 <br/>
@@ -64,7 +77,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 ~~ 台湾·法藏法师 <br/>
 <br/>
-​ </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-11 08:36</div><div class="post-body">诸位要瞭解，福能够润慧，那必须是以能够滋润慧的那种福才算是能润慧。有很多的居士在庙上面修福报，我看他这个人啊，不但不能往生，他下一辈子搞不好还作庙上的大住持。他在庙上花了很多钱，可是毫无智慧，根本不想修行。 <br/>
+​ </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-11 08:36</div><div class="post-body">诸位要瞭解，福能够润慧，那必须是以能够滋润慧的那种福才算是能润慧。有很多的居士在庙上面修福报，我看他这个人啊，不但不能往生，他下一辈子搞不好还作庙上的大住持。他在庙上花了很多钱，可是毫无智慧，根本不想修行。 <br/>
 <br/>
 对庙上来讲，反正就给他这因缘，他现在也就是富贵学道难，供养供养就可以了，帮助寺庙建设，也不要讲太多......结果呢，相牵堕落。你受他的供养，可是你也没有教他道法、佛法；他以今天供养三宝的这种功德，他又不愿意学佛，也不把佛法修行当一回事。 <br/>
 <br/>
@@ -88,7 +101,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 ​ <br/>
 <br/>
-​ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-11 08:38</div><div class="post-body">很多人喜欢向外攀缘，这个是非常危险的事情。拜佛的时候看到佛像对你微笑了，这个非常危险。我们要借相修心，假借佛像来启发对阿弥陀佛皈依的心，佛像的目的是这样的。以前参加斋戒学会的时候，有一位大专生就站在佛堂不动，一直看着佛像，忏公师父说：这个佛像不能一直看，会出事情的，就是这个意思。 <br/>
+​ </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-11 08:38</div><div class="post-body">很多人喜欢向外攀缘，这个是非常危险的事情。拜佛的时候看到佛像对你微笑了，这个非常危险。我们要借相修心，假借佛像来启发对阿弥陀佛皈依的心，佛像的目的是这样的。以前参加斋戒学会的时候，有一位大专生就站在佛堂不动，一直看着佛像，忏公师父说：这个佛像不能一直看，会出事情的，就是这个意思。 <br/>
 <br/>
 因为忏公师父知道这个人是向外攀缘，一个人向外攀缘的时候，魔王就有机可乘了。修行是托彼依正，显我心性，我自性本来有极乐世界的功德，但是我假借这个外境的因缘，来启发对弥陀的皈依，所以只要你心中的因缘准备好了，阿弥陀佛随时会出现，这叫做：是心作佛，是心是佛，本经的整个思想，就在这两句话当中。 <br/>
 <br/>
@@ -98,7 +111,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 古德把感应道交讲出一个譬喻说，说是我们跟阿弥陀佛感应道交是怎么回事？千江有水千江月。说身为月亮它很想跟我们感应道交，但是我们没有水，没有水的话月亮也不能显现出来。你今天把水准备好，月亮它的光明就映在水面上。身为月亮它没有意见，它随时高挂空中，你把水准备好，月亮就出现。 <br/>
 <br/>
-~~~ 净界法师 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-11 08:40</div><div class="post-body">如果净土宗只是念阿弥陀佛的圣号，却没有发菩提心，那结果会是什么样？这种情况下能否往生西方极乐世界呢？答案是可以往生。藏传佛教里讲，当远离两个违缘、具备四个条件时，就能够往生西方极乐世界。 <br/>
+~~~ 净界法师 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-11 08:40</div><div class="post-body">如果净土宗只是念阿弥陀佛的圣号，却没有发菩提心，那结果会是什么样？这种情况下能否往生西方极乐世界呢？答案是可以往生。藏传佛教里讲，当远离两个违缘、具备四个条件时，就能够往生西方极乐世界。 <br/>
 两个违缘是什么呢？第一，不能造五无间罪。如果造过五无间罪，就必须要忏悔，忏悔后才能够往生西方极乐世界。第二，不能造谤法罪。如果造了谤法罪也要忏悔清净了才可能往生。其他的罪业诸如杀盗淫妄等都不会阻碍往生西方极乐世界，但唯有这两个罪业无法带业往生。 <br/>
 另外，还要具备四个条件。如果四个条件当中的其他三个都具备，唯一不具备菩提心，那能否往生西方极乐世界呢？可以往生。但是往生西方极乐世界以后会是什么样呢？比如有人现在没有修菩提心，但念佛非常虔诚，那这种人可以往生，但是往生极乐世界后，虽然他灭除了自己的轮回痛苦，但因为没有菩提心，所以他在极乐世界中也只能是小乘的阿罗汉，而非菩萨，这是非常可惜的。 <br/>
 而如果发了菩提心，不仅可以往生西方极乐世界，往生后还可以立即证得菩萨一地果位，并且能很快成佛。本可以以这种方式成佛，却因为没有菩提心而只能成为阿罗汉，没有度众生的能力，这是非常可惜的。 <br/>

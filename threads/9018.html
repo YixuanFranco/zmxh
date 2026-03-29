@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>千手观音本尊坛城和实修笔记 - 藏密修海典藏</title>
+<title>千手观音本尊坛城和实修笔记 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/实证传承金刚藏.html">实证传承金刚藏</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">千手观音本尊坛城和实修笔记</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚海会发表于 2015-12-19 15:25</div><div class="post-body">[size=5] <br/>
+<div class="post"><div class="post-header"><div class="avatar">金</div>金刚海会发表于 2015-12-19 15:25</div><div class="post-body">[size=5] <br/>
 [img]http://www.zmxh.com/pics/______________01_20060112173731.jpg[/img] <br/>
 <br/>
 <br/>
@@ -219,7 +232,7 @@ Aogula实证传承行者 <br/>
 Aogula808 <br/>
 2015.11.27 <br/>
 修观音，持铃杵旋转舞动，自身显现为本尊的形象，舞动中，中脉通透，全身毛孔打开，感觉每个毛孔在呼吸，气脉从毛孔溢出伸向体外，形成很多手臂，每个手臂都持一种法器舞动，犹如莲花绽放。持续观修，本尊显现十一个面，上千手臂每个手心都有一只眼睛，气息可以通过这些眼睛进出。 <br/>
-持续观修，身体越来越轻盈透明，每个毛孔都在呼吸，全身被一层能量包围，中脉通透明亮，心轮有一个宝座放光，八宝围绕，并有六字大明咒的咒字绕宝座旋转。安住在此禅定中，身心喜悦宁定。[/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">风</div>风火时轮发表于 2018-4-13 20:35</div><div class="post-body">Aogula实证传承行者 <br/>
+持续观修，身体越来越轻盈透明，每个毛孔都在呼吸，全身被一层能量包围，中脉通透明亮，心轮有一个宝座放光，八宝围绕，并有六字大明咒的咒字绕宝座旋转。安住在此禅定中，身心喜悦宁定。[/size] </div></div><div class="post"><div class="post-header"><div class="avatar">风</div>风火时轮发表于 2018-4-13 20:35</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 <br/>
 2018.2.2 <br/>
@@ -228,7 +241,7 @@ Aogula808 <br/>
 旋转法器和震动手印持咒，感到自身脊柱不断拉伸，自身与本尊合一手臂越来越多，手臂从躯干一圈圈一层层展开，感到脊椎在节节拔高，每拔高一节，就增加一圈手臂，感觉肩膀变多，喉咙变多，肚脐也变多，感到自身顶天立地而且持续增高增大。 <br/>
 旋转手印和法器持咒不断，本尊千手千眼法器变多，轮番显现，有铃杵，弓-箭，长矛盾牌（盾牌上有虎面），八辐轮，摩尼宝，莲花、宝剑，宝幢，金刚斧，金刚棒、金刚钩、绳索，羯摩杵、宝瓶、甘露壶、锡杖、法钵等 <br/>
 结印持咒不断而修，手心足心热流连通全身，中脉脉轮震动带动全身热流涌动、暖热舒畅，有温热的能量在身体内外游走，身心静定，热流在全身波动涌动震动中自然生起一波一波的喜悦感持续不断。观音本尊眉心放光，光中出现金刚杵，金刚轮、摩尼宝珠、莲花，十字杵、宝瓶宝剑、宝幢等法器，观音千手法器放光、手心有智慧眼，光明境界中自然显现很多佛菩萨本尊天女护法，光明境界中有很多尊观音化身，各种天女持金刚铃和甘露，香花油灯、饮食乐器等有天女在咒音中歌舞、手持各种法器舞蹈飘动，也有各种众生各种龙凤多种化生的瑞鸟瑞兽在境界中不断显现。 <br/>
-旋转金刚铃杵持咒不断而修，手中法器与中脉能量自然呼应，全身热流涌动波动震动中，心中越来越喜悦宁定，安住在此三昧禅定中。修完观音继续诵《大方广佛华严经普贤三昧品》，同时轻轻震动手臂如击鼓式如敲木鱼，在持诵中手臂震动不停，带动全身内在能量一起震动，手臂轻轻的震动自然连通中脉和全身，震动持诵中海底轮中脉到眉心和顶轮的内在能量自然呼应震动，三昧禅定涌动波动震动的感受在诵经时持续不断，震动持诵中感到禅修与念诵相容无碍，内外震动中融入普贤三昧光明网，如此反复持诵身心静定、法喜充满。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-4-11 06:43</div><div class="post-body">Aogula实证传承行者 <br/>
+旋转金刚铃杵持咒不断而修，手中法器与中脉能量自然呼应，全身热流涌动波动震动中，心中越来越喜悦宁定，安住在此三昧禅定中。修完观音继续诵《大方广佛华严经普贤三昧品》，同时轻轻震动手臂如击鼓式如敲木鱼，在持诵中手臂震动不停，带动全身内在能量一起震动，手臂轻轻的震动自然连通中脉和全身，震动持诵中海底轮中脉到眉心和顶轮的内在能量自然呼应震动，三昧禅定涌动波动震动的感受在诵经时持续不断，震动持诵中感到禅修与念诵相容无碍，内外震动中融入普贤三昧光明网，如此反复持诵身心静定、法喜充满。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-4-11 06:43</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 QQ群：289578411 <br/>
 <br/>
@@ -251,7 +264,7 @@ QQ群：289578411 <br/>
 <br/>
 修观音，自身气脉能量显现成观音形象，本尊十一个面颜色不同，表情各异，七面忿怒，四面寂静。行进中，尾椎处有明点暖热震荡，热流从此明点出发，震荡上升，通过脊柱，到达脑脉和顶轮，躯干气脉热流延伸处体外，形成了多双手臂，一圈圈一层层，每个手心有一只智慧眼，手里拿着各种法器。有些手臂持法器不动，有些手臂不断翻转，行进中手心足心热流旋转，通过四肢，不断进入中脉，在从躯干延伸出体外，本尊的手臂和法器越来越多。中脉笔直粗壮，中脉热流充盈，自身气脉能量循环往复，暖热舒适。 <br/>
 <br/>
-静坐修释迦牟尼佛，本尊左手托钵置于小腹前，右手镇地印，感受自身呼吸，手足心热流旋转，螺旋形通过四肢汇聚于中脉，中脉膨胀收缩，有暖热震动感，全身气脉能量汇聚于小腹，形成一个横着的金刚杵，呼吸中，自身中脉变粗变长，身体变高变大，中脉形成一个竖立的金刚杵。每一次呼吸，都触动全身皮肤震动酥酥麻麻，每个毛孔都在开合呼吸，全身暖热舒适，身心宁静喜悦，处于此禅定中，长时间修持，不愿停止。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-4-11 06:54</div><div class="post-body">Aogula实证传承行者 <br/>
+静坐修释迦牟尼佛，本尊左手托钵置于小腹前，右手镇地印，感受自身呼吸，手足心热流旋转，螺旋形通过四肢汇聚于中脉，中脉膨胀收缩，有暖热震动感，全身气脉能量汇聚于小腹，形成一个横着的金刚杵，呼吸中，自身中脉变粗变长，身体变高变大，中脉形成一个竖立的金刚杵。每一次呼吸，都触动全身皮肤震动酥酥麻麻，每个毛孔都在开合呼吸，全身暖热舒适，身心宁静喜悦，处于此禅定中，长时间修持，不愿停止。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-4-11 06:54</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 QQ群：289578411 <br/>
 <br/>
@@ -266,7 +279,7 @@ QQ群：289578411 <br/>
 <br/>
 之后轮番修了文武百尊忿怒尊坛城和寂静尊坛城，五方佛坛城，右手震动如击鼓式持诵《大方广佛华严经  普贤行愿品》段落回向。 <br/>
 <br/>
-建议体弱多病的人和受疫情影响了健康的人，坚持每天热水泡脚至出汗促进代谢循环，注意不要受风和禁吃冷饮，可以排出体内的病气毒素，缓解呼吸道疾病、肺病和其他各种疾病。对百分之六十以上的人明显有效。 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-5-12 23:09</div><div class="post-body">Aogula实证传承行者 <br/>
+建议体弱多病的人和受疫情影响了健康的人，坚持每天热水泡脚至出汗促进代谢循环，注意不要受风和禁吃冷饮，可以排出体内的病气毒素，缓解呼吸道疾病、肺病和其他各种疾病。对百分之六十以上的人明显有效。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-5-12 23:09</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula321 <br/>
 QQ群：289578411 <br/>
 <br/>
@@ -282,7 +295,7 @@ QQ群：289578411 <br/>
 修观音化身犼体内中脉能量化成金刚杵，先修开手足肢体气脉能量就能迅速修开中脉，观修自身为观音化身独角犼，中脉显现金刚杵，就能自然显现观音本尊，实修中修开自身气脉能量就能与千手观音相应合一。 <br/>
 观音化身犼的背上托着大莲花，莲花上有一面千手观音。气脉能量运转中，观修自身与一面千手观音合一，手中持各种法器，金刚杵、金刚铃、金刚斧、金刚钩、金刚轮、莲花、拂尘、宝瓶、柳枝、火焰宝、宝珠等。千臂舞动，法器震颤，放出更多法器布施给众生，千手掌心都有智慧眼，千手舞动放光明照耀加持六道众生，各种众生在光中显得十分舒适畅快。 <br/>
 修化身犼自然显现观音身边有童男童女，或合抱宝珠或合掌顶礼。观音近侧远处，祥云中显现很多佛菩萨天女护法眷属们围绕，外围有长翅膀的瑞龙瑞兽环绕飞翔。 <br/>
-持续观修，自身与一面千手观音相应合一，全身内外各种震动，中脉通明震动，手足毛孔都在震动，显现一切内外境界的同时，身心安稳舒适喜悦静定。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-7-10 17:40</div><div class="post-body">Aogula实证传承行者 <br/>
+持续观修，自身与一面千手观音相应合一，全身内外各种震动，中脉通明震动，手足毛孔都在震动，显现一切内外境界的同时，身心安稳舒适喜悦静定。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-7-10 17:40</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula303 <br/>
 <br/>
 2021.2.27 十一面千手观音实修笔记 <br/>
@@ -300,7 +313,7 @@ Aogula303 <br/>
 <br/>
 大士加持胜法用，想己身即佛影像； <br/>
 此如是智若相应，即得最上佛成就。 <br/>
-《一切如来真实摄经》 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-7-10 17:41</div><div class="post-body">实修千手观音笔记 <br/>
+《一切如来真实摄经》 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-7-10 17:41</div><div class="post-body">实修千手观音笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -322,7 +335,7 @@ Aogula321 <br/>
 洗涤尘劳愿济海，超证菩提方便门； <br/>
 我今称诵誓皈依，所愿从心悉圆满。 <br/>
 <br/>
-持续旋转手印观修千手观音持咒，内外境界动中变化不断，心越来越定。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-7-10 17:42</div><div class="post-body">Aogula实证传承行者 <br/>
+持续旋转手印观修千手观音持咒，内外境界动中变化不断，心越来越定。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-7-10 17:42</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula811 <br/>
 <br/>
 2021.4.24 <br/>
@@ -347,7 +360,7 @@ Aogula811 <br/>
 手抱金刚铃震动持咒不断，自身本尊不断变高变大，脸和手臂逐渐变多，随之喉咙肚脐也变多，一面观音，变为三面观音，四面观音，五面观音，十一面观音，二十五面观音，之后百面百臂、千面千臂、万面万臂的各种观音本尊自然显现，身体周围有很多观音化身、各种天女，半人半鸟的迦陵频迦，大鹏，各种金刚护法、人身龙尾长翅膀的龙王，多头多爪的祥龙，瑞鸟瑞兽，周围的祥云中有很多菩萨飘来飘去，足下也有更小的祥云和天人，衣着华丽，特别祥瑞。在祥云和天人下方，是近似于人世间的景象，在近似于人世间世界的下方，是饿鬼道和地狱道的景象。佛国净土以及六道世界都显现在观音本尊的光明境界中。 <br/>
 之后，本尊的心轮放出光芒，照射在前方，显现出一个动态的六道轮回图，展示了众生是如何在六道中反复轮回，苦苦挣扎的。境界中很多天人以及其他六道众生，看到此景象，产生了厌恶六道的出离心，显现成光明能量体安住在观音本尊的庄严坛城中。 <br/>
 <br/>
-再修金刚萨埵，金刚持五方佛，修玛哈嘎拉护法震动法器持咒。又震动手臂如击鼓式持诵《华严经  普贤行愿品》段落回向。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-7-10 17:43</div><div class="post-body">合掌转手持咒修千手观音觉受体验笔记 <br/>
+再修金刚萨埵，金刚持五方佛，修玛哈嘎拉护法震动法器持咒。又震动手臂如击鼓式持诵《华严经  普贤行愿品》段落回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-7-10 17:43</div><div class="post-body">合掌转手持咒修千手观音觉受体验笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -365,14 +378,14 @@ Aogula321 <br/>
 自身千手观音身形变高，越来越高大，身边和远处呈现无数明亮光点，观察身边的一些明亮光点，这光点都是由星系组成的星系团，在观音身边显示为小光点，感受到诸佛本尊境界的庄严宏伟。 <br/>
 此时，感觉自身本尊身处于宇宙深处浩渺时空中，有超脱感，宁静，法喜充满，持续而修。 <br/>
 <br/>
-修完观音，又修金刚萨埵五方佛，供修玛哈嘎拉护法，再震动手臂如击鼓式持诵《华严经 普贤三昧品》段落后回向。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-7-22 00:11</div><div class="post-body">实修十一面千手观音禅修体验 <br/>
+修完观音，又修金刚萨埵五方佛，供修玛哈嘎拉护法，再震动手臂如击鼓式持诵《华严经 普贤三昧品》段落后回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-7-22 00:11</div><div class="post-body">实修十一面千手观音禅修体验 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula303 <br/>
 <br/>
 2021.7.21 <br/>
 行禅走转中修十一面千手观音，手心有厚厚的热流，热流涌动遍布全身，浑身暖热，毛孔打开，在一开一合的呼吸，毛孔呼吸和腹部的胎息相呼应，气息暖热，腹部起伏，热流充盈直通脑脉和指尖，全身上下像一个打通的管道，热流畅通，感受手指连通到脉轮的震动和顶轮的呼吸，身体七个脉轮通透，感觉到中脉在和身体一体收缩呼吸。 <br/>
-观修十一面千手观音，自身长出观音的手臂，手持各种法器，和观音深深的相应，自身灵魂与观音菩萨相融，感觉到慈悲心不断增长，自己的心和观音的心合为一体，大慈大悲度众生的悲愿深深的烙印在心底，与观音菩萨的相应如此之深，吸气，感觉气脉清净，体内遍洒白色莲花，感受到观音菩萨馥郁芬芳的气息与轻柔的呼吸，像丝一样穿过我的身体，进入灵魂，观音菩萨手中持有各种法器，各种众生境界自然显现，观音菩萨化身无数，将法器布施给众生，心柔软而坚定，自身与观音菩萨的相应超过任何一个本尊，实修体证观音菩萨的大慈大悲，深入观音菩萨的三昧禅定。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-8-6 01:52</div><div class="post-body">修千手观音 觉受体验笔记 <br/>
+观修十一面千手观音，自身长出观音的手臂，手持各种法器，和观音深深的相应，自身灵魂与观音菩萨相融，感觉到慈悲心不断增长，自己的心和观音的心合为一体，大慈大悲度众生的悲愿深深的烙印在心底，与观音菩萨的相应如此之深，吸气，感觉气脉清净，体内遍洒白色莲花，感受到观音菩萨馥郁芬芳的气息与轻柔的呼吸，像丝一样穿过我的身体，进入灵魂，观音菩萨手中持有各种法器，各种众生境界自然显现，观音菩萨化身无数，将法器布施给众生，心柔软而坚定，自身与观音菩萨的相应超过任何一个本尊，实修体证观音菩萨的大慈大悲，深入观音菩萨的三昧禅定。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-8-6 01:52</div><div class="post-body">修千手观音 觉受体验笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -386,7 +399,7 @@ Aogula321 <br/>
 胸前，有一双手抱金刚铃，金刚铃在手中自旋、绕转，抱铃的双手自然随铃的绕动而相应绕动。另有一双手抱宝珠，宝珠旋转中不断向外面虚空放出祥云，云中显现宫殿、天女（在飞行中散花）、神鸟、瑞兽，莲花化佛，放光加持众生。 <br/>
 持续行走安住观修自身本尊身，本尊可显现为一面、十一面、二十五面、三十三面、六十五面，千手中不同的手自然显现出各种手印和动作，优雅庄严。如，有的手在胸前作翻转手印；有很多手从身体两侧自下而上划圆至头顶，再从头顶降下至腹前到身体两侧，再重复路线划动；有的双手作抱珠状从胸前自下而上伸至头顶，再从头顶往两侧划圆至腹前再至胸前，再重新划动；有很多手臂从前向后翻转，等等。 <br/>
 修完观音，又修龙尾文殊、象头护法、金刚萨埵等本尊护法。 <br/>
-身心感觉安稳舒畅。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-9-4 21:43</div><div class="post-body">修观音 觉受体验笔记 <br/>
+身心感觉安稳舒畅。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-9-4 21:43</div><div class="post-body">修观音 觉受体验笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -395,7 +408,7 @@ Aogula321 <br/>
 修一面四臂观音本尊。合掌念诵持咒，再修两手胸前抱宝珠揉动旋转持咒，感觉脚底风轮转动，腿部震动，热流遍及全身，手指内持续有电流感，手心有气压感。持续揉动，双手间气感增强，形成如宝珠气球的气团，感觉身体气脉能量化为观音身形，自身能量与观音本尊合为一体，本尊身颜洁白如月，头戴五佛冠，胸前二手捧有摩尼宝珠，另一右手持念珠，另一左手持莲花，双跏趺坐於莲花月轮上，寂静庄严。 <br/>
 安住观修自身观音本尊，一能量宝珠自旋中围着腰部带脉绕转，左手的莲花转动中花瓣绽放，右手的念珠每个珠子在手中自然循环滚动，胸前双手手心的阴阳双鱼宝在转动中变化为金刚轮，金刚轮旋转中放出能量光流灌入两手间的摩尼宝珠，摩尼宝珠获得了能量动力，加速自旋，并向外持续放光，光中花现很多莲花，花中化佛。 <br/>
 本尊心轮莲花上立有旋转金刚杵，金刚杵转动中变大变小，自然显现，身体气脉随之震动，放虹光。 <br/>
-再修千手观音、金刚萨埵等本尊护法。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-9-24 14:22</div><div class="post-body">千手观音 实修笔记 <br/>
+再修千手观音、金刚萨埵等本尊护法。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-9-24 14:22</div><div class="post-body">千手观音 实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -409,7 +422,7 @@ Aogula321 <br/>
 行进中安住观修自身本尊，光中显现很多观音化身，看到以前超度过的众生，很多都显现在境界中，有的坐在莲花上，有的在向佛菩萨顶礼，有的在念佛持咒，有的在看着前方金色字的《普贤行愿品》或念诵经文。 <br/>
 安住本尊的三昧禅定中，自身观音本尊胸前抱的摩尼宝珠在转动中化出观音菩萨化身，有的观音化身持铃、莲花、摩尼宝珠等法器，有的化身观音左手持着净瓶，右手拿杨柳枝沾瓶中净水甘露洒向下方加持众生。 <br/>
 <br/>
-修完千手观音，又修金刚萨埵和玛哈嘎拉护法。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-10-27 01:10</div><div class="post-body">千手观音 实修超度笔记 <br/>
+修完千手观音，又修金刚萨埵和玛哈嘎拉护法。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-10-27 01:10</div><div class="post-body">千手观音 实修超度笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -425,7 +438,7 @@ Aogula321 <br/>
 修完十一面千手观音，再修迦陵频伽。 <br/>
 双手抱以金刚铃为标志图像的Aogula护摩火供法宝咒轮，于胸前自然任运地摇动震动手中铃。感到自身与迦陵频伽相应，自身能量化为半人半鹏的迦陵频伽，人面人身，凤凰翅膀，大鹏鸟腿，在空中立于金刚火焰轮上，轮心有交叉金刚杵自在滚动，身体散发彩色能量波。脐轮显现能量球滚动旋转，黄色能量珠围着带脉绕转，心轮能量球在转动中放出金光。双手抱铃持续震动，手中Aogula法宝咒轮的金刚铃图像在震动中化现出立体形态能量铃，立体形态能量铃在转动震动中放出光波能量。 <br/>
 <br/>
-修完迦陵频伽，再修金刚萨埵，五方佛坛城和玛哈嘎拉护法后回向。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-11-7 07:13</div><div class="post-body">Aogula实证传承行者 <br/>
+修完迦陵频伽，再修金刚萨埵，五方佛坛城和玛哈嘎拉护法后回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-11-7 07:13</div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula303 <br/>
 <br/>
 千手观音实修笔记 <br/>
@@ -433,7 +446,7 @@ Aogula303 <br/>
 经行绕佛五小时，感到手足心有厚厚的热流，手指有膨胀感，热流越来越厚，双手被热流包裹，手心里有轮在旋转，脚底有风轮旋转，走起路来健步如飞，风轮四周有火焰围绕，感到自身与天神护法合一，脚踏风火轮轻松行走，热流在腹部涌动，全身充满能量。 <br/>
 观修自身与十一面千手观音合为一体，大悲心油然而生，心轮有热流旋转舒展，感到体内的七个脉轮随息相应一体，息息相通。持咒中热流涌动旋转贯通全身，通达毛孔，自身中脉如同一根粗壮的金色管道，中脉内有金刚杵旋转，形成一串金刚杵，感到金刚杵在呼吸，感到腹部有自然形成胎息，吸气，腹部微微鼓起，气息缓慢深沉，呼气，腹部收缩，气息平稳，能量随息涌动，自然形成的胎息让身心更加静定。在行走中修千手观音，动中禅修与本尊合一，深入禅定三昧，感到自身与千手观音合为一体，背部长出很多手臂，千手千眼，手持各种法器，手中有智慧眼，显现无数各种观音化身和不同层次的众生与观音相应，千手观音大慈大悲，光中化佛，慈眼视众生，心轮莲花上又有一尊千手观音，进入千手观音的三昧正定，深入的与本尊相应，身心与千手观音的三昧正定相应，体内热流涌动震动，全身暖热。光中有各种天女踏着五彩祥云手捧花篮、乐器在空中舞蹈，自身中脉震动发出吽吽吽的风雷声。 <br/>
 身体脉轮震动，观音菩萨化身无数，千手观音反复对我说，发菩提心利益众生。要随缘善待众生，每个众生都有自己的业力，能遇到佛法一直修行需要很大的福报。引导众生学佛，供养诸佛，集聚功德，念佛修行，培植福慧善根，有大慈悲和功德的人，更容易与观音菩萨和诸佛相应。 <br/>
-我修本尊可以与千手观音相应与诸佛菩萨对话，千手观音说要耐心解答有缘众生的各种问题，发菩提心，普度众生。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-11-29 00:00</div><div class="post-body">修观音、阿弥陀佛 超度刘某的父亲、流产堕胎婴灵 超度笔记 <br/>
+我修本尊可以与千手观音相应与诸佛菩萨对话，千手观音说要耐心解答有缘众生的各种问题，发菩提心，普度众生。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-11-29 00:00</div><div class="post-body">修观音、阿弥陀佛 超度刘某的父亲、流产堕胎婴灵 超度笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -446,7 +459,7 @@ Aogula321 <br/>
 观修中自身本尊佛身体放出虹光，光中化佛，显现阿弥陀佛化身、观音菩萨化身和很多化身菩萨。阿弥陀佛的左手于腹前托的莲花在转动中放出一朵莲花进入被超度者的心轮，被超度者立即站立起来，身形变高，精神好了很多，并向面前的佛菩萨合掌顶礼。境界中观音放出莲花和金刚铃，被超度者恭敬接过法宝，满面欢喜，脚下也显现了莲花，但还没度到佛国净土，需要多次修法加持才能度往佛国。 <br/>
 <br/>
 继续修观音、阿弥陀佛，超度刘某的三个流产堕胎婴灵，境界中显示前两个婴灵已经转世到人间，第三个婴灵见佛菩萨现前，即合掌顶礼。 <br/>
-安住三昧观修阿弥陀佛，化身佛阿弥陀佛放光加持第三个婴灵，他脚踩莲花，跟随阿弥陀佛往生净土。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-12-12 22:42</div><div class="post-body">行禅 修千手千眼观世音菩萨 <br/>
+安住三昧观修阿弥陀佛，化身佛阿弥陀佛放光加持第三个婴灵，他脚踩莲花，跟随阿弥陀佛往生净土。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-12-12 22:42</div><div class="post-body">行禅 修千手千眼观世音菩萨 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula303 <br/>
@@ -455,7 +468,7 @@ Aogula303 <br/>
 诵经后行禅，经行走转五小时，感到手足心有热流旋转，脚下热流形成旋转的风轮，连通中脉直通顶轮，体内有一个红色宝珠随呼吸在海底轮和顶轮之间弹动旋转，同时感到腹轮自然呼吸，随着呼吸感到身体在膨胀收缩。 <br/>
 修十一面千手观音合掌持咒，感到自身化为千手观音与本尊合为一体，长出上千手臂，手中持有各种法器，有金刚杵、金刚铃、金刚轮、金刚拂尘、宝镜、法螺、金刚斧、金刚钩、绳索等很多法器，千手观音每个手心中有智慧眼在放光。感到千手和法器带动全身脉轮和微细脉不断打开，中脉和心轮震动，发出阵阵吽吽吽的风雷声。 <br/>
 合掌持咒中，千手观音法器变多，本尊境界光明中显现化身无数，有化身天女和天龙护法拥护围绕。 <br/>
-持咒不断经行，在行禅中感到自身体内中脉通明震动，七个脉轮莲花开放，安住在此三昧禅定中与千手观音合一，动中禅修体证三昧入定，持续经行。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-12-12 22:43</div><div class="post-body">实修十一面千手观音 阿弥陀佛 五方佛 超度笔记 <br/>
+持咒不断经行，在行禅中感到自身体内中脉通明震动，七个脉轮莲花开放，安住在此三昧禅定中与千手观音合一，动中禅修体证三昧入定，持续经行。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-12-12 22:43</div><div class="post-body">实修十一面千手观音 阿弥陀佛 五方佛 超度笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -474,7 +487,7 @@ Aogula321 <br/>
 被度的人见化佛显现于前，有的顶礼嗑拜，有的欢喜合掌。佛光加持下，被度者有的连同所坐的莲花自然升起，另有被度者其心轮莲花自然转动。 <br/>
 <br/>
 之后修五方佛本尊旋转手印法器持咒，五方佛显现光中化佛，化身佛各放光明加持所超度的人。 <br/>
-震动手臂如击鼓式，持诵《普贤行愿品》回向。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-12-15 04:20</div><div class="post-body">千手千眼观音菩萨 实修笔记 <br/>
+震动手臂如击鼓式，持诵《普贤行愿品》回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-12-15 04:20</div><div class="post-body">千手千眼观音菩萨 实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula303 <br/>
@@ -482,7 +495,7 @@ Aogula303 <br/>
 2021.12.10 <br/>
 行禅经行走转五小时，手心有厚厚的热流，热流变成金刚轮旋转，如同镶嵌在手心一样，心轮也有一个金刚轮在旋转。 <br/>
 观自身与千手观音合为一体，本尊千手千眼，每个手心中有智慧眼放光，手持金刚杵、金刚铃、法轮、金刚拂尘、宝镜、花、弓-箭、摩尼宝、宝瓶等各种法器，全身气脉震动涌动，毛孔在打开呼吸，毛孔内有热流，有金刚杵和莲花。观音本尊身形变得高大，慈眼视众生，身心与千手观音相应，自然涌现大悲心和普度众生的菩提心。千手观音菩萨手中的金刚拂尘轻轻挥动，带动自身能量如春风拂面般柔和温暖，金刚拂尘的能量柔和而坚定，与本尊坛城相应一体。千手观音手中各种法器变多，放出很多化身，持法器、法宝、莲花，布施加持给众生，很多众生得到了救度。 <br/>
-合掌持咒，旋转铃杵法器持咒，挥动金刚拂尘持咒，修自身与千手观音合一，大悲心升起，千手法器相应诸佛坛城，自身中脉通明震动，脉轮能量转动，热流在体内升腾蔓延，光中显现很多千手观音化身，形态各异不断变化。此时感到中脉能量涌动震动，有风雷之声，千手观音本尊坛城境界自然显现，自身脉轮能量旋转，如同发电一样，如此安住在与千手观音相应的三昧境界中，行住坐卧持咒不断，持续而修。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-12-16 19:48</div><div class="post-body">千手观音 实修笔记 <br/>
+合掌持咒，旋转铃杵法器持咒，挥动金刚拂尘持咒，修自身与千手观音合一，大悲心升起，千手法器相应诸佛坛城，自身中脉通明震动，脉轮能量转动，热流在体内升腾蔓延，光中显现很多千手观音化身，形态各异不断变化。此时感到中脉能量涌动震动，有风雷之声，千手观音本尊坛城境界自然显现，自身脉轮能量旋转，如同发电一样，如此安住在与千手观音相应的三昧境界中，行住坐卧持咒不断，持续而修。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-12-16 19:48</div><div class="post-body">千手观音 实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -495,7 +508,7 @@ Aogula321 <br/>
 再修千手观音翻转变化手印持咒，自身本尊双手翻转手印，其他很多手也随之翻转舞动，每只手的手心都有智慧眼，同时手心显现金色的金刚轮转动。光中显现很多观音化身和祥云、莲花、宝珠，宝珠旋转放光。 <br/>
 持续持咒，千手观音本尊从一面变成十一面、二十五面、三十三面、一百二十一面等多面，千只手的手心都有智慧眼和转动的金刚轮，手中持有的各种法器震动转动摇动放光，光中化佛，自然显现本尊坛城。 <br/>
 <br/>
-修完观音，修五方佛、阿弥陀佛，加持之前超度过的人。再修玛哈嘎啦护法，持诵《普贤行愿品》段落回向。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2024-3-30 21:58</div><div class="post-body">千手观音实修笔记 <br/>
+修完观音，修五方佛、阿弥陀佛，加持之前超度过的人。再修玛哈嘎啦护法，持诵《普贤行愿品》段落回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2024-3-30 21:58</div><div class="post-body">千手观音实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula305 <br/>
@@ -516,7 +529,7 @@ Aogula305 <br/>
 <br/>
 如实记录实修感受 <br/>
 于云南大理 <br/>
-2024/3/30 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2024-8-15 01:23</div><div class="post-body">修千手观音 实修笔记 <br/>
+2024/3/30 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2024-8-15 01:23</div><div class="post-body">修千手观音 实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -539,7 +552,7 @@ Aogula321 <br/>
 <br/>
 如实记录实修感受 <br/>
 于马来西亚 槟城 <br/>
-2024年8月13日 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2024-10-8 02:11</div><div class="post-body">修千手观音 实修笔记 <br/>
+2024年8月13日 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2024-10-8 02:11</div><div class="post-body">修千手观音 实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -558,7 +571,7 @@ Aogula321 <br/>
 <br/>
 如实记录实修感受 <br/>
 于马来西亚 槟城 <br/>
-2024年9月13日 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2024-10-8 02:14</div><div class="post-body">修千手观音 实修笔记 <br/>
+2024年9月13日 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2024-10-8 02:14</div><div class="post-body">修千手观音 实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -583,7 +596,7 @@ Aogula321 <br/>
 <br/>
 如实记录实修感受 <br/>
 于马来西亚 槟城 <br/>
-2024年9月27日 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2025-3-10 05:38</div><div class="post-body">修千手观音 实修笔记 <br/>
+2024年9月27日 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2025-3-10 05:38</div><div class="post-body">修千手观音 实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>

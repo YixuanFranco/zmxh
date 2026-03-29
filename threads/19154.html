@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大續金剛莊嚴根本壇城灌頂儀軌金剛甘露流  根本灌頂 藏汉 - 藏密修海典藏</title>
+<title>大續金剛莊嚴根本壇城灌頂儀軌金剛甘露流  根本灌頂 藏汉 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大續金剛莊嚴根本壇城灌頂儀軌金剛甘露流  根本灌頂 藏汉</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2025-12-24 05:29</div><div class="post-body">td2346_大續金剛莊嚴根本壇城灌頂儀軌金剛甘露流 大續金剛莊嚴 根本灌頂.g2.0f <br/>
+<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2025-12-24 05:29</div><div class="post-body">td2346_大續金剛莊嚴根本壇城灌頂儀軌金剛甘露流 大續金剛莊嚴 根本灌頂.g2.0f <br/>
 Rinchen TerdzodTD2346ལུང་ཆེན་རྡོ་རྗེ་བཀོད་པ་རྩ་བའི་དཀྱིལ་འཁོར་དུ་དབང་བསྐུར་བའི་ཆོ་ག་རྡོ་རྗེ་བདུད་རྩིའི་ཆུ་རྒྱུན་ཅེས་བྱ་བ་བཞུགས་སོ། །ལུང་ཆེན་རྡོ་རྗེ་བཀོད་པ། རྩ་དབང་། 55-18-1a ༄༅། །ལུང་ཆེན་རྡོ་རྗེ་བཀོད་པ་རྩ་བའི་དཀྱིལ་འཁོར་དུ་དབང་བསྐུར་བའི་ཆོ་ག་རྡོ་རྗེ་བདུད་རྩིའི་ཆུ་རྒྱུན་ཅེས་བྱ་བ་བཞུགས་སོ། །ལུང་ཆེན་རྡོ་རྗེ་བཀོད་པ། རྩ་དབང་། ༄། །སྦྱོར་བ། ༄༅། །ལུང་ཆེན་རྡོ་རྗེ་བཀོད་པ་རྩ་བའི་དཀྱིལ་འཁོར་དུ་དབང་བསྐུར་བའི་ཆོ་ག་རྡོ་རྗེ་བདུད་རྩིའི་ཆུ་རྒྱུན་ཅེས་བྱ་བ་བཞུགས་སོ། ། 55-18-1b བླ་མ་དང་དཔལ་སྒྲོལ་བྱེད་ཐུགས་རྗེའི་བདག་པོ་ལ་ཕྱག་འཚལ་ལོ། །དབྱིངས་ལས་ཡེ་ཤེས་རྡོ་རྗེར་རོལ་པའི་གར། །དཀྱིལ་འཁོར་སྤྲོ་བསྡུ་དེ་ཡི་སྔགས་རྒྱུད་བཅས། །སྟོན་མཛད་དབང་ཕྱུག་རྒྱལ་པོ་ཧེ་རུ་ཀར། །གདོད་ནས་གྲུབ་པ་གང་དེར་ཕྱག་བགྱིའོ། །ལུང་གི་སྙིང་པོའི་དཀྱིལ་འཁོར་ཚོགས་ཆེན་འདུས། །རྡོ་རྗེ་རྣམ་པར་བཀོད་པ་ཚིག་ཉུང་ཞིང་། །དོན་རྒྱས་པདྨའི་ཞལ་ལུང་བདུད་རྩིའི་ཐིགས། །སྐལ་བཟང་ཐར་པའི་སྲོག་འཚོ་འདི་བརྟེན་འཚལ། །གསང་ཆེན་ཐེག་པའི་ཉིང་ཁུ་ངོ་མཚར་རྨད་དུ་བྱུང་བ་འདིའི་སྨིན་བྱེད་བསྒྲུབ་པ་ལ། སྒྲུབ་ཁོག་ནམ་མཁའ་ཀློང་ཡངས་དང་སྦྲེལ་བ་སྨིན་སློབ་སྒྲུབ་ཆེན་གྱི་ལུགས་དང་། སྒྲུབ་མཆོད་ཀྱི་ཆོ་ག་དཀྱུས་མ་ཙམ་ལ་བརྟེན་ཏེ་མོས་སློབ་སློབ་མ་རྗེས་གཟུང་གཉིས་ལས། འདིར་ད་ལྟ་ཁྱེར་བདེའི་ཕྱག་ལེན་ཕྱི་མའི་ལུགས་ལྟར་འཆད་པ་ལ་གསུམ། སྦྱོར་བ། དངོས་གཞི། རྗེས་སོ། །དང་པོ་ལའང་བསྙེན་པའི་ཆོ་ག་ནི། སློབ་དཔོན་གྱིས་རབ་འབྲིང་ཐ་མའི་ཚུལ་གྱི་བསྙེན་པ་ཁ་གསོ་བཅས་གྲུབ་པར་བྱ། ལས་ཀྱི་གཞི་གཟུང་བ་ནི། གནས་དུས་ཡོ་བྱད་ཕུན་སུམ་ཚོགས་པའི་ཆ་རྐྱེན་ཐམས་ཅད་ཚོགས་པར་བྱ། སའི་ཆོ་ག་ནི། འདིར་དཀྱིལ་འཁོར་རྡུལ་ཚོན་མི་འགྲུབ་ཅིང་སྒྲུབ་གནས་རྙིང་པར་རས་བྲིས་ཀྱི་དབང་དུ་བྱས་ཏེ། ཕྲིན་ལས་ཀྱི་ཐོག་མར་གཞི་གནས་བདག་པོའི་དཀར་གཏོར་སྤྱི་འགྲོ་ཙམ་བཏང་བས་འཐུས་སོ། །སྟ་གོན་ནམ་ལྷག་པར་གནས་པའི་ཆོ་ག་ལ། ཡན་ལག་དང་ཡན་ལག་ཅན་གྱི་རབ་གནས་གཉིས་སུ་བཤད་པ་ཐམས་ཅད་མི་དགོས་ཀྱང་ཉེར་མཁོའི་སྙིང་པོར་དྲིལ་ན། བདག་བསྐྱེད་ཀྱི་མཆོད་པ་ཆུ་གཉིས་དང་བཞི་བསྣོལ། 55-18-2a སྨན་རཀ་གཏོར་གསུམ་རྣམས་ཕུགས་ལོགས་ལྟ་བུར་བཀོད། དཀྱིལ་འཁོར་གྱི་སྟེགས་བུའི་སྟེང་ལས་བུམ་བཅུད་ལྡན་མགུལ་ཆིངས་ལྗང་ནག་ཁ་རྒྱན་ཅན། ཞབས་བསིལ་དང་བཞི་བསྣོལ་གྱིས་བསྐོར་བ་བཀོད། སེམས་བསྐྱེད་ལ་སྲུང་འཁོར་ནས་བཟླས་པའི་བར་སྒྲུབ་ཐབས་རྒྱུན་གྱི་ཉམས་ལེན་མཐར་ཆགས་སུ་བཏང་། ཡིག་བརྒྱས་གསལ་བརྟན་བྱས་ནས། ལས་བུམ་བསང་སྦྱང་། མི་དམིགས་སྟོང་པའི་ངང་ཉིད་ལས༔ བྷྲཱུྃ་ལས་བུ <br/>
 <br/>
 【現代漢語翻譯】 Rinchen TerdzodTD2346《隆欽多杰郭巴根本壇城灌頂儀軌·金剛甘露之流》。 《隆欽多杰郭巴》。根本灌頂。 頂禮上師與具大悲之怙主。 從法界中，智慧金剛舞動；壇城舒捲，伴隨彼之真言續流；示現自在之王黑汝嘎，向本初成就者敬禮！ 彙集了口傳心髓壇城大會，金剛佈置精妙，言簡意賅，義豐如蓮顏，甘露滴落，愿此成為具緣解脫之命脈。 為成就此甚深大乘之精要，奇妙稀有之法，其成熟之法，與修法竅訣虛空廣闊相連，乃成熟教導之大成就法；或僅依簡略之修供儀軌，隨應根器引導弟子。此處依易於修持之後者而宣說，分為三：預備、正行、結行。 首先是預備，上師應完成上、中、下三種方式之修持，並補足所需。作為事業之基礎，應具備圓滿之處所、時間、資具等一切順緣。關於地之儀軌，此處不繪製彩粉壇城，而在舊修法處以唐卡代替。於事業之初，僅作普通之供施食子予地神即可。 關於準備或特別安住之儀軌，雖說有支分與有支分之兩種圓滿，然皆不需，僅需濃縮為必要之精華：自生本尊之供品，水供二二相交，四四相交。 將藥、酒、朵瑪三者如根本與枝葉般排列。壇城之臺上，放置具寶瓶，以綢緞束頸，飾以綠黑二色，以底座及四四相交環繞。于發心及防護輪間，完整進行日常修法之修持。以百字明進行明晰穩固，之後進行事業瓶之凈化。從不可思議之空性中，由（藏文：བྷྲཱུྃ，梵文天城體：भ्रूम，梵文羅馬擬音：bhrūṃ，漢語字面意思：種子字）生出寶瓶。 <br/>

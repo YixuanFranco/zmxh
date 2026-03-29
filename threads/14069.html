@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>印光大师去宁波阿育王寺拜佛舍利的故事 - 藏密修海典藏</title>
+<title>印光大师去宁波阿育王寺拜佛舍利的故事 - 藏密修海</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
@@ -8,30 +8,43 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 .navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
-.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
-.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
-.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
-.thread-card:hover::before { transform: scaleY(1); }
-.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
-.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
+.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
+.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
+.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
+.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+
+/* Threads UI */
+.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
+.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
+.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
+.th-meta { font-size: 13px; color: #94a3b8; }
+
+.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
 .post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
 .post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-.search-container { margin-bottom: 40px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
-.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
-button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
-button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
 </style>
 </head><body>
 <div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
 <div class="container">
+<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
 <h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">印光大师去宁波阿育王寺拜佛舍利的故事</h1>
-<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-4 08:39</div><div class="post-body">清光绪二十一年，乙未（1895年）春，大师去宁波阿育王寺拜佛舍利。当时已经有三艘火轮船轮渡可以每天往返，交通比较方便。大师坐船，当天就到了阿育王寺，办好挂单手续，就住下来了。 <br/>
+<div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-4 08:39</div><div class="post-body">清光绪二十一年，乙未（1895年）春，大师去宁波阿育王寺拜佛舍利。当时已经有三艘火轮船轮渡可以每天往返，交通比较方便。大师坐船，当天就到了阿育王寺，办好挂单手续，就住下来了。 <br/>
 <br/>
 阿育王寺位于浙江宁波鄞县东乡四十里鄮山。它的来历据传是这样的，释迦牟尼佛灭度后，印度中天竺国孔雀王朝国王阿育王统治时期，威德广大。所有鬼神，都听从他的调遣。 <br/>
 <br/>
@@ -45,7 +58,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 即时，沂亲王家生了一个儿子，嚎哭不止。奶妈抱着他走动，走到挂着的舍利塔图前面就不哭，离开又哭。于是把图取下来，奶妈常拿图对着他，这样就再也不哭了。亲王对这件事感到奇异，就派人到阿育王寺询问化缘僧人的情况，知道僧人就在他儿子出生那一天，断手流血而死。亲王于是独立出资把舍利殿修好。亲王的儿子二十岁时，宋宁宗死了，没有儿子，就把亲王的儿子过继给他，当了四十一年皇帝，这个皇帝就是宋理宗，他就是这位阿育王寺僧的后身。印光大师指出对舍利瑞相要有正确的认识：“须知如来大慈，留此法身真体。俾后世众生，种出世根。以由睹此神异，自可生正信心。从兹改恶修善，闲邪存诚，以期断惑证真，了生脱死。直至复己本具佛性，圆满无上菩提。 <br/>
 <br/>
-此如来示现不思议相，曲垂接引之本心也。”大师在光绪三十一年的时候，因事往阿育王寺，又拜了一次舍利。其大小像一个黑豆那么大，颜色像黑豆上起的白霉，紧靠钟底不动。因为黑色又加白霉，按照俗传的说法，看到这种景象，当年自己会死，但结果是无吉无凶。这说明不可着相，唯在于真实修证。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-5 08:56</div><div class="post-body">忏公师父有个方法，说人生在55岁以前，重视生活，55岁以后，要收心了，重视生命。再不收心这辈子就收不起来了。 <br/>
+此如来示现不思议相，曲垂接引之本心也。”大师在光绪三十一年的时候，因事往阿育王寺，又拜了一次舍利。其大小像一个黑豆那么大，颜色像黑豆上起的白霉，紧靠钟底不动。因为黑色又加白霉，按照俗传的说法，看到这种景象，当年自己会死，但结果是无吉无凶。这说明不可着相，唯在于真实修证。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-5 08:56</div><div class="post-body">忏公师父有个方法，说人生在55岁以前，重视生活，55岁以后，要收心了，重视生命。再不收心这辈子就收不起来了。 <br/>
 <br/>
 不过，你真的认为人是因为分别、计划才会成功吗？你能够成功是因为你有善业力，是你有福报，你不去追求结果，它也会成功。你要知道，你的快乐跟别人是没有关系的，你是在享受你阿赖耶识的善业。所以阿赖耶识变现果报的时候，你要认命，它是一个成熟的业力，没有办法改变，你要修无分别智。但是第六意识在攀缘造作的时候，你要小心。重视因地，放弃果报。 <br/>
 <br/>
@@ -53,7 +66,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 当然，我们不知道我们什么时候往生，一般来说，你最晚六十岁要收心。所以你看到一个人六十岁还在外面跑，如果他修圣道门，我没有意见；如果修净土宗的，不吉祥！除非他能够“百花丛里过，片叶不沾身”，他跑跟没跑一样，他有这种本事，那我没话说。但是你跑的时候，心会动，那就另当别论了，仁者心动。当然你是做慈善事业，但是站在净土宗，你要追求临终的正念，那就不是这样的章法。 <br/>
 <br/>
-~~ 净界法师 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-5 09:14</div><div class="post-body">慈悲是无我，智慧是无执。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-5 09:15</div><div class="post-body">无须探究每件事的根源，只需探究心的根源。一旦心的根源被发现，你会因此解脱一切！若心的根源未被发现，即便知道每件事，也并未真正了解 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-6 08:53</div><div class="post-body">我们在讲解佛法的时候，凭借修学佛法功德增上，这个功德指的并不是你今天所从事的善行大与小，也不在于你所做的这些善事多与少，而在于凭借这个方便调伏内心起到多么大的作用。 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-6 08:55</div><div class="post-body">自他交换的基本精神，就是学吃亏！ <br/>
+~~ 净界法师 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-5 09:14</div><div class="post-body">慈悲是无我，智慧是无执。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-5 09:15</div><div class="post-body">无须探究每件事的根源，只需探究心的根源。一旦心的根源被发现，你会因此解脱一切！若心的根源未被发现，即便知道每件事，也并未真正了解 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-6 08:53</div><div class="post-body">我们在讲解佛法的时候，凭借修学佛法功德增上，这个功德指的并不是你今天所从事的善行大与小，也不在于你所做的这些善事多与少，而在于凭借这个方便调伏内心起到多么大的作用。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-6 08:55</div><div class="post-body">自他交换的基本精神，就是学吃亏！ <br/>
 <br/>
 净界法师 <br/>
 <br/>
@@ -63,7 +76,7 @@ button:hover { background: var(--primary); color: white; border-color: var(--pri
 <br/>
 你用你的心态，来带动你内心的这个善恶的功德，功德跟过失了，是你自己的心去熏习它的。 <br/>
 <br/>
-节选《菩提心修学述要》 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-6 08:57</div><div class="post-body">我们在听闻的时候最好的心态，就是把自己当病人。很多人为什么不肯听经？我看很多人出家以后，前几年有听经，到最后都不听经了。为什么？因为他认为自己没有病，这件事就很严重了。 <br/>
+节选《菩提心修学述要》 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-12-6 08:57</div><div class="post-body">我们在听闻的时候最好的心态，就是把自己当病人。很多人为什么不肯听经？我看很多人出家以后，前几年有听经，到最后都不听经了。为什么？因为他认为自己没有病，这件事就很严重了。 <br/>
 <br/>
 一个人不认为自己有病，这件事就很严重，他没办法进步了。所以，你一定要知道，你是一个有病之人，你非常需要药物的治疗，非常需要佛法的药物。好比我自己，除了要讲经以外，几乎每一天，我每天至少都会听三十五分钟到四十五分钟的佛法——每一天。 <br/>
 <br/>
