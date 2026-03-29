@@ -307,4 +307,259 @@ window.triggerSearch = function(keyword) {
 })();
 </script>
 
+
+<!-- ================= 观想与仪式引擎 (Ritual Engine) ================= -->
+<script>
+(function() {
+    // 注入庄严的样式
+    const ritualCSS = `
+    .ritual-btn { 
+        background: rgba(212,175,55,0.05); border: 1px solid rgba(212,175,55,0.3); border-radius: 20px; color: var(--primary); padding: 8px 20px; font-size: 15px; cursor: pointer; transition: all 0.3s; margin-right: 10px; display: inline-flex; align-items: center; gap: 8px; font-family: 'Noto Serif SC', serif; letter-spacing: 2px;
+    }
+    .ritual-btn:hover { background: rgba(212,175,55,0.15); box-shadow: 0 0 15px rgba(212,175,55,0.4); transform: translateY(-2px);}
+    .ritual-btn.active { background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; font-weight: bold; border:none;}
+    .merit-btn { 
+        display: block; margin: 60px auto 40px; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); border: 1px solid rgba(212,175,55,0.4); border-radius: 12px; color: #f5eedf; padding: 18px 45px; font-size: 20px; cursor: pointer; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); font-family: 'Noto Serif SC', serif; letter-spacing: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); position: relative; overflow: hidden;
+    }
+    .merit-btn::after { content: ''; position: absolute; top:0; left:-100%; width:50%; height:100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: 0.5s; }
+    .merit-btn:hover { transform: scale(1.03) translateY(-5px); box-shadow: 0 15px 40px rgba(138,28,28,0.7); border-color: rgba(212,175,55,0.8);}
+    .merit-btn:hover::after { left: 100%; }
+    .merit-btn:active { transform: scale(0.97); }
+    .toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%) translateY(100px); background: rgba(14,10,9,0.95); border: 1px solid rgba(212,175,55,0.6); color: var(--primary); padding: 18px 35px; border-radius: 30px; font-family: 'Noto Serif SC', serif; font-size: 16px; letter-spacing: 2px; box-shadow: 0 15px 50px rgba(0,0,0,0.9); backdrop-filter: blur(10px); z-index: 10000; transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; pointer-events: none; text-align:center;}
+    .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+    #droneToggle { position: fixed; bottom: 30px; right: 30px; width: 55px; height: 55px; border-radius: 50%; background: rgba(26,20,18,0.9); border: 1px solid rgba(212,175,55,0.3); color: var(--primary); font-size: 26px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 999; box-shadow: 0 5px 20px rgba(0,0,0,0.6); transition: all 0.4s; user-select: none; }
+    #droneToggle:hover { background: rgba(40,30,25,0.95); border-color: var(--primary); transform: scale(1.1);}
+    #droneToggle.playing { animation: pulseBg 3s infinite; background: rgba(40,30,25,0.95); border-color: var(--primary);}
+    @keyframes pulseBg { 0% {box-shadow: 0 0 0 0 rgba(212,175,55,0.5);} 70% {box-shadow: 0 0 0 20px rgba(212,175,55,0);} 100% {box-shadow: 0 0 0 0 rgba(212,175,55,0);} }
+    `;
+    const style = document.createElement('style');
+    style.innerHTML = ritualCSS;
+    document.head.appendChild(style);
+
+    // 1. 全局提示框 (Toast)
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    document.body.appendChild(toast);
+    let toastTimer;
+    window.showToast = function(msg, ms=3500) {
+        toast.innerHTML = msg;
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), ms);
+    }
+
+    // 2. 纯代码合成颂钵环境音 (Web Audio API)
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    let audioCtx, droneOsc1, droneOsc2, droneGain;
+
+    function initAudio() {
+        if(!audioCtx) {
+            audioCtx = new AudioContext();
+            // Theta 脑波双频颂钵合成 (108Hz 为神圣基频, 加上一点偏移产生4Hz嗡嗡声)
+            droneOsc1 = audioCtx.createOscillator();
+            droneOsc2 = audioCtx.createOscillator();
+            droneGain = audioCtx.createGain();
+            
+            droneOsc1.type = 'sine';
+            droneOsc2.type = 'triangle';
+            droneOsc1.frequency.setValueAtTime(108.0, audioCtx.currentTime); 
+            droneOsc2.frequency.setValueAtTime(112.0, audioCtx.currentTime);
+            
+            const filter = audioCtx.createBiquadFilter();
+            filter.type = 'lowpass';
+            filter.frequency.value = 350; // 只保留深邃低频
+            
+            droneGain.gain.setValueAtTime(0, audioCtx.currentTime);
+            
+            droneOsc1.connect(filter);
+            droneOsc2.connect(filter);
+            filter.connect(droneGain);
+            droneGain.connect(audioCtx.destination);
+            
+            droneOsc1.start();
+            droneOsc2.start();
+        }
+    }
+
+    let isDronePlaying = false;
+    window.toggleDrone = function() {
+        if(!audioCtx) initAudio();
+        if(audioCtx.state === 'suspended') audioCtx.resume();
+        
+        const toggleBtn = document.getElementById('droneToggle');
+        if(!isDronePlaying) {
+            droneGain.gain.setTargetAtTime(0.08, audioCtx.currentTime, 2.0); // 丝滑淡入
+            isDronePlaying = true;
+            toggleBtn.classList.add('playing');
+            toggleBtn.innerHTML = '🧘';
+            showToast('入定模式开启 · 聆听法音', 3000);
+        } else {
+            droneGain.gain.setTargetAtTime(0, audioCtx.currentTime, 1.5); // 丝滑淡出
+            isDronePlaying = false;
+            toggleBtn.classList.remove('playing');
+            toggleBtn.innerHTML = '📿';
+            showToast('入定模式已止息', 2000);
+        }
+    }
+
+    // 击磬/引磬 声音 (清脆的高频空灵法音)
+    window.playBellStrike = function() {
+        if(!audioCtx) initAudio();
+        if(audioCtx.state === 'suspended') audioCtx.resume();
+        
+        const osc = audioCtx.createOscillator();
+        const osc2 = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        
+        osc.type = 'sine';
+        osc2.type = 'sine';
+        osc.frequency.setValueAtTime(864, audioCtx.currentTime); // 108 * 8
+        osc2.frequency.setValueAtTime(1728, audioCtx.currentTime); // 泛音
+        
+        osc.connect(gain);
+        osc2.connect(gain);
+        gain.connect(audioCtx.destination);
+        
+        osc.start();
+        osc2.start();
+        
+        // 瞬间敲击，并带着极长、空灵的回声衰减
+        gain.gain.setValueAtTime(0, audioCtx.currentTime);
+        gain.gain.linearRampToValueAtTime(0.2, audioCtx.currentTime + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 5.0);
+        
+        setTimeout(() => { osc.stop(); osc2.stop(); }, 5100);
+    }
+
+    // 注入白噪音悬浮按钮
+    const droneBtn = document.createElement('div');
+    droneBtn.id = 'droneToggle';
+    droneBtn.innerHTML = '📿';
+    droneBtn.title = "开启/关闭 深渊颂钵环境白噪音";
+    droneBtn.onclick = window.toggleDrone;
+    document.body.appendChild(droneBtn);
+
+
+    // 3. Web 原生语音朗读系统 (Text-to-Speech)
+    let isSpeaking = false;
+    let utterance = null;
+    
+    // 强制冷启动加载语音包，避免延时
+    if(window.speechSynthesis) window.speechSynthesis.getVoices();
+
+    window.stopSpeaking = function() {
+        if(window.speechSynthesis) window.speechSynthesis.cancel();
+        isSpeaking = false;
+    }
+
+    window.speakText = function(text, btnElement) {
+        if(isSpeaking) {
+            window.stopSpeaking();
+            btnElement.innerHTML = '🎧 聆听开示';
+            btnElement.classList.remove('active');
+            return;
+        }
+        if(!window.speechSynthesis) {
+            showToast("抱歉，您的设备内核似乎不支持开示。");
+            return;
+        }
+        
+        // 净化文本符号
+        let cleanText = text.replace(/[
+]+/g, '。').replace(/[❖📿🧘]/g, '');
+        utterance = new SpeechSynthesisUtterance(cleanText);
+        utterance.lang = 'zh-CN';
+        utterance.rate = 0.9; // 语速减慢，显得庄重
+        utterance.pitch = 0.9; 
+        
+        // 尽力找一个好听的中文女声或男声
+        const voices = window.speechSynthesis.getVoices();
+        for(let i=0; i<voices.length; i++) {
+            if(voices[i].lang.includes('zh') && (voices[i].name.includes('Ting-Ting') || voices[i].name.includes('Lilian'))) {
+                utterance.voice = voices[i];
+                break;
+            }
+        }
+        
+        utterance.onend = () => {
+            isSpeaking = false;
+            btnElement.innerHTML = '🎧 聆听开示';
+            btnElement.classList.remove('active');
+        };
+        
+        isSpeaking = true;
+        btnElement.innerHTML = '⏹ 止息聆听';
+        btnElement.classList.add('active');
+        window.speechSynthesis.speak(utterance);
+    }
+
+    // 4. 利用监听器拦截并注入元素到全屏弹窗中
+    const viewerBody = document.getElementById('quickViewerBody');
+    if(viewerBody) {
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach(m => {
+                if(m.addedNodes.length > 0) {
+                    const container = viewerBody.querySelector('.container');
+                    if(container && !container.dataset.ritualized) {
+                        container.dataset.ritualized = "true";
+                        
+                        // A: 在首个大标题下注入【朗读按键】
+                        const h1 = container.querySelector('h1');
+                        if(h1) {
+                            const controlDiv = document.createElement('div');
+                            controlDiv.style.textAlign = 'center';
+                            controlDiv.style.marginBottom = '40px';
+                            
+                            const ttsBtn = document.createElement('button');
+                            ttsBtn.className = 'ritual-btn';
+                            ttsBtn.innerHTML = '🎧 聆听开示';
+                            ttsBtn.onclick = function() {
+                                // 提取整个文章内容进行朗读
+                                let pTexts = [];
+                                container.querySelectorAll('.post-body').forEach(pb => {
+                                    pTexts.push(pb.innerText);
+                                });
+                                if(pTexts.length === 0) pTexts.push(container.innerText);
+                                window.speakText(pTexts.join("。下一楼传法提示："), this);
+                            };
+                            controlDiv.appendChild(ttsBtn);
+                            h1.parentNode.insertBefore(controlDiv, h1.nextSibling);
+                        }
+                        
+                        // B: 在文章极致处注入【功德回向/电子木鱼大按键】
+                        const meritBtn = document.createElement('button');
+                        meritBtn.className = 'merit-btn';
+                        meritBtn.innerHTML = '🙏 阅毕 · 善根供养';
+                        meritBtn.onclick = function() {
+                            window.playBellStrike(); // 清脆梵钟
+                            
+                            let count = parseInt(localStorage.getItem('zmxh_merit') || '0');
+                            count++;
+                            localStorage.setItem('zmxh_merit', count);
+                            
+                            this.innerHTML = `✨ 法喜充满 (共参阅 ${count} 卷)`;
+                            this.style.pointerEvents = 'none'; 
+                            this.style.background = 'linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%)';
+                            this.style.color = '#000';
+                            this.style.borderColor = 'transparent';
+                            
+                            showToast(`结缘圆满，加持不散。<br>您已在此法阵参阅 <strong style="font-size:22px; color:#fff;">${count}</strong> 部经卷。`, 5000);
+                        };
+                        container.appendChild(meritBtn);
+                    }
+                }
+            });
+        });
+        observer.observe(viewerBody, {childList: true, subtree: true});
+        
+        // 当用户关闭阅读弹窗时，强制停止朗诵！避免在后台继续念经的灵异事件。
+        const closeBtn = document.getElementById('quickViewerClose');
+        if(closeBtn) closeBtn.addEventListener('click', () => window.stopSpeaking());
+        const qv = document.getElementById('quickViewer');
+        qv.addEventListener('click', (e) => { if(e.target === qv) window.stopSpeaking(); });
+    }
+})();
+</script>
+<!-- ================= /观想与仪式引擎 ================= -->
+
 </body></html>
