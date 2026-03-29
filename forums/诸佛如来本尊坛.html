@@ -369,4 +369,91 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <a href="../threads/38.html" class="thread-row"><h2>清  威罗瓦像</h2><div class="th-meta">TID: 38</div></a>
 <a href="../threads/23.html" class="thread-row"><h2>十相自在图 吉祥时轮心髓十相自在的意义—宝灯论释</h2><div class="th-meta">TID: 23</div></a>
 
-</div></body></html>
+</div>
+<script>
+// ---------- 沉浸式快速阅读弹窗引擎 ----------
+(function() {
+    if(document.getElementById('quickViewer')) return;
+    const modalHTML = `
+    <div id="quickViewer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,0.6); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); opacity:0; transition:opacity 0.3s ease; box-sizing:border-box; align-items:center; justify-content:center; padding: 20px;">
+        <div id="quickViewerContent" style="background:var(--bg, #f9fafb); width:100%; max-width:850px; height:95%; max-height:95vh; border-radius:16px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.2); position:relative; transform:scale(0.95) translateY(30px); opacity:0; transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1); display:flex; flex-direction:column; overflow:hidden;">
+            <div style="padding:16px 24px; border-bottom:1px solid rgba(0,0,0,0.05); background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); display:flex; justify-content:space-between; align-items:center; z-index:10;">
+                <div style="font-weight:600; color:var(--primary, #3b82f6); font-size:16px; display:flex; align-items:center;"><span style="font-size:20px; margin-right:8px;">📄</span> 沉浸阅读模式</div>
+                <button id="quickViewerClose" style="background:#f1f5f9; border:none; width:36px; height:36px; border-radius:50%; font-size:20px; cursor:pointer; color:#475569; display:flex; align-items:center; justify-content:center; transition:all 0.2s; box-shadow:inset 0 2px 4px rgba(0,0,0,0.02)">×</button>
+            </div>
+            <div id="quickViewerBody" style="padding:0; overflow-y:auto; flex:1; scroll-behavior: smooth;">
+                <div style="text-align:center; padding:80px; color:#94a3b8; font-weight:500;">
+                    <div style="font-size:30px; margin-bottom:15px; animation: pulse 1.5s infinite;">⚡</div>
+                    正在拉取数据...
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>@keyframes pulse { 0% {transform:scale(0.95); opacity:0.5;} 50% {transform:scale(1.05); opacity:1;} 100% {transform:scale(0.95); opacity:0.5;} }</style>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+    const qv = document.getElementById('quickViewer');
+    const qvContent = document.getElementById('quickViewerContent');
+    const qvBody = document.getElementById('quickViewerBody');
+    const qvClose = document.getElementById('quickViewerClose');
+
+    function openViewer(url) {
+        qv.style.display = 'flex';
+        void qv.offsetWidth; // trigger reflow
+        qv.style.opacity = '1';
+        qvContent.style.opacity = '1';
+        qvContent.style.transform = 'scale(1) translateY(0)';
+        document.body.style.overflow = 'hidden';
+        
+        qvBody.innerHTML = '<div style="text-align:center; padding:100px; color:#94a3b8;"><div style="font-size:40px; margin-bottom:20px; animation: pulse 1.5s infinite;">⚡</div><div style="font-weight:600; font-size:18px;">正在穿梭时空抓取帖子...</div></div>';
+        
+        fetch(url).then(res => res.text()).then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            let contentContainer = doc.querySelector('.container');
+            if(contentContainer) {
+                let bread = contentContainer.querySelector('.breadcrumb');
+                if(bread) bread.remove();
+                contentContainer.style.margin = '20px auto 40px';
+                qvBody.innerHTML = '';
+                qvBody.appendChild(contentContainer);
+                qvBody.scrollTop = 0;
+            } else {
+                qvBody.innerHTML = '<div style="padding:40px; text-align:center;">解析内容失败，该页可能已损坏。</div>';
+            }
+        }).catch(err => {
+            qvBody.innerHTML = '<div style="padding:40px; text-align:center; color:#ef4444;">拉取失败: '+err+'</div>';
+        });
+    }
+
+    function closeViewer() {
+        qv.style.opacity = '0';
+        qvContent.style.opacity = '0';
+        qvContent.style.transform = 'scale(0.95) translateY(30px)';
+        setTimeout(() => {
+            qv.style.display = 'none';
+            document.body.style.overflow = '';
+            qvBody.innerHTML = '';
+        }, 300);
+    }
+
+    qvClose.addEventListener('click', closeViewer);
+    qvClose.addEventListener('mouseover', () => qvClose.style.background = '#e2e8f0');
+    qvClose.addEventListener('mouseout', () => qvClose.style.background = '#f1f5f9');
+    
+    qv.addEventListener('click', (e) => {
+        if(e.target === qv) closeViewer();
+    });
+
+    document.addEventListener('click', (e) => {
+        let link = e.target.closest('a.thread-card, a.thread-row');
+        if(link && link.href && link.href.includes('threads/')) {
+            e.preventDefault();
+            openViewer(link.href);
+        }
+    });
+})();
+</script>
+
+</body></html>
