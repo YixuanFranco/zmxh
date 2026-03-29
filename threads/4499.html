@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>莲师二十五心子 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>莲师二十五心子 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/诸佛如来本尊坛.html">诸佛如来本尊坛</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">莲师二十五心子</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚震发表于 2009-4-21 19:57<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">莲师二十五心子简介 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/诸佛如来本尊坛.html">诸佛如来本尊坛</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">莲师二十五心子</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚震发表于 2009-4-21 19:57</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">莲师二十五心子简介 <br/>
 <br/>
 当莲师抵藏之时，宫内已秘密传出有一无上密乘之上师将传金刚乘道之说。未几，不少弟子即依止莲师，精进修持。渐次，其中有超凡能力者冒出，莲师即个别传以甚深之修法及仪轨。了知西藏毗邻各佛教国土经典之丰富及深邃，不少弟子即开始有系统地将显密经典取回，加以翻译。 <br/>
 <br/>
@@ -52,12 +73,12 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 嗣后，二十五弟子均各将莲师各部教法圆满，各得证量每一弟子即以某一示相显现，此中画像则留形后世。 <br/>
 <br/>
-<br/>
+3125 <br/>
 <br/>
 以下为二十五心子唐卡及简介： <br/>
 <br/>
 1、努·桑吉益西尊者 <br/>
-<br/>
+3118 <br/>
 <br/>
 努·桑吉益西尊者，诞生于努叶荣地方。 <br/>
 <br/>
@@ -74,7 +95,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：桑吉益西以橛插山崖 <br/>
 <br/>
 2、甲瓦确扬尊者 <br/>
-<br/>
+3119 <br/>
 <br/>
 甲瓦确扬尊者，诞生于沃热磐耶地方，族姓安南。 <br/>
 <br/>
@@ -85,7 +106,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：甲瓦确扬三次作马鸣！ <br/>
 <br/>
 3、南卡酿波尊者 <br/>
-<br/>
+3120 <br/>
 <br/>
 南卡酿波尊者，诞生于涅玛酿嘎达香沃地方，族姓努氏。 <br/>
 <br/>
@@ -106,7 +127,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：南卡酿波日光为座骑！ <br/>
 <br/>
 4、涅大译师智童尊者 <br/>
-<br/>
+3121 <br/>
 <br/>
 涅大译师智童尊者，亦名嘉纳格玛热尊，族姓涅氏。 <br/>
 <br/>
@@ -123,7 +144,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：嘉纳格玛变化显神通 <br/>
 <br/>
 5、空行主尊益西措嘉佛母 <br/>
-<br/>
+3122 <br/>
 <br/>
 空行主尊益西措嘉佛母，父亲为卡青·华吉旺修，母亲为努·盖瓦奔，诞生于札卓莫切地方。 <br/>
 <br/>
@@ -155,7 +176,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：卡青措嘉能起已斩尸！ <br/>
 <br/>
 6、华吉益西尊者 <br/>
-<br/>
+3123 <br/>
 <br/>
 华吉益西尊者，族姓卓莫，精通翻译，译出了诸多《玛姆续》等显密教典。 <br/>
 <br/>
@@ -166,7 +187,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：华吉益西玛姆为仆使！ <br/>
 <br/>
 7、郎·华吉桑盖尊者 <br/>
-<br/>
+3124 <br/>
 <br/>
 郎·华吉桑盖尊者，族姓郎氏，父名阿美香切翟阔，母名觉母嘎丹玛。尊者乃为长子，犹为阿阇黎莲师之意子，具足不可思议之神变及威力。 <br/>
 <br/>
@@ -177,7 +198,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：华吉桑盖天魔供差遣！ <br/>
 <br/>
 8、贝若扎那尊者 <br/>
-<br/>
+3126 <br/>
 <br/>
 贝若扎那尊者，族姓巴郭，诞生于桑嘎地附近，父名巴郭·多杰加波，母名仲吉。 <br/>
 <br/>
@@ -194,7 +215,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：贝若扎那具足智慧眼 <br/>
 <br/>
 9、玉扎酿波尊者 <br/>
-<br/>
+3127 <br/>
 <br/>
 玉扎酿波尊者，为藏拉遮之转世，诞生于甲莫察瓦荣地方。 <br/>
 <br/>
@@ -205,7 +226,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：玉扎酿波证德最为高 <br/>
 <br/>
 10、多杰登炯尊者 <br/>
-<br/>
+3128 <br/>
 <br/>
 多杰登炯尊者，族姓纳朗，年少时曾做法王赤松德赞之法臣，后依莲花生大士入密咒门，从而成为大持明咒者。 <br/>
 <br/>
@@ -220,7 +241,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：多吉登炯风行无阻碍！ <br/>
 <br/>
 11、益西扬尊者 <br/>
-<br/>
+3129 <br/>
 <br/>
 益西扬尊者，显比丘相，乃邬金莲花生大士诸甚深伏藏法之文字书写者。为善巧书法八尊者之一，获证任运行往空行刹土之神变及殊胜、共同悉地。 <br/>
 <br/>
@@ -229,7 +250,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：益西扬尊善往空行刹 <br/>
 <br/>
 12、索波拉华尊者 <br/>
-<br/>
+3130 <br/>
 <br/>
 索波拉华尊者，诞生于雅卓地方。 <br/>
 <br/>
@@ -240,7 +261,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：索波拉华手执猛兽颈！ <br/>
 <br/>
 13、纳朗益西尊者 <br/>
-<br/>
+3131 <br/>
 <br/>
 纳朗益西尊者，显出家相，乃前译嘎、觉、香三尊之一，善巧翻译，获得如大鸟般翱翔虚空之稀有神变，圆具智者及成就者之殊胜功德。 <br/>
 <br/>
@@ -249,7 +270,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：纳朗益西翔空如飞鸟！ <br/>
 <br/>
 14、卡青·华吉旺修尊者 <br/>
-<br/>
+3132 <br/>
 <br/>
 卡青·华吉旺修尊者，显现在家持咒瑜伽士相，为莲花生大士所摄受之意子。 <br/>
 <br/>
@@ -258,7 +279,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：华吉旺修掌握橛诛法！ <br/>
 <br/>
 15、丹玛·翟芒尊者 <br/>
-<br/>
+3133 <br/>
 <br/>
 丹玛·翟芒尊者，诞生于康区丹地，故尊称为丹玛，本名翟芒。 <br/>
 <br/>
@@ -267,7 +288,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：丹玛翟芒证记忆总持！ <br/>
 <br/>
 16、嘎瓦·华札尊者 <br/>
-<br/>
+3134 <br/>
 <br/>
 嘎瓦·华札尊者，即共称嘎、觉、香三尊中之嘎译师，诞生于沃热磐嘎瓦地方。父名嘎瓦·罗丹，母名卓氏翟玛。 <br/>
 <br/>
@@ -276,7 +297,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：嘎瓦华扎圆显他心通！ <br/>
 <br/>
 17、谢波·华吉桑盖尊者 <br/>
-<br/>
+3135 <br/>
 <br/>
 谢波·华吉桑盖尊者，族姓同法王赤松德赞，曾任国王内臣，亦名谢波·赤章空赞。 <br/>
 <br/>
@@ -289,7 +310,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：谢波华桑令使河倒流！ <br/>
 <br/>
 18、真·甲维罗珠尊者 <br/>
-<br/>
+3136 <br/>
 <br/>
 真·甲维罗珠尊者，原为国王赤松德赞内眷，名谓贡波。后显出家相，法名甲维罗珠。 <br/>
 <br/>
@@ -302,7 +323,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：甲维罗珠起尸变黄金！ <br/>
 <br/>
 19、且琼罗扎尊者 <br/>
-<br/>
+3137 <br/>
 <br/>
 大成就且琼罗扎尊者，族姓卓莫，少时即通达翻译，亦称“小童子译师”。 <br/>
 <br/>
@@ -313,7 +334,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：且琼罗扎召擒飞空鸟！ <br/>
 <br/>
 20、旃巴南卡尊者 <br/>
-<br/>
+3138 <br/>
 <br/>
 旃巴南卡尊者，初习苯教，后依止莲师修学密法。通晓翻译。能以神变结期克印勾召北方野牛。尊者将诸多苯教窍诀献于大阿阇黎，莲师遂以之伏藏，后世开取之若干伏藏中，有彼窍诀。 <br/>
 <br/>
@@ -322,7 +343,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：旃巴南卡勾召北野牛！ <br/>
 <br/>
 21、沃瞻旺修尊者 <br/>
-<br/>
+3139 <br/>
 <br/>
 沃瞻旺修尊者，诞生于沃玉达地方，乃沃瞻华季炯乃之子。显在家瑜伽士相，为莲花生大士意子。精通诸密咒教理，现前获证殊胜成就验相。于大河流中，无有畏惧，如鱼跃行。 <br/>
 <br/>
@@ -331,7 +352,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：沃瞻旺修入水似游鱼！ <br/>
 <br/>
 22、玛·仁钦确尊者 <br/>
-<br/>
+3140 <br/>
 <br/>
 玛·仁钦确尊者，诞生于沃热磐玛觉地方，人共称为“智慧敏锐玛僧仁钦确”。尊为藏域最胜九尊者之一。 <br/>
 <br/>
@@ -342,7 +363,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：玛唐仁钦以磐石为餐！ <br/>
 <br/>
 23、拉龙·华吉多杰尊者 <br/>
-<br/>
+3141 <br/>
 <br/>
 拉龙·华吉多杰尊者，诞生于沃热章多贡穆切地方，俗名达涅桑。 <br/>
 <br/>
@@ -357,7 +378,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：华吉多杰穿山无阻碍 <br/>
 <br/>
 24、朗卓·贡确炯乃尊者 <br/>
-<br/>
+3142 <br/>
 <br/>
 朗卓·贡确炯乃尊者，诞生于藏益日象达呢地方，原为法王赤松德赞之内臣，名谓朗卓囊谢，后出家法名为贡确炯乃。 <br/>
 <br/>
@@ -366,7 +387,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 颂曰：朗卓贡确抛雷如射箭！ <br/>
 <br/>
 25、拉森甲瓦香切尊者 <br/>
-<br/>
+3143 <br/>
 <br/>
 拉森甲瓦香切尊者，为藏域最初出家七尊者之一。 <br/>
 <br/>
@@ -376,14 +397,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 从阿阇黎莲师处求取灌顶教诫后修持，从而能示现于无依虚空之中结跏趺坐等稀有神变。乃大自在之成就胜士。 <br/>
 <br/>
-颂曰：甲瓦香切空中跏趺住！ </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-23 19:33<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
+颂曰：甲瓦香切空中跏趺住！ </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div><span style="font-size:15px; letter-spacing:1px;">贝嘛埵吉发表于 2010-6-23 19:33</span><div class="badge-floor">第 2 进</div></div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
 眾生善根盡隨喜 正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽 直至菩提我皈依 <br/>
 所為利益自他故 我今即發菩提心 <br/>
 <br/>
 既發最上菩提心 饒益一切諸有情 <br/>
-菩提妙行皆修作 為利眾生願成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">踏</div>踏雪发表于 2011-2-27 16:12<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
+菩提妙行皆修作 為利眾生願成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">踏</div><span style="font-size:15px; letter-spacing:1px;">踏雪发表于 2011-2-27 16:12</span><div class="badge-floor">第 3 进</div></div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
 眾生善根盡隨喜 正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽 直至菩提我皈依 <br/>

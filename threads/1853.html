@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>浪丐心泪──大藏寺祈竹仁宝哲自传 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>浪丐心泪──大藏寺祈竹仁宝哲自传 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">浪丐心泪──大藏寺祈竹仁宝哲自传</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚震发表于 2006-10-21 20:34<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">    在此，我先向我的根本恩师赤江仁宝哲致敬。 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">浪丐心泪──大藏寺祈竹仁宝哲自传</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚震发表于 2006-10-21 20:34</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">    在此，我先向我的根本恩师赤江仁宝哲致敬。 <br/>
  <br/>
 自一九八六年起，小徒林聪便开始由师徒日常谈天内容中搜集我的生平资料，十多年来不厌其烦地多番追问我生平的细节。近年来，由于祖庭大藏寺僧众及各地弟子的请求，同时为了避免各国弟子及故乡对我生平的失实渲染，我用上了一点时间，由我依回忆口述，林聪、达华译师及卡玛仁青比丘笔录及整理，配合林聪十多年来抄录成的片段，最终才结集成为这本自传。 <br/>
 <br/>
@@ -105,7 +126,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在外公圆寂后，我便常常嚷要出家，但父母却因为我是长子而不愿我离开他们。当时在马尔康县城有一个一百二十岁的老妇，她长年闭关修持，被人视为一位有证量的圣者，能知道许多旁人不能知道的事情，所以受到当地民众的尊崇。她对我双亲说：‘现在老转世者圆寂了（指外公，即先世祈竹仁宝哲之转世），但你们家中另有一个年幼的转世者。这位小转世者必须入大藏寺出家，否则大藏寺的护法会示现忿力，这个小孩必将堕崖而卒！’。此后，家父与家母走访多位有神通及证量的大师，所有大师的预言与老妇所说的不谋而合。家父与家母迫于无奈，便只好把我送至堪萨仁宝哲洛桑占巴(LobsangJinpa，意为‘善慧布施’)大师处剃度。 <br/>
 <br/>
-堪萨仁宝哲曾任拉萨甘丹寺（格律派之祖庭，公元一四零九年由宗喀巴祖师亲建）蒋孜院之方丈，极有名声。他老人家在一九四五年的僧团结夏安居期间，在大藏寺堪康楼中为我一人特别举行剃度及授沙弥戒仪式，为我赐出家法名‘洛桑登度’（LobsangDhondup，意为‘善慧义成’）。这时候外公已圆寂一年多了，我时年十岁。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚震发表于 2006-10-21 20:39<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">第二章──登大藏寺法台 <br/>
+堪萨仁宝哲曾任拉萨甘丹寺（格律派之祖庭，公元一四零九年由宗喀巴祖师亲建）蒋孜院之方丈，极有名声。他老人家在一九四五年的僧团结夏安居期间，在大藏寺堪康楼中为我一人特别举行剃度及授沙弥戒仪式，为我赐出家法名‘洛桑登度’（LobsangDhondup，意为‘善慧义成’）。这时候外公已圆寂一年多了，我时年十岁。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚震发表于 2006-10-21 20:39</span><div class="badge-floor">第 2 进</div></div><div class="post-body">第二章──登大藏寺法台 <br/>
 <br/>
 在剃度后，我并未马上入住大藏寺，而返家住了几个月（记忆中约为三至五个月）。在此期间，由于我被视为高僧之转世者，在教育方面便不能草率，故家人必须为我物色一位德高望重的师长。负责物色明师的有关人等晋见了大藏寺高僧洛桑达华大师(LobsangDawa，意为‘善慧月’)。大师被尊称为‘大藏贡喇洛桑达华’，意为‘与护法无异的大藏寺善慧月上师’。他长有长长的胡子，中等身材；是我出家后第一位正式的师父（在我剃度出家时，大师亦在场担任授戒仪式其中之一位长老职位）。但刚才已提过，堪萨仁宝哲洛桑占巴是我的剃度师父，而我亦视外公为师长之一（外公虽是我亲人而并不是一个出家人，但他是一位大修行者，被视为先世大藏寺法台及高僧祈竹仁宝哲之转世，且又对我间接地授以佛法，所以我把他也视为佛法上之师长之一）。此外，霞渡村的疏南师父是我的启蒙老师。 <br/>
 <br/>
@@ -227,7 +248,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 以上所说的，是我在大藏寺时的情况。我所讲述的每天生活，是初入寺的小僧之学习情况，年长及已学完基本课程的僧人，生活自然大是不同，各有各的修持及寺务工作。当时的大藏寺僧众很多，寺务兴盛。在当地民间正在发生的巨大政局变化，对我们在感觉上来说是很遥远的。 <br/>
 <br/>
-在距今约一百年前，大藏寺有一位名为‘卡华珠洛桑尼玛格西’的长老曾作预言：‘现在显得法务昌隆的此寺，将来会被毁灭荒废，再由来自远方的人重建。于重建后，僧人众多，僧舍遍布整个山头，于召众上殿时，现在以锣声宏亮著称的大铜锣仍不够用，到时要用上两个大锣分别在寺院前方及后方敲响才能令最远的僧舍听到召集。在那时候，寺殿比现在还大，现在寺院尚没有的辩经院，到时也会建成，更会有黄衣僧人与红衣僧人一起学习经论。此时，我将会再来寺院，于后山建舍修持。于此之后，大藏寺将大弘正法，直至末法时代方息！’。在我年幼时，眼见寺院一片鼎盛之况，哪会相信这个预言！其他僧人亦没有在意流传下来的古老说话。没想到在今天公元二零零零年，大藏寺已经历了被毁及重建，这个古老预言至今已应验了绝大部份。始自一九九三年的重建工作，得到了我的各国弟子资助，甚至有新加坡弟子率队往寺院亲手建造部份工程，所以应验了预言中‘来自远方的人重建’的部份。重建后的大雄宝殿比以前的大得多，又先后建成供有十三米高弥勒像的弥勒殿、供有八米高宗喀巴像的祖师殿及供奉五米高千手千眼观音像的大悲殿，此外还建成了大型僧舍、不动佛殿、居士住宿楼、闭关房、大型僧人膳堂及方丈楼等，甚至连新建的祈竹楼亦比我年青时所住的大了许多，应验了‘寺殿比现在还大’的部份预言。重建后的大藏寺，有一座宏伟的辩经院，又应验了‘现在寺院尚没有的辩经院，到时也会建成’部份。至于‘黄衣僧人’，有些人认为是指来自五台山的僧人，但我却认为这一词在广义上泛指汉僧。以今天格律派的趋势来说，大藏寺未来的确极可能有众多汉僧来到与我们这些‘红衣僧人’共同学习佛法。寺院在重建过程中，一直留空了长老预言将于乘愿再来时建舍居住的后山地方（长老曾插杖为记），不敢使用该块土地。至于寺院是否能发展至‘僧舍遍布整个山头’，则要视乎创寺祖师阿旺札巴当初发了怎样的宏愿了，我们所能做到的只是尽力而为及拭目以待！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚震发表于 2006-10-21 20:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">第三章──徒步走拉萨 <br/>
+在距今约一百年前，大藏寺有一位名为‘卡华珠洛桑尼玛格西’的长老曾作预言：‘现在显得法务昌隆的此寺，将来会被毁灭荒废，再由来自远方的人重建。于重建后，僧人众多，僧舍遍布整个山头，于召众上殿时，现在以锣声宏亮著称的大铜锣仍不够用，到时要用上两个大锣分别在寺院前方及后方敲响才能令最远的僧舍听到召集。在那时候，寺殿比现在还大，现在寺院尚没有的辩经院，到时也会建成，更会有黄衣僧人与红衣僧人一起学习经论。此时，我将会再来寺院，于后山建舍修持。于此之后，大藏寺将大弘正法，直至末法时代方息！’。在我年幼时，眼见寺院一片鼎盛之况，哪会相信这个预言！其他僧人亦没有在意流传下来的古老说话。没想到在今天公元二零零零年，大藏寺已经历了被毁及重建，这个古老预言至今已应验了绝大部份。始自一九九三年的重建工作，得到了我的各国弟子资助，甚至有新加坡弟子率队往寺院亲手建造部份工程，所以应验了预言中‘来自远方的人重建’的部份。重建后的大雄宝殿比以前的大得多，又先后建成供有十三米高弥勒像的弥勒殿、供有八米高宗喀巴像的祖师殿及供奉五米高千手千眼观音像的大悲殿，此外还建成了大型僧舍、不动佛殿、居士住宿楼、闭关房、大型僧人膳堂及方丈楼等，甚至连新建的祈竹楼亦比我年青时所住的大了许多，应验了‘寺殿比现在还大’的部份预言。重建后的大藏寺，有一座宏伟的辩经院，又应验了‘现在寺院尚没有的辩经院，到时也会建成’部份。至于‘黄衣僧人’，有些人认为是指来自五台山的僧人，但我却认为这一词在广义上泛指汉僧。以今天格律派的趋势来说，大藏寺未来的确极可能有众多汉僧来到与我们这些‘红衣僧人’共同学习佛法。寺院在重建过程中，一直留空了长老预言将于乘愿再来时建舍居住的后山地方（长老曾插杖为记），不敢使用该块土地。至于寺院是否能发展至‘僧舍遍布整个山头’，则要视乎创寺祖师阿旺札巴当初发了怎样的宏愿了，我们所能做到的只是尽力而为及拭目以待！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚震发表于 2006-10-21 20:40</span><div class="badge-floor">第 3 进</div></div><div class="post-body">第三章──徒步走拉萨 <br/>
 在一九五三年，我近十八岁的时候，中国政府命各藏族地区的领导人物前往成都观摩学习。在这时候，四川嘉绒地区已由共产党管理，但藏人对政府及政策所知不多。我是大藏寺地区的精神领袖，自然也被邀请往成都学习，同行的有双亲（家父当时成为了政协代表）、舅舅等六、七个人。其他地区上的领袖、旧社会中的富人及具影响力的人物，全都在被邀之列，包括原嘉绒藏区的土司(地方领主)。 <br/>
 <br/>
 在当年春季，我家一行六、七个人骑马前往成都。路上除了汶川县有一个客店外，其他晚上都是在路上扎帐蓬而休息。一路上的风景很不错，沿途有大片的竹林(在一九九三年至二零零零年间，我多次回乡，在同一条路上却没见一根竹子)。这次的观摩学习，名义上我们是被邀请参加的贵宾，但我们心明白，实在上我们并无自行决定参加与否的自由。一路上，天性豁达的我尚有心情欣赏风景，父亲却是连日来失眠，对前途及自身安全很是担心。 <br/>
@@ -290,7 +311,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在第二天，同乡僧人带我朝圣大昭寺。大昭寺供奉由文成公主带入西藏的一尊释迦太子等身像。这尊佛像是世界上最神圣的一尊佛像，西藏有一句老话说：‘天下最惨的损失，莫过于走了八十座山，又过了八十条河，最后却没看到大昭寺佛像！’。所以在传统上，凡外地藏人到达拉萨的第一件事，便是先要去大昭寺礼佛，然后才进行其他活动。在佛前，我先是为我的老马祈愿，然后才为双亲祈求，最后则为众生祈求安乐及祈愿自己能光大宗喀巴大师之宗门。在同一天中，我们也去了小昭寺及布达拉宫，因为在同一天中朝礼这三寺的释迦佛，是西藏人认为最是殊胜的机缘。在色拉寺中，我被安排洗浴及缝制新僧袍，半年来未剃过的头发也从新剃去了。由于半年来的徒步行走，我十只脚趾上的脚甲已磨至脱落，这时候才得到疗理敷药。 <br/>
 <br/>
-在清洁过后，我披上新净的僧袍，被引至色拉寺方丈及铁棒师(管僧人风纪的长者)处拜见及登记入学。在三天后，我入城探访了一路上曾对我照顾的同行商旅，然后便正式入学色拉寺，成为八千多个学僧中的一份子。这时候，我身上的盘川早已用光，心中想：‘现在我终于到了色拉寺求学。家乡的政治局势动荡不定，今生中我恐怕是永不能返乡了！’。此时的我，心中很是感慨。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚震发表于 2006-10-21 20:41<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">第四章──色拉寺的奉茶僧 <br/>
+在清洁过后，我披上新净的僧袍，被引至色拉寺方丈及铁棒师(管僧人风纪的长者)处拜见及登记入学。在三天后，我入城探访了一路上曾对我照顾的同行商旅，然后便正式入学色拉寺，成为八千多个学僧中的一份子。这时候，我身上的盘川早已用光，心中想：‘现在我终于到了色拉寺求学。家乡的政治局势动荡不定，今生中我恐怕是永不能返乡了！’。此时的我，心中很是感慨。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚震发表于 2006-10-21 20:41</span><div class="badge-floor">第 4 进</div></div><div class="post-body">第四章──色拉寺的奉茶僧 <br/>
 色拉寺建于公元一四一九年，其创建者为在汉、藏二地有极高地位的大慈法王。这位大师是宗咯巴祖师的弟子。当年汉地皇帝永乐由于仰慕宗喀巴祖师，特遣代表往拉萨迎请祖师入京登国师位。宗喀巴祖师并未答允，但派了他的弟子上京。皇帝在认识了宗喀巴的弟子后，十分敬重，便册封以‘大慈法王’等封号及迎请其为国师。早在当年，大慈法王便已在汉地五台山说法，把宗喀巴祖师的教法带到了汉地。在回藏时，大慈法王带回了皇帝御赐的冠帽、封印及一套御印《大藏经》。在回到拉萨后，大慈法王建成了色拉寺。 <br/>
 <br/>
 与其称色拉寺为‘寺院’，其实倒不如称之为‘佛教学府’更为恰当。色拉寺与甘丹寺及哲蚌寺并列，是世界三大佛教学府。这三间寺院并不同大藏寺一类的道场，而是专门提供僧伽教育的地方。学僧由西藏各地来到这三大寺中，接受佛学的教育，在学成后多回到自己原属寺院，所以这三大寺中并无太多常住僧众，也没有其他寺院这么多的宗教法事，寺方甚至不准学僧作禅修或修密法，而规定学僧必须把所有精力集中在学习经论上面。我在后来的日子中，经常有与汉地佛教徒交流的机会，发现汉人多以为西藏佛教就是密宗和密法，这是一种天大的笑话。在色拉寺等三大寺中，学僧加起来当年便有二万以上，他们必须花近二十年学习显乘经论，在这期间根本不会接触密法，也根本不准许修持密法。这三座佛教学府是西藏佛教的最高权威及中枢，但全都不是密宗学府，可见汉地一般对西藏佛教的理解其实并不正确。 <br/>
@@ -430,7 +451,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 我在色拉寺一共生活了七年多，学业成绩只是中等，学习也不过不失，说不上是很用功（我一直心想学得个大概便足够了，本准备此后便终生闭关苦修终老）。我的师长本来计划在我到达色拉寺起计的第八年，安排举行我在色拉寺昧院中的升座典礼，以补办登记成为色拉寺官方承认的转世者学僧身份。但世事的变幻，又岂是我们所能预计的呢？ <br/>
 <br/>
-在我入学色拉寺的第八年，拉萨局势变得很乱，最后更爆发成为战争，我平淡而充实的求学生涯便告终结，随之而来的是一个变幻年代。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚震发表于 2006-10-21 20:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">第五章──变幻年代 <br/>
+在我入学色拉寺的第八年，拉萨局势变得很乱，最后更爆发成为战争，我平淡而充实的求学生涯便告终结，随之而来的是一个变幻年代。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚震发表于 2006-10-21 20:42</span><div class="badge-floor">第 5 进</div></div><div class="post-body">第五章──变幻年代 <br/>
 在我读第七年班的时候，大藏寺的另一世系法台转世也来到了色拉寺。这位未到二十岁的湛康仁宝哲成为第一年班的新学僧，同时也举行了转世者入学的升座典礼及盛大供养等等。 <br/>
 <br/>
 在湛康仁宝哲入学后不久，战事便爆发了（我当时二十四岁）。僧人本来是不参与政治的，我当时实在也不清楚真正局势情况，只知道学业及寺院生活恐怕是不可能继续下去了，心中很为焦虑。没多久后，有一天炮火直闯色拉寺轰炸，情势十分危急，寺僧只好各有各逃。 <br/>
@@ -483,7 +504,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 由于当地已开始注意上我这个外来者，镇上居民又开始在纷纷讨论我的失踪（我当时藏痔巴桑家中），我眼见情况不太妙，一周后便动身跨越边境，行程是要翻过喜玛拉雅山脉到山对面的印度。 <br/>
 <br/>
-我换上了乔装用途的衣物，与一位老僧人随同赶骡的边境商人上路。在路上，我们不断听到别人谈及‘失踪的喇嘛’之传闻。由于局势不妙，老僧便与一龑骡商先过境了，我则在路上躲了几天。在几天后，我穿上了破衣，面部涂上炭灰，带佩柴刀及绳索乔装为樵夫上路。在行至第二天，我到达了印度边境，印方边境守卫问我：‘听说近日在边境的另一边正嚷要寻捕一个有点名气的喇嘛，这可能就是说你吧？’。在我承认身份后，他们便予以通行。我在长叹一口气后，踏上了印度的领土。这时候，我身上只带一副望远镜、一袋加持过的石粉（这种石粉可供修过禁食闭关的行者食用）、一向永不离身的一尊释迦牟尼佛像及一本沉重的古本《菩提道次第广论》。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚震发表于 2006-10-21 20:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">第六章──印度岁月 <br/>
+我换上了乔装用途的衣物，与一位老僧人随同赶骡的边境商人上路。在路上，我们不断听到别人谈及‘失踪的喇嘛’之传闻。由于局势不妙，老僧便与一龑骡商先过境了，我则在路上躲了几天。在几天后，我穿上了破衣，面部涂上炭灰，带佩柴刀及绳索乔装为樵夫上路。在行至第二天，我到达了印度边境，印方边境守卫问我：‘听说近日在边境的另一边正嚷要寻捕一个有点名气的喇嘛，这可能就是说你吧？’。在我承认身份后，他们便予以通行。我在长叹一口气后，踏上了印度的领土。这时候，我身上只带一副望远镜、一袋加持过的石粉（这种石粉可供修过禁食闭关的行者食用）、一向永不离身的一尊释迦牟尼佛像及一本沉重的古本《菩提道次第广论》。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚震发表于 2006-10-21 20:43</span><div class="badge-floor">第 6 进</div></div><div class="post-body">第六章──印度岁月 <br/>
 在一九六零年十一月初，我到达位于印度边境的甘托克镇（Gangtok，当时属锡金王国领土）。这个地方与西藏的民风及气候差不远，其居民中有不少也是藏族。我在一个尼泊尔人家中住了近一个月。这个人年约四十五岁，从很年青时他便修持宁玛派的法门。他对我很友善，常以很好的食物提供给我。在这个月中，由于可自由地穿上僧袍和修行，我感到两年来未感受过的轻松自在。 <br/>
 <br/>
 在一九六一年藏历年初四，我启程往印度孟加拉西部的噶伦堡(Kalimpong)，车程要一整天。噶伦堡邻近以产茶著名之大吉岭(Darjeeling)，位于喜玛拉雅山脚。这里虽属印度领土，但自古已多藏族聚居，这年代又有更多来自西藏的人涌至，所以在这的生活便与西藏一样。我在噶伦堡有父系的亲戚，在到达后我便暂住在他们的房子中。 <br/>
@@ -602,7 +623,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在一九八五年，已赴澳洲弘法的路敦长老要求我到澳洲协助教授他的洋人徒弟。我当时心想：‘印度色拉寺现已上了轨道，大藏寺则暂时无法集资重建，倒不如暂去澳洲弘法！’。当时我完全没有向洋人说法的经验，心中也有多少担心不知是否应付得来，只抱着姑且一试的心态答应了下来。 <br/>
 <br/>
-在一九八六年，我的签证终于获批准了，我便动身远赴澳洲｜一个我对其全无认识的异国。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚震发表于 2006-10-21 20:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">第七章──到西方弘法 <br/>
+在一九八六年，我的签证终于获批准了，我便动身远赴澳洲｜一个我对其全无认识的异国。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚震发表于 2006-10-21 20:44</span><div class="badge-floor">第 7 进</div></div><div class="post-body">第七章──到西方弘法 <br/>
 在一九八六年的某一天，我收到了往澳洲弘法的签证。没多久后（一九八六年六月），我坐飞机远赴这片我在概念中完全没有认识的土地。 <br/>
 <br/>
 这是我生平第一次乘坐飞机，但我的心情却并非紧张，也谈不上有甚么兴奋。 <br/>

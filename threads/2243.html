@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>胜乐耳传脐火及方便道事体功 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>胜乐耳传脐火及方便道事体功 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/金刚菩提遍庄严.html">金刚菩提遍庄严</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">胜乐耳传脐火及方便道事体功</h1>
-<div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-4-25 05:13<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">胜乐耳传脐火及方便道事体功 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/金刚菩提遍庄严.html">金刚菩提遍庄严</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">胜乐耳传脐火及方便道事体功</h1>
+<div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-4-25 05:13</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">胜乐耳传脐火及方便道事体功 <br/>
 <br/>
 顶礼师尊神佛空行母，解开脉结除障妙肯綮， <br/>
 消除身体疾病无遗漏，认明心识智慧之自性。 <br/>
@@ -58,7 +79,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 六种大乐根本事体功 <br/>
 <br/>
 一、狮子嬉戏功（图1-1，口诀第16） <br/>
- <br/>
+1449 <br/>
 狮子嬉戏跏趺坐，双手交叉聚于脚， <br/>
 向上提升缓放松，以此守持身明点。 <br/>
 <br/>
@@ -66,7 +87,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：守持明点。 <br/>
 <br/>
 二、大象傲岸功（图1-2、3，口诀第17） <br/>
-<br/>
+1450 <br/>
 大象傲岸事体功：五指拳放双脚间， <br/>
 右手放置左手上，九拍臀部和排胫， <br/>
 明点因此向上引。 <br/>
@@ -76,7 +97,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：提引明点。 <br/>
 <br/>
 三、孔雀飞翔功（图1-4、5，口诀18） <br/>
-<br/>
+1451 <br/>
 孔雀飞翔事体功：双手握住脚拇趾， <br/>
 交替拍击臀和踵，明点因而隐体内。 <br/>
 <br/>
@@ -85,7 +106,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：明点灌于体内。 <br/>
 <br/>
 四、虎呕功（图1-6，口诀第19） <br/>
-<br/>
+1452 <br/>
 老虎呕吐事体功；跏趺腿间两手放， <br/>
 挺直上身九佯吐，以此守持身明点。 <br/>
 <br/>
@@ -93,7 +114,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：守持明点。 <br/>
 <br/>
 五、乌龟收缩功（图1-7，口诀第20） <br/>
-<br/>
+1453 <br/>
 乌龟蜷曲事体功：两脚相距一肘宽， <br/>
 大腿内侧手外伸，握住双脚的趾头， <br/>
 体内明点向上提。 <br/>
@@ -102,7 +123,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：上引明点。 <br/>
 <br/>
 六、灵鹫飞翔功（图1-8、9，口诀第21） <br/>
-<br/>
+1454 <br/>
 灵鹫飞翔事体功：结成跛脚交替跳， <br/>
 晃抖双手舞十方，以此隐匿身明点。 <br/>
 <br/>
@@ -122,7 +143,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 三十九种支分功插图所表二十一种方便道功法 <br/>
 <br/>
 一、洗幢功（图2-1、2，口诀第22） <br/>
-<br/>
+1455 <br/>
 宝幢沐浴事体功：宛若沐浴宝幢般， <br/>
 擦洗自己的四肢，以此消除身疾患。 <br/>
 <br/>
@@ -133,7 +154,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 四种须弥功： <br/>
 <br/>
 二、揉蛇功（图2-3） <br/>
-<br/>
+1456 <br/>
 四种须弥事体功：恰似揉蛇把头搓， <br/>
 任何二孽头疾消。 <br/>
 <br/>
@@ -141,14 +162,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：消除头部诸疾。 <br/>
 <br/>
 三、筒车功（图2-4） <br/>
-<br/>
+1457 <br/>
 旋转颈脖如筒车，喉间颈部诸病消。 <br/>
 <br/>
 法要：双手交叉抓胸前，颈部向左右正反旋转各三次。 <br/>
 功效：消除喉间和颈部诸疾。 <br/>
 <br/>
 四、养息牢狱功（图2-5） <br/>
-<br/>
+1458 <br/>
 养息牢狱须弥功：击拍四方各三次， <br/>
 消除头鼻诸病患。 <br/>
 <br/>
@@ -156,7 +177,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：消除头疾和鼻疾。 <br/>
 <br/>
 五、泉水功（图2-6） <br/>
-<br/>
+1459 <br/>
 凝视十方之泉水，眼内翳障全消除， <br/>
 防止聋瞎和乏味，不生瘿疣与皱纹， <br/>
 解开头部脉结症。 <br/>
@@ -167,7 +188,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 四种树木功： <br/>
 <br/>
 六、三山功（图2-7，口诀第23） <br/>
- <br/>
+1460 <br/>
 头手脚部三山功：用力提至肩部位， <br/>
 消除胸肋的病患。 <br/>
 <br/>
@@ -175,7 +196,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：消除胸胁疼痛诸疾。 <br/>
 <br/>
 七、放线团功（图2-8） <br/>
- <br/>
+1461 <br/>
 伸展线团事体功：握拳拍打左右肩， <br/>
 肩周疼痛全祛除。 <br/>
 <br/>
@@ -183,7 +204,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：消除肩疾、心脏和命脉（生命所依之脉），以及前后疼痛诸疾。 <br/>
 <br/>
 八、器官盈满功（图2-9） <br/>
-<br/>
+1462 <br/>
 感官盈满事体功：轮番展臂如张弓， <br/>
 祛除手臂乏力症，以及上身疼痛病。 <br/>
 <br/>
@@ -191,7 +212,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：缓解手和上身疼痛等症。 <br/>
 <br/>
 九、拇指腰间功（图2-10） <br/>
-<br/>
+1463 <br/>
 右手拇指顶腰间，如抛绳般连转动， <br/>
 左拳击背达三遍，同样握拳拍右肩。 <br/>
 手臂手腕诸疾消，鼻血流淌可阻止， <br/>
@@ -204,7 +225,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 上体四种功： <br/>
 <br/>
 十、流星交叉功（图2-11，口诀24） <br/>
-<br/>
+1464 <br/>
 流星交叉双手功：抓住双肩左右扭， <br/>
 上下寒热诸病除，前后疼痛可以消。 <br/>
 <br/>
@@ -212,7 +233,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：消除上下寒热往来症，止胸背疼痛。 <br/>
 <br/>
 十一、“里日”作揖功（图2-12） <br/>
-<br/>
+1465 <br/>
 里如交叠两臂肘，交替牵曳向上举， <br/>
 胸部肝肺百病除。 <br/>
 <br/>
@@ -220,7 +241,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：消除神经紊乱症、肺部病变和肝病。 <br/>
 <br/>
 十二、夹击须弥功（图2-13、14，口诀25） <br/>
-<br/>
+1466 <br/>
 击须弥功用双手，独股金刚举端正， <br/>
 左右胸膛轻轻拍，胸膛中间拍一次， <br/>
 复又向下拍三次，消除脾疾与肋痛， <br/>
@@ -231,7 +252,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：消除脾疾、胸肋疼痛和上体闷胀等病患。 <br/>
 <br/>
 十三、吹笛功（图2-15） <br/>
-<br/>
+1467 <br/>
 吹笛功为左膝盖，右手掩肩倒竖立。 <br/>
 上身左右交替扭，可除胸肺诸病患， <br/>
 心风下泄病症消，腮炎痞块可预防， <br/>
@@ -243,14 +264,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 腰部四种功法： <br/>
 <br/>
 十四、搅海功（图2-16，口诀26） <br/>
-<br/>
+1468 <br/>
 腹似搅海转脐轮，消除腹中积食症。 <br/>
 <br/>
 法要：左右旋转腹脐，复转腹中三次。 <br/>
 功效：消除积食症。 <br/>
 <br/>
 十五、美女仰身功（图2-17） <br/>
- <br/>
+1469 <br/>
 美女挺身猝然起，双手用力向后挥， <br/>
 腰部用力向后伸，消除肾病和髋痛。 <br/>
 <br/>
@@ -258,7 +279,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：消除肾病和髋骨疼痛。 <br/>
 <br/>
 十六、压抑欲界功（图2-18，口诀27） <br/>
- <br/>
+1470 <br/>
 镇天界功腿交叉，双手交叉握拇趾， <br/>
 向上提拉缓缓放，消除痞块水肿病， <br/>
 以友淋病与尿阻。 <br/>
@@ -267,7 +288,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：消除痞块、肾型水肿、小便淋漓及阻塞等病患。 <br/>
 <br/>
 十七、鹿马和合功（图2-19） <br/>
-<br/>
+1471 <br/>
 鹿马野合指交叉，先放头顶后拍脐， <br/>
 手掌揉擦肚腹部，痞块水肿腰疾消， <br/>
 所有寒热虫疾除，解开腰部脉结症。 <br/>
@@ -278,7 +299,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 下体四种功法： <br/>
 <br/>
 十八、金刚步功（图2-20,口诀28） <br/>
-<br/>
+1472 <br/>
 金刚步法是何状？叉手膝弯当舞跳， <br/>
 怀间平放两只手，可防邪风向上壅， <br/>
 以及持命风僵滞。 <br/>
@@ -287,7 +308,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：消除风疾（体内气息错乱引起的血管和神经系统诸病，分癔病、神经官能症等六十三种）、风邪上壅（风邪侵入上体肺脏等处，引起胸隔胀痛，呼吸困难等症）和神经官能症。 <br/>
 <br/>
 十九、鳌鱼伸缩功（图2-21） <br/>
-<br/>
+1473 <br/>
 鳌鱼伸缩事体功：双手搓揉腿外侧， <br/>
 轮流抖动一双脚，消除身痛和拘楼， <br/>
 以及脚疾关节痛。 <br/>
@@ -296,7 +317,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：消除全身病患、四肢关节疼痛和脚疾。 <br/>
 <br/>
 二十、蛙步功（图2-22，口诀29） <br/>
-<br/>
+1474 <br/>
 蛙步功法是何状？有时匍匐有时跳， <br/>
 黄水水肿即可消。 <br/>
 <br/>
@@ -304,7 +325,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：消除黄水病（黄水，存留于关节、眼部和皮肉之间血液沉淀与胆汁精华所生赤黄色稀薄粘液。此量过多过少均转成黄水病）和涎分虚肿。 <br/>
 <br/>
 二十一、金刚跏趺坐功（图2-23、24、25、26、27） <br/>
-<br/>
+147514761477 <br/>
 一结金刚跏趺坐，下身百病自然消。 <br/>
 <br/>
 法要：1.结金刚跏趺坐，正襟危坐，右手握左手手腕，置于下腹，引导气息下降，观想解开左、中、右之脉道。舒息。 <br/>
@@ -340,7 +361,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 总计数目一十八。 <br/>
 <br/>
 二十二、消除气症功（图2-28、29、30、31、32，口诀1） <br/>
-<br/>
+14781479148014811482 <br/>
 主治气疾一功法：交叉胸前如轮转， <br/>
 双脚金刚跏趺坐，双手拇指互交叉， <br/>
 按住无名指握拳，反复拧扭达九次， <br/>
@@ -353,62 +374,62 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 5.上体挺直，伸直手，握拳，以右手食指捂右鼻孔，呼吸三次。同样，用左手食指捂左鼻孔，呼吸三次。继而，置两手于大腿之间，如是三次。 <br/>
 <br/>
 和风四功（图2-33，口诀2） <br/>
-<br/>
+1483 <br/>
 法要：身体结毗卢七法坐姿。任运自在地呼吸四次。 <br/>
 <br/>
 猛烈瓶气功（图2-34，口诀3） <br/>
- <br/>
+1484 <br/>
 法要：伴随“咝咝”喉音，尽量呼气。继而，吸气，尽量留住。涤荡血脉、精脉和中脉，次第呼出。 <br/>
 <br/>
 练身增长功： <br/>
 法要： <br/>
- <br/>
+1485 <br/>
 1.（图2-35，口诀4）结跏趺坐，修练瓶气。 <br/>
- <br/>
+1486 <br/>
 2.（图2-36）修练瓶气后，上身做三次欲跳状。 <br/>
- <br/>
+1487 <br/>
 3.（图2-37）用左手从肩部擦刮，击拍两腋。 <br/>
-       <br/>
+1488       <br/>
 4.（图2-38）左手握右手小臂。 <br/>
- <br/>
+1489 <br/>
 5.（图2-39）拍击肩臂，手掌平展，指头相对，擦抹头顶。两手分别揉擦头部两侧三次，揉擦面部三次。然后从肩部左右切入推纳三次。侧面转莲印三次。 <br/>
-       <br/>
+1490       <br/>
 6.（图2-40）然后体侧转莲印，最末一次莲转时做跳姿。继而，伸直右脚，左脚蜷曲。从脚尖至髋骨，双手转莲印三次。同样，弯右脚，伸左脚，从脚尖至髋骨，双手转莲印三次。 <br/>
-       <br/>
+1491       <br/>
 7.（图2-41）按摩脚拇趾。 <br/>
-       <br/>
+1492       <br/>
 8.（图2-42）坐地，左大腿压左小腿，左手握右脚掌，左膝跪立，上身右转。左右交换，做同样的功法。继而，结跏趺坐，舒息。 <br/>
 <br/>
 练五肢功（口诀5） <br/>
 法要： <br/>
- <br/>
+1493 <br/>
 1.（图2-43）修练瓶风。颈向左右扭动，拍击左右前后各三次。颈部左右扭动各三次。 <br/>
-       <br/>
+1494       <br/>
 2.（图2-44）双膝着地，左手又腰，右手伸直，反复三次。如是左右手交换做同样功法。接着，双手伸直，向十方摇抖。 <br/>
-       <br/>
+1495       <br/>
 3.（图2-45）蹲地，双手和左脚触地。右脚伸直，举脚面，向左、中、右三个方位举移。左脚做同样功法。继而，结跏趺坐，舒息。 <br/>
 <br/>
 射箭抛绳功（口诀6） <br/>
 法要： <br/>
- <br/>
+1496 <br/>
 1.（图2-46）修练瓶风。张手掌，左手贴乳根，右手伸直，做张弓之姿三次。左右手交换，做同样功法三次。 <br/>
-       <br/>
+1497       <br/>
 2.（图2-47）伸直右手三次，左手三次。伸直双手三次，舒息。 <br/>
 <br/>
 转轮功（口诀7） <br/>
 法要： <br/>
- <br/>
+1498 <br/>
 1.（图2-48）修练瓶气，双手置于膝部，向腹部左右旋转各三次，在腹部中间转动三次。消气（消气，持气不能忍时，应予消散，分为内消与外消。内消，观想气入左右二脉，充满中脉，消失于心间；外消，观想气先满中脉，后满四脉轮，复遍满全身及毛孔）。 <br/>
-       <br/>
+1499       <br/>
 2.（图2-49）鼓盈瓶气，伸直双手，平展手掌，置于膝下。 <br/>
-       <br/>
+1500       <br/>
 3.（图2-50）向外消气，向左右扭转上身，做傲慢相三次。 <br/>
 功效：消除周身风症，使体内气息畅通，身体爽快。 <br/>
 <br/>
 四种坐功 <br/>
 <br/>
 二十三、毗卢七法功（图2-51） <br/>
- <br/>
+1501 <br/>
 穴道安住四功法：谛洛七法跏趺坐， <br/>
 世称毗卢七法旨，两脚金刚跏趺坐， <br/>
 灵热隐隐遍周身；手放脐下四指处， <br/>
@@ -423,7 +444,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：结跏趺坐，灵热任运而生；手结等引状印能打开脉道，舒心；脊椎挺直，气息自然入位；颈部俯曲，心尖向上，生无分别心；双肩后张，使风疾消失；眼觑鼻尖，视角清晰，身心专注，生起乐暖。 <br/>
 <br/>
 二十四、空心结束缚功（图2-52，口诀33） <br/>
-<br/>
+1502 <br/>
 空心结束缚功法：诸种要点如前述， <br/>
 叉脚蹲坐套禅带，功德如前所述及， <br/>
 此功特能生灵热。 <br/>
@@ -432,7 +453,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：如上文所述，尤能产生灵热。 <br/>
 <br/>
 二十五、树木交叉功（图2-53，口诀34） <br/>
- <br/>
+1503 <br/>
 树木交叉事体功：双脚交叉似格子， <br/>
 紧缚双手于腕间，双膝外侧双手抱， <br/>
 寒症能够随即消。 <br/>
@@ -441,7 +462,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：寒症即除。 <br/>
 <br/>
 二十六、三身交叉功（图2-54，口诀35） <br/>
- <br/>
+1504 <br/>
 三身交叉事体功：左脚脚背的上面， <br/>
 放置右脚的掌弯，双手抱住双膝盖， <br/>
 诸脉邪症得纠正，体内气分入命根。 <br/>
@@ -451,7 +472,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：诸脉得到矫正、疏通，气息进入命脉。 <br/>
 <br/>
 二十七、强降灵热之束缚六空心结功（图2-55，口诀8） <br/>
-<br/>
+1505 <br/>
 空心结功速生暖，亦即强力暖降功。 <br/>
 上述六功纲要是：双脚交叉如格子， <br/>
 双手交叉腿中间，握住脚趾左右转， <br/>
@@ -462,7 +483,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：消除积食症和痞块，体内灵热如火烧，能裸身卧雪地。 <br/>
 <br/>
 二＋八、肯綮舍弃功（图2-56） <br/>
- <br/>
+1506 <br/>
 蛇鹏抛弃肯綮功：手脚拇趾立地上， <br/>
 把头弯至双膝间，尽力晃动全身躯， <br/>
 功德如上所述及，小便淋漓可收敛。 <br/>
@@ -471,7 +492,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：其它如上所述，尤能使小便淋漓收敛。 <br/>
 <br/>
 二十九、两种消除掉举之灵鹫翔空功（图2-57、58，口诀38） <br/>
- <br/>
+1507 <br/>
 消除昏沉事体功：倘若闷倦缠绕身， <br/>
 功法好像鹫翔空，举起双手腾跃状， <br/>
 在那空中观明点，再三呼气随念“帕”。 <br/>
@@ -480,7 +501,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：消除神志昏聩。 <br/>
 <br/>
 三十、神志持瓶功（图2-59） <br/>
- <br/>
+1508 <br/>
 消除神志不清功：神志掉举持瓶风， <br/>
 双手交叉放膝上，把头放在手旁边， <br/>
 观想脚掌的光点，散乱掉举自能除。 <br/>
@@ -495,14 +516,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 乐暖熊熊燃烧起，夜间只可单衣睡。 <br/>
 <br/>
 法要： <br/>
- <br/>
+1509 <br/>
 1.狼卧功（图2-60），修持瓶气，右胁着地，右手放在左肾部位上，双膝贴胸，左手抱双膝。 <br/>
-       <br/>
+1510       <br/>
 2.狮卧功（图2-61），卧姿同上，右手无名指捂鼻孔，左手掩臀部。 <br/>
 功效：乐暖熊熊燃，可单衣过夜。 <br/>
 <br/>
 三十二、两种行走功之如堡倒塌功（图2-62，口诀15） <br/>
-<br/>
+1511 <br/>
 行走时候二功法：所谓如堡降落功， <br/>
 仰面踢脚抖躯体，黄水病症自然消， <br/>
 明点隐没无庸疑，身材自然长得美。 <br/>
@@ -511,7 +532,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 功效：黄水就地退，明点隐身。 <br/>
 <br/>
 三十三、老鹰轮休功（图2-63） <br/>
- <br/>
+1512 <br/>
 老鹰轮休事体功：强抑不忘下行风， <br/>
 观想行空两神女，用翅托腋满天飞； <br/>
 观想脚下的风轮，好似神弓的一端， <br/>
@@ -530,9 +551,9 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 上身强健如狮子。 <br/>
 <br/>
 法要： <br/>
- <br/>
+1513 <br/>
 1.（图2-64）结跏趺坐，双手抱膝。 <br/>
-       <br/>
+1514       <br/>
 2.（图2-65）口念咒语“帕哈哈”，舒息。 <br/>
 功效：排除体内浊气，使明点隐身，上体宛若狮子。 <br/>
 <br/>
@@ -544,9 +565,9 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 修练往生妙肯綮。 <br/>
 <br/>
 法要： <br/>
- <br/>
+1515 <br/>
 1.（图2-66）结跏趺坐，用两只手掌和十指遮掩脸和口、鼻、眼等五窍，旋转上体如轮。 <br/>
-       <br/>
+1516       <br/>
 2.（图2-67）继而，念咒语“嘛哈哈”三次，舒息，平摊手掌。 <br/>
 功效：消除风、脉、明点之障碍，使精气散布于四脉轮。 <br/>
 <br/>
@@ -560,14 +581,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 止住遗精向上引。 <br/>
 <br/>
 法要： <br/>
- <br/>
+1517 <br/>
 1.（图2-68）结金刚跏趺坐，双手拇指分别压无名指，深呼吸三次，口念咒字“吽”长短二十一次。 <br/>
-       <br/>
+1518       <br/>
 2.（图2-69）继而，握拳，插入大腿旁。此后，两手平摊相叠，贴下腹部，猛解跏趺坐姿。上体向左右扭动，舒息。 <br/>
 功效：防止遗精，提升明点。 <br/>
 <br/>
 三十七、狐狸发笑功（图2-70，口诀10） <br/>
-<br/>
+1519 <br/>
 狐狸发笑事体功：双手握拳置膝上， <br/>
 双脚金刚跏趺坐，念诵“吽”字上吸气。 <br/>
 <br/>
@@ -579,13 +600,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 双手掩住两膝盖，猛念“嘿噶嘿噶”咒。 <br/>
 <br/>
 法要： <br/>
- <br/>
+1520 <br/>
 1.（图2-71)蹲坐，脚尖着地，臀部触两踵，双手掩膝，深呼吸三次。 <br/>
-       <br/>
+1521       <br/>
 2.（图2-72）继而，口念咒语“嘿噶”，平摊双手，相叠于腹部，如上文所述，舒息。 <br/>
 <br/>
 三十九、狮子仰卧功（图2-73，口诀12） <br/>
-<br/>
+1522 <br/>
 狮子仰卧加行功：双脚金刚跏趺坐， <br/>
 双手放置盘脚间，猛念“嘿噶嘿噶”咒， <br/>
 继之如狮抖威风，然后聚神渐放松。 <br/>
@@ -598,34 +619,34 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 粗细脉结全解开，容光焕发体态美。 <br/>
 延年增寿不衰老，脉陷皱纹不出现， <br/>
 返老还童容颜俊，内具空行本尊相， <br/>
-是为各功的要点。 </div></div><div class="post"><div class="post-header"><div class="avatar">东</div>东宁发表于 2008-12-1 17:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">非常感谢你,找了很久啦... </div></div><div class="post"><div class="post-header"><div class="avatar">月</div>月光行者发表于 2009-2-7 00:01<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">好东西呀,收藏了.非常感谢楼主...... <br/>
-有时间一定好好学学 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 08:41<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
+是为各功的要点。 </div></div><div class="post"><div class="post-header"><div class="avatar">东</div><span style="font-size:15px; letter-spacing:1px;">东宁发表于 2008-12-1 17:10</span><div class="badge-floor">第 2 进</div></div><div class="post-body">非常感谢你,找了很久啦... </div></div><div class="post"><div class="post-header"><div class="avatar">月</div><span style="font-size:15px; letter-spacing:1px;">月光行者发表于 2009-2-7 00:01</span><div class="badge-floor">第 3 进</div></div><div class="post-body">好东西呀,收藏了.非常感谢楼主...... <br/>
+有时间一定好好学学 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div><span style="font-size:15px; letter-spacing:1px;">贝嘛埵吉发表于 2010-6-25 08:41</span><div class="badge-floor">第 4 进</div></div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
 众生善根尽随喜  正觉菩提意中持 <br/>
 正觉妙法及僧伽  直至菩提我皈依 <br/>
 所为利益自他故  我今即发菩提心 <br/>
 既发最上菩提心  饶益一切诸有情 <br/>
-菩提妙行皆修作  为利众生愿成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-20 23:41<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+菩提妙行皆修作  为利众生愿成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金鑫发表于 2010-10-20 23:41</span><div class="badge-floor">第 5 进</div></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-20 23:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金鑫发表于 2010-10-20 23:44</span><div class="badge-floor">第 6 进</div></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">光</div>光耀大千发表于 2010-12-28 19:58<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">光</div><span style="font-size:15px; letter-spacing:1px;">光耀大千发表于 2010-12-28 19:58</span><div class="badge-floor">第 7 进</div></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">摩</div>摩诃萨埵发表于 2011-1-7 09:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">至诚顶礼至尊大恩根本上师金刚持！ <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">摩</div><span style="font-size:15px; letter-spacing:1px;">摩诃萨埵发表于 2011-1-7 09:24</span><div class="badge-floor">第 8 进</div></div><div class="post-body">至诚顶礼至尊大恩根本上师金刚持！ <br/>
 至诚顶礼无量上师本尊空行护法尊！ <br/>
 一心降魔除障护持正佛正法正行者！ <br/>
-一心修法成佛誓度无边如母有情众！ </div></div><div class="post"><div class="post-header"><div class="avatar">桑</div>桑天.加措发表于 2011-1-7 18:18<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">頂禮至尊金剛持 <br/>
-勝樂耳傳清淨法.......百千萬劫南值遇 </div></div><div class="post"><div class="post-header"><div class="avatar">菩</div>菩提萨埵发表于 2011-10-28 00:09<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">米麥只尾得清今惹舍 <br/>
+一心修法成佛誓度无边如母有情众！ </div></div><div class="post"><div class="post-header"><div class="avatar">桑</div><span style="font-size:15px; letter-spacing:1px;">桑天.加措发表于 2011-1-7 18:18</span><div class="badge-floor">第 9 进</div></div><div class="post-body">頂禮至尊金剛持 <br/>
+勝樂耳傳清淨法.......百千萬劫南值遇 </div></div><div class="post"><div class="post-header"><div class="avatar">菩</div><span style="font-size:15px; letter-spacing:1px;">菩提萨埵发表于 2011-10-28 00:09</span><div class="badge-floor">第 10 进</div></div><div class="post-body">米麥只尾得清今惹舍 <br/>
 直比清彼汪波降彼陽 <br/>
 獨巴馬魯均者商尾當 <br/>
 剛井克比左近宗喀巴 <br/>
 洛桑紮比曉拉所瓦德 <br/>
-揭谛揭谛 波罗揭谛 波罗僧揭谛 菩提萨婆诃  嗡嘛呢叭咪吽 </div></div><div class="post"><div class="post-header"><div class="avatar">秋</div>秋月如水发表于 2012-10-10 14:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">至诚顶礼至尊大恩根本上师金刚持！ <br/>
+揭谛揭谛 波罗揭谛 波罗僧揭谛 菩提萨婆诃  嗡嘛呢叭咪吽 </div></div><div class="post"><div class="post-header"><div class="avatar">秋</div><span style="font-size:15px; letter-spacing:1px;">秋月如水发表于 2012-10-10 14:37</span><div class="badge-floor">第 11 进</div></div><div class="post-body">至诚顶礼至尊大恩根本上师金刚持！ <br/>
 至诚顶礼无量上师本尊空行护法尊！ <br/>
 一心降魔除障护持正佛正法正行者！ <br/>
 一心修法成佛誓度无边如母有情众！ <br/>

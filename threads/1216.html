@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>密勒日巴尊者传 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>密勒日巴尊者传 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">密勒日巴尊者传</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-7-19 08:55<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body"><br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">密勒日巴尊者传</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-7-19 08:55</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">1599 <br/>
 <br/>
  <br/>
 <br/>
@@ -352,7 +373,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 “‘闻喜！起先我如传你咒术，怕你这个憨头憨脑的人会后悔；现在既然知道一切都非虚构，我当将咒术传授给你。我有两个秘法：一个是‘杀法哼’，一个是‘毁法呸’；有一位叫古容巴功德海的喇嘛，住在藏州西隙村，他精通医药，并且擅咒术。他也有一个秘咒，名降雹法，我们彼此传授了独有的秘法以后，就成为莫逆之交。因此，凡是到我这里来学咒术的人，我都送到他那里去；他也将向他求咒术的人送到我这儿来。今番你也不能例外，就让我的大儿子陪你一同去吧！’ <br/>
 <br/>
-“师傅为我准备了食物，又给我带了卫州的细毡，毛呢；还给我一些用来供养古容巴师傅的礼品。我们将这些东西都装载在马背上，就向藏州出发。” </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-11 17:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">第二章 <br/>
+“师傅为我准备了食物，又给我带了卫州的细毡，毛呢；还给我一些用来供养古容巴师傅的礼品。我们将这些东西都装载在马背上，就向藏州出发。” </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-11 17:00</span><div class="badge-floor">第 2 进</div></div><div class="post-body">第二章 <br/>
 <br/>
 “到了西隙村，会见了古容巴喇嘛，我将带来的礼品悉数供奉了给他，然后又将我的悲惨遭遇和所以要求诛法的理由细细的叙述了一遍，恳求喇嘛传授我咒法。喇嘛说： <br/>
 <br/>
@@ -519,7 +540,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 “我带着旅行的食量与上师的介绍书信，就动身上路。一路上老是想，恨不得马上会见上师才好。 <br/>
 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-11 17:11<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">第三章 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-11 17:11</span><div class="badge-floor">第 3 进</div></div><div class="post-body">第三章 <br/>
 <br/>
 “在我要行抵扎绒的前一天晚上，马尔巴上师梦见大善巧者那诺巴上师降临灌顶，那诺巴尊者给了马尔巴上师一个五股琉璃金刚杵，在杵的尖端上，略微沾有一些尘垢；另外又给了一个盛满了甘露的金瓶子，说道：‘你拿这个瓶子里面的水来洗净金刚杵上的尘垢；把金刚杵高悬在大幢之上，上令诸佛欢喜，下令众生获益，这样就能成就自他二种事业。’言毕逝去。马尔巴上师就依照尊者的话，用瓶中的甘露洗净金刚杵，把金刚杵放在大幢之上，金刚杵忽然大放光明，普照三千大千世界。光明照在六道众生的身上，消除了所有的痛苦和悲哀。众生快乐踊跃，向马尔巴上师和大幢顶礼；恒河沙数无量诸佛都向着这个大幢开光（开光——就西藏佛教一般习俗言，开光者即诸佛亲自降临加持祝福）。 <br/>
 <br/>
@@ -720,7 +741,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 “‘你还不知道吗？就是那个你见了跟仇人一样的，专给他苦吃的大力呀！’ <br/>
 <br/>
 “上师一听，脸色马上变成青白，泪如雨下，合掌祈祷道：‘口授传承的历代上师啊！空行及护法啊！请使我那宿善的好弟子回来啊！’说完了，默然无言。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-11 17:27<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">第四章 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-11 17:27</span><div class="badge-floor">第 4 进</div></div><div class="post-body">第四章 <br/>
 <br/>
 <br/>
 “我回去之后，先去顶礼师母，师母非常欢喜说：‘啊呀！这一下我放心了，上师这一次恐怕要传给你法了。当我告诉他，说你走了，他老人家喊着说：‘使我宿善的好弟子回来啊！’他连眼泪都流了出来了！大力！你已经把上师的慈悲心引出来了！’我心里想：这不过是师母安慰我的话罢了；假使是真的流眼泪，而又叫我为宿善的弟子，那当然是满意我的表现，不然只是说：把他喊回来，而仍不给灌顶和口诀，那么我这个所谓‘宿善’也是最下的。我如果不到别的地方去，痛苦又会找上身上来的！正在这样暗自思量的时候，师母就告诉上师说：‘大力不肯舍弃我们，他又回来了！叫他到你面前来顶礼好不好！’ <br/>
@@ -893,7 +914,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 “‘你把我给你的酒都喝完了，把田耕得一点不剩，这是你将领受口诀成为法器，达到圆满大觉的徵兆。后来，你供养了我一个有四个柄的铜钵，这是表示你将成为我四大弟子之一。铜钵上毫无一点破隙，表示你烦恼垢轻，身享‘拙火定’大暖乐的徵兆。你用空来供养我，表示将来在你修行的时候，会有食物困难，遭受饥饿的痛苦。我为了亻头你的后半生与你的弟子法统得大受用的原故，又为了使有根器的弟子依着口诀的精要生起喜乐的原故，我就装满酥油在空钵中，燃成明灯。为着使你生起广大名声，所以我敲铜钵让它发声。为着净除你的罪业，所以我叫你来建筑息，憎，怀，诛的房屋。我把你从灌顶的会座中赶出去，又做很多不合情理的事情，可是你不起丝毫的邪见；这表示将来你的弟子和法统，学道时能具足信心，精进，智慧，慈悲等一切弟子应具的条件。修道之时，皆能於此生无大贪着，有忍苦精进修行的毅力；最后生起觉受证解，具足慈悲和加持，成为圆满具相的上师。我此口授传承法统将会发扬光大，如月轮增长，光辉无限。儿呀！你要高兴啊！’ <br/>
 <br/>
 “这样为我授记，鼓励，安慰和赞叹。我从此以后，就踏上修正法的幸福之途了。” <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-11 17:41<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">第五章 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-11 17:41</span><div class="badge-floor">第 5 进</div></div><div class="post-body">第五章 <br/>
 <br/>
 惹琼巴又问道：“尊者，您得了口诀之后，是立刻就到山里去修行呢？还是仍旧住在马尔巴上师那里？” <br/>
 <br/>
@@ -1477,7 +1498,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 “见了俄巴喇嘛，把他的口诀和我的作了一个比较；在密续的解释和说法的善巧方面，他比我强；可是在修行的口诀上，我绝不比他弱；特别是空行口传，我知道得确比他多。最后我向俄巴喇嘛顶礼，发愿以后，就一直回自己的家乡了。 <br/>
 <br/>
 “十五天的路程，三天就走到了。我心里想：修气功的能力，真伟大啊！” <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-11 17:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">第六章 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-11 17:44</span><div class="badge-floor">第 6 进</div></div><div class="post-body">第六章 <br/>
 <br/>
 惹琼巴又问：“上师老人家啊！您回乡以后，家乡的情形是不是和梦中的预兆一样呢？究竟会见你的母亲没有呢？” <br/>
 <br/>
@@ -1704,7 +1725,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 愿加持弟子， 消遥得山居。 <br/>
  <br/>
 “姑母听了我的歌，就说：‘像侄儿你这样的人，才是真正的修行人啊！’就心满意足地下山去了。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-11 17:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">第七章 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-11 17:55</span><div class="badge-floor">第 7 进</div></div><div class="post-body">第七章 <br/>
 <br/>
 “我受了这种种的刺激之后，对于人世间起了更大的厌离之心；因为决定了舍弃家宅和田园，心中反而觉得坦然无事。所以我就立刻想到护马白崖窟去修行。这一个崖洞是我开始修行以至日后获得成就的地方，所以后来被大家称做‘发足崖窟’。 <br/>
 <br/>
@@ -2022,7 +2043,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 汝等忏悔我已知，　　答汝供奉七蚌壳； <br/>
 为此教汝口诀歌，　　欢喜为汝传妙法。 <br/>
 <br/>
-　　“我的歌，使得那几位女郎们都生了信心，欢喜信受而去。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-11 18:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">第八章 <br/>
+　　“我的歌，使得那几位女郎们都生了信心，欢喜信受而去。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-11 18:04</span><div class="badge-floor">第 8 进</div></div><div class="post-body">第八章 <br/>
 <br/>
 “我来到布林，打听了关于曲巴和寄普两地的祥细情形，便决定到寄普的太阳窟中去修行，在太阳窟中住了几个月，觉得都有很迅速的进步。布林的居民常常拿食物来供养我，零零星星的时常有许多人来看我，渐渐地我觉得对修定有一点妨碍，就想到师傅指示的无人深山中去修行。 <br/>
 <br/>
@@ -2233,7 +2254,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 尊者说完了他的故事，参加法会的会众，对佛法都生起了信仰和厌世出离及慈悲的心，大家都对世间八法极生厌离，虔诚慕乐正法。 <br/>
 <br/>
 尊者的大弟子们，都向尊者发愿：愿意断舍世欲，终生精进修法，作利益众生的事业。天神诸弟子也都发愿维护佛法。世俗的听众中，有很多上根的人，都皈依了尊者作为弟子，如法修行终于成为得证实相境界的瑜珈行者。中根的人，都愿以月计或以年计来专门修法。下根的人，也决定终身不做恶事，常做善业。参与闻法的大众都得到了究竟的利益。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-11 18:15<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">第九章 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-11 18:15</span><div class="badge-floor">第 9 进</div></div><div class="post-body">第九章 <br/>
  <br/>
 以上是尊者自述的传记，由他的弟子们所记录的。尊者一生的事迹，如果详细叙说，可以分为三大类：第一是非人的神鬼向尊者的挑战和尊者降伏超度他们的事迹，第二是对诸具有善根大弟子的化度和成功的事迹，第三是对一般弟子及普通世人说法及其他应化的事迹。 <br/>
 关于化度非人的事迹，大致说来：—— <br/>
@@ -2557,7 +2578,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 亦为大悲宏愿摄。 随顺不同之缘起， <br/>
 变成无尽之化身； 定住尊者悲护中。 <br/>
 <br/>
-　　歌声甫毕，空中天神像虹光一样的消逝不见了。施主和徒众们如同又见到尊者一样，说不出的欢喜和高兴，大家都不再争吵了，就一心一意的祈祷。终于在不可思议的幻化中，除诸大弟子和曲巴施主们保有原有的遗体以外，鸭龙地方的人民却也得到了另一具尊者的遗体，他们就抬着这个遗体，到那其雪山的大鹏蛋窟的顶上举行火葬。空中又出现了与前次涅槃量一样的五色虹光、彩云、天乐、异香、和其他种种的奇徵。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-10-11 23:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">第十章  <br/>
+　　歌声甫毕，空中天神像虹光一样的消逝不见了。施主和徒众们如同又见到尊者一样，说不出的欢喜和高兴，大家都不再争吵了，就一心一意的祈祷。终于在不可思议的幻化中，除诸大弟子和曲巴施主们保有原有的遗体以外，鸭龙地方的人民却也得到了另一具尊者的遗体，他们就抬着这个遗体，到那其雪山的大鹏蛋窟的顶上举行火葬。空中又出现了与前次涅槃量一样的五色虹光、彩云、天乐、异香、和其他种种的奇徵。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-10-11 23:51</span><div class="badge-floor">第 10 进</div></div><div class="post-body">第十章  <br/>
 　　在曲巴这一边，诸大弟子和施主们连续的至心祈祷了六天，尊者的面孔忽然容光焕发，年青得好像八岁小童一般的模样。这时几个大弟子就议论道：“惹琼巴恐怕不会来了。如果我们再延迟的话。可能什么都留不下来了。甚至一点供养的骨灰都拿不着了。我们还是赶快举行火葬吧！”大家商量以后，就依次作最后一次的尊者的圣容瞻仰。同时把圣体移到炽结窟前面的法座崖上，并架起火葬的台子，然后把圣体安放在台上，划好坛城。虽然比不上天人的供养，却把人间最好的供品陈列起来。在黎明之际，举行了各种祈祷与仪式，大家就想举行火葬。但是无论如何，火总点不起来。在这当儿，天空中忽然出现一道虹彩，带来了五个空行母，齐声唱道：——  <br/>
  <br/>
 智慧拙火圣者火，　　瑜珈行者常修故； <br/>
@@ -2929,7 +2950,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 庄严佛法及道场。 <br/>
 　　为撰此‘至尊密勒日巴传’，余曾搜罗有关尊者各种传记，悉心考校并请诸不共弟子们口述尊者事迹，亲为记录，最后择要去繁，编成此传。 <br/>
  <br/>
-　　游行尸林骨饰庄严瑜珈者，木星年，秋月初八日，於诸空行母会聚雪山胜地，圆满完成此书。愿以此功德，於轮回未空之际，普利一切众生，增长一切佛法！吉祥，如愿成就。 </div></div><div class="post"><div class="post-header"><div class="avatar">普</div>普賢菩薩发表于 2009-3-14 20:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">把尊者之傳記提供給人  是真實法供養   行普賢行 當中功德唯佛能知 <br/>
+　　游行尸林骨饰庄严瑜珈者，木星年，秋月初八日，於诸空行母会聚雪山胜地，圆满完成此书。愿以此功德，於轮回未空之际，普利一切众生，增长一切佛法！吉祥，如愿成就。 </div></div><div class="post"><div class="post-header"><div class="avatar">普</div><span style="font-size:15px; letter-spacing:1px;">普賢菩薩发表于 2009-3-14 20:51</span><div class="badge-floor">第 11 进</div></div><div class="post-body">把尊者之傳記提供給人  是真實法供養   行普賢行 當中功德唯佛能知 <br/>
 在此向你敬禮 <br/>
 <br/>
 </div></div>

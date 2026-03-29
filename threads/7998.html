@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>五方佛及其图像考察 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>五方佛及其图像考察 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">五方佛及其图像考察</h1>
-<div class="post"><div class="post-header"><div class="avatar">宝</div>宝莲定觉发表于 2013-9-5 21:52<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">五方佛及其图像考察 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">五方佛及其图像考察</h1>
+<div class="post"><div class="post-header"><div class="avatar">宝</div><span style="font-size:15px; letter-spacing:1px;">宝莲定觉发表于 2013-9-5 21:52</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">五方佛及其图像考察 <br/>
 作者：杨清凡 <br/>
 五佛思想是密教金刚乘的根本宇宙观，五方佛体系的最终形成也标志佛教神系的完备和系统化。然而五佛体系的完善定型经历了复杂的演变，图像的变化也反映出密教哲学思想的发展，文章在前人研究的基础上，对五佛的演变进行简单梳理，并对五佛组合、五佛形像在不同历史时期的图像进行分析，指出五佛图像变化与密教瑜伽部、无上瑜伽部的发展密切相关。 <br/>
 五佛五智是密教金刚乘的根本哲学思想，并构成了金刚乘的基本结构体系；从神佛系统来说，五方佛或日五智如来的最终形成也标志着完备丰富的佛教神系的建立和系统化。不论在宗教哲学上，还是神佛体系以及其图像表现上，对五方佛的相关概念及历史上的变化予以梳理，无疑十分重要。笔者不揣浅陋，贸然问津这一深奥复杂的课题，不当之处，敬请方家指正。 <br/>
@@ -56,7 +77,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 五佛（the five Buddhas，藏，又作五方佛、五智如来、五智佛、五圣，或称五禅定佛（panca dhyāni-buddhāh），指密教中以大日如来为首的五尊佛，有金刚界五佛与胎藏界五佛之别。（一）金刚界五佛，即毗庐遮那（梵Vairocana、阿閦、宝生（梵Ratna—sambhava，、阿弥陀（梵Amitabha，）不空成就（梵Amogha-siddhi），居于金刚界曼荼罗中央之五解脱轮。（二）胎藏界五佛，谓大日、宝幢、开敷华王、无量寿、天鼓雷音。即胎藏曼荼罗中台八叶中之五佛。在藏传佛教密教中，基本是以金刚界五佛为核心，本文所探讨的也仅限于金刚界五佛的相关问题。 <br/>
 <br/>
 瑜伽部密教的中心经典《初会金刚顶经》（别称《真实摄经》，Tatt-vasamgraha，原本或成书于7世纪末之南印度）中，首次描述了以大日如来为中尊的五方佛及各自的身色、真言、印契、曼荼罗。无上瑜伽部密教经典《秘密集会怛特罗》（Guhyasanlaja Tantra，也作Tathagataguhyaka）又明确了五方佛各自的明妃。随着密教思想的发展和完善，五方佛又与五蕴、五智、五大等相结合。五佛均不下到凡俗世间，住于涅槃中，代替其行使世间职责的为相对应的五方菩萨。关于五方佛的上述特性，不再引证经文一一描述，可归纳简表如下： <br/>
-<br/>
+7908 <br/>
 五方佛各居于中、东、南、西、北不同方位的佛国中，各自拥有自己的菩萨、明妃、护法等眷属，组成五个次佛国系统（梵Kula，the Buddha Family，汉意译为“部族、家族”）；五个次佛国系统又组成一个完整的佛国神系，数量庞大的佛教诸神及外来神祇被系统地纳入这一神系中。五方佛被赋予不同的神格（宗教特性、功能），分别作为五佛部族的部尊，并成为五部诸神之父，五佛部族的成员作为其“法子”也具有相同特性，如阿閦佛为金刚部部尊，具有破坏威猛的特点，许多护法神和本尊神都被视为其派生；宝生佛为宝部部尊，具有财富神的特性，宝部族中的诸神也有具有相同神格；阿弥陀佛为莲花部部尊，佛教中的寿神多与此尊有关，如度母等。据成就法的描述，在五佛部族成员的图像特征中，其宝冠、发髻中常有表现所属部尊形象的“化佛”出现，以此表明其领属关系。（注：印度的佛教艺术史学者B.巴达恰利亚B.Bhattacharyya在对梵文本《成就法鬘》整理的基础上，著《印度佛教图像志——基于&lt;成就法鬘&gt;及其他相关密教仪轨文献》The Indian Buddhist Iconography: Based onthe Sadhanamala adn other Connate Tantric Texts of Rituals. Calcutta；1924.），该书以五佛为系统，将众多菩萨、女神、护法纳入五佛化身体系，对各密教尊神的描述中多引《成就法鬘》原文。 <br/>
 <br/>
 二、五方佛的演变 <br/>
@@ -80,7 +101,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 （一）五佛组合的表现形式 <br/>
 <br/>
 五佛组合图像基本呈两种排列方式：一为传统的曼荼罗中心的五佛环形构图，一为五佛成排横列，大概是五方环形的变通形式。两种排列方式具体为： <br/>
-<br/>
+7909 <br/>
 五佛图像的常见艺术形式有建筑、雕塑、绘画几类。五佛横列构图主要见于绘画、雕塑（泥塑、木雕的五佛冠，经书板），绘画中保留下来的经典作品如14世纪夏鲁寺南配殿（甘珠尔殿）、北配殿（三门佛殿）的两组壁画。五佛环形构图是金刚乘五佛宇宙观的形象表现，其性质属于曼荼罗，在实际表现中有立体曼荼罗（五佛组合佛塔，雕塑构成的曼荼罗）、平面曼荼罗（是立体曼荼罗的二维表现形式，主要为绘画）。 <br/>
 <br/>
 <br/>
@@ -105,7 +126,7 @@ T．S．麦克斯韦尔（T．S．MaxwelI）对五佛组合的研究认为：“
 <br/>
 其二，关于藏传佛教五方佛体系中阿弥陀佛的具体名号。藏传佛教中的阿弥陀佛具有特殊性，就是一佛而有两种身形，即无量光、无量寿。李翎博士从晚期图像材料、早期文本材料进行分析，认为“五佛供养像中出现的阿弥陀佛，无论何种身形，都称之为‘无量光’”，身相红色。一般不持器物，极少持钵者（这种持钵像极易与化身无量寿混淆，只有通过是否为五佛曼陀罗的组合来确定，一旦失去组合关系，辨认时就比较困难）。 <br/>
 <br/>
-其三，关于东方阿閦佛的图像。阿閦佛的图像特征很明确，在五佛组合中不难辨认，但一旦失去组合关系，或以单尊形式出现时，就很容易与降魔印释迦牟尼佛像相混淆。尤其中小型金铜佛像，一般无法区分身色，有的也没有座骑标志，其便携性又往往导致失去原来的保存环境，在辨识时必须慎重。另外，擦擦上的同类佛像也存在以上问题，但很多擦擦的边缘往往印有一圈经咒，各佛的咒文不同，通过对咒文的辨认也可以确定是否阿閦佛。 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大福德金刚发表于 2016-3-19 15:48<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+其三，关于东方阿閦佛的图像。阿閦佛的图像特征很明确，在五佛组合中不难辨认，但一旦失去组合关系，或以单尊形式出现时，就很容易与降魔印释迦牟尼佛像相混淆。尤其中小型金铜佛像，一般无法区分身色，有的也没有座骑标志，其便携性又往往导致失去原来的保存环境，在辨识时必须慎重。另外，擦擦上的同类佛像也存在以上问题，但很多擦擦的边缘往往印有一圈经咒，各佛的咒文不同，通过对咒文的辨认也可以确定是否阿閦佛。 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div><span style="font-size:15px; letter-spacing:1px;">大福德金刚发表于 2016-3-19 15:48</span><div class="badge-floor">第 2 进</div></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>

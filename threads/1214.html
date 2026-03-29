@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>掌中解脱.菩提道次第二十四天教授 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>掌中解脱.菩提道次第二十四天教授 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">掌中解脱.菩提道次第二十四天教授</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-7-17 12:22<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">目录 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">掌中解脱.菩提道次第二十四天教授</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-7-17 12:22</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">目录 <br/>
 <br/>
 《掌中解脱》第Ⅰ册 <br/>
 <br/>
@@ -116,7 +137,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 竭尽心力制作之余，若仍有疏漏之处，我们日后将透过网址（http：//www．whiteconch．org/cpub）公布，也请读者透过此网址赐教。您所见到的书名—“掌中解脱—菩提道次第二十四天教授”是大书家杜忠诰先生继“白云行”之后再度赠予的笔墨，我们感激不尽。非常谢谢数位不愿意公开善行的人士赞助此书的出版，特别谢谢美国“白法螺基金会”在本书版权的取得方面给予许多协助。最后，我们诚挚的谢谢诸佛菩萨护法的护佑，使此书得以顺利出版。愿我们能陆续制作更多的好书以飨读者。 <br/>
 <br/>
 白法螺编辑室 <br/>
-二OOO年一月一日 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-18 15:19<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">第四世墀江仁波切序 <br/>
+二OOO年一月一日 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-18 15:19</span><div class="badge-floor">第 2 进</div></div><div class="post-body">第四世墀江仁波切序 <br/>
 ──中译在前，原文在后 <br/>
 <br/>
 《掌中解脱》中译本由白法螺出版社出版问世，实为无上吉祥之事。这部书是当代最杰出的两位大师嘉杰•帕绷喀德钦宁波仁波切及嘉杰•墀江洛桑耶协仁波切的智慧心髓。 <br/>
@@ -184,7 +205,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 法会中，大师时而令我们大笑以驱散我们的昏沉和瞌睡，时而又令我们不由自主地流泪。由于被恐惧和出离心所压倒，我们有时会情不自禁地想：&quot;我为什么不从现在起就舍弃现世，只修正法呢？&quot;这些例子说明大师的说法方式是极其殊胜的，所以没有人能把大师的开示完整无缺地记录下来。然而如果将这些来自经验的教授要点遗忘掉，那是件多么可惜的事啊！所以我把自己所能回忆起来的都写了下来。 <br/>
 <br/>
-后来大师本人也指示我说：&quot;由于未必有机会再为法会中未听明白的那些人另作讲解，而且虽然记笔记的人很多，却又未必全面与可靠，所以把你所能肯定下来的做个记录吧！&quot;此外，为了对其他想作实修的朋友有所帮助，看到本书就像是看到大师言教的代替品一样，我力求不加任何篡改而将大师的言教编辑成文。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-18 15:32<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">菩提道次第二十四天教授 <br/>
+后来大师本人也指示我说：&quot;由于未必有机会再为法会中未听明白的那些人另作讲解，而且虽然记笔记的人很多，却又未必全面与可靠，所以把你所能肯定下来的做个记录吧！&quot;此外，为了对其他想作实修的朋友有所帮助，看到本书就像是看到大师言教的代替品一样，我力求不加任何篡改而将大师的言教编辑成文。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-18 15:32</span><div class="badge-floor">第 3 进</div></div><div class="post-body">菩提道次第二十四天教授 <br/>
 <br/>
 卷首语： <br/>
 <br/>
@@ -385,7 +406,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 35、第一世班禅喇嘛（1570-1662)。 <br/>
 36、[引导传承]是指一种包含本法历代祖师教授的特殊传承。 <br/>
 37、藏文原文为‘红引导’。 <br/>
-38、指在受法者是非器的情况下。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-18 15:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">第二天　阿底峡尊者生平与藏地道次第引导的起源 <br/>
+38、指在受法者是非器的情况下。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-18 15:55</span><div class="badge-floor">第 4 进</div></div><div class="post-body">第二天　阿底峡尊者生平与藏地道次第引导的起源 <br/>
 （第二天，大宝上师嘉杰（1）•帕绷喀仁波切作了如下开示：） <br/>
 <br/>
 　　法王大宗喀巴说： <br/>
@@ -809,7 +830,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 59、1670-1741。 <br/>
 60、1682-1762。 <br/>
 61、法名为耶协坚赞（慧幢，1713-1793)，第八世DL喇嘛经师。 <br/>
-62、全文为：[吉祥上师身云何，誊属寿量与刹土，胜妙名号云何者，愿我等众亦复然。] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-18 16:32<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">第三天 道次第教授的殊胜与如何讲听此法 <br/>
+62、全文为：[吉祥上师身云何，誊属寿量与刹土，胜妙名号云何者，愿我等众亦复然。] </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-18 16:32</span><div class="badge-floor">第 5 进</div></div><div class="post-body">第三天 道次第教授的殊胜与如何讲听此法 <br/>
 <br/>
 寂天怙主说： <br/>
 <br/>
@@ -1432,7 +1453,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 49、全颂为：[天与非天人与非人王，及帝释等护持正法众，佛陀善说寂静安乐因，我今宣说请临听正法。] <br/>
 <br/>
-50、参看本书附录《有缘颈严》 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-18 17:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">第四天　加行法之一（第一、二、三加行） <br/>
+50、参看本书附录《有缘颈严》 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-18 17:55</span><div class="badge-floor">第 6 进</div></div><div class="post-body">第四天　加行法之一（第一、二、三加行） <br/>
 <br/>
 吉祥月称说： <br/>
 若得自在住顺处：设此不能自摄持， <br/>
@@ -1846,7 +1867,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 55、即密宗特重的乐空无二智。 <br/>
 56、息、增、怀、诛。 <br/>
 57、见「第十六天」至「第十九天」四章。 <br/>
-58、舍无量、慈无量、悲无量与喜无量。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-18 18:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">第五天　加行法之二（第四、五加行） <br/>
+58、舍无量、慈无量、悲无量与喜无量。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-18 18:46</span><div class="badge-floor">第 7 进</div></div><div class="post-body">第五天　加行法之二（第四、五加行） <br/>
 <br/>
 <br/>
 吉祥圣龙猛曾说： <br/>
@@ -2178,7 +2199,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 50、指修行者本人的右方与左方。 <br/>
 <br/>
-51、此著名比丘尼成就者系出生於印度某王族，早年因染恶性癞病离家出走，在偏僻的山林里苦修十二年，最後亲见大悲观自在。由他传出的大悲观自在修法，成为吉祥女比丘尼派。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-18 19:06<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">第六天　　加行法之三（第五、六加行） <br/>
+51、此著名比丘尼成就者系出生於印度某王族，早年因染恶性癞病离家出走，在偏僻的山林里苦修十二年，最後亲见大悲观自在。由他传出的大悲观自在修法，成为吉祥女比丘尼派。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-18 19:06</span><div class="badge-floor">第 8 进</div></div><div class="post-body">第六天　　加行法之三（第五、六加行） <br/>
 <br/>
 <br/>
 月宫阿奢黎曾说： <br/>
@@ -2497,7 +2518,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 42、另请参见本书中卷附录《菩提道次第体验引导修法教授》。 <br/>
 <br/>
-43、孤萨黎意为「具善」，是指遮离一切外事、一心内修之人；班智达意为[学者]，是指博学多闻之人。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-18 20:21<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">第七天　　依止善知识---道之根本 <br/>
+43、孤萨黎意为「具善」，是指遮离一切外事、一心内修之人；班智达意为[学者]，是指博学多闻之人。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-18 20:21</span><div class="badge-floor">第 9 进</div></div><div class="post-body">第七天　　依止善知识---道之根本 <br/>
 <br/>
 <br/>
 （嘉杰·帕绷喀仁波切引用寂天大菩萨的话，作为第七天开示的开场白：） <br/>
@@ -2850,7 +2871,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 35、札雅罗桑顿巴所著《嘉曹杰传》中说：[由于嘉曹杰以教理之雄辩，击败雅、绒二师后，心高气傲，意欲与一切智宗喀巴大一比高低。他来到时，正值大师为众说法。因急欲寻找辩论的时机，所以故意不脱帽而进入讲经院中。宗喀巴大师一见到此情，便从正在说法的座上下来，坐在下面。嘉曹杰竟旁若无人，戴着帽子登上大师的法座，坐下来听法。然而他耳中听到的，全是往昔闻所未闻的嘉言。由此摧倒我慢之山。他慌忙脱下帽子，从座位上下来，坐在弟子群中。从此，他抛弃了辩论的打算，作为弟子追随大师。据说，那时他登上大师的法座，正是凑合了后来他绍继宗喀巴大师法席的缘起。] <br/>
 <br/>
-36、表悲痛难忍之意。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-18 21:09<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">第八天　意乐依止法 <br/>
+36、表悲痛难忍之意。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-18 21:09</span><div class="badge-floor">第 10 进</div></div><div class="post-body">第八天　意乐依止法 <br/>
 <br/>
 宗喀巴大师说： <br/>
 <br/>
@@ -3231,7 +3252,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 52、一部为「胜者金刚持」；三部为「毗卢」、「无量光」与「不动」，分别为佛金刚持的身、语、意体性：五部则再加「宝生」与「不空成就」，分别为佛的清净五蕴体性；五部再各分五蕴、四界、六处与五境而成百部。 <br/>
 <br/>
-53、经中原文系第三人称，乃弥勒菩萨为大众所说：此处我们用於忆念自己上师恩德，故改用第一人称。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-18 22:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">第九天 加行依止法及于有暇身劝取心要 <br/>
+53、经中原文系第三人称，乃弥勒菩萨为大众所说：此处我们用於忆念自己上师恩德，故改用第一人称。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-18 22:08</span><div class="badge-floor">第 11 进</div></div><div class="post-body">第九天 加行依止法及于有暇身劝取心要 <br/>
 <br/>
 无等阿底峡尊者曾说： <br/>
 「所知类多寿苦短，寿量几何不能知， <br/>
@@ -3611,7 +3632,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 55、引自《噶当嘉言集》。 <br/>
 <br/>
-56、《乐善根本颂》。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-18 23:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">第十天 死亡无常 <br/>
+56、《乐善根本颂》。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-18 23:00</span><div class="badge-floor">第 12 进</div></div><div class="post-body">第十天 死亡无常 <br/>
 <br/>
 （嘉杰·帕绷喀仁波切首先引用大智者成就师—根敦丹增嘉措（僧伽持教海）（1）的话说： <br/>
 　「此（2）是具量经论心，非走臆造虚妄法； <br/>
@@ -4049,7 +4070,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 48、全称为《依怙大悲颂·普救恶趣》，作者佚名。 <br/>
 49、因「中有」以香为食，故焚烧混合有[三白]（乳、酪、酥）、[三红]（肉、脂、血）的糌粑而作布施。 <br/>
 50、引自《圣大悲观自在前赞叹启请文·降利乐雨》。 <br/>
-51、安多夏玛尔活佛著。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 00:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">第十一天　三恶趣苦 <br/>
+51、安多夏玛尔活佛著。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 00:44</span><div class="badge-floor">第 13 进</div></div><div class="post-body">第十一天　三恶趣苦 <br/>
  <br/>
 　　《大游戏经》中说： <br/>
 三有无常如秋云，有情生死等观戏， <br/>
@@ -4434,7 +4455,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 27、参见「第四天]章。 <br/>
 28、参见「第十三天」章。 <br/>
 29、断除一切烦恼而解脱轮回。 <br/>
-  </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 01:01<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">附录一 菩提道次第明晰引导速道前行念诵次第易行仪轨·有缘颈严 <br/>
+  </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 01:01</span><div class="badge-floor">第 14 进</div></div><div class="post-body">附录一 菩提道次第明晰引导速道前行念诵次第易行仪轨·有缘颈严 <br/>
 绛贝伦珠大师　造 <br/>
 仁钦曲札 译 <br/>
 一切时中顶礼皈依于上师与能仁金刚持无别足下，伏请大悲摄受！ <br/>
@@ -4857,7 +4878,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 六加行法温萨巴教授，名为有缘颈严之嘉言。 <br/>
 译藏为汉所致诸善根，回向父母为主众有情， <br/>
 一切生中勤修此妙道，速获无上菩提大安乐。 <br/>
-吉祥乐善！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 01:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">附录二　 《供养上师仪轨》资粮田图解 <br/>
+吉祥乐善！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 01:10</span><div class="badge-floor">第 15 进</div></div><div class="post-body">附录二　 《供养上师仪轨》资粮田图解 <br/>
 <br/>
 <br/>
 资粮田主尊 <br/>
@@ -4943,7 +4964,7 @@ Y、四大天王 <br/>
 <br/>
 说明: <br/>
 1、本图结构安排系按照帕绷喀大师传承 <br/>
-2、修行加持派众上师名号系参考帕绷喀大师《闻法录》写成。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 01:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">附录三 《菩提道次第体验引导修法教授》  <br/>
+2、修行加持派众上师名号系参考帕绷喀大师《闻法录》写成。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 01:20</span><div class="badge-floor">第 16 进</div></div><div class="post-body">附录三 《菩提道次第体验引导修法教授》  <br/>
 帕绷喀大师　造 <br/>
 仁钦曲札　译 <br/>
 第一章　教诫观察修之重要及其修法扼要 <br/>
@@ -5352,7 +5373,7 @@ Y、四大天王 <br/>
 是故欲勤计数念皈依，当于此间广修所缘类， <br/>
 如是精进方达彼扼要。」 <br/>
 <br/>
-本文《菩提道次第体验引导修法教授·通俗明了直指其要》者，是应巴康雪朵寺扎贡却珠仁波切致书请求，由恩德无比最胜依怙金刚持帕绷喀大乐藏吉祥贤，于事务极其繁忙之间隙忽然赐予。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 01:23<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">附录四：遥呼上师·速引三身无别上师加持之悲歌 <br/>
+本文《菩提道次第体验引导修法教授·通俗明了直指其要》者，是应巴康雪朵寺扎贡却珠仁波切致书请求，由恩德无比最胜依怙金刚持帕绷喀大乐藏吉祥贤，于事务极其繁忙之间隙忽然赐予。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 01:23</span><div class="badge-floor">第 17 进</div></div><div class="post-body">附录四：遥呼上师·速引三身无别上师加持之悲歌 <br/>
 <br/>
 遥呼上师·速引三身无别上师加持之悲歌（1） <br/>
  <br/>
@@ -5475,7 +5496,7 @@ Y、四大天王 <br/>
 （5）幻化的基础。 <br/>
 （6）文殊、观自在、金刚手为事部三部佛部、莲华部、金刚部的部主，分别为诸佛智、悲、力三者的体现。 <br/>
 （7）第六部大密金刚持。 <br/>
-（8）指应成派中观见。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 01:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 18 楼</span></div><div class="post-body">附录五：策励自他一切人等痛念无常歌·心匙 <br/>
+（8）指应成派中观见。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 01:25</span><div class="badge-floor">第 18 进</div></div><div class="post-body">附录五：策励自他一切人等痛念无常歌·心匙 <br/>
 <br/>
 仁钦曲札　译 <br/>
  <br/>
@@ -5585,7 +5606,7 @@ Y、四大天王 <br/>
 （1）收入《帕绷喀大师文集》第六函第一篇《道歌学处类汇编》。 <br/>
 （2）意为此生最后所卧之床，“末衣”即此生最后所著之衣等，下同。 <br/>
 （3）地、水、火、风。 <br/>
-（4）宗喀巴大师。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 01:32<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 19 楼</span></div><div class="post-body">译　序 <br/>
+（4）宗喀巴大师。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 01:32</span><div class="badge-floor">第 19 进</div></div><div class="post-body">译　序 <br/>
 <br/>
 第四世墀江仁波切序 <br/>
 ----中译在前，原文在后 <br/>
@@ -5660,7 +5681,7 @@ Y、四大天王 <br/>
 <br/>
 法会中，大师时而令我们大笑以驱散我们的昏沉和瞌睡，时而又令我们不由自主地流泪。由于被恐惧和出离心所压倒，我们有时会情不自禁地想：&quot;我为什么不从现在起就舍弃现世，只修正法呢？&quot;这些例子说明大师的说法方式是极其殊胜的，所以没有人能把大师的开示完整无缺地记录下来。然而如果将这些来自经验的教授要点遗忘掉，那是件多么可惜的事啊！所以我把自己所能回忆起来的都写了下来。 <br/>
 <br/>
-后来大师本人也指示我说：&quot;由于未必有机会再为法会中未听明白的那些人另作讲解，而且虽然记笔记的人很多，却又未必全面与可靠，所以把你所能肯定下来的做个记录吧！&quot;此外，为了对其他想作实修的朋友有所帮助，看到本书就像是看到大师言教的代替品一样，我力求不加任何篡改而将大师的言教编辑成文。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 02:03<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 20 楼</span></div><div class="post-body">第十二天 皈依——入圣教之门 <br/>
+后来大师本人也指示我说：&quot;由于未必有机会再为法会中未听明白的那些人另作讲解，而且虽然记笔记的人很多，却又未必全面与可靠，所以把你所能肯定下来的做个记录吧！&quot;此外，为了对其他想作实修的朋友有所帮助，看到本书就像是看到大师言教的代替品一样，我力求不加任何篡改而将大师的言教编辑成文。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 02:03</span><div class="badge-floor">第 20 进</div></div><div class="post-body">第十二天 皈依——入圣教之门 <br/>
 <br/>
 法王大宗喀巴说： <br/>
 “暇满难得寿无暇，串习能除此生欲。”（1） <br/>
@@ -6119,7 +6140,7 @@ Y、四大天王 <br/>
 （49）、DL喇嘛随身近侍中的高级僧职。 <br/>
 （50）、1890年，西藏政府为审查官方文件以修改法规而成立的机构。 <br/>
 （51）、义译为胜者一切智，DL喇嘛的尊称。 <br/>
-（52）、外道六师之一。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 10:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 21 楼</span></div><div class="post-body">第十三天 天深信业果—一切安乐之本 <br/>
+（52）、外道六师之一。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 10:42</span><div class="badge-floor">第 21 进</div></div><div class="post-body">第十三天 天深信业果—一切安乐之本 <br/>
 <br/>
 　（嘉杰·帕绷喀仁波切先引述三界法王大宗喀巴的话—「死後难保不堕落」（1）等，作为第十三天教授的开场白。在简略地介绍了一些有关前行的内容後，大师回顾了前面已经讲过的科判，重讲了「开示後世安乐方便」两部分的第一部分—皈依，并简要讲述其观修之法。接著说：） <br/>
  <br/>
@@ -6574,7 +6595,7 @@ Y、四大天王 <br/>
 49、引自寂天的《集学论》，据说此颂出自《文殊佛土庄严功德经》，藏译本中但有长行，汉译本中仅提及文殊之名，未见其他。 <br/>
 50、净罪之人、所净之罪、净罪之事三者均无自性。 <br/>
 51、引自《菩提道次第广论》。 <br/>
-52、《毗奈耶分别》、《毗奈耶事教》　、《毗奈耶杂事》及《毗奈耶上分》。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 11:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 22 楼</span></div><div class="post-body">第十四天 思维轮回苦 <br/>
+52、《毗奈耶分别》、《毗奈耶事教》　、《毗奈耶杂事》及《毗奈耶上分》。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 11:10</span><div class="badge-floor">第 22 进</div></div><div class="post-body">第十四天 思维轮回苦 <br/>
 <br/>
 　（帕绷喀仁波切引用法王宗喀巴大师所造的两个偈颂，即「身命动摇犹如水中泡」等（1），先简略地开示了前行改正动机之法，接著回顾了前面讲过的科判，并重述了「获得後世安乐正方便业果法类」的内容。） <br/>
  <br/>
@@ -6968,7 +6989,7 @@ Y、四大天王 <br/>
 41、指色界天与无色界天。 <br/>
 42、以为不存在解脱的邪见。 <br/>
 43、引自《内心忧悔歌）。 <br/>
-44、详见《贤愚因缘经）。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 11:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 23 楼</span></div><div class="post-body">第十五天 思维苦因与抉择解脱道性 <br/>
+44、详见《贤愚因缘经）。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 11:56</span><div class="badge-floor">第 23 进</div></div><div class="post-body">第十五天 思维苦因与抉择解脱道性 <br/>
 <br/>
 大阿奢黎圣天说： <br/>
 [此大苦海者，诸边岸全无， <br/>
@@ -7388,7 +7409,7 @@ l、引自《四百论》。 <br/>
 52、又称[四他胜]：一、杀人：二、偷盗：三、行淫：四、妄说上人法。 <br/>
 53、关於[罪]与[堕]的区别，请参阅本书[第十三天]。 <br/>
 54、贪、嗔、痴。 <br/>
-55、大印与大圆满派用语，内容、修法与汉地禅宗十分接近。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 12:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 24 楼</span></div><div class="post-body">第十六天 发菩提心利益 <br/>
+55、大印与大圆满派用语，内容、修法与汉地禅宗十分接近。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 12:14</span><div class="badge-floor">第 24 进</div></div><div class="post-body">第十六天 发菩提心利益 <br/>
 <br/>
 (嘉杰·帕绷喀仁波切先依照轨矩，念了论中相关的几段文字，随后引用三界法王宗喀巴大师的话：[若无菩提心摄持，出离不成无上觉]等（1），讲了必须在出离心基础上发菩提心的道理，亦即前行纠正动机之法。接着回顾了已经讲述的各科，并重达了一递[抉择趣解脱道性]的内容。 <br/>
 大师接着说：是什么力量使我们在轮回中流转呢?是业。业则由烦恼产生，更明确地说，是由烦恼根本无明所产生。为了根除无明，我们需要生起增上慧学；为了生起增上慧学，又需要有定学与戒学做为前提，所以说，戒是功德的基础。 <br/>
@@ -7658,7 +7679,7 @@ l、引自《四百论》。 <br/>
 41、这是相对于作为新噶当派的格鲁派来讲的，系指从阿底峡尊者至宗喀巴大师之前的噶当派传承。 <br/>
 42、引自《令信莲开敷之赞颂日轮》，详见本书第—册381页。 <br/>
 43、后藏在拉萨之西北方，工布在拉萨之东部。 <br/>
-44、另请参阅本书附录《平等舍修法口传教授》，该篇内含帕绷喀大师关于此段教授的全部底蕴，墀江仁波切造。附录一与附录二为上下相关的姊妹篇。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 12:57<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 25 楼</span></div><div class="post-body">第十七天 七重因果与修心七义之一 <br/>
+44、另请参阅本书附录《平等舍修法口传教授》，该篇内含帕绷喀大师关于此段教授的全部底蕴，墀江仁波切造。附录一与附录二为上下相关的姊妹篇。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 12:57</span><div class="badge-floor">第 25 进</div></div><div class="post-body">第十七天 七重因果与修心七义之一 <br/>
 <br/>
 （嘉杰．帕绷喀仁波切首先引用寂天大菩萨的话说： <br/>
 “何人生此珍贵心，我即敬礼彼士夫！ <br/>
@@ -7936,7 +7957,7 @@ l、引自《四百论》。 <br/>
 34、全颂为“由此我获敌，亦捕隐藏贼，扮我欺诳者，是我执无疑。” <br/>
 35、全称为玛基·拉季准玛（1062-1129），“施身法”传承祖师。 <br/>
 36、约为十一世纪早期，竹巴噶举派大成就者，教授风格以生动幽默见长。师有颂曰“吾失我爱已数载，四处寻觅无踪影，今日却见于大寺，我爱易名称党执。” <br/>
-37、引自《修心八偈》。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 13:07<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 26 楼</span></div><div class="post-body">第十八天 修心七义之二 <br/>
+37、引自《修心八偈》。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 13:07</span><div class="badge-floor">第 26 进</div></div><div class="post-body">第十八天 修心七义之二 <br/>
 <br/>
 （嘉杰．帕绷喀仁波切先引用法王宗喀巴大师的言教，即“四瀑流冲难遮止”等（1），为我们简示前行改正动机之法。在回顾了以前已讲的各科之后，大师将修菩提心法类中的“七因果”重新讲了一遍。“正明修心”一科的第二部分有五节，即“自他平等” 、“由众多门思惟我爱执过患”、“由众多门思惟他爱执利益”、“正修自他相换”与“依此修取舍法”。帕绷喀大师将前三节复讲了一遍。） <br/>
  <br/>
@@ -8033,7 +8054,7 @@ l、引自《四百论》。 <br/>
 11、作者为扬贡巴·坚赞贝（幢贤， 1213-1258），竹巴噶举派上师。 <br/>
 12、洛桑南结的故事详见本书第一册。 <br/>
 13、出处未详。 <br/>
-14、许多《修心七义》根本文版本中，有“乱境观四身，空为无上护”这两句。出于见地上的考虑，帕绷喀仁波切在其校订本中作了删除。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 13:17<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 27 楼</span></div><div class="post-body">第十九天 修心七义之三 <br/>
+14、许多《修心七义》根本文版本中，有“乱境观四身，空为无上护”这两句。出于见地上的考虑，帕绷喀仁波切在其校订本中作了删除。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 13:17</span><div class="badge-floor">第 27 进</div></div><div class="post-body">第十九天 修心七义之三 <br/>
 <br/>
 （嘉杰·帕绷喀仁波切首先引用《弥勒愿》中的“能返恶趣道”等（1），略示前行改正动机之法，然后回顾了以前所讲的科判，并重述了“正修自他相换”与“依此修取舍法”两节，以及“修心七义”中的前二段。大师授著指出：） <br/>
  <br/>
@@ -8302,7 +8323,7 @@ l、引自《四百论》。 <br/>
 17、密宗修法。 <br/>
 18、类似“龟兔赛跑”寓言。 <br/>
 19、寻、伺均以思、慧一分为体，但对境的推度有浅、深之别。属“不定”心所。 <br/>
-20、见本书第一册35页。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 14:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 28 楼</span></div><div class="post-body">第二十天 六度总说 <br/>
+20、见本书第一册35页。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 14:05</span><div class="badge-floor">第 28 进</div></div><div class="post-body">第二十天 六度总说 <br/>
 <br/>
 （嘉杰·帕绷喀仁波切引用《摄功德宝》中的颂文，作为第二十天教授的开场白： <br/>
 　“过去未来现在诸胜者，皆修波罗蜜道而非余。” <br/>
@@ -8555,7 +8576,7 @@ l、引自《四百论》。 <br/>
 11、《菩提道次第广论》中将上述方面归纳为八个方面：1、依止处；2、世法处；3、威仪处；4、摄法处；5、乞活处；6、勤劬处；7、利有情处；8、现所作处。 <br/>
 12、见本书“第十三天” <br/>
 13、全颂为“假使为利一有情，无间火内经劫海，勤求菩提全不厌，加持进度速圆满。”。 <br/>
-14、指“摄善法”与“饶益有情”两种。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 14:21<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 29 楼</span></div><div class="post-body">第二十一天　奢摩他 <br/>
+14、指“摄善法”与“饶益有情”两种。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 14:21</span><div class="badge-floor">第 29 进</div></div><div class="post-body">第二十一天　奢摩他 <br/>
 <br/>
 （嘉杰·帕绷喀仁波切先引述补处菩萨弥勒怙主的话说： <br/>
 “初依听闻如理作意生，如理作意复生胜义慧。”（1） <br/>
@@ -8837,7 +8858,7 @@ l、引自《四百论》。 <br/>
 22、释迦牟尼佛之父。 <br/>
 23、名为“内住心”，详见下文。 <br/>
 24、三舍之一，《声闻地》中说：“云何谓舍？谓于所缘心无染污心平等性，于止观品调柔正直任运转性，及调柔心有堪能性，令心随与任运作用。”。 <br/>
-25、意为花力气将心“运送”到所缘境上。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 14:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 30 楼</span></div><div class="post-body">第二十二天　毗钵舍那 <br/>
+25、意为花力气将心“运送”到所缘境上。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 14:49</span><div class="badge-floor">第 30 进</div></div><div class="post-body">第二十二天　毗钵舍那 <br/>
 <br/>
 （嘉杰·帕绷喀仁波切先引述吉祥月称的话： <br/>
 　“世俗真实广白翼，鹅王引导众生鹅， <br/>
@@ -9171,7 +9192,7 @@ l、引自《四百论》。 <br/>
 34、引自《三主要道》。 <br/>
 35、《三摩地王经》。 <br/>
 36、三轮：1、能知；2、所知；3、知。 <br/>
-37、择灭与非择灭。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 14:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 31 楼</span></div><div class="post-body">第二十三天　金刚乘、四摄与发心仪轨（预备） <br/>
+37、择灭与非择灭。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 14:56</span><div class="badge-floor">第 31 进</div></div><div class="post-body">第二十三天　金刚乘、四摄与发心仪轨（预备） <br/>
 <br/>
 （嘉杰·帕绷喀仁波切先引用法王宗喀巴大师的言教，“如是三主要道诸要”等（1），简述纠正动机之法。在回顾了已讲的各科之后，大师接着说：） <br/>
 庚三、学不共金刚乘之理 <br/>
@@ -9241,7 +9262,7 @@ l、引自《四百论》。 <br/>
 6、出处不详，全颂为：“殊胜大宝菩提心，若未生者令生起，若已生者令不退，辗转向上愿增长!”。 <br/>
 7、见龙树造，《发菩提心仪轨》。全颂为：“愿诸父母具安乐，愿诸恶趣常空无，诸凡各方菩萨众，彼等诸愿悉成就!”。 <br/>
 8、出处不详。全颂为：“吉祥上师寿坚固，自他积资净障已，等空众生安乐源，佛位速疾愿获得!”。 <br/>
-9、贡唐· 贡却丹贝准美着，汉译全文见拙译《三主要道甚深引导笔记·开妙道门》之附录（台北：经续法林出版）。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 15:16<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 32 楼</span></div><div class="post-body">第二十四天　发心仪轨（正行） <br/>
+9、贡唐· 贡却丹贝准美着，汉译全文见拙译《三主要道甚深引导笔记·开妙道门》之附录（台北：经续法林出版）。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 15:16</span><div class="badge-floor">第 32 进</div></div><div class="post-body">第二十四天　发心仪轨（正行） <br/>
 <br/>
 　（第一次集会时，我们一齐念诵经典，也修了施放朵玛等法。第二次集会时，迎请大宝上师入座，并修“加行法”，供养蔓等均为长颂。随后奉献请求授予发心律仪的曼荼罗。当时每人手里都捧着发心供养，献穹曼荼罗之后，大家将供品献到上师跟前、累积成堆。 <br/>
 帕绷喀大师先引述三界法王宗喀巴大师的话，“大乘道命为发心”（1）等，如前介绍了发心的种种功德。接着说：） <br/>
@@ -9415,7 +9436,7 @@ l、引自《四百论》。 <br/>
 17、此颂隐含“极大恶行自趣消灭”殊胜的文句 <br/>
 18、丹增嘉措：指第十四世DL喇嘛。 <br/>
 19、三时城：似指天界。 <br/>
-20、拉江：对三品官以上贵妇的尊称。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 15:19<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 33 楼</span></div><div class="post-body">附录一 <br/>
+20、拉江：对三品官以上贵妇的尊称。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 15:19</span><div class="badge-floor">第 33 进</div></div><div class="post-body">附录一 <br/>
  <br/>
 《“平等舍”修法口传教授》 <br/>
 雍增·墀江仁波切　造 <br/>
@@ -9501,7 +9522,7 @@ l、引自《四百论》。 <br/>
 关于共与不共的正行所缘修法，应根据各种引导与上师的教授来修，在这里就不多写了。 <br/>
 <br/>
 口说自他相换如诵咒，事关紧急胆大且妄为， <br/>
-师尊父母悉皆抛脑后，空具大乘者名我悲哀。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 15:21<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 34 楼</span></div><div class="post-body">附录二 <br/>
+师尊父母悉皆抛脑后，空具大乘者名我悲哀。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 15:21</span><div class="badge-floor">第 34 进</div></div><div class="post-body">附录二 <br/>
  <br/>
 《修心“取舍”所缘广略修法》 <br/>
 雍增·墀江仁波切　造 <br/>
@@ -9553,7 +9574,7 @@ l、引自《四百论》。 <br/>
 　烦恼之火烧自心，喜说妙香散十方， <br/>
 具粗暴行之线香，日后愿令圣者喜。 <br/>
  <br/>
-　　虽然自己是三毒的仆人，但想到这对信解修心法的后人在需要这些教授时会有很大的助益，我墀江巴，将具恩上师的教授笔录成文。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 15:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 35 楼</span></div><div class="post-body">附录三 <br/>
+　　虽然自己是三毒的仆人，但想到这对信解修心法的后人在需要这些教授时会有很大的助益，我墀江巴，将具恩上师的教授笔录成文。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 15:25</span><div class="badge-floor">第 35 进</div></div><div class="post-body">附录三 <br/>
 <br/>
 《大乘修心七义根本文》 <br/>
 帕绷喀仁波切　编 <br/>
@@ -9624,7 +9645,7 @@ l、引自《四百论》。 <br/>
 我因多信解，轻苦与恶名， <br/>
 获伏我执教，今死亦无憾! <br/>
  <br/>
-　　新、旧噶当派文集中虽有大量《修心七义》根本文句与注疏等，然正文次第互不相同、文句多寡参差不齐。或与引导科判不相吻合，或有非属通行之文句等，情形不一。有鉴于此，长时以来拟编写一根本文，按照符合自宗文殊怙主宗喀巴大师语教传统之诸论，即《修心日光》、《善慧密意庄严》、《甘露藏》等之密意编排。后于木亥年（1935）昌都甘丹强巴林寺讲《菩提道次第广论》时，由一心专修者朗忍巴·彭措贝丹献礼劝请，于是细察多种本释编成此根本文句，另以科判庄严合成一文，僭名帕绷喀转世者书，愿众生利益增长! </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-19 15:28<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 36 楼</span></div><div class="post-body">附录四 <br/>
+　　新、旧噶当派文集中虽有大量《修心七义》根本文句与注疏等，然正文次第互不相同、文句多寡参差不齐。或与引导科判不相吻合，或有非属通行之文句等，情形不一。有鉴于此，长时以来拟编写一根本文，按照符合自宗文殊怙主宗喀巴大师语教传统之诸论，即《修心日光》、《善慧密意庄严》、《甘露藏》等之密意编排。后于木亥年（1935）昌都甘丹强巴林寺讲《菩提道次第广论》时，由一心专修者朗忍巴·彭措贝丹献礼劝请，于是细察多种本释编成此根本文句，另以科判庄严合成一文，僭名帕绷喀转世者书，愿众生利益增长! </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-19 15:28</span><div class="badge-floor">第 36 进</div></div><div class="post-body">附录四 <br/>
 <br/>
 《大乘修心七义论贯注》 <br/>
 雍增·墀江仁波切　造 <br/>

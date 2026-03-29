@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大方广佛华严经（60卷）（法华部·华严部） - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>大方广佛华严经（60卷）（法华部·华严部） - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大方广佛华严经（60卷）（法华部·华严部）</h1>
-<div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-26 22:59<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body"> <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">大方广佛华严经（60卷）（法华部·华严部）</h1>
+<div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-26 22:59</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body"> <br/>
 大方广佛华严经 <br/>
 <br/>
 <br/>
@@ -255,7 +276,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 众生一见如来身 悉能断除众烦恼 远离一切诸魔事 是名清净妙境界 <br/>
 佛于一切大众海 处此众会悉遍照 普为众生雨法雨 是名普音称法门 <br/>
 <br/>
-大方广佛华严经卷第一 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-26 23:39<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">大方广佛华严经卷第二 <br/>
+大方广佛华严经卷第一 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-26 23:39</span><div class="badge-floor">第 2 进</div></div><div class="post-body">大方广佛华严经卷第二 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 世间净眼品第一之二 <br/>
 复有释提桓因。于三世佛出兴住灭决定大智念喜法门。而得自在。普称满天。于众生色如来色身诸功德力清净法门。而得自在。慈眼天。于平等慈云荫覆法门。而得自在。宝光称天。于众光色具足念佛普势法门。而得自在。乐喜髻天。于观众生业报法门。而得自在。乐念净天。于诸佛国具净法门。而得自在。须弥胜音天。于观世间生灭法门。而得自在。念智慧天。于起当来菩萨诸行化众生因超念法门。而得自在。净华光天。于一切天娱乐法门。而得自在。慧日眼天。于诸天处教化流通善根法门。而得自在。尔时释提桓因。承佛神力。遍观三十三天众。以偈颂曰 <br/>
@@ -451,7 +472,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 尔时莲华藏庄严世界海东。次有世界海。名净莲华胜光庄严。中有佛刹。名众宝金刚藏。佛号法水觉虚空法王。于彼如来大众海中。有菩萨名观胜法妙清净王。为佛光明所开发已。与世界海尘数菩萨眷属围绕来向佛所。充满十方一切虚空。兴十种宝色光明华云。悉皆弥覆充满虚空。十种妙宝须弥山云。十种日轮云。十种宝华云。十种妙宝楼阁藏云。十种华树云。十种妙香现众色云。十种一切妙音声云。如是一切悉皆弥覆充满虚空。来诣佛所供养恭敬礼拜已。在于东方杂华光藏师子座上。结跏趺坐。此世界海南。次有世界海。名众宝月光庄严藏。中有佛刹。名无量光严。佛号普智光胜须弥山王。于彼如来大众海中。有菩萨名清净海慧。为佛光明所开发已。与世界海尘数菩萨眷属围绕来向佛所。兴十种一切妙庄严藏众宝王云。悉皆弥覆充满虚空。十种普庄严宝王云。十种妙宝藏炽然照明叹佛功德宝王云。十种妙音充满赞叹宝王云。十种菩提树庄严道场宝王云。十种普门光明佛变化宝王云。十种不坏众光明示现宝王云。十种香灯照一切刹充满宝王云。十种不可思议佛刹如来宫殿普现宝王云。十种杂宝三世诸佛法身光明宝王云。悉皆弥覆充满虚空。来诣佛所恭敬供养礼拜已。在于南方青色莲华师子座上。结跏趺坐。 此世界海西。次有世界海。名宝光乐。中有佛刹。名一切胜观。佛号香光王功德宝庄严。于彼如来大众海中。有菩萨名香焰平等庄严月光。为佛光明所开发已。与世界海尘数菩萨眷属围绕来向佛所。兴十种一切杂宝香华楼阁云。悉皆弥覆充满虚空。十种一切色宝王庄严楼阁云。十种一切宝幢香焰楼阁云。十种一切解脱庄严楼阁云。十种一切宝华鬘云。十种一切宝鬘庄严宝楼阁云。十种一切普光明藏照一切庄严楼阁云。十种一切宝庄严无量庄严悉现楼阁云。十种普满庄严楼阁云。十种无量华乐云。悉皆弥覆充满虚空。来诣佛所供养恭敬礼拜已。在于西方金色杂宝庄严莲华藏化师子座上。结跏趺坐。此世界海北。次有世界海。名琉璃宝光充满藏。中有佛刹。名化青莲华庄严。佛号无量智慧音王。于彼如来大众海中。有菩萨名师子光庄严。为佛光明所开发已。与世界海尘数菩萨眷属围绕来向佛所。兴十种一切香云。悉皆弥覆充满虚空。十种一切青色华云。十种一切妙宝树云。十种一切诸杂华云。十种一切宝庄严云。十种一切宝雷音云。十种一切妙音声云。如是一切悉皆弥覆充满虚空。来诣佛所供养恭敬礼拜已。在于北方大灯变化师子座上。结跏趺坐。 此世界海东南方。次有世界海。名阎浮檀玻璃色幢。中有佛刹。名宝庄严藏。佛号一切法灯无所怖畏。于彼如来大众海中。有菩萨名无尽胜灯功德法藏。为佛光明所开发已。与世界海尘数菩萨眷属围绕。来向佛所。兴十种无量色莲华藏师子座云。悉皆弥覆充满虚空。十种师子座云。十种一切庄严具庄严师子座云。十种灯明师子座云。十种能出十方一切众宝师子座云。十种一切香鬘师子座云。十种一切诸佛庄严示现师子座云。十种一切宝台栏楯庄严师子座云。十种一切宝树庄严师子座云。十种日庄严师子座云。皆悉弥覆充满虚空。来诣佛所供养恭敬礼拜已。在东南方夜光幢宝藏师子座上。结跏趺坐。 此世界海西南方。次有世界海。名普照庄严。中有佛刹。名香胜离垢光明。佛号一切众生普欢喜王。于彼如来大众海中。有菩萨名普智光明-慧灯。为佛光明所开发已。与世界海尘数菩萨眷属围绕来向佛所。兴十种如意宝王云。悉皆弥覆充满虚空。十种青色宝云。十种一切香云。十种一切幡云。十种一切妙色庄严云。悉皆弥覆充满虚空。来诣佛所供养恭敬礼拜已。在西南方众宝师子座上。结跏趺坐。 此世界海西北方。次有世界海。名善光照。中有佛刹名意入。佛号普门智慧意入明净音。于彼如来大众海中。有菩萨名无量华照垂髻。为佛光明所开发已。与世界海尘数菩萨眷属围绕来向佛所。兴十种一切杂宝轮盖云。悉皆弥覆充满虚空。十种华盖云。十种解脱盖云。十种宝王盖云。十种杂宝盖云。十种普宝盖云。十种琉璃宝王盖云。十种一切香盖云。悉皆弥覆充满虚空。来诣佛所供养恭敬礼拜已。在西北方众善光明幢师子座上。结跏趺坐。 此世界海东北方。次有世界海。名宝照光明藏。中有佛刹。名香庄严乐胜藏。佛号无量功德海。于彼如来大众海中。有菩萨名无尽清净光明王。为佛光明所开发已与世界海尘数菩萨眷属围绕来向佛所。兴十种一切宝光轮云。悉皆弥覆充满虚空。十种光轮云。十种华云。十种如来变化轮云。十种一切佛境界轮云。十种一切功德宝云。十种一切众生乐不可尽示现云。十种一切诸佛所愿示现云。悉皆弥覆充满虚空。来诣佛所供养恭敬礼拜已。在东北方清净光明不可尽师子座上。结跏趺坐 <br/>
 <br/>
-大方广佛华严经卷第二 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 00:23<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">大方广佛华严经卷第三 <br/>
+大方广佛华严经卷第二 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 00:23</span><div class="badge-floor">第 3 进</div></div><div class="post-body">大方广佛华严经卷第三 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 卢舍那佛品第二之二 <br/>
 此世界海下方。次有世界海。名莲华妙香胜藏。中有佛刹。名宝师子光。佛号明照法界。于彼如来大众海中。有菩萨名光照分别法界。为佛光明所开发已。与世界海尘数菩萨眷属围绕来向佛所。兴十种一切宝光明云。悉皆弥覆充满虚空。十种一切香光明云。十种诸佛师子吼云。十种一切佛刹功德庄严云。十种一切华楼阁云。十种一切座庄严云。悉皆弥覆充满虚空。来诣佛所。在于下方宝藏师子座上。结跏趺坐。此世界海上方。 <br/>
@@ -759,7 +780,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 彼诸一切香水河 净宝王云弥覆上 佛白毫相出宝王 其光明耀等如来 <br/>
 <br/>
 大方广佛华严经卷第三 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 00:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">大方广佛华严经卷第四 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 00:40</span><div class="badge-floor">第 4 进</div></div><div class="post-body">大方广佛华严经卷第四 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 卢舍那佛品第二之三 <br/>
 彼香河中间一切平正。诸妙宝树以为庄严。杂种宝幔弥覆其上。一切菩萨愿力所起。佛所护念。三世庄严而庄严之。尔时普贤菩萨。以偈颂曰 <br/>
@@ -1005,7 +1026,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 诸佛子。诃尼世界如是等四谛名。有四十亿百千那由他。随诸众生所应调伏作如是说。诸佛子。如娑婆世界所言苦谛者。于饶益世界。或名重担。或名危脆。或名贼等。或名生死。或名非欢喜。或名流转。或名疲劳。或名丑貌。或名能生。或名利刃。所言苦集谛者。或名流散。或名扰乱。或名烦恼。或名羸劣。或名漂沦。或名乖违。或名非解脱。或名所作。或名取。或名虚妄。所言苦灭谛者。或名离狱。或名真实。或名离诸难。或名覆护。或名善因。或名随至。或名根。或名离枝。或名无为。或名无次第。所言苦灭道谛者。或名达无所有。或名一切因。或名善本。或名明至。或名不转法。或名有尽。或名大道。或名能调伏。或名安隐。或名非流转 <br/>
 <br/>
-大方广佛华严经卷第四 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 08:15<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">大方广佛华严经卷第五 <br/>
+大方广佛华严经卷第四 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 08:15</span><div class="badge-floor">第 5 进</div></div><div class="post-body">大方广佛华严经卷第五 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 四谛品第四之二 <br/>
 诸佛子。饶益世界如是等四谛名。有四十亿百千那由他。随诸众生所应调伏作如是说。诸佛子。如娑婆世界所言苦谛者。于鲜少世界。或名恶逆心。或名不长慧。或名邪念。或名流转。或名无惭愧。或名贪根。或名炽然。或名刺棘。或名火山。或名忧恼。所言苦集谛者。或名广地。或名来起。或名远智。或名众恼。或名恐怖。或名放逸。或名大失。或名著处。或名无主。或名相续。 <br/>
@@ -1218,7 +1239,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 众生种种业 难可分别知 十方内外身 种种无量色 <br/>
 佛身亦如是 一切满十方 难知能知者 彼是大导师 <br/>
 譬如无量刹 依止虚空住 不从十方来 去亦无所至 <br/>
-世界若成败 本来无所依 佛身亦如是 充满虚空界 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 09:38<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">           　　大方广佛华严经菩萨明难品第六 <br/>
+世界若成败 本来无所依 佛身亦如是 充满虚空界 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 09:38</span><div class="badge-floor">第 6 进</div></div><div class="post-body">           　　大方广佛华严经菩萨明难品第六 <br/>
 尔时文殊师利菩萨。问觉首菩萨言。佛子。心性是一。云何能生种种果报。或至善趣或至恶趣。或具诸根或不具者。或生善处或生恶处。端正丑陋苦乐不同。业不知心心不知业。受不知报报不知受。心不知受受不知心。因不知缘缘不知因。智不知法法不知智。尔时觉首菩萨。以偈答曰 <br/>
  <br/>
 为化众生故 乃能问斯义 诸法如实性 我说仁谛听 <br/>
@@ -1373,7 +1394,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第五 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 09:50<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">大方广佛华严经卷第六 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 09:50</span><div class="badge-floor">第 7 进</div></div><div class="post-body">大方广佛华严经卷第六 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 净行品第七 <br/>
 尔时智首菩萨。问文殊师利言。佛子。云何菩萨不染身口意业。不害身口意业。不痴身口意业。不退转身口意业。不动身口意业。应赞叹身口意业。清净身口意业。离烦恼身口意业。随智慧身口意业。云何菩萨生处成就。姓成就。家成就色相成就。念成就。智慧成就趣成就。无畏成就。觉悟成就。云何菩萨第一智慧。 <br/>
@@ -1562,7 +1583,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 昏夜寝息 当愿众生 休息诸行 心净无秽 <br/>
 晨朝觉悟 当愿众生 一切智觉 不舍十方 <br/>
 <br/>
-佛子。是为菩萨身口意业。能得一切胜妙功德。诸天魔梵沙门婆罗门人及非人声闻缘觉所不能动 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 10:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">                大方广佛华严经贤首菩萨品第八之一 <br/>
+佛子。是为菩萨身口意业。能得一切胜妙功德。诸天魔梵沙门婆罗门人及非人声闻缘觉所不能动 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 10:13</span><div class="badge-floor">第 8 进</div></div><div class="post-body">                大方广佛华严经贤首菩萨品第八之一 <br/>
 尔时文殊师利。以偈问了达深义净德。贤首菩萨曰 <br/>
 佛子我已说 菩萨清净行 一切诸世尊 咸共所赞叹 <br/>
 又诸大士众 甚深微妙行 功德广大义 仁者应演说 <br/>
@@ -1763,7 +1784,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 又放光明名欢喜 彼光觉悟一切众 欢喜爱乐佛菩提 发心愿求无师宝 <br/>
 建立如来大慈像 相好具足坐莲华 赞叹最胜诸功德 因是得成喜光明 <br/>
  <br/>
-大方广佛华严经卷第六 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 10:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">大方广佛华严经卷第七 <br/>
+大方广佛华严经卷第六 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 10:40</span><div class="badge-floor">第 9 进</div></div><div class="post-body">大方广佛华严经卷第七 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 贤首菩萨品第八之二又放光明名爱乐 彼光觉悟一切众 心常爱乐诸如来 无上法宝清净僧 <br/>
 常会十方诸佛前 逮成无上深法忍 教化无量群生类 心常念佛深妙法 <br/>
@@ -2024,7 +2045,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 各伸右手摩其顶 贤首菩萨德无量 以其右手摩顶已 一切如来赞叹言 <br/>
 善哉善哉真佛子 快说是法我随喜 <br/>
  <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 10:50<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">            大方广佛华严经佛升须弥顶品第九 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 10:50</span><div class="badge-floor">第 10 进</div></div><div class="post-body">            大方广佛华严经佛升须弥顶品第九 <br/>
 尔时如来。威神力故。十方一切诸佛世界。诸四天下一一阎浮提。皆有如来坐菩提树下无不显现。彼诸菩萨各承佛神力。说种种法。皆悉自谓在于佛所。尔时世尊威神力故。不起此座。升须弥顶向帝释殿。尔时帝释遥见佛来。即于妙胜殿上。敷置众宝师子之座。以万种杂宝而庄严之。万种宝帐弥覆其上。以万宝网。而绞络之。次上万种众妙宝盖。天缯杂宝以为垂带。万种璎珞而庄严之。万种宝衣以敷座上。一万天子在前立侍。一万梵天而围绕之。一万光明以为照耀 <br/>
  <br/>
 尔时帝释。为佛庄严师子座已。合掌恭敬白佛言。善来世尊。唯愿哀处我此宫殿。尔时世尊。即受其请升妙胜殿。一切十方亦复如是。尔时帝释无量乐音。佛神力故寂然无声。即自忆念于过去佛所种诸善根。以偈颂曰 <br/>
@@ -2122,7 +2143,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第七 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 10:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">大方广佛华严经卷第八 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 10:56</span><div class="badge-floor">第 11 进</div></div><div class="post-body">大方广佛华严经卷第八 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 菩萨云集妙胜殿上说偈品第十之二     尔时善慧菩萨。承佛神力普观十方。以偈颂曰妙哉佛世尊 无量诸如来 离害心解脱 自度能度彼 <br/>
 正见世间灯 如实不颠倒 无量无数劫 积德故见佛 <br/>
@@ -2193,7 +2214,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 我等重欢喜 见佛卢舍那 无量无边智 演说不可尽 <br/>
 无上慧坚固 及诸佛子等 无数亿劫中 说佛德无尽 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 11:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">               大方广佛华严经菩萨十住品第十一 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 11:08</span><div class="badge-floor">第 12 进</div></div><div class="post-body">               大方广佛华严经菩萨十住品第十一 <br/>
 尔时法慧菩萨承佛神力。入菩萨无量方便三昧正受。入三昧已。十方千佛世界尘数佛土之外。各见千佛世界尘数诸佛。是诸如来悉号法慧。时彼诸佛。告法慧菩萨言。善哉善哉。善男子。乃能入是菩萨无量方便三昧正受。善男子。十方各千佛刹。尘数诸佛。加汝神力故。能入是三昧正受。 <br/>
  <br/>
 又卢舍那佛本愿力故。威神力故。及汝善根力故。又欲令汝广说法故。长养佛慧故。开解法界故。分别众生界故。除灭障故。入无碍境界故。无等等方便入一切智陀罗尼故。觉一切法故。善知诸根故。说法持故。所谓菩萨十住。善男子。当承佛神力说微妙法。尔时一切如来。即与法慧菩萨。无碍智。无住智。无断智。无痴智。无坏智。无恶智。无量智。无胜智。无懈怠智。无退智。何以故。 <br/>
@@ -2377,7 +2398,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 如是观察如来十力甚深无量。具足长养大慈悲心。悉分别众生而不舍众生。亦不舍寂灭。行无上业不求果报。观一切法。如幻如梦如电如响如化。菩萨摩诃萨。如是观者。以少方便。疾得一切诸佛功德。常乐观察无二法相。斯有是处。初发心时便成正觉。知一切法真实之性。具足慧身不由他悟 <br/>
 <br/>
-大方广佛华严经卷第八 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 22:38<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">   大方广佛华严经卷第九 <br/>
+大方广佛华严经卷第八 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 22:38</span><div class="badge-floor">第 13 进</div></div><div class="post-body">   大方广佛华严经卷第九 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 初发心菩萨功德品第十三 <br/>
 尔时天帝释。白法慧菩萨言。佛子。初发心菩萨。为成就几功德藏。法慧答言。佛子。是处甚深难知难信难解难说难通难分别。虽然我当承佛神力具足演说。佛子。假使有人。供养东方阿僧祇世界众生一切乐具。乃至一劫。然后教令净修五戒。南西北方四维上下亦复如是。佛子。于意云何。彼人功德宁为多不。帝释言。佛子。除诸如来。其余一切。不能称量彼人功德。 <br/>
@@ -2757,7 +2778,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 大方广佛华严经卷第九 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 22:53<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">大方广佛华严经卷第十 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 22:53</span><div class="badge-floor">第 14 进</div></div><div class="post-body">大方广佛华严经卷第十 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 明法品第十四 <br/>
 尔时精进慧菩萨。问法慧菩萨言。佛子。初发心菩萨。成就如是无量功德之藏。以大庄严而自庄严。乘一切智乘入菩萨离生道。远离世间志求正觉。诸佛所住皆以得住。决定成就无上菩提。彼菩萨摩诃萨。云何修习功德转胜。令诸如来皆悉欢喜。具足菩萨所住功德清净之行。大愿成满得菩萨藏。随其所应而化度之。已能不舍诸波罗蜜。随所请众生皆悉度脱。兴隆三宝永使不绝。一切所为善根境界。诸行方便皆悉不虚。 <br/>
@@ -2897,7 +2918,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 如此间夜摩天王佛神力故忆念过去诸等正觉以偈赞叹。如是十方一切世界。夜摩天王。各自忆念过去佛所所种善根。以偈赞叹亦复如是。尔时世尊升其宝殿宝莲华藏师子座上。结跏趺坐。尔时宝殿忽然广博。犹如夜摩天处。十方世界亦复如是 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 23:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">          大方广佛华严经夜摩天宫菩萨说偈品第十六 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 23:08</span><div class="badge-floor">第 15 进</div></div><div class="post-body">          大方广佛华严经夜摩天宫菩萨说偈品第十六 <br/>
 尔时十方各过十万佛刹尘数世界。有世界名无量慧。次名幢慧。次名地慧。次名胜慧。次名灯慧。次名金刚慧。次名安乐慧。次名日慧。次名清净慧。次名梵慧。其佛号常住眼。次号无量眼。次号真实眼。次号不动眼。次号天眼。次号清净眼。次号安谛眼。次号明相眼。次号无上眼。次号净光泽眼。其菩萨名功德林。次名慧林。次名胜林。次名无畏林。次名惭愧林。次名精进林。次名力成就林。次名坚固林。次名如来林。次名智林。此诸菩萨。各于其国佛所净修梵行。 <br/>
  <br/>
 尔时佛神力故。彼诸菩萨。各与一佛世界尘数菩萨。来诣佛所恭敬礼拜。佛神力故随所来方。化作宝藏师子之座。结跏趺坐。充满十方。如此世界夜摩天上菩萨云集。十方世界亦复如是。尔时世尊从两足指。放百千亿妙色光明。普照十方一切世界。诸四天下菩提树下。夜摩天宫莲华藏宝师子座。如来神力及诸大会。皆悉显现。尔时功德林菩萨。承佛神力普观十方。以偈颂曰 <br/>
@@ -3044,7 +3065,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第十 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 23:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">大方广佛华严经卷第十一 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 23:13</span><div class="badge-floor">第 16 进</div></div><div class="post-body">大方广佛华严经卷第十一 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 功德华聚菩萨十行品第十七之一 <br/>
 尔时功德林菩萨摩诃萨。承佛神力。入菩萨善伏三昧。入三昧已。十方各过万佛世界尘数刹外。各见万佛世界尘数诸佛。是诸如来皆号功德林。时彼诸佛。告功德林菩萨言。善哉善哉。佛子。乃能入是善伏三昧。十方各万佛刹尘数诸佛。加汝神力故。能入是善伏三昧。卢舍那佛本愿力故。威神力故。诸菩萨善根力故。 <br/>
@@ -3179,7 +3200,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第十一 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 23:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">大方广佛华严经卷第十二 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 23:24</span><div class="badge-floor">第 17 进</div></div><div class="post-body">大方广佛华严经卷第十二 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 功德华聚菩萨十行品第十七之二 <br/>
 尔时佛神力故。十方世界六种震动。如来威神法应如是雨天华云。雨天香云。雨天末香云。雨天鬘云。雨天衣云。雨天宝云。雨天庄严云雨。又自然出天妓乐音。天妙光明普照一切。演出诸天微妙音声。如此四天下夜摩天宫说十行法。佛神力故。十方世界亦复如是。尔时十方各过十万佛刹尘数世界。有十万佛刹尘数菩萨。充满十方来诣此土。到已。语功德林菩萨言。 <br/>
@@ -3313,7 +3334,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 无量不可数 众生法界等 无数劫赞叹 菩萨德无尽 <br/>
 <br/>
 菩萨德无量 究竟一切德 诸佛无量劫 叹此德无尽 <br/>
-何况世间人 声闻及缘觉 无量劫赞叹 而能得穷尽 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 23:26<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 18 楼</span></div><div class="post-body">　　   　　大方广佛华严经菩萨十无尽藏品第十八 <br/>
+何况世间人 声闻及缘觉 无量劫赞叹 而能得穷尽 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 23:26</span><div class="badge-floor">第 18 进</div></div><div class="post-body">　　   　　大方广佛华严经菩萨十无尽藏品第十八 <br/>
 尔时功德林菩萨摩诃萨。复告诸菩萨言。佛子。菩萨摩诃萨。有十种藏。三世诸佛之所演说。何等为十。信藏。戒藏。惭藏。愧藏。闻藏。施藏。慧藏。正念藏。持藏。辩藏。是为十。何等为菩萨信藏。此菩萨信一切法空无真实。信一切法无相。信一切法无愿。信一切法无作者。信一切法不实。信一切法无坚固。信一切法无量。信一切法无上。信一切法不可度。信一切法不生。 <br/>
  <br/>
 若菩萨成就如是随顺净信。闻诸佛法不可思议。心不惊怖。闻一切佛不可思议。心不惊怖。闻众生不可思议。心不惊怖。闻法界不可思议。心不惊怖。闻虚空界不可思议。心不惊怖。闻涅盘界不可思议。心不惊怖。闻过去世不可思议。心不惊怖。闻未来世不可思议。心不惊怖。闻现在世不可思议。心不惊怖。闻入一切劫不可思议。心不惊怖。何以故。菩萨于诸佛所一向坚信不可沮坏。 <br/>
@@ -3400,7 +3421,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第十二 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-27 23:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 19 楼</span></div><div class="post-body">大方广佛华严经卷第十三 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-27 23:37</span><div class="badge-floor">第 19 进</div></div><div class="post-body">大方广佛华严经卷第十三 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 如来升兜率天宫一切宝殿品第十九 <br/>
 尔时佛威神力故。十方一切世界。诸四天下。一一阎浮提。皆有如来坐菩提树。无不显现。彼诸菩萨。承佛神力说种种法。皆悉自谓在于佛所。尔时如来。以自在神力。不离菩提树座及须弥顶妙胜殿上夜摩天宫宝庄严殿。趣兜率天宫一切宝庄严殿。时彼天王遥见佛来。即于殿上敷如意宝藏师子之座。以种种天宝而庄严之。过去修习善根所得。一切如来威神护持。不可数那由他阿僧祇善根所生。 <br/>
@@ -3544,7 +3565,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第十三 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-28 11:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 20 楼</span></div><div class="post-body">大方广佛华严经卷第十四 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-28 11:22</span><div class="badge-floor">第 20 进</div></div><div class="post-body">大方广佛华严经卷第十四 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 兜率天宫菩萨云集赞佛品第二十 <br/>
 尔时佛神力故。十方各过万佛世界尘数刹外。彼有世界。名坚固宝。次名坚固乐。次名坚固宝王。次名坚固金。次名坚固摩尼。次名坚固金刚。次名坚固莲华。次名坚固青莲华。次名坚固旃檀。次名坚固香。其佛号寿无尽幢。次号风幢。次号清白幢。次号威仪幢。次号明相幢。次号常幢。次号上幢。次号自在幢。次号梵幢。次号宁泰幢。 <br/>
@@ -3700,7 +3721,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 过去无量劫 流转于生死 不知真实法 如来所起处 <br/>
 诸法不可坏 亦无坏法者 照明诸世间 示现自在法 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-28 11:36<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 21 楼</span></div><div class="post-body">        大方广佛华严经金刚幢菩萨十回向品第二十一之一 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-28 11:36</span><div class="badge-floor">第 21 进</div></div><div class="post-body">        大方广佛华严经金刚幢菩萨十回向品第二十一之一 <br/>
 尔时金刚幢菩萨。承佛神力。入菩萨明智三昧正受。入正受已。十方各过百万佛刹微尘数等世界之外。各见百万佛刹微尘数诸佛。是诸如来悉号金刚幢。时彼诸佛告金刚幢菩萨言。善哉善哉。佛子。乃能入是菩萨明智三昧正受。 <br/>
  <br/>
 善男子。十方各百万佛刹微尘数等世界诸佛加汝神力故。乃能入是三昧正受。又卢舍那佛本愿力故。威神力故。汝智慧清净故。诸菩萨善根力故。欲令菩萨得清净无所畏故。得无碍不断辩故。入无碍智地故。入佛一切智广大心故。具足无尽诸善根故。满足无碍白净法故。入普门法界故。 <br/>
@@ -3862,7 +3883,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 大方广佛华严经卷第十四 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-28 11:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 22 楼</span></div><div class="post-body">大方广佛华严经卷第十五 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-28 11:56</span><div class="badge-floor">第 22 进</div></div><div class="post-body">大方广佛华严经卷第十五 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 金刚幢菩萨十回向品第二十一之二 <br/>
 佛子。何等为菩萨摩诃萨第三等诸佛回向。此菩萨摩诃萨。随顺学过去未来现在诸佛回向。此菩萨。修菩萨行时。见好恶色。其心清净而无憎爱。欢喜悦乐起无坏心。离诸忧恼得正直心。身意柔软诸根清凉。此菩萨。得如是乐时。回向诸佛。作如是念。一切诸佛。虽有无上净妙快乐。复愿诸佛具不思议佛所住乐。 <br/>
@@ -4051,7 +4072,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 众生所生无有生 亦无流转生死中 不着众生说众生 善能随顺诸世间 <br/>
 <br/>
-大方广佛华严经卷第十五 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-28 12:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 23 楼</span></div><div class="post-body">大方广佛华严经卷第十六 <br/>
+大方广佛华严经卷第十五 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-28 12:10</span><div class="badge-floor">第 23 进</div></div><div class="post-body">大方广佛华严经卷第十六 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 金刚幢菩萨十回向品第二十一之三 <br/>
 佛子。何等为菩萨摩诃萨第六随顺一切坚固善根回向。此菩萨摩诃萨。若为王时得胜国土。安隐丰乐降伏怨敌。治以正道如法教化。功盖天下德覆十方。万国归顺无敢违命。兵仗不用自然泰平。以四摄法善摄众生。转轮圣王七宝成就。此菩萨摩诃萨。坚固安住自在功德。眷属和睦不可沮坏。端正第一观者无厌。离一切恶功德具足。相好成满颜容殊特。身体肢节端严周备。鲜洁明净见者欢喜。 <br/>
@@ -4186,7 +4207,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第十六 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-28 12:38<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 24 楼</span></div><div class="post-body">　大方广佛华严经卷第十七 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-28 12:38</span><div class="badge-floor">第 24 进</div></div><div class="post-body">　大方广佛华严经卷第十七 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 金刚幢菩萨十回向品第二十一之四 <br/>
 菩萨摩诃萨。施种种盖。所谓尊重人盖。种种妙宝而庄严之。于无量无边严饰盖中。最为第一。众宝为竿金网罗覆。杂宝璎珞周匝垂下。悬众宝铃。净琉璃珠。微动相扣出和雅音。白净宝网而绞络之。百千清净众杂宝网罗覆其上。无量百千亿杂宝庄严。无量亿那由他沈水旃檀坚固香熏。阎浮檀金清净庄严。 <br/>
@@ -4330,7 +4351,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第十七 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-28 12:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 25 楼</span></div><div class="post-body">　大方广佛华严经卷第十八 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-28 12:56</span><div class="badge-floor">第 25 进</div></div><div class="post-body">　大方广佛华严经卷第十八 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 金刚幢菩萨十回向品第二十一之五 <br/>
 菩萨摩诃萨。见有人来乞手足指。如坚固精进菩萨。阎浮提自在王金光菩萨等。无量菩萨摩诃萨。施手足指时。心大欢喜颜色无异。乘大乘施。不求五欲施。不求名闻施。建立檀波罗蜜施。大施心施。离悭垢施。离嫉妒施。随顺佛施。以是施手足指所摄善根回向众生。令一切众生。得佛长指相。令一切众生。得指密相圆[月*庸]纤直。令一切众生。得赤铜甲相筒密清净。 <br/>
@@ -4473,7 +4494,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第十八 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-28 13:52<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 26 楼</span></div><div class="post-body">大方广佛华严经卷第十九 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-28 13:52</span><div class="badge-floor">第 26 进</div></div><div class="post-body">大方广佛华严经卷第十九 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 金刚幢菩萨十回向品第二十一之六 <br/>
 复次菩萨摩诃萨作无量亿那由他阿僧祇大众施会。离恶清净诸佛所叹。普净众生。永离众恶。净三业迹。生萨婆若。无量境界皆悉清净。无量百千亿那由他布施之具。皆悉庄严而以惠施。菩萨摩诃萨。以大施会所摄善根。回向众生。令一切众生。悉得无上菩提之心。行无量施皆悉清净。令一切众生。皆悉究竟无量无边清净之道。 <br/>
@@ -4657,7 +4678,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第十九 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-28 14:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 27 楼</span></div><div class="post-body">大方广佛华严经卷第二十 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-28 14:08</span><div class="badge-floor">第 27 进</div></div><div class="post-body">大方广佛华严经卷第二十 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 金刚幢菩萨十回向品第二十一之七 <br/>
 佛子。何等为菩萨摩诃萨第八如相回向。佛子。此菩萨摩诃萨。成就念智。安住不动。离痴正念。直心不动。成就坚固不可坏业。一切智境界得不退转。得大乘勇猛无畏之心。修习无尽善根。积集胜妙善根。修白净法增长大悲。得正直宝。常能正念一切诸佛白净法。回向心不退转。乐求菩萨道巧妙方便。出生清净坚固善根。 <br/>
@@ -4811,7 +4832,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第二十 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-28 14:26<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 28 楼</span></div><div class="post-body">大方广佛华严经卷第二十一 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-28 14:26</span><div class="badge-floor">第 28 进</div></div><div class="post-body">大方广佛华严经卷第二十一 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 金刚幢菩萨十回向品第二十一之八 <br/>
 以此无缚无着解脱心善根。于一业分别知无量诸业种种缘造。如一业。一切诸业亦复如是。修习普贤菩萨行业智地。以此无缚无着解脱心善根。于一法中。悉分别知一切诸法。于一切法中。亦知一法。分别诸法而不违不着。以此无缚无着解脱心善根。于一语中。悉分别知无量言音。犹如呼响。如一语中。一切语言亦复如是。 <br/>
@@ -4978,7 +4999,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第二十一 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-28 14:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 29 楼</span></div><div class="post-body">大方广佛华严经卷第二十二 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-28 14:42</span><div class="badge-floor">第 29 进</div></div><div class="post-body">大方广佛华严经卷第二十二 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 金刚幢菩萨十回向品第二十一之九 <br/>
 菩萨摩诃萨。以此善根如是回向。不着色故回向。不着声香味触法故回向。不求生天故回向。不求欲乐故回向。不着欲境界故回向。不求眷属故回向。不求自在故回向。不求生死乐故回向。不着生死故回向。不着死此生彼故回向。不求三有乐故回向。不求欲相应故回向。不求乐处故回向。不毒心故回向。不坏善根故回向。 <br/>
@@ -5166,7 +5187,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第二十二 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-28 15:06<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 30 楼</span></div><div class="post-body">大方广佛华严经卷第二十三 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-28 15:06</span><div class="badge-floor">第 30 进</div></div><div class="post-body">大方广佛华严经卷第二十三 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 十地品第二十二之一 <br/>
 尔时世尊。在他化自在天王宫。摩尼宝殿上。与大菩萨众俱。于阿耨多罗三藐三菩提。皆不退转。从他方世界。俱来集会。此诸菩萨。一切菩萨智慧行处。悉得自在。诸佛如来智慧入处。悉皆得入。善能教化一切世间。于念念中。普能示现神通等事。具足一切菩萨所愿。于一切世。一切劫。一切国土。常修一切诸菩萨行。 <br/>
@@ -5403,7 +5424,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第二十三 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-28 15:39<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 31 楼</span></div><div class="post-body">大方广佛华严经卷第二十四 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-28 15:39</span><div class="badge-floor">第 31 进</div></div><div class="post-body">大方广佛华严经卷第二十四 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 十地品第二十二之二 <br/>
 一切菩萨众 闻说上地义 其心皆清净 欢喜无有量 <br/>
@@ -5645,7 +5666,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第二十四 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-28 15:58<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 32 楼</span></div><div class="post-body">大方广佛华严经卷第二十五 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-28 15:58</span><div class="badge-floor">第 32 进</div></div><div class="post-body">大方广佛华严经卷第二十五 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 十地品第二十二之三 <br/>
 诸菩萨闻是 第四地行法 心皆怀喜悦 踊跃无有量 <br/>
@@ -5969,7 +5990,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第二十五 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 10:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 33 楼</span></div><div class="post-body">大方广佛华严经卷第二十六 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 10:13</span><div class="badge-floor">第 33 进</div></div><div class="post-body">大方广佛华严经卷第二十六 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 十地品第二十二之四 <br/>
 他化自在王 诸天及菩萨 闻说此上行 心皆大欢喜 <br/>
@@ -6226,7 +6247,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第二十六 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 10:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 34 楼</span></div><div class="post-body">    大方广佛华严经卷第二十七 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 10:29</span><div class="badge-floor">第 34 进</div></div><div class="post-body">    大方广佛华严经卷第二十七 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 十地品第二十二之五 <br/>
 说诸大菩萨 所行无上事 无数那由他 首陀会诸天 <br/>
@@ -6474,7 +6495,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第二十七 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 10:53<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 35 楼</span></div><div class="post-body">大方广佛华严经卷第二十八 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 10:53</span><div class="badge-floor">第 35 进</div></div><div class="post-body">大方广佛华严经卷第二十八 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 十明品第二十三 <br/>
 尔时普贤菩萨摩诃萨告诸菩萨言。佛子。菩萨摩诃萨有十种明。何等为十。此菩萨摩诃萨。悉知三千大千世界众生心念。所谓善心。不善心。无记心。广心。狭心。恶心。胜心。顺生死心。背生死心。声闻心。缘觉心。菩萨心。声闻行心。缘觉行心。菩萨行心。天心。龙心。夜叉心。乾闼婆心。阿修罗心。迦楼罗心。紧那罗心。 <br/>
@@ -6747,7 +6768,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第二十八 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 11:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 36 楼</span></div><div class="post-body">大方广佛华严经卷第二十九 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 11:22</span><div class="badge-floor">第 36 进</div></div><div class="post-body">大方广佛华严经卷第二十九 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 心王菩萨问阿僧祇品第二十五 <br/>
 尔时心王菩萨白佛言。世尊。所谓阿僧祇。不可量。无分齐。无周遍。不可数。不可称量。不可思议。不可说。不可说不可说。世尊。云何阿僧祇。乃至不可说不可说耶。佛告心王菩萨言。善哉善哉。善男子。饶益众生故。乃能问此如来应供等正觉。佛智境界甚深之义。善男子。汝今谛听。我当说之。尔时心王菩萨白佛言。 <br/>
@@ -6942,7 +6963,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第二十九 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 11:36<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 37 楼</span></div><div class="post-body">大方广佛华严经卷第三十 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 11:36</span><div class="badge-floor">第 37 进</div></div><div class="post-body">大方广佛华严经卷第三十 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 佛不思议法品第二十八之一 <br/>
 尔时诸菩萨大会中。有诸菩萨。作如是念。诸佛刹土不可思议。诸佛净愿不可思议。诸佛种姓不可思议。诸佛出世不可思议。诸佛法身不可思议。诸佛音声不可思议。诸佛智慧不可思议。诸佛神力自在不可思议。诸佛无碍住不可思议。诸佛解脱不可思议 <br/>
@@ -7057,7 +7078,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第三十 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 11:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 38 楼</span></div><div class="post-body">大方广佛华严经卷第三十一 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 11:43</span><div class="badge-floor">第 38 进</div></div><div class="post-body">大方广佛华严经卷第三十一 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 佛不思议法品第二十八之二 <br/>
 佛子。一切诸佛。有十种佛事无量无边不可思议。一切天人不能称量。三世一切声闻缘觉所不能说。除佛神力。何等为十。一切诸佛。于无量无边虚空法界等一切世界兜率天上。修菩萨行而作佛事。无量妙色。无量功德。无量光明。无量音声。无量清净音声。无量三昧。无量智慧境界。摄取天人魔梵沙门婆罗门阿修罗等一切世间。 <br/>
@@ -7190,7 +7211,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第三十一 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 11:54<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 39 楼</span></div><div class="post-body">大方广佛华严经卷第三十二 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 11:54</span><div class="badge-floor">第 39 进</div></div><div class="post-body">大方广佛华严经卷第三十二 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 如来相海品第二十九 <br/>
 尔时普贤菩萨摩诃萨。告诸菩萨言。佛子。谛听谛听善思念之。当为汝说如来相海。如来顶上有大人相。名曰明净。三十二宝以为庄严。普放无量大光明网。遍照一切十方世界。如来顶上有大人相。名曰普照佛方便海。圆满杂宝以为庄严。种种摩尼宝王庄严。金刚光明世界所起。普照一切法界。如来顶上有大人相。名充满法界云。 <br/>
@@ -7324,7 +7345,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第三十二 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 13:35<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 40 楼</span></div><div class="post-body">大方广佛华严经卷第三十三 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 13:35</span><div class="badge-floor">第 40 进</div></div><div class="post-body">大方广佛华严经卷第三十三 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 普贤菩萨行品第三十一 <br/>
 尔时普贤菩萨摩诃萨。告诸菩萨言。佛子。如向所说是微少说。何以故。一切如来应供等正觉。为受化者随应说法。愚痴众生诸缠所缠。计我我所。着吾我见。常随颠倒。生邪见惑。起邪虚妄。为缚所缚。流转生死。远如来道。为如是等诸众生故。如来应供等正觉。出兴于世。佛子。若菩萨摩诃萨。起一嗔恚心者。 <br/>
@@ -7604,7 +7625,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第三十三 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 13:52<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 41 楼</span></div><div class="post-body">大方广佛华严经卷第三十四 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 13:52</span><div class="badge-floor">第 41 进</div></div><div class="post-body">大方广佛华严经卷第三十四 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 宝王如来性起品第三十二之二 <br/>
 佛子。菩萨摩诃萨。又复应知。如来性起正法。功德无量。行无量故。充满十方。无来去故。离生住灭。无有行故。离心意识。无有身故。性如虚空。悉平等故。一切众生无我我所。无有尽故。一切刹无尽。无有转故。不断未来际。无有退故。如来智无疑。无二平等。观察有为无为故。成等正觉饶益众生。本行回向自在满足故。尔时普贤菩萨。欲重明此义。以偈颂曰 <br/>
@@ -7842,7 +7863,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第三十四 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 14:28<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 42 楼</span></div><div class="post-body">大方广佛华严经卷第三十五 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 14:28</span><div class="badge-floor">第 42 进</div></div><div class="post-body">大方广佛华严经卷第三十五 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 宝王如来性起品第三十二之三 <br/>
 复次佛子。菩萨摩诃萨。知见如来音声十种无量。何等为十。所谓知见虚空等无量。无处不至故。知见法界等无量。无处不彻故。知见众生界等无量。令一切众生悉欢喜故。知见行业等无量。广说一切果报故。知见烦恼等无量。究竟寂灭故。知见种种音声等无量。随应受化无不闻故。知见欲乐等无量。悉分别说诸解脱故。 <br/>
@@ -8085,7 +8106,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第三十五 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 14:54<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 43 楼</span></div><div class="post-body">大方广佛华严经卷第三十六 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 14:54</span><div class="badge-floor">第 43 进</div></div><div class="post-body">大方广佛华严经卷第三十六 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 宝王如来性起品第三十二之四 <br/>
 佛子。云何菩萨摩诃萨。知见如来应供等正觉大般涅盘。此菩萨摩诃萨。欲知见如来应供等正觉大般涅盘者。当如是知如如般涅盘。如来大般涅盘。亦复如是。如实际。如法界。如虚空界。如实性。如离欲际。如无相际。如我性际。如一切法性际。如真实际般涅盘。如来大般涅盘。亦复如是。何以故。涅盘非生灭法。若法不生。 <br/>
@@ -8231,7 +8252,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第三十六 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 15:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 44 楼</span></div><div class="post-body">大方广佛华严经卷第三十七 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 15:04</span><div class="badge-floor">第 44 进</div></div><div class="post-body">大方广佛华严经卷第三十七 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 离世间品第三十三之二 <br/>
 佛子。菩萨摩诃萨。有十种戒。何等为十。所谓不坏菩提心戒。离声闻缘觉地戒。饶益观察一切众生戒。令一切众生住佛法戒。一切菩萨学戒戒。一切无所有戒。一切善根回向菩提戒。不着一切如来身戒。佛子。菩萨摩诃萨。有十种自知受记法。令彼菩萨自知受记。何等为十。所谓一向发菩提心菩萨受记。不厌菩萨行菩萨受记。 <br/>
@@ -8356,7 +8377,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第三十七 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 15:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 45 楼</span></div><div class="post-body">　大方广佛华严经卷第三十八 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 15:08</span><div class="badge-floor">第 45 进</div></div><div class="post-body">　大方广佛华严经卷第三十八 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 离世间品第三十三之三 <br/>
 佛子。菩萨摩诃萨有十种巧方便分别智。何等为十。所谓入一切佛刹巧方便分别智。入一切众生处巧方便分别智。入一切众生心心所行巧方便分别智。入一切众生根巧方便分别智。入一切众生诸行业报巧方便分别智。入一切声闻行巧方便分别智。入一切缘觉行巧方便分别智。入一切菩萨行巧方便分别智。入一切世间法巧方便分别智。 <br/>
@@ -8481,7 +8502,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第三十八 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 18:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 46 楼</span></div><div class="post-body">大方广佛华严经卷第三十九 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 18:08</span><div class="badge-floor">第 46 进</div></div><div class="post-body">大方广佛华严经卷第三十九 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 离世间品第三十三之四 <br/>
 佛子。菩萨摩诃萨。有十种宝住成阿耨多罗三藐三菩提。何等为十。所谓菩萨摩诃萨。悉能往诣无量阿僧祇世界诸如来所。恭敬礼拜亲近供养。是为菩萨摩诃萨第一宝住成阿耨多罗三藐三菩提。菩萨摩诃萨。于不可思议诸如来所。闻法受持正念不忘。智慧分别长养胜趣。出生智慧充满十方。 <br/>
@@ -8622,7 +8643,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第三十九 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 18:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 47 楼</span></div><div class="post-body">　大方广佛华严经卷第四十 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 18:13</span><div class="badge-floor">第 47 进</div></div><div class="post-body">　大方广佛华严经卷第四十 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 离世间品第三十三之五 <br/>
 佛子菩萨摩诃萨。有十种不共法。何等为十。所谓菩萨摩诃萨。修习六波罗蜜。不由他悟。平等心施无所悭吝。持戒清净远离恶戒。忍辱成就心不可动。勤修精进于一切劫未曾退转。深入禅定离一切乱。出生智慧远离邪见。是为菩萨摩诃萨修习六波罗蜜随顺波罗蜜道不由他悟第一不共法。菩萨摩诃萨。摄一切众生而饶益之。 <br/>
@@ -8757,7 +8778,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第四十 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 18:23<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 48 楼</span></div><div class="post-body">大方广佛华严经卷第四十一 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 18:23</span><div class="badge-floor">第 48 进</div></div><div class="post-body">大方广佛华严经卷第四十一 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 离世间品第三十三之六 <br/>
 佛子。菩萨摩诃萨。有十种足。何等为十。所谓净戒足。积集成满一切大愿故。精进足。积集一切菩提枝至不退转故。诸通足。随众生愿令欢喜故。身通足。不离一坐而能悉诣一切佛刹故。深心足。究竟一切胜妙法故。坚誓足。所求诸事悉究竟故。摄右法足。不违一切尊重教故。闻法无厌足。闻持一切佛所说法无疲倦故。 <br/>
@@ -8864,7 +8885,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第四十一 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 18:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 49 楼</span></div><div class="post-body">大方广佛华严经卷第四十二 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 18:29</span><div class="badge-floor">第 49 进</div></div><div class="post-body">大方广佛华严经卷第四十二 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 离世间品第三十三之七 <br/>
 佛子。菩萨摩诃萨。有十种净喜。何等为十。所谓发菩提心净喜。舍一切所有净喜。于犯戒人不生恶心教化成就净喜。于一切诤讼众生悉令和合得无上智净喜。不惜身命守护正法净喜。远离五欲常乐正法净喜。令一切众生不着资生之具常乐正法净喜。见一切佛恭敬供养无有厌足而不坏法界净喜。 <br/>
@@ -8998,7 +9019,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 大方广佛华严经卷第四十二 <br/>
 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 18:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 50 楼</span></div><div class="post-body">大方广佛华严经卷第四十三 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 18:43</span><div class="badge-floor">第 50 进</div></div><div class="post-body">大方广佛华严经卷第四十三 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 离世间品第三十三之八 <br/>
 佛子。菩萨摩诃萨。有十种生。何等为十。所谓离愚痴生。放大光明网普照三千大千世界生。除灭一切未来世最后身生。不生生。知三界诸劫悉如幻生。于十方世界普现身生。具足一切智身生。放一切如来光明普照觉悟一切众生生。正受大智自在诸禅三昧身生。佛子。菩萨生时。一切佛刹六种震动。一切众生皆得解脱。 <br/>
@@ -9352,7 +9373,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第四十三 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 18:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 51 楼</span></div><div class="post-body">大方广佛华严经卷第四十四 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 18:56</span><div class="badge-floor">第 51 进</div></div><div class="post-body">大方广佛华严经卷第四十四 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之一 <br/>
 尔时佛在舍卫城祇树给孤独园。大庄严重阁讲堂。与五百菩萨摩诃萨俱。普贤菩萨。文殊师利菩萨。而为上首。夜光幢菩萨。须弥山幢菩萨。宝幢菩萨。无碍幢菩萨。华幢菩萨。离垢幢菩萨。日光幢菩萨。正幢菩萨。离尘幢菩萨。明净幢菩萨。大地端严菩萨。宝端严菩萨。大慧端严菩萨。金刚智端严菩萨。离垢端严菩萨。法日端严菩萨。功德山端严菩萨。智光端严菩萨。普妙德端严菩萨。 <br/>
@@ -9546,7 +9567,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第四十四 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 20:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 52 楼</span></div><div class="post-body">大方广佛华严经卷第四十五 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 20:43</span><div class="badge-floor">第 52 进</div></div><div class="post-body">大方广佛华严经卷第四十五 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之二 <br/>
 尔时坏散一切众魔智幢王菩萨。承佛神力。观察十方。以偈颂曰 <br/>
@@ -9785,7 +9806,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第四十五 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 20:58<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 53 楼</span></div><div class="post-body">大方广佛华严经卷第四十六 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 20:58</span><div class="badge-floor">第 53 进</div></div><div class="post-body">大方广佛华严经卷第四十六 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之三 <br/>
 尔时文殊师利。如象王回。观善财童子。作如是言。善哉善哉。善男子。乃能发阿耨多罗三藐三菩提心。求善知识亲近善知识。问菩萨行求菩萨道。善男子。是为菩萨第一之藏。具一切智。所谓求善知识。亲近恭敬而供养之。是故善男子应求善知识亲近恭敬。一心供养而无厌足。问菩萨行。云何修习菩萨道。云何满足菩萨行。 <br/>
@@ -9935,7 +9956,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第四十六 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 23:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 54 楼</span></div><div class="post-body">大方广佛华严经卷第四十七 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 23:14</span><div class="badge-floor">第 54 进</div></div><div class="post-body">大方广佛华严经卷第四十七 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之四 <br/>
 尔时善财童子。正念思惟解脱长者教。念不可思议菩萨法门。思惟不可思议菩萨慧光。随顺深入不可思议甚深法界。摄取菩萨不可思议净妙功德。显现如来不可思议自在神力。解了不可思议庄严佛刹。分别知佛不可思议住持庄严安住境界。思惟不可思议菩萨境界三昧庄严。分别不可思议世界究竟无碍。向不可思议菩萨坚固净业深心。 <br/>
@@ -10098,7 +10119,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第四十七 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 23:26<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 55 楼</span></div><div class="post-body">　大方广佛华严经卷第四十八 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 23:26</span><div class="badge-floor">第 55 进</div></div><div class="post-body">　大方广佛华严经卷第四十八 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之五 <br/>
 尔时善财童子。起不可思议恭敬之心。好乐净法专向大乘。求诸佛智亲近如来。观法境界无所障碍。决定实际住实境界。至三世际。解了三世如虚空际。决定了知三世法际。不作法际住无碍际。不违业际。决定了知佛际非际。住如来住。灭一切妄想。不着一切佛。一切眷属。一切世界。知一切众生非我无实。一切音声离语言道。 <br/>
@@ -10223,7 +10244,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第四十八 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 23:38<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 56 楼</span></div><div class="post-body">大方广佛华严经卷第四十九 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 23:38</span><div class="badge-floor">第 56 进</div></div><div class="post-body">大方广佛华严经卷第四十九 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之六 <br/>
 尔时善财童子。思惟诸佛无量法门。逮得菩萨无量诸行。菩萨无量妙方便道。普照身心。乐求无量方便法门。成就菩萨清净解脱。菩萨无量清净诸根。菩萨无量诸清净力。心随菩萨无量诸行。出生菩萨无量大愿力。逮得菩萨不可沮坏妙智慧幢。普照一切。渐渐游行至于彼国。求普门城。心无休息精进不退。念善知识。赞善知识。 <br/>
@@ -10358,7 +10379,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第四十九 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 23:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 57 楼</span></div><div class="post-body">　大方广佛华严经卷第五十 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 23:42</span><div class="badge-floor">第 57 进</div></div><div class="post-body">　大方广佛华严经卷第五十 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之七 <br/>
 善男子。复有香。名牛头旃檀。从离垢山王生。若以涂身火不能烧。复有香。名不可坏。从大海生。若以涂身。出妙音声降伏怨敌。复有香。名莲华黑沈水。从阿耨达池四岸边生。若烧一丸。悉能普熏阎浮提界。若有众生得闻此香。离一切恶具清净戒。复有香。名曰明相。从雪山王生。若有众生闻此香者。离诸垢染心得清净。 <br/>
@@ -10469,7 +10490,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第五十 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-29 23:53<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 58 楼</span></div><div class="post-body">大方广佛华严经卷第五十一 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-29 23:53</span><div class="badge-floor">第 58 进</div></div><div class="post-body">大方广佛华严经卷第五十一 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之八 <br/>
 尔时善财童子。正念思惟彼长者教。随顺菩萨解脱之藏。正念菩萨诸忆念力。次第分别一切诸佛及诸佛法。一心正念诸佛法流。忆念受持彼诸佛法。及佛庄严长养菩提。思惟正念一切诸佛不思议业。渐渐游行至光明山。登彼山上周遍推求。见观世音菩萨住山西阿。处处皆有流泉浴池。林木郁茂地草柔软。结跏趺坐金刚宝座。 <br/>
@@ -10647,7 +10668,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷五十一 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-30 00:07<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 59 楼</span></div><div class="post-body">大方广佛华严经卷第五十二 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-30 00:07</span><div class="badge-floor">第 59 进</div></div><div class="post-body">大方广佛华严经卷第五十二 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之九 <br/>
 尔时善财童子。专求善知识。念因善知识生诸善法。善知识者。难见难遇。见善知识。灭诸乱想。见善知识。除灭一切诸缠障碍。见善知识。得萨婆若智慧光明。见善知识。深入佛海。见善知识。得正念法云陀罗尼。受持一切佛净法-轮云。见善知识。具大悲海救护众生。见善知识。智慧明净。悉能普照诸法界海。 <br/>
@@ -10911,7 +10932,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第五十二 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-30 00:12<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 60 楼</span></div><div class="post-body">大方广佛华严经卷第五十三 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-30 00:12</span><div class="badge-floor">第 60 进</div></div><div class="post-body">大方广佛华严经卷第五十三 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之十 <br/>
 尔时普贤菩萨。在彼圣王宝宫殿上。于虚空中而告之言。大王当知。佛兴于世。今在普光明妙法音幢菩提树下。时彼众生。见普贤菩萨相好严身无量光明。闻妙音声。欢喜无量发如是愿。令我等所作善根。得此妙身相好庄严。威仪无异。神力自在。除灭一切众生愚暗。觉悟一切。佛兴于世。趣趣受生。愿常不离此善知识。时彼圣王。与其宝女及诸眷属千子大臣并四种兵。上升虚空。放大光明照四天下。普为众生。以偈颂曰 <br/>
@@ -11127,7 +11148,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第五十三 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-30 00:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 61 楼</span></div><div class="post-body">大方广佛华严经卷第五十四 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-30 00:25</span><div class="badge-floor">第 61 进</div></div><div class="post-body">大方广佛华严经卷第五十四 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之十一 <br/>
 复次佛子。我或为众生说闻慧法。或为众生说思慧法。或为众生说修慧法。或说一有。或说一切有海。或说一佛海。或说一切佛名号海。或说一世界。或说一切世界海。或说授一记。或说授一切记海。或说一佛眷属海。或说一切佛眷属海。或说一佛法-轮。或说一切佛法-轮海。或说一修多罗。或说一切佛修多罗海。或说一会。 <br/>
@@ -11382,7 +11403,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第五十四 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-30 00:38<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 62 楼</span></div><div class="post-body">大方广佛华严经卷第五十五 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-30 00:38</span><div class="badge-floor">第 62 进</div></div><div class="post-body">大方广佛华严经卷第五十五 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之十二 <br/>
 尔时善财童子。往诣愿勇光明守护众生夜天所。见彼夜天在大众中。处于普照摩尼王藏师子之座。摩尼王网罗覆其身。光明普照一切法界。一切日月星宿光明。以为其身。一切众生形类色像。悉于中现。又现一切诸色海身。诸威仪身。诸方面身。应现一切众生前身。游行十方自在力身。于一切时现众生前不失时身。 <br/>
@@ -11600,7 +11621,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第五十五 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-30 00:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 63 楼</span></div><div class="post-body">大方广佛华严经卷第五十六 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-30 00:51</span><div class="badge-floor">第 63 进</div></div><div class="post-body">大方广佛华严经卷第五十六 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之十三 <br/>
 尔时善财。白圆满妙德林天言。天神。得此菩萨受生自在法门其已久如。答言。佛子。乃往古世。过亿佛刹微尘等劫。有劫名可悦乐。彼有世界。名一切宝。彼劫世界中。有八十那由他佛。出兴于世。其最初佛。号不可坏自在幢王。彼世界中。一阎浮提有一王都。名庄严幢。王名宝焰眼光。第一夫人。名善喜光。 <br/>
@@ -11916,7 +11937,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第五十六 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-30 00:57<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 64 楼</span></div><div class="post-body">大方广佛华严经卷第五十七 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-30 00:57</span><div class="badge-floor">第 64 进</div></div><div class="post-body">大方广佛华严经卷第五十七 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之十四 <br/>
 尔时善财童子作如是念。我当云何见善知识。善知识者远离世间。住无所住不着诸入。超出障碍趣无碍道。具净法身善业化身。以明净智观诸世间。大愿成满。持佛法身。如意法身。非生灭身。非来去身。非虚实身。非聚散身。一切诸相即一相身。离边见身。无所著身。无穷尽身。灭众虚妄如电光身。如幻梦身。如镜像身。 <br/>
@@ -12052,7 +12073,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 愿及智所摄成故。善男子。幻境自性不可思议。善男子。我等二人但能知此菩萨解脱。如诸菩萨摩诃萨。善入无边诸事幻网。彼功德行我等云何能知能说。时童子童女。说自解脱已。诸善根力不思议故。令善财身柔软光泽。自说本愿 <br/>
 <br/>
 大方广佛华严经卷第五十七 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-30 01:09<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 65 楼</span></div><div class="post-body">　　大方广佛华严经卷第五十八 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-30 01:09</span><div class="badge-floor">第 65 进</div></div><div class="post-body">　　大方广佛华严经卷第五十八 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之十五 <br/>
 又作是言。善男子。于此南方有一国土。名曰海涧。彼有园林。名大庄严藏。于彼林中有大楼观。名严净藏。菩萨往昔善根所起。菩萨诸愿自在诸通智力。巧妙方便功德大悲。法门所起。彼园中有菩萨摩诃萨。名曰弥勒。常化父母亲戚眷属及同行者。又复长养其余无量众生善根。令住大乘。亦欲为汝显现菩萨方便法门。 <br/>
@@ -12322,7 +12343,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大方广佛华严经卷第五十八 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-30 01:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 66 楼</span></div><div class="post-body">大方广佛华严经卷第五十九 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-30 01:14</span><div class="badge-floor">第 66 进</div></div><div class="post-body">大方广佛华严经卷第五十九 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之十六 <br/>
 尔时弥勒菩萨。以如是等。赞叹善财诸妙功德令无量众生。发道心已。告善财言。善哉善哉。童子。乃能发阿耨多罗三藐三菩提心。专求一切佛法。饶益一切世间。救护一切众生。善男子。汝得善利。人身寿命。值遇诸佛。得见文殊师利大善知识。汝为法器。善根润泽。长清白法。净胜欲性。为善知识之所总摄。诸佛护念。 <br/>
@@ -12457,7 +12478,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 其身寿量劫刹。教授无量法门。正法住世。分别了知皆悉不同。尔时善财。诸楼观中见一楼观。高广严饰胜妙于前。包容三千大千世界。百亿阎浮提。百亿兜率天。菩萨命终降神。受胎出生。游行七步。观察十方大师子吼。帝释梵王恭敬奉侍。现童子身处宫殿中。出游园观。以萨婆若心出家苦行。现受乳糜。往诣道场降伏众魔。观菩提树转正法-轮。升天宫殿。方土劫数眷属寿量。行菩萨行满足大愿。演说正法教化众生。现分舍利皆悉不同 <br/>
 <br/>
-大方广佛华严经卷第五十九 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2007-3-30 01:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 67 楼</span></div><div class="post-body">　　大方广佛华严经卷第六十 <br/>
+大方广佛华严经卷第五十九 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2007-3-30 01:25</span><div class="badge-floor">第 67 进</div></div><div class="post-body">　　大方广佛华严经卷第六十 <br/>
 东晋天竺三藏佛驮跋陀罗译 <br/>
 入法界品第三十四之十七 <br/>
 尔时善财。自见己身在诸佛所。见如是等诸奇特事。又闻楼观诸金铃中。出不思议微妙音声。所谓初发菩提心声。菩萨所行诸度愿声。恭敬供养不可思议诸佛音声。净佛刹声。佛法云声。诸庄严具。亦出如是微妙音声。又闻某菩萨在某世界。于某劫中某知识化。回向善根出生大愿。于某佛所。大众之中。发菩提心声。 <br/>
@@ -12695,7 +12716,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 华严经梵本凡十万偈。昔道人支法领。从于阗国得此三万六千偈。以晋义熙十四年岁次鹑火三月十日。于扬州司空谢石所立道场寺。请天竺禅师佛度跋陀罗。手执梵文译梵为晋沙门释法业亲从笔受。时吴郡内史孟顗右卫将军褚叔度为檀越。至元熙二年六月十日出讫 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">蓮</div>蓮師金剛发表于 2012-11-15 12:45<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 68 楼</span></div><div class="post-body">頂禮蓮師！ <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">蓮</div><span style="font-size:15px; letter-spacing:1px;">蓮師金剛发表于 2012-11-15 12:45</span><div class="badge-floor">第 68 进</div></div><div class="post-body">頂禮蓮師！ <br/>
 最上三寶我皈依，一切罪業皆懺悔 <br/>
 眾生善根盡隨喜，正覺菩提意中持 <br/>
 <br/>

@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>四念处禅观之理论与实践 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>四念处禅观之理论与实践 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/定慧禅修成就法.html">定慧禅修成就法</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">四念处禅观之理论与实践</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚得发表于 2005-11-8 16:50<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">四念处禅观之理论与实践 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/定慧禅修成就法.html">定慧禅修成就法</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">四念处禅观之理论与实践</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚得发表于 2005-11-8 16:50</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">四念处禅观之理论与实践 <br/>
 释观慧中华佛学研究所研究员提要 <br/>
 <br/>
 本文以四念处禅观为主，所引用的数据有南传和汉译经文为主。 <br/>
@@ -80,7 +101,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 第四 ’’监视念头的分散心’’ 。 习襌者不应该随着外界的诱惑而停止习襌  或是因外界事物而分心。习襌者应该保持心念在身体的某一部份上，不能让心被外界任何事物所分散。第五 ‘’概念的突破’’。 襌修者知道头发、肤毛，他们是重复名字的概念或是重复一部份的名字，你必需超越这些概念。当你重复时，你不能专注在某部份的概念上，你得试着建立你的心念在某部份的样子去厌离它，那是很重要的。因为襌定的目的，是要建立习襌者的心念专住在对某些身体的部份，这样才能成为真正的厌离者。有五种方法可以产生厌离心即色、形状、味道、住所及地方。譬如：颜色，头发显现出来的是黑色，如果你看到一根黑头发掉入你的食物中，你应该会说：把这盘食物拿走或丢掉，当你正想吃这食物时，有一根头发在食物里，你会觉得很不愉快，而形状、味道、住所及地方都是一样的道理。譬如说住所，我的身体来自那里？头发长在我的身上，而身体是所有各部份所组成的，如：血、脓、痰、尿等。头发是长在这个令人厌恶的身体上，因此头发也是住在令人厌恶的住所里。第六是 ’’相继’’ 。 一位襌修者能够详述身体的某一部份，有些人会很清楚地显示出在他们的心里，但有些人不会。这个情况下，襌修者自己不清楚的部份特别专住，直到他们之中非常楚地显示出来，直到全神贯注的襌定阶段。第七是 ‘’专心注意’’。一位襌修者想要获得更高的境界，应该注意如下三点：集中注意力、勤修、平静。只有集中注意力，才可能阻止怠惰，惟有努力专注，才不动摇，惟有专注平静，才能如法实践。因此专注、努力和平静必需适当的平衡。《念处经》里，又教导到达平静如下的几种方法：「阻止心念散乱、运用心念助长心念、用平静心去观看每一件事情、决心到达超越的状态、达到喜乐自在的涅盘。」[7]  总之，襌修者应该学习这几种专注心念的技巧。 <br/>
 3 如实了知心念 <br/>
 观身的意思是 ’’如实了知心念’’ 。 襌师运用不同的方法教导襌法，但是他们的意思是相同的，例如：事物的察觉、专注、注意、观察、知道，所有这些的意思都是相同的。意思是要保持心念在一事物上、或细心地和精密地观察它。所以佛陀告诉比丘们说，不管走向前方或后方，应当如实了知心念的生起和降落。如实了知心念，首先要俱备〝正见’’ 。一位习襌者应该试着对事物细心去〝观’ 去 ’’看’’ ， 和精确地去 ’’看住’’，这样才不容易混淆其它的事物，细心地和精切地去 ’看’，就是所谓的〝正见’’ 。 第二、整体地看和辨别一个东西，整体的意思是在所有精神上或物质上的现象，当知每一个东西的特征、作用和意义。 <br/>
-襌修者必需知道如何平等地运用他们的信、进、念、定、慧五力。必需彼此取得调和和平衡。尤其是进和定的平衡，这些要素若能平衡，便会生定，而慧是由定来的，这些要素如不能平衡，就不能得定。众生有两种，一者为：愚痴无闻凡夫，眼见色已，于可念色而起乐着；不可念色而起憎恶；不住身念处。于心解脱，慧解脱无少分智，而起种种恶不善法，耳鼻舌身意亦复如是。…，如是比丘，不胜于色 …，不能胜法。[8] 一般众生眼见色起爱味心、贪着心，所以身心不能自在，不能自在，就不能如实了知色，色味，色患，色离，如此就不能解脱。反之：   多闻圣弟子眼见色，于可念色不起乐着；不可念色不起憎恶；系念而住—无量心解脱，慧解脱。如实知于彼已，起恶不善法，无余减尽，耳鼻舌身意亦复如是。…，如是比丘能胜彼色，不为彼色之所胜也。[9]   襌修者，时时看住自己的心，令心不会因色起乐着或憎恶，能系心念住，如实知不善法，如此修习必得身心自在和解脱。   </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚得发表于 2005-11-8 16:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">四念处禅观理论与实践 <br/>
+襌修者必需知道如何平等地运用他们的信、进、念、定、慧五力。必需彼此取得调和和平衡。尤其是进和定的平衡，这些要素若能平衡，便会生定，而慧是由定来的，这些要素如不能平衡，就不能得定。众生有两种，一者为：愚痴无闻凡夫，眼见色已，于可念色而起乐着；不可念色而起憎恶；不住身念处。于心解脱，慧解脱无少分智，而起种种恶不善法，耳鼻舌身意亦复如是。…，如是比丘，不胜于色 …，不能胜法。[8] 一般众生眼见色起爱味心、贪着心，所以身心不能自在，不能自在，就不能如实了知色，色味，色患，色离，如此就不能解脱。反之：   多闻圣弟子眼见色，于可念色不起乐着；不可念色不起憎恶；系念而住—无量心解脱，慧解脱。如实知于彼已，起恶不善法，无余减尽，耳鼻舌身意亦复如是。…，如是比丘能胜彼色，不为彼色之所胜也。[9]   襌修者，时时看住自己的心，令心不会因色起乐着或憎恶，能系心念住，如实知不善法，如此修习必得身心自在和解脱。   </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚得发表于 2005-11-8 16:51</span><div class="badge-floor">第 2 进</div></div><div class="post-body">四念处禅观理论与实践 <br/>
 <br/>
 一位襌修者，如何于受观受而住? 因六根：「眼触所生之受，耳触所生之受，鼻舌身意所生之受…, 」 [10] <br/>
 眼触外界生苦受、乐受、不苦不乐受。然而，禅修者应如实了知：觉乐觉时，便知觉乐觉、觉苦觉时，便知觉苦觉、觉不苦不乐觉时，便知不苦不乐觉；觉乐身、苦身、不苦不乐身；乐心、苦心、不苦不乐心；乐食、苦食、不苦不乐食；乐无食、苦无食、不苦不乐无食；乐欲、苦欲、不苦不乐欲；乐无欲觉、苦无欲觉、不苦不乐无欲觉时，便知觉不苦不乐无欲觉。[11] <br/>
@@ -114,7 +135,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 佛陀在《大念处经》为诸弟子们说：「诸比丘，为众生之清净，为度忧悲，为灭苦恼，为得真理，为证涅盘，唯一趣向道，即四念处。」[24] 修习四念处不但如此，又可得四果，四种福利: 「谓须陀洹果，斯陀含果，阿那含果，阿罗汉果。」[25]  如果人人都能依照佛陀的教示去实践，观照身体的每一部份的不净和感受，心的无常和法的变易和败坏，精勤努力修习，并且俱备不放逸行，以及有正智正念的心，必定可得四果。而且「若阿罗汉，诸漏己尽，所作已作，舍诸重担，尽诸有结，正知善解脱…，乃至于法得远离。」[26] 当阿罗汉断尽所有的烦恼之后，不受后有，心自然清净，不在有任何束缚，对正法也不执着，而且可得无上的福德和利益。 <br/>
 佛陀告诉弟子们，如果众生想得身心清净，或为克服忧悲苦恼，或为灭除烦恼痛苦，或为获得真理，或为证得涅盘，只有一条道路可以引导我们由苦恼获得解脱，这条路就叫四念处。而且修习四念处者能令「未净众生，令得清净，已净众生，令增光泽  未度彼岸者令度，…。」[27]  四念处也就是观身不净，观受是苦，观心无常，观法无我。修习四念处有如此多的利益，禅修者应该多练习多精进多观照，就可以获得解脱。 <br/>
 四念处包含在三十七道品的内容，正念是八正道的内容之一，八正道能引导烦恼的止息，也是四圣谛中第四道谛的执行者，在戒、定、慧三学中，正念是执行第二任务的定，念是信、进、念、定、慧五根之一，在五根中，念是执行观察心念发展并与其它四根保持平衡关系。他们有着息息相关而不可分离的。 <br/>
-本文以四念处襌观为主，并论及四念处禅关的理论和实践方法，主要谈论对身体有关的执着，敏觉地察觉心念的升起和降落，如果真正地了解，进一步去实践，可敏锐察觉身心的真实状态。总之四念处是一种重要修行方法，不但简单，当下可以专注和如实了知之道，它更可以带给我们自由解脱。要想让忧悲苦恼止息者，就要如实了知四念处的实践方法，使身体变为轻安柔软，使心不执着，而活在当下，这是古仙人之道。四念处的实践方法，可使我们在生病疼痛时，也不至于影响我们的心，让我们的心念保持“平衡与宁静” </div></div><div class="post"><div class="post-header"><div class="avatar">福</div>福喜发表于 2006-2-14 22:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">一、修习四念处的重要性 <br/>
+本文以四念处襌观为主，并论及四念处禅关的理论和实践方法，主要谈论对身体有关的执着，敏觉地察觉心念的升起和降落，如果真正地了解，进一步去实践，可敏锐察觉身心的真实状态。总之四念处是一种重要修行方法，不但简单，当下可以专注和如实了知之道，它更可以带给我们自由解脱。要想让忧悲苦恼止息者，就要如实了知四念处的实践方法，使身体变为轻安柔软，使心不执着，而活在当下，这是古仙人之道。四念处的实践方法，可使我们在生病疼痛时，也不至于影响我们的心，让我们的心念保持“平衡与宁静” </div></div><div class="post"><div class="post-header"><div class="avatar">福</div><span style="font-size:15px; letter-spacing:1px;">福喜发表于 2006-2-14 22:46</span><div class="badge-floor">第 3 进</div></div><div class="post-body">一、修习四念处的重要性 <br/>
  <br/>
 　　(1)有一乘道，净诸众生，令越忧悲、灭恼苦，得如实法，所谓四念处。(六○七)【注()内的数字是大正藏中杂阿含的经文次第，以下同此。】 <br/>
  <br/>
@@ -272,7 +293,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 14.观察离贪入息念时，于观察离贪入息系念善学；观察离贪出息念时，于观察离贪出息系念善学。 <br/>
 15.观察灭尽入息念时，于观察灭尽入息系念善学；观察灭尽出息念时，于观察灭尽出息系念善学。 <br/>
 16.观察舍弃入息念时，于观察舍弃入息系念善学；观察舍弃出息念时，于观察舍弃出息系念善学。圣弟子尔时法法观念住，异于法者，亦随法比思惟。 <br/>
-　　(以上13～16阶系根据巴利南传相应部，其所列为「观察无常、离贪、灭尽、舍弃」的次第。梵文汉译杂阿含则为「观察无常、断、无欲、灭」的次第。) </div></div><div class="post"><div class="post-header"><div class="avatar">福</div>福喜发表于 2006-2-14 22:52<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">四念处(四个参学的架构) <br/>
+　　(以上13～16阶系根据巴利南传相应部，其所列为「观察无常、离贪、灭尽、舍弃」的次第。梵文汉译杂阿含则为「观察无常、断、无欲、灭」的次第。) </div></div><div class="post"><div class="post-header"><div class="avatar">福</div><span style="font-size:15px; letter-spacing:1px;">福喜发表于 2006-2-14 22:52</span><div class="badge-floor">第 4 进</div></div><div class="post-body">四念处(四个参学的架构) <br/>
  <br/>
 　　修习佛陀正法之道应该真诚地专注于正确的实践，对于我们应尽的各项任务都必须专注地予以完成，当我们执行任何任务的时候，即使是小事，如果在我们自己和我们的工作之中，缺少了完成任务的专注和信念，就不能漂亮地完成它。在我们自己和我们的工作之中，不论是内在或外在的工作，为了具备专注和信念，就必须致力于修习。如果一个人缺乏「专注」来作为保持工作清晰的方法，那么即使他是一个能够做出坚固和美丽东西的技师，他的缺乏「专注」将会降低工作的质量和美观。因此，专注和定力是那些在工作上志求圆满成果的人所不应该忽略它的重要因素。 <br/>
  <br/>
@@ -364,7 +385,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 　　可贵的是胜过自己。 <br/>
  <br/>
-　　到目前为止，似乎解释得很充分了，所以现在，在这次谈话结束的时候，我请求三宝的力量庇护你们每一个人，让你们身心安和，让你们在戒、定、慧上有所进步，直到你们能够克服所有通往安全与宁静之境(亦即涅盘)的障碍为止。 </div></div><div class="post"><div class="post-header"><div class="avatar">福</div>福喜发表于 2006-2-14 23:02<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">出入息观修持法要 <br/>
+　　到目前为止，似乎解释得很充分了，所以现在，在这次谈话结束的时候，我请求三宝的力量庇护你们每一个人，让你们身心安和，让你们在戒、定、慧上有所进步，直到你们能够克服所有通往安全与宁静之境(亦即涅盘)的障碍为止。 </div></div><div class="post"><div class="post-header"><div class="avatar">福</div><span style="font-size:15px; letter-spacing:1px;">福喜发表于 2006-2-14 23:02</span><div class="badge-floor">第 5 进</div></div><div class="post-body">出入息观修持法要 <br/>
  <br/>
 　　「出入息观」(又称安那般那念)的修持，全程完全在呼吸上修行，不用作任何变更及移动，从始至终运行呼吸一直达到涅盘境界为止，是最方便不过的一种修法，不必依靠外物，如遍处轮与尸体之类，再者其法温柔，不激烈，不紧张，不可怕。不如「不净观」一般的难为。所以没有害处，绝对不会伤及身体。问题只在能够修行与否﹖如果不能修行便不能修行，伤害绝没有。如果有人说修持出入息观会引起发狂，那是无稽之谈，说这话的人也许误认旁门别教的出入息观，以为是本佛教的出入息观，那并不是佛世尊宣说而记载于巴利圣典上的真正佛法，如本书所根据讲解的一般。本门出入息观绝对无害，如果修行的人真的发狂的话，那个人必定先有狂病，而动用心神时抵触神经发作。另一个原因便是其人修行的目的并不在断灭烦恼，而只妄求神通法力，希图财利，这是会引起狂病的。 <br/>
  <br/>
@@ -512,7 +533,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 　　一：普通人修习入出息观，有可能出问题。根据瑜伽师地论所说，由于呼吸太急、太缓或勉强用力呼吸，都可能会令身、心不平衡，使关节生诸疾病或令心生诸散乱，或极重忧恼逼切。所以还是要先具足正见、净戒及呼吸的技巧才好。 <br/>
  <br/>
-　　二、三、四：有关「取相」、「似相」建议参照本书「解脱心」和「正道足迹」中的开示，避免被幻相迷惑。 </div></div><div class="post"><div class="post-header"><div class="avatar">福</div>福喜发表于 2006-2-14 23:06<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">身观念处的十项功德 <br/>
+　　二、三、四：有关「取相」、「似相」建议参照本书「解脱心」和「正道足迹」中的开示，避免被幻相迷惑。 </div></div><div class="post"><div class="post-header"><div class="avatar">福</div><span style="font-size:15px; letter-spacing:1px;">福喜发表于 2006-2-14 23:06</span><div class="badge-floor">第 6 进</div></div><div class="post-body">身观念处的十项功德 <br/>
  <br/>
 　　录自巴利中部119经 <br/>
  <br/>
@@ -545,7 +566,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 　　(九)他以超人的清净天眼，见到诸有情在生死。他知道诸有情是随业而生得贵贱，美丑，幸福与不幸福。即所谓：『诸位贤者，这些有情，具备了身口意的恶行，诽谤诸圣贤，怀诸邪见，行邪见业。他们命终死后，生于苦界、恶趣、苦途或地狱。』『诸位贤者，然而这些有情，却具备了身口意的善行。不谤诸圣贤，怀诸正见，行正见业。他们命终死后，生于善趣、天界。』他如此以超人的清净天眼，见到诸有情在死在生。他知道诸有情是随业而生得贵贱、美丑、幸福与不幸福。 <br/>
  <br/>
-　　(十)他诸漏已尽，亲自见法，缘自觉知，证得那无漏心慧解脱，并且住在那无漏心慧解脱。 </div></div><div class="post"><div class="post-header"><div class="avatar">福</div>福喜发表于 2006-2-14 23:09<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">修习四念处的譬喻 <br/>
+　　(十)他诸漏已尽，亲自见法，缘自觉知，证得那无漏心慧解脱，并且住在那无漏心慧解脱。 </div></div><div class="post"><div class="post-header"><div class="avatar">福</div><span style="font-size:15px; letter-spacing:1px;">福喜发表于 2006-2-14 23:09</span><div class="badge-floor">第 7 进</div></div><div class="post-body">修习四念处的譬喻 <br/>
  <br/>
 　　原始圣典中相关譬喻的编译 <br/>
  <br/>
@@ -593,7 +614,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 　　「如果有个比丘很聪明、具辨识力、有善巧方便来注意自己的身心状态，然后才观察思惟外在的境相，那么，日后他就不会退堕而生出障碍来。就好比是聪明、辨味灵敏的厨师，以优秀的烹饪技巧来供养尊贵的主人一般，他能够调和众味——酸、咸、酢、淡，善于注意主人所喜好的口味，进而调和众味以迎合其心意，遵照主人所要的口味，一次又一次地予以奉侍。主人高兴了，必定会得到赏赐、眷顾、信任和器重。聪明的厨师就像这样，善于注意主人的心意。比丘也应该像这样，身身观念处，断除粗重的烦恼，善于摄念在心，内心宁静安详，正念正智，得到四种增上心法，现前住于安乐，得到从未有过的安稳涅盘。这就叫做比丘聪明、具辨识力、有善巧方便来注意自己的身心状态，然后观察思惟外在的境相，就不会退堕，不会生出障碍来，受……，心……法法观念处，也是一样。」 <br/>
  <br/>
-　　佛陀说法结束了，比丘们听了佛陀所说的，都欢喜奉行。 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 08:38<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
+　　佛陀说法结束了，比丘们听了佛陀所说的，都欢喜奉行。 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div><span style="font-size:15px; letter-spacing:1px;">贝嘛埵吉发表于 2010-6-25 08:38</span><div class="badge-floor">第 8 进</div></div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
 众生善根尽随喜  正觉菩提意中持 <br/>
 正觉妙法及僧伽  直至菩提我皈依 <br/>
 所为利益自他故  我今即发菩提心 <br/>

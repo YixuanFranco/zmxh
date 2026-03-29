@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大幻化成就法-大幻母修法儀軌 藏汉 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>大幻化成就法-大幻母修法儀軌 藏汉 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大幻化成就法-大幻母修法儀軌 藏汉</h1>
-<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-1-8 00:19<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body"> <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">大幻化成就法-大幻母修法儀軌 藏汉</h1>
+<div class="post"><div class="post-header"><div class="avatar">班</div><span style="font-size:15px; letter-spacing:1px;">班匝咕汝发表于 2026-1-8 00:19</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body"> <br/>
 d1626 大幻化成就法世尊佛母金剛空行母 阿瓦杜帝巴 釋迦精進 <br/>
 D1626 <br/>
 ། @##། །རྒྱ་གར་སྐད་དུ། མ་ཧཱ་མཱ་ཡཱ་སཱ་དྷ་ན་ནཱ་མ། བོད་སྐད་དུ། སྒྱུ་འཕྲུལ་ཆེན་མོ་ཞེས་བྱ་བའི་སྒྲུབ་པའི་ཐབས། དཔལ་རྡོ་རྗེ་མཁའ་འགྲོ་དང་།མཁའ་འགྲོ་མའི་ཚོགས་ཐམས་ཅད་ལ་ཕྱག་འཚལ་ལོ། །དང་པོར་སྔ་བར་ལངས་ལ་སྙིང་རྗེ དང་ལྡན་པའི་རྣལ་འབྱོར་པས་རང་གི་སྙིང་གར་པདྨའི་སྟེང་དུ་ཐིག་ལེ་དཔའ་བོ་བལྟས་ལ།དེའི་འོད་ཟེར་གྱིས་བླ་མ་དང་། དཔའ་བོ་དང་། རྣལ་འབྱོར་མ་རྣམས་ཡང་དག་པར་བསྐུལ་ནས། བར་སྣང་ལ་དམིགས་པར་བྱས་ལ་མཆོད་པ་གསུམ་ཀྱིས་མཆོད་པར་བྱས་ཏེ། དེ་རྣམས་ཀྱི་ མདུན་དུ་དཀོན་མཆོག་གསུམ་ལ་སྐྱབས་སུ་འགྲོ་བའི་ཚིགས་བཅད་དག་བརྗོད་པར་བྱ་བ་ནི་འདིའོ།།ོཾ་དཔལ་ལྡན་བླ་མའི་ཞབས་རྡུལ་རྣམས་ལ་ཕྱག་འཚལ་ལོ། །ོཾ་དཔལ་ལྡན་རྡོ་རྗེ་སེམས་དཔའ་ལ་ཡང་ཕྱག་འཚལ་ལོ། །ོཾ་དཔལ་ལྡན་རྡོ་རྗེ་མཁའ་འགྲོ་མ་རྣམས་ལ་ཕྱག་འཚལ་ ལོ།།ཞེས་པ་འདི་དག་བརྗོད་ནས་ཆོ་ག་བཞིན་དུ། སྙིག་པ་བཤགས་པ་དང་།བསོད་ནམས་ལ་རྗེས་སུ་ཡི་རང་བ་དང་། བསོད་ནམས་ཡོངས་སུ་བསྔོ་བ་དང་།དཀོན་མཆོག་གསུམ་ལ་སྐྱབས་སུ་འགྲོ་བ་དང་། བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་པ་དང་ལམ་བསྟེན་པ་དང་། བདག་གི་དངོས་པོ་དབུལ་བར་བྱའོ། །དེ་ནས་ཚངས་པའི་གནས་བཞི་སྔོན་དུ་བསྒོམ་པས། སྟོང་པ་ཉིད་བསྒོམ་པར་བྱ་བ་ནི། ཨོཾ་ཤུནྱ་ཏཱ་ཛྙཱ་ན་བཛྲ་སྭ་བྷཱ་ཝ་ཨཱཏྨ་ཡི་ཀོུ྅ཧཾ། ཞེས་པ་སྟེ། འདིའི་དེ་མ་ཐག་ཏུ་ཡི་གེ་རཾ་ལས་བྱུང་བའི་ཉི་མའི་སྟེང་དུ་ཡི་གེ་ཧཱུཾ་གནས་པ་བསམ་བར་བྱའོ། །དེའི་འོད་ ཟེར་གྱིས་ཁྱད་པར་དང་།དེ་དག་ཐམས་ཅད་ཡོངས་སུ་ཞུ་བ་ལས་ས་གཞི་རྡོ་རྗེའི་རང་བཞིན་དང་། རྡོ་རྗེའི་རྩིག་པ་དང་། རྡོ་རྗེའི་བུར་བ་དང་། དུར་ཁྲོད་བརྒྱད་ཀྱི་དབུས་སུ་པདྨ་དམར་པོ་འདབ་མ་བཞི་པ་ལ། རྡོ་རྗེ་ནག་པོའི་ཕྲེང་བས་མཐའ་མ་ཡོངས་སུ་བསྐོར་བར་བསམ་པར་བྱའོ། །ཡང་ན་ཀླུ་ ལྷག་མ་ཅན་གྱི་རིམ་པས་སོ།།པདྨའི་ལྟེ་བའི་དབུས་སུ་དབྱངས་ཡིག་ཨ་ལ་སོགས་པ་ཉིས་འགྱུར་དུ་བྱས་ཏེ་ཟླ་བའི་དཀྱིལ་འཁོར་དུ་བསྒོམ་པར་བྱའོ། །དེའི་སྟེང་དུ་ཡི་གེ་དྲུག་པོ་བསྣན་པའི་ཡི་གེ་ཀ་ལ་སོགས་པ་ཉིས་འགྱུར་དུ་བྱས་ཏེ་ཉི་མའི་དཀྱིལ་འཁོར་དུ་བསྒོམ་པར་བྱའོ། །མེ་ལོང་ལྟ་བུ་ ཟླ་བར་ཡང་དག་བཤད།།མཉམ་པ་ཉིད་ནི་ཉི་མར་རབ་ཏུ་གྲགས། །འདི་དག་དབུས་སུ་ཐིག་ལེའི་རྒྱལ་པོ་སྟེ། །འདི་ལ་སྤྲོ་བསྡུ་འགྲོ་པའི་དོན་བྱེད་པ། །སོ་སོར་རྟོག་པས་བྱ་བ་ནན་ཏན་ནོ། <br/>
@@ -105,7 +126,7 @@ D1626 <br/>
 我來為您翻譯這段藏文： 名為《大幻化成就法》， <br/>
 此法由世尊佛母金剛空行母親臨烏金剎土后所宣說圓滿。 <br/>
 由印度堪布阿瓦杜帝巴親授，藏地譯師比丘釋迦精進恭請譯出。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-1-8 04:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">d1629大幻母修法儀軌度愚論庫庫日巴 阿尼拉班扎 果·勒扎 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">班</div><span style="font-size:15px; letter-spacing:1px;">班匝咕汝发表于 2026-1-8 04:42</span><div class="badge-floor">第 2 进</div></div><div class="post-body">d1629大幻母修法儀軌度愚論庫庫日巴 阿尼拉班扎 果·勒扎 <br/>
 ﻿ <br/>
 <br/>
 D1629 <br/>
@@ -124,7 +145,7 @@ D1629 <br/>
 <br/>
 ། །།རྒྱ་གར་གྱི་མཁན་པོ་ཨ་ནཱི་ལ་བཛྲ་དང་། བོད་ཀྱི་ལོ་ཙཱ་བ་འགོས་ལྷས ་བཙས་ཀྱིས་རྒྱ་གར་གྱི་དཔེའི་ཕྱི་མོ་དང་གཏུགས་ཏེ་གཏན་ལ་ཕབ་པ།་ <br/>
 <br/>
-我來為您直譯這段藏文： 由印度堪布阿尼拉班扎（Anila Vajra）與藏地譯師果·勒扎（&#x27;Gos lHas btsas）對照印度原本 </div></div><div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-1-8 07:11<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">d1634 大幻化成就法 寶金剛 智吉祥賢 聖智慧 <br/>
+我來為您直譯這段藏文： 由印度堪布阿尼拉班扎（Anila Vajra）與藏地譯師果·勒扎（&#x27;Gos lHas btsas）對照印度原本 </div></div><div class="post"><div class="post-header"><div class="avatar">班</div><span style="font-size:15px; letter-spacing:1px;">班匝咕汝发表于 2026-1-8 07:11</span><div class="badge-floor">第 3 进</div></div><div class="post-body">d1634 大幻化成就法 寶金剛 智吉祥賢 聖智慧 <br/>
 D1634 <br/>
 ། །།རྒྱ་གར་གྱི་མཁན་པོ་ཀཱ་མ་ལ་གུཔྟ་དང་ཞུ་ཆེན་གྱི་ལོ་ཙཱ་བ་རིན་ཆེན་བཟང་པོས་བསྒྱུར་ཅིང་ཞུས་ནས་གཏན་ལ་ཕབ་པའོ།། @##། །རྒྱ་གར་སྐད་དུ། མཱ་ཧཱ་མཱ་ཡཱ་སཱ་དྷ་ནཾ། བོད་སྐད་དུ། སྒྱུ་འཕྲུལ་ཆེན མོའི་སྒྲུབ་ཐབས།དཔལ་རྡོ་རྗེ་སེམས་དཔའ་ལ་ཕྱག་འཚལ་ལོ། །སྒྱུ་མ་ཆེན་མོ་རྣམ་སྒེག་པས། །སྣ་ཚོགས་སྒྱུ་མ་བཞད་གད་ལྟར། །ཐུགས་རྗེའི་སྟོབས་ཅན་དགའ་བ་ཅན། །སྒྱུ་མས་རྣམ་རྒྱལ་ཕྱག་འཚལ་ལོ། །སྡུག་བསྔལ་གསུམ་གདུངས་བདག་ཉིད་ཁམས་གསུམ་པ། ། གང་ལས་བྱུང་བའི་བདེ་བ་ཆེན་པོ་ཡོད། །ཐུགས་རྗེ་ཆེན་པོའི་རིག་པ་རྟོག་ཆེན་པོའི། །དེ་ཉིད་རྣམ་བརྒྱན་བླ་མ་བཟང་ལ་འདུད། །སྒྱུ་མ་ཆེན་མོའི་རྗེས་འབྲངས་ནས། །སྙིང་རྗེའི་སྟོབས་ཅན་རྡོ་རྗེ་ཡི། །གང་ཞིག་བསྒྲུབ་པར་འདོད་པ་ཡིས། །བདག་གིས་སྒྲུབ ཐབས་འདི་བརྩམས་སོ།།སྙིང་གའི་ནང་དུ་ཟླ་བ་ལ། །ཟླ་དཀྱིལ་རང་གི་ས་བོན་བསམ། །དེ་ཡི་འོད་ཀྱིས་ལུས་རེག་པས། །ལུས་ཀྱི་དྲན་པ་ཉེར་གཞག་པ། །དེ་གྱུར་པ་ལས་ལུས་རྣམས་དང་། །འཇིག་རྟེན་སྲིད་པ་སྣང་བ་ལ། །མདུན་ན་ལྷ་དང་སངས་རྒྱས་རྣམས། །གུས་ པས་མ་ལུས་མཆོད་པར་བྱའོ།།དཀོན་མཆོག་གསུམ་ལ་སོགས་པ་ཡི། །ཚིགས་བཅད་གསུམ་ནི་བསྒྲག་པར་བྱ། །ཚངས་པའི་གནས་བཞི་བསྒོམ་བྱས་ལ། །སྟོང་པ་ཉིད་ནི་བསྒོམ་བྱས་ནས། །གསང་སྔགས་ཀྱང་ནི་བརྗོད་པར་བྱ། །བསྲུང་བའི་སྔགས་ཀྱང་དྲན་བྱས་ལ། །རྡོ་རྗེ་ ར་སོགས་རྣམ་པར་བསམ།།ཆོས་ཀྱི་དབྱིངས་སུ་ཆུད་པ་ཡི། །དེ་ནང་འབྱུང་བ་བསམ་པར་བྱ། །སྟེང་དུ་རི་རབ་བསྒོམ་བྱས་ཏེ། །འབྱུང་བའི་རི་རབ་གྱུར་པ་ལས། །གཞལ་ཡས་ཁང་པ་བསམ་བྱས་ཏེ། །ཟུར་བཞི་དང་ནི་ལྡན་པས་གནས། །རྒྱུད་རྣམས་ཀུན་ནས་འབྱུང་བ་བཞིན། ། ཕྱི་ཡི་ཕྱོགས་དང་མཚམས་རྣམས་སུ། །དུར་ཁྲོད་ཀྱིས་ནི་རྣམ་པར་བརྒྱན། །དེ་ཡི་མིང་དང་མཚན་ཉིད་ནི། །ཇི་བཞིན་ལུང་གིས་བཤད་པར་བྱ། །གཏུམ་དྲག་གཅིག་སྟེ་དབྱིབས་ཅན་ནི། །གཉིས་པ་ཚང་ཚིང་གསུམ་པ་ཡིན། །འབར་བ་ཞེས་བྱ་བཞི་པ་ཡིན། །མི་ཐོད་ཅེས་བྱ་ལྔ་པ ཡིན།།མི་བཟད་པ་དང་ཧ་ཧར་དགོད། །བརྒྱད་པ་གཡེང་ཀ་ཅན་དུ་འདོད། །དང་པོ་ཚིག་པ་ཞེས་བྱ་སྟེ། །གཉིས་པ་ཡང་ནི་མ་ཚིག་པ། །གསུམ་པ་དུམ་བུར་གྱུར་པ་སྟེ། །བཞི་པ་དུམ་བུར་མ་གྱུར་པ། །ལྔ་པ་འཇིགས་པ་ཞེས་བཤད་དེ། །དྲུག་པ་འཇིགས་པར་བྱེད་པ་ཡིན། ། བདུན་པ་མདུང་རྩེ་བསྐྱོན་པ་སྟེ། །བརྒྱད་པ་སྒེག་པ་ཞེས་བྱའོ། <br/>
 <br/>

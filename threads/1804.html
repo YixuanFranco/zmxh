@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大威德度亡灌顶密仪 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>大威德度亡灌顶密仪 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/往生佛土普超度.html">往生佛土普超度</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大威德度亡灌顶密仪</h1>
-<div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-10-14 16:13<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">大威德度亡灌顶密仪 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/往生佛土普超度.html">往生佛土普超度</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">大威德度亡灌顶密仪</h1>
+<div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-10-14 16:13</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">大威德度亡灌顶密仪 <br/>
  <br/>
 十世班禅大师传承 <br/>
 甘肃省冉子寺成来嘉措活佛译 <br/>
@@ -86,13 +107,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 总之从今以后一切世，勇猛欢喜文殊随护持， <br/>
 通达生圆次第道精义，三身果位安然得成就。 <br/>
  <br/>
-嗡，索巴哇希多，萨尔哇达尔嘛，索巴哇希敌好。净瓶无性化空寂，性空所然从哇木()中生化白色宝瓶，大腹，长颈，悬口等一切性相。嗡大代大代嘛哈大代索哈。神水恒河与瓶中圣水化二为一无别，瓶中月轮之上吽()字周围以百字明环绕，放大光明，招请一切十方上师佛与佛子，集身语意功德加持能量化为光而临，融入吽()字与百字环绕明咒，于此流出智慧甘露与瓶中圣水汇化为一味无二。  <br/>
+嗡，索巴哇希多，萨尔哇达尔嘛，索巴哇希敌好。净瓶无性化空寂，性空所然从哇木(2560)中生化白色宝瓶，大腹，长颈，悬口等一切性相。嗡大代大代嘛哈大代索哈。神水恒河与瓶中圣水化二为一无别，瓶中月轮之上吽(2561)字周围以百字明环绕，放大光明，招请一切十方上师佛与佛子，集身语意功德加持能量化为光而临，融入吽(2561)字与百字环绕明咒，于此流出智慧甘露与瓶中圣水汇化为一味无二。  <br/>
  <br/>
 嗡呀曼大嘎萨嘛呀，嘛奈巴拉呀，呀曼大嘎帝诺巴，帝叉执着美巴哇，斯多卡吆美巴哇，斯布卡美巴哇，啊诺热多美巴哇，萨尔哇斯德，美扎呀差，斯尔哇嘎尔玛苏扎美，资大木希日呀艮日吽，哈哈，哈哈霍，巴格哇哪，萨尔哇大塔格大，呀曼大嘎嘛美，孟扎，呀曼大嘎巴哇，嘛哈萨嘛呀萨唾啊吽呸。（念二十一遍） <br/>
 <br/>
-月轮吽()字环咒化为光与瓶中圣水融入成一体。嗡，班杂萨唾吽杂，今依诸佛真谛，正法之真谛，僧格之真谛，以及如来部，金刚部，宝生部，莲花部，事业部等所入一切部，心咒，手印，密咒，等一切眷属等真谛，依大真谛所加持力，招回该逝者神识在世间中阴，三界六道，四生处所摄，居于于世间何处，令其刹那间摄归融入此肉体（尸体）中。（三遍） <br/>
+月轮吽(2561)字环咒化为光与瓶中圣水融入成一体。嗡，班杂萨唾吽杂，今依诸佛真谛，正法之真谛，僧格之真谛，以及如来部，金刚部，宝生部，莲花部，事业部等所入一切部，心咒，手印，密咒，等一切眷属等真谛，依大真谛所加持力，招回该逝者神识在世间中阴，三界六道，四生处所摄，居于于世间何处，令其刹那间摄归融入此肉体（尸体）中。（三遍） <br/>
 <br/>
-从自己心口发出如钩形之光茫，招摄逝者神识赤红而明亮短啊()形，从（死者）头顶进融心间，嗡休达奈，修达奈，萨尔哇叭哇木，啊那呀吽，招摄逝者一切罪障，嗡萨尔哇，啊哇呀，啊格尔那，斑杂萨码呀吽呸，招摄一切恶趣者于坛城外围，此等众生向世尊祈求从苦海中救度，我等众生向佛法僧三宝诚心归依，嗡班杂叭呢本普扎呀，萨尔哇阿哇呀，班达哪能，扎木恰呀，萨尔哇阿哇格代白，萨尔哇萨唾哪木，萨尔哇达塔格大，班杂萨嘛呀占，令一切罪障皆息灭，逝后受生于文殊佛国，将肉身投掷于碱海中，嗡萨尔哇本，萨尔哇阿哇呀，本修达奈吽呸索哈。班杂班达债（三遍），消除逝者一切罪障习气，观逝者头顶嗡()白色，喉咙啊()红色，心间吽()蓝色作严之，嗡班杂啊等定叉贾那，萨嘛耶吽。于自心间吽()中放光，迎请一切忿怒于前方虚空中，班杂萨嘛泽。 <br/>
+从自己心口发出如钩形之光茫，招摄逝者神识赤红而明亮短啊(2562)形，从（死者）头顶进融心间，嗡休达奈，修达奈，萨尔哇叭哇木，啊那呀吽，招摄逝者一切罪障，嗡萨尔哇，啊哇呀，啊格尔那，斑杂萨码呀吽呸，招摄一切恶趣者于坛城外围，此等众生向世尊祈求从苦海中救度，我等众生向佛法僧三宝诚心归依，嗡班杂叭呢本普扎呀，萨尔哇阿哇呀，班达哪能，扎木恰呀，萨尔哇阿哇格代白，萨尔哇萨唾哪木，萨尔哇达塔格大，班杂萨嘛呀占，令一切罪障皆息灭，逝后受生于文殊佛国，将肉身投掷于碱海中，嗡萨尔哇本，萨尔哇阿哇呀，本修达奈吽呸索哈。班杂班达债（三遍），消除逝者一切罪障习气，观逝者头顶嗡(2564)白色，喉咙啊(2565)红色，心间吽(2561)蓝色作严之，嗡班杂啊等定叉贾那，萨嘛耶吽。于自心间吽(2561)中放光，迎请一切忿怒于前方虚空中，班杂萨嘛泽。 <br/>
  <br/>
 吽， <br/>
 犹如智慧劫火燃烧光，烧毁一切无明欲界暗， <br/>
@@ -122,7 +143,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 威镇吽声响彻天，一切魔军皆降服， <br/>
 垂赐所有成就尊，众魔敌雄我顶礼。 <br/>
  <br/>
-嗡舍以置翁置大哪哪吽呸，嗡索巴哇希达，萨尔哇，达尔嘛索巴哇希多吽，自性本空寂，性空所然，从嗡()中生无边巨大宝皿内嗡()融化为光，生出圣物所成，障食清静无阻生化无漏殊生大乐。嗡萨尔哇本格南，哪麦萨尔哇大塔格大，巴吆本修孟开白，萨尔哇代卡木，恩格代，帕热哪亨嘛木，格格奈康，巴浪大耶索哈（三遍）。 <br/>
+嗡舍以置翁置大哪哪吽呸，嗡索巴哇希达，萨尔哇，达尔嘛索巴哇希多吽，自性本空寂，性空所然，从嗡(2564)中生无边巨大宝皿内嗡(2564)融化为光，生出圣物所成，障食清静无阻生化无漏殊生大乐。嗡萨尔哇本格南，哪麦萨尔哇大塔格大，巴吆本修孟开白，萨尔哇代卡木，恩格代，帕热哪亨嘛木，格格奈康，巴浪大耶索哈（三遍）。 <br/>
  <br/>
 嗡斯巴能，斯巴能吽，格日哈哪格日哈哪吽，格日哈哪哇呀，格日哈哪哇呀吽，阿哪呀吽，巴格哇哪，本呀然杂吽呸（三遍）。 <br/>
  <br/>
@@ -134,12 +155,12 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 南无至尊一切根本及传达承具德圣上师之言真谛，僧格之真言谛，如来部，金刚部，莲花部，格摩部，所入一切部，心咒，手印，密咒，明咒，等一切分别诸尊，尤为乃世尊文殊阎罗王之众部眷属等谛，以大真谛所加持力，该逝者，生前具寿时，此间设障，以及逝后所居何处，对其身命受生天道，解脱设障之一切魔眷，冒持逝者伪相，而对近亲，世间众生欺诳，作崇伤害之夜叉，食肉，鬼魅等，施此食受用而得满足，远离一切伤害恶意，具以利他菩提心而各归其所，如若不离此处，将以金刚杵火，烧为灰烬，速离勿疑。 <br/>
  <br/>
-嗡舍以置，嗡置大哪哪吽呸，嗡索巴哇希达，萨尔哇，达尔嘛索巴哇希多吽，自性本空寂，性空所然从吽中生化白色圆形息业炉，炉口边绿饰以金刚串环绕，四角严阵以半月轮形金刚，化为清净无碍之然木()生烧出智慧火焰中吽()字金刚以吽()严饰，全方化作忿怒空行，身黑色，一首二臂，持金刚铃杵，伸左脚姿而立，忿怒之相圆满，仰面张口，头顶嗡()，喉处啊()，心间吽()，从心间吽()中放光，迎请如观想之智慧尊及授权灌顶尊，与智慧尊，杂()吽()哇木()霍()化为无二，权尊授权以不动如来严饰头顶。嗡班杂者嘎阿日格木，巴当，贝白，都白，阿鲁盖，敢代，奈吾代，夏布大所登策索哈。  <br/>
+嗡舍以置，嗡置大哪哪吽呸，嗡索巴哇希达，萨尔哇，达尔嘛索巴哇希多吽，自性本空寂，性空所然从吽中生化白色圆形息业炉，炉口边绿饰以金刚串环绕，四角严阵以半月轮形金刚，化为清净无碍之然木(2563)生烧出智慧火焰中吽(2561)字金刚以吽(2561)严饰，全方化作忿怒空行，身黑色，一首二臂，持金刚铃杵，伸左脚姿而立，忿怒之相圆满，仰面张口，头顶嗡(2564)，喉处啊(2565)，心间吽(2561)，从心间吽(2561)中放光，迎请如观想之智慧尊及授权灌顶尊，与智慧尊，杂(2566)吽(2561)哇木(2560)霍(2567)化为无二，权尊授权以不动如来严饰头顶。嗡班杂者嘎阿日格木，巴当，贝白，都白，阿鲁盖，敢代，奈吾代，夏布大所登策索哈。  <br/>
  <br/>
 不动金刚智慧尊，金刚法性善巧身， <br/>
 殊三金刚三坛城，能食空行我顶礼。 <br/>
  <br/>
-从然木()中生智慧烈火于其中刹那化为忿怒金刚空行。身黑色，一首二臂，持金刚铃杵，张大口，于逝者双脚心之呀木()生风轮，其中心燃烧，智慧烈火，于心间种子字黑色哇木()，身语意罪业融入其中，复从脐眼发出智慧火光使心口哇木()驱向鼻空而出，化为毒蝎之形，复融入自己手中所持芝麻中。嗡班杂者嘎卡卡，卡亨卡亨，萨尔哇巴哇木，达哈哪巴木格日索哈。嗡班杂者嘎阿尔格木，巴当，贝白，都白，阿罗盖，敢代，奈吾代，夏布大者都策索哈。嗡班杂孟，智慧尊归于法界，誓言尊化为烈火相。南无然哪扎呀呀，嗡罔嘎能，罔嘎能，若杂能若杂能，桌扎能，桌扎能，扎萨能，扎萨能，扎定哈那，扎定哈那，萨尔哇嘎尔嘛巴然木，哇热能美，萨尔哇萨唾奈杂索哈。嗡班嘛恩能克文玛来吽呸，嗡直木索哈，嗡啊孟尔代，阿英日达代索哈。嗡呀嘛然杂萨美呀......  <br/>
+从然木(2563)中生智慧烈火于其中刹那化为忿怒金刚空行。身黑色，一首二臂，持金刚铃杵，张大口，于逝者双脚心之呀木(2568)生风轮，其中心燃烧，智慧烈火，于心间种子字黑色哇木(2560)，身语意罪业融入其中，复从脐眼发出智慧火光使心口哇木(2560)驱向鼻空而出，化为毒蝎之形，复融入自己手中所持芝麻中。嗡班杂者嘎卡卡，卡亨卡亨，萨尔哇巴哇木，达哈哪巴木格日索哈。嗡班杂者嘎阿尔格木，巴当，贝白，都白，阿罗盖，敢代，奈吾代，夏布大者都策索哈。嗡班杂孟，智慧尊归于法界，誓言尊化为烈火相。南无然哪扎呀呀，嗡罔嘎能，罔嘎能，若杂能若杂能，桌扎能，桌扎能，扎萨能，扎萨能，扎定哈那，扎定哈那，萨尔哇嘎尔嘛巴然木，哇热能美，萨尔哇萨唾奈杂索哈。嗡班嘛恩能克文玛来吽呸，嗡直木索哈，嗡啊孟尔代，阿英日达代索哈。嗡呀嘛然杂萨美呀......  <br/>
  <br/>
 嗡呀曼大嘎萨呀，嘛奈巴拉呀，呀曼大嘎帝诺巴，帝叉执着美巴哇，斯多卡吆美巴哇，斯布卡吆美巴哇，啊诺热多美巴哇，萨尔哇斯德，美扎呀差，萨尔哇玛苏扎美资大木希日央艮日嗒，哈哈，哈哈霍，格蛙哪，萨尔哇大塔格大，呀曼大嘎嘛美，孟扎，呀曼大嘎巴哇，嘛哈萨呀萨唾吽呸。嗡萨尔哇巴哇木，本修达奈班杂吽呸，嗡萨尔哇嘎嘛，啊哇然好能巴孟格日格吽呸，嗡直木文那夏呀，阿哇然那能班杂吽呸。嗡仲木，本修达呀，阿哇然哪能吽呸，嗡左拉左拉，达嘎达嘎，哈哪哈哪，啊哇然能吽呸。嗡四木，萨然萨然，者萨然，啊哇然哪能吽呸。嗡哈然哈然，萨尔哇阿哇然那能吽呸，嗡喳喳扎，萨尔哇啊哇然哪能吽呸。嗡层达层达，萨尔哇啊哇然那能吽呸，嗡达哈达哈，萨尔哇哪然嘎格都嗨都有吽呸。嗡巴杂巴杂萨尔哇债大格都，嗨都吽呸。嗡玛塔玛塔，萨尔哇登日呀，嘎格嗨都吽呸。 <br/>
  <br/>
@@ -332,7 +353,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 因昔违越您教言，现时遭见大怖畏， <br/>
 唯您救星诚归依，求速消除大怖畏。  <br/>
 <br/>
-嗡舍以置......。性空所然，于莲花月轮座上吽()中金刚严以吽()从中得白色金黄色刚萨唾执持金刚铃杵，着天衣，饰以奇宝婴赂伽跌而坐，首顶嗡()白色，喉咙啊()红色，心口吽()青色而严之。从心口吽()放大光芒，迎请如所观修智慧尊，杂()吽()哇()霍()化为无二，嗡班扎萨唾阿尔格木，巴当，敢代，贝白，都白阿罗盖，奈吾代，夏布大扎都有策索哈。 金刚萨唾萨唾尊，一节金刚如来佛， 金刚之首普贤佛，顶礼金刚萨唾尊， 嗡舍以置......。空性使然，从嗡()生出广大宝器，其内嗡()化为光，从中生出圣物，其中具有色、声、香、味、触等五种妙欲充满无边虚空。 <br/>
+嗡舍以置......。性空所然，于莲花月轮座上吽(2561)中金刚严以吽(2561)从中得白色金黄色刚萨唾执持金刚铃杵，着天衣，饰以奇宝婴赂伽跌而坐，首顶嗡(2564)白色，喉咙啊(2565)红色，心口吽(2561)青色而严之。从心口吽(2561)放大光芒，迎请如所观修智慧尊，杂(2566)吽(2561)哇(2560)霍(2567)化为无二，嗡班扎萨唾阿尔格木，巴当，敢代，贝白，都白阿罗盖，奈吾代，夏布大扎都有策索哈。 金刚萨唾萨唾尊，一节金刚如来佛， 金刚之首普贤佛，顶礼金刚萨唾尊， 嗡舍以置......。空性使然，从嗡(2564)生出广大宝器，其内嗡(2564)化为光，从中生出圣物，其中具有色、声、香、味、触等五种妙欲充满无边虚空。 <br/>
 <br/>
 嗡萨尔哇布然布然，斯然斯然，阿哇大呀，阿哇大呀豪，班扎帕然哪康（三遍）嗡日巴，夏打，敢地，然萨，巴夏啊吽。 <br/>
 <br/>
@@ -413,7 +434,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 是诸法空相，不生不灭，不垢不净，不增不减。是故空中无色，无受、想、行、见、识，眼、耳、鼻、舌、身、意、无色、声、香、味、触、法，无眼界，乃至无意识界；无无明，亦无无明尽；乃至无老死，亦无老死尽；无苦、集、灭、道，无智，亦无得。以无所得故，菩提萨多，依般若波若密多故，心无挂碍。无挂碍故，无有恐怖。远离颠倒梦想，究竟涅磐。  <br/>
  <br/>
-版权所有：青海省循化县文都大寺（如欲转载请注明出处） </div></div><div class="post"><div class="post-header"><div class="avatar">蓮</div>蓮師金剛发表于 2010-6-24 18:54<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">頂禮蓮師！ <br/>
+版权所有：青海省循化县文都大寺（如欲转载请注明出处） </div></div><div class="post"><div class="post-header"><div class="avatar">蓮</div><span style="font-size:15px; letter-spacing:1px;">蓮師金剛发表于 2010-6-24 18:54</span><div class="badge-floor">第 2 进</div></div><div class="post-body">頂禮蓮師！ <br/>
 最上三寶我皈依，一切罪業皆懺悔 <br/>
 眾生善根盡隨喜，正覺菩提意中持 <br/>
 <br/>
@@ -421,25 +442,25 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 所為利益自他故，我今即發菩提心 <br/>
 <br/>
 即發最上菩提心，饒益一切諸有情 <br/>
-菩提妙行皆修作，為利眾生願成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-24 23:09<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">最上三寶我皈依，一切罪業皆懺悔 <br/>
+菩提妙行皆修作，為利眾生願成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div><span style="font-size:15px; letter-spacing:1px;">贝嘛埵吉发表于 2010-6-24 23:09</span><div class="badge-floor">第 3 进</div></div><div class="post-body">最上三寶我皈依，一切罪業皆懺悔 <br/>
 眾生善根盡隨喜，正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽，直至菩提我皈依 <br/>
 所為利益自他故，我今即發菩提心 <br/>
 <br/>
 即發最上菩提心，饒益一切諸有情 <br/>
-菩提妙行皆修作，為利眾生願成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-11 03:54<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+菩提妙行皆修作，為利眾生願成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金鑫发表于 2010-10-11 03:54</span><div class="badge-floor">第 4 进</div></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">踏</div>踏雪发表于 2011-2-24 16:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">最上三寶我皈依，一切罪業皆懺悔 <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">踏</div><span style="font-size:15px; letter-spacing:1px;">踏雪发表于 2011-2-24 16:25</span><div class="badge-floor">第 5 进</div></div><div class="post-body">最上三寶我皈依，一切罪業皆懺悔 <br/>
 眾生善根盡隨喜，正覺菩提意中持 <br/>
 <br/>
 正覺妙法及僧伽，直至菩提我皈依 <br/>
 所為利益自他故，我今即發菩提心 <br/>
 <br/>
 即發最上菩提心，饒益一切諸有情 <br/>
-菩提妙行皆修作，為利眾生願成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">葛</div>葛根情结发表于 2011-5-2 23:45<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+菩提妙行皆修作，為利眾生願成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">葛</div><span style="font-size:15px; letter-spacing:1px;">葛根情结发表于 2011-5-2 23:45</span><div class="badge-floor">第 6 进</div></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>

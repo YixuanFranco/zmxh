@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>入菩萨行论释——佛子正道（102任甘丹赤巴 日宗仁波切） - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>入菩萨行论释——佛子正道（102任甘丹赤巴 日宗仁波切） - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">入菩萨行论释——佛子正道（102任甘丹赤巴 日宗仁波切）</h1>
-<div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-4 09:29<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">入菩萨行论释——佛子正道（102任甘丹赤巴 日宗仁波切）</h1>
+<div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-4 09:29</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第1讲 <br/>
 <br/>
@@ -140,7 +161,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 对于这一点它的内涵，跟道次第当中三士道的引导方式，刚好是相同的。以三士道的角度我们提到的是下士道、中士道以及上士道，而整个道次第的内涵，并不是要我们直接趣入下士或者是中士的法类，而是将下士道以及中士道的法类，作为修学上士道的前行，所以提到了共下士道以及共中士道，以这样的一种方式来修学上士道的法类，这是以三士道的角度来介绍的。所以以「乘」的角度，相同的，我们并不是要修声闻乘以及缘觉乘，而是把声闻乘跟缘觉乘作为是大乘道的前行，而修学的「共声闻乘」以及「共缘觉乘」的内涵。 <br/>
 <br/>
-上一段是介绍《入行论》是如何的阐释佛经的道理，而这一段提到的是《入行论》的造者，也就是寂天论师他的功德。正文当中，此论造者──圣者寂天论师，圆满通达诸经意趣，具足大悲爱他胜己，寂天论师他的内心当中具足了大悲，舍弃了自己的利益，珍爱他人，这跟我们是完全相反的，我们平时舍弃他人，珍爱自己，但是寂天论师他是舍弃自身和珍爱他人。所以提到「具足大悲爱他胜己」，不顾一己安乐，并且他也不把自己本身──也就是各人的安乐，放在优先的考虑位置，专注行他利乐，特由行持无上瑜伽极无戏论行仪，圆满成办大乘道也。并且在不为人知的情况下，寂天论师他所修学的内涵，是无上瑜伽部当中的「极无戏论」的行仪，但是这个部分是周边的人都不了解的，以这样的方式圆满成办大乘道。早上的这堂课就先上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-4 09:38<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+上一段是介绍《入行论》是如何的阐释佛经的道理，而这一段提到的是《入行论》的造者，也就是寂天论师他的功德。正文当中，此论造者──圣者寂天论师，圆满通达诸经意趣，具足大悲爱他胜己，寂天论师他的内心当中具足了大悲，舍弃了自己的利益，珍爱他人，这跟我们是完全相反的，我们平时舍弃他人，珍爱自己，但是寂天论师他是舍弃自身和珍爱他人。所以提到「具足大悲爱他胜己」，不顾一己安乐，并且他也不把自己本身──也就是各人的安乐，放在优先的考虑位置，专注行他利乐，特由行持无上瑜伽极无戏论行仪，圆满成办大乘道也。并且在不为人知的情况下，寂天论师他所修学的内涵，是无上瑜伽部当中的「极无戏论」的行仪，但是这个部分是周边的人都不了解的，以这样的方式圆满成办大乘道。早上的这堂课就先上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-4 09:38</span><div class="badge-floor">第 2 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第2讲 <br/>
 <br/>
@@ -261,7 +282,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 前后二者亦摄二种色身，「前后二者」指的是「善逝」的这个字眼，跟「法身」的这个字眼，这四个字当中也包含了「化身」以及「报身」这两种色身。因为佛的「化身」以及「报身」衪也包含了「善逝」的功德，以及衪也具有法身的特质，所以前面「善逝」以及「法身」的这四个字里，也包含了「化身」和「报身」二种色身；后句亦显菩萨灭、道，而「后面」也就是「善逝」跟「法身」前后的这两者当中，后者「法身」的这两个字，也说明了菩萨的灭谛和道谛的功德。在介绍「法身」的时候，所提到的是佛心续当中最究竟的「灭谛」。要成办如此圆满究竟的「灭谛」，在因地──也就是修道的时候，必须要成办菩萨心续中灭、道的功德。所以法身的这一句话里，也包含了菩萨的「灭谛」和「道谛」的功德在其中。所以提到「后句亦显菩萨灭道」，故佛宝及一切大乘法宝皆为礼敬之境。所以「佛宝」以及包含菩萨灭道功德的「大乘法宝」，都是这个地方所要礼敬的对象。 <br/>
 <br/>
-接下来，佛子者，「佛子」这两个字最主要指的是，谓圣者菩萨；与此共为三宝。所以加上前面的佛宝、法宝以及佛子，在这个地方共有三宝，所以三宝是礼赞文当中最主要礼敬的对象。更进一步的，与此共为三宝。除了三宝之外，于彼等及诸余应礼敬者──亲教师及轨范师等，其他应该要礼敬的对象，包括了亲教师以及轨范师等，皆以三门恭敬顶礼。而在这两句话最后有提到「已」这个字，已者，如云于沐浴已进食，是引下文。「已」这个字，比方说作一个譬喻，我们在洗澡之后要用餐，「之后」的这个词它指的意思，就是接续之前的这个动作，而后面有另外一个动作在进行，所以它是引下文的意思。也就是在礼敬了诸佛菩萨，以及诸多应礼敬的对象之后，接下来有提到要「立誓造论」，也就是要正式造论的这个部分。我们今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-4 09:41<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+接下来，佛子者，「佛子」这两个字最主要指的是，谓圣者菩萨；与此共为三宝。所以加上前面的佛宝、法宝以及佛子，在这个地方共有三宝，所以三宝是礼赞文当中最主要礼敬的对象。更进一步的，与此共为三宝。除了三宝之外，于彼等及诸余应礼敬者──亲教师及轨范师等，其他应该要礼敬的对象，包括了亲教师以及轨范师等，皆以三门恭敬顶礼。而在这两句话最后有提到「已」这个字，已者，如云于沐浴已进食，是引下文。「已」这个字，比方说作一个譬喻，我们在洗澡之后要用餐，「之后」的这个词它指的意思，就是接续之前的这个动作，而后面有另外一个动作在进行，所以它是引下文的意思。也就是在礼敬了诸佛菩萨，以及诸多应礼敬的对象之后，接下来有提到要「立誓造论」，也就是要正式造论的这个部分。我们今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-4 09:41</span><div class="badge-floor">第 3 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第3讲 <br/>
 <br/>
@@ -378,7 +399,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 这三种条件，我们仔细的思维我们自己本身，我们先不要去讨论别人，我们看看我们自己，我们是不是有具备这三种的条件？如果我们本身没有具备这三种的条件，外面有再多的人获得暇满人身，对我们都是没有帮助的。所以从这样的因我们就可以推论，想要再一次的获得暇满人身几乎是不太可能的事情，所以暇满人身是非常难得的，为什么难得？因为成办暇满人身的因非常的难得，所以由因而感得的果，相对于其他的果而言，也是非常难得的。所以提到，然修彼等极难得故。要想要成办这三种因是不太可能的一件事。 <br/>
 <br/>
-接下来，思维暇满义大者，偈颂当中，既得能成士夫利，若于此身利未办，后岂复得此圆满？在之前我们提到「暇满难得」的这一点，更进一步我们必须要去思维，透由暇满的人身，他能够成办许多有意义的事情，这是提到了「暇满义大」的部分。如果你能够仔细的思维，「暇满难得」以及「暇满义大」的内涵，纵使外在没有其他人告诫你、强迫你修学佛法，你打从内心你也会觉得修学佛法是很重要的一件事，为什么重要？因为你想要离苦得乐，你想要离苦得乐，你就必须要想办法去成办离苦得乐的因，所以会打从内心底告诉自己：「我应该要去成办离苦得乐的因」。早上这堂课上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-4 09:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+接下来，思维暇满义大者，偈颂当中，既得能成士夫利，若于此身利未办，后岂复得此圆满？在之前我们提到「暇满难得」的这一点，更进一步我们必须要去思维，透由暇满的人身，他能够成办许多有意义的事情，这是提到了「暇满义大」的部分。如果你能够仔细的思维，「暇满难得」以及「暇满义大」的内涵，纵使外在没有其他人告诫你、强迫你修学佛法，你打从内心你也会觉得修学佛法是很重要的一件事，为什么重要？因为你想要离苦得乐，你想要离苦得乐，你就必须要想办法去成办离苦得乐的因，所以会打从内心底告诉自己：「我应该要去成办离苦得乐的因」。早上这堂课上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-4 09:44</span><div class="badge-floor">第 4 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第4讲 <br/>
 <br/>
@@ -481,7 +502,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 透由修学菩提心，任何的恶行都能够对菩提心瞬间摧毁，偈颂当中，除此圆满菩提心，岂有余善能胜彼？如果在内心中能够生起菩提心，纵使过去累积了再多的恶业，都能够藉由此心完全的净化，并且之后能够断除造恶的续流──也就是透由菩提心的摄持，我们之后就不会再继续的造作种种的恶行。因此在忏悔的时候，也有特别的提到「依止力」，必须要生起皈依以及发心的这一点。在解释这两句话时，正文当中有提到，理应勤修二菩提心，因堕地狱等因──猛烈罪业，除此圆满菩提心外，岂有余善能胜彼恶？所以在之前我们有提到，「是故其善恒微弱，罪业力大极猛烈」，现今我们所累积的善是如此的微弱，所造的恶却是如此的强大，在此同时，除了修学圆满的菩提心之外，怎么会有其余的善业能够战胜我们过去所造的诸恶呢？任何善行弗能胜故。其他的善行都没有办法胜过我们过去所造的种种恶业。 <br/>
 <br/>
-此处非以「胜义发心有断诸障种子之力」为主而说，提到了发心，「发心」可以分为胜义的发心以及世俗的发心，在此我们提到的菩提心是以「世俗的发心」来作解释。「胜义的发心」指的是证得空性的智慧，证得空性的智慧它有断除「障碍」以及「障碍种子」的能力，虽然这一点是成立的，但是这个地方在提到「除此圆满菩提心，岂有余善能胜彼」的时候，并不是以「胜义发心」的角度来作解释，所以提到「此处非以胜义发心有断诸障种子之力为主而说」，是显世俗发心有能净化往昔所集恶趣之因、断后续流之利益也。这个地方最主要提到发心的利益是指「世俗的发心」，它能够净化往昔我们所造作的种种恶业，而这些恶业是我们将来有可能会投生恶趣的主因。并且透由生起了世俗的发心，它能够完全的断除将来再次造恶的可能性，所以提到「断后续流之利益」，因此「世俗的发心」具备有这两种的利益。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-4 09:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+此处非以「胜义发心有断诸障种子之力」为主而说，提到了发心，「发心」可以分为胜义的发心以及世俗的发心，在此我们提到的菩提心是以「世俗的发心」来作解释。「胜义的发心」指的是证得空性的智慧，证得空性的智慧它有断除「障碍」以及「障碍种子」的能力，虽然这一点是成立的，但是这个地方在提到「除此圆满菩提心，岂有余善能胜彼」的时候，并不是以「胜义发心」的角度来作解释，所以提到「此处非以胜义发心有断诸障种子之力为主而说」，是显世俗发心有能净化往昔所集恶趣之因、断后续流之利益也。这个地方最主要提到发心的利益是指「世俗的发心」，它能够净化往昔我们所造作的种种恶业，而这些恶业是我们将来有可能会投生恶趣的主因。并且透由生起了世俗的发心，它能够完全的断除将来再次造恶的可能性，所以提到「断后续流之利益」，因此「世俗的发心」具备有这两种的利益。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-4 09:51</span><div class="badge-floor">第 5 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第5讲 <br/>
 <br/>
@@ -597,7 +618,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 而我们所熟知的宗大师，宗大师虽然他当时他并不是非常的长寿，并且在晚年的时候也有一些病相产生。但是他在示寂之前，他身上所有的那些病相，都一一的消失，并且他的容貌看起来就像一个小孩子一样，而且他的身体有慢慢缩小的这种趋势。这一点虽然以密教的角度来作解释，我们可以解释为是宗大师他在修幻身，并且他所示现的面貌就是在中阴身成佛的这种面貌。但不管以显教或者是密教的角度来作解释，我们在这个地方所提到的这些成就者，之所以会有这些征兆出现，都是因为他们透由如实的修学大乘法之后，而呈现的一种圆满的相貌。 <br/>
 <br/>
-正文的后半段，《华严经》云：「金漆」乃水银类，在《华严经》当中有提到金漆它本身是属于水银，以其一两，能转千两废铁成金。所以它具有这样的功效，是佛在经中亲口宣说的。经中以此为喻，总摄所说发心利益。并且在佛经当中，以金漆来作为譬喻，统摄了在之前所提到菩提心的种种利益。今天早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-5 09:31<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文的后半段，《华严经》云：「金漆」乃水银类，在《华严经》当中有提到金漆它本身是属于水银，以其一两，能转千两废铁成金。所以它具有这样的功效，是佛在经中亲口宣说的。经中以此为喻，总摄所说发心利益。并且在佛经当中，以金漆来作为譬喻，统摄了在之前所提到菩提心的种种利益。今天早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-5 09:31</span><div class="badge-floor">第 6 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第6讲 <br/>
 <br/>
@@ -704,7 +725,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 并且在提到大悲心的时候，一开始就提到大悲心对于一个修学大乘法的行者而言，初、中、后三时都是非常重要的，因此一开始要成办大悲心。如果想要成办如此圆满的悲心，在此之前必须要具备什么样的因？透由这些因在成办了大悲之后，能感得什么样的果报？是在下一个科判才会介绍到。 <br/>
 <br/>
-之前为什么要特别的提到七因果教授，是因为在《现观庄严论》里面有特别的提到，「发心为利他，欲正等菩提」，也就是为菩提心取名为欲。为什么要对菩提心取名为欲？刚刚我们从两个角度来作解释：第一、从「希求利他」的角度来作解释，第二从「希求自利」或是「希求菩提」的角度来作解释。如果想要更进一步的了解何谓希求利他，何谓希求自利的话，就必须要从「七因果」的教授来作前后的分别，所以提到了七因果教授的内涵。所以之前提到的希求利他，以及希求自利的这两种角度，一者是从菩提心的「因」的角度，来为菩提心取名；另外一者是从「助伴」的角度来为菩提心取名。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-5 09:33<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+之前为什么要特别的提到七因果教授，是因为在《现观庄严论》里面有特别的提到，「发心为利他，欲正等菩提」，也就是为菩提心取名为欲。为什么要对菩提心取名为欲？刚刚我们从两个角度来作解释：第一、从「希求利他」的角度来作解释，第二从「希求自利」或是「希求菩提」的角度来作解释。如果想要更进一步的了解何谓希求利他，何谓希求自利的话，就必须要从「七因果」的教授来作前后的分别，所以提到了七因果教授的内涵。所以之前提到的希求利他，以及希求自利的这两种角度，一者是从菩提心的「因」的角度，来为菩提心取名；另外一者是从「助伴」的角度来为菩提心取名。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-5 09:33</span><div class="badge-floor">第 7 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第7讲 <br/>
 <br/>
@@ -788,7 +809,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 接下来我们看到正文，此由「体性」门分愿行二心；菩提心如果以本质来分类的话，可以分为愿心以及行心。由「助伴」门可分二十二种；透由周边的助伴来作分类的话，可以分为如大地般的22种发心。由「界线」门则分信解、清净增上意乐等四。如果从五道十地来作区分的话，可以分为信解行发心、清净增上意乐发心、异熟发心以及断障发心（断除障碍的发心）。所以提到「由界线门则分信解、清净增上意乐等四」。「等四」当中包含的是「异熟发心」以及「断障发心」这两种。 <br/>
 <br/>
-仅发愿行二心，于未获得殊胜资粮道前亦有；在还没有获得殊胜的资粮道之前，是可以发起愿心以及行心的。所以这个地方有特别的强调「殊胜的资粮道」。一般而言，生起菩提心就等于是进入了大乘的资粮道，但是这个地方更进一步的提到的是「殊胜的资粮道」。「仅发愿行二心，于未获得殊胜资粮道前亦有」，什么样的道可称为殊胜的资粮道？殊胜资粮道者，即三大阿僧祇劫中成佛道之起首，并于《现观庄严论》中所说一百四十四种现观功德品类，皆由闻思断除增益，最初能作修持为始。所以这个地方有特别的提到殊胜的资粮道，它必须要具备的条件。首先提到的是，「三大阿僧祇劫中成佛道之起首」，它是三大阿僧祇劫当中累积资粮的开始，「并于」这当中的「于」是指对于的意思，并且对于《现观庄严论》当中所提到的144品现观功德品类，皆由闻思断除诤议，透由闻思的力量，断除对这144种的功德生起错误的见解，这种错误的见解是必须要断除的。所以提到「皆由闻思断除增益，最初能作修持为始。」并且更进一步的，他能够如实的修学这144种的功德。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-5 09:36<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+仅发愿行二心，于未获得殊胜资粮道前亦有；在还没有获得殊胜的资粮道之前，是可以发起愿心以及行心的。所以这个地方有特别的强调「殊胜的资粮道」。一般而言，生起菩提心就等于是进入了大乘的资粮道，但是这个地方更进一步的提到的是「殊胜的资粮道」。「仅发愿行二心，于未获得殊胜资粮道前亦有」，什么样的道可称为殊胜的资粮道？殊胜资粮道者，即三大阿僧祇劫中成佛道之起首，并于《现观庄严论》中所说一百四十四种现观功德品类，皆由闻思断除增益，最初能作修持为始。所以这个地方有特别的提到殊胜的资粮道，它必须要具备的条件。首先提到的是，「三大阿僧祇劫中成佛道之起首」，它是三大阿僧祇劫当中累积资粮的开始，「并于」这当中的「于」是指对于的意思，并且对于《现观庄严论》当中所提到的144品现观功德品类，皆由闻思断除诤议，透由闻思的力量，断除对这144种的功德生起错误的见解，这种错误的见解是必须要断除的。所以提到「皆由闻思断除增益，最初能作修持为始。」并且更进一步的，他能够如实的修学这144种的功德。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-5 09:36</span><div class="badge-floor">第 8 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第8讲 <br/>
 <br/>
@@ -878,7 +899,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 子三、诸有情众纵为自利亦难生起此利他心 <br/>
 <br/>
-第三个科判，「诸有情众纵为自利亦难生起此利他心」，偈颂当中，彼等为自利，往昔于梦中，尚未梦此心，况为利他生？正文当中，彼等有情，在之前我们提到，这个世间上不管是父亲、母亲，天人、仙人、梵天，这些有情，往昔纵为自利，于睡梦中尚未梦及此利他心，在过去不要说是利他，纵使是为了自利，不要说是白天能够直接生起这样的心，纵使是在晚上睡梦当中，也不曾生起「为利他而愿成佛」的这颗发心，因而提到「往昔纵为自利，于睡梦中尚未梦及此利他心」，况为利他岂能直接生起？如果思维自利，都没有办法生起这样的发心，那更何况是为了利他，怎么可能直接的生起这样的一颗殊胜发心，未曾生也。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-5 09:39<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+第三个科判，「诸有情众纵为自利亦难生起此利他心」，偈颂当中，彼等为自利，往昔于梦中，尚未梦此心，况为利他生？正文当中，彼等有情，在之前我们提到，这个世间上不管是父亲、母亲，天人、仙人、梵天，这些有情，往昔纵为自利，于睡梦中尚未梦及此利他心，在过去不要说是利他，纵使是为了自利，不要说是白天能够直接生起这样的心，纵使是在晚上睡梦当中，也不曾生起「为利他而愿成佛」的这颗发心，因而提到「往昔纵为自利，于睡梦中尚未梦及此利他心」，况为利他岂能直接生起？如果思维自利，都没有办法生起这样的发心，那更何况是为了利他，怎么可能直接的生起这样的一颗殊胜发心，未曾生也。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-5 09:39</span><div class="badge-floor">第 9 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第9讲 <br/>
 <br/>
@@ -990,7 +1011,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 这时候这位国王就对世尊说：我倒想要看看你是否在修学忍辱？一边说一边将他手边的刀抽了出来，并且在这位行者──也就是世尊的手上划了一刀，并且问他说：你是否能够修学忍辱？世尊回答说：我能忍。接下来，分别把他的左手、右手，左脚、右脚，一一的切了下来，并且依次的问他说：你是否还能够修学忍辱？世尊在当下回答说：我还能忍！ <br/>
 <br/>
-世尊当时在内心中，不仅没有生起一丝的瞋恚，并且他在内中如此的发愿，他发愿说：就如同现今你用手边的利器──也就是这把锋利的刀子，藉由质问我种种的问题，而将我的手脚一一的砍下来。将来在我成就圆满的佛果之后，我也希望透由智慧的宝剑，并且在询问你众多的问题的当下，将你内心当中的无明，一一的铲除，所以这就是之后的阿难憍陈如。佛在宣说四谛的时候，一一的询问了五比丘，你们知不知道苦的本性？你们知不知道要如何的断除集谛，而成就灭谛的功德？佛是以这样的方式来面对伤害他的有情。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-5 09:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+世尊当时在内心中，不仅没有生起一丝的瞋恚，并且他在内中如此的发愿，他发愿说：就如同现今你用手边的利器──也就是这把锋利的刀子，藉由质问我种种的问题，而将我的手脚一一的砍下来。将来在我成就圆满的佛果之后，我也希望透由智慧的宝剑，并且在询问你众多的问题的当下，将你内心当中的无明，一一的铲除，所以这就是之后的阿难憍陈如。佛在宣说四谛的时候，一一的询问了五比丘，你们知不知道苦的本性？你们知不知道要如何的断除集谛，而成就灭谛的功德？佛是以这样的方式来面对伤害他的有情。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-5 09:42</span><div class="badge-floor">第 10 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第10讲 <br/>
 <br/>
@@ -1111,7 +1132,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 卯一、浴室 <br/>
 <br/>
-第三个科判「观想供养」分二：一、有上供养，二、无上供养。「有上供养」分十二：一、沐浴，二、天衣，三、饰品，四、涂香，五、鲜花，六、烧香，七、饮食，八、明灯，九、供无量宫，十、伞盖，十一、乐器，十二、加持供物无有间断。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-5 09:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+第三个科判「观想供养」分二：一、有上供养，二、无上供养。「有上供养」分十二：一、沐浴，二、天衣，三、饰品，四、涂香，五、鲜花，六、烧香，七、饮食，八、明灯，九、供无量宫，十、伞盖，十一、乐器，十二、加持供物无有间断。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-5 09:46</span><div class="badge-floor">第 11 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第11讲 <br/>
 <br/>
@@ -1223,7 +1244,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在解释共大小乘的皈依，以及大乘的不共皈依时，虽然他们的因有所不同，但是实际上内涵并没有太大的差异，这两者都是我们必须要修学的内涵。以大乘的不共皈依而言，大乘的法宝，是我们的正皈依；而大乘的法宝最主要提到的是，在菩提心摄持的情况下，所生起的道谛以及灭谛的功德，因此在修学大乘道的过程中，「菩提心」就显得格外的重要。在菩提心的摄持下，所生起的灭谛以及道谛的功德，才是我们所要真正皈依的对象；并且修学菩提心以及生起道灭功德的圣者，是我们所要皈依的僧宝。 <br/>
 <br/>
-现今我们在这个地方讲说听闻的法是大乘的法，所以在讲说、听闻的当下，也希望能够至诚的皈依大乘的三宝。所以在内心中我们要如此的思维，如果你打从内心真的想要利益如同虚空般的有情众生，想要获得究竟的佛果的话，你必须要思维在这样的一条道路上，我除了依止大乘的三宝之外，没有其他的方法能够让我获得究竟圆满的佛果。并且在思维过后，应该要精勤的修学大乘法，看是否能够在自己的心续上，早日的生起大乘种种教证的功德。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-7 10:45<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+现今我们在这个地方讲说听闻的法是大乘的法，所以在讲说、听闻的当下，也希望能够至诚的皈依大乘的三宝。所以在内心中我们要如此的思维，如果你打从内心真的想要利益如同虚空般的有情众生，想要获得究竟的佛果的话，你必须要思维在这样的一条道路上，我除了依止大乘的三宝之外，没有其他的方法能够让我获得究竟圆满的佛果。并且在思维过后，应该要精勤的修学大乘法，看是否能够在自己的心续上，早日的生起大乘种种教证的功德。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-7 10:45</span><div class="badge-floor">第 12 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第12讲 <br/>
 <br/>
@@ -1396,7 +1417,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 偈颂当中，唯福是救护，然我未曾修。 <br/>
 <br/>
-正文，尔时唯有皈依、持戒等福是胜救护，在临终时唯有皈依以及持戒所累积的福德，才是我真正的救护，然我未曾修习；此谓追悔昔未行善。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-7 10:52<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，尔时唯有皈依、持戒等福是胜救护，在临终时唯有皈依以及持戒所累积的福德，才是我真正的救护，然我未曾修习；此谓追悔昔未行善。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-7 10:52</span><div class="badge-floor">第 13 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第13讲 <br/>
 <br/>
@@ -1545,7 +1566,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 接下来正文，现已见闻他人终将死殁，在现今我们亲眼看到，亲耳听到，我们周边的人一一的离开了我们。我们思维一下，我们就知道，在这个地球上，没有一个人不会死，所以「现已见闻他人终将死殁」，死后有堕恶趣之怖，不仅会死，并且在死后我们堕入恶趣的机会是非常大的，善士谁能赐我无惧，在这个世间上，有哪一位善知识，有哪一位善士他能够赐予我，在面对痛苦以及死亡的当下不恐惧的这种勇气？令我不须怖死、畏罪？绝无能施此者。现今在这个世间上，没有人能够做到这一点。故若不能勤修对治，如何得脱此罪、死亡？所以在今生，如果没有办法精勤的修学恶业的对治力，要用什么样的方式，才能够脱离当下我们所造的诸多罪业，以及跳脱死亡的这件事情？定不能脱。倘若死后必将消逝，为何我今安逸、随懈怠转，如果在死后，我的生命就结束了，并且我有堕入恶趣的可能性的话，为什么在现今，我的状态却是如此的安然，并且被懈怠所控制，而不励力对治罪业？不合理故，应勤修道。 <br/>
 <br/>
-之前我们有谈到圣天论师所造的一个偈颂当中的内涵，这个内涵最主要提到的是，虽然轮回是有边际的，但是轮回有边际的这一点，并不是自然会消失的。如果你想要让你的轮回有结束的一天，必须如实的思维「恶趣以及轮回的痛苦」，对于解脱生起希求，更进一步的修学佛道，你的轮回才有结束的一天。如果放任它，一天过一天的话，这样你的轮回是绝对不会有边际的。更进一步的，如果你是一个修学佛法的佛弟子，修学佛法的佛弟子必须要展现出来的特色是什么呢？在还未死之前，对于死亡心生恐惧，但是在临终的时候，面对死亡的当下心生欢喜。一般的世间人在未死之前，自以为已经跳脱了轮回，这时候他的内心当中是没有任何恐惧；但是在临终时，他的内心会生起极大的恐惧，而我们大部分人的状态都是后者。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-7 10:57<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+之前我们有谈到圣天论师所造的一个偈颂当中的内涵，这个内涵最主要提到的是，虽然轮回是有边际的，但是轮回有边际的这一点，并不是自然会消失的。如果你想要让你的轮回有结束的一天，必须如实的思维「恶趣以及轮回的痛苦」，对于解脱生起希求，更进一步的修学佛道，你的轮回才有结束的一天。如果放任它，一天过一天的话，这样你的轮回是绝对不会有边际的。更进一步的，如果你是一个修学佛法的佛弟子，修学佛法的佛弟子必须要展现出来的特色是什么呢？在还未死之前，对于死亡心生恐惧，但是在临终的时候，面对死亡的当下心生欢喜。一般的世间人在未死之前，自以为已经跳脱了轮回，这时候他的内心当中是没有任何恐惧；但是在临终时，他的内心会生起极大的恐惧，而我们大部分人的状态都是后者。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-7 10:57</span><div class="badge-floor">第 14 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第14讲 <br/>
 <br/>
@@ -1689,7 +1710,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 偈颂当中，随喜佛子地、救护者菩提；欢喜作随喜：为令有情乐，发心善如海，并饶益有情。 <br/>
 <br/>
-正文，亦复随喜救护众生者之圆满菩提、佛子十地；除了随喜成办增上生以及解脱的善因之外，更进一步的，也随喜能够救护轮回当中众生的佛，所成就的圆满菩提，以及佛子菩萨的五道十地功德。在这个地方有特别的提到「佛子十地」，声闻跟缘觉只有谈论到五道，但并没有十地的内涵；而佛子菩萨除了资粮道等五道之外，在见道以上还有特别安立十地的内涵，而这两者是我们所随喜的果，而想要成办圆满的菩提，以及菩萨的十地，必须要具备有什么样的妙音？彼等之因──为令一切有情安乐，发起胜菩提心，最主要的主因是发起殊胜的菩提心，其善犹如大海，发起菩提心的同时，所累积的善它的量就如同大海般的宽阔，它没有竭尽的一天，并且在发心之后，并以妙行饶益有情，透由行为去饶益周边的有情，于彼修习与喜相应之净信心，对于圆满菩提，或是菩萨的十地功德，或者是成办如此妙果的善因，在内心当中修习与心王喜相应的一颗净信心，心生欢喜而作随喜。在修随喜的当下，我们必须要能够内心当中现起随喜的对境──也就是众善，将善让我们的内心当中，能够生起对境的善，它的行相而来修学随喜。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-7 11:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，亦复随喜救护众生者之圆满菩提、佛子十地；除了随喜成办增上生以及解脱的善因之外，更进一步的，也随喜能够救护轮回当中众生的佛，所成就的圆满菩提，以及佛子菩萨的五道十地功德。在这个地方有特别的提到「佛子十地」，声闻跟缘觉只有谈论到五道，但并没有十地的内涵；而佛子菩萨除了资粮道等五道之外，在见道以上还有特别安立十地的内涵，而这两者是我们所随喜的果，而想要成办圆满的菩提，以及菩萨的十地，必须要具备有什么样的妙音？彼等之因──为令一切有情安乐，发起胜菩提心，最主要的主因是发起殊胜的菩提心，其善犹如大海，发起菩提心的同时，所累积的善它的量就如同大海般的宽阔，它没有竭尽的一天，并且在发心之后，并以妙行饶益有情，透由行为去饶益周边的有情，于彼修习与喜相应之净信心，对于圆满菩提，或是菩萨的十地功德，或者是成办如此妙果的善因，在内心当中修习与心王喜相应的一颗净信心，心生欢喜而作随喜。在修随喜的当下，我们必须要能够内心当中现起随喜的对境──也就是众善，将善让我们的内心当中，能够生起对境的善，它的行相而来修学随喜。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-7 11:05</span><div class="badge-floor">第 15 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第15讲 <br/>
 <br/>
@@ -1846,7 +1867,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 偈颂当中，纵戏弄我身、侵犯或讥讽，既已施吾身，何故复珍爱？ <br/>
 <br/>
-正文，今后纵使戏弄我身、侵凌冒犯或作讥笑嘲讽，然既已施吾身于诸有情，何故复为守护、珍爱此身之人？既然我们已经至诚的，把我们的身体布施给其他的有情，从今天开始，纵使他人藉由各种的方式，不管是戏弄我、冒犯我，或者是嘲笑我，既然我已经把身体布施给其他的人，为什么我要再次的成为守护、珍爱此身之人呢？既无眷恋已作施舍，则应任其所欲而行。如果在毫无眷恋的情况下，把身体布施给其他的有情，这时候其他的有情想要对我们做什么？就随他吧！早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-7 11:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，今后纵使戏弄我身、侵凌冒犯或作讥笑嘲讽，然既已施吾身于诸有情，何故复为守护、珍爱此身之人？既然我们已经至诚的，把我们的身体布施给其他的有情，从今天开始，纵使他人藉由各种的方式，不管是戏弄我、冒犯我，或者是嘲笑我，既然我已经把身体布施给其他的人，为什么我要再次的成为守护、珍爱此身之人呢？既无眷恋已作施舍，则应任其所欲而行。如果在毫无眷恋的情况下，把身体布施给其他的有情，这时候其他的有情想要对我们做什么？就随他吧！早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-7 11:13</span><div class="badge-floor">第 16 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第16讲 <br/>
 <br/>
@@ -2001,7 +2022,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 偈颂，我今务必作，符合佛族业，应莫染污此，无过尊贵种。 <br/>
 <br/>
-正文，若念：「仅此即足？」我今务必着手造作符合慈父佛族之三门业，既然已经受了愿、行二心，从今天开始，我务必着手造作符合慈父佛族的身、语、意三门的善业，并且我所做的一切，并不是仅为了自利，而是以利他作为出发点，并于此尊贵种，在此时我们的内心中已有了愿、行二心，我们心续当中的「佛性」已完全的成熟，所以对于如此珍贵的种性，这时我们不应该让违犯了愿行学处所产生的罪堕，而染污了我们的相续。如此珍贵的佛性，它为什么是珍贵的？──初中后三皆无过失、唯以功德严饰，这是佛性它的本质，初、中、后三时都没有任何的过失，完全是以功德来庄严它。莫使违犯愿、行学处所生罪堕染污相续，所以这时既然我们的心续中，有如此珍贵的佛性，我们就不应该去违犯愿、行的种种学处，因为在违犯的当下所产生的罪堕，会染污我们的心相续，应当勤修彼之方便。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-7 11:16<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，若念：「仅此即足？」我今务必着手造作符合慈父佛族之三门业，既然已经受了愿、行二心，从今天开始，我务必着手造作符合慈父佛族的身、语、意三门的善业，并且我所做的一切，并不是仅为了自利，而是以利他作为出发点，并于此尊贵种，在此时我们的内心中已有了愿、行二心，我们心续当中的「佛性」已完全的成熟，所以对于如此珍贵的种性，这时我们不应该让违犯了愿行学处所产生的罪堕，而染污了我们的相续。如此珍贵的佛性，它为什么是珍贵的？──初中后三皆无过失、唯以功德严饰，这是佛性它的本质，初、中、后三时都没有任何的过失，完全是以功德来庄严它。莫使违犯愿、行学处所生罪堕染污相续，所以这时既然我们的心续中，有如此珍贵的佛性，我们就不应该去违犯愿、行的种种学处，因为在违犯的当下所产生的罪堕，会染污我们的心相续，应当勤修彼之方便。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-7 11:16</span><div class="badge-floor">第 17 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第17讲 <br/>
 <br/>
@@ -2222,7 +2243,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 不仅在《念住经》当中有如此的提到，在《分辨六趣经》当中也再次的提到，《分辨六趣经》云：「若人已立誓，欲布施饭菜、根茎及果实，后因悭未施，将生饿鬼城，遭受猛烈苦。」尚说此即饿鬼之因；如果内心中生起，想要布施一口饭等非常普通的物品给他人，但在生起这样的念头之后，却没有去实践，当下所造的业，如果都会让我们感生饿鬼，甚至地狱的话，况心至诚宴请一切有情、非唯空言，恭敬高呼前来作客，更何况是我们在受持菩提心、以及受持菩萨戒的过程中，我们在十方诸佛菩萨的面前发誓，并且在发誓的当下「非唯空言」，我们并不是口头上说说，而是打从内心里，希望藉由我的力量来救度一切的有情众生，并且随着仪轨的文字「高呼前来作客」，我们希望一切的有情众生，都能够前来享用无上的安乐，令其享用无上大乐以及现前人天安乐，所以我们希望一切的有情，最终都能够享用佛果的安乐，在还未成佛之前，也希望他们能够获得现前的人天安乐，在立下这样的誓言之后，后反舍弃，最后因为某一种的原因，而舍弃了一切的众生，此为欺诳一切众生，云何能生善趣？这等于是欺骗了一切的有情众生，在这样的情况下，怎么可能再次的投生在善趣当中？定不能生。 <br/>
 <br/>
-之前我们所提到的例子，他所对的有情──也就是对象，是只有一个人，我们现今立誓的对象是一切的有情。并且之前所举的譬喻，想要施予有情的是非常普通的饮食，而且它的量是非常的微少，而现今我们想要给予一切有情众生的，是最终究竟的无上大乐。所以之前藉由这样的心念，都会让我们来生投生饿鬼或是地狱的话，那更何况是我们在立下誓言之后，最终弃舍了一切有情。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-7 11:19<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 18 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+之前我们所提到的例子，他所对的有情──也就是对象，是只有一个人，我们现今立誓的对象是一切的有情。并且之前所举的譬喻，想要施予有情的是非常普通的饮食，而且它的量是非常的微少，而现今我们想要给予一切有情众生的，是最终究竟的无上大乐。所以之前藉由这样的心念，都会让我们来生投生饿鬼或是地狱的话，那更何况是我们在立下誓言之后，最终弃舍了一切有情。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-7 11:19</span><div class="badge-floor">第 18 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第18讲 <br/>
 <br/>
@@ -2367,7 +2388,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 正文，莫念有暇：「暇满人身接续可得，故于尔时再修即可。」有些人在修学佛法的同时，会生起以下的念头：「暇满人身，是可以一再的获得」，也就是很容易就能够再次的获得这样的人身，「所以现今纵使没有办法好好的修学，我到时候再修学也不晚」。这时在偈颂里就有提到「凭吾此素行」，凭着我们平常的行为，「人身尚难得」，我们平常的行为是什么样的状态？内心当中所想的是烦恼，身语所造作的是恶行，凭借着我们日常生活的行为，不要说是暇满的人身，就连非常普通的人身，都很难再次的获得。「若不得人身，徒恶无善行」，如果来生我们没有办法再次的获得人身，而堕入恶趣的话，到时除了造恶之外，是没有机会行善的。 <br/>
 <br/>
-对于这个偈颂的解释，正文当中，凭吾造恶、弃善如此素行，凭着我日常生活的行为，不外乎就是造恶以及弃舍善行，这样的行为，后时人身尚难获得；不要说是暇满，就连普通的人身都很难获得；倘若不得人身，投生恶趣，徒造恶业、无有少许善行，故难再得善趣。如果堕入了恶趣，这时想要再行善是不可能的事情，所以想要从恶趣当中再次的跳脱，而投生善趣，它的机率是非常渺茫的。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-7 11:23<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 19 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+对于这个偈颂的解释，正文当中，凭吾造恶、弃善如此素行，凭着我日常生活的行为，不外乎就是造恶以及弃舍善行，这样的行为，后时人身尚难获得；不要说是暇满，就连普通的人身都很难获得；倘若不得人身，投生恶趣，徒造恶业、无有少许善行，故难再得善趣。如果堕入了恶趣，这时想要再行善是不可能的事情，所以想要从恶趣当中再次的跳脱，而投生善趣，它的机率是非常渺茫的。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-7 11:23</span><div class="badge-floor">第 19 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第19讲 <br/>
 <br/>
@@ -2515,7 +2536,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 对于这个科判的内容，偈颂当中：瞋爱等怨敌，全无手足等，非勇亦非智，何令我如仆？ <br/>
 <br/>
-正文，根本烦恼及随烦恼所摄瞋恚、贪爱等我诸怨敌，不管是根本烦恼也好，或者是随烦恼也好，这当中所包含的瞋恚、贪爱等种种的烦恼，都是我们的敌人。但是这些敌人，全无手足，亦未持兵器等；他们既没有手，也没有脚，甚至他们手上也没有拿着兵器等种种的武器，既非强悍勇士，亦非精明智者。他既不是杀敌无数的强悍勇士，也不是深谋远虑的精明智者，彼等烦恼，如何令我如其仆役，全无自主？在没有手脚，没有拿兵器，也不是强悍的勇士，也不是精明智者的情况下，这些烦恼到底是如何把我变成像他们的仆人一样，完全没有办法自主呢？他们到底具备有什么样的能力呢？其实说实在的，并不是烦恼强而有力，而是我们根本没有修学烦恼的对治。烦恼它并不是故意要来伤害我们的，它既没有手，又没有脚，也没有拿武器，也不会生起一个念头，想要故意的来伤害我们，那为什么现今我们被他完全的控制，而没有办法自主？这是因为我们根本没有想要修学烦恼对治。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-7 11:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 20 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，根本烦恼及随烦恼所摄瞋恚、贪爱等我诸怨敌，不管是根本烦恼也好，或者是随烦恼也好，这当中所包含的瞋恚、贪爱等种种的烦恼，都是我们的敌人。但是这些敌人，全无手足，亦未持兵器等；他们既没有手，也没有脚，甚至他们手上也没有拿着兵器等种种的武器，既非强悍勇士，亦非精明智者。他既不是杀敌无数的强悍勇士，也不是深谋远虑的精明智者，彼等烦恼，如何令我如其仆役，全无自主？在没有手脚，没有拿兵器，也不是强悍的勇士，也不是精明智者的情况下，这些烦恼到底是如何把我变成像他们的仆人一样，完全没有办法自主呢？他们到底具备有什么样的能力呢？其实说实在的，并不是烦恼强而有力，而是我们根本没有修学烦恼的对治。烦恼它并不是故意要来伤害我们的，它既没有手，又没有脚，也没有拿武器，也不会生起一个念头，想要故意的来伤害我们，那为什么现今我们被他完全的控制，而没有办法自主？这是因为我们根本没有想要修学烦恼对治。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-7 11:25</span><div class="badge-floor">第 20 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第20讲 <br/>
 <br/>
@@ -2659,7 +2680,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 对于这样的问题，偈颂当中：我宁被烧杀，或遭砍头颅；然一切时处，不屈烦恼敌。 <br/>
 <br/>
-正文，我宁被火焚烧杀害，或遭他人砍断头颅，此唯令舍今生躯壳；在今生我宁可被火焚烧、杀害，或者是遭到他人来砍断我的头颅，这样的行为，顶多是伤害我的肉身躯壳，它并不能够让我来生堕入恶趣受苦，也不会障碍来生我想要获取的这些事情，忍受当下的小苦，是能够换取将来的大乐，但是现今安住在我们心中的烦恼敌，然烦恼敌，令生地狱等剧烈苦，它不仅在今生会伤害我们，并且会使我们来生堕入地狱当中，遭受种种剧烈的痛苦，障碍我获所欲求事。并且会障碍来生获得我想要获得的目标，故于一切时处，不应屈服彼前、为彼所转。所以在任何的情况下，我们都不应该屈服在烦恼的面前，也不应该被烦恼所控制。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-15 10:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 21 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，我宁被火焚烧杀害，或遭他人砍断头颅，此唯令舍今生躯壳；在今生我宁可被火焚烧、杀害，或者是遭到他人来砍断我的头颅，这样的行为，顶多是伤害我的肉身躯壳，它并不能够让我来生堕入恶趣受苦，也不会障碍来生我想要获取的这些事情，忍受当下的小苦，是能够换取将来的大乐，但是现今安住在我们心中的烦恼敌，然烦恼敌，令生地狱等剧烈苦，它不仅在今生会伤害我们，并且会使我们来生堕入地狱当中，遭受种种剧烈的痛苦，障碍我获所欲求事。并且会障碍来生获得我想要获得的目标，故于一切时处，不应屈服彼前、为彼所转。所以在任何的情况下，我们都不应该屈服在烦恼的面前，也不应该被烦恼所控制。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-15 10:10</span><div class="badge-floor">第 21 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第21讲 <br/>
 <br/>
@@ -2771,7 +2792,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 第二个科判，「显示仅修智能、方便一分不能成佛」。这一段最主要提到的是，在修学大乘法的过程中，我们所修学的法类，它的本质跟次第应该是无误的，而数量是圆满的。 <br/>
 <br/>
-对于这一点，正文当中，趣入成佛之方便时，所趣方便须无错谬；于错谬道，任凭如何励力，终不能生所欲果故。虽无错谬，若不圆满，亦不生果，故应修学圆满、无误之道。简单的来说，大乘道它的本质，跟修学的次第必须是无误的，在无误的情况下，我们所修学的内涵，它的数量必须是圆满的。又彼为何？什么样的道，它的本质是无误、数量是圆满的？这一点如同密续中的，如《毗卢遮那现证菩提经》云：「秘密主，一切智从大悲根本而生，从菩提心因生，以诸方便令其究竟。」成办一切遍智的根本是大悲心，并且更进一步的，由大悲策发起菩提心，透由修学种种的方便，使大乘道圆满究竟。所以在经文里面特别的提到，即大悲心、世俗胜义二菩提心、方便施等波罗蜜多。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-15 10:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 22 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+对于这一点，正文当中，趣入成佛之方便时，所趣方便须无错谬；于错谬道，任凭如何励力，终不能生所欲果故。虽无错谬，若不圆满，亦不生果，故应修学圆满、无误之道。简单的来说，大乘道它的本质，跟修学的次第必须是无误的，在无误的情况下，我们所修学的内涵，它的数量必须是圆满的。又彼为何？什么样的道，它的本质是无误、数量是圆满的？这一点如同密续中的，如《毗卢遮那现证菩提经》云：「秘密主，一切智从大悲根本而生，从菩提心因生，以诸方便令其究竟。」成办一切遍智的根本是大悲心，并且更进一步的，由大悲策发起菩提心，透由修学种种的方便，使大乘道圆满究竟。所以在经文里面特别的提到，即大悲心、世俗胜义二菩提心、方便施等波罗蜜多。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-15 10:13</span><div class="badge-floor">第 22 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第22讲 <br/>
 <br/>
@@ -2783,7 +2804,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在《现观庄严论》里面提到一百四十四种的功德，是从二十一种的「无漏智」来作解释。二十一种的「无漏智」，是指佛祂有二十一种的无漏功德。这二十一种的无漏功德分别是：第一种「三十七菩提分」，第二种「四无量」，第三种「八解脱」，第四种「九次第等至」，第五「十遍处」，第六「八胜处」，第七「无染等执」，第八「愿智」，第九「六通」，第十「四无碍」，第十一「四清净」，第十二「十自在」，第十三「十力」，第十四「四无畏」，第十五「三无护」，第十六「三念住」，第十七「念无失性」，第十八「永断习气」，第十九「大悲心」，二十「十八不共法」，二十一「一切种智」。 <br/>
 <br/>
-在这个地方有提到二十一种的佛功德，二十一种的佛功德我们仔细的细数的话，就是一百四十四种的现观功德，我们稍微的来统计一下：「三十七菩提分」是37种，加上「四无量」＝41，加上「八解脱」＝49，加上「九次第等至」＝58，「十遍处」＝68，「八胜处」＝76，「无染等执」＝77，「愿智」＝78，「六通」＝84，「四无碍」＝88，「四清净」＝92，「十自在」＝102，「十力」＝112，加「四无畏」＝116，加「三无护」＝119，加「三念住」＝122，加「念无失性」＝123，加「永断习气」＝124，加「大悲心」＝125，加「十八不共法」＝143，加「一切种智」＝144，所以这是二十一种的无漏智功德。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-15 10:17<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 23 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+在这个地方有提到二十一种的佛功德，二十一种的佛功德我们仔细的细数的话，就是一百四十四种的现观功德，我们稍微的来统计一下：「三十七菩提分」是37种，加上「四无量」＝41，加上「八解脱」＝49，加上「九次第等至」＝58，「十遍处」＝68，「八胜处」＝76，「无染等执」＝77，「愿智」＝78，「六通」＝84，「四无碍」＝88，「四清净」＝92，「十自在」＝102，「十力」＝112，加「四无畏」＝116，加「三无护」＝119，加「三念住」＝122，加「念无失性」＝123，加「永断习气」＝124，加「大悲心」＝125，加「十八不共法」＝143，加「一切种智」＝144，所以这是二十一种的无漏智功德。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-15 10:17</span><div class="badge-floor">第 23 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第23讲 <br/>
 （二十三）2012年3月31日 （上午）大悲精舍 <br/>
@@ -2945,7 +2966,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在这里有特别的提到《念住经》，藏文版的《念住经》有三函，在《念住经》当中最主要提到的是业果的道理，造作了什么样的恶业，将来会投生炎热地狱，或是寒冷地狱，或是近边地狱以及独一地狱。造作了什么样的善业，能够让我们感得转轮圣王的果位，在《念住经》里面都有仔细的提到。所以在《念住经》当中提到了，一切的苦果都是我们内心恶念所产生的果报。 <br/>
 <br/>
-一类论中有作「火团」释者，版本有误。这一句话的藏文原文，现今各位所看到的版本就是有误的版本，它的这个并音是错的，所以一类论中有作「火团」释者，「妖女」的这个字它藏文的原文，有一些版本用「火团」来作解释的话，它的版本本身是有错误的。《念住经》云：「心为敌中敌，无有过此敌。」在《念住经》当中有提到，如果心没有办法调伏，其实他是众多敌人当中，对我们的伤害最大的敌人。如果心没有调伏，这时我们的周边就会有许多的敌人来伤害我们；相反的，如果心调伏了，周边的敌人自然就会消失，所以一切的敌人都是来于我们的内心，所以提到「心为敌中敌，无有过此敌。」早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-15 10:26<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 24 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+一类论中有作「火团」释者，版本有误。这一句话的藏文原文，现今各位所看到的版本就是有误的版本，它的这个并音是错的，所以一类论中有作「火团」释者，「妖女」的这个字它藏文的原文，有一些版本用「火团」来作解释的话，它的版本本身是有错误的。《念住经》云：「心为敌中敌，无有过此敌。」在《念住经》当中有提到，如果心没有办法调伏，其实他是众多敌人当中，对我们的伤害最大的敌人。如果心没有调伏，这时我们的周边就会有许多的敌人来伤害我们；相反的，如果心调伏了，周边的敌人自然就会消失，所以一切的敌人都是来于我们的内心，所以提到「心为敌中敌，无有过此敌。」早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-15 10:26</span><div class="badge-floor">第 24 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第24讲 <br/>
 <br/>
@@ -3106,7 +3127,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 偈颂当中：故我应善持、善守护此心；除护心禁行，余繁有何益？ <br/>
 <br/>
-正文，断过、修德皆依于心，是故我应善以正念、正知摄持自心，善加守护，不令此心退失；不论是断除过失，或者是修学善行，而培养众多的福德，最主要关键都必须依于我们的内心。为了要守护我们的心，必须善加以正念、正知来摄持我们的内心，好好的保护我们的心，让我们的心不要退失。除此护心禁行，不护自心其余禁行──念课颂等，繁多又有何益？「禁行」这两个字，可以分成两个部分，「禁」禁止，断除恶行、禁止恶行，「行」在断除恶行之后，更进一步的造作善行，简单的来说就是「修持」。修学佛法的过程里，最重要的修持就是守护我们的内心，「不护自心其余禁行──念课颂等」，如果没有办法守护我们的内心，纵使做再多的善行，比方念课颂，「繁多又有何益」？念再多，又有什么意思呢？全无意义。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-15 10:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 25 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，断过、修德皆依于心，是故我应善以正念、正知摄持自心，善加守护，不令此心退失；不论是断除过失，或者是修学善行，而培养众多的福德，最主要关键都必须依于我们的内心。为了要守护我们的心，必须善加以正念、正知来摄持我们的内心，好好的保护我们的心，让我们的心不要退失。除此护心禁行，不护自心其余禁行──念课颂等，繁多又有何益？「禁行」这两个字，可以分成两个部分，「禁」禁止，断除恶行、禁止恶行，「行」在断除恶行之后，更进一步的造作善行，简单的来说就是「修持」。修学佛法的过程里，最重要的修持就是守护我们的内心，「不护自心其余禁行──念课颂等」，如果没有办法守护我们的内心，纵使做再多的善行，比方念课颂，「繁多又有何益」？念再多，又有什么意思呢？全无意义。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-15 10:29</span><div class="badge-floor">第 25 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第25讲 <br/>
 <br/>
@@ -3250,7 +3271,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 偈颂当中：具缘近上师；住持示教诫，因惧起恭敬，正念易生起。 <br/>
 <br/>
-正文，护正念之方便：具善缘者亲近己之上师、住持、轨范师及同梵行等诸众；具足善缘的人，透由亲近自己的「上师」；或是「住持」，这当中的住持有受沙弥戒的住持，以及受比丘戒的住持；「轨范师」，在律典当中有提到各种的轨范师，它的种类非常多；「同梵行等」，以及周边的同行善友；由依住持所示教授、教诫，并且在亲近上师以及同行善友的过程中，透由依止住持所开示的教授、教诫，并因知惭、恐为他人斥责而生畏惧，第一个部分「惭」，所谓的「惭」是指，当你受了出家戒，成为了出家人之后，这时你必须要告诉自己：「我是一个出家人，什么事情该做，什么事情不该做」，纵使你不是一位出家人，但是你受了在家戒，或是你是一位佛弟子，你也应该以：「我今天受了在家戒，我身为一个佛弟子，哪一些恶行是必须要避免的」，这是提到了「惭」。「恐为他人斥责而生畏惧」这是愧，也就是如果当下我造作了这样的恶行，被他人发现的人，是会被他人所斥责的，而在内心当中生起恐惧，所以这两句话是提到了「惭、愧」。故于学处生起恭敬，以惭愧心，以这样的一种心态，我们就会对所受的戒律，以及必须修学的学处生起恭敬心，彼由此易生起正念，这样的人，藉由这种方式，他就会很容易在内心中生起正念，不忘善法所缘、行相。故任作闻、思、修，皆应善巧守护正念。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-15 10:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 26 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，护正念之方便：具善缘者亲近己之上师、住持、轨范师及同梵行等诸众；具足善缘的人，透由亲近自己的「上师」；或是「住持」，这当中的住持有受沙弥戒的住持，以及受比丘戒的住持；「轨范师」，在律典当中有提到各种的轨范师，它的种类非常多；「同梵行等」，以及周边的同行善友；由依住持所示教授、教诫，并且在亲近上师以及同行善友的过程中，透由依止住持所开示的教授、教诫，并因知惭、恐为他人斥责而生畏惧，第一个部分「惭」，所谓的「惭」是指，当你受了出家戒，成为了出家人之后，这时你必须要告诉自己：「我是一个出家人，什么事情该做，什么事情不该做」，纵使你不是一位出家人，但是你受了在家戒，或是你是一位佛弟子，你也应该以：「我今天受了在家戒，我身为一个佛弟子，哪一些恶行是必须要避免的」，这是提到了「惭」。「恐为他人斥责而生畏惧」这是愧，也就是如果当下我造作了这样的恶行，被他人发现的人，是会被他人所斥责的，而在内心当中生起恐惧，所以这两句话是提到了「惭、愧」。故于学处生起恭敬，以惭愧心，以这样的一种心态，我们就会对所受的戒律，以及必须修学的学处生起恭敬心，彼由此易生起正念，这样的人，藉由这种方式，他就会很容易在内心中生起正念，不忘善法所缘、行相。故任作闻、思、修，皆应善巧守护正念。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-15 10:42</span><div class="badge-floor">第 26 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第26讲 <br/>
 <br/>
@@ -3418,7 +3439,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 偈颂当中：于身起船心，此仅往来依；为办有情利，转成如意身。 <br/>
 <br/>
-正文，为勤修善，应于此身起舟船心，念此仅是往来所依，以此渡脱轮回大海；为了要精勤的修学善法，对于当下我们所获得的人身，我们必须要生起「它就如同是一艘船」的这种心念，要想到现今我们所获得的人身，只是让我们能够来去自如，行利益他人的种种所依，以此渡脱轮回大海，为能成办诸有情利，当令此身转成果位圆满、如如意宝之妙佛身。而且为了要能够成办一切有情的利益，希望当下我们所获得的不净身，透由修学佛道在不久的将来能够成办果位圆满，如如意宝的妙佛身。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-19 22:07<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 27 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，为勤修善，应于此身起舟船心，念此仅是往来所依，以此渡脱轮回大海；为了要精勤的修学善法，对于当下我们所获得的人身，我们必须要生起「它就如同是一艘船」的这种心念，要想到现今我们所获得的人身，只是让我们能够来去自如，行利益他人的种种所依，以此渡脱轮回大海，为能成办诸有情利，当令此身转成果位圆满、如如意宝之妙佛身。而且为了要能够成办一切有情的利益，希望当下我们所获得的不净身，透由修学佛道在不久的将来能够成办果位圆满，如如意宝的妙佛身。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-19 22:07</span><div class="badge-floor">第 27 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第27讲 <br/>
 <br/>
@@ -3580,7 +3601,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 之前在正文当中有提到，「大悲商主由杀恶人，摧坏多劫生死轮回」，这个公案的主角大悲商主，是导师释迦世尊在行菩萨道的一个人，这时，世尊是一位登地的菩萨，对于登地的菩萨而言，由于他现证空性，所以并不会堕入恶趣。但是当时是什么样的情况，我相信很多人都有听过这个公案，当时有一位商主，也就是导师释迦世尊的前生，带着四百九十九位的商人，到大海当中去寻宝，对于其他的商人而言，他们需要一位有经验、有福报的人来带领他们，所以带领的人本身如果是一位罗汉，或者是一位菩萨，由于他们福德非常的广大，所以对他们而言，想要寻求宝物也变得比较容易，所以他们都希望有一位有经验、有福报的人来作他们的引导。 <br/>
 <br/>
-但是在五百个商人当中，有一个人他是强盗，所以当这群人他们寻获了宝藏，准备返回原有的出发点，这时这个强盗心生了恶念，他为了要让自己能够获得所有的宝藏，所以生起了想要杀害其他人的念头，他想要把其他的四百九十九个人都杀害。这时商主他知道有人动了这样的念头，所以他就默默的思维这件事情，他在想：我该怎么处理这个问题，如果我放任他，不杀他的话，这时他会杀害其他的商人，让其他的商人受苦。并且造作杀业的这个强盗，由于他杀了其他的人，会造下非常深重的恶业，而让他生来堕入恶趣受苦，所以这对他而言，或者是对其他的商人来说都是有伤害的。但是相反的，如果今天我杀了他，这时我不仅能够救其他的商人，我也能够救他。虽然我造了杀生的业，或许会让我们的来生堕入恶趣受苦，但是如果我一个人能够代替其他的四百九十九个人受苦的话，我也甘之如饴。所以当下他就生起了这个念头，而将这个强盗给杀害了，杀害了之后，他不仅没有堕入恶趣，并且在一瞬间之内，他就圆满了万劫──也就是将近一万劫，所能够成办的资粮，在此一瞬间都完全的圆满。我们今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-19 22:17<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 28 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+但是在五百个商人当中，有一个人他是强盗，所以当这群人他们寻获了宝藏，准备返回原有的出发点，这时这个强盗心生了恶念，他为了要让自己能够获得所有的宝藏，所以生起了想要杀害其他人的念头，他想要把其他的四百九十九个人都杀害。这时商主他知道有人动了这样的念头，所以他就默默的思维这件事情，他在想：我该怎么处理这个问题，如果我放任他，不杀他的话，这时他会杀害其他的商人，让其他的商人受苦。并且造作杀业的这个强盗，由于他杀了其他的人，会造下非常深重的恶业，而让他生来堕入恶趣受苦，所以这对他而言，或者是对其他的商人来说都是有伤害的。但是相反的，如果今天我杀了他，这时我不仅能够救其他的商人，我也能够救他。虽然我造了杀生的业，或许会让我们的来生堕入恶趣受苦，但是如果我一个人能够代替其他的四百九十九个人受苦的话，我也甘之如饴。所以当下他就生起了这个念头，而将这个强盗给杀害了，杀害了之后，他不仅没有堕入恶趣，并且在一瞬间之内，他就圆满了万劫──也就是将近一万劫，所能够成办的资粮，在此一瞬间都完全的圆满。我们今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-19 22:17</span><div class="badge-floor">第 28 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第28讲 <br/>
 <br/>
@@ -3692,7 +3713,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 所以提到了「谓彼甚为其器」的这个「彼」，仁波切他虽然前后用了两种不同的方式来解释，但是他认为用第二种的方式来解释，会比较符合这一段的文义。也就是有些小乘的行者，他是以持守别解脱戒为主，这时我们就不应该告诉他说，「你不需要持戒，你只要来学大乘法，因为在大乘法里面有提到，诵经、念咒是可以净化恶业的，所以你并不需要持戒」，我们不能够用这样的方式来告诉别人，叫别人不要持戒。「莫以经咒欺诳他人」，不能够用在显教或者是密教当中有特别的提到，诵经、念咒就可以净化恶业的这个观点，而告诉别人「持戒是不重要的」。 <br/>
 <br/>
-接下来是第三个科判，「护有情心学无罪行」。我们早上的课就先上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-19 22:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 29 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+接下来是第三个科判，「护有情心学无罪行」。我们早上的课就先上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-19 22:22</span><div class="badge-floor">第 29 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第29讲 <br/>
 <br/>
@@ -3795,7 +3816,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 下一个偈颂：佛子不需学，此事定无有；智者若住此，则无不成福。 <br/>
 <br/>
-正文，所知事中，此定无有佛子菩萨不需学者，在一切的「所知」，也就是万法当中，没有一件事是菩萨不需要修学的，纵使是一位木工，或者是一位水泥匠所作的事情，对于菩萨来说这都是必须要修学的内涵，须修一切学处；智者若安住此，则无不成修福之行，故莫心生不信。对于菩萨而言，他不仅能够了解所知的内涵，而且更进一步的，他会去实践他所了解的部分，并且在实践的过程中，他的动机是以利他作为出发点。如果一位智者菩萨，能够安住在这样的状态下，在此时，他所造的一切业都能够成为是修福之业，所以提到「智者若安住此，则无不成修福之行」，他所有身语意三门的行为，都能够成为是修学福德的一种行仪，「故莫心生不信」，所以对于周边的人，有些人他学的可能不是佛法，他学的是科学，或者是种种的语言，但是我们很难了解对方他的本性是什么？这有可能是菩萨为了行利益众生的事业，而修学了非佛法的相关法门，他可能会去修学，像科学，或者是学习种种的语言来利益众生。所以面对这样的一种情况，内心当中不应该生起排斥或是不信，这一点是很重要的。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-19 22:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 30 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，所知事中，此定无有佛子菩萨不需学者，在一切的「所知」，也就是万法当中，没有一件事是菩萨不需要修学的，纵使是一位木工，或者是一位水泥匠所作的事情，对于菩萨来说这都是必须要修学的内涵，须修一切学处；智者若安住此，则无不成修福之行，故莫心生不信。对于菩萨而言，他不仅能够了解所知的内涵，而且更进一步的，他会去实践他所了解的部分，并且在实践的过程中，他的动机是以利他作为出发点。如果一位智者菩萨，能够安住在这样的状态下，在此时，他所造的一切业都能够成为是修福之业，所以提到「智者若安住此，则无不成修福之行」，他所有身语意三门的行为，都能够成为是修学福德的一种行仪，「故莫心生不信」，所以对于周边的人，有些人他学的可能不是佛法，他学的是科学，或者是种种的语言，但是我们很难了解对方他的本性是什么？这有可能是菩萨为了行利益众生的事业，而修学了非佛法的相关法门，他可能会去修学，像科学，或者是学习种种的语言来利益众生。所以面对这样的一种情况，内心当中不应该生起排斥或是不信，这一点是很重要的。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-19 22:24</span><div class="badge-floor">第 30 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第30讲 <br/>
 <br/>
@@ -3922,7 +3943,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 偈颂当中：故我应断除，瞋敌所需食；此敌唯害我，除此无余事。 <br/>
 <br/>
-正文，是故，应尽断除我瞋恚敌所需不悦粮食；既然瞋恚对我们造成的伤害是如此的大，这时我们应该要想办法断除瞋恚的敌人所需要的粮食，也就是内心在面对境界时生起的不悦感。为什么我们要断除瞋恚敌的粮食呢？此瞋恚敌唯加害我，除此无有余事，外在的敌人，虽然会伤害我，但是它至少有自己的事情可以做，但是我们内心当中的瞋恚敌，他除了伤害我之外，他没有其他的事情了，所以只要在我们的心中生起瞋的那一刻，从那一刻开始，我们心中的瞋恚敌就不断的伤害着我们，故应勤灭此首要敌。所以我们应该精勤的灭除最主要的敌人──也就是心中的瞋恚。而想要灭除心中的瞋恚，就必须断除瞋恚敌所需要的粮食，也就是不悦。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-19 22:27<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 31 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，是故，应尽断除我瞋恚敌所需不悦粮食；既然瞋恚对我们造成的伤害是如此的大，这时我们应该要想办法断除瞋恚的敌人所需要的粮食，也就是内心在面对境界时生起的不悦感。为什么我们要断除瞋恚敌的粮食呢？此瞋恚敌唯加害我，除此无有余事，外在的敌人，虽然会伤害我，但是它至少有自己的事情可以做，但是我们内心当中的瞋恚敌，他除了伤害我之外，他没有其他的事情了，所以只要在我们的心中生起瞋的那一刻，从那一刻开始，我们心中的瞋恚敌就不断的伤害着我们，故应勤灭此首要敌。所以我们应该精勤的灭除最主要的敌人──也就是心中的瞋恚。而想要灭除心中的瞋恚，就必须断除瞋恚敌所需要的粮食，也就是不悦。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-19 22:27</span><div class="badge-floor">第 31 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第31讲 <br/>
 <br/>
@@ -4063,7 +4084,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 正文，谓有勇士遭他刺击，见己身血，反而更加坚定、勇猛；然有懦夫仅见他血，惊慌失措而昏-迷者。此非外物力量大小，或其身有软硬等别，全由心性坚定或心怯弱所致，故应勤修安受苦忍。 <br/>
 <br/>
-勇敢的战士和他人打斗时，看到自己的身体遭到敌人的攻系，而受伤流血反而会更加的坚定勇猛；「然有懦夫仅见他血，惊慌失措而昏-迷者」，但是有些懦夫、胆小怯弱，所以看到他人身上的血，就会因此而感到惊慌失措，而昏-迷倒地。「此非外物力量大小」，之所以会有这么大的差别，并不是外物它的力量有大小的区别，这两者它所看到的外境都是血，「或其身有软硬等别」，也不是因为他们的身体一者比较坚硬，一者比较软弱，也不是，「全由心性坚定」，这完全是「心」坚定与否所造成的。勇敢的战士，他在看到血的时候，他不仅能够安忍，而且会更勇敢的跟敌人打斗；但是相反的，懦夫在看到鲜血时，这时他是没有办法忍受，而到最后昏-迷倒地，这两者最主要的差距，是他们的心所造成的，一者他的心非常的坚定，而另外一者非常的怯弱。「故应勤修安受苦忍」，所以我们的心在面对逆境时，只要不断的去串习，我们内心的力量就会慢慢的增强，到最后任何的困境，我们都有办法安忍、有办法突破。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-19 22:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 32 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+勇敢的战士和他人打斗时，看到自己的身体遭到敌人的攻系，而受伤流血反而会更加的坚定勇猛；「然有懦夫仅见他血，惊慌失措而昏-迷者」，但是有些懦夫、胆小怯弱，所以看到他人身上的血，就会因此而感到惊慌失措，而昏-迷倒地。「此非外物力量大小」，之所以会有这么大的差别，并不是外物它的力量有大小的区别，这两者它所看到的外境都是血，「或其身有软硬等别」，也不是因为他们的身体一者比较坚硬，一者比较软弱，也不是，「全由心性坚定」，这完全是「心」坚定与否所造成的。勇敢的战士，他在看到血的时候，他不仅能够安忍，而且会更勇敢的跟敌人打斗；但是相反的，懦夫在看到鲜血时，这时他是没有办法忍受，而到最后昏-迷倒地，这两者最主要的差距，是他们的心所造成的，一者他的心非常的坚定，而另外一者非常的怯弱。「故应勤修安受苦忍」，所以我们的心在面对逆境时，只要不断的去串习，我们内心的力量就会慢慢的增强，到最后任何的困境，我们都有办法安忍、有办法突破。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-19 22:29</span><div class="badge-floor">第 32 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第32讲 <br/>
 <br/>
@@ -4195,7 +4216,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 而提到了数论外道，在这个地方有一个公案，过去有一位格西，他虽然是内道的佛弟子，但是只要每次讲到数论派的宗义时，他就会完全的投入在那个境界里面，甚至他也能够非常详细的宣说数论派的宗义。到最后他跟别人说，我只要一想到数论派的宗义，我就觉得我好像完全融入了那个法当中，所以后人就为这个格西取名叫「数论格西」，就认为他是数论派转世过来的一个格西。 <br/>
 <br/>
-为什么我们要探讨外道的宗义，是因为如果你想了解佛教当中的宗义，尤其是空正见的理路时，你必须要知道有谁提出了什么错误的见解，而我们应该如何的破斥这些见解，才能够在内心中对于法生起最究竟的定解，而了解一切的万法。所以了解外道的宗义，是有它的重要性以及必要性的。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-19 22:32<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 33 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+为什么我们要探讨外道的宗义，是因为如果你想了解佛教当中的宗义，尤其是空正见的理路时，你必须要知道有谁提出了什么错误的见解，而我们应该如何的破斥这些见解，才能够在内心中对于法生起最究竟的定解，而了解一切的万法。所以了解外道的宗义，是有它的重要性以及必要性的。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-19 22:32</span><div class="badge-floor">第 33 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第33讲 <br/>
 <br/>
@@ -4319,7 +4340,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在偈颂当中：若能自主取，皆不欲苦故，诸众生皆应，无任何苦楚。如果轮回中的有情有办法自主自己的苦乐，就如同他内心中想要离苦得乐，更进一步的，他也能够成办一切的安乐、去除一切的痛苦，但是实际上却不是如此。 <br/>
 <br/>
-正文，若非依缘，而能自主随欲取果，则诸有情皆不欲苦，故诸众生皆应无有任何苦楚；然见有苦，但实际上我们现今看周边的有情，绝大部分的人都是在面对痛苦，表示它并没有办法自主自己的苦乐，因彼无有自主，是故不应瞋彼，既然是如此，他一切的行为都是他自己本身所没有办法控制、没有办法自主的，所以我们不应该瞋恚他人，而当背弃烦恼。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-19 22:34<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 34 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，若非依缘，而能自主随欲取果，则诸有情皆不欲苦，故诸众生皆应无有任何苦楚；然见有苦，但实际上我们现今看周边的有情，绝大部分的人都是在面对痛苦，表示它并没有办法自主自己的苦乐，因彼无有自主，是故不应瞋彼，既然是如此，他一切的行为都是他自己本身所没有办法控制、没有办法自主的，所以我们不应该瞋恚他人，而当背弃烦恼。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-19 22:34</span><div class="badge-floor">第 34 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第34讲 <br/>
 <br/>
@@ -4511,7 +4532,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 偈颂当中：谓他不喜我；然于今后世，若不能食我，我何故不悦？ <br/>
 <br/>
-正文，谓此言令他不喜我，如果他人鄙视我，或者是用粗恶的言语在辱骂我，这会造成其他人不喜欢我；然于今生或于后世，倘若此举不能伤害并吞食我，我又何故不悦而造无义苦因？或许在今生中，由于某个人他批评你、辱骂你，而会造成其他人不喜欢你；但是，其他的人不喜欢你，难道说就会伤害到你吗？以今生的角度而言，以来生的角度而言，别人不喜欢你，又不会怎么样，「然于今生或于后世，倘若此举不能伤害并吞食我，我又何故不悦而造无义苦因？」所以面对这样的境界，既然它不会伤害我的今生，也不会伤害我的来生，那为什么我的内心要对于他心生不悦，而进一步的去造作无意义的苦因呢？不应不悦。今天的课就上到这边。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-19 22:36<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 35 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，谓此言令他不喜我，如果他人鄙视我，或者是用粗恶的言语在辱骂我，这会造成其他人不喜欢我；然于今生或于后世，倘若此举不能伤害并吞食我，我又何故不悦而造无义苦因？或许在今生中，由于某个人他批评你、辱骂你，而会造成其他人不喜欢你；但是，其他的人不喜欢你，难道说就会伤害到你吗？以今生的角度而言，以来生的角度而言，别人不喜欢你，又不会怎么样，「然于今生或于后世，倘若此举不能伤害并吞食我，我又何故不悦而造无义苦因？」所以面对这样的境界，既然它不会伤害我的今生，也不会伤害我的来生，那为什么我的内心要对于他心生不悦，而进一步的去造作无意义的苦因呢？不应不悦。今天的课就上到这边。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-19 22:36</span><div class="badge-floor">第 35 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第35讲 <br/>
 <br/>
@@ -4647,7 +4668,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 偈颂当中：若有害上师、亲属或好友，彼由诸缘生，知已应止瞋。 <br/>
 <br/>
-正文，若有人害为我说正法之上师、同家族之亲属或好友等，见已亦不应瞋，如果有人，伤害了为我宣说正法的上师，或者是同一个家族里面的亲属，或者是我周边的好友，我们看到了这种情形，内心当中也不应该生起瞋恨，为什么？因亲友等往昔造作非理恶业，由业所感，如同前述之理，在之前我们有提到，当敌人在伤害我们的时候，我们不应该对他生起瞋恨，这是因为之所以会有敌人出现，更进一步的，他会用各种的方式来伤害我们，这是我们过去所造的恶业所感得的果报。相同的道理，之所以会有人去伤害我们的亲朋好友，这也是因为我们的亲朋好友，他们自己在过去造作了非理的恶业，由业所感得的恶果，彼由诸业缘生，知已应当遮止瞋恚。所以在思维这个道理时，我们必须要更进一步的想到，这一切都是过去所造的业而感得的果报，在了解了这个道理之后，应该要遮止内心中的瞋恚。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-20 09:21<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 36 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，若有人害为我说正法之上师、同家族之亲属或好友等，见已亦不应瞋，如果有人，伤害了为我宣说正法的上师，或者是同一个家族里面的亲属，或者是我周边的好友，我们看到了这种情形，内心当中也不应该生起瞋恨，为什么？因亲友等往昔造作非理恶业，由业所感，如同前述之理，在之前我们有提到，当敌人在伤害我们的时候，我们不应该对他生起瞋恨，这是因为之所以会有敌人出现，更进一步的，他会用各种的方式来伤害我们，这是我们过去所造的恶业所感得的果报。相同的道理，之所以会有人去伤害我们的亲朋好友，这也是因为我们的亲朋好友，他们自己在过去造作了非理的恶业，由业所感得的恶果，彼由诸业缘生，知已应当遮止瞋恚。所以在思维这个道理时，我们必须要更进一步的想到，这一切都是过去所造的业而感得的果报，在了解了这个道理之后，应该要遮止内心中的瞋恚。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-20 09:21</span><div class="badge-floor">第 36 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第36讲 <br/>
 <br/>
@@ -4820,7 +4841,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 对于这一点，偈颂当中：不欲众获利，岂欲证菩提？若人瞋他财，岂有菩提心？ <br/>
 <br/>
-正文，若人不欲众生获衣食等少许利养，岂欲令彼证得菩提？如果平时我们不想要周边的有情，获得衣食等少许的利养，这时我们怎么会打从内心底，希望他们证得圆满的菩提呢？若人瞋他有少许财，则彼岂有欲置一切有情于菩提之菩提心耶？如果我们因为他人获得了少许的财物，而对他人生起瞋恨的话，这时我们怎么会为了要利益他人而生起菩提心呢？此坏菩提心故，应于他人所获利养，励力断除嫉妒之心。内心当中生起嫉妒、瞋恨会破坏我们内心当中的菩提善心，所以平时我们应该想办法断除心中的嫉妒之心。嫉妒他人所获得的圆满快乐，这种心态是非常要不得的一种心态，所以平时我们应该要想办法断除这一颗恶劣的心。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-20 09:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 37 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，若人不欲众生获衣食等少许利养，岂欲令彼证得菩提？如果平时我们不想要周边的有情，获得衣食等少许的利养，这时我们怎么会打从内心底，希望他们证得圆满的菩提呢？若人瞋他有少许财，则彼岂有欲置一切有情于菩提之菩提心耶？如果我们因为他人获得了少许的财物，而对他人生起瞋恨的话，这时我们怎么会为了要利益他人而生起菩提心呢？此坏菩提心故，应于他人所获利养，励力断除嫉妒之心。内心当中生起嫉妒、瞋恨会破坏我们内心当中的菩提善心，所以平时我们应该想办法断除心中的嫉妒之心。嫉妒他人所获得的圆满快乐，这种心态是非常要不得的一种心态，所以平时我们应该要想办法断除这一颗恶劣的心。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-20 09:24</span><div class="badge-floor">第 37 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第37讲 <br/>
 <br/>
@@ -4978,7 +4999,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 偈颂当中：赞扬声无心，绝无赞我念；若谓他喜我，念彼为喜因，然赞他或我，他喜我何益？喜乐属于彼，我不得少分。 <br/>
 <br/>
-正文，他人赞我而心喜时，当自己因为受到他人的赞美，而感到沾沾自喜时，要试着观察自己到底是喜欢什么，你喜欢的是赞美你的声音吗？于初即不应喜赞扬之声，在一开始我们在观察自己到底是喜欢什么对境时，我们不应该去执着，或者是对于赞扬我们的声音生起欢喜，为什么？因彼无心，因为声音本身并没有心，所以它不会有想要赞叹我们的念头，绝无赞我之念，是故于彼不应生喜。如果你喜欢的并不是赞美你的声音，而是赞美你的人他内心中想要赞美你的动机，也就是他因为欢喜你，看到你的功德，所以想要赞美你，他内心当中的动机是你所欢喜的对境的话，若谓：「他赞我时，于我心生欢喜。」而念赞者心喜彼为我心喜乐之因，有些人他会提到：当他人在赞美我的时候，是对于我感到欢喜所以会赞美我，所以我喜欢是他内心当中「欢喜我」的这种动机，而想到「赞者心喜彼为」这当中的「彼」是指的上面「赞者心喜」的这四个字。如果赞叹者本身内心当中的欢喜，是你内心生起欢喜的主因的话；然赞他人或是赞我，赞者他心欢喜于我有何利益？不管是他赞美别人也好，或者是赞美你也好，赞扬者他的内心当中感到欢喜，对于你到底有什么帮助呢？他心续之喜乐属于彼心，他内心当中的欢喜，是属于他内心当中的一种善念，这是属于他的，故我不可得其少分。所以对于我们来说，他人心中的欢喜，我们是没有办法获得的，所以我们并不需要在他人赞美我们的同时，对于声音、或者是对于他人想要赞美我们的动机，内心当中生起过度的执着。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-20 09:30<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 38 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，他人赞我而心喜时，当自己因为受到他人的赞美，而感到沾沾自喜时，要试着观察自己到底是喜欢什么，你喜欢的是赞美你的声音吗？于初即不应喜赞扬之声，在一开始我们在观察自己到底是喜欢什么对境时，我们不应该去执着，或者是对于赞扬我们的声音生起欢喜，为什么？因彼无心，因为声音本身并没有心，所以它不会有想要赞叹我们的念头，绝无赞我之念，是故于彼不应生喜。如果你喜欢的并不是赞美你的声音，而是赞美你的人他内心中想要赞美你的动机，也就是他因为欢喜你，看到你的功德，所以想要赞美你，他内心当中的动机是你所欢喜的对境的话，若谓：「他赞我时，于我心生欢喜。」而念赞者心喜彼为我心喜乐之因，有些人他会提到：当他人在赞美我的时候，是对于我感到欢喜所以会赞美我，所以我喜欢是他内心当中「欢喜我」的这种动机，而想到「赞者心喜彼为」这当中的「彼」是指的上面「赞者心喜」的这四个字。如果赞叹者本身内心当中的欢喜，是你内心生起欢喜的主因的话；然赞他人或是赞我，赞者他心欢喜于我有何利益？不管是他赞美别人也好，或者是赞美你也好，赞扬者他的内心当中感到欢喜，对于你到底有什么帮助呢？他心续之喜乐属于彼心，他内心当中的欢喜，是属于他内心当中的一种善念，这是属于他的，故我不可得其少分。所以对于我们来说，他人心中的欢喜，我们是没有办法获得的，所以我们并不需要在他人赞美我们的同时，对于声音、或者是对于他人想要赞美我们的动机，内心当中生起过度的执着。早上的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-20 09:30</span><div class="badge-floor">第 38 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第38讲 <br/>
 <br/>
@@ -5156,7 +5177,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 对于这一点，偈颂当中：故依极瞋恚，方能生忍辱，故彼是忍因，应供如正法。 <br/>
 <br/>
-正文，仅依利他之心，不能圆满忍辱，如果对方他的内心中，并没有想要伤害我们的念头，这时面对这样的对境，是没有办法圆满忍辱度的，故依以极瞋恚而加害者，方能生起忍辱，所以如果想要成就忍辱，这时我们必须要依靠着内心中生起瞋恨，而更进一步加害我们的人，就是我们的敌人，故彼害者是忍辱因，所以对方在加害我们的同时，正是我们修学忍辱的主因，彼虽无有饶益之心，然应视如正法而供养之。虽然对方在伤害我们的当下，内心中并没有想要饶益我们，并没有想要藉此而让我们成办忍辱度的想法，但是我们在面对他的当下，还是应该如同面对正法，而作恭敬的供养。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-20 09:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 39 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+正文，仅依利他之心，不能圆满忍辱，如果对方他的内心中，并没有想要伤害我们的念头，这时面对这样的对境，是没有办法圆满忍辱度的，故依以极瞋恚而加害者，方能生起忍辱，所以如果想要成就忍辱，这时我们必须要依靠着内心中生起瞋恨，而更进一步加害我们的人，就是我们的敌人，故彼害者是忍辱因，所以对方在加害我们的同时，正是我们修学忍辱的主因，彼虽无有饶益之心，然应视如正法而供养之。虽然对方在伤害我们的当下，内心中并没有想要饶益我们，并没有想要藉此而让我们成办忍辱度的想法，但是我们在面对他的当下，还是应该如同面对正法，而作恭敬的供养。今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-20 09:42</span><div class="badge-floor">第 39 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第39讲 <br/>
 <br/>
@@ -5319,7 +5340,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在藏文版的偈颂里有提到「子、亥」的这两个字，「子、亥」的「子」这个字的拼音有几种不同的拼法，如果用不同的拼法来拼音的话可以作为，若作「意坚定」解。如果把「子亥」的这个字眼作为是「意坚定」解的话，要该如何解释？谓以坚定精进之心，承许己为世人仆役。在之前我们是谈到，为了让诸佛感到欢喜，所以在内心中立下一个誓言，希望从今天开始停止再一次的伤害他人，这是第一种的解释方式。第二种的解释方式，为了让如来的内心能够感到欢喜，所以从今天开始，在内心中生起一颗坚定精进的心，而告诉自己我应该为他人来服务，成为世人的仆人。纵有他人践踏我顶，或杀害我，亦应忍受而不报复，既然我们有心想要服务他人，这时纵使他人用脚践踏我的头顶，或者是杀害我，亦应忍受而不报复，愿以此能令世间怙心生欢喜。希望藉由这样的行为，能够让世间的依怙──也就是佛，祂的心中感到欢喜。 <br/>
 <br/>
-而以上的这些文，最主要是寂天论师告诫我们的，并不是说寂天论师他自己作不到，而他希望这样作；反而是我们在过去，如果没有办法如理造作的部分，都希望藉由偈颂以及正文的解释，如理的思维之后，然后专注的将我们的行为改正过来，利益周边的有情。我们今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-20 10:01<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 40 楼</span></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
+而以上的这些文，最主要是寂天论师告诫我们的，并不是说寂天论师他自己作不到，而他希望这样作；反而是我们在过去，如果没有办法如理造作的部分，都希望藉由偈颂以及正文的解释，如理的思维之后，然后专注的将我们的行为改正过来，利益周边的有情。我们今天的课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-20 10:01</span><div class="badge-floor">第 40 进</div></div><div class="post-body">入菩萨行论释 佛子正道 <br/>
 <br/>
 第40讲 <br/>
 <br/>
@@ -5451,7 +5472,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 甚至其他教派当中，有一位论师名叫做无着贤论师，这位论师他也造了《入行论》的批注，但是在正见的这个部分，他所提出的见是比较趋近于唯识宗的正见。而提到造论者本身，也就是无着贤论师，他从小内心当中就能够任运的生起菩提心。有一次他外出时，他发现自己身上的一只跳蚤掉到了地上，这时他在寻找之后，他没有办法找到这只跳蚤而嚎啕大哭，跟周边的人说：「我的妈妈失去了，她迷路了，而我却找不到她」，会为这种事情而嚎啕大哭，就表示他从小内心当中就能够生起任运的菩提心。所以在其他的教派里面，也都有很多相关的批注，而这些批注也都是值得我们参考的，因为有很多的批注确实能够让我们对于《入行论》的偈颂，能够产生更多的理解，或许我们会更容易了解《入行论》当中的义涵。 <br/>
 <br/>
-而这位的讲课到今天告一个段落，很谢谢各位来到这个地方听法，问候各位！ </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-20 10:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 41 楼</span></div><div class="post-body">入菩萨行论释释疑（一） <br/>
+而这位的讲课到今天告一个段落，很谢谢各位来到这个地方听法，问候各位！ </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-20 10:14</span><div class="badge-floor">第 41 进</div></div><div class="post-body">入菩萨行论释释疑（一） <br/>
 <br/>
 释疑：如性法师 <br/>
 <br/>
@@ -5676,7 +5697,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在这个地方有提到二十一种的佛功德，二十一种的佛功德我们仔细的细数的话，就是一百四十四种的现观功德，我们稍微的来统计一下：「三十七菩提分」是37种，加上「四无量」＝41，加上「八解脱」＝49，加上「九次第等至」＝58，「十遍处」＝68，「八胜处」＝76，「无染等执」＝77，「愿智」＝78，「六通」＝84，「四无碍」＝88，「四清净」＝92，「十自在」＝102，「十力」＝112，加「四无畏」＝116，加「三无护」＝119，加「三念住」＝122，加「念无失性」＝123，加「永断习气」＝124，加「大悲心」＝125，加「十八不共法」＝143，加「一切种智」＝144，所以这是二十一种的无漏智功德。 <br/>
 <br/>
-所以在来之前仁波切有特别的提醒，希望把这一百四十四种的功德跟各位介绍。时间也差不多了，今天的释疑就到这个地方告一个段落。我们一起来回向：「愿此殊胜功德，回向法界有情，净除一切罪障，共成无上菩提。」 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-20 10:17<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 42 楼</span></div><div class="post-body">入菩萨行论释释疑（二） <br/>
+所以在来之前仁波切有特别的提醒，希望把这一百四十四种的功德跟各位介绍。时间也差不多了，今天的释疑就到这个地方告一个段落。我们一起来回向：「愿此殊胜功德，回向法界有情，净除一切罪障，共成无上菩提。」 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-20 10:17</span><div class="badge-floor">第 42 进</div></div><div class="post-body">入菩萨行论释释疑（二） <br/>
 <br/>
 今天是第二次来到这个地方跟各位一起讨论佛法，应该也是今年的最后一次。很快的时间已经接近了尾声，所剩的课，应该按照正常的进度只剩下一堂课。从头到尾今年的《入行论》总共是上了四十堂课，所以应该会在礼拜六上午那堂课的时候，圆满的告一个段落。 <br/>
 <br/>
@@ -5860,7 +5881,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 今天应该到这个地方可以告一个段落，很谢谢各位让我有这个机会，在这个地方跟各位一起讨论佛法。虽然讨论来、讨论去都是我一个人在讲，这不知道能不能称得上是讨论，但至少有很多的问题、有很多的疑惑，可以从仁波切的回答，或者是各位的问题当中，让听的人内心也对于这方面的法类，生起一丝丝的怀疑；并不一定要在当下得到定解，但是生起怀疑是很重要的。有时，我们就是欠缺思维，对于很多的法类都觉得理所当然，而没有怀疑，这是我们没有办法进步的另外一个原因。 <br/>
 <br/>
-所以我在三大寺学习的过程里，很多的经教师，他们都会提醒我们说：「你们去辩经场辩论，并不是要从辩经场辩论的过程里，马上就得到一个答案。」他说：「这并不是辩经最重要的目的，辩经最重要的目的，是让你的心中生起你之前没有生起的疑惑；当你的内心有疑惑，你会更进一步的去阅读相关的经论；当你的内心有疑惑，你会跟同行善友讨论；当你的内心有疑惑，你会去请教你的上师；但是如果你的内心都没有疑惑的话，这些动作都不会出现。所以我们的经教师，时常会提醒我们：「纵使你今天去辩论，你没有办法得到一个标准的答案，但是你不需要因此而气馁，你只要想办法让你自己的心中、让对方的心中能够生起疑惑，辩论的目的就达到了。」所以透由「释疑」的这堂课，不见得能够让各位都得到一个标准的答案，但是希望每一个人的心中，至少对某些问题能够生起疑惑。好！我们今天的这堂课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-7-20 10:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 43 楼</span></div><div class="post-body">入菩萨行论白话——达瓦次仁译 <br/>
+所以我在三大寺学习的过程里，很多的经教师，他们都会提醒我们说：「你们去辩经场辩论，并不是要从辩经场辩论的过程里，马上就得到一个答案。」他说：「这并不是辩经最重要的目的，辩经最重要的目的，是让你的心中生起你之前没有生起的疑惑；当你的内心有疑惑，你会更进一步的去阅读相关的经论；当你的内心有疑惑，你会跟同行善友讨论；当你的内心有疑惑，你会去请教你的上师；但是如果你的内心都没有疑惑的话，这些动作都不会出现。所以我们的经教师，时常会提醒我们：「纵使你今天去辩论，你没有办法得到一个标准的答案，但是你不需要因此而气馁，你只要想办法让你自己的心中、让对方的心中能够生起疑惑，辩论的目的就达到了。」所以透由「释疑」的这堂课，不见得能够让各位都得到一个标准的答案，但是希望每一个人的心中，至少对某些问题能够生起疑惑。好！我们今天的这堂课就上到这个地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2012-7-20 10:20</span><div class="badge-floor">第 43 进</div></div><div class="post-body">入菩萨行论白话——达瓦次仁译 <br/>
 http://www.zmxh.com/bbs/viewthread.php?tid=7284&amp;extra=page%3D1 <br/>
 <br/>
 入菩萨行（入行论）原文——如石法师译 <br/>

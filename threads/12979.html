@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>正法念处经讲记 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>正法念处经讲记 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">正法念处经讲记</h1>
-<div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-24 22:06<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">《正法念处经》正法念处经讲记 第1课——十善业道品01 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">正法念处经讲记</h1>
+<div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-24 22:06</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">《正法念处经》正法念处经讲记 第1课——十善业道品01 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -218,7 +239,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 修行者又要了解业报之法，因上造什么业行，会感得什么果报，这叫做知业报法。怎么叫做第四种绮语口业呢？就是说一些无意义的话，前后相违或者不相应的话，这些绮语业决定受和不决定受的情况就像其余三种业那样，如是名为第四口业。 <br/>
 <br/>
-绮语是指无有实义的语言，说的话前言不搭后语，这么说说，那么说说，胡说乱说，或者说不相应法义的话。这样的话都是绮语，全是废话。这些随意乱说的话、无病呻吟的话、垃圾一样没营养的话，通通属于绮语。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-25 17:28<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第2课——十善业道品02 <br/>
+绮语是指无有实义的语言，说的话前言不搭后语，这么说说，那么说说，胡说乱说，或者说不相应法义的话。这样的话都是绮语，全是废话。这些随意乱说的话、无病呻吟的话、垃圾一样没营养的话，通通属于绮语。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-25 17:28</span><div class="badge-floor">第 2 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第2课——十善业道品02 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -334,7 +355,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 可见，邪见是十不善业中最可怕的。如果认为没有因果、前后世、三宝、净土、圣人等等，以邪心否定真实存在的事物，排斥正见，这就是大的邪见。善是依正见而起，而邪见和正见相反，所以，邪见能障蔽发起一切善根。被邪见捆缚的人，将在极漫长的时劫里堕入无间地狱受苦；业力稍轻会生在畜生里，以邪见余势的障蔽无法发起善根，所以不断地转为旁生，经历了无量百千万亿亿次也难以脱出；生在饿鬼里也是如此。邪见是一切身语意恶业的主根，一旦建立就很难去除，由它不断地发出三门无量恶业，众生会不可计数次地堕在恶趣里，根本见不到边际，不得不感受生命无可奈何和难以承载的痛。总之邪见是万恶之本。 <br/>
 <br/>
-如果持邪见者生在人中，那他就不会做人。正法所说的做人之道，应尽的本分，孝悌等各种善业道行，对这些不能如法而行，换句话说，就是披着人皮不干人事。比起他的前辈父祖种性下劣千倍，自己没脸，连带着丢了祖宗的人。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-25 18:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第3课——十善业道品03 <br/>
+如果持邪见者生在人中，那他就不会做人。正法所说的做人之道，应尽的本分，孝悌等各种善业道行，对这些不能如法而行，换句话说，就是披着人皮不干人事。比起他的前辈父祖种性下劣千倍，自己没脸，连带着丢了祖宗的人。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-25 18:10</span><div class="badge-floor">第 3 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第3课——十善业道品03 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -540,7 +561,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 有福德的人被诸天所赞叹。如果一个人能够中道而正行，不偏在一边，不出错，那今生身体就不会遭遇不吉祥，不被毁坏。而借这个身修炼，又积集很多福德宝藏的缘故，未来会生到天上，受用快乐荣华。 <br/>
 <br/>
-观察这样的善恶业处后，明白道理的黠慧智者就会去修学戒行，净治身口意的恶行，励力行持身口意的善行，这是由圣见具足带来的好结果。“圣见”指佛的见，就是指黑白分明的善恶因果规律。如果一个人具足圣见，那他就是依佛之见为己之见，他能够辨识纷繁的现相，见到现相背后善恶分明的两条路。这样的人，一切时处都知道该怎么做，怎么走安乐之路。这样具足业果正见去行持善行，最终将得到寂静涅槃。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-26 15:23<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第4课——十善业道品04 <br/>
+观察这样的善恶业处后，明白道理的黠慧智者就会去修学戒行，净治身口意的恶行，励力行持身口意的善行，这是由圣见具足带来的好结果。“圣见”指佛的见，就是指黑白分明的善恶因果规律。如果一个人具足圣见，那他就是依佛之见为己之见，他能够辨识纷繁的现相，见到现相背后善恶分明的两条路。这样的人，一切时处都知道该怎么做，怎么走安乐之路。这样具足业果正见去行持善行，最终将得到寂静涅槃。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-26 15:23</span><div class="badge-floor">第 4 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第4课——十善业道品04 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -640,7 +661,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 这样就明白，深信因果是一切白法的根本，是一切安乐的源泉。如果没有深信因果，盲目行动是非常危险的。如果颠倒再加颠倒，一直沦陷在深重业的黑暗中，几乎就没有不往恶趣走的，因此，建立因果正见非常重要，是重中之重。 <br/>
 <br/>
-正法念处经卷第一 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-26 15:30<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第5课——十善业道品05 <br/>
+正法念处经卷第一 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-26 15:30</span><div class="badge-floor">第 5 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第5课——十善业道品05 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -760,7 +781,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 生到天上受报享乐，也有曾行邪淫和不邪淫的差别。天人们将要死亡，退没此生现相，显现五衰相的时候，其他天子出生于天界。那些曾行邪淫者将死的时候，见到其他天子在自己的天女众中出生，那时天女们抛开他，当即跟新天子簇拥在一起娱乐嬉笑。那个快要死去的天子，看到天女们移情别恋，跟其他天子一起相随、娱乐嬉笑，他就生起强烈的妒忌心，就像被绳索捆缚了一样，心里热恼难安。他在这个恶心中死亡，就会让他堕入地狱。真相就是这样可怕，如果前世曾经邪淫，那就会经历这样的痛苦。不但当生感受很多苦报，将来生到天上，也一定会有因缘迫使他见到不清净的景象，这是他邪淫的习气现行了，他会见到天女跟别的天子在一起，由于妒火中烧，他就以此堕入地狱了。 <br/>
 <br/>
-无论是谁，如果能够远离邪淫，他就摄入了大善之道，他是能证涅槃的法器。持了离邪淫的戒，以这个善行为因，会摄持很多善妙的道，善心、善的缘起、善果都会由此呈现。从善入善，从清净入清净，辗转出生无量的善法利益。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-26 15:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第6课——十善业道品06 <br/>
+无论是谁，如果能够远离邪淫，他就摄入了大善之道，他是能证涅槃的法器。持了离邪淫的戒，以这个善行为因，会摄持很多善妙的道，善心、善的缘起、善果都会由此呈现。从善入善，从清净入清净，辗转出生无量的善法利益。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-26 15:37</span><div class="badge-floor">第 6 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第6课——十善业道品06 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -890,7 +911,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 复有三种大胜妇女功德相应，谓不多语、心不邪见、夫若不在不乐声触诸味香等心意不动。以是因缘，身坏命终则生善道天世界中。如是胜妙女宝之食，唯转轮王乃得之耳。 <br/>
 <br/>
-女宝又有三种殊胜妇女的功德：一、不多语；二、心不邪见；三、如果丈夫不在，就不贪恋不乐于声触味香等享受，心意寂静淡泊不动。玉女宝以具有这些殊胜功德的因缘，身坏命终生在善道天界。拥有这样高洁胜妙的女宝，如得美食般令人满足，只有转轮王的福德才能得到。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-27 18:34<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第7课——十善业道品07 <br/>
+女宝又有三种殊胜妇女的功德：一、不多语；二、心不邪见；三、如果丈夫不在，就不贪恋不乐于声触味香等享受，心意寂静淡泊不动。玉女宝以具有这些殊胜功德的因缘，身坏命终生在善道天界。拥有这样高洁胜妙的女宝，如得美食般令人满足，只有转轮王的福德才能得到。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-27 18:34</span><div class="badge-floor">第 7 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第7课——十善业道品07 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -1086,7 +1107,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 轮王儿孙满堂。清朝康熙皇帝的福报算很大了，他晚年过大寿时，一大堆孙子前来祝寿，但相比轮王就显得太少了。转轮王有一千个儿子，个个勇猛雄健，以他们的威猛之力能摧毁别国的军队。转轮王能成为一切人敬重之处。这就是过去修了离嗔的善业得到如是的快乐，这还只是十善业道余残势力所感现的果，主要果报是在天上享受更高级别的快乐。 <br/>
 <br/>
-以上讲了以善的余业势力在人间做轮王，享受殊胜妙欲的状况。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-27 18:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第8课——十善业道品08 <br/>
+以上讲了以善的余业势力在人间做轮王，享受殊胜妙欲的状况。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-27 18:44</span><div class="badge-floor">第 8 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第8课——十善业道品08 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -1226,7 +1247,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 当地的夜叉、虚空夜叉到了四大王那里，见者闻者都很欢喜。以见闻了知或者通过天眼见到，四大王和四天王一起到帝释天王面前，这样说道：阎浮提里某国、某村、某聚落中某善男子（或善女人），这样的种姓、这样的名字，他剃除须发被上法衣，正信出家，严格地持戒，随顺正法修行，具足无碍乐说的辩才。他常常住在正念里，乃至对于少分的罪业都生起很深的畏惧。这减灭折损了恶魔方，增长了正法的同修。那四大王等向帝释天王这样说，帝释天王听后心生大欢喜，同住在三十三天的帝释天王的眷属们听后也都非常欢喜。 <br/>
 <br/>
-正法念处经卷第二 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-27 18:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第9课——生死品01 <br/>
+正法念处经卷第二 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-27 18:51</span><div class="badge-floor">第 9 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第9课——生死品01 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -1409,7 +1430,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 境界是缚因，若不爱色等，彼至胜寂静，到不苦恼处。 <br/>
 <br/>
-色声香味触等六尘境界，这些是系缚自心的因。心一遇境，随之就会起欲染贪著在上面，被绑在生死里。所以，如果比丘不爱著色等五欲，他就已臻至殊胜寂静，到达没有苦恼的解脱处了。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-28 14:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第10课——生死品02 <br/>
+色声香味触等六尘境界，这些是系缚自心的因。心一遇境，随之就会起欲染贪著在上面，被绑在生死里。所以，如果比丘不爱著色等五欲，他就已臻至殊胜寂静，到达没有苦恼的解脱处了。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-28 14:49</span><div class="badge-floor">第 10 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第10课——生死品02 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -1551,7 +1572,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 又彼比丘，观察彼受，我此受者几许时住。彼观我受生灭相住，譬如电光。 <br/>
 <br/>
-比丘又观察我的这个受安住多少时间。他观察到我的受生起当即灭坏，就像电光那样刹那闪过，一下子就没有了。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-28 15:07<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第11课——生死品03 <br/>
+比丘又观察我的这个受安住多少时间。他观察到我的受生起当即灭坏，就像电光那样刹那闪过，一下子就没有了。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-28 15:07</span><div class="badge-floor">第 11 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第11课——生死品03 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -1789,7 +1810,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 弥勒世尊这样听后，向炎摩天如此说道：“天的友朋有了威力，魔的部分变得劣弱，正法的友朋得以增长，烦恼缠缚得以松缓，魔军由于正法增上而颤动，我听了为之欢喜。” <br/>
 <br/>
-正法念处经卷第三 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-28 15:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第12课——生死品04 <br/>
+正法念处经卷第三 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-28 15:13</span><div class="badge-floor">第 12 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第12课——生死品04 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -1923,7 +1944,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如是畜生，水陆空行，三处皆畏，是长生死。缘彼相想。 <br/>
 <br/>
-接着总结到：像这样的畜生，包括水、陆、空三处的旁生都处在生死怖畏当中，由于不断地起惑造业的缘故，没有出现解脱道法缘的缘故，将会是非常漫长的生死相续。比丘缘着长相起了这些水陆空的旁生生死实在很漫长的想。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-29 13:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第13课——生死品05 <br/>
+接着总结到：像这样的畜生，包括水、陆、空三处的旁生都处在生死怖畏当中，由于不断地起惑造业的缘故，没有出现解脱道法缘的缘故，将会是非常漫长的生死相续。比丘缘着长相起了这些水陆空的旁生生死实在很漫长的想。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-29 13:13</span><div class="badge-floor">第 13 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第13课——生死品05 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -2022,7 +2043,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 什么是白色生死呢？就是被白色的业所摄，生在天中。某人修了清净的白业，他就有了生善道的财宝，由此买到了天人的席位而受生天人。当天人快要退没或者死掉的时候，其他天人会对他说：愿你生到善道人间。人间将要死的时候，亲友、师长、妻子、儿女在身边啼哭，泪流满面，这样说：太让人伤心！现在你离开我而走了，你一定要生在人间，托生个好地方。像这样，人间和天界叫做白生死。比丘缘着白相思维人和天界生死的状况。 <br/>
 <br/>
-总之，缘着外在的青、黄、赤白等色相，思维生死界里各道的生死状况。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-29 13:19<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第14课——生死品06 <br/>
+总之，缘着外在的青、黄、赤白等色相，思维生死界里各道的生死状况。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-29 13:19</span><div class="badge-floor">第 14 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第14课——生死品06 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -2172,7 +2193,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 接着结合在净土上去体会。所谓“心秽土秽，心净土净”，这是正反两方面的道理。如果心念娑婆、念贪嗔痴，那就是在画娑婆世界的图；如果心念佛法僧、念阿弥陀、念极乐土，那就是在画净土的图景，应当这样了解。所以，修净土者的心不能懈怠，所谓“念不一不生极乐，爱不重不生娑婆”，心应当专一地缘在净土上，这样一念一念地在心上描绘净业，就会画出净土的莲花、净土的庄严、净土的根身等，要像这样非常清净、庄严地安住在净土的缘起上。从念佛法门来说，就是从庄严、诚敬的心中念出“阿弥陀佛”， 念出来的一句一句的佛，都是佛的智慧光明，自己的心和佛的果觉相融通。这样忆念时，自身已经和佛光接通，已经念念摄集佛功德，念念成就九莲种子、孕育莲胎，实现净土的缘起。这样不断地往净土走、描绘净土图景，整个身心都会逐渐转变。 <br/>
 <br/>
-落在污秽界、杂乱界里，就是涂染污的色彩，把自己的心相续搞得一塌糊涂。而我们修净土就是要念念清净、念念画庄严、念念画佛像，这样的话，最终会出现非常庄严、胜妙的净土境界。这个人在世时，身心世界已经在潜移默化，积聚到一定程度就成熟了，出现了极乐世界。这样就明白，我们要怎么在心里画净土、画极乐世界。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-29 13:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第15课——生死品07 <br/>
+落在污秽界、杂乱界里，就是涂染污的色彩，把自己的心相续搞得一塌糊涂。而我们修净土就是要念念清净、念念画庄严、念念画佛像，这样的话，最终会出现非常庄严、胜妙的净土境界。这个人在世时，身心世界已经在潜移默化，积聚到一定程度就成熟了，出现了极乐世界。这样就明白，我们要怎么在心里画净土、画极乐世界。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-29 13:29</span><div class="badge-floor">第 15 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第15课——生死品07 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -2324,7 +2345,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 又彼比丘，如是勤观三种烦恼，三种对治。彼三种灭已，一切烦恼结使皆灭。如断树根，皮茎枝叶花果缘等，一切悉干。如是能断此三烦恼，一切烦恼皆悉断灭。 <br/>
 <br/>
-像这样，比丘勤观三种烦恼和三种对治，灭掉了三种烦恼后，一切烦恼结使就都灭掉了。就像断了树根，树的根茎枝叶花果等都会干枯，根断了，枝末也就随之断掉了，同样，三根本贪嗔痴烦恼断掉了，其他支分烦恼也就随之而断了。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-29 13:34<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第16课——生死品08 <br/>
+像这样，比丘勤观三种烦恼和三种对治，灭掉了三种烦恼后，一切烦恼结使就都灭掉了。就像断了树根，树的根茎枝叶花果等都会干枯，根断了，枝末也就随之断掉了，同样，三根本贪嗔痴烦恼断掉了，其他支分烦恼也就随之而断了。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-29 13:34</span><div class="badge-floor">第 16 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第16课——生死品08 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -2462,7 +2483,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 像这样，凡夫如果锁定在这样的缘起里，将来的苦会非常大、非常多。如果因为享受不到欲而起很多嗔恚，那会很快堕落下趣。如果通过行善来求取贪欲，也只不过暂时得一点人天享受，之后又要堕入下趣，或者会发生各种各样的生死牵连。 <br/>
 <br/>
-这就知道，欲果即使得到满足，也是味少过多，片刻的享受后面紧跟着无限漫长的苦缘起。比丘这样观察一切欲心的过患，知道它会把慧命送掉，把无数劫的前程送掉。它是诱人的罗刹女，将把自己捆定在生死牢狱里，它像杀人不见血的刀，又是迷惑人的美味毒药。这样看到它最可怕、是伤害自己的最大凶手后，对此就不生分别了。他从反面认定了这是苦的根源，既然认定了是苦的根源，那还会去求它吗？还想生一个“我要求取它”“它有好有坏”的念头吗？等等，他对此不再抱希望了，就是因为看透彻的缘故。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-29 13:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第17课——生死品09 <br/>
+这就知道，欲果即使得到满足，也是味少过多，片刻的享受后面紧跟着无限漫长的苦缘起。比丘这样观察一切欲心的过患，知道它会把慧命送掉，把无数劫的前程送掉。它是诱人的罗刹女，将把自己捆定在生死牢狱里，它像杀人不见血的刀，又是迷惑人的美味毒药。这样看到它最可怕、是伤害自己的最大凶手后，对此就不生分别了。他从反面认定了这是苦的根源，既然认定了是苦的根源，那还会去求它吗？还想生一个“我要求取它”“它有好有坏”的念头吗？等等，他对此不再抱希望了，就是因为看透彻的缘故。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-29 13:40</span><div class="badge-floor">第 17 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第17课——生死品09 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -2671,7 +2692,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 他这样净治颠倒分别心，包括由真实义愚和业果愚发展出来的各种颠倒心态，就能够破除无量高大的三有受生之山。也就是，当生死根源的心得到了净治，就不会发展生死中的受生。过去没有修解脱道，那当然排定了生死中无量无边的群山。“生”是从果上说，也就是没除掉颠倒心的话，就要不断地起惑造业，受取三有中的生。这种受生不计其数，种类纷繁，叫做“无量百千”。而且，业力成熟时会出现非常显赫的果报，这叫做“大”。 <br/>
 <br/>
-比丘随顺解脱道的法而行，就能够止息掉苦因。这样的话，智慧越来越明朗，虚妄分别就逐渐灭除，最终连习气也不生。像这样就离开了能伤害的烦恼刀，趣近永灭一切苦的涅槃，这就是解脱道。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-29 13:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 18 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第18课——地狱品01 <br/>
+比丘随顺解脱道的法而行，就能够止息掉苦因。这样的话，智慧越来越明朗，虚妄分别就逐渐灭除，最终连习气也不生。像这样就离开了能伤害的烦恼刀，趣近永灭一切苦的涅槃，这就是解脱道。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-29 13:44</span><div class="badge-floor">第 18 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第18课——地狱品01 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -2797,7 +2818,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 彼于地狱，如是无量百千年岁常被劈裂。乃至恶业未坏未烂，业气未尽，心业画师画文不灭，广说如前。 <br/>
 <br/>
-在地狱里，无量百千年岁不断感受被劈割散裂的痛苦，就是因为曾经切割众生，现在就要无数次地重复受苦，那简直不知道是什么日子，没办法想，每天不是被劈就是被割。屠宰厂里被宰只要一次，而这里受报是无数百千万次，这就是业的放大率。就像不能染上毒，一染上就会无数次地发作，我们千万不能造恶业，否则堕入地狱就很可怕了。一直到恶业力量没烂坏，业气没消尽之间，心业画师所画的图就不会灭掉，它会一直在那儿显现。受报的时候，不管自己如何不情不愿，业力一天不消，就一天无法解脱地狱。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-29 13:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 19 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第19课——地狱品02 <br/>
+在地狱里，无量百千年岁不断感受被劈割散裂的痛苦，就是因为曾经切割众生，现在就要无数次地重复受苦，那简直不知道是什么日子，没办法想，每天不是被劈就是被割。屠宰厂里被宰只要一次，而这里受报是无数百千万次，这就是业的放大率。就像不能染上毒，一染上就会无数次地发作，我们千万不能造恶业，否则堕入地狱就很可怕了。一直到恶业力量没烂坏，业气没消尽之间，心业画师所画的图就不会灭掉，它会一直在那儿显现。受报的时候，不管自己如何不情不愿，业力一天不消，就一天无法解脱地狱。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-29 13:46</span><div class="badge-floor">第 19 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第19课——地狱品02 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -2939,7 +2960,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 这一类人是过去恐吓过众生的人。以恐吓业，这一世常常忧愁凄苦，一切处听到的都是不吉利的声音，心里从来不欢喜。有人常常听到不幸的消息，不是妻子死就是儿子亡，财物耗尽，眷属遭殃，或者被杀、被打、被绑，因此常常怀着悲恼，从来没欢喜过。这就是过去让众生不喜的业力感召，自然使你心情不快乐、不开朗，莫名其妙地陷在阴暗里，莫名其妙地忧虑、愁苦，这都是恶业力的反应。 <br/>
 <br/>
-行善常安乐，造恶常忧苦，这是业果的定律。要想心情愉悦就要多做善事，多行利他。我们自身当下就能检验，每当做了一件利益他人的事，给他人吉祥、安宁、安慰，自己的心情就很快乐。慈心是喜乐、温暖、开放的相，心开放，一切处都是阳光明媚、慈光照耀。如果给别人恐惧、逼恼，那自心就是收缩、紧张、黑暗的。有时候外面阳光明媚，但很多人就像待在黑屋子里一样沉闷、压抑，以杀生业习的势力常常反应出这样的心态，造恶的人一脸黑气，好像陷在黑暗里。像这样，什么果相都是心创造出来的，要想不受苦，就要欢欢喜喜地去行善。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-29 13:53<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 20 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第20课——地狱品03 <br/>
+行善常安乐，造恶常忧苦，这是业果的定律。要想心情愉悦就要多做善事，多行利他。我们自身当下就能检验，每当做了一件利益他人的事，给他人吉祥、安宁、安慰，自己的心情就很快乐。慈心是喜乐、温暖、开放的相，心开放，一切处都是阳光明媚、慈光照耀。如果给别人恐惧、逼恼，那自心就是收缩、紧张、黑暗的。有时候外面阳光明媚，但很多人就像待在黑屋子里一样沉闷、压抑，以杀生业习的势力常常反应出这样的心态，造恶的人一脸黑气，好像陷在黑暗里。像这样，什么果相都是心创造出来的，要想不受苦，就要欢欢喜喜地去行善。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-29 13:53</span><div class="badge-floor">第 20 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第20课——地狱品03 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -3087,7 +3108,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 彼地夜叉，见彼比丘有如是等功德相应，转复上闻虚空夜叉，如前所说，次第乃至大梵身天，广说如上。 <br/>
 <br/>
-当地夜叉见到这位比丘有这样相应法的功德，就转而向上报给虚空夜叉。就像前面所说的那样，这个好消息一直传到了大梵身天那里，具体情况就像前面说的那样。这就是说，当一个人开始行正道后，就有很多非人、天神赞叹护持。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-30 17:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 21 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第21课——地狱品04 <br/>
+当地夜叉见到这位比丘有这样相应法的功德，就转而向上报给虚空夜叉。就像前面所说的那样，这个好消息一直传到了大梵身天那里，具体情况就像前面说的那样。这就是说，当一个人开始行正道后，就有很多非人、天神赞叹护持。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-30 17:37</span><div class="badge-floor">第 21 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第21课——地狱品04 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -3199,7 +3220,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 比丘见到、听到、了解到，三种恶业和恶业的果报，这样了知以后生起很重的厌离。他观察业如绳索，因因果果不断地纠结，缠缚众生，把众生牢牢地系在各种恶趣等的果报处。这里要顺法而认知，能系缚的是烦恼和业。业一经造下就会把众生捆绑到地狱、饿鬼、旁生里。甚至摆脱旁生以后，还要被系在人间受等流果等等，这叫做被业绳所系。 <br/>
 <br/>
-比丘再观察无量种的业，又进一步观察到，这实际是由无量种的心不停地动转、攀缘而造成的。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-30 17:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 22 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第22课——地狱品05 <br/>
+比丘再观察无量种的业，又进一步观察到，这实际是由无量种的心不停地动转、攀缘而造成的。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-30 17:44</span><div class="badge-floor">第 22 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第22课——地狱品05 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -3281,7 +3302,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 又复如是，阎魔罗人以铁炎杵筑彼罪人，罪人怖走，四向顾望望有归救，作如是言：何人救我？我何所归？四向走望。如是行已炎杵筑已，置炎燃河、若炎燃树、山岩石间、窟穴等中，极险恶处，受种种苦。谓著树头，复推令堕在铁钩地，彼身疮裂，如是千到，若百千到。 <br/>
 <br/>
-还有这种情形，阎魔罗狱卒用炎烧的铁杵戳击这些罪人，他们害怕得到处逃，东张西望，期望能有归依处、求救处。他们这样说：“谁来救我，我现在该往哪里去？”他们边逃边害怕地看着四方。这样走的时候，炎烧的铁杵打倒了他，他们被放在炎烧炽燃的河里，或者被放在正在炎烧炽燃的树中，或者被放在山岩石头之间，或者被放在洞窟等中。在这些极险恶的地方受各种苦。比如把他挂在树上再推下去，令他落在遍满铁钩的地上，他全身的疮口都破裂了，破成了一千道或者百千道。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-30 17:47<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 23 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第23课——地狱品06 <br/>
+还有这种情形，阎魔罗狱卒用炎烧的铁杵戳击这些罪人，他们害怕得到处逃，东张西望，期望能有归依处、求救处。他们这样说：“谁来救我，我现在该往哪里去？”他们边逃边害怕地看着四方。这样走的时候，炎烧的铁杵打倒了他，他们被放在炎烧炽燃的河里，或者被放在正在炎烧炽燃的树中，或者被放在山岩石头之间，或者被放在洞窟等中。在这些极险恶的地方受各种苦。比如把他挂在树上再推下去，令他落在遍满铁钩的地上，他全身的疮口都破裂了，破成了一千道或者百千道。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-30 17:47</span><div class="badge-floor">第 23 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第23课——地狱品06 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -3413,7 +3434,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如果在过去久远的前世造了善业，而且善业在这时候成熟，那他就不会投生在饿鬼道、畜生道。如果他转生于人道，以过去恶业余势的影响，还是贫穷短命；所娶的妻子长得很丑；即使得了相貌好的妻子也不贞洁，会与其他人私通；或者他干脆就没有妻子；他生活在社会最底层，被人奴役，没有自在。他恶业残余势力的果报，感得前面说的那些状况。这些杀、盗、淫等的恶业能诳惑欺骗世人，使人堕入地狱。 <br/>
 <br/>
-世间一切苦乐全是由业来决定的，是业力变现的。果报里又有异熟报、等流报、增上报、士用报等等。业作完了以后，在业力没有消尽之间，它会不断地发生果报。所以，我们切莫在心里种杀盗淫等的业力种子，否则无边的苦难将来一一都要显现出来。在世俗谛里，谨慎取舍十分关键，要知道自己一言一行的去向，必须对自己的前途负责。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-30 22:35<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 24 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第24课——地狱品07 <br/>
+世间一切苦乐全是由业来决定的，是业力变现的。果报里又有异熟报、等流报、增上报、士用报等等。业作完了以后，在业力没有消尽之间，它会不断地发生果报。所以，我们切莫在心里种杀盗淫等的业力种子，否则无边的苦难将来一一都要显现出来。在世俗谛里，谨慎取舍十分关键，要知道自己一言一行的去向，必须对自己的前途负责。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-30 22:35</span><div class="badge-floor">第 24 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第24课——地狱品07 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -3537,7 +3558,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如果在过去久远的前世，曾经做的善业到此世已经成熟，那他就不必再投生饿鬼、畜生道受苦。假使以过去的善业生在人中，也要投生在有相同业感的地方。虽然生在人中，却没有儿子，没有后代。虽然夫妻交合，也有精液，但精子成活率很低，无法受孕生子。世间人们都传言，这个人不是真正男人，他那方面不行，没有生育能力，因此遭到一切人的嫌弃和轻贱。这都是过去造邪淫业余残的等流果报，必受的报应。 <br/>
 <br/>
-这样观察就可以看到，一分恶业从最初造作到最后堕入地狱，成熟的是极其漫长、不见边际、极其惨烈的苦果。不晓得这个世界经历多少沧海桑田，才能从地狱里爬出来。就算是最后重新回到人间，也没有好果子吃。这肮脏恶劣污秽的业，还要继续制造苦果。因此，恶业千万造不得。现在充好汉，天不怕地不怕，认为没有怎样，藐视因果律，等到果报铁绳牢牢绑住的时候，自己只有任人宰割，一点都挣脱不了。为什么为了一点暂时的淫乐，却要去品尝无量年月的恶苦呢？这就像愚人冒死吃河豚一样，自己不作死就不会死。做这样愚痴的事情，完全是被欲乐冲昏了头脑，这不是理智人的做法，一切痛苦都是业果愚一手造成的。所以我们要再三深入佛宣说因果的真实语，让心生起不可拔的深忍信，这样我们才可能防护恶行，摆脱恶趣痛苦的威胁。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-30 22:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 25 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第25课——地狱品08 <br/>
+这样观察就可以看到，一分恶业从最初造作到最后堕入地狱，成熟的是极其漫长、不见边际、极其惨烈的苦果。不晓得这个世界经历多少沧海桑田，才能从地狱里爬出来。就算是最后重新回到人间，也没有好果子吃。这肮脏恶劣污秽的业，还要继续制造苦果。因此，恶业千万造不得。现在充好汉，天不怕地不怕，认为没有怎样，藐视因果律，等到果报铁绳牢牢绑住的时候，自己只有任人宰割，一点都挣脱不了。为什么为了一点暂时的淫乐，却要去品尝无量年月的恶苦呢？这就像愚人冒死吃河豚一样，自己不作死就不会死。做这样愚痴的事情，完全是被欲乐冲昏了头脑，这不是理智人的做法，一切痛苦都是业果愚一手造成的。所以我们要再三深入佛宣说因果的真实语，让心生起不可拔的深忍信，这样我们才可能防护恶行，摆脱恶趣痛苦的威胁。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-30 22:42</span><div class="badge-floor">第 25 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第25课——地狱品08 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -3633,7 +3654,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 若于前世过去久远，有善业熟，不生饿鬼畜生之道。若生人中同业之处，多有怨对，虽在王舍而不得力；生常贫穷，资生乏少；又不长命。是彼邪行恶业势力，在于人中，受余残果报。 <br/>
 <br/>
-如果在过去久远前世，有善业在这个时候成熟，他就不必再转生饿鬼、畜生道。如果当时生在人间有同类业感的地方，就会遭遇很多怨家对头。即使身处国王的王宫也不得利，没有用，始终逃不出冤家的手掌。不但提心吊胆，生活也常常贫穷，连活命的物资都很难得到，而且寿命也不长。这都是邪淫恶业势力导致转生为人，也要受的残余果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-30 22:50<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 26 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第26课——地狱品09 <br/>
+如果在过去久远前世，有善业在这个时候成熟，他就不必再转生饿鬼、畜生道。如果当时生在人间有同类业感的地方，就会遭遇很多怨家对头。即使身处国王的王宫也不得利，没有用，始终逃不出冤家的手掌。不但提心吊胆，生活也常常贫穷，连活命的物资都很难得到，而且寿命也不长。这都是邪淫恶业势力导致转生为人，也要受的残余果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-30 22:50</span><div class="badge-floor">第 26 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第26课——地狱品09 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -3766,7 +3787,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 造恶所积蓄的业力一旦成熟了果报，那么在业报势力没有穷尽之间，一直脱不出来。始终要被业报缠绕，不得不一次次地受苦。即使已经在无量亿年受了地狱的痛苦，在人间还要感受这样残余的苦报。人世间很多情杀，那些妻子与奸夫共同谋杀丈夫的事情，实际上都是过去邪淫业的报应，因此身口的行为不得不谨慎。应该知道，业力因缘和合的时候，一定在自身上感受果报，这是没办法幸免的。 <br/>
 <br/>
-因此造邪淫业的人，不要想得太美了，说现在人生一帆风顺，美人在怀。这只是业力还没成熟到反噬的时候，终会有那么一天，要在自身上感果。所以作人应该有道德，在现前自己还没有造业的时候，悬崖勒马。造了业的，要趁着业报还没有成熟，痛自忏悔。看看轮回这因果铁律，应该趁着还有自由，从轮回越狱。应该在还没有被业报束缚的时候，努力找一条解脱之路。尤其应该依止慈航普渡的净土法门。净土法门确实十分简易，要把握现前这个机会，今生就要超出苦轮，否则在这样一个业力幻变的世界，成熟果报还是极其可怕的。除非能够截断业流，否则轮回的因因果果，一报接一报，没完没了。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-30 23:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 27 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第27课——地狱品10 <br/>
+因此造邪淫业的人，不要想得太美了，说现在人生一帆风顺，美人在怀。这只是业力还没成熟到反噬的时候，终会有那么一天，要在自身上感果。所以作人应该有道德，在现前自己还没有造业的时候，悬崖勒马。造了业的，要趁着业报还没有成熟，痛自忏悔。看看轮回这因果铁律，应该趁着还有自由，从轮回越狱。应该在还没有被业报束缚的时候，努力找一条解脱之路。尤其应该依止慈航普渡的净土法门。净土法门确实十分简易，要把握现前这个机会，今生就要超出苦轮，否则在这样一个业力幻变的世界，成熟果报还是极其可怕的。除非能够截断业流，否则轮回的因因果果，一报接一报，没完没了。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-30 23:24</span><div class="badge-floor">第 27 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第27课——地狱品10 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -3816,7 +3837,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 我们可以看到，业根本不随人的主观意愿而改变。自以为是好的，对的，快乐的行为，只要背离了业道，不管自己认为多么美好，多么无害，还是会受到业果重重的打击。而且这个业的种子，甚至到最后，已经转生人间，只是一点残余气氛所感的业，居然还能变出这么可怕的苦难。 <br/>
 <br/>
-因此要知道淫业污秽，才出现这么多极度的苦恼。知道地狱里受苦有多深重，才知道这个行为不能做，做了结局不是好玩的，它的果报量非常严重。如果在业上没有得到定解，的确容易大开放逸之门，这就是把自己往死里整。贪淫其实就像吸毒一样，都是自取灭亡的行为，最终要堕在地狱里受无数年极度的苦楚。这个业果现相是非常惊人可怕的，它比世界上任何最恐怖的电影要恐怖无数亿亿倍。所以，一定要了解业果，否则人生的确是不堪设想的。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-30 23:32<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 28 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第28课——地狱品11 <br/>
+因此要知道淫业污秽，才出现这么多极度的苦恼。知道地狱里受苦有多深重，才知道这个行为不能做，做了结局不是好玩的，它的果报量非常严重。如果在业上没有得到定解，的确容易大开放逸之门，这就是把自己往死里整。贪淫其实就像吸毒一样，都是自取灭亡的行为，最终要堕在地狱里受无数年极度的苦楚。这个业果现相是非常惊人可怕的，它比世界上任何最恐怖的电影要恐怖无数亿亿倍。所以，一定要了解业果，否则人生的确是不堪设想的。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-30 23:32</span><div class="badge-floor">第 28 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第28课——地狱品11 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -3936,7 +3957,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 比丘又观察这合大地狱每一个不同的地方，看到只有这十六处，没有看到第十七处。这合大地狱十六差别处，每个地狱都有非常多的众生充满其中。比丘这样观察后，真正看清了每种业的果报法则。比丘了知，那些众生造各种恶业就被各自恶业所左右，不得不承受果报，没有丝毫自在。当他看到一切都是业自在转，一切都是业的自性后，他对生死生起了很大的厌离。 <br/>
 <br/>
-轮回的确是一个极大的火坑，想不堕落恶道几乎不可能，而堕下去了以后，那就不知道哪一年才能爬出来。生死之间没有丝毫安乐，众生无知胡乱造业就要受极大的惩罚。真正的修行人看到这轮回的真相，就不能再贪求生死了。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-30 23:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 29 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第29课——地狱品12 <br/>
+轮回的确是一个极大的火坑，想不堕落恶道几乎不可能，而堕下去了以后，那就不知道哪一年才能爬出来。生死之间没有丝毫安乐，众生无知胡乱造业就要受极大的惩罚。真正的修行人看到这轮回的真相，就不能再贪求生死了。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-30 23:43</span><div class="badge-floor">第 29 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第29课——地狱品12 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -4033,7 +4054,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如果在过去久远前世有善业成熟，他就不再投生饿鬼、畜生。如果生在人中有相同业感的地方，感召很多的等流果。一种是心神恍惚，忘性很大。这是过去让人饮酒，神志不清，丧失智慧，所以业力反噬，今生没有智慧，好忘事，什么也记不住，说过的事马上就忘。还很贫穷，物质匮乏。常常要在小街小巷、十字路口摆摆地摊，卖卖便宜的东西，做点小买卖，只能这样谋生赚一点钱。由于身份卑微，很多小孩嘲笑、戏弄他。他长相也不好，褐唇黄牙，脚底皴裂的痕迹就像刀劈了一样，常常处于饥寒交迫中。不但如此，他还没有妻子儿女，没有父亲母亲，没有兄弟姊妹，孤苦伶仃。这令人辛酸的情形都是他过去饮酒和给人喝酒恶业的余残果报。 <br/>
 <br/>
-而给持戒人喝酒的罪业，就会堕在这样的叫唤大地狱里，受那些苦报。应当这样了解。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-30 23:47<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 30 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第30课——地狱品13 <br/>
+而给持戒人喝酒的罪业，就会堕在这样的叫唤大地狱里，受那些苦报。应当这样了解。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-30 23:47</span><div class="badge-floor">第 30 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第30课——地狱品13 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -4166,7 +4187,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 何况再还有其他苦恼的逼迫。所说其他苦是指，那地狱罪人身上自然生出很多虫子。这些虫子啃破他的皮肉，以罪人的脂血、骨髓作饮食。被这样难忍的苦所折磨，罪人疼痛得大声叫唤，但却孤苦伶仃，无人救援。而且他看到那些阎魔罗狱卒的样子，心里极度害怕恐惧。他还要被大火烧煮，身体炎然燃烧，受着这样的种种痛苦。 <br/>
 <br/>
-一直到他所造作积集的恶业坏散消退，连气息也没有的时候，才能从地狱解脱出来。如果在过去久远的前世，有善业已经成熟，这样他就不必再投生饿鬼、畜生道。如果生在人间，就会生在跟业体性相当的地方，受着贫穷困苦的逼恼，这就是他前世卖酒恶业残留业力的果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 18:03<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 31 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第31课——地狱品14 <br/>
+一直到他所造作积集的恶业坏散消退，连气息也没有的时候，才能从地狱解脱出来。如果在过去久远的前世，有善业已经成熟，这样他就不必再投生饿鬼、畜生道。如果生在人间，就会生在跟业体性相当的地方，受着贫穷困苦的逼恼，这就是他前世卖酒恶业残留业力的果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 18:03</span><div class="badge-floor">第 31 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第31课——地狱品14 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -4218,7 +4239,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如果过去久远的前世，有善业已经成熟，他就不再投生饿鬼、畜生道。如果生在人中，也是生在跟业体性相当的地方，他会生在杀象的人家，最终注定被大象所杀。他在生也是常常困窘贫穷，容貌丑陋，手脚都很粗糙、干硬，身体皮肤摸起来一直都很粗糙干枯，这都是过去他造集恶业的残余果报。 <br/>
 <br/>
-象醉了以后踏杀他人，那种触感是极苦的。所以后来业力反噬，他感得的领受等流是被象所杀。他常常贫困，相貌丑陋，手脚身体等等皮肤都很坚硬、粗涩，没有好的触感，这就是过去造业的余残果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 18:15<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 32 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第32课——地狱品15 <br/>
+象醉了以后踏杀他人，那种触感是极苦的。所以后来业力反噬，他感得的领受等流是被象所杀。他常常贫困，相貌丑陋，手脚身体等等皮肤都很坚硬、粗涩，没有好的触感，这就是过去造业的余残果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 18:15</span><div class="badge-floor">第 32 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第32课——地狱品15 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -4342,7 +4363,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如果在过去久远的前世，所做的善业已经成熟，那他就不会转生饿鬼、畜生道。假使以过去的善业生在人中，也要受等流果，生在跟业体性相当的地方。由于因地心不正直，受报就得很多恶病、重病、心痛病、只罗娑病，有的得脚肿病，有的得盲眼病等，这都是给人酒的恶业残余果报。 <br/>
 <br/>
-一切现相都是唯心变现的，既然心里一直在造着卖酒的业行，就变现出这样的图景来，所以这个心实在是太稀奇！我们的心稍稍沾一点恶业，就呈现出恐怖的恶趣景象；我们的心稍微行一点善业，也会现出很美妙的人天等乐境。一切乐都是由善而来，包括与之相关的根身器界、各种受用。因此，修行人应该明辨善恶因果，只作贤善的行为，心中种善的种子，这样就能改变业力，呈现未来吉祥美好的景象。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 18:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 33 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第33课——地狱品16 <br/>
+一切现相都是唯心变现的，既然心里一直在造着卖酒的业行，就变现出这样的图景来，所以这个心实在是太稀奇！我们的心稍稍沾一点恶业，就呈现出恐怖的恶趣景象；我们的心稍微行一点善业，也会现出很美妙的人天等乐境。一切乐都是由善而来，包括与之相关的根身器界、各种受用。因此，修行人应该明辨善恶因果，只作贤善的行为，心中种善的种子，这样就能改变业力，呈现未来吉祥美好的景象。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 18:20</span><div class="badge-floor">第 33 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第33课——地狱品16 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -4501,7 +4522,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 又修行者，内心思惟，随顺正法，观察法行。彼比丘观察如是诸地狱已，深畏生死，得第十地。彼地夜叉，知已欢喜，如是复闻虚空夜叉，如前所说。次第乃至梵迦夷天、梵不流天、大梵天等，彼梵天等，闻已欢喜，如前所说。生死魔分，皆悉损减，正法增长。 <br/>
 <br/>
-比丘这样观察了地狱苦报以后，深深地畏惧生死，修行正法，获得了第十地。地行夜叉知道了以后很欢喜，把消息转告给了虚空夜叉，就像前面所说那样。这样辗转上报到了梵众天、梵辅天、大梵天等处。梵天等听闻了以后，也很欢喜，就像前面所说一样。他们欢喜地说“生死恶魔的各部分都被消减了，正法得以增长”，正义战胜了邪恶！ </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 18:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 34 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第34课——地狱品17 <br/>
+比丘这样观察了地狱苦报以后，深深地畏惧生死，修行正法，获得了第十地。地行夜叉知道了以后很欢喜，把消息转告给了虚空夜叉，就像前面所说那样。这样辗转上报到了梵众天、梵辅天、大梵天等处。梵天等听闻了以后，也很欢喜，就像前面所说一样。他们欢喜地说“生死恶魔的各部分都被消减了，正法得以增长”，正义战胜了邪恶！ </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 18:25</span><div class="badge-floor">第 34 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第34课——地狱品17 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -4673,7 +4694,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 这要看到，直到恶业腐烂消尽以后，才从地狱里出来。如果前世的善业成熟，生在人中也是得很多的等流苦果。他常常生病，主要表现为口腔部分的病，比如咽喉得病、口得病、舌头得病等等的苦。再说由于妄语不诚信的缘故，人们不信任他，也就遮止了福德之门，会感得贫穷困苦，他常常向富人、能够施舍的人乞求，却得不到。一切人都知道，都说“你是妄语的人，说假话的人”，所以就不给他，这样他得恶病而死。这都是前世妄语恶业的余残果报。 <br/>
 <br/>
-正法念处经卷第八 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 18:28<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 35 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第35课——地狱品18 <br/>
+正法念处经卷第八 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 18:28</span><div class="badge-floor">第 35 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第35课——地狱品18 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -4825,7 +4846,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 “设得财物，为王所夺，系狱而死”，这就是领受等流了。即使得到一些财物，也不能拥有，被国王等所夺，披枷带锁被拘禁在监狱里而死。“系”就是拘禁的意思，就是没得自由了。过去世以妄语行窃（作掠夺）的缘故，所以这一分业使得这一世他的财物被掠夺，而且他没有自由，会被关押。这就是恶业的余残果报。 <br/>
 <br/>
-所以从三世因果统而观之，就会知道此世所受的任何果报没有冤枉的、非理的。如果只看一世，“怎么这个人突然之间被关受惩罚呢？”其实他是受报。因此，我们在此世无论遇到什么苦乐的境遇，都要知道这肯定是业决定的，只是自己看不到。不要认为自己很无辜，怎么又受压迫？没有这种事，全部是业力。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 18:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 36 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第36课——地狱品19 <br/>
+所以从三世因果统而观之，就会知道此世所受的任何果报没有冤枉的、非理的。如果只看一世，“怎么这个人突然之间被关受惩罚呢？”其实他是受报。因此，我们在此世无论遇到什么苦乐的境遇，都要知道这肯定是业决定的，只是自己看不到。不要认为自己很无辜，怎么又受压迫？没有这种事，全部是业力。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 18:51</span><div class="badge-floor">第 36 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第36课——地狱品19 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -4887,7 +4908,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 这样无论求什么都得不到，这也就是说虚诳语的余业果报。也就是这股业势力在他受完了恶趣的报，转到人中的时候，只剩下一点点气氛，还在那儿起作用，一直要到这个业气消完为止，这个业才算结束。所以业是很可怕的，染上了一点，那等于是患上了百千万年的恶病，一下子是治不好的。就好比我们发烧，重烧过去了，还有轻烧。有轻烧在身，就有轻烧的影响，你全身都在轻烧的笼罩当中。一直到烧全退了，这才叫病好了，恢复到一个好的状态。我们染上恶业病，不像得个感冒三五天就好了，那是百千万亿年都没办法好的，这种病是最厉害的。 <br/>
 <br/>
-我们懂了这些就知道，闻法的时候，所谓“病人想”是怎么回事，为什么说被果的三苦、因的三毒所缠缚。要知道这个病是相当厉害的，尤其这种业力病，不晓得过去造了多少。所以，我们应该承认自己是病人，处在很重的恶业病中。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 18:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 37 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第37课——地狱品20 <br/>
+我们懂了这些就知道，闻法的时候，所谓“病人想”是怎么回事，为什么说被果的三苦、因的三毒所缠缚。要知道这个病是相当厉害的，尤其这种业力病，不晓得过去造了多少。所以，我们应该承认自己是病人，处在很重的恶业病中。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 18:55</span><div class="badge-floor">第 37 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第37课——地狱品20 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -4965,7 +4986,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 若于前世过去久远，有善业熟，不生饿鬼畜生之道。若生人中同业之处，生则为奴，属本前世所诳之人，以前世时许而不与，是故如是。或复系属余人为奴，彼人异业。何以故？以无始来生生轮转，无始以来造作种种恶不善业，如是世间生死所摄，处处流转，难相值故，喜爱业绳之所系缚，是故轮转处处异故，不可相值，以此因缘，或时复与异人为奴，常离饮食卧具屋舍随病医药，常为大家之所骂辱，是彼恶业余残果报。 <br/>
 <br/>
-假使前世过去久远做过善业，善业成熟，没生在饿鬼、畜生，而生在人中，还有不好的等流果。生下来就做奴仆，属于贱种阶级，隶属于前世所欺诳的人，也就是要还债了。前世的时候答应给而不给，这是欠了业力债的缘故，这一世就要还那个曾经骗过的人。（常常说人情债难还，曾经答应过别人，结果让人徒怀希望，这都是欠业债。所以语言特别要注意，凡是真心许诺过的，就要这样去做。如果不这样去做，别人空怀希望，那以后就要去还这个债，给别人当奴仆），或者也有系属于其他的人作为奴隶。什么缘故呢？因为众生业行不同，从无始以来生生随业流转，每一生又造作种种不同的恶业，这样众生在无边的生死中处处流转，很难再次相遇的缘故。众生喜爱造业而被无数无量的业绳所系缚，随不同的业流转于不同的地方，极难再次遇到，以这个因缘，也有给其他人作奴隶或者仆人的。而奴仆的时候，常常远离饮食、卧具、房屋以及治病的医药，常常被主人毁骂、侮辱。这就是过去恶业的余残果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 19:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 38 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第38课——地狱品21 <br/>
+假使前世过去久远做过善业，善业成熟，没生在饿鬼、畜生，而生在人中，还有不好的等流果。生下来就做奴仆，属于贱种阶级，隶属于前世所欺诳的人，也就是要还债了。前世的时候答应给而不给，这是欠了业力债的缘故，这一世就要还那个曾经骗过的人。（常常说人情债难还，曾经答应过别人，结果让人徒怀希望，这都是欠业债。所以语言特别要注意，凡是真心许诺过的，就要这样去做。如果不这样去做，别人空怀希望，那以后就要去还这个债，给别人当奴仆），或者也有系属于其他的人作为奴隶。什么缘故呢？因为众生业行不同，从无始以来生生随业流转，每一生又造作种种不同的恶业，这样众生在无边的生死中处处流转，很难再次相遇的缘故。众生喜爱造业而被无数无量的业绳所系缚，随不同的业流转于不同的地方，极难再次遇到，以这个因缘，也有给其他人作奴隶或者仆人的。而奴仆的时候，常常远离饮食、卧具、房屋以及治病的医药，常常被主人毁骂、侮辱。这就是过去恶业的余残果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 19:00</span><div class="badge-floor">第 38 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第38课——地狱品21 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -5115,7 +5136,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 具足妄语不实之人，到极苦恼地狱恶处，受恶果报。 <br/>
 <br/>
-具足妄语的不诚实的人，他会到极苦恼的地狱恶处，受恶业的果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 19:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 39 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第39课——地狱品22 <br/>
+具足妄语的不诚实的人，他会到极苦恼的地狱恶处，受恶业的果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 19:05</span><div class="badge-floor">第 39 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第39课——地狱品22 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -5274,7 +5295,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如果他有前世的善业成熟而生在人中的话，也常常是贫穷困乏。而且过去以妄语骗人的缘故，心里很虚，所以他会怕一切人。再者，过去以恶劣的手段来谋财的缘故，这一世就要做奴仆，做很苦的打工的人，人中的下贱人，所有的话别人都不信受。他是以妄语欺诈的因缘，常常受苦恼，他会得到实语反面的妄语恶行的果报。 <br/>
 <br/>
-正法念处经卷第九 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 19:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 40 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第40课——地狱品23 <br/>
+正法念处经卷第九 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 19:10</span><div class="badge-floor">第 40 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第40课——地狱品23 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -5459,7 +5480,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 假使他过去久远有善业成熟，很幸运地投生在人中，是不是暇满人身呢？不是。得到了人身，也是生在边地各种野蛮人、边鄙人的群落里，常常疾病缠身、贫穷困窘，瞎眼、短命，他说的所有语言没有人相信。这就是邪见的余残果报。 <br/>
 <br/>
-因此，我们要对邪见生起深深的厌患。要明白染上邪见没多少意思，它只会无数次地摧残、毁坏自己，只会无数年月里在恶趣中受报，好不容易得到人身，还是这般下贱、困苦，闻不到法，而且短暂的人生过后又是无边的恶趣了。所以心中要再再发愿：要生生世世不沾染一点邪见，常具正见。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 19:16<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 41 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第41课——地狱品24 <br/>
+因此，我们要对邪见生起深深的厌患。要明白染上邪见没多少意思，它只会无数次地摧残、毁坏自己，只会无数年月里在恶趣中受报，好不容易得到人身，还是这般下贱、困苦，闻不到法，而且短暂的人生过后又是无边的恶趣了。所以心中要再再发愿：要生生世世不沾染一点邪见，常具正见。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 19:16</span><div class="badge-floor">第 41 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第41课——地狱品24 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -5537,7 +5558,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 乃至恶业未坏未烂，业气未尽，于一切时，与苦不止。若恶业尽，彼地狱处尔乃得脱。既得脱已，于四百世，生饿鬼中，受饥渴苦。既得脱已，于三百世，生畜生中。既得脱已，难得人身，如龟遇孔。若生人中同业之处，彼人则生，畏刀铁处俭处贼处多恶人处，国土中生。又彼生处，常贫常病，仆使下贱，诸根不具。是彼邪见，恶行恶业余残果报。 <br/>
 <br/>
-一直到恶业没有消尽之间，一切时不断地受苦，等到恶业消尽了，才从地狱里脱出。脱出以后，还要四百世生在饿鬼里，受饥渴之苦，脱免以后，还要三百世生在畜生里。脱免以后，难得人身，还是会堕下恶趣。什么时候能得人身呢？就像盲龟遇轭木孔一样，极其困难。如果他侥幸过去有善业成熟而得到人身，也是生在很倒霉的地方，就是生在有恐怖的刀铁处、贫俭处、盗贼多处、恶人多处的国土里。这是什么报应呢？这是他的增上果，因为邪见使得一切白法无法出生，一切善妙都隐没。一切白法都要从善心出来，而这个邪见障蔽了善心的缘故，将来得到增上果的环境，就是处在一种贫乏、恶人充满、到处是盗贼等的恐怖之地。而且他出生以后常常是贫穷多病，充当下贱的奴仆，诸根不具。这就是邪见恶行的余残果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 19:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 42 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第42课——地狱品25 <br/>
+一直到恶业没有消尽之间，一切时不断地受苦，等到恶业消尽了，才从地狱里脱出。脱出以后，还要四百世生在饿鬼里，受饥渴之苦，脱免以后，还要三百世生在畜生里。脱免以后，难得人身，还是会堕下恶趣。什么时候能得人身呢？就像盲龟遇轭木孔一样，极其困难。如果他侥幸过去有善业成熟而得到人身，也是生在很倒霉的地方，就是生在有恐怖的刀铁处、贫俭处、盗贼多处、恶人多处的国土里。这是什么报应呢？这是他的增上果，因为邪见使得一切白法无法出生，一切善妙都隐没。一切白法都要从善心出来，而这个邪见障蔽了善心的缘故，将来得到增上果的环境，就是处在一种贫乏、恶人充满、到处是盗贼等的恐怖之地。而且他出生以后常常是贫穷多病，充当下贱的奴仆，诸根不具。这就是邪见恶行的余残果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 19:20</span><div class="badge-floor">第 42 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第42课——地狱品25 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -5647,7 +5668,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 那么好了，缘起就是这样，天理就是这样，有决定的正道。如果你搞到世间邪见里面去了，那糟了，这里面太多的歧途，之后结局就惨不忍睹。就像说只有一条康庄大道，它在通向善趣、解脱和成佛，其他都是各种邪道。有的是马上就冲到悬崖里，有的看似有一段很安稳的路途，也好像给你各种迷人的风光、诱人的前景，但是它直接开过去以后，发现是欺诳的，也同样坠入悬崖，只不过是一步坠入和两步坠入的差别。 <br/>
 <br/>
-就像这样，了知正教、邪教的差别以后，应该发出唯一归依正教、不言其余的誓愿，这是非常重大的问题，尤其你对业果有真实认识的时候，自己开始会每天这样发愿：但愿我生生世世不生邪见之家！常生正见之家！你会这样祈愿的，因为你害怕。这是认识了因果的大义之后，自然会发这样的心。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 19:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 43 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第43课——地狱品26 <br/>
+就像这样，了知正教、邪教的差别以后，应该发出唯一归依正教、不言其余的誓愿，这是非常重大的问题，尤其你对业果有真实认识的时候，自己开始会每天这样发愿：但愿我生生世世不生邪见之家！常生正见之家！你会这样祈愿的，因为你害怕。这是认识了因果的大义之后，自然会发这样的心。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 19:25</span><div class="badge-floor">第 43 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第43课——地狱品26 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -5729,7 +5750,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 彼处火炎，头在下入。既入彼处，或沈或浮。常为锯割，热沸铜汁割其身体，脉脉分散，如是劈裂。又复沈没，没已更浮，浮已复沈。如是锯水。常割常裂。皆悉熟烂。犹如熟豆。身体分裂。或浮或沈。于长久时常煮割劈。 <br/>
 <br/>
-那里火焰炽然，罪人头部向下入到赤铜色的沸水当中。一入到里面或者下沉或者浮起，不论怎么样都是常时不断被水的锯子锯割，被热沸铜汁所成的锯子割裂他的身体，身上的脉一条条分散。这样劈割以后，他又沉没，沉没又浮起，浮起又沉没。就像这样，锯水常常割裂他的身体，使得身体全部都煮熟糜烂，就像煮豆子一样。身体裂散了以后，或者浮在水面，或者沉在水底。在长久时不断地受烧煮割劈之苦。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 19:31<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 44 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第44课——地狱品27 <br/>
+那里火焰炽然，罪人头部向下入到赤铜色的沸水当中。一入到里面或者下沉或者浮起，不论怎么样都是常时不断被水的锯子锯割，被热沸铜汁所成的锯子割裂他的身体，身上的脉一条条分散。这样劈割以后，他又沉没，沉没又浮起，浮起又沉没。就像这样，锯水常常割裂他的身体，使得身体全部都煮熟糜烂，就像煮豆子一样。身体裂散了以后，或者浮在水面，或者沉在水底。在长久时不断地受烧煮割劈之苦。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 19:31</span><div class="badge-floor">第 44 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第44课——地狱品27 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -5849,7 +5870,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如果生在人中同业之处，就会贫穷多病，这也是过去恶业的余残果报。 <br/>
 <br/>
-造邪见业都是毁坏自己，会得很多病，而且没有福报。因为邪见的传播会止息掉一切胜妙生源，使得一切具福德的相都消失，所以，这一世做人贫穷困窘，没有福报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 19:36<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 45 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第45课——地狱品28 <br/>
+造邪见业都是毁坏自己，会得很多病，而且没有福报。因为邪见的传播会止息掉一切胜妙生源，使得一切具福德的相都消失，所以，这一世做人贫穷困窘，没有福报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 19:36</span><div class="badge-floor">第 45 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第45课——地狱品28 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -5929,7 +5950,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 这样从水虫处死了以后很难得人身，这个微末的生命死后还要下堕，再得人身比盲龟值木还难。如果生在人间同业之处，也是贫穷短命，诸根不具。过去造业时，把动物、人等的身体全烧毁了，现在受报就成了残疾人。而且没有妻没有儿，常常做下贱人，做天祀的奴仆等。这就是他恶业的余残果报。 <br/>
 <br/>
-正法念处经卷第十 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 19:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 46 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第46课——地狱品29 <br/>
+正法念处经卷第十 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 19:40</span><div class="badge-floor">第 46 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第46课——地狱品29 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -6019,7 +6040,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 当恶业消尽，从地狱里脱出后，还要在食血饿鬼和有毒的畜生里感受果报。为什么很多旁生有毒呢？这也是业力所致。它过去的心识状况是有毒的，所以就做了有毒的旁生。心地善良能化毒为药，或者解除各种毒害刀兵等，使当地不发生疾疫，这都是慈悲心的力量或者善心的力量所致。譬如一个孝子，以善心能感召天降甘霖，或者一位有菩提心的菩萨，会使得周边的环境都转得吉祥美好，这就是心的力量。持邪见者的心已经邪辟，做的是自杀、伤残的行为，即使生在人中也没有福报，贫穷、多病，而且在很鄙恶、听不到正法的国土里出生，里面普遍都是行杀、行盗、行淫等等。而且他常常感觉处境不安，充满了各种危险、恐惧，这些都是恶业力所感的增上果。而且诸根不具，成为残疾人。根功德圆满也相当难得，这都是福业力所感。如果造了恶业，那器官就不对了，根会变得有障碍。 <br/>
 <br/>
-从这里要了解，邪见会在方方面面制造出恶果报，任何恶业制造出的都是衰损、可怕、残缺、受苦的景象。一切苦都是从不善业生，或者反过来说，一切不善业所生的果，从前到后全是不好的。如果从不善能生出一点好的来，那因果就错乱了；如果从善能生出一点不好的来，那也是因果错乱。所以要知道，因果律是毫无错乱的铁律，是法性的规律。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 19:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 47 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第47课——地狱品30 <br/>
+从这里要了解，邪见会在方方面面制造出恶果报，任何恶业制造出的都是衰损、可怕、残缺、受苦的景象。一切苦都是从不善业生，或者反过来说，一切不善业所生的果，从前到后全是不好的。如果从不善能生出一点好的来，那因果就错乱了；如果从善能生出一点不好的来，那也是因果错乱。所以要知道，因果律是毫无错乱的铁律，是法性的规律。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 19:44</span><div class="badge-floor">第 47 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第47课——地狱品30 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -6131,7 +6152,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 假使万幸生在人中，也是很不好的人身，常常被饥渴逼恼，或者别人违犯王法，自己却被诬陷、被关押，被判有罪。这就是过去以邪见伤害他人的等流果。 <br/>
 <br/>
-因为罪人过去传播邪见，别人本来没有事，染上邪见后，心地受到严重染污，一切都被搞坏了，所以罪人的过失特别大。即使这一回做了人，还要被诬陷关押入狱，成了替罪羊，受很多的苦。我们经常会听到“谁谁谁很冤枉”，其实一点不冤枉，这些都是邪见恶业的报应，这笔账错不了。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 19:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 48 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第48课——地狱品31 <br/>
+因为罪人过去传播邪见，别人本来没有事，染上邪见后，心地受到严重染污，一切都被搞坏了，所以罪人的过失特别大。即使这一回做了人，还要被诬陷关押入狱，成了替罪羊，受很多的苦。我们经常会听到“谁谁谁很冤枉”，其实一点不冤枉，这些都是邪见恶业的报应，这笔账错不了。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 19:49</span><div class="badge-floor">第 48 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第48课——地狱品31 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -6247,7 +6268,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 这样就知道，蚯蚓等的小含生类，都是过去造邪见业而感生这样的身，非常可怜。它们的业报很重，比如蚯蚓，轻易死不了，身体即使断掉还能活，还要继续受报。所以，不要把它看成自然界很奇妙的相，认为它没有苦，活得很快乐，其实这都是恶报的现相，要对它发悲心。 <br/>
 <br/>
-所以，我们学了《念处经》，明白了业果以后，会改变旧有的世界观，重新看待这个世界。要看到整个轮回就是一片苦海，没有一点乐可言，从而真正发起出离的道心、悲愍的善心，真正成为一个以正法修习善心的行者（也就是你知道是什么法，心随着法来修，这样就能出来善心）。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 20:03<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 49 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第49课——地狱品32 <br/>
+所以，我们学了《念处经》，明白了业果以后，会改变旧有的世界观，重新看待这个世界。要看到整个轮回就是一片苦海，没有一点乐可言，从而真正发起出离的道心、悲愍的善心，真正成为一个以正法修习善心的行者（也就是你知道是什么法，心随着法来修，这样就能出来善心）。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 20:03</span><div class="badge-floor">第 49 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第49课——地狱品32 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -6371,7 +6392,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 闇覆生死中  难得佛正法  若人不爱法  从苦到苦处 <br/>
 若人寂静心  境界不破坏  彼人到善处  汝今者至此 <br/>
 <br/>
-黑暗覆盖住的生死当中，难得佛的正法，如果人不爱乐正法，他就会从苦处到苦处。如果人以寂静心，在境界中不做破坏的事情，就是不做损人损己的事，那他就会到善处。你现在是造恶而来此地。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-3-31 20:07<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 50 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第50课——地狱品33 <br/>
+黑暗覆盖住的生死当中，难得佛的正法，如果人不爱乐正法，他就会从苦处到苦处。如果人以寂静心，在境界中不做破坏的事情，就是不做损人损己的事，那他就会到善处。你现在是造恶而来此地。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-3-31 20:07</span><div class="badge-floor">第 50 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第50课——地狱品33 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -6499,7 +6520,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 所谓沙门在檀越家，惜檀越意，不能弃却而便饮之，此业果报。 <br/>
 <br/>
-所谓沙门在施主家，因为顾惜施主的情面，怕面子上过不去，不能拒绝就喝下了酒。所以业果律很可怕，我们应该有正见，有自己的操持，不能为了人情面子去造恶，不然就跑到地狱里去喝赤焰的铜水，这就是一杯酒的代价！ </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-1 11:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 51 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第51课——地狱品34 <br/>
+所谓沙门在施主家，因为顾惜施主的情面，怕面子上过不去，不能拒绝就喝下了酒。所以业果律很可怕，我们应该有正见，有自己的操持，不能为了人情面子去造恶，不然就跑到地狱里去喝赤焰的铜水，这就是一杯酒的代价！ </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-1 11:24</span><div class="badge-floor">第 51 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第51课——地狱品34 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -6577,7 +6598,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如是无量百千年岁，乃至偷盗不善业果，破坏无气腐烂尽灭，彼人彼处尔乃得脱。 <br/>
 <br/>
-要惩罚多久呢？这样无量百千年岁，一直到偷盗不善业果的习气势力完全消尽，连余气都没有了，这个人才会从地狱的苦难处脱出。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-1 11:30<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 52 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第52课——地狱品35 <br/>
+要惩罚多久呢？这样无量百千年岁，一直到偷盗不善业果的习气势力完全消尽，连余气都没有了，这个人才会从地狱的苦难处脱出。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-1 11:30</span><div class="badge-floor">第 52 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第52课——地狱品35 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -6721,7 +6742,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 这个时代有各种奇奇怪怪的事，不要认为这很冤枉或者很倒霉，其实都是恶业的报应，怨不了别人。身体不正常，心上也是这样，老是烦恼，狂乱不止，安静不了，比如得抑郁症、精神病等，或者常常害怕，或者心很邪，或者失念，或者忽然之间忧郁、焦躁等等。好多都不是由今生而来的，而是前世恶业等流的反应。 <br/>
 <br/>
-所以，身体多病、贫穷，在别人那里总是搞得烦烦恼恼，总是不快乐，这就是前世以邪心集了恶业习气，侵犯居士女的领受等流。接着以造作等流来说，那么这一世心也不会正直，还是要继续造业，苦果还会接连不断。反过来说，如果心很正直，无我、无私、利他，常常行善，将来就感得相貌端正、身体健康、寿命绵长，跟人相处和谐，常常欢喜，在哪里都很快乐，这一切的果报都是好的。这就是善业的等流果。所以，我们必须把握住内在的心识之流，千万不要走到邪行当中！ </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-1 20:27<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 53 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第53课——地狱品36 <br/>
+所以，身体多病、贫穷，在别人那里总是搞得烦烦恼恼，总是不快乐，这就是前世以邪心集了恶业习气，侵犯居士女的领受等流。接着以造作等流来说，那么这一世心也不会正直，还是要继续造业，苦果还会接连不断。反过来说，如果心很正直，无我、无私、利他，常常行善，将来就感得相貌端正、身体健康、寿命绵长，跟人相处和谐，常常欢喜，在哪里都很快乐，这一切的果报都是好的。这就是善业的等流果。所以，我们必须把握住内在的心识之流，千万不要走到邪行当中！ </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-1 20:27</span><div class="badge-floor">第 53 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第53课——地狱品36 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -6868,7 +6889,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 这样就明白，哦，这世间还有个因果律，它是法界的规则，它是天理，有它自己的一套奖惩制度，丝毫不会错乱。凡是违背了这个因果律，必定受惩罚；相反来说，如果能行善，奖赏也会非常大。 <br/>
 <br/>
-这个因果律是最大的法，超过了人间的任何法律，没有丝毫的漏洞。在人间有了麻烦，托关系、走后门或者塞个大大的红包，就可以糊弄过去，最后不了了之。但是这一切在因果法面前全部失效了，因为没有地方可以贿赂，没有后门可走，它就是天理，惩罚全在你心中。懂了这一点就不会有侥幸心理，会非常害怕因果，一言一行都非常谨慎，即使一个人独处也都非常自律，根本不必外在去管束，因为他知道一旦违背了因果法，就要受极惨烈的惩罚。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-1 20:34<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 54 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第54课——地狱品37 <br/>
+这个因果律是最大的法，超过了人间的任何法律，没有丝毫的漏洞。在人间有了麻烦，托关系、走后门或者塞个大大的红包，就可以糊弄过去，最后不了了之。但是这一切在因果法面前全部失效了，因为没有地方可以贿赂，没有后门可走，它就是天理，惩罚全在你心中。懂了这一点就不会有侥幸心理，会非常害怕因果，一言一行都非常谨慎，即使一个人独处也都非常自律，根本不必外在去管束，因为他知道一旦违背了因果法，就要受极惨烈的惩罚。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-1 20:34</span><div class="badge-floor">第 54 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第54课——地狱品37 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -6987,7 +7008,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 恶业尽了，才会从地狱里脱出。如果前世久远有善业成熟，没有生在饿鬼、畜生道，也很难得到人身，就像盲龟遇轭木孔那样。 <br/>
 <br/>
-如果生到人中的同业之处，也是常常贫穷生病，得很坏的病，不容易治好，成为海边的罪苦众生。由于他的恶业力，一生出来身体不全，也就是一只脚、一只眼、一个手臂，身体很矮，寿命不长，或者只有一天的寿命，会在这样的同业之处受生。这就是彼恶业的余残果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-1 20:50<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 55 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第55课——地狱品38 <br/>
+如果生到人中的同业之处，也是常常贫穷生病，得很坏的病，不容易治好，成为海边的罪苦众生。由于他的恶业力，一生出来身体不全，也就是一只脚、一只眼、一个手臂，身体很矮，寿命不长，或者只有一天的寿命，会在这样的同业之处受生。这就是彼恶业的余残果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-1 20:50</span><div class="badge-floor">第 55 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第55课——地狱品38 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -7083,7 +7104,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 尤其读了《念处经》，视野会拉长到很宽广的层面，人的心自然会这样思维，因为有定解的缘故。人生中的遭遇是各种各样的，一般人受了打击就怨天尤人，甚至消极绝望，感觉活在这世上没意思，干脆死了吧，反正别人也不在意。你不要死！应当想：哦，这一世是最后受报了，受完就能了业，是好事啊，这都是应该的、应该的！你口里永远要说“应该的、应该的”，这样就能消了果报。 <br/>
 <br/>
-正法念处经卷第十二 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-1 21:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 56 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第56课——地狱品39 <br/>
+正法念处经卷第十二 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-1 21:13</span><div class="badge-floor">第 56 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第56课——地狱品39 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -7149,7 +7170,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 直到恶业的果报报完了，才会从地狱里脱出。即使脱离地狱，也是六百世生在畜生当中。如果有幸生在人中的同业之处，心也是常常处在惊慌恐惧当中，就像野鹿等动物，胆子特别小，心惊不安，又常常害怕官府无故突然来抓、系缚牢狱，寿命极其短暂，一生下来心就很不安定，这都是恶业的余残果报。 <br/>
 <br/>
-所以，不要以为看看心理医生、吃特效药就会好，想得太简单了，这是因果律的惩罚，这都是业障所导致的心理病，除非自身真正忏悔得力，去掉了恶业功能。因为他过去强奸姊妹，违背了天理良心，所以受很重的报应，即使经过无量百千年岁，业的残余势力还在，导致做了人，心也是常常害怕，恐惧不安。相反真正行善的话，人是一身正气，坦坦荡荡，何时何处都很心安的。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-1 21:18<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 57 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第57课——地狱品40 <br/>
+所以，不要以为看看心理医生、吃特效药就会好，想得太简单了，这是因果律的惩罚，这都是业障所导致的心理病，除非自身真正忏悔得力，去掉了恶业功能。因为他过去强奸姊妹，违背了天理良心，所以受很重的报应，即使经过无量百千年岁，业的残余势力还在，导致做了人，心也是常常害怕，恐惧不安。相反真正行善的话，人是一身正气，坦坦荡荡，何时何处都很心安的。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-1 21:18</span><div class="badge-floor">第 57 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第57课——地狱品40 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -7259,7 +7280,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 这样就知道，一旦犯了这个邪淫大罪，就会得极重的业障病，一直都好不了。乃至它没好之间，时时不断地发出这个病苦。经历极其漫长的时节以后，业力尽了，才会从地狱里脱出。所以，我们千万不要犯这种邪淫的业障病。以此类推，杀生、偷盗、妄语等的恶业病也都不能沾染，一旦染上了，体内就有了毒细胞，必须尽快忏除。否则一旦它蔓延出去了，积集深厚以后，相当于癌症晚期，这时会在身上不断地出苦，即使最先进的医疗手段也没办法救治。 <br/>
 <br/>
-就像这样，恶业一旦成熟，没有办法挽回的，会直接堕在地狱里无穷无尽地受苦。而这种苦报的程度，完全超过了人间任何一种恶病的无数百千亿倍，根本无法想象。所以要明白，业是大冤家，就是它在害自己，就是它在整自己，没有别的东西。只要造了业，就像得了不治之症一样，非常可怕的。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-1 21:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 58 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第58课——地狱品41 <br/>
+就像这样，恶业一旦成熟，没有办法挽回的，会直接堕在地狱里无穷无尽地受苦。而这种苦报的程度，完全超过了人间任何一种恶病的无数百千亿倍，根本无法想象。所以要明白，业是大冤家，就是它在害自己，就是它在整自己，没有别的东西。只要造了业，就像得了不治之症一样，非常可怕的。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-1 21:24</span><div class="badge-floor">第 58 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第58课——地狱品41 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -7361,7 +7382,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 若五逆人，于地狱中其身长大五百由旬。若四逆人，四百由旬。若三逆人，三百由旬。若二逆人，二百由旬。若一逆人，一百由旬。 <br/>
 <br/>
-如果造五逆罪的人，在地狱里身体大到五百由旬。依此类推，造四逆的人，身体四百由旬；造三逆的人，身体三百由旬；造两逆的人，身体两百由旬；造一逆的人，身体一百由旬。总之，随造业的多少而显现身量的大小。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-1 21:30<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 59 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第59课——地狱品42 <br/>
+如果造五逆罪的人，在地狱里身体大到五百由旬。依此类推，造四逆的人，身体四百由旬；造三逆的人，身体三百由旬；造两逆的人，身体两百由旬；造一逆的人，身体一百由旬。总之，随造业的多少而显现身量的大小。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-1 21:30</span><div class="badge-floor">第 59 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第59课——地狱品42 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -7477,7 +7498,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 即死即倒。即于倒时，阎魔罗人之所执持，焰燃铁罥，系缚其咽，反束两手。东西南北，四维上下，见火焰燃。见彼火中种种恶面阎魔罗人，火中沸热，手执种种可畏器仗而打其身。彼人既见反缚其臂，极大怖畏。 <br/>
 <br/>
-他一死当时就倒下，倒下的时候，阎魔罗人抓住了他，用火焰炽燃的铁罥系住他的咽喉，反绑他的两手。在东西南北四维上下的十方界里，他见到都是火焰炽燃。见到火中现出各种面貌凶恶的阎魔罗人，在沸腾的火中，手里拿着各种可怕的器仗打他的身体。这个人见到自己的两臂被反绑后，心里生起极大的恐怖。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-1 21:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 60 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第60课——地狱品43 <br/>
+他一死当时就倒下，倒下的时候，阎魔罗人抓住了他，用火焰炽燃的铁罥系住他的咽喉，反绑他的两手。在东西南北四维上下的十方界里，他见到都是火焰炽燃。见到火中现出各种面貌凶恶的阎魔罗人，在沸腾的火中，手里拿着各种可怕的器仗打他的身体。这个人见到自己的两臂被反绑后，心里生起极大的恐怖。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-1 21:37</span><div class="badge-floor">第 60 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第60课——地狱品43 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -7674,7 +7695,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 彼地狱人，人世间中作恶业已，于中有中种种苦覆。复闻彼声，十倍闷绝。彼人如是苦恼无边，身心苦恼，心更起乱，如梦相似。 <br/>
 <br/>
-那地狱人在人世间做了恶业后，死后生在中有，淹没在极大的苦里。本身已经非常痛苦，又听到这个啼哭声后，整个身心都吓得闷绝，而且是十倍的强度。那罪人这样的苦恼无有边际，身心痛苦恼乱，心又进一步起更大的烦乱的苦，就像做梦一样。一切都是无而现的幻影，但是在那个时候，由罪业的习气，就会一直现非常大的苦相，整个状况就像做梦一样。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-5 14:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 61 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第61课——地狱品44 <br/>
+那地狱人在人世间做了恶业后，死后生在中有，淹没在极大的苦里。本身已经非常痛苦，又听到这个啼哭声后，整个身心都吓得闷绝，而且是十倍的强度。那罪人这样的苦恼无有边际，身心痛苦恼乱，心又进一步起更大的烦乱的苦，就像做梦一样。一切都是无而现的幻影，但是在那个时候，由罪业的习气，就会一直现非常大的苦相，整个状况就像做梦一样。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-5 14:05</span><div class="badge-floor">第 61 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第61课——地狱品44 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -7784,7 +7805,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 又由于过去多有杀生作集恶业，受恶果的缘故，地狱人无量百千年岁在地狱里受恶业果报。所生的恶业果报极其严重、惨烈，是一种无法描述的大苦痛，没有跟它相似的，所以拿不出对应的譬喻来形容。 <br/>
 <br/>
-正法念处经卷第十三 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 19:09<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 62 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第62课——地狱品45 <br/>
+正法念处经卷第十三 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 19:09</span><div class="badge-floor">第 62 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第62课——地狱品45 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -7972,7 +7993,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 汝以破坏心  而作多语说  一切法中垢  彼果如是煮 <br/>
 破坏语恶人  生处常孤独  何人两舌说  善人所不赞 <br/>
 <br/>
-你以破人关系的心而作两舌说，这是一切法中的垢染，以它的果报，你就要这样被烧煮。说破坏语的恶人，所生之处常常孤独无依。谁人说两舌，善人是不会赞叹的。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 21:52<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 63 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第63课——地狱品46 <br/>
+你以破人关系的心而作两舌说，这是一切法中的垢染，以它的果报，你就要这样被烧煮。说破坏语的恶人，所生之处常常孤独无依。谁人说两舌，善人是不会赞叹的。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 21:52</span><div class="badge-floor">第 63 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第63课——地狱品46 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -8199,7 +8220,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 彼人苦恼，不可得说。此有少喻。如海水渧，不可得数。如是如是，阿鼻地狱，恶业行人所受苦恼，不可得数，不可得说。一切苦处，更无有如阿鼻处者。以业重故，受苦亦重。 <br/>
 <br/>
-罪人的苦恼没办法说，这里用少分譬喻来说明。比如海里的水滴没办法计数，就像这样，在阿鼻地狱里，恶业行人所受的苦恼没办法计算它的数量，也没办法言说它的程度等等，一切苦处再没有超过阿鼻地狱的。以业重的缘故，受苦也重。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 21:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 64 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第64课——地狱品47 <br/>
+罪人的苦恼没办法说，这里用少分譬喻来说明。比如海里的水滴没办法计数，就像这样，在阿鼻地狱里，恶业行人所受的苦恼没办法计算它的数量，也没办法言说它的程度等等，一切苦处再没有超过阿鼻地狱的。以业重的缘故，受苦也重。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 21:55</span><div class="badge-floor">第 64 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第64课——地狱品47 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -8365,7 +8386,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 脱彼处已，若生人中同业之处，贫穷常病，世中鄙贱，妻不贞良。若侵他妻，或犯他女，为彼所捉，捉已付王。若王王等，拔其人根。无有舍宅，于四出巷，若三角巷，从他乞食，以自活命。常患饥渴，彼复发病。或四出巷，若墓田中，苦毒而死。是彼恶业余残果报。 <br/>
 <br/>
-脱离恶趣以后，如果生在人中的同业之处，也是贫穷，常常生病，身份卑微下贱，妻子也不贞良。或者侵犯他人的妻子或者女儿，就会被人抓住交给国王。国王或者与国王相类的上层裁决者，会命人拔掉他的人根。他没有舍宅，在四出巷或三角巷以乞讨为生。常常被饥渴逼恼，而且发病。或者在四出巷，或者在墓地当中苦毒而死。这都是邪淫恶业的余残果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 21:57<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 65 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第65课——地狱品48 <br/>
+脱离恶趣以后，如果生在人中的同业之处，也是贫穷，常常生病，身份卑微下贱，妻子也不贞良。或者侵犯他人的妻子或者女儿，就会被人抓住交给国王。国王或者与国王相类的上层裁决者，会命人拔掉他的人根。他没有舍宅，在四出巷或三角巷以乞讨为生。常常被饥渴逼恼，而且发病。或者在四出巷，或者在墓地当中苦毒而死。这都是邪淫恶业的余残果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 21:57</span><div class="badge-floor">第 65 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第65课——地狱品48 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -8518,7 +8539,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 一旦造了烧僧寺、烧佛像等的大罪，因为对境严厉的缘故，就要受连绵不断的大苦，所以千万不要在业果上愚昧。而末法时代的人普遍业行颠倒，谤无因果，举心动念全都是罪，甚至正在受着苦报还不自知，总是埋怨老天不公。所以我们要发个大心，在这个世间普遍地宣扬因果，不但自身对因果有胜解，励力地断恶行善，还要发心把因果正见深植在他人的心相续中，教导他人断恶修善，这的确是人生最基础、最重要的课题。 <br/>
 <br/>
-正法念处经卷第十四 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 22:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 66 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第66课——地狱品49 <br/>
+正法念处经卷第十四 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 22:05</span><div class="badge-floor">第 66 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第66课——地狱品49 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -8662,7 +8683,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 彼处得脱，若生人中同业之处，常贫常病，为他所使。旷野险岸饶沙之处、草稀之处、无草之处、无水之处、离泽之处、常怖畏处，恶国土生。是彼恶业余残果报。 <br/>
 <br/>
-脱离畜生以后，如果生在人中的同业之处，也是常常贫穷多病，被别人指使，没有自由。生在旷野险岸有很多沙的地方，或者草稀少的地方，或者没有草的地方，或者没有水的地方，或者远离水泽的地方，或者常常充满恐怖的地方，在这样的险恶国土里出生。这就是盗取僧众饮食恶业的余残果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 22:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 67 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第67课——地狱品50 <br/>
+脱离畜生以后，如果生在人中的同业之处，也是常常贫穷多病，被别人指使，没有自由。生在旷野险岸有很多沙的地方，或者草稀少的地方，或者没有草的地方，或者没有水的地方，或者远离水泽的地方，或者常常充满恐怖的地方，在这样的险恶国土里出生。这就是盗取僧众饮食恶业的余残果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 22:08</span><div class="badge-floor">第 67 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第67课——地狱品50 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -8816,7 +8837,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 既得脱已，若生人中同业之处，则常治生，身为导主，饥渴常乏。一切时行，常系属他，为他所使，依他活命。与人相似，非是正人，常受苦恼。是彼恶业余残果报。 <br/>
 <br/>
-脱离畜生以后，如果生在人中的同业之处，常常身为导主来谋生，饥饿干渴，经常贫乏。一切时的行为常常系属于他人，被他人指使，没有一点自在，依靠他人活命。看起来像人，其实不是真正的人，经常受苦恼。这就是他恶业的余残果报。他过去偷比丘圣者的食物，让比丘受饥饿的苦，因此感受这样的苦报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 22:11<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 68 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第68课——地狱品51 <br/>
+脱离畜生以后，如果生在人中的同业之处，常常身为导主来谋生，饥饿干渴，经常贫乏。一切时的行为常常系属于他人，被他人指使，没有一点自在，依靠他人活命。看起来像人，其实不是真正的人，经常受苦恼。这就是他恶业的余残果报。他过去偷比丘圣者的食物，让比丘受饥饿的苦，因此感受这样的苦报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 22:11</span><div class="badge-floor">第 68 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第68课——地狱品51 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -8918,7 +8939,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 直到恶业的势力完全消尽了，罪人才从彼地狱处脱出。脱出以后，还要百千世生在食脑饿鬼当中，吃脑子来活命。脱离彼处以后，又要七百世生在食火畜生中，以火为食物。脱离畜生以后，如果过去有善业力成熟，而生在人中的同业之处，也是五百世不被国王信任，常常被关押系缚在牢狱里，因饥渴而死。这就是诳骗、弃舍比丘的余残果报。 <br/>
 <br/>
-这样就知道，如果表面上说些好听的话，答应得很好，实际上根本不去做，那么他将来就不会被人信任，说什么别人根本不相信，而且常常会被关在监狱里。他本来答应比丘要提供资具，却不提供，所以一直受饥渴的苦，做了人还要在饥渴中死去。这就是彼恶业的余残果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 22:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 69 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第69课——地狱品52 <br/>
+这样就知道，如果表面上说些好听的话，答应得很好，实际上根本不去做，那么他将来就不会被人信任，说什么别人根本不相信，而且常常会被关在监狱里。他本来答应比丘要提供资具，却不提供，所以一直受饥渴的苦，做了人还要在饥渴中死去。这就是彼恶业的余残果报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 22:14</span><div class="badge-floor">第 69 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第69课——地狱品52 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -9087,7 +9108,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 那里的诸天听闻正法，都这样欢喜。那些从未听闻过正法的诸天听后尚且欢喜，何况是具信心、随顺正法的行人、谛见法义的正士，听闻那比丘了解业果报法，增长了正法，哪有不欢喜的呢？ <br/>
 <br/>
-正法念处经卷第十五地狱品竟 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 22:23<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 70 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第70课——饿鬼品01 <br/>
+正法念处经卷第十五地狱品竟 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 22:23</span><div class="badge-floor">第 70 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第70课——饿鬼品01 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -9198,7 +9219,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 由此会如实观见有为世间的三种老。所谓的“老”，就是凡是因缘所生法，到了成熟位就进入了衰老位，最后坏灭一空。当他看到后边际都是归于无有，就知道一切不能过度，所谓“日中则仄，月满则亏”。了解缘起的人，或者学过老子《道德经》或者了解坏苦的人都明白这个道理，比如名过了度要衰，利过了度要衰，身体过了度也要衰等等，因此要常行止足之道，也就是在世上为了维持色身，保证最基本的衣食就好，不要过度。偈颂里只说到饮食，其他方面依此类推，名誉、利养、住处等等都要知道止足。 <br/>
 <br/>
-这样的人就能远离忧恼。因为没有寻求的苦、守护的苦、失坏的苦，像乞丐那样，心中一点牵挂没有，不必去跟人竞争，也不必去诳想、妄想，连真正受用衣食等的苦都不要了，有一点饭能充饥、几件破衣服能蔽体就可以过了。这样的话，常伸两脚卧，时时都是快乐无忧的。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 22:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 71 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第71课——饿鬼品02 <br/>
+这样的人就能远离忧恼。因为没有寻求的苦、守护的苦、失坏的苦，像乞丐那样，心中一点牵挂没有，不必去跟人竞争，也不必去诳想、妄想，连真正受用衣食等的苦都不要了，有一点饭能充饥、几件破衣服能蔽体就可以过了。这样的话，常伸两脚卧，时时都是快乐无忧的。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 22:29</span><div class="badge-floor">第 71 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第71课——饿鬼品02 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -9281,7 +9302,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 所谓观苦，这里指，对于一切地狱的那些深可怖畏、为苦恼逼迫的地方，要做具体地观察，也就是详详细细、很真切地去认识，到底是什么样的处境。就地狱里出现的情形，比如说八热地狱，那里的环境如何、根身如何、受苦状况如何、寿量如何等等，这些方面都要具体地去观察；然后又要知道，是由一个什么样的力量不断地在变现这些苦。这样联系起来就非常地清楚，原来以那种恶业会造出这么大的苦。也就是，它的确是非常地漫长，非常地深重，而且是相续不断地在变现苦报，实在是太可怕了！这样知道业报以后，就会发生厌离心。也就是知道，这样的一种做法、一种走法，的确是一点点实义也没有，唯一是苦，这种苦原来这么漫长、这么深重，那真的就跟服了一个最剧毒的毒素一样，那么这样的路实在是可厌患啊！这时他自然会发生一个厌离心，就发誓：从今以后，我再不愿意造这样的业因！我再不愿意走到这种状况里！ <br/>
 <br/>
-在自身上修好了，发生了业果的认识，然后对于这种生死状况起了厌离心，接着就要去看众生。的确是在传统的修轨里，它要连接起来，自己修了苦以后，再转到众生身上修悲心。也就是，不光是我一个人有这种情况，现在在法界的无数恶道里面，无数的生死诸道里面，有见不到边际那么多的母有情，也同样在受苦。那么再继续地要去观察，这些众生是怎样陷没在这样的种种恶道的大怖畏处，行在生死旷野里面呢？就跟瞎眼一样，蹎蹶而行，没有尽头。这样就一定要去关注有情的状况。这样子才会知道，他们不是活得很幸福，也不是有真实的意义，的确是苦中之苦。然后再遍观到所有轮回里的众生，都是最可怜愍的。这样思惟后，会发起慈悲心。由此就由修苦，进而转入到大乘道的修习。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 22:35<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 72 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第72课——饿鬼品03 <br/>
+在自身上修好了，发生了业果的认识，然后对于这种生死状况起了厌离心，接着就要去看众生。的确是在传统的修轨里，它要连接起来，自己修了苦以后，再转到众生身上修悲心。也就是，不光是我一个人有这种情况，现在在法界的无数恶道里面，无数的生死诸道里面，有见不到边际那么多的母有情，也同样在受苦。那么再继续地要去观察，这些众生是怎样陷没在这样的种种恶道的大怖畏处，行在生死旷野里面呢？就跟瞎眼一样，蹎蹶而行，没有尽头。这样就一定要去关注有情的状况。这样子才会知道，他们不是活得很幸福，也不是有真实的意义，的确是苦中之苦。然后再遍观到所有轮回里的众生，都是最可怜愍的。这样思惟后，会发起慈悲心。由此就由修苦，进而转入到大乘道的修习。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 22:35</span><div class="badge-floor">第 72 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第72课——饿鬼品03 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -9363,7 +9384,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如是思惟：一切生死，皆悉苦恼。 <br/>
 <br/>
-比丘从生死之根的妄心入手观察，结果一举断定，一切生死中的法全数都是苦恼。这是定义轮回法纯一是苦性，毫无安乐可言。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 22:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 73 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第73课——饿鬼品04 <br/>
+比丘从生死之根的妄心入手观察，结果一举断定，一切生死中的法全数都是苦恼。这是定义轮回法纯一是苦性，毫无安乐可言。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 22:40</span><div class="badge-floor">第 73 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第73课——饿鬼品04 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -9477,7 +9498,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 悭贪的业报完以后，他就会在饿鬼界里命终，生在畜生界。还是受悭吝余业的障蔽，常常只能吃一点呕吐物，其他食物找不到，所以一直受饥渴的苦。在畜生里死了以后，假使生到人中，以悭吝的余业因缘，还是要受领受等流。 <br/>
 <br/>
-所谓的“领受等流”，自身、外境的各个方面都有表现，比如自身要受饥渴的苦，外境上也只能捡拾一点街头巷尾别人丢弃的残羮剩饭等，或者从沙门、婆罗门那里乞求资具来活命。以悭吝余业势力的缘故，在人中还要受这些等流果，也就是乞讨、饥渴、只能吃残食等等。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 22:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 74 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第74课——饿鬼品05 <br/>
+所谓的“领受等流”，自身、外境的各个方面都有表现，比如自身要受饥渴的苦，外境上也只能捡拾一点街头巷尾别人丢弃的残羮剩饭等，或者从沙门、婆罗门那里乞求资具来活命。以悭吝余业势力的缘故，在人中还要受这些等流果，也就是乞讨、饥渴、只能吃残食等等。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 22:46</span><div class="badge-floor">第 74 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第74课——饿鬼品05 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -9597,7 +9618,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 就像这样，假使终有一天得到了人身，住在母胎里，这样生下来以后却发现命运多舛。这也是由前世的业所导致的，并不是什么单纯生理现象，或者其他的倒霉现象。在无知的状况下，人们会感觉困惑，怎么生出来的孩子就是这样，又贫穷、又多病，身体还发臭呢？其实这是业的作品。当我们知道《入胎经》等经中描述的胎中七日一转的现象时，就会发现，那根本不是人凭着一种分别来左右的，它是业自然运行的。譬如说，从名色位是怎么逐步七天七天地，在身上出来一个个的骨骼、肌肉、筋脉、器官等等呢？那个时候胎儿没有一点的指挥权力，然而一切都给他打理得井井有条，一如当初所造业的缘起。就像这样，的确是业在运行。 <br/>
 <br/>
-那么这个业的影响度太大了，即使经过百万年的岁月，又经过数不清的沦落状况，然后得人身的时候它还在起影响，而且这种影响精确得一丝不差。正是由于当初那种悭吝，这个时候就感得臭秽的身，然后非常贫乏，没有财富，身体也不好，还生很多的病。这都是由于当初悭嫉恶业的残余势力，所以在人中得到这样的等流果。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 22:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 75 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第75课——饿鬼品06 <br/>
+那么这个业的影响度太大了，即使经过百万年的岁月，又经过数不清的沦落状况，然后得人身的时候它还在起影响，而且这种影响精确得一丝不差。正是由于当初那种悭吝，这个时候就感得臭秽的身，然后非常贫乏，没有财富，身体也不好，还生很多的病。这都是由于当初悭嫉恶业的残余势力，所以在人中得到这样的等流果。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 22:51</span><div class="badge-floor">第 75 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第75课——饿鬼品06 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -9713,7 +9734,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 他的心术已经不好了，越来越邪。而善恶是相克的，一旦嫉妒恶贪发展得深了，必然障住各种的善心。就像布施，他是一毛不拔，丝毫不肯舍出去。而且不修福德的，凡是什么让自己吃亏或者利益别人的事，是绝对不肯做的。而且认为，“这世上哪有什么道德、什么因果？想要，都可以用我的心机来得到，什么都是可以自由放任的！”这样子，他对于自心上的贪嗔、邪见，口里的妄语、绮语、两舌、恶口，身上的杀、盗、淫不作戒除，这样就不持禁戒。再者，平常他随便乱打诳语，不会有什么诚信，一心就是以骗人为庄严。这样心已经偏邪了之后，没办法再随顺正法了，久而久之，心发展得越来越粗犷，不可调伏。而这样的邪心，现行一次就会加重一次，那么在他一生几十年里都是这种心的话，当然最终的心是非常可怕的，它就已经邪恶成性，积成了极重的恶贪的业。 <br/>
 <br/>
-再者，“物以类聚，人以群分”，当他心中的这种恶的习性已经非常深重的时候，导致他会有非常大的心理障碍，没法亲近善友，总是离得远远的；反面，却是一见到他们有什么光荣，就任运起嫉妒心，或者一见到他们圆满的时候，非常吃醋。就像这样，实际因位已经成了一个饿鬼的心态。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 22:57<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 76 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第76课——饿鬼品07 <br/>
+再者，“物以类聚，人以群分”，当他心中的这种恶的习性已经非常深重的时候，导致他会有非常大的心理障碍，没法亲近善友，总是离得远远的；反面，却是一见到他们有什么光荣，就任运起嫉妒心，或者一见到他们圆满的时候，非常吃醋。就像这样，实际因位已经成了一个饿鬼的心态。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 22:57</span><div class="badge-floor">第 76 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第76课——饿鬼品07 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -9888,7 +9909,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 那么，这些都是与业因同类的在人间残余的等流果，叫做“领受等流”。从前是这样的一个做法，那么现在就领到这样的报应。就像高烧过后还有低烧，烧得人就不会好受一样。那么同样，以悭嫉的恶业，在受了非常深重、漫长的恶趣报以后，到人中只是个“低烧”，也一样地难受，程度较轻而已。 <br/>
 <br/>
-因此要知道，恶业现不出丝毫的乐果，这是因果律决定的。在认识了饿鬼的因果过程后，自己必须发誓断掉这种悭嫉的恶心，以后再也不能做这样的下贱之事，反而要起尊贵之行。令人尊贵，自身尊贵，因而对于福田乃至一切的众生，都要起增上的恭敬之心，用妙好的食物来作奉献，就像这样，一定要做尊贵的善行。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 23:07<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 77 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第77课——饿鬼品08 <br/>
+因此要知道，恶业现不出丝毫的乐果，这是因果律决定的。在认识了饿鬼的因果过程后，自己必须发誓断掉这种悭嫉的恶心，以后再也不能做这样的下贱之事，反而要起尊贵之行。令人尊贵，自身尊贵，因而对于福田乃至一切的众生，都要起增上的恭敬之心，用妙好的食物来作奉献，就像这样，一定要做尊贵的善行。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 23:07</span><div class="badge-floor">第 77 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第77课——饿鬼品08 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -10052,7 +10073,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 假使生在人中，等流果也很不好，常常遭遇很多的灾难。这种叫“领受等流”，也就是以余业的影响，常常莫名其妙的，会有很多的磨难、很多的患难。实际一点不偶然，都是过去常常害人的果报。 <br/>
 <br/>
-他在饿鬼界里受尽了苦，从那里命终后，还要多劫地轮转受报。假使有幸生到人中，也非常不顺利，常常遇到王难，比如被政府判刑，关押在监狱里；或者遇到水、火等的自然灾难；或者遇到黑社会抢劫、恐怖分子劫机；或者遇到饥荒之世。这就是过去造了非常可怕的恶行，在自身上领受到的惩罚。再者，常常生在贫穷下贱之处，身上有好多的病苦，有时候生难以治好的怪病，身体很瘦、很虚弱。这就是过去以贪嫉心做各种的侵夺等恶行，在漫长的时劫之后，还要受这样大的苦报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 23:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 78 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第78课——饿鬼品09 <br/>
+他在饿鬼界里受尽了苦，从那里命终后，还要多劫地轮转受报。假使有幸生到人中，也非常不顺利，常常遇到王难，比如被政府判刑，关押在监狱里；或者遇到水、火等的自然灾难；或者遇到黑社会抢劫、恐怖分子劫机；或者遇到饥荒之世。这就是过去造了非常可怕的恶行，在自身上领受到的惩罚。再者，常常生在贫穷下贱之处，身上有好多的病苦，有时候生难以治好的怪病，身体很瘦、很虚弱。这就是过去以贪嫉心做各种的侵夺等恶行，在漫长的时劫之后，还要受这样大的苦报。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 23:14</span><div class="badge-floor">第 78 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第78课——饿鬼品09 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -10170,7 +10191,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 也就是他做鬼时心已经成了变态，所以在经过千万亿年，再转为人的时候，那个嗔心还是非常地大，你看他一眼，他就要捅你一刀，有仇没仇他都视如怨家，反正看所有的人都不对头。就像这样，以种种的方便求别人的短缺。这是一种diandaoxi性，一旦坚固了就会成这样，以过去的恶性的业势力的缘故，一直到后来做人，还受这样的等流果。 <br/>
 <br/>
-正法念处经卷第十六 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 23:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 79 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第79课——饿鬼品10 <br/>
+正法念处经卷第十六 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 23:25</span><div class="badge-floor">第 79 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第79课——饿鬼品10 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -10446,7 +10467,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 饥渴所逼，但食风气，恶业不尽，故使不死。 <br/>
 <br/>
-这句是讲执杖饿鬼的苦，他常常受着饥渴的逼恼，只能吃一点风气活命。这也是由于前世仗着豪贵的威力，做各种诈取等恶业，因此现在只能吃到一点风。在恶业的功能势力没穷尽的期间，他也就一直这样子做小鬼，饥渴、吃风气，而死不掉的。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-6 23:34<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 80 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第80课——饿鬼品11 <br/>
+这句是讲执杖饿鬼的苦，他常常受着饥渴的逼恼，只能吃一点风气活命。这也是由于前世仗着豪贵的威力，做各种诈取等恶业，因此现在只能吃到一点风。在恶业的功能势力没穷尽的期间，他也就一直这样子做小鬼，饥渴、吃风气，而死不掉的。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-6 23:34</span><div class="badge-floor">第 80 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第80课——饿鬼品11 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -10659,7 +10680,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 当那一世感现的饿鬼的业力穷尽，他就会在鬼界死去，然后新的一度的转生，就是受其他业因支配的缘故。假使生在人间，他的习性就是常常喜欢吃人肉或者喝人血，这是由前世嗜好杀生的余残业势力的钳制，使得他受这样的苦报。 <br/>
 <br/>
-这里的果相实际是造作等流。可以看到，它的确贯穿三世，已经很长时间在饿鬼界当中杀了无数次，再转到人间还是这个邪性，比前世还厉害，竟然吃起人肉、喝起人血了。这种对于血腥的爱乐，实际就是习性之果。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-7 21:34<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 81 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第81课——饿鬼品12 <br/>
+这里的果相实际是造作等流。可以看到，它的确贯穿三世，已经很长时间在饿鬼界当中杀了无数次，再转到人间还是这个邪性，比前世还厉害，竟然吃起人肉、喝起人血了。这种对于血腥的爱乐，实际就是习性之果。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-7 21:34</span><div class="badge-floor">第 81 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第81课——饿鬼品12 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -10892,7 +10913,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 最后以偈颂来作总结：像这样，众生以恶业在识田中熏了种子，也就是造业的第二刹那就在识中熏建了业习气，以这个业种已经种下去的缘故，一旦成熟，就会发出各种如同枝叶花果般的器界根身等的无量苦报，所以说，会受各种各样的苦恼。如同被粪所熏后，非常可恶，就像这样，恶业熏在我们心中也是非常地可怕，它会发生一切不吉祥，所以我们要尽快地舍离恶业。一旦它造下的时候，也要尽快地悔除，不要让它沾染，乃至增长成熟。 <br/>
 <br/>
-善业的所熏确实最为殊胜，能够永远脱离恶趣的诸苦。就像那瞻卜花，所熏的香油非常清香、可意，花虽然灭了，可是它所熏到的香油还是在的。同样，做过的善业虽然结束了，可是在心中已经熏了很好的业习气，以此将来会出现各种安乐的芬芳。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-7 21:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 82 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第82课——饿鬼品13 <br/>
+善业的所熏确实最为殊胜，能够永远脱离恶趣的诸苦。就像那瞻卜花，所熏的香油非常清香、可意，花虽然灭了，可是它所熏到的香油还是在的。同样，做过的善业虽然结束了，可是在心中已经熏了很好的业习气，以此将来会出现各种安乐的芬芳。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-7 21:49</span><div class="badge-floor">第 82 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第82课——饿鬼品13 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -11185,7 +11206,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 真可怜啊，偶尔有一念的善心起来，但很快就又没有了，在饿鬼界里千万年受苦以后，再转到人中也非常不好。所以，心是很难治的，赶紧往生极乐世界，否则就会非常可怕，因为人的心是自己没法把持的。就像那个饿鬼，他当时受苦大的时候会起这样的悔悟，然而还是不行，一旦陷入的时候又懵了。就好像一个重度的疯子，忽然之间他还会稍微有两分钟清醒，家人以为有希望，可是过后又不行了。就像这样，心是不能邪作的。而且在我们有机会，感觉自己还能够有点把握的时候要赶紧修法，赶紧远离这个世间，不要去沾染。这一世就要作大逃亡，要逃到净土去，然后就安全了。就像这样，一定要在这个世界上看到可怕，因果非常可怕，自身的业系非常可怕，这个病非常可怕。 <br/>
 <br/>
-再看，这一类塚间住饿鬼死了以后，假使生在人中，也是堕在旃陀罗屠夫之家，整天杀猪等，或者做一个担负死尸者，去背死尸。这种都是过去的恶业残余的势力要受这样的果报，都是一种卑贱的事情。所谓的“卑贱”，是指恶业自然要惩罚成这样的相。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-7 21:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 83 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第83课——饿鬼品14 <br/>
+再看，这一类塚间住饿鬼死了以后，假使生在人中，也是堕在旃陀罗屠夫之家，整天杀猪等，或者做一个担负死尸者，去背死尸。这种都是过去的恶业残余的势力要受这样的果报，都是一种卑贱的事情。所谓的“卑贱”，是指恶业自然要惩罚成这样的相。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-7 21:56</span><div class="badge-floor">第 83 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第83课——饿鬼品14 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -11347,7 +11368,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 比丘这样勤修精进，心不暂时休息，而是像瀑流水一样地一时接一时地思惟正法，勤修正行，他的心变得端正而不谄曲，远离各种的偏邪歪曲的心行。如果不顺于正法，心就非常地不正直，有各种邪僻的、偏曲的那种心的状态，以及发出来的语言、行为。由于比丘已经明知正法，以此他的心就变得端正了，就可以在此基础上求得入涅槃城的果报，将来会得到寂灭一切生死苦的大安乐。他的善的名称周遍地传扬在天众的群体当中。 <br/>
 <br/>
-正法念处经卷第十七饿鬼品竟 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-7 22:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 84 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第84课——畜生品01 <br/>
+正法念处经卷第十七饿鬼品竟 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-7 22:04</span><div class="badge-floor">第 84 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第84课——畜生品01 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -11497,7 +11518,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 他以闻慧知道这类众生，或者常常多嗔，或者常常很多愚痴，以这种烦恼驱使，比如一见到众生就想杀掉它，或者很愚痴，认为这个东西就是天生给我们吃的，它就叫做食品，是动物类的食品，诸如此类，他是以痴心来杀生。不管哪种，他们死了以后生在恶道里，受大蟒蛇的身体，好大好大。这是由于前世的时候，他喜欢结怨结来缚住了自心，心一直被这种杀等的恶业所缚的缘故，就会生在畜生里，出现一个大蟒蛇的身躯，非常苦恼，喜欢吃一点风。 <br/>
 <br/>
-如果生在人中，在无因无缘的那些地方，常常怀着嗔恚。比如，热了几天，他就骂天；或者风刮得大、雨下得大，他就骂风骂雨；或者在哪个地方绊了一跤的话，他就骂地；或者他见到哪儿觉得不舒服，他就要骂，就要起嗔心，就像这样起斗诤之心，这都是造作等流。从前已经起了这样的造作，当时就输入了这种业习，一遇到相应的境界，他就会同类现起，这种叫“造作等流”。这是由于余业影响的缘故。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-7 22:11<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 85 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第85课——畜生品02 <br/>
+如果生在人中，在无因无缘的那些地方，常常怀着嗔恚。比如，热了几天，他就骂天；或者风刮得大、雨下得大，他就骂风骂雨；或者在哪个地方绊了一跤的话，他就骂地；或者他见到哪儿觉得不舒服，他就要骂，就要起嗔心，就像这样起斗诤之心，这都是造作等流。从前已经起了这样的造作，当时就输入了这种业习，一遇到相应的境界，他就会同类现起，这种叫“造作等流”。这是由于余业影响的缘故。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-7 22:11</span><div class="badge-floor">第 85 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第85课——畜生品02 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -11612,7 +11633,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 复次比丘，观龙世间，以何业故，生于彼处？以何缘故，不为热沙之所烧害？即以闻慧，知此众生，于前世时，受诸外道世间邪戒，行于布施而不清净，如上所说七种不净，以嗔恚心，愿生龙中。是人身坏命终之后，堕戏乐城，受龙王身。生彼城已，嗔恚心薄，忆念福德，随顺法行。如是龙王，其身不受热沙之苦。 <br/>
 <br/>
-再者，比丘观察龙世间，以什么业因生在龙类当中？又以什么缘故，不被热沙所烧害？他以闻慧知道这类众生前世的时候，受了外道世间的邪戒，也修布施但是不清净，就像上面所说具七种不净的相，以嗔恚心愿生在龙中。这个人身坏命终以后，就堕于戏乐城，受龙王之身。生彼城后，嗔恚心薄，它还能够忆念作福德之事，随顺法行。这样的龙王，由于它心中出现的烦恼薄，能忆念福德，顺法而行的缘故，它的身不受热沙的苦。或者，由于前世基本是修善行，只是布施不清净，因此所感得的龙身不会受热沙的苦。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-8 00:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 86 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第86课——畜生品03 <br/>
+再者，比丘观察龙世间，以什么业因生在龙类当中？又以什么缘故，不被热沙所烧害？他以闻慧知道这类众生前世的时候，受了外道世间的邪戒，也修布施但是不清净，就像上面所说具七种不净的相，以嗔恚心愿生在龙中。这个人身坏命终以后，就堕于戏乐城，受龙王之身。生彼城后，嗔恚心薄，它还能够忆念作福德之事，随顺法行。这样的龙王，由于它心中出现的烦恼薄，能忆念福德，顺法而行的缘故，它的身不受热沙的苦。或者，由于前世基本是修善行，只是布施不清净，因此所感得的龙身不会受热沙的苦。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-8 00:10</span><div class="badge-floor">第 86 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第86课——畜生品03 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -11734,7 +11755,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 复次比丘，知业果报，观一切龙所住宫殿，几许龙众住于海中？几许龙众住于众流？即以闻慧，知阎浮提人不顺法行，无量诸龙住于众流。阎浮提人随顺法行，五十七亿龙住于众流。 <br/>
 <br/>
-再者，比丘为了认识业果，观察一切龙所住的宫殿，有多少龙众住在大海当中，又有多少龙众住在各大水流或河流当中？他以闻慧知道，南阎浮提的人不顺正法而行，这种因缘力，就会有无数的龙安住在众流当中；而阎浮提人随顺正法而行，将会有五十七亿龙众住在众流当中。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-8 00:16<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 87 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第87课——畜生品04 <br/>
+再者，比丘为了认识业果，观察一切龙所住的宫殿，有多少龙众住在大海当中，又有多少龙众住在各大水流或河流当中？他以闻慧知道，南阎浮提的人不顺正法而行，这种因缘力，就会有无数的龙安住在众流当中；而阎浮提人随顺正法而行，将会有五十七亿龙众住在众流当中。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-8 00:16</span><div class="badge-floor">第 87 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第87课——畜生品04 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -11836,7 +11857,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 时阿修罗思惟是已，从城而起，即以一手，覆障日月诸光明轮。世间愚人，诸相师等，咸记灾祥，如上所说。复以一手，摩须弥顶，欲与诸天决其得失。是阿修罗，畜生少智，见天种种胜相庄严，威德光明，心生疑悔，还归所止，住光明城。是名第二因缘，掩蔽日月，令日月蚀，天声震吼。 <br/>
 <br/>
-再说，阿修罗王这样想了以后，他就从城中而起，以一只手障蔽日月的光明轮，这样整个天下突然就变黑了。世间的愚人，那些相师等，就授记这个是灾是祥等等，就像上面所说，而实际是罗睺阿修罗王在覆障日月。而且，他又以一只手摩到须弥山的山顶，想和诸天决一得失。这个阿修罗他是畜生，少有智慧，当他见到天上种种胜相庄严、威德光明的时候，他就起了疑悔之心，不想决斗了，于是就很灰心丧气地回到他的住处，安住在光明城内。这就是第二因缘掩蔽日月，使得出现日蚀、月蚀和天声震吼的现象。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-8 00:21<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 88 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第88课——畜生品05 <br/>
+再说，阿修罗王这样想了以后，他就从城中而起，以一只手障蔽日月的光明轮，这样整个天下突然就变黑了。世间的愚人，那些相师等，就授记这个是灾是祥等等，就像上面所说，而实际是罗睺阿修罗王在覆障日月。而且，他又以一只手摩到须弥山的山顶，想和诸天决一得失。这个阿修罗他是畜生，少有智慧，当他见到天上种种胜相庄严、威德光明的时候，他就起了疑悔之心，不想决斗了，于是就很灰心丧气地回到他的住处，安住在光明城内。这就是第二因缘掩蔽日月，使得出现日蚀、月蚀和天声震吼的现象。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-8 00:21</span><div class="badge-floor">第 88 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第88课——畜生品05 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -11939,7 +11960,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 所以，因果各算各的账，丝毫不会紊乱，就像我们以笔沾着各种的颜料，是红则画出红色，是黑则画出黑色。由于他过去善恶业夹杂的缘故，所以今生所感得的果报也是有苦有乐。由引业不善，而投生为畜生，又由满业善，而具有相当大的福德，五欲受用可与天界媲美。然而，他虽然具有天人的福德，但是却没有天人的道德，所以又叫做“非天”。 <br/>
 <br/>
-正法念处经卷第十八 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-8 00:28<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 89 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第89课——畜生品06 <br/>
+正法念处经卷第十八 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-8 00:28</span><div class="badge-floor">第 89 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第89课——畜生品06 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -12051,7 +12072,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 而那些具邪见的相师们本来就不认识因果，却都有一套说辞，他们说：那是天上的帝释动地了；或者说这是风动，今年会有灾祸的；或者说今年的年景很好，会有大丰收；又或者说今年会有大饥荒，很多人都要饿肚子，还会死掉很多人；或者说这事关我国的国政，国王或者会吉祥、或者会有凶险等等；又有的说今年会有风雨旱涝；又说会有战争之事，又或者没有；还有的说天牛婆罗门或者是善或者是恶等等。就像这样，世间的相师们就是这样来占卜吉凶的，观察星宿的人，不能够了知因果，所以只能做这样的说法，授记说将会有百灾等等。假使偶然有一句话出现了一点征相，愚人就会说：你看，这是我所推断的，现在应验了吧！谁都没有我算得准。 <br/>
 <br/>
-就像这样很愚痴，他们根本不知道业的状况，也根本不知道是什么样的力量在推动着，他们只是看到了一点点表面现象，就妄说吉凶祸福，其实这些唯一都是由业所决定的，都是业感缘起，而只有佛法中才讲到了这个缘起的奥秘，因此我们应当好好学习。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-8 00:34<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 90 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第90课——畜生品07 <br/>
+就像这样很愚痴，他们根本不知道业的状况，也根本不知道是什么样的力量在推动着，他们只是看到了一点点表面现象，就妄说吉凶祸福，其实这些唯一都是由业所决定的，都是业感缘起，而只有佛法中才讲到了这个缘起的奥秘，因此我们应当好好学习。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-8 00:34</span><div class="badge-floor">第 90 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第90课——畜生品07 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -12165,7 +12186,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 观第二地已，随顺法行。观一切众生，顺法众生，法护众生，一切生死所摄众生，善业生于人天之中。恶不善业，生于地狱饿鬼畜生。 <br/>
 <br/>
-比丘观察第二地后，他起了随顺正法而行的心。他以简择智看到，一切众生，顺法众生，法护众生，这些生死所摄的众生，一方面如果行了善业，就会以此业力转生在人天当中，发生各种福乐的果报；如果造的是不善业，也会以此业力受生在地狱、饿鬼、畜生当中，受的都是各种不合心意的坏的果报。由此他在世间范畴中就看到了，善恶业的两种截然不同的感果的相。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-9 16:38<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 91 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第91课——畜生品08 <br/>
+比丘观察第二地后，他起了随顺正法而行的心。他以简择智看到，一切众生，顺法众生，法护众生，这些生死所摄的众生，一方面如果行了善业，就会以此业力转生在人天当中，发生各种福乐的果报；如果造的是不善业，也会以此业力受生在地狱、饿鬼、畜生当中，受的都是各种不合心意的坏的果报。由此他在世间范畴中就看到了，善恶业的两种截然不同的感果的相。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-9 16:38</span><div class="badge-floor">第 91 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第91课——畜生品08 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -12325,7 +12346,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 复次比丘，知业果报，观天心行已，内自思惟，随顺法行。 <br/>
 <br/>
-再者，比丘为了认识业果，观察天的心行之后，就往内自己观察，随顺法道而行。这一切也是明显地显示了善恶因果的法则，善者上升，恶者下堕，而且善住于善、恶住于恶。就像这样，要知道世间有黑白两众，懂了这个道理，就唯一地在自心上修善断恶，随顺正法而行，这样就能增长天众，消减魔众。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-9 16:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 92 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第92课——畜生品09 <br/>
+再者，比丘为了认识业果，观察天的心行之后，就往内自己观察，随顺法道而行。这一切也是明显地显示了善恶因果的法则，善者上升，恶者下堕，而且善住于善、恶住于恶。就像这样，要知道世间有黑白两众，懂了这个道理，就唯一地在自心上修善断恶，随顺正法而行，这样就能增长天众，消减魔众。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-9 16:49</span><div class="badge-floor">第 92 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第92课——畜生品09 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -12525,7 +12546,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 即以闻慧，知此众生，爱著美味，住林树间，护此林树。非为众生，自活命故，非有悲心，为自利益身命因缘，护一切林。以是因缘，身坏命终，生一切忍阿修罗中。 <br/>
 <br/>
-他以闻慧了知，这类众生在从前的时候爱著美味，住在树林当中，守护着这片园林。然而他不是为了众生，只是为了养活自己，所以不是有悲心，只是想生活过得好。为了利益自己的身心性命，以这个因缘，他护持着这一片园林。这也只是一个擦边球的善法。以这个因缘，他身坏命终以后，就生在一切忍阿修罗的民众当中，一方面他可以享受福报，另一方面是一个畜生的身份。原因是他因地行善只是为了自己活命，没有悲心，或者利他之心，所以感得这种果报。这也看出因果丝毫不爽，是做了一点好事，有福德，但是在根本的心上只是一个私欲，不过出于正当手段，所以，他没有世间正见，就没法得到天人的果位，因果律安排就生在一切忍阿修罗当中。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-9 17:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 93 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第93课——畜生品10 <br/>
+他以闻慧了知，这类众生在从前的时候爱著美味，住在树林当中，守护着这片园林。然而他不是为了众生，只是为了养活自己，所以不是有悲心，只是想生活过得好。为了利益自己的身心性命，以这个因缘，他护持着这一片园林。这也只是一个擦边球的善法。以这个因缘，他身坏命终以后，就生在一切忍阿修罗的民众当中，一方面他可以享受福报，另一方面是一个畜生的身份。原因是他因地行善只是为了自己活命，没有悲心，或者利他之心，所以感得这种果报。这也看出因果丝毫不爽，是做了一点好事，有福德，但是在根本的心上只是一个私欲，不过出于正当手段，所以，他没有世间正见，就没法得到天人的果位，因果律安排就生在一切忍阿修罗当中。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-9 17:04</span><div class="badge-floor">第 93 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第93课——畜生品10 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -12663,7 +12684,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 可以看到，阿修罗的问题关键是一念斗-争之心。这个习气太重，以至于它占据内心，成为一种主义，就是非得胜利不可，这就是竞争主义。那么以下无数场的战争，无数种的火拼，都是由这样一种义气来的，这就是私欲的可怕。心里的那种习气一现形、一推动，就已经进入苦难的长河了。 <br/>
 <br/>
-要看到，它的放大率太大了，一个分别导致持久的超级大战，一个念头酿成极大的苦难。好比今天人类的贪欲，随着科技的发展，物质生活的进步，已经变成无法歇止的欲望的奔驰，引领着全数的贪欲者，进行旷日持久的贪欲运动。现前造成了无数的烦恼和苦，未来又要堕入饿鬼等的深渊。那么同样地，我们要观照阿修罗界，就是一念竞争或者斗-争的心，拉响了一个极长的斗-争运动。从现前来看，天天处在那种非常恐怖的战争当中，比人类的战争还要残酷多少倍，而且，是一场接一场的大战。现前就是这样受极度的战争之苦，而未来还要堕入地狱等。要像这样认识阿修罗的苦处。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-9 17:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 94 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第94课——畜生品11 <br/>
+要看到，它的放大率太大了，一个分别导致持久的超级大战，一个念头酿成极大的苦难。好比今天人类的贪欲，随着科技的发展，物质生活的进步，已经变成无法歇止的欲望的奔驰，引领着全数的贪欲者，进行旷日持久的贪欲运动。现前造成了无数的烦恼和苦，未来又要堕入饿鬼等的深渊。那么同样地，我们要观照阿修罗界，就是一念竞争或者斗-争的心，拉响了一个极长的斗-争运动。从现前来看，天天处在那种非常恐怖的战争当中，比人类的战争还要残酷多少倍，而且，是一场接一场的大战。现前就是这样受极度的战争之苦，而未来还要堕入地狱等。要像这样认识阿修罗的苦处。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-9 17:14</span><div class="badge-floor">第 94 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第94课——畜生品11 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -12805,7 +12826,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 时阿修罗，闻是语已，复往趣彼四天王所，更共斗战。雨大石山，雷电注雨，黑云黤霮，列阵大斗。见者毛竖。天复得胜，破阿修罗军。 <br/>
 <br/>
-当时，阿修罗们听到阿修罗王的话语以后，他们又鼓动了心力，再度往趣那四天王所在之处，共相战斗。雨下大石山，霹雳闪电，降注大雨，黑云黤霮。双方展开阵势，一场大战。如果见到那个战争的残酷的场面，毛都要竖起来了。天再度得胜，战败了阿修罗军。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-9 17:26<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 95 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第95课——畜生品12 <br/>
+当时，阿修罗们听到阿修罗王的话语以后，他们又鼓动了心力，再度往趣那四天王所在之处，共相战斗。雨下大石山，霹雳闪电，降注大雨，黑云黤霮。双方展开阵势，一场大战。如果见到那个战争的残酷的场面，毛都要竖起来了。天再度得胜，战败了阿修罗军。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-9 17:26</span><div class="badge-floor">第 95 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第95课——畜生品12 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -12999,7 +13020,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 关键要看到天理人欲，天理上相不相信有这样的理，如果相信，就不敢顺着自心的意思来走的；而修罗处处都是按自己的意思做，其实他是一个自我意志、自我尊严极度的表现。那种一出来就是“我很好的！”就可以干；“我绝不服输！”再干；“我不可能不如他的！”就像这样，自我它自己鼓气，处在一种很好的感觉当中。自我有个意志，有个发号者，从始至终都是这套系统在运作。从中可见集谛的坚固，可以看到修罗身上深重的苦相。 <br/>
 <br/>
-正法念处经卷第二十 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-9 17:39<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 96 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第96课——畜生品13 <br/>
+正法念处经卷第二十 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-9 17:39</span><div class="badge-floor">第 96 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第96课——畜生品13 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -13165,7 +13186,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 天众闻已，皆大欢喜，身力转增，过先十倍。白言：天王，何故而住？何故而住？我以天王威势力故，破彼怨敌，令天得胜。 <br/>
 <br/>
-当时，天众太欢喜了，身上的力量转而增上了十倍。他们纷纷地向天王请战：“天王，为什么还要待着？为什么还要待着？我们以天王无比的威势之力的缘故，一定能破彼怨敌，令天得胜！”他们迫不及待要去打仗。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-9 17:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 97 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第97课——畜生品14 <br/>
+当时，天众太欢喜了，身上的力量转而增上了十倍。他们纷纷地向天王请战：“天王，为什么还要待着？为什么还要待着？我们以天王无比的威势之力的缘故，一定能破彼怨敌，令天得胜！”他们迫不及待要去打仗。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-9 17:49</span><div class="badge-floor">第 97 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第97课——畜生品14 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>
@@ -13327,7 +13348,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 时钵呵娑、罗睺王等，见诸天众，执种种器仗，共钵呵娑，向帝释所。时诸天众，见四阿修罗王向帝释所，即自庄严，以助天王。 <br/>
 <br/>
-当时，勇健、罗睺阿修罗王等（原文“钵呵娑”似为讹误），见到天众手拿种种器仗前来，就前去和钵呵娑一起奔往帝释之处。当时，天众见到四位阿修罗王共同奔向帝释之处，就各自戒备庄严，来帮助天王。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-4-9 18:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 98 楼</span></div><div class="post-body">《正法念处经》正法念处经讲记 第98课——畜生品15 <br/>
+当时，勇健、罗睺阿修罗王等（原文“钵呵娑”似为讹误），见到天众手拿种种器仗前来，就前去和钵呵娑一起奔往帝释之处。当时，天众见到四位阿修罗王共同奔向帝释之处，就各自戒备庄严，来帮助天王。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-4-9 18:00</span><div class="badge-floor">第 98 进</div></div><div class="post-body">《正法念处经》正法念处经讲记 第98课——畜生品15 <br/>
 <br/>
 智圆法师 讲解 <br/>
 <br/>

@@ -1,56 +1,77 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>无等妙香--熏烟法门仪轨及导修 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>无等妙香--熏烟法门仪轨及导修 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/护摩内外密火供.html">护摩内外密火供</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">无等妙香--熏烟法门仪轨及导修</h1>
-<div class="post"><div class="post-header"><div class="avatar">纽</div>纽固修发表于 2008-7-16 10:31<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">无等妙香--熏烟法门仪轨及导修 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/护摩内外密火供.html">护摩内外密火供</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">无等妙香--熏烟法门仪轨及导修</h1>
+<div class="post"><div class="post-header"><div class="avatar">纽</div><span style="font-size:15px; letter-spacing:1px;">纽固修发表于 2008-7-16 10:31</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">无等妙香--熏烟法门仪轨及导修 <br/>
 前行开示 <br/>
 修法的最好时间是在「日与夜交替之时」，也就是等于黄昏的时分，但其他任何时间也可以修供，并无限制。 <br/>
 <br/>
-法器方面：要备有一个如法的供炉、一对小铜钹及上插以孔雀毛与吉祥草的「事业瓶」一个（见图）。供炉可以用任何大小适中的红铜炉皿，或用陶瓷所造的小炉皿也如法，一般市面上见到的红铜和陶瓷檀香炉都可用作熏烟供养用途；小钹以能发出清澈响声的为佳，在一些有售西藏及尼泊尔法器的店铺中不难购得（见书末）；「事业瓶」则是一个以金属制造的法器（见书末），有一瓶嘴，顶上另有一支顶嘴，插有数根孔雀毛及吉祥草（见书末），瓶身可以用彩布（见书末）装饰，里面装入约三分二容量的干净清水，若可加少许上好藏红花则更佳，加入水中会令净水染为金黄色。若未具备「事业瓶」的话，也可以用干净小杯和小瓶装水，另备数根吉祥草（见书末）或如杨枝一类之植物代替顶嘴也可以。 <br/>
+法器方面：要备有一个如法的供炉、一对小铜钹及上插以孔雀毛与吉祥草的「事业瓶」一个（见图）2569。供炉可以用任何大小适中的红铜炉皿，或用陶瓷所造的小炉皿也如法，一般市面上见到的红铜和陶瓷檀香炉都可用作熏烟供养用途；小钹以能发出清澈响声的为佳，在一些有售西藏及尼泊尔法器的店铺中不难购得（见书末）；「事业瓶」则是一个以金属制造的法器（见书末），有一瓶嘴，顶上另有一支顶嘴，插有数根孔雀毛及吉祥草（见书末），瓶身可以用彩布（见书末）装饰，里面装入约三分二容量的干净清水，若可加少许上好藏红花则更佳，加入水中会令净水染为金黄色。若未具备「事业瓶」的话，也可以用干净小杯和小瓶装水，另备数根吉祥草（见书末）或如杨枝一类之植物代替顶嘴也可以。 <br/>
 <br/>
-这个仪轨是以炭火烧出熏烟来作供养的。上乘的炭火是无烟的火，我们在炉中准备一块烧红了的炭块和煤块即可。熏烟是供品置炭火上所熏出的香味；供品可以预先制造一大瓶，放冰箱中贮藏；造法是把白面粉渗加「三白三甜物」，即牛奶、奶酪及牛油各少许（此为「三甜」）混合拌调，用时以铜和瓷质小匙取出少许（约一汤匙之量）置炭火上烧出香气即可；这种供品不须每天制造，可以预早造好整月用量，储于瓶中置冰箱内使不变坏即可；若要更为如法，可以加入香料粉末（即「六香」）少许（见书末）；若要简便从略，则只用白面粉（不加「三甜三白物」）就可以作供了，或者用面包糠亦可以，总之是要干净的同类食品就可作供。（编者注：上师开示时并未详述各成份之份量，查三、四零年代之我派祖师开示录中有述：以面粉一斤混「三白三甜」各一两即成）。 <br/>
+2570这个仪轨是以炭火烧出熏烟来作供养的。上乘的炭火是无烟的火，我们在炉中准备一块烧红了的炭块和煤块即可。熏烟是供品置炭火上所熏出的香味；供品可以预先制造一大瓶，放冰箱中贮藏；造法是把白面粉渗加「三白三甜物」，即牛奶、奶酪及牛油各少许（此为「三甜」）混合拌调，用时以铜和瓷质小匙取出少许（约一汤匙之量）置炭火上烧出香气即可；这种供品不须每天制造，可以预早造好整月用量，储于瓶中置冰箱内使不变坏即可；若要更为如法，可以加入香料粉末（即「六香」）少许（见书末）；若要简便从略，则只用白面粉（不加「三甜三白物」）就可以作供了，或者用面包糠亦可以，总之是要干净的同类食品就可作供。（编者注：上师开示时并未详述各成份之份量，查三、四零年代之我派祖师开示录中有述：以面粉一斤混「三白三甜」各一两即成）。 <br/>
 <br/>
 炭火必须在开始修供前烧透，预先置于炉皿内。修法时可以把供炉放在户外或窗台上，免令室内烟雾弥漫；自己则站立或坐于炉前念诵仪轨。 <br/>
 <br/>
@@ -59,10 +80,10 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 行者皈依直至成正觉 佛陀正法以及圣僧众 <br/>
 因作布施等诸修持故 愿证佛境利普有情生 <br/>
 <br/>
-念诵以上之「皈依及发心偈」时也同时敲击小钹三次；钹的敲法是把左边钹的边沿以九十度垂直打在右钹的边沿上（见图），然后反过来以右钹边击左钹。在这时间响钹的意义是表征禅定之音，也是召请圣众前临之意。  </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div>纽固修发表于 2008-7-16 10:33<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">正行开示 <br/>
+念诵以上之「皈依及发心偈」时也同时敲击小钹三次；钹的敲法是把左边钹的边沿以九十度垂直打在右钹的边沿上（见图）2571，然后反过来以右钹边击左钹。在这时间响钹的意义是表征禅定之音，也是召请圣众前临之意。  </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div><span style="font-size:15px; letter-spacing:1px;">纽固修发表于 2008-7-16 10:33</span><div class="badge-floor">第 2 进</div></div><div class="post-body">正行开示 <br/>
 念诵了「皈依及发心偈」后，就到了仪轨中之正行部分： <br/>
 <br/>
-观想自成圣者观自在  <br/>
+观想自成圣者观自在 2572 <br/>
  <br/>
 念至这一句开始，我们就要参想自己之体性为缘起，而并无一个个别单独及有自性地存在的「我」；在达到这个空性见时，便住于此空性之定中，再观想自己变化成为观世音大士之相。仪轨中所说的「观自在」，即就是观音大士的一种尊称；仪轨并无明指行者要观自己变化为什么化相之观音大士，但传统上，历代的行者都在修此法时观己身为四臂相的观音（见图）；若要观为其他化相的观音，也无不可。大部分人都暂没能力生起前述之空性正见，更不要说入于空性定中了，那么的话，就只好观想自己凡俗之身蕴溶化于虚空之中，再由虚空中变化成为观音化相。大家可能心中不太明白：为何要先入空性定或观身溶入虚空呢？原因是如果直接观自己一变就成为诸佛之悲心化相（观音），恐怕不易把自己凡俗之身、语、意观为与大士的超凡身、语、意无异。大家又可能有疑惑：为什么要自观为观音呢？答案是因为仪轨中必须加持供品及解除中阴身等之痛苦，若我们以凡俗之身、语、意来作，则没能力做得到这些事业，故须依赖变化成为观音之化相的方法及依靠大士之能力，才可以圆满做到这些事业。我们不单只观自己身体如同观音，心念也要尽力生起与观音相合之悲心才是圆满；在观想自己已变成观音化相是，可以加诵大明六字咒百次、千次等数。 <br/>
 <br/>
@@ -81,18 +102,18 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 这四组之主尊是本师释迦牟尼、观音、文殊师利及金刚手；观音、文殊与金刚手亦称作「圣三部主」，分别代表诸佛之悲心（以大悲观音代表）、智慧（以大智文殊代表）及力量（以大力金刚手为代表）；大家要努力熟习这四尊的形相（注：参考封面内页彩图）。 <br/>
 <br/>
-我们刚才已经谈过，修「行密部」仪轨者，必须小心注意法器之如法及外在的清净；若一切能做得如法，当生起召请之念时，圣众及天界众生、「非人」众、中阴众等都会马上来到受供；若果法器或衣服、地方、身体及指甲等不干净的话，很多喜爱清净的「非人」众就不会到临，那我们就无法供养了。另者，修法时应观面前之虚空无边无际，四组宾客亦充斥无际的虚空；必须尽力观得广大；若观不得广大，则效用、利益与功德亦不大。  </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div>纽固修发表于 2008-7-16 10:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">然后以干净的铜质或瓷质小匙，取少量供品置于修法前早已预备妥当的炉中红炭上（见图1）以熏出香气，同时诵以下的真言： <br/>
+我们刚才已经谈过，修「行密部」仪轨者，必须小心注意法器之如法及外在的清净；若一切能做得如法，当生起召请之念时，圣众及天界众生、「非人」众、中阴众等都会马上来到受供；若果法器或衣服、地方、身体及指甲等不干净的话，很多喜爱清净的「非人」众就不会到临，那我们就无法供养了。另者，修法时应观面前之虚空无边无际，四组宾客亦充斥无际的虚空；必须尽力观得广大；若观不得广大，则效用、利益与功德亦不大。  </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div><span style="font-size:15px; letter-spacing:1px;">纽固修发表于 2008-7-16 10:37</span><div class="badge-floor">第 3 进</div></div><div class="post-body">然后以干净的铜质或瓷质小匙，取少量供品置于修法前早已预备妥当的炉中红炭上2577（见图1）以熏出香气，同时诵以下的真言： <br/>
 <br/>
 嗡 班渣阿密烈打 滚达里 哈那 哈那 吽 呸 <br/>
 （洒净咒） <br/>
 <br/>
-诵咒时以「事业瓶」顶上之顶嘴洒净水于炭火上（见图2），观想所供之香气已经净化了，除却不净及魔障等等过失；若未备「事业瓶」者，则以吉祥草或杨枝沾净水作同样之洒净程序  （见图3及4）。 <br/>
+诵咒时以「事业瓶」顶上之顶嘴洒净水于炭火上2574（见图2），观想所供之香气已经净化了，除却不净及魔障等等过失；若未备「事业瓶」者，则以吉祥草或杨枝沾净水作同样之洒净程序2579  2580（见图3及4）。 <br/>
 <br/>
 嗡 森巴华 淑打 沙华 打玛 森巴华 淑多 吭 <br/>
 （空性咒） <br/>
 转化成空性 从空性之中具 种字 转化成为诸广大宝器 其内 嗡 阿 吽字化光华 出生圆满妙香熏具足五欲 弥漫充满大地 遍虚空一切方所 嗡 阿 吽 <br/>
 <br/>
-念这「空性咒」时，必须入空性定中，对「空性」无足够理解及体悟者，则应观宇宙一切万物溶为虚空。由诵「转化成空性…」一句开始，要一边诵念内文，一边作观想：由虚空之中生出一个藏文「种」字（见图），这字又变为广大无边的宝皿，皿内有「嗡、阿、吽」三个藏文字（见图），这三个字溶化变为香气，如烟雾般溢遍宇宙虚空；这些香气是不会耗尽的，而且能令见者、听者、嗅者、触者及食者都生出满足。 <br/>
+念这「空性咒」时，必须入空性定中，对「空性」无足够理解及体悟者，则应观宇宙一切万物溶为虚空。由诵「转化成空性…」一句开始，要一边诵念内文，一边作观想：由虚空之中生出一个藏文「种」字（见图），这字又变为广大无边的宝皿，皿内有「嗡、阿、吽」三个藏文字2578（见图），这三个字溶化变为香气，如烟雾般溢遍宇宙虚空；这些香气是不会耗尽的，而且能令见者、听者、嗅者、触者及食者都生出满足。 <br/>
 <br/>
 修到这部分，所供香气已非凡俗的烟雾或气味了，而是经过了真言之加持变化，成为广大无边的妙香了；所供之熏香现已如法准备好，随时可以用作供养，就如一窝饭已经煮熟了，只待宾客享受。 <br/>
 <br/>
@@ -101,26 +122,26 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 南玛 沙华 他化格他 阿华路格地 嗡 森巴啦 森巴啦 吽 <br/>
 （令得甘露真言） <br/>
 <br/>
-这句是「令得甘露真言」（汉传佛教寺院于日常上供时亦诵，称作「变食真言」），要诵七遍，双手作捧食状之手印，以右手拇指及中指弹指，每诵一遍即弹指一下（见图）。 <br/>
+这句是「令得甘露真言」（汉传佛教寺院于日常上供时亦诵，称作「变食真言」），要诵七遍，双手作捧食状之手印，以右手拇指及中指弹指，每诵一遍即弹指一下2581（见图）。 <br/>
 <br/>
 嗡 甘地 卡玛 滚那 布渣伊登 卡卡 卡嘻卡嘻 <br/>
 （供食咒） <br/>
 <br/>
-这句是「供养真言」，也是念诵七遍而作如前手印，弹指七次。 </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div>纽固修发表于 2008-7-16 10:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">两句真言诵毕后，应作八大供养。在仪轨中，只说「次诵咒从“阿根”至“夏达”之间而作供养」，并未印明念诵的内容；我们应念诵： <br/>
+这句是「供养真言」，也是念诵七遍而作如前手印，弹指七次。 </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div><span style="font-size:15px; letter-spacing:1px;">纽固修发表于 2008-7-16 10:51</span><div class="badge-floor">第 4 进</div></div><div class="post-body">两句真言诵毕后，应作八大供养。在仪轨中，只说「次诵咒从“阿根”至“夏达”之间而作供养」，并未印明念诵的内容；我们应念诵： <br/>
 <br/>
 嗡（阿根 巴典 布别 杜别 阿路盖 甘爹 尼爹 夏达）阿 吽 <br/>
 （八大供养咒） <br/>
 om argham padyam pupe dupe aloke gandhe niude shabda ah hum <br/>
  <br/>
 念诵这八大供养咒时，要观想天女由自己心间化出，对面前宾客作种种供养，同时配合作八大供养之手印（见图）： <br/>
-「阿根」是净口水供，须作手印并观天女供上净口水； <br/>
-「巴典」是净足水供，须作手印并观天女供上净足水； <br/>
-「布别」是花供，须作手印并观天女供上鲜花； <br/>
-「杜别」是燃香供，须作手印并观天女捧炉熏香作供； <br/>
-「阿路盖」是明灯供，须作手印并观天女供上盏盏明灯； <br/>
-「甘爹」是涂香供，须作手印并观天女奉上种种香膏； <br/>
-「尼爹」是食供，须作手印并观天女供上百味妙食； <br/>
-「夏达」是乐供，须敲钹数声并观天女以种种乐器演奏作供。 <br/>
+2582「阿根」是净口水供，须作手印并观天女供上净口水； <br/>
+2583「巴典」是净足水供，须作手印并观天女供上净足水； <br/>
+2584「布别」是花供，须作手印并观天女供上鲜花； <br/>
+2585「杜别」是燃香供，须作手印并观天女捧炉熏香作供； <br/>
+2586「阿路盖」是明灯供，须作手印并观天女供上盏盏明灯； <br/>
+2587「甘爹」是涂香供，须作手印并观天女奉上种种香膏； <br/>
+2588「尼爹」是食供，须作手印并观天女供上百味妙食； <br/>
+2589「夏达」是乐供，须敲钹数声并观天女以种种乐器演奏作供。 <br/>
 <br/>
 行者敬礼世尊薄伽梵多珍宝胜者如来 <br/>
 行者敬礼最上妙色胜者如来 <br/>
@@ -188,7 +209,7 @@ om argham padyam pupe dupe aloke gandhe niude shabda ah hum <br/>
 莲花藏蕊中化生 愿能受生彼刹中 <br/>
 <br/>
 这四句总结了修熏烟供养法者，未来生可得之利益，亦即往生净土的成就。修法时诵到这个阶段的时候，正行已经圆满做完了，剩下来的是结行的功夫。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div>纽固修发表于 2008-7-16 10:53<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">无等妙香--熏烟法门仪轨及导修 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div><span style="font-size:15px; letter-spacing:1px;">纽固修发表于 2008-7-16 10:53</span><div class="badge-floor">第 5 进</div></div><div class="post-body">无等妙香--熏烟法门仪轨及导修 <br/>
 结行开示 <br/>
 仪轨中并没有要求行者念补缺咒，但依着传统，我们必须要去念诵「莲华部百字明」作为补缺，同时慢慢敲响小钹，一声一声地配合持咒，然后再诵「补缺偈」作为对修法中的各种过失的补充。「莲华部百字明」与大家可能熟悉的金刚萨埵百字明只有少许的不同，一般来说，修「行密部」的观音法门仪轨都是诵「莲华部百字明」的： <br/>
 <br/>

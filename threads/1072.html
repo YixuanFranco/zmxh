@@ -1,51 +1,72 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>《西藏古代佛教史》 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>《西藏古代佛教史》 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">《西藏古代佛教史》</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-5-26 19:07<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">《西藏古代佛教史》 <br/>
-敦珠上师赐序       <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">《西藏古代佛教史》</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-5-26 19:07</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">《西藏古代佛教史》 <br/>
+敦珠上师赐序 732  733734735    <br/>
 　　古代密咒之大金刚乘　　　　法规如何来源之所说 <br/>
 此天自在胜利大鼓音　　　　无边殊胜名称人乐闻 <br/>
 如理密法与具福众生　　　　希有广大需要之悲愍 <br/>
@@ -92,7 +113,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 　　明珠昂旺丹增 <br/>
  <br/>
-①指汉人不识藏文。②舒囊卓之赞青为刘锐之居士法名。  </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 10:57<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">西藏古代佛教史 <br/>
+①指汉人不识藏文。②舒囊卓之赞青为刘锐之居士法名。  </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 10:57</span><div class="badge-floor">第 2 进</div></div><div class="post-body">西藏古代佛教史 <br/>
 <br/>
 西藏古代佛教史封面 <br/>
 敦珠上师法相(本书著者) <br/>
@@ -220,7 +241,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 一、莲师法相，有赞颂词者，是从藏文原本译出，而无赞颂词者，则是敦师所赐给，以原像未附赞词，不敢妄加也。 <br/>
 一、本书著者　敦珠上师著述等身，文名盖世，书法尤佳，前于乙七章有关渣华龙清巴密解之开示，特作端楷，附以龙草（藏文之草体）。 庄严秀丽，兼而有之，珍贵无量，不敢自秘，爰付梓人，庶同得珍赏焉。 <br/>
 一、译本笔记，及跋等文内所列之日期，均以我国阴历为主，而以西元纪年辅之，非惟顽固守旧，实亦顺西藏之俗也。 <br/>
-一、藏文原附法相、图片、及　师赐法相，均配入书内。而为使翻阅方便，特各列制一览表，连同大德别名表，传承系统专表，全部附入，俾易参考。至在整编译稿时，所编成之藏汉专名辞典、藏汉分字辞典卡片、及藏汉人名、地名、经法名辞典。均付阙如，免累赘也。若藏汉常用专名音义对照，尚在编订之中，更无论矣。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 11:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">简要纲目 <br/>
+一、藏文原附法相、图片、及　师赐法相，均配入书内。而为使翻阅方便，特各列制一览表，连同大德别名表，传承系统专表，全部附入，俾易参考。至在整编译稿时，所编成之藏汉专名辞典、藏汉分字辞典卡片、及藏汉人名、地名、经法名辞典。均付阙如，免累赘也。若藏汉常用专名音义对照，尚在编订之中，更无论矣。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 11:00</span><div class="badge-floor">第 3 进</div></div><div class="post-body">简要纲目 <br/>
 <br/>
 甲一：文前叙敬分分二 <br/>
 乙一：叙编史之由 <br/>
@@ -1554,7 +1575,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 罗爵赞青＝＝达青罗爵赞青 <br/>
 罗渣祝青南卡赞青＝＝那治多杰 <br/>
 蒋干罗桑渣巴＝＝宗喀巴大士 <br/>
-释迦居士＝＝智者移喜多杰格尼能尼渣华＝＝楚宗遮啤兰楚朱那玛惠呢吗＝＝敦珠活佛渣康巴 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 11:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">西藏古代佛教史  <br/>
+释迦居士＝＝智者移喜多杰格尼能尼渣华＝＝楚宗遮啤兰楚朱那玛惠呢吗＝＝敦珠活佛渣康巴 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 11:10</span><div class="badge-floor">第 4 进</div></div><div class="post-body">西藏古代佛教史  <br/>
 西藏古代佛教史 <br/>
 又名胜利王之鼓音 <br/>
 <br/>
@@ -1664,7 +1685,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 ①大乐金刚禁戒，原名大乐金刚之禁戒舞，是如幻化出家戒 <br/>
 ②指他住世人间九百年。此段应是赞莲华生大士。 <br/>
-③指宁玛巴与格鲁巴教派无分别 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 11:31<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">甲二：依教广成分　分八 <br/>
+③指宁玛巴与格鲁巴教派无分别 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 11:31</span><div class="badge-floor">第 5 进</div></div><div class="post-body">甲二：依教广成分　分八 <br/>
 <br/>
 乙一：般若乘缘起　分四 <br/>
 <br/>
@@ -1743,7 +1764,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 弘化三转妙法-轮　双林树下示涅磐　周遍染污世界中 <br/>
 度生说法无间断 <br/>
-  <br/>
+736  <br/>
 　　从我佛在兜率天中，为白幢天子时起，便不断以法传付天人。而从周围围绕之走廊中，传出音乐之声，都是代表燃灯佛劝请释迦佛，到南瞻部洲以说法。于是释尊准备降生南瞻部洲。当时观察之方法有五：一、于此三千大千世界中，南瞻部洲之迦毗罗国，最为适中。二、诸族种姓，释迦第一，婆罗门苗裔，最为贵盛。三、净饭王与摩耶夫人，夫妻真正，堪为父母。四、今诸众生，是我发心以来所成熟者。五、时节因缘已至。如是观察已，因自想念：我应入摩耶夫人胎中，使甚深甘露，得以显现；遂先将十八个辩论者，都予以降伏，再将许多忠臣，从极苦地方，救度出来，成就菩提。如是觉已，乃乘六牙白象而来；于时摩耶夫人，住清净长养戒中，遂入胎焉。佛入胎内，以所有如来之加被故，胎中非常清净，无诸积污，如越量宫，而远离烦恼，住胎十月，表示十地圆满，然后出生。于是金色身体，在蓝毗尼园从母亲右臂降生；时不动金刚都来加持，诸天天子从天下降，为之灌浴，许多天人，在空中赞颂，大梵天与帝释天送衣服来。王子乃向四方各走七步，表示慈悲喜捨四无量心，步下都有莲花，是天神所现者。蓝毗尼园众花尽开，而难陀等释迦族有五百少年，耶输陀罗等八百少女，佣人顿巴五百，犍陟马等五百马，同时诞生；准备以供给王子。是时大地震动，天放光明，邻近四小国，同时诞生王子，各国父王，都极庆幸。 <br/>
  <br/>
 　　释迦佛出生后，菩提树与五百花园，五百库藏，皆自然开现，所以父王名之为一切义成。时有相师相之曰：如在家当为轮王，普王四洲；如出家则可成佛。佛出生后七天，摩耶夫人命终生天，由三十二位后妃，加以抚养。王子稍长，从笙布普叉学习书算，从桑波香林学骑象颈等武技，都能通达。父王在皇宫内，向三释迦族有女儿者，请纳为王子妃。释迦族说：“如王子通晓武技，当可如愿，否则恕难如命。”父王闻之，闷闷不乐。王子说：“三界中射箭与体力，无如我者。”于是答允竞技，释迦族中有傲慢者，定期宣布到郊外，与王子比赛；及出毗舍离城门外，时有人以一大象，献给王子；会王子之弟名提婆达多者常嫉其兄，遂即击死此象。难陀乃将象尸体掷出城门外；王子下马车，以足尖挑象，象体超越七层城郭之外，诸天为之赞颂。时大理树下，施列鼓凡七具，提婆达多先射彻三鼓，难陀彻五鼓，王子射之，穿过七鼓后入地，八功德水出焉。如是复比少壮力量，骑象游泳等，当游泳时，王子入水，身如雄鹅；如是等是六十四种比赛，无人能及王子菩萨，傲慢之释迦族，亦为之赞叹不已。时乃选女子中无五种过失，而有八种功德者，名耶输陀罗为第一夫人，名耶惟檀（西藏译沙图玛）为第二夫人，名鹿野（西藏译仪达遮）为第三夫人。父王为立三殿，殿各二万彩女，三殿凡六万綵女。  <br/>
@@ -1753,7 +1774,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 我当对之极悦意　　所有受用皆喜乐 <br/>
 <br/>
 一切有为法，都有坏而无常，且与苦俱，苦复随苦，于是王子出离之心，更为坚定。父净饭王虑其出家，乃在城门，派有警戒，昼夜防护，致王子无法出离。最后，夜里王子遥向父王致最敬礼，骑犍陟马上，四天王恭敬捧四马足上升空中，飞向清净塔旁，自剪头发出家，脱下俗衣，改穿袈裟。到毗舍离城，及摩竭陀国之王舍城，时远飞及那珠二仙，正入三摩地定中；王子知其不能离开烦恼，不是真正解脱之道。因又到尼连河畔，与乔陈如等五人，同修苦行。每年每人食一粒米，如是二年，第二个二年中，每人饮水一滴，第三个二年中，一切都不饮食。时空中天人请之出定；十方佛及佛子等，亦来劝请，出小乘定，引之以入大乘。王子出定已，觉得疲劳，因稍进食，以护身体。时彼五人，亦觉疲劳，到波罗捺国鹿野苑去。王子自往金刚座，在路上遇梵志女儿难陀波罗（西藏译宝摩利晶）用五百青牛牛乳供养之，王子受施已，身中充满气力，发光而成金色，由此梵志女儿福报甚大。复遇一卖草者名嘉斯（义为吉祥）所售草甚细软如孔雀项下毛，菩萨略取之，到金刚座（此是诸佛加被自生之金刚座，在菩提树根上）前，将草敷以为座，结跏趺坐，而作誓言：  <br/>
-   <br/>
+ 737  <br/>
 在此金刚座身体若乾　甚至皮骨和合皆毁坏 <br/>
 历劫难得菩提未证前　绝不离此自生金刚座 <br/>
 <br/>
@@ -1785,7 +1806,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 当时世尊未有答应，诸天王劝请至再至三，并以有大福德之千幅金轮奉献，而白佛言：摩竭陀地方，以前唯有罪行，故今特请转法-轮。如此恳切劝请，佛乃受金轮，而对天王言： <br/>
 大梵及摩竭陀诸有情　　耳根清净能信而智慧 <br/>
 平常所听一切有为法　　如今我当为开甘露门  <br/>
-   <br/>
+ 738  <br/>
 <br/>
 　　说毕，如是如来答允转法-轮之音，一弹指顷，即色究竟天亦能清晰听闻，即得听闻，皆大欢喜，悉皆前来供养。是时世尊以为第一甘露之器，必须易于调伏，且具足学习，与隐藏之智慧。复以回忆以前所发之愿，乃前赴鹿野苑。时憍陈如等五人言：“乔答摩弃捨苦行，而受饮食之乐，无复道心，我等见之，不须起立致敬！”  <br/>
  <br/>
@@ -1804,7 +1825,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 真实语与广大语　　都是如是所说中 <br/>
 <br/>
 不问众生根之次序，佛已将三大法-轮，先后均为之转，使有随入殊胜之因。而众生亦随而得闻佛无自性之言语，与佛无量功德法门，各乘异名，所化方便，与前后时间等，在众生心中永不能显。此三乘法深广如海，有等是言语与果法之排列，有等是天与人快乐之排列，有等则是在现阶段中，令人非常惊怖，而从可怖境中救度出来者；所说虽如此简单，但佛之神变却甚多，盖其功德无量也。简要言之：我之见闻觉知等，都是成佛种子之福田，而于乾闼婆、罗刹等，则用极佳之方便，以调伏之；此是佛极慈悲之调伏方便。  <br/>
-   <br/>
+ 739  <br/>
  <br/>
 　　佛到俱尸那迦城娑罗双树，作最后之指示。我佛三十二相，八十种随形好之色身，与十方诸佛，本无分别，而一切烦恼均已断除。时佛示疾，张口喉间发出噎声，为众生主母听见，即祈请佛住世三大阿僧祇劫，以救度众生，祈请之声，上达色究竟天，一切天人，随之祈请。佛告众生主母曰：“汝之祈请，是不契理。应知佛若长住世间？懈怠者将无法劝其学法。”众生主母，为表忏悔故，自取涅磐；五百女阿罗汉，随而涅磐。是时舍利弗、目犍连到地狱行，见外道教主，以因缘故，在此受苦；外道教主因请彼等返世间时，为之告诫其门徒。舍利弗先行代告，以因果故，其徒听而不闻。目犍连遂将彼教主受苦及请转告之语，详为告之，其徒众大为不悦，以为是攻击彼教，且谤彼教主，非降伏之不可，乃共将目犍连殴打，身体糜烂，有如泥塗；舍利弗见而以袈裟包裹，背之而行。及到声达城，因念目犍连必无生理，朋友之死，尚不愿闻，更不忍看。因赴那兰陀，在上午时，与八万阿罗汉共取圆寂。而目犍连亦与七万阿罗汉，在下午时，共取圆寂。复有许多阿罗汉亦同时圆寂，有如柴薪既尽，火遂熄灭。 <br/>
 <br/>
@@ -1818,7 +1839,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 舍卫城住廿三年　　药森林处住四年 <br/>
 <br/>
 燃光洞者住二年　　王舍城内住五年　　修苦行地住六年 <br/>
-在本国住廿九年　　如是住世八十载　　牟尼世尊示涅磐。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 11:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">　丙二：遗教结集　分二 <br/>
+在本国住廿九年　　如是住世八十载　　牟尼世尊示涅磐。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 11:49</span><div class="badge-floor">第 6 进</div></div><div class="post-body">　丙二：遗教结集　分二 <br/>
 <br/>
 世尊所说教法，如何结集，此有共乘（般若乘）与不共乘（金刚乘）两种所说，稍有差异，兹分别以明之。 <br/>
 丁一：共乘所说分四 <br/>
@@ -1872,7 +1893,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 佛教之传播，除释迦佛传给迦叶，为法王之代表，加以弘扬而外，并以传付上座十六人。 <br/>
 迦叶生于摩竭陀国婆罗门族，宁佐达城内。有宁佐达都之子，名宁佐达，祷告天佛而生迦叶。及长，其父为聘萨迦生摩为妻，金色美女也，但迦叶对之，无一刹那生起贪爱。双亲死后，遗物凡九百九十九袋，金六十千万，金缸八十个，迦叶弃如腐草，只取白布衣服，並使其妻至外道处修行，自己到释迦佛处去。时释迦佛成佛不久，迦叶一见之即说：“薄伽梵是我导师，我愿意作薄伽梵之声闻弟子。”如是三说。佛说：“善哉！我是你导师，你是我之声闻。”如是得近圆戒，其学识为众所称赞，以为最上，及后得佛传付法衣；迦叶便将以前所仅有之白布献呈佛陀。 <br/>
 初佛陀从兜率天下此世界，许多天人，因欲得法甘露，随而下降，迦叶亦其中之一，故年岁与佛大致相同。佛灭后，迦叶即将佛教护持弘扬，多年以来，所化者已有甚多解脱，余亦得法益。 <br/>
-   <br/>
+ 740  <br/>
  <br/>
 　　及迦叶将取涅磐，告阿难陀曰尔知佛以法付我，然后圆寂，我今欲圆寂，乃将佛法交尔护持，尔将来可交草衣（草衣有译作奢搦迦，义即麻类，此人生时，奢搦迦布裹身而出，故有此名）自此以后，迦叶到佛舍利塔供养，旋赴南部侧之翟江山，（汉译作鸡足山，或作尊足）山中裂开，成为两山，乃敷草坐三峰内，以佛所得传粪扫纳之法衣覆身入定，待弥勒菩萨当来下生，故其身体不坏而住，乃示现许多神变，取般涅磐，无量天人供养之，于是两山皆合，上皆密覆。时未生怨王在睡梦中，梦见王宫栋梁，相继摧折，醒来始知迦叶涅磐，即与阿难陀尊者，到翟江山，一夜又即将两山分开，使可得而观，王即皈依，并作供养。正拟纵火焚烧，阿难陀止之，谓“须等待弥勒佛下生。于第一次传法弟子领会时，九千九百万声闻到此山来，两山即开，看见遗体，弥勒佛取而置之掌中，以示大众，曰：此是释迦佛时之最上声闻，具甚多智慧而所穿法衣，亦是释迦佛传付，现在无有比丘，与之同等智慧者。弥勒佛说毕，于时迦叶遗体将显现甚多神变，无余没入天上，当时随弥勒佛来之声闻，皆大欢喜，起信仰心，亦得智慧证阿罗汉”后阿难陀偕王回去，山亦复合，即在山顶建塔，阿难陀负荷甘露佛法而去。 <br/>
  <br/>
@@ -1892,13 +1913,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 　　近藏传授修证弟子甚多，若以十八肘高十二尺宽之山洞，使其弟子受过七种教诲而证阿罗汉者，各以四指高之术，放置洞中，亦可全满，故说佛灭度后，证阿罗汉之弟子以彼为最多。其后近藏以佛法传付圣达德迦，而取涅磐。 <br/>
 圣达德迦证阿罗汉，通达三藏，以佛法传付摩竭陀国人圣黑，而取涅磐。 <br/>
-   <br/>
+ 741  <br/>
 圣黑证阿罗汉，通达三藏，于佛法极为保护。及后以之交付圣善现，而取涅磐。 <br/>
 有说日中罗汉，得圣善现传法，但依本派所说：是圣善现传付龙猛，而龙猛以上为七代。 <br/>
 释尊所传之十六上座，彼辈前来四大洲及三十三天等处，各有五百阿罗汉随同以护持佛法，如汉地唐苴时，有帝名耶王及萨青者则是也。以彼辈皆是虹身，虽有许多具福者，亲见其人，而一般凡夫，视而不见。 <br/>
  <br/>
 　　佛在世时，南瞻部洲十六城市，佛法均甚兴盛；而迦湿弥罗国尚无城市，佛灭度后一百年，日中罗汉，在入定中，佛授记说：应将佛法，传至彼国。故于阿难灭后二十年，日中罗汉知时节因缘成熟，乃到迦国。该地有塘在九谷中，为龙扰乱，狂风暴雨，雷电迅击。罗汉乃结跏趺，以入慈心定，法衣衣裾，从不稍动；龙乃以箭刀等武器，抛掷侵扰，竟均变成天花，缤纷乱坠，龙遂以为希有，请示所须。罗汉说：我是佛所授记来此，尔应为我安置蒲围地。龙就所坐地以献之，并问彼有多少弟子？答以五百阿罗汉。龙说倘不足五百之数，此地即当收回。罗汉说：“凡于其处，若有受者，即有施者；我欲施主亦当进入共同居止。”龙言悉从尊意。日中罗汉遂使此地变成城市，且甚良好，並加被之便不毁坏，故又称日中罗汉为幻师焉。日中並从醉香山上取金盏草花移植城市中说：若世界上有佛法，则此花开。其加被如此。现在许多人，都喜爱此地，其名为迦湿弥罗国又名迦尸迦国云。  <br/>
-   <br/>
+ 742  <br/>
 　　一　般若乘传播系统表 <br/>
 ┌水中罗汉 <br/>
 ┌迦叶——阿难陀─┤ <br/>
@@ -1907,13 +1928,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
  <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 11:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">丙四：大乘护持与弘扬 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 11:51</span><div class="badge-floor">第 7 进</div></div><div class="post-body">丙四：大乘护持与弘扬 <br/>
 <br/>
 佛灭度后，胜士及功德侪佛之大声闻，与喇嘛渣巴等阿罗汉众聚会，如迦叶上座部，国王赖遮嘉华等诸王，梵志部学问通达之诸学者，及会证功德之大德，无量数众以护持佛法。  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
+743  <br/>
+744  <br/>
+745  <br/>
+746  <br/>
  <br/>
 但依声闻经量部意趣所说，说分别库论，是阿罗汉所著；若依大乘所说，彼中各论，则为弥勒菩萨及龙猛所造，其后作注释者，皆是依止所造论之规矩分析而成。从佛所授记言之：甚深见续，是萨罗哈弟子龙猛所造；广大行续，是弥勒菩萨弟子无著所弘扬遍布，而所有证智力量规矩分析，是文殊菩萨弟子陈那所造；故论之原文，均是以上三尊所造。龙猛之弟子提婆（西藏译作圣天）是从莲花生来，殊胜可想；无著之弟世亲，是九十九部经籍甚深通达，多闻如海；陈那弟子法称，所有外道教之力量，多败于其手上。是等六大论师，前三尊造论，后三尊注释。论者或以龙猛无著为最上，以后者四尊，加功德光，释迦光二尊，为六大论师。若有七种希有见称之佛子寂天，与有一切智道力通达，而得成就之大德珍渣果密，如是二尊，世称之为希有胜士。 <br/>
  <br/>
@@ -1927,7 +1948,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 关于印度圣城中一切佛法之经教，与其修证之宝贵教诫，具有二圣善之命根无量数，此教史中，只稍简述，莫道其详。有志研讨者，应多阅读一切有名之历史，以资参考，则能令尊敬简要心，有如莲花之开放矣。 <br/>
 <br/>
-以前金刚乘宝贵佛法之来源，胜利王之鼓音中，佛之宝贵法，在世界上之来源，第一部圆满。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 11:59<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">乙二：金刚乘缘起　分二 <br/>
+以前金刚乘宝贵佛法之来源，胜利王之鼓音中，佛之宝贵法，在世界上之来源，第一部圆满。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 11:59</span><div class="badge-floor">第 8 进</div></div><div class="post-body">乙二：金刚乘缘起　分二 <br/>
 <br/>
 金刚乘之缘起，依本派所传，其不共之来源，共有三种。如说续海云： <br/>
 佛与菩萨及瑜伽　　意趣持明口耳传 <br/>
@@ -1939,21 +1960,21 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 丁一：表示传承 <br/>
 <br/>
 所谓胜者意趣，是一切出有坏之共吉祥六部遍主，普贤王如来在清净法界，金刚色究竟天，示现金刚持行相，于自他无二眷属，统摄五方佛，而为之导师。如此自明体之眷属，寂忿圣者之中围，无数明显示现，开示法性不可思议之真谛，远离一切言语声诠允许，加持通达空性之智慧，为法身语之名，以表示意趣，而为传承。如中观应成派论云： <br/>
-  <br/>
+747  <br/>
 无生法性在空中　　胜者大遍入意趣　　加持自声自明显 <br/>
  <br/>
 又如释心论云：“导师法身眷属，是智慧海，无生空性，以为释名。” <br/>
 不共甚深广大之光明金刚心中之地，各地导师眷属，及一切法，任运自生。智慧宝之外表三身自性，自然显露，变化无边，超越声音寻思之境。平等一味如理之法性轮转，永不变易，十地传统之一切大圣显现（指他显非自显）所积聚，圆满报身之受用法界，在金刚色究竟天六部之行相，与五方导师之行相，对特别眷属大菩萨，金刚手、观世音菩萨、文殊菩萨等殊胜清净之根与境之果地菩萨，以不可言诠转无上瑜伽法-轮。以此意趣表示之方法，以为传授永久之传统。如心要论云： <br/>
 无上色究竟天中　　毗卢遮那理性身　　向大菩萨眷属等 <br/>
 不可思诠无上语　　报身与法全显现  <br/>
-  <br/>
+748  <br/>
 　　有说断除兜率天烦恼之自在天在色究竟天说，如金刚幻化经云： <br/>
 断德一切清净众　　色究竟天圣地中　　 <br/>
 部主手印任运身　　远离一多之分别 <br/>
  <br/>
 与一切佛陀无二　　本来是大乘宝藏　　 <br/>
 向断烦恼所化众　　一刹那间而显现  <br/>
-  <br/>
+749  <br/>
 　　九地八地菩萨之法界，金刚比丘尼班嘉等一切越量宫，非常严历与可怕之威德，由毒害所化各根智慧明显之兮鲁迦，具勇力童子，莲花舞自在、黑金刚、渣渣森巴那、与时轮等在此种金刚地最主要中间宫之行相，示现种种形态，变化中围，那打不坏之声音，以转法-轮。如胜乐根续云： <br/>
 我最伟大之法王　　闻法说法皆是我 <br/>
 又如喜金刚续云： <br/>
@@ -2005,7 +2026,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 可惜可惜世界上　　佛日胜光已淹没　　黑暗何日再光明 <br/>
 彼等说此三句苦语，说毕痛哭。 <br/>
 薄伽梵来此世界上，以佛所授记时至，密乘之声音，遂开始传播。此时秘密主金刚手，已得得道灌顶，故将报身加以显现；五主及诸持明大德，将以前普贤王导师，在法界已传授之密乘法，再度显现传授。罗刹持明罗爵他丁，並将密乘法缮写，以吠琉璃造成经卷，以七种意趣之变化力，放在天空上看不见处，以隐藏起来。 <br/>
-  <br/>
+751  <br/>
 　　马拉雅山之楞伽（此非南瞻部洲小洲中之楞伽）主罗刹之发声王，请佛为说楞伽经，地在南瞻部洲之东南小洲，复有赤铜洲、麦洲、打那诗列洲、巴衣咕洲等小洲里，是时前后均有佛法弘扬。以前楞伽都是罗刹发声王所管辖，罗刹地方隐灭以后，有商王名狮子者来管辖之。现在地名胜加那洲，义即西冷。以前有大教主名伽哈那巴者到此，将比沙那巴等五百大罗刹调伏后，弘扬密法。其后复有大乘教主名楞伽渣华桑波者，在此出生大教主珍渣果密，曾到此地；星德巴，与班禅嘉芝宁青，亦曾到此，以弘扬密法。一千之人王拿玛尼，将罗刹王楞伽十项摧毁时，于南瞻部洲与小洲当中，造石桥以利通行，是以海上有许多大石，依然显现。有时船经此地，以大石嶙峋，须绕道而过，有人且说，当杀楞伽十颈时，颈血染汙，故一切石尽成红色，其地经半日才可走完。在此当中有山名苏玛那古打，其义即是无善心之墙，许多石山围绕，有如咒鬘，凡夫不能抵其山上。大教主师徒，曾到此地，居住山上者六年，后乃返回印度此山之共同名字，略说如上：真实名字，则为马拉雅山。以此山是具足一切山之体性，故亦有作如是说云： <br/>
 勇武大王在山顶　　山面白岩镶嵌著　　 <br/>
 狮子站立天空上（指像形也）山之麓植有草药 <br/>
@@ -2013,7 +2034,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 尚有一人在山上　　　　　　有如宝库之巢穴 <br/>
 具福德者能到达　　无福德者不能至 <br/>
 <br/>
-此外，比其他洲，有殊胜之功德，值得赞颂者：如山之北邻，有一大塔，名姑那维，另有如来舍利塔甚多；山之西邻有一树名宝达沙那拿，树根旁有如来曾在此修等引定七天，一切水都成珍珠，一切家都成宝具，一切树林都是象，一切妇女都是莲花种姓，如是充满，故其名为西冷。东北邻树林丛密，石洞中有释尊甚大之足印，洞名诗列巴都嘉。于是每有特别节日，便有一万二千比丘在此聚会；从以前到今，大乘小乘佛法之弘扬，闻均甚为发达云。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 12:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">丁二：补特迦罗口耳传承 <br/>
+此外，比其他洲，有殊胜之功德，值得赞颂者：如山之北邻，有一大塔，名姑那维，另有如来舍利塔甚多；山之西邻有一树名宝达沙那拿，树根旁有如来曾在此修等引定七天，一切水都成珍珠，一切家都成宝具，一切树林都是象，一切妇女都是莲花种姓，如是充满，故其名为西冷。东北邻树林丛密，石洞中有释尊甚大之足印，洞名诗列巴都嘉。于是每有特别节日，便有一万二千比丘在此聚会；从以前到今，大乘小乘佛法之弘扬，闻均甚为发达云。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 12:05</span><div class="badge-floor">第 9 进</div></div><div class="post-body">丁二：补特迦罗口耳传承 <br/>
 <br/>
 释尊遗教三次结集以后，迦腻色迦王之子，与弘扬大乘之教主五百人，都从金刚手得传付密法，而得神变。西方国王那叉雅疏，请此五百教主，到雅褒山顶，修建一寺以供养之。王之眷属，有智慧者五百人，随之出家，从五百教主听大乘法。时国王准备编集经卷，问教主辈经续共有多少？答以依共义言之，其数量不可思议，但在此地则有一千万。王念此数虽多，仍将之缮写，献呈教主；从此时起，大乘遂甚发达，复有秘密修学之四部续，亦复增长，于是诸教主，便从各地将许多密续取至，加以弘扬。 <br/>
  <br/>
@@ -2023,7 +2044,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 从身语意而融入　　宝经从天降下来　　大乘佛法之研习 <br/>
 彼此念佛法之经　　并造广大之供养　　天上下七宝之雨 <br/>
 授记表示他成佛（颂文七句，即表王渣所梦之七奇梦。） <br/>
-  <br/>
+752  <br/>
 　　王渣于释迦佛一切经续中，均有授记。如胜乐颂续说： <br/>
 我从圆寂时以后　　经一百一十二年　　 <br/>
 三天地名有名者　　佛教之心一圣者 <br/>
@@ -2034,7 +2055,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 有谓国王渣即是因渣菩提，而因渣菩提曾得释迦佛灌顶者。亦有谓国王渣是因渣菩提之子，更有谓中因渣菩提就是国王渣；如是三种不同之说法。本来大圣之化身，非凡夫所可思议，故可能如以上所述。但以其时考之，国王渣与姑姑喇渣同时，如此则中因渣菩提即国王渣一说，似较有根据。 <br/>
 <br/>
 大成就者那华巴与国王渣，无论是一是二，而彼等是同时。复有赖巴多杰、楚遮、渣伦打拿等，大抵亦是同时。 <br/>
-  <br/>
+753  <br/>
 　　国王渣修事部时，所有以前梦兆，均一一依次显现，有生遮钦佐经等许多经，与一肘高之金刚手佛像，均降临其王宫房顶。王渣恭敬供养，祷告发愿，且于都森些通记理乌经，已得通达，恭对金刚手佛像修行，至第七天，金刚萨垛，予以面见。给以智慧灌顶，而于经名与密意，皆能明瞭。 <br/>
 <br/>
 在此同时，阿努约噶之经续，已降临楞伽山上。而普贤智慧明示胜道集续五部中有说：吗哈约噶一切经续，已降临国王渣之房顶；阿努约噶一切经续，已降临楞伽山之树林上；其授记如此。当国王渣奉到降下之经续，乃赴沙珂，呈给教主姑巴也渣过目，教主对于书名与内容，均不了解。后呈教主姑姑喇渣看之，以姑姑于都森些通记理乌经，早经通达，遂依之修行，真能亲见金刚萨垛之面。金刚萨埵且开示以：密续一切义，就是密宗主给你之指导；作如此之授记。姑姑喇渣依之再修，真复面见密宗主，密宗主且给以一切教义之灌顶焉。密宗主复对之说：“一切教诫，你可请求赖渣啤给以传授。”作如此之授记，教主姑姑依密宗主之语，请得赖渣啤传授，乃将一切续部分十八函，为国王渣开说：国王渣乃造幻化道登记论云： <br/>
@@ -2042,7 +2063,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 金刚手现前指示　　大幻化网修持法　　量为五十千米堆 <br/>
 现前成就金刚手　　断受（受是不断）禁戒之行为 <br/>
 令诸吉利远烦恼　　其次弘扬于世间（将密宗弘扬之意） <br/>
-  <br/>
+754  <br/>
 　　国王渣自己本来已甚通达，但因为傲慢，故须依止姑姑喇渣以断之。姑姑喇渣又名狗王，有等历史称其名姑打蘭渣。姑姑日间变狗，向空行瑜伽母说法，晚间一同前往尸陀林会供，如此十二年，遂得大手印成就。有说此教主曾到过邬金。 <br/>
 <br/>
 教主姑姑在十八函密续中，有生遮钦佐五内续部，较为广大之说：其最后是依月密明点（指变运）得不共最胜成就。彼复造许多论，指示依变运获得功德：名密义明净六庄严论及后入一切中围五部仪轨。 <br/>
@@ -2064,7 +2085,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 国王渣曾造许多阐述密宗内容之论：如大幻化网明显道论、第二次第论、胜乐根续解释论、智慧任运论、一切生起成就论。 <br/>
 在印度圣地得成就者，其续与教诲大部分均是国王渣教主所传。而大乐光明之教诲，是王渣传付渣伦打拿，而渣伦打拿传付拿波爵巴及其弟子；谛洛巴、那诺巴与弟子等所传之规矩，均从此而来。即事业手印之教诲亦然，女公主戈妈德伟，传付姑姑喇渣，姑姑喇渣传付纪巴多杰、与生遮生汪。 <br/>
-  <br/>
+755  <br/>
 　　教主纪巴多杰，生于星沙那，在邬金出家，学习三藏，特于无著教派甚为通达，一切共同明处亦然。邬金有小洲名马德玛，他在洲中修习文殊法，接近成就时，文殊画像放光，在小洲中与太阳同等光明，即远处亦能看见，故时人称之为“像太阳”。该洲有一邪见修行者，修行时须以佛教班达之五根，以为修物，所以有人欲杀害纪巴多杰，多杰乃变成象、马、小狗、女孩子、水牛、孔雀等甚多，使其人无从分别谁是多杰，失望回去，因此人又称之为“种种化身”。他暮年在邬金造许多饶益众生之事，且于一切续部，均甚通达，尤其于大幻化网，获得成就。曾住那兰陀十年，护持密法，造无上续清净释名注解大疏，喜金刚圆满次第大明点次序、集续释上师口诀释、双运修法、其他续、密乘心要注疏、意明点、第六次序、发愿文，从小到大之幻化纲方面，造许多论，如此得金刚身成就。他出家时，名吉祥胜菩提，密名纪巴多杰；其所造论，亦有用纪巴多杰、像太阳、种种化身等名字者。 <br/>
 <br/>
 有一教主名生遮野些，向纪巴多杰接受大幻化网、双运、密集金刚、月密明点等十八部大登德中主要五内续闻思修而得智慧自在。口教经说： <br/>
@@ -2074,32 +2095,32 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 纪巴多杰在邬金护持密法时，有戌陀罗之子，见圣天论师，师予以加持，而得通达；乃将龙猛父子所有密宗，皆向之宣说。 <br/>
 <br/>
 马当纪巴、与恭伽那育，从那华渣闻法，第一次得灯光明显经，如此罗睺罗班知达时之集圣类，是第一次传来。 <br/>
-  <br/>
+756  <br/>
 　　教主生遮生汪论师，出生印度中部，在那兰陀出家，与教主佛喜二人，皆是野些年青时之弟子。在鹿野苑修妙吉祥法，一日画像竟现笑容，在沙锅内之奶油，不烧自沸，而旧花朵又开放，他知为成就之佳兆。当时乃自想念：先将花献佛，抑先自尝酥油，寻思片刻；夜叉母来阻障之，且以手批其颊，昏倒俄顷。及苏醒来，则佛像已为灰尘所汙，花亦残矣，酥油倾矣。遂将佛像扫除清净，花置头上，以供养佛，而所剩余之酥油，亦食净尽；于是身体一切病患，悉皆清除。且甚有力量，智慧明显，而得神通自在。 <br/>
 <br/>
 是时生遮生汪，前往邬金，谒见纪巴多杰，闻瑜伽部，及无上瑜伽部法，尤其对大幻化网，甚为通达。复与佛喜同到布达拉山朝观世音，时山下有绿度母向龙众说法，山腰忿怒度母向夜叉及“非人”说法，而山顶则观音菩萨在，乃朝礼之；生遮因得飞行成就。绿度母授记之云：如到西藏雪山区修行，将有成就。他旋从布达拉山回来，到鹿野苑，一住多年，以弘扬密法。其后妙吉祥开示：须依照绿度母所授记，往雪山修行，遂乃遵命前往。由是看见金刚法-轮中围多次，对妙吉祥，有如真人晤对；而于“非人”等，则有如眷属焉。他造论甚多，其最著者：为密乘心要论疏解释、金刚业次第、中围法义、胜庄严、大纲小纲、大小道次第二种、寂静与忿怒现观次序、瑜伽续金刚法-轮修法、毗卢证菩提集解、外静虑增广解释等。且对西藏有极大之恩泽，其最后身无人得见。 <br/>
-  <br/>
+757  <br/>
 　　教王姑姑喇渣又传付骆兰德维鸦洲、与仙人巴斯达二人，鸦洲传班渣哈些。哈些造密集金刚解释，及依其口诀修持，並造大乐修法等著作，留传至今。在印度圣地密集金刚教规之不同者，凡二十四种，到西藏者六种，其中第四种密集金刚教规来源，亦是从他传来者。哈些传付那兰陀西门守者鸦纪汪朱以胜乐轮灌顶，及续之讲解与口诀；汪朱修口诀得到双运大手印持明成就。汪朱与仙人巴斯达两人，传付沙珂王渣巴哈德，王是西方王族，出生于支打巴那，在寂光教主与马育之舒囊渣巴处出家，命名为释迦光，学习三藏能得通达。依教主多杰些巴，于密乘教主所有之续部，均能领悟，且得成就。其名为渣巴哈德，与密宗密名无二。渣巴传付弟子释迦些宁，些宁造“瑜伽续集空性解释”之论，名果沙利晶。如是师徒二人到迦湿弥罗造许多弘法利生之事。教主生遮生汪，与大教主啤吗森巴华，从教主渣巴哈德闻法甚多。而啤吗森巴华，且曾从王渣闻法。 <br/>
 <br/>
 妙吉祥幻化纲续说： <br/>
 具佛光荣莲花生　　遍知智慧司库者　　 <br/>
 各待幻化之法王　　总持明咒之“胜佛” <br/>
 有如此之授记。  <br/>
-  <br/>
+758  <br/>
 　　莲花生大士，是世界上一切如来语金刚之主宰，阿弥陀佛之化身，随所化者各各福缘，以上中下三根之分别，各有不同之观念。若依修部历史言之：他出生是乌金国之王子，亦有说是从天钱（按即雷铁）马拉雅山顶自己下来者。但从岩传派所有历史，都说他是化生；印度之西方乌金，其东、南、北三方均是海，南与西南邻近罗刹之地方，中有海洲，佛所加被之莲花茎，有各种颜色，花胚内从阿弥陀佛意化出来之金制金刚杵中有“”字，从此字化成幼儿，具足三十二相，八十随形好，右手持金刚杵，左手拿莲花，如此化身。于是在里面住之天人，及海洲中之空行，向之传授甚深法。 <br/>
 <br/>
 是时乌金国王因渣菩提，未有儿子，供养三宝，布施众生，致令库藏空虚，乃到海上寻如意宝珠。当法之大臣兹拉尊第一眼看见莲花生，即携之而回。于是国王亦朝见之。乃迎请至王宫，立之为王子，赐名莲花生，及海生金刚。从如意宝之力量，成为宝座，请之坐床；于是食品衣服等许多宝物，如雨下降，令一切众生，皆得温饱。他从童子游戏中，造许多成熟之事，其配偶名空行持明。及长，依佛法规，护持王国，而当国王，人称之为有髻王。他自想念：如当国王，则于利他事业，当无甚殊胜之成就，乃以禀告父王请辞，未得允许。一日他造游戏舞，手执三叉矛，以虚幻杀死魔臣之子，而将其神识度至色究竟天。于是为法律所限制，被放逐至施维叉与贾维叉处两尸陀林中，修赎罪之苦修法。有两空行敦都玛、喜华初，为灌顶加持之，所有此地之空行，均受其降伏，听其指挥；是时他名星德那车达。其后到打那果斯海洲，用密乘空行母之语与意，以降伏海洲之空行母。当在诸巴珠时，金刚亥母显现其前，予以加被，海中龙王，空中耀星，都发愿护持之。以上连三地之一切勇士与空行母，赐与成就，遂又名为金刚能力。及到金刚座，显现更多神变，有人问其是谁，他说我是自来佛，人皆不之信，且加以毁谤；他知之乃认为甚有出家闻法之需要。于是前往沙河，谒见教主渣巴哈德，从之出家，命名为释迦狮子。于一切瑜伽续，共闻十八次，忽然眼见诸佛之面。时有智慧空行，以每种智慧示现比丘母相名恭迦摩者现前，莲师请求灌顶，母遂变成“”字，入其喉中，于是其腹中所有外内密灌顶，均得圆满示现，三障清净（三障是习气、种子、现行三者。莲师本来已无如此三障，不过在所化前，示现而已。）。 <br/>
-  <br/>
-</div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 12:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body"> <br/>
-   <br/>
+759  <br/>
+760 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 12:08</span><div class="badge-floor">第 10 进</div></div><div class="post-body">761 <br/>
+762   <br/>
     莲师时从八大持明，闻八种修法部，从生遮生汪，闻幻化纲，从诗列星哈，闻大圆满，从许多胜地学者与成就者，闻经续及一切明。他对每一　种法，只一过目，即使通达，不必修行，诸佛亦来显现；是时又名罗登楚诗，而所修已到成熟边际。 <br/>
  <br/>
 他到沙河时，国王朱那珍有公主名满达那华，具空行之种姓，乃将之降伏，而后依以修行，偕至玛那诗迦岩洞，修长寿佛法三个月，长寿佛现前灌顶，作无二无别之加被，将“一百忆”续传授之，故得长寿自在持明成就，而成为无死金刚身。 <br/>
  <br/>
     但为著调伏沙河国王之有情，故在沙河示现圆寂。时国王与王臣将其身体浇以麻油，送至火中荼毗之，讵麻油竟变成海，海中有茎莲花，他坐在莲花中，以此神变，调伏所化有情，以增长其信心，于是一切有情，皆皈依佛法，且得不退地。 <br/>
- <br/>
- <br/>
-       <br/>
+763 <br/>
+764 <br/>
+765       <br/>
     其后返到乌金，拟将该地有情，予以调伏，因此现乞食者身前往，但国人皆知其为杀死魔鬼之子而被放逐，且曾圆寂而在海上莲花中双运示现者。于是莲师身上即现出人骨璎珞甚多，表示一切众生在轮迴中，于是他又名为莲花璎珞。乌金王供养之十三年，国内一切人民都皈依佛法，而得不退地。 <br/>
 <br/>
 莲师以佛教结集法海，传授父王母后，给予成熟解脱；所有当地有缘人士，均得上持明，故时人皆尊称之为莲花王，此名与行境神变经所授记者无二也。  <br/>
@@ -2114,7 +2135,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 修清净之不共成就，如远行商之经营，颇多障碍，普巴续者则有如长途护送之侍卫，故相需甚殷。如是教主所造之普巴续合修仪轨甚多；並有十六个普巴护法等，与一切轮回父续母续，均立誓为护法。教主且常到乌金小岛名胡模洲、诗果打那、打那果斯、杜玛、达那胡德、他育国土、与嘉马鲁那等处，对具福缘者，如理传法，随根器而授给，共同成就，作利益无量众生之事。 <br/>
 <br/>
 并于无水之处，为开水源，泛滥大河，则藏之于地下。印度东、南、中、三地，有外道自生梵志各一人，伤毁佛教，教主乃用金刚普巴法，以消灭之。于间支地区，佛教本甚发达，时有杜噜卡王率领军队，乘船准备渡尼拉河前往，以伤害佛法；当在河中，教主以手作期克印，将五百船翻在河中，嗣此杜噜卡之伤害，乃中止焉。 <br/>
-  <br/>
+766  <br/>
 　　教主到佐丁巴时，空行与人非人等逐渐调伏，且使之修建佛寺。对教规之喜金刚、月密明点、清净马头金刚、普巴本母等四续部之闻法、说法、与修行三者，裨益甚大，所以此地在最近以前，佛教固非常发达也。依其传记里说：由此地直至印度南罗刹地区，亦复如是，即印度之传说，都如是云。依共义言之：教主在印度共住三千六百年，以弘法利生，但许多学者意见，以为应以折半计算，亦较多也。 <br/>
 <br/>
 教主为降伏珂（地名在蒙古附近）与中国之所化，乃化成神通王，及具力瑜伽者，以为调伏。又在西藏之桑松，化身为自生童子，名达啤诗渣，将大圆满教传派口耳传承，传授许多具福缘者，皆得虹身成就。即使是所有不同种族，不同语言之地方，教主亦用种种不同之事业，以调伏之，使得解脱之道。如此无限之善业，亦是以如此不同之行相，不同之名字，以造成其历史。但只有直接传承（指亲承教诲者）与间接传承（指奉持其经续者）之不同，其余无一不是其化身所化之大地，所以入双运佛位者之历史，将无人能尽其边际，而全部了知也。 <br/>
@@ -2150,7 +2171,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 │　　　　　　　│第二金刚持　　│　　　　　　　│ <br/>
 │　　　　　　　│啤吗嘉邦　　　│　　　　　　　│ <br/>
 │　　　　　　　│啤吗忠兰　　　│　　　　　　　│ <br/>
-└───────┴───────┴───────┘ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 12:16<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">四　吗哈约噶续部传承系统表 <br/>
+└───────┴───────┴───────┘ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 12:16</span><div class="badge-floor">第 11 进</div></div><div class="post-body">四　吗哈约噶续部传承系统表 <br/>
 <br/>
 （甲）大幻化网传承： <br/>
 <br/>
@@ -2193,7 +2214,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 如前所说，教主于生起次第、圆满次第、大圆满，及其他续部以饶益众生。並将扬达汝噜些亲、及生遮钦佐续内口诀，区分为四，其内容甚为明显。所造论有兮鲁迦之仪轨、第二次序论等，亦甚精警。最后便如大鹏鸟王，飞到不动佛刹土去矣。 <br/>
 <br/>
 教主柯华杜达巴，与教主生遮巴诗华二人生起次第，皆是从空遮伽雅教主处闻者。二人以之传于教主大金刚座疏利巴，疏传付之于教主支麦宗兰及其弟子。 <br/>
-  <br/>
+767  <br/>
 　　教主蒋巴舍宁，是身毗卢遮那佛族之妙吉祥忿怒密续等大威德，具福缘而降生者。出生于西印度迎巴宁巴城内，父名沙都沙笛，母名兰华尊美，少时于四吠陀典，已甚通达。得大教主骆兰他多，传授内外密乘灌顶，及共不共一切口诀。並从教主罗比多杰处，学敌、面（按即狮面母）威（按即大威德）三续，因得领悟共同成就，将证双运之佛位。 <br/>
 <br/>
 当教主行瑜伽时，有外道国王骑象，从对面来，遇之于桥，彼此不让；教主以期克印指示，王及象竟分为两半，掉在桥之左右。国王眷属向之道歉忏悔祈祷，教主乃将国王及象，合而为一，王从此皈依佛教。教主说： <br/>
@@ -2203,12 +2224,12 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 一日，与文殊师利菩萨无二，而到双运佛位之妙吉祥阎曼德迦（即大威德）为教主灌顶，以续与口诀悉皆传授，时有许多化身事业之阎摩围绕，将命根及心献奉；且从马拉雅山取出四事业全金字写在吠琉璃上之经卷，阅之即得领悟。由是调伏外道，用咒将外道国土，皆予消灭，乃将金字经卷盖印，放置印度金刚座北旁隐蔽地方。他又名婆罗门迎波竹巴，依此名言，大教主支达意之父名婆罗门迎波寿，似即为此师。 <br/>
 <br/>
 教主蒋巴已得妙吉祥之根本咒，时有一国王名达玛巴那，尊之为上师；并请为其王子传妙吉祥法，其后王子亦得成就。教主之弟子，在时轮金刚外续有授记者，其名为婆罗门移喜多杰，与蒋操多杰二人，所说续部甚多，彼等之（教降，即所有教传各大德之出生皆有“教降”之语。教降者，是从本尊传下来，加以弘扬之意。）传承，有如此之记载。复有大敦宇多杰，从教主所闻阎曼德迦法之一切，即以之传付于小敦宇多杰等，故在西藏有名阎曼德迦之来源，实肇始于此也。 <br/>
-  <br/>
+768  <br/>
 　　大教主圣龙猛论师，是无量光语族之胜马游戏等莲花语一切登德之传承。有说巴渣美诗那施食之教主，是巴凌阿渣雅，而不是圣龙猛。但巴凌阿渣雅，意为“龙猛心要”而不名“圣”，因此教主圣龙猛所造一切论中，其名字均写“圣龙猛精华”，故勿将龙猛与圣龙猛，混而为一也。圣龙猛教主之名誉，无人不知。他所请来八个吗哈嘉那之续，天女黑母之续，与咕噜咕叻之大慧等，及其他续之种类甚多。教主以得智慧空行母之口诀，与多种修法，凡六十种。在八大共同成就中，每给不同之成就亦不少。教主住诗列巴达二百年，许多夜叉母之眷属前来，与之修瑜伽行，如是证得金刚身。 <br/>
 <br/>
 教主卑吗那密渣，是功德宝源族金刚甘露八部传承。出生于印度西方之象林，对五明甚为通达，且向许多持经大德，闻大小乘之经藏，因此成为学者。复从教主毕达咕兮等许多大金刚持，闻所有之续部，依之修持，得大手印成就；而于大幻化网，尤为胜解。其著作有灯光心要之解释、上师除障法、及支分解释、八十部集解、开智慧论、三明、手印静虑、护摩会供、梵尸事业、布坛次序、简略解释等论。 <br/>
 <br/>
-教主渣巴哈德是义成族普巴事业续传承。（教降）大教主啤吗森巴华，当莲花生大士在赖舒依止兮鲁迦中围，作大手印之持明时，有遵波龙王，果玛卡夜叉、空中非人罗玛卡三者以心中不安，对大士作恶意之加害。大士为调伏之，从比多登达那十万颂修行，班渣咕玛那、现身将上列之障碍，皆予以消灭。于是十二本母，四个地主，均向之立誓护法焉。大士又向教主渣巴哈德，闻机那雅续十八遍，成为一切普巴事业之教主。以后各教主，自己固依之修行，并传给有缘所化，以弘扬焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 12:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">　　五　吗哈约噶修部教传系统表 <br/>
+教主渣巴哈德是义成族普巴事业续传承。（教降）大教主啤吗森巴华，当莲花生大士在赖舒依止兮鲁迦中围，作大手印之持明时，有遵波龙王，果玛卡夜叉、空中非人罗玛卡三者以心中不安，对大士作恶意之加害。大士为调伏之，从比多登达那十万颂修行，班渣咕玛那、现身将上列之障碍，皆予以消灭。于是十二本母，四个地主，均向之立誓护法焉。大士又向教主渣巴哈德，闻机那雅续十八遍，成为一切普巴事业之教主。以后各教主，自己固依之修行，并传给有缘所化，以弘扬焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 12:29</span><div class="badge-floor">第 12 进</div></div><div class="post-body">　　五　吗哈约噶修部教传系统表 <br/>
 （甲） <br/>
 生遮野些─┐　　　　　　　　┌柯华杜达巴─┐ <br/>
 ├——空遮伽雅——┤　　　　　　├—疏利巴——支麦宗兰 <br/>
@@ -2233,7 +2254,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 金刚法菩萨，将一切共不共之修部，造成经卷，以暂时在此世界无缘显现，乃交付事业自在空行母保留之此即为严传。母乃将八修教、五共同续、十特别续，一並放置于宝箱内，而将特别续，各各分置宝箱。加盖以印，存于尸陀林之塔名德遮诗啤车内，隐蔽而不为人所见。 <br/>
 <br/>
-其后有大成就之教主八人，皆有神通，由于专诚祈祷，得知经续存于何处，彼等即往其间，修持我佛意旨之禁行法。当时有世间空行，与傲慢空行之集会，成就者乃以谛理开示之，並修利他意旨之禅定，以此力量，于是事业自在空行母显现，而将藏经之宝箱取出，分别呈献焉。所献者：是以殊胜之金箱，献卑吗那密渣；清净之银箱，献空遮伽雅；閰摩之铁箱，献蒋巴舍宁；马头之赤铜箱，献郎嘉佐那；普巴之绿松耳石箱，献莲花生；本母之犀牛箱，献达那生芝达；供（供养）赞（赞颂）胜（殊胜）箱，献岩布姑希；猛咒之玛瑙箱，献史华迎波；如是献已。诸成就者均能通达其意义，而得密咒成就。此八种宝箱所存者，皆是一切善逝所积集之续部与口诀。及后均传给莲花生大士。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 12:35<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">戊二：阿努约噶（圆满次第） <br/>
+其后有大成就之教主八人，皆有神通，由于专诚祈祷，得知经续存于何处，彼等即往其间，修持我佛意旨之禁行法。当时有世间空行，与傲慢空行之集会，成就者乃以谛理开示之，並修利他意旨之禅定，以此力量，于是事业自在空行母显现，而将藏经之宝箱取出，分别呈献焉。所献者：是以殊胜之金箱，献卑吗那密渣；清净之银箱，献空遮伽雅；閰摩之铁箱，献蒋巴舍宁；马头之赤铜箱，献郎嘉佐那；普巴之绿松耳石箱，献莲花生；本母之犀牛箱，献达那生芝达；供（供养）赞（赞颂）胜（殊胜）箱，献岩布姑希；猛咒之玛瑙箱，献史华迎波；如是献已。诸成就者均能通达其意义，而得密咒成就。此八种宝箱所存者，皆是一切善逝所积集之续部与口诀。及后均传给莲花生大士。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 12:35</span><div class="badge-floor">第 13 进</div></div><div class="post-body">戊二：阿努约噶（圆满次第） <br/>
 <br/>
 <br/>
 阿努约噶之传播经过，本来密主金刚手，将一切法传付王渣，王渣均已领悟。不过为于所化异生前，以密法授受如此简单，易启轻法之念。所以由“人持明”之赖渣啤，为王渣灌顶，並由王渣以恭敬语，向赖求法，及造共同经解释论呈献，以表诚恳。 <br/>
@@ -2260,7 +2281,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 教主吽遮在白云城市里，灌顶与德华些遮。而德曾从空遮伽雅教主闻法，修成虹身即持明身。其所造论，有十八种不同之文字，及瑜伽次第大乘灯等。德传付具福缘之大弟子四人，並从孟嘉达内传给达玛波德大堪布。波德著作，有经义集注、智慧灯论、部派经等。后在那兰陀传给达玛兰渣巴堪布，灌顶与传授续部。并在摩竟陀国王舍城，传给尼泊尔国王巴苏打那、与珠那巴叽灌顶，并传授续部。彼三人者，曾从达那喇赤德，闻受关于阿努约噶之法。如上所说，四人之一切眷属，都是灌顶教诫、开示教诫、与口诀教诫，三种一并传授者。 <br/>
 <br/>
-上列三教主，在中印度之竹沙，这教主车珍遮灌顶，并讲授续部，故车亦得成就。后车以仰慕教主达那喇赤德，请之前往竹沙，翻译经义注释集。将行达觉得此行法缘希望不大，乃转赴尼泊尔，传给其国王巴苏打那，与达玛波德。其后车珍遮在达玛波德，及达那喇赤德面前，将经义注释集，译成竹沙（按竹沙在印度西北方，西藏之西方）语文，流传当世。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 12:45<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">六　阿努约噶传承系统表  <br/>
+上列三教主，在中印度之竹沙，这教主车珍遮灌顶，并讲授续部，故车亦得成就。后车以仰慕教主达那喇赤德，请之前往竹沙，翻译经义注释集。将行达觉得此行法缘希望不大，乃转赴尼泊尔，传给其国王巴苏打那，与达玛波德。其后车珍遮在达玛波德，及达那喇赤德面前，将经义注释集，译成竹沙（按竹沙在印度西北方，西藏之西方）语文，流传当世。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 12:45</span><div class="badge-floor">第 14 进</div></div><div class="post-body">六　阿努约噶传承系统表  <br/>
 　　　　　　　　　　　┌姑巴也渣 <br/>
 │　　　　　┌星哈菩提 <br/>
 ├释迦布捷─┤ <br/>
@@ -2288,7 +2309,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 依估导师薄伽梵　　自性光明作护持　　 <br/>
 恭敬劝请护念我（天人自说）　　虚空金刚（婴儿之名）我祈祷 <br/>
 <br/>
-空行、空行母、天、龙、夜叉等护持世间者，皆以许多用具，来兴供养赞叹焉。   <br/>
+空行、空行母、天、龙、夜叉等护持世间者，皆以许多用具，来兴供养赞叹焉。 769  <br/>
 <br/>
 　　及过七年，王子对母亲说：呜呼！我欲向班知达辈，发挥辩才，请赐准许。母说：尔年太轻，而请班知达，皆是有学问之学者，怎能与之相比。但其子卻请无论如何，给予机会。母亲无法劝阻，因念其父姑巴也渣国王所供养之福田学者五百，乃饬往该处，与彼等作佛法之讨论。子乃前往，面见国王，作如前之申请。王念彼太年轻，对诸班知达难作佛法之研讨；但以其身上具有许多圣者之相，缘是姑予答应；乃以告所供养之福田辈，诸班知达默尔无言。时有一大学者说：今年有一吉兆，可让此子进来，彼一定是佛之化身也。比进入，孩子向诸班知达顶礼，如是研讨商议多次，多所发挥；彼等本来以为自己是大智慧者，至此傲慢心皆已消除，乃礼孩子双足，置自顶上，作大供养，且名之曰渣渣巴华持明。国王闻之，亦诧亦喜，乃为之命名为嘉饶多杰。其母亦以他前曾弃置灰堆，亦无伤害，因命名为嘉兰德华，或骆兰他多。 <br/>
 <br/>
@@ -2306,7 +2327,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 妙吉祥口诀论内，详述吗哈阿努二约噶空性之修法，是教主生遮野些，结集而成，可见他之成就，已得法之究竟。但第一次对从狗吐出之鱼不愿吃，及看见老居士犁田，便起不大信心；故令其身体，不能得到不共成就，以证虹身；至于中有时，成就金刚萨垛。 <br/>
 宋惠寿者，从教主生遮野些处，修其教诲，亦得成就。所造明点解脱论，普贤五成就方便等许多论，及圆满次第之口诀，以前在西藏所流传，皆是心部清净之宗派，故彼诸弟子聚会，均能达到大圆满之义理也。 <br/>
-  <br/>
+770  <br/>
 　　有云：教主诗列星哈，是宋之异名，依一部分历史考察，可能是其名字。时中国之疏清城，有家长纪仪微，妻郎华沙华饶都亲玛，其子诗列星哈，具有福德。修杜多德（苦行也）年十五岁时，从教主哈呢巴那，学习因明与声明等共同明者三年，已甚通达，成为大学者。其后往西方金洲城市，在路上时，看见观音菩萨，在空中为之授记曰：尔如欲得有福之果，可到印度尸林疏沙陵去。教主闻之，非常满意。为易于了解无上果，故对密宗续，定须学得通达。乃赴五台山，依靠戍陀罗族之教主啤那机德，闻受一切内外密乘法，甚得领悟，于是出家成比丘身及经师。 <br/>
 <br/>
 及三十岁，修禁行律仪。因意念以前之授记，拟到印度，且觉前往並不困难，可以稍修神变，如是修习三年，得持明身。从此双脚，可以离地一肘而行，转瞬到达。叩见教主蒋巴舍宁，请求赐予随后成就，不稍捨离。教主大喜答应，二十五年当中，传以一切教诲，及随行教诲。其后教主化成光蕴身示寂，诗列星哈发出痛苦之哭声，教主身体，即在空中显现；並给他以一个宝箧，表示圆寂后之最胜口诀，诗列遂得甚深了义之定解。 <br/>
@@ -2316,16 +2337,16 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 以前教主诗列星哈，从金刚座下，取出所藏密典，其后到中国，遂将大圆满口诀部分四：一、外类，二、内类，三、密类，四、无上密类；前列三类，是编集戏论之义；编成之后，密存于菩提树寺，不为人见；无上密类，则依照空行授记，放置在吉祥座门柱下，放置时并祈祷发愿。 <br/>
 <br/>
 教主到施珍大尸陀林，有许多奇怪而有毒之非人，向之供养，他便入定。时印度西方南布港有家长德敦果罗，妻德宁些利，其子卑吗那密渣；及东方嘉玛诗利城市，有戍陀罗族史华喇巴，妻纪惠生晶玛，其子移喜度。一日，金刚萨垛显现，对彼二人曰：吾子二人，五百生都是班知达身，受用佛位；但以前未得果，现在仍不得果，如欲在此一世之人身，将此有漏蕴身体，转变成佛，可到中国菩提树寺。作如是之授记。 <br/>
-  <br/>
+771  <br/>
 　　卑吗那密渣托钵而至中国，见到诗列星哈，在此一住二十年，得到耳传全部内外密教诲之传授，但于经续却未得之。卑吗便满意回到印度，见渣那宿渣，报告到中国后受法情况。 <br/>
-  <br/>
+772  <br/>
 　　渣那以前曾得空行授记，而是非常精进者，亦曾到中国求法；在施珍大尸陀林，见到诗列教主，一住三年，亲近承事，常令上师欢喜，且将黄金曼达，献呈上师，求受教诲。于九年当中，所有耳传教诲，甚至经续，均已获得，乃甚满意，准备回去。教主问以是否满意乃对曰然。教主说：上师尚有许多未曾传你。他遂再求最深教诲，教主乃为之灌顶，将外类有戏论之全部灌顶，及无上密类之口诀，于三年中，一切传之。渣那请示是否须要修行？上师以尚有无戏论之灌顶，亦当传授。遂在果沙那山顶，以轮涅不二之行为，作无戏论之灌顶；继续将极无戏论之灌顶，全部付与。十六年中，他依之修行，教主特别用各种行为，以作模范。时有利育国王，迎请渣那返国供养，他刚到利育七日，忽听见极大声音，知非吉兆，並看见诗列教主坐在天空上，因此知道教主涅磐 ，于是痛哭 ，发出悲苦之声音，教主乃将遗嘱降下，付其手上，遗嘱内说：秘密心要口诀与经续，皆在吉祥座门柱子里，尔欲取出，应到班星尸陀林去；作如此之授记。渣那乃将所有秘密经续，带到印度班星尸陀林，向世间及出世间空行与空行母，转密心要法-轮，并在此地传授。 <br/>
 <br/>
 当卑吗那密渣正在修行时，有一次空行告之曰：“嗟！具福德者，如欲得比以前更深之心要教诲，便应到班星大尸陀林去。”如是授记，说毕不见。他乃往谒渣那宿渣求授最深教诲，教主示以各种神变。如是有戏论及无戏论之灌顶，均传授之；並偕之到兰遮山顶，以轮涅不二之行为，作无戏论全部灌顶，皆付与焉，因此他便全部领悟。 <br/>
 <br/>
 卑吗鼻尖有白颜色“阿”字，凌空嵌成，如欲堕状。及渣那传以极无戏论之灌顶，能证赤裸裸之空性；关于大圆满类之灌顶，教诲及经续，均传付之；十年当中，已断疑焉。其后渣那之身体，化成光蕴圆寂，卑吗大哭发出几声痛苦之声音，渣那便在空中显现身体，並将五宝庄严之宝箧，交其手中，此是涅磐以后之口诀，因此便得“语不增减，义无错误”之证量。 <br/>
 <br/>
-后来卑吗到东方嘉玛鲁城，作星叽生波王之福田者二十年。又到西方比雅城，作达玛巴那王之福田。並在饶都郎遮大尸陀林，对“有毒者”聚会，以“禁行”方法（即诸恶莫作，众善奉行之方法）传之。将殊胜密乘经续，缮写三份：一埋藏于乌金金沙海洲内，一存迦湿弥罗之金洲岩洞里，一存他所坐之大尸陀林里，作竿空行之福田。而其自己之大迁清净身，留在印度圣地颇久，然后前往西藏。至其在西藏之弘化事迹，容后再详述之。  </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 12:47<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">七　阿的约噶传承系统表 <br/>
+后来卑吗到东方嘉玛鲁城，作星叽生波王之福田者二十年。又到西方比雅城，作达玛巴那王之福田。並在饶都郎遮大尸陀林，对“有毒者”聚会，以“禁行”方法（即诸恶莫作，众善奉行之方法）传之。将殊胜密乘经续，缮写三份：一埋藏于乌金金沙海洲内，一存迦湿弥罗之金洲岩洞里，一存他所坐之大尸陀林里，作竿空行之福田。而其自己之大迁清净身，留在印度圣地颇久，然后前往西藏。至其在西藏之弘化事迹，容后再详述之。  </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 12:47</span><div class="badge-floor">第 15 进</div></div><div class="post-body">七　阿的约噶传承系统表 <br/>
 <br/>
 　　　　　　　　　　　　　　┌圣天菩萨 <br/>
 │ <br/>
@@ -2356,8 +2377,8 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 　　后来在中印度之佛法，差不多已衰落矣，而东方许多共同名字为国基之小地，及南方之渣美佐德巴、达那诗列洲、珍渣德巴等，与北方姑芝那他等，其大乘、小乘、及密乘法之传播，从古至今未有衰落，以后新来与现在真正之佛法，尚在此间。密乘行者大部分仍是保持莲花生大士之教规；亦有大部分，是大成就者果那叉之弟子佐叽达部十二人，尤其是那他巴悌里，从帝沙呢部来之金刚大教主星达古巴与其子等诸弟子，皆以佐叽达部之人为多。近来在圣地两旁啤些大山内，孟遮地区，其国王名巴那彭渣，将南方之续部，均翻译出来。复有一名史华德巴者，及其弟子等，皆是国王之福田，且将如来之佛法，从新加以弘扬。听圣地之人民说：将来在南方班遮山里，我佛教法，从新弘扬，佛曾有作如此之授记者。 <br/>
 <br/>
-以前金刚乘宝贵佛法之来源，胜利王之鼓音里面金刚乘不共佛法之来源第二部圆满。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 12:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">乙三：西藏黑洲佛灯之传播 <br/>
-  <br/>
+以前金刚乘宝贵佛法之来源，胜利王之鼓音里面金刚乘不共佛法之来源第二部圆满。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 12:49</span><div class="badge-floor">第 16 进</div></div><div class="post-body">乙三：西藏黑洲佛灯之传播 <br/>
+773  <br/>
 　　世界佛法弘扬之大地有六：曰印度、曰中国、曰西藏、曰利、曰香拔拉、曰嘉那沙（在西藏西北方）其中第三之雪山区域，佛法从何时传入，有足述者。 <br/>
  <br/>
 妙吉祥经续说： <br/>
@@ -2370,15 +2391,15 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 尼墀之王子为穆慈赞波，再传为郎遮慈尊，多芝丁呢、沙衣那竹、巴芝德遮、赤那珍鸦等，如是一代一代以相传者；依上列国王之传记，当时国家，是黑教所管理。 <br/>
 <br/>
 无垢天女授记说：我涅磐后二十五百年时，在东玛晶地方，佛教弘扬起来，有如此之授记。 <br/>
-  <br/>
+774  <br/>
 　　国王传记说：第二十八位国王，是普贤菩萨之化身，名哈图妥列呢珍，当其住在勇布那冈王宫时，宫顶降下宝箧，启而视之，则内有经书，为榜宫叉渣巴、如意珠总持宝箧庄严经、六字明、及金塔等，他虽不知为何，只觉其为宝物，乃庄严以供养之。缘是之故，国王更得加持，时已六十一岁，竟返老还童，变成十六岁之青年，其寿命至一百二十岁。国王传记中所记，从此始至第五位国王时，对于经典之意义，已从祈祷而得了解，且得授记，遂开始作佛法之弘扬。 <br/>
-  <br/>
+775  <br/>
 　　关于宝箧降下之来源，传说颇多，依尼巴班知达所说，从天空降下，此是黑教之说法，因彼教尊天也。复有说是罗森楚班知达，与罗渣华悌列些二人所取来者。但国王对其中文字意义，漠然不知，故二人就此回去，如此说法，较为真实。其后有名比些冷者，到尼泊尔，见史华楚堪布，堪布告之说：西藏王与你我三人，均须变成养鸟母之子，以弘扬迦叶佛之佛法，我经祷告，但王未出世，你亦老矣；我在此等待，已历九王传统。此事阅巴叶铮玛史便知其详，其如此说，自有其真义，且亦是部分学者之意趣所在。 <br/>
 妙吉根续内所说： <br/>
 哈丁（即拉萨）是雪山围绕　　有国王名人之神　　 <br/>
 从赖渣啤族而来 <br/>
-　　其授记有如此者。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 13:28<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">丙一：三代法王建立佛教 <br/>
-  <br/>
+　　其授记有如此者。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 13:28</span><div class="badge-floor">第 17 进</div></div><div class="post-body">丙一：三代法王建立佛教 <br/>
+776  <br/>
 　　从哈图妥列呢珍国王，传至第五位国王，是观世音菩萨化成人身之松真刚布，（又名松真遮）十三岁即登王位。十五岁时，从化身比丘阿嘉玛达诗列处，请得一尊自来观音之佛像，並派遣金刚手化身之法臣嘉，四出访寻释迦佛八岁与十二岁身量之真正佛代表，恭敬请来。嘉奉派后，即往迎请有海上莲花之称之有额部（度母之一）度母化身之尼泊尔公主慈珍，及绿度母化身之中国文成公主，以为王后。并修建佛堂一座，名为普仁，当修建时，非人常加以灾害，以败坏之。 <br/>
  <br/>
     王及二王后到支舒扬镇之柏宫卡王宫内，修成本尊，修行时得成就本尊授记说：以所修之地方，是罗刹仰卧之重地，如欲加以降伏，应在该地四旁，皆建庙宇，以改变之。如是遵行，已将佛堂建好，（按：即西藏拉萨神变大庙）而尼泊尔公主所盖之拿摩车庙，亦已建成，两方佛像，均将以供奉。从印度请来之教主姑沙那，与婆罗门森嘉那，尼泊尔请来之教主诗列那玛珠，及从中国请来之教主哈森玛哈雅那，彼等带来之三藏经，与许多续部，均加以翻译，以建立佛法，但仍未有真正之说法及闻法者，只有王及具福缘者，得到不公开传授以大慈大悲寂静忿怒之续部教诲，依以修行。  <br/>
@@ -2386,7 +2407,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　“舍美”七人未出家前，在支舒扬镇之柏宫卡王宫内，大慈大悲之修瑜伽行者，凡百余人，是时所说之教诲，已加以结集，並将之分成三种，放在三种岩里。其后祝图昂珠、雅达扬，及尊师释迦光三人，将岩藏法请出，法之名字，为摩尼嘉榜，这西藏佛法教诲之开始。 <br/>
 <br/>
 法王复遣派文殊化身纯密森波渣，前往印度，研究文字及声明学，非常通达；遂以梵文为藏文之蓝本，创制文字，并造文法论八卷，于佛法作取舍，以前西藏所无也。从此以后，西藏佛法与文法之大门，皆敞开焉。文字大行而后，成为一切财物，与佛法之根本来源。 <br/>
-  <br/>
+777  <br/>
 　　从此以后，第五传国王，为妙吉祥之化身赤松德真。根据以前麦松真之授记说：从我（按似即是楹真刚布）到第五传，名渣波德，于时弘扬佛法。其所授记，用铜板缮写，以其时计之已经到矣。 <br/>
 <br/>
 王德从十三岁登王位，二十岁时，便弘扬佛法；派人前往沙珂，迎请堪布菩提萨埵前往西藏，以开示佛教十善与十八界。时西藏之神与罗刹等，非常憎恨；故有玛波山雷殛，彭汤王宫为水飘去，年榖不登等灾害甚多。诸魔臣等竟谓因佛法之故，而有此灾害，奏请将堪布遣送回国。王乃向堪布奉献多金，並以情形报告，堪布认为是西藏之“非人”不喜所致，只有暂时回尼泊尔。尚欲调伏有毒之鬼与罗刹，则现在世间最有能力者，为密宗堪布莲花生大士，王应遣使迎请，我亦当从旁劝驾也。 <br/>
@@ -2394,14 +2415,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 国王遂即派使前往敦请莲师，尤其是命使者那南多杰敦珠，兼程而往。大士已知其意，须臾便到达西藏之孟宇宫棠，而遇使者于途。使者献金致敬，大士谓，我所见者，尽皆是金是以不取。而将黄金满布于雅星，表示将来可満西藏人一切之欲望。尼泊尔之石匠，与堪布菩提萨埵二人，均到大士面前谒见焉。 <br/>
 <br/>
 及大士到支宗时，西藏之毒鬼与罗刹，降下甚大冰雹，並将两大山合并，图夹大士于山中，大士就在山之空洞，用禅定之方法，以调伏之。此后复以种种之神变，到雅里、乌藏（按即西藏中部）多康（按即甘肃与西康）等地方，所有坚宝女（下方护法天女）十二人，歌神十三人，“纪宁”（非人之重要者）二十一人等大能力者，均已调伏，导之皈依，且饬立誓，以护持佛法。 <br/>
-   <br/>
-  <br/>
+778   <br/>
+779  <br/>
 　　国王在渣玛昂布车，延见大士，时渣玛宁桑佛堂，重修完善，请为佛像开光，开光而后，恍若真人，且能摄受供品，众皆现前看见；复有一日，供养之器具，竟自生增长。 <br/>
 <br/>
 大士集聪颖之童子数人，使看圆光，令将光中所显现以前困扰堪布之魔鬼形状、作法及地方说出，魔众均甚窘迫，大士乃调伏之，使皈佛法。所未调伏者，以烧施方法调伏之，如是者两次。又调伏无热龙王，使为国王之友，及助修建佛堂，龙乃供养黄金凡四十克。（克为西藏量器名，每克为二十华升，每升约二十华两）堪布菩提萨埵研究地形，大士到哈波呢，将一切神鬼，悉以调伏。乃唱妙吉祥歌，词语表示降伏之意；並在空中跳金刚舞，以加被此地方。 <br/>
-  <br/>
+780  <br/>
   　　大士请左罗布聪氏，与哈布文二人，共弹粉线，以定佛堂方位。依堪布所说，按照乌金达布呢庙形式，而奠基础。大士饬一切“非人”为之服务，所以于日间人类所修之墙壁，与晚上：“非人”所修者比较，则“非人”所修者更高。庙之形状，如须弥山、日、月、四大部洲，八小洲，铁围山等，具体而微。庙名为巴桑雅，义即吉祥无边。是任运而不变者。其三位皇后，则造三洲，如此庞大之建筑，五年才完成。完成而后，由大士开光，当时最上层楼之佛像，均能自动出来，有此种种神变，真属希有。 <br/>
-  <br/>
+781  <br/>
 　　其后国王想在此地建立佛法之根基，遂将许多显密经典，加以翻译；并将翻译方法，教育当地知识青年。其从印度请来之教主渣惠舍宁、汤遮青啤哈、曾啤昂楚等比丘及持经者多人，金刚持卑吗那密渣与星登嘉巴那等，及说根本一切有部比丘十二人，均应邀请而来。 <br/>
 <br/>
 关于西藏人能否出家，（藏音舍美，有睡醒之意）是国王所须研究之问题。时有具信心大臣，名巴芝诗者，发心出家，王以转告菩提萨埵，于是菩提为堪布，达那诗那，与支那美渣二人，为业教与密导，其他班知达十人为补充，以处理出家之事。巴出家后，受近圆戒，名为巴扬，国王并赐名巴呢冷，他依修后，便得五通。此时而后，巴沙郎、巴戈毗卢渣那、雅兰渣华楚扬、玛宁青楚、昆禄汪波松华、那森渣华蒋操等皆出家，且已更名，受近圆戒，此七人者，是西藏人出家之始，名为“舍美”七人；由是国王心想：以后西藏人，可以出家矣。 <br/>
@@ -2417,19 +2438,19 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 大士到西藏时，赤松王才二十一岁。王于五十九岁圆寂，王寂后，大士尚留居藏地十六年零六个月。本派学者喇嘛所说，与此相类。 <br/>
 <br/>
 大士居住于巴野等地方，时间不多，因为须随顺魔臣之意，显现第二化身；于是从印度与西藏边境一个山顶，飞到天空，在云雾中，法衣摇曳，送行者皆看见之。但其真身，在雪都达佐，与青圃等人踪绝灭，清净之雪崖，向有福缘而具信心之大臣与部属众，传授无上密法。当许多人说大士在雪崖中时，国王为辨真伪，乃派人请之到巴桑雅庙，为佛像开光。（按西藏规矩，佛庙每年开光一次） <br/>
-  <br/>
+782  <br/>
 　　赤松王是中年，禅位于其王子穆尼，自登恭汤那之山顶，王骑马一并飞到天空。穆尼见之曰： <br/>
 父王已到天空去　　咕噜亦已返乌金　　我王寿命太短矣　　 <br/>
 国民快乐亦尽矣　　王与咕噜不住时　　我穆尼心亦死矣 <br/>
 　　作此哀号呼声。 <br/>
- <br/>
-   <br/>
-  <br/>
+783 <br/>
+784   <br/>
+785  <br/>
   <br/>
 　　本来大士辈住世时间甚短，但彼等成就却甚大，此乃甚为希有者。现在许多法界内，彼等化身，真是不可思议；因其得到甚多神变也。依贤愚经及律藏教诫说：“佛在舍卫城之神变，所化者所看见之时间，长短不同；此是有情之观念，随其业果清净与否之关系，故时间有所不同也。” <br/>
 <br/>
 大士与弟子，秘密商议后，移喜磋嘉与具福缘眷属众，于西藏所有地方，未曾到过，不遣马足之迹者：在雅里有雪崖二十处，乌藏有修行圣地二十一处，及多康有大圣地二十五处，此上、中、下三种之隐藏地，为三国王所管辖者，是五小地域，三大地区，及一洲，各一部分，如树之有枝、及花与果。于是所有雪山、崖洞、及一切山、海，都得加被，作为修行圣地。大士知道，将来王族里，有魔鬼化身，以消灭佛法，所以给国王以许多授记。为使密乘佛法，不予消灭，即从辩论考察，亦不让彼等使佛法改变。为欲循序以饶益有情，乃将国王生命之库藏一百个，意之库藏，大者五个，深而大者二十五个等，其他有名、无名之库藏者无数量。至所藏在之隐藏地，对于何时及具福缘者何人，以取藏者，大士均一一予以授记焉。 <br/>
-  <br/>
+786  <br/>
 　　蒙卡尼英星叽宗等十三处地区，大士显现忿怒可畏身像，调伏有毒之神，与罗刹等，使充库藏之护法。为令后人信仰故，在本塘多杰枝巴之石上，留下全部身影；在南楚秋摩，留下手印；在巴佐渣嘉，停下脚印。一切修行圣地，都有莲花生上师父母之希有手印与脚印无量数。 <br/>
 <br/>
 当穆饶遮波王子毁坏巴达珂派修院，及其后胜渣王派遣军队来时，大士显现忿怒身，将之降伏，使充当寺庙财物之保护者。于是法相宗之讲堂，与密宗之修院，兴建甚多。一切王与部下，对出家人，均极尊重，且供养之。 <br/>
@@ -2444,10 +2465,10 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 穆德兴建嘉聪多杰欣寺庙。彼有子五人，其中一子是最希有之金刚手菩萨化身，名赤雅巴丁，又名赤德竹丁。此子对于每一出家人，均献以七户人民之赋税，以为供养。（按即将七户人民劳力所得，不归于已有，而献于僧侣，有如周代之食邑制度焉。） <br/>
 <br/>
 穆尼兴建寺庙一千间，且将绫两疋，分缚头发之两绺，以另一端，分别奉陈于显密两宗之大德足下，以示恭敬之意，于是宝贵之佛法，得以尊敬，弘化无边。 <br/>
-  <br/>
+787  <br/>
 　　在支麦温曾多地区，修建啤麦嘉斯几帕庙。並从印度请来之仁铮波德、诗宁渣波笛、达那诗那等许多班知达，与西藏之堪布拿那雅赤德、达玛打诗那、罗渣华渣那些拿那等，制西藏文字未有之名相，以翻译沟通印度之佛法，使能适应西藏之文法规矩。且将一切深奥难明之词句，予以改良，庶与当地相同，以资普及。于是大乘小乘之一切经典，均作如是改善。依广略般若经，分成十六种，将以前诸大德翻译所用大部分之佛语，以新定之语言，从事抉择。至于密宗内续，则严格规定，是对于具福缘者以外，不能公开，故依然库藏不动也。因此在西藏地区弘扬佛法之手泽，有最大之遣存，比之松真刚布，与赤松德真之恩惠，尤有过之，而其遗迹，则为建立佛教之三代法王中之最殊胜者。 <br/>
 <br/>
-诸班知达中，以班知达史华楚，莲花生大士，诸罗渣华中，以罗渣华纯密森波渣、毗卢渣那、及嘉佐生三人等，均有最希有之遗迹。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 13:33<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 18 楼</span></div><div class="post-body">八　　西藏国王传法系统表 <br/>
+诸班知达中，以班知达史华楚，莲花生大士，诸罗渣华中，以罗渣华纯密森波渣、毗卢渣那、及嘉佐生三人等，均有最希有之遗迹。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 13:33</span><div class="badge-floor">第 18 进</div></div><div class="post-body">八　　西藏国王传法系统表 <br/>
 <br/>
 尼墀赞波——穆慈赞波——郎遮慈尊——多芝丁呢——沙衣那竹——巴芝德遮——赤那珍鸦……哈图妥列呢珍……（经四传）……松真刚布……（经四传）…… <br/>
 ┌穆尼遮波 <br/>
@@ -2479,14 +2500,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 盖以玛宇山三人说：“现在佛法，在增减交替时，（意谓以前佛法是增，曾为国王所减，故名之为减）彼等对佛法极其需要之故，所以能得许可。我等三人，年老不能当堪布，但可以当事（业）教，而选伦美当堪布可也。”其后中地与后藏所来之十人，回到本地，藏王皆聘之，以为福田。 <br/>
 <br/>
 伦美有四柱子，（即四弟子）八栋梁，（八弟子）三十二椽子，（三十二弟子）一千椽上之木板等，所以能将佛法，从底层建筑起来。在那摩、拿遮、义巴、巴里、苍都等地方，修建庙宇甚多。任庶之堪布格西渣巴，独力修建庙宇一百零八座。其余庙宇，均是伦美堪布及其弟子等所修，普遍建立，于是僧侣日以增加，因此名之为玛都芝靖。 <br/>
-  <br/>
+788  <br/>
 　　以前僧侣，与以后宇渣之罗青达玛诗列之说法与修行，都是从是时西藏唯一庄严之乌金文佐陵寺所传下来之律仪传统实践者。后期弘扬佛法时之勤律仪者，大部分是噶登巴（阿底峡尊者之教派）成就格西之律仪传统，亦遥接上述传承，其余尚有上下对法（即集论与俱舍论）是依照班知达支那美渣与罗渣华嘉华巴支等所译所说而成。 <br/>
 <br/>
 彼等传付那南达华多杰、哈龙巴支多杰、与华移喜渣华等三人。其后华移喜到西康说法与传授，直至现在，仍甚发达。经部（即显教）中期（即中轮）之般若波罗蜜多类，是龙钦巴果车，将经论十万颂，熟记心上。所有一切印度经籍，均加以翻译，宣说弘扬。后期（后论）一切经籍，都是嘉佐与毗卢等翻译宣说，以从事抉择。佛法说部与修部之规矩，均是从此而来者。 <br/>
-  <br/>
+789  <br/>
 　　在此间弘扬佛法之最大遗爱，是三代藏王。彼等之事迹，本当详细宣说，但恐太烦琐，未及縷述。读者欲知其详，可从其他史籍研求，当可睹全豹矣。 <br/>
 <br/>
-以前金刚乘宝贵佛法之来源，胜利王之鼓音里面，西藏黑洲佛灯之传播来源第三部圆满。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 13:41<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 19 楼</span></div><div class="post-body">　乙四：金刚乘不共之三续法 <br/>
+以前金刚乘宝贵佛法之来源，胜利王之鼓音里面，西藏黑洲佛灯之传播来源第三部圆满。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 13:41</span><div class="badge-floor">第 19 进</div></div><div class="post-body">　乙四：金刚乘不共之三续法 <br/>
 丙一：“续”生起次第 <br/>
 藏王赤松德真，于密法之事部、行部、瑜伽部，宣说修行，极多致力；然当时所主要弘扬者，却是无上瑜伽部。无上瑜伽有三：曰生起次第，曰圆满次第，曰大圆满。而生起次第有二：曰续部，曰修部。 <br/>
 <br/>
@@ -2525,22 +2546,22 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 依共义言之：閰曼德迦法类，是教主星登嘉巴那，在西藏弘扬。甘露法类，是教主卑吗那密渣，与尼渣那咕吗那等弘扬。其余法类，均为教主莲花生大士弘扬。 <br/>
  <br/>
 依共义言之：藏王赤松德真，祷告莲花生大士，在巴治青蒲治咕叽乌，传八大修部，内、外、密、三种中围灌顶，给与具福缘之王与臣九人，均甚圆满；各依法及口诀修行，皆能面见本尊。国王雅达遮波，成立大胜生起禅定，显现修所成慧，著清净正量论等。  <br/>
-  <br/>
+790  <br/>
 　　南卡迎波得到清净成就，能站立在阳光之上。生遮移喜修成妙吉祥，能将木钉打进石岩。渣华卓扬得大灌顶成就，顶上现出马头，且发出马鸣声音。卡青沙得到普巴成就，死者可使复生。巴支移喜，得邬摩天女成就，一切女魔鬼等，均受其伇使。巴支星叽，得供养赞叹之成就，八大神鬼，均受其伇使。 <br/>
- <br/>
+791 <br/>
     毗卢渣那，得猛咒之成就，获智慧与神变。其他在此前后，得大教主之灌顶教诲，及随行教诲，而成就者甚多。尼渣那咕吗那在干燥之悬崖间，能取甘露。女王宇渣迎波，能将身变成金色金刚。那南多杰敦珠，能在悬崖，随意来往，而无所障碍。阿渣雅移喜扬，能到空行之法界。舒波那巴，能手执最凶恶野兽之颈，而降伏之。那南生移喜德，能在空中如鸟飞翔。 <br/>
  <br/>
     卡青巴支汪朱，能持普巴杵举手作打势，便能杀死魔鬼。丁玛渣孟，能得从堕恶趣摄受之咒，忆持文义不忘。嘉华巴支，能得他心智无障碍之了知。苏部巴支星叽，能令大河倒流。谢河华罗爵，能令惊起之死尸（即尸变之尸）变成金子。佐宾车聪罗渣华，眼睛一瞥，手指一指，即能将空中之飞鸟，收入掌中。 <br/>
  <br/>
     和珍巴芝汪卓，能于大河内泅游来去，与鱼无别。玛宁青楚，能将石头切开，食以充饥。哈龙巴支多杰，能于悬崖，无阻碍而来往自如。兰佐君楚忠兰，能令天空随时轰雷。那森渣华蒋操，能在天空结跏趺坐。此其表表者也。 <br/>
-  <br/>
+792  <br/>
 　　若妇女得成就者，亦复有之：如沙珂敏达那华，得无死寿，神变力，无上不共成就等。卡青初渣玛，得金刚寿命，不忘总持，神变能力，能到空行法界，且得殊胜大乐。此二位尊贵之妇女，与金刚亥母无分别。楚南夏生遮楚，身化光明消失而成就。舍嘉多杰楚，能歩过大河，如履平地。苍衷沙啤吗楚，将虱心成熟佛身。 <br/>
- <br/>
+793 <br/>
     马贡沙宁青楚，能将丝绸之衣，挂在太阳光下。路渣东朱玛，以眼一瞥，能令十二地神，都供役使。苏部雅舍饶玛，对一切经与论，不须学习，即能通达。雅佐尼楚宗玛说话，天人闻之，皆大赞叹。和遮雅遮玛于佛法一切疑难都可以向本尊请示。曾沙那摩，其所须饮食，均向天空取来。巴沙哈杨玛，能知调他人人心之方法。左洛雅蒋操铭，身体可变成火与水。 <br/>
  <br/>
     曾雅班达青摩，能在天空如鸟飞翔。容明雅操亲尊，能食石头，有如食饭。俱雅啤遵玛之在希普，能令大地震动。松雅些明，能将花置空中。如此各种神变，均是在不少众生面前示现。彼辈身体，皆得双运成就，且均在青圃之二十五大成就者（参看“莲师佛母及其二十五大弟子法相”）。 <br/>
  <br/>
-还有杨总地区，有大智慧，凡五十五位。至义巴与崖窝呢两地之得肉身化光成就者，每地有一百零八人。舍渣地区，诵持密咒得成就者三十人，身化光蕴飞去之空行二十五人，其余成就者无量数。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 13:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 20 楼</span></div><div class="post-body">十　生起次第修部传承系统表 <br/>
+还有杨总地区，有大智慧，凡五十五位。至义巴与崖窝呢两地之得肉身化光成就者，每地有一百零八人。舍渣地区，诵持密咒得成就者三十人，身化光蕴飞去之空行二十五人，其余成就者无量数。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 13:55</span><div class="badge-floor">第 20 进</div></div><div class="post-body">十　生起次第修部传承系统表 <br/>
 <br/>
 　　　　　┌阎曼德迦法类传承：星登嘉巴那 <br/>
 │ <br/>
@@ -2616,7 +2637,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 巴金之弟子靖，其母名叉咕遮德，是雅龙汤聪之祖母，从汤聪遮波之大子转世而生靖。靖十六岁时，奔走几月之路程，前往多芝洞那，经营商业。及到多芝慈聪，见有许多人集会，乃往一看，得见邓巴渣嘉，知为大德，乃居留十四个月，如奴仆以承事之。后二人同返后藏，及至那诗香晶时，邓巴以毛呢衣料一疋与之，饬其早回家乡，以后从达波取桃子来时，当可遇到一个良朋。靖乃回去，邓巴随之返乡，以两手拦阻之说： <br/>
 无论如何皆不是　两种把握均阙如（按系指世出世间，世俗胜义之二谛也。） <br/>
-  <br/>
+794  <br/>
 　　说毕，邓巴以头冲碰其头两次，靖是时之心，豁然开朗，开口呼哈，在一切均无当中，突然显现心中生起智慧，口中津液滋长之情状，心知是邓巴加持而来者。靖说：以前教主曾为授记，后来遇见金刚桥，邓巴乃为之造几种缘起，而密宗要诀，亦传授之；並传授以蒋洛车玛六字明之教诲，靖依止修习以后，得到极大之加被。 <br/>
 <br/>
 教主又给予以授记曰：大河之东方，有一檀香森林，则汝之上师在焉。后靖到西藏中地，得遇见雅咕班巴，传授以叉通及啤哈法。陆生波车传授以资雅及卡巴玛之施食迴遮法。陆派其以供养品前往后藏喇嘛巴里华处，巴乃传授以妙吉祥法，及大鹏鸟修法。迨遇到格西波，亦传授以密法。 <br/>
@@ -2628,9 +2649,9 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 一日靖带一囊，前往云当香呢乞食，满载青粿而归，献之巴金。巴说：“尔已以劳力供养，既充佣役，我极满足，此青粿可留为汝之口粮。我有金刚桥（按是大圆满之一种）口诀，可于一刹那顷，领悟空性，即身成佛，无余涅磐，我有此法之传承，是连续不断者。以前尚无传人，今以付汝。”靖乃以一囊青粿，再三供献，说：“此全是为教主而献，敬请俯为鉴纳。我之口粮，当可设法，请勿为念。”巴以左手置其顶止，右手拊之曰：尔是有誓句之人，我之教诲，对尔当极为有用。 <br/>
 <br/>
 是时靖以红阎摩修法，传授罗聪地区之瑜伽者，得供养之豆八克。（按一克约等二十华升）又向罗摩及川地区之人，以从事保护之工作，得到足量法之口粮。但为接受金刚桥之传承，所须会供之供物，未有完全。巴金告以：须立刻接受传承，稍迟恐有障碍。靖乃以衣物售给友人，收取价银，以买毛裙，分割转售，得款以为酒、食品之供，及青粿五升，全牛一体，与每日所献之灯。准备既毕，巴乃传以能解脱之四灌顶，及一切教诲，其后靖並从巴处受金刚医之加持者四次，（按即前后共五次）而已黄金及青粿供养巴金者共五次。 <br/>
-  <br/>
+795  <br/>
 　　一日，巴向靖说：一切所见之法，皆是虚妄。乃以手向水中之石打去，肘以上均没入石中，起来时两手一伸，斜倚石崖，身体之印，明显印在岩石上。在普聪庸时，巴以目观该处柏树，即能将树移于自己所住之处，以为左摩修建佛堂之用。 <br/>
-　　靖从巴金教主处，得到金刚桥类口诀，已得完全矣。此外复得阿底峡尊者之波若密多道，是从宇摩处，得到六加行，从康巴龙巴处，得到八段者，从利乌树巴之弟子处，得到三缘类，从松宝罗渣华处，得到小解脱，从格西谢刚处，得到那洛修法道，而靖亦将金刚桥全部传授之。（按即互为师徒）从舒鳶丁处，得到尊朱，及教夏，从渣波华处，得到甘露三滴，从利初龙聪处，得到耳传三教，从龙钦青波处，得到多哈口诀，从刘遵处，得到爵裕，从渣华波敦处，得到第七部类，从陆生青处，得到巴里巴德十五行部法，从丁列贡噶处，得到听受各宗之教训等，又从达波哈遮处，得到六法，及生起加行。如是靖得到甚多积累之领悟，故极为兴奋。从此乃修习瑜伽，遂名为“禁行者”。其师兄弟，均是穿老虎皮之瑜伽者，其名为喇嘛邬珍巴、喇嘛图卡、喇嘛爵佐、桑遵呢等。靖常与诸修习瑜伽者，一同结伴，在后藏住五年，修裸体行。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 14:34<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 21 楼</span></div><div class="post-body">十二　靖所事师闻法表 <br/>
+　　靖从巴金教主处，得到金刚桥类口诀，已得完全矣。此外复得阿底峡尊者之波若密多道，是从宇摩处，得到六加行，从康巴龙巴处，得到八段者，从利乌树巴之弟子处，得到三缘类，从松宝罗渣华处，得到小解脱，从格西谢刚处，得到那洛修法道，而靖亦将金刚桥全部传授之。（按即互为师徒）从舒鳶丁处，得到尊朱，及教夏，从渣波华处，得到甘露三滴，从利初龙聪处，得到耳传三教，从龙钦青波处，得到多哈口诀，从刘遵处，得到爵裕，从渣华波敦处，得到第七部类，从陆生青处，得到巴里巴德十五行部法，从丁列贡噶处，得到听受各宗之教训等，又从达波哈遮处，得到六法，及生起加行。如是靖得到甚多积累之领悟，故极为兴奋。从此乃修习瑜伽，遂名为“禁行者”。其师兄弟，均是穿老虎皮之瑜伽者，其名为喇嘛邬珍巴、喇嘛图卡、喇嘛爵佐、桑遵呢等。靖常与诸修习瑜伽者，一同结伴，在后藏住五年，修裸体行。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 14:34</span><div class="badge-floor">第 21 进</div></div><div class="post-body">十二　靖所事师闻法表 <br/>
 ┌─────────┬──────────────────┐ <br/>
 │　　所事之师　　　│　　　　所闻之法　　　　　　　　　　│ <br/>
 ├─────────┼──────────────────┤ <br/>
@@ -2660,7 +2681,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 其后靖于一切有为法，均具有能力；于是冬日睡于冰上，夏日立于火中，而于极峻险之悬崖，可以跳跃下去。所有各种武器，或巨石向之打击，均无法将其伤害。如此受用，无不亲自体验，因此名为巴波晶聪，其名大著。  <br/>
  <br/>
 　　靖以大手印传授舒玛晶，故舒得到错误明相，就是智慧以依止之领悟。又传授利初龙德，与柯摩渣弥箴以大圆满，于是彼等，均得身体无余化光飞去之成就。又向马佐达巴晶，与康巴迎鲁晶传授以金刚桥口诀。于是马佐在蒙卡舍摩卓，及康巴在恭波楚忠，均用空性大迁规矩，与空行大迁规矩，皆得身体无余，化光飞去。 <br/>
-  <br/>
+798  <br/>
 　　靖对于弟子教以穿薄布衣裳，而将教诲传授，使身中之乐与温暖，均能生起。又只开示使观空性，便得证功德解脱者甚多。靖自己说：我之弟子当中，有四个罗渣华，复有大导师，修行母、与修行者，有大功德者亦当不少。除如理修行者之外，尚有在达波地区稍事修行者，亦有十一人，彼等均能预知时至，或免除临命终时节节支解之痛苦，与虹光刺入身内者。以我之教诲，是详细而条分缕析，如毛母之析毛；对于弟子之关怀，则有如独子母之爱护其子，故依修者，能于五、六年中，得到身体无余飞去。 <br/>
 <br/>
 靖之广大神变，能得自在，身体化成虹光，足不著地，眼中抽看，与心中所想者，无二无别，能于一刹那间，到达所到之境。他得他心通，並留下许多授记焉。且得天眼通，一日，左些玛多杰哲之子，半夜在凉亭边失足滑倒而下，亦为其所看见。故其眼之明见，无日夜之分，于黑夜中，亦能找到绣针等物。 <br/>
@@ -2674,7 +2695,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 他亦造义纪史那美都巴松芝之苦行（义纪史者，即四个字也，为大波派噶未巴之大手印四瑜伽不作三种之苦行）所以乐暖生起，一住五年，可不穿衣服。当他修亥母之苦行时，在古摩之西方，面见亥母，给予许多实证。及在陆宇容修梦，胜解功德是一切所显，皆如夢幻。在梳都达佐些蒲修行时，曾面见忿寂尊甘露漩，于是空行均向之献大供养。 <br/>
 <br/>
 他说：一日曾见大德之身体，飞去天空，往返翱翔，他往追之，便不复见，故不知其是人否也？在达波书育修安支本尊法时，当太阳升起来，便得以面见。当其拟从事登些时，见左摩来，望之竟成光蕴身化去。在哈苏庙，修长寿法后，面见长寿佛，而许多法之规矩，由是皆从其心显现。在邬嘉渣时，修行后，面见胜乐佛父母焉。 <br/>
-  <br/>
+799  <br/>
 　　及后，靖拟往别处一行，在蒙卡荘摩车前面，有一水塘，已结成冰。为检查自己身体能力之故，聳身跳下，觉仍甚冷，因起内惭，遂从心现羞意，水即变热，烟雾腾空，如云蔽天矣。见者皆大惊异，以在此严冬，如此景象，有如烘铁下水，而他却说：我只觉冷，未觉热也。一日，与左摩入森林，寻得木材甚多，将之取出，直达悬崖。他想一切法，皆如夢幻不真，乃往下跳，竟如鸟降，纡徐降至山麓。左摩说：喇嘛尔究竟是人，抑是何物？如此说来，真令我怀念邓巴渣嘉也。 <br/>
 <br/>
 靖之教诲，虽无多大增益；唯造成在家人诵经仪轨，作密乘之功用，因此从远方来之弟子，大为增加。其后巴布多那迎请返家，向之求法，乃以口诀传授之。当传法第一日之上午，空中有许多虹光如伞如线，五色缤纷。修法下座后，偕弟子往山林消遣，弟子请问，虹光是否上师圆寂之不良预兆？靖说：我之上师巴金，以此教诲，传授巴敦些饶渣二兄弟时，雁苏与普波车山上，虹光甚多，而且普遍，故教说必须有此标识也。 <br/>
@@ -2717,7 +2738,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 释迦渣波幼时即在秋那卡出家，至二十岁时，乃受近圆戒，学习律藏，及阿毗达磨论，均甚通达。及后至佐龙庙安住，于是领悟之智慧，日有增加。迨其年事既高，视觉衰退，仍俛人诵读经典听之。其所造论，亦倩人代笔，以其理论精辟，对后学有极大之嘉惠也。住世将一百岁，圆寂付之荼毗，遗留不少舍利。 <br/>
 <br/>
-释迦渣波传授贵洛孙奴啤，贵以之传授曾雅卓之渣巴，曾以之传授舍渣巴卓之罗佐，舍以之传授聪苍华罗爵巴丁，聪以之传授班敦嘉玛咕汝巴，班敦以之传授班敦卓汪伦朱，卓汪以之传授卓汪君桑，君桑以之传授班敦君桑卓渣，卓渣以之传授荣增德达零巴。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 15:21<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 22 楼</span></div><div class="post-body">十三　大圆满心部自然果部传承系统表 <br/>
+释迦渣波传授贵洛孙奴啤，贵以之传授曾雅卓之渣巴，曾以之传授舍渣巴卓之罗佐，舍以之传授聪苍华罗爵巴丁，聪以之传授班敦嘉玛咕汝巴，班敦以之传授班敦卓汪伦朱，卓汪以之传授卓汪君桑，君桑以之传授班敦君桑卓渣，卓渣以之传授荣增德达零巴。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 15:21</span><div class="badge-floor">第 22 进</div></div><div class="post-body">十三　大圆满心部自然果部传承系统表 <br/>
 <br/>
 <br/>
 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　                                                      ┌一努生遮 <br/>
@@ -2759,7 +2780,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 王后曾雅蒋操文，其公主哈堪啤吗沙，出生甫八岁而殇逝，父王因是非常悲痛；大士为驱除其烦恼，乃在公主尸体心中，用朱砂写一字，以禅定之铁钩，将其识勾召回来，于是公主两眼，复能视物，亦能说话。遂以口诀空行心要加持转变之能力传授与之，并为之灌顶，以为来生得法之种子。其后公主转生，将前生由大士所传之口诀心要甚深库藏取出，是为有名之空行口诀心要。后来君清卓之渣波龙青巴，将深法传承之历史，加以摘要。下文当另详及。 <br/>
  <br/>
-其他库藏，大部分是对上中下三根修行种类，所编成之口诀教诲，内无错误，意义完备，而尽所有之口诀心要教规，库藏不少焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 15:33<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 23 楼</span></div><div class="post-body">戊二：教主卑吗那密渣之教规 <br/>
+其他库藏，大部分是对上中下三根修行种类，所编成之口诀教诲，内无错误，意义完备，而尽所有之口诀心要教规，库藏不少焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 15:33</span><div class="badge-floor">第 23 进</div></div><div class="post-body">戊二：教主卑吗那密渣之教规 <br/>
 <br/>
 教主卑吗那密渣，年将二百，当藏王建立佛法时，藏地有名杨丁增康波者，能入定七年不动，而眼却能同时遍见四大部洲。曾向藏王建议，遣派罗渣华嘉佐等二人，赉重金赴印度，以聘请卑吗那密渣，王从之，卑觉所化之时机已至，允为前往。印度人生嫉忌心，以离间语中伤之，欲使二使臣不再奉请，卑乃显现许多神变，于是西藏人始信奉之。 <br/>
  <br/>
@@ -2770,9 +2791,9 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　杨登青波虹身飞去后之八年，与杨密巴玛同时之乌育若玛纪楚之子上座邓玛伦朱赞青，为卑吗那密渣之化身，但其形相与普通上座无异。一次彼能依照多杰赖巴所给予之授记，取出以前库藏。从华罗爵处，闻受深法，并得传授，便得领悟一切空性之道理；且亦受到口诀。 <br/>
 <br/>
 其后十五年，邓玛为觅传人，往寻能接受教传之根器；及到杨敦时，遇见吉尊狮子自在，以教诲传授之凡七次。从此不久，又传授以卡那锦聪，因此而得解脱。 <br/>
-  <br/>
+800  <br/>
 　　上座邓玛，对吉尊说：“尔将一切经本，腾写清净以后，交付予蔡延达华可也。”其后吉尊又返回杨敦，归来时携带供养品物甚多，道经呢塘，遇到杨嘉登巴，杨以上座邓玛涅槃情况告之，吉尊听后，乃将所带品物，以供养庙内大德。杨又说：上座邓玛，以前众人见之，以为是普通之上座，而不知竟是最殊胜者！当其圆寂时，天上虹光遍满，身上且有舍利甚多，缘是众人觉得甚为希有，且悔以前之不知。并谓尔带来许多之供养品，以供上座，想必有特殊教诲之传承，敢请赐以传授于我，如是诚恳祈请。吉尊乃将一切教诲，均传授之。杨在梳基佐渣，修行两年后，亦虹身无余飞去矣。 <br/>
-  <br/>
+801  <br/>
 　　吉尊狮子自在者，是杨洛英楚地区之智图啤汪波之子。少年时，已闻受佛法甚多，得极通达。及在呢渣格波龙，遇见上座邓玛，即蒙以卡那一切圆满口诀之传授。迨上座圆寂以后，乃将以前库藏之经籍，继续藏埋于兰佐车巴如老虎泉水之源中，与吴育、及遮芝蒲等三处焉。 <br/>
 <br/>
 吉尊从吴育到辛以上之山上修行，在一日夢中，见一瑜伽者说： <br/>
@@ -2824,7 +2845,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 及赴沙乌达哥，及卡操等圣地，只携带青粿一克，（按约二十华升）为二十日之粮食，其修苦行，具大忍耐，有如此者。 <br/>
 <br/>
 十八岁朝见星叽渣巴，得一切口诀心要之传授。因念口诀已足，及决心修行，修前行者六日，面见金刚萨埵。修正行时，所有一切上师，均在夢中见到，予以加持。二十三岁，从生遮赖巴受金刚亥母等岩传法，后来修到面见金刚亥母。他尝以石击岩石，如击泥团，自然击入，其能力有如此者。不特此也，祝青并能面见马头金刚，度母，观世音，莲花生大士，普贤王如来，金刚萨垛，卑吗那密渣，沙龙巴，生遮赖巴，左根帕朱等，其殊胜有如此者。 <br/>
-  <br/>
+802  <br/>
 　　祝青之在洞龙，听到空行母极悦耳之声音，给予解脱之授记。在嘉华晶之虚空中，看见红亥母。与祝图沙龙巴在雅聪同住时，梦见亥母主伴五人，醒来而光蕴之亥母，亦现前见到。在教呢宗时，夢中见金刚萨埵，给予大圆满之灌顶。依共义言之，他已承事许多上师；而依不共说，则有十三位上师，且从无比恩德之祝图沙龙巴、曹普多波呢巴、及星叽渣巴三位上师中，得到心要意义，因为有大禁行，所以一切密乘之誓句，均能如理造到，其得加被有如此者。 <br/>
 <br/>
 祝青有一次见小鹫鸟，在空中飞，乃用明禁行之毅力，亦复飞到空中，且对岩石视之柔软如泥，其神变有如此者。 <br/>
@@ -2849,9 +2870,9 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 姑玛后来在渣呢之知摩沙青草地石佛像前，看见五色虹光，从天空中，融入像内。其地有嘉玛巴杨忠多杰，迎请前往，乃传授杨以心要教诲，又赴辛地从谢甘那波族之教主甘巴受密类耳传一切法要，与眼灯禅定。在鼎列那玛，从庞波蒋朱，受杨干巴法，并朝见邬金宁青巴。从喇嘛渣龙巴，受史遮法。从教主移君等许多上师，受密类贵苍巴之导引法，与阿洛大导引法等；而于西藏所传甚著名之生起次第，大部分皆已领悟焉。 <br/>
 <br/>
 姑玛之于佛法也，极能修忍辱之行，及到渣呢沙玛之宁玛绿海滨，独居八月，地神对之，竟显现神变，他遂入空性定以降伏之，地神便向之皈依，且奉供养，黄财神亦以宝献之。又一时看见五色水泡，如指头大，没入海中，遂悟诸法如泡，而于生死起厌离心；故常在森波空谷与雪山边修行。 <br/>
-  <br/>
+803  <br/>
 　　姑玛之弟子甚多，均能令之到达轮迴边际，而得究竟。其大圆满最主要之弟子，为化身嘉玛巴杨忠多杰，与渣华龙青巴；彼等弘扬大圆满之事业，无量无边。故藉恭巴之卓渣宁青彭楚有云：“大圆满之法主，为渣华龙青巴；而于弘利事业最发扬光大者，则为嘉玛巴杨忠多杰也。”其言如是，可以证明。 <br/>
-  <br/>
+804  <br/>
 　　持明姑玛喇渣，经常行菩萨道，已成习惯，并以大慈悲方便以度城市乡村等眷属，超脱轮迴。从恭波到爱那图之危险路上，见有呼号痛苦者，即予以利益。对于水陆弱小畜生等，心尤慈悲；而于一切财物，无所悭吝以施与之。曾将一百座山，一百条路，及一百条河，置于平安之地区。无论所住何处，所有疫症、灾难、冰雹等悉皆消除，以为众生作饶益也。 <br/>
 <br/>
 姑玛之心要教诲，于自教派能予分别，与其他教派之生起次第，并不混淆。以其鼻上有字黑痣，故一切非人，与有誓愿者，均服从之。因其具有神通，能知所化众之心意，缘是调伏有情，极有方便，且有加持别人与具有福缘弟子等之能力。及圆寂时，显现许多不同之标帜，人因是皆敬重之。有说之为教主卑吗那密渣化身者。若中观应成派里授记说之格龙巴丁迨亦是此师。其生平所造一切饶益众生之事，皆是殊胜希有不可思议。 <br/>
@@ -2866,7 +2887,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 地上所有诸菩萨     致力弘扬到海边 <br/>
 迨指此而说也。  <br/>
  <br/>
-　　从普贤王如来心中，自明思想之大宝库，自在传授之嘉玛心要（按即教传）其著名之教诲，是从此地而来，如是亦为佛法来源之一也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 16:06<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 24 楼</span></div><div class="post-body">丙四：“特别口诀部”心中之传记 <br/>
+　　从普贤王如来心中，自明思想之大宝库，自在传授之嘉玛心要（按即教传）其著名之教诲，是从此地而来，如是亦为佛法来源之一也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 16:06</span><div class="badge-floor">第 24 进</div></div><div class="post-body">丙四：“特别口诀部”心中之传记 <br/>
 <br/>
 第二佛巴桑雅巴之渣华龙青巴，是宇鲁渣叉多城内，雅龙王和芝可晶有功德之族，姓骆。亦是西藏第一次舍美七人中渣那因渣那赤达，莲花生大士之弟子格龙渣华卓杨族之第二十五代。 <br/>
  <br/>
@@ -2935,7 +2956,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 问：宁青铃巴之库藏如何？答：然、然，但不甚清楚。问：我未有修尔，但却已成就尔，其原因何在？答：尔有修之本尊乎？尔有念之咒乎？尔有供养之境乎？瑜伽者有誓句与具证，我平常追随彼等于一处，尔不知乎？我将于尔之一切本生（按即生生世世），总不离开尔也。问：在青圃有哈箴之财富，是在何时处？答：在像“佛供养”（按即食子）而无尖峰之石山中，但现在未届发现时也。 <br/>
 <br/>
 问：卑吗那尊者之库藏，要在何时才发现乎？答：从此五年后，有一白瑜伽者，探取出来以供养尔；此中甚深之四本经，亦到尔之手上也。 <br/>
-  <br/>
+805  <br/>
 　　白月（按即上半月）十一日派遣白瑜伽和萨果叉，往取经书。及取得后，在途中有虹光透入经书内；尤其是在邻近苏卡达石塔东波渣地区之晚上，从义摩晶到其所住处，均是虹光接连遍满，许多瑜伽父母等，皆能看见。渣华乃在此处，造圆满之会供，开空行心要口诀之法门。 <br/>
 <br/>
 晚上，光明法身之思想，漩在空性法界遍满；而其能力光明之报身，显现出来；光明外放之化身，出现于六道等光明之法音，亦非大声明，大星相者，所能了知其所在方所。以此为自性之所现，是上师本尊空行所现前加被彼之意而成者；尤其是空行母辈给彼以赤裸裸法性之介绍。 <br/>
@@ -2979,7 +3000,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 其后渣华到拉萨朝“佐”（按“佐”是拉萨最有名之释迦佛圣像也）从“佐”眉间放白毫光，入彼眉间；因此忆起以前在灵鹫山与利育等地班知达之前身。当时拉萨众大德，列队手持仪仗奏乐，以欢迎之。他自拉萨至拿摩车庙间之法座中，传授大乘发菩提心法要者多次，即使甚多慢心高举者，亦能了解觉悟，矫正过来，且对之发起信心，因此称之为君清卓遮（按君清义为一切智，卓遮义为法主。）焉。 <br/>
 <br/>
-一日渣华朝“佐”时，“佐”身发金色光，顶上有七代佛、药师佛、乐喜、观世音、虚空王、渣华嘉楚护法聚会等甚多。又于朝莲花生大士时，忿怒莲师、百部胜士、大成就八教等佛菩萨、圣众，如芝麻剖夹，皆得亲见。并许可造论，因造思宝藏论者七大藏，心性休息者三类，自解脱者三类，与密宗心要解释名除暗者亦三类，复有心要三类，甚深心要等三类，如是不可思议之论，如宝贵目录之库藏焉。密主遍入与护法之有誓句者，承事之有如眷属，非常服从。当其造七库论时，使遍入磨墨，其邻居亦现前能见之也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 16:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 25 楼</span></div><div class="post-body">十四　　渣华所事师闻法表 <br/>
+一日渣华朝“佐”时，“佐”身发金色光，顶上有七代佛、药师佛、乐喜、观世音、虚空王、渣华嘉楚护法聚会等甚多。又于朝莲花生大士时，忿怒莲师、百部胜士、大成就八教等佛菩萨、圣众，如芝麻剖夹，皆得亲见。并许可造论，因造思宝藏论者七大藏，心性休息者三类，自解脱者三类，与密宗心要解释名除暗者亦三类，复有心要三类，甚深心要等三类，如是不可思议之论，如宝贵目录之库藏焉。密主遍入与护法之有誓句者，承事之有如眷属，非常服从。当其造七库论时，使遍入磨墨，其邻居亦现前能见之也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 16:13</span><div class="badge-floor">第 25 进</div></div><div class="post-body">十四　　渣华所事师闻法表 <br/>
 <br/>
 所事之师　│　　所闻之法 <br/>
 ─────┼───────────────────────────── <br/>
@@ -3012,7 +3033,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 渣些赖巴　　│空行心要语续 <br/>
  <br/>
 渣华在清净之地方，以为修行心要之处所，其名为笙野青夫、邬金忠、哈英渣、渣普、宿些、刚列图嘉、梳都达佐、义巴、雅那萨波、本塘、蒋宝巴治几丁、贡波呢那华龙、及恭波渣宫等处，其大部分皆在雪山旁者。其余尚有罗竹、乌育、及罗文等地。 <br/>
-  <br/>
+806  <br/>
 　　从各地而来弟子，凡千余人，谒见多次，渣华赐予极大之法恩，且免其缴付法税。（按法税有如汉人之供养常住）即供养上师，亦不许其浪费。復以众弟子，能忍耐疲劳，便为之造盛大会轮。并以得他心通智，故于调伏所化，能具善巧方便，不可思议。 <br/>
 谢恭甘巴君宁，以其眷属财富均甚多，缘是骄傲，擬在西藏中地，准备发动战争。且知教主莲花生授记有云： <br/>
 名字为谢于此处　　恭甘为魔鬼之子　　身上画有兵器者 <br/>
@@ -3056,7 +3077,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 后来持明者亲遮和些，在己卯年，于法界之青圃，曾面见渣华之智慧身凡三次，并承赐与经典，而告之曰：关于大车经中不明白之一切口诀，可从此中而得明白。遂将口诀与后随行，一切皆传付之。于是亲遮对共义之佛法，与渣华之教诲，及其口诀，均得领悟焉。 <br/>
 <br/>
-最接近之传承，是圣天（按即提婆）传授马当叽巴。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 16:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 26 楼</span></div><div class="post-body">　　十五　　大圆满心要部卑吗那传承系统表 <br/>
+最接近之传承，是圣天（按即提婆）传授马当叽巴。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 16:20</span><div class="badge-floor">第 26 进</div></div><div class="post-body">　　十五　　大圆满心要部卑吗那传承系统表 <br/>
 <br/>
 　　　　　　　　　　　┌——藏王赤松德真 <br/>
 ├——杨丁增康波——左宁青巴华 <br/>
@@ -3109,11 +3130,11 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 （二）　为耳传教诲大河主要文字之明显训示。 <br/>
 （三）　为加持授权大河之灌顶方便介绍。 <br/>
 （四）　教规建立事业修行大河之护法忿怒咒等。 <br/>
-  <br/>
+807  <br/>
 　　尼渣那在莲花生大士功德甘露中围里，从事成熟之事，所以能在雅龙些岩洞干石里，令出自生甘泉。（按即成就水）并在此岩洞中，以传授幻化纲，主要是依普巴法，而得有现量之成就。 <br/>
  <br/>
 藏王赤松圆寂后，王后楚榜萨，思想行为，均极乖谬；而对班知达与罗渣华等较高职位者，备致摧残。时尼渣那住在雅佐，其伯父尼格敦，对之有如敌人，说是外道之持咒者，如此作许多之毁谤，阴险之破坏。尼渣那为清净众疑，使彼等在所住处，得到宝物甚多，因此众人知彼有神变，遂不听其伯父之言；但其伯父他仍用种种方法，以压迫之。 <br/>
- <br/>
+808 <br/>
     尼渣那知其地不可复留，乃到恭波清宇，在空谷中，见有母羊七头，遂使仆人追逐之；仆曰羊或有主？追逐之为何？尼说：空谷之羊，焉得有主？于是挈之同行。为羊之主人程渣禄所知，追至，指为偷盗，索其赔偿，每羊偿以七头。尼渣那答应与之，而主人意仍未足，且以铁锤追击之，尼遂遁逃入庙，既入关门。 <br/>
  <br/>
     主人以锤击门下之宝门说：我要击尔之头。尼知无法再留，乃往西藏中地；道上遇到左些聪，骑马而牵鹿以同行，马一见尼渣那，惊而飞遁。左以马遁，鹿亦逃去，缘是愤怒非常，遂要杀尼，尼又远逃，左寻之不获。 <br/>
@@ -3149,7 +3170,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 舒波巴支移喜，出生于雅佐巴，本于教主莲花生时，已得成就。但以在所化共同感觉面前，示现铁匠形相；尼罗渣华，虽是大智者，唯彼自思一己所知比上师更高，如此想过三次，结果便受性命之威协者亦三次。他亦表示接受此因果不爽之谛，所以在生命威协三次中，曾为尼之伯叔父辈尼玛帕本芝，以仇恨故，将尼渣那拘禁监狱间。 <br/>
 <br/>
-时舒波已得义成就之受用，乃作执持野兽颈项之形状，表现得甚勇敢；此时是为上师以金刚誓句之故，不惜身命，杀死监守者二人，将教主从监狱内拯救出来；且于教主三次之危险，均加拯救。教主于是显现普巴中围，而传授之，舒波其后将法传授努青生遮野些。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 16:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 27 楼</span></div><div class="post-body">十六　尼渣那咕玛那师徒表 <br/>
+时舒波已得义成就之受用，乃作执持野兽颈项之形状，表现得甚勇敢；此时是为上师以金刚誓句之故，不惜身命，杀死监守者二人，将教主从监狱内拯救出来；且于教主三次之危险，均加拯救。教主于是显现普巴中围，而传授之，舒波其后将法传授努青生遮野些。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 16:29</span><div class="badge-floor">第 27 进</div></div><div class="post-body">十六　尼渣那咕玛那师徒表 <br/>
 <br/>
 　　　　　　　　　　　　　　　　　　　　　　　┌　巴支移喜 <br/>
 ┌（甲）四前巴┼　和珍巴支孙奴 <br/>
@@ -3162,14 +3183,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 │　　　　　　┌　邬巴多沙 <br/>
 └（丙）其他　┼　邬卡帕舍饶 <br/>
 └　宝苏姑楚 <br/>
-  <br/>
+809  <br/>
 　　其第二之努青生遮野些，其父是努族，名为沙华汪竹；其母名车摩嘉斯车，壬子年春，出生于乌渣芝普。时其祖墓，名渣易窝车者，生长檀香树一株，有一汉僧，道经此地，考察其树，认为是出生一化身佛之标帜，饬善为保护之，有如此之授记。生遮未出家前，名多杰慈竹，法名生遮野些，密名多杰杨汪德。从七岁在和珍巴支孙奴处居住，学习一切明，而得通达。结集持明根本续中授记说： <br/>
 宝佛名之翻译者　　特别示现身密宗  <br/>
  <br/>
 　　当生遮幼小时，从教主莲花生大士，已得八种修部灌顶。与其有缘之本尊，遇到妙吉祥之中围，乃修其法，而得明显成就。其后在印度与尼泊尔边境之多杰遮鸦普处，接受续部口诀部甚多。此外于诗列星哈、卑玛那尊者、嘉玛那诗那、达那达喇、叉通那波、星登嘉巴、达那生芝达、舒渣狄华、达那喇赤德、蒋些沙威靖、达玛波德、达玛杨渣、朱那巴叽、巴苏达那、车珍遮等印度、尼泊尔、与竹沙许多班知达，与罗渣华，及西藏之大智者，尼渣那咕玛那与其弟子“八巴”，均曾从问法。复有舒波巴支移喜、达玛、尼渣那共同之弟子桑渣华袁登等，以学习显密内外密之一切续部，与口诀部，而得通达。 <br/>
 <br/>
 如是在尼泊尔印度之间，来往七次，于续部口诀部及护法等法，翻译甚多；尤其是五十四岁乙巳年，前往尼泊尔从巴苏达那，受灌顶与教诲无量。为求佛法，于供养布施，造得不少，且以真实信心，而得上师欢喜。故巴苏向之说：在印度有我之上师，名教主沙威靖，其年岁可说是已满六百岁，尔应前往朝见，依之修行。他乃到鹿野苑，朝见教主，面求教法甚多；且受全部经部灌顶，与结集共同经续意之教诲。教主靖与德华些遮同时，故他又受得结集经续教典之演说。巴苏达那復向之说：达那喇赤德、达玛波德、达玛杨渣等，接受车珍遮之迎请，前往竹沙。尔往彼处求法为宜，于是又往竹沙，从四位罗渣华与班知达，求得主要进教典演说，与灌顶等一切法要；而主要之教诲，亦得全部传授，而感满意。 <br/>
-  <br/>
+810  <br/>
 　　生遮即得到成就之方法，乃在舒几多杰忠布，修行凡九个月，得心志之解脱，而作本性抉择。在金刚座及容忠宁青德呢（按容忠者卍字也）等处，亲见密主金刚（按即金刚手）之面，而密主所持之金刚杵，降其手上，赐与名词灌顶。在和摩蔡时，有乾达婆之子，献以佛之名字。在刚杨时，夜叉与九洲海边之龙子三兄弟，均来供养。而在尸陀林饿鬼之子，且向之礼足皈依。在和摩蔡亲觐大威德，赐与灌顶及成就。一切天人罗刹，以降伏故，尊之为密宗主；而阎母空行自在，当其护法。妙吉祥以其授记，是相同者。在印度沙龙拿波之尸陀林中，爱嘉渣芝（按即一发母）给之以成就之物。由此种种之证量，故其智慧能证空性法界，现前证悟大地（按即十地）莲花舞自在，与大威德全部中围，皆能面见，给予灌顶，而得成就。且復具有天眼，及无碍神通，故能入水不沉，入岩能穿，如是事迹，不可思议。西藏中部之圣地渣支杨忠，为修行主要之地，生遮时常均欲前往其地以修行。 <br/>
 <br/>
 时西藏国法初坏，人民多各为其主，偏袒一方，致将有战争之恐怖，遂使生遮诸师徒，饱尝艰苦。尤其是于彼前世，所出生在印度之生巴马育芝，曾造许多利益众生之事，令得到无余圆满之所化众，其苦尤甚。当藏王父子对佛法予以逐渐消灭，而前后摧毁佛法者，愈聚愈多。为保护佛法故，纷纷请示生遮用忿怒咒，消灭佛教敌人，以弘扬佛之事业。且以在西藏前后三次战争中，生遮二子，已为杀死。依此以说： <br/>
@@ -3178,7 +3199,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 但为怨敌所不许　　为护佛法不消灭 <br/>
 于是生起嗔恨心　　想四獠牙今示现（按即是生忿怒心） <br/>
 所以学习忿怒咒  <br/>
-  <br/>
+811  <br/>
 　　于是前往印度及尼泊尔两地，请得忿怒明王类忿怒咒等，归而结集焉。 <br/>
 依止十一位喇嘛　　但班知达者四位 <br/>
 大教主巴支星叽　　与印度叉通那波 <br/>
@@ -3211,7 +3232,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 是袁登渣楚 <br/>
 如是四个心之子，通达根本续者，名巴戈伦青帕巴。通达甘露叶（按即口诀）者，名苏敦赖卑遵墨。通达答辩花者，名邓节袁登楚。通达心之见地主要之果者，名舒移喜汪竹。此外有能通达上列四项，而最优越者，名俱龙华袁登渣楚。有等历史内说：俱龙华所接受者，均是灌顶、经续、及教诲等。而苏敦所接受者，则是四种灌顶之大河也。 <br/>
 <br/>
-经部赞扬努青生遮野些为十地菩萨，释迦世尊涅槃后二千年，努便出生，有如是之授记。所说之二千年，是约略言之。依现代著名之时轮计算法，以详细推算，是于释尊圆寂后一千六百五十三年而努出生。其所计算之因缘，是释尊于庚辰年圆寂，越二十八年后戊申年，在藏王渣宫房顶降下密宗经续时，从此推算一千六百二十五年壬子年，而努出生。若依藏王赤松庚午年出生算起，越四十三年，便是壬子年。而从舍美七人出家之丁未年算起，则为越第六年，故于戊辰年藏王赤松圆寂时，努则当为十七岁也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 16:33<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 28 楼</span></div><div class="post-body">十七　　　努青生遮野些师徒表 <br/>
+经部赞扬努青生遮野些为十地菩萨，释迦世尊涅槃后二千年，努便出生，有如是之授记。所说之二千年，是约略言之。依现代著名之时轮计算法，以详细推算，是于释尊圆寂后一千六百五十三年而努出生。其所计算之因缘，是释尊于庚辰年圆寂，越二十八年后戊申年，在藏王渣宫房顶降下密宗经续时，从此推算一千六百二十五年壬子年，而努出生。若依藏王赤松庚午年出生算起，越四十三年，便是壬子年。而从舍美七人出家之丁未年算起，则为越第六年，故于戊辰年藏王赤松圆寂时，努则当为十七岁也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 16:33</span><div class="badge-floor">第 28 进</div></div><div class="post-body">十七　　　努青生遮野些师徒表 <br/>
 <br/>
 莲　花　生　大　士┐ <br/>
 诗　列　星　哈　　┤ <br/>
@@ -3255,12 +3276,12 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 舒移喜汪竹之弟子，名颜通蒋操赞青、龚遵舍饶移喜、利聪舍饶竺青、袁登渣楚父子二人，及舒之共同弟子，是杨舍翅楚。杨之弟子是移喜忠兰，忠兰之弟子，是哈遮苏窝车；而苏亦是董秋帕巴宁波车之弟子。至努与苏之间，是有一上师者。 <br/>
 <br/>
 丙二：不共经续修部各别次序 <br/>
-  <br/>
+812  <br/>
 　　其第三弘扬古代佛教金刚乘法之苏窝车；以其弘法，虽较在后，然而种下古教之根：苏聪巴舍饶渣，造其树枝；苏释迦星叽，造叶与果之弘扬；故苏氏祖孙三代，均极有名。 <br/>
 <br/>
 苏族本从印度移来；印度圣地，以前有一人，名有顶髻哈汪孙奴，其子名文达尚舒晶，文之子名苏渣华森渣，在西康出生；渣华之子名苏巴舍宁达渣晶，巴之子名苏宁青渣楚，宁青之子，名楚生美波车。在斗翁经（按即故事书）有说：“哈遮苏窝车，是楚之第三子所生。”其他记载，则说是楚之长子名苏鸦渣列之子。然此经详述苏代二十七代之史事，较为正确。 <br/>
 <br/>
-故知楚生美波车有子三人，名苏鸦渣列、苏卡清那晶、苏香舍饶忠兰。而其三子忠兰，有子四人，名哈遮苏窝车、苏敦喇嘛、苏甘多杰忠兰、苏甘聪等。但其长子苏鸦渣列，有子名呢吗迎波，系在印度出生，及回到西藏他龙巴时，呢吗生一子，名苏他巴甘青，他巴之子，名苏聪舍饶渣巴。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 16:38<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 29 楼</span></div><div class="post-body">十八　苏窝车家族表 <br/>
+故知楚生美波车有子三人，名苏鸦渣列、苏卡清那晶、苏香舍饶忠兰。而其三子忠兰，有子四人，名哈遮苏窝车、苏敦喇嘛、苏甘多杰忠兰、苏甘聪等。但其长子苏鸦渣列，有子名呢吗迎波，系在印度出生，及回到西藏他龙巴时，呢吗生一子，名苏他巴甘青，他巴之子，名苏聪舍饶渣巴。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 16:38</span><div class="badge-floor">第 29 进</div></div><div class="post-body">十八　苏窝车家族表 <br/>
 <br/>
 哈汪孙奴－文达尚舒晶－苏渣华森渣－苏巴舍宁达渣晶－苏宁青渣楚－－＊ <br/>
 ┌　苏鸦渣列－呢吗迎波－苏他巴甘青－苏聪舍饶渣巴 <br/>
@@ -3292,7 +3313,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 苏平常均在清净处所修行，所以亦有散逸习气。因此乃单独前往菩东鸦达岩以修行，其时诸弟子均欲随往。苏说：汝等来此，如果是为菩提，则只有专修，才有成功希望；其他一切均无所用之，故应将所有世间之散逸切断，而作修行精进，我亦惟有修行而已。弟子辈因亦各各精进焉。  <br/>
  <br/>
-后来有一日，空行授记之，说：“尔应下山，则对有情饶益较大。”苏乃前赴打那及龙巴两处，其地有一枭巢岩洞，门向东方。遂在此修大吉祥清净九佛法，却能亲见大吉祥清净本尊之面。以其安住枭巢修行之故，人皆称之为喇嘛胡巴（按胡巴之义为枭）龙巴（龙巴之义为巢）也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 16:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 30 楼</span></div><div class="post-body">十九　　苏窝车事师闻法表 <br/>
+后来有一日，空行授记之，说：“尔应下山，则对有情饶益较大。”苏乃前赴打那及龙巴两处，其地有一枭巢岩洞，门向东方。遂在此修大吉祥清净九佛法，却能亲见大吉祥清净本尊之面。以其安住枭巢修行之故，人皆称之为喇嘛胡巴（按胡巴之义为枭）龙巴（龙巴之义为巢）也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 16:46</span><div class="badge-floor">第 30 进</div></div><div class="post-body">十九　　苏窝车事师闻法表 <br/>
 <br/>
 所　事　之　师　│　所　　　　闻　　　　之　　　　法 <br/>
 ────────┼─────────────────────────── <br/>
@@ -3318,7 +3339,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
     喇嘛乃念此普通福报，是不共成就之障碍，乃去积聚九峰之山上以修行，地主又来申请，以食粮即足，再乞多留。喇嘛说：尔所供养，不过如此，极难作根本清净，如果久住，是增进散逸之因。地主知不可留，暗中堕泪，曰：喇嘛即不允留，请在大悲之下，以保护我，乃以性命献上；喇嘛遂授以近事戒，使之为护法焉。 <br/>
  <br/>
 苏乃往义苏他，并对苏聪巴说：我有授记，在积聚九峰之山上以修行，遂在此胡须崖内住，乃与弟子，均在山内修持。时苏有四“尖”及一“最尖”之弟子等五人，复有大修者一百零八人。四尖弟子中，有名苏聪舍饶渣，是宗派中思想之尖；梅雅聪渣，是幻化纲之尖；桑果聪，是大智慧之尖；杨甘舍饶渣波，是修持之　尖。其最尖者，名渣喇嘛，是一切法之尖。复有祝刚晶、俞甘那摩、谢甘沙渣、苏甘多忠、虞甘佐巴及康巴舒囊迎波等一百零八大学者。能于空中，来往自如，及作许多神变。  <br/>
-  <br/>
+813  <br/>
 　　一日，有少女三人前来，对教主授记：以在义汝森谷中之东有一谷，形如半月，且有一崖其形如心在其中。对面有一平地，如摩登伽女之皮平铺者。山形如象鼻，山下有岩，形如狮子额上之部，有三池塘之水往下流，以表三身。尔到此修行，即生可以成就，而于利他时期，亦能长久。于是遂将以前所住之胡须崖，留给苏聪巴住。而与眷属下山，寻觅该地，既得，则有桑摩圆丁晶，造其施主，献以房屋，使苏安住焉。 <br/>
 <br/>
 而苏聪巴等百余之大修行者，分别住在谷之深处，与谷之出口，各皆修建草房，或住于岩之孔穴以修行，当地七村之居民，咸供养之，主要施主为桑渣彭忠巴。众施主之承事喇嘛，视之如佛，以此供养，喇嘛与眷属住以修行多年。苏于四十二位之寂静尊，及五十八位之忿怒尊，皆能亲见；尤其是大吉祥清净尊，如人之相晤，彼时可以交谈。八位果列（按是世间神）供其使役；一切非人，悉服从其命令也。 <br/>
@@ -3333,7 +3354,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 匠人又在此佛堂之北部，营造一塔，与笙野塔无二。而寺院之名，亦随苏名而起，名为巴胡渣龙，甚为著名。此寺为苏窝车所始创，而苏聪巴为立寺规，苏释迦星叽，为之弘扬。 <br/>
 <br/>
-以上所说，均是于前者金刚乘之教法，造成广大规模之来源也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 17:11<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 31 楼</span></div><div class="post-body">二十　苏窝车主要弟子表  <br/>
+以上所说，均是于前者金刚乘之教法，造成广大规模之来源也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 17:11</span><div class="badge-floor">第 31 进</div></div><div class="post-body">二十　苏窝车主要弟子表  <br/>
 　　　　　　　　　┌苏聪舍饶渣（宗派中思想之尖） <br/>
 （甲）　四尖　┤梅雅渣聪（幻化纲之尖） <br/>
 │桑果聪（大智慧之尖） <br/>
@@ -3352,9 +3373,9 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 能看见者不是见　　见无见义才是见　　修离言法性之道  <br/>
 <br/>
 　　如此等等，为说见修行三种修道之歌，弟子等闻之，均极虚心而发愿。苏所住胡巴龙巴之道场有二：一是听经之道场，一是修行之道场也。 <br/>
-  <br/>
+814  <br/>
 　　苏聪巴在殷沙摩修大吉祥清净时，在香地修行精舍之山坡，看见因地之兮鲁迦，一面二手。修行圆满后，以报告上师苏窝车，师大悦说：“苏聪巴已经得兮鲁迦之成就，我得荣增南卡迎波授记说：‘尔修建一尊兮鲁迦之像，对西藏人民之魔鬼大灾难，可以调伏，而于彼等利益甚大。’如此我辈应准备造此佛像”遂嘱咐其他弟子，以准备修建佛堂，将所有其他物品，均取出应用。乃到上狮子额之地方安住，陈设施食已妥，入兮鲁迦定，成其形状；具福德者见之，以为真正之兮鲁迦也。 <br/>
-  <br/>
+815  <br/>
 　　时苏聪巴在安置护腮石，（按即在屋旁之石，如腮边。）有见其身体胖而矮，面甚凶恶，加以诽谤说：人皆放置此护腮石，尔亦放置一具力士（按即大也）石乎？聪巴不理，但说：“尔师徒辈，可到献食之地方用膳，我即前来。”但竟不来，及师徒食讫回时，他已放置四方四隅大石八方，非人力所能动者。石上写著，此是苏聪巴之力士石，人皆见之。而说诽谤者见之，骄傲为之大减，且内愧焉。在黑业方面，障碍修建佛堂者，以聪巴置力士石，均为之消灭矣。 <br/>
  <br/>
 　　佛堂四柱，准备修建，但皆曲曲弯弯。苏窝车说：最好使苏聪巴来，调之使直。苏聪巴乃用气深吸，一仰一俯时，而木柱便直如矢矣。庙外已盖完好，须要画工，苏聪巴说：“我已钩召之来。”及过两天，便有画工，到苏处求法，苏虽知是画工，而作为不知。问曰：尔等是有学问之族乎？答以均是绘佛像者，特在尊前求法。苏说：运气大佳，我可以满尔等愿，在此末法时代，为利众生，应修兮鲁迦像，尔等照造可也。画工等皆尽心满意，于是苏乃先授予以兮鲁迦之瓶灌，与如来之舍利，七生婆罗门之肉，（按亦是释尊化身）八大尸陀林之土、石、水、木，一切宝贵种种品物，印度及西藏持明已修成之药种类，一切准备完妥。 <br/>
@@ -3480,7 +3501,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 翌日法会时，聪巴坐座上，破颜微笑；众弟子问：上师何微笑也？答：佛法便是我辈大乘密宗之密法，依其所以杀而能度之以了生死者，乃密宗之教诫，而为法相家所无者。今聪波所说：杀我便可成佛之言，如此大法相家，意尽边际，亦是我辈之教诫，故我闻之，异常欢喜也。 <br/>
 <br/>
 四柱者：心部之柱，为恭布之左敦沙耶；经部之柱，为钟龙之杨倾喇嘛；幻部之柱，为崔巴之宁释迦生波；修业之柱，为那摩列之达德佐沙。亦有人说：加上马图蒋巴，而成为五者。八梁为马图巴、左敦卓声、宁释迦蒋操、渣沙英、鲁敦巴玛、乌巴沙图、舒敦打渣、谢侵蒋巴等八人。亦有人加上史清、那巴迎波、与顔敦渣华三人，而成为十一人。二大修行者，为巴甘德玛、殷金多巴等二人。一大自明者，为那都之史敦舒渣。二“达古那”者，为桑敦鸦些，及聪波渣些。其余十六椽、三十二桁、及二平常者，以名字太多，未便缕述。其三无益处者，为果渣叉、密松汪星、果聪汪爱等三人。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 17:23<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 32 楼</span></div><div class="post-body">二十一　　苏聪巴主要弟子表 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 17:23</span><div class="badge-floor">第 32 进</div></div><div class="post-body">二十一　　苏聪巴主要弟子表 <br/>
 <br/>
 ┌　心部之柱：左敦沙那 <br/>
 （甲）四柱　┼　经部之柱：杨倾喇嘛 <br/>
@@ -3531,7 +3552,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 聪巴復于苏窝车显现大吉祥时，右脚所放之山上，修建一座大吉祥之佛堂。当马图蒋巴修建佛堂时，以选择木料极严，因为地神所伤害；于是马图先将其木献与上师，而地神竟将大木扣留水中五日不放。聪巴命二弟子持白红食子各一个，以白食子交付崖山，而以红食子放置水中。并说：尔等即将柱取回，时地神甚为惶恐，即将其柱送至河边。如此世间神及非人等，均须听其训示也。 <br/>
 <br/>
 后来聪巴将示圆寂，众弟子请其娶妻生子，以延嗣续。于是密主金刚手，入其妻胎，诞生一子，名苏释迦星叽，具足三十二相之希有清净，并具八十种随形好教诫之名字。聪巴说：造山之儿子，穿破烂之衣服，食粗粝之食物，远离魔敌，决心佛法。说毕，聪巴于六十一岁甲寅年，在胡须崖中，光蕴、声音、大地震动，到金刚法界去矣。 <br/>
-  <br/>
+816  <br/>
 　　苏聪巴之子苏释迦星叽，在西藏言之，是密宗心要之来源。其名字亦称为密主左蒲巴。其母亲名左沙摩，亦名达摩祝多针，本是苏聪巴之弟子；聪知其腹内，可以孕育化身转世活佛。而其兄名达德佐沙，亦是四柱之一；聪向之说：尔之妹妹，可以给我乎？达德答以：上师所说，无不惟命是从。后来达德以金刚铃杵，交给其妹，且告之曰：此铃杵尔不可由别人转交，而须亲谒上师呈献者。诸大德知之，为之不悦，认为此种铃杵，非上师所须，为何献之？以为彼迨不明上师心意者也。 <br/>
 <br/>
 时左敦沙耶说：我得一梦，在无名指上，有一化身佛，会当降生，于佛法甚有饶益者，尔等不应不悦也。如是其他二柱，各皆得夢兆，或是佛之身体，入左沙摩体内；或是金色金刚，降入左沙摩之身。 <br/>
@@ -3552,7 +3573,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 苏星叽之智慧、仁爱、能力等功德，均极圆满；尤其于密宗心要，极清净之心性，得到胜解。所以密主左蒲巴之教诲，直至现在，尚如日月经天，名垂不朽。 <br/>
 <br/>
-星叽之主要弟子十二人：拿波（黑也）者四人，敦巴（导师）四人，美（祖父）者四人。四拿波者，为谢敦渣拿、苏拿哥罗、杨拿多波、达拿祝多汪竹。四敦巴者，为尼敦卓星、左敦多杰干波、桑敦、渣敦。四美者，为蒋巴治敦、虞敦珂波、彭敦渣朱、乌巴卓星。于众弟子中之分别，有上下二种，此其上焉者也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 17:28<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 33 楼</span></div><div class="post-body">二十二　　左蒲巴主要弟子表 <br/>
+星叽之主要弟子十二人：拿波（黑也）者四人，敦巴（导师）四人，美（祖父）者四人。四拿波者，为谢敦渣拿、苏拿哥罗、杨拿多波、达拿祝多汪竹。四敦巴者，为尼敦卓星、左敦多杰干波、桑敦、渣敦。四美者，为蒋巴治敦、虞敦珂波、彭敦渣朱、乌巴卓星。于众弟子中之分别，有上下二种，此其上焉者也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 17:28</span><div class="badge-floor">第 33 进</div></div><div class="post-body">二十二　　左蒲巴主要弟子表 <br/>
    ┌—谢敦渣拿 <br/>
 （甲）四拿波┼—苏拿哥罗 <br/>
 ├—杨拿多波 <br/>
@@ -3576,7 +3597,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 星叽与卑吗那密渣之关系，其中距离有三位上师。是卑吗那尊者传授容操珍之格龙马遮摩，格龙以之传授柯渣乍些之马巴舍饶窝，马巴以之传授辛喇布之郞敦达玛舒囊，而郞敦之弟子，乃为左蒲巴。 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 17:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 34 楼</span></div><div class="post-body">二十三　　　左蒲巴得卑吗那传承之系统 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 17:40</span><div class="badge-floor">第 34 进</div></div><div class="post-body">二十三　　　左蒲巴得卑吗那传承之系统 <br/>
 卑吗那密渣尊者——格龙马遮摩——马巴舍饶窝——郞敦达玛舒囊——左蒲巴 <br/>
  <br/>
 左蒲巴之弟子谢敦渣拿，于甲戌年在俞杨敦出生。其兄长二人，在法相宗庙里读书，他送膳食时，只是旁听，后来其所领悟，却比二兄为强。乃对二兄说：兄等读书三年，仍无意义，如是我读，当有意义。二兄说：我等所知便是如此，但佛法谁得听闻，谁亦得益；故我等欢迎尔来学，我为送膳食可也。 <br/>
@@ -3664,11 +3685,11 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 释迦军已属希有；其弟释迦和，自小即有自生神通，于一切法，均具解释能力。依止渣珠贡巴为上师，于父亲所有法要，皆从以得闻。且能现前见中有，故常为人演说中有闻救度法；其兄诫以无菩提心之仪轨，是毫无意义者，自是而后，彼即不復再宣说矣。 <br/>
 <br/>
 一日，释迦和表示心生后悔，人以问之。乃说：我平常于持明者领会侪辈中，均能进入参加，俱会一处。但我因日前曾对哥哥说一句粗恶语：故诸持明者，乃说我是破坏三眛耶，如是无法参与，遂非忏悔不可也。 <br/>
-  <br/>
+817  <br/>
 　　时有名梅利伽耶者，以诸亲戚辈，常加损害；因查询在西藏中谁具足咒骂最大能力？人皆说是释迦和。梅利闻之，即派人赍具卑礼厚币往谒，以两地距离辽远，途程凡八阅月，始克抵达。及至，请求咒骂之法，和表示无此能力，如有需要？可鼗我之手杖取去，故亦未具復函。来人不得已，乃取其手杖，归具以告梅利，梅利异常愤怒曰：彼受我厚礼，而不给以教诫，如此是何道理耶？说毕，执其手杖，怒而掷之，一掷之刹那间，从手杖中，竟走出大护法金刚善之第四位圣者名多杰赖巴焉。他一见之，顿生欢喜，且极满意，乃依以修之。于是以前对他伤害之人，能降伏者已降伏，无法降伏者则消灭之。 <br/>
 <br/>
 梅利至是乃造清净恶业之善根，遂修建佛堂、佛塔，以报释迦和之深恩，并具极多礼物，亲往朝见之。和传之以密乘一切之法，于是二人同往柯渣卡操，并在戈听庙与巴佐庙以修行。且朝见杨父子二人，（杨父子二人为杨舍饶楚，及其弟子杨舍饶忠兰，为杨规之创始者。）杨乃以八种佛所说教，乐集，与大部分杨派教规，俱传授与之。 <br/>
-  <br/>
+818  <br/>
 　　迨二人返抵胡巴龙时，梅利对释迦和说：大恩德上师，我今要往柯宇去，请指派一人以同行，我亦可造报恩之事。及抵柯时，有名路波鸦列邦嘉者，有掌握国家之能力；释青君渣王，却不能统治之，乃与战争，释青王以之问梅利曰：问西藏有咒骂之法，尔能之乎？梅利曰：然，我知之，且可为尔修之，但于杀戮、驱逐、勾召之法，以何者为宜乎？王自念：如请之修杀戮法，倘遇敌人病死，或他故而死，则不知其能力。 <br/>
 <br/>
 如请修驱逐法，倘遇敌人自动远离，亦不知其能力。不如请修勾召法，因敌人皆不愿来，所以要勾召之。当梅利修风轮之加行时，路波无法稳站，乃将之勾召而来。但释青王仍然不甚相信，请其在青草地与海岛之中以降雷；梅利乃依照其所指示之处以降之，王乃深信不疑，赏赐甚丰。梅利是得大威德法能力之成就者，其创始咒之根据，亦是从苏聪巴所传也。 <br/>
@@ -3684,7 +3705,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 巴诗释迦和之弟子，达那敦都；达那之弟子，达释迦柏；柏之弟子，苏铮巴星叽。苏铮巴之父亲，名苏呢吗星叽，为其祖父巴诗之子也。在楚普出家，叉罗珍巴巴赐以此名；他具足一切功德，尤其是菩提心之根本，甚为坚定。当珂之军队发生战事时，森巴达之长官，供养以黄金甚多；但他不受，云以需无畏施，因此拯救甚众。及在楚普修建庙宇，适值天旱，居民深以为苦，他用能力降下甘霖，存活无算。 <br/>
 <br/>
 当杜珂伤害萨迦之佛法时，皇帝赐以诏书，请施制敌之法；而班禅君孙，亦请求之。呢吗乃用忿怒现前之能力，以降下大雪，令敌人军队三万余众。无法前进，只得撤去，其保护佛法之功德甚大，概可想见。并曾修建许多佛庙，与身语意之所依，如此所造为佛法与众生利益之事业，是非常广大者。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 17:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 35 楼</span></div><div class="post-body">丙三；圆满次第根本与支分共同经续之思想集合 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 17:51</span><div class="badge-floor">第 35 进</div></div><div class="post-body">丙三；圆满次第根本与支分共同经续之思想集合 <br/>
 <br/>
 苏铮巴星叽者，从小即已有大乘之宿根，具大慈悲心，每见别人伤害众生时，其心中辄为之不安。在楚普出家，对于法相家之名相，及楚普庙派之法规，学得均极通达。十四岁时，便能讲经，因此遂著学者之名。容敦多杰巴亦说：“我之上师，属一切智。”其住楚普庙之法座者有年，为诸大德宣讲对法藏。 <br/>
  <br/>
@@ -3695,7 +3716,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 当修行时，面见许多本尊。而谒见他之人，均不自主以生起出离心、大悲心、与具足信心。但后为黑教者毒药所害，圆寂时才二十七岁。其智、悲、能力三者之功德，悉皆不可思议；故为一尊化身佛，是无可置疑者。 <br/>
  <br/>
 铮巴所传之弟子甚多，其对于幻化纲次第密乘之解释八确，及关于经部，皆得圆满通达，而以能作广大利生事业，著名者十六人。其中主要之　弟子有二：曰、容敦多杰巴，曰、达那佐玛华生祝多杰。  <br/>
-  <br/>
+819  <br/>
 　　容敦多杰巴者，姓宁，出生于甲申年，年青时圆满智具，且通达一切法，而于对法藏为尤然；即一切新旧密宗，亦极通达。其后能成为嘉玛巴杨忠多杰之高足弟子，非无故也。从苏铮巴星叽学习经、幻、心三部一切口诀，因此而证大语自在。并于密宗心要，造解释论，名光明镜子。当铮巴从金巴沙本学红黑色大威德法时，他亦随同学习，故对大威德法之加行幻轮，均能修习，而且极具能力也。 <br/>
 <br/>
 时有欲伤害铮巴之寿命者，名哈俱本波，容敦乃运用幻轮法，将其人、财、田、宅等，用水淹没，甚至冲入河中，以消灭之。乃说：消灭上师之敌人，只有我等之誓句如是也。 <br/>
@@ -3755,7 +3776,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 及后八十二岁辛亥年，在后藏圆寂。从苏聪巴出生，到生遮圆寂时止，共四百七十年。 <br/>
 <br/>
 贵洛雅桑渣巴者，又名贵孙奴啤，其父名贵敦忠兰多杰，母名施他遮。贵洛系于壬申年出生，从曾雅堪青出家；后从嘉玛巴德新舍巴，闻受菩萨律仪与六法；从多蒋秋巴，闻受一切多派之法，尤其是从班禅巴那雅那，接受无上瑜伽大部分之灌顶，真实名经，与芝悌、汪多、无比六加行等，加以翻译。 <br/>
-  <br/>
+820  <br/>
 　　在达那佐玛之子生遮宁青七十岁时，己亥年，得受幻化纲静忿灌顶，幻化纲长寿灌顶，那也东初灌顶，寿主与清净之灌顶，那波巴教派马头明王灌顶，那渣麦教派随许灌顶，萨迦派普巴灌顶忿怒随许，十八种心部明力灌顶等，遂于古教续部一切灌顶，均完全接受。 <br/>
 <br/>
 而密宗心要续解释开示，其本人所著之郞能果之解释开示，幻化纲四十种简略本续，意集经与其根本续集，露青经解释名黑暗盔甲，八十种幻化纲两个喇嘛清净根本之念诵等，均传付与之。且有心要戏论与离戏论之四灌，麦龙华所造之导引法，左青鸦罗之口诀，亦得传授。简略言之，贵洛已成为一切密宗之教主，而对宁玛巴古派方面，得到满愿。 <br/>
@@ -3838,7 +3859,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 又殷释迦榜巴，向文龙巴呈献密宗心要解释。楷朱卓巴父子二人，亦从文龙巴而得心要解释之开示。所以从文龙巴所传承而来之弟子，当时均成为法王。 <br/>
 <br/>
-谢卓之星叽寺之主持渣移喜干波，亦皈依文龙巴。而宁卓渣亦向文求学经部、幻化纲等均甚通达。宁之叔父多杰赞青，从小时到桑浦学因明，已得胜解；又从渣移喜干波，学经部、幻部、解释八確、灌顶、仪轨等；且以之传授其叔父喇嘛竺渣华。竺以之传授利东巴喜饶赞青；利以之传授达波族之主伴与密宗者辈所以当时在达波方面，亦大加以弘扬焉。利以之传授桑卡华舒囊生波，桑以之传授教主嘉斯渣楚。嘉斯于密心要解释上，造开示、念诵、及修普巴佛法等，并以之传授贵孙奴素。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 17:54<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 36 楼</span></div><div class="post-body">廿四　　生、圆、共、不共、经、幻、修三部传承系统表 <br/>
+谢卓之星叽寺之主持渣移喜干波，亦皈依文龙巴。而宁卓渣亦向文求学经部、幻化纲等均甚通达。宁之叔父多杰赞青，从小时到桑浦学因明，已得胜解；又从渣移喜干波，学经部、幻部、解释八確、灌顶、仪轨等；且以之传授其叔父喇嘛竺渣华。竺以之传授利东巴喜饶赞青；利以之传授达波族之主伴与密宗者辈所以当时在达波方面，亦大加以弘扬焉。利以之传授桑卡华舒囊生波，桑以之传授教主嘉斯渣楚。嘉斯于密心要解释上，造开示、念诵、及修普巴佛法等，并以之传授贵孙奴素。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 17:54</span><div class="badge-floor">第 36 进</div></div><div class="post-body">廿四　　生、圆、共、不共、经、幻、修三部传承系统表 <br/>
 <br/>
 　　　　　　　　　　　　　　　　　　　　　　　　　　　┌移喜渣楚—哈遮吽聪┐ <br/>
 ┌　袁登渣楚　┤　　　　　　　　　│ <br/>
@@ -3878,7 +3899,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 从左洛罗渣华学金刚亥母与律仪来源。从干卓之移喜，学喜金刚。从贵罗渣华之弟子董敦多杰迎波、与菩提桑敦，学密集金刚。复从董敦与菩提之弟子那敦班治汪竹学道炬论、导引法、与大威德法类。从谢兑青学胜乐金刚灌顶、大手印、那落六法之口诀，故在谢宝锡弟子中，有高足之称，而于共同显密教中，尤其是金刚乘方面，无有不学过之法。 <br/>
 <br/>
-一日，蒋敦开示之曰：“尔如到甘波修行，可以得光蕴身之成就；如到嘉图修行，则可造弘扬佛法之事。”喜饶一心为弘佛法，乃往嘉图；及抵嘉悌，见有许多牧童在此牧羊，乃以“何处是嘉图”问之。彼等答以“嘉图就是上面之山谷。所牧之羊，均是所化之缘起；而所有牧人，均是弟子之缘起也。”因念缘起甚佳，乃决赴嘉图焉。该处风景优美，而山形极像藏文之（音嘉）字，图是“上”义，故名嘉图，乃于己卯年，在此山上建庙。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 18:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 37 楼</span></div><div class="post-body">廿五　嘉图巴事师闻法表  <br/>
+一日，蒋敦开示之曰：“尔如到甘波修行，可以得光蕴身之成就；如到嘉图修行，则可造弘扬佛法之事。”喜饶一心为弘佛法，乃往嘉图；及抵嘉悌，见有许多牧童在此牧羊，乃以“何处是嘉图”问之。彼等答以“嘉图就是上面之山谷。所牧之羊，均是所化之缘起；而所有牧人，均是弟子之缘起也。”因念缘起甚佳，乃决赴嘉图焉。该处风景优美，而山形极像藏文之（音嘉）字，图是“上”义，故名嘉图，乃于己卯年，在此山上建庙。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 18:05</span><div class="badge-floor">第 37 进</div></div><div class="post-body">廿五　嘉图巴事师闻法表  <br/>
 　 所　事　之　师　│　　　所　　闻　　之　　法 <br/>
 ────────┼───────────── <br/>
 蒋操星叽　　　　│　（从之出家） <br/>
@@ -3893,13 +3914,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 谢兑青　　　　　│　　胜乐金刚灌顶、大手印、那洛六法之口诀  <br/>
  <br/>
 　　时黑教之神，名多宁明布者，对此起瞋恨心，乃显现身体，以甚多方法，而障碍之。教主偕二弟子加以驱逐，神遂隐身入大石里，卓遮山敦以袈裟缚而牵曵之使出，嘉图巴从后面，持鞭追逐，且鞭挞之；将石头牵至谷口，此大石至今仍在其处，人多认识之者。复有持黑教者八人，修念毒咒，以为伤害；于是吉祥天母佛堂上有一岩石，行将倾下，惊险万状，嘉图巴以手在岩石上画一十字杵，如是岩便不动，亦不能加以伤害焉。其所示现之成就，不可思议，有如此者。  <br/>
-  <br/>
+821  <br/>
 　　东方阿多以上，南方罗叉华英、与罗民以内，其所传弟子，为数甚多。主要所传者：为大圆满、幻化纲、密心要开示之教诫，与灌顶之教诲等；所有印藏大乘教典之解释，均依苏巴之教派，以传授者。此外复有依止经部、妙吉之幻化纲等。在显教方面，则为弥勒菩萨所造之一切大乘教典；寂天菩萨所造之入佛子行论等，皆传授焉。简略言之，在西藏多康（西康）一带，他于密乘佛法，均能恢复，并加以弘扬也。及壬子年九月圆寂，时年七十一岁。 <br/>
 <br/>
 本来嘉图巴大胜士，对于文殊菩萨，有如人之与人晤对无二，文殊且常给予授记。即不动佛、极乐世界、与药师佛之琉璃光世界等，他亦时常可以面见。幻化纲寂忿本尊、胜乐金刚六十二尊佛、大吉祥兮鲁迦之中围，亦复时常可以见到者。他时亲近五方佛闻受法要；并常与诸大菩萨，彼此讨论教理。以此功德，故于下一生到极乐世界，成为大菩萨，名罗爵迎波，而得八地成就。将来且得无量寿如来之成就焉。 <br/>
 <br/>
 嘉图巴之主要弟子山敦巴者，于丙午年在宝波江之山沙出生。十七岁朝嘉图巴闻法，其后教主偕之前往梅利，将一切口诀传付之。二十一岁时，住藉德列多干寺里，及二十三岁时，往嘉图以修行。 <br/>
-  <br/>
+822  <br/>
 　　一日，嘉图巴在修行时，观察所现，一大谷里，有水遍满，中有大光堆，灼耀炫目。因念此是何表义？旋闻有声音说：此乃是尔之弟子。其所坐位，是第十一地（遍光明地）。因此嘉图巴告山敦巴说：我有如此境界，此当然是尔矣！大约就在此时，山敦面见大吉祥兮鲁迦，与寂静四十二尊中围，而吉祥天母、与大黑天，是时常可见者。山敦对于罗渣华移喜楚，与渣嘉能言善辩那之前世，均能了了。五十六岁，当嘉图寺之堪布（主持），将经、幻、心三部法，遵上师之教规，以护持之。 <br/>
 <br/>
 时有一教主大菩萨名彭渣巴，闻嘉图之山敦巴名誉甚高，正在怀想；观察所得，如无云晴空，青色光明越量宫中，有报身佛会，在山敦巴所住之对面，有五色虹光堆，因此想他是一尊佛。于是即在该晚会供，面见大吉祥兮鲁迦，当夕梦中亦见各种宝物，所成极伟大之山，山麓有许多药林，多人前往采药；山顶青光越量宫内，嘉图之山敦巴却住在其中。有一大海螺，无人吹之，而自动作响，从大海螺中，放出无数小螺，皆出螺声；因想念山敦巴之名声，当无远而弗届。彭其后到嘉图寺朝见山敦巴，接受幻化纲灌顶，以增长其智慧。当其遵照上师教诲修大圆满法时，他之观察有如虚空，且于三天晚上，均能看见寂静忿怒诸尊焉。 <br/>
@@ -3941,7 +3962,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 蒋操罗爵之主要弟子蒋操星叽与蒋操赞青二人，皆于教传岩传二派，以闻思修而弘扬。 <br/>
 <br/>
 蒋操赞青之主要弟子彭布开珠渣那叽都者，是雅青移喜孙奴之化身，对显密道次第一切，均极通达。尤其从大学者渣和卓榜闻受经部及幻化纲寂静忿怒本尊灌顶、开示、仪轨等。 <br/>
-  <br/>
+823  <br/>
 　　其后摩敦多杰巴桑，亦从渣那叽都，闻受经部。摩敦以之传授大菩萨达龙巴多杰能渣，从此传承不断焉。 <br/>
 <br/>
 有名之康派经部，传至西藏中部；学者移喜赞青巴，对密心要之一切根本解释论，经部、大圆满、心中心口诀三部，各别教规本，如太阳光明，以弘扬于世。其所造之寂静忿怒尊，与普巴教派之解释论，密心要之解释、纲要、与集义，将郞能果造成解释及小注，解释八确及小注，对邓车沙渣亦造成解释，名光明经；与寂静忿怒仪轨等。 <br/>
@@ -3955,7 +3976,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 空行母业自在母，给予南卡以授记说：“尔六十四岁圆寂，后来到北方造极大饶益众生之事；并从该地到极乐世界，成为德卫饶果菩萨。亦是在清净一切功德之法界，名德卫迎波世界处成佛。”等语。故其能面见诸佛菩萨，而得自在。依共同之行境而言：南卡能将法衣，挂在太阳光影上。缘是学者与成就者之历史，是不可思议者。 <br/>
 <br/>
 以上名为“十三位嘉图寺历代相传之传记”，彼等均是三族依怙（文殊、观音、金刚手）不断之化身，而于前期之佛法，皆用开示、修行、以护持焉。  <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 18:11<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 38 楼</span></div><div class="post-body">廿六　　大圆满心中心口诀部康派传承系统表（甲） <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 18:11</span><div class="badge-floor">第 38 进</div></div><div class="post-body">廿六　　大圆满心中心口诀部康派传承系统表（甲） <br/>
 <br/>
 左蒲巴——蒋敦佐华干波——嘉图巴——山敦巴——曾巴本——舒囊本巴——乌俄移喜榜——蒋操巴华——舒囊香波——贡噶本巴——汪操巴华——罗爵榜巴——罗爵星叽——蒋操罗爵——蒋操赞青——彭布开珠渣那叽都——摩敦多杰巴桑——达龙巴多杰能渣 <br/>
 <br/>
@@ -3966,7 +3987,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　祝叉在本容沙松与卡华嘉波等地，成立寺庙凡一百零八间，以从事弘扬佛法，其史迹之伟大，概可想见。 <br/>
 <br/>
 渣德在果付兴建渣德寺；其弟子钟图遮移喜、与敦巴汪佐等，以幻化纲、与大圆满法类，弘扬于西藏中地（按即前藏）如此亦是康派之来源。 <br/>
-  <br/>
+824  <br/>
 　　摩敦在藉朱修建寺庙，以弘扬佛法，利益众生，其事迹甚伟。其后所称“摩代十三人”，盖即从斯庙传承传统而来十三代之成就者也。 <br/>
 <br/>
 识者均知祝图为咕汝卓之汪竹之根本集名大悲心要之法主。他及其女君佐本，曾同得授记以“在嘉图寺护持佛法。”虽祝图以未受出家戒，故因缘较逊；然其与三人共同之功德，亦有极大之成就。且曾披袈裟以为翅膀，飞到对面空中之山顶，留下脚印。从此遂安住于列佐以修持，不久却成光蕴身，无余涅磐矣。 <br/>
@@ -3977,7 +3998,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 从另一方面说：嘉图巴、山敦巴、曾巴本三位传付给南卡多杰、钟图遮移喜、敦巴汪佐、至尊巴巴华南卡多杰、敦巴干渣、杨卓初亲赞青、渣和卓榜、彭布开珠移喜赞青、史喇开珠移喜榜巴等。史喇以之传授蒙嘉图巴舒囊赞青、嘉图巴南卡香波、嘉图巴卓之星叽、及哈佐华卓之汪波等。如是传承相续，至谢明龙巴罗爵多杰，从此时直至于今，依然不断者。 <br/>
 <br/>
-又康派经部之灌顶中，一时左青森朱多杰，传付苏杨菴巴释迦忠兰姐妹二人；彼等二人，以至传授苏摩纪敦榜。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 18:18<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 39 楼</span></div><div class="post-body">廿七　大圆满康派传承系统表（乙） <br/>
+又康派经部之灌顶中，一时左青森朱多杰，传付苏杨菴巴释迦忠兰姐妹二人；彼等二人，以至传授苏摩纪敦榜。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 18:18</span><div class="badge-floor">第 39 进</div></div><div class="post-body">廿七　大圆满康派传承系统表（乙） <br/>
 　　　 　┌　南卡多杰 <br/>
 │　钟图遮移喜 <br/>
 │　敦巴汪佐 <br/>
@@ -4005,8 +4026,8 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 喜饶和之著作，有幻化纲之根道果三论，郞能果之解释论等。喜饶和以之开示严多棠遮释巴，严多亦著有心要，与郞能果详细注解。如此骆族一代之灌顶，与续部之开示，均极增盛。 <br/>
 <br/>
-喜饶和后来在山敦孟嘉、雅敦宿巴等地，相续以开示、修行，作妥善之护持。雅敦在西藏上部之地区，南方与北方，如火炽然之增长，以弘扬佛法。而在北方麦敦忠兰俄、雅敦星叽和、与摩巴圆丁汪竹等地，以开示弘扬。后在殿帕，亦有幻化纲之开示，若渣华龙清巴，亦在此地，而得闻幻化纲法者。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 18:19<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 40 楼</span></div><div class="post-body">廿八　　康派经部灌顶传承系统表 <br/>
-左青森朱多杰——苏杨菴巴释迦忠兰——苏摩纪敦榜——杨菴生鸦铃巴——渣和卓榜——史宁军楚香波——嘉图巴摩敦多杰巴桑——达龙巴多杰能渣——聪苍巴初诗罗爵巴丁——班敦嘉玛咕汝巴——持密君桑巴佐——山达亲呢伦朱——达敦卓河丹增——笛清卓之渣波爵麦多杰 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 18:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 41 楼</span></div><div class="post-body">廿九　　骆派传承系统表 <br/>
+喜饶和后来在山敦孟嘉、雅敦宿巴等地，相续以开示、修行，作妥善之护持。雅敦在西藏上部之地区，南方与北方，如火炽然之增长，以弘扬佛法。而在北方麦敦忠兰俄、雅敦星叽和、与摩巴圆丁汪竹等地，以开示弘扬。后在殿帕，亦有幻化纲之开示，若渣华龙清巴，亦在此地，而得闻幻化纲法者。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 18:19</span><div class="badge-floor">第 40 进</div></div><div class="post-body">廿八　　康派经部灌顶传承系统表 <br/>
+左青森朱多杰——苏杨菴巴释迦忠兰——苏摩纪敦榜——杨菴生鸦铃巴——渣和卓榜——史宁军楚香波——嘉图巴摩敦多杰巴桑——达龙巴多杰能渣——聪苍巴初诗罗爵巴丁——班敦嘉玛咕汝巴——持密君桑巴佐——山达亲呢伦朱——达敦卓河丹增——笛清卓之渣波爵麦多杰 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 18:22</span><div class="badge-floor">第 41 进</div></div><div class="post-body">廿九　　骆派传承系统表 <br/>
 左蒲巴——陆敦——卡那迎波——任庶——啤吗巴——骆喜饶和 <br/>
  <br/>
 在生列地区，最殊胜而著名望之大班知达容巴卓之生波，是容宾巴芝宁波车之子，容宾宁青竹青（按即容巴班知达之父）在敦伦时，依五种证菩提法，而孕育之。故其能得陈那之智慧，世亲之经教，珍渣果密之解说，法称之辩论，教主巴波之著作等五种圆满自性，而成菩提。故其降生之缘起，是在山玛玉那之雅龙容处出生，而示现者。 <br/>
@@ -4029,7 +4050,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 楚敦是律藏学者（按指楚敦伊格）　桑支善编排仪轨（按指桑支耶渣） <br/>
 容巴善声明因明　　　　　　　一切和合就是我  <br/>
  <br/>
-　　依共义说：容巴所承事之上师甚多，故于显密各种传承，是不断以传下者。尤其关于金刚乘方面，却是教主莲花生之教诲传承，那南多杰敦珠，亦复有之。那南以之传授卡青巴之汪朱，卡青以之传授邓阿奢梨巴密都，邓以之传授左多杰孙奴，左以之传授香桑圆丁渣，香桑以之传授容宾圆丁，容宾以之传授容宾竹青宁波车，如是传至容巴卓之生波，此中之传承，是不断者。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 18:27<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 42 楼</span></div><div class="post-body">三十　　容派传承系统表 <br/>
+　　依共义说：容巴所承事之上师甚多，故于显密各种传承，是不断以传下者。尤其关于金刚乘方面，却是教主莲花生之教诲传承，那南多杰敦珠，亦复有之。那南以之传授卡青巴之汪朱，卡青以之传授邓阿奢梨巴密都，邓以之传授左多杰孙奴，左以之传授香桑圆丁渣，香桑以之传授容宾圆丁，容宾以之传授容宾竹青宁波车，如是传至容巴卓之生波，此中之传承，是不断者。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 18:27</span><div class="badge-floor">第 42 进</div></div><div class="post-body">三十　　容派传承系统表 <br/>
 莲花生——那南多杰敦珠——卡青巴之汪朱——邓阿奢梨巴密都——左多杰孙奴——香桑圆丁渣——容宾圆丁——容宾竹青——容巴卓之生波 <br/>
  <br/>
 毗卢渣那之口诀方面：是毗卢以之传授宇渣迎波、宇渣以之传授喇青贡巴饶沙，喇青以之传授钟星那遮，钟星以之传授陆巴敦，陆巴以之传授史本敦，史以之传授君清容森；此亦为行部传承之一。 <br/>
@@ -4042,7 +4063,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 卅二　大圆满康派传承系统表（丙） <br/>
 “印度七位教主”——阿洛移喜忠兰——左洛香嘉佐俱——雅史本敦——容巴卓之生波 <br/>
  <br/>
-又卑吗那密渣尊者，传授杨丁增康派。复次卑吗传授玛宁青楚，玛宁以之传授尼渣那咕玛那。而杨丁与尼渣那二人传授俱蒋操和，俱以之传授聪波衣和，聪波一起传至君清容森。以君清是前代密宗无比之法王，故此亦为佛法来源之一。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 18:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 43 楼</span></div><div class="post-body">卅三　大圆满卑吗那传承系统表 <br/>
+又卑吗那密渣尊者，传授杨丁增康派。复次卑吗传授玛宁青楚，玛宁以之传授尼渣那咕玛那。而杨丁与尼渣那二人传授俱蒋操和，俱以之传授聪波衣和，聪波一起传至君清容森。以君清是前代密宗无比之法王，故此亦为佛法来源之一。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 18:49</span><div class="badge-floor">第 43 进</div></div><div class="post-body">卅三　大圆满卑吗那传承系统表 <br/>
 卑吗那密渣┬　杨丁增康波───────┐ <br/>
 └　玛宁青楚尼——渣那咕玛那┴　俱蒋操和——聪波衣和——君清容森 <br/>
 <br/>
@@ -4087,7 +4108,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 复有依靠普巴密续六种，与嘉那雅登达十二种，集合而成之普巴森俄类法要，从尼渣那咕玛那传承者，已详见本章之首。如此从普巴本尊而来，得明显而有证据及不可思议者甚多，不能尽说。 <br/>
 <br/>
 其中最为希有者，是郎饶蒋操多杰，从小离开双亲，而其父系亲属对之，有如木勒日巴尊者之所遇；致令弱小心灵，苦恼无限。谢阿阇梨露育知之，心中非常难忍，故不待请求，特将普巴口诀，传授与之。郎饶依法修行遂将父系亲属，皆降伏焉；由是其名大著。但因前生不事布施，遂无福报，以致困穷；不得不在果列为人牧羊。 <br/>
- 　　时有雅罗渣华，权力甚大，资殖富饶；西藏之一切喇嘛与官吏，皆不由自主，而皈依之；否则他用阎摩王之忿怒咒，予以除灭。其所用之阎摩王法，是从邓巴渣桑聪在岩洞里盈满之陶器中得来者。他从此法所抄录之一半，与自己原有之阎摩王法，加以校对补充。如是在本塘许多岩洞所传之图、达、式三种，（图者诛法，保护自己以消灭障碍之诛法也。 <br/>
+825 　　时有雅罗渣华，权力甚大，资殖富饶；西藏之一切喇嘛与官吏，皆不由自主，而皈依之；否则他用阎摩王之忿怒咒，予以除灭。其所用之阎摩王法，是从邓巴渣桑聪在岩洞里盈满之陶器中得来者。他从此法所抄录之一半，与自己原有之阎摩王法，加以校对补充。如是在本塘许多岩洞所传之图、达、式三种，（图者诛法，保护自己以消灭障碍之诛法也。 <br/>
 <br/>
 念咒，咒咀而将物埋地下，以给地神从事降伏也。式者对敌人田地房屋等降下冰雹也。如是三种，皆是忿怒现行。）及多闻天王黄财神、宁玛巴之象头明王等取出之口诀甚多。并以之降伏麻巴之子达玛多帝等十三位菩萨，宁罗渣华十三位罗渣华。其后雅罗渣华到果列，参加法会，郎饶不向之顶礼，雅想其如此所为，是愚不可及者。而郎饶却对别人谓雅如不忏悔，则其寿命，只到今晚而已。随用普巴忿怒法，修第一次时，有许多普巴雨降下。 <br/>
 <br/>
@@ -4155,10 +4176,10 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 山达以闻、思、修三慧，断除一切法之黑暗；并赴许多清净地区以修行，所以能成灭除所见不净之生起次第，明净现前。故其所受事业，无碍成就；且证悟圆满次第无变之自性，而能断轮湼之实执心，见之者均能到光明法界而去，面见许多本尊，而得授记，且于自利之作意，自动灭除，对利他之功德，自动生起。遂于具福缘之求法者，所有上中下三根，成为之转开示修行之法-轮，以造对佛法与众生利乐增长之事。尤其是对笛青爵麦多杰，传授以一切深广之法，并选之以为教主。及壬寅年五十二岁，二月二十二日，便到金刚法界焉。 <br/>
 <br/>
 山达亲呢伦朱之弟子罗青卓渣丹增，于辛未年在爱东亨波村里出生，对前生习气，悉能了知；故诸大德，甚爱护之，迎请至大都灵庙安住，遂于书写、念诵、仪轨、事业等，均学习之，而得领悟。及到松渣巴呢庙，从舒囊宁青出家，命之名为卓渣丹增，于灌顶、传教、闻受甚多。所学之经部一切仪轨、中围绘量法等，及渣华龙清巴所造论，名心性休息根本与解释，皆得胜解。复从陆敦渣巴汪波，学忿怒咒之修法，及芝嘉那（白月黑月之占算法）。 <br/>
- <br/>
+826 <br/>
 　　卓渣十八岁，戊子年，在庙里当纠察职务，对诸大德，能施予范围之力甚大，故后人以之为模范焉。是年迎请荣增亲呢伦朱到松渣巴呢庙，向化身却呢南遮，及诸大德，传授苏派经部灌顶、教诲，并从颜料与沙所画中围里，将大修事业次第，加以联系，而传付予之。此外复向少数教主，在绘画中围里，请求传授康派之经部灌顶；卓渣亦同受法焉。其后并闻受八种教之修部、经部、胜乐、密集、意集、与卑吗心要、史陵岩传等。复从哈尊能卡芝美，与宋珠楚青多杰等许多上师，以接受教传岩传两派之灌顶、传教、导引等法要甚多。 <br/>
 <br/>
-渣易邦沙请卓渣前往贡野，从杨敦罗卓多杰，学渣嘉那巴派之声明、诗词、偈颂，均能了知；如是所闻之法，悉得圆满焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 19:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 44 楼</span></div><div class="post-body">卅四　经部大灌顶传承系统表 <br/>
+渣易邦沙请卓渣前往贡野，从杨敦罗卓多杰，学渣嘉那巴派之声明、诗词、偈颂，均能了知；如是所闻之法，悉得圆满焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 19:00</span><div class="badge-floor">第 44 进</div></div><div class="post-body">卅四　经部大灌顶传承系统表 <br/>
 　　　　　　　　┌苏堪（甲） <br/>
 左青森朱多杰　┤苏摩纪敦榜（以下见康派经部灌顶传承） <br/>
 └生遮宁青（乙） <br/>
@@ -4179,7 +4200,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 其后当未法时代，古教密法，日渐凌夷，殆将隐没。西藏顶岩教主莲花生大士、毗卢渣那、及宇渣迎波，以大能力负荷各方所有之教诲，如水流传，将其微细之一切，集聚起来，成为伟大水源，不断流下。如此传承是经、幻、心三部法幢之树立者，为笛清卓之渣波爵麦多杰、与罗青雅汪卓巴父子及弟子集团等，关于笛清事迹，留下简述。 <br/>
 <br/>
 罗青雅汪卓巴，又名罗青达玛诗列，是笛清之弟；生于甲午年。从其兄笛清，受居士戒，时命名为邓真蒋杨汪波。十五岁时，从第五代DL出家，命名为雅汪卓巴，受近圆戒。到二十岁，又从第五代DL，受比丘戒。其后从君楚敦真，接受律藏经下一段律流；从笛清受菩提心戒。达玛当以前十二岁时，于持明心要之颜色杂沙中围，接受灌顶；并受后得别解脱戒，及菩提心戒；受戒而后，守护甚严。且于书写、念诵、修持、事业等，悉得领悟。 <br/>
-  <br/>
+829  <br/>
 　　达玛十六岁，从恭汤班禅些利能渣，学渣嘉那巴派之声明、偈颂、梵文、及兰查体之梵文，与各种文字文法。从董巴敦珠汪渣，学黑白月之占星学，从达龙渣巴学妙音天女之绘画，名沙那沙德画；及珍渣巴之文字简写法，学得非常通达。从其兄笛清，学诗词、宁玛教派之舞蹈、坛城之弹线方法，及韵律等，均能得其究竟。又从珍渣些丹啤呢吗，学律藏之实践，心性休息论，及龙衣登珠之律藏等教典，稍为过目，皆能完全了解其内容。 <br/>
 <br/>
 从胜士生遮卓达闻三藏，从恭汤班禅学中观，及三百律藏经，从楷朱卓忠赞青，闻受甚深空性内义之开示，从笛清闻渣华龙青巴、苏父子、及容森巴（君清容森）等所造之论；故于闻、思、修三，均能解脱自相相续之缠缚。复从笛清闻受密心要之解释八确，及容敦解释，遂于一切法，得澈底了悟焉。 <br/>
@@ -4194,10 +4215,10 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在古代共同之教传派，尤其是经、幻、心三部之能解脱、开示、灌顶、教诲、导引等教诫；从笛清卓之渣波爵麦多杰，以之传授其弟宇渣迎波之化身，罗青达玛诗列；达玛以之传授卑吗那尊者之化身，渣些宁青能渣；渣些以之传授达玛之转世，堪青邬金丹增多杰。由彼父子二人，来至西康之嘉巴舍佐、沙渣摩容、及雅多果罗等地，经弘扬焉。在此诸地，开示、修行，而至现在不断，其个别之传承，说不能尽。 <br/>
 <br/>
-从上述之传承当中，依其主要言之：堪青柯芝雅那，以之传授亲呢伦朱之化身赤青却呢南遮；却呢以之传授爵麦多杰之化身赤啤吗汪渣；啤吗以之传授宇渣之化身，赤生遮贡伽。从笛清以至生遮当中，佟族之血统，是不断者。生遮以之传授多康蒋卡之化身多鸦顿真罗布；顿真以之传授密主金刚手之化身蒋巴帝卫呢吗；由是赐我，（按即敦珠上师）得到传承。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 19:02<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 45 楼</span></div><div class="post-body">卅五　　大圆满教传派经幻心三部传承系统表 <br/>
+从上述之传承当中，依其主要言之：堪青柯芝雅那，以之传授亲呢伦朱之化身赤青却呢南遮；却呢以之传授爵麦多杰之化身赤啤吗汪渣；啤吗以之传授宇渣之化身，赤生遮贡伽。从笛清以至生遮当中，佟族之血统，是不断者。生遮以之传授多康蒋卡之化身多鸦顿真罗布；顿真以之传授密主金刚手之化身蒋巴帝卫呢吗；由是赐我，（按即敦珠上师）得到传承。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 19:02</span><div class="badge-floor">第 45 进</div></div><div class="post-body">卅五　　大圆满教传派经幻心三部传承系统表 <br/>
 笛清卓之渣波爵麦多杰——罗青达玛诗列——渣些宁青能渣——堪青邬金丹增多杰——赤青却呢南遮——赤啤吗汪渣——赤生遮贡伽——多鸦顿真罗布——蒋巴帝卫呢吗——敦珠宁波车 <br/>
  <br/>
-依大圆满心部“自然果部”口诀心要之主要传承言之：荣增笛打零巴，以之传授渣些宁青能渣，渣些以之传授移喜磋嘉之化身至尊明珠巴尊。如是师徒二人，以之传授堪青邬金丹增多杰；堪青以之传授赤青却呢南遮，却呢以之传授至亲尊呢却尊，却尊以之传授卑吗那尊者与雅达卓渣双入之化身蒋杨亲遮旺而，蒋杨以之传授南佐能罗之化身、至宗亲那箴卑忠兰，及毗卢渣那之化身、秋打卓朱岩顿旺布。从彼二尊赐我，（按即敦珠上师）使得到能成熟与能解脱之全部口诀，如此加持之恩德，当永矢弗谖也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 19:07<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 46 楼</span></div><div class="post-body">卅六　　大圆满心部“自然果部”传承系统表 <br/>
+依大圆满心部“自然果部”口诀心要之主要传承言之：荣增笛打零巴，以之传授渣些宁青能渣，渣些以之传授移喜磋嘉之化身至尊明珠巴尊。如是师徒二人，以之传授堪青邬金丹增多杰；堪青以之传授赤青却呢南遮，却呢以之传授至亲尊呢却尊，却尊以之传授卑吗那尊者与雅达卓渣双入之化身蒋杨亲遮旺而，蒋杨以之传授南佐能罗之化身、至宗亲那箴卑忠兰，及毗卢渣那之化身、秋打卓朱岩顿旺布。从彼二尊赐我，（按即敦珠上师）使得到能成熟与能解脱之全部口诀，如此加持之恩德，当永矢弗谖也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 19:07</span><div class="badge-floor">第 46 进</div></div><div class="post-body">卅六　　大圆满心部“自然果部”传承系统表 <br/>
 <br/>
 荣增笛打零巴——渣些宁青能渣┬至尊明珠巴尊┬堪青邬金丹增多杰—— <br/>
 └──────┘ <br/>
@@ -4212,19 +4233,19 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 如前所说嘉图多杰登之学院，是古代佛法之一种来源；后来荣增顿朱多杰，及龙沙迎波二人，事业极为发展。但此当中，教传方面，曾经一度衰落。所以顿朱转世之龙沙王子舒囊德真，皈依万宁荣增德达宁巴，以学习教传派，于是使之从根本以恢复焉。其后舒囊转世为朱麦圣忠干波等，护持佛法之殊胜者，鱼贯而至，盛极一时。  <br/>
  <br/>
-南欣能育荣增车汪罗布，及尼青之化身吗哈班知达竹墨车汪卓竹等，从彼辈起，直至最近如施杜君诗卓之渣楚，及卑吗那尊者之化身堪青荣增雅汪巴桑，用以调伏所化之殊胜学者，及成就者之事迹，与所转闻、思、修三种事业轮而说，皆非常希有，无与伦比。对于共同佛法，及不共之古代教派，放出如白昼之光明，有足多者。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 19:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 47 楼</span></div><div class="post-body">卅七　　　十万颂全续传教传承系统表 <br/>
+南欣能育荣增车汪罗布，及尼青之化身吗哈班知达竹墨车汪卓竹等，从彼辈起，直至最近如施杜君诗卓之渣楚，及卑吗那尊者之化身堪青荣增雅汪巴桑，用以调伏所化之殊胜学者，及成就者之事迹，与所转闻、思、修三种事业轮而说，皆非常希有，无与伦比。对于共同佛法，及不共之古代教派，放出如白昼之光明，有足多者。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 19:10</span><div class="badge-floor">第 47 进</div></div><div class="post-body">卅七　　　十万颂全续传教传承系统表 <br/>
 <br/>
 笛清那那宁巴——楚汪渣巴——雅汪渣巴——雅汪罗布——罗布龙渣——君清竹青多杰——鸦汪竹青赞青——邓真爵麦多杰——雅汪君桑多杰——祝墨卓竹巴巴——金刚持啤吗顿朱渣巴——君桑登啤赞青——巴卡君桑荣增多杰——君桑登巴呢吗——巴卡荣增堪松容佐——多杰镇巴邬金能佐渣楚——根敦渣楚——敦珠宁波车 <br/>
 <br/>
 此外大圆满成就自在者，名啤吗荣增，是姑姑喇渣，及卑吗那尊者双入之化身，变是大学者与成就者，其事迹是不可思议。时第五代DL，受聘前赴多康，在育登支亲龙巴兴建修部之庙，名为祝达心丁卓灵，此亦为古教之一支派。从庙里啤吗荣增之转世，是一代一代以传来。而其“意子”笛清呢吗渣巴，教主南卡和些，及锡青饶铮顿啤赞青等之弘化事业，广大有如虚空；且如“金山珠”，相续不断焉。 <br/>
  <br/>
 　　尤其是左青第四世之转世明珠南卡多杰，及其同时万宁德青之化身渣些仁编泰贤，于显密许多经典、开示、修行以从事弘扬。特别是古教教传方面　，用极庞大之精进力，以造传记、传教、与口诀之传播。且将经、幻两法要之典籍，凡十余种，均已付之梓人；故于佛教之功德，是不可思议者。与其相等之那森渣华蒋操之化身荣增君桑舍饶，在巴育兴建能渣蒋操灵庙。所以从此时起，荣增在庙里之转世，是一代一代以传来者。此外复有许多殊胜学者及成就者，不断以闻、思、修三种事业，从事弘法利生，功德非常广大。  <br/>
-  <br/>
+831  <br/>
 　　最近蒋杨亲遮旺布与笛清楚朱零巴，从彼二尊，所传渣朱啤吗多雅丹增庙里古教教传灌顶，传教之流传；由是现在所有一切二十七-大中围之修供，是每年不断以举行者。在彼等新近兴建之大塘多鸦些朱庙，作闻思修三轮之事业，且皆非常殊胜焉。 <br/>
 <br/>
 尤其是邬金多雅卓之呢吗之大悲与愿力，以造教传法库藏之经典，其完全者，凡二十种，悉以之付梓人（邬金所雕）。此二十种刊行之经籍，我（按即敦珠上师）亦幸得珍藏以保存。因此现在在西藏之蔑戾车凶暴时，有如佛经所说之刼浊。经、幻、心三种重要古代之教传法，虽付灰烬，尚幸仍有少许，留存此地（印度噶林邦），使之不隳。从此而得法之命根不断，以继承解脱成熟之功德；只此希有之恩德，变成无尽之灯。 <br/>
 <br/>
-以前金刚乘宝贵佛法之来源，胜利王之鼓音里面，“长传教诲如大河不断之经幻心来源”第五部圆满。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 19:12<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 48 楼</span></div><div class="post-body">乙六：甚深切近岩传之历史 <br/>
+以前金刚乘宝贵佛法之来源，胜利王之鼓音里面，“长传教诲如大河不断之经幻心来源”第五部圆满。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 19:12</span><div class="badge-floor">第 48 进</div></div><div class="post-body">乙六：甚深切近岩传之历史 <br/>
 <br/>
 丙一：岩库性相与分类 <br/>
 <br/>
@@ -4234,7 +4255,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 经中复说：“对圆满心意之人，如佛不在世？可从天空、墙壁上、树木中，传付法门。”如此说来，是指示可从天空降下法宝。 <br/>
  <br/>
-复从甚多著名之经续里，均指示岩之性相、释义、及其异名、与所需要等，如是宣示，至再至三。在印度西藏两地，非常普及，知者甚众；而不是西藏二三人，所向壁虚构者也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 19:18<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 49 楼</span></div><div class="post-body">丙二：岩传之重要 <br/>
+复从甚多著名之经续里，均指示岩之性相、释义、及其异名、与所需要等，如是宣示，至再至三。在印度西藏两地，非常普及，知者甚众；而不是西藏二三人，所向壁虚构者也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 19:18</span><div class="badge-floor">第 49 进</div></div><div class="post-body">丙二：岩传之重要 <br/>
 <br/>
 依崔龙洛巴经（河流游戏经）说： <br/>
 我之佛法诸教典    从心到心付岩藏     或作地中之精华 <br/>
@@ -4255,7 +4276,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 当此末法时代，教传派之灌顶、教诲，皆如经商者之牛奶，逐渐稀淡，每况愈下。而许多传授者，亦因三味耶之败坏，引致障碍，使加持力，随之而减少焉。若岩传派方面，其导师之化身，是真正得莲花生大士随时随地之护持，及能成熟、能解脱之灌顶、教诲、许可。故所请得之甚深法，有如空行口气之未消失（按意指传承极近）；所以从近传加持之光华言之，是无可比拟者矣。 <br/>
  <br/>
-岩传派是于意趣、语文、及耳传承之外，复有祈愿灌顶、受命授记、及空行付讬等三种传承，如是六种。关于意趣、语文、耳传承三，已详前述，不赘。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 19:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 50 楼</span></div><div class="post-body">丁一：祈愿灌顶 <br/>
+岩传派是于意趣、语文、及耳传承之外，复有祈愿灌顶、受命授记、及空行付讬等三种传承，如是六种。关于意趣、语文、耳传承三，已详前述，不赘。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 19:22</span><div class="badge-floor">第 50 进</div></div><div class="post-body">丁一：祈愿灌顶 <br/>
 <br/>
 所谓祈愿灌顶者：是指谁对岩藏，具福缘而有权力取得者，便可将岩藏之品物，探取出来。此为一篇祈愿文，如此作真实语祈祷之印证。 <br/>
 <br/>
@@ -4269,7 +4290,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 所谓空行付讬者：是以能表示所成语文，藏于金刚岩阳沙之海，及不变之箱等；对各各岩主，给以付讬，而成为无形印证。迨至按月记所示之时机成熟，于是以祈愿之能力，使之如睡初醒；亦是业之胜余，得，而于已定书名，或未定书名之岩藏甚深胜法，宛然如在掌中。 <br/>
  <br/>
-尤其是在岩藏内之胜法，大部分均是空行表示语文之束缚，因此除具福补特迦罗之外，他人无法以解脱说之。且岩传是直接接受莲花生大士之教诫、标识，故普通人在其中，亦无法中断其传承。故根本非常清净，未有改变之表示，復无错误之语文，其内容意趣，亦不相违；如是依空行秘密之意趣表示，以译成经典，故其加持力甚大。非具福补特迦罗，即使非常聪敏，当如盲人摸象，无法得其要领。由是岩传之殊胜，是完全超越常人之行境，因之应具足异常之信心也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 20:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 51 楼</span></div><div class="post-body">丙三：岩传法器宝瓶及传授者之历史 <br/>
+尤其是在岩藏内之胜法，大部分均是空行表示语文之束缚，因此除具福补特迦罗之外，他人无法以解脱说之。且岩传是直接接受莲花生大士之教诫、标识，故普通人在其中，亦无法中断其传承。故根本非常清净，未有改变之表示，復无错误之语文，其内容意趣，亦不相违；如是依空行秘密之意趣表示，以译成经典，故其加持力甚大。非具福补特迦罗，即使非常聪敏，当如盲人摸象，无法得其要领。由是岩传之殊胜，是完全超越常人之行境，因之应具足异常之信心也。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 20:10</span><div class="badge-floor">第 51 进</div></div><div class="post-body">丙三：岩传法器宝瓶及传授者之历史 <br/>
 <br/>
 岩传派所藏之法器宝瓶，及传授者之历史，亦是在西藏共同密宗心要金刚乘，与不共甚深岩传法之事业，为第二佛莲花生大士，用以调伏无边所化者。如涅磐经说： <br/>
 在我示现涅磐时　　经过一十二年后　　 <br/>
@@ -4346,7 +4367,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　岩传导师五王，三殊胜化身中，第二位咕汝卓之汪竹，是藏王赤松德真，从鸦达杨宁波车，而得到彼岸之果，其授记为佛语之化身。 <br/>
  <br/>
 　　卓之汪竹之文字诞生因缘，亦有说是从班遮遵亲而来者。当在西藏第一次弘扬佛法时（按西藏佛法，中落二次，故有三度弘扬之说）有名殷雅容者，擬杀死藏王赤松德真。教主莲师、卑吗那、毗庐渣那三位之弟子班遮遵亲，是一位有能力之持密咒者；当殷雅容刚降下五雷发击藏王之一刹那，班用右手以期克印，将雷吸入指中，送回殷处，而将殷消灭焉；藏王对之赏赐甚丰。 <br/>
-  <br/>
+832  <br/>
 　　班遮之子班荣增迎波，在杨都四佛堂内，充管理员。每年均到郭听以应法会，遇见那雅渣巴之长官，给以财物田地甚多；荣增说：此是我前生之地方，故亦接受。 <br/>
  <br/>
 　　荣增之子君青饶渣波，从此传承而来，未有间断，均是有智慧与有能力之后裔。其中有名班敦竹啤迎波，向喇嘛生遮呢金，请求出家，生遮说：一个菩萨，比八个比丘，其饶益有情，力量尤大，故不应断后裔。班敦在家时，得到授记，说：空行舞自在，为其佛母。因此知道常在空中往来成就者之族，名贾沙贡遮，乃娶之以为妻。班敦从植恭渣巴，闻普巴法，植恭对之说：将来尔子，应将佛法圆满以传付之，因其能造极大之事业也。时桑宁疲车向班敦说：我来造尔子如？然只是说笑而已；但尔将来当有如我无二之子也。而班敦亦得到如此之授记焉。后其子入胎时，其妻夢见日月和合，入彼心中。及后住胎，常有（鸦）字声音，如此希有之标识甚多也。  <br/>
@@ -4354,7 +4375,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　汪竹于第四耀宗壬申年正月十五日日出时出生其父正以金磨水书写妙吉祥真实名经，因此看其子出世时，书至何句？及后竟在“法之自在法之王”句上，乃名之为法自在（卓之汪竹）焉。适有能看鬼及非人者说：此子是天与非人所常供养者。  <br/>
 <br/>
 　　汪竹四岁时，从其父亲学书写及念诵；且学语门兵器、呢那笛鸦、及卑打青摩等声明论十三种：支窝梳悌等医明论十种；黑月历学、和合药论、及帝王本纪七种，德珠青波之故事等歌舞论一百零四种。黑教送鬼教典七十五种。多桑青巴一百种。及内外密宗弹粉线法等，关于普巴类四种经，闻受甚多。十岁时闻受新派之金刚手法，且修习之；並修阎摩王与变巴承事。十一岁受大幻化网灌顶，续部口诀等圆满。十二岁学习嘉加那呢蒋鸦，及一百种仪轨，均能学得通达；並造百字明之承事。至十三岁学习大吉祥兮鲁迦、及大悲观世音两教规、马头明王等、新旧派之经典，闻修极夥。 <br/>
-  <br/>
+833  <br/>
 　　时汪竹定中所现之左摩佐妈领导前往玻璃碉堡之顶上，面谒金刚萨垛，并在其前，见有一位四面之空行母：即见其白色之前面说： <br/>
 尔来合保护佛法 <br/>
 其黄色之右面说： <br/>
@@ -4372,7 +4393,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　并开示之云：“知道心是对心之考察，为一切法之门；法门者，不可思议之意，只是自生智慧之明点也。如是八万四千法门之内容，我今已为尔说竟。尔应于其内容之道理，详加考察之。”说毕，他遂醒觉。从此乃得一切法之决定证悟。 <br/>
  <br/>
 　　汪竹在十三岁时，得到渣巴俄些从笙野取出之黄纸标题。关于此标题之探取，以前曾有许多愚蠢而傲慢者，均作往取之准备；但或半途而死，或刚到岩前，天降雷雹，无法接近，故皆无从取得也。标题如存在家中，魔鬼非人之邪法，不能伤害；如在道上，水中，地下，四大亦不能消灭之。其不应得者，决不能得以保持，故后人名此黄纸为那肃（按义即摧毁纸）者以此。时其父班敦知而诫之曰：如此历害之岩传标题，尔保存之，有何用处，岂非自讨死所乎？乃取之去，而库藏之。 <br/>
-  <br/>
+834  <br/>
 　　汪竹到廿二岁，又将黄纸取出，与一成就者同行；及至那雅陵之山谷，有天梯处，取出比前此之标题更清净之标题时护持岩库之神，与智慧空行母，予以钥匙，以启岩洞之门。突有一大鹫鸟冒出，大如大鹏；汪竹骑在鸟上，飞上天空。渐渐升到第十三层上面，有虹光之帐幕里。朝见金刚萨垛，得明力（大小五明神变力）之灌顶，并以甘露宝瓶赐给之。 <br/>
  <br/>
     其后復依照此标题，以启岩门，得到龙魔九头之铜像，高约一肘；红铜佛像盒一个，铜像里面有四种教诲法；从像盒内有一百零八种口诀法。计算此中，共有十八个大岩传法，加上意之岩传，则共有十九个。其地名为（一）乃嘉晶、（有空梯）（二）渣玛、（三）当珍寿、（四）万卡丁、（五）当珍、（六）英芝郭、（七）窝儿些玛、（八）当珍、（九）箴卓那、（十）沙卡、（十一）渣窝普英、（十二）叉悌马、（十三）笙野鸦那、（十四）渣蒲、（十五）麦本塘、（十六）支治那康、（十七）容渣、（十八）哈波冈、（十九）自密意库等。并悬记云：“如果有人，以前生胜余业之关系，可以朝见法自在我。”（按此是岩传所说）以上其所取出之岩传，均是与具福者同往，大部分是得岩主之协助，並另使役具福者往取焉。 <br/>
@@ -4458,7 +4479,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 如此希有空行一切密集之法，暂时在空行之手里，不是普通之依修行境，须俟机缘成熟，始示现其大悲大愿力量焉。缘是化身岩传导师大持明啤吗和些多鸦宁巴，以与卓之汪竹是金刚兄弟之关系，及智慧之加被，乃将此经籍名字与意义均加以抉择，藏置于大宝岩库中矣。 <br/>
 <br/>
 哈沙楚珠渣疲之第七世转世者雅烋邬金宁巴。第五耀宗年癸亥岁，在若育渣兰之雅杰处，从持密族出生；故自少时即学习咒力、医方明、历算，均极通达。 <br/>
-   <br/>
+835 836  <br/>
 　　雅杰二十三岁时，从竹野红塔内，取出岩传之标题（目录之说明）。复至雅龙些渣后面之渣啤吗芝巴，此地原是莲花生大士修甘露药行法之圣地。其中所有寂静忿怒之佛像，皆是自来者。彼从护门者遍入像之最上头里，取出关于生起次第之法类，与寂静忿怒之法，乃大悲啤吗心要，长寿大圆满，及阿的、芝的、仰的等大圆满类；后有上、圆、意三种。又从大遍入像之根本三头里，取出本尊法大海一百三十二种。从喉间取出寂忿教集、空行黑忿怒，及关于依怙玛诚那。从心取出莲花生大士所造之红教史与画像。从大遍入像之龙身后面，取出智慧依估大黑天续与仪轨既各种事业：医方及保护佛法之教诲。並从其余龙后及手里，均取出有利有害事业之方法，工巧明等甚深之岩传法。此外又从渣儿恭渣取出密宗道次第，小莲花史，使安静遗嘱明显义，缘起心要等。从笙野许多不同之地方，亦取出五部画像。从宿卡朵塔里，取出大悲智慧光，巴干达孙。（按巴干是人名，骑老虎者。）从云普达仓，取出忿怒莲师，及护法之法要。从渣池大岩山，取出阎摩王长寿主法等经卷，凡百余本，教集三十余本，但以从书上无法抄录完毕，即再岩藏之。复有所依之三昧耶法器、财宝等，经其取出者，亦复无量。总略言之：彼从二十八个大岩库所取得之法，在差渣多都第一次开得法门，以为教集之灌顶与大修之用，因授记中，亦有如是说也。 <br/>
 <br/>
 自从那鸟洞遮之达斯蒋操赞青，造成许多反对岩传之说，加以诽谤，欲使衰退，致令缘起颠倒。如是方才所述之岩传导师，亦复离开该地，而往爱及达波等处；不久，且在爱村罗聪圆寂焉。 <br/>
@@ -4467,14 +4488,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 其后第十三代DL喇嘛，以为如果每人均请求此丸，则遗体将日趋伤损，如此是于西藏共同福德，加以破坏；擬将此遗体迎请至布特达宫供养，乃专派蒋贡汤巴前往迎迓。时笙野之护法降临说：此遗体只可留在南部供养，不可迎往别处，DL惟有照办。后DL至南部圣地朝礼时，专诚觐谒白藏钧庙，並将前存其罗布领宫中之小丸，全部献出；以四升余，永镇庙中，用作他利。其余则以药粉与之配合，偕同龙增普罗榜钧宁波车，以之补回遗体上。且造红铜塑金塔，以遗体供养其中；塔中有螺旋可以开合，由DL盖印加以封固。此后是地之长官，及白藏钧庙之主持，均是奉DL命令以护持之。其缄封之命令，凡十七纸，每纸上均盖有印信，我（著者自称）亦幸得而朝见焉。至DL所存庙里之小丸，珍藏在木匣中者，及后启而视之，比前自动增长四倍，其殊胜有如此者。所以达斯颠倒缘起之诽谤，及相信其言者，均如季秋泉水，日益降下矣。 <br/>
 <br/>
-雅杰宁巴之后裔，尚流传于奏章卡等地区，但于弘扬佛法之事，却无显著史迹。而其成就能力之标识，尚能示现，于是持明者，可从而知悉焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 21:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 52 楼</span></div><div class="post-body">丙三：岩传法器宝瓶及传授者之历史 (续一) <br/>
+雅杰宁巴之后裔，尚流传于奏章卡等地区，但于弘扬佛法之事，却无显著史迹。而其成就能力之标识，尚能示现，于是持明者，可从而知悉焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 21:04</span><div class="badge-floor">第 52 进</div></div><div class="post-body">丙三：岩传法器宝瓶及传授者之历史 (续一) <br/>
 <br/>
 关于岩传法，如大悲智慧光、忿怒莲师、长寿仪轨、及巴干达孙等，直至荣增笛打零巴、（锐之按即雅杰宁巴之别名，亦即大幻化网导引法传承表中之邬金笛打零巴也。）以上，均有灌顶与传教之流传，但现在已不复见矣。红教史与画像，及缘起心要等之传承，则至今犹有存者。 <br/>
- <br/>
+837 <br/>
 　　至雅杰邬金宁巴自己岩传授记内所说：大教集心要经典，现前降临于至尊啤吗和些多鸦宁巴之手里。有等经典，是空行表示之文字，如此造成决定成熟解脱之流传，与主要之经典。而简要之书籍，均在宝贵大岩库内；奁其教集之名字，并不是只“上修”（即上业菩提修）与八教而已。我辈当知在此广大教史内，有二十一种教集，以如此甚深希有之经典，而恢复佛法焉。 <br/>
  <br/>
 　　那南多杰敦珠之转世殊胜化身之一，岩传导师荣增青疲昂珠赞青，是呢波嘉桑之北，图育那波之那摩龙地区，珂古锡皇族教主敦都之子。在第二耀宗年丁丑岁正月初十日，示现极希有之标识等而出生。依授记所说：十二岁时，其头顶出生五枝鹫毛，所以人皆称之为荣增葛丁晶（按葛义为鹫，丁义为箭，晶义为具有。）也。 <br/>
- <br/>
+838 <br/>
 　　荣增从小时，向其父亲闻受古代一切法，闻思修均已得究竟。时马兰香波渣巴从蒋扬波龙地方所取出之岩传标题七义纲要口诀等八种法，知此标题，是荣增青波在哈渣岩探取者，乃交由敦巴舒襄汪竹以予之。荣增于是在丙午年四月初八日，从呢波嘉桑之山顶，三根白石柱中，取出三个大岩，及一百个小岩之标题，及既取出，乃以代用品填塞其中，故此地今名龙升。 <br/>
  <br/>
     在同年六月初十日黄昏时，从像蛇聚之岩山，名哈渣岩库者，取出蓝色四方小箱，内争五格。中格紫色心库之内，有三张纸卷，及普巴法卷上紫色之绸。东方白螺库内，有对不清净因果之消除法，如天空之高。南方黄色金库内，有四种近行修法，如日月之光明。西方红色铜库内，有缘起法，如梅檀树。北方黑色铁库内，有消除魔鬼法，如有毒树之利害。总而言之，其所取出之岩法，及誓句法器，为数无量。如此五格，每一格中，各有一百种法；共有根本法五百种，及支分法等。他乃抄录，笔之于纸，加以抉择，然后以之弘扬于西藏各地。 <br/>
@@ -4486,7 +4507,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 荣增所造留者，有子嗣之传承，佛母之传承，及弟子之传承等三种，至今仍不断也。在此传承下，修得身化虹光飞去，及得成就者甚多焉。 <br/>
 <br/>
 第二葛丁为荣增赖敦杰，与雅里班禅之转世，名蒋达嘉斯杜渣汪波。时有德诗山巴盛沙巴者，不特反对彼等，且加以诽谤。因此二人，与诸大德，离开德诗，另成一庙名爱庵佐嘉华。蒋达之子，为第三荣增，名雅纪汪波，在前藏成立一庙，名图登多杰渣。第四荣增，名邵忠啤吗亲呢，转闻思修之大法-轮，故利他事业，非常广大，亦是一种佛法之来源；如此荣增之转世。至今仍复流传也。在西藏上地鸦里拉达，直至下面地区打箭炉（汉人称之为康定）以上，仍留有许多荣增弟子之流传，而彼等遗下之寺庙，亦复不少也。 <br/>
- <br/>
+839 <br/>
 　　天子邓晶洛巴移喜渣之化身笛清生遮宁巴，在恭波之杨波地区，邬金所修行之圣地，名晶普若龙者；于第六耀宗年庚辰岁，示现许多标识以诞生。其父为马头明王之化身康诗达龙香巴，母为金刚亥母所加被之阿哞靖。以其降生之示现希有，乃命名为荣增。于五岁时。从堪布孙奴巴受近事戒；竟能出现大悲清净之明相（人所皆见），从此当念书时，对书之内容，一教便晓；学虱甚为通达，而其父圆寂矣。 <br/>
 <br/>
 生遮之父死后，其母再醮，后父对之，有所歧视。但每于痛苦时，见到红色少女，予以授记。告之应赴龙波宗些达，以朝见渣汪洛啤多杰，他乃遵命前往。在渣呢邻近之干巴蒋操岭庙，从堪布蒋操多杰，教主释迦移喜二人出家，命其名为生遮香波。后以其能取得岩藏，人皆称之为生遮宁巴。他随事堪布及教主，闻受密法甚多。 <br/>
@@ -4498,7 +4519,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 由是年起，从岩库之名嘉苏仓、智窝容、遮青渣、龙波赞德本巴、龙波嘉达苍、晶治嘉丁仓等地，取出修普巴仪轨精华、达亲育巴那波、黑马头明王、无上密宗心要、岩传法器及小丸、邬金像、铜宝瓶内满贮金、渣蒲巴、如来舍利廿一颗等甚多。 <br/>
 <br/>
 生遮之在恭波清宇开岩库时，笛敦芝密伦波。照空行母之授记，亦来至此。于是二人偕同取岩，内有蓝衣金刚手、文巴古都之忿怒咒、即邬金父母之红白菩提，亦皆已取得焉。复从布列宁青巴华，取出观音菩萨法类。又从渣戈松，取出大悲法类、提炼精华法、及汪竹龙沙（义为自在风绳，绳本是护法持以钩魔鬼者。）等。蒋操宁巴巴之赞青亦有授记，以其所取岩库，与生遮相同，于是遣使前往拜观，并朝见生遮，生遮亦为之异常欢喜也。 <br/>
- <br/>
+840 <br/>
 　　此外生遮并从渣呢取出龙王靖山之修法；从遮玛嘉波取出长寿日月配合仪轨等；从洪量那星遮伯洞，与笛敦芝密一同取出寿主阎摩王仪轨、邬金之事业普巴仪轨等。复从邬金竹浦取出大圆满要集；从恭波登宇，取出六续根本意集；从笙野青夫，取出极希有之乌金像；从和书垄宗，取出罗布达沙德华（宝物之名），空行母之身庄严品。从二十五岁至卅二岁当中，在十八种大岩库里，取出上述各种物品；此外复有从许多小岩库取出之法宝，说不能尽。当其取岩库时，天降花雨、空中遍满虹光，且有许多音乐声，及空行母现身等奇迹焉。 <br/>
 <br/>
 金刚亥母及十三位空行母之授记，意集第十三种经典，其书旁均涂抹红色，如此规范，至今仍有遗传者。授记内说： <br/>
@@ -4541,7 +4562,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 耶那从卡操巴之普英，取岩法时，示现极希有之神变，及宿命通；並朝见莲师凡二十五次，且明显出现香多啤呢之境界，更能见如历史所述十三库房之形状；复保存有意修、药修、释迦第七世小丸（释迦七世遗体所成）之修法。其传授诸弟子之灌顶、导引、口诀时，有虹光、花雨、香味等希有境界，说不能尽。所有障碍物品，悉皆清除，况其运气极佳，所以将所有下两世应取之岩传，亦一並取出焉。 <br/>
 <br/>
 其显著之名有三：曰、史波宁巴，曰、左都宁巴，曰、耶那宁巴等。其从西藏干德士到康渣摩龙当中，许多众生，均度之至能成熟能解脱之境界。 <br/>
- <br/>
+841 <br/>
 　　甘珠目录名丁嘉麻者，有说：“一切密宗内续，非常严肃，故未加以誊录；所以古教宁玛巴续，为甘珠所无，其经典、传教，流传甚少。但耶那从胡巴龙有十万续，并向各方搜求经卷之流传，加以集中，而编辑之。且念完备传教之保存者，全西藏中，只有后藏教主麦甘森登香波；为雇虑传教之中断，以是时麦甘之年事甚高，于是师（麦甘）徒（耶那）二人，用极大之精神，以讲贯闻受。其后又从珠舒伦朱宫内，将十万续，加以整理；以前是用墨水缮写，后用金水重写，如是多次，作传教之流传与弘扬。于今如意轮密续，我辈能现前受用，皆是岩传大导师耶那慈悲之恩泽也。”由此可知，于古代共同佛法，耶那之恩惠极大，而其弘利之事业，已得究竟。遂于七十六岁，示现极希有之神变等，在莲花光宫中圆寂矣。有子四人，故子嗣传承，与弟子传承，均甚良好，而数目亦甚多；此种胜法之事业，至今犹未堕也。 <br/>
 <br/>
 第四位岩传导王，是沙摩哈堪啤吗沙之第五世，名邬金啤吗宁巴；其父为骆族，名丁珠香波，母名贡摩巴箴；于第八耀宗年庚午岁，在麦本塘示现许多极希有之标识出生。以前生宿植善根之关系，故从小时便甚聪明，且于印藏等文字，及工巧明，不教亦能了解。 <br/>
@@ -4553,7 +4574,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 啤吗复从笙野青夫，取出大圆满普贤王意集。并从每个岩传地方，取出大圆满无二续、上师宝海法、大悲除暗灯、八教意镜、普巴最秘密快刀、甘露药修法等，教、普、药三种，与降魔金刚手、忿怒金刚手、及大中小三种忿怒、长寿导引法、金刚珠、长寿罗布南车、那波（大黑天）类三种，及事业法等甚多。同时并取得释尊七世小丸、莲师像、及许多三昧耶法器，不可思议者。尤其是罗遮崔佛堂，与巴操第三之佛堂，是同一模样者，以前无人能现前看见。但自啤吗宁巴将山泥石移开，不再隐蔽而后，谁亦可以现见，至今亦复如是。至其岩取财物，则有法王寿命绿松石名宁波车昂巴。与名东呢昂巴之寿命绿松石。名干列堪吗之寿命绿松石。及沙摩哈堪之未缝衣服。复有圆明小镜等各种殊胜希有之财物甚多也。 <br/>
 <br/>
 啤吗所得岩传之标题，凡一百另八种，但所取得，只有一半，其余则未经探取。彼将圆寂时，其子请求可否准许取出其余之法？示曰：此较为难，但尔如保护清净之三昧耶，以祷告我，或可得多少也。故后来其子图些达华，亦能取得一部分者以此。此外啤吗之事业，是不可思议者。 <br/>
- <br/>
+842 <br/>
 　　啤吗之授记有说：彼将来在莲花法界内，成金刚心佛。现在与之有关系者，届时到其法界，当成为其所化。而其子与弟子众，亦在岩传授记内说： <br/>
 因之联系者一万　　　　愿之联系者二千　　　　 <br/>
 甚深纲要者十一　　　　能持中围者（按即能任阿奢黎者）七人　　 <br/>
@@ -4574,12 +4595,12 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 观音菩萨与马头双入之化身，名祝啤汪竹汤东渣波，是莲花生大士表示入胎而生者。于第六耀宗年乙丑岁，在后藏和华那遮出生，及其稍长，同时依止师长凡五百人，故于闻、思、修三慧，是无可限量者。 <br/>
 <br/>
 祝啤原是自生大成就自在者，（即不须苦修）但由于在所化前示现之关系，乃从君巴多若赞青，闻受完全之岩传法。从喇嘛多杰孙奴，亦闻受许多法要。且为表示从此两位上师得到成就之示现，乃以神变之力量，用禁戒之行为，到全世界与各小洲。尤其是到雅饶莲花光之法界，朝见莲花生大士，及许多大成就者，闻受多种法要；而空行与护法等，皆皈依其足下。为使在西藏伤害佛法之边军，全部回转，遂于主要地区，修建佛堂多座。于是一切神及魔鬼，极难调伏者，悉皆调伏焉。 <br/>
- <br/>
+843 <br/>
 　　祝啤复从笙野青夫，取出无死长寿纸卷五卷，从沼泽取出意修无上密；从朱卓啤吗岭，取出上师宝石岩口诀；从满巴佐达仓取出一切经续其深心要选录纸卷十叉（两手平伸之量为叉）；从渣呢生鸦颇铮内，取出意岩深法；从渣呢喜青普，取出自己之授记，名授记光明灯，与保护法界之修法等，深法甚多；而其再将之藏入岩库者，亦不少也。 <br/>
 <br/>
 在印度之嘉马德达爵，是外道之王者，与西藏之边境，一切蔑戾车等；祝啤均能将之调伏　，使之皈入佛法中，其神变是无碍者。其所修是佛身语意之所依，亦是无数焉。 <br/>
 <br/>
-祝啤并造世间福利之事，如修建铁桥五十八座，皮船一百十八艘，泊于河边，以利益众生，真是不可思议，故其声誉极大。当时为劝人学佛法，自出财物，编辑以前菩萨法王之历史，以歌舞方法示现，以资普及，传至于今，即所谓“阿遮那摩”（义为戏剧演员）之流传；我辈看之，真是极有意义，而于弘利事业，却是异常希有者也。 <br/>
+祝啤并造世间福利之事，如修建铁桥五十八座，皮船一百十八艘，泊于河边，以利益众生，真是不可思议，故其声誉极大。当时为劝人学佛法，自出财物，编辑以前菩萨法王之历史，以歌舞方法示现，以资普及，传至于今，即所谓“阿遮那摩”（义为戏剧演员）之流传；我辈看之，真是极有意义，而于弘利事业，却是异常希有者也。844 <br/>
 <br/>
 　　祝啤一百二十五岁，当往空行法界时，其子呢吗香波，发出极痛苦之声音，因此他又回来，给予以许多未圆寂前之教训。然后在巴呢波车，示现圆寂。 <br/>
 <br/>
@@ -4588,7 +4609,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 法王赤松德真意之化身，王子哈遮之第九世，名雅里班禅啤吗汪渣多杰，在罗窝马塘，于第八耀宗年丁未岁出生。其父为雅达麻巴之转世，名蒋扬宁青，母名左碪康巴靖，命其名啤吗汪渣。八岁时受居士戒（近事戒），从其父闻受生起菩提心，并学经、幻、心三部等，古代教传法，已得究竟；且修如此法，能出现许多成就之标识矣。 <br/>
 <br/>
 从教主罗敦香波闻律藏与经藏，及关于阿底峡法等。迨二十岁闻中观、因明、般若等大教典一百种，皆得领悟；成为名宝相符之圣士。二十一岁，从蒋扬卓中，与竺青巴接受红阎摩王法成熟解脱之灌顶，在修行时，且面见忿怒妙吉祥焉。尤其是于二十二岁，从其父闻受一切古代之教传及岩传法，而能断疑。当其修八教时，其父给以教诲而赞叹之，后来果如所言。二十三岁前后从罗窝罗渣，闻道果者两次。二十五岁时，在桑朱灵庙内，从萨迦班知达之化身罗窝堪青舒囊伦朱，及教主（罗敦香波）受近圆戒。从此依照律藏之戒律，严为护持，所以成为一切比丘之领袖。 <br/>
- <br/>
+845 <br/>
 　　啤吗从罗窝堪青，古纪班禅能渣巴桑与蒋扬罗爵巴，闻声明、内明，及新旧派灌顶、续、传教、导引法等，人称之为吗哈班知达。又从蒋波笛敦释迦香波，闻岩传法多种。简略言之，新旧密宗之灌顶、续、口诀，及所有流传，多已闻修焉。 <br/>
 <br/>
 其后啤吗前往尼泊尔，依止尼瓣尔之上师，故其所依尼泊尔与西藏之上师甚　多也。当在尼泊尔朝见圣地与静坐时，亦出现清净之显相者。 <br/>
@@ -4601,15 +4622,15 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 谢恭宁青彭楚，得荣增赖敦杰之介，迎请啤吗前往，于是师弟三人，在笙野举行开光法会，对于西藏有情，多所饶益；如此在前藏弘法利生之事，已得究竟。及五十六岁，在云满塘，前往香多啤呢去（等于圆寂）焉。 <br/>
 <br/>
-如此圣士，其学问、戒律、成就三种之事迹，均不可思议，如其自述之生平偈颂内，能道其详。此外其所造论，精简扼要，而内容非常丰富，论名三律仪决定。只此言之，其嘉惠后学之恩，又岂浅鲜耶；至今古教之导师，且常引其论著，作庄严之格言（座右铭）也。关于其所传法要之传承方面，对古教教传及憾动传，成为明显大乘；及其转世名蒋达嘉斯杜渣，又名卓渣汪波德，其岩传导师成就者之历史，均是极辉煌者，而其甚深之流传，亦不断焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 21:30<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 53 楼</span></div><div class="post-body">丙三：岩传法器宝瓶及传授者之历史 (续二) <br/>
+如此圣士，其学问、戒律、成就三种之事迹，均不可思议，如其自述之生平偈颂内，能道其详。此外其所造论，精简扼要，而内容非常丰富，论名三律仪决定。只此言之，其嘉惠后学之恩，又岂浅鲜耶；至今古教之导师，且常引其论著，作庄严之格言（座右铭）也。关于其所传法要之传承方面，对古教教传及憾动传，成为明显大乘；及其转世名蒋达嘉斯杜渣，又名卓渣汪波德，其岩传导师成就者之历史，均是极辉煌者，而其甚深之流传，亦不断焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 21:30</span><div class="badge-floor">第 53 进</div></div><div class="post-body">丙三：岩传法器宝瓶及传授者之历史 (续二) <br/>
 <br/>
 <br/>
 岩传导师黎楚宁巴、荣增渣春迎波、鸦苍空那麦巴，此三种名字，皆为比丘大金刚持；是以前莲花生大士之弟子，成就无漏光蕴身一百另八位中之最殊胜者杨冰丁珍香波之化身。于第十耀宗年己酉岁嘉、马、渣（鬼宿之三星）降下时，在恭宇华育南叉出生。父名卓忠干波、母名南那布赤。从小时已具有佛法宿根，三岁始学文字，一教就能通晓；于岩石上留有足印甚多。从十二岁到二十岁当中，均学佛法，尤其是于因明，及医方明等，学得极为通达也。  <br/>
  <br/>
 　　黎楚每于定中右梦中，常常朝见莲花生大士，故已具出离心，于世间名利，均觉得不足留恋；因此趋谒麦彭嘉斯罗爵座下。时麦彭梦见莲师所建之旧塔，为有等少女所请得，丐其开光。在开光时，看见从塔发光，于是他知黎楚是具福者；便为之出家，命名雅汪卓渣汪波，传授以密乘灌顶、传教、教诲、导引，均能闻得究竟，而从事修行。并从邵忠罗布珍巴、祝巴棠遮青巴、与岩麦那渣华，闻显密新旧派之一切法，所以可说无所不闻者。尤其从那渣华受近圆戒，十七年中，均在精进，竖起修行之法幢。 <br/>
-  <br/>
+846  <br/>
 　　当是时也，有许多岩传授记降临，而黎楚置之不理；及后修持承事金刚手一亿时，再降岩传授记，重以麦彭之命，遂在庚申年正月初十日，第一次闻始探取岩法。见有铜箱如大鹏鸟子之大小，内有标题，是移喜磋嘉亲手所缮写者。乃开渣龙堪仓之大门，在其内取出甚深三宝总集等秘密岩法，取出而后，依照修之，再为秘密以隐匿之。从此并到恭波宝秋、及蒋青遮、又名蒋巴龙二处，洞开圣地之门。从夜摩哈呢、恭操纪敦兰、及鸟育夏之佛堂等地，取出大悲法、马亥如意宝、寂忿了义心要、长寿仪轨名雷铁（按或名大铁）、金刚、多杰佐雷、大天具德玛诚那、莲花圣地、及里程表等岩传法要甚多。而三宝总集等，与较秘密之岩法，亦公诸同好焉。其神通神变，均是无碍者；故于水上及岩壁之中，皆可以无碍行走也。 <br/>
-  <br/>
+847  <br/>
 　　当黎楚之在夜摩哈呢取岩法也，恭波渣德华等，恐其取岩而后，于地方上或有不利，乃派军队前来，以保护岩洞。黎楚知之，乃骑马在岩前峭壁上行走，岩石留著马足之印，并将岩藏之法，立予取出，而示现极大之神变，于是军队及旁观者，均甚怯懦，且生起信心，如此能力，是不可思议者也。在该地原有伤害之鬼魅，乃将之调伏；于边军中亦使之远退，故于西藏饶益之事甚多。并摄受许多具福之弟子，而将教传与岩传，及新旧教之甘露，均施与之，令得解脱。 <br/>
  <br/>
 黎楚之对于近圆戒，守护甚严，故诸所化，均感动于彼之以身作则，追随其所率领，步上康庄坦途焉。在榜列佐波所闻圣地之门，以其地势高且清净，乃于此处，修建精舍。此舍至今所以仍未衰落者？以其叔父之后代，与其化身之传承，以保护之故也。 <br/>
@@ -4619,21 +4640,21 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　黎楚七十二岁，在榜列佐波示现许多希有之标识与神变，而至清净大法界焉。 <br/>
  <br/>
 其法之传承，至麦汪舒襄杜渣时，在达波有两位成就光蕴身者，其前前后后，能成就光蕴身者，亦复不少。总略言之，此尊化身岩传导师，依其授记所说，有缘起上中下及最下四种，他成为最下者。但其志愿、及功德能力，皆非常殊胜。尤其自己之岩传深法，修得究竟。因此其岩传事业，从西方印度、尼泊尔、到东方海边，乃至中国各地，均能弘扬增广，至今仍未衰落也。 <br/>
-  <br/>
+848  <br/>
 　　佐宝车聪罗渣华之转世，岩传导师大持明者，敦都多杰，是从以前十三种旧岩传授记之所说明；于第十耀宗年乙卯岁，在西康德格之鸟普地区出生。其父是宁族，名楚些康巴鲁朱，母名波努玛。自小时从其父学写及念诵文字，并学医方明，到六岁时，出现许多清净明显之境界。 <br/>
  <br/>
 稍长，进入巴伦朱丁庙，从荣增葛丁晶之化身，德格之成就者贡噶渣楚出家，命名为贡噶舒襄卓柏。少年曾在大石，留下足印，至今仍在庙内大经堂之东门外。及得闻受萨迦巴之一切教典，对于寻求智慧义（心要），如渴者之欲得水，今幸得之，其欢喜可知也。遂往慕山之精舍，从曾巴贡楚赞青，闻受大圆满及深法多种，而得领悟。后又到前藏，朝见杨波之成就者嘉斯赤登，闻受甚多成熟解脱之教诫。在渣嘉哈操断绝食物，只修延寿提炼精华之法，以修脉气明点之深道，能得究竟。又到后藏萨迦俄庙里，闻受语口诀之道果；回来时，皈依樘列佐波大持明者渣春迎波，从之闻受其甚深之岩传法、灌顶、口诀、导引等甚多。  <br/>
 <br/>
 　　当斯时也，敦都有授记其是岩传导师之具福者；于是便往布波，在颇蒋饶楚，修最秘密无上普巴之修行。当在梦中，有许多空行母降临，请往香多啤呢安住二十八日，其殊胜希有之境界，有如此者，並于梦中从莲师圆满接受成熟解脱之法，且承赐予以岩传之授记；如此事迹，在其自撰之达襄汪叽渣波中，较为详尽。旋往朝见巴邬金丹增，巴一见之大喜，而他对巴作圆满之供养，事之为金刚上师。 <br/>
-  <br/>
+849  <br/>
 　　时敦都是持密宗之大金刚导师，依照岩传深法之标题所授记，到二十九岁，可从裕楚宁青岩，取出另一标题。于是依此标题，从布波洞崔之德青沙华普取出意集一切法类，是其所取出一切岩法之主要，而以后所取出者，均是支分。从此依次又从叉华佐岩，取出化身心要保护法界之护法法等；从布列达宗，取出深义密心要、吉祥胜乐、及护法四臂类；从布列沙治杨中，取出心要、长寿、及普巴三种，与护法一发母类；从布波洞崔北方之岩中，取出啤摩嘉巴、及圣地说明；从西康德格之楚诗亲伽雅，取出本尊红、黑威德等三种类及妙吉祥寂静仪轨类。除此而外，其他取出之法要，末得其加以抉择者：如从泽普渣蒲晶，取出之四面依估，与大天仪轨；从笙野佛堂最高层里，取出之上师持明 汇集、长寿仪轨名叉华玛地、护法邦那类；从拉萨大寺庙西方之最高佛堂里，取出之耳传顶岩如意宝类等是也。又从布波德列兰渣巴华，取出幻化纲寂静忿怒及八教类护法等；从拿渣石塔，取出骑虎吉祥依估类，此是瑜伽者董青珍取出以献者。此外从裕楚些芝洞卡、荣增生普、些雅佐、那宝总、达雪芝果塘等地，先后取出甚深岩法多种；如此是从岩传授记来源内，亦复有所说明者。  <br/>
  <br/>
 　　隐藏地啤吗谷中边各区，彼亦敞开许多大圣地之门；在取出岩传法要之同时，并取出所依（佛像）及三昧耶之法器等，甚数无量。总括言之，圣地与岩库一百种，离解脱法一千种等，于授记中，所应取之教典，大部分已取出矣。 <br/>
-  <br/>
+850  <br/>
 　　敦都四十二岁时，德格喇嘛曾巴彭楚，迎请前往。他于自己所坐之精舍，修成一座佛堂名敦都哈堂，如此以造对佛法饶益之事。但于德格之嘉图多杰登等古代宁玛巴之寺庙，他亦前往，且摄受许多珍福缘之弟子。在靖能渣邻近之流芝蒲泽普达，居住颇久，其修行之精舍，至今犹有存者。后来乃赴铃苍，为铃苍王造福田上师与施主，缘起甚佳。並在此地修持大悲空幻瓶，于是显现许多希有之标识；如此修法标识之流传，至今尚为人乐道不衰也。 <br/>
  <br/>
 旋复接受具福缘者之迎请，前往巴堪巴都、巴玛哈丁、及呢波车等处，以从事饶益有情之无边事业。尤其是在波尼渣，朝见郎卓明珠多杰，彼此互相闻法，（互为师徒）故其缘起亦甚佳。如是二人，对大成就者嘉马叉麦介绍、赞叹、及献花。并在布都德青汤、与裕列钧窝二地，建成寺庙，居住良久。而隐藏地啤吗谷，亦已加以敞开作明显之显现，如此事业，能得究竟。 <br/>
-  <br/>
+851  <br/>
 　　壬子年敦都五十八岁，到莲花光宫去，于晨声音光彩，及降花雨等希有之神变，为数甚多。尤其遗体，大部分成为光蕴，所余者只一肘而已；付荼毗时，出现颇多舍利，而遗体且分为五大部分焉。 <br/>
  <br/>
 敦都之主要弟子，是哈尊青波能卡芝美、荣增龙沙迎波、巴叉珠咕卓之蒋楚、左青啤吗荣增、君桑秋德伦朱、祝青啤吗罗布等，而于达鸟方面，所传授金刚乘之弟子，是无边者。若其后代渣沙罗布明渣等法要之传承，与弘利之事业，均在不衰落中，不断以流传也。 <br/>
@@ -4643,13 +4664,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 稍长在宋宁呢楚，从化身邬金巴佐出家，命之名为君桑能渣，第一次在汤朱僧院，从事闻思修。渐次从许多金刚持（即一切上师）闻受八教、意集等教传岩传之教诲，並受成熟解脱之灌顶圆满，承事本尊，且得到许多成就之事业。尤其是依靠左青巴舒襄汪波者十七年当中，闻受心要教请，而得完成闻后即修，得到圆满之证悟。  <br/>
 <br/>
 　　尊者雅汪麦卓多杰，为法之利益，乃传付以贪道一切口诀之自身具法、与瑜珈手印；以空乐智慧之能力，导引四喜，入自己身中，一切见闻，均成为光明双运之快乐。遮（遮宇）达（达波）恭（恭波）等三处，与前后藏及宇等三处，一切西藏大圣地，均从事修行。故其成就之地位，非常之高，尤其解脱喉轮之脉结，所以其一切语之意义甚佳，辩才无碍。  <br/>
-  <br/>
+852  <br/>
 　　哈尊之在印度，亦曾调伏外道之王，领导皈依佛教；在西藏役使神鬼，以助修笙野庙；在渣呢有大山崩墜，他用手以期克印一指，山即不坠；如是等等，其神变自在，是不可思议者。其后在素布龙，宁青喜依慕波嘉卡，啤吗渣窝些中，及雅龙沙呢那丁等大圣地入定时，有不可思议之境界显现。如是从其意念，流出许多不可思议之岩传：如一切岩传心要、一切耳传根本、见闻念触解脱之金刚心要如云突然散之法类，均予以整理，然后以耳传方法，传付不共具福之弟子。其后徇荣增渣春迎波，及笛清敦都多杰等之请求，从事利益康藏地区之事业。  <br/>
 <br/>
 　　丙戌年哈尊五十岁，到渣松哈烈俄沙迎波，敞开圣地之门，以寻其所有之授记，而修建寺庙。当其在渣卡嘉斯丁，将得到所有空行之授记，来至渣叽迎纪变巴以修行时，在定中出现清净明显法，于是将不共无上阿的心要之教诲，及持明命修类，加以抉择整理，传付具福众弟子。此外复弘扬大圆满法，故其事业非常广大；因此是名闻各方之锡金大圆满宗派，最近得究竟之圣士，无能比之更高者，盖众口一词也。深法持明命修，与云突然散法灌顶、传教、口诀之流传，至今仍有焉。法之传承事业，大部分西藏地区，尤其是巴育、锡金渣摩聪，现仍在弘扬中。  <br/>
 <br/>
 　　法王赤松德真之事业化身，许多新旧岩传法里所授记者，西藏依怙观世音之大悲自身所成之第五代DL，其密名为多杰图麦渣。是聪渣达遮之沙珂王族，父名麦汪都敦饶登，母是杨佐赤宝之女名贡噶那遮。于第四耀宗年丁巳岁，示现极希有之标识等以出生。  <br/>
-  <br/>
+853  <br/>
 　　是年蒋巴荣增雅纪汪波，传以长寿灌顶。班禅罗桑卓之赞青，证明其为第四代DL渣华圆丁渣楚之转世，乃迎请之到哲蚌大寺，从班禅出家，命之名为罗桑渣楚，奉之坐床。从大教主俄罗青波之化身凌马巴君竹卓柏学习内明等大教典甚多，得无碍智。复从班禅领受多种灌顶传教口诀等；从孟佐班知达父子学诗词、偈颂、声明、音韻学、词藻；（修词学）并与董波华从苏青学黑白月历学占算法等，十明通达，成为吗哈班知达焉。  <br/>
 <br/>
 　　廿二岁从班禅受近圆戒，更名为雅纪汪朱。复依止巴本卡巴（地名）之昆敦班佐伦朱、沙禄舒襄卓朱、苏青卓英杨佐、文龙华罗多杰、与卓渣笛打零巴等许多学者与成就者。其所闻受均是萨迦巴、格鲁巴、与宁玛巴三派之主要法；在此时西藏所有之显密开示，与密宗灌顶、传教、口诀之流传，大都能闻受，而得究竟。读其自撰之亲闻记，（按即以自己所闻之法而加以纪录）胪列所闻之经籍，便知其详。其在修行，亦有圆满之成就。  <br/>
@@ -4661,7 +4682,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 多杰到笙野时，得到岩传之缘起，但须视察机缘与时间之配合，故未有取之。其后三根本究竟佛，为之面见授记，并赐之灌顶；于是乃将二十五种法要秘密之记录，与充满法等，主要是古代宗派者，共二经函，以之传付卓渣笛打零巴、与荣增啤吗清那等众弟子，甚为发达，流传至今不断也。  <br/>
 <br/>
 　　在政治方面：多杰二十五岁时，蒙古王古斯丹增卓渣，以许多百姓（属民）与土地献与之。其后中国皇帝，迎请之赴北京，以“全部法主金刚持DL喇嘛”之荣衔以献，并有如此之印信。复为皇帝之上师，二人协力从事供施之事。在西藏拉萨红山上，修建布达拉宫。有等授记内说：“在此末法时代，观世音菩萨，与赤松德真二人，其化身成为比丘王之形相，以保护西藏。”故直至现在，西藏国土，以政治宗教二者，相辅而成为保护西藏之方便。 <br/>
-  <br/>
+854  <br/>
 　　在宗教方面：多杰于一切显密新旧，教传岩传，其所转之法-轮，是无量无边者。萨迦巴之父子谢达竹巴，班禅之转世嘉丁持丹朱等，许多大喇嘛，及所有在西藏之善士，大都是其弟子。尤其是古代宗派之卓渣笛打零巴、荣增啤吗清那、柯渣图些丹增芝美多杰等，及许多特别殊胜之补特迦罗，均皈依之。所以对于古代佛教，从己身弘扬，並予以传承推衍，故其功德，是无比者。此外复有在印度恒河以东之东姑一带，大喇嘛与贵人，均尊敬之，无有不皈依之者。如是在前后藏、西康、中国、蒙古等地，其所修建之寺庙，无量数也。 <br/>
  <br/>
 在著述方面：其所造论，对大小五明，与经典之解释，演述得非常希有，如是者凡三十函（经函）。于新派之蒋扬亲遮、旧派之蒋巴渣杜等教规，皆甚忠实以奉持；尤其是按照授记万宁德青与弟子共施之缘起，是甚佳者：故于西藏政府之根本，得以坚定焉。如是三种法-轮内外事业之史迹，皆是殊胜希有，不可思议，而得究竟。 <br/>
@@ -4677,7 +4698,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 十三岁时，于本续密宗心经、上师续、意休息、如意库根本与解释，如此均是从其父亲闻受者。其后复闻受鲁苏容三派之论，萨迦班知达之分别抉择，掌珍雅芝晶能，（按掌义为除烦恼，珍为具功德，又掌珍为梵语之薄伽梵。雅芝之义则为刀。）杨忠寿等，于其内容，皆得领悟。尤其重视者，是渣华龙青巴之论，故于一切法，皆能抉疑。从达敦卓渣丹增，在经部灌顶仪轨宁青青巴上，依四十五个中围，举行四种大河（如经部等）圆满灌顶，与边定（即后劲）长寿灌顶等一切灌顶、教诲、开示、传教等。並在灌顶仪轨蒋芝磋尊上，传付以依二十一种中围灌顶、传教、口诀等。又从多杰渣荣增啤吗清那，在经部灌顶仪轨上，依二十七种灌顶、教诲、传教；如此闻受，甚为圆满。上述二位上师（达敦与多杰）均命其密名为芝美多杰渣焉。  <br/>
 <br/>
 　　德达所有岩传之教诫，其缘起始于十八岁癸卯年五月初十日，从雅玛龙取出持明心要。廿二岁丁未年八月初八日，显现神变，以从舍渣取出阎摩王靖（傲慢）箴（除掉）。三十一岁丙辰年正月十五日，从邬嘉渣取出忿怒莲师、与金刚萨垛、都森阿的类。三十五岁丙申年六月廿九日从沙鸟达窝取出大悲善逝总集类等法要。 <br/>
-  <br/>
+855  <br/>
 　　及其既已请岩传法也，先后多次在渣玛青浦、雅玛龙等，希有之修行大圣地，及自己新旧寺庙之寝室内，善芝昂沙遮，与森丁节等清净之地方，闭关凡数年、六月、三月、一月不等，以资修证。依边（修长寿法）、寂忿上师、金刚萨埵、八教、大悲、普巴、阎摩王、马头明王、那洛卡爵等，三十五种本尊之承事，大圆满撷取心要精华，以从事妥噶与气函盖之修法等，其中主要之修行。能得断除不清净之显相，以对生起次第之坚定；故于四种事业，无碍以成就。並得圆满次第，气派明点进入中脈之方法，而得智慧手印之空乐四喜。大圆满自明无分之意生起，能所二取自然解脱，无分光明周遍之禅定，而得自在。所见所造。均是显现智慧之游戏。莲师、卑吗那尊者、空遮伽雅、生遮生汪、毗卢渣那、移喜磋嘉、杨利、君青卓遮等，印度与西藏许多班知达与成就者之智慧身，现前见到，化成中围；将一切教传岩传之灌顶深道教诲心要，传付与之。多杰孙奴、金刚持、清净吉祥大兮鲁迦、大悲、寂静忿怒、瑜伽母等，许多本尊，均面见之，予以灌顶及加被。且能前往具乐世界、与雅饶洲之巴列等，许多清净法界，而得禅定自在。所有空行与护法辈，亦无碍以从事其事业，由此可知，均如其所说而示现；所以世人对之深具信心，如此事迹甚多，此中未及细述。  <br/>
 <br/>
 　　德达三十一岁以前，从其意所成熟之种子，一一增长；以瓶灌之经验，所有见者，均是观空如幻，作如是之抉择。如此大部分是身之利益众生时，故其所到宿青支龙等许多南北地区，所有见其身体之中围者，一切无分之所化，皆皈依焉。他亦将能成就能解脱之种子，放置于彼等心上；以造对于轮回得究竟之事业。三十二岁丁巳年二月初七日，以已得到密灌之经验，自明观空之出现，如此能所二取，在法界中解脱；此是主要用语以造利益众生事业时，上中下三根具福所化，均传付以甚深广大之法，而法-轮遂不断以转矣。三十八岁癸亥年八月初七日，以意智慧、乐空双运、不变四喜，生起智灌之经验，渐渐增长；此是用意以造利益众生之事业时，从此时始，其共同所开示，均是无分新旧教派者，尤其是甚深导引之教诲，于自续上而得成熟。对许多具福所化，自来智慧，以本来清净见证悟之。如此一切佛三金刚，同样自生，以事业造利益众生之事，而所造一切自利之事情，皆断绝矣；完全从事弘法利生之事，如此巨大能力，以开示、修行、事业三种以度日焉。 <br/>
@@ -4710,7 +4731,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　班禅卑吗那尊者，与藏王赤松德真双入之化身，荣增德达宁巴之转世，君青宜吗宁巴，是咕汝卓汪、生遮宁巴、卓宁与雅敦父子等，依照授记所说：松渣与宋真榜素玛波之南方，巴呢庙之邻近，卓遮祝巴六个大意子中贾渣巴之伯叔父族，于第十二耀宗年己酉岁十二月渣华龙青巴周年祭之日上午出生者。从小时于笛清生遮喇嘛，与卓渣德达宁巴之前世事迹，均能清楚忆想说出。 <br/>
  <br/>
 君青六岁时，入至尊蒋渣雅美转身语意三种法-轮之圣地，名巴治呢波庙，从磋嘉之化身雅汪罗桑啤吗，受近事戒，命名为啤吗亲遮和些。其后从乃沙之雅 汪贡噶利啤忠兰，受近圆戒。从利丁君桑和些，接受成熟解脱之心要、与上师意集等之灌顶、传教。十三岁朝见荣增图楚多杰，接受大手印智慧见解脱等，当第一位成熟基本性之根本上师，故后来智慧身，亦加被之也。其先后从笛清芝密宁巴、桑刚达尔马几德、万宁竹汪诗列那他、邓真移喜伦朱、唐佐恩啤吗卓朱、与蒙乍嘉喇嘛达遮等，接受古代法规，主要是教传与上下岩法；新派方面，亦接受许多成熟解脱之法。并学习五小明之一部分，其著作之显密大教典纲要，皆是自生能力所成，而不是依五小明而作者；其主要是修行心要以度日焉。  <br/>
-  <br/>
+856  <br/>
 　　君青二十八岁，丁丑年，从一月起，在自己之庙，名干巴呢锦康，闭关发誓修行三年。主要修者，是笛青舍饶和些甚深法解脱心要，又名意解脱，远近传承。只修教诫之生起及圆满次第，得特有之成就标识。此外上下岩传等，许多岩传法修近行，已得究竟，而所成就之标识，明显现前。以得脉气明点瑜伽之自在，解脱喉轮，故所说法，辩才无碍，甚为圆满；如金刚歌等，从大法库明显降临。及修上师意集近行时。从头顶有马嘶声，故莲师命其名为巴啤吗汪青；教主蒋巴舍宁，现前为之加被，得到如所有智之领悟。以遵守兮鲁迦之大禁戒，且能在光明显现中，到尼泊尔之渣龙卡梳塔。法身智慧空行母降临，给与空行实证，因此得大圆满心要之自在，已到学者与成就者最高之地位。但君青仍以为未足，在出关时，前往笙野青夫。在生青密多浦，专修极大苦行。再闭关三年，修心要义之修行，于时所得共同清净之境界，是无边者。尤其是渣华龙青巴之智慧身，显见三次，所以得到身语意之加被，与语之大许可，由是更得圣道意之大圆满谛。于是乃向弟子十五人，第一次开意岩大法之成熟解脱，所以其能成为大圆满心要乘之导师；闭关三年，已得究竟。 <br/>
 咕汝卓之汪竹深法楷呢问答有云： <br/>
 我化身在松渣以弘利　　　　 <br/>
@@ -4747,7 +4768,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 自修任运得成就　　成就弟子无量数 <br/>
 　　许多外内密之授记，均有此说。 <br/>
  <br/>
-是年九月，史波朝见蒋扬亲遮旺布，蒋扬非常欢喜，第一次以普巴杨生布捷传付之。复传以昆派之普巴大灌顶，外内密障，均为之清除，及传授仰兑如意宝灌顶，在清净明显中，上师现成卑吗那密渣尊者，而能作成赤裸裸之认识。受鸦松妈护法法时，如大地震动，威光闪耀，现前看见一发母；母说：三年后，我对尔师徒二人，给予以大成就，此为后来三种大圆满出现之预兆。二十七岁，领受大吉祥兮鲁迦九尊大灌顶，上师兮鲁迦入其顶上，以能有此境界，故身之脉轮，得到解脱；且从此始。遂能无碍，而唱金刚歌焉。以前意修除障之未得正确者，亦无碍而了知；其意修除障，与蒋扬之甚深岩传意修善逝结集其内容与教理，本是相同，词句亦大都类似，如是二者，有如母子之相依，于是遂无碍以抉择焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 21:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 54 楼</span></div><div class="post-body">丙三：岩传法器宝瓶及传授者之历史 (续三) <br/>
+是年九月，史波朝见蒋扬亲遮旺布，蒋扬非常欢喜，第一次以普巴杨生布捷传付之。复传以昆派之普巴大灌顶，外内密障，均为之清除，及传授仰兑如意宝灌顶，在清净明显中，上师现成卑吗那密渣尊者，而能作成赤裸裸之认识。受鸦松妈护法法时，如大地震动，威光闪耀，现前看见一发母；母说：三年后，我对尔师徒二人，给予以大成就，此为后来三种大圆满出现之预兆。二十七岁，领受大吉祥兮鲁迦九尊大灌顶，上师兮鲁迦入其顶上，以能有此境界，故身之脉轮，得到解脱；且从此始。遂能无碍，而唱金刚歌焉。以前意修除障之未得正确者，亦无碍而了知；其意修除障，与蒋扬之甚深岩传意修善逝结集其内容与教理，本是相同，词句亦大都类似，如是二者，有如母子之相依，于是遂无碍以抉择焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 21:51</span><div class="badge-floor">第 54 进</div></div><div class="post-body">丙三：岩传法器宝瓶及传授者之历史 (续三) <br/>
 <br/>
 <br/>
 史波师徒（按指与蒋扬）之同在岩修时，莲师父母现前在明显中，赐与许多岩传标题，其缘起之殊胜，有如是者。而其二人，且互为师徒，以蒋扬曾向之领受新岩传派成熟解脱之甘露，故各方面，均称之为岩传大导师，有如日月之在中天，其声誉之隆盛，有如是者。  <br/>
@@ -4780,7 +4801,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 在和文操浦地方，建立常修七种普巴大修法之道场，尚有许多寺庙，作新岩法大小之修供。为使西藏安乐之方法，乃于根本十种法中，缘起法抉择完妥。按照缘起之道理，凭藉庙中堪布、教主、纠察（按为纠察不守戒之僧众者）三位；在八蚌、嘉图、左青等地，于显密双修佛法，用开示、修行、事业三种方法，以弘扬之，主要寺庙有三：曰、嘉马列，曰、乃丁甘，曰、芝叽都多；各庙均有所依甚多，后列二庙中，且有诸大德之集团，以造显密两种开示修行之流传，其弘法利生之事业，如此已得究竟。  <br/>
 <br/>
 　　史波或者为其他大事，到四十二岁，庚午年，偶示徵恙，病时定中，到达佛之法界，于五月初一日，大地震动，虹光及希有神变逕示圆寂焉。是年十一月十五日，程遮汪波于定中，看见他前往西方极乐世界，证莲花芽菩萨位。程遮乃向之闻受修法、灌顶、教诲之甘露，如是一月守极秘密之誓句。于十二月初十日会供，随著抉择所闻之法时，地上忽然生起暖气，冰雪融化，如是希有标识，甚殊胜加被之相状，为我辈所应胜解者。  <br/>
-  <br/>
+857  <br/>
 　　岩传导王第五位，是卑吗那尊者与藏王赤松德真双入之化身，王子德敦刚巴转世之第十世：名蒋扬亲遮旺布、又名啤吗和些多鸦宁巴。父为骆族，名钟青宁青汪渣；母名舒渣舒囊楚。在第十四耀宗年庚辰岁六月初五日，于多康德格之德龙殿窝村，遮育聪青渣邻近，示现希有之标识多种以出生。于时彼稍一动念，六臂依怙，与一发母，即前来以保护之。而于前生许多世之事业，均能随念忆起；小时便有大乘之根器，尤其是常欲出家。其智慧无与伦比，故其所写之字，所念之书，均极容易了知；于大部分之经典，只念一次，语及意义，均能领悟。 <br/>
  <br/>
 蒋扬二十一岁，从邬金文佐宁之堪布荣增生波，受近圆戒。从萨迦伯多杰宁青，接受开示，修行之教规。从他遮堪布兄弟二人，接受胜乐与喜金刚灌顶。从万宁慈青、爵密生遮贡噶，闻受舒派大吉祥兮鲁迦，与持明心要。从史青之朱迈图球能渣，领受寂忿幻化纲之灌顶等，並建立密宗戒之根本；而于化身之地位，族之高贵，能力、财宝之傲慢，则已根除矣。以伟大精进之精神，在前后藏、康等三地区，所皈依之金刚上师、圣士、十明通达之学者，共喇嘛一百五十余位也。  <br/>
@@ -4834,7 +4855,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　及七十三岁，壬辰年二月初六日至初十日当中名“嘉华呢巴”之晚上，抛献花朵，念祝福（圆满吉祥颂）毕，在入定中圆寂，其意入到卑吗那密渣尊者之意法界去矣。  <br/>
 <br/>
 　　又按照授记所说：其根本化身，在五台山。且有五种殊胜化身，一同示现，以造弘法利生之事业；其以前与现在所从事者，悉皆是不可思议者也。  <br/>
-  <br/>
+858  <br/>
 　　罗青巴育之化身，蒋干袁登嘉楚罗爵泰贤者；在禅定王经中所说： <br/>
 谁人掌握殊胜禅定者　　如名闻无边弥勒菩萨 <br/>
 从事利益众生之胜事　　我来授记此罗爵泰贤 <br/>
@@ -4847,7 +4868,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 罗爵在西康谢达利摩甘之啤吗那遮前，容校之“秘密藏地”，于第十四耀宗年癸酉岁十月禄十日，太阳初升时出生。父名聪渣珠易晶翁忠，母为瑜伽母嘉斯楚。其于异生之行境，从小便已过去，故许多圣士，授记之为圣士也。当小孩游戏时，亦示现灌顶、念诵、开示之形状。五岁学习文字，一表示便得领悟，而对莲师有极大之信心，且有现前明显、与夢中之清净明显。及十岁于睡醒时，对佛法生起异常之信念，同时于工巧明医方明等，稍观便能胜解。其禀性正直，所发誓句，言出必行，故其智慧增长无方，其福德甚大，顺缘甚佳，不须精进，而成就甚大；如此殊胜之功德，集于其身。 <br/>
  <br/>
 罗爵从五大明通达之班知达石青竹麦图球能渣等，及许多上师，学习共同明论十余种。不共之内明、中观、般若、律藏、论藏、主要菩提法等法相宗之注释。极不共之新旧教传及岩传派所有大续部等，能得抉疑广大之智慧所以人名之为“沙那哇渣那吗哈班知达”（即一切智大学者），如是著称。从曾军达诗都啤吗凌遮汪波，接受三律仪（别解脱、菩提、密等）于是双运大乐之智慧，遂得现前；于意纲要之传承方法，而得自在。尤其是从蒋扬等无分之善师五十余位，领受修部之传承、八大乘之教规，及在西藏所一切成熟解脱之教训，如是一切法要，均已闻得，且能精进修行，至得到成就之标识为止。似此以极大精进，竖弘扬修部密法之法幢，领悟共不共之成就。且于经典论续，以传教、口诀、开示及各种之事业，与方便，达成领悟。 <br/>
-  <br/>
+859  <br/>
 　　罗爵从闻思修而来三慧，著成极希有之论；其所造之论，盖从共同之明，至不共之九乘、大圆满阿的约噶等，显现全部显密纲要者，名遍满一切所知之库论。指述修部传承八大乘之一切根本心要，与成熟解脱一切甚深共同总集者，名教诲宝库论。于古教金刚乘教传派之杨（甚深密）普（普巴）仙（阎摩王）三种，及新派麻（麻巴）柯（白教之传承）续部类中围成熟解脱之总集者，名教传密宗库；于古教具六传承甚深岩海数理化之总集者，名宝岩库等论。及说明“黄纸誓句”法语者，名甚深岩传殊胜不共库。其随后连续零碎之著作，名广大语库论等；如是五种大库乘（论名）是世界前所未有。以其所著之论，不是得到少许闻思，便著成虚幻之文章，而毫无实义者可比，故均甚有意义。缘是对无分别佛法之流传，有如垂死之人，得到续命之希有方便。其所造癈，凡九十卷，依此事迹以观之，则其一生之精力，全付之于造论也。 <br/>
  <br/>
 至其闻思修所弘扬显密新旧教传岩传无分之灌顶、导引、口诀、传教等，依此事迹以观之，则其一生之精力，却付之于弘扬佛法也。且复依其事业，从前行积集福德资粮，至不可思议周遍中围生起圆满之修行以观之，则其一生之精力，又是全付之于修行也。其于珍打宁青渣岩，与仲素德些都巴之精舍，及新建之寺庙，尚有许多身语意所依之旧者，均加以恢复；而新修者，亦复不少，且皆不可思议。更从事于会供之大修一百五十余次，以供养三宝，供养大德等十波罗蜜之事业，依此观之。则其一生之精力，却又只是造此十波罗蜜也。 <br/>
@@ -4871,13 +4892,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　罗爵之从意与语所有诸弟子，是不可思议；主要则为蒋扬，而蒋扬与之互为师徒。其次则至于今尚有存在，名为蒋干、青恭两人，如此善妙名称，在康藏各地，从学者、班知达，以至牧童，均如风行草偃，无人不知者也。若其佛法所传承，成为其代表者，是嘉马巴斯之十四代，与十五代达斯都（按此为汉土皇帝所赐之封号，或译“八思巴”。）之第十位及第十一位，嘉、祝、谢、达等，教传派噶朱巴之善士者。他遮教主蒋扬罗帝汪波、钟沙雅呢之卓渣恭嘉蒋扬等萨迦俄之善士。麦彭蒋扬能渣、笛敦利饶宁巴、麦昂敦汪波尊者，及至宗亲那箴卑忠兰等古代方面之善士。珠密庙之堪布移喜恭柏，渣育之转世，楷卓鸦汪登楚渣楚等格鲁巴之善士。总而言之：从前后藏及西康上中下三地之学者、班知达、成就者，及大圣士之大者小者，无不是其弟子。 <br/>
  <br/>
 古代佛教大乘麦彭蒋扬能渣渣楚，其父是天族，名朱干波达遮；其母名穆波东渣星聪玛。于第十四耀宗年丙午岁，在多康达龙河边之雅秋丁聪出生其叔父名殷喇嘛啤吗达遮，为之命名为麦彭渣楚。从小时对佛法极具信心，及出离心、智慧心、慈悲心等，如此大乘行人，所应具足者，皆是与有生以俱来者。  <br/>
-  <br/>
+860  <br/>
 　　麦彭从六、七岁，于三律仪已能背诵；于历算白月黑月之前行，均已学习。十岁于书写念诵，皆得无碍，且能造成演讲录。十二岁住邬金文佐宁巴之卓朱石青丹衣达遮灵庙之支分庙，名朱密柯生鸦卓陵时，与普通僧侣无异，（按即不具化身等之地位）众皆赞叹之，称为小和尚学者。十五岁，读妙音经数日，并祷告文殊，乃得无余智慧。又在珠容列爵（列爵者山上之精舍也）住十八个月，以修文殊说法狮子法，并造丸子和合之事业，得极殊胜相应之标识。彼亦自谓：从斯时始，于显密与各种明（五明）论诸经典，偶然过目，便能胜解；但只有传教之传承，未经学习而已。十七岁时龙容帝沙山上之牧民，迁到果庐居住，乃亦随众前往，而于堪兴地理之学，却甚通达。及十八心猿意马，随古桑竺生同到前藏，朝该处之圣地，住伽敦寺（三大寺之一）一个月后，复往朝南部之圣地。在中途柯渣卡操时，所见出现空乐证境（清净明显），遂得暖乐，如是数日，因言此乃圣地之加被使然。在北方道上，于证境中，手里得到一经，经名普遍观见大妙音明镜经，如此事迹，便在经之后页，明显记载。回时朝见刘干君汪青遮饶多杰，从之闻白文殊随许之灌顶，在灌顶时，修马赤（白文殊）合业，得从经典所说之标识，从此智慧异常增长。从巴朱邬金芝麦卓之汪波者五日，闻佛子入菩提心论之智慧部，便能彻底领悟其中之义理，后来且造智慧部之解释。尤其是与因业有关之蒋扬亲遮旺布，往皈依之，蒋扬自念只有彼是其意子，第一次遂将白文殊随许传授，以开共同与不共之一切法门，近传显密之经典，与大密金刚衍绎一切教传岩传成熟解脱所依之法，所有口诀、修法，及直接之教授，均传付与之。  <br/>
 <br/>
 　　此外并先后从罗爵夫贤学声明月亮，与水银烹洗等共同明论，寿主妙吉祥，渣珍渣德等不共之成熟解脱法。从左青康波啤吗班渣等甚多善士，闻受显密明论等，为数无量。 <br/>
  <br/>
 如是闻法已，复研习修行，並从精勤学习因身无量寿佛法。得到“白业熟练”之能力，因此上师大悲加持之缘起，其智慧乃如梦初醒焉。于是所有善逝之语所说之经，甚深广大之内容，皆清净无遣而得领悟。其自生智慧明显，高如虚空，有如此自在解脱八种辩才之宝库。  <br/>
-  <br/>
+861  <br/>
 　　复从善士朱安芝麦多杰，闻受结集经根本传教，闻后于一个月之时间，即能以之开示于朱安。（按垀彭与朱安是互为师徒）从庞沙格西雅汪忠兰，闻中观时，请求上师传教，其他不敢奉扰，（按意为只求传教不求开示）传教以后，即将考试卷呈献。当中观之开始时，格西说：我是得格西名位者，但我之智慧，比不上尔之智慧一分。许多眷属，皆予以赞叹。从教主罗德汪波，学习因明；从舒敦啤吗闻受仁慈法等，其于经论之开示与传教，闻毕即向罗德等造广大之解释，以奉献焉。如此经、续、注解一切之理，从其意中，自然流露。故对许多讲经典之学者，无所怖畏，有如狮子王。其开示与经典之注解等，绵是无碍，且无人能与之比拟。  <br/>
 <br/>
 　　麦彭自言：我从小时，已有许多新旧派善士，９按指许多殊胜上师）为转法-轮；但我从巴朱宁波车只学佛子入菩提心论之智慧部，其他则未尝多学；后来上师与本尊赐予恩德之关系，不需经如何困难，所有经典，一经念诵，于其大意，均可了了。故方开始学佛时，于新派经典，容易了解；但于古派经典，则领悟较难。是时我想，知之为知之，不知为不知，惟在持明传承之殊胜经典，一定须有极简要之道理，故不敢于即使一刹那间，而稍有所致疑；以是缘起，遂成智慧成熟焉。此后如须看此等经典，一切甚深之纲要，均是从古教所传来传承之教诲，同时我亦得到极决定之胜解。时蒋扬饬我造一个“自宗教规”之论著，乃遵照上师之命令，以智慧之熏习，著作许多显教等之经籍，全为弘扬佛法而成；遂于其著作中，写作一部分自规愿望之能力，所以有等宗派，认为是遮，而后来各方面，均为此写成辩论文，亦复不少。事实上我之动机，只是遵照上师之命令，与现在古代之佛教，有如接近绘画而来之灯。大部分只有他规，是讽刺他人者；而极少人研求自规宗派纲要之道理；所以希望对于他人。有多少利益，而从事著作，並不是对他规起嗔恚心，与自慢之骄傲，——即在夢中，亦无此种观念；所以从具足智慧眼之佛视之，当可无愧。如要写成答复辩论之话，但因自己未得圣法，如何能领悟一切所知。而合理不合理之事情，完全依止无垢之佛语，与西藏大乘诸圣士所造之注解，自己亦需考察合不合宜；如此言之，亦是对利他有益之事。假如自己不能证悟，所证悟者，是邪分别；反而将佛语与注解，成为过失，如此对自己了脱生死烦恼之门，为之障碍，而于他人，亦领导之趋此邪道，其为罪过实莫大焉。倘使遵照正徧知清净教派之破除邪分别，应如病者之依止医师无二，而嗔恚比较之心，是永远不应存有者。我以正直之智慧，贡献此区区之意见焉。因此殊胜诸善士，闻此胜论，赞叹佩服，得未曾有。为保护此法库，皆将邪分别消除，故其意义与价值甚大也。  <br/>
@@ -4914,14 +4935,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 　　麦彭并无真正取出地下之岩传，但于特别之需要，如生起、圆满、口诀、事业等，为以前所无者，多数从其意岩流出，著论以弘扬，因此成为一切岩法之王。且于甚深意之广库，能得自在，故尊之为岩传导师之王。近传甚深岩法，教、意、普三种主要之每一岩传，有上、圆、意三种等之数目，不可思议。所有此等法之传承历史，无量无边，说不能尽。如欲知其详细，可从各别岩传历史，与“亲闻记”，当能圆满也。  <br/>
 <br/>
-　　以前金刚乘宝贵佛法之来源，胜利王之鼓音里面，甚深切近岩传之历史，来源第六部圆满。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 22:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 55 楼</span></div><div class="post-body">乙七：反对旧教者忏悔之经历 <br/>
+　　以前金刚乘宝贵佛法之来源，胜利王之鼓音里面，甚深切近岩传之历史，来源第六部圆满。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 22:37</span><div class="badge-floor">第 55 进</div></div><div class="post-body">乙七：反对旧教者忏悔之经历 <br/>
 <br/>
 妙吉（文殊）化身西藏之赤松德真，其恩泽极为殊胜；所对西藏诸所化福德之部分，是从三种传承而来者：为密乘无上瑜伽光明金刚心要等甚深之续部；许多空行与持明者之悲悯心，及其不共之行境；既在西藏大教主莲花生、尊者卑吗那密渣等之所加被；我等应予随喜。而以前之法王、班知达、与大罗渣华等之史迹，更应尊敬。但在以前此未有佛法，而成为粗暴者之黑洲，只依止希望暂时之乐果，遂认之为佛法。于是一般具信者，常皈依于世间法，似此无缘之众生，其痛苦可想。  <br/>
  <br/>
 　　化身之法王降生而后，准备发扬佛法之光；但黑暗方面之诸魔鬼对之，则极为不悦，乃以各种之神变，甚凌厉之大风，以资勾摄。迨至彼等权力。接近成功时，适值莲师驾临西藏，以其大悲，于一切神、夜叉、及凶暴之魔鬼，均加以降伏。由是所有西藏人士，对于佛法，皆有机会方便以学习，且修建寺庙甚多。即未之前闻之法语，于小力薄智之藏人，以勇猛精进，建立法规焉。且从第一次能出家与不能出家之考察，直至释迦佛宝贵之佛法，一切种智道之基础，三藏经典密法等，均加以翻译。其散失者收集之，歪曲者修正之，作根本之抉择。而于佛道之领悟，用亲闻、开示、修行三种方法，以弘扬于国内；故于解脱与一切种智之道，均可方便以受用。此是以前之教主、法王、与化身之罗渣华、班知达辈之恩德。其后宗派之学者、罗渣华等，在其前辈所开辟之康庄大道上，大可无碍以行走矣。 <br/>
  <br/>
 但是后世有等学者，从以上之佛法中，加入自己之智慧，于是並不觉得希有，且予以批评；认为以前有一部分经续，是印度所无，而为西藏所造者。如是以嫉妒之言语，作离间之加行，然只能说为印度所无之续，不能说是不清净之续也。且印度所具有之一切续，并不是从印度本土所有，而是天龙、夜叉、空行等界，与南瞻部洲之一部分：所谓沙珂、香拔拉、西冷山、马拉雅、邬金、与佐丁等大圣地；复有从其他圣地，由成就者、大教主辈，所请来印度者。故只可说为印度所无之续，而不能说是不清净之续者，盖以此也。 <br/>
-  <br/>
+862  <br/>
 　　假定在印度地区来者，可能是若干经续而已。但只到过印度一次，于当地各事，固无法全部得知也。盖以前化身之罗渣华、班知达（学者）辈，皆是住于圣地，以其神通，能到二十四空行刹土，一切凡夫，所不能往，如是所知非广可知矣。阿底峡尊者说：法语是不可说者。大学者容森巴说：古代之密乘，与新派比较，有六种极殊胜者：  <br/>
 <br/>
 　　第一，迎请之施主不同：古代之施主，是圣者三族依怙（观音、文殊、金刚手），现王者身而来之鸦打眉温三位，与后世一般之施主不同。  <br/>
@@ -5301,7 +5322,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 　　现在黑教诸魔臣，变化成为有色无色之各种方法，以对付西藏之佛法，加以障碍，令之中断。尤其是降伏非人魔鬼之法，均是从古代甚深岩传而来者。故对皈依受持如此法规之人，魔鬼一定予以怒视。同时自己前生业缘所感之等流果，是因果缘起之法性。因此我对如此非人魔鬼，应以慈悲之心，依之以为自己忍辱之境，即一刹那，亦不应嗔恨之。如稍嗔恨，是于菩提戒律，为之损坏。此语是依经而说者，尤其是在西藏人之皈处，对教主莲师，不念其恩德，复欲加以诽谤，是暂时自己修无福德者。莲师事业，是非常广大，谁亦不能否认；故与之稍有关系之人，皆得到解脱。可知其事业是神圣者极特别之法。因此现在不喜莲师，而加以诽谤者，将来总有一时，变成为莲师之所化，而得到福德，是无疑焉，此是莲师之使者，（按是著者之自称）所授记也。  <br/>
 <br/>
-　　以前金刚乘宝贵佛法之来源，胜利王之鼓音里面“反对旧教者忏悔之经历”来源第七部（即有等人对古代金刚乘佛法曾表示反对者，特清净彼等之错误）圆满。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 22:41<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 56 楼</span></div><div class="post-body">乙八　　佛教传播时期之经过简史 <br/>
+　　以前金刚乘宝贵佛法之来源，胜利王之鼓音里面“反对旧教者忏悔之经历”来源第七部（即有等人对古代金刚乘佛法曾表示反对者，特清净彼等之错误）圆满。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 22:41</span><div class="badge-floor">第 56 进</div></div><div class="post-body">乙八　　佛教传播时期之经过简史 <br/>
  <br/>
 丙一：将来佛教住世时期展望 <br/>
 <br/>
@@ -5313,7 +5334,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
     佛之化身永不断　　解脱法亦不衰落 <br/>
 　　如此等密宗之一切续里所说者，是佛法住世决定，与不决定及不衰落等等所说甚多，此不能详。  <br/>
 <br/>
-　　如此佛法降临世间（住世）以前，经过多少时间，根据此方面言之，亦有许多不同之陈说。（按如依藏文直译，应作“欲望”。）在此中是释迦牟尼佛自己之律藏经，与一切经部时轮金刚续，及其他极殊胜之密续，其年月均有极明显之规定。如此语金刚邬金大教主啤吗嘉那，吗哈班知达卑吗那密渣，与罗渣华毗卢渣那等，彼等所说，皆是不共及无垢，而在此间完全依止之不共所说者；昆亦从清净占星学之道路而言。在西藏共同之时轮者，尤其是佛所授记者，成为一切大乘之意趣，均极相同，所以其他疑心不大之辈，亦领悟其真理，故在此中亦如此说。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 22:48<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 57 楼</span></div><div class="post-body">丙二：简史全部 <br/>
+　　如此佛法降临世间（住世）以前，经过多少时间，根据此方面言之，亦有许多不同之陈说。（按如依藏文直译，应作“欲望”。）在此中是释迦牟尼佛自己之律藏经，与一切经部时轮金刚续，及其他极殊胜之密续，其年月均有极明显之规定。如此语金刚邬金大教主啤吗嘉那，吗哈班知达卑吗那密渣，与罗渣华毗卢渣那等，彼等所说，皆是不共及无垢，而在此间完全依止之不共所说者；昆亦从清净占星学之道路而言。在西藏共同之时轮者，尤其是佛所授记者，成为一切大乘之意趣，均极相同，所以其他疑心不大之辈，亦领悟其真理，故在此中亦如此说。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 22:48</span><div class="badge-floor">第 57 进</div></div><div class="post-body">丙二：简史全部 <br/>
 <br/>
 <br/>
 我等导师是义成年（按义成年是己未年）六月十五日晚上，渣星（按即鬼宿）过去时，见一母亲在能长养清净戒中，遂入胎焉。从此经过九个月二十三日，于庚申年四月初七日上午渣星出现时，在蓝毗尼出生及十九岁十月初八日初夜，与太子妃耶输陀罗留下族之种子，后夜看见渣星出现时，离王宫以出家，六年当中，以修苦行。至二十五岁，甲申年四月十五日在菩提树下日落时，降伏魔敌。后夜月亮与渣铮平等时，（按即是完全黑暗之黑夜）及月亮离开渣铮，明相初现（天亮），亦是接近快打晨鼓之时，遂成佛矣。其子罗睺罗坐母腹中六年，其时亦出生矣。一切国人，均极喜欢，举行庆祝会。在此皆大欢喜时，阿难尊者亦复出生，故名庆喜。于时持月（蟾蜍）刚过半夜，亦是丑时之上半，从月亮之东北方，持月已盖月亮六分之五，及离月亮十三水量，（按水量是以分计，抑以秒计，未详。但有如汉地，铜壶点漏之水量也。）月亮已经圆满，如此而成佛焉。 <br/>
@@ -5328,7 +5349,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　所说甚准确，如是从佛涅磐之庚辰年，至今第十六耀宗年之壬寅年，（按指西历纪元一九六二年）已经过二千八百四十三年矣；未来之纪元，亦根据此历推算。 <br/>
  <br/>
 佛教之纪元详细计算，从香拔巴法王历代相传传记而来，本应如是叙述，为恐过于繁赘，只将主要摘录。 <br/>
-  <br/>
+863  <br/>
 　　佛圆寂后第五年，甲申岁，西元前八七七年五月初十日，太阳初出时，星都海洲内，莲花中心，第二佛啤吗忠兰出生，至今是二千八百三十八年矣。 <br/>
  <br/>
 佛圆寂后第九年，戊子岁（西元前八七三年），密主勇士（金刚手）在马拉雅山顶，对五位殊胜族，名五渣玛，转密乘法-轮。並以经续降下，赐给沙珂那王渣那珍达，至今是二千八百三十四年。 <br/>
@@ -5358,7 +5379,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　从此经过三十七年甲申岁，大教主离藏，到雅饶洲。至第二年丙戌岁，藏王赤雅巴出生。 <br/>
  <br/>
 从此经过二十六年壬子岁，喇青贡巴饶沙出生。至第九年辛酉岁，藏王朗达吗在前后藏消灭佛法。至第三年甲子岁，哈龙巴多，杀死藏王朗达吗。及二十五年己丑岁，西藏陷于战争之故，国土分裂。第二十四年癸丑岁，喇青与在前后藏四人，从西康返抵前藏，开始作第二次佛法之弘扬。  <br/>
-  <br/>
+864  <br/>
 　　从此至第五年戊午岁，新派一切罗渣华之第一位罗青宁青香波出生。经二十年戊寅岁，松波那佐楚青干波出生。至第四年壬午岁，阿底峡出生。至第二十二年甲辰岁，蒋敦巴渣惠忠兰出生。至第八年壬子岁，麻巴罗渣华，与岩传导师渣巴和些出生。至第二年甲寅岁，苏聪巴出生。  <br/>
 <br/>
 　　从此至第十三年丁卯岁，在西藏第一次得到时轮金刚之续，自是年起算，为第一耀宗。 <br/>
@@ -5420,13 +5441,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　在此下面之世界，六十万劫（按每劫为一百万年）之当中，便是无有增减。如是说有如虚空，在此时期，佛之事业，是不断者。 <br/>
  <br/>
 以前金刚乘贵佛法之来源，胜利王之鼓音里面，[佛教传播时期之经过简史]来源第八部（即与佛教传播配合时节之决定，稍加考察，以说明其住世界之寿量）圆满。  <br/>
+865 <br/>
+866 <br/>
+867 <br/>
+868   <br/>
+869    <br/>
  <br/>
- <br/>
- <br/>
-   <br/>
-    <br/>
- <br/>
-多珠青之大寺庙 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 23:07<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 58 楼</span></div><div class="post-body">甲三    释结施愿分 <br/>
+多珠青之大寺庙 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 23:07</span><div class="badge-floor">第 58 进</div></div><div class="post-body">甲三    释结施愿分 <br/>
 <br/>
 乙一：本书之根据 <br/>
 <br/>
@@ -5520,7 +5541,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 无量有情消除苦恼者何时向第五导师⑧法身至此不衰以增长永久遍满事业 <br/>
 无精进“乘王”任运四见中高举⑨离戏论空性千幅光耀般若行边际各方围绕者 <br/>
 金刚心要神圣佛法金轮在四洲上空对三界吉祥安乐如须弥山愿永远不动 <br/>
-  <br/>
+870  <br/>
 <br/>
 　 ①（按即弟子） <br/>
 ②（云之花即是下雨） <br/>
@@ -5531,7 +5552,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 ⑦（指邪分别等三。） <br/>
 ⑧（第五导师谓弥勒菩萨） <br/>
 ⑨（谓密乘法在释迦佛法中之最高者） <br/>
-</div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 23:09<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 59 楼</span></div><div class="post-body">乙二：   著书之缘起 <br/>
+871 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 23:09</span><div class="badge-floor">第 59 进</div></div><div class="post-body">乙二：   著书之缘起 <br/>
 <br/>
 如是在雪地（西藏）完全佛法之根本，古代金刚之宝贵法，如何来源之道理，清净明显，以宣说此胜利王之鼓音。盖从哈渣赤真波统治布波容而来；自此处官吏名嘉林卓渣之无垢民族而生长，在隐藏之啤吗谷，以呱呱坠地者。邬支雅那大教主之大悲光触到之心，以稍事开发智慧之莲花者，释迦居士，持密咒智者移喜多杰格尼能巴渣华；或笔名（按或作表示名）楚宗遮啤兰楚扰那玛惠呢吗；（按义为海生欢喜年青说法之太阳。）常用名字共称为敦珠活佛渣康巴。我之年令，是十个五与吉祥独一之数目时，同时亦是第十六耀宗壬寅年，从无二续之王（按似是赤松德真）第一次将密语甘露，持与具福者之三月，开始属草。在一切有请受用夏天之圆满庆祝会，成熟果之时期，大自在猴月十日，于印度之沙珂耶那褒呢城，大乐啤吗森巴华，对渣波朱那珍吉祥教集法海中围内，造成熟之大手印智慧幻舞，遍满虚空游戏之圣地，而得完成。第一次造此经卷者罗文星律车，密宗导师卓渣渣楚，极尊敬与精进善巧，以编成之。 <br/>
 <br/>
@@ -5539,7 +5560,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 愿写此书之善愿，共同宝贵之佛法，不共大密心要无垢之教规，方、时、暂时、一切内中增长，弘扬不断，永久具足。一切有情，时常得到吉祥快乐圆满欢喜之根本。 <br/>
  <br/>
-愿     善     妙     增     长 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 23:30<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 60 楼</span></div><div class="post-body">译事笔记 <br/>
+愿     善     妙     增     长 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 23:30</span><div class="badge-floor">第 60 进</div></div><div class="post-body">译事笔记 <br/>
  <br/>
 　　西藏古代佛教史之译为汉文，从乙巳年（西元一九六五年）八月初七日开始，直至己酉年（一九六九年）七月十五日蒇事。如是整整凡四周年，所有译述、统一专名、修饰、润色、钞誊、制表、装订等，虽指导匡助，不乏其人，然大部份均一手一足为之，其中之得失廿苦，不欲自家独知，此译事过程，有足记者。 <br/>
  <br/>
@@ -5556,7 +5577,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 本书传承系统，胪列纷如，乃加以图表，庶几朗若列眉。而师尊大德，别名颇多，若表而出之，则不至脱跳。尤其师佛法相、圣地图片，藏文原本所有，如不将之附入，未免可惜；而详细编排文内，亦复维艰，但又不敢安加臆测。乃函请示明珠活佛，得覆奖励有加，不作详示。如是经数十日，始稍程功，仍未完全得当也，任之而已。 <br/>
  <br/>
 译事至此，实已大功告成，如是接摺、装订等，至七月十五日，全部完竣。越日七月十六日，佛制之自恣日，四年文债，一旦清偿，大可放下而安居矣。  <br/>
- <br/>
+873 <br/>
  <br/>
 跋  <br/>
  <br/>
@@ -5581,7 +5602,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　正伏案间，忽奉　敦师手论，以“藏史已译成梵文脱稿待印”与此书同时脱稿，如斯巧合，真大喜事也。因念由外国文译成梵文，千古以来，只有玄奘三藏，而所译者非其所著；今　上师以所著作，译成梵文，更属难能而可贵。复忆十余年前，旅游印度，知该国佛法久灭，兹幸得无上密法，以反哺之，有胜奘师多矣！遂乃虔诚所祷，吾　师长寿住世，使佛法得以重兴，于此作殷重之启请焉。  <br/>
  <br/>
 　　藏历九四三年西元一九六九年己酉七月十五日舒囊卓之赞青东莞佛根刘锐之谨跋 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 23:36<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 61 楼</span></div><div class="post-body">《西藏古代佛教史》提要 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 23:36</span><div class="badge-floor">第 61 进</div></div><div class="post-body">《西藏古代佛教史》提要 <br/>
 <br/>
 弟子谈延祚述 <br/>
 <br/>
@@ -5693,7 +5714,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 松真刚布、赤松德真及穆尼遮波，为隆兴佛教三代法王。 <br/>
 及后，三传而至朗达玛王，王迫害佛教不遗余力，影响所及，至其被杀后仍无人敢皈依出家，而藏王统治亦四分五裂，此为佛教在藏地之中衰时期。当此之暗，只有居士白衣传法，而密乘法统乃赖之不致中断。 <br/>
  <br/>
-于受朗达玛王迫害，有堪布三人，携经、律、论三藏至西康弘法，于是大乘律藏、般若、及密宗大圆满心要乃得传至康地。及后西藏佛教重兴，乃自康地反聘堪布伦美回乡邦弘法。然此际传承已大异三法王时期，于藏土流行者为噶登巴派之律仪，及经部之般若波罗蜜多，兴论部之集论及俱舍论。此为密宗而外，流行藏土的经续。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 23:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 62 楼</span></div><div class="post-body">四无上瑜伽密传播史略 <br/>
+于受朗达玛王迫害，有堪布三人，携经、律、论三藏至西康弘法，于是大乘律藏、般若、及密宗大圆满心要乃得传至康地。及后西藏佛教重兴，乃自康地反聘堪布伦美回乡邦弘法。然此际传承已大异三法王时期，于藏土流行者为噶登巴派之律仪，及经部之般若波罗蜜多，兴论部之集论及俱舍论。此为密宗而外，流行藏土的经续。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 23:40</span><div class="badge-floor">第 62 进</div></div><div class="post-body">四无上瑜伽密传播史略 <br/>
 （原题：金刚乘不共之三续法） <br/>
 <br/>
 密宗共分四部：事部、行部、瑜伽部及无上瑜伽部，西藏密宗，尤重后者，而称前三者为“下三部密”。一。无上瑜伽密之受藏人重视，自赤松德真时已然。本章所述，即为无上密部之专题。 <br/>
@@ -5720,7 +5741,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 除上述三部之外，大圆满另有一特别口诀部。此部可视为心要部的分支。 <br/>
  <br/>
-心要部第十代传人姑玛喇渣，有二弟子，一为上述之杨忠多杰，另一人即为特别口诀部祖师渣华龙青巴，渣华初修习姑玛所授大圆满三部续、口诀、念诵、护身等外，并得姑玛喇渣赐与传承。而先后曾承事上师二十二位，精通显教，密乘一切教规及各种口诀，并精通经、律、论三藏。如般若、法相、七部因明、中道论等显密经典；六法、时轮金刚续、宁玛巴总集续、大生起心、道果等九种萨迦深法、空行心要语续等密乘经典。故自学术观点而言，渣华实亦为划时代的宗师。而关于心诀心要解脱教诲类传承，至渣华可称圆满矣。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 23:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 63 楼</span></div><div class="post-body">五　西藏密宗传授史略 <br/>
+心要部第十代传人姑玛喇渣，有二弟子，一为上述之杨忠多杰，另一人即为特别口诀部祖师渣华龙青巴，渣华初修习姑玛所授大圆满三部续、口诀、念诵、护身等外，并得姑玛喇渣赐与传承。而先后曾承事上师二十二位，精通显教，密乘一切教规及各种口诀，并精通经、律、论三藏。如般若、法相、七部因明、中道论等显密经典；六法、时轮金刚续、宁玛巴总集续、大生起心、道果等九种萨迦深法、空行心要语续等密乘经典。故自学术观点而言，渣华实亦为划时代的宗师。而关于心诀心要解脱教诲类传承，至渣华可称圆满矣。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 23:49</span><div class="badge-floor">第 63 进</div></div><div class="post-body">五　西藏密宗传授史略 <br/>
 （原题：长传教诲如大河不断之经幻心来源） <br/>
 <br/>
 前章所述，为宁玛巴古代法统来源大略，本章则兼及各派，全面阐述较后时期之生起次第、圆满次第及大圆满传承，而仍以宁玛巴为主。其所以兼及他派之故，是因为其他各派均由宁玛巴发展而来。如元代极盛的萨迦巴，即与宁玛巴有甚深血缘。 <br/>
@@ -5794,7 +5815,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 至于著者　敦珠上师的传承，其荦荦者则共有三种： <br/>
 经、幻、心三部法幢之树立者，为笛青卓之渣波爵麦多杰。此为宁玛巴之教传派。笛青传罗青达玛诗列，由达玛传下，经八传而至　敦珠上师。 <br/>
 大圆满心部自然果部，由荣增笛打零巴传下，经八传而至　敦珠上师。 <br/>
-十万颂全续传承，由笛青耶那宁巴，经十七传而至　敦珠上师。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 23:53<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 64 楼</span></div><div class="post-body">六　岩传历史 <br/>
+十万颂全续传承，由笛青耶那宁巴，经十七传而至　敦珠上师。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 23:53</span><div class="badge-floor">第 64 进</div></div><div class="post-body">六　岩传历史 <br/>
 （原题：甚深切近岩传之历史） <br/>
  <br/>
 岩传法系，为宁玛巴的特点。所谓岩传，是前代圣者将经续、仪轨或法器等，封藏在山岩水壑，以待后世有缘人发现。──汉地学者所说的“藏诸名山、传诸其人”，便有相同的意思。 <br/>
@@ -5829,7 +5850,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 　　敦珠宁波车于记述蒋扬的历史时，并加评论，以为蒋扬能统摄修行八大乘的传承——宁玛巴；噶登巴；啤育巴父子的法统；噶朱巴；舍楚巴丁森巴的教传；时轮金刚法统；邓巴生遮之教规；邬金巴的三金刚承事法统，并遗留后代七种教诫。此可知师资为近代之大成就者矣。  <br/>
 <br/>
-　　除上述岩传五导王外，著名的岩传导师，尚有笛清耶那宁巴等百余人，而为汉土所谂知的第五代DL，亦为其中之表表者，故宁玛巴岩传成就，治藏地教史者当不可忽视也。由于　敦珠宁坡车本人亦得岩传传承，并将之弘扬于汉士，故岩传历史一节，实为近代著作中稀有难得之资料。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 00:02<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 65 楼</span></div><div class="post-body">七　答难 <br/>
+　　除上述岩传五导王外，著名的岩传导师，尚有笛清耶那宁巴等百余人，而为汉土所谂知的第五代DL，亦为其中之表表者，故宁玛巴岩传成就，治藏地教史者当不可忽视也。由于　敦珠宁坡车本人亦得岩传传承，并将之弘扬于汉士，故岩传历史一节，实为近代著作中稀有难得之资料。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 00:02</span><div class="badge-floor">第 65 进</div></div><div class="post-body">七　答难 <br/>
 （原题：反对旧教者忏侮之经过） <br/>
 <br/>
 在本章中，作者对向宁玛巴教理经续提出责难者，予以一一批驳，他的答辩是很客观的，并不反击其他的教派，只提出历史事实，使责难者无词。  <br/>
@@ -5847,7 +5868,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 　　作者对此问题，用了很大的篇幅。并顺带谈到了大手印与密心续。汉土的禅宗学者，对此当会感到极大的兴趣。这里，我却想起了　诺那上师所说的一则密宗的故事。相传邬金国王因渣菩提向释迦请法，但却要顿即成就。于是释迦使对他说了一句话：“你就是佛。”因渣菩提闻言顿悟，立即成就。此时追随释迦的弟子感到奇怪，释迦便对他们说：“你们是显教的根机，国王是密宗的根机。”由此故事，再证诸藏密称禅宗为大密宗，似乎两宗传承之间有关系存在。不过，这只是我个人的意见而已，尚待研究者予以证信。 <br/>
  <br/>
-此外，作者在本章，澄清了岩传的怀疑，与及分析黑教对宁玛巴之影响，及其不共之处，此种意见，均为研究藏密者所乐闻。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 00:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 66 楼</span></div><div class="post-body">八　 佛教传播简史 <br/>
+此外，作者在本章，澄清了岩传的怀疑，与及分析黑教对宁玛巴之影响，及其不共之处，此种意见，均为研究藏密者所乐闻。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 00:05</span><div class="badge-floor">第 66 进</div></div><div class="post-body">八　 佛教传播简史 <br/>
 （原题：佛教传播时期之经过简史） <br/>
 <br/>
 本章在原书中，为总结性的一章，其精华部份，在“简史全部”一节。 <br/>
@@ -5873,7 +5894,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 　　香港金刚乘学会，原为西藏密宗的研究机构，因为导师　刘上师得到　敦珠宁波车付与传承，故对宁玛巴自然更感亲切。“西藏古代佛教史”，主要叙述的是宁玛巴的历史，故此书的翻译，并非表示对藏密的其他宗派有所贬损。我们觉得，藏密能在汉土民间弘扬，只不过是几十年间的事，如今虽已弘法自欧美等地，而仍可以说尚在萌芽时代，作为佛教徙，对任何佛教宗教的弘扬，都应该觉得高兴。一般编著教史的学者，却每多站在本宗的立场，而只凭着若干资料，即大事发挥以贬损他宗。我们高兴　敦珠宁波车的原著，并无如此种恶劣的态度，而本提要的编写，也极力注意保持客观的态度，恪遵“不毁谤自他宗”的金刚乘戒条。 <br/>
  <br/>
-在阅读原著，及编写提要期间，受到师友的关注，更在难得的是，一些教外的学者，也在精神上给我支持，谨在此致意，为免标榜，恕不在此列名致谢。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 00:09<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 67 楼</span></div><div class="post-body">西藏密宗编年 <br/>
+在阅读原著，及编写提要期间，受到师友的关注，更在难得的是，一些教外的学者，也在精神上给我支持，谨在此致意，为免标榜，恕不在此列名致谢。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 00:09</span><div class="badge-floor">第 67 进</div></div><div class="post-body">西藏密宗编年 <br/>
 <br/>
 谈延祚　编 <br/>
 <br/>
@@ -5898,13 +5919,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 检讨起来，这种情况是令人惭愧与痛心的。 <br/>
 所以发生这种情况，除了实修与非实修之外，另一主要的原因，是因为藏密在汉士植根较浅，不若佛教其他宗派之源远流长。明理的各派宗师，当不会排斥教内的他宗，但难保没有一些急功近利，切于成名的人，仅凭自己的一知半解而作哗众取宠之谈。在欧美的情况不同，基督教尤其是天主教的宗教哲学家，正急于向东方的宗教汲取实际修持的经验，以补充西方宗教之不足，因此不但迎请佛教与印度教的学者赴彼邦讲学，而且更派遣学者往东方求法。也许他们的动机并非百分之百的纯正，但动机既在学习，自然就不会作种种的歪曲。 <br/>
  <br/>
-因此，我觉得，要使西藏密宗的教、理、行、果，能使世人知其真相，首先要消除心理的隔膜。倘一旦世人了知藏密的源流与历史，则将曾消除成见，不视藏密为佛教中的异党。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 00:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 68 楼</span></div><div class="post-body">二 <br/>
+因此，我觉得，要使西藏密宗的教、理、行、果，能使世人知其真相，首先要消除心理的隔膜。倘一旦世人了知藏密的源流与历史，则将曾消除成见，不视藏密为佛教中的异党。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 00:10</span><div class="badge-floor">第 68 进</div></div><div class="post-body">二 <br/>
 <br/>
 重视上师的历史，原是西藏密宗的优良传统。藏密信徒，以上师行化、修持的事迹作为宝贵的经验，恍如森林行脚，以前人的足迹为向导。因此，在西藏原流传着相当数量的祖师传记；多罗那他，布顿宁波车，狄德松波等大师所著的印藏佛教史乘，尤素为学者所重视，尽管这些不是基于所谓理性态度的近人著作。 <br/>
  <br/>
 庚戌秋，　刘师锐之化了四年时间翻译的“西藏古代佛教史”脱稿。原书是在西藏素负文名，掌西藏王室文献有年的宁玛巴法王　敦珠宁波车所著，于西元一九六五年在印度噶林邦出版。　刘师是他的传承弟子。蒙　刘师青眼，允许我先读译稿。书中记叙宁玛巴古德的历史逾百，更宝贵的是，其中一章，记载了约百则上师大德的纪年。今人治藏史，每苦年代难稽，则此纪年虽未称完备，亦自稀有。因此，我发愿更稽钩其他藏士史乘，稍事增益，细述“西藏密宗编年”。藏人谈史，喜称其贯串如珠鬘，则编年之作，亦取其贯串之意耳。另外一层的意思，则希望读者阅读的重点既放在年代上，当从而知藏密之源远流长。倘细加比较，或亦可稍窥各派兴替、次第流传的经过。  <br/>
  <br/>
-　　当然，编年之作，有异于通史，其间即或是重要大事，倘年份模糊，亦无法编入。此体裁所闻，事难两全。因此，简略地向读者介绍西藏密宗的源流和各重要派系的历史，虽嫌多事，或亦称便。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 00:17<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 69 楼</span></div><div class="post-body">　　三 <br/>
+　　当然，编年之作，有异于通史，其间即或是重要大事，倘年份模糊，亦无法编入。此体裁所闻，事难两全。因此，简略地向读者介绍西藏密宗的源流和各重要派系的历史，虽嫌多事，或亦称便。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 00:17</span><div class="badge-floor">第 69 进</div></div><div class="post-body">　　三 <br/>
 <br/>
 吕澄著《西藏佛学原论》称：“密乘学系，通途皆归之龙树。”此“通途”之说，其实未尽藏密源流。因为吕氏所说，仅据多罗那他大师所著“印度佛教史”一书，而没有利用多氏另一专门介绍密乘传承的“七系付法传”。倘据吕氏所言（原书一Ｏ页），密乘的世系可表列如下： <br/>
 提婆──娑罗诃──龙树──龙智──毗流波 <br/>
@@ -6015,7 +6036,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 　　吕澄又以为，宗喀巴大士之学，有二特点为汉传学说所未尝见：“其一，备具印度晚期大乘之风范，而桓置重于实践也。”“其二，即以实践为据，而于诸家有所抉择组织也。”（引文均见《西藏佛学原论》第四章）  <br/>
 <br/>
-　　宗喀巴大士这种置重实践的作风，当与其幼年曾受萨迦巴的教导有关，因为萨迦巴原就是承接宁玛巴那种注重实修风范的教派。因此，宗喀巴大士的格鲁巴，虽然在学术源流上遥接阿底峡的统绪——其《菩提道次第广论》所论述的次第，与阿底峡的《菩提道炬论》大致相同。但在修持上，则仍抉择旧教的遗规——这从格鲁巴的后代传承弟子，仍常从宁玛巴闻法的事实，可以约略窥见。彼此的修待仪轨不容公开，故后人无法详加比较其异同而已。由此可见，假如称宗喀巴大士为西藏密宗的集大成者，似亦不为过。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 00:18<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 70 楼</span></div><div class="post-body">　　五 <br/>
+　　宗喀巴大士这种置重实践的作风，当与其幼年曾受萨迦巴的教导有关，因为萨迦巴原就是承接宁玛巴那种注重实修风范的教派。因此，宗喀巴大士的格鲁巴，虽然在学术源流上遥接阿底峡的统绪——其《菩提道次第广论》所论述的次第，与阿底峡的《菩提道炬论》大致相同。但在修持上，则仍抉择旧教的遗规——这从格鲁巴的后代传承弟子，仍常从宁玛巴闻法的事实，可以约略窥见。彼此的修待仪轨不容公开，故后人无法详加比较其异同而已。由此可见，假如称宗喀巴大士为西藏密宗的集大成者，似亦不为过。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 00:18</span><div class="badge-floor">第 70 进</div></div><div class="post-body">　　五 <br/>
 <br/>
 本《编年》之作，主要根据　敦珠宁波车的《西藏古代佛教史》，虽然也曾参考其他的西藏史乘著作，尽量将其他教派的历史细年补入，但在份量上仍以宁玛巴的上师大德之纪年为多。这自然是因为手头上其他教派的史料较缺乏，而事实上，宁玛巴的统绪也较长，故稍觉有轻重轩轾，原非出于编者的本意。  <br/>
  <br/>
@@ -6025,7 +6046,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 　　据西藏历法惯例，年份是用五行阴阳生肖表出，与汉土的干支纪年无异。如今年干支“庚戌”兰地当认作“阳金狗年”，盖天干庚为阳金，地支戌肖犬也。由此纪年换作干支以推算年份，除了核计属于那一甲子较为麻烦之外，倒甚便于与汉历的相当年份对照。  <br/>
 <br/>
-　　关于译名，则以所徵引的文献，尽多同名异译，为统一计，悉以《西藏古代佛教史》汉译本为依据。除整段抄引其他文献外，倘只属引述，则均将原译名更改，俾省注释之烦。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 00:28<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 71 楼</span></div><div class="post-body">西藏密宗编年 <br/>
+　　关于译名，则以所徵引的文献，尽多同名异译，为统一计，悉以《西藏古代佛教史》汉译本为依据。除整段抄引其他文献外，倘只属引述，则均将原译名更改，俾省注释之烦。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 00:28</span><div class="badge-floor">第 71 进</div></div><div class="post-body">西藏密宗编年 <br/>
 <br/>
 谈延祚　编 <br/>
 <br/>
@@ -6224,7 +6245,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 苏聪巴年十三岁，是年始承事苏窝车。 <br/>
 案，于师门中，苏聪巴为“四尖”之一——宗派思想之尖。 <br/>
 那洛巴赴迦湿弥罗求法。 <br/>
-案，此条系年，据根德“那洛巴生平及其教诲”。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 00:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 72 楼</span></div><div class="post-body">下　耀宗年以后 <br/>
+案，此条系年，据根德“那洛巴生平及其教诲”。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 00:43</span><div class="badge-floor">第 72 进</div></div><div class="post-body">下　耀宗年以后 <br/>
 <br/>
 西元一Ｏ二七年　宋仁宗天圣五年丁卯 <br/>
 “时轮金刚续”降临藏土，由是年起，始以“耀宗”纪年。 <br/>
@@ -6796,7 +6817,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 敦珠宁波车（金刚智）于藏历六月初十日诞生。 <br/>
 案，　敦珠宁波车生辰，见其示　刘师锐之法谕，有关　敦珠师佛之行化，详见　刘师译《　敦珠上师降生本传》。敦珠师佛现避地印度噶林邦，为宁玛巴仅存之法王。 <br/>
  <br/>
-</div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 00:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 73 楼</span></div><div class="post-body">密乘行人参考典籍 <br/>
+874 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 00:43</span><div class="badge-floor">第 73 进</div></div><div class="post-body">密乘行人参考典籍 <br/>
 <br/>
 密乘出版社发行 <br/>
 ■金刚乘全集 <br/>
@@ -6846,7 +6867,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 二十五　显密丛集 <br/>
 二十六　梵汉藏文合璧圣妙吉祥真实名经 <br/>
  <br/>
-<br/>
+875 <br/>
 <br/>
 </div></div>
 </div>

@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大威德之光--密宗大师热罗多吉扎奇异一生 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>大威德之光--密宗大师热罗多吉扎奇异一生 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大威德之光--密宗大师热罗多吉扎奇异一生</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-12 07:45<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">大威德之光--密宗大师热罗多吉扎奇异一生 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">大威德之光--密宗大师热罗多吉扎奇异一生</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-12 07:45</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">大威德之光--密宗大师热罗多吉扎奇异一生 <br/>
 <br/>
 热 益西森格 著 <br/>
 多识 洛桑图丹琼排 译 <br/>
@@ -402,7 +423,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 如愿以偿得密法，而今就要回雪域， <br/>
 商主可好可如意？情深意长真可喜。” <br/>
 <br/>
-在富商的苦苦挽留下，热罗住了半月。富商赠送黄金，他未收分毫，只接受了一些当地所产贵重药物，与尼泊尔译师结伴，踏上了返乡的归程。  </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-12 13:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">　　返乡的途中，在一个森林里，热罗和译师遇到了一只猛虎张牙舞爪地向他们扑来。热罗做了个握拳的手势，那老虎一下变得像僵尸一样，定在了山坡上，一动不动。他俩从老虎的身边走了过去，走了几百步以后，热罗把握着的拳伸开，那老虎才走进了森林。至今当地还流传着这个定虎的故事，地名叫“见格毛哈拉”，即伏虎之地。在藏尼边界的一个集镇上， <br/>
+在富商的苦苦挽留下，热罗住了半月。富商赠送黄金，他未收分毫，只接受了一些当地所产贵重药物，与尼泊尔译师结伴，踏上了返乡的归程。  </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-12 13:55</span><div class="badge-floor">第 2 进</div></div><div class="post-body">　　返乡的途中，在一个森林里，热罗和译师遇到了一只猛虎张牙舞爪地向他们扑来。热罗做了个握拳的手势，那老虎一下变得像僵尸一样，定在了山坡上，一动不动。他俩从老虎的身边走了过去，走了几百步以后，热罗把握着的拳伸开，那老虎才走进了森林。至今当地还流传着这个定虎的故事，地名叫“见格毛哈拉”，即伏虎之地。在藏尼边界的一个集镇上， <br/>
 <br/>
 他们遇到一个名叫扎巴诺悟的富商，赶着一百多头骡子，驮着绫罗绸缎，自己骑着一头青骡子，带着几条猎狗和二十多个仆人，好不威风。他问热罗说：“你二人从哪里来？”热罗答道：“从尼国来。”“是经商的吗？”热罗答道：“是的，我们也是经商的。”又问：“经营什么？”热罗便唱道： <br/>
 <br/>
@@ -649,7 +670,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 虽然经典多如山，所唱概括其要点， <br/>
 照此修心便成佛，奋发图强众门人。” <br/>
 <br/>
-向众徒弟以道歌的形式进行了一番教导后，热罗兄弟和尼泊尔译师一起，带了五百多两黄金，辞别父母，踏上了奔赴尼国的路途。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-12 14:02<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">　　经过十多天的长途跋涉，热罗兄弟和尼泊尔译师来到了尼国伊让城。热罗沿途受到尼国山神的欢迎，同伴们只感觉到天气的神奇变化。到伊让后他们先去看望了那位尼泊尔施主，为了表示对以前资助求法的谢意，热罗为其进行了传法灌项。此富商信念坚定，修持用功，临终时，肉身虹化，出现了许多舍利。 <br/>
+向众徒弟以道歌的形式进行了一番教导后，热罗兄弟和尼泊尔译师一起，带了五百多两黄金，辞别父母，踏上了奔赴尼国的路途。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-12 14:02</span><div class="badge-floor">第 3 进</div></div><div class="post-body">　　经过十多天的长途跋涉，热罗兄弟和尼泊尔译师来到了尼国伊让城。热罗沿途受到尼国山神的欢迎，同伴们只感觉到天气的神奇变化。到伊让后他们先去看望了那位尼泊尔施主，为了表示对以前资助求法的谢意，热罗为其进行了传法灌项。此富商信念坚定，修持用功，临终时，肉身虹化，出现了许多舍利。 <br/>
 <br/>
 他们随后去拜见巴若上师，献上了八两黄金作见面礼。巴若大师见到得意门生热罗，也显得非常高兴。热罗向上师汇报了与浪勒斗法之事和此次的来意。上师说：“你为求法，不辞劳苦的精神可佳，我定会满足你的要求，速速筹办会供。”上师又说：“我有大威德四字诛破法，威力无比，无论佛教密法师或者苯教、婆罗门教等其它一切旁门外道的任何法术、咒符、气能、神功都无法战胜此法。 <br/>
  <br/>
@@ -802,7 +823,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 上师听了上述汇报，表示十分满意，说：“你的大事已成，没有辜负我的希望，我很高兴。”热罗又去一一拜别了他曾经聆听过教诲的诸上师和金刚师兄弟姐妹，并举行了临别答谢宴会，又一次朝拜供养了当地的寺庙、圣迹，便起程返回雪域故乡。 <br/>
 <br/>
-　　返回故乡的途中，他一路上受到群众的热烈欢迎和接待，对沿途有缘众生，都按机缘进行了教化度脱，播下无数善种。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-12 14:06<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">　　再说家乡。热罗离开家乡已有七年零四个月了，听不到任何消息，家中的亲人和众弟子非常担心，怕他路上遇到了什么意外事故，或者在尼泊尔授徒不愿意回来。有一天明妃说：“上师已回到了藏尼边境。”便派了十几个弟子去迎接，与热罗在雪山岗加茂脚下相逢。那天正逢五长命女神和十二常住神母等雪域众山神带队迎接热罗上师回国，晴朗的天空布满了彩虹，朵朵白云呈现出龙虎骏马等各种动物坐骑和武士、仙女的形象，如真如画。 <br/>
+　　返回故乡的途中，他一路上受到群众的热烈欢迎和接待，对沿途有缘众生，都按机缘进行了教化度脱，播下无数善种。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-12 14:06</span><div class="badge-floor">第 4 进</div></div><div class="post-body">　　再说家乡。热罗离开家乡已有七年零四个月了，听不到任何消息，家中的亲人和众弟子非常担心，怕他路上遇到了什么意外事故，或者在尼泊尔授徒不愿意回来。有一天明妃说：“上师已回到了藏尼边境。”便派了十几个弟子去迎接，与热罗在雪山岗加茂脚下相逢。那天正逢五长命女神和十二常住神母等雪域众山神带队迎接热罗上师回国，晴朗的天空布满了彩虹，朵朵白云呈现出龙虎骏马等各种动物坐骑和武士、仙女的形象，如真如画。 <br/>
  <br/>
     这种奇征异兆使更多人对热罗上师产生了信仰，沿途有很多人请授沙弥戒和比丘戒，请求灌顶传法。热罗的家乡拉堆各地的群众举行了隆重的接风仪式。聂南木山村的邻里亲朋也喜气洋洋地迎接了带着更高的荣誉归来的雪域骄子。 <br/>
 <br/>
@@ -976,7 +997,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 从此以后热罗上师大部分时间就住在这个寺院传法灌顶，把每年的所有钱财物资供养都用在了以下几个方面：维修和建造寺庙、佛塔；向藏区——从阿里到康地的各个寺院发放布施、上供点灯；向各地各教派的高僧大德敬献供品；在各地修公房、建客店茶房，供给讨饭的穷人和外地行人食宿；捐资保护森林和野生动物等，使无数野生动物免于被猎人捕杀的灾难。 <br/>
  <br/>
-    凡受热罗上师保护的野生动物，谁也不敢捕杀，违禁的人立刻遭到口吐鲜血暴死的报应而人人惧怕。由于热罗上师造福的功德，各地风调雨顺，森林、水草茂盛，五谷丰收，人畜两旺，没有战乱，没有盗贼，没有自然灾害和疾病传染，人们过上了安定、幸福、快乐的生活。热罗上师有八百多名弟子修到了无所执虚空境界，有的见到了大威德现身，有的获得了高层次神通成就。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-12 14:15<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">　　热罗上师三十七岁那年，有天晚上做了个梦，梦见明妃盖鹃姆裸体，佩戴着骷髅骨饰，手持铃鼓，来到身边说：“明天我要去乌杖焉（空行佛土），特来告别上师。”热罗说：“有人接你吗？”她说：“有，请看。”指着天空。热罗仰望天空，看到空中有很多身佩骨饰的裸体少女，其中有四个少女展开一匹彩绸，把明妃搁在上面，在仙乐的伴奏下向西缓缓飘走。 <br/>
+    凡受热罗上师保护的野生动物，谁也不敢捕杀，违禁的人立刻遭到口吐鲜血暴死的报应而人人惧怕。由于热罗上师造福的功德，各地风调雨顺，森林、水草茂盛，五谷丰收，人畜两旺，没有战乱，没有盗贼，没有自然灾害和疾病传染，人们过上了安定、幸福、快乐的生活。热罗上师有八百多名弟子修到了无所执虚空境界，有的见到了大威德现身，有的获得了高层次神通成就。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-12 14:15</span><div class="badge-floor">第 5 进</div></div><div class="post-body">　　热罗上师三十七岁那年，有天晚上做了个梦，梦见明妃盖鹃姆裸体，佩戴着骷髅骨饰，手持铃鼓，来到身边说：“明天我要去乌杖焉（空行佛土），特来告别上师。”热罗说：“有人接你吗？”她说：“有，请看。”指着天空。热罗仰望天空，看到空中有很多身佩骨饰的裸体少女，其中有四个少女展开一匹彩绸，把明妃搁在上面，在仙乐的伴奏下向西缓缓飘走。 <br/>
  <br/>
     早晨，上师对身边的弟子说：“今天盖玛鹃姆要升天了。”有几个弟子偷偷去看，看到盖鹃姆满面春风，安然无恙，他们以为上师是在和他们开玩笑。过了一会，听到明妃口中大声念了“派”的一声，头顶上射出一道白光升向天空，寂然逝去。肉体火化时变成了一团彩光，没有留下一点骨灰。 <br/>
 <br/>
@@ -1364,7 +1385,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　要想迅速出成就，就要潜心多努力。 <br/>
 可曾想到无常理？剩余时间有多少？” <br/>
 <br/>
-密咒士香藏闻此教导，从内心深处对热罗上师产生崇敬，邀请热罗去到他的住所，献上新写的《般若大藏经》等上万件礼物，请求灌顶传法。上师满足了他的要求，密咒士很快摆脱了迷惘，获得了万物一理的平等智，度脱众生，临终幻化而去。和密咒士同时获得教益的有缘弟子有一千两百多人。热罗将敬献的财物，一部分给了大菩提寺作供养，一部分捐给地方修路搭桥和救济贫苦群众。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-12 14:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">　　热罗上师的声誉日隆，各地派代表来祈请他前去讲经传法的不断。热罗上师—一答应，并对行程作了安排。随后，他便带着随从弟子先去了绰普、森保日、托普、夏郭雄等地进行普度，受到各地群众的热烈欢迎和隆重接待。在这些地区他也使很多人进入菩提道，使僧众坚持清净戒行，修密的人严格按仪规修持生起圆满二次第，普通人持亲善戒，各方面的人都受到不同的教益，改变了人们的思想面貌。上师还出钱赎出了一批服刑的罪犯，解决了部落、地区之间的仇杀纠纷。 <br/>
+密咒士香藏闻此教导，从内心深处对热罗上师产生崇敬，邀请热罗去到他的住所，献上新写的《般若大藏经》等上万件礼物，请求灌顶传法。上师满足了他的要求，密咒士很快摆脱了迷惘，获得了万物一理的平等智，度脱众生，临终幻化而去。和密咒士同时获得教益的有缘弟子有一千两百多人。热罗将敬献的财物，一部分给了大菩提寺作供养，一部分捐给地方修路搭桥和救济贫苦群众。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-12 14:22</span><div class="badge-floor">第 6 进</div></div><div class="post-body">　　热罗上师的声誉日隆，各地派代表来祈请他前去讲经传法的不断。热罗上师—一答应，并对行程作了安排。随后，他便带着随从弟子先去了绰普、森保日、托普、夏郭雄等地进行普度，受到各地群众的热烈欢迎和隆重接待。在这些地区他也使很多人进入菩提道，使僧众坚持清净戒行，修密的人严格按仪规修持生起圆满二次第，普通人持亲善戒，各方面的人都受到不同的教益，改变了人们的思想面貌。上师还出钱赎出了一批服刑的罪犯，解决了部落、地区之间的仇杀纠纷。 <br/>
 <br/>
 在绰普传法期间热罗上师见到了胜顶佛母九尊现身，用怒斥手印消除了山洪。在森保日看到了金刚四座诸本等和无烦金刚佛国，并以神通降服了一批苯教徒。在托普时，有个名叫拉改卡热的苯教徒，在热罗上师的饭碗中下了毒药，上师吃了毒药后反而变得精神焕发，神采奕奕，对那个下毒的人说：“我喜欢吃毒药，请你给我再盛一碗。”那个人十分惊奇，趴 <br/>
 <br/>
@@ -1802,7 +1823,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 地一个藏有数千函经卷的寺庙献给了上师。法会上敬献的供品还有金银佛像、唐卡、金银、锦缎等。上师将法会上所得供养，除了一部分留给当地寺院作修缮和僧人生活费用外，其余都作了救济贫民、保护森林和野生动物、保赎狱中罪犯的费用，自己分文未取。热罗上师此后在万玛寺住了很长时间，在万玛尔山沟上部修建了禅院，中部修建了讲经院，下部修建了密法院。在这个寺院里，终身修炼的弟子有五百多人，学法的弟子发展到 <br/>
 <br/>
-八千多人。上师在这个寺院多次灌顶传法、大转法-轮，创造了风调雨顺、人畜兴旺、安定祥和的大好局面。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-12 17:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">　　在热罗上师六十一岁时，有一次身佩骨饰、肤色各异的五位空行天女从天而降，来到上师面前，手摇法鼓，翩翩起舞，唱出了美妙动听的金刚歌： <br/>
+八千多人。上师在这个寺院多次灌顶传法、大转法-轮，创造了风调雨顺、人畜兴旺、安定祥和的大好局面。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-12 17:04</span><div class="badge-floor">第 7 进</div></div><div class="post-body">　　在热罗上师六十一岁时，有一次身佩骨饰、肤色各异的五位空行天女从天而降，来到上师面前，手摇法鼓，翩翩起舞，唱出了美妙动听的金刚歌： <br/>
 <br/>
 “我等来自金刚座，曼杂朗瓦上师处， <br/>
 虔诚弟子多吉扎，为何不去迎上师？” <br/>
@@ -2226,7 +2247,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 吃喝也是修定观，一切融入定观境。 <br/>
 轻松自在可解脱，墨守陈规无意义。” <br/>
 <br/>
-唱完道歌后，热罗随即化现为彩虹似的透明光身。巴察布杜增格西听完道歌，又亲眼看到上师化现光身的神通后，立刻产生了深信，叩头对自己的邪见表示忏悔，并请求收为弟子传法灌顶。热罗上师接受请求传授给他大威德法。经观修他获得深显无二悟境，亲见本尊法身，成了广泛度化众生的成就师。为答谢赐法宏恩，格西向热罗上师敬献了珍珠佛塔、银制器皿、幢幡宝盖等数百件礼品。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-12 17:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">　　热罗师徒又回到草地。这时热罗上师已是八十五岁高龄，但从外相上看，头发漆黑，面无皱纹，颜若童子，肌肤细嫩，白里透红，走路时步履轻健，犹如飘行水面，同行的人都赶不上，不了解情况的人都以为他是精力充沛的年轻人。 <br/>
+唱完道歌后，热罗随即化现为彩虹似的透明光身。巴察布杜增格西听完道歌，又亲眼看到上师化现光身的神通后，立刻产生了深信，叩头对自己的邪见表示忏悔，并请求收为弟子传法灌顶。热罗上师接受请求传授给他大威德法。经观修他获得深显无二悟境，亲见本尊法身，成了广泛度化众生的成就师。为答谢赐法宏恩，格西向热罗上师敬献了珍珠佛塔、银制器皿、幢幡宝盖等数百件礼品。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-12 17:20</span><div class="badge-floor">第 8 进</div></div><div class="post-body">　　热罗师徒又回到草地。这时热罗上师已是八十五岁高龄，但从外相上看，头发漆黑，面无皱纹，颜若童子，肌肤细嫩，白里透红，走路时步履轻健，犹如飘行水面，同行的人都赶不上，不了解情况的人都以为他是精力充沛的年轻人。 <br/>
 <br/>
 这年又应卡热地区派人来请，热罗带领几名弟子从燕卓起程，途径岗巴拉、岗巴瓦日磁、香塘等地，进行财施和法施，随缘度化。有天在草原上看到有几只黑鹰，从天空盘旋而下，从草地上叼走几只小山羊羔，飞上天空。热罗上师朝着鹰的方向举起双手“啪”地拍了一下，那几只黑鹰从空中掉在了地上，一动不动，像死了一样，几只小羊挣脱逃走。过了一阵，上师又朝着那几只黑鹰做了个弹指，那几只鹰才又苏醒了过来，惊恐地飞走了。 <br/>
 <br/>
@@ -2388,7 +2409,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 对治之法如雹雨，希望后来密咒士， <br/>
 若降雹雨应如此。” <br/>
 <br/>
-听了这段道歌后，众人明白了上师降冰雹的寓意，加深了信念，从此热罗上师的弘法利生事业有了更大的发展。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-12 17:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">　　由于长时期从事繁忙的传法活动，热罗上师觉得有点疲倦劳累，准备隐居休息一段时间，正这样想的时候，眼前出现站在大如一座山峰的黑水牛背上的阎罗王，手持一面铜镜和盛满甘露的水瓶，周围有许多面貌狰狞的冥界使从和眷属。阎罗王将手中的甘露水瓶献给了热罗上师说：“大师若想静居，就请到丹地去，在那里有座青山，山形像堆积的盔甲和兵器。在那里静修可以消除雪域的战火。”说完便消失。 <br/>
+听了这段道歌后，众人明白了上师降冰雹的寓意，加深了信念，从此热罗上师的弘法利生事业有了更大的发展。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-12 17:37</span><div class="badge-floor">第 9 进</div></div><div class="post-body">　　由于长时期从事繁忙的传法活动，热罗上师觉得有点疲倦劳累，准备隐居休息一段时间，正这样想的时候，眼前出现站在大如一座山峰的黑水牛背上的阎罗王，手持一面铜镜和盛满甘露的水瓶，周围有许多面貌狰狞的冥界使从和眷属。阎罗王将手中的甘露水瓶献给了热罗上师说：“大师若想静居，就请到丹地去，在那里有座青山，山形像堆积的盔甲和兵器。在那里静修可以消除雪域的战火。”说完便消失。 <br/>
 <br/>
 热罗一行从拉萨起程渡过吉曲河，中途在蔡贡塘等地化度众生。在吉雪多丹沟青山峰的山腰里有一座名叫桑俄曲宗即“密法法宫”的寺庙，热罗在此寺庙中闭关静修。闭关期间有许多佛菩萨多次现身，敦促热罗说：“神圣佛子闭关亿万年，不如度众一日。为自己修寂灭之乐，不是菩萨的行为， <br/>
 <br/>
@@ -2785,7 +2806,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 满山遍野响起了诵咒声，天空中出现许多五彩光团旋转如轮和大大小小的无数本尊纷纷如雨降落在人群中的奇景。凡参加灌顶的弟子都产生了自生真智。 <br/>
 <br/>
-朗日巴尊者也是在这个时候拜见热罗求法的。他想给上师献上一百驮青稞，上师说：“我不要你的粮食，要你撰写我所传的密续的解说。”于是，朗日巴奉命撰写了《大威德续经疏解》。这时死了一匹上师使用的马和一条狗，上师进行超度，在马和狗的尸体上发出了光，生出了舍利子。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-12 17:59<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">　　第十章 <br/>
+朗日巴尊者也是在这个时候拜见热罗求法的。他想给上师献上一百驮青稞，上师说：“我不要你的粮食，要你撰写我所传的密续的解说。”于是，朗日巴奉命撰写了《大威德续经疏解》。这时死了一匹上师使用的马和一条狗，上师进行超度，在马和狗的尸体上发出了光，生出了舍利子。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-12 17:59</span><div class="badge-floor">第 10 进</div></div><div class="post-body">　　第十章 <br/>
 <br/>
 热罗上师在一百五十岁之前，风尘仆仆、孜孜不倦地奔走各地，传播胜法，化度众生。到一百五十岁的高龄时，才安居在丹地主寺密法官，继续传经说法。该寺僧人、常住和流动人口达到了十八万多，本寺容纳不下，从扎格到德钦几十里地，山上山下搭满了学法人居住的茅篷。 <br/>
 <br/>
@@ -2949,14 +2970,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 未证果前流转世间时， <br/>
 但愿文武文殊来摄持， <br/>
 获得自心解脱诸障蔽， <br/>
-慈心悲愿度化诸众生！ </div></div><div class="post"><div class="post-header"><div class="avatar">普</div>普賢菩薩发表于 2009-10-28 21:03<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">文殊菩薩德難量   久成龍種上王佛 <br/>
+慈心悲愿度化诸众生！ </div></div><div class="post"><div class="post-header"><div class="avatar">普</div><span style="font-size:15px; letter-spacing:1px;">普賢菩薩发表于 2009-10-28 21:03</span><div class="badge-floor">第 11 进</div></div><div class="post-body">文殊菩薩德難量   久成龍種上王佛 <br/>
 因憐眾生迷自性   特輔釋迦振玄綱 <br/>
 為七佛師體莫測   作菩薩母用無方 <br/>
-常住寂光應眾感   萬川一月影咸彰 </div></div><div class="post"><div class="post-header"><div class="avatar">桑</div>桑天.加措发表于 2011-1-7 18:50<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">頂禮熱羅大師 <br/>
+常住寂光應眾感   萬川一月影咸彰 </div></div><div class="post"><div class="post-header"><div class="avatar">桑</div><span style="font-size:15px; letter-spacing:1px;">桑天.加措发表于 2011-1-7 18:50</span><div class="badge-floor">第 12 进</div></div><div class="post-body">頂禮熱羅大師 <br/>
 吉祥大威德ㄉ真實化現 <br/>
 在五濁惡世中綻放光明 <br/>
 宏傳如來ㄉ真實教法 <br/>
-依怙主....我向您至頂禮 </div></div><div class="post"><div class="post-header"><div class="avatar">花</div>花开见佛发表于 2011-3-2 23:18<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">愿常面见诸如来 及诸佛子众围绕 于彼皆兴广大供 尽未来劫无疲厌 <br/>
+依怙主....我向您至頂禮 </div></div><div class="post"><div class="post-header"><div class="avatar">花</div><span style="font-size:15px; letter-spacing:1px;">花开见佛发表于 2011-3-2 23:18</span><div class="badge-floor">第 13 进</div></div><div class="post-body">愿常面见诸如来 及诸佛子众围绕 于彼皆兴广大供 尽未来劫无疲厌 <br/>
 愿持诸佛微妙法 光显一切菩提行 究竟清净普贤道 尽未来劫常修习 <br/>
 <br/>
 </div></div>

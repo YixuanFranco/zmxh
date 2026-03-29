@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>菩萨本缘经（本缘部） - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>菩萨本缘经（本缘部） - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">菩萨本缘经（本缘部）</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-19 23:46<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">      菩萨本缘经卷上 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">菩萨本缘经（本缘部）</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-19 23:46</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">      菩萨本缘经卷上 <br/>
 　　　　僧伽斯那撰 <br/>
 <br/>
 　　　　吴月支优婆塞支谦字恭明译 <br/>
@@ -132,7 +153,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 尔时菩萨见诸婆罗门贪心诤物互相瞋恚。即作是言。是诸受者贪欲瞋恚愚痴乱心不能堪受。如是供养如车轴折。辐辋破坏不任运载。我亦如是。种子良善而田薄恶。以此受者心不善故令是澡水不肯流下。我今虽作如是布施。亦无有人教我令发阿耨多罗三藐三菩提心。而我自为一切众生故发是心。今当自试。若我审能愍众生者灌水当下。即以左手执罐泻之。水即流下菩萨右手。诸婆罗门见是事已各生惭愧。离所施物修行梵行。诸婆罗门寻共稽首。求请菩萨以为和尚。 <br/>
  <br/>
 菩萨怜愍即便受之。教令修学四无量心。以是因缘命终即得生梵天上。令无量众生发阿耨多罗三藐三菩提心。菩萨摩诃萨行檀波罗蜜时。不见此是福田此非福田。亦不分别多亲少疑。是故菩萨若布施时。或多或少或好或恶。应以一心清净奉上莫于受者生下劣心。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-19 23:52<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">　   　菩萨本缘经一切施品第二 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-19 23:52</span><div class="badge-floor">第 2 进</div></div><div class="post-body">　   　菩萨本缘经一切施品第二 <br/>
  <br/>
   　一切诸菩萨　　为利众生故 <br/>
 舍弃己身命　　犹如草粪秽　 <br/>
@@ -198,7 +219,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 今若见嗔者　　是则为自嗔　 <br/>
  <br/>
     是故大王不应生嗔。若故嗔者今得自在幸可随意早见屠戮。先所开募可赏是人。我今必定舍命不悔。以是因缘愿诸众生能一切施及得舍名。尔时怨王闻是语已。从御座起合掌敬礼一切施王作如是言。唯愿大王还坐本座。汝是法王正化之主。我是罗剎暴恶之人。汝是世灯为世父母。我是世间弊恶大贼。专行恶法劫夺他财。汝是法称正法明镜。我非法称常欺诳他。犹如盲人不自见过。如我等辈罪过深重。是身久应陷入此地。所以迁延得至今日。实赖仁者执持故耳。今舍此地及以己身奉施仁者。一切施王即为怨王广说法要。令其安住于正法中。大以财宝与婆罗门遣还本土。菩萨摩诃萨如是修行檀波罗蜜时。尚舍如是所重之身。况复外物所有财宝。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-19 23:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">　　菩萨本缘经一切持王子品第三之一 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-19 23:55</span><div class="badge-floor">第 3 进</div></div><div class="post-body">　　菩萨本缘经一切持王子品第三之一 <br/>
  <br/>
   　菩萨摩诃萨　　为诸众生故 <br/>
 一切所重物　　无不以惠施　 <br/>
@@ -226,7 +247,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 大王今日快善所重白象。王子已持施婆罗门。诸婆罗门得已乘去。今到敌国。以王先时见其布施金银珍宝不呵责故。致令今日复以白象施与怨家。大王世间恶子多诸过患。饮酒樗蒲贪色费用。臣等敢奏不咎责。王子若能从今已往更不以财惠施于人则可听住。若不止者便当摈之远着深山。尔时父王即召其子作是念言。怪哉我今云何一旦为诸大臣不令我子随意行施。我今惭愧犹如妇人怖畏姑妐。即向其子而说是言。卿从今始莫复贪着一切功德可离舍。心行正法者应着草衣服噉水果远处深山。卿今不应挑其右目以治左眼。卿于今日如何一旦恼乱我心及诸大臣。夫为人法先安其亲。然后乃当及余他人。卿今云何以我白象施与怨家。 <br/>
  <br/>
     菩萨本缘经卷上右经第三幅十四行鹿群威猛(之下)丹本有如我曾闻菩萨往昔以恚因缘堕于龙中(乃至)五谷临熟遇天恶雹等。凡二十六行四百四十二字。国本宋本所无者。今捡彼文。则是此经下卷。龙品第八之文。丹藏错乱妄安于兹耳。故今不取。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-19 23:58<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">      菩萨本缘经卷中 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-19 23:58</span><div class="badge-floor">第 4 进</div></div><div class="post-body">      菩萨本缘经卷中 <br/>
 　　　　僧伽斯那撰 <br/>
 <br/>
 　　　　吴月支优婆塞支谦字恭明译 <br/>
@@ -303,7 +324,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 尔时菩萨即作是念。是婆罗门从我乞目为作何等。复作是念。我何所计。是身犹如冢间死尸。以不坚牢贸易坚牢。应当欢喜何所思虑。尔时菩萨捉佉陀罗木而作誓言。我今悉为一切众生弃舍二目无所贪惜。我先舍妇持用施人。愿此功德锺及众生永断贪欲。施子因缘令离爱习。今施二日悉令众生得清净法眼。菩萨摩诃萨作是愿已。便以木锥向目欲挑。时婆罗门寻前捉手且莫挑出。目今属我更莫余施。菩萨答言。我今一身。云何一日连受二寄。先婆罗门已寄我妇。汝今寄眼。我当云何而得守护。时婆罗门即复帝释身。语菩萨言。妇目二物悉是我有。今相付嘱莫复余施。 <br/>
  <br/>
 尔时帝释即飞而去。于虚空中雨四种华。空中声出。宣告诸天。汝等当知。此人增长菩提道树。不久当得阿耨多罗三藐三菩提。菩萨摩诃萨行檀波罗蜜。其事如是无所不舍。一切众生若闻是事。应于菩萨悉生欢喜。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-20 00:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">　　   菩萨本缘经善吉王品第四 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-20 00:00</span><div class="badge-floor">第 5 进</div></div><div class="post-body">　　   菩萨本缘经善吉王品第四 <br/>
  <br/>
     菩萨行施时　　定心究竟作 <br/>
 乃至魔波旬　　不能得断绝　 <br/>
@@ -325,7 +346,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 尔时善吉即作是念。如是之言颠倒虚妄无有义理。所以者何。我未曾见呵梨勒树能生甘蔗。厕粪之中出净莲华。纯真妙金变为铜铁。信心檀越受地狱苦。如是之言多所亏损。此言颠倒定是魔语。即作是言。善哉善哉。善能分别如是功德。汝则已为摄取于我。复语魔言。汝今当知。如蝗虫翅所有风力不能吹动须弥山王。以汝风力欲令我动。亦复如是。如先所说言诸施主以施因缘堕于地狱。 <br/>
  <br/>
 诸受施人生天上者正合我愿。愿我从今独为施主常堕地狱。令诸众生悉为受者生于天上。一身受苦令多受乐。岂非菩萨本誓愿耶。我今定知汝是波旬。汝亦不能当与我战。我从昔来常集施心。汝今云何卒令我舍。菩萨摩诃萨修行如是檀波罗蜜。乃至天魔不能留难。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-20 00:03<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">　 　菩萨本缘经月光王品第五 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-20 00:03</span><div class="badge-floor">第 6 进</div></div><div class="post-body">　 　菩萨本缘经月光王品第五 <br/>
  <br/>
   　菩萨摩诃萨　　行无上道时 <br/>
 为诸众生故　　乃至舍头目　 <br/>
@@ -358,7 +379,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 云何于此清净人边生是恶心。汝身所以不陷地者。赖是菩萨拥护汝故。时婆罗门谓得真实断菩萨头。怨心得解即便还去。王亦还宫身安无损。菩萨摩诃萨行檀波罗蜜时。能作如是无所不舍。 <br/>
 菩萨本缘经卷中 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-20 00:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">      菩萨本缘经卷下　　　　僧伽斯那撰 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-20 00:05</span><div class="badge-floor">第 7 进</div></div><div class="post-body">      菩萨本缘经卷下　　　　僧伽斯那撰 <br/>
 <br/>
 　　　　吴月支优婆塞支谦字恭明译 <br/>
 <br/>
@@ -391,7 +412,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 尔时兔王竟夜不眠。为诸兔众说法如是。夜既终已。清旦地了于薪聚边即便吹火。火然之后语婆罗门言。我昨请汝欲设微供。今已具办愿必食之。何以故。智人集财欲以布施。受者怜愍要必受用。若有凡人多畜财宝。以施于人此不以为难。我今贫穷施乃为难。唯愿哀矜必定受之。我今深心清净启请。唯愿仁者必受不疑。说是语已复自慰喻。我今为他受安乐故。自舍己身无所贪惜大如毫厘。如是福报愿诸众生证无上智。自慰喻已投身火坑。 <br/>
  <br/>
 时婆罗门见是事已。心惊毛竖即于火上而挽出之。无常之命即便断灭。谛观心闷抱置膝上。对之呜唼并作是言。爱法之士慈愍大仙调御船师。为利众生舍身寿命今何所至。我今敬礼为归依主。我处此山长发重担。虽经多年无所利益。我愿从今常相顶戴。愿汝功德具足成就。令我来世常为弟子。说是语已还持兔身置之于地。头面作礼复还抱捉犹如赤子。即共死兔俱投火坑。尔时释天知是事已。大设供养收骨起塔。菩萨摩诃萨修行如是。尸波罗蜜不诳于世。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-20 00:06<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">  　　菩萨本缘经鹿品第七 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-20 00:06</span><div class="badge-floor">第 8 进</div></div><div class="post-body">  　　菩萨本缘经鹿品第七 <br/>
  <br/>
   　菩萨摩诃萨　　行大波罗蜜 <br/>
 乃至上怨中　　终不生恶心　 <br/>
@@ -420,7 +441,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 王复言曰。汝今受我愿求何等。鹿王答曰。若能于我生尊相者。今当谛听。我是兽身唯赖水草以自存活余无所求。大王当知。是人昔为水所漂困。无救护者余命无几。我于尔时犹能救之。王今若有慈悲之心。当视是人如赤子想。若视是人即亦视于我。是人愚痴无知可愍。命终之后必堕地狱。经无量岁备受众苦。是故应当于是人所生慈愍心。大王。譬如有人多诸子息爱无偏党。然于病者心则偏重。菩萨亦尔。于恶众生偏生悲爱。以是众生怀恶法故。是故菩萨为诸众生发菩提心。尔时大王复更敛容而作是言。汝今真是调御大师。护持正法救济危厄归依之处。能除众生一切畏者。 <br/>
  <br/>
-是诸众生多行恶法身应陷地。所以不没谅由大士护持故也。从今以往施诸鹿群无所畏乐。我今终身愿为弟子。若汝来世成无上道愿先济度。于是国王说是语已即告群臣。举国人民自今为始不得游猎杀害为业。菩萨摩诃萨行尸波罗蜜时。虽受兽身于诸怨憎乃至不生一念恶心。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-10-20 00:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">　　菩萨本缘经龙品第八 <br/>
+是诸众生多行恶法身应陷地。所以不没谅由大士护持故也。从今以往施诸鹿群无所畏乐。我今终身愿为弟子。若汝来世成无上道愿先济度。于是国王说是语已即告群臣。举国人民自今为始不得游猎杀害为业。菩萨摩诃萨行尸波罗蜜时。虽受兽身于诸怨憎乃至不生一念恶心。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-10-20 00:08</span><div class="badge-floor">第 9 进</div></div><div class="post-body">　　菩萨本缘经龙品第八 <br/>
  <br/>
   　菩萨摩诃萨　　处嗔犹持戒 <br/>
 况生于人中　　而当不坚持　 <br/>

@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>文殊化身瑞兽祥瑞金刚牛实修笔记 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>文殊化身瑞兽祥瑞金刚牛实修笔记 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/与神合一瑜伽行.html">与神合一瑜伽行</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">文殊化身瑞兽祥瑞金刚牛实修笔记</h1>
-<div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-11-11 19:16<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">Aogula实证传承行者 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/与神合一瑜伽行.html">与神合一瑜伽行</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">文殊化身瑞兽祥瑞金刚牛实修笔记</h1>
+<div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-11-11 19:16</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula321 <br/>
 QQ群：289578411 <br/>
 <br/>
@@ -61,7 +82,7 @@ QQ群：289578411 <br/>
 动中禅修中与各种祥瑞化身相应合一，自身中脉显现一串金刚杵，就能与诸佛菩萨自然相应；也可直接修金刚立，观自身化为金刚杵，都能与佛菩萨本尊坛城自然相应，消除各种实修障碍。 <br/>
 修诸佛菩萨本尊坛城需要有灌顶传承。实修祥瑞化身，与龙头貔貅、狮鹏瑞兽等相应合一，则是很基础的动中禅修，任何人都可以实修实践，亲身体验。如有行者在实修中有任何不适，可立即修金刚立，观自身化为金刚杵颤动震动，就能消除各种实修障碍。 <br/>
 <br/>
-修完瑞兽再修金刚立金刚杵，自身能与金刚杵相应合一感到金刚杵变大变多，就能立即与诸佛菩萨本尊坛城境界相应。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-11-11 19:17<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">动中禅修的实践，我与七眼祥瑞金刚牛 <br/>
+修完瑞兽再修金刚立金刚杵，自身能与金刚杵相应合一感到金刚杵变大变多，就能立即与诸佛菩萨本尊坛城境界相应。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-11-11 19:17</span><div class="badge-floor">第 2 进</div></div><div class="post-body">动中禅修的实践，我与七眼祥瑞金刚牛 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula妙吉祥11 <br/>
@@ -73,7 +94,7 @@ QQ群：289578411 <br/>
 初见文殊化身金刚瑞牛时，看到他体型庞大犹如一栋行走的别墅大小，两只牛角弯弯朝天高高举起，瑞牛角上缠绕着长翅膀的龙，瑞牛浑身颜色呈蓝绿色，身上有金色镶边云朵的花纹。额头有第三只眼，左右肩膀及后臀两边各有两只眼。远处看眼睛就像是闪烁的光，近处看每只眼睛神情不一样，时而调皮的眨眼睛，时而宠溺，时而愤怒等。头上有十字杵顶髻，鼻子上有三个金刚杵弯成圈，圈上挂着两个铃铛，随着鼻子一呼一吸发出悦耳的声音，时而快时而慢。脖子很粗，故而脖子上的金刚杵及铃铛很大，随着走动的步伐发出悦耳的声音，时而活泼时而低沉。中脉是金刚杵组成，左右脉是两串小金刚杵扭成麻花形状，三条脉连接鼻子到海底轮及脚底。瑞牛嘴有獠牙，嘴巴不停的咀嚼，可以吃掉各种的敌魔，吸食它们的精血，夺取它们的能量，一切魔都惧怕它。吃掉的敌魔变成金刚杵，与中脉金刚杵融合，积聚能量中脉金刚杵变大，身体自然变大。四只腿粗大，每只腿上各缠绕着长翅膀的龙。脚掌分为五瓣，每瓣脚掌心有风轮。牛尾有白色云朵的花纹，似铅笔用卷笔刀削过的纹路。尾巴大多数甩得悠闲自得，遇敌魔时，自动变大扫出去很有力量。这就是文殊化身七眼祥瑞金刚牛。 <br/>
 <br/>
 我修习时，时常躺在牛背上，一顶草帽嘴里叼着花，它带我满世界的跑积聚能量。 脚底轻便但身体很有能量，感觉能量随时会迸发出来。听到铃铛的声音，心很定，好一副悠闲自得福泽深厚的景象。 <br/>
-随时与文殊化身祥瑞金刚牛相应沟通和玩耍都能进入三昧禅定的各种境界。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-11-11 19:18<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">动中禅修，大威德佛母和七眼祥瑞金刚牛 <br/>
+随时与文殊化身祥瑞金刚牛相应沟通和玩耍都能进入三昧禅定的各种境界。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-11-11 19:18</span><div class="badge-floor">第 3 进</div></div><div class="post-body">动中禅修，大威德佛母和七眼祥瑞金刚牛 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula妙吉祥11 <br/>
@@ -82,7 +103,7 @@ QQ群：289578411 <br/>
 2020.4.17 实修笔记 <br/>
 大威德佛母又名金刚起尸母，初修时，感觉并不强烈。感到与她合一就似一团似有似无的紫色透明的气体，她身体轻的很，仿佛风一吹就能吹飞了。开始脸看不清晰，法器的舞动也只有很小的光。 <br/>
 后几日经过了几天每晚三到八小时的经行走转绕佛禅修，自身气脉能量运转升华，中脉能量更足了，再修习时，细细观修，用心体会。感受自身手臂的摆动指尖有像摸到水的感觉，感受自身远处看有一条线鼻子连接中脉到左右脉到海底轮至脚底，近处看中脉及左右脉是一连串的金刚杵。感受身如云影变高变大等一系列身体变化。显现她袭一身紫衣，因看到敌魔而愤怒的脸，脸上有第三只眼，右手拿着死神镰刀，左手托着颅器。死神镰刀很大，立起来比她个子还高，乍一看刀上泛着冷冷的光很是显眼。镰刀长长的棒，棒是金刚杵，刀似月牙状，月牙尖尖带点弯。刀上有眼睛、耳朵、鼻子、嘴巴，牙齿、獠牙、和犄角，刀尖又似嘴里吐出的舌头，下巴上有三个金刚杵弯成圈挂着的金刚铃，随着刀自动挥舞降伏敌魔发出悦耳的声音，声音很高兴很亢奋。这种金刚刀宛如有生命力，会呼吸，有思想会自动攻击敌魔，刀上有十字杵顶髻。颅器似倒立的骷髅头，底部有十字杵，内有降伏敌魔成就的功德甘露，手持颅器供养本尊。衣服一体的帽子遮住了本身的头发，就看见喷怒的脸出现在我眼前。一会又显现三个脸，但三个脸上表情依旧很愤怒，手臂变多，另有很多鉞刀颅器，金刚杵、金刚铃变多。面容显现凶得很，我感叹道女孩子不可以生气，你看脸都变形了，就不美了。 <br/>
-又过几日，我修习七眼祥瑞金刚牛时，看她坐在瑞牛背上。没戴帽子的她，露出一头乌黑浓密的卷发，额头有美人尖，眉毛似柳叶般细长带点弯，脸上露出喜悦的笑容，浑身的气都变柔和，少了些杀伐猛利之气。也没再看到她那死神镰刀，低头笑着轻声细语的似跟金刚瑞牛在交谈，时不时摸着祥瑞金刚牛两鬓的头发，脚时不时随着风微微摆动，一副悠闲自得安稳自在的样子。周围有很多拿着鉞刀颅器的金刚起尸母化身给她供养，这时她的颅器变成了高脚杯，杯中福德的甘露源源不断，似香甜的葡萄酒，她发出悦耳得笑声跟祥瑞金刚牛脖子上的铃铛发出的声音一起相得益彰。有时显现她躺在牛背上似睡着了，呼吸声跟金刚牛呼吸声融为一体，就像金刚瑞牛是她，她则也是金刚瑞牛。一袭紫衣，衣上绣着牡丹花，花上颜色是渐变得紫色，花蕊则是如血般红，衣服随风轻轻飘荡，腰间则挂个一串宝珠由大到小，随着金刚瑞牛行走在那摆动，她也不理睬依旧闭着眼睛，睡得很安稳，脚上一双绣花鞋，两只鞋花纹不一样，一只脚上绣着带翅膀的龙，另一只鞋上绣着凤凰。此时身心静定，如在欣赏一副充满动感的立体山水美人图，身心与这充满动感的坛城境界融为一体，进入越来越深的禅定。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-11-11 19:19<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">Aogula实证传承行者 <br/>
+又过几日，我修习七眼祥瑞金刚牛时，看她坐在瑞牛背上。没戴帽子的她，露出一头乌黑浓密的卷发，额头有美人尖，眉毛似柳叶般细长带点弯，脸上露出喜悦的笑容，浑身的气都变柔和，少了些杀伐猛利之气。也没再看到她那死神镰刀，低头笑着轻声细语的似跟金刚瑞牛在交谈，时不时摸着祥瑞金刚牛两鬓的头发，脚时不时随着风微微摆动，一副悠闲自得安稳自在的样子。周围有很多拿着鉞刀颅器的金刚起尸母化身给她供养，这时她的颅器变成了高脚杯，杯中福德的甘露源源不断，似香甜的葡萄酒，她发出悦耳得笑声跟祥瑞金刚牛脖子上的铃铛发出的声音一起相得益彰。有时显现她躺在牛背上似睡着了，呼吸声跟金刚牛呼吸声融为一体，就像金刚瑞牛是她，她则也是金刚瑞牛。一袭紫衣，衣上绣着牡丹花，花上颜色是渐变得紫色，花蕊则是如血般红，衣服随风轻轻飘荡，腰间则挂个一串宝珠由大到小，随着金刚瑞牛行走在那摆动，她也不理睬依旧闭着眼睛，睡得很安稳，脚上一双绣花鞋，两只鞋花纹不一样，一只脚上绣着带翅膀的龙，另一只鞋上绣着凤凰。此时身心静定，如在欣赏一副充满动感的立体山水美人图，身心与这充满动感的坛城境界融为一体，进入越来越深的禅定。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-11-11 19:19</span><div class="badge-floor">第 4 进</div></div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula321 <br/>
 QQ群：289578411 <br/>
 <br/>
@@ -91,7 +112,7 @@ QQ群：289578411 <br/>
 原地站立，双臂如走路时自然摆动。修四念处的身念处和受念处，双臂肩膀摆动带动腰椎尾椎扭动，念腰椎尾椎扭动，又自然牵引全身肩膀摆动。感受摆动中的双手和指尖，感觉有热流暖风缠绕手臂皮肤，手指手背内感有电流，轻微触电感，手掌心处形成一股暖气，暖气旋转摩擦掌心，随后呈现为旋转阴阳太极球。自然呼吸，感受呼吸，身体随呼吸产生的气动而自然晃动摇动，呼吸中默念嗡啊吽三字明，气脉能量动中运转，中脉能量光柱显现，身体呈现出气团状。 <br/>
 <br/>
 观自身为文殊化身祥瑞金刚牛，全身显现出能量态的瑞牛身，蓝色光蕴组成，背部珍宝装饰，大威德金刚本尊牛脸面庞，三眼圆睁、撩牙，牛角黄金色，双角上各缠绕一振翅欲飞的青龙，龙时喷出火焰，瑞牛四脚蹄都有五瓣，蹄底各显现一耀眼金轮，脚踏莲花，空中行走，牛鼻孔两边各挂有一金刚杵环，环上挂金刚铃，瑞牛呼吸气息吹动，金刚铃发出微妙铃声法音。 <br/>
-持续观修自身为瑞牛，自己肉身呼吸与金刚牛鼻孔呼吸融为一体，呼吸气连左右脉、通中脉，中脉能量光柱显示为金刚杵链，安住三昧定境，宁静安然。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-11-11 19:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">Aogula实证传承行者 <br/>
+持续观修自身为瑞牛，自己肉身呼吸与金刚牛鼻孔呼吸融为一体，呼吸气连左右脉、通中脉，中脉能量光柱显示为金刚杵链，安住三昧定境，宁静安然。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-11-11 19:22</span><div class="badge-floor">第 5 进</div></div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula南无药师琉璃光如来 <br/>
 QQ群：289578411 <br/>
 <br/>
@@ -102,7 +123,7 @@ QQ群：289578411 <br/>
 此时观修自身与文殊化身七眼祥瑞金刚牛相应合一，瑞牛身形庞大，头上有三只眼，两肩两胯各有一只眼睛，瑞牛身体蓝色透明，四个牛腿下每个蹄子如花瓣一样显现五瓣，每一瓣蹄子内有宝轮自然旋转，感到瑞牛脚下的风轮旋转与鼻息中脉的气脉能量呼应相连，各种形状的能量升华，光中显现各种祥瑞禽兽的形状，有显现龙凤形状，感受气脉能量从毛孔向外的通道打开，脚面上敷着一层厚厚的热气，绵柔致密的感受沁润整个脚掌，瑞牛脚心有纤细的白线，连接海底轮和中脉，脚下宝轮随呼吸旋转，身形不断变大。 <br/>
 修瑞牛透明蓝色身，中脉左右脉显现一串金刚杵，鼻息与中脉左右脉的金刚杵呼应，中脉震动直通脑脉，眉心轮有眼睛，三目圆睁，双肩双胯都有眼睛，显现瑞牛的七眼。显现各个方向自然可见，脚心五瓣牛蹄内宝轮旋转，脚大趾宝轮旋转，脚背升起一层层绵柔的热流连通中脉，瑞牛头顶有十字金刚杵，牛头上两个金色犄角上各盘有一长翅膀的龙，感受中脉左右脉能量随息冲击顶轮。 <br/>
 感到自身与祥瑞金刚牛相应合一舞动，双手有轮旋转，中脉通明震动发热，自身中脉显现成一串金色金刚杵旋转，左右脉是由小一些的金刚杵连成的。三个连串的金刚杵有时平行，有时左右脉交叉通过中脉，八字形缠绕，瑞牛全身气脉涌动震荡，自然随意转动扭动。 <br/>
-持续而修，瑞牛鼻孔中间显现三个金刚杵结成的圆环挂着铃铛，随着呼吸一轻一重发出声音，鼻息与中脉左右脉自然呼应相连，自身肚脐内有白色细长的宝瓶旋转，胎息启动内呼吸，细密悠长源源不断，鼻孔却感受呼吸如电闪雷鸣。感到瑞牛身形巨大在空中舞动，舌脉中心有金色串杵伸下去，随呼吸，不停地吃各种食物，有时口中如风卷残云般，吞噬咀嚼，非常威猛，有时摇头摆尾的反刍回味悠闲自在。口中食物变成白亮的能量，融入中脉的金刚杵中，中脉内的一串金刚杵火热旋转，自然摆动手臂，持续动中禅修，身心与瑞牛相应合一，在中脉通明震动显现内外境界变化中，感到身心安稳，舒畅喜悦，越来越静定，进入文殊化身祥瑞金刚牛的三昧正定。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-11-11 19:28<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">动中禅修 文殊化身祥瑞金刚牛 实修笔记 <br/>
+持续而修，瑞牛鼻孔中间显现三个金刚杵结成的圆环挂着铃铛，随着呼吸一轻一重发出声音，鼻息与中脉左右脉自然呼应相连，自身肚脐内有白色细长的宝瓶旋转，胎息启动内呼吸，细密悠长源源不断，鼻孔却感受呼吸如电闪雷鸣。感到瑞牛身形巨大在空中舞动，舌脉中心有金色串杵伸下去，随呼吸，不停地吃各种食物，有时口中如风卷残云般，吞噬咀嚼，非常威猛，有时摇头摆尾的反刍回味悠闲自在。口中食物变成白亮的能量，融入中脉的金刚杵中，中脉内的一串金刚杵火热旋转，自然摆动手臂，持续动中禅修，身心与瑞牛相应合一，在中脉通明震动显现内外境界变化中，感到身心安稳，舒畅喜悦，越来越静定，进入文殊化身祥瑞金刚牛的三昧正定。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-11-11 19:28</span><div class="badge-floor">第 6 进</div></div><div class="post-body">动中禅修 文殊化身祥瑞金刚牛 实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>

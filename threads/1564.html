@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>菩提道次第传承诸师修心语录选集 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>菩提道次第传承诸师修心语录选集 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">菩提道次第传承诸师修心语录选集</h1>
-<div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 14:35<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">菩提道次第传承诸师修心语录选集 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">菩提道次第传承诸师修心语录选集</h1>
+<div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 14:35</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">菩提道次第传承诸师修心语录选集 <br/>
 <br/>
 上　篇 <br/>
 01　发心为诸修之首 <br/>
@@ -96,7 +117,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 44　示成熟已修行之次第 <br/>
 45　示修圆满次第诸法一些教授编著圆满 <br/>
 回向发愿 <br/>
-附录 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 14:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">上　篇 <br/>
+附录 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 14:40</span><div class="badge-floor">第 2 进</div></div><div class="post-body">上　篇 <br/>
 <br/>
 南无曼殊廓喀雅 <br/>
 <br/>
@@ -121,7 +142,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 皆由长久熏习力，福慧善根所养成。 <br/>
 <br/>
 如是由修悟达语，皆为诸师内证音， <br/>
-绛巴妥默取道用，圆修一环无匹伦。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 15:03<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">按法门次第及师承先后次序编出如下： <br/>
+绛巴妥默取道用，圆修一环无匹伦。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 15:03</span><div class="badge-floor">第 3 进</div></div><div class="post-body">按法门次第及师承先后次序编出如下： <br/>
 <br/>
 壹 发心为诸修之首 <br/>
 <br/>
@@ -183,7 +204,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 又至尊文殊菩萨广说正法，成为法幢时，令我们的释迦世尊等贤劫千佛，皆发菩提心，这在《入中论本释》中有这样的解释说：［作师长（文殊作诸佛之师）的特别事业者，是说至尊文殊成菩萨时，令如来释迦牟尼，及其他一切诸佛如来，都于最初开始发菩提心。］ <br/>
 <br/>
-五、班禅·洛桑却季绛称的语录中记载说：［在宗喀大师的语绿中有问：［诸修之首，等同诸经开始首句——在梵语……那样，应依何法为首？］彼时各答不同，或答身坐八法。后来，洛桑却季绛称答说：［首在发心二即动机或称等起）以此应知如阿底峡尊者所说：［凡是贪嗔痴的动机，都是不善业。以此以不善的动机，而修善法，是不能入于道的，如正下中士两道那样发心的善念，固然很多，但是现在此间必须的唯一善念，应当是菩提心。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 15:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">贰 积资忏净 <br/>
+五、班禅·洛桑却季绛称的语录中记载说：［在宗喀大师的语绿中有问：［诸修之首，等同诸经开始首句——在梵语……那样，应依何法为首？］彼时各答不同，或答身坐八法。后来，洛桑却季绛称答说：［首在发心二即动机或称等起）以此应知如阿底峡尊者所说：［凡是贪嗔痴的动机，都是不善业。以此以不善的动机，而修善法，是不能入于道的，如正下中士两道那样发心的善念，固然很多，但是现在此间必须的唯一善念，应当是菩提心。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 15:08</span><div class="badge-floor">第 4 进</div></div><div class="post-body">贰 积资忏净 <br/>
 一、佛向弥勒说：［应知具足成佛，应修何法？我为一切有情利义故，下僧衣向十方三世诸佛礼拜等而得成佛。” <br/>
 <br/>
 二；积资忏净，摄于七支。昔印度修“密集］即生即身成就者亨遮菩提王说：“依唯识赏识及幻识，皆不能成佛，当依七支成佛一（七支功德，能使种姓清明，身心成熟。） <br/>
@@ -250,7 +271,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 一、为令应得度众生增长福德： <br/>
 二、不失时机因缘。佛向阿难示意说： <br/>
 “一切如来具足四足神通，皆能久住沙尘劫，越过一切劫。” <br/>
-而阿难说：“当时为魔加持。众生福薄。故失时机，为魔乘机请佛涅盘” </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 15:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">叁 依止善知识法门（中摄上师瑜伽法门） <br/>
+而阿难说：“当时为魔加持。众生福薄。故失时机，为魔乘机请佛涅盘” </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 15:14</span><div class="badge-floor">第 5 进</div></div><div class="post-body">叁 依止善知识法门（中摄上师瑜伽法门） <br/>
 <br/>
 一、《密集金刚相续经》中说： <br/>
 ［虽造五无间重罪，依金刚乘可得悉地。惟轻慢师罪，虽依金刚乘亦不得悉地。” <br/>
@@ -441,7 +462,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 六十五、恩师昂旺郎嘉（因事称名）传法说：二不喀佛心中，有释迦像，像心中有金刚大持者，乃表上师、佛、金刚大持三位一体。昔释迦世尊在灵鸶山等处说三乘教时，当时众生业报，故现三十二相化身相，说密乘时，现金刚大持像，现值末法，吾人所能见者，唯与吾人相似之上师像，故现宗喀巴比丘相。如是观者，表现见上师像，将来业障轻消时，可见佛像，再轻消时，可见金刚大持像。成佛时如百川归海为一味，故此观三者一味，观上师即佛。恩师自谦说，此非自谓已具足上师，于教弟子恭敬事之如佛。 <br/>
 <br/>
 但正说法时，听者应想作上师想，余但转述颇章喀仁波伽及康萨仁波伽教授，如两位师尊，应观为一切佛聚而为一。著者按：恩师实即宗喀化身，实即释迦，实即金刚大持。）六十六、编者绛巴妥默过去在故乡雅安，见恩师昂旺朗嘉（因事称名）时，师命我为作讲《缘起赞颂》＜宗喀大师着）的翻译，当时我年甫二十八岁，汉藏教理，均感薄弱，我惶恐不胜，又不敢违命，但说我恐不胜，师以手摩我顶作记荆道： <br/>
-［汝勿惶恐！我加持于汝，能胜此事，当即祝道：愿绛巴妥默能成诺扎瓦钦波（义为大译师之意），直获大义。］感恩之余，侍师翻译，有时讲到缘起性空甚深义时，我本闻所未闻，但心中开朗，总觉此义，曾于何处听过（想是前生听过），犹如宿构，顺口译出，无有所难，闻者欢悦！后来侍师十年，作翻译中，均有如是感觉。又我后来患重病，师赐药加持于我，乃至梦中得师按摩加持，痼疾亦得顿时消去，略念师恩，不禁泪下，卑劣弟子，唯祈师恩，永作加持！ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 15:17<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">肆 于有暇身劝取心要 <br/>
+［汝勿惶恐！我加持于汝，能胜此事，当即祝道：愿绛巴妥默能成诺扎瓦钦波（义为大译师之意），直获大义。］感恩之余，侍师翻译，有时讲到缘起性空甚深义时，我本闻所未闻，但心中开朗，总觉此义，曾于何处听过（想是前生听过），犹如宿构，顺口译出，无有所难，闻者欢悦！后来侍师十年，作翻译中，均有如是感觉。又我后来患重病，师赐药加持于我，乃至梦中得师按摩加持，痼疾亦得顿时消去，略念师恩，不禁泪下，卑劣弟子，唯祈师恩，永作加持！ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 15:17</span><div class="badge-floor">第 6 进</div></div><div class="post-body">肆 于有暇身劝取心要 <br/>
 <br/>
 一、龙树菩萨说：［执邪见及畜生道，生饿鬼及地狱中，无佛法及生边地，痴哑及长寿天，任生何种无暇修，离此无暇八种难，获得有暇之身已，为反生彼当励力。］ <br/>
 <br/>
@@ -477,7 +498,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 十七、恶趣得人身，较人身成佛尤难。颇公说：［人成佛如推大圆铜球上山，佛果如列山顶，而得人身如已推至半山腰，勿令铜球还堕下山。以此所修能究竟，固为尽善，否则，亦不可令此人身复失］ <br/>
 <br/>
-与下士共道次第亦即粗分出离心修要：分四 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 15:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">伍 念死无常 <br/>
+与下士共道次第亦即粗分出离心修要：分四 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 15:22</span><div class="badge-floor">第 7 进</div></div><div class="post-body">伍 念死无常 <br/>
 <br/>
 一、《集经法句》中说： <br/>
 ［相好金刚不死身（佛），须现无常应舍相， <br/>
@@ -759,7 +780,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 四十一、颇公说：［世间八风，总摄为名闻、衣、食三者，不唯求足，且欲圆满，非必不要，但须不贪着。今日为东方国王，甚有荣威，然心不着追求，听其自来（此即舍此世）。不汲汲于衣食尚易，不贪名则甚难。反之穷乏至于一无所有，然犹想着异日或当富饶，亦不能说为舍此世，故虽穷极，不能拾者，仍不能拾。虽极富饶，心能拾者，亦可说为能拾此世。］ <br/>
 <br/>
-四十二、上师教授说：［念死无常有所通达，则生起现在须修之决定，复重在须舍此世之贪恋，不然，所修之法不能入道。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 15:31<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">陆 思恶趣苦 <br/>
+四十二、上师教授说：［念死无常有所通达，则生起现在须修之决定，复重在须舍此世之贪恋，不然，所修之法不能入道。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 15:31</span><div class="badge-floor">第 8 进</div></div><div class="post-body">陆 思恶趣苦 <br/>
 <br/>
 <br/>
 一、思地狱苦：如释迦世尊《本生经》中说：［于三宝、业果驳以为无，生寒地狱。］ <br/>
@@ -788,7 +809,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 十三、思畜生苦：如《俱舍论》中说：［傍生胜者长一劫。］此言畜中如龙寿命可至一劫，受苦时亦长。其他畜类，受苦时间则无定。 <br/>
 <br/>
-十四、生傍生因：《玛澈》教授说：［主要由于轻毁正法，及于说法者不敬，已入佛门者起内讧，互揭过失等业因。］十五、堕傍生业因，极易种下。大德常说：［吾人与我守门之犬，彼此相易，刹那间事耳。应思吾人与其所受爱乐否？］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 15:33<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">柒 皈依三宝 <br/>
+十四、生傍生因：《玛澈》教授说：［主要由于轻毁正法，及于说法者不敬，已入佛门者起内讧，互揭过失等业因。］十五、堕傍生业因，极易种下。大德常说：［吾人与我守门之犬，彼此相易，刹那间事耳。应思吾人与其所受爱乐否？］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 15:33</span><div class="badge-floor">第 9 进</div></div><div class="post-body">柒 皈依三宝 <br/>
 <br/>
 皈依因及境 <br/>
 一、班禅·洛桑却季绛称说：［皈依因有二：一、生怖畏恶趣苦。二、知唯三宝能救护。皈依清净与否？以是否具此二因而定。］此言一，当思易堕三途苦，而希求救护；二，当认识何者方能有此救护之功德能力，具此二因，始为正皈依。 <br/>
@@ -838,7 +859,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 二十二、所谓皈依体，乃心中至诚希求救护之念。以三宝为极大依怙，而生希求三宝救护之心，非口诵为皈依之体。甘丹派大德博多瓦说：［能令心变动之皈依，关系极大！无论居士及出家老比丘，已娴习诸仪轨者，是否内道行列中所摄，尚不敢断定。因其是否已生起令心变动之皈依，尚不决定故。］ <br/>
 <br/>
-二十三、《菩提道次第略论》中说：［身命受用终须舍离，若因彼故而舍三宝者，则一切生中常为苦逼。故当立誓自决，任遇何缘，乃至失命，皆不舍离皈依；虽为戏笑亦不说舍三宝之言也。或谓行趣何方，便当皈依何方之佛。此学处出自何经，未见其所据也。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 15:36<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">捌 深信业果 <br/>
+二十三、《菩提道次第略论》中说：［身命受用终须舍离，若因彼故而舍三宝者，则一切生中常为苦逼。故当立誓自决，任遇何缘，乃至失命，皆不舍离皈依；虽为戏笑亦不说舍三宝之言也。或谓行趣何方，便当皈依何方之佛。此学处出自何经，未见其所据也。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 15:36</span><div class="badge-floor">第 10 进</div></div><div class="post-body">捌 深信业果 <br/>
 <br/>
 业决定之理 <br/>
 一、如佛经中说：［从善因唯生乐果，不生苦果。从不盖口因生苦果，不生乐果。］又说：［由作此此业，得此此果，作破彼业，得彼彼果。］是故诸苦乐，非从无因、及根本自性（如大自在天许根本自性为常）、不顺因（外道许乐之因为常，常因得无常果，为不顺因）等而生。 <br/>
@@ -917,7 +938,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 第一、修此求解脱之心：（此中摄思惟总别苦） <br/>
 一、经论中说：［思苦能于轮回起厌离心，思苦能折骄慢，思苦能于他有情起悲，思苦能止恶修善。］此言思苦功德，极关重要！应知不厌轮回，不能生起菩提心，即不能成佛。 <br/>
 <br/>
-二、上师教授说：［有情于轮回中，如蜂闭于瓶中，或上或下，终不能出，有情或生人天，或堕三途，终不能出轮回，须将能盖之业烦恼除去，始得解脱。吾等贪着轮回，不知是苦，故无求解脱之心，即不求解脱之法。如人野宿，大水淹没，即觉冷苦，乃起视水自何方来，而思有以堵之，使水不至，而得安睡，即如解脱。砌石堵水，即如道谛。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 15:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">玖 思流转总苦：分六 <br/>
+二、上师教授说：［有情于轮回中，如蜂闭于瓶中，或上或下，终不能出，有情或生人天，或堕三途，终不能出轮回，须将能盖之业烦恼除去，始得解脱。吾等贪着轮回，不知是苦，故无求解脱之心，即不求解脱之法。如人野宿，大水淹没，即觉冷苦，乃起视水自何方来，而思有以堵之，使水不至，而得安睡，即如解脱。砌石堵水，即如道谛。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 15:37</span><div class="badge-floor">第 11 进</div></div><div class="post-body">玖 思流转总苦：分六 <br/>
 <br/>
 三、（一）轮回无定苦：如龙树菩萨说：［有父即子母即妻，有类成怨即彼亲，由有颠倒性在故，诸世间中无决定。］如以经中所说来解释：如目犍连至人家乞食，见其人方食鱼，而打守其旁之犬，其人所抱爱子，乃前世怨仇，目犍连以神通观知而说道：［子食父肉而打母，怀抱被杀世怨仇，犬食鱼骨妻食夫。］月亲菩萨寄弟子书说：［六趣（六自有顶，下至阿鼻）无处吾等未去过，未曾受过之苦亦无有。］ <br/>
 <br/>
@@ -929,7 +950,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 七、（五）数数高下不可保信苦：经中说：［积集终消散，崇高必堕落，合会终别离，有命咸归死。］上师教授释说：［前世为王，后世为贼者有之。昔西藏有王极骄，后为人杀，头漂水中七日。］ <br/>
 <br/>
-八、（六）共住友伴不可保信苦：寂天菩萨《入行论》说：［生时亦为独自生，死时彼亦独自死，苦份他人不取受，作障亲友复何为。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 15:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">拾 思惟别苦（摄善恶二趣苦，恶趣苦详下士道） <br/>
+八、（六）共住友伴不可保信苦：寂天菩萨《入行论》说：［生时亦为独自生，死时彼亦独自死，苦份他人不取受，作障亲友复何为。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 15:43</span><div class="badge-floor">第 12 进</div></div><div class="post-body">拾 思惟别苦（摄善恶二趣苦，恶趣苦详下士道） <br/>
 <br/>
 思善趣苦（摄人、天、阿修罗三类苦） <br/>
 九、（一）人中苦：（摄八苦）一，谋生之苦：如《明灯颂》摄菩提道次第要义作颂说：［由诸方便营受用，到小有时因租借，盗劫等使财失苦； <br/>
@@ -958,7 +979,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 二十一、大德阿里巴说：［与其得色界、无色界报，毋宁为一乞丐，尚可闻法修行。］无色界未脱行苦性（外道以为解脱），将在数万劫前闻法熏习，一并忘却，更易堕落。 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 15:48<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">第二、抉择趣解脱之道 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 15:48</span><div class="badge-floor">第 13 进</div></div><div class="post-body">第二、抉择趣解脱之道 <br/>
 拾壹 思惟集谛流转之次第（中摄烦恼之相，集业之相等，此间以修为主，重在认识烦恼之相，余从略） <br/>
 <br/>
 二十二、生烦恼之相：《集论》说：［若法生起不宁静，令心愚昧相续，即为烦恼。令心无善堪能，不自在而入倒境。］ <br/>
@@ -990,7 +1011,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 三十五、师传菩提道次第释上颂义说：此谓比救头燃更为急者，为灭除生死，世间人皆不能自主，以为随命运转，不知乃受业烦恼支配，应修三学（戒定慧），求证无生（空性），始能出离生死轮回。外道专修定，上至有顶，后复下堕，故应具修一一一学，始证涅盘，涅盘位以无病故无老，无老故无死，相续不断故无穷尽，涅盘不是四大日月，外道有谓涅盘如月、海螺、珍珠，有形色可见，皆属错误。 <br/>
 <br/>
-三十六。宗喀《菩提道次第》说：［于此若仅于中士道而为引导者，亦须广说以三学引导之方便，然此不尔，此慧观及止学（定），生止法者，于上士道时当说，（故）今此略言戒学耳。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 15:50<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">拾贰 戒学概要 <br/>
+三十六。宗喀《菩提道次第》说：［于此若仅于中士道而为引导者，亦须广说以三学引导之方便，然此不尔，此慧观及止学（定），生止法者，于上士道时当说，（故）今此略言戒学耳。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 15:50</span><div class="badge-floor">第 14 进</div></div><div class="post-body">拾贰 戒学概要 <br/>
 <br/>
 <br/>
 三十七、佛说：［若其地有人住持戒律，如日月光（知所取舍以教导人），则其地不空，如有我在（戒乃佛之代表），则我不焦虑。：如父母见其子能出头，则不焦虑。）又说：［定慧皆依于戒。］ <br/>
@@ -1003,7 +1024,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 四十一、不守戒过患：经中说：［有类王命虽重大，数违不定得惩罚，能仁教语若故违，如翳罗龙堕畜生。］ <br/>
 <br/>
-四十二、《文殊根本大教王经》亦说：［持咒若坏戒，不得上悉地，中品亦不成，亦不成下品。佛于毁戒人，不说咒成就，亦非趣涅盘，境处之方际，于此恶异生，何有咒成就，此毁戒众生，如何有乐趣，既不成现上，亦不成胜乐，况佛说诸咒，而能成就耶？］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 15:57<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">拾叁 应知生罪四因 <br/>
+四十二、《文殊根本大教王经》亦说：［持咒若坏戒，不得上悉地，中品亦不成，亦不成下品。佛于毁戒人，不说咒成就，亦非趣涅盘，境处之方际，于此恶异生，何有咒成就，此毁戒众生，如何有乐趣，既不成现上，亦不成胜乐，况佛说诸咒，而能成就耶？］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 15:57</span><div class="badge-floor">第 15 进</div></div><div class="post-body">拾叁 应知生罪四因 <br/>
 <br/>
 <br/>
 四十三、不知为犯堕之门：如《明灯颂》说：［不知为犯堕之门，此之对治于学处，由闻求知最上者，依具相师学全道，如是没有不逮时，亦应学知下中道，若为比丘则应于，彼诸戒学作领会，得圆满四灌顶者，于廿律等诸菩萨，学处根本重罪等，应知其详而励行。］ <br/>
@@ -1027,7 +1048,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 五十二、甘丹派大德贡巴瓦告其弟子勒乌树巴说：［将来有人间汝师有何功德？汝勿以神通见本尊为答。说我但渐于业果得决定，能清净住持律仪而已］ <br/>
 <br/>
 上士道修心之次第亦即示菩提心修要 <br/>
-总说一般修心概要 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">拾肆 承传诸师所说一般修心语录 <br/>
+总说一般修心概要 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:05</span><div class="badge-floor">第 16 进</div></div><div class="post-body">拾肆 承传诸师所说一般修心语录 <br/>
 <br/>
 一、文殊开示宗喀巴大师说：［以后应当勤祈上师即本尊；忏除过去所积罪障；增长广大资粮；并依大车轨智理细研显密经论教义，如是三者合修的方法，不断勤修，不久将获证究竟正见，与一切显密无谬教义的决定通达。］ <br/>
 <br/>
@@ -1263,11 +1284,11 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 五十六、DL·洛桑格桑嘉措应准噶尔堪布再三劝请，作一宗喀教法修要教诫，以饶益僧俗，以此作出教诫说：［宗喀大师着中说，既得值遇教法的暇满人身，则当闻思诸大经论，对抉择取舍之要义，能很好地通晓时，当如颂所说［闻后进入修心要，将从生城得解脱。：厄是说先闻诸经论义，心中萦绕思维，继当实修——唯一趣向调伏此心之方便。又如颂说：［多闻诸人于林薮，少光已过正宜居］。这是说最好是离开了此生的知友徒眷施主等，去到寂静山林中，身正净守持如仙幢；语勤念祈祷本尊及密咒，供物秽障勿令染，以此语根亦明洁。意当不为任何希求此世心而缠缚，以此意亦得安适。由三门不染罪业而心安。若能由心法相合之修行，坚毅不移生喜乐，则没有较此更好的志趣。获得人身诚然应当重视，但是我们广宏讲说事业时，如关于他者的纠缠，是难以拒绝的，但是应当对于暂时的财物一切五欲等，现前来到时，应当这样思想——我今天不能说没有死的可能，这些财欲，哪能用来完全为自己作想，必须努力解松贪欲的缠缚。过去完全为了自利而作，也没有得着任何利益，若能一心为着利他，才能获得佛果位。过去妄费艰苦，都是在无意义的事务中而空过，现在任作何种一切事业，都完全对于一切众生有益而作，愿常有这样的善念，愿常发这样的善愿，所有一切善行，固然是应当一直修持到生起芏菩提心之间，可是如果能主要以结合甚深无上密法生圆二次，常时不失本尊佛慢，以及励力念诵近修等而作的话，也就没有较此更胜的修持。以此任住何方，不观待于是否寂静，而只是以这样的修心善法为主要。特别是戒经中所说：现在末法时，守一戒学的利益功德，较贤劫时守所有完全戒学的利益功德为大。如这样的比较，如果在边地能负起教法之责的功德，比有许多善知识及大寺院所在地的功德更大。以此在你们那边常住的求法众，对于广宏讲说圣教事业，应具毫无畏惧的精神，你们那边的人士，大都是合法之器，主要是都具有大信。出家众当知一切福善的根本，是别解戒，愿励力实修，哪怕是极小的犯染，都能守持不犯。至于菩萨戒及密戒，至今徒有空言，能实修真行的人，是不易见的。以此关于这两种戒学，对于合器的人们，应善为教导，使其能如理取舍而作，如果犯染戒律的时候，应当是昼间所犯，晚间忏净，晚问所犯，明朝在三宝像前，由修总忏仪轨，及三十五佛忏悔文之门，作励力还净。应这样令心清净，生起惭愧，这些作用，是很大的，此外，为了修学诸大经论，实修诸经论教义起见，应开示《菩提道次第》等的导修法类。但是所闻教义，不能外向成为遇耳之言，应作内照，成为饶益内心之方便。对于在家的人们，在良辰节日中，当善住《八关斋戒法》及《断食斋戒法》等，在三宝像前，常作供养，礼拜绕行等，勤念《弥遮玛》、《怙主三尊》、《救度母》等密咒。宣说《戒教缘起录》及《贤愚因缘经》等生起业果诸教义。主要是对于一切善法之本——三实及业果，须趣向生起坚定之信心，由不退转增上的方便，住在止恶修善的取舍法中，愿能这样励力使弘法利生的事业，获得具义佳果。］ <br/>
 <br/>
-菩提道次第传承诸师修心语录选集一切悉地生源下篇别示菩提心修要：分三大科第一科明发心为入大乘之门分三 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:06<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">拾伍、须入大乘之理 <br/>
+菩提道次第传承诸师修心语录选集一切悉地生源下篇别示菩提心修要：分三大科第一科明发心为入大乘之门分三 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:06</span><div class="badge-floor">第 17 进</div></div><div class="post-body">拾伍、须入大乘之理 <br/>
 <br/>
 一、《经庄严论》说：［大乘种姓人，较声闻人去佛果远近，前者虽以业力堕无间地狱中，较后者已证阿罗汉者，其得佛果之障难尚轻。由于阿罗汉住寂灭境界中，以过乐故，不乐舍此等持（定），以此坚固愿力，能住无数劫，须得佛菩萨放光加被，尚有愿不愿舍者，又因彼已杀尽惑苦，全无苦受，无所借镜，不易生悲，故生菩提心尤难。］ <br/>
 <br/>
-二、甘丹派大德博多瓦说：［上者一渡非二涉，从初即可入大乘。］此谓出离心生起后，即须入大乘，不可枉道迂回。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:07<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 18 楼</span></div><div class="post-body">拾陆、发心十德 <br/>
+二、甘丹派大德博多瓦说：［上者一渡非二涉，从初即可入大乘。］此谓出离心生起后，即须入大乘，不可枉道迂回。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:07</span><div class="badge-floor">第 18 进</div></div><div class="post-body">拾陆、发心十德 <br/>
 <br/>
 三、（一）入大乘门：如《华严经》赞说：［发菩提心功德，无量无边，不可思议！］又说：［初发心为入大乘门。］ <br/>
 <br/>
@@ -1305,7 +1326,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 二十、《宝曼论》说：［欲趣入佛果，其根为菩提心。］ <br/>
 <br/>
-二十一、《入行论》说：［声缘皆由佛所生，佛由菩提心所生。］又说：［如是大实菩提心，初生即胜于往昔，如此善生何处有，如此福报何处有。］培福之大者，无遇菩提心。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 19 楼</span></div><div class="post-body">拾柒、大乘命根 <br/>
+二十一、《入行论》说：［声缘皆由佛所生，佛由菩提心所生。］又说：［如是大实菩提心，初生即胜于往昔，如此善生何处有，如此福报何处有。］培福之大者，无遇菩提心。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:08</span><div class="badge-floor">第 19 进</div></div><div class="post-body">拾柒、大乘命根 <br/>
 <br/>
 二十二、诸佛本尊告阿底峡尊者说：［善男子：希成正觉，应速发起菩提心，速修速修菩提心，欲见本尊勿妄想，菩提心即汝本尊，汝须生起大悲心，大悲观音是本尊。］ <br/>
 <br/>
@@ -1319,7 +1340,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 二十六、颇公说：［二乘但缘知母、念恩、报恩、慈心而起悲，不能以增上意乐缘知母等，但有悲、呼号、悲戚，而无猛勇大力，如舍利弗不能救竹签外道师，反为其弟子所杀。］ <br/>
 <br/>
-二十七、恩师开示口诀说：［余昔于大德称勒格西座前［学性相时，师谓发心，乃生起广大心，吾人平时常生起新心，为现世乐者，求名求利，皆思明年后年，或较今年为好，彼所计或月或年；有大心者，不但为此生计，乃求后世人天果，其心较前为大矣；又有人以人天为不究竟，而思出离者，其心尤为广大；又有不以自解脱为足，思解脱其他一切有情，令住圆满菩提二刚前所发，皆不及此之广大，过此尤广大者已不可得，故发心乃发广大心；此为上师口诀，将甚深教义，以浅喻令吾人易摄持于掌中，宗喀之恩，亦在总摄一切经教心要法门，令吾人便于修习。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:09<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 20 楼</span></div><div class="post-body">拾捌 由七因果教授之门生起菩提心法 <br/>
+二十七、恩师开示口诀说：［余昔于大德称勒格西座前［学性相时，师谓发心，乃生起广大心，吾人平时常生起新心，为现世乐者，求名求利，皆思明年后年，或较今年为好，彼所计或月或年；有大心者，不但为此生计，乃求后世人天果，其心较前为大矣；又有人以人天为不究竟，而思出离者，其心尤为广大；又有不以自解脱为足，思解脱其他一切有情，令住圆满菩提二刚前所发，皆不及此之广大，过此尤广大者已不可得，故发心乃发广大心；此为上师口诀，将甚深教义，以浅喻令吾人易摄持于掌中，宗喀之恩，亦在总摄一切经教心要法门，令吾人便于修习。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:09</span><div class="badge-floor">第 20 进</div></div><div class="post-body">拾捌 由七因果教授之门生起菩提心法 <br/>
 <br/>
 （一）平等舍心修法 <br/>
 二十八、关于怨亲等舍：如《胜月女问经》说：［我昔曾经杀汝等，我亦曾被汝等截，彼此一切是仇杀，汝等何为起贪心。］《亲友书》亦说：［父母妻子皆无定。］ <br/>
@@ -1353,7 +1374,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 （八）菩提心修法 <br/>
 三十九、《入行论》中说：［空性、大悲、修求菩提，皆初业有情相似菩提心，若修到不待造作，任运生起者，方是真实菩提心。］修谓串习，求谓欲得，其欲得菩提之心，尚须串习，犹不是殊胜菩提心，故称相似。 <br/>
 <br/>
-四十、宗喀大师依《修次初编》以己任运生起菩提心，而缘念有情义利，愿自成佛，始能称［愿菩提］，非但以过去善根，师宝加持，念利有情，愿得成佛，即可称为［愿菩提］；虽生起菩提心，然尚未入佛子行，须任运生起菩提心，依学处入于六度万行也。（行菩提） </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:11<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 21 楼</span></div><div class="post-body">拾玖 由自他相换之门生起菩提心法 <br/>
+四十、宗喀大师依《修次初编》以己任运生起菩提心，而缘念有情义利，愿自成佛，始能称［愿菩提］，非但以过去善根，师宝加持，念利有情，愿得成佛，即可称为［愿菩提］；虽生起菩提心，然尚未入佛子行，须任运生起菩提心，依学处入于六度万行也。（行菩提） </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:11</span><div class="badge-floor">第 21 进</div></div><div class="post-body">拾玖 由自他相换之门生起菩提心法 <br/>
 <br/>
 此一法门前四种与前七种因果教授同。从第五编如下： <br/>
 <br/>
@@ -1441,10 +1462,10 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 七十七、于诸有情生大师想，如侠惹瓦说：［我等虽作琐屑之善，然无增长之相，而坏尽之相，则甚多。于芏菩萨及法侣，以嗔恨轻蔑，是生疮疤而坏尽也。以是若能将此及于菩萨所生疮疤断之，则如《集学论》中所说之依于补特伽罗而起之损失，皆将不生，以不知芏门萨于何有故，应如《迦叶问经》所说：［于诸有情，生大师想。］ <br/>
 <br/>
 四黑法中 <br/>
-七十八、上师教授说：［有说犯四黑法，即舍菩提愿戒。宗喀巴大师则以舍菩提心，及舍有情心，生起此二种，乃舍菩提愿心条件。其余犯四黑法，及与四白法相违者，但退而非舍。余诸誓受学处，因摄于十八重四十六轻，然若尚未受菩提行戒，（寂天轨则，为愿行俱受）故不犯戒，然乃誓受学处，故成恶行。第三科发心已学行之法 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:11<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 22 楼</span></div><div class="post-body">贰拾 发心已于学处须修学之相 <br/>
+七十八、上师教授说：［有说犯四黑法，即舍菩提愿戒。宗喀巴大师则以舍菩提心，及舍有情心，生起此二种，乃舍菩提愿心条件。其余犯四黑法，及与四白法相违者，但退而非舍。余诸誓受学处，因摄于十八重四十六轻，然若尚未受菩提行戒，（寂天轨则，为愿行俱受）故不犯戒，然乃誓受学处，故成恶行。第三科发心已学行之法 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:11</span><div class="badge-floor">第 22 进</div></div><div class="post-body">贰拾 发心已于学处须修学之相 <br/>
 <br/>
 <br/>
-七十九、《修次初编》说：［如是发心菩萨，知自未调伏，不能调伏于他已，自于修布施等，极作加行，以无修行则不得菩提也。］又说：［修亦谓受戒已，于彼学处而修学是也。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 23 楼</span></div><div class="post-body">贰拾壹 方便与智慧，仅随学其一，不能成佛。 <br/>
+七十九、《修次初编》说：［如是发心菩萨，知自未调伏，不能调伏于他已，自于修布施等，极作加行，以无修行则不得菩提也。］又说：［修亦谓受戒已，于彼学处而修学是也。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:13</span><div class="badge-floor">第 23 进</div></div><div class="post-body">贰拾壹 方便与智慧，仅随学其一，不能成佛。 <br/>
 <br/>
 <br/>
 八十、《大日经》说：［秘密主：彼一切种智者，是从大悲之根本生，是从菩提提心之因生，是以（六度）方便而到究竟。］上师教授释说：总上三句，谓须智慧、方便（六度摄故）一种始得成佛。世俗菩提心，即真正菩提心；胜义菩提心，谓唯名安立，须初地以上菩萨常一心住空性中者，于世俗谛之见相二分已断，心与空性，和合为一，如水入水，无有二见，如是有情之心，方称胜义菩提心，非真实菩提心，假名安立为菩提心。内外道多于此义误会，彼以住空性，即是修真实菩提心，彼不解有世俗菩提心也。 <br/>
@@ -1477,7 +1498,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 九十四、恩师又开示说：［经中说，任何亦不见，即是正见。不知此就已证空性者遮止俗谛而言，遂生误解。故善修空性者，应不舍俗谛行品，三乘皆须修空性，《现观庄严论》说：［声缘欲趣究竟道，皆由四谛力引导。”谓以四谛方便而得智慧，以得其究竟果，而不说以空性趣究竟道。又说：菩萨由（修）诸道方便，而得成就众生事”此谓以三士道而成就众生事。声闻须证人无我方便；缘觉乘须证人法二无我粗分方便；菩萨则须具人无我、法无我粗分及人法无我细分（此方是空性，前二非是）三种方便，又说：［又彼一切种智者，亦须成熟诸有情。”所谓一切种智，即摄真俗二谛，故知三乘及佛皆须俗谛行品，此乃《弥勒菩萨现观庄严论》全论纲领。与此论纲领相违，即与此论各品相违，而此论乃了义《般若经》之锁钥，以此与一切佛说了义经相违，并且违理。龙树菩萨说：［不达俗谛者，不能了空性。］当知空性现量，由比量生，《因明》中广成此理。俗谛应以《因明》正净，因之三相证成而后转入现量。因之三相，即是俗谛，又与龙树《宝鬘论》所说，何故须修慈悲之理相违。《入中论》首说，大悲为根本，此论乃说空性者，而首举俗谛行品中之大悲。须空性智慧，方能不住生死，须方便俗谛行品，方能不住涅盘。以通达空性（如所有性）智慧断无明，则不堕生死；以尽所有性智慧了达一切有情，皆是父母，故为慈悲驱使，不住寂灭（以大悲方便不舍有情）。以智慧断烦恼，乃证法身；由福资粮成就色身（摄报化二身），方能成熟有情。佛非以法身成熟有情，一切有情不能见法身故，由基道果三种而言，基有真俗二谛，于此不圆，则道中之福智亦各别不圆融，乃至果时法身、色身亦不能得。故方便、智慧任舍其一，皆不应理。］ <br/>
 <br/>
-九十五、又恩师开示之教授中说：［破支那和尚与教相违，与理相违，自语相违。彼所说任何不起思维，不修身语二种善业，此如将心幽囚，令如顽石，属于愚痴黑暗。萨迦班抵达说此为［愚痴大手印］，皆趣畜生行。彼等将心幽囚，误谓即证空性。黑暗愚痴，恶行烦恼，彼称以为成佛之因。此宗喀简择彼之所说，即彼所言已成自语相违，乃摄其（支那堪布）所著《睡转法-轮》中之心要，彼谓但心不生分别，身语二业，可以随便，但睡亦可成佛。又其（和尚）所引之经，彼亦误解，由人法二我执而行施等如以毒和食，不唯无益而又害之。若总说六度皆魔业，汝（和尚）称汝所倡者摄于慧度，亦魔业矣。［堕所缘］谓耽着于实有，此（彼所引经）所谓魔业，乃谓对于菩萨成佛为障之魔业，非对一切有情而言，不然，则登地有情，皆未达空，皆有二执，且其修施等亦魔业耶？一切行品如修大慈、大悲、菩提心等，皆谓具二执堕于有相之摧毁一切行品。凡夫现行虽有我执，然布施时之舍心，是善行故非我执，破斥之谓若如所称，则得法无我者，须将舍心、防心等亦如嗔慢等而并灭之，即将六度视同烦恼而断之，则无圆满佛陀，佛亦无所依矣，熟盛则寒微，寒盛则熟微（成反比），见行如此，则堕断常，则以见害行，或以行害见，不唯不得成佛，如圣天《四百论》所说，［执有堕畜生，执无堕恶趣］。法身与色身，和凡夫之心识与肉体，此二不离互用，须于因位不离互用，须空慧乃得法身之因，然若无方便，法身亦不圆满，故方便亦是得法身之质，如是空慧于色身亦可（此有发心为前导，余五度力，摄持不失，而专修慧度时，一心专注之空性也）得用。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:15<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 24 楼</span></div><div class="post-body">贰拾贰 于学处修学之次第（摄学行六度） <br/>
+九十五、又恩师开示之教授中说：［破支那和尚与教相违，与理相违，自语相违。彼所说任何不起思维，不修身语二种善业，此如将心幽囚，令如顽石，属于愚痴黑暗。萨迦班抵达说此为［愚痴大手印］，皆趣畜生行。彼等将心幽囚，误谓即证空性。黑暗愚痴，恶行烦恼，彼称以为成佛之因。此宗喀简择彼之所说，即彼所言已成自语相违，乃摄其（支那堪布）所著《睡转法-轮》中之心要，彼谓但心不生分别，身语二业，可以随便，但睡亦可成佛。又其（和尚）所引之经，彼亦误解，由人法二我执而行施等如以毒和食，不唯无益而又害之。若总说六度皆魔业，汝（和尚）称汝所倡者摄于慧度，亦魔业矣。［堕所缘］谓耽着于实有，此（彼所引经）所谓魔业，乃谓对于菩萨成佛为障之魔业，非对一切有情而言，不然，则登地有情，皆未达空，皆有二执，且其修施等亦魔业耶？一切行品如修大慈、大悲、菩提心等，皆谓具二执堕于有相之摧毁一切行品。凡夫现行虽有我执，然布施时之舍心，是善行故非我执，破斥之谓若如所称，则得法无我者，须将舍心、防心等亦如嗔慢等而并灭之，即将六度视同烦恼而断之，则无圆满佛陀，佛亦无所依矣，熟盛则寒微，寒盛则熟微（成反比），见行如此，则堕断常，则以见害行，或以行害见，不唯不得成佛，如圣天《四百论》所说，［执有堕畜生，执无堕恶趣］。法身与色身，和凡夫之心识与肉体，此二不离互用，须于因位不离互用，须空慧乃得法身之因，然若无方便，法身亦不圆满，故方便亦是得法身之质，如是空慧于色身亦可（此有发心为前导，余五度力，摄持不失，而专修慧度时，一心专注之空性也）得用。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:15</span><div class="badge-floor">第 24 进</div></div><div class="post-body">贰拾贰 于学处修学之次第（摄学行六度） <br/>
 <br/>
 <br/>
 （一）施波罗密 <br/>
@@ -1517,7 +1538,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 一百一十一、《菩提道次第》说：精进所依之顺缘四者中，胜解力：乃于应行应止生起意乐，为精进之基（所依），故精进乃于应行应止（善为抉择）而精进。止观修法亦即别示后二度——禅定与清净正见之修要 <br/>
 （此二度广开，别成修要，以此支分条数亦另起）。 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:16<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 25 楼</span></div><div class="post-body"> <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:16</span><div class="badge-floor">第 25 进</div></div><div class="post-body"> <br/>
 <br/>
 （五）禅定波罗密 <br/>
 贰拾叁 正修止法科中所摄一些教授 <br/>
@@ -1548,11 +1569,11 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 十三、恩师昂旺朗嘉（因事称名）开示说：为利他故，须修戒定慧三学，欲得止观双运，须先修无过三摩地。此之教义，虽有佛之《解深密》及《三摩地王》等经及慈氏、无著之《瑜伽》、《中边》等论，然其言简意赅，末世难解。能深体佛言，符于二大车轨之教授者，其唯宗喀大师乎！故所谓修定资粮，自依止师，下中上士道皆是。即以六度言二刚四度皆修定资粮，定与外道共，何以相异？以发菩提心与外道异，庶有大义利，而不虚度此大好人生，否则，如以等量黄金换取等量煤炭，且不大可惜哉！］ <br/>
 <br/>
-十四、上师教授说：［欲任运住无过三摩地中，何时放缓？须于第八住心（方放缓）。将何放缓？有将［所缘］，及［持力］、［功用］放缓之各种，支那堪布大乘和尚之一切不想，乃将［所缘］放缓矣。此说放缓，乃将防沉防掉之功用放缓。如放缓［所缘］则无住分，放缓“持力］则无明分。无住分明分何为定？！此为宗喀大师之不共教授。依颇公说：［于第七住心时，于沉掉将来时，自能察觉微有来势，然以防护力，彼实不能来。于第八住心时，此种沉掉欲来之冲动余势已无］。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:17<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 26 楼</span></div><div class="post-body">贰拾肆 依于止而修九住心科中一些教授 <br/>
+十四、上师教授说：［欲任运住无过三摩地中，何时放缓？须于第八住心（方放缓）。将何放缓？有将［所缘］，及［持力］、［功用］放缓之各种，支那堪布大乘和尚之一切不想，乃将［所缘］放缓矣。此说放缓，乃将防沉防掉之功用放缓。如放缓［所缘］则无住分，放缓“持力］则无明分。无住分明分何为定？！此为宗喀大师之不共教授。依颇公说：［于第七住心时，于沉掉将来时，自能察觉微有来势，然以防护力，彼实不能来。于第八住心时，此种沉掉欲来之冲动余势已无］。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:17</span><div class="badge-floor">第 26 进</div></div><div class="post-body">贰拾肆 依于止而修九住心科中一些教授 <br/>
 <br/>
 十五、恩师昂旺朗嘉（因事称名）开示教授说：［九住心修时，不能置书于面前，最略须将五过、八断行、九住心等领会于心。修菩提道次第各法门之纲领科目亦然，均须熟记心中］。 <br/>
 <br/>
-十六、修定不依上师口诀，不易辨其差别。恩师口诀说：［初住——［内住］：谓于一座间，如一小时，有十分之一时，能住所缘（则为六分钟），散乱时占十分之九；二住——［等住］：依初住功用，令稍延长，能达数珠一串之时（如诵六字大明一串数珠之时）；三住——［安住］：于一串多珠时，于心散乱，甫乱即知，旋即仍住于前所缘，又经一串多珠时，令心安住；四住——［近住］：四住虽摄心渐细，不免有微细外逸相，然未尝忘其所缘。此系上师口诀，与《声闻地》论义微异；五住——［调伏］：依上师口诀，四住尚有粗昏沉，五住尚有细昏沉，即细掉举亦有；六住——“寂静”上师口诀说，第六寂静者，由见随烦恼散乱等过失，于三摩地相违，能令三摩地不喜，故应寂灭此诸随烦恼，及不喜心情；七住——［最极寂静］：依上师口诀，七住最极寂静，此时已无微细沉掉，然有最极微细沉掉欲来之势。然甫将冲动，即能觉知，而起防护（口诀说，五、六住尚有引入沉掉之可能，如夜防盗，尚有失物戒慎恐惧心理。五住有微细沉，六住有微细掉，故须戒慎。如将强敌打倒在地，恐其复起。七住则如已伤强敌手足，彼虽尚可复起，不足虞矣。此时彼强撑起，随手即可击踣之矣。彼散乱之各种行相，如贪、忧、昏睡等亦尔。习定人以第五住为最难关头，此时如不认识自己尚有微捆昏沉。此时已如虚空之坦荡光明，最易误认以为已得无过三摩地，而得自己欺诳耽误，透过此关，第六、七住，智慧与常不同，尚易察觉禅病）；八住——［专注一趣］：依上师口诀说，第八住心，尚须励力，为欲得第九住任运平等转故，此即前说作行，非不作行。专注一趣者，谓一座之间（又称一流，谓一座之间相续如流）能相续如流；九住——［等持住心］：依上师口诀说，由串习力故，不待努力即得无沉无掉心乎等性自在任运而转，如熟读之书，不待用忆念，即如银瓶泻水矣，所谓熟能生巧。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:18<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 27 楼</span></div><div class="post-body">贰拾伍 真实成止之量 <br/>
+十六、修定不依上师口诀，不易辨其差别。恩师口诀说：［初住——［内住］：谓于一座间，如一小时，有十分之一时，能住所缘（则为六分钟），散乱时占十分之九；二住——［等住］：依初住功用，令稍延长，能达数珠一串之时（如诵六字大明一串数珠之时）；三住——［安住］：于一串多珠时，于心散乱，甫乱即知，旋即仍住于前所缘，又经一串多珠时，令心安住；四住——［近住］：四住虽摄心渐细，不免有微细外逸相，然未尝忘其所缘。此系上师口诀，与《声闻地》论义微异；五住——［调伏］：依上师口诀，四住尚有粗昏沉，五住尚有细昏沉，即细掉举亦有；六住——“寂静”上师口诀说，第六寂静者，由见随烦恼散乱等过失，于三摩地相违，能令三摩地不喜，故应寂灭此诸随烦恼，及不喜心情；七住——［最极寂静］：依上师口诀，七住最极寂静，此时已无微细沉掉，然有最极微细沉掉欲来之势。然甫将冲动，即能觉知，而起防护（口诀说，五、六住尚有引入沉掉之可能，如夜防盗，尚有失物戒慎恐惧心理。五住有微细沉，六住有微细掉，故须戒慎。如将强敌打倒在地，恐其复起。七住则如已伤强敌手足，彼虽尚可复起，不足虞矣。此时彼强撑起，随手即可击踣之矣。彼散乱之各种行相，如贪、忧、昏睡等亦尔。习定人以第五住为最难关头，此时如不认识自己尚有微捆昏沉。此时已如虚空之坦荡光明，最易误认以为已得无过三摩地，而得自己欺诳耽误，透过此关，第六、七住，智慧与常不同，尚易察觉禅病）；八住——［专注一趣］：依上师口诀说，第八住心，尚须励力，为欲得第九住任运平等转故，此即前说作行，非不作行。专注一趣者，谓一座之间（又称一流，谓一座之间相续如流）能相续如流；九住——［等持住心］：依上师口诀说，由串习力故，不待努力即得无沉无掉心乎等性自在任运而转，如熟读之书，不待用忆念，即如银瓶泻水矣，所谓熟能生巧。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:18</span><div class="badge-floor">第 27 进</div></div><div class="post-body">贰拾伍 真实成止之量 <br/>
 <br/>
 十七、成止之量：《菩提道次第》说： <br/>
 ［若得如前所说九住心，离微细沉掉，能久修习，无须作行，任运续转之三摩地，是否为已得奢摩他？曰：得此三摩地者，若未得轻安，则是随顺“奢摩他”，非真奢摩他。］《解深密经》说：［世尊：若诸菩萨缘心为境，内思惟心。乃得末得身心妙轻安，名为有作意。］所言作意即奢摩他。《修次中编》亦说：［若于何成就轻安，如其所欲，心于所缘成就自在，当知即是成止。］ <br/>
@@ -1564,7 +1585,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 释迦世尊说：［我为众生说解脱法，然法非解脱，乃用之人自解脱。］ <br/>
 故须法与心合，能自受用，方合《菩提道次第》意义。吾人既已得难得之人身，应求大义，方不虚度此人身，初应离非福，中须去我执，末应除习气。初离非福，必须止恶修善，知善恶取舍，方能感得增上福果（人天）。然非究竟，以过去造恶习气厚故，暂时福果享尽，以恶业还堕恶趣。故欲不造恶业，须先断烦恼，烦恼之根，乃我执无明，故须先除我执无明，方不起惑造业，是谓出离生死。故圣提婆说：［中须去我执。］然此犹非究竟安乐利益，何以故？最微细烦恼所知二障，犹未尽断，虽离生死恐怖，犹未离寂灭恐怖故，未能究竟自他二利故。故须尽断微细二障习气，取得佛果，方能救度一切如母有情。然究能成佛与否？须知吾人既具此暇满人身，又值遇佛法，且有人说圆净无倒之成佛次第，显密兼备，则决能成佛，定非虚诳，如操左券。但视吾人究能发心与否，能转变否，即能决定究能成佛与否。但仅发心犹嫌不足，尚须寻求成佛方便（方法），寻求与佛无二之空慧，以除我执习气。又须先求不离止之观，故应先习定。吾等众生，如极污之衣，如欲除脏垢，须先浣去粗重污垢（如认识业果），次方洗去细垢（如去我执），最后乃以药皂涤除微细污垢油迹（如以最大方便除去习气）。佛教大概程序，先以小方便去最粗重染污；次以中方便去较细染污；最后以最大方便乃除微细之染污习气。欲得止观双运之瑜伽行，须先习定。以上所说（修止法）依弥勒所说离五过、修八断行，由九住法得殊胜身心轻安，方为得殊胜轻安三摩地。若无微细沉掉，能无功用，恒久修习，在此九住心时，是否已经得止？□□□□，若不知此，或误认自己得止，或竟谓自己得圆满次第□□大乐，生起我慢，自谓不久当得金刚大持位，或竟夸示信象，可谓自欺欺人，虚生一世！所谓［圆满轻安］，即谓不动轻安。佛说三摩地王经及解深密经皆谓已得不动圆满轻安，方为得止。《经庄严论》及《修次中编》皆如是说。口若未得圆满轻安，犹未得止。然有于第九住时不加作口，误认为已证空性，又觉舒乐，误认为已得圆满，或甚至误认为已得无上密之大乐。依道次第闻思修学，依修止资粮而修，随顺龙树、无著二大车轨所说方法——离五过、修八断行，次第而修，由此而分九住心，初内住乃至第九住等持，然究得止与否？即须知此科目——所谓成止之量，初示正义，所谓正义者，即如何方谓之止？若得任运三摩地，即为得止，则第九住心，即是止，若此犹非止，□□何为止耶？论所说奢摩他随顺，即相似三摩地。宗喀大师所说：［乃得殊胜轻安，方得为止。然非无通常轻安，否则即不耐长时而座，以无沉掉，又能长时耐座，是任运生，具此三分，虽非真止，可谓得止之随顺。再加殊胜轻安；即真得止矣。要之，一，纵初住以上，有轻安细微支分；二，第九住得轻安，然非殊胜轻安；三，后得圆满殊胜轻安，亦即得止］。 <br/>
  <br/>
-（六）智慧波罗密（修观法别开，条目亦另起） </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:19<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 28 楼</span></div><div class="post-body">贰拾陆 总示修观资粮科中所摄一些教授 <br/>
+（六）智慧波罗密（修观法别开，条目亦另起） </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:19</span><div class="badge-floor">第 28 进</div></div><div class="post-body">贰拾陆 总示修观资粮科中所摄一些教授 <br/>
 <br/>
 一，智慧之修学，分智慧自性、差别、生起之法。何者为智慧自性？《菩提道次第》说：［总言慧者，于所观境，事物类法，能实拣择，此通五明处善巧之慧也。《菩萨地》谓于五明外善巧；于事物上依教依理，思维抉择，于善、恶、无记三法，加以决定，谓之智慧。中间疑虑，不能谓之智慧，最后决定，或为功德，或为过失，生起认识，是谓智慧。五明善巧，总指凡圣皆共，此总指慧之体性而言也。 <br/>
 <br/>
@@ -1579,7 +1600,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 六、宗喀大师之弟子敦巴住默《修行语录》中说：［根本应如理依师，师教与戒应守持，此生幻妄应舍弃，以后应于大师：不喀）法，常求心要闻思修，忏悔积福好助伴，如是佛果已在握，吁嗟乎。成佛方便更无余，较此事喜亦无有。］ <br/>
 <br/>
 七、文殊向宗喀指示说：［生起空见之主因有三：总亦如修止时所说，具资粮，知修法等，特别是一，应于善知识前，如理依止与闻思关于［胜观”之广大经教；二，观想上师与本尊无二无别，而勤求祈祷（加持）．。三，勤修积资忏净。以此三因合修，生起空见不难也。宗喀大师曾说：［一二两因，于修空见，固不可少，即学他法，亦不能离。］又说：［对于一切经论，诵之不能忆，思之而不能解，修之而不能证时，惟依三宝加持之力，自然能忆，能解，能证。］故欲求空见，不外依上述因素，又今所教授依修观二路中，由得止后而修观，故合止因，连前三因，是为修观四主因。 <br/>
-八、然闻思究以何者为依？当依了义经教，即经龙树（或称龙猛）师徒抉择了义之一部。佛曾授记说：［我灭度后四百年，有善如我意抉择空有，显明中道之龙猛当出于世，大宏我教。］阿底侠尊者所著《中观指归》中说：［依何知空性，依佛所授记，龙猛解空性，月称继龙猛，亲承其教授，故依二师教，成佛甚容易，不依则不成。］宗喀大师又为继阿底侠、月称、龙猛而解空性之圣者。《入中论》中曾有记荆，其大意谓：［有智慧如日，显明中道，破边执暗，慧贤名称：不喀巴之名讳）其人在，当出于世，后人依之，得以出离二边入中道者，为数甚多］等语。宗喀大师《嘉言录》中曾说：［我于中观见，未离障时，幸仗上师文殊之恩，始无过证入。］约而言之，《大般若》意义，不外中观、空见二者，释般若无误，唯有依龙树之《中观六论》，次依月称之《入中论》，及《中观根本明句释》，近依宗喀大师之《中观根本广释》，及《大小胜观》，直依恩师昂旺朗嘉（因事称名）所传释宗喀中观诸教授，即《明灯颂自释》中［观之修学］，所释各节，若不如是依学，则空见之得甚难。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 29 楼</span></div><div class="post-body">贰拾柒 欲断彼我执（俱生无明）须求无我见 <br/>
+八、然闻思究以何者为依？当依了义经教，即经龙树（或称龙猛）师徒抉择了义之一部。佛曾授记说：［我灭度后四百年，有善如我意抉择空有，显明中道之龙猛当出于世，大宏我教。］阿底侠尊者所著《中观指归》中说：［依何知空性，依佛所授记，龙猛解空性，月称继龙猛，亲承其教授，故依二师教，成佛甚容易，不依则不成。］宗喀大师又为继阿底侠、月称、龙猛而解空性之圣者。《入中论》中曾有记荆，其大意谓：［有智慧如日，显明中道，破边执暗，慧贤名称：不喀巴之名讳）其人在，当出于世，后人依之，得以出离二边入中道者，为数甚多］等语。宗喀大师《嘉言录》中曾说：［我于中观见，未离障时，幸仗上师文殊之恩，始无过证入。］约而言之，《大般若》意义，不外中观、空见二者，释般若无误，唯有依龙树之《中观六论》，次依月称之《入中论》，及《中观根本明句释》，近依宗喀大师之《中观根本广释》，及《大小胜观》，直依恩师昂旺朗嘉（因事称名）所传释宗喀中观诸教授，即《明灯颂自释》中［观之修学］，所释各节，若不如是依学，则空见之得甚难。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:25</span><div class="badge-floor">第 29 进</div></div><div class="post-body">贰拾柒 欲断彼我执（俱生无明）须求无我见 <br/>
 <br/>
 九、月称论师说：［若见贪等烦恼，及生老等过患，一切皆以我执出生，起欲灭除，尔时，须将我执所增益之境——补特伽罗我，修瑜伽者应以理灭之。］ <br/>
 <br/>
@@ -1613,7 +1634,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 二十四、宗喀《芏菩提道次第》中说：［若无通达空性慧，纵具出离、菩提心，依然不能出轮回。］又说：［于寂止法之上，长养摄持空慧，方能遮三有之门，我如是修，汝等后学，亦应如是修。］此言须止观双运也。又宗喀＜显明密意论》中说：［应成派须先知诸法皆由分别安立之建立规矩，则其反面，执诸法非由分别安立实有自性之我执无明，即易认识。］ <br/>
 <br/>
-二十五、明我无自性：如《般若经》说：［色受想行识，唯有假名，菩提萨捶，唯有假名，般若波罗蜜，唯有假名。］上师教授说：［空性亦唯假名安立，若无空性名言，则不能了解空义，而求证得。通达空性分二：一，真实通达空性，证空性时，固无所谓安立；二，分别空性心，安立空性之名，此如眼识见柱，意识安立，非眼识安立，佛身语意所发不可思议功德，虽非凡夫名言所安立，然与唯名安立之理无违。以其为佛一切种智所建立故，凡圣虽别，安立无异故，世俗名言如何安立，一切种智亦如何安立。故佛说：［世间说有，我亦说有，世间说无，我亦说无。］佛于名言安立，不与与世间相违。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:26<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 30 楼</span></div><div class="post-body">贰拾捌 抉择人无我（依四要抉择法） <br/>
+二十五、明我无自性：如《般若经》说：［色受想行识，唯有假名，菩提萨捶，唯有假名，般若波罗蜜，唯有假名。］上师教授说：［空性亦唯假名安立，若无空性名言，则不能了解空义，而求证得。通达空性分二：一，真实通达空性，证空性时，固无所谓安立；二，分别空性心，安立空性之名，此如眼识见柱，意识安立，非眼识安立，佛身语意所发不可思议功德，虽非凡夫名言所安立，然与唯名安立之理无违。以其为佛一切种智所建立故，凡圣虽别，安立无异故，世俗名言如何安立，一切种智亦如何安立。故佛说：［世间说有，我亦说有，世间说无，我亦说无。］佛于名言安立，不与与世间相违。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:26</span><div class="badge-floor">第 30 进</div></div><div class="post-body">贰拾捌 抉择人无我（依四要抉择法） <br/>
 <br/>
 第一、决定所破之要（即认识障空见之我执） <br/>
 二十六、上师教授说：［平常所说我啊我啊之想心，虽不概系俱生我执，然其中有俱生我执在内。平常我想分三：一，不依分别心与名字安立，执我由自成之我；二，由分别心安立我名之我；三，无上二者分别，第唯执我之我（即由蕴所缘而生，如行曰我行，坐曰我坐等），此三者中，唯初为俱生我执，是应断之我；二为中观行者所计之我；三为不假察之名言我。若将二三两者，列入应断中，则堕入断见矣。故三者中唯初者为空见之障，此为第一扼要也。］ <br/>
@@ -1638,13 +1659,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 三十五、初得空见：上师教授说：二异之外，别无有［有”法，而不在一异之内，则自性成立之我，决非有法矣，是为空见生起之初门。如过去世空见习薄者，则如原有宝物，忽然失去，生出恐慌之心；如前生空见习气厚者，则如原失宝物，忽然寻获，生出欢喜之心。经中说：［譬如失念人，疯狂而跳号，已经千万年。一旦获正念，回忆狂叫状，生无限羞愧。］此指空见习薄者而言也。 <br/>
 <br/>
-三十六、由此知我所无自性：《中观本颂》说：［若无有我者，则无有我所。］譬如石女儿知其为无，则其眼耳等之为无，不待问矣。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:35<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 31 楼</span></div><div class="post-body">贰拾玖 依上抉择法观法我无自性 <br/>
+三十六、由此知我所无自性：《中观本颂》说：［若无有我者，则无有我所。］譬如石女儿知其为无，则其眼耳等之为无，不待问矣。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:35</span><div class="badge-floor">第 31 进</div></div><div class="post-body">贰拾玖 依上抉择法观法我无自性 <br/>
 <br/>
 三十七、上师教授说：［依上诸抉择法，既知我与我所无自性之决定，再观法我执，仍依前一异之理，分别检寻，亦不难知其为无自性。如马离分别心与名相安立之外，若认为有自性成立之马，则此自性之马，应与马蕴为一为异，如推寻皆不可得，则自性之马，决定为无，由是推之一切法，莫不如是，即得法无我。］ <br/>
 <br/>
 三十八、更进为由缘起门通达空性义：上师教授说：［以上由一异之理，通达无实有自性成立之我，更进为由缘起门通达空性义。缘起有三义中，本宗应成派所许为由依而生起，谓依安立名处，又须唯分别安立假名，由此因缘而来，如面与镜会合而生影像。此名甚深缘起，亦最殊胜。安立名处与唯分别安立名会合，虽欲此法不起，亦不可能。此不共缘起，乃本宗特法，由性空而见缘起，须证空性者乃能，非一般人士所能。龙树说：［由空见缘起，由缘起知空，如是达中道，佛陀我敬礼。三不喀大师说：［决知缘起，不违空性，决知空性，亦不违缘起，互为助伴。］（相得益彰，乃至证空性时，尔时方通达缘起） <br/>
 <br/>
-三十九、《入中论释》中说：［空性是常，不变不移，不假因缘造作，若假因缘造作，因缘变时，果亦应变，而空性不变。故非因缘造作。］上师教授说：［所谓不依他者，非谓不依因缘，前已说故，非谓不依支分，空性即缘起，若谓空性非缘起，即无我空性，则空上安空不能安立。无常谛实空性，须于缘起上见十六空，就境分别安立，其中说空空者，乃依空境安立，说无自性成立之空性，所谓无实空，依支分即依缘起即依他，而论说不依他者，乃谓就安立说，不观待他故。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 32 楼</span></div><div class="post-body">叁拾 显示补特伽罗如幻 <br/>
+三十九、《入中论释》中说：［空性是常，不变不移，不假因缘造作，若假因缘造作，因缘变时，果亦应变，而空性不变。故非因缘造作。］上师教授说：［所谓不依他者，非谓不依因缘，前已说故，非谓不依支分，空性即缘起，若谓空性非缘起，即无我空性，则空上安空不能安立。无常谛实空性，须于缘起上见十六空，就境分别安立，其中说空空者，乃依空境安立，说无自性成立之空性，所谓无实空，依支分即依缘起即依他，而论说不依他者，乃谓就安立说，不观待他故。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:37</span><div class="badge-floor">第 32 进</div></div><div class="post-body">叁拾 显示补特伽罗如幻 <br/>
 <br/>
 四十、明如幻义：《三摩地王经》说：［犹如阳焰寻香城，即如幻事并如梦，串习性相自性空，当知一切法如是。］《般若经》亦说：［从色乃至一切智，一切法皆如幻梦。］ <br/>
 <br/>
@@ -1666,11 +1687,11 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 四十九，故应知《三摩地王经》所说：［三有众生皆如梦］谓三有众生，虽现似有真实生死，然实无自性生死。又说：［此中无生亦无死。］此就胜义而言，无自性生死，又说：［有情（总）人（别）命（识之所依曰命）不可得。］谓以无自性胜义理智观察，皆不可得，又说，［诸法如沫（稍遇违缘，即行销灭）及芭蕉（层层剥落，实无心可得）。［亦如幻事与空电］，幻事虽现似种种诸相，然非自性实有，空电暂时显象而不常。［等同水月及阳焰］，前生如在天之月，此生如水中月影，天上之月，不入水中，前生之我，不来今世（非谓总我），世间有情，虽现似有受事，而实不可得。阳焰如水，似可受用，而实无可受用之水。［无人从此世间没，而更往生余世间］，（如前水月喻），［然所造业终不失，黑白亦各熟其果。］如此生特定一人（如一比丘），渡河仍为一比丘，死此生彼则不如是，而业果不失（如屋鸽喻），此缘起不可思议力之所致。造业者虽不亲往受果之处（业亦不往），而业不消失，果自成熟，造业之补特伽罗其流不断，故能受果，虽无生死补特伽罗可得， <br/>
  <br/>
-然如幻诸法，亦能出生黑白之果。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:38<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 33 楼</span></div><div class="post-body">叁拾壹 依何方便现无倒如幻 <br/>
+然如幻诸法，亦能出生黑白之果。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:38</span><div class="badge-floor">第 33 进</div></div><div class="post-body">叁拾壹 依何方便现无倒如幻 <br/>
 <br/>
-五十、上师教授说：二，幻师眼见幻象幻马；二，意决定其为假。］此二条件缺一不可。观幻者仅具眼见之一种心，而不具决定为假之意。显于心中现起补特伽罗如幻之理，须现空双具，［空］须以胜义理智抉择补特伽罗自性之有无，而达其本空（如幻师决定其为假），［现］则依世俗名言量现境（本宗特法）。此要先于定中，观实执境，如同虚空，修此空性，（修如虚空空性时，遮止下至微尘许实有之执，此时唯证空性，不能现起如幻。）后出定时，观诸现相，则能见后得如幻之空性，现起不可遮止之补特伽罗名言，即安立彼为造业者与受果者，虽现似实有，而实无自性，此不能遮，故安立造业受果能成。［于无自（注——［自］原文无）性中，成立缘起之理（性空缘起，彼此相依），皆当善获定解也］，难解处在此，精要处亦在此，不堕常断二边，方于中道有所了解，方得称为中观者。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:39<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 34 楼</span></div><div class="post-body">叁拾贰 抉择法无我科中摄要教授 <br/>
+五十、上师教授说：二，幻师眼见幻象幻马；二，意决定其为假。］此二条件缺一不可。观幻者仅具眼见之一种心，而不具决定为假之意。显于心中现起补特伽罗如幻之理，须现空双具，［空］须以胜义理智抉择补特伽罗自性之有无，而达其本空（如幻师决定其为假），［现］则依世俗名言量现境（本宗特法）。此要先于定中，观实执境，如同虚空，修此空性，（修如虚空空性时，遮止下至微尘许实有之执，此时唯证空性，不能现起如幻。）后出定时，观诸现相，则能见后得如幻之空性，现起不可遮止之补特伽罗名言，即安立彼为造业者与受果者，虽现似实有，而实无自性，此不能遮，故安立造业受果能成。［于无自（注——［自］原文无）性中，成立缘起之理（性空缘起，彼此相依），皆当善获定解也］，难解处在此，精要处亦在此，不堕常断二边，方于中道有所了解，方得称为中观者。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:39</span><div class="badge-floor">第 34 进</div></div><div class="post-body">叁拾贰 抉择法无我科中摄要教授 <br/>
 <br/>
-五十一、依师教授说：［当抉择者，为有为法无自性，及无为法无自性，用以抉择此二之法有二：一，移前说之理（以一异之理观察补特伽罗无自性），而为破除，二，以前未说之理，二不缘起因，及缘起与前理（一异）成立无为亦无谛实）而为破除。抉择有为法无自性：此如经说：［如汝知我想］，汝指瑜伽行者，于补特伽罗上，如何观察而想者，即执着实有之颠倒想，［如是观诸法］谓依经教可移如前所说之理（余六界、六处皆可分为有色、非有色二类，仿此而破）而破；二，以前未说之理而破分二：一，示缘起（无自性）之理据（余理尚不止此，如破四生皆是），缘起与谛实相达（如水火不相容），故可分［缘起相连理据］而知，及［不相连理据］而知之二类：如《海慧问经》说：［若法因缘生，是即无自性。］次句乃宗，其理口即第一句，如说：［苗芽无自性（宗），依缘生故（因）。］以此缘起因破除自性。《无热恼龙王问经》亦说：［若从缘生即不生，若法依缘即说空，知空即是不放逸。：若依缘起相因，而达空性者，佛即赞彼为不放逸之勤修瑜伽行者。）初句所说不生之义，二句释为无自性生，是于破生，应加简别。《明显句论》说：［恐见经说无生，未加简别，便执凡说无生，一切皆无。故佛自释诸经密意，谓无自性生。］《般若心经》亦因无自性，而说一切法无，无色，无受……，谓色无自性，受无自性……云云，佛恐末世误解缘生即无生，以为无世俗名言之生，故于次句自释为无自性生。三句故自性空是缘起义，非生灭作用空义，自知缘起即自性空义，自性空即缘起义（此非初业有情所能了知，乃已获得甚深中观见者，内心所现之境。）绿起即性空义，不可释为世俗谛即胜义谛，又不可释为了解缘起义，即为了解性空义，若说缘起即性空，则一切穿衣吃饭，皆是空矣。故说缘起即性空义，性空即缘起义者，乃已得中观清净见之行者，于空性已得决定，知由此力故，彼能引生缘起决定，二者互为助伴，心中决定缘起，则空性同时显现，心中决空性，则缘起同时显现。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 35 楼</span></div><div class="post-body">叁拾叁 抉择有为法无自性科中一些教授 <br/>
+五十一、依师教授说：［当抉择者，为有为法无自性，及无为法无自性，用以抉择此二之法有二：一，移前说之理（以一异之理观察补特伽罗无自性），而为破除，二，以前未说之理，二不缘起因，及缘起与前理（一异）成立无为亦无谛实）而为破除。抉择有为法无自性：此如经说：［如汝知我想］，汝指瑜伽行者，于补特伽罗上，如何观察而想者，即执着实有之颠倒想，［如是观诸法］谓依经教可移如前所说之理（余六界、六处皆可分为有色、非有色二类，仿此而破）而破；二，以前未说之理而破分二：一，示缘起（无自性）之理据（余理尚不止此，如破四生皆是），缘起与谛实相达（如水火不相容），故可分［缘起相连理据］而知，及［不相连理据］而知之二类：如《海慧问经》说：［若法因缘生，是即无自性。］次句乃宗，其理口即第一句，如说：［苗芽无自性（宗），依缘生故（因）。］以此缘起因破除自性。《无热恼龙王问经》亦说：［若从缘生即不生，若法依缘即说空，知空即是不放逸。：若依缘起相因，而达空性者，佛即赞彼为不放逸之勤修瑜伽行者。）初句所说不生之义，二句释为无自性生，是于破生，应加简别。《明显句论》说：［恐见经说无生，未加简别，便执凡说无生，一切皆无。故佛自释诸经密意，谓无自性生。］《般若心经》亦因无自性，而说一切法无，无色，无受……，谓色无自性，受无自性……云云，佛恐末世误解缘生即无生，以为无世俗名言之生，故于次句自释为无自性生。三句故自性空是缘起义，非生灭作用空义，自知缘起即自性空义，自性空即缘起义（此非初业有情所能了知，乃已获得甚深中观见者，内心所现之境。）绿起即性空义，不可释为世俗谛即胜义谛，又不可释为了解缘起义，即为了解性空义，若说缘起即性空，则一切穿衣吃饭，皆是空矣。故说缘起即性空义，性空即缘起义者，乃已得中观清净见之行者，于空性已得决定，知由此力故，彼能引生缘起决定，二者互为助伴，心中决定缘起，则空性同时显现，心中决空性，则缘起同时显现。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:42</span><div class="badge-floor">第 35 进</div></div><div class="post-body">叁拾叁 抉择有为法无自性科中一些教授 <br/>
 <br/>
 五十二、上师教授说：［缘起三理：第一，生缘聚合，成无自性，此缘起因，是［聚合缘起：苗芽依种子等生缘之作用，聚合而生起，故说有自性自相，为不合理）；第二，须观待支分而有，由此缘起因，知其无自性，为［依靠缘起：如瓶等亦须依其自身支分而在，即与自能自在之义相连。自能自在，即不依它。推苗芽亦然，苗芽依其自体诸支分而有，不能自能自立，故知苗芽无自体）；第三，依自积聚而施设安立，由此缘起因，成立无自性，是为［安立缘起］或称［施设绿起］（自宗说见苗芽时，不关系于唯分别安立，而执有苗芽，是为有自在，依因与缘即无自在（依他起性）。虽一切有部亦如是说，何须再成？故知此处所成立之无自在，乃谓依唯分别安立，故无自性成就，如是为无自在。）依而施设之缘起，最细不共，乃月称所显；”观待支分而有（虽微尘亦须观待其自有支分而有。），乃自续派所许之缘起，此较粗；因缘聚合之缘起，乃唯识、经部、有部所共许，此为最粗（但摄有为，不遍无为，遍有广狭）。依而施设之缘起，乃应成派独创，此为不共特法。上三宗喀大师略摄为二，共与不共，依而施设之缘起为不共，观待支分与因缘聚合摄为共之一种。无论瓶等或依其因缘支分而生，或依其积聚唯分别安立而生，皆无自性成就之异或一，若一则补特伽罗之能所取，及诸法之能所作，皆应成一；若异则如马牛不相关，而破其相依（或依其因缘、支分，或依其积聚而施设。）之关系，与观待于他之理相违，以故知诸法不由一异而有，遂离四生，非常非断。 <br/>
 <br/>
@@ -1692,17 +1713,17 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 五十八、上师教授说：依缘起因决定苗芽无自性之宗，此乃施设而有之缘起，故能决定苗芽无自性，而破有边；如苗芽无自性：（宗）缘起故（因），（依而安立之缘起，施设之缘起），以此缘起于无自性诸晶类，知其能安立因果，即破无边，决定因相（现空双运）之义：以现断无，以空断有，虽各宗业（许，此不共义，谓现断有，以空断无，依缘起之因故，此对修清净中观者说，苗芽依缘起因，以依而安立之苗芽，非有自性成就之苗芽（由缘起因引生空性），故说以现遮有；又如是中观者决定苗芽无自性之宗，由此即知所无，乃无自性，非毕竟无，非遮世俗名言之有，故说以如是空而遮止无，由无自性引生有世俗名言，是谓［现空双合］，亦即现（缘起）空（自性空）互为助伴之理。此仅略说粗分。 <br/>
 <br/>
-五十九、上师教授说：［要之，中观者说，执诸法有自性（重在自性），是堕常边；执诸法名言无，是堕断边。依缘起之因，显无自性而破二边。本宗如实知缘起之理，依缘起因知苗芽依缘而起，遮断边；依缘起因所成立无自性之宗，知苗芽无自性，遮常边。他宗依缘起反成立诸法有自性。彼不如实知缘起理，仅知有缘起理。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 36 楼</span></div><div class="post-body">叁拾肆 抉择无为法无自性 <br/>
+五十九、上师教授说：［要之，中观者说，执诸法有自性（重在自性），是堕常边；执诸法名言无，是堕断边。依缘起之因，显无自性而破二边。本宗如实知缘起之理，依缘起因知苗芽依缘而起，遮断边；依缘起因所成立无自性之宗，知苗芽无自性，遮常边。他宗依缘起反成立诸法有自性。彼不如实知缘起理，仅知有缘起理。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:43</span><div class="badge-floor">第 36 进</div></div><div class="post-body">叁拾肆 抉择无为法无自性 <br/>
 <br/>
 六十、以此（缘起之因）及前理二异之理）成立无为法无自性：《中论》说：［有为法无（自性）故，何得有无为（法之自性）。］《入中论》说：［由通达俗谛方便，而通达胜义谛。］此言通达诸法方便，可以引生通达法性理智，上师教授说：［虚空乃遮止碍着（无著无碍），无为法摄；由内心了别各各观察，诸法法性，而灭烦恼，此分谓之［择灭：无为）．。因缘不具，能违害生（如生善趣，发生障碍，此分非择灭）谓之［非择灭无为］；真如即空性，亦属无为。宗喀大师《菩提道次第》说：［易成之理者，谓如前破有为法有自性，虽无自性，而能安立因果，解脱系缚、能量、所量等一切作用。此既成立，则法性择灭无为法，虽非实有，亦可安立道之所证，智之所量，众生皈依法之法宝等，一切建立，谁亦不能攻难。谓（藏中觉朗派谓）此等若非实有，则彼建立，皆不应理，然（彼觉朗派）无可说（出无为法无自性之过失），故无许无为法实有之必要也。］……如灭谛之择灭是有分，如许彼有自性成就，则应不观待其别别思择诸烦恼，而灭除之之各支分。又若许空性有自性成就，则应不观于法宝（依法而生之空慧为能量，空性为所量），是则三实，仅有二宝，成大过失。此节显空性等诸无为法，亦依缘而有，依缘而生，空性亦应有其空分故，离种种垢，断种种染，空性须与种种能量、所量等支分相关，空性乃有分，有分须观待诸支分故，（以上说缘起之因讫，以下说一异之理。） <br/>
 <br/>
 六十一。宗喀《菩提道次第》又说：［亦可观其一异而破。］上师教授说：［空分乃空性之安立处，空分谓抉择诸染别别灭分，观察有分之空性，与空性成就自性之一或异体，如前观察补特伽罗，与其安立名处之诸蕴一异之理，而破除之，空性之支分甚多，如离垢分，又一切法，各各皆有其法性，有情各各心识，亦各有其法性，若空性与离染分成就自性之一体，则有染有情，以有法性故，亦应具离染分；若空性与诸空分成就自性之异体，则应［有分］（空性），不待支分（空分）而有。 <br/>
 <br/>
-六十二、宗喀《菩提道次第》说：［若谓娄曰译［觉朗］派）此理不能破无为法实有者，亦应不能破有为法，是则全无实有可破。若（觉朗）谓有为法自（体）空者，是说彼法无彼自性，故是断空。然（彼说）真如有自性，故有实有。上句（有为法自空）是抉择有为法自性空之最大歧途，是毁谤有为缘起之断见。后句说真如有自性，是增益实有之邪见，故是邪解真空之义。若自性空义，是彼法无彼自体者，自既非有（若此柱之本体无柱者，即是自无），则他亦非有，则安立实有分少法之宗派，纯属臆说也。若善知此理，则知印度佛弟子凡说实有法者（指说一切有部及唯识部），则定说有为法实有，名实事师（于有为有法事事物物决定说为实有者，即称之为说实事师，此印度通例），其说有为法非实有者，亦必不许任何法为实有。实较藏地任意谈说者，超胜多矣。］上师教授说：藏中诸派或如觉朗派说，俗有真无，或说非有非无，虽自命为中观应成派，而实不及印度之犊子诸部，何况有部、唯识诸宗。唯识师所据仍是佛说，不过非佛之不共密意而已。虽各宗所许了义不同，然皆依据佛说，无谬无乱，且通达下部见，为通达上部见之基础。藏中许自空他空（如觉朗派），或许非有非无之说，于佛三时教中，皆无根据。彼等虽或引《宝性论》等教，然皆误解教义，不合佛意。应知若有自性实有之空性，则不须依遮破具应破分而显，如虚空须依遮止质碍而显。故空性名言虽有（遮破应破分之空性，于名言有），而非自性实有。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 37 楼</span></div><div class="post-body">叁拾伍 建立世俗谛中一些教授 <br/>
+六十二、宗喀《菩提道次第》说：［若谓娄曰译［觉朗］派）此理不能破无为法实有者，亦应不能破有为法，是则全无实有可破。若（觉朗）谓有为法自（体）空者，是说彼法无彼自性，故是断空。然（彼说）真如有自性，故有实有。上句（有为法自空）是抉择有为法自性空之最大歧途，是毁谤有为缘起之断见。后句说真如有自性，是增益实有之邪见，故是邪解真空之义。若自性空义，是彼法无彼自体者，自既非有（若此柱之本体无柱者，即是自无），则他亦非有，则安立实有分少法之宗派，纯属臆说也。若善知此理，则知印度佛弟子凡说实有法者（指说一切有部及唯识部），则定说有为法实有，名实事师（于有为有法事事物物决定说为实有者，即称之为说实事师，此印度通例），其说有为法非实有者，亦必不许任何法为实有。实较藏地任意谈说者，超胜多矣。］上师教授说：藏中诸派或如觉朗派说，俗有真无，或说非有非无，虽自命为中观应成派，而实不及印度之犊子诸部，何况有部、唯识诸宗。唯识师所据仍是佛说，不过非佛之不共密意而已。虽各宗所许了义不同，然皆依据佛说，无谬无乱，且通达下部见，为通达上部见之基础。藏中许自空他空（如觉朗派），或许非有非无之说，于佛三时教中，皆无根据。彼等虽或引《宝性论》等教，然皆误解教义，不合佛意。应知若有自性实有之空性，则不须依遮破具应破分而显，如虚空须依遮止质碍而显。故空性名言虽有（遮破应破分之空性，于名言有），而非自性实有。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:44</span><div class="badge-floor">第 37 进</div></div><div class="post-body">叁拾伍 建立世俗谛中一些教授 <br/>
 <br/>
 六十三、建立世俗、胜义二谛科中，分别之义：《入中论释》说：三且说诸法之体性有二，谓世俗与胜义。］上师教授释说：［如于瓶上有世俗、胜义二相。名言有即世俗，自性空即胜义。］宗喀《菩提道次第》说：［此说一一法（摄有为、无为），各有世俗、胜义二种体故。］上师教授说：据此可知世俗、胜义，二皆有体，然不必二皆有物。故知藏中先贤说有（事）物方有体，有体必有物之说，为不合理。……以凡有者，一体异体，二决定故。多体即异体有，如瓶与其自体乃一体有，瓶与柱则异体有。二谛若有，亦不出一异二体有故。《菩提心论释》说：世俗谛实有自性空，自性空之空性，须观待于世俗谛，彼此互相关系，互相依存。分别法之世俗谛，须关连分别事之自性空，分别事之自性空，须关连于法之世俗谛，如苗芽与种子，乃缘生相属，瓶与土乃一体相属；此处此无则彼无，无世俗则无胜义，无胜义则无世俗，乃一体相属，回遮为异。与所作性与无常之一体相属等同。其体虽一，语音分立分非一也（如雅安与雅州；翌日分立非一，而实为一地。） <br/>
 <br/>
-六十四、于世俗谛之体相科中，上师教授说：世俗谛法事体非谛，是于执实前为谛，故了解彼义时，必须了解彼为虚妄（通达世俗谛之自分，固不须通达空性；然通达世俗谛之意义，则须通达空性）。论说：［喻如了解瓶是虚妄所知欺诳义时，必须于瓶，先以理智破除实执之境，获得正见（无自性之见）。如显瓶之虚妄义，有所决定，须先通达空性，而后决定其为虚妄。知瓶为虚妄，而后知瓶为世俗谛。未以正理破除实有（心），必无正量能成其为虚妄故，故知通达世俗谛，实非易事。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:45<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 38 楼</span></div><div class="post-body">叁拾陆 建立胜义谛中一些教授 <br/>
+六十四、于世俗谛之体相科中，上师教授说：世俗谛法事体非谛，是于执实前为谛，故了解彼义时，必须了解彼为虚妄（通达世俗谛之自分，固不须通达空性；然通达世俗谛之意义，则须通达空性）。论说：［喻如了解瓶是虚妄所知欺诳义时，必须于瓶，先以理智破除实执之境，获得正见（无自性之见）。如显瓶之虚妄义，有所决定，须先通达空性，而后决定其为虚妄。知瓶为虚妄，而后知瓶为世俗谛。未以正理破除实有（心），必无正量能成其为虚妄故，故知通达世俗谛，实非易事。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:45</span><div class="badge-floor">第 38 进</div></div><div class="post-body">叁拾陆 建立胜义谛中一些教授 <br/>
 <br/>
 六十五、胜义与胜字义：宗喀《菩提道次第》说：［言胜者，谓圣者平等智最为殊胜；言义者，谓即此圣智所行境义；言谛者，谓如其法性，不虚不诳。］又说：［世俗就无明我执而安立，于执实之前，安立为谛；胜义即谛，皆就空性安立。胜义谛之谛，谓不欺诳。］如眼识执持内心分别显现等，瓶为谛实，而彼瓶等法性，实无谛实，故称虚诳。如真实通达慧，如所显现，与法性相合，即是胜义谛，即非虚诳。 <br/>
 <br/>
@@ -1722,11 +1743,11 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 七十、上师教授说：空性为所见，慧为能见，受用身（即报身）为见者。如是（报身）证（空性）时，（若欲善了须入密），即如《明显句论》说：［全无心、心所之分别行］，显教未明说，所谓空性境，心与心所不转者，谓心与心所分别行不转，说唯彼身作证者，谓唯报身，作证法身。成佛时，报身先熟，先证得报身时，心、心所分别已净故，为报身作证法身。（详密法中） <br/>
 <br/>
 <br/>
-七十一、胜义差别科中，上师教授说：当知破苗芽真实生之空，有［无遮之空］及［非遮之空二一种，无遮空义非世俗乃胜义；非遮空义，非倒世俗乃正世俗。［无遮空］摄受苗之眼识不现；［非遮空］则现，即所谓［现空双合］也。宗喀大师之前，藏中人士皆不能辨此，故异说纷纭。（无遮、非遮之义详《明灯颂》自释胜义差别科中） </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 39 楼</span></div><div class="post-body">叁拾柒 定中修如虚空之空见修法 <br/>
+七十一、胜义差别科中，上师教授说：当知破苗芽真实生之空，有［无遮之空］及［非遮之空二一种，无遮空义非世俗乃胜义；非遮空义，非倒世俗乃正世俗。［无遮空］摄受苗之眼识不现；［非遮空］则现，即所谓［现空双合］也。宗喀大师之前，藏中人士皆不能辨此，故异说纷纭。（无遮、非遮之义详《明灯颂》自释胜义差别科中） </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:46</span><div class="badge-floor">第 39 进</div></div><div class="post-body">叁拾柒 定中修如虚空之空见修法 <br/>
 <br/>
-七十二、上师教授说：无我见生起时，此一刹那略生恐怖，应多次串习，将此种了知无自性，无实我之心情，延续下去，有时心中渐淡漠，无精力时，又从认识［应破分］重修，令其明显有力现起，即遮所应破之实有已，无我决定之中观见现起时，虽现之境，一朗空明犹如虚空，就决定言，于无自性理智，心中紧持，常安住于如是等持中，具有境（内心）了无我慧，境显现大空寂境，即安住于此境与有境二俱殊胜中，专住而修，是为如虚空修法，虚空观不过如虚空性，无触法之碍而已，但虚空观亦非易事，盖必除触碍之法，而后可见虚空性，欲去触碍之法，必先认识何者为触碍法，而后能除之，除去触法之障，即得虚空观，除去执实之障，即得空性，修观行人以决定心住于空性，长时继续，如此长时之观想情形，安想如虚空，此如虚空之安想，非住缘不可。故亦称为如虚空之止相。总之，住无我之缘心（止）如马，决定无我之心（观）如骑者，不可相离（此时心安于无我所缘不乱［住定］，心不住无我所缘［即出定后］，而仍不离无我之想，此即后得中应修之法）。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:47<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 40 楼</span></div><div class="post-body">叁拾捌 后得修如幻化之空见修法 <br/>
+七十二、上师教授说：无我见生起时，此一刹那略生恐怖，应多次串习，将此种了知无自性，无实我之心情，延续下去，有时心中渐淡漠，无精力时，又从认识［应破分］重修，令其明显有力现起，即遮所应破之实有已，无我决定之中观见现起时，虽现之境，一朗空明犹如虚空，就决定言，于无自性理智，心中紧持，常安住于如是等持中，具有境（内心）了无我慧，境显现大空寂境，即安住于此境与有境二俱殊胜中，专住而修，是为如虚空修法，虚空观不过如虚空性，无触法之碍而已，但虚空观亦非易事，盖必除触碍之法，而后可见虚空性，欲去触碍之法，必先认识何者为触碍法，而后能除之，除去触法之障，即得虚空观，除去执实之障，即得空性，修观行人以决定心住于空性，长时继续，如此长时之观想情形，安想如虚空，此如虚空之安想，非住缘不可。故亦称为如虚空之止相。总之，住无我之缘心（止）如马，决定无我之心（观）如骑者，不可相离（此时心安于无我所缘不乱［住定］，心不住无我所缘［即出定后］，而仍不离无我之想，此即后得中应修之法）。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:47</span><div class="badge-floor">第 40 进</div></div><div class="post-body">叁拾捌 后得修如幻化之空见修法 <br/>
 <br/>
-七十三、上师教授说：既得虚空观，则必有后得之修法，即从如虚空修法起座后，于此后得时，心虽不专住于无我所缘，然仍不离无我之想，即出定后观一切法，无自性实有成就，皆如幻化，如是生起之见，名如幻见，此如幻见，复有二种：一、空如幻，二、境相如幻。空如幻者，即扫除实有之后，相分尚在，是为唯有（藏语哟把掌），唯有即空如幻，现在所观之如幻，非指空如幻言，乃指境相如幻而言，譬如幻师，以木等变狮象，幻师眼识中所见之境，虽属宛然狮象，而了知中决定知此狮象皆非是实。境相如幻，正是如此。吾人平时对于我、我所，所以显现其为实有者，盖执实无明力，乱心所致，亦如旁观幻人，为咒力所乱，见狮象为实。今修观之力，于此显现之境相，决定知其非实有，亦如幻师知狮象之非实。是即通达境相如幻之理，如《三摩地王经》说：［犹如阳焰寻香城，及如幻事并如梦，串习行相自性空，当知一切法如是。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:48<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 41 楼</span></div><div class="post-body">叁拾玖 得止后修观法 <br/>
+七十三、上师教授说：既得虚空观，则必有后得之修法，即从如虚空修法起座后，于此后得时，心虽不专住于无我所缘，然仍不离无我之想，即出定后观一切法，无自性实有成就，皆如幻化，如是生起之见，名如幻见，此如幻见，复有二种：一、空如幻，二、境相如幻。空如幻者，即扫除实有之后，相分尚在，是为唯有（藏语哟把掌），唯有即空如幻，现在所观之如幻，非指空如幻言，乃指境相如幻而言，譬如幻师，以木等变狮象，幻师眼识中所见之境，虽属宛然狮象，而了知中决定知此狮象皆非是实。境相如幻，正是如此。吾人平时对于我、我所，所以显现其为实有者，盖执实无明力，乱心所致，亦如旁观幻人，为咒力所乱，见狮象为实。今修观之力，于此显现之境相，决定知其非实有，亦如幻师知狮象之非实。是即通达境相如幻之理，如《三摩地王经》说：［犹如阳焰寻香城，及如幻事并如梦，串习行相自性空，当知一切法如是。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:48</span><div class="badge-floor">第 41 进</div></div><div class="post-body">叁拾玖 得止后修观法 <br/>
 <br/>
 七十四、上师教授说：如前所言止观当并行，必心能住所缘（无我）不失，已得止后，又能一面观察，决定知其无我（观），然后能见境相如幻，若此决定了知无我之心，不能久住（止不固），则不能见境相如幻。前说后得行人，固已略通空性，而心则未必能久住所缘，然以修空之力故，有时亦能见一切境如咽如雾如虹，或见自身空洞无物，但此非境相如幻，因有类未通空性之人，制其心不生作意，久之亦能获如是现象。 <br/>
 <br/>
@@ -1734,7 +1755,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 七十五、又上师教授说：后得行人必须如幻作观者，即在通达缘起以明陆空，缘起性空，务须圆融。初业行人于此当分界限：一，于我及蕴上，将自陆空去；二、空去自性之后，此我及蕴所余唯假名。将此二者之理——无自陆及假名，于我及蕴上，融会于心，善巧修习，方可谓于观之事理，已得生起。 <br/>
 <br/>
 <br/>
-七十六、善修之情况：上师教授说：善入中观之补特伽罗于后得时，修如幻观之法如何？后得之补特伽罗于我与蕴，能空去自性，唯有假名之上，所起种种作用，同时以自力决定，忆念真俗二谛，云何忆念？即于念空见时，同时能思念得起如幻。于思念如幻时，同时能思念得起空见。如此则可谓善住如幻矣。云何能如此？即由于定中善修如虚空之空见，故于后得时，善住境相如幻。于后得时，不能善修境相如幻，则对如虚空之空性，亦即不易得增长之利益。故知后得之如幻观（俗谛），能助长空见（真谛），而空见亦复能助长后得之如幻观，行人能从此二者相互互助上，以修习空见，则得之矣，此如宗喀巴大师在获得无谬中观正见时说：［由于现在已经善修，以此在后得（未修时中）中，也能对所见诸相，一切都见其为性空如幻，不合入于空性大印中的现相，是决不随欲现起的。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:48<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 42 楼</span></div><div class="post-body">肆拾 抉择无为法无自性之修法 <br/>
+七十六、善修之情况：上师教授说：善入中观之补特伽罗于后得时，修如幻观之法如何？后得之补特伽罗于我与蕴，能空去自性，唯有假名之上，所起种种作用，同时以自力决定，忆念真俗二谛，云何忆念？即于念空见时，同时能思念得起如幻。于思念如幻时，同时能思念得起空见。如此则可谓善住如幻矣。云何能如此？即由于定中善修如虚空之空见，故于后得时，善住境相如幻。于后得时，不能善修境相如幻，则对如虚空之空性，亦即不易得增长之利益。故知后得之如幻观（俗谛），能助长空见（真谛），而空见亦复能助长后得之如幻观，行人能从此二者相互互助上，以修习空见，则得之矣，此如宗喀巴大师在获得无谬中观正见时说：［由于现在已经善修，以此在后得（未修时中）中，也能对所见诸相，一切都见其为性空如幻，不合入于空性大印中的现相，是决不随欲现起的。］ </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:48</span><div class="badge-floor">第 42 进</div></div><div class="post-body">肆拾 抉择无为法无自性之修法 <br/>
 <br/>
 七十七、上师教授说：无为法无自性，例如虚空，无为法也，此虚空之名，本系依虚空种种支分而安立，但吾人心中所显现之虚空，即不觉其为依支分上所安立之假名，而恒觉其为自性所成（不依他能自成），此种想象为自性所成之虚空，究与其支分，为一为异？于此当加判断，东南西北等，皆虚空之支分，如为一，则应无分别，如无分别，则言北方时，则不应有其余各方，何以故？一故。又如为一，则诸方分成一，东西南北亦成一，则东降雨西亦降；如为异，除此种种支分，则应有一不依支分而自性成立之虚空在。实无此虚空可指，虚空虽是空无、，但亦有东西南北中等可言，亦即于此东西南北中等支分之上，而安立空名。又如空性，空性云者，亦不过于一切俗谛上，将一切实有之障破除之后，而安以空性之名，故虽性空，而其具足种种支分缘聚之上，即可依之而施以假名。若谓其有自性，仍依前法，一异求之，最终实不可得，则能知其非自性成立必矣。 <br/>
 <br/>
@@ -1742,7 +1763,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 七十八、上师教授说：若仅安住于原来所决定之空见上，而不加以观修，则原来空见之力，不能增长，不能如利斧，能断生死之根，若加观修，则其力愈增大，愈决定，愈明显。颇公说：［此如凡夫，仅记仇敌，其嗔恨不强，则加观察思惟彼过去某次对我，其身语意诸门如何如何，而作怨事，则其力增强，赫然忿怒矣。］抉择空见，亦复如是，若仅住修，则空见力不强，如杯水车薪，不能扑灭我执，而断生死之根，故须止修观修，二者辗转间杂而修。或问：此正修观，乃已得止以后之事，何以尚须修止？答：前说修止，乃未生令生，此处所说，乃谓生已令不退失，非得止后，即不再修。 <br/>
 <br/>
 <br/>
-七十九、上师教授说：过去误解［陀罗尼］意，谓以无作意之方法，令心境中色等诸法显现不起，如是修法，实太容易，则释迦、龙树不应说难，如龙树说：［佛说甚深空性法，此于凡愚难通达，故佛暂不转法-轮。］又如佛说：［甚深甚难空性法，我能达此光明露，随向谁说彼不现，以故我暂不开演。］仅不作意，即修胜观，则少慧寡闻，亦优为之，古德呵斥说：［此种猪子狗子能修之法，世尊不应说为甚难。］莲花戒大师释为修空性时，以慧观察于我执所执境（实有自性），见无所得，不起作意，而断色等诸法之实有相，于实有执不起作意，不能断彼。如无想定暂伏作意，仅能令心暂时不为外境所夺，于色等贪着境，有无自性，若不以慧抉择，非能永断，故暂伏作意，不能断我执境。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:50<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 43 楼</span></div><div class="post-body">肆拾壹 成观之量 <br/>
+七十九、上师教授说：过去误解［陀罗尼］意，谓以无作意之方法，令心境中色等诸法显现不起，如是修法，实太容易，则释迦、龙树不应说难，如龙树说：［佛说甚深空性法，此于凡愚难通达，故佛暂不转法-轮。］又如佛说：［甚深甚难空性法，我能达此光明露，随向谁说彼不现，以故我暂不开演。］仅不作意，即修胜观，则少慧寡闻，亦优为之，古德呵斥说：［此种猪子狗子能修之法，世尊不应说为甚难。］莲花戒大师释为修空性时，以慧观察于我执所执境（实有自性），见无所得，不起作意，而断色等诸法之实有相，于实有执不起作意，不能断彼。如无想定暂伏作意，仅能令心暂时不为外境所夺，于色等贪着境，有无自性，若不以慧抉择，非能永断，故暂伏作意，不能断我执境。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:50</span><div class="badge-floor">第 43 进</div></div><div class="post-body">肆拾壹 成观之量 <br/>
 <br/>
 八十、上师教授说：真正中观，不惟于决定无自性之止，无有退失，且同时能以正知观察一异之理，不但同时能观，且同时能使止益增长，不但止益增长，且同时能生最殊胜之轻安，而为从前之止中所未得者，得此轻安时，则一切分别智慧，均成中道之观。生起如此中观时，则对于空性有更显明之见矣。如此之补特伽罗，于止中有悦意轻安之观，于此悦意轻安之观中，仍不离止，是即止观双运。如具菩提心得此中观时，同时即入大乘加行位。如此补特伽罗，以正修与后得互相资助而修，次第历加行四位，而真正见得空性，同时即入见道位，是为初地。得初地时，尚须视其是否得真正能离遍计执之空性，如得则证入相似法身。此后即依其能离遍计执之空性之程度，而分十地阶位，及至入于佛位，则悉离一切相矣。 <br/>
 <br/>
@@ -1750,7 +1771,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 八十一、上师教授又说：初业有情，未得止者，多用观修，固不易得止，然既得止后，观修之力，不惟不妨碍止，反令定分增长。一般人于住分及心一境陆，有所误解，以为一心绿空，即不能稍移一点，方是心一境性，不知止乃住分，观乃明分，由观纯熟与住相应，成为一体，此时明住二分俱有，故不能说观修，即妨碍止，明住二分已成一体故。此如仁达瓦·迅路洛卓大师为利后世众生，示圣龙树密意——中观正见之量，作有颂说：［因果无欺深信中，通达绿起空性慧，二者何时得圆融，彼时离边入中道，如所见称之有法，自他宗立遍计执，及诸俱生执实众，以正教理光除暗。相现彼时达空性，达空彼时相仍显，何时生此双运定，尔时即证佛密意。］又如洛桑却季绛称有颂说：［如空无别慧法界，幻师舞者遍尘刹，无实如梦之父前，如幻之子至心礼。遍观有法唯如幻，观察法性无所见，幻与空性双合道，得此双运由师恩。奇哉远离有无边，离边界中心安止，观法性而有法灿，察有法而契性空，现空不作轮替安，获此双运由师恩。奇哉远离有无边，离边界中心安止，由胜义而见因果，由世俗而显胜义，二谛真性本无别，获此双运由师恩。奇哉远离有无边，离边界中心安止，住胜义界观察时，缘起之名亦无实，性空绿起之双运，由师恩知无相违，获此双运由师恩。奇哉远离有无边，离边界中心安止，轮回涅盘一切法，知其无实而达真，真假性空本无别，获此双运由师恩。奇哉远离有无边，离边界中心安止，唯名诸法实有空，性空中诸因果显，性空因果无别道，大哉证此由师恩，奇哉常断边尽离。］ <br/>
 <br/>
 <br/>
-八十二、又上师教授说：止观双运，谓止中为观，观中为止，互相联系而转。依总说止观，二非同时，依细微说，实非同时，观察之观，与胜观不同。拉卜楞寺大德绛央协巴著作中说：［止观同时，为一大难处。］应知一，由观能引生止，须得止后，修观纯熟方能；二，须将得胜观时，由轻安乐方能令止增长，故说由观生止，须将时间辨清，非谓一切时；三，于自所缘一心不乱，无沉无掉，专注一境，不余散乱，即称为止。非如余宗所说一心死住于显色上，方称为止。故以观慧缘空性境，但心不乱，亦称为止。以胜义空性为所缘择法之观，与专注之止，所缘及时间二俱相应，其时之观，已极纯熟，不动不乱，观中有止，胜观中亦有住分止修，在说观之门类有三中：一，有相毗钵舍那，即有住分止修。惟于自所缘境，念知而住，不别寻求伺察。第九住心时，其定力亦如水静无波，此时若多兼观察，无我空义，如静水中有小鱼游行，虽不妨于水之澄静，然不能称为止观双运。以尚无止观一体之义故。总说修法，先依菩提心教授，上者是心中生起真实菩提心，下至相似菩提心生起，次乃选择与自相应之所缘而修止，得止后，乘定力未退之时，认识胜义之［应破分］——久所执实我，乃以分别观察智，抉择其有无，最后得实我无有之决定知，即行安住，又以观察慧抉择，得决定知，又复安住，如是反复观修止修，间杂而修，最后已能明察秋毫之末，此得止观双运。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 44 楼</span></div><div class="post-body">肆拾贰 摄道总义中，上师所示一些教授 <br/>
+八十二、又上师教授说：止观双运，谓止中为观，观中为止，互相联系而转。依总说止观，二非同时，依细微说，实非同时，观察之观，与胜观不同。拉卜楞寺大德绛央协巴著作中说：［止观同时，为一大难处。］应知一，由观能引生止，须得止后，修观纯熟方能；二，须将得胜观时，由轻安乐方能令止增长，故说由观生止，须将时间辨清，非谓一切时；三，于自所缘一心不乱，无沉无掉，专注一境，不余散乱，即称为止。非如余宗所说一心死住于显色上，方称为止。故以观慧缘空性境，但心不乱，亦称为止。以胜义空性为所缘择法之观，与专注之止，所缘及时间二俱相应，其时之观，已极纯熟，不动不乱，观中有止，胜观中亦有住分止修，在说观之门类有三中：一，有相毗钵舍那，即有住分止修。惟于自所缘境，念知而住，不别寻求伺察。第九住心时，其定力亦如水静无波，此时若多兼观察，无我空义，如静水中有小鱼游行，虽不妨于水之澄静，然不能称为止观双运。以尚无止观一体之义故。总说修法，先依菩提心教授，上者是心中生起真实菩提心，下至相似菩提心生起，次乃选择与自相应之所缘而修止，得止后，乘定力未退之时，认识胜义之［应破分］——久所执实我，乃以分别观察智，抉择其有无，最后得实我无有之决定知，即行安住，又以观察慧抉择，得决定知，又复安住，如是反复观修止修，间杂而修，最后已能明察秋毫之末，此得止观双运。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:51</span><div class="badge-floor">第 44 进</div></div><div class="post-body">肆拾贰 摄道总义中，上师所示一些教授 <br/>
 <br/>
 八十三、摄下士共道法类：恩师教授说：欲得最后果位，皆与前前相关，佛所说一切成佛法门，不外三士道摄，三士道以发菩提心为入大乘之门，然欲菩提心生起，须有出离心。欲生出离心，须先了知下士道，欲知下士道，须先依止善知识。故于依止善知识法，心中须相应生起，于依止功德，不依止过患，依教依理，善为抉择，修习以断疑虑。 <br/>
  <br/>
@@ -1768,7 +1789,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 八十六、最后结要：恩师继说：已知道之概要，真实修时，修下欲得上，闻上欲修下，方入于道之切要。若修下不乐向上，闻上法而反以下法为迂回者，即未入道之切要，应知圆次由生次，生次乃大乘法，须由菩提心生，菩提心由慈悲生，慈悲由知母、念恩、报恩生，慈悲乃缘他有情苦而生，若尚不能缘自己生死之苦，如何能缘他有情之苦而生悲？此《入行论》所说。故须先生自于轮回不能忍受之出离心，认识此微细苦之前，须先认识下士道所说三途粗猛剧苦（若粗猛剧苦，尚未怖畏，生起出离，则不能对于细微难觉之生死苦，生起出离心）。生此三途剧苦怖畏，又须观待念死无常二息不来，即有堕入三途之险），及速取心要之心，中士道细分出离心，关系于下士道之远离恶趣之粗分出离心，念死无常不能久住之心，即缘念于后世，而后世以恶业易集故，又多入于三恶道，由是生起怖畏三途苦之心，然若无思惟暇满大义，速取心要之心，不能生起念死无常之心，而此诸义，又须由道之根本——依止善知识起，故知圆满双运身，穷究根源，皆由依止善知识。故颇公讲授生圆二次时，常开示应由最初根本法门修起。故欲得胜观，应郑重勤修于定，如是欲定，应修菩提心，乃至欲得中士道，应修下士道。所谓切要，如人身有病，于其窍＜，施以针灸者然，于诸次第法门，用力乎均，不可于此法，用力甚强，而于彼法，用力又弱。应以聪慧观察于诸法门，皆能用力强大而修。修暇满时，若不能如修依止时之有力，则应励力勤修，令其力增上，亦如前修依止时之量，此乃就已修之人而言，若尚未修者，则于一切法门，力皆微弱，不待言矣。已修而未生者，乃以总观察，于何法门尚有弱点，乃于此致力，以补足之。不愿利他，即为自利心太强之象征，若着相布施，则当以理智破执相心。入座修如虚空，后得修如幻化，菩萨行六度时，若犹执相，则如净饭掺毒。若于善缘心不安住，此心为散乱所役使，则当修止。以上乃甘丹派大德所说者，最要之义，为依止善知识起，乃至胜观诸法门，专修一种，不能成佛。故说专修空见，或专修定，即能成佛者，皆不应理。以须具备一切断证功德，方能成就法色二身故。而一切道次，又以出离、菩提、空慧为三津梁。就中又以菩提心为主，以前一切法门，皆为成熟菩提心之方便，不可或缺。乍视颇似繁难，此因未修之故，若勤串习，亦不甚难。此如一部机器，常人见之，茫无头绪，若在工程师，曾经串习，则能得其枢纽，控制而得其用。 <br/>
 <br/>
 别示金刚乘修学法要中一些教授语录 <br/>
-生起次第如何修法中：分二节 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:52<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 45 楼</span></div><div class="post-body">肆拾叁 第一节示瑜伽行者成熟身心之要 <br/>
+生起次第如何修法中：分二节 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:52</span><div class="badge-floor">第 45 进</div></div><div class="post-body">肆拾叁 第一节示瑜伽行者成熟身心之要 <br/>
 <br/>
 一、熟习共通道：共通道谓出离心、菩提心、正见（显密共行之道）。甘丹派大德说：［法须大乘法，固无待言，然尚不足，须人为大乘人。］生起菩提心，方为大乘人。文殊向宗喀说：［不须好高骛远，暂时将大心修习合量（大心即菩提心），道在眼前，即可豁然贯通。］恩师教授说：［颇、康二公说，密乘固为成佛大法，最堪赞叹！然如狮乳，土钵不堪承受，惟丁兹末法，以劫浊见浊之故，一般学人无不欲修无上密乘，而忽略菩提心及空慧，一若其前生已修成者然，推究其动机，无非欲迅速得成。以一平庸之人，数年之间，欲成而不得者，动机既为虚荣，所学虽为妙法，然亦断无成就之理。此不过劫浊之象征而已。应知菩提心乃显密共道，依经教说，若能真实生起，固为最上。依口诀说：即能相似生起，亦能入密，方能圆满成熟之道。吾等值此有密法住世贤善因缘，极为不易，勿令良机坐失，以其速具圆满二资粮故，须具菩提心，方能真入密道，安住密乘，否则，虽得灌顶，不得称为入密。《密续》中说：菩提心生已，方能达密道。］故第一具菩提心以成熟身心，方能成堪学密乘法器。 <br/>
 <br/>
@@ -1786,7 +1807,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 五、开示密法要义：恩师教授说：［父续分贪嗔痴三道用，能怖金刚法属以嗔为道用，威猛现行作业，动机分因与时，因之动机属慈与悲，时之动机，乃于所缘（烦恼无明我执怨敌）常生嗔恨，由此而起现行威猛作业，能积无量资粮。通过生圆二次修道，即生即身速证双运位，故惹师以杀为秘密三昧耶，不作即犯三昧耶。然此乃最高证达。吾人不能仿效。（此为最高证量，丝毫不能借口道用，而作杀业。）以嗔为助伴为道用，非变嗔恨为道用，亦非谓嗔恨即道。乃借嗔恨为助伴，令通达增上（借嗔作通达之助伴，此为最深之方便）。本法虽能使五浊恶众，消除障碍，速得成就，然能入密法与否之先决条件，仍在求法者能如命重视共通道——出离心、菩提心、清净正见（空见），速急勤修，心确改动，然后同时修此无上甚深微妙法生圆二次，上者即生即身成佛，次者来世亦当获证，此为师佛所授记真实语。］ <br/>
 <br/>
 <br/>
-六、法有何差别：宗喀大师证悟语录七要中，有颂大意说：［于大乘中密胜显，密中无上胜下三。］恩师说：此二语虽如日月经天，人所尽知，而其所以然之故，多数善巧者皆不免忽略，如是百千万劫难遭遇之超出一切教乘之无上甚深微妙密法，死时弃之如遗，诚为可惜！（恩师于此节详为开示，详见《明灯颂自释本法有差别节目》中，兹摘录其中一些概要如下。）须知密乘不必三祗修行，超捷迅速，显乘不过可入成佛之道，纯依于显，决无成佛之理。大乘中果乘（密）较因乘（显）殊胜者，非依心、行、见、果而别，发心皆为不忍一切有情，长沦生死海中，所行皆六度万行，见皆依空慧，果皆佛果，其差别在方便，显教以积集三祗福慧资粮，至十地时，随顺合量，常住空性定中，再加密法而成佛。密乘则不同，初生起菩提心，于摄持菩提心中，不须积集三祗资粮，不惟依佛法身果相相似相续为方便，且依佛色身果相相似（同类）相续为方便，以此方便，能将时间缩短，即生即身成佛。再就根器而言，下下教乘为钝根说，上上教乘为利根说，吾等身心，未入于道，较之小乘，其根尤钝，大乘人视小乘人钝，如是辗转，无上瑜伽，乃无上利根所学，以最钝之根，学最利之法，欲求通达，实为艰难。密相续方面，最钝为《作部》，中等为《行部》，利根为《瑜伽部》，最利为《无上瑜伽》。以道用观察而言：《作部》仅能以视乐方便而为道用，而入空性本尊瑜伽；《行部》仅能依嬉戏欲乐为方便而起用，于外作法，须与内心行境相应；《瑜伽部》又称［触手相续］，依此方便而为道用，不须如下二部依外作法，以内心瑜伽行境为主；（以上下三部），《无上瑜伽部》又称［和合相续］，此以最粗重贪欲，而为道用，无有较此更胜之内心瑜伽，故称无上。此生即身成佛，有多解释，普通解释：谓即此粗分色身，金刚乘四部皆取佛色身果相等修，惟无上瑜伽有以基道果配合三有相，而修三身道用，即取三有之相以为道用而修三身，下三部无此方便故无生次，故亦无风、脉、明点之圆次，故无法身、色身之近取因（即无光明及幻化身），故说无上瑜伽超胜下三部者以此。至于无上瑜伽部父续中尤以《能怖金刚法》为最胜之情况，详见《明灯颂自释本法有何差别节目》中。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:53<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 46 楼</span></div><div class="post-body">肆拾肆 第二节示成熟已修行之次第 <br/>
+六、法有何差别：宗喀大师证悟语录七要中，有颂大意说：［于大乘中密胜显，密中无上胜下三。］恩师说：此二语虽如日月经天，人所尽知，而其所以然之故，多数善巧者皆不免忽略，如是百千万劫难遭遇之超出一切教乘之无上甚深微妙密法，死时弃之如遗，诚为可惜！（恩师于此节详为开示，详见《明灯颂自释本法有差别节目》中，兹摘录其中一些概要如下。）须知密乘不必三祗修行，超捷迅速，显乘不过可入成佛之道，纯依于显，决无成佛之理。大乘中果乘（密）较因乘（显）殊胜者，非依心、行、见、果而别，发心皆为不忍一切有情，长沦生死海中，所行皆六度万行，见皆依空慧，果皆佛果，其差别在方便，显教以积集三祗福慧资粮，至十地时，随顺合量，常住空性定中，再加密法而成佛。密乘则不同，初生起菩提心，于摄持菩提心中，不须积集三祗资粮，不惟依佛法身果相相似相续为方便，且依佛色身果相相似（同类）相续为方便，以此方便，能将时间缩短，即生即身成佛。再就根器而言，下下教乘为钝根说，上上教乘为利根说，吾等身心，未入于道，较之小乘，其根尤钝，大乘人视小乘人钝，如是辗转，无上瑜伽，乃无上利根所学，以最钝之根，学最利之法，欲求通达，实为艰难。密相续方面，最钝为《作部》，中等为《行部》，利根为《瑜伽部》，最利为《无上瑜伽》。以道用观察而言：《作部》仅能以视乐方便而为道用，而入空性本尊瑜伽；《行部》仅能依嬉戏欲乐为方便而起用，于外作法，须与内心行境相应；《瑜伽部》又称［触手相续］，依此方便而为道用，不须如下二部依外作法，以内心瑜伽行境为主；（以上下三部），《无上瑜伽部》又称［和合相续］，此以最粗重贪欲，而为道用，无有较此更胜之内心瑜伽，故称无上。此生即身成佛，有多解释，普通解释：谓即此粗分色身，金刚乘四部皆取佛色身果相等修，惟无上瑜伽有以基道果配合三有相，而修三身道用，即取三有之相以为道用而修三身，下三部无此方便故无生次，故亦无风、脉、明点之圆次，故无法身、色身之近取因（即无光明及幻化身），故说无上瑜伽超胜下三部者以此。至于无上瑜伽部父续中尤以《能怖金刚法》为最胜之情况，详见《明灯颂自释本法有何差别节目》中。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:53</span><div class="badge-floor">第 46 进</div></div><div class="post-body">肆拾肆 第二节示成熟已修行之次第 <br/>
 <br/>
 七、生起次第加行修法：宗喀原著说：［得清净兰若及适意地已，瑜伽者应具事物：为沐浴、扫除、曼荼罗，陈设本尊像等。］（详《明灯颂自释》中）上师教授说：［修密不可忽视选择住处，应选水土妙善，易得生活之地（如道次第所说），或有加持之地（如大德曾说法，修行加持之地），须有见行相合之助伴，非指恶习之见行相合（如饮酒嬉戏等），阿阇黎寂慧说：成就悉地，应具四因：一、信，二、慧，三、定，四、密。自己应具此四因，助伴亦应具此四因。（详《明灯颂自释》以何为生起此法之处所科目中）上师教授说：次诵师承启请、皈依发心，总摄入上师瑜伽修法中。正修时加行法分四：一，受持三种誓句；二，供前行朵玛；三，加持自生供品；四，修金刚萨缍法。（此四种详《明灯颂自释加行法》中） <br/>
 <br/>
@@ -1798,7 +1819,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 有善知识说：［无上密法身道用时，乃以俱生大乐之有境（心），及应破分（实执）断后之空性境，为立名处，于其上安立法身之我（波罗蜜多乘通达空性之有境，乃普通心，金刚乘为大乐心，无上密则为俱生大乐心）。故法身道用，应具四特法。］非将有目共睹现有之情器，强修为无，此乃修虚空，非修空性，下者乃修断空，不惟与修法身无关，且堕恶见。 <br/>
 <br/>
 <br/>
-十、为利他圆满修念诵法（详《明灯颂自释念诵法》中）：上师教授说：念诵法有四胜利：一，由念诵力故，与佛尊相近，而加持身心。二，清净口业，转成圆次金刚念诵之成熟因。三，为未来真成佛时，说法缘起，而生果时道用。四，作息增怀诛诸事业之助因。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 47 楼</span></div><div class="post-body">肆拾伍 示修圆满次第诸法一些教授 <br/>
+十、为利他圆满修念诵法（详《明灯颂自释念诵法》中）：上师教授说：念诵法有四胜利：一，由念诵力故，与佛尊相近，而加持身心。二，清净口业，转成圆次金刚念诵之成熟因。三，为未来真成佛时，说法缘起，而生果时道用。四，作息增怀诛诸事业之助因。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:55</span><div class="badge-floor">第 47 进</div></div><div class="post-body">肆拾伍 示修圆满次第诸法一些教授 <br/>
 <br/>
 十一、应知要义：恩师教授说：［欲得殊胜成就（不共悉地），非修圆次不可。若仅修下三部及生次，不能得殊胜悉地，然圆次虽为得殊胜悉地之捷径，然亦不能说仅依圆次，即能成就殊胜悉地。如圣提婆说：［生圆二次，如（□）梯然，生次有粗细，圆次有五次，若不修生次，仅专修圆次，纵得一少分，亦属相似法。］故须先以生次成熟相续（身心），而后可修圆次，故生次称为［成熟程序］，圆次称为［解脱程序］，此为密法之二大程序，后后依于前前，故此前行，即出离心、菩提心、清净正见（空见）。颇公说：［离此道之三要，而言修密，如狐蒙狮皮而效狮吼。］以圆次以脉、息、精点三者为道之要津，此三者外道亦修之，然彼等亦不能得解脱，将何以别于外道耶？此须菩提胜心、清净正见（空见），由此初业应成熟事而趣入解脱。不修如是成熟之因，（恶劣者甚至皈依亦未固，且孜孜于此生利乐。）乃至不修生次，而专于风息、脉络用功，如是虚度一生者，比比皆是也。故提婆说：［初业有情，欲去恶道，生圆二次，如拾级然。］故生次为成熟圆次圆满通达之因，而圆次为获得解脱之程序，故圆次之所谓圆满者，如人生而为人，则其一己之身体、精液、风息、脉络等，亦当依次而圆满，即其人之要点，如息、明点等亦当具有。依此种圆满为人之要点而修之次第，即称“圆满次第”非谓功德圆满也。］ <br/>
 <br/>
@@ -1812,7 +1833,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 十四、寂天菩萨《入行论》说：［若仅见谛为解脱（仅通达苦谛），见无我者应云何？］上师教授释说：［谓小乘仅见苦谛，通达小乘《对法》（即俱舍。《集论》方是大乘对法。）所许之空性一切有情自成自有，遮此实境，所显空性），虽可称为通达劣乘《对法》空性之阿罗汉，然非通称之阿罗汉。又如唯识师所许断法我执之执着境，所显之空性，如龙树菩萨说：［何时执有蕴，尔时仍执我。］唯识师说生死根本法我执所执境遮已之空性，印度阿阇黎辛底巴取以修圆次，得身语寂静及意寂静之［喻光明］已，即不能更有趣入。故取唯识见以修圆次，此生即中有亦不能证得双运位。于下生中，亦须舍唯识见，转取中观应成派见，方能证得。当知应成派所许执着境空后，所显之空性，以此为［境］，与显教相共，非别有［境］，而［有境］之大乐慧，则显教所无，圆次所修者即此。故先［境］（空性），已有决定，然后此间，再修［有境］（大乐慧），依方便以得空乐不二智慧。显教思惟集谛，知生死之根，为我执无明，能断此者，唯无我空慧，方能对治，仅依此无我空慧，以断我执无明；密乘以我执无明，即烦恼所御之业风二者，为生死根本。显教未认识后者（烦恼所御之业风），故无断除之方便，密乘认识生死根本为此二者，故以殊胜方便，并断二种。］ <br/>
 <br/>
 <br/>
-十五、以成就双运位殊胜缘起，为此一著述圆满作结：龙树菩萨《五种姓论》说：［俗谛净幻身，真谛胜光明，二分各善修，何时成一体，即称为双运。］又《密续》说：［金乌西坠时，入此光明性，直至拂晓时，成就决无疑］。又僧海《愿文》说：［七德圣位现证已，愿将一切诸众生，刹那速置于此位。］所谓七德者：一，受用圆满功德，二，和合圆满功德；三，大乐功德；四，无自性功德；五，无缘大悲充满功德；六，无间功德；七，不灭功德。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 16:58<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 48 楼</span></div><div class="post-body">编著圆满回向发愿 <br/>
+十五、以成就双运位殊胜缘起，为此一著述圆满作结：龙树菩萨《五种姓论》说：［俗谛净幻身，真谛胜光明，二分各善修，何时成一体，即称为双运。］又《密续》说：［金乌西坠时，入此光明性，直至拂晓时，成就决无疑］。又僧海《愿文》说：［七德圣位现证已，愿将一切诸众生，刹那速置于此位。］所谓七德者：一，受用圆满功德，二，和合圆满功德；三，大乐功德；四，无自性功德；五，无缘大悲充满功德；六，无间功德；七，不灭功德。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 16:58</span><div class="badge-floor">第 48 进</div></div><div class="post-body">编著圆满回向发愿 <br/>
 <br/>
 愿以译著所有善，回向自他诸有情， <br/>
  <br/>
@@ -1831,7 +1852,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 诸护法众行事业，绛巴妥默诚祈祷。 <br/>
  <br/>
 　　优婆塞·绛巴妥默蒙 <br/>
-师佛加被，护法护持，得于壬子年初译竣《菩提提道次第师师相承传》（此传早从丁未年起译，中间为生活俗事所扰，至壬子始译竣）。此一巨著约八十万言，一切悉地，皆源于师，故先译此，以示尊重。此为我之第一部译作。继于壬子年中著作出《大乘速速成佛正道明灯颂》全部根本汉藏对照颂文，此一根本汉藏颂文约十五万言。整个成佛正道，依此易于诵持，此为我之第二部著作。总摄修学，不外三慧，以此摄我所闻法要，于癸丑年著作出《大乘速速成佛正道明灯颂自释师佛密意庄严论》，此一论著约八十万言，以为闻慧之秘藏。此为我之第三部著作。闻后不可无思，继于癸丑年着出《学习问答三百六十则灭除心暗曼殊意光论》，以表思慧之端倪。此一著作约二十余万言，此为我之第四部著作。为圆三慧，特集诸师，修悟语录，于甲寅年，编辑出此一《菩提道次第承传诸师修心语录选集一切悉地生源》，聊补修慧之一环，此一选集约十三万言，（所有语录，多从藏文原著中，由编者译出汉文）此为我之第五部编著。今后愿依此五著，勤行心法相合之修学，并愿其他一切具缘有情，亦能获此师佛密意，而勤修学，速成佛位。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-9-13 17:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 49 楼</span></div><div class="post-body">附录: <br/>
+师佛加被，护法护持，得于壬子年初译竣《菩提提道次第师师相承传》（此传早从丁未年起译，中间为生活俗事所扰，至壬子始译竣）。此一巨著约八十万言，一切悉地，皆源于师，故先译此，以示尊重。此为我之第一部译作。继于壬子年中著作出《大乘速速成佛正道明灯颂》全部根本汉藏对照颂文，此一根本汉藏颂文约十五万言。整个成佛正道，依此易于诵持，此为我之第二部著作。总摄修学，不外三慧，以此摄我所闻法要，于癸丑年著作出《大乘速速成佛正道明灯颂自释师佛密意庄严论》，此一论著约八十万言，以为闻慧之秘藏。此为我之第三部著作。闻后不可无思，继于癸丑年着出《学习问答三百六十则灭除心暗曼殊意光论》，以表思慧之端倪。此一著作约二十余万言，此为我之第四部著作。为圆三慧，特集诸师，修悟语录，于甲寅年，编辑出此一《菩提道次第承传诸师修心语录选集一切悉地生源》，聊补修慧之一环，此一选集约十三万言，（所有语录，多从藏文原著中，由编者译出汉文）此为我之第五部编著。今后愿依此五著，勤行心法相合之修学，并愿其他一切具缘有情，亦能获此师佛密意，而勤修学，速成佛位。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-9-13 17:00</span><div class="badge-floor">第 49 进</div></div><div class="post-body">附录: <br/>
 <br/>
 《至尊弥拉惹巴行传》中记载设：至尊弥拉得其妹白达及未婚妻哲色送来的美好饮食，进食后，身体发生乐受与疼痛交加而来，心中各种现境渐大，以致不能再修下去时，心思不能继修，许是发生大障难，及时启开上师玛巴所赐密封小手册而观，其中开示除障增益之心要：为转变过患为功德之诸种秘诀教授；特别指示当生此障时，应受用美食，原因是由于汝往日勤修之力，使诸脉中所积精点，因受粗粝恶食之影响（弥拉因长久缺食，只以蝎子草为食），而不能运行。弥拉以此知道须略饮少许白达送来之酒，并将哲色送来好食物完全用后，依照手册中所示［身之要点］、［风息要点］、及诸所缘，而努力勤修，以此获得诸支脉之脉结得解，上至中脉上端，下至脐下诸脉结，皆得解开，生起乐空无别之修悟，所有过去了知与修验过程，有似经烧而净。实际是发生大变化，修力已固，生起了特殊的修证功德，从障难中而获得解脱，认识诸过患转成功德，执实分别现为清净法身，了知轮回、涅盘一切诸法，皆于缘起中而显现自心复不堕于边方。知由邪见引导之道，所得之果为轮回，由增上意乐引导之道，所得之果为涅盘。此二者之心要，于空性光明中，而得彻底了达。特别是了知此次身心生起如此之功德，是以过去修力作近取因，复以美食及甚深教授秘诀作缘起，而获得的，同时决知密乘之方便，是以五欲功德为道用［此实为密乘之不共道，并知白达及哲色对于自之修证，亦有大恩，愿以所修作报恩想，并以所修善根回向菩提后，歌出缘起心要歌如下： <br/>
  <br/>
@@ -1856,7 +1877,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 回向文: <br/>
 <br/>
 我等所作诸善德，饶益正法及有情， <br/>
-所有善愿悉成满，普令众生速成佛！ </div></div><div class="post"><div class="post-header"><div class="avatar">乐</div>乐空不二发表于 2008-1-23 18:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 50 楼</span></div><div class="post-body">愿以译著所有善，回向自他诸有情， <br/>
+所有善愿悉成满，普令众生速成佛！ </div></div><div class="post"><div class="post-header"><div class="avatar">乐</div><span style="font-size:15px; letter-spacing:1px;">乐空不二发表于 2008-1-23 18:55</span><div class="badge-floor">第 50 进</div></div><div class="post-body">愿以译著所有善，回向自他诸有情， <br/>
 <br/>
 罪障清净福德增，速证圆满大菩提。 <br/>
 <br/>
@@ -1870,7 +1891,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如是回向并善愿，愿无障难速成就， <br/>
 <br/>
-诸护法众行事业，绛巴妥默诚祈祷。 </div></div><div class="post"><div class="post-header"><div class="avatar">c</div>carolwh发表于 2010-6-5 19:18<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 51 楼</span></div><div class="post-body">回向文: <br/>
+诸护法众行事业，绛巴妥默诚祈祷。 </div></div><div class="post"><div class="post-header"><div class="avatar">c</div><span style="font-size:15px; letter-spacing:1px;">carolwh发表于 2010-6-5 19:18</span><div class="badge-floor">第 51 进</div></div><div class="post-body">回向文: <br/>
 <br/>
 我等所作诸善德，饶益正法及有情， <br/>
 所有善愿悉成满，普令众生速成佛！ <br/>

@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>佛典譬喻经全集 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>佛典譬喻经全集 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">佛典譬喻经全集</h1>
-<div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 12:52<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">佛典譬喻经全集 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">佛典譬喻经全集</h1>
+<div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 12:52</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">佛典譬喻经全集 <br/>
 作者:王文元 <br/>
 <br/>
 序 <br/>
@@ -167,7 +188,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 点评乃是我的一孔之见，由于本人对于佛学下功夫还不够多，理解也还不够深，希望读者权把它当作先入佛门的人为后学者引引路径，心在扬善，决不敢逞能于前辈。不佞多有心冰未解之处，哪位佛陀、菩萨、罗汉、比丘、男女居士不吝赐教，纠纆讹谬，解我妄执，再造之恩将永铭天人。 <br/>
 <br/>
-戊子仲夏于北京社科院哲学所 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 12:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">旧杂譬喻经（吴天竺三藏康僧译） <br/>
+戊子仲夏于北京社科院哲学所 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 12:55</span><div class="badge-floor">第 2 进</div></div><div class="post-body">旧杂譬喻经（吴天竺三藏康僧译） <br/>
 卷上 <br/>
 （一）萨薄降鬼喻  <br/>
 <br/>
@@ -285,7 +306,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 （点评） <br/>
 萨薄降鬼的故事跌宕起伏，感人至深。萨薄这个普通商人由无信仰到有信仰，由有信仰到得道，由度人到度人，由度人到成佛，中间贯穿一个诚字。他以诚心观看法事，以诚心接受五戒，以诚心接受上座高僧的劝言，以诚心宣扬教化，以诚心救人危难，以诚心度恶魔，取得巨大成功。佛法无边，就是爱的力量无边。这种爱能被善良的人接受，也能感化恶人。萨薄前去与阅叉鬼搏斗，根本就没有打算进行武力角逐，他知道那样无济于事。萨薄通过“五戒”、“十善”感化阅叉鬼，最终如愿以偿。 <br/>
 印度有非暴力抵抗（以德服人）的传统，直至现代，这个传统仍然未泯灭。半个多世纪前，圣雄甘地（1869——1948）就是非暴力主义的英雄，他早年曾在南非进行反种族歧视运动，提出“非暴力抵抗”的著名口号。第一次世界大战之后，甘地在印度倡导与英国殖民政府的“不合作运动”，取得令世界瞩目的成功。一天，甘地遭遇一个年轻歹徒，歹徒一手掐住他脖子，一手持刀就要行刺。情况万分危急。然而，甘地不惊不慌，向歹徒投以温和的善意，歹徒反而失常，先是嘴唇与手指颤动，后来全身都在颤抖，思想终于崩溃。暴力对歹徒是无效的，但他抵挡不住善意的目光，他不能动手去杀从容镇静、面带微笑的人。 <br/>
-这个歹徒不是与阅叉鬼有几分相似吗？甘地不就是萨薄的再现吗？  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 12:58<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">（二）孔雀王喻 <br/>
+这个歹徒不是与阅叉鬼有几分相似吗？甘地不就是萨薄的再现吗？  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 12:58</span><div class="badge-floor">第 3 进</div></div><div class="post-body">（二）孔雀王喻 <br/>
 <br/>
 过去无数劫①，尔时有孔雀王，从五百妇孔雀相随。经历诸山，见青雀色大好，便舍五百妇追青雀。青雀但食甘露好果。 <br/>
 <br/>
@@ -329,7 +350,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 （点评） <br/>
 古代，很多民族都有讥讽贪婪无厌者的寓言故事，《孔雀王喻》是其中比较优秀的一部。普希金《金鱼与渔夫的故事》寓意与结构与《孔雀王喻》几乎如出一辙。 <br/>
 中国在三千多年前就已经出现对贪婪的抨击，《诗经•大雅•桑柔》说：“大风有隧，贪人败类。”，意思是，天空大风呼呼地吹，贪利的小人是败类。 <br/>
-儒家、道家都主张天人合一，反对把天当作纯粹的客体，由主体（人）来控制与宰割。为什么要这样做呢？因为人对天过于贪心，就会像调达一样，最终获得恶报。那恶报就是天象异常（南方不热，北方不冷）、气温升高（温室效应）、厄尔尼诺等可怕异象频发。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">（三）裸形女喻①  <br/>
+儒家、道家都主张天人合一，反对把天当作纯粹的客体，由主体（人）来控制与宰割。为什么要这样做呢？因为人对天过于贪心，就会像调达一样，最终获得恶报。那恶报就是天象异常（南方不热，北方不冷）、气温升高（温室效应）、厄尔尼诺等可怕异象频发。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:04</span><div class="badge-floor">第 4 进</div></div><div class="post-body">（三）裸形女喻①  <br/>
 <br/>
 昔有国王，行射猎于旷泽中，大饥渴，疲极。遥望郁然，有屋、树木，即往趣之。中有一女人，王从求饮食、果实之辈，所求悉得。 <br/>
 <br/>
@@ -362,7 +383,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 （一）顺现报，即今生造业，今生报应（现报）； <br/>
 （二）顺生报，即今生造业，来生报应； <br/>
 （三）顺后报，即今生造业，再来生报应。 <br/>
-裸体女人得到的报应属于顺生报。她不能穿衣服是因为前世吝啬，今世改正错误，得到正果。中国有一个成语叫做“亡羊补牢，犹未为晚”，所言道理与这个故事很相似。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:06<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">（四）赎沙门喻  <br/>
+裸体女人得到的报应属于顺生报。她不能穿衣服是因为前世吝啬，今世改正错误，得到正果。中国有一个成语叫做“亡羊补牢，犹未为晚”，所言道理与这个故事很相似。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:06</span><div class="badge-floor">第 5 进</div></div><div class="post-body">（四）赎沙门喻  <br/>
 <br/>
 昔海边有国王行射猎，得一沙门，持①作伎。使沙门夜诵经，作梵声②。王言：“此伎大工歌。”有客辄伎歌。 <br/>
 <br/>
@@ -387,7 +408,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 （点评） <br/>
 居士（优婆塞）出现得很早。佛陀成道后，在差梨尼迦树林结跏趺坐，这时，从北天竺来了两位商人，二位商人用乳酪与蜂蜜供养佛陀，皈依了佛、法、僧，成为最初的优婆塞。看来，最初的居士来自商人，是可信的。 <br/>
-商人居士前世欠钱不还，今世得到报应，说明天网恢恢，疏而不漏。中国古代有句俗语，叫做“杀人偿命，欠债还钱”，这是世界通行的自然法，在任何时候都有效。不遵此法，人类就无法相安无事，无法互助互利，无法传宗接代。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">（五）兄嫂悔过喻  <br/>
+商人居士前世欠钱不还，今世得到报应，说明天网恢恢，疏而不漏。中国古代有句俗语，叫做“杀人偿命，欠债还钱”，这是世界通行的自然法，在任何时候都有效。不遵此法，人类就无法相安无事，无法互助互利，无法传宗接代。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:08</span><div class="badge-floor">第 6 进</div></div><div class="post-body">（五）兄嫂悔过喻  <br/>
 <br/>
 佛在世，有小儿与兄嫂共居。儿日日至佛所，受经戒。兄嫂谏不止，后取儿牵抱之，以杖捶之，言：“佛、比丘僧当救汝！”儿啼呼恐怖，自归三尊，则得须陀洹道①。 <br/>
 <br/>
@@ -407,7 +428,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 （点评） <br/>
 这是一篇劝善归佛的故事。佛前无老少，孩子先向佛，先得道，哥哥、嫂子反在其后。 <br/>
 为什么有人觉悟有人不觉悟，有人觉悟得快有人觉悟得慢？因为人分三等：利根（遇到问题速疾而生妙的人）、中根（智慧非利非钝，处于中等的人）、钝根（自不披阅教文，但信他人言说而悟道的人）。本文中，小孩属于利根，他的哥哥、嫂子属于钝根。故有早觉悟与晚觉悟之别。 <br/>
-可以把行善与归佛视为一体。归佛是形式，行善是内容。形式是内容的保证，可以把宗教理解为信仰，信仰为了清洁身心，为了行善，也为了得好报——留名（儒家）、成佛（佛教）或上天堂（基督教）。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">（六）沙弥为龙作子喻  <br/>
+可以把行善与归佛视为一体。归佛是形式，行善是内容。形式是内容的保证，可以把宗教理解为信仰，信仰为了清洁身心，为了行善，也为了得好报——留名（儒家）、成佛（佛教）或上天堂（基督教）。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:10</span><div class="badge-floor">第 7 进</div></div><div class="post-body">（六）沙弥为龙作子喻  <br/>
 <br/>
 昔有罗汉①与沙弥②，于山中行道。沙弥日日至道人家取饭，道经历堤基上行，崎岖危崄，常躃③地覆饭，污泥土。沙弥取不污饭着师钵中，取污饭澡洗食之，如是非一日。 <br/>
 <br/>
@@ -454,7 +475,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 （点评） <br/>
 这是一篇耐人寻味、寓意深长的寓言故事，对今人有很强的教育作用。世界对我们人类并不是完全敞开的。我们必须确定这样一个规则：做我们应该做的事情，不该做的事情不要做。 <br/>
 不应该做的事情未必是坏事，只是条件不成熟时不适宜做。中国古代的礼就是决定取舍的标准。“非礼勿视，非礼勿听，非礼勿言，非礼勿动”（《论语•颜渊》）并非有意限制人的自由，而是为了看应该看的，听应该听的，说应该说的，行应该行的。 <br/>
-现代社会涌动着一股个性解放的潮流。很多人只注意到这个潮流中好的一面，忽视了消极的一面。有人羡慕美国，只见其好的一面，不见坏的一面，不知美国人因为自己的民族历史短、文化少而无限懊恼。像早恋、婚外恋、性自由、出卖身体、忤逆父母、自由持枪、蔑视师道、为所欲为、无必要的整容等行为颇像向往变龙的沙弥，只看到一时痛快的一面，没看到终生痛苦的一面。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">（七）月女与乞儿喻 <br/>
+现代社会涌动着一股个性解放的潮流。很多人只注意到这个潮流中好的一面，忽视了消极的一面。有人羡慕美国，只见其好的一面，不见坏的一面，不知美国人因为自己的民族历史短、文化少而无限懊恼。像早恋、婚外恋、性自由、出卖身体、忤逆父母、自由持枪、蔑视师道、为所欲为、无必要的整容等行为颇像向往变龙的沙弥，只看到一时痛快的一面，没看到终生痛苦的一面。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:13</span><div class="badge-floor">第 8 进</div></div><div class="post-body">（七）月女与乞儿喻 <br/>
 <br/>
 昔有国王、夫人生一女，父母名为月女，端正无比。王与衣被、珍宝，辄言：“自然也。”至年十六，王恚言：“此是我与汝，何言自然？” <br/>
 <br/>
@@ -486,7 +507,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 （点评） <br/>
 文中多次出现“自然”一词。这里的自然不同于平常的“大自然”。佛教中的“自然”有两种所指：其一，表示觉悟之世界脱离有无的区别，空无自性，独立存在，绝对自由，称为“无为自然”；其二，经由善恶行为，依循因果法则而产生结果，称为“业道自然”。本文中的“自然”指后者。 <br/>
-转世是佛教的一个重要主张。佛教认为前世为本，今世为末，每个人都有无法摆脱的业缘。这里有一个问题必须注意：前世与今世并非同一感知主体，前世种下业根，今世得到惩罚，没有把“果”与“报”施于同一个人，有失公平，同时有违扬善惩恶的初衷。所以我们完全可以把果报理解为现世因、现世报。这样的话，扬善抑恶的作用会更大些。佛教有修正义理的传统，比如，最初的佛教没有灵魂转生之说，后来增加了这一说法。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">（八）三醉人喻  <br/>
+转世是佛教的一个重要主张。佛教认为前世为本，今世为末，每个人都有无法摆脱的业缘。这里有一个问题必须注意：前世与今世并非同一感知主体，前世种下业根，今世得到惩罚，没有把“果”与“报”施于同一个人，有失公平，同时有违扬善惩恶的初衷。所以我们完全可以把果报理解为现世因、现世报。这样的话，扬善抑恶的作用会更大些。佛教有修正义理的传统，比如，最初的佛教没有灵魂转生之说，后来增加了这一说法。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:14</span><div class="badge-floor">第 9 进</div></div><div class="post-body">（八）三醉人喻  <br/>
 <br/>
 昔佛从众比丘行，逢三醉人。一人走入草中逃。一人正坐搏颊①，言：“无状犯戒。”一人起舞，曰：“我亦不饮佛酒浆，亦何畏乎？” <br/>
 <br/>
@@ -507,7 +528,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 （点评） <br/>
 三个醉酒人都是出家人，犯了同一个错误：饮酒。不同之处在于，前两个有羞耻心，后一个无羞耻心。人总会犯错误，不怕犯错，怕不认错；不怕无知，就怕不知道自己无知。 <br/>
-有一个问题稍做一下解释：作为十大弟子，阿难为什么看不出来，须要佛陀指点才知道三个醉汉将来的果报？这是因为阿难虽是释迦牟尼的堂弟，但阿难在佛陀在世时并未开悟，本文他与释迦牟尼在一起时他还是肉眼凡胎。佛陀入灭后他接受大迦叶的教诫，发愤用功而开悟，并于首次经典结集会中被选为诵出经文者，对于经法之传持，功绩极大。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:16<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">（九）狗听经喻  <br/>
+有一个问题稍做一下解释：作为十大弟子，阿难为什么看不出来，须要佛陀指点才知道三个醉汉将来的果报？这是因为阿难虽是释迦牟尼的堂弟，但阿难在佛陀在世时并未开悟，本文他与释迦牟尼在一起时他还是肉眼凡胎。佛陀入灭后他接受大迦叶的教诫，发愤用功而开悟，并于首次经典结集会中被选为诵出经文者，对于经法之传持，功绩极大。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:16</span><div class="badge-floor">第 10 进</div></div><div class="post-body">（九）狗听经喻  <br/>
 <br/>
 昔有沙门，昼夜诵经。有狗伏床下，一心听经，不复念食。如是积年，命尽得人形，生舍卫国①中作女人。长大见沙门分卫②便走，自持饭与，欢喜如是。后便追沙门去，作比丘尼③，精进④得应真道也。 <br/>
 <br/>
@@ -523,7 +544,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 （点评） <br/>
 佛家认为狗也有佛性，儒家、道家大同小异。王阳明认为满大街跑圣人。道家认为道无处不在，一天有人问庄子道在何处，庄子说在便溺中。看来，各家都不把成圣、成道、成佛看成神秘的事情，事实也确实如此。狗都能成佛，何况人呢？无论有多大的缺陷，都可能成功。 <br/>
 须注意，佛教并非一开始就认为狗有佛性。起初部派佛教不认为佛、菩萨以外的人能成佛，所以他们认为并非众生都有佛性。但世亲菩萨写的《佛性论》卷一，主张众生无先天之“性得佛性”，但有后天依修行而得之“修得佛性”，同书卷二又将佛性分为三种：其一，众生先天具有之佛性；其二，通过佛教修行所引发之佛性；其三，佛果圆满时显发之佛性。 <br/>
-读者可以根据以上情况，判断自己是否有佛性。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:17<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">（十）施甘果喻 <br/>
+读者可以根据以上情况，判断自己是否有佛性。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:17</span><div class="badge-floor">第 11 进</div></div><div class="post-body">（十）施甘果喻 <br/>
 <br/>
 昔维卫佛①在世时，国中诸大姓各各一时供佛及比丘众。时有一大姓，贫无以供佛者，白言：“愿比丘众有欲得药者，某悉当给之。”时有一比丘，身体有疾，大姓以一甘果与之食，比丘得安隐②除愈。大姓后寿尽，生③天上④，胜诸天有五事：一者身无病，二者端正，三者命长，四者得财富，五者智慧。如是九十一劫中，上为天，下生大姓家，不堕三恶道⑤。乃至释迦文佛时，为四姓家⑥作子，名曰多宝。见佛欢喜，作沙门，精进得道，号为应真。 <br/>
 <br/>
@@ -545,7 +566,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 （点评） <br/>
 这个故事来自于《付法藏经》卷三中的一个故事：毗婆尸佛时，一比丘头痛，薄拘罗尊者持一诃梨勒果施彼食之，其病即愈。尊者因施果之故，于九十一劫中在天上人间享福快乐，且未尝有病。后生于婆罗门家，其母早亡，父所娶之继母苦厌尊者，曾五度加害之，然皆无所损。 <br/>
 在佛教里，施舍是很高尚的行为，是慈悲、爱心的具体体现。诚如佛陀所说：“我经中以施行为本，施行善者最为大种。其天下尊贵者，皆施行善得耳，不以种得也。” <br/>
-施舍得报的故事数不胜数，本文为其中一篇。为报答而施爱于人算是高尚行为吗？答案是肯定的。建立在利己主义之上的爱才是持久与牢固的。人人为自己，人人又爱他人，这是最理想不过的了。抽掉利己的爱很容易产生畸形，让人感到不正常。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:19<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">（十一）新学比丘得道喻  <br/>
+施舍得报的故事数不胜数，本文为其中一篇。为报答而施爱于人算是高尚行为吗？答案是肯定的。建立在利己主义之上的爱才是持久与牢固的。人人为自己，人人又爱他人，这是最理想不过的了。抽掉利己的爱很容易产生畸形，让人感到不正常。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:19</span><div class="badge-floor">第 12 进</div></div><div class="post-body">（十一）新学比丘得道喻  <br/>
 <br/>
 昔有夫妇，俱持五戒，事沙门。有新学比丘不知经①，至其门乞。夫妇请道人前坐，作饭食已毕，夫妇俱下地作礼言：“少小事道人，未曾闻经，愿开解蔽闇②不及。”比丘低头无以答，曰：“苦哉苦哉。”夫妇心意俱解，言：“世间实苦。”应时俱得道迹③。比丘见两人欢喜，亦得道迹也。 <br/>
 <br/>
@@ -569,7 +590,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 八苦说：1生苦；2老苦；3病苦；4死苦；5爱别离苦；6怨憎会苦；7求不得苦；8五阴炽盛苦。 <br/>
 十八苦说：1老苦；2死苦3忧苦；4悲苦5苦苦；6恼苦；7大苦；8无明苦；9行苦；10识苦；11名色苦；12六入苦；13触苦；14受苦；15爱苦；16取苦；17有苦；18生苦。 <br/>
 上述种种苦都不适合解释比丘之苦，足见，苦是有个性的，几乎每人都有属于自己的苦。死为苦之最，有如千百只刀割裂身子，故称为“风刀苦”。 <br/>
-我最大的“苦”是眼见中国传统文化一天天没落，有起衰救弊之心，无力挽狂澜之力。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">（十二）国王绕塔喻  <br/>
+我最大的“苦”是眼见中国传统文化一天天没落，有起衰救弊之心，无力挽狂澜之力。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:20</span><div class="badge-floor">第 13 进</div></div><div class="post-body">（十二）国王绕塔喻  <br/>
 <br/>
 昔有国王，出射猎，还，过绕塔①为沙门作礼，群臣共笑之。王觉知，问群臣：“有金在釜，釜沸中以手取可得不？”答曰：“不可得。”王言：“以②冷水投中，可得不？”臣白王：“可得也。”王言：“我行王事，射猎所作如汤沸；烧香然灯、绕塔，如持冷水投沸汤中。夫作王，有善恶之行，何可但有恶无善乎？” <br/>
 <br/>
@@ -585,7 +606,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 绕塔指由右旋绕佛塔，表示对佛的恭敬、仰慕之意。因为佛塔是藏佛的舍利（子）的地方，绕塔形同绕佛。 <br/>
 至于烧香，印度人古代就有夏天涂香，冬天烧香习俗。后来烧香演化为一种佛教形式，表达希望人如一缕缕香烟乘虚空往至世尊之顶与佛沟通的愿望。 <br/>
 国王认识到有些“恶”是不得已而为之，他用烧香、燃灯、绕塔等善行抵消所做的恶，不失为一种明智之举。 <br/>
-人生于世，不可能一点恶都不做。比如不杀生就很难做到。释迦牟尼说，每碗水中都有十万条虫。出家人外出每人都带有一个极细的篦子，用来过滤水，把“虫”放归江河，以示仁心。但是无论怎样过滤，总有些虫（今天谓之细菌）进入水中，被人喝掉。这是没有办法的事情。我们能做的就是将功补过。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:21<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">（十三）鬼持沙门喻①  <br/>
+人生于世，不可能一点恶都不做。比如不杀生就很难做到。释迦牟尼说，每碗水中都有十万条虫。出家人外出每人都带有一个极细的篦子，用来过滤水，把“虫”放归江河，以示仁心。但是无论怎样过滤，总有些虫（今天谓之细菌）进入水中，被人喝掉。这是没有办法的事情。我们能做的就是将功补过。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:21</span><div class="badge-floor">第 14 进</div></div><div class="post-body">（十三）鬼持沙门喻①  <br/>
 <br/>
 昔有沙门，行至他国，夜不得入城，于外草中坐。至夜，阅叉鬼来，持之：“当啖汝。”沙门言：“相离远！”鬼言：“何以为远？”沙门言：“汝害我，我当生忉利天上，汝当入地狱中，是不为远也？”鬼则置辞谢，作礼而去。 <br/>
 <br/>
@@ -597,7 +618,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 （点评） <br/>
 一般人遇到鬼的第一反应是逃跑，但这并不一定有效，因为鬼具有超能力，人在其面前很难跑掉。这个沙门的做法值得称道——与鬼讲道理。看似是与虎谋皮，实际上也许是有效的。 <br/>
-能说服善良的人不算真本事，能说服恶魔那才是真本事。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">（十四）藏七宝喻  <br/>
+能说服善良的人不算真本事，能说服恶魔那才是真本事。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:24</span><div class="badge-floor">第 15 进</div></div><div class="post-body">（十四）藏七宝喻  <br/>
 <br/>
 昔有国王，令人呼知识①。知识言：“谢王，适穿地作坑，欲藏七宝。”王闻大惊，令人复呼。知识白王：“今适下宝着坑中。”王便复令呼。知识白王：“今适下平地，平地已，便往。” <br/>
 <br/>
@@ -617,7 +638,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 （点评） <br/>
 佛教对财产的态度是取财有道，财尽其用。财物躺在仓库里是无用的东西，施舍给众人则成为宝物。用多余的财行善事，这已经成为许多人的共识。有些国家——比如日本制定严格的遗产税法，人死后相当一部分财产归国家所有，用来救济穷人，不失良策。 <br/>
-这位善知识告诉了国王该如何对待财产，国王结识他乃三生有幸。阿难说过：“诸修行者，由善友力，方能成办。得善友故，远离恶友，以是义故，方知善友是半梵行。”  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:26<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">（十五）持斋喻 <br/>
+这位善知识告诉了国王该如何对待财产，国王结识他乃三生有幸。阿难说过：“诸修行者，由善友力，方能成办。得善友故，远离恶友，以是义故，方知善友是半梵行。”  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:26</span><div class="badge-floor">第 16 进</div></div><div class="post-body">（十五）持斋喻 <br/>
 <br/>
 昔有四姓，请佛饭。时有一人卖牛湩①，大姓留止饭。教持斋戒②，止听经。宾乃归，妇言：“我朝相待，未饭。”便强令夫饭，坏其斋意。虽尔，七生天上，七生世间。 <br/>
 <br/>
@@ -633,7 +654,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 法师说：“一日修持斋戒，可得到六十万年的口粮。另外还有五种福分：一是少生疾病，二是身体平安，三是少淫意，四是少睡卧，五是能转生天上，而且能识解前世的所作所为。”  <br/>
 <br/>
 （点评） <br/>
-持斋不是指食素，指过中午不食，是苦行的一种。苦自己不是目的，而是形式。佛学家经常从佛学角度讲佛法。实际上，作为对佛教感兴趣的局外人甚至居士，与其说精通佛理是必须的，不如说在形式上向佛更重要些。遇塔扫塔，遇佛拜佛，燃香许愿，忏悔罪过、持斋静心，这些无论对人都大有裨益。　 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">（十六）道逢淫女喻  <br/>
+持斋不是指食素，指过中午不食，是苦行的一种。苦自己不是目的，而是形式。佛学家经常从佛学角度讲佛法。实际上，作为对佛教感兴趣的局外人甚至居士，与其说精通佛理是必须的，不如说在形式上向佛更重要些。遇塔扫塔，遇佛拜佛，燃香许愿，忏悔罪过、持斋静心，这些无论对人都大有裨益。　 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:29</span><div class="badge-floor">第 17 进</div></div><div class="post-body">（十六）道逢淫女喻  <br/>
 <br/>
 佛及比丘众应请，有一沙门与一沙弥后来。道逢淫女人，牵沙门。沙门与之有欲，欲毕到饭家。佛呼沙弥：“汝到须弥山①下取甘泉来。”沙弥已得道，便挑钵于前，叉手②退③。须臾，得水来还。其师惭愧踧踖④，悔过自责，即得罗汉。此女人，宿命对也。逢对毕罪，乃得道矣。 <br/>
 <br/>
@@ -647,7 +668,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 佛和比丘众僧应邀赴斋，有一沙门与一沙弥后到。他们在路上遇到一个淫女人，拽住了沙门。沙门与她发生了淫事，淫欲满足之后来到施饭人家。佛呼唤沙弥：“你到须弥山下取甘泉来。”沙弥已得道，便挑钵在身前，合十行礼后退下。不一会儿，把水取回来了。而他的师傅（沙门）惭愧不安，由于悔过自责，得到罗汉果位。此女前世命定是沙门的配偶。遇到配偶，了结罪孽，才悟得道法。  <br/>
 <br/>
 （点评） <br/>
-苦行是很难的，总会出现个别破戒者，和尚变成了花和尚。面对这种情况，不能不给予一种解释。对那些改正错误、真心悔过的破戒者予以原谅，把他们的破戒行为解释为前世所定、偿坏孽债，也无不可。不过，如果一错再错，那就不可饶恕了。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:33<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 18 楼</span></div><div class="post-body">（十七）年少沙门视正夫人喻 <br/>
+苦行是很难的，总会出现个别破戒者，和尚变成了花和尚。面对这种情况，不能不给予一种解释。对那些改正错误、真心悔过的破戒者予以原谅，把他们的破戒行为解释为前世所定、偿坏孽债，也无不可。不过，如果一错再错，那就不可饶恕了。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:33</span><div class="badge-floor">第 18 进</div></div><div class="post-body">（十七）年少沙门视正夫人喻 <br/>
 <br/>
 昔阿育王①日饭千罗汉。后有来年少沙门与千道人俱入宫。年少沙门坐已，上下视王宫殿，复视正夫人不休。王有恚意。 <br/>
 <br/>
@@ -678,7 +699,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 法师说：“没有前世缘分的话就不能互相解脱，也不能相见，说话也不投机，这是因为人都有本来的师傅啊。  <br/>
 <br/>
 （点评） <br/>
-佛教的业根论与基督教的原罪论颇相似。儒家与道家不讲业，也不讲罪，但儒家、道家与佛教、基督教一样，也讲修行，只是修行方法不同罢了。作为一个人，浑浑噩噩混日子没有任何意义。修行是为了使人生有意义。不论人性恶否，也无论人有原罪否，假设人有恶的一面，通过修行祛除恶，总是有益的。在祛除恶的过程中同时能体会人生价值与意义。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:41<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 19 楼</span></div><div class="post-body">（十八）伊利沙悭贪为天帝所化喻 <br/>
+佛教的业根论与基督教的原罪论颇相似。儒家与道家不讲业，也不讲罪，但儒家、道家与佛教、基督教一样，也讲修行，只是修行方法不同罢了。作为一个人，浑浑噩噩混日子没有任何意义。修行是为了使人生有意义。不论人性恶否，也无论人有原罪否，假设人有恶的一面，通过修行祛除恶，总是有益的。在祛除恶的过程中同时能体会人生价值与意义。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:41</span><div class="badge-floor">第 19 进</div></div><div class="post-body">（十八）伊利沙悭贪为天帝所化喻 <br/>
 <br/>
 昔有四姓，名“伊利沙”，富无央数，悭贪不肯好衣食。时有贫老公，与相近居，日日饮食，鱼肉自恣，宾客不绝。四姓自念：我财无数，反不如此老公？便杀一鸡，炊一升白米，着车上，到无人处下车。适欲饭，天帝释①化作犬来，上下视之。请谓狗言：“汝若不能倒悬空中，我当与汝不？”狗便倒悬空中。四姓意大②恐，何图有此？曰：“汝眼脱着地，我当与汝不？”狗两眼则脱落地，四姓便徙去。 <br/>
 <br/>
@@ -702,7 +723,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 （点评） <br/>
 以善心对待自己，以善心对待他人，缺一不可。古往今来，无数作品讥讽过守财奴，巴尔扎克的《高老头》与莫里哀的《悭吝人》都被视为名著。本篇作品的特殊价值在于，它以很少的篇幅阐明了一个大道理：财不可守，因为以一人之力无法抵挡五家之祸。佛教认为，财产从来不为个人所有，而是与五家（王、贼、火、水、恶子）所共有。《智度论•十一》说：“富贵虽乐，一切无常，五家所共，令人心散轻躁不定。”又说：“勤苦求财，五家所共，若王若贼若火若水若不爱子用，乃至藏埋亦失。” <br/>
-古代、现代都不乏看透财产的人。宋朝的司马光用余财赞助邵雍治学，成就了一代哲学宗师，传为美谈，这是财尽其用的绝妙注脚。现代小学家胡适，不论其学术上的错误，仅就对钱的认识而言，绝对高人一筹，他死时仅余五毛钱，也就是说，所有的钱在死前都已经花掉了。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2011-11-19 13:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 20 楼</span></div><div class="post-body">（十九）颜色复故喻  <br/>
+古代、现代都不乏看透财产的人。宋朝的司马光用余财赞助邵雍治学，成就了一代哲学宗师，传为美谈，这是财尽其用的绝妙注脚。现代小学家胡适，不论其学术上的错误，仅就对钱的认识而言，绝对高人一筹，他死时仅余五毛钱，也就是说，所有的钱在死前都已经花掉了。  </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2011-11-19 13:46</span><div class="badge-floor">第 20 进</div></div><div class="post-body">（十九）颜色复故喻  <br/>
 <br/>
 昔有大姓家子，端正。以金作女像，语父母：“有女如此者乃当娶也。”时他国有女人，亦端正。亦以金作男像，白父母：“有人如此乃当嫁之耳。”父母各闻有是，便远聘，合此二人为夫妇。 <br/>
 <br/>

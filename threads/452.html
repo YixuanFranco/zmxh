@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>比丘圆真的前世 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>比丘圆真的前世 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">比丘圆真的前世</h1>
-<div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-1-8 20:26<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">比丘圆真的前世 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">比丘圆真的前世</h1>
+<div class="post"><div class="post-header"><div class="avatar">江</div><span style="font-size:15px; letter-spacing:1px;">江孜NILU发表于 2006-1-8 20:26</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">比丘圆真的前世 <br/>
 <br/>
 珠古•努•巴杂冉那   随记 <br/>
 <br/>
@@ -82,7 +103,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 50担木柴，若还需什么，尽请知会我府上管事，也尽人子之力咧！连同施斋日也请法师一并代劳，我先在此谢过了。”清清朗朗的话音一落，隆严法师脸上掠过一丝肃容，立即接过：“施主赤诚之心，老衲岂会不知。请胡施主安心便是了。”说完就是一副要送客的样子。这位胡老爷当真是知得人事，起身，捻根香燃后敬在侧身供奉的弥勒佛前的香炉上，拜了一拜，便向隆严法师合十告退了。 <br/>
 我当真是看的一头雾水。这位胡老爷端着架子，看不出丝毫的悲伤，反正家中的老父也是高寿归西的人，倒也伤心不到哪里去。只是隆严法师可不同，我参学西京寺在隆严法师座下听授已两月有余，法师可是心性纯净，语言风趣得很，常在讲学之时引些民俗掌故消化枯燥繁冗的经论。我很喜欢在他老人家坐下听课，他很象我天雪寺的大印法师，很是让人容易亲近，最好笑的是他脸上圆圆的大鼻头，笑起来时鱼尾纹一直延伸到耳朵的上方，肥胖而粗短的十指永远都重复一个动作——拨动着乌黑油亮甚至泛着红光的檀木念珠。他的个子偏偏又长的奇高，穿上宽大的袈裟更像是是一堵活动的墙。每日早晨五更时分不到他就会在大殿上撞击那口青铜大钟，“咚……咣……”沉闷的钟声就会从寺院里穿墙而出，漫延在这个小镇的每个角落。 <br/>
 <br/>
-（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-1-9 01:01<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">（续） <br/>
+（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div><span style="font-size:15px; letter-spacing:1px;">江孜NILU发表于 2006-1-9 01:01</span><div class="badge-floor">第 2 进</div></div><div class="post-body">（续） <br/>
 <br/>
 第二章：心语 <br/>
 <br/>
@@ -101,7 +122,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 胡安芷就是请西京寺作法事的胡老爷家的女公子，长千金。那日这位冷硬的胡老爷从隆严法师客房走后，法师便端坐在蒲团上诵经，连午膳都没用过。晚课后，我偕法言，法行，法相，法悟五人去隆严法师的禅房去听课，这是每晚法师给我五人特开的小灶，所授内容是续部经论，据说是隆严法师的一位师兄曾拜习一位天竺高僧而来，后授与隆严法师。因时下不断有天竺高僧来大唐登坛宣法，朝廷颇为重视，又以国力举办译经大事选拔人才，故此每个寺院都积极争取参选。当晚，隆严法师讲了一个时辰，便把师兄退下，留我侯在一旁，自个儿不言不语入定了。我则整理近日的笔记和温习功课，大概过了丑时的时候，隆严法师含含糊糊的嘀咕了一句：“大哥还是这样。”“恩，什么？”我应道。法师抬眼看了看我，示意我坐在他身旁。“孩子啊，人如夏虫不知寒冬，转眼而逝。若临命终时自不能度，却常常设想他人度己，不知他人之力是否真如自己所期盼那样能使自己死后不堕地狱，不入轮回吗？佛法传播一来便以度众离苦得乐为重，以不转轮回修得佛果为根，更有诸种方便调伏接引众生，实是佛法更注重自身内在的修行，绝非流于外形，佛陀以自身自力证悟成佛，而非靠他人超度成佛，而现今世人皆以为现世修来世福，死后靠超度，和尚念念经，敲敲木鱼，便是功德圆满，生前、死时、死后三重天啊……”。 <br/>
 “圆真，胡家老翁的法事就定在十月初六寅时开始吧。你去和法言、法行准备准备，初四胡老爷就会差人把东西送来。你明日让执事僧过来一趟，我有话交待。放布施时拨两组僧人维持秩序，总不要挤伤人才好。”隆严法师闭着眼吩咐道。“我知道了。”可是法师好象忘了，我是外来僧，并不能随意调拨寺院僧众啊。“最多跑个腿传个话还可以。”我默默地想到。 <br/>
 <br/>
-（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-1-10 11:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">第三章：超度（一） <br/>
+（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div><span style="font-size:15px; letter-spacing:1px;">江孜NILU发表于 2006-1-10 11:43</span><div class="badge-floor">第 3 进</div></div><div class="post-body">第三章：超度（一） <br/>
 <br/>
 初四。 <br/>
 午膳后我依然坐在凉亭内看讲义。远远的就听见法行师兄边跑边喊：“圆真，圆真，快过来帮忙。”我迎向他问道：“师兄，这么急冲冲的什么事？”“胡……胡老爷……死了……”“啊？他前几日不是好好的吗？”“不……不是，哎，累死我了，是……胡老太爷……死了。”法行师兄上气不接下气的说完。“差点吓了我一跳，阿弥陀佛，那你这么着急干什么？”我明知故问。因为前几日晚上，隆严法师就和我提起过胡家会差人送东西过来，他们一定是忙不过来才想起我这闲人。果然：“呀，你是不知道，这胡家送东西来了！马车都已经从咱们前院排到后院啦，比有钱人家娶媳妇上门时的队伍还风光！我呆在西京寺也有十六年啦，还是第一次看见做法事下功德也能这么惊天动地的，就差请戏班子来助势啦！”法行师兄说得口沫横飞，满脸通红，就连额头和面颊上的红疙瘩，都闪闪发红光，油亮油亮的。 <br/>
@@ -120,7 +141,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 押上印，十几小贩们便拥着胡家管事离开寺院。斜阳西沉，染红半边天，聒噪的鸦鹊盘旋在小林子上空，四周生起袅袅炊烟，夹杂着淡淡的米饭香气，十月晚秋的风扫过我的僧袍，枯败的树叶在脚下打着旋涡。“入冬后，我便要离开这儿返京了。”阵阵的凉意提醒着我。“关于忿怒明王的那部分曼陀罗的描述经文还没有着落，近日法师也没有提及，一定要请法师讲。”我下了决心。转过身，掩上寺门向里走去，留下身后长长的影子。 <br/>
 远处。“大狗，还不把你二妹子找回来吃饭。这疯丫头又不晓得野到哪里去了，看回来不打断她的腿……” <br/>
 <br/>
-（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-1-11 17:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">第四章：超度（二） <br/>
+（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div><span style="font-size:15px; letter-spacing:1px;">江孜NILU发表于 2006-1-11 17:43</span><div class="badge-floor">第 4 进</div></div><div class="post-body">第四章：超度（二） <br/>
 <br/>
 “咚、咚、咚、咚”急促的鼓点，“铛、铛、铛”阵阵的钟声，鱼贯而入的僧侣肃穆以待。 <br/>
 在主持隆严法师的带领下，领经师以低沉而悠长的声音诵出“香赞”，“佛赞”，“佛号”。 <br/>
@@ -137,7 +158,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 放完最后一把施物，我才抬起头说道：“女施主，您是胡老爷府上的千金吧，请入内堂休息，伙房会将斋饭送过来。” <br/>
 “嗯，你……你……好，我是要问，你们每天撒米是给鬼吃，还是给人吃的？可我看见都是麻雀和老鼠在偷吃，这是干吗？是仪式的一部分？如果是这样我觉得没有必要，何况爷爷也不喜欢这样浪费。佛祖也是这样的吗？是他定的规矩吗？”听她急急地说着。我并没有向她解释，只是看着在泥地啄食的麻雀，褐色的花羽翼在阳光的照射下随着它们蹦来跳去一闪一闪的，偶尔会有一只停下来歪着小脑袋，鼓着小圆眼睛瞪着我，几缕淡烟色在时明时暗的阳光中间或闪过…… <br/>
 <br/>
-（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-1-13 14:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">第五章：阙歌 <br/>
+（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div><span style="font-size:15px; letter-spacing:1px;">江孜NILU发表于 2006-1-13 14:14</span><div class="badge-floor">第 5 进</div></div><div class="post-body">第五章：阙歌 <br/>
 <br/>
 第七日，子夜后。胡老爷再次出现在隆严法师的禅房中。我在一旁候着奉茶。房内，隆严法师坐在蒲团上闭目数念珠，胡老爷却拿眼猛往我身上瞧，弄的我也往自个儿身上前前后后看了一遍，怕是哪儿出了问题。 <br/>
 “你这孩子若是呆在这小庙，修三辈子都出不了正果，反染了这红尘的俗气，误了慧根。不如与我西出边关，看看塞外风情，对你佛家了悟生死大事也多些历练”。“出关？悟生死？近年边戌一直都在和番邦交兵，在京都时我多少知道些方外大事的。”我讷讷的说。 <br/>
@@ -159,7 +180,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 长风扬。急催蹄。送我小儿踏兰山。负虹剑。破长空。强弓-弩击雄鹰。行川岭。越急流。长鞭直抵塞北外。大漠黄沙长蛇阵。一声嘶。万鼓擂。百兽搏食天地摇。浅风吹尽露骨寒。苍穹繁星从天泻。照我银盔两相映。仰月天。亢龙呤。狐迹狼散惊鸟飞。一骑牧歌渐远至。星星野草复争绿。九州天子一言鼎。 <br/>
 一辆车，三匹马，载着歌声渐行渐远…… <br/>
 <br/>
-（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-1-16 17:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">2006．元月13日   16：36 <br/>
+（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div><span style="font-size:15px; letter-spacing:1px;">江孜NILU发表于 2006-1-16 17:29</span><div class="badge-floor">第 6 进</div></div><div class="post-body">2006．元月13日   16：36 <br/>
 <br/>
 第六章：安正 <br/>
 <br/>
@@ -189,7 +210,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 我捂着口鼻，眼泪被熏的直往下淌，跌跌撞撞在浓烟中摸到胡大人的房间。门从外面被人用一根铁棒斜抵着，里面的人是怎样也出不来的，火把铁烤的滚烫，火舌肆无忌惮的舔着我的身体。我咬着牙，使劲想拽出铁棒，可就是不见松动。“来人啊！大人被锁在门里了！”我大声呼救，却没人响应。心里越来越慌张，恐惧使我浑身都在颤抖，拽铁棒的手好象僵硬了一般，一点也不听使唤，“孩子，别着急，不要使蛮力，先看看再说。”胡大人冷静的提醒我，我使劲瞪着快张不开的眼睛，想找出机关，顺着铁棒斜插的下方，终于发现原来它是插在一个石磨里，上端顶着门上的天窗的横格里，我逆着方向推开石磨，铁棒“当啷”就掉下来了，我冲进房发现胡大人已经被浓烟熏倒在地上，我背起胡大人转向门口，可是大火已将门封住，“出不去了，怎么办？佛祖啊，若圆真是代天子出家，请你护佑于我吧，大慈大悲的菩萨啊，请您在您的佛弟子于厄难中实现您对众生的誓言吧，”我在心中祈求着，准备闯出这火魔的困阵。正在这时，我听见外面有人喊：“里面有人吗？有人还在里头吗？”“爹，爹，你还在吗？请回答正儿，圆真哥哥，圆真法师你还在吗？”这是我所听见最动人的声音，“一定是菩萨在我身边护佑着我！”我无比感激地喊道：“我们在里面，火把出口封住了，快来救我们。” <br/>
 几条人影冲进来，说也怪，火也渐渐退了些，隔着烟隐隐看见一群人，接着身上就一个激凌，有人泼了一大桶水在我们身上，连扯带拽的将我一下子扔到了一大片泥地上，我趴在地上，像头老黄牛似的喘大气…… <br/>
 <br/>
-（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-1-21 00:45<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">2006．元月18日   13：30 <br/>
+（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div><span style="font-size:15px; letter-spacing:1px;">江孜NILU发表于 2006-1-21 00:45</span><div class="badge-floor">第 7 进</div></div><div class="post-body">2006．元月18日   13：30 <br/>
 <br/>
 第七章：念住 <br/>
 <br/>
@@ -271,7 +292,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 入夜时分，我们三人再次同行一辆马车。我的东西几乎是完好无损的打好包放在一角，安正冲我顽皮一笑，似乎很得意的告诉我：那是他帮我干的。我微微笑了笑表示我的谢意。胡大人眯着眼打盹，他整个人看上去很疲倦，也显得更瘦了。塞外是个什么样子啊，我竟有些期待。 <br/>
 恍惚中又看见很多的火，冲天的火，映红整个天空，有血红的眼睛，森森的白牙，千万只挥舞的手臂，被风吹乱发丝的头颅漂浮在我的周围，一圈一圈的将我包围起来，忽然他们的眼睛流出泪水，不，是血水，汩汩的往外流出，红色的水，越来越多，汇成一条宽不见边，长不见头的江，波涛汹涌的浪将我卷起又抛下去，……一个颠簸把我惊醒，出了一身冷汗，轻轻挑开帘子，启明星散着清淡的光，无尽的沙丘已经落在我眼底，小花似的帐篷点缀着这片土地。 <br/>
 <br/>
-（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-1-24 21:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">2006．元月23日  13：41 <br/>
+（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div><span style="font-size:15px; letter-spacing:1px;">江孜NILU发表于 2006-1-24 21:49</span><div class="badge-floor">第 8 进</div></div><div class="post-body">2006．元月23日  13：41 <br/>
 <br/>
 第八章：断魂（一） <br/>
 <br/>
@@ -308,7 +329,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 “什么？我的老命在和尚手中？”郭将军怪叫道。 <br/>
 “大人，你说什么？郭将军的命在我手中？”我大吃一惊，“那可是人命啊！”安正在一旁摇着脑袋和我一同喊道。 <br/>
 <br/>
-（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-1-27 00:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">第九章：断魂（二） <br/>
+（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div><span style="font-size:15px; letter-spacing:1px;">江孜NILU发表于 2006-1-27 00:43</span><div class="badge-floor">第 9 进</div></div><div class="post-body">第九章：断魂（二） <br/>
 <br/>
 “死老头，你今儿个给我把话摆清楚，否则要你好看！”郭将军的声音几乎掀翻帐篷顶。 <br/>
 “郭老弟，安分打好今天的仗再说吧，就你这沉不住气的火暴脾气，也不知这四十年的仗是怎么打出来的。你可是大唐二品大将，当今圣上亲封的镇国公咧。此事是落在我手上，若不是圣上明鉴体恤，你怕是早就人头落地，满门抄斩了。打好这一仗，我这死老头子再与你论可好？”一席话说得郭肃将军闷不吭声，我则是更加迷茫，阿弥陀佛，打妄语犯戒的报应来的真快。 <br/>
@@ -363,7 +384,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 …… <br/>
 “圆真师父，圆真法师，您一定要坚持啊，我们很快就到驿庄了。”“圆真，我们回京都，你会好的……”柔柔的女音不停的在说着，而我的意识越来越模糊，眼前一朵千叶雪莲在雪花中正静静绽放…… <br/>
 <br/>
-（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-2-1 03:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">2006．元月27日   20：48 <br/>
+（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div><span style="font-size:15px; letter-spacing:1px;">江孜NILU发表于 2006-2-1 03:20</span><div class="badge-floor">第 10 进</div></div><div class="post-body">2006．元月27日   20：48 <br/>
 <br/>
 第十章：菩提（一） <br/>
 <br/>
@@ -393,7 +414,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 这群少女对我指指点点，她们中走出一个稍长的少女，眉心长着一条悬针似的红纹，及腰的长发随着曼妙的身体不停的摆动，在“咚咚”的鼓音中跳起强劲的舞蹈，其他的少女则在她身后围成半圆，“咚咚”的鼓音响遍整个白玉色的骨头宫殿，而宫殿似乎发出象海螺般“呜---呜”的回音。 <br/>
 她们渐渐向我舞近：“圣者比丘，因宿缘而来此地，领受红白甘露。往后圣者还将转世行菩提道，请圣者暂歇片刻后即返。”悦耳的声音听在我的耳朵里有说不出的舒服，她身后的少女立刻分成两拨围在红白水池旁，一段歌舞后，用金杯盛满白池中的水，用银杯盛满红池中的水，捧到我面前：“圣者请用完它。”我双手先接过金杯，一张口，这白色的液体就进了我的喉咙，又接过银杯，也毫不迟疑的“咕噜”喝了下去。 <br/>
 <br/>
-（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-2-2 02:53<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">2006．2月1日    15：02 <br/>
+（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div><span style="font-size:15px; letter-spacing:1px;">江孜NILU发表于 2006-2-2 02:53</span><div class="badge-floor">第 11 进</div></div><div class="post-body">2006．2月1日    15：02 <br/>
 <br/>
 第十一章：菩提（二） <br/>
 <br/>
@@ -457,7 +478,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 你将再次回到温暖的怀抱……” <br/>
 这是我在被蓝眼珠怪人一番折腾后沉沉睡去前唯一听见的…… <br/>
 <br/>
-（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-2-6 00:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">2006.2月3日   19：54 <br/>
+（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div><span style="font-size:15px; letter-spacing:1px;">江孜NILU发表于 2006-2-6 00:46</span><div class="badge-floor">第 12 进</div></div><div class="post-body">2006.2月3日   19：54 <br/>
 <br/>
 第十二章：归营 <br/>
 <br/>
@@ -486,7 +507,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 “好，马上就来。”我一边应到一边起身准备去见胡大人。 <br/>
 “圆真师父，我要和你一块去。“安正抢着说道。 <br/>
 <br/>
-（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-2-21 00:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">2006.2月11日  22：30 <br/>
+（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div><span style="font-size:15px; letter-spacing:1px;">江孜NILU发表于 2006-2-21 00:04</span><div class="badge-floor">第 13 进</div></div><div class="post-body">2006.2月11日  22：30 <br/>
 <br/>
 第十三章：翻译 <br/>
 <br/>
@@ -535,7 +556,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 ……菩萨摩诃萨。亦复如是。于无国土。现有国土。于有国土。现无国土。于有众生。现无众生。于无众生。现有众生。无色现色。色现无色。初不乱后。后不乱初。菩萨了知一切世法。悉亦如是。同于幻化。知法幻故。知智幻。知智幻故。知业幻。知智幻业幻已。起于幻智。观一切业。如世幻者。不于处外。而现其幻。亦不于幻外。而有其处。菩萨摩诃萨。亦复如是。不于虚空外入世间。亦不于世间外入虚空。何以故。虚空世间。无差别故。住于世间。亦住虚空。菩萨摩诃萨。于虚空中。能见能修。一切世间。种种差别。妙庄严业。于一念顷。悉能了知无数世界。若成若坏。亦知诸劫。相续次第。能于一念。现无数劫。亦不令其一念广大。菩萨摩诃萨。得不思议解脱幻智。到于彼岸。住于幻际。入世幻数。思惟诸法。悉皆如幻。不违幻世。尽于幻智。了知三世。与幻无别。决定通达。心无边际。如诸如来住如幻智。其心平等。菩萨摩诃萨。亦复如是。知诸世间皆悉如幻。于一切处。皆无所著。无有我所。如彼幻师作诸幻事。虽不与彼幻事同住。而于幻事。亦无迷惑。菩萨摩诃萨。亦复如是。知一切法。到于彼岸。心不计我。能入于法。亦不于法。而有错乱。是为菩萨摩诃萨。第二妙光明大三昧善巧智…… <br/>
 “皋”一阵凄烈的狼嚎，打破营地的安宁，几条人影迅速的几个窜跳后隐没在月光下的帐篷群中…… <br/>
 <br/>
-（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-6-3 20:31<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">2006.2月20日   15：00 <br/>
+（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">江</div><span style="font-size:15px; letter-spacing:1px;">江孜NILU发表于 2006-6-3 20:31</span><div class="badge-floor">第 14 进</div></div><div class="post-body">2006.2月20日   15：00 <br/>
 <br/>
 第十四章：嗔念 <br/>
 <br/>
@@ -562,24 +583,24 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 “不，不，我不要，我决不死在天牢大狱中，我决不能这样，绝对不能这样的，我只能死在沙场，哪怕是荒岭野地。”郭肃的双眼暴突，似在滴血。 <br/>
 “啊！”突如其来的，一双铁掌死死掐住我的咽喉。 <br/>
 <br/>
-（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2009-1-15 15:16<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">期待下文 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2009-12-10 18:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">期待下文 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-24 01:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+（待续） </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚羽发表于 2009-1-15 15:16</span><div class="badge-floor">第 15 进</div></div><div class="post-body">期待下文 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚竹发表于 2009-12-10 18:04</span><div class="badge-floor">第 16 进</div></div><div class="post-body">期待下文 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金鑫发表于 2010-10-24 01:20</span><div class="badge-floor">第 17 进</div></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-24 01:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 18 楼</span></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金鑫发表于 2010-10-24 01:20</span><div class="badge-floor">第 18 进</div></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-24 01:21<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 19 楼</span></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金鑫发表于 2010-10-24 01:21</span><div class="badge-floor">第 19 进</div></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-12-6 20:54<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 20 楼</span></div><div class="post-body">随喜赞叹！！！ <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金鑫发表于 2010-12-6 20:54</span><div class="badge-floor">第 20 进</div></div><div class="post-body">随喜赞叹！！！ <br/>
 不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
-不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大福德金刚发表于 2016-3-5 10:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 21 楼</span></div><div class="post-body">一切诸佛菩萨众  祈请于我垂护念 <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post"><div class="post-header"><div class="avatar">大</div><span style="font-size:15px; letter-spacing:1px;">大福德金刚发表于 2016-3-5 10:04</span><div class="badge-floor">第 21 进</div></div><div class="post-body">一切诸佛菩萨众  祈请于我垂护念 <br/>
 犹如三世诸依怙  决定趣入大菩提 <br/>
 所发无上菩提心  我亦真实而发起 <br/>
 祈求本尊诸佛众  为我弟子作明证 <br/>

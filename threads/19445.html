@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>吉祥密整合就法寶藏 毗陀跋陀 噶瑪拉古耶拉耶 希堅贊 藏汉 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>吉祥密整合就法寶藏 毗陀跋陀 噶瑪拉古耶拉耶 希堅贊 藏汉 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">吉祥密整合就法寶藏 毗陀跋陀 噶瑪拉古耶拉耶 希堅贊 藏汉</h1>
-<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-1-27 10:54<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">d1874 吉祥密整合就法寶藏 毗陀跋陀 噶瑪拉古耶拉耶 希堅贊 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">吉祥密整合就法寶藏 毗陀跋陀 噶瑪拉古耶拉耶 希堅贊 藏汉</h1>
+<div class="post"><div class="post-header"><div class="avatar">班</div><span style="font-size:15px; letter-spacing:1px;">班匝咕汝发表于 2026-1-27 10:54</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">d1874 吉祥密整合就法寶藏 毗陀跋陀 噶瑪拉古耶拉耶 希堅贊 <br/>
 <br/>
 D1874 <br/>
 @##།།རྒྱ་གར་སྐད་དུ།ཤྲཱི་གུ་ཧྱ་ས་མཱ་ཛ་སཱ་དྷ་ནཾ་སིདྡྷི་སཾ་བྷ་བ་ནི་དྷི་ནཱ་མ།བོད་སྐད་དུ།དཔལ་གསང་བ་འདུས་པའི་སྒྲུབ་པའི་ཐབས་དངོས་གྲུབ་འབྱུང་བའི་གཏེར་ཞེས་བྱ་བ།དཔལ་རྡོ་རྗེ་སེམས་དཔའ་ལ་ཕྱག་འཚལ་ལོ།།ཟབ་གསལ་གཉིས་མེད་དག་པའི་བདག་ཉིད་ཀྱིས།།བདག་དང་གཞན་དོན་ཕུན་སུམ་ཚོགས་པའི་སྐུ།།དཔལ་ལྡན་ཆོས་ཀྱི་དབྱིངས་ཀྱི་ཕྱག་རྒྱལ།།རྒྱལ་སྲས་རྒྱུ་དང་བཅས་པ་རབ་འབྱུང་ཞིང་།།རྟག་སོགས་རྒྱུ་འདྲས་ཁམས་ཀུན་རབ་བཀང་ནས།།ཇི་སྲིད་བར་དུ་དོན་མཛད་རྒྱུན་མི་འཆད།།ཁྱབ་བདག་རྡོ་རྗེ་སེམས་དཔའ་དེ་དང་ནི།།དེ་ཡི་སྲས་རྣམས་ལ་ཡང་ཕྱག་འཚལ་ལོ།།ཁམས་གསུམ་རྒྱུ་དང་མི་རྒྱུ་ཀུན་ཁྱབ་པ།།སྙིང་གའི་དབུས་བསམ་དེ་ལ་བརྟན་སོགས་སྐྱེ།།ཆོས་བདག་ཁྲོས་པས་ཀྱང་ནི་མི་གནོན་པ།།མི་ཤིགས་ཐིག་ལེ་གང་ཡིན་རྟོགས་པར་མོས།།བློ་དང་ལྡན་པ་རྣམས་ཀྱིས་པདྨ་ཁ་འབྱེད་པ།།རྨོངས་པ་སྲེག་བྱེད་སྙིང་གི་མུན་པ་སེལ་མཛད་པ།།ཡོན་ཏན་དག་པའི་མཁའ་ལ་རྒྱུ་ཞིང་འཇིགས་བྲལ་མཛད།།བླ་མ་དམ་པ་རྣམས་ཀྱི་ཞལ་སྔ་རྒྱལ་གྱུར་ཅིག་།དཔལ་ལྡན་གསང་འདུས་མཚོ་ཆེན་ལས།།བླ་མའི་བརྒྱུད་རིམ་གྲུ་གཟིངས་ཀྱིས།།ཡིད་བཞིན་ནོར་བུ་རྣམ་པ་གསུམ།།སྨན་པའི་ཞབས་ཀྱིས་རྙེད་པའོ།།དེ་རྙེད་དཔེ་མཁྱུད་སྤངས་བྱས་ཏེ།།འདི་ནི་ཐུན་མོང་ཅིག་ཤོས་ཀྱི།།དངོས་གྲུབ་འབྱུང་ཕྱིར་གཏེར་འདྲ་བ།།ཕན་ཕྱིར་བདག་གིས་བརྩམ་པར་བྱ།།གཞུང་གཞན་སྤངས་ཏེ་བླ་མའི་བརྒྱུད་རིམ་གྱིས།།དཔལ་དང་ལྡན་པའིམཉམ་འདུས་སྒྲུབ་པའི་ཐབས།།དམ་པས་གསོལ་བ་བཏབ་ཕྱིར་རབ་བྲོད་ཅིང་།།དད་པས་ཅི་ནུས་བདག་གིས་བཤད་པར་བྱ།།དེ་ལ་ཁ་ཅིག་ནི་ཡང་དག་པའི་མན་ངག་དང་བྲལ་བ་རྣམས་ནི་དམ་པ་མ་ཡིན་པར་མཁས་པར་གྲགས་པ་རྣམས་ལ་བླ་མ་ཉིད་དུ་ཁས་བླངས་ནས་དེའི་ལམ་ལ་ཞུགས་ཏེ།དཀའ་ཐུབ་དང་སྨྱུང་བ་དང་།བརྟུལ་ཞུགས་ལ་སོགས་པས་དོན་དམ་པ་གཅིག་པོ་ལ་དཔྱོད་ཅིང་།འདི་སྙམ་དུ་བདག་གི་རྒྱུའི་འཁྲུལ་འཁོར་ལ་སོགས་པ་དང་ལྷན་ཅིག་ཏུ་སྐྱེས་ཀྱང་།དེ་རྣམས་ཀྱིས་སྟོང་པའི་དངོས་པོ་ནི་ཡོད་དེ།དེ་ཙམ་ཞིག་བརྟགས་པས་མངོན་དུ་བྱེད་ཀྱང་།དངོས་པོ་ལ་དོན་དམ་པར་ཞེན་པས་སྟོང་པ་ཉིད་མི་ཤེས་ཏེ་གྲོལ་བ་དང་རྒྱང་རིང་དུ་འགྱུར་རོ།།ཇི་སྐད་དུ།སྟོང་པ་ཉིད་ནི་མ་ཤེས་པས།།ཀུན་ལ་འདས་པ་དེས་མི་ཤེས།།དངོས་དང་དངོས་མེད་རྣམ་འཇིགས་པས།།སྟོང་པ་ཉིད་ནི་ཤེས་པར་བྱ།།ཞེས་འབྱུང་བས་སོ། <br/>
@@ -722,7 +743,7 @@ D1874 <br/>
 嗡薩兒瓦達塔嘎達悉地班匝薩瑪雅底叉誒夏當達熱雅米，嘻嘻嘻嘻吽&quot; <br/>
 應說彼之真實義，無始時來之勇識，金剛薩埵大歡喜，普賢一切之主尊， <br/>
 金剛心要主中主。業所生起之鈴鐺，授左手已八方振，此等禁行最初時， <br/>
-作為彼之伴侶授。 </div></div><div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-1-27 10:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">།འདི་ནི་སངས་རྒྱས་ཐམས་ཅད་ཀྱི།།ཤེས་རབ་དབྱངས་ཆེན་འཁྲོལ་བར་འདོད།།རྟག་པར་ཁྱོད་ཀྱིས་ཀྱང་བཟུང་སྟེ།།རྒྱལ་བ་བྱང་ཆུབ་མཆོག་ཏུ་འདོད།།དེ་ཉིད་བཤད་པར་བྱ་བ་ནི།།འདི་ནི་ཁྱོད་ཀྱིས་དཀྲོལ་བྱ་སྟེ།།སྲིད་པ་རང་བཞིན་གྱིས་དག་ཕྱིར།།རང་བཞིན་གྱིས་ནི་འབྱུང་བར་བྱེད།།རང་བཞིན་དག་པས་སེམས་ཅན་ཀུན།།དམ་པའི་སྲིད་པ་བྱེད་པ་པོ།།སློབ་མ་རྡོ་རྗེ་དབྱིངས་ཕྱུག་དང་།།ལྡན་པར་བསམས་ནས་བཅོམ་ལྡན་འདས།།མངོན་བྱེད་འདས་པ་མཆོག་འདི་ཡིས།།ཕྱག་རྒྱའི་དམ་ཚིག་སྦྱིན་པའོ།།ཕྱག་རྒྱ་ཆེན་པོའི་བྱིན་བརླབས་ཏེ།།སྙིང་པོ་བསྙེན་པ་ལ་སོགསགྲགས།།དམ་ཚིག་འདོད་གཟུགས་སོགས་རྣམས་ཀྱིས།།སྔགས་ནི་དབུགས་སུ་རྟོགས་ནས་བཟླ།།རང་གི་རང་བཞིན་དེ་རྣམས་ཀྱིས།།ཕྱོགས་བཅུ་དུས་གསུམ་ཁྱབ་པ་ཡི།།མ་ལུས་གཙོ་བོ་མཆོད་བྱས་ནས།།བདག་དང་གཞན་ཡང་མཉེས་པར་བྱ།།དཀའ་ཐུབ་དམ་བཅས་དེ་དག་གིས།།བསྟན་པར་བྱས་ཀྱང་འགྲུབ་པ་མེད།།མི་སྣང་མངོན་ཤེས་མཁའ་འགྲོ་མེད།།སྐུ་གསུང་ཐུགས་ལས་གྲུབ་སྐྱེས་སོ།།དེ་བས་སངས་རྒྱས་སེམས་ཅན་རྣམས།།སྔགས་ཀྱི་སྤྱོད་པ་མཆོག་བཟུང་སྟེ།།འདོད་པ་ཀུན་ལ་ལོངས་སྤྱོད་པས།།ཆོས་ཀྱི་ཡི་གེ་མཆོག་ཐོབ་འགྱུར།།བདེ་སྡུག་གཉིས་མེད་བདག་ཉིད་ཀྱིས།།འདོད་པའི་ཡོན་ཏན་ལྔ་བསྟེན་ཏེ།།ཆགས་ཆེན་ཡེ་ཤེས་དོན་སྦྱོར་ན།།དེ་ཁོ་ན་ཉིད་ཀུན་ཀྱང་འགྲུབ།།སྐུ་གསུང་ཐུགས་གྲུབ་ཡང་དག་སྟེ།།གང་གཞན་དམན་པ་ཡང་སྐྱེ་འདོད།།དེ་ཡང་སྐུ་གསུང་ཐུགས་བསྒོམས་ནས།།སྔགས་བཟླསཔ་ཡིས་འགྲུབ་པའོ། <br/>
+作為彼之伴侶授。 </div></div><div class="post"><div class="post-header"><div class="avatar">班</div><span style="font-size:15px; letter-spacing:1px;">班匝咕汝发表于 2026-1-27 10:55</span><div class="badge-floor">第 2 进</div></div><div class="post-body">།འདི་ནི་སངས་རྒྱས་ཐམས་ཅད་ཀྱི།།ཤེས་རབ་དབྱངས་ཆེན་འཁྲོལ་བར་འདོད།།རྟག་པར་ཁྱོད་ཀྱིས་ཀྱང་བཟུང་སྟེ།།རྒྱལ་བ་བྱང་ཆུབ་མཆོག་ཏུ་འདོད།།དེ་ཉིད་བཤད་པར་བྱ་བ་ནི།།འདི་ནི་ཁྱོད་ཀྱིས་དཀྲོལ་བྱ་སྟེ།།སྲིད་པ་རང་བཞིན་གྱིས་དག་ཕྱིར།།རང་བཞིན་གྱིས་ནི་འབྱུང་བར་བྱེད།།རང་བཞིན་དག་པས་སེམས་ཅན་ཀུན།།དམ་པའི་སྲིད་པ་བྱེད་པ་པོ།།སློབ་མ་རྡོ་རྗེ་དབྱིངས་ཕྱུག་དང་།།ལྡན་པར་བསམས་ནས་བཅོམ་ལྡན་འདས།།མངོན་བྱེད་འདས་པ་མཆོག་འདི་ཡིས།།ཕྱག་རྒྱའི་དམ་ཚིག་སྦྱིན་པའོ།།ཕྱག་རྒྱ་ཆེན་པོའི་བྱིན་བརླབས་ཏེ།།སྙིང་པོ་བསྙེན་པ་ལ་སོགསགྲགས།།དམ་ཚིག་འདོད་གཟུགས་སོགས་རྣམས་ཀྱིས།།སྔགས་ནི་དབུགས་སུ་རྟོགས་ནས་བཟླ།།རང་གི་རང་བཞིན་དེ་རྣམས་ཀྱིས།།ཕྱོགས་བཅུ་དུས་གསུམ་ཁྱབ་པ་ཡི།།མ་ལུས་གཙོ་བོ་མཆོད་བྱས་ནས།།བདག་དང་གཞན་ཡང་མཉེས་པར་བྱ།།དཀའ་ཐུབ་དམ་བཅས་དེ་དག་གིས།།བསྟན་པར་བྱས་ཀྱང་འགྲུབ་པ་མེད།།མི་སྣང་མངོན་ཤེས་མཁའ་འགྲོ་མེད།།སྐུ་གསུང་ཐུགས་ལས་གྲུབ་སྐྱེས་སོ།།དེ་བས་སངས་རྒྱས་སེམས་ཅན་རྣམས།།སྔགས་ཀྱི་སྤྱོད་པ་མཆོག་བཟུང་སྟེ།།འདོད་པ་ཀུན་ལ་ལོངས་སྤྱོད་པས།།ཆོས་ཀྱི་ཡི་གེ་མཆོག་ཐོབ་འགྱུར།།བདེ་སྡུག་གཉིས་མེད་བདག་ཉིད་ཀྱིས།།འདོད་པའི་ཡོན་ཏན་ལྔ་བསྟེན་ཏེ།།ཆགས་ཆེན་ཡེ་ཤེས་དོན་སྦྱོར་ན།།དེ་ཁོ་ན་ཉིད་ཀུན་ཀྱང་འགྲུབ།།སྐུ་གསུང་ཐུགས་གྲུབ་ཡང་དག་སྟེ།།གང་གཞན་དམན་པ་ཡང་སྐྱེ་འདོད།།དེ་ཡང་སྐུ་གསུང་ཐུགས་བསྒོམས་ནས།།སྔགས་བཟླསཔ་ཡིས་འགྲུབ་པའོ། <br/>
 此乃一切諸佛之，智慧大音欲振奏，汝亦應當常執持，勝者菩提最勝愿。 <br/>
 其真實義當宣說，此汝應當作振奏，有為自性清凈故，由自性中而生起。 <br/>
 自性清凈諸有情，殊勝有為之作者。觀想弟子具足於，金剛界主薄伽梵， <br/>
@@ -1473,7 +1494,7 @@ D1874 <br/>
 （藏文：ོཾ་ཨཱཿབྲུཾ་ཛིན་ཛིཀ་ཆེ་གེ་མོའི་ནང་ཛྭ་ལ་ཛ་ཧཱུཾ་སྭཱ་ཧཱ，梵文天城體：ॐआःब्रुंजिन्जिक्चेगेमोइनङ्ज्वलजहूँस्वाहा， <br/>
 羅馬音：oṃāḥbruṃjinjikcegemo&#x27;inaṅjvalajahūṃsvāhā） <br/>
 誦此天尊金剛身，所放光明遍照射，如同劫末大火焰，一切眾生諸疾病， <br/>
-悉皆焚燒令消盡。 </div></div><div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-1-27 10:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">།ཤེལ་ལྟར་རབ་ཏུ་གནས་པ་ལ།།མི་ལྡོག་བྱ་ཕྱིར་རྒྱས་བྱའི་ཕྱིར།།གསང་སྔགས་འདི་ནི་བརྗོད་པ་ཡིས།།སྤྱན་ལ་སོགས་པ་སྤྲ་བར་བྱ།།ོཾ་རུ་རུ་སྥུ་རུ་ཛྭ་ལ་ཏིཥྛ་སིདྡྷ་ལོ་ཙ་ནི་སརྦ་ཨརྠ་སཱ་དྷ་ནི་ནད་ཤིནྟཱཾ་ཀུ་རུ་སྭཱ་ཧཱ།མཁའ་དབྱིངས་ཡོངས་སུ་བཀང་བྱས་ནས།།བདུད་རྩི་ལྔས་གང་བུམ་པ་ཡིས།།དེ་རྣམས་སྤྱི་བོར་བཀྲ་ཤིས་སྒྲ།།ལྡན་པར་བླངས་ནས་དབང་བསྐུར་སྩོལ།།ོཾ་ཀཱ་ཡ་བཛྲ་ནད་ཤཱིནྟཾ་ཀུ་རུ་སྭཱ་ཧཱ།ཨོཾ་ཝཱ་ཀ་བཛྲ་ནད་ཤཱིནྟཾ་ཀུ་རུ་སྭཱ་ཧཱ།།ོཾ་ཙིཏྟ་བཛྲ་ནད་ཤཱནྟིཾ་ཀུ་རུ་སྭཱ་ཧཱ།དེ་རྣམས་བརྗོད་པས་རྡོ་རྗེ་གསུམ།།བ་སྤུའི་བུ་ག་ལས་སྤྲོས་པས།།སྔོན་བཞིན་དབང་བསྐུར་རབ་བྱིན་ན།།ངེས་པའི་ནད་ཀྱང་ཞག་བདུན་འཇིག་།རྡོ་རྗེ་བསམ་གཏན་འདི་ཡིས་ནི།།གང་དཀའ་བའང་རབ་ཏུ་འགེངས།།དེ་ནི་སྦྱིན་པ་རབ་གྲུབ་ཅིང་།།ཡིད་བཞིན་ནོར་བུ་དཔལ་འདྲར་འགྱུར།།བསྐལ་པ་གསུམ་གྱི་ཡུན་གནས་ཤིང་།།སངས་རྒྱས་ཐམས་ཅད་བྱིན་གྱིས་རློབ།།འདི་ནི་སངས་རྒྱས་ཐམས་ཅད་ཀྱི།།གསང་བའི་སྐུ་སྟེ་སྐྱོན་མེད་པའོ།།ཡང་ན་འགའ་ཞིག་དོན་གྱི་ཕྱིར།།ཐམས་ཅད་སྔ་མ་བཞིན་བྱས་ལ།།ཆུ་ཟླའི་དཀྱིལ་འཁོར་དབུས་སུ་ནི།།རྟག་པའི་འཁོར་ལོ་ཉི་ཤུས་བསྐྱེད།།མཆོད་བསྟོད་བདུད་རྩི་མྱང་བྱས་ལ།།དེ་ཡི་ཡེ་ཤེས་སེམས་དཔའ་ཡི།།ཐུགས་ཀར་ཟླ་བའི་སྟེང་དུ་ནི།།ཞི་བར་འདོད་པ་གཞག་པར་བྱ།།དེ་ནས་གོང་དུ་གསུངས་པ་ཡི།།སྤྱན་མའི་སྔགས་ནི་རིག་མར་བཅས།།བཟླས་བརྗོད་བྱས་པས་བ་སྤུ་ཡི།།བུ་ག་ལས་ནི་སྤྱན་ཚོགས་སྤྲོ།།དེ་རྣམས་འོད་ཟེར་ལྔ་འབར་བའི།།འོད་ཟེར་ཚུལ་གྱིས་ནད་པ་ལ།།ཞི་བར་བྱ་ཕྱིར་རྒྱས་བྱའི་ཕྱིར།།དེ་ལ་གཟི་བརྗིད་དབབ་པར་བྱའོ། <br/>
+悉皆焚燒令消盡。 </div></div><div class="post"><div class="post-header"><div class="avatar">班</div><span style="font-size:15px; letter-spacing:1px;">班匝咕汝发表于 2026-1-27 10:56</span><div class="badge-floor">第 3 进</div></div><div class="post-body">།ཤེལ་ལྟར་རབ་ཏུ་གནས་པ་ལ།།མི་ལྡོག་བྱ་ཕྱིར་རྒྱས་བྱའི་ཕྱིར།།གསང་སྔགས་འདི་ནི་བརྗོད་པ་ཡིས།།སྤྱན་ལ་སོགས་པ་སྤྲ་བར་བྱ།།ོཾ་རུ་རུ་སྥུ་རུ་ཛྭ་ལ་ཏིཥྛ་སིདྡྷ་ལོ་ཙ་ནི་སརྦ་ཨརྠ་སཱ་དྷ་ནི་ནད་ཤིནྟཱཾ་ཀུ་རུ་སྭཱ་ཧཱ།མཁའ་དབྱིངས་ཡོངས་སུ་བཀང་བྱས་ནས།།བདུད་རྩི་ལྔས་གང་བུམ་པ་ཡིས།།དེ་རྣམས་སྤྱི་བོར་བཀྲ་ཤིས་སྒྲ།།ལྡན་པར་བླངས་ནས་དབང་བསྐུར་སྩོལ།།ོཾ་ཀཱ་ཡ་བཛྲ་ནད་ཤཱིནྟཾ་ཀུ་རུ་སྭཱ་ཧཱ།ཨོཾ་ཝཱ་ཀ་བཛྲ་ནད་ཤཱིནྟཾ་ཀུ་རུ་སྭཱ་ཧཱ།།ོཾ་ཙིཏྟ་བཛྲ་ནད་ཤཱནྟིཾ་ཀུ་རུ་སྭཱ་ཧཱ།དེ་རྣམས་བརྗོད་པས་རྡོ་རྗེ་གསུམ།།བ་སྤུའི་བུ་ག་ལས་སྤྲོས་པས།།སྔོན་བཞིན་དབང་བསྐུར་རབ་བྱིན་ན།།ངེས་པའི་ནད་ཀྱང་ཞག་བདུན་འཇིག་།རྡོ་རྗེ་བསམ་གཏན་འདི་ཡིས་ནི།།གང་དཀའ་བའང་རབ་ཏུ་འགེངས།།དེ་ནི་སྦྱིན་པ་རབ་གྲུབ་ཅིང་།།ཡིད་བཞིན་ནོར་བུ་དཔལ་འདྲར་འགྱུར།།བསྐལ་པ་གསུམ་གྱི་ཡུན་གནས་ཤིང་།།སངས་རྒྱས་ཐམས་ཅད་བྱིན་གྱིས་རློབ།།འདི་ནི་སངས་རྒྱས་ཐམས་ཅད་ཀྱི།།གསང་བའི་སྐུ་སྟེ་སྐྱོན་མེད་པའོ།།ཡང་ན་འགའ་ཞིག་དོན་གྱི་ཕྱིར།།ཐམས་ཅད་སྔ་མ་བཞིན་བྱས་ལ།།ཆུ་ཟླའི་དཀྱིལ་འཁོར་དབུས་སུ་ནི།།རྟག་པའི་འཁོར་ལོ་ཉི་ཤུས་བསྐྱེད།།མཆོད་བསྟོད་བདུད་རྩི་མྱང་བྱས་ལ།།དེ་ཡི་ཡེ་ཤེས་སེམས་དཔའ་ཡི།།ཐུགས་ཀར་ཟླ་བའི་སྟེང་དུ་ནི།།ཞི་བར་འདོད་པ་གཞག་པར་བྱ།།དེ་ནས་གོང་དུ་གསུངས་པ་ཡི།།སྤྱན་མའི་སྔགས་ནི་རིག་མར་བཅས།།བཟླས་བརྗོད་བྱས་པས་བ་སྤུ་ཡི།།བུ་ག་ལས་ནི་སྤྱན་ཚོགས་སྤྲོ།།དེ་རྣམས་འོད་ཟེར་ལྔ་འབར་བའི།།འོད་ཟེར་ཚུལ་གྱིས་ནད་པ་ལ།།ཞི་བར་བྱ་ཕྱིར་རྒྱས་བྱའི་ཕྱིར།།དེ་ལ་གཟི་བརྗིད་དབབ་པར་བྱའོ། <br/>
 如水晶般安住中，為作不退及增長，誦此密咒語言故，眼等放射作觀想。 <br/>
 嗡如如斯普如匝拉底叉悉地洛佳尼薩兒瓦阿塔薩達尼納德香當庫如梭哈 <br/>
 （藏文：ོཾ་རུ་རུ་སྥུ་རུ་ཛྭ་ལ་ཏིཥྛ་སིདྡྷ་ལོ་ཙ་ནི་སརྦ་ཨརྠ་སཱ་དྷ་ནི་ནད་ཤིནྟཱཾ་ཀུ་རུ་སྭཱ་ཧཱ， <br/>
@@ -2112,7 +2133,7 @@ D1874 <br/>
 嗡舍札威格日達南那羅剎等某某男或女此我施予斯當巴雅吽啪德匝 <br/>
 （藏文略，梵文天城體略，羅馬音略，意為&quot;嗡舍札可怖面羅剎等某某男或女此我施予鎮定吽啪德匝&quot;）， <br/>
 宣說彼壓四時中，七修羅剎等眾者，自身教敕任何者，引領決定作供獻。 <br/>
-剛才所說相應以，一切如前善作已。 </div></div><div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2026-1-27 10:57<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">འདས་མ་ཐག་པའི་སྦྱོར་བ་ཡིས།།ཐམས་ཅད་སྔ་མ་བཞིན་བྱས་ལ།།ཇི་སྐད་བཤད་པའི་ཕྱག་རྒྱ་མཆོག་།བསྒྲུབ་ཕྱིར་སྦྱིན་སྲེག་ཆོ་ག་བྱ།།དུར་ཁྲོད་ཐལ་བ་སོལ་བ་ལ།།ཧོམ་ཁུང་གྲུ་གསུམ་ཁྲུ་དོ་པ།།ཟབས་སུ་ཁྲུ་གང་ཁ་ཁྱེར་ནི།།སོར་མོ་བརྒྱད་པའི་ཚད་དུ་བྱ།།རྡོ་རྗེ་རྩེ་གསུམ་སོར་བཅུ་གཉིས།།རྩེ་དབུས་ལྕགས་ཀྱུ་ལྟར་བྱས་ནས།།དབུས་དང་ཁ་ཁྱེར་ལ་བཀོད་དེ།།དམར་ནག་ཁ་ཁྱེར་རམས་ཀྱིས་བྱུག་།ཇི་སྐད་གསུངས་པའི་གཤིན་རྗེ་གཤེད།།ཧཱུཾ་བསྐྱེད་རྡོ་རྗེ་ལྕེ་ལྡན་པའི།།ཞལ་དུ་ངེས་པར་བསྒྱུར་བྱས་ལ།།པོ་སོན་ཆ་སོགས་མེ་སྦར་རོ།།དུག་གི་ཁྲག་དང་རབ་ཏུ་སྦྱར།།ལན་ཚྭ་སྐེ་ཚེ་དེ་བཞིན་སྦྱར།།དྷ་དུ་ཨ་ཡི་འབྲས་བུ་ཡིས།།ཞལ་དུ་བསྲེགཅིང་ལུས་དང་ངག་།ཁྲོ་ཞིང་བསྒྲུབ་བྱའི་མིང་བཅས་པའི།།སྔགས་འདི་སྟོང་དང་རྩ་བརྒྱད་དུ།།བློ་དང་ལྡན་པས་གཡེལ་མེད་པས།།བཟླ་ཞིང་སྦྱིན་སྲེག་བརྩམ་པའོ།།ོཾ་ཧྲཱིཿཥྚྲཱིཿཝི་ཀྲྀ་ཏཱ་ན་ན་བུ་མོ་ཆེ་གེ་མོ་སྟམྦྷ་ཡ་ན་ཤཱ་ཡ་ཧཱུཾ་ཧཱུཾ་ཕཊ་ཛྫ།དེ་ལས་འཕྲོས་པའི་གཤིན་རྗེགཤེད།།ལྕགས་ཀྱུ་ཐོགས་པ་འཕྲོས་བྱས་པས།།རླུང་དཀྱིལ་ལ་གནས་བུ་མོ་ཡི།།སྙིང་གར་སྦྱར་ཏེ་དགུག་པར་བསམ།།ཉི་མའི་གུང་དང་ནམ་ཕྱེད་ན།།འདི་ནི་ཤིས་པའི་དུས་ཡིན་པས།།བློ་དང་ལྡན་པས་སྦྱོར་བ་དེས།།ཉི་མ་གསུམ་དང་དྲུག་ཏུ་བྱ།།འོངས་པས་འཚེ་བ་བཟློག་པའི་ཕྱིར།།སྔོན་བཞིན་ཞི་དང་བསྲུང་བ་བྱ།།བསྐལ་པ་གྲངས་མེད་གསུམ་དུའང་།།དེ་ཡིས་རྟག་ཏུ་འདུལ་བར་འགྱུར།།སངས་རྒྱས་སམ་ནི་ཆོས་འཛིན་ནམ།།རྡོ་རྗེ་སེམས་དཔའ་གང་ཡང་རུང་།།གལ་ཏེ་རྨོངས་པས་འདས་ན་ནི།།དེ་ཡི་ཚེ་ནི་དེར་ཟད་འགྱུར།།ད་ནི་ཀླུ་སྐམས་པས་ཆར་གཅད་པར་བྱ་བའི་ཆོ་ག་བཤད་པར་བྱའོ། <br/>
+剛才所說相應以，一切如前善作已。 </div></div><div class="post"><div class="post-header"><div class="avatar">班</div><span style="font-size:15px; letter-spacing:1px;">班匝咕汝发表于 2026-1-27 10:57</span><div class="badge-floor">第 4 进</div></div><div class="post-body">འདས་མ་ཐག་པའི་སྦྱོར་བ་ཡིས།།ཐམས་ཅད་སྔ་མ་བཞིན་བྱས་ལ།།ཇི་སྐད་བཤད་པའི་ཕྱག་རྒྱ་མཆོག་།བསྒྲུབ་ཕྱིར་སྦྱིན་སྲེག་ཆོ་ག་བྱ།།དུར་ཁྲོད་ཐལ་བ་སོལ་བ་ལ།།ཧོམ་ཁུང་གྲུ་གསུམ་ཁྲུ་དོ་པ།།ཟབས་སུ་ཁྲུ་གང་ཁ་ཁྱེར་ནི།།སོར་མོ་བརྒྱད་པའི་ཚད་དུ་བྱ།།རྡོ་རྗེ་རྩེ་གསུམ་སོར་བཅུ་གཉིས།།རྩེ་དབུས་ལྕགས་ཀྱུ་ལྟར་བྱས་ནས།།དབུས་དང་ཁ་ཁྱེར་ལ་བཀོད་དེ།།དམར་ནག་ཁ་ཁྱེར་རམས་ཀྱིས་བྱུག་།ཇི་སྐད་གསུངས་པའི་གཤིན་རྗེ་གཤེད།།ཧཱུཾ་བསྐྱེད་རྡོ་རྗེ་ལྕེ་ལྡན་པའི།།ཞལ་དུ་ངེས་པར་བསྒྱུར་བྱས་ལ།།པོ་སོན་ཆ་སོགས་མེ་སྦར་རོ།།དུག་གི་ཁྲག་དང་རབ་ཏུ་སྦྱར།།ལན་ཚྭ་སྐེ་ཚེ་དེ་བཞིན་སྦྱར།།དྷ་དུ་ཨ་ཡི་འབྲས་བུ་ཡིས།།ཞལ་དུ་བསྲེགཅིང་ལུས་དང་ངག་།ཁྲོ་ཞིང་བསྒྲུབ་བྱའི་མིང་བཅས་པའི།།སྔགས་འདི་སྟོང་དང་རྩ་བརྒྱད་དུ།།བློ་དང་ལྡན་པས་གཡེལ་མེད་པས།།བཟླ་ཞིང་སྦྱིན་སྲེག་བརྩམ་པའོ།།ོཾ་ཧྲཱིཿཥྚྲཱིཿཝི་ཀྲྀ་ཏཱ་ན་ན་བུ་མོ་ཆེ་གེ་མོ་སྟམྦྷ་ཡ་ན་ཤཱ་ཡ་ཧཱུཾ་ཧཱུཾ་ཕཊ་ཛྫ།དེ་ལས་འཕྲོས་པའི་གཤིན་རྗེགཤེད།།ལྕགས་ཀྱུ་ཐོགས་པ་འཕྲོས་བྱས་པས།།རླུང་དཀྱིལ་ལ་གནས་བུ་མོ་ཡི།།སྙིང་གར་སྦྱར་ཏེ་དགུག་པར་བསམ།།ཉི་མའི་གུང་དང་ནམ་ཕྱེད་ན།།འདི་ནི་ཤིས་པའི་དུས་ཡིན་པས།།བློ་དང་ལྡན་པས་སྦྱོར་བ་དེས།།ཉི་མ་གསུམ་དང་དྲུག་ཏུ་བྱ།།འོངས་པས་འཚེ་བ་བཟློག་པའི་ཕྱིར།།སྔོན་བཞིན་ཞི་དང་བསྲུང་བ་བྱ།།བསྐལ་པ་གྲངས་མེད་གསུམ་དུའང་།།དེ་ཡིས་རྟག་ཏུ་འདུལ་བར་འགྱུར།།སངས་རྒྱས་སམ་ནི་ཆོས་འཛིན་ནམ།།རྡོ་རྗེ་སེམས་དཔའ་གང་ཡང་རུང་།།གལ་ཏེ་རྨོངས་པས་འདས་ན་ནི།།དེ་ཡི་ཚེ་ནི་དེར་ཟད་འགྱུར།།ད་ནི་ཀླུ་སྐམས་པས་ཆར་གཅད་པར་བྱ་བའི་ཆོ་ག་བཤད་པར་བྱའོ། <br/>
 剛才所說相應以，一切如前善作已，如是所說印契勝，修習故作護摩法。 <br/>
 尸林灰燼炭火上，護摩坑作三角形，深度一肘口沿緣，八指量度作尺寸。 <br/>
 金剛三尖十二指，中尖鐵鉤形作已，中央口沿作安置，紅黑口沿塗抹遍。 <br/>

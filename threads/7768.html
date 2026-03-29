@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大鹏自在振翅舞 动中修定转宝珠 (动画观修) - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>大鹏自在振翅舞 动中修定转宝珠 (动画观修) - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/与神合一瑜伽行.html">与神合一瑜伽行</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大鹏自在振翅舞 动中修定转宝珠 (动画观修)</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚呈发表于 2013-1-9 07:42<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body"> <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/与神合一瑜伽行.html">与神合一瑜伽行</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">大鹏自在振翅舞 动中修定转宝珠 (动画观修)</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚呈发表于 2013-1-9 07:42</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body"> <br/>
 大鹏自在振翅舞 动中修定转宝珠 <br/>
 嗡啊吽咒金刚诵 合一无别入三昧 <br/>
 <br/>
@@ -57,7 +78,7 @@ http://www.zmxh.com/bbs/donghua/dapeng.swf <br/>
 用QQ影音 设置单个循环播放效果最好 <br/>
 <br/>
 http://www.zmxh.com/pics/________________20081204092513.jpg <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">焱</div>焱彩峰发表于 2014-2-28 18:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">Aogula实证传承行者 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">焱</div><span style="font-size:15px; letter-spacing:1px;">焱彩峰发表于 2014-2-28 18:22</span><div class="badge-floor">第 2 进</div></div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula智丹 <br/>
 礼佛念诵后，心中生起恭敬心、菩提心，修人面大鹏金刚，金色蓝色相间展翅的大鹏形象在心中升起，心中自然生起的欢喜心，安详自在，身心舒畅。甩手摆动和抱球旋转双手一小时以上，甩长时感到手臂变长，身体变的透明高大。 <br/>
 转手和甩手摆动时保持手心呼应相对，慢慢的感觉手掌在发热，有热风吹过，能量在聚集，手掌发热像是一个火盆烧出的火，热流流出，在两手之间交叉汇集，形成火焰宝，变得很热。 <br/>
@@ -158,9 +179,9 @@ Aogula808 <br/>
 ---大方广佛华严经 <br/>
 <br/>
 藏密修海五股金刚杵925纯银专利法器随身携车挂显宗密宗大乘藏传 <br/>
-http://world.taobao.com/item/520412799081.htm?fromSite=main&amp;spm=a312a.7700824.w4002-11557054388.21.Y3bA26 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大威德明王发表于 2015-12-23 22:35<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">这个不是大鹏金翅鸟应该是妙音鸟吧？ </div></div><div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2015-12-27 09:57<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">大鹏和迦陵频伽有多种，人面鸟面，多面多臂，法器不同，各派所说不同，各自修自己的传承。 <br/>
+http://world.taobao.com/item/520412799081.htm?fromSite=main&amp;spm=a312a.7700824.w4002-11557054388.21.Y3bA26 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div><span style="font-size:15px; letter-spacing:1px;">大威德明王发表于 2015-12-23 22:35</span><div class="badge-floor">第 3 进</div></div><div class="post-body">这个不是大鹏金翅鸟应该是妙音鸟吧？ </div></div><div class="post"><div class="post-header"><div class="avatar">班</div><span style="font-size:15px; letter-spacing:1px;">班匝咕汝发表于 2015-12-27 09:57</span><div class="badge-floor">第 4 进</div></div><div class="post-body">大鹏和迦陵频伽有多种，人面鸟面，多面多臂，法器不同，各派所说不同，各自修自己的传承。 <br/>
 在实修传承中有很多种大鹏和迦陵频伽，智慧大鹏都是佛菩萨本尊化身，与世间金翅鸟和迦陵频伽又不同，有人面鸟面手臂和法器不同，在实修中会自然有很多变化。在理论上各派说法是有很多不同的。 <br/>
-<br/>
+907090719072907390749069 <br/>
 <br/>
 大鹏金翅鸟是三世诸佛智慧与方便的显现，也是如意宝和一切事业的象征。密宗中很多愤怒本尊的顶上空中皆有此大鹏金翅鸟飞翔，有人面鸟面多种不同，显宗中本师释迦牟尼佛在印度金刚座证道时，具六种庄严，其中顶饰庄严即此大鹏鸟，象征弘法利生事业的胜利。一般而言，大鹏鸟有世间大鹏鸟、化身大鹏鸟与智慧大鹏鸟三类。 <br/>
 <br/>
@@ -181,7 +202,7 @@ http://world.taobao.com/item/520412799081.htm?fromSite=main&amp;spm=a312a.770082
 迦陵频伽，此云美音鸟，或云妙音鸟。此鸟本出雪山，在壳中即能鸣，其音和雅，听者无厌。 <br/>
 《正法念经》说：“山谷旷野，多有迦陵频伽，出妙声音，若天（神）若人，紧那罗（歌神）无能及者。” <br/>
 《慧苑音义》说：“迦陵频伽，此云美音鸟，或云妙音鸟。此鸟本出雪山，在壳中即能鸣，其音和雅，听者无厌。 <br/>
-在无量佛（阿弥陀佛）的莲座下，绘有一对异鸟，人首鸟身，毛色斑斓，作反弹琵琶、振翅欲飞之状。 </div></div><div class="post"><div class="post-header"><div class="avatar">风</div>风火时轮发表于 2018-4-13 20:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">Aogula实证传承行者 <br/>
+在无量佛（阿弥陀佛）的莲座下，绘有一对异鸟，人首鸟身，毛色斑斓，作反弹琵琶、振翅欲飞之状。 </div></div><div class="post"><div class="post-header"><div class="avatar">风</div><span style="font-size:15px; letter-spacing:1px;">风火时轮发表于 2018-4-13 20:44</span><div class="badge-floor">第 5 进</div></div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 <br/>
 2018.2.6 <br/>
@@ -197,7 +218,7 @@ Aogula808 <br/>
 于如来身入正定，诸天身中从定出； <br/>
 诸天身中入正定，大龙身中从定出； <br/>
 大龙身中入正定，夜叉身中从定出； <br/>
----大方广佛华严经贤首品 </div></div><div class="post"><div class="post-header"><div class="avatar">风</div>风火时轮发表于 2018-4-13 20:48<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">Aogula实证传承行者 <br/>
+---大方广佛华严经贤首品 </div></div><div class="post"><div class="post-header"><div class="avatar">风</div><span style="font-size:15px; letter-spacing:1px;">风火时轮发表于 2018-4-13 20:48</span><div class="badge-floor">第 6 进</div></div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 <br/>
 2018.2.11 <br/>
@@ -206,7 +227,7 @@ Aogula808 <br/>
 持续而修，大鹏手中的宝珠自然变成宝瓶又变成八幅金刚轮，腹轮莲花上有摩尼宝珠化为火焰宝珠。肩膀持续忽高忽低，带动手臂扭动身形忽高忽低的任运舞动，面相有时是将军面，有时会长出大鹏嘴，有时是大鹏头。腰部显现一条金龙盘绕，四个龙爪尖锐而猛厉，牢牢地抓在本尊的战袍和铠甲之上。 <br/>
 本尊中脉越来越粗，火热通明，不断震动，随着能量涌动震动发出吽吽吽的三昧禅定之声。感觉手足心以及中脉能量持续不断汇聚在中脉和脉轮中，手中的法器与腹轮宝珠能量呼应，大鹏手抱宝瓶或抱八幅轮金刚轮旋转舞动，感到自身成为大鹏护法形体，不断变高变大，自身本尊身体里不停地向外辐射着光明能量。中脉显现为一条金龙，感觉能量更加集中，本尊坛城境界更有内力身心更加舒畅宁定。 <br/>
 境界中，空中有大鹏在展翅高飞，有各种龙盘旋舞动，有很多大鹏护法围绕在坛城外围守护坛城，大鹏护法的外围又有很多龙围绕坛城。 <br/>
-修大鹏护法持咒又修金刚诵三字明咒，呼吸与三字明嗡啊吽咒音合为一体，全身热流在脉轮中流转循环往复，中脉通明震动涌动，手指足趾的气脉能量与中脉和肢体关节气脉能量呼应，感到全身暖热舒适，身心喜悦宁定，在此境界中持续而修。之后又修金刚萨垛五方佛，修后以击鼓式震动手臂反复持诵《华严经如来出现品》章节段落后回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">风</div>风火时轮发表于 2018-5-29 00:16<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">Aogula实证传承行者 <br/>
+修大鹏护法持咒又修金刚诵三字明咒，呼吸与三字明嗡啊吽咒音合为一体，全身热流在脉轮中流转循环往复，中脉通明震动涌动，手指足趾的气脉能量与中脉和肢体关节气脉能量呼应，感到全身暖热舒适，身心喜悦宁定，在此境界中持续而修。之后又修金刚萨垛五方佛，修后以击鼓式震动手臂反复持诵《华严经如来出现品》章节段落后回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">风</div><span style="font-size:15px; letter-spacing:1px;">风火时轮发表于 2018-5-29 00:16</span><div class="badge-floor">第 7 进</div></div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 <br/>
 2018.2.14 <br/>
@@ -224,7 +245,7 @@ Aogula808 <br/>
 于如来身入正定 诸天身中从定出 <br/>
 诸天身中入正定 大龙身中从定出 <br/>
 大龙身中入正定 夜叉身中从定出 <br/>
----大方广佛华严经贤首品 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-4-11 06:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">Aogula实证传承行者 <br/>
+---大方广佛华严经贤首品 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2020-4-11 06:42</span><div class="badge-floor">第 8 进</div></div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 QQ群：289578411 <br/>
 <br/>
@@ -247,7 +268,7 @@ QQ群：289578411 <br/>
 <br/>
 修观音，自身气脉能量显现成观音形象，本尊十一个面颜色不同，表情各异，七面忿怒，四面寂静。行进中，尾椎处有明点暖热震荡，热流从此明点出发，震荡上升，通过脊柱，到达脑脉和顶轮，躯干气脉热流延伸处体外，形成了多双手臂，一圈圈一层层，每个手心有一只智慧眼，手里拿着各种法器。有些手臂持法器不动，有些手臂不断翻转，行进中手心足心热流旋转，通过四肢，不断进入中脉，在从躯干延伸出体外，本尊的手臂和法器越来越多。中脉笔直粗壮，中脉热流充盈，自身气脉能量循环往复，暖热舒适。 <br/>
 <br/>
-静坐修释迦牟尼佛，本尊左手托钵置于小腹前，右手镇地印，感受自身呼吸，手足心热流旋转，螺旋形通过四肢汇聚于中脉，中脉膨胀收缩，有暖热震动感，全身气脉能量汇聚于小腹，形成一个横着的金刚杵，呼吸中，自身中脉变粗变长，身体变高变大，中脉形成一个竖立的金刚杵。每一次呼吸，都触动全身皮肤震动酥酥麻麻，每个毛孔都在开合呼吸，全身暖热舒适，身心宁静喜悦，处于此禅定中，长时间修持，不愿停止。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-4-11 07:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">Aogula实证传承行者 <br/>
+静坐修释迦牟尼佛，本尊左手托钵置于小腹前，右手镇地印，感受自身呼吸，手足心热流旋转，螺旋形通过四肢汇聚于中脉，中脉膨胀收缩，有暖热震动感，全身气脉能量汇聚于小腹，形成一个横着的金刚杵，呼吸中，自身中脉变粗变长，身体变高变大，中脉形成一个竖立的金刚杵。每一次呼吸，都触动全身皮肤震动酥酥麻麻，每个毛孔都在开合呼吸，全身暖热舒适，身心宁静喜悦，处于此禅定中，长时间修持，不愿停止。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2020-4-11 07:25</span><div class="badge-floor">第 9 进</div></div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 QQ群：289578411 <br/>
 <br/>
@@ -261,7 +282,7 @@ QQ群：289578411 <br/>
 之后修人身龙头龙背的大鹏鸟，原地自然的踏步摆动身体，气脉热流在身体两侧荡来荡去，气脉能量从身体两侧延伸出去，形成了一对巨大有力的大鹏翅膀，本尊三面四臂龙头龙背大鹏爪，手持杵、铃，斧、花，抡动法器，四种法器都在手心颤动，颤动感通过四肢，传到脊柱和全身，全身气脉热流震荡产生一圈圈一层层的酥麻暖热感，犹如过电，腹轮胎息的感觉在不断加强，随息震动持续发出吽吽吽的声音 。龙头大鹏三面四臂，两面如天神面，中间一面显现龙头，龙角长而坚硬，龙须飘飘荡荡，龙嘴很大，张开大嘴能看到宽厚的红舌头，嘴里衔着一颗宝珠在发光发热。感觉自身在高空展翅猛冲，迅猛有力。 <br/>
 龙头大鹏的嘴逐渐变长变宽，向前突出，嘴变得特别巨大，变化成饕餮的样子，头上仍然长着龙角，但一会儿缩短，缩进去不见了，一会儿又长出，并持续变长变大，变得非常坚硬。饕餮头越来越大，张开巨嘴，感觉能吞下一切。饕餮的嘴越张越大，一口将境界中的月轮吞了下，之后又吞下日轮，月轮在心轮震荡，产生暖热酥麻感。日轮逐渐进入脑脉，发光发热，照亮照热了全身。如此持续动中禅修，感受自身与龙面变化的饕餮面大鹏合一，在胎息和中脉通明震动中深入三昧禅定。 <br/>
 <br/>
-之后又修千手观音，金刚萨埵五方佛和玛哈嘎拉护法，以右手震动如击鼓式持诵《大方广佛华严经-普贤三昧品》段落回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2020-4-11 09:48<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">Aogula实证传承行者 <br/>
+之后又修千手观音，金刚萨埵五方佛和玛哈嘎拉护法，以右手震动如击鼓式持诵《大方广佛华严经-普贤三昧品》段落回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2020-4-11 09:48</span><div class="badge-floor">第 10 进</div></div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula808 <br/>
 QQ群：289578411 <br/>
 <br/>
@@ -277,7 +298,7 @@ QQ群：289578411 <br/>
 修龙头大鹏，显现人身龙背龙头鹏翅鹏爪的大鹏入定，自身又自然显现成彩色光明能量体的凤凰，在空中飞舞，全身气脉热流随着这种动感，在脊柱里螺旋形旋转荡漾，在脉轮中任运奔腾，循环往复。而后，逐渐变化成菩萨面人身凤翅凤尾凤爪，三面六臂的凤凰本尊，立于莲台上舞动，本尊持杵铃、弓-箭、钩索，六种法器的旋转、震动、颤动，甩动，有酥麻震颤的电流感，通过手臂，传入中脉，中脉中有气脉热流，冲撞激荡，形成闪电，伴随吽吽吽的风雷之声，酥麻暖热震动感一圈圈一层层从中脉传遍全身，本尊身体更加明亮高大，显现本尊全身凤鳞，凤鳞是形状像羽毛的麟片，背部长着凤鳍，翅膀美丽灵动，凤爪上也有鳞片。全身释放着彩色的光明能量，显得非常祥瑞。 <br/>
 境界里有凤凰和其他各种各样的鸟，全都围着人面人身的凤凰本尊，形成彩色、绚丽、灵动的坛城境界。 <br/>
 <br/>
-再修金刚萨埵、千手观音、毗卢遮那五方佛、玛哈嘎拉，右臂震动如击鼓式持诵《大方广佛华严经 普贤三昧品》段落回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-7-22 00:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">Aogula实证传承行者 <br/>
+再修金刚萨埵、千手观音、毗卢遮那五方佛、玛哈嘎拉，右臂震动如击鼓式持诵《大方广佛华严经 普贤三昧品》段落回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-7-22 00:55</span><div class="badge-floor">第 11 进</div></div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula811 <br/>
 <br/>
 2021.7.21 <br/>
@@ -285,7 +306,7 @@ Aogula811 <br/>
 修完象头护法后，修大鹏护法。大鹏护法半人半鸟，一面二臂，人脸大鹏嘴，鼻子也弯成近似于大鹏嘴的样子，浓眉大目，手持杵铃，指甲长而尖锐，大鹏腿大鹏爪，爪尖锐有力。 <br/>
 杵铃自然震动，杵发出吽吽吽的震动声，铃能同时产生各种音色的铃音，带动全身皮肤产生酥麻暖热感。同时杵铃在膨胀收缩，自身也同步膨胀收缩。 <br/>
 全身酥麻震动时，脑脉向两端延伸扩展，形成了并排三个脸、五个脸，七个脸、九个脸。每个脸颜色不同，表情各异。手臂不断变多，变成十八对手臂，九对手，左九手持钺刀，右九手持颅器。每一对刀盖颜色和形象都不一样，另九对手臂，左九手持九个交杵，右九手持九个金刚，每个镢的半杵下面都有佛面。感觉自身越来越高大威猛。手里的法器各自晃动，有气脉能量从手臂通到脊柱和全身，全身酥麻暖热。 <br/>
-又修观音、金刚萨埵五方佛，右臂震动如击鼓式持诵《佛说阿弥陀经》回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-10-4 09:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">Aogula实证传承行者 <br/>
+又修观音、金刚萨埵五方佛，右臂震动如击鼓式持诵《佛说阿弥陀经》回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-10-4 09:49</span><div class="badge-floor">第 12 进</div></div><div class="post-body">Aogula实证传承行者 <br/>
 Aogula Rotate <br/>
 <br/>
 2021.10.3 <br/>
@@ -295,7 +316,7 @@ Aogula Rotate <br/>
 修迦陵频伽，自身化为光明能量体显现成一面二臂、人身人面、鸟爪鸟翅的半人半鸟的迦陵频伽的形象，本尊持金刚杵、铃，杵也会变化成莲花、火焰宝、金刚轮、交叉金刚杵等不同法器。自身本尊光明为体，一层层一圈圈释放着彩色光明，腹轮有火焰宝珠旋转滚动，全身暖热酥麻，舒适喜悦。体表不断有热流蔓延，如同被热风吹拂。 <br/>
 持续观修，随着呼吸，本尊不断变高变大，变成三面多臂的形象，手持铃杵和各种法器，面容喜悦。本尊的鸟腿和群山之巅一样高，在山川大地之间来回踱步，自然显现各种光明境界和芸芸众生。 <br/>
 <br/>
-又修了文殊菩萨、金刚萨埵、五方佛和玛哈嘎拉护法，震动手臂击鼓式，诵读《普贤行愿品》段落回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2021-10-4 09:50<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">动中禅修 化身狮鹏瑞兽和迦陵频伽的实修笔记 <br/>
+又修了文殊菩萨、金刚萨埵、五方佛和玛哈嘎拉护法，震动手臂击鼓式，诵读《普贤行愿品》段落回向。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2021-10-4 09:50</span><div class="badge-floor">第 13 进</div></div><div class="post-body">动中禅修 化身狮鹏瑞兽和迦陵频伽的实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -312,7 +333,7 @@ Aogula321 <br/>
 中脉交叉金刚杵旋转中向上喷射光明，光明穿过顶轮在头顶上空转化为旋转祥云莲花，花上是本尊坛城。 <br/>
 右边手持的金刚杵和金刚轮转动中放光明。 <br/>
 左边手持的金刚铃和宝瓶自然转动，宝瓶内非常广阔，显现有另一天空，空中有祥云、宫殿等。金刚铃摇动震动转动中放出各种化身瑞兽、瑞鸟、大鹏鸟、凤凰等。 <br/>
-修自身成为迦陵频伽手持金刚法器，在世间各种境界中飞行和漫步，感受呼吸自然成为嗡啊吽三字明咒，腹轮中有宝珠滚转，全身脉轮暖热通明，身心静定喜悦，持续而修。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2025-3-10 05:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">动中禅修 迦陵频伽 实修笔记 <br/>
+修自身成为迦陵频伽手持金刚法器，在世间各种境界中飞行和漫步，感受呼吸自然成为嗡啊吽三字明咒，腹轮中有宝珠滚转，全身脉轮暖热通明，身心静定喜悦，持续而修。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2025-3-10 05:44</span><div class="badge-floor">第 14 进</div></div><div class="post-body">动中禅修 迦陵频伽 实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>
@@ -325,7 +346,7 @@ Aogula321 <br/>
 持续而修，迦陵频伽的凤凰羽毛彩色光明闪耀，灵动飘逸，飘动中放出能量彩波，也放出很多凤凰。 <br/>
 修自身为迦陵频伽，有自旋火焰宝珠围着腰部带脉绕转，中脉显现一个交叉金刚杵组成的能量球，球体滚动，能量上涌，身体随之变大如高山，脸变多，喉咙变多，一面变二面、三面、四面、五面。 <br/>
 <br/>
-站立和静坐中自然微微晃动脊柱，修自身成为迦陵频迦，感到中脉通明震动，体内热流涌动，感到身心光明静定喜悦，持续而修。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2025-3-10 05:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">修大鹏迦陵频伽转脉轮宝珠 <br/>
+站立和静坐中自然微微晃动脊柱，修自身成为迦陵频迦，感到中脉通明震动，体内热流涌动，感到身心光明静定喜悦，持续而修。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2025-3-10 05:46</span><div class="badge-floor">第 15 进</div></div><div class="post-body">修大鹏迦陵频伽转脉轮宝珠 <br/>
 修金刚萨埵 实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
@@ -340,7 +361,7 @@ Aogula321 <br/>
 <br/>
 修完大鹏迦陵频伽脉轮转宝珠，又修金刚萨埵本尊。 <br/>
 先修站立持咒旋转铃杵，再修坐式持金刚杵铃持咒。持咒转动金刚杵、金刚铃，观自身为一面二臂金刚萨埵本尊，自身气脉能量顿然化为金刚萨埵身形，白色光明能量为体，全身毛孔散发虹光，光中化现很多金刚萨埵的化身，心轮显现坐姿金刚萨埵，头顶上空显现金刚持本尊。 <br/>
-修自身化为单身金刚萨埵本尊，手持铃杵，腿自然变化，人腿变为橛腿，又变为杵腿、铃腿，一面二臂变三面六臂，中脉震动，手中法器震动，中脉通明震动，自身能量涌动，身心静定安稳，如此融入本尊的三昧正定。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2025-3-10 05:48<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">修大鹏 实修笔记 <br/>
+修自身化为单身金刚萨埵本尊，手持铃杵，腿自然变化，人腿变为橛腿，又变为杵腿、铃腿，一面二臂变三面六臂，中脉震动，手中法器震动，中脉通明震动，自身能量涌动，身心静定安稳，如此融入本尊的三昧正定。 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2025-3-10 05:48</span><div class="badge-floor">第 16 进</div></div><div class="post-body">修大鹏 实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula305 <br/>
@@ -353,7 +374,7 @@ Aogula305 <br/>
 <br/>
 如实记录实修感受 <br/>
 于江西 景德镇 <br/>
-2024年9月15日 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div>佛海发表于 2025-3-10 05:50<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">修大鹏迦陵频伽 实修笔记 <br/>
+2024年9月15日 </div></div><div class="post"><div class="post-header"><div class="avatar">佛</div><span style="font-size:15px; letter-spacing:1px;">佛海发表于 2025-3-10 05:50</span><div class="badge-floor">第 17 进</div></div><div class="post-body">修大鹏迦陵频伽 实修笔记 <br/>
 <br/>
 Aogula实证传承行者 <br/>
 Aogula321 <br/>

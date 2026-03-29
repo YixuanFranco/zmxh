@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>藏密气功日月和合 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>藏密气功日月和合 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/金刚菩提遍庄严.html">金刚菩提遍庄严</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">藏密气功日月和合</h1>
-<div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-8 15:00<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body"><br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/金刚菩提遍庄严.html">金刚菩提遍庄严</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">藏密气功日月和合</h1>
+<div class="post"><div class="post-header"><div class="avatar">瑞</div><span style="font-size:15px; letter-spacing:1px;">瑞祥发表于 2013-10-8 15:00</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">8132 <br/>
 持明大师比卢遮那 <br/>
 <br/>
 出版说明 <br/>
@@ -129,7 +150,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 1、除障 ………………………………………………………（156） <br/>
 2、结行教诫 ………………………………………………（160） <br/>
 3、回向净善 ………………………………………………（160） <br/>
-注释 …………………………………………………………… （164） </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-8 15:17<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">藏密气功日月和合 <br/>
+注释 …………………………………………………………… （164） </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div><span style="font-size:15px; letter-spacing:1px;">瑞祥发表于 2013-10-8 15:17</span><div class="badge-floor">第 2 进</div></div><div class="post-body">藏密气功日月和合 <br/>
 毗卢遮那 著 <br/>
 万果  佘万治   译    <br/>
 <br/>
@@ -198,7 +219,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 修炼憋气八细竹，吐空相联四细竹， <br/>
 是为达到小瓶气，憋气十六中瓶气， <br/>
 <br/>
-卅二细竹大瓶气。纳气呼“”吐气“”， <br/>
+卅二细竹大瓶气。纳气呼“8133”吐气“8134”， <br/>
 捂鼻自然发声音。入憋吐空按次第， <br/>
 不断修习到熟练。跪坐舒息俯卧伸， <br/>
 手掌下颔腰触地，入息细竹上体仰。 <br/>
@@ -226,21 +247,21 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 肩臂臀下贴地铺，踵颔相贴施技能。 <br/>
 经绕踝骨束后颈，生效七节气息空。 <br/>
 密气住持中脉法，身结莲花跏趺坐， <br/>
-拇指朝前手叉腰，作“吽”明王静坐姿。 <br/>
+拇指朝前手叉腰，作“8135吽”明王静坐姿。 <br/>
 <br/>
 观想自身净且明，现空无别之中央， <br/>
-中脉具备六特征，脐间“吽”字闪蓝光。 <br/>
-中脉所住“吽” 字光，由小渐大遍如海， <br/>
+中脉具备六特征，脐间“8136吽”字闪蓝光。 <br/>
+中脉所住“8136吽” 字光，由小渐大遍如海， <br/>
 最终遍及宇宙间，消除业风相气障， <br/>
 <br/>
-再将中脉和“吽”字，收缩微小又微小， <br/>
-一心观注那“吽”字，修炼散集之要点。 <br/>
+再将中脉和“8137吽”字，收缩微小又微小， <br/>
+一心观注那“8138吽”字，修炼散集之要点。 <br/>
 经由左右两脉道，业风深沉入体内， <br/>
-住持中脉小憋气，束腰“吽”字自然引。 <br/>
+住持中脉小憋气，束腰“吽8139”字自然引。 <br/>
 <br/>
-放松鼻孔和唇齿，“吽”雄壮呼出字声， <br/>
-内外业相及习气，一切物相“吽”字除。 <br/>
-如斯入憋呼气出，熟练散集“吽”字时。 <br/>
+放松鼻孔和唇齿，“8140吽”雄壮呼出字声， <br/>
+内外业相及习气，一切物相“8141吽”字除。 <br/>
+如斯入憋呼气出，熟练散集“8142吽”字时。 <br/>
 业气全部入中脉，显现幻想为智慧。 <br/>
 <br/>
 俯卧两手伸背后，两脚背仰握脚腕， <br/>
@@ -310,13 +331,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 生效七节气息空。六种猛气修炼法， <br/>
 曲腿端坐腰椎直，金刚之拳置膝上， <br/>
-室利僧哈之法印。观想脐间蓝色吽“”， <br/>
+室利僧哈之法印。观想脐间蓝色吽“8143”， <br/>
 或者观想气明点。左手食指捂左鼻， <br/>
 <br/>
 捏鼻猛入息细竹，吸气肩头右前转， <br/>
 用力向下压气息，放置拳头胯前地， <br/>
 憋气体直挺胸膛。自下猛烈向上引， <br/>
-向上抬臀臂膀直。“哈”降业气隐入吽“”， <br/>
+向上抬臀臂膀直。“哈”降业气隐入吽“8144”， <br/>
 <br/>
 坐地双手捏拳头，双脚径直向上抬。 <br/>
 同样左入左扭转，双运肩头背后绕， <br/>
@@ -442,7 +463,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 受用天成大圆满，幻化藏究竟要点。 <br/>
 祝愿众生因此善，解脱业惑错分别， <br/>
 获得光焰自然智，普贤初佛之果位。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-8 15:36<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">序  言 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div><span style="font-size:15px; letter-spacing:1px;">瑞祥发表于 2013-10-8 15:36</span><div class="badge-floor">第 3 进</div></div><div class="post-body">序  言 <br/>
 雪域藏地无与伦比的大译师，遍知显密二宗的大学者，现证任运大圆满法本性的持明大圣，以上述三种权威而地位显赫的毗卢遮那大师（1）所著气功著作《日月和合》是藏地流传的多数气功著作之源，它同世尊圆满成就王（指 四噜迦）的怛特罗之甚深秘诀相随，是耳传金刚桥典籍中的佼佼者。 <br/>
 《气功日月和合》及其教诫自大圣毗卢遮那和大圣宇扎宁波师徒以此甚深教诫摄益有缘所化之时到现今，密诀之耳传未曾中断，加持之效力未曾消散，成就之露珠未曾洒落。 <br/>
 同大瑜伽诸怛特罗相联系的各类气功，尤其是《气功日月和合》是致力于世尊吉祥圆满王 四噜迦甚深瑜伽的瑜伽行者入定瑜伽的条件。它确属深密的无上瑜伽部；但是，无论任何人，修习瑜伽，特别是修持任运大圆满法必须的前提是，修行者相应调伏自己的三门（2），而调伏三门的重要条件是，真切与其人三门之作用相联系的气功诸次第。如是，不能认定所谓的诸种气功仅仅是修习猛厉火瑜伽等深密法类的条件，应该认识到，任何人调伏其三门，修持它是不可缺少的；或者，纵然进行任何修持，它是不可缺少的准备。因为自心是否正常，依赖于其气息是否正常，而气息是否正常，依赖于金刚身之状况。因此，与金刚身之动作相联系的气功形成多种。换句话说，凭依与金刚身动作相联系的诸种功法，使修持者的气息正常，气息正常方能滋养组成身体的大种，身体健安，而大种的作用调和，则违缘灭寂，幸福美满齐备。自心正常，方能心生甚深等持（3），故必能生暂时和永久的不可思议之功德。所以，不应仅观其是不是密咒瑜伽行者，凡是不祓三门之作迷惑的人均应注意和希求修炼气功，这是极为重要的。 <br/>
@@ -450,7 +471,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 值得庆幸的是我自幼就获得长期与阿章•竹钦的亲弟子叔父朵丹沃坚丹增亲近的缘分，通过修行，获得日月和合功的传承，有机会通达甚深殊胜功法的诸要点，并取得体验。对书中不甚明白之处，及诸多难点，给予修习身教者是竹塞•久美多吉、竹仓的及门弟子师尊仁增绛秋多吉和杰塞•久美坚赞活佛师徒等，凭依他们的恩德，我方能从疑网中全部解脱出来。 <br/>
 最近，考虑到为了使甚深功法日月和合不断传承于世、虔诚的后辈们能够恰到好处地修习，我甘受辛苦，依据朵丹沃坚丹增等宏恩无比的先师们之传承——所有经过千锤百炼的草稿，再增添本人修习所得的各种体验，撰此通俗易懂之注释。在介绍与气息修炼和功法相联系的特殊气息修炼的段落之处，还列表注明了气息修炼的刻分。 <br/>
 总之，我尽量详细注释，使读者能直接领悟《气功日月和合》之要义。愿所有众生借此获得暂时和永久利乐之种子。 <br/>
-南喀诺布 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-8 15:39<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">一 书首礼赞 <br/>
+南喀诺布 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div><span style="font-size:15px; letter-spacing:1px;">瑞祥发表于 2013-10-8 15:39</span><div class="badge-floor">第 4 进</div></div><div class="post-body">一 书首礼赞 <br/>
 <br/>
 吽吽吽吽吽吽吽吽吽，毗卢耳传教诫珍宝主， <br/>
 浊世瑜伽王者阿章巴，仁增仲杜巴沃多吉师， <br/>
@@ -470,7 +491,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 此偈是说：本来自性清净，基位法身圆满成就王普贤菩萨，在其他具有殊胜缘分的所化之感觉之中，显现为色身，盛德世尊金刚勇识，为圆满撰写此甚深瑜伽之著作，使后辈追随者们在自心领悟此甚深妙法等诸多目的，瑜伽行者毗卢遮那向你敬礼。 <br/>
 （二）、命题并许愿 <br/>
 “介绍日月和合功，持明瑜伽金刚道。” <br/>
-在敬礼之后，讲述凭依持明藏无上瑜伽金刚藏之捷径，即凭依气、脉密诀及金刚身之功法，将用日月（诶”字表示智慧分，称作月， 旺字表示方便分，称作日）表示的方便智慧二者所有流动的业气一起汇入中脉智慧界，和合双运，从而使被业气吹动的分别心全部消除，实现原始清净的自性悟，并获得无量之任运功德的深奥秘诀。 <br/>
+在敬礼之后，讲述凭依持明藏无上瑜伽金刚藏之捷径，即凭依气、脉密诀及金刚身之功法，将用日月（8146诶”字表示智慧分，称作月， 8145旺字表示方便分，称作日）表示的方便智慧二者所有流动的业气一起汇入中脉智慧界，和合双运，从而使被业气吹动的分别心全部消除，实现原始清净的自性悟，并获得无量之任运功德的深奥秘诀。 <br/>
 <br/>
 二、进入主体 <br/>
 <br/>
@@ -481,7 +502,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 2、排浊气 <br/>
 “封毗卢印排浊气&quot; <br/>
 身体封以毗卢法印，即脚结跏趺，两手放置膝上、舌抵上腭、眼、唇齿等自然闭合、脊椎正直、鼻和脐间端直如箭、挺胸、身体各部分放松，但又不散。首先深吸气，从脐下向上次第满息。肩头和右手肘关节上举，圆满入息。继之，用右手无名指按右鼻孔，由左鼻孔缓而深长地排浊气。左手做同样的动作，由右鼻孔排浊气。左右鼻孔轮流各呼气三次，再由两鼻孔同时排气。其后，脊椎保持正直，向前下俯，额触地铺，呼出全部浊气。脊椎上仰，保持端直，深沉吸气、缓而长地排浊气如此反复做三次。以上吐纳共计九次，叫做九节排浊气。呼气时无声息；用力呼出时，从鼻孔排出的气力要达到脐间。有声呼气是紧闭喉头，呼气时带有明显的喉音，除从鼻孔排出热气外，无气力之感。同呼出时一样，入息也有径直入息和带声入息，两者差别甚大。了知各次吐纳次序不容凌乱极为重要。 <br/>
-</div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-8 15:39<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">3、修身 <br/>
+8147 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div><span style="font-size:15px; letter-spacing:1px;">瑞祥发表于 2013-10-8 15:39</span><div class="badge-floor">第 5 进</div></div><div class="post-body">3、修身 <br/>
 修身分三点：锻炼关节、涤荡气息、调治脉道。 <br/>
 1)锻炼关节 <br/>
 “修身前行要点是，四肢以及五根门。” <br/>
@@ -492,29 +513,29 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 再又，收拢时，注意舌头向舌根收缩，紧缩和摇晃耳和身体各部。切记，放松之同时身体各部应还原。最后，双手置于膝上，猛吐气。双手迅速伸直上举，猛吸气。手指抚摸脚趾俱朝下，弯腰，前额贴膝，猛吐气。 <br/>
 功效。《除隘法》云：“涤荡身体策励功，消除器官遍行疾。” <br/>
 如上所说，此功消除器官和遍行气（4）之诸病。 <br/>
-<br/>
+8148 <br/>
 <br/>
 &lt;2&gt;摇晃： <br/>
 “蹲坐手脚关节摇。” <br/>
 端坐，曲腿，脚掌相贴，双手放在膝盖上，继尔双手伸直迅速上举，挺胸，扩臂猛吸气。胳膊平伸，双手下垂。手肘横对，手置胯前两侧，猛吐气。上体挺直，用力摇晃手部关节，猛吸气。边摇晃手关节，边放下手，吐气三次。最后，向前平伸手，前额触膝，吐气。手再次向上伸直，吸气。双手分别握胫骨，猛吐气。猛摇胫骨，吐纳三次，按上文所述练功。较为熟练时，纳吐气息，同时摇晃前臂和胫骨。 <br/>
 功效。《除隘法》云：“摇晃功法能祛除，四肢筋脉关节病。” <br/>
-<br/>
+8149 <br/>
 <br/>
 &lt;3&gt;推脱： <br/>
 “坐地向后推膝盖。” <br/>
 端坐，曲腿，脚掌相对，双手分别放在膝盖上。两手伸直迅速上举，双脚迅速朝前伸直挺胸，猛吸气。右手握左膝，左手握左脚掌，猛吐气。伸直左腿向上举，猛吸气。扭左脚掌至髋骨右侧，脚掌朝下，猛吐气。抬左脚至右膝盖，猛吸气。从髋骨左侧向后拉左脚，猛吐气三次。同样，右脚的动作，按上文所述做三次。最后，两腿朝前伸直，两手伸直上举，猛吸气。手握脚趾，二者俱朝下，额触膝盖，猛吐气。修炼较为熟练时，同时举两脚朝向心间，吐气。举至乳根与肩头之间吸气，分别向髋骨两侧后抛，吐气。 <br/>
 功效：“推脱消除腰和肾，关节下行气之疾。” <br/>
 如上所说，此功能祛除腰部、肾脏、关节的疾病，以及下行气引发之疾病。 <br/>
-</div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-14 16:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">&lt;4&gt;侧倾 <br/>
+8150 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div><span style="font-size:15px; letter-spacing:1px;">瑞祥发表于 2013-10-14 16:51</span><div class="badge-floor">第 6 进</div></div><div class="post-body">&lt;4&gt;侧倾 <br/>
 “跪地叉掌扭腰倾。” <br/>
 跪地，双手同时放于膝上。手掌交叉掌心朝下举至头顶，不触及头部，肘部和肩膀后张，猛吸气。然后向左扭上体，猛吐气。脊椎恢复原状，挺胸，吸气。向右扭转，吐气。恢复原状，吸气。挺胸，头和肘关节保持法印，上体向左侧下倾，吐气。恢复原状，上体正直，吸气。向右侧倾上体吐气。恢复原状，上体正直，吸气。向左侧倾上体，吐气。如此反复三次。最后，双手放在前面地铺上，前额触膝，吐气。双手伸直迅速上举，臀部坐地，吸气。双腿朝前伸直，手握脚趾，手指、脚趾朝下，额触膝盖，猛吐气。 <br/>
 功效。《除隘法》云：“上体腰肾脊髓病，等住气患此功除。” <br/>
 如上所说，侧倾能祛除上体、腰部、脊髓和肾脏诸疾。尤为胜者，能除住气（5）的所有疾病。 <br/>
-<br/>
+8152 <br/>
 &lt;5&gt;转动： <br/>
 “直对肘指踝关节，转动吐纳皆要猛，锻练五根及关节。” <br/>
 伸脚，两踵相对称，相距约二虎口尺（6）趾尖向外，手心向上，放于膝上，挺胸，肩头后张。手背相对，手指朝下，渐渐举至喉间，猛吸气。 <br/>
-<br/>
+8153 <br/>
 朝外转莲印（7），两肘同时下放，分开手掌，猛吐气。两前臂在左右方旋转，两肘相对称，朝内转莲印，手指向下，吸气。朝外转莲印，吐气。如此反复做三次或七次。最后，两臂上举，猛吸气。两腿前伸，手握脚趾，手指、脚趾朝下，额触前膝，猛吐气。两手向外对伸，脚趾也向外。当手背相对，手指向下时，脚趾亦同时向下，眼睛的视线也随顺手指左右移动。 <br/>
 借助锻练关节的五种功法，勤练眼等五根及髋骨、腰部等大小关节。 <br/>
 功效。《除隘法》云：“转动能祛四肢残，关节萎缩通行疾。” <br/>
@@ -526,7 +547,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 “吐纳入息抱臂立。” <br/>
 并脚立正，气息按气息四支加行一节（8）所说，吸气两细卡：一细卡，右手放在左肘弯，随即握左臂；一细卡，放左手于右肘弯，随即握右肩，举手至肩前。吐气两细卡，肘关节下放，挺胸。入息一细竹，前臂交叉，平举至头顶，上体伸直。开口满息两细卡，摇动身体吐气两细卡，两臂左右平伸，放于左右两肋。吸气两细卡，两臂径直上举，吐气两细卡，放至左右两肋如前。反复做三次。 <br/>
 图⑨入息 <br/>
-<br/>
+81548155 <br/>
 功效。《除隘法》云：“入息功效神志清，健身五脏诸病除。” <br/>
 如上所说，此功能使神志清明，身体安康，能除心、肺、肝、脾、肾等五脏之疾病。 <br/>
 <br/>
@@ -535,89 +556,89 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 两脚并立，吸气两细卡，两手左右平举、挺胸。吐气两细卡，两手放回原处，吸气两细卡，右手无名指压拇指，攥拳，右胳膊平举，置拳右腋；左手攥拳向左平举，贴额。张口满息两细卡，左肘后拍，拳头自额经左耳绕至后颈窝，持久满息，压抑气息两细卡，拳头经右耳用力从额间绕至左侧眉梢。吐气两细卡：一细卡两手左右平举；一细卡两手迅速下放，伸直分贴两腿外侧。再次吸气两细卡，两手左右平举，挺胸。吐气两细卡，手还原处。继尔，右手捏拳绕至眉梢。最后，两拳分绕各方眉梢，如上文类推。 <br/>
 功效。《除隘法》云：“满息能除上体病，肩臂炎及脑溢血。” <br/>
 如上所说，此功能除整个上体病症、肩周炎、大小关节炎和脑溢血等。 <br/>
-<br/>
+81588159 <br/>
 图⑩  满息 <br/>
 &lt;3&gt;压气： <br/>
 “压气左右推膝盖。” <br/>
 两脚并立，吸气两细卡，两手平举，左脚放于右脚踝骨外侧的地铺上。吐气两细卡，臀部坐在地铺上，大腿交叉蜷曲，双手分别握脚掌，大拇指贴脚拇趾，手臂伸直，上体向右斜扭。吸气两细卡。接着，满息两细卡，上体伸直，挺胸。向左扭，向右肋，压抑气息两细卡，脊椎正直，上体尽量向左侧扭转。吐气两细卡，前额低垂，触及左侧地铺。吸气两细卡，两臂朝前平举、挺胸，两腿朝前伸直。吐气两细卡，两手伸至脚趾，手指朝下，前额触膝。再次吸气两细卡，两手左右平举。吐气两细卡，置右脚于左脚踝骨外侧的地铺上。相反的动作，按上文类推。 <br/>
 功效。《除隘法》云：“五脏六腑腰和肾，脊肋等处诸病消。” <br/>
 如上所说，此功可除心、肺、肝、脾、肾等五脏诸疾，可消胃、小肠、大肠、胆囊、膀胱、精囊等六腑之疴，可祛腰部、脊髓、小腹和肋骨之病症，以及等住气引发之疾病。 <br/>
-<br/>
+81608161 <br/>
 图11压气 <br/>
 &lt;4&gt;吐气： <br/>
 “跪地弯腰挤腹部。” <br/>
 坐地，两脚朝前伸直，吸气两细卡，双手按照入息功法——前臂交叉相抱，跪地，脚趾触地。吐气两细卡，臀部贴脚踵，脚掌伸直，胫骨触地，弯腰。入息一细竹，两脚伸直，上抬离地，肘关节与交叉相抱的前臂上举，与肩头平行，上体正直。开口满息两细卡，下放交叉相抱的前臂，贴靠脐下。用力吐气两细卡，交叉相抱的前臂挤压肾脏部位，脊椎正直，臀部坐于脚踵，弯腰，前额触地。吸气两细卡，两手伸直上举，膝和脚趾触地，上体正直。吐气两细卡，两手伸直，迅速下垂至髋骨两侧，胫骨触地，臀部坐于两踵。再次吸气两细卡，前臂交叉相抱，膝和脚趾触地，上体伸直。吐气两细卡，弯腰，胫骨触地。如此反复做三次或七次。 <br/>
 功效。《除隘法》云：“脏腑筋络与关节，遍行下行诸病除。” <br/>
 如上所说，吐气功可除心、肺、肝、脾、肾等五脏之病，能消胃、小肠、大肠、胆囊、膀胱、精囊等六腑以及筋络、大小关节之疾，能祛遍行气、下行气所控制部位的气息引发之疾病。 <br/>
-<br/>
+81568157 <br/>
 &lt;5&gt;吸气： <br/>
 “抑压喉部抬臀部。” <br/>
 跪地，胫骨触地，吸气两细卡，两手伸直，并迅速上举，脚趾触地。吐气两细卡，臀部触地，抬起膝盖，两脚掌踏地，伸直前臂，两手攥拳，分置于两侧地铺上。继之，下颔紧压喉部。吸气两细卡，臀部上抬，腹部伸直，脚掌伸直，脚趾触地，两拳和两脚脚趾支撑身体。憋气两细卡于脐下，摇晃身体。舒息一细竹，臀部坐于地铺上，下颊放在膝盖上。再次吸气两细卡，两手伸直，迅速上举至头顶，两腿迅速朝前伸直。吐气两细卡，两脚脚踵贴会阴处，两拳放于两侧地铺上。吸气两细卡，下颔压喉都，臀部上抬。如此反复做三次或七次。 <br/>
 功效。《除隘法》云：“脊髓心肺和关节，上行遍住气疾除。” <br/>
 如上所说，此功能使脊椎、脊髓、肺、心和大小关节健壮有力，消除与上行气、遍住气相联系的诸气之疾。 <br/>
-<br/>
-<br/>
+8162 <br/>
+8163 <br/>
 修  炼  吸  气  气  息  表 <br/>
 &lt;6&gt;憋气： <br/>
 “拇指交叉绕颈部。” <br/>
 两脚伸直，两手放膝上。吸气两细卡，双脚摆开，两臂左右平伸，挺胸。吐气两细卡，两腿交叉，曲腿坐地，左腿在下，右腿在上；两臂交叉，左臂在下，右臂在上，手握脚趾，拇指贴拇趾。吸气两细卡，上体伸直，头后仰。憋气两细卡，耳贴肩头，反时针旋转头。压气两细卡。下颔贴于左肩头之上，吐气两细卡。然后头颈放正，遂解法印，置于两侧地铺上。吸气两细卡，两手伸直迅速上举，两脚迅速朝前伸直。吐气两细卡，两手握脚趾，手指、脚趾向下，前额触膝。再次吸气两细卡，站立，双手左右平举，两脚摆开，挺胸。手脚交叉，做相反的动作，以此类推。 <br/>
 功效。《除隘法》云：“器官脉道与脑疾，持命上行气疾除。” <br/>
 如上所说，此功祛除五根（9）诸脉道之疾，与五根有密切联系的脑疾；消除心气（10）等持命气（11）和上行气（12）引发之病。 <br/>
-<br/>
+81648165 <br/>
 图14憋气 <br/>
 &lt;7&gt;运气： <br/>
 “仰卧半蜷臀触地。” <br/>
 坐地，两腿前伸，两手放于膝上。吸气两细卡，仰卧，两手朝头顶方向迅速伸直，抖动全身。吐气两细卡，两手平放于两肋侧地铺上。猛吸气两细卡，两前臂交叉相抱于后脑，伸直两脚，脚趾向下。满息两细卡，上体上抬。运气两细卡，两脚同时上抬，臀部支撑体重，身体呈弧形。吐气两细卡，仰卧，两手迅速向两肋伸直。吸气两细卡，两手伸直，用力举到头顶，吐气两细卡。上体端坐，两手握脚趾，前额触膝。再次吸气两细卡，仰卧，两手迅速向头顶伸直，抖动身体。如此，做三次或七次。 <br/>
 功效。《除隘法》云：“运气消除六腑病，脊椎等住气诸疾。” <br/>
 如上所说，此功消除脊椎、脊髓和胃、小肠、大肠、胆囊、膀胱、精囊等六腑之病，祛除等住气引发之疾。 <br/>
-<br/>
+81668167 <br/>
 图15运气 <br/>
 &lt;8&gt;舒息： <br/>
 “挽拳脐下舒息功。” <br/>
 坐地，两脚前伸，两手放于膝上。吸气两细卡，两手上举，挺胸，两脚弯曲并交叉，右腿在上，臀部坐于左脚胫骨后侧。吐气两细卡，两手伸直向后拍，脊椎伸直，向前俯体。吸气两细卡，右手抱左胳膊，左手捏金刚拳，挺胸，向前倾。往下压抑气息两细卡，左手金刚拳挽主脐下。舒息一细竹，脊椎正直，前额向右肋倾斜。吸气两细卡，两手迅速向上伸直，两足迅速向前伸直。吐气两细卡，两手握脚趾，手指、脚趾向下，前额触膝。再次吸气两细卡，两手向上伸直，挺胸。向左肋倾斜，相反动作，如上类推（译注：此节原文文字与图示不符，故有所改动）。 <br/>
 功效。《除隘法》云：“调和大种壮腑脏，下行等住诸病除。” <br/>
 如上所说，此功可除心、肺、肝、脾、肾等五脏和胃、小肠、大肠、胆囊、膀胱、精囊等六腑诸疾，可调和人体大种，增长体力。尤为胜者，能祛除等住气、下行气引发之病。 <br/>
-<br/>
+81688169 <br/>
 3)调治脉道 <br/>
 调治脉道分两点：练气和练功。 <br/>
 第一，练气 <br/>
 “调治脉道脊椎直，右面鼻孔出粗气，左鼻缓入柔和气，守持中性遍周身。” <br/>
-<br/>
+8170 <br/>
 图17  调治脉道 <br/>
 双腿结跏趺，脊椎伸直，右手无名指按右鼻孔，伴随喉音右鼻孔猛呼粗气。继之，右手大拇指按右鼻孔，由左鼻孔缓而长地吸入柔和气息。如是反复做三次或七次。流动的气转移至左鼻孔，因而分别心易于受阻，产生美满幸福。女性应相反地用左手无名指按右鼻孔，由左鼻孔出粗气，从右鼻孔吸入柔和气息。 <br/>
-其后，守持缓峻平等与日月气均匀的中性气息遍布全身，随即练功。 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-14 18:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">   第二，练功 <br/>
+其后，守持缓峻平等与日月气均匀的中性气息遍布全身，随即练功。 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div><span style="font-size:15px; letter-spacing:1px;">瑞祥发表于 2013-10-14 18:20</span><div class="badge-floor">第 7 进</div></div><div class="post-body">   第二，练功 <br/>
     &lt;1&gt;按摩： <br/>
 “击掌磨擦头和身，对伸‘哈’声排浊气。” <br/>
 坐地，两脚斜伸，呈八字形，嗒嗒击掌，手掌相互用力磨擦，至发热时，掌心向内，从眼、脸，抚摸至脚趾。继之，掌心向外，用手背磨擦踝关节至左右腋窝。手掌调转方向，向上磨擦至勃颈，向下磨擦至脚趾。反复做三次或七次，达到能守持气息之量。按摩全身之后，手脚对称平行并 <br/>
 前伸，呈上下重叠八字形，连呼“哈”声三次，尽排浊气。在反复练习的间隙，手脚对伸，猛吸气，两手握脚趾，前额朝向地铺，猛吐气三次。反复做三次。以下动作类推。 <br/>
 功效：《除隘法》云：“按摩消除皮肤病，黄水气病遍行衰。” <br/>
 如上所说，此功可除黄水病（13）、皮肤病、风大失调（14）。尤为胜者，能消除遍行气作用衰败之症。 <br/>
-<br/>
+8172 <br/>
 &lt;2&gt;擦踝： <br/>
 “直立撇脚碰踝骨。” <br/>
 两脚并立，两手叉腰。抬右脚，向右伸直。收缩右脚，脚掌贴左脚大腿内侧，向下磨擦至踝骨。继之，右脚向前径直伸。其后膝盖贴腹部，脚踵贴会阴处。膝下放，脚向后抛。接着向前抛，右脚踝骨碰左脚膝弯。两脚并立。反复做三次。同样，左脚的动作类推。如此反复多次，每次之间，双手向上伸直，猛吸气，弯腰，双手抚脚趾，继尔双手后扬，前额触膝，反复三次。 <br/>
 功效。《除隘法》云：“擦踝消除脚关节，脚筋下行气衰症。” <br/>
 如上所说，此功可除脚病，脚筋和脚关节之病，以及下行气衰弱等病症。 <br/>
-<br/>
+8173 <br/>
 &lt;3&gt;转肩： <br/>
 “双手用力向后抛。” <br/>
 直立，双脚距离等同肩宽，双手下垂于左右两肋。两手同时由前上旋并后扬，反复三次，迅速伸直上举。再次由前面下旋，反复做三次。初学者在手向上扬时入息，向下甩时猛吐气。 <br/>
 功效。《除隘法》云：“消除手臂关节病，上行气衰转肩除。” <br/>
 如上所说，此功可除手腕、肩周、肘关节诸病症；尤为胜者，能祛除上行气功能衰弱等症。 <br/>
-<br/>
+8174 <br/>
 &lt;4&gt;降腋： <br/>
 “半盘降腋缩肘击。” <br/>
 曲腿坐地，脚掌相合，双手捏成金刚拳放于膝上，用力上举至乳根和肩头。接着，左右平举，缩肘，以金刚拳击肩。再次左右平举。如此反复做三次。最后以肘击拍两肋，两拳交叉于锁骨前。 <br/>
 功效。《除隘法》云：“肩部关节肩胛骨，肺心胸筋诸病除。” <br/>
 如上所说，降腋功可除左右肩胛骨、左右肩及其筋脉、关节，以及肺、心、胸肋诸疾。 <br/>
-<br/>
+8171 <br/>
 &lt;5&gt;舒展： <br/>
 “端坐曲腿脚掌合，满息细卡是要点，伴随‘哈’声猛吐气。” <br/>
 曲腿端坐，脚掌相合。双手伸直并上举，两脚撇开伸直，双手经乳根前方伸直下放至前方地铺，肩臂和前额触及地铺。以上动作之气息要点如上文所述。满息一细卡，即全部入息的八分之四。 <br/>
 调治脉道的每一功法之末尾，均应伴随“哈”气之声从口中吐出全部浊气。 <br/>
 功效。《除隘法》云：“脊椎脊髓六腑疾，等住上行气病除。” <br/>
 如上所说，舒展功可除脊椎关节、脊髓和胃、小肠、大肠、胆囊、膀胱、精囊等六腑之病，能祛除等住气、上行气功能衰弱或失调等病症。 <br/>
-<br/>
+8176 <br/>
 （二）、正行气息和功法次第 <br/>
 1、略述正行 <br/>
 “练气根本是气息，满压憋引脉空旋，缓峻七节的加行，进入练气有五组。” <br/>
@@ -635,11 +656,11 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 第三，气息要点：“俱声右鼻吸入气，满压憋引四自性，次第顿时之体位，左鼻舒息踏实学。” <br/>
 <br/>
 双腿结跏趺，左手大指捂左鼻孔，伴随声音右鼻孔用力猛吸粗气，下颔压喉部，两手攥拳，放两胯。开口满息，肩头后张，胳膊伸直，束缚腰腹，向下压抑气息。闭口，上体气息全部积留脐下，紧束腰部，用力导气至脊椎。如斯依次修炼气息四自性。较为熟练时，一次吸气之中，具足四自性。最后，由左鼻孔缓慢、轻松呼气。女性入正行日月二气相反，应认真修习。 <br/>
-<br/>
+8177 <br/>
 ②练功 <br/>
 鼓式 <br/>
 鼓式挺腹满息： <br/>
-<br/>
+8178 <br/>
 第一，正行；“跪地拇指贴拇趾，入息细竹抬臀部，上体后仰形似鼓。” <br/>
 跪地，臀部坐脚踵，双手放膝上。入息一细竹，双手伸直并上举。舒息一细竹，两手下垂至两侧地铺上，抬臀部，手握脚趾。入息一细竹，胸部和腰部缓挺，头后仰，体弯似鼓，满息一细竹。继之，舒息一细竹，臀部下落至脚踵，弯腰，前额触膝。再次入息一细竹，双手伸直并上举。舒息一细竹，弯腰，前额和前臂贴地。 <br/>
 正行入息之后住气和满气，前行的入息和舒息，正行的舒息，结行的入息和舒息等七节练气应完整是气功的常规，应如是勤勉修习气功的气息要点。 <br/>
@@ -649,10 +670,10 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 双膝跪地，入息一细竹，抬臀部。上体伸直，两手上举至头顶。舒息一细竹。双手伸直，垂两侧。入息一细竹，双手从前面上绕，大指向后，紧叉腰。入息一细竹，双手手肘和后脑后仰，随着修炼的熟练程度延长满息时间，借以发挥效力。最后，双手从后面上绕，放至腰部，舒息一细竹。入息一细竹，双手伸直并上举。舒息一细竹，臀部坐脚踵，弯腰，前额和前臂贴地。如斯七节练气完整，发挥效力是五组功法之首入息和开口满息功之次第。反复练习三次五次或七次。为了同后面的功法相联系，结行的次第是入息一细竹，跪立，臀部坐    于脚踵，双手伸直迅速并上举。舒息一细竹两脚前伸，弯腰，前额和前臂同时触地。 <br/>
 功效。《除隘法》云：“鼓形功法壮脏腑，祛除脊髓腰关节，等住上行诸气病， 修炼生效相关联。” <br/>
 如上所说，此功壮心、肺、肝、脾、肾等五脏和胃、小肠、大肠、胆囊、膀胱、精囊等六腑之功能，祛除脊髓、腰部、腰关节之疾。尤为胜者能除等住气、上行气功能衰退或失调等病症。 <br/>
-<br/>
+81798180 <br/>
 海螺式 <br/>
 海螺式压气： <br/>
-<br/>
+8181 <br/>
 第一，正行； <br/>
 “伸脚端坐抬右手，入息舒息脚贴腰，左拍入息拉伸展，压气右仰如海螺。” <br/>
 端坐，两脚斜伸，双手抚膝。入息一细竹，右手向上斜伸，（译注：插图与文字说明不符，）右脚弯曲，置于左腿之上，左手握右脚脚趾，贴左胯。舒息一细竹，右手从背后伸至左胯，握右脚掌，上体前俯，伸展左手握左脚掌。入息一细竹，左手向上平抬，用力拉曳左脚，上体伸直，并向左扭转。压气一细竹右肩尽力后张，身体如海螺。舒息一细竹，双脚向前对伸，双手抚膝。入息一细竹，双手向上伸展，上体向左扭转。舒息一细竹，两脚朝前并伸，前额贴膝，前臂触胫骨。向右扭转，如上文类推。 <br/>
@@ -665,7 +686,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 侧的脚掌，用力拉曳。再次按正行功法入息、舒息。向右扭转上体，动作相反如上文类推。最后，按照正行程式结行入息、舒息。是为发挥效力。功法的正行及其支分，每遍修炼与练气七节的要点相联系。是为压抑气息的次第。 <br/>
 功效。《除隘法》云：“海螺式祛腰肾病、胆虚气痛（15）筋络疾、六腑阳衰（16）下行乱，练功生效相关联。” <br/>
 如上所说，海螺功可除肾病、腰病、同腰部关联的筋络病症、胆虚、风痛关节炎，可除胃、小肠、大肠、胆囊、膀胱、精囊等六腑病症和涎液阳衰。尤为胜者，能祛下行气失调而引发的疾病。 <br/>
-</div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-14 19:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body"> 火焰式 <br/>
+81828175 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div><span style="font-size:15px; letter-spacing:1px;">瑞祥发表于 2013-10-14 19:00</span><div class="badge-floor">第 8 进</div></div><div class="post-body"> 火焰式 <br/>
 火焰式倒立憋气： <br/>
       第一，正行； <br/>
 “仰卧全入抬脚臀，两手辅胯胫骨抖，后颈和肩支体重，姿如火焰闪闪动。” <br/>
@@ -678,7 +699,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 加行的入息同于正行。舒息一细竹，两手放胯骨两侧的地铺上，两脚伸直上举并向头顶前方弯曲，脚趾触地；两手摩擦膝盖内侧直至趾尖。入息一细竹，两手迅速朝头顶前方伸展，两手用力摩擦双脚脚趾顶端至胫骨。同时，两臂、两腿伸直，上抬，臀部支撑体重，腿、膝相并，伸直。继之，做肩肘倒立。其时，随各自修炼的熟练程度，肩部、腹部向上如箭挺直，颈椎和肩头支撑体重。舒息一细竹，双手摩擦双膝至脚趾；手指、脚趾同时朝下，放于头顶前方的地铺上。入息一细竹，伸展双手，放于头顶前方地铺上，双脚缓放至原处（指仰卧姿态）。舒息一细竹，上体端坐，双手握脚趾，前额贴膝。是为发挥效力。以上动作，每遍练气七节，是为憋气之次第。 <br/>
 功效。《除隘法》云：“火焰式法祛气病，腰脊残废坐地行，上行等住气疾除，修炼生效功效平。” <br/>
 如上所述，火焰式可祛诸种气病、背部和脊髓之疾，腰疼、腰部筋脉残疾、坐地移行等疾病。尤其能除上行气、等住气功能衰退和失调等病症。 <br/>
-  <br/>
+81848185 8186 <br/>
 <br/>
 龟式 <br/>
 龟式运气： <br/>
@@ -694,7 +715,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 以上每种功法同七节练气之要点相联系，各做三遍。如是修炼，是为运气的次第。 <br/>
 功效。《除隘法》云：“乌龟式消乳根痛，肝疼脏腑衰弱症， 涎液淤紫溃疡病，修炼生效相联系。” <br/>
 如上所说，此功可消乳根和肝脏疼痛，祛除心、肺、肝、脾、肾等五脏之疾，和胃、小肠、大肠、胆囊、膀胱、精囊之神精衰弱不能发挥正常作用和溃疡病（17），以及与之相关之疾。 <br/>
-<br/>
+818781888189 <br/>
 <br/>
 犁式 <br/>
 犁式脉空旋： <br/>
@@ -712,7 +733,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 如上所说，此功可除脊椎，心、肺、肝、脾、左右肾等五脏，以及胃、小肠、大肠、胆囊、膀胱、精囊等六腑之病症，可祛手脚及头部筋、脉之疾，调和持命气、上行气、等住气下行气、遍行气等五根本气，恢复其功能。 <br/>
 对根本功的所有功效而言，修炼和发挥其效力，可照此类推。 <br/>
 以上所述是五组功法之首主要五种功和其十种支分功，即与四种自性相联系的十五种功，全部介绍完毕。 <br/>
-<br/>
+819081918192 <br/>
 <br/>
 (2)、具足四加行 <br/>
 从具足甚深四加行角度介绍属于瓶气修炼法。 <br/>
@@ -722,7 +743,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 第一，身体要点： <br/>
 “身具毗卢七法姿，右手触及左右膝，继尔弹指向心间。” <br/>
 身体呈毗卢七法修禅静坐姿态，其情况如上文呼出浊气一节所述。妙排浊气后，右手刚触及左膝，就抚右膝，随即还原。接着抚胸间，随即在右膝上弹指，其速度不快于健康人闲居时心跳速度。此时限齐全算作一细竹，每一分解动作的长短算作一细卡。此情况无需注意钟表或耳听任何能表时间长短的声音。因系不障碍所缘要点的妙法，故必须学会自然熟悉它。 <br/>
-<br/>
+8183 <br/>
 第二，所缘要点： <br/>
 “倾注所缘气运行。” <br/>
 此时所需所缘要点是意念不散逸，一心专注入息、憋气、吐气和吐气之后脉道空旋（译注：原文下文又表述为空闭，意为呼气后似乎已断呼吸）等四种修气法。 <br/>
@@ -740,13 +761,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 熟练并准确无误地掌握，计算瓶气之量和除障碍所缘要点的深奥之法是遵循杰塞•久美坚赞的教诫；铭记乃至四细竹是容易的。之后，在第五细竹时，左手抱膝，食指向上竖。第六细竹时，食指还原。或者，若需计算更多次数，则中指上竖。在第七细竹时，中指还原，小指上竖。第八细竹时小指还原，表示达到中等瓶气之量。如是反复四次，圆满大瓶气之量。 <br/>
 <br/>
-“纳气发阿吐发吽 ，捂鼻自然发声音，入憋吐空按次第，不断修习到熟练。” <br/>
-修气达到小瓶气之量后，紧捂鼻孔，伴随自然发出的 （读音“阿”）入息，吐、空时间相等，吐气亦即舒息有 字音（读“吽”）。此系伴随自然声音，以缓急之势入息、憋气，以及吐气、空闭。学者应修习娴熟，不断积累经验，乃是提高瓶气修炼不可缺少的根本，宜于极端重视。 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+“纳气发阿8193吐发吽8194 ，捂鼻自然发声音，入憋吐空按次第，不断修习到熟练。” <br/>
+修气达到小瓶气之量后，紧捂鼻孔，伴随自然发出的8195 （读音“阿”）入息，吐、空时间相等，吐气亦即舒息有8196 字音（读“吽”）。此系伴随自然声音，以缓急之势入息、憋气，以及吐气、空闭。学者应修习娴熟，不断积累经验，乃是提高瓶气修炼不可缺少的根本，宜于极端重视。 <br/>
+8198 <br/>
+8199 <br/>
+8200 <br/>
+8201 <br/>
+8202 <br/>
 <br/>
 ②练功 <br/>
 蛇式 <br/>
@@ -762,7 +783,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 加行的入息和舒息同于正行。双手向两肋伸展。入息一细竹，两脚胫骨贴地，用力伸展脚掌，同时上体后仰，随顺各自修习的熟练程度满息，头和肩头后仰，紧缩身体。舒息一细竹，两手伸直，迅速上举。舒息一细竹，坐地，两脚朝前伸直，前额触膝，双手握脚趾，手指、脚趾向下。是为发挥效力。七节齐全地修炼以上每一步骤，是满息之次第。 <br/>
 功效。《除隘法》云：“蛇式可祛四肢筋，背脊关节脏腑疾，五气衰退等疾病，修习生效如上述。” <br/>
 如上所说，此功可除脊椎、脊髓、大小关节、四肢筋络，心、肺、肝、脾、肾等五脏以及胃、小肠、大肠、胆囊、膀胱、精囊等六腑之病，能除持命气、上行气、等住气、下行气、遍行气等五气功能衰退之疾病。 <br/>
-</div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-16 12:09<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">      弯刀式 <br/>
+820382048197 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div><span style="font-size:15px; letter-spacing:1px;">瑞祥发表于 2013-10-16 12:09</span><div class="badge-floor">第 9 进</div></div><div class="post-body">      弯刀式 <br/>
 弯刀式压气： <br/>
 第一，正行； <br/>
 “右脚蹬地左脚盘，右手绕背右膝前，左手背后握手腕，左扭压气弯刀般。” <br/>
@@ -775,7 +796,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 入息一细竹，两手用力上举，右脚盘在左腿上。舒息一细竹，左脚收缩，其后踵放于会阴处下方地铺上，右腋贴左膝，左手攥拳，经左腋绕至背后。入息一细竹，右手上举，上体伸直。随顺各自修炼的熟练程度压抑气息，右手从右肋绕到背后，并握左手手腕，上体和脸右转左侧的动作亦如上文类推。结行的次第同于正行。是为发挥效力。以具足七节练气的要点来修炼，是为压抑气息的次第。 <br/>
 功效。《除隘法》云：“弯刀式祛腰背痛，脘症（21）呼吸困难症，等住下行诸气病，修炼生效如上述。” <br/>
 如上所说，此功消除左右肾疾，脊椎关节疼痛，一般涎液病，尤其能除脘症，呼吸困难症，以及等住气、下行气功能衰退症。 <br/>
-<br/>
+820682078208 <br/>
 <br/>
     金刚撅式 <br/>
 金刚橛式憋气： <br/>
@@ -783,11 +804,11 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 “踮立合掌举头顶，肘膝弯曲后踵贴，挺胸形似金刚橛。” <br/>
 端坐，两腿前伸，双手抚膝。入息一细竹，上体端直，左右脚掌对贴，腿弯曲，脚踵朝向会阴处，两膝对称；双手用力上举；腰伸直。舒息一细竹，两手放于两侧地铺之上，臀部上抬，脚趾触地踮立。入息一细竹，肩 <br/>
 头和肘关节后张；手掌闭合、上举，不要触头顶；肘和膝左右对张；脚踵相贴、蹲立。满息一细竹，压抑气息、憋气，上体微仰，挺腰，身躯和触地的脚趾形如金刚撅，缓缓向上引体。吐气两细卡，臀部缓放于地上，两手触两侧之地。空闭气息两细卡，放松身体。入息一细竹，两手向上伸举，两脚朝前伸展。舒息一细竹，前额触膝，手抚脚趾。 <br/>
-<br/>
+8209 <br/>
 第二，施展技能； <br/>
 “仰卧手脚掌相贴，膝肘触地施技能。” <br/>
 入行同于正行。舒息两细卡，两手伸于两侧，仰卧，入息一细竹，手及双脚相对称。随顺各自熟练程度满压憋气，手脚掌分别相贴。膝肘分贴两侧地铺之上，紧缩身体。舒息两细卡，伸直双腿，两手分贴两侧。入息两细卡，两手举至头顶，脚趾用力前伸。舒息两细卡，端坐，并向前下俯，额头触膝，手指及脚趾并伸。 <br/>
-<br/>
+82108211 <br/>
 第三，发挥效力； <br/>
 “拳脚鼎立支体重，七节生效憋气息。” <br/>
 加行的入息同于正行。舒息一细竹，两脚掌对合，后踵朝向会阴处，两手无名指压拇指并攥拳，两拳置于胯侧的地铺上。入息一细竹，上体高耸，腰部伸直，臀部上抬，由翘立的两脚脚趾和两拳支撑身体，状如三脚鼎立。随顺各自修习的熟练程度憋气，紧缩身体之后，双手平举，两脚脚趾从前方向上转，端坐。舒息一细竹，两手下放至胯侧，放松身体。入息一细竹，跪立，脚趾触地，腰部伸直，两手用力向上伸举；舒息一细竹，端坐，双腿贴地，前额触膝，手握脚趾（译注：原文与插图不太相符）；是为发挥效力。与练气七节相联系地修习，是为憋气之次第。 <br/>
@@ -807,14 +828,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 加行的入息同于正行。舒息一细竹，双手手腕贴膝，两手手掌放于膝前地铺上，猛入息两细卡，两脚后伸，脚趾触地，膝部上抬，肩臂直竖，上体后仰，伴随“哈”声，停止吐纳，同时手脚稍向前跳。随顺各自修习的熟练程度运气。其后，两脚倏尔前抛，两手上举，臀部敏捷、轻松坐地。舒息一细竹，两手放胯侧地铺上，全身放松。入息一细竹，双脚前伸，两手用力向上举至头顶。舒息一细竹，前额触膝，两手抚脚趾，脚趾向下。是为发挥效力。以上每个分解动作同练气七节的要点相联系，借以修炼，是运气的分际。 <br/>
 功效。《除隘法》云：“热肿积食腰脊肾，痞块筋络遍行疾，如狗伸腰均可祛，修炼生效如上述。” <br/>
 如上所说，此功可祛除下列疾病：脊椎、脊髓、左右肾、大小肠热肿、积食不化症、痞块、筋络病、以及遍行气功能衰退或混乱症。 <br/>
-<br/>
+821282138214 <br/>
 <br/>
      蜘蛛式 <br/>
 蜘蛛式脉空旋： <br/>
 第一，正行； <br/>
 “坐地两手经膝弯，平放地上似擦腹，退臀低胸吐两分，抬头仰脑似蜘蛛。” <br/>
 坐地，双脚朝前并伸，双手同时抚膝。入息一细竹，两手用力上举，两脚脚掌闭合，两膝左右平放贴地。舒息一细竹，双手徐缓下放，经膝弯，两手手掌触地，用力左右平伸。入息一细竹，两膝用力压肩，仿佛磨擦腹部，头和上体后仰。猛吐气两细卡，胸膛贴地，臀部后移，空闭气息一个半细竹，头后仰，身体宛若蜘蛛。入息一细竹，端坐，两手上举，双脚朝前并伸。舒息一细竹，前额贴膝，手抚脚趾，脚趾向下。 <br/>
-<br/>
+821582168217 <br/>
 第二，施展技能； <br/>
 “肩臂臀下贴地铺，踵颔相贴施技能。” <br/>
 加行的入息同于正行。舒息一细竹，两手肩臂从臀下向上朝背伸展，肩头触地。入息一细竹，肩及头部后仰，两手贴地，臀部压左右两胳膊，猛吐气两细卡，两脚脚趾张开，后踵靠拢，紧贴下颔。随顺各自修习的熟练程度空闭气息，躯体舒展，紧缩脉道。结行的次第同于正行一节所述，是为施展技能。 <br/>
@@ -830,25 +851,25 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 介绍秘密气息流入中脉的方法分两点：练气和练功。 <br/>
 ①练气 <br/>
 第一，身体要点： <br/>
-“密气住持中脉法，身结莲花跏趺坐，拇指朝前手叉腰，作吽明王静坐姿。” <br/>
-端坐，双腿结莲花跏趺坐姿，两手束腰，拇指在前，朝向脐间，其余手指朝向背后，挺胸，两肩后张，脊椎正直，身体呈作吽明王静坐之姿。 <br/>
+“密气住持中脉法，身结莲花跏趺坐，拇指朝前手叉腰，作吽8224明王静坐姿。” <br/>
+端坐，双腿结莲花跏趺坐姿，两手束腰，拇指在前，朝向脐间，其余手指朝向背后，挺胸，两肩后张，脊椎正直，身体呈作8223吽明王静坐之姿。 <br/>
 第二，所缘要点： <br/>
-“观想自身净且明，现空无别的正中， 中脉具备六特征，脉间吽字闪蓝光。” <br/>
-<br/>
-观想自身不是普通的血肉之躯，身体自性如晶石清净、明亮，虽显现，却自性空，现分和空分二者无别。身体正中中脉具备六种特征；即从自性而言为空；从体相而言为明；从慈悲心而言外白内泛红光；不加造作天成端直；上窍主解脱，在顶间开口；下端就地阻滞，在脐下四指处闭合。中脉正中处，不散风息明点的五种依次重叠，其中央意金刚的本色吽字自然放射闪烁的蓝光，充盈中脉。 <br/>
-“中脉及蓝光吽字，由小变大遍如海，最终遍际宇宙间，消除业相（24）习气障。” <br/>
-修持所缘要点时，观想中脉和蓝色命根的吽字逐渐扩大，与自已的身量等同。继尔依次第扩大至住宅之量、山岳之量、大海之量、乃至遍及宇宙。自他之全部业相习气如阳光照耀霜雪一样，随即消除清净，被净治为法尔界。 <br/>
-“再将中脉和吽字，收缩微小又微小，一心倾注那吽字，修炼散集的要点。” <br/>
-再将中脉和吽字还原为先前之量，心中明白显现缩小到马尾毫之大小，乃至文小到一丝光线大小，认真修炼，倾注极微小的字为所缘。修习熟练时，逐渐扩大和缩小至极其微小，即同时透彻修炼散集的要点。 <br/>
+“观想自身净且明，现空无别的正中， 中脉具备六特征，脉间8222吽字闪蓝光。” <br/>
+8218 <br/>
+观想自身不是普通的血肉之躯，身体自性如晶石清净、明亮，虽显现，却自性空，现分和空分二者无别。身体正中中脉具备六种特征；即从自性而言为空；从体相而言为明；从慈悲心而言外白内泛红光；不加造作天成端直；上窍主解脱，在顶间开口；下端就地阻滞，在脐下四指处闭合。中脉正中处，不散风息明点的五种依次重叠，其中央意金刚的本色吽8225字自然放射闪烁的蓝光，充盈中脉。 <br/>
+“中脉及蓝光吽8221字，由小变大遍如海，最终遍际宇宙间，消除业相（24）习气障。” <br/>
+修持所缘要点时，观想中脉和蓝色命根的吽8226字逐渐扩大，与自已的身量等同。继尔依次第扩大至住宅之量、山岳之量、大海之量、乃至遍及宇宙。自他之全部业相习气如阳光照耀霜雪一样，随即消除清净，被净治为法尔界。 <br/>
+“再将中脉和吽8239字，收缩微小又微小，一心倾注那吽8227字，修炼散集的要点。” <br/>
+再将中脉和吽8228字还原为先前之量，心中明白显现缩小到马尾毫之大小，乃至文小到一丝光线大小，认真修炼，倾注极微小的8229字为所缘。修习熟练时，逐渐扩大和缩小至极其微小，即同时透彻修炼散集的要点。 <br/>
 关于中脉的粗细，有人说有如麦秸，有人认为如藤鞭，等等，有不同意见；但是，绛秋多吉大圣说：“中脉乃是智慧脉，而不是实体筋、脉的行相，随顺各自身体，依据尽量易记的经验，其为重要。” <br/>
 显然，签于以上提示，《日月和合》对中脉之量没有定论。认真修习中脉所缘要点时，应观想中脉之右白色的精脉（25）在右攀交中脉，其上端从脑后向前弯曲，插入右鼻孔；中脉之左红色的血脉（26）在左攀交中脉，上端从脑后向前弯曲，插入左鼻孔。精脉、血脉的下端在脐下四指处同中脉智慧脉相连。女性精脉和血脉的状况左右方位则相反。如斯等等应精通所缘要点。 <br/>
 第三，气息要点： <br/>
-“经由精血二脉道，业气深沉入体内，住持中脉小憋气，束腰吽字自然引。” <br/>
-观想业气经精、血二脉道徐缓而深沉直入体内，向下压抑，小憋气，束紧于中脉。挺胸，勿挺腹，紧束左右腰部，其时，中脉正中明亮的吽字宛若磁铁吸引铁屑一般瞬间自然地集拢全部业气。 <br/>
-“放松鼻孔和唇齿，吽声呼出那甘露，内外业相诸习气，明结万物修成吽。” <br/>
-继之，放松两鼻孔和唇齿，讴出长音吽，如同周身充满了明晶的甘露一般，从而外部显现和内部实体血肉之躯等所有业相习气、使人受害的病魔就地清净。认真观修便可见，在明亮不灭的意境中，整个世界布满了游尘一般巨细不同的吽字。 <br/>
-“如斯入憋呼出气，熟练散集吽字时，业气皆入中脉中，幻象显现为智慧。” <br/>
-如是，业气由日月二道进入体内；接着，积汇并引导住持于中脉，念诵吽字，在吽字境界中观想万物，熟练地散集，从而全部业气被纳入中脉，二执（27）之所有幻象显现为智慧。 <br/>
+“经由精血二脉道，业气深沉入体内，住持中脉小憋气，束腰吽8230字自然引。” <br/>
+观想业气经精、血二脉道徐缓而深沉直入体内，向下压抑，小憋气，束紧于中脉。挺胸，勿挺腹，紧束左右腰部，其时，中脉正中明亮的8231吽字宛若磁铁吸引铁屑一般瞬间自然地集拢全部业气。 <br/>
+“放松鼻孔和唇齿，8232吽声呼出那甘露，内外业相诸习气，明结万物修成吽8233。” <br/>
+继之，放松两鼻孔和唇齿，讴出长音吽8234，如同周身充满了明晶的甘露一般，从而外部显现和内部实体血肉之躯等所有业相习气、使人受害的病魔就地清净。认真观修便可见，在明亮不灭的意境中，整个世界布满了游尘一般巨细不同的吽8235字。 <br/>
+“如斯入憋呼出气，熟练散集吽8236字时，业气皆入中脉中，幻象显现为智慧。” <br/>
+如是，业气由日月二道进入体内；接着，积汇并引导住持于中脉，念诵吽8237字，在8238吽字境界中观想万物，熟练地散集，从而全部业气被纳入中脉，二执（27）之所有幻象显现为智慧。 <br/>
 <br/>
 ②练功 <br/>
 弓式 <br/>
@@ -865,16 +886,16 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 加行的入息、满息同于正行。俯卧，双手用力向头顶方向伸展然后触地。入息一细竹，头后仰，双手经肩头后伸，两脚背向弯曲，两手大指握脚拇趾。随顺各自修习的熟练程度满息，手脚伸展形如引弓，紧缩身体。舒息一细竹，跪坐，头和双手分别贴膝。入息一细竹，同时站立，双手用力上举。舒息一细竹，前额贴膝，双手分别握脚掌。是为发挥效力。认真修习，因各个分解动作同七节练气相联系，故为满息之次第。 <br/>
 功效。《除隘法》云：“背脊腰部关节痛，筋络脏腑胃口败，积食五气病症除，修炼生效如上述。” <br/>
 如上所说，与脊椎、脊髓和肾脏相联系的腰部关节疼痛、躯体和五体筋络的病症，心、肺、肝、脾、肾等五脏，以及胃、大小肠、膀胱、胆囊、精囊等六腑之疾病，食欲不振，新老积食不化，持命气、上行气、等住气、下行气、遍行气等五气功能衰退或混乱等症，修炼弓式均可祛除。 <br/>
-</div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-16 14:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">      月牙式 <br/>
+821982208205 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div><span style="font-size:15px; letter-spacing:1px;">瑞祥发表于 2013-10-16 14:49</span><div class="badge-floor">第 10 进</div></div><div class="post-body">      月牙式 <br/>
 月牙式压气： <br/>
 第一，正行； <br/>
 “撇脚举入放舒息，直入欠身压气息，指趾相连如新月，右侧动作以此推。” <br/>
 立正，两手用力伸直，垂贴两胯。入息一细竹，右脚脚趾朝右，左脚外展两虎口，紧缩身体；右手上举，两眼注视指尖；左手用力向下磨擦左腿外侧。舒息一细竹，保持上体和左手姿态，右手缓放胯侧。入息一细竹，紧缩身体，腰腹缓缓端正时，左右手掌用力上下磨擦大腿外侧。压抑气息一细竹，上体向右脚外展的一侧倾斜，右手手指抚右脚脚趾，体形弯如月牙。入息一细竹，两手用力上举，双脚并拢。舒息一细竹，向前弯腰，前额贴膝，双手分别握脚腕。向左侧欠身压抑气息的动作以此类推。 <br/>
-<br/>
+8241 <br/>
 第二，旌展技能； <br/>
 “左右两手同时放，欠身左胯施技能。” <br/>
 加行的入息、舒息同于正行。入息一细竹，上体正直，左手上举，右手用力磨擦左腿外侧。随顺各自修习的熟练程度压抑气息，右手和左手同时从右侧下放，上体正直，向右胯欠身。舒息一细竹，腰部正直。如斯等等，同于正行，左右动作相反；是为施展技能。 <br/>
-<br/>
+82428243 <br/>
 第三，发挥效力； <br/>
 “头顶和手朝向膝，生效七节压气息。” <br/>
 加行的入息、舒息和正行的入息于同“施技”一节。随顺各自修习的熟练程度满息，上体端直地向右倾斜，右膝略微弯曲，右手抚膝而下，紧握脚腕，头顶和左手手指朝向脚趾。舒息一细竹，两脚外展并立，双手和前额触及前面的地铺。是为发挥效力。左右动作相反，如上类推。修炼全部分解动作均与练气七节相联系。是为压抑气息的次第。 <br/>
@@ -894,7 +915,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 加行的入息同于正行。舒息一细竹，双手手掌触及胯前地铺，吸气两细卡，两脚脚掌践踏手指中部，臂膀伸直。随顺各自修习的熟练程度憋气，臀部上抬，双肩后张，脑袋后仰，身体空悬之后，端坐，上体正直，双手左右平展。结行的次第同于正行。是为发挥效力。修炼以上各个分解动作均与练气七节的要点相联系。是为憋气之次第。 <br/>
 功效。《除隘法》云：“狮子式调五大种，五气混乱消炎症，神志清醒心识明，修炼生效如上述。” <br/>
 如上所述，狮子式可调解人体的地大种组成之骨肉、水大种组成的血液和元气、火大种构成的体温、风大种构成的气息吐纳、空大种构成的心之冥想等功能失常或混乱，以及持命气、上行气、等住气、下行气、遍住气等五气功能衰退或失调，使之恢复正常，使之雄劲。它还能消除控制体内五大种和五气的脏腑等身体各部分的炎症和功能失调。尤其能使神志清明。如斯等等，功德颇多。 <br/>
-<br/>
+824482458246 <br/>
 <br/>
       灵鹫式 <br/>
 灵鹫式运气： <br/>
@@ -910,7 +931,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 修炼以上分解动作均与练气七节相联系。是为运气之次第。 <br/>
 功效。《除隘法》云：“调和五气五元素， 根除上行气病症，五脏神经鹫功壮，修炼生效如上述。” <br/>
 如上所说，灵鹫式可调和持命气、上行气、等住气、下行气、遍住气等五气功能混乱，自身地大种组成的骨肉、水大种构成的血液和黄水、火大种构成的体温、风大种构成的气息、空大种组成的心等失调，尤为胜者，此功能消除上行气功能衰退症，恢复和增长心、肺、肝、脾、左右肾等脉络和五根神经的活力。 <br/>
-<br/>
+824782488249 <br/>
 <br/>
       法基式（28） <br/>
 法基式脉空旋： <br/>
@@ -926,7 +947,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 以上是引导秘密气息人中脉的五种要功和十种支分功，即第三组五个一组的十五种功已叙述完毕。 <br/>
 功效。《除隘法》云：“壮体祛除腰背疾，脏腑五体关节病，筋络五气诸病症， 修炼生效如上述。” <br/>
 如上所说，法基式可祛除下列病症：背脊、脊髓和心、肺、肝、脾、肾等五脏，以及胃、大小肠、膀胱、胆囊、精囊等六腑之病，消除与持命气、上行气、等住气、下行气、遍行气等五气相联系的头和手足等五体筋络、大小关节之疾以及功能衰退等病症。 <br/>
-<br/>
+825082518252 <br/>
 <br/>
 (4)、和气七支 <br/>
 介绍用和气七支来控制性属五大种诸气之法。 <br/>
@@ -941,7 +962,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 第三，气息要点： <br/>
 “气息要点缓入息，左右均匀用力压，血精二气入中脉，紧缩腰部积脐下。” <br/>
 缓而柔和的气息均匀地从左右两鼻孔入于体内，适当满息后，心神倾注于所缘——血脉、精脉交汇处空大种之明点。继尔，连续两次小吸气，无声息地咽吞唾液，向下压抑风息，身体朝左、右摇动，保持平衡，用力向下压抑气息，使血脉、精脉的气息进入中脉。接着，紧缩腰部，观想气息积存于脐下，倾注脐间的气明点。 <br/>
-<br/>
+8253 <br/>
 “压引上下之气息，经过中脉智慧道，心喉顶间脉轮中，融于大种各明点。” <br/>
 猛烈地向下压抑上体气息，上引下体气息，观想业风融于脐间风明点，无别地融合。再次观想脐间动荡的气息经中脉智慧道上引，与心间的明点无别地融合。向上猛引风火之气于喉间明点融合，然后与顶间脉轮之明点相融，依次上引，融于各大种之精华一一明点，平等一味。从而以大种为性的诸气息就地清净，对存于体外的气息遂获得自在。最后，伴随“哈”声吐气，入定于无所缘境界，安住于空闭气息的状态。如是，具备入息、满息、憋气、运气、吐气、空闭气息等气息要点的七种状态是达到修习气息瑜伽的标准。 <br/>
 <br/>
@@ -963,7 +984,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 第一，正行； <br/>
 “俯伸下颔触地铺，开口满息抬两脚，攥拳触地支体重，形如蝗虫翘下体。” <br/>
 跪坐，两手扶膝。入息一细竹，两手用力上举，挺胸。舒息一细竹，俯卧，两手攥金刚拳，用力伸至胯侧。入息一细竹，下颔触地，两脚用力伸直，紧缩身体。开口满息一细竹，两脚和腰部伸直，向上抬脚，拳头和臂膀触地，支撑体重，下体形如蝗虫一般上翘。舒息一细竹，两掌放于肩侧地铺上，周身放松。入息一细竹，膝和手掌触地，趴地。舒息一细竹，臀坐后踵，前额触地。 <br/>
-<br/>
+82548255 <br/>
 第二，施展技能； <br/>
 “膝臂手掌均触地，抬脚上翘施技能。” <br/>
 加行的入息同于正行。舒息一细竹，双膝、两肘关节并拢，前臂和手掌触地。入息一细竹，两膝上抬，脚趾在原地触地。随顺各自修习的熟练程度满息，两脚径直向上抛抬，头后仰。舒息一细竹，膝和前额触地，臀坐后踵。结行的次第同于正行。 <br/>
@@ -972,16 +993,16 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 加行的入息、舒息同于“施展技能”一节。入息一细竹，膝部向上抛抬，臂膀正直，手掌触地，支撑体重。随顺各自修炼的熟练程度满息，头后仰，两脚和大小腿伸直，向头顶前方挺起。入息一细竹，膝部、前额和两手掌触地，臀坐后踵。结行的次第同于“施展技能”一节。是为发挥效力。修炼以上各个分解动作同练气七节的要点相联系，是为满息之次第。 <br/>
 功效。《除隘法》云：“满息蝗虫式祛除，腰疾瘫痪和肠炎，等住下行遍行疾，修炼生效如上述。” <br/>
 如上所说，此功祛除腰部疼痛或筋脉疼痛使坐地移行或两脚瘫痪、消除大小肠发炎的寒热病等。此外，祛除等住气、下行气、遍行气功能衰退或混乱等病症。 <br/>
-</div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-16 15:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">      鸽式 <br/>
+8240 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div><span style="font-size:15px; letter-spacing:1px;">瑞祥发表于 2013-10-16 15:20</span><div class="badge-floor">第 11 进</div></div><div class="post-body">      鸽式 <br/>
 鸽式压气： <br/>
 第一，正行； <br/>
 “坐地伸曲踵贴胯，两手叉腰入息仰，挺胸压气肘朝后，仰头细竹似鸽子。” <br/>
 双膝触地，两手抚膝。入息一细竹，两手用力上举。舒息一细竹，双手和前额触及膝前地铺；右脚向后伸直，左脚弯曲，后踵紧贴会阴处。入息一细竹，双手叉腰，大指朝后，肘关节朝后，上体、手肘和肩头后张。压抑气息一细竹，头后仰，挺胸腹，状如鸽子。舒息一细竹，前额触地；两手用力前伸。入息一细竹，双脚前伸，两手用力上举，舒息一细竹，前额下俯，双手抚脚趾。左右两侧动作相反，以此类推。 <br/>
-<br/>
+8257 <br/>
 第二，施展技能； <br/>
 “伸展脚趾朝后脑，紧缩身体施技能。” <br/>
 加行的入息、舒息同于正行。入息一细竹，胸腹上挺，弯曲的右脚膝部前伸缓抬，脚趾与后脑相触，随顺各自熟练程度压抑气息，并紧缩身体。结行次第同于正行，左右动作相反，以此类推。 <br/>
- <br/>
+82588259 <br/>
 第三，发挥效力； <br/>
 “曲腿前伸伸腿曲，生效七节入气息。” <br/>
 入息舒息同于正行，入息一细竹，上体后仰，弯曲之右腿缓缓前伸。随顺各自修习的熟练程度压抑气息，上体后仰，后脑贴右大腿，紧缩身体。舒息一细竹，双手和前额向右脚下俯。入息一细竹，双手用力上举，上体右扭，右脚和其大中腿全部收拢，脚趾向上，斜展。舒息一细竹，双脚并拢前伸，前额下俯膝部，手抚脚趾，指趾同时朝下。相反之动作，如上类推。是为发挥效力。 <br/>
@@ -997,7 +1018,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 第二，施展技能； <br/>
 “手印上伸与肘齐，脚掌贴降施技能。” <br/>
 加行的入息、舒息和正式“施技”的入息同于正行。随顺各自修习的熟练程度憋气，双手合掌，向上伸举，脚掌分别贴于两肘，膝部对称。最后，双脚朝头顶倒钩，两脚触地，臀部高耸，端坐。如斯等等，同于正行。 <br/>
-   <br/>
+8260  82618262 <br/>
 第三，发挥效力； <br/>
 “手举腿斜伸直降，生效七节憋气息。” <br/>
 加行的入息、舒息和正式“发挥效力”的入息同于正行。随顺各自修习的熟练程度憋气，两手合掌上举，两脚掌贴两手肘，膝部对称伸直。最后，双脚朝头顶倒钩，端坐。如斯等等，同于正行一节。是为发挥效力。修炼以上各个分解动作与练气七节相联系，是憋气的次第。 <br/>
@@ -1010,12 +1031,12 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 “手脚对张掌贴地，运气个半头后仰，收腹贴脊腰椎直。” <br/>
 端坐，两脚前仲，双手抚膝。入息一细竹，两手用力上举，两腿伸直，两脚左右对张，相距约两肘（31）。舒息一细竹，两手肘关节触及膝前地铺， <br/>
 两手掌触及脚趾前的地铺，前额贴地。入息两细卡，站立，脚掌和手掌均触地。运气一个半细竹，头后仰，大海亦即腹部贴山岳亦即腰椎，胸腹正直，如虎傲立。最后，两脚前伸，两手左右平伸，臀部放地。舒息一细竹，双手平抚斜展的胫骨，前额贴地。入息一细竹，两手上举，双脚前伸。舒息一细竹，前额贴膝，双手分别拉脚掌。 <br/>
-<br/>
+8263 <br/>
 第二，旋展技能； <br/>
 “顶立运气施技能。” <br/>
 加行的入息和舒息同于正行。入息两细卡，手掌和脚掌触地，臂膀和大 <br/>
 小腿笔直，头顶触地。随顺各自修炼的熟练程度来运气，紧缩身体。结行的次第同于正行。是为施展技能。 <br/>
-<br/>
+82648265 <br/>
 第三，发挥效力； <br/>
 “上仰抬踵前移降，生效七节运气息。” <br/>
 加行的入息和舒息同于正行。入息两细卡，手脚掌均触地，上体上仰。随顺各自修习的熟练程度运气，上抬两脚后踵，肩头、胸膛依次前移，旋即下降。最后，结行的次第同于正行。是为发挥效力。修炼以上各分解动作均与练气七节相联系，是为运气之次第。 <br/>
@@ -1037,7 +1058,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 同和气七支相关联的五种主要功和十种支分功，即第四组五功一组的功法十五种叙述完毕。 <br/>
 功效。《除隘法》云：“五大五气不调和，三相和合（32）种界疾，珠宝功祛功能壮，修炼生效如上述。” <br/>
 如上所说，地、水、火、风、空等五大种，持命气、上行气、等住气、下行气、遍行气等五气，风、胆、涎液三和合，白界（男精）、赤界（血和月经），或者元气、血、肉、脂肪、骨髓、精液等主要六界功能失调引发的疾病，练珠宝式均能消除之。 <br/>
-<br/>
+826682678268 <br/>
 <br/>
 (5)、猛气六支 <br/>
 修炼六种猛气来强制约束业气。 <br/>
@@ -1048,12 +1069,12 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 “曲腿端坐腰椎直，金刚之拳置双膝，室利僧哈的法印。” <br/>
 端坐，两脚合掌，两膝左右对张，腰椎正直；两手无名指压拇指，攥金刚拳，分别置于两膝；两眼瞠目直视前方天空。是为证果者室利僧哈大师坐姿。 <br/>
 第二，所缘要点： <br/>
-“观想脐间的字，或者观想气明点。” <br/>
-观想在脐间脉轮气心无二的自性放蓝色明光的，或者按照具足和气七支分一节所说，观想蓝色的气明点。 <br/>
+“观想脐间的8272字，或者观想气明点。” <br/>
+观想在脐间脉轮气心无二的自性放蓝色明光的8273，或者按照具足和气七支分一节所说，观想蓝色的气明点。 <br/>
 第三，气息要点： <br/>
 “左手食指捂左鼻，捏鼻细竹猛入息，鼻息肩头右前转。” <br/>
 首先用两鼻孔猛短、深沉地排浊气三次。其后，左手攥拳，贴鼻梁，朝下，用无名指的指尖阻塞左鼻孔，向上缓抬肩头，控制右鼻窦，伴随鼻息，猛烈吸入粗气一细竹，吸气圆满时，气息充满上体，上体右扭，肩头向前绕转。 <br/>
-<br/>
+8269 <br/>
 “用力向下压气息，金刚拳头贴胯前。” <br/>
 继之，左手抚膝，上体伸直，用力向下压气息。同时，两个金刚拳头放于会阴处前的地铺上，臂膀伸直。 <br/>
 <br/>
@@ -1063,8 +1084,8 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 “猛烈从下往上引，向上抬臀臂膀直。” <br/>
 自下向上猛烈地引气。同时，上抬臀部，臂膀保持正直。 <br/>
 <br/>
-“‘哈’降业气入字。” <br/>
-业气似磁石吸铁屑一般隐入脐间的字。伴随“哈”声，臀部落地。其时，全部业气隐入于字。 <br/>
+“‘哈’降业气入8274字。” <br/>
+业气似磁石吸铁屑一般隐入脐间的8276字。伴随“哈”声，臀部落地。其时，全部业气隐入于8275字。 <br/>
 <br/>
 “坐地双手捏拳头，双脚径直向上抬。” <br/>
 坐立，双手捏金刚拳，并左右平伸，两手腕从踝骨上抬相合的脚掌，腰背伸直。空闭气息，在所有分别心散集远离性相的境界中入定（译注：即入定于空性，妄念敛入无所缘。） <br/>
@@ -1080,7 +1101,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 “上仰双手之手指，朝肩倒转掌触地，抬臀四掌支体重，挺腹细竹似转轮。” <br/>
 端坐，两脚前伸，双手抚膝。入息一细竹，双手用力上举。舒息一细 <br/>
 竹，仰卧，两手伸直，放于胯侧地铺上。吸气两细卡，两手向上倒转，手指朝向肩头，手掌触地；两脚弯曲，后踵触臀，立地。继尔，臀部上抬，手掌和脚掌触地，支撑体重，挺腹。开口满息一个半细竹，身体如车轮一般呈现圆形。舒息一细竹，臀部放地，两手贴胯侧，双脚用力平伸。入息一细竹，两手用力向头顶方向伸直，紧缩身体。舒息一细竹，坐立，前额向膝下俯，两手拉脚掌。 <br/>
-<br/>
+827082718256 <br/>
 第二，施展技能； <br/>
 “轮脚上抬头触地，肩膀触地施技能。” <br/>
 加行的入息同于正行。舒息一细竹，臀部上抬，两手手掌触及脚趾前的地铺。吸气两细卡，后踵上抬，脚趾尖触地，臂膀正直，双肩和后脑上扬。随顺各自修习的熟练程度开口满息，用力向上抛抬两脚，缓缓放至背后，头顶和肩膀触地，紧缩身体。舒息一细竹，两脚逆向转动，两膝触地。入息一细竹，两手用力上举，挺胸。舒息一细竹，两手用力伸至前面地铺上，前额贴地。 <br/>
@@ -1090,7 +1111,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 入息一细竹，臀部上抬，伸腰，双手用力伸向头顶方向。舒息一细竹，按鼓式“施展技能’’一节所述，手指朝向后踵，脚掌手掌并贴，两肘关节触地。吸气两细卡，腰部上抬，头顶朝向后踵。随顺各自修炼的熟练程度满息，腰背弯曲如车轮，呈现圆形，紧缩身体。舒息一细竹，腰背下放，落地；双手用力伸直贴胯侧。入息一细竹，坐地，两手用力向上举，两脚前伸，前额触地，双手拉脚掌。是为发挥效力。 <br/>
 修炼以上各分解动作均与练气七节相联系，为开口满息的次第。 <br/>
 功效。《除隘法》云：“腰脊关节五体筋，僵直萎缩和腰疼，遍行气病轮功除，修炼生效如上述。” <br/>
-如上所说，腰椎、脊髓、腰等大小关节和头、手足等五体的筋络僵直、萎缩等诸种风寒病，遍行气功能衰退或失调所引发的病症，车轮式均可祛除。 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-16 16:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">      大鹏式； <br/>
+如上所说，腰椎、脊髓、腰等大小关节和头、手足等五体的筋络僵直、萎缩等诸种风寒病，遍行气功能衰退或失调所引发的病症，车轮式均可祛除。 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div><span style="font-size:15px; letter-spacing:1px;">瑞祥发表于 2013-10-16 16:05</span><div class="badge-floor">第 12 进</div></div><div class="post-body">      大鹏式； <br/>
 大鹏式压气： <br/>
 第一，正行 <br/>
 “左脚右扭触地铺，右手左膝向右绕，背后左手搂右腰，扭转形如大鹏倨。” <br/>
@@ -1103,7 +1124,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 加行的入息同于正行。舒息一细竹，左脚紧贴右腿，两手分别放在胯侧地铺上，左脚收缩，上抬臀部，左脚掌触地，上体竖立。吸气两细卡，右脚小腿贴左脚踝关节，右手绕左手合掌。随顺各自修习的熟练程度压抑气息，上体正直，手掌朝向前额。舒息一细竹，两脚并拢，端坐；两手紧握踝关节；前额贴膝。入息一细竹，两手用力上举，同时跪立。舒息一细竹，前额和双手前俯。相反的动作，如上类推。是为发挥效力。修炼以上各分解动作均与练气七节相联系，是为压抑气息之次第。 <br/>
 功效。《除隘法》云：“鹏式可祛关节疾，腰脊五体器官病，调和五大与气息，修炼生效如上述。” <br/>
 如上所说，腰部、左右肾、腰椎、脊髓，大小关节和头、手足等五体，以及眼、耳、鼻、舌、身、意等诸根的病症，大鹏功均能祛除。此功还可调和五大种与持命气、上行气、等住气、下行气、遍行气等五气之功能，还可增强三门（33）之功能。 <br/>
-<br/>
+827882798280 <br/>
 <br/>
       宝剑式 <br/>
 宝剑式憋气： <br/>
@@ -1113,7 +1134,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 第二，施展技能； <br/>
 “膝对脚掌相并合，熟练憋气施技能。” <br/>
 加行的入息和舒息同于正行。吸气两细卡，膝和小腿伸直，两脚上抬，两膝对称，两脚脚掌相合。随顺各自修习的熟练程度压抑气息，伸直腰腹。结行的次第同于正行，是为施展技能。 <br/>
-<br/>
+828182828283 <br/>
 第三，发挥效力； <br/>
 “手臂前伸脚后抖，挺腹生效压气息。” <br/>
 加行的入息和舒息同于正行。吸气两细卡，双手径直前伸，触地，前额和两臂支撑体重。随顺各自修习的熟练程度憋气，双脚向背后抖动，用力挺腹、伸腰、挺胸。舒息一细竹，双脚放地。如斯等等，同于正行，完成结行。是为发挥效力。修炼以上各个分解动作均与练气七节相联系，是为憋气的次第。 <br/>
@@ -1125,7 +1146,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 第一，正行； <br/>
 “俯卧手指握脚趾，‘哈’吐耸臀上体仰，两脚贴胯运气息，个半细竹似青蛙。” <br/>
 跪立，两手抚膝。入息一细竹，上体正直，挺胸。舒息一细竹，俯卧，两手用力伸直，贴胯侧，入息一细竹，两脚背向弯曲，双手后伸，握脚掌，拇指分别贴拇趾。急促吐气两细卡，臀部下移，上体和头上扬，两脚触胯侧地铺，两肘对称。两脚夹腰一个半细竹，腹贴腰椎空运气息，体态如青蛙。入息一细竹，两脚还原，两手用力向头顶方向伸直，贴地。舒息一细竹，臀部坐后踵，前额和两手触前面的地铺。 <br/>
-<br/>
+828482858286 <br/>
 第二，施展技能； <br/>
 “两腿对称指握趾，反手前拉施技能。” <br/>
 加行的入息、舒息同于正行。入息一细竹，两腿对展，双手后转，食指如铁钩弯曲，钩住拇趾。急促吐气两细卡，两手蜷曲如铁钩的食指分别从肩头拉拇趾。随顺各自修习的熟练程度引导气息，臀部下移，双脚夹腰部，上体和头上扬。入息一细竹，脚放原处。结行的次第同于正行。是为施展技能。 <br/>
@@ -1140,7 +1161,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 第一，正行； <br/>
 “跪立双手的指尖，朝向膝部触地铺，肘节贴腹猛吐气，体直悬浮似孔雀。” <br/>
 跪立，双手抚膝。入息一细竹，两手用力上举，上体伸直，挺胸。舒息一细竹，两手触地，指尖对膝。入息一细竹，脚趾触地，身体伸直，挺胸，两肘关节靠拢并贴腹。猛吐气两细卡，上体微微下降，身体正直如箭；两脚上抬，两手支撑体重。空闭气息一个半细竹，身躯悬浮如孔雀。入息一细竹，跪地，臀部坐后踵，两手用力上举。舒息一细竹，两手背后结法印（译注：指合掌），前额下俯。 <br/>
-<br/>
+8287 <br/>
 第二，施展技能； <br/>
 “凌空仰头扬小腿，身体上抖施技能。” <br/>
 加行的入息和舒息同于正行。入息一细竹，身体凌空。吐气两细卡，头后仰，同时小腿仰起。随顺各自修习的熟练程度空闭气息，身体上抖，状如孔雀。结行的次第同于正行。是为强调。 <br/>
@@ -1149,7 +1170,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 加行的入息和舒息同于正行。入息一细竹，左脚弯曲，右脚伸直，上抬。随顺各自修心的熟练程度空闭气息，身体凌空，缓缓向上仰头，右脚小腿翘立。入息一细竹，双膝跪地。结行的次第同于正行。相反的动作如上类推；是为发挥效力。以上各分解动作均与练气七节相联系，是空闭气息的次第。 <br/>
 以上是同具备气息要点三加行相联系的五种要功、十种分支功，第五组五功（34）的十五种功，介绍完毕。 <br/>
 功效。《除隘法》云：“增强脏腑之精神，调和五大与五气，此功壮体亦祛病，修炼生效如上述。” <br/>
-<br/>
+82888289 <br/>
 如上所说，孔雀功增强控制心、肺、肝、脾、肾的主要脉（译注：即精神，下同），以及同胃、大小肠、胆囊、膀胱、精囊相关联并控制它们的脉的功能。自身地大种组成的骨、肉，水大种构成的血液和黄水，火大种构成的体温，风大种构成的气息呼吸，空大种构成的心之思维等的功能失调或衰退，持命气、上行气、等住气、下行气、遍行气等五气功能混乱或衰退等症，孔雀式均可消除。 <br/>
 <br/>
 <br/>
@@ -1175,7 +1196,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 第三组五功之三狮子式憋气、之四灵鹫式运气之五法基式空闭气息等，修炼以上诸功时双脚对张，分别贴胳膊，前额向前下俯，舒息一细竹。 <br/>
 <br/>
 “诸功分作加正结，吐纳细竹正行义，满压憋引空闭气，七节要点皆相联。” <br/>
-所有五功的五种主要功及其“施展技能”和“发挥效力”等，所有步骤均有加行、正行和结行等三次第。加行的入息和舒息各一细竹，结行的入息和舒息也各一细竹。如斯等等，应完整修炼之。正行的含义是满息、压抑气息、憋气、运气、空息等，无论与何种修气相联系，每种功都应七节齐全地修气。 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-16 16:39<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">全入 <br/>
+所有五功的五种主要功及其“施展技能”和“发挥效力”等，所有步骤均有加行、正行和结行等三次第。加行的入息和舒息各一细竹，结行的入息和舒息也各一细竹。如斯等等，应完整修炼之。正行的含义是满息、压抑气息、憋气、运气、空息等，无论与何种修气相联系，每种功都应七节齐全地修气。 </div></div><div class="post"><div class="post-header"><div class="avatar">瑞</div><span style="font-size:15px; letter-spacing:1px;">瑞祥发表于 2013-10-16 16:39</span><div class="badge-floor">第 13 进</div></div><div class="post-body">全入 <br/>
 全入有与气息七要点相联系的七种妙莲功。 <br/>
 （1）七种妙莲功 <br/>
 <br/>
@@ -1184,19 +1205,19 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 端坐，两脚前伸，两手抚膝。入息一细竹，两手用力上举，左脚朝内，结金刚跏趺坐。舒息一细竹，两手径直后伸，前额前俯。入息一细竹，双手用力高举，同时臀部上抬，两膝着地，上体直立。开口满息一细竹，腰腹尽量挺直。其后，双手左右平伸，抬膝放臀。舒息一细竹，双手径直后伸，前额贴前地。入息一细竹，双手用力上举，两脚用力前伸。舒息一细竹，前额俯膝，两手分别拉脚掌。 <br/>
 功效。《除隘法》云：“《脉络衰老除隘》云：精进妙莲盛开降，脉无绕僵裂断缩，诸疾消除器官明，身体爽朗脉堪能。” <br/>
 如上所说，盛莲式可祛除脉络老化、脉道萎缩、相互缠绕、硬化、破裂、脉络断、痉挛等脉病，具有增强眼、耳、鼻、舌、身、意诸根功能之作用。 <br/>
-<br/>
+83038304 <br/>
 <br/>
       仰莲式 <br/>
 “仰莲后仰握脚掌，腰腹后仰头触地， 压气细竹腰部卧，两手用力仲胯侧。” <br/>
 端坐，双脚前伸，两手抚膝。入息一细竹，双手上举，脚结跏趺。舒息一细竹，双手后伸，前额贴地。入息一细竹，双手分别握该侧的脚掌，腰腹前挺，头顶触地。压抑气息一细竹，腰腹尽量前挺，紧缩身体。舒息一细竹，卧放腰部，两手用力伸展放胯侧。入息一细竹，双手上举，两脚同时前伸。舒息一细竹，上体竖立，前额触膝，两手分别拉脚掌。 <br/>
 功效。《除隘法》云：“《明点寂静除隘》说：致力仰莲的功法，明点缺乏布关节，内漏不禁遗失等，仰莲式功能尽除。” <br/>
 如上所说，仰莲式可祛除男女缺乏白界，或者元气附于关节，白界或赤界等内漏不禁、遗失等症。它使身体健安，体力增强，肌肉发达，容光焕发，充满安乐。 <br/>
-<br/>
+83058302 <br/>
 <br/>
       旋莲式 <br/>
 “旋莲两手绕背后，和合细竹握脚掌，两手后伸束腰间，前额下俯触地铺。” <br/>
 端坐，双脚前伸，两手抚膝。入息一细竹，两手上举，脚结跏趺。舒息一细竹，右手从右肋后绕，握右脚；左手从左肋后绕，握左脚。入息一细竹，腰椎伸直，挺胸。上下体的气息汇合一细竹，随即约束于腰间。其后两手用力上举，同时解跏趺坐姿。舒息一细竹，两手后伸，前额俯地。入息一细竹，双手上举，两脚前伸。舒息一细竹，前额贴膝，双手分别拉脚掌。 <br/>
-<br/>
+829482958295 <br/>
 功效。《除隘法》云：《气界停滞除隘》说：身体僵硬练旋莲。” <br/>
 如上所说，诸气不畅，离散和凝滞之症，特别是周身气息不畅者适合练旋莲式。 <br/>
 <br/>
@@ -1207,12 +1228,12 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 直，上抬跏趺，臂膀伸直，拳头支撑体重（译注：原文与图不符）。憋气一细竹，猛烈上引下体气息。其后，两手左右平伸，解跏趺坐姿，舒息一细竹，两手后伸，前额触地。入息一细竹，两手上举，双脚前伸。舒息一细竹，前额贴膝，两手分别拉脚掌。 <br/>
 功效。《除隘法》云：“《气界停滞除隘》云：脉络硬化练浮莲。” <br/>
 如上所说，诸气住在脉界，亦即脉络不畅，或者离散者，若勤练此功可全部祛除之。 <br/>
-<br/>
+8296 <br/>
 <br/>
       绕莲式 <br/>
 “绕莲两拳着地铺，上抬跏趺憋引气，个半细竹绕至七，遂解跏趺如上述。” <br/>
 端坐，两脚前伸，双手抚膝。入息一细竹，两手上举，脚结跏趺。舒息一细竹，两手攥拳，分别置胯侧地铺上。猛吸气两细卡，双肩后张，腰腹及臂膀挺直，上抬跏趺。憋气、运气一个半细竹，向前、向后晃动跏趺七次。其后，坐地，上体正直，两手左右平伸，遂解跏趺坐姿。舒息一细竹，两手后伸，前额触地。入息一细竹，两手上举，双脚前伸。舒息一细竹，双手分别拉脚掌，前额俯膝。 <br/>
-<br/>
+82978298 <br/>
 功效。《除隘法》云：“《气机停滞除隘》云：气凝于心练绕莲。” <br/>
 如上所说，修炼此功可消除诸气散失和停滞于心之疾。 <br/>
 <br/>
@@ -1221,14 +1242,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 端坐，两脚前伸，双手抚膝。入息一细竹，背脊贴地仰卧，两手用力向头顶方向伸展。舒息一细竹，两手伸展，着胯侧地铺，脚结跏跌，上体伸直，两手上抬跏趺。入息一细竹，下放跏趺，跪立，两手上举，伴随强烈的“哈”声两手左右平展，臀部下放。其后，舒息一细竹，两手背后合掌，前额触地。入息一细竹，两手上举，双脚前伸。舒息一细竹，双手分别拉脚掌，前额俯膝。 <br/>
 功效。《除隘法》云：“《气机停滞除隘》云：气不就位练降莲。” <br/>
 如上所说，持命气等五气各不就位，离散或停滞，凭借此功可使之就位。 <br/>
-<br/>
+82998300 <br/>
 <br/>
       闪莲式 <br/>
 “两手拄地闪莲式，抬膝腋下臂膀直，前胸触地膝下挪，空竹背后法印仰。” <br/>
 端坐，双脚前伸，两手抚膝。入息一细竹，双手上举，脚结跏趺。舒息一细竹，双手拄地，臂膀伸直，手掌和双膝着地，趴地。入息一细竹，抬膝至腋下，伸直的臂膀支撑体重。舒息一细竹，膝盖着地，身体下降，前胸和下颔触地。空闭气息一细竹，两手在背后结法印（译注：指合掌），上体、肩头和头后仰。入息一细竹，两手触及胯侧地铺，上体上抬。舒息一细竹，就地解跏趺，两手抚膝。 <br/>
 功效。《除隘法》云：“《气机停滞除隘》云：调和混乱练闪莲。” <br/>
 如上所说，闪莲式可祛除持命气、上行气、等住气、下行气、遍行气等五气所控制的部位混乱、功能失调等病症，具调和诸气功能之功效。 <br/>
-<br/>
+83018293 <br/>
 <br/>
 (2)诸功前后的加、结行功法 <br/>
 <br/>

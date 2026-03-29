@@ -1,70 +1,91 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>五台山---中国佛教四大名山之一 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>五台山---中国佛教四大名山之一 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/圣地游览贴图区.html">圣地游览贴图区</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">五台山---中国佛教四大名山之一</h1>
-<div class="post"><div class="post-header"><div class="avatar">纽</div>纽固修发表于 2007-10-10 10:43<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body"> <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/圣地游览贴图区.html">圣地游览贴图区</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">五台山---中国佛教四大名山之一</h1>
+<div class="post"><div class="post-header"><div class="avatar">纽</div><span style="font-size:15px; letter-spacing:1px;">纽固修发表于 2007-10-10 10:43</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">2263 <br/>
 <br/>
 五台山位于山西省五台县东北隅，系恒山系脉。因山五峰矗立，顶无林木，土筑石垒，故名五台。以山区气侯多寒，凉爽无夏，又称清凉山。 <br/>
 <br/>
 五台山是中国著名的佛教圣地，相传为文殊菩萨应化的道场，它与四川峨眉山(普贤菩萨道场)、浙江普陀山(观音菩萨道场)和安徽九华山(地藏菩萨道场)并称中国佛教四大名山。文殊菩萨是释迦牟尼佛的“左胁侍”，与普贤、观音菩萨合称“三大士”。五台山被确定为文殊菩萨道场，在四大名山中是唯一见于经典的。最早的根据见晋译《华严经》卷二十九：“东北方有菩萨住处名清凉山，过去诸菩萨常于中住，彼现有菩萨名文殊师利，有一万菩萨眷属，常为说法。”又见《文殊师利法宝藏陀罗尼经》：“佛告金刚密迹王言：我灭度后，于此南赡部洲东北方，有国名大振那，其国中有山号曰五顶，文殊师利童子游行居住，为诸众生于中说法。”唐证圣元年(695)，武则天命菩提流志与实叉难陀重译的《华经严》中说：“东北方有处，名清凉山。从昔以来，诸菩萨众于中止住。现有菩萨名文殊师利，与其眷属诸菩萨众一万人，俱常在其中而演说法。”由此开始，五台山便被佛教徒一致公认为文殊菩萨圣地，并随着时间的推移而名扬天下。 <br/>
 <br/>
-<br/>
+2264 <br/>
 <br/>
 五台山在中国佛教四大名山中，佛教的兴起与寺庙的创建最早。据明镇澄《清凉山志》记载：“汉明帝时，摩腾西至，以慧眼观清凉山乃文殊化宇，中有阿育王所置佛舍利塔。……帝以始信佛化，故以名焉。”阿育王造佛舍利塔，指塔院寺白塔。由佛光寺现存北魏时期“祖师塔”可以看出，当时五台山的佛教文化已达到极高水平。北齐时代，五台山香火旺盛，建寺二百余所，朝廷曾拨八州赋税以充香火。北周武帝灭法，五台寺庙悉数被毁。隋开皇元年(581)在五顶置寺度僧，从此开始在五峰上建寺。唐代为五台山佛教极盛时期。由太宗至德宗九代，不断遣使来山建寺、供养。唐武宗会昌灭法，五台山佛教中落。宋代，重建寺庙，置寺僧正。宋真宗时，五台山基本恢复了唐时的隆盛状况。蒙古族建立元朝后，藏传佛教传入五台，蒙藏佛教徒也随之进住，修建黄庙。明清时期，统治者都非常崇信佛教，藏传佛教便发展到与汉传佛教平分秋色。于是五台山便成为中国唯一兼有汉传佛教与藏传佛教、青庙与黄庙并立的佛教圣地。 <br/>
 <br/>
-五台山的寺庙数量，历代废兴，变化较大。在唐代极盛时期，据说全山有佛寺三百六十座，僧尼近万名。唐武宗灭法后随之衰落，宋代有佛寺七十余座，元代只有六十余座，明末清初呈现复兴势头，达一百二十多座。目前全山有完好寺庙四十七座，其中著名寺庙十余座。 </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div>纽固修发表于 2007-10-10 11:52<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">    座落在五台山南台锦绣峰西北麓的金阁岭上，位于南台顶与中台顶之间，寺以山名。寺院创建于唐代宗大历年间(766—779) ，仿照印度著名的那烂陀寺设计，并由当时从那烂陀寺来中国的高僧纯陀法师监修。1983年，该寺被定为汉族地区全国重点寺庙。 <br/>
+五台山的寺庙数量，历代废兴，变化较大。在唐代极盛时期，据说全山有佛寺三百六十座，僧尼近万名。唐武宗灭法后随之衰落，宋代有佛寺七十余座，元代只有六十余座，明末清初呈现复兴势头，达一百二十多座。目前全山有完好寺庙四十七座，其中著名寺庙十余座。 </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div><span style="font-size:15px; letter-spacing:1px;">纽固修发表于 2007-10-10 11:52</span><div class="badge-floor">第 2 进</div></div><div class="post-body">    座落在五台山南台锦绣峰西北麓的金阁岭上，位于南台顶与中台顶之间，寺以山名。寺院创建于唐代宗大历年间(766—779) ，仿照印度著名的那烂陀寺设计，并由当时从那烂陀寺来中国的高僧纯陀法师监修。1983年，该寺被定为汉族地区全国重点寺庙。 <br/>
 <br/>
 寺分作前后两院，前院为观音阁，外观气势雄伟，内供一尊高达十七点七米的千手观音铜像，是五台山诸寺中最高大的观音塑像。中间有八座阁式通殿，依次为毗卢殿、弥陀殿、观音殿、地藏殿、文殊菩萨殿、药王殿等，内有塑像近千尊。后院是大雄宝殿，内供三世佛像及十八罗汉塑像。整座寺院殿宇巍峨，气势宏大。 <br/>
 <br/>
-金阁寺的开山祖师是中国佛教密宗的创始人之一、佛教经典四大译师之一、唐代北天竺高僧不空三藏。不空法师去世后，其弟子，被誉为密宗“六哲”之一的含光即为金阁寺住持。 </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div>纽固修发表于 2007-10-10 11:54<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">     <br/>
+金阁寺的开山祖师是中国佛教密宗的创始人之一、佛教经典四大译师之一、唐代北天竺高僧不空三藏。不空法师去世后，其弟子，被誉为密宗“六哲”之一的含光即为金阁寺住持。 </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div><span style="font-size:15px; letter-spacing:1px;">纽固修发表于 2007-10-10 11:54</span><div class="badge-floor">第 3 进</div></div><div class="post-body">    2265 <br/>
 <br/>
 殊像寺位於河北省承德市避署山庄之北，普陀宗乘之庙西，狮子园北麓。据寺内碑文记载;乾隆二十六年(1761年)，乾隆陪皇太后到山西五台山文殊菩萨道场——殊像寺进香，见文殊妙相庄严，令人起敬，“默识其像以归”。佛经中有“东方主尊菩萨是文殊，有时现比丘像，有时现国王像”的说法。而“文殊”又译“曼殊”，“曼殊”与“满洲”音近，所以西藏DL喇嘛进丹书时，称清朝皇帝为“曼殊师利大皇帝”。又因清廷有乾隆皇帝出生承德狮子园传言，进而有人就附会传说乾隆皇帝是文殊菩萨转世。乾隆和太后对此不加可否。回到京师，太后就令人按五台山文殊模样雕刻石像供於香山宝相寺。乾隆三十九年(1774年)，特命内务府仿五台山殊像寺现制，按香山文殊相貌在承德修建此庙。殊像寺落成时，乾隆参加瞻礼，并作诗道:“殊像全规台庙模，撰辰庆落礼曼殊。金经蒙古犹常有，宝帙皇朝可独无?译以国书宣白业，习之修土翊浮图。虽然名实期相称，师利应嗤谓是乎。”该庙喇嘛皆为满族，故清廷对此处按家庙管理。 <br/>
  <br/>
 殊像寺为典型汉式寺庙，东西1l5米，南北200米，占地面积27公顷。采用庭园布局手法，大规模叠砌假山，散植松树，创造了自己的独特风格。 <br/>
   <br/>
-　　 <br/>
+　　2266 <br/>
 <br/>
 山门面南，面阔三楹，进深两间，单檐歇山顶，内供护法神哼、哈二将。山门前左右置石狮一对，两侧设腰门。过门殿两侧有钟、鼓楼，均为面阔三楹，进深一间，单檐歇山。山门正北为天王殿，面阔五楹，进深两间，单檐歇山。前后檐封木壁板，中三间设欢门，稍间开欢窗，殿两侧置腰墙，界以一进院落，腰墙辟腰门与二进相通。天王殿北两侧为东、西配殿，东殿名“馔香室”，西殿名“演梵堂”。天王殿正北地势增高，上多级大石阶可登月台，月台北建“会乘殿”。  <br/>
  <br/>
@@ -74,7 +95,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 　　殊像寺是皇帝和太后经常临幸之所，建筑布局高低错落，内部考究，环境幽雅，园林气息浓厚，寺中叠石更为驰名。会乘殿、山门、钟鼓楼等建筑在1949年後由政府多次修缮，仍保持原有风貌。1975年，国家重新修建了天王殿和东西配殿。寺内三身木雕菩萨像为国家级文物。殊像寺现已被列为第三批全国重点文物保护单位。  <br/>
  <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div>纽固修发表于 2007-10-10 11:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">    观音洞，因位于栖贤谷口，又称栖贤寺，距台怀镇约十里。1983年，被国务院确定为汉族地区佛教全国重点寺院。 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div><span style="font-size:15px; letter-spacing:1px;">纽固修发表于 2007-10-10 11:56</span><div class="badge-floor">第 4 进</div></div><div class="post-body">    观音洞，因位于栖贤谷口，又称栖贤寺，距台怀镇约十里。1983年，被国务院确定为汉族地区佛教全国重点寺院。 <br/>
 <br/>
 寺院建造在悬崖之上，从崖底的下院开始，凿石为阶梯通道，在凸出的石壁上盖有亭子和殿堂僧舍，石径的崖壁边缘护有红围墙，迤逦伸向上院石洞前的大殿，形势十分险峻。传说观音洞的岩洞是观音菩萨显示灵迹的地方，故缘洞建寺。《清凉山志》载：“洞有滴泉，味甘。”游人视之为“圣水”。古诗赞道：“足蹑云梯上翠巅，画楼飞阁接云天。殷勤瞻礼圆通相，一滴甘泉热恼蠲。”就是对观音洞的真实写照。 <br/>
 <br/>
@@ -88,7 +109,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 1907年11月27日，由礼部给DL降旨，邀请DL赴山西五台山朝佛。11月29日，DL从塔尔寺起程，1908年正月初五，DL一行到达太原，受到当地政府的盛大欢迎。此时五台山札萨和五台山各庙宇的大喇嘛都先到这里，欢迎DL。正月十二日，DL离开太原，18日到达五台山麓，五台县官、五台山札萨、大喇嘛等人，在山门前欢迎，向DL献哈达、曼札，切按照西藏礼节。DL进入五台山寺庙区时，全寺僧众列队欢迎。DL在五台山又照例给全体僧众讲经说法、放头，并派人给五台山各寺庙熬茶、放布施。据说十三世DL就曾在观音洞坐静。 <br/>
 <br/>
-由于以上原因，观音洞成了在蒙藏地区极有影响的喇嘛庙，很多少数民族信徒朝拜五台山，必到此处，以一礼DL喇嘛坐静处。 </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div>纽固修发表于 2007-10-10 12:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">     <br/>
+由于以上原因，观音洞成了在蒙藏地区极有影响的喇嘛庙，很多少数民族信徒朝拜五台山，必到此处，以一礼DL喇嘛坐静处。 </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div><span style="font-size:15px; letter-spacing:1px;">纽固修发表于 2007-10-10 12:00</span><div class="badge-floor">第 5 进</div></div><div class="post-body">    2267 <br/>
     显通寺坐落在台怀镇。它是五台山众多寺庙中最大、最古的一座。该寺历史悠久，珍贵文物很多，是佛教圣地中的一颗明珠。  <br/>
  <br/>
 河南洛阳白马寺，是中国始建年代最早的一座佛寺，被人们称为“释源”。而显通寺的初建时间，可以和白马寺相比。 <br/>
@@ -103,7 +124,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 千钵文殊铜象，供奉在千钵文殊殿内。这尊铜像，造型奇特，上叠五个头像；胸前有手六只，其中的两只捧着一个金钵，钵内坐着释迦牟尼佛，背后向四周伸出一千只手，每只手上都有一个金钵，每个钵内都有一尊释迦牟尼佛。所以，这尊铜像又被叫做千臂千钵千释迦文殊像。这尊像金光灿烂，铸于明代，全国少有。 <br/>
 <br/>
-<br/>
+2268 <br/>
 铜殿和铜塔，也是全国罕见的文物。铜殿高八点三米，宽四点七米，深四点五米，是明朝万历年间用铜十万斤铸成的。殿内四壁铸满了佛像，号称万佛；铜殿隔扇的外壁，铸有各种图案和花卉鸟兽，如玉兔拜月、丹凤朝阳、二龙戏珠等，非常精致。铜殿前原有铜塔五座，暗含五台之意，现仅留下两座，八面十三层，玲珑秀丽，引人注目。 <br/>
 <br/>
 无量殿面阔七间，进深四间，四壁全用青砖砌就，殿顶用方木砌就。殿内无大梁、无立柱，殿外无廊檐，因此人们又叫它无梁殿。殿内壁上有走廊一圈，有梯道可上。在走廊的任何一个部位均可看清全殿面貌。这是五台山各寺庙中的一座特殊建筑，在全国也不多见。此殿又叫七处九会殿。因为释迦牟尼成佛之后讲解《华严经》，在七个地方讲了九次才讲完。为纪念佛祖的这项佛事活动，殿前正面每层都辟有七个阁洞。殿内正中供奉着卢舍那佛，背后供着弥勒佛。 <br/>
@@ -112,7 +133,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大铜钟悬挂在显通寺的钟楼内。这口钟铸于明朝万历四十八年（公元1620年），重九千九百九十九斤半。为什么不铸成一万斤呢？这是为了忌讳皇帝“万岁”老爷的“万”字。这口钟名叫幽冥钟。钟的外部，铸有楷书佛经一部，共一万余字。因为敲击时钟声绵长，传播深远，所以人们又把此钟叫做长鸣钟，也称为长命钟。显通钟声，历来是五台山梵宇佛国的一个标志，向来为人们所称道。 <br/>
 <br/>
-作为五台山首屈一指的大寺，显通寺历代驻锡过许多名僧大德，如志远、澄观、贤林、延一、大宝法王哈里麻、妙峰等，其中以唐代清凉国师澄观最为著名。 </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div>纽固修发表于 2007-10-10 12:03<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">         <br/>
+作为五台山首屈一指的大寺，显通寺历代驻锡过许多名僧大德，如志远、澄观、贤林、延一、大宝法王哈里麻、妙峰等，其中以唐代清凉国师澄观最为著名。 </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div><span style="font-size:15px; letter-spacing:1px;">纽固修发表于 2007-10-10 12:03</span><div class="badge-floor">第 6 进</div></div><div class="post-body">    2269     <br/>
     台怀中心区寺庙群东，一座陡峭的山崖上，平生出又一座山形如锥形大螺的小山，小山上有寺曰黛螺顶，亦称大螺顶，该寺以供奉五种文殊法像而名扬五台。1983年，被国务院确定为汉族地区佛教全国重点寺院。 <br/>
 <br/>
 黛螺顶创建于明成化年间，明万历年间和清康熙、乾隆年间都曾重修和局部补建。传说乾隆要朝拜五台五方文殊，终因风大路远，未能如愿，遂命人摹似五座台顶的五方文殊，总塑于此，以便朝台者到此参拜。 <br/>
@@ -131,7 +152,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 黛螺顶寺宇占地3000余平方米，计有殿堂僧房20余间。寺内第一进大殿为站坛殿。殿座六角台基，上部是六角重檐攒尖顶。看去如一座亭台，很是俏丽。殿内立供站坛佛，释迦牟尼佛不是常见的趺坐形样，而是站立于佛坛之上。又因佛像是用为檀木雕成的，又名为檀佛。现在佛像是后代补塑的。 <br/>
 <br/>
-第二进大殿为五文殊殿，正面三间，侧面两间，外加半间宽的四面出廊，单檐歇山顶。殿内供的就是集五座台顶五种文殊法像于一室的五文殊。正中殿坛上，中间供中台翠岩峰演教寺的孺童文殊，左侧供北台叶斗峰灵应寺的无垢文殊，右侧供南台锦绣峰普济寺的智慧文殊，左侧殿坛供东台望海峰望海寺的聪明文殊，右侧殿坛供西台桂月蜂法雷寺的狮子吼文殊。把五座台顶的五种文殊法像集于一殿，开辟小朝台胜地，免去了许多人朝五台路遥之苦，又可了却朝佛之愿，是颇见标新立异之心的。从此，黛螺顶也从名不见经传的小寺，一跃而为盛誉闻名遐迩的佛徒朝台必到之地。第三进大殿是该寺后殿，面阔五间，歇山顶，殿阶台下长有一松一柏，松在北端，柏在南端，围粗均在9尺左右，即是乾隆帝诗中所称赞的“阶下千年不老松”。松柏高大直立，无有弯曲，望去如戟指蓝天，为寺字增色不少。 </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div>纽固修发表于 2007-10-10 12:07<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">     <br/>
+第二进大殿为五文殊殿，正面三间，侧面两间，外加半间宽的四面出廊，单檐歇山顶。殿内供的就是集五座台顶五种文殊法像于一室的五文殊。正中殿坛上，中间供中台翠岩峰演教寺的孺童文殊，左侧供北台叶斗峰灵应寺的无垢文殊，右侧供南台锦绣峰普济寺的智慧文殊，左侧殿坛供东台望海峰望海寺的聪明文殊，右侧殿坛供西台桂月蜂法雷寺的狮子吼文殊。把五座台顶的五种文殊法像集于一殿，开辟小朝台胜地，免去了许多人朝五台路遥之苦，又可了却朝佛之愿，是颇见标新立异之心的。从此，黛螺顶也从名不见经传的小寺，一跃而为盛誉闻名遐迩的佛徒朝台必到之地。第三进大殿是该寺后殿，面阔五间，歇山顶，殿阶台下长有一松一柏，松在北端，柏在南端，围粗均在9尺左右，即是乾隆帝诗中所称赞的“阶下千年不老松”。松柏高大直立，无有弯曲，望去如戟指蓝天，为寺字增色不少。 </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div><span style="font-size:15px; letter-spacing:1px;">纽固修发表于 2007-10-10 12:07</span><div class="badge-floor">第 7 进</div></div><div class="post-body">    2270 <br/>
     菩萨顶位于山西省五台山台怀镇的灵鹫峰上，是五台山十座黄庙（喇嘛庙）中的首庙。由于它的建筑雄伟、金碧辉煌，远看好似西藏拉萨的布达拉宫，因此人们又把它叫做喇嘛宫。  <br/>
  <br/>
 菩萨顶是满族语言的叫法，意思是文殊菩萨居住的地方。 <br/>
@@ -152,7 +173,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 此外，菩萨顶内还存有许多文物。这些文物中，有几件比较稀奇，而且还有趣闻。 <br/>
 <br/>
-菩萨顶后院正房内存有四口大铜锅。这些锅是过去菩萨顶在每年农历的正月、四月、六月、十月和腊月举办佛事活动时煮粥用的。其中最小的一口锅，直径即近二米。据说，有一个冬天，小和尚去刷洗铜锅爬不出来，最后还是搭上木梯才把他拽出来的。菩萨顶山门外的两座石狮中有一头没有舌头。这是少有的石雕作品。据说，在清朝康熙年间重修菩萨顶时，早上的粥总是不够吃，火头僧发现，锅内的粥被石狮偷吃了，于是便在粥锅内放上一把利刀，待石狮偷粥吃时，刀把舌头割下来了。这样，这头石狮就没有了舌头。在菩萨项前院的西配殿里，还有一尊泥塑文殊菩萨像，也是饶有风趣的佛教文物。过去，这尊文殊菩萨像的右肩上还带着一支箭，据说还是乾隆皇帝射的。如今肩上的箭没有了，但乾隆皇帝给它的封号“带箭文殊”依然流传至今。 </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div>纽固修发表于 2007-10-10 12:09<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">   《清凉山志》有一首描述碧山寺的诗道：“落日碧山寺，萧然古涧边，白云生翠崦，明月下寒泉。”仔细品赏，会觉得碧山寺清静优美，简直是一幅绝妙的工笔画。实地游览，触景生情，则另有一番诗情画意。未入寺院，即见密林掩映下，一座雕工极其精细的木牌楼上，悬着一块书有“清凉震萃”的匾额。向寺院的靠山瞻望，但见中间大、两边小的高山，就象是天工造就的一个立体形“山”字。入寺环顾，又见寺院开阔，殿宇宏伟，一派庄严整肃景象。 <br/>
+菩萨顶后院正房内存有四口大铜锅。这些锅是过去菩萨顶在每年农历的正月、四月、六月、十月和腊月举办佛事活动时煮粥用的。其中最小的一口锅，直径即近二米。据说，有一个冬天，小和尚去刷洗铜锅爬不出来，最后还是搭上木梯才把他拽出来的。菩萨顶山门外的两座石狮中有一头没有舌头。这是少有的石雕作品。据说，在清朝康熙年间重修菩萨顶时，早上的粥总是不够吃，火头僧发现，锅内的粥被石狮偷吃了，于是便在粥锅内放上一把利刀，待石狮偷粥吃时，刀把舌头割下来了。这样，这头石狮就没有了舌头。在菩萨项前院的西配殿里，还有一尊泥塑文殊菩萨像，也是饶有风趣的佛教文物。过去，这尊文殊菩萨像的右肩上还带着一支箭，据说还是乾隆皇帝射的。如今肩上的箭没有了，但乾隆皇帝给它的封号“带箭文殊”依然流传至今。 </div></div><div class="post"><div class="post-header"><div class="avatar">纽</div><span style="font-size:15px; letter-spacing:1px;">纽固修发表于 2007-10-10 12:09</span><div class="badge-floor">第 8 进</div></div><div class="post-body">   《清凉山志》有一首描述碧山寺的诗道：“落日碧山寺，萧然古涧边，白云生翠崦，明月下寒泉。”仔细品赏，会觉得碧山寺清静优美，简直是一幅绝妙的工笔画。实地游览，触景生情，则另有一番诗情画意。未入寺院，即见密林掩映下，一座雕工极其精细的木牌楼上，悬着一块书有“清凉震萃”的匾额。向寺院的靠山瞻望，但见中间大、两边小的高山，就象是天工造就的一个立体形“山”字。入寺环顾，又见寺院开阔，殿宇宏伟，一派庄严整肃景象。 <br/>
  <br/>
 碧山寺创建于北魏，重修于明代，曾名为普济寺、护国寺、北山寺等，清代乾隆年间改名为碧山寺，宣统年间，又称为广济茅蓬。宣统二年，有乘参、恒修两位老修行朝礼五台山，上到北台顶时，天气突变，朔风凛冽，把他俩的脚冻伤了。他们还在北台的华严岭，见到两个被冻死在半路的人。乘参和恒修心想，朝拜北台顶，需要有个食宿的处所。两位老修行誓建一座茅蓬，供朝礼北台的僧人和居士们歇脚和饮居，于是，创立了“广济茅蓬”，并从北台顶下的碧山寺买了一部分房产，使山上山下联成一体。后来，广济茅蓬又与碧山寺合成一体，碧山寺由子孙庙改为十方丛林。这个寺庙有如下三个特点：凡南来北往的游访僧到此，都管吃管住；方丈和尚实行选贤制；丛林师父们度的弟子不得在本寺常住。由于上述原因，碧山寺广结善缘，聚集高僧名师，影响越来越大，不仅在全国佛教界有名气，而且在东南亚国家也有一定的声誉。 <br/>
 广济茅蓬名传海外，现在。寺内存有新加坡和马来西亚教徒捐赠的铜牌、火典，有从缅甸请来的玉佛像。 <br/>
@@ -167,8 +188,8 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 最后一进大殿在靠山脚下的一处高台上，单另为一个小院，大殿坐西向东，有南、北两侧的堂屋陪衬。大殿面宽五间，上下两层，原为藏经殿，曾存有雍正十三年四月八日刊印之三藏经全部，计七千五百余卷。大殿正中靠后墙，塑有一座高大的弥勒佛像，头部伸到了二层大殿上。弥勒佛的塑法，不是盘腿打坐，而是作坐的姿势，双腿自然下垂，脚蹬地上，称为“弥勒下生”。按佛家的说法，释迦牟尼佛是现在佛，弥勒佛是未来佛。《弥勒上生经》说弥勒佛现住在兜率天，《弥勒下生经》说他以后将从兜率天下生此世界，在龙华树下继承释迦牟尼而成佛。这尊“弥勒下生”塑像，当然是取了后一种说法。 <br/>
 <br/>
-碧山寺碑记较多。除前面引述的以外，戒坛殿前，有明成化丁未正月立的重修碑记，有明弘治元年立的石刻经幢，有明正德申戍庚午月碑记，雷音殿后墙北侧，有康熙十九年御制五台碧山寺碑。由此可见，历史上碧山寺就是五台山的一处大寺。 </div></div><div class="post"><div class="post-header"><div class="avatar">走</div>走进佛法发表于 2008-10-10 14:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">我也去过五台山，据说五台山的寺庙还分为外五台和内五台。 <br/>
-内五台是指六大寺：东台顶、南台顶、西台顶、北台顶、中台顶，还有台怀镇从外向内数第二座寺庙（具体寺名忘了）。除了这六大寺，都称为外五台。 </div></div><div class="post"><div class="post-header"><div class="avatar">善</div>善缘发表于 2012-7-19 17:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">见我身者发菩提心，闻我名者断恶修善，闻我法者得大智能，知我心者即身成佛。 <br/>
+碧山寺碑记较多。除前面引述的以外，戒坛殿前，有明成化丁未正月立的重修碑记，有明弘治元年立的石刻经幢，有明正德申戍庚午月碑记，雷音殿后墙北侧，有康熙十九年御制五台碧山寺碑。由此可见，历史上碧山寺就是五台山的一处大寺。 </div></div><div class="post"><div class="post-header"><div class="avatar">走</div><span style="font-size:15px; letter-spacing:1px;">走进佛法发表于 2008-10-10 14:51</span><div class="badge-floor">第 9 进</div></div><div class="post-body">我也去过五台山，据说五台山的寺庙还分为外五台和内五台。 <br/>
+内五台是指六大寺：东台顶、南台顶、西台顶、北台顶、中台顶，还有台怀镇从外向内数第二座寺庙（具体寺名忘了）。除了这六大寺，都称为外五台。 </div></div><div class="post"><div class="post-header"><div class="avatar">善</div><span style="font-size:15px; letter-spacing:1px;">善缘发表于 2012-7-19 17:05</span><div class="badge-floor">第 10 进</div></div><div class="post-body">见我身者发菩提心，闻我名者断恶修善，闻我法者得大智能，知我心者即身成佛。 <br/>
 <br/>
 </div></div>
 </div>

@@ -1,60 +1,81 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>THE HUMAN CHAKRA SYSTEM - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>THE HUMAN CHAKRA SYSTEM - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/与神合一瑜伽行.html">与神合一瑜伽行</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">THE HUMAN CHAKRA SYSTEM</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚得发表于 2013-11-27 19:25<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">CHAKRA <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/与神合一瑜伽行.html">与神合一瑜伽行</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">THE HUMAN CHAKRA SYSTEM</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚得发表于 2013-11-27 19:25</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">CHAKRA <br/>
+8361 <br/>
+8360 <br/>
+8334 <br/>
+8336 <br/>
+8337 <br/>
+8338 <br/>
+8339 <br/>
 Original illustration from The Chakra-Handbook <br/>
 by Shalila Sharamon and Bodo j. Baginski <br/>
-</div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚得发表于 2013-11-27 19:34<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body"> <br/>
+8333 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚得发表于 2013-11-27 19:34</span><div class="badge-floor">第 2 进</div></div><div class="post-body"> <br/>
 THE  HUMAN  CHAKRA  SYSTEM <br/>
 <br/>
 MENU <br/>
@@ -85,7 +106,7 @@ In addition, there is a complex energy system that is at work, which the body co
 1. the chakras the (or energy centers) <br/>
 2. and the nadis (also known as energy channels) <br/>
 Nadi is a Sanskrit word meaning, &quot;pipe&quot; or &quot;vein.&quot; Nadis are akin to a network of channels or arteries that transport prana(vital energy) throughout the human being&#x27;s energy system. <br/>
-<br/>
+8341 <br/>
 <br/>
 The above illustration depicts the chakra system and the large number of secondary chakras,including the complex network of nadis. <br/>
 These nadis unite into 14 main channels, Which correspond to the main primary and secondary chakras. <br/>
@@ -121,12 +142,12 @@ Each chakra is connected with one of the elements of earth, water, air ether and
 Chakra is a Sanskrit word, meaning, &quot;wheel.”The human chakras are &quot;wheel-I i ke&quot; vortices, or saucer-shaped depressions that exist on the surface of the etheric human body. <br/>
 <br/>
 Traditional writings say there are 88,000 chakras in the human body. Most are extremely small and play a minor role in your energy system. However, there are approximately 40 secondary chakras that are of significance; these are located in your spleen, the back of your neck, the palms of your hands and the soles of your feet. But for brevity purposes, we will only explore the seven (7) primary chakras here. <br/>
-<br/>
+8340 <br/>
 If we look down into the bell of a convoluted-type flower, we would get the general appearance of a chakra. <br/>
 <br/>
 The seven primary chakras are located along a central vertical axis of our spine and open toward the front of the body like a blossom (see Figure 2 below).These circular energy centers are in constant motion, rotating, attracting energy-receiving or radiating. <br/>
 <br/>
-At the center of each chakra, in its deepest point, is a stem-like channel that extends to the spine and merges with it, thus connecting the individual chakra with the sushumna (the most important energy channel) which ascends within the spine to the top of the head. More on that later. </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚得发表于 2013-11-27 19:41<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body"><br/>
+At the center of each chakra, in its deepest point, is a stem-like channel that extends to the spine and merges with it, thus connecting the individual chakra with the sushumna (the most important energy channel) which ascends within the spine to the top of the head. More on that later. </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚得发表于 2013-11-27 19:41</span><div class="badge-floor">第 3 进</div></div><div class="post-body">8343 <br/>
 FIGURE 2 <br/>
 <br/>
 Like a flower, a &quot;stem&quot; branches out from our spine into the shape similar to that of a lotus flower. Think of our spine like a central stem. <br/>
@@ -134,11 +155,11 @@ Like a flower, a &quot;stem&quot; branches out from our spine into the shape sim
 For most people, the chakras extend about four inches in all directions from their point of origin. When undeveloped, they appear as small circles about two (2) inches in diameter, but when awakened, they are blazing, shimmering whirlpools akin to miniature suns several inches in diameter. As one&#x27;s development advances, their chakras will extend further from the body, their frequency vibrations will increase and their corresponding colors will become clearer and brighter. <br/>
 <br/>
 Depending on the sex of the individual, the chakras rotate either clockwise or counter-clockwise. For instance, when a chakra in a man is rotating clockwise, the same chakra in a woman w川rotate counter-clockwise and visa versa. This enables the energies of man and woman to compliment each other. Every clockwise rotation is primary male, which is in accordance with the Chinese teaching, Yang; and every counter-clockwise rotation is female, or Ying. <br/>
-<br/>
+8344 <br/>
 It should be noted, the direction in which a chakra rotates varies from chakra to chakra. Each chakra rotates in a different direction, as these illustrations depict. <br/>
 <br/>
 THE SEVEN PRIMARY HUMAN CHAKRAS <br/>
-<br/>
+8345 <br/>
 The Seven Primary Chakras in the human body are: <br/>
 (7) Crown (Third Eye?) Chakra <br/>
 (6) Third Eye? <br/>
@@ -183,7 +204,7 @@ The chakra centers are in constant operation in all of us. In the undeveloped pe
 <br/>
 The divine energy that pours into each chakra from without sets up at right angles to itself secondary forces in an oscillating circular motion. Think of this like a magnet that produces a current around a coil at right angles to its axis. <br/>
 <br/>
-<br/>
+8347 <br/>
 <br/>
 After entering the vortex, the primary force radiates from it at right angles as straight lines, as though the center of the vortex was the hub of a wheel and the radiations of the primary force were the spokes. <br/>
 <br/>
@@ -199,7 +220,7 @@ Each chakra contains all color variations, although one color always dominates. 
 <br/>
 Figure 3 below is a diagrammatic representation of these paths of dispersed prana. <br/>
 <br/>
-<br/>
+8348 <br/>
 It is important to note that the divisions of prana are not like what we normally see in the solar spectrum but resemble the arrangement of colors we see on the higher levels in the causal, mental and astral bodies. <br/>
 <br/>
 For example, indigo is divided between the violet ray and the blue ray. <br/>
@@ -226,7 +247,7 @@ Violet prana color enters the 7th (Crown-Third Eye?) chakra <br/>
 <br/>
 Sushumna <br/>
 The most important and fundmental forms of energy enter the human system through the Root and Crown chakras. These two chakras are connected by a nadi called, sushumna. <br/>
-<br/>
+8349 <br/>
 The sushumna runs up and down the central axis of the body within the spine, between the crown (top of the head) and sacrum. The sushumna is also connected to all seven primary chakras via the &quot;stems,&quot; which provides each chakra with this vital energy. <br/>
 <br/>
 This primary current runs between the sun and earth”-”from heaven above and &quot; earth below.&quot; <br/>
@@ -235,12 +256,12 @@ As Above, So Below. <br/>
 <br/>
 This current induces other currents at right angles to itself, which flow between the spine and the outer edges of our etheric body (aura.) Thus we have a vital etheric body consisting of an interweaving mesh of stream of energy with the spinal current as an axis. This axis actually holds the &quot;etheric body&quot; (our aura) together and gives it coherent form. Think of this like a magnet surrounded by lines of force in which the metal fillings are drawn into a pattern and held in place <br/>
 in a magnetic field. <br/>
-<br/>
+8342 <br/>
 Besides the sushumna, there are two additional energy channels that play an important role in our energy system. These channels are known in Sanskrit as:&quot;ida“and &quot;pingala.“ The pingala channel is the carrier of solar energy. It is full of heat and drive. It begins on the right hand side of the Root chakra and ends in the upper area of the right nostril. <br/>
 <br/>
 The ida channel is the carrier of the cool and calming lunar energy. It begins on the left hand side of the Root chakra and ends in the left nostril. <br/>
 <br/>
-These two channels wind their way around the sushumna from the Root chakra to the nose, meeting at the 6th chakra and polarizing each of the chakras in between, thus contributing to their spin (see Figure 6 above). </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚得发表于 2013-11-28 17:26<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body"><br/>
+These two channels wind their way around the sushumna from the Root chakra to the nose, meeting at the 6th chakra and polarizing each of the chakras in between, thus contributing to their spin (see Figure 6 above). </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚得发表于 2013-11-28 17:26</span><div class="badge-floor">第 4 进</div></div><div class="post-body">8351 <br/>
 Only when one attempts to arouse the energy latent in the inner layers does the dangerous serpent fire begin to show itself. Think of this serpent fire as a ball or sphere of fire, or energy, and the ball is made up of layers, like a ball within a ball within a ball within a ball, etc. <br/>
 <br/>
 The harmless fire of the outer skin of the ball or sphere travels up the spinal column using the three lines of sushumna, ida and pingala simultaneously. <br/>
@@ -255,7 +276,7 @@ The wings of the caduceus depicted in Figure7 is a symbolic representation of th
 <br/>
 I repeat, at the center of each chakra, in its deepest point, there is a stem-like channel that extends to the spine and merges with it. The chakras are connected to the sushumna via these stems, which provides each chakra with &quot;vital energy.&quot; <br/>
 <br/>
-<br/>
+8352 <br/>
 In Figure 8 above, you can see the general location of the flower-like chakras, their respective stem, and the location of their connection to the spinal cord. <br/>
 <br/>
 As you can see, the stem bends downwards, it droops if you will, in the coeliac (or solar plexus) cardiac (heart) plexus, and the throat plexus. The reason for this involves the cerebro-spinal and sympathetic nervous systems, which I am not going to explain here. <br/>
@@ -265,7 +286,7 @@ Before we leave this segment, it should be noted that the Crown Chakra is NOT co
 The Crown Chakra }s associated with the pineal <br/>
 gland and pituitary body and is related to the development of the brain and spinal system of nerves. <br/>
 The pineal gland is separated from the pituitary gland by a heavy cartilaginous tissue. For many, the astral vortices corresponding to the 6th and 7th chakras converge upon the pituitary body-the pituitary body being the only direct link between the physical and the higher planes. <br/>
-<br/>
+8353 <br/>
 For another type of people, the pituitary vortex is bent, or slanted until it coincides with the pineal organ, which is vivified and made into a line of communication directly with the lower mental plane without having to pass through the intermediate astral plane in the ordinary way. <br/>
 <br/>
 The goal here is to develop and bridge the 6th and 7th chakras, creating an avenue of communication between them. This connecting link is called the antahkarana, or simply, the psychic bridge. <br/>
@@ -284,7 +305,7 @@ After musing over a wealth of research information, I think they may be one of t
 <br/>
 The Pituitary Gland <br/>
 The pituitary gland is a roundish organ, about the size of a pea, located just behind the bridge of the nose in the center and at the base of the skull/brain in a depression called the sella turcjca (&quot;Turkish saddle&quot;).It weighs about 1/2 gram (0.018 oz) produces 0.00001 grams of hormone per day, and is attached to the hypothalamus via nerve fibers. It is an important link between the nervous system and the endocrine system. <br/>
-<br/>
+8354 <br/>
 The pituitary gland consist of three lobes: <br/>
 <br/>
 (1) anterior (secretes protein hormones) <br/>
@@ -292,9 +313,9 @@ The pituitary gland consist of three lobes: <br/>
 (3) posterior (is an extension of the hypothalumous) <br/>
 <br/>
 Each lobe produces and releases hormones that affect growth, sexual development, metabolism and the reproduction system, particularly the ovaries and testes as well as the adrenal, kidneys, breasts, intestines, bladder, uterus, stomach and spleen. <br/>
-<br/>
+8355 <br/>
 The posterior is composed of axons of hypothalamic neurons that extend downward as a large bundle behind the anterior. It also forms the pituitary stalk, which appears to suspend the anterior from the hypothalamous. <br/>
-<br/>
+8356 <br/>
 The above image on the is the frontal view of the pituitary gland and hypothalamus of a sheep. This image will hopefully give you some idea how the parts of this organ fit together. <br/>
 <br/>
 Hormone secretion from the anterior pituitary is strictly controlled by hypothalamus hormones. The &quot;hypothalamus&quot; is a cluster of brain cells just above the pituitary gland, which transmits messages from the body to the brain. <br/>
@@ -303,7 +324,7 @@ For years, the pituitary gland was believed to be the master gland of the body, 
 <br/>
 The hypothalamus replies to the needs of the body by nerve impulses to the pituitary gland, which in turn produces the hormones the body&#x27;s needs. These hormones are then circulated in the blood to the body&#x27;s tissues, including other endocrines. <br/>
 <br/>
-<br/>
+8357 <br/>
 Now you know the basic physiological/biological purpose of the pituitary gland. <br/>
 <br/>
 But what does the pituitary gland have to do with the 6th chakra? and the Third Eye? <br/>
@@ -312,7 +333,7 @@ The Pineal Gland <br/>
 The pineal gland, a cone-shaped organ, which btw is how it got its name, is about the size of a pea and is located in a tiny cave behind and above the pituitary gland almost directly in the middle of the brain. It is attached to the third ventricle of the brain and produces the hormone &quot;melatonin,&quot; which is secreted throughout the night with the absence of light. <br/>
 <br/>
 When light enters the retina of the eyes, this signal is sent through the optic nerve to a region of the hypothalamus called the suprachiasmatic nucleus. This pathway is called the retinohypothalamic tract. From the suprachiasmatic nucleus, nerve impulses via the sympathetic nervous system travel to the pineal gland and inhibit the production of melatonin. At night, these impulses stop (because no light stimulates the hypothalamus) and melatonin production ensues and is released into the body. As a result, it appears the pineal gland is a photosensitive organ. Or is it? <br/>
-<br/>
+8350 <br/>
 Melatonin is implicated in many human activities, and perhaps human behavioral disorders. Melatonin regulates the human daily body rhythms, most notably the day and night cycle, and perhaps the depression and tiredness some people feel during long periods of overcast skies and short days during the winter months is in response to an over production of melatonin? If this is true, I wonder how melatonin production effects blind people? Are blind people more susceptible to depression because of a melatonin imbalance? <br/>
 <br/>
 Melatonin can be found throughout the animal kingdom. In reptiles and birds, the pineal gland is found close to the skin; it needs no interaction with with the eye to sense whether it is day or night. Interestingly enough, this is where the term &quot;third eye&quot; originated. The pineal gland is therefore the master clock for these animals. For mammals, however, the pineal gland is subordinate to the eye and the suprachiasmatic nucleus because light severely stops the production of melatonin. <br/>
@@ -342,7 +363,7 @@ Think about the above story. Other than the fact the pineal gland is effected by
 <br/>
 Now, there has been some confusion as to what the human &quot;Third Eye&quot; is and where it is located. This confusion seems to stem mostly from the location of the pituitary and pineal gland and the similarity of their names. <br/>
 <br/>
-The &quot;magical&quot; Third Eye and the Ajna chakra have been mentioned in many religions as dwelling between the eyes, eyebrows, center of the forehead, etc., and its association with light. </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚得发表于 2013-11-29 15:02<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body"><br/>
+The &quot;magical&quot; Third Eye and the Ajna chakra have been mentioned in many religions as dwelling between the eyes, eyebrows, center of the forehead, etc., and its association with light. </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚得发表于 2013-11-29 15:02</span><div class="badge-floor">第 5 进</div></div><div class="post-body">8363 <br/>
 In 1644, Descartes&#x27; theory of vision and interaction with the pineal gland is expressed in this woodcut. He believed light particles interacted with the eyes and the image seen (the light particles themselves) were then transmitted to the pineal gland-the pineal gland being the nexus between the mind and the body. <br/>
 <br/>
 &quot;In man, soul and body touch each other only at a single point, the pineal gland in the head.&quot; <br/>
@@ -372,7 +393,7 @@ Once you learn how to activate and use this wonderful &quot;Third Eye,&quot; you
 It should be noted that you will never realize any of this until you have properly prepared yourself. This preparation takes time, effort and DESIRE. I offer many exercises that are designed simply to HELP you attain this higher level of spiritual education, so to speak, but the end result is and always will be completely up to                                                             you. <br/>
 <br/>
 For now, this is all I will say about that. <br/>
-<br/>
+8373 <br/>
 The fly landed on the page just as I snapped the photo <br/>
 <br/>
 In essence, the chakras are akin to sense-organs for the astral body. They are NOT organs in the ordinary sense of the word, since it is not through them that a person sees or hears, as they would through their eyes and ears, but rather sense-organs that when functioning give the person the ability to see o勿ects behind them, above them, and beneath them without turning their head. <br/>
@@ -394,19 +415,19 @@ The Higher chakra group involves the 6th and Crown (Third Eye) chakras. These ch
 Here are some VERY, VERY, VERY BRIEF tid bits of information about What the Middle and Higher chakra&#x27;s influence may have upon the person: <br/>
 <br/>
 SOLAR PLEXUS Chakra (3rd chakra) <br/>
-<br/>
+8365 <br/>
 When the Solar Plexus Chakra is open or activated, the person begins to be conscious of all kinds of astral influences, vaguely feeling some are friendly and others are hostile, some pleasant and others unpleasant, all without knowing why. <br/>
 <br/>
 HEART Chakra(4th, chakra) <br/>
-<br/>
+8366 <br/>
 Stimulation of the Heart Chakra makes the person instinctively aware of the joys and sorrows of others. You essentially feel the feelings of others. This psychic ability has an adverse downside-you may be easily effected by another person&#x27;s emotional feelings, thus altering your own without knowing it. <br/>
 <br/>
 THROAT chakra (5th chakra) <br/>
-<br/>
+8367 <br/>
 Arousal of the Throat Chakra enables the person to hear voices, which sometimes makes all kinds of suggestions to you. Sometimes they even hear music, or less pleasant sounds. You become somewhat clairaudient, as least as far as the etheric and astral planes are concerned. <br/>
 <br/>
 6th Chakra(Third Eye?) <br/>
-<br/>
+8368 <br/>
 When the Third Eye Chakra is awakened, the person begins to see things. You may see waking visions, sometimes places, sometimes people. At first these sightings are often partial landscapes and clouds of color, whereas the full arousal brings about clairvoyance. <br/>
 <br/>
 The Third Eye Chakra is connected with sight in another way, too. A tiny, flexible tube of etheric matter is projected from the center of the pituitary gland, which resembles a microscopic snake with and eye at the end of it. The eye at the end can be expanded or contracted, the effect being to change the power of magnification according to the size of the object being examined. This is what is meant in ancient books as: the capacity to make oneself large or small at will. For example, in order to examine an atom, one must develop an organ of vision commensurate in size with the atom. Do you see? (If you have no idea what I am talking about, no problem. You belong to the average mass of humanity. These esoteric truths have been carefully guarded secrets throughout the ages. I reveal these tiny little clues to you simply because I believe it is time for many of you to know-especially those of you who are still with me and reading this.) <br/>
@@ -418,7 +439,7 @@ This symbolic headdress portrayed them as an Initiate of the Mysteries. Unfortun
 Now you know the hidden (secret/sacred) meaning behind this symbolic headdress that was worn in ancient Egypt. <br/>
 <br/>
 CROWN Chakra-Third Eye (7th chakra) <br/>
-<br/>
+8369 <br/>
 When the Crown Chakra is awakened, the person is able to pass through it and leave the body in full consciousness, and return to it without the usual break so that their consciousness will be continuous through night and day <br/>
 <br/>
 What Is Kundalini? <br/>
@@ -428,13 +449,13 @@ Kundalini is an invisible force, but in the human body it is clothed in a nest o
 There are seven (7) concentric spheres resting within the Root Chakra (in an around the last hollow of the spine close to the coccyx.) In the ordinary human, the only force active is the outermost sphere; the other spheres are asleep. <br/>
 <br/>
 In order to bring your Root(1st) Chakra into full activity is to awaken these inner spheres, and it is THIS force that arouses or awakens (activates) the rest of the chakras. <br/>
-<br/>
+8370 <br/>
 The kundalini power lies at rest at the lower end of the spine like a &quot;coiled snake&quot; and enters the system through the Root Chakra. The kundalini power flows through the sushumna in a mere trickle in most people. But when it is awakened, it rises up the sushumna like a growing stream, activating the chakras, supplying them with vibrations, causing them to expand and increase their vibrational frequency. <br/>
-<br/>
+8371 <br/>
 As the kundalini rises, its energy is transformed into various vibrations, corresponding to each individual chakra (ie. it is lowest at the Root Chakra and highest at the Crown Chakra.) The degree of each chakra&#x27;s performance is determined by the degree of consciousness (awareness) the person has attained in the various areas of his/her life, and whether they are blocked by stress and/ or unresolved experiences. The more conscious a person is, the more active and open their chakras will be and the more kundalini that will be able to enter their body and flow like a strong flowing stream. <br/>
 <br/>
 Please read the following page carefully: <br/>
-<br/>
+8372 <br/>
 A Kundalini Journey through the Chakras <br/>
 <br/>
 Here is a very, Very, Very BRIEF description: <br/>
@@ -476,7 +497,7 @@ Other unpleasant possibilities involve the mental body. For example, ambition is
 Kundalini is no ordinary energy. It is restless. Only under the guidance of a Master, who watches over them, should one attempt to awaken these tremendous forces. In the words of The Hathayoga Pradipika: &quot;Kundalini power gives liberation to yogis, and bondage to fools.&quot; <br/>
 <br/>
 In addition to kundalini, there is another energy that enters the body through the Crown Chakra (the top of your head) and flows down/through the spine to each individual chakra. It is a pure and divine vital energy. The archaic teachings in India call this energy, the god Shiva, whose mere presence initiates the transformation towards the Divine. <br/>
-<br/>
+8362 <br/>
 Remember, the chakras act as receivers of the energy vibrations and information that transcends the physical realm-openings that are connecting us with the unlimited universe of subtle energies. <br/>
 <br/>
 It should be noted that the chakras also radiate energy into our surrounding environment. Through our chakras, we can send out loving and healing vibrations and conscious or subconscious messages, which can and will influence the people around us (near or far away) as well as situations and even physical matter, all in a positive or negative light. So think about that. <br/>
@@ -503,7 +524,7 @@ The basic Law of the Universe is that Energy Follows Thought. This is why we exp
 <br/>
 NOTE: Because the Heart Chakra is the most important chakra, please give your Heart Chakra most of your attention and develop it fully. It is one of the two psychic centers which are in direct connection with your Higher Self and through which soul energy and other higher energies enter your being (the other is through your Crown Chakra.) <br/>
 <br/>
-The following exercises are designed to help cleanse and open (activate) your Heart Chakra. </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚得发表于 2013-12-7 19:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">The  4th HEART chakra <br/>
+The following exercises are designed to help cleanse and open (activate) your Heart Chakra. </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚得发表于 2013-12-7 19:08</span><div class="badge-floor">第 6 进</div></div><div class="post-body">The  4th HEART chakra <br/>
 <br/>
 PART I <br/>
 This is NOT Hatha Yoga exercises. There should be no compression of breath. Your breathing should be normal, but deep. <br/>
@@ -644,7 +665,7 @@ The first noticeable effect of the pituitary (Third Eye) exercises will be an in
 <br/>
 Meanwhile, continue your Heart and Lower Chakra exercises. Don’t stop the ongoing process! You need to open all chakras and fully develop the all-important Heart Chakra. <br/>
 <br/>
-AFTER YOU HAVE STARTED TO DEVELOP YOUR PITUITARY GLAND, THEN PROCEED WITH THE FOLLOWING EXERCISES FOR THE PINEAL GLAND. </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚得发表于 2013-12-7 19:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">7th CHAKRA <br/>
+AFTER YOU HAVE STARTED TO DEVELOP YOUR PITUITARY GLAND, THEN PROCEED WITH THE FOLLOWING EXERCISES FOR THE PINEAL GLAND. </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚得发表于 2013-12-7 19:10</span><div class="badge-floor">第 7 进</div></div><div class="post-body">7th CHAKRA <br/>
 CROWN CHAKRA <br/>
 THIRD EYE <br/>
 PINEAL GLAND <br/>
@@ -852,10 +873,10 @@ study yourself — To Know ThySelf. <br/>
 <br/>
 (18)        You have been given the techniques. So your rate of progress is now up to You. <br/>
 <br/>
-Reference: Wisdom of the Mystic Masters by Joseph Weed </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚得发表于 2013-12-7 19:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">SHALL WE BEGIN? <br/>
-<br/>
+Reference: Wisdom of the Mystic Masters by Joseph Weed </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚得发表于 2013-12-7 19:20</span><div class="badge-floor">第 8 进</div></div><div class="post-body">SHALL WE BEGIN? <br/>
+8378 <br/>
 ROOT chakra <br/>
-<br/>
+8379 <br/>
 Color: Fiery Red <br/>
 <br/>
 Element: Earth <br/>
@@ -894,7 +915,7 @@ If you have developed your higher chakras and neglected your lower ones, you may
 to Study Your other Chakras <br/>
 <br/>
 SACRAL chakra <br/>
-<br/>
+8380 <br/>
 Color: Orange <br/>
 <br/>
 Element: Water and all biological life <br/>
@@ -927,7 +948,7 @@ In most cases, inadequate functioning of the Sacral Chakra can be traced back to
 to Study Your other Chakras <br/>
 <br/>
 SOLAR PLEXUS chakra <br/>
-<br/>
+8381 <br/>
 Color: Yellow - Golden <br/>
 <br/>
 Element: Fire Sense: Sight <br/>
@@ -967,7 +988,7 @@ Acceptance and material well-being are of primary importance for you. Your true 
 to Study Your other Chakras <br/>
 <br/>
 HEART chakra  <br/>
-<br/>
+8385 <br/>
 Color: Green, Pink, and sometimes Gold <br/>
 <br/>
 Element: Air Sense: Touch <br/>
@@ -1020,7 +1041,7 @@ You may compensate for your lack of love by adopting an extremely friendly perso
 to Study Your other Chakras <br/>
 <br/>
 THROAT chakra <br/>
-<br/>
+8382 <br/>
 Color: Pale blue, greenish-blue <br/>
 <br/>
 Element: Ether Sense: Hearing <br/>
@@ -1078,7 +1099,7 @@ to Study Your other Chakras <br/>
 to Study Your other Chakras <br/>
 <br/>
 6th-3rd Eye? <br/>
-<br/>
+8383 <br/>
 Color: Indigo, yellow, yellow-green or violet <br/>
 <br/>
 Sense: Sight, sound, smell, taste and touch, also extrasensory perception <br/>
@@ -1141,7 +1162,7 @@ to Study Your other Chakras <br/>
 <br/>
 <br/>
 CROWN - 3rd Eye chakra  <br/>
-<br/>
+8384 <br/>
 Color: Violet, also white <br/>
 <br/>
 Fundamental Principle: Purest being <br/>
@@ -1206,7 +1227,7 @@ The Chakras by C.W. Leadbeater <br/>
 Eastern Body Western Mind by Anodea Judith <br/>
 <br/>
 I hope you learned something of importance here. <br/>
-<br/>
+8377 <br/>
 <br/>
 </div></div>
 </div>

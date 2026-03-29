@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>西藏王统记 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>西藏王统记 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">西藏王统记</h1>
-<div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:25<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">西藏王统记 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">西藏王统记</h1>
+<div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:25</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">西藏王统记 <br/>
 <br/>
 索南坚贊　著 <br/>
 刘立千　　译 <br/>
@@ -119,7 +140,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 但为信众凭史记，能动人心生敬信， <br/>
 能娱人耳我故书（13）”。谨此颂言。 <br/>
 <br/>
-夫此世间一切福善利乐本源，厥为大宝佛法，而佛法宏扬因缘，又实赖诸天竺吐蕃法王菩萨之恩德。若尔，则诸先德之史事，应当广为流布。特此边地雪域，曾蒙本师圆满正觉（14）所授记（15），谓圣观自在菩萨当在此土，随类施教，现变化身，度诸有情，登解脱道。尤以圣者心密所变化之护教法王，如松赞干布（16）等及其相继出世之法王祖孙数代，其大兴佛教之史事，更应广为流布。故今特撮略讲述，望能凭其起信祛疑，并将教法源流铭记，勿忘为祷！ </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:27<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">第一章 <br/>
+夫此世间一切福善利乐本源，厥为大宝佛法，而佛法宏扬因缘，又实赖诸天竺吐蕃法王菩萨之恩德。若尔，则诸先德之史事，应当广为流布。特此边地雪域，曾蒙本师圆满正觉（14）所授记（15），谓圣观自在菩萨当在此土，随类施教，现变化身，度诸有情，登解脱道。尤以圣者心密所变化之护教法王，如松赞干布（16）等及其相继出世之法王祖孙数代，其大兴佛教之史事，更应广为流布。故今特撮略讲述，望能凭其起信祛疑，并将教法源流铭记，勿忘为祷！ </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:27</span><div class="badge-floor">第 2 进</div></div><div class="post-body">第一章 <br/>
 <br/>
 讲述从如何成劫（17）至天竺法王相继出现和释迦牟尼降临世间大兴佛教之情 <br/>
 <br/>
@@ -151,7 +172,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如萨迦巴所推算世尊降生应为辰年，则喇嘛帝师哀罗（78）于阳水犬年在卫部受具足戒时，已过三千四百五十五年，而转入五十六年之上。按授记说佛教住世五千年，其中分三时期，则论藏时分已过，经藏时分已过二年，尚徐四百九十八年，律藏时分有五百年，性相法时分九百九十八年、像法时分有五百年，待来尚有一千四百九十八年也（79）（原注：《彰所知论》（80）云：佛灭度后一百年，印度有阿育王（81）者出，将作结集中转法-轮教法之施主）。此乃撮略而言，欲求详尽，则经藏律部俱在，颇为详明。设有未能广间经律者，则请细读喇嘛王法（82）所著之《彰所知论》。此书与布敦大师（83）之《善逝教法源流史》所许极相契合也。 <br/>
 <br/>
-讲述从最初如何成劫至天竺法王相继出现和本师释迦牟尼降临世间大兴佛教之情品第一章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:28<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">第二章 <br/>
+讲述从最初如何成劫至天竺法王相继出现和本师释迦牟尼降临世间大兴佛教之情品第一章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:28</span><div class="badge-floor">第 3 进</div></div><div class="post-body">第二章 <br/>
 <br/>
 塑造释迦牟尼佛三身圣像与迎神开光 <br/>
 <br/>
@@ -206,7 +227,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如是寄语。汉王得书，极惬其意，发大欢喜，以种种伎乐，隆礼恭迎。将觉阿佛像等三宝法品供奉于汉王宫中，仗此缘力，使诸有情，成受庥福，殊方汉土，亦蒙佛化。故彼地圣教得以大为兴盛也。 <br/>
 <br/>
-塑造释迦牟尼三身圣像与及迎神开光品第二章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">第三章 <br/>
+塑造释迦牟尼三身圣像与及迎神开光品第二章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:29</span><div class="badge-floor">第 4 进</div></div><div class="post-body">第三章 <br/>
 <br/>
 讲述汉土霍尔两地佛法如何宏扬和出现若干朝代等情 <br/>
 <br/>
@@ -222,7 +243,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 上述史实系根据精通汉族霍尔史籍之曾泽大师·喜饶耶协（163）在贡塘（164）所译历史；复根据出身高贵家族而又兼政教领袖之蔡巴·汤吉勤巴·司徒格卫罗朱（165）所著历史，从中扼要摘录者。若求详知汉族霍尔史事，则请阅读上说二书可也。 <br/>
 <br/>
-讲述汉土霍尔二地佛法如何宏扬和出现若干朝代品第三章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:30<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">第四章 <br/>
+讲述汉土霍尔二地佛法如何宏扬和出现若干朝代品第三章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:30</span><div class="badge-floor">第 5 进</div></div><div class="post-body">第四章 <br/>
 <br/>
 圣观世音菩萨自莲花中化生，宣讲六字真言功德 <br/>
 <br/>
@@ -300,7 +321,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 即此雪域边地中，度众成熟并解脱， <br/>
 无上妙法大宏扬。”如是授记云。 <br/>
 <br/>
-圣观音菩萨自莲花中化生，宣讲六字咒言功德品第四章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:31<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">第五章 <br/>
+圣观音菩萨自莲花中化生，宣讲六字咒言功德品第四章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:31</span><div class="badge-floor">第 6 进</div></div><div class="post-body">第五章 <br/>
 <br/>
 圣观世音菩萨成熟度脱有雪邦土一切众生 <br/>
 <br/>
@@ -338,7 +359,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如是赞已。为教化雪域众生，尊者亦现众多化身，使一切有情，皆得成熟解脱。 <br/>
 <br/>
-圣观世音菩萨成熟度脱有雪邦土一切众生第一品第五章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:32<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">第六章 <br/>
+圣观世音菩萨成熟度脱有雪邦土一切众生第一品第五章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:32</span><div class="badge-floor">第 7 进</div></div><div class="post-body">第六章 <br/>
 <br/>
 变化马王利益众生 <br/>
 <br/>
@@ -390,7 +411,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如上事例所明，只贪今生而造恶业之人，正如请从商人，由于回顾，同遭殒落。漂流轮回，永无解脱恶道之辨。若不贪图今生，修习妙法，如同商主，则能获得上界解脱安乐，并可由之而成佛也。 <br/>
 <br/>
-变化马王利益众生品第六章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:34<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">第七章 <br/>
+变化马王利益众生品第六章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:34</span><div class="badge-floor">第 8 进</div></div><div class="post-body">第七章 <br/>
 <br/>
 讲述藏族人种出自神猴及岩山魔女之情 <br/>
 <br/>
@@ -433,7 +454,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 母岩魔所成种性，贪欲瞋恚，俱极强烈，从事商贾，贪求营利，仇心极盛，喜於讥笑，强健勇敢，行不坚定，刹那交易，思虑烦多，动作敏捷，五毒炽盛，喜窥人过，轻易恼怒。此皆母之特性也。当时，山野尽属山林，江河盈溢洪水。盈满之水，开为支道，水即流归支道，原野之上，从事稼稿，营建城邑。尔后未久，即有聂赤赞普（211）者出，来为吐蕃之王，从此始有臣民之分焉。 <br/>
 <br/>
-讲述藏族人种出自神猴及岩山魔女之情品第七章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:35<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">第八章 <br/>
+讲述藏族人种出自神猴及岩山魔女之情品第七章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:35</span><div class="badge-floor">第 9 进</div></div><div class="post-body">第八章 <br/>
 <br/>
 吐蕃王统最初如何出现之情 <br/>
 <br/>
@@ -491,7 +512,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 夫此能生一切利乐之本源，固为吐蕃历代诸王（原注《彰所知论》云：佛灭度后二千年时，聂赤赞普出世，二千五百年时拉托托宁协出世）。然由聂赤赞普至拉托托宁协以上王统共有二十七代，约五百年，因无与佛法为缘之王，故其史传多无详记。至拉托托宁协王时，方为有佛之始。彼寿一百二十岁。其后四世，至朗日松赞时，亦约一百一十年。此乃《大盟誓文》中所说也。上仅简略述其一隅，若求详尽，请问《大盟誓文》（262）和柱藏本《遗训首卷录》、《王统如意宝树史》（263）等古代文献。 <br/>
 <br/>
-讲述吐蕃最初王统如何出现之情品第八章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:36<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">第九章 <br/>
+讲述吐蕃最初王统如何出现之情品第八章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:36</span><div class="badge-floor">第 10 进</div></div><div class="post-body">第九章 <br/>
 <br/>
 从圣观世音菩萨身中放出几种光明而降生法王之情 <br/>
 <br/>
@@ -509,7 +530,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 复次，法王松赞干布心自思维，为利益此雪邦有情，我修行处，当往何处？又思昔我祖拉托托宁协乃圣普贤之化身，曾住拉萨红山之巅，我亦当践履先王遗迹，往彼吉祥安适之处而作利益一切众生之事业，时在亚伦哲堆园作如是思维已，明日即裹粮起程至亚场六字大明咒处，卸除行装，放牧牲畜就草，自亦小憩进餐。食毕王入水沐浴。水中放出各种毫光，灿烂辉煌，为拉钦布伦布（276）所见，骇而问王曰：“大王何故，此水中放出毫光，甚奇希有2？”王言：“大向伦！汝谛听之，度此有雪边地一切众生登于成熟解脱之道，摄集诸佛密意之本体，一切利乐功德之来源，教化边地之妙法，有雪邦人享用之法份，总摄心要中之心髓者，即此秘密六字法身之字也。此最胜说法之六字明咒，将自然出现于此岩石之上。即此明咒便能利益众多有情者也”。语毕，放岩石前，作诸供养。由则岩石中现出诸种光明，照射对面岩石，彼此毫光，如虹色相连，此后该地送名为稼当（277）。此岩石上又自然出现诸佛身像（原注；出现观世音、喀萨巴哩（278）、吉祥马头明王等像，后由尼泊尔匠师又再重为雕刻。使其愈加明现）。于是，王又从此前进，至红山顶（279）修筑宫室而居焉。 <br/>
 <br/>
-从圣观自在菩萨身中放出四种光明而降生法王之情品第九章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">第十章 <br/>
+从圣观自在菩萨身中放出四种光明而降生法王之情品第九章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:40</span><div class="badge-floor">第 11 进</div></div><div class="post-body">第十章 <br/>
 <br/>
 大臣吞弥自天竺改制文字，赞普因之建立十善法律 <br/>
 <br/>
@@ -646,7 +667,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 契合五欲，增益受用。此有雪邦，方域之内， <br/>
 十善律法，光如日月，遍照雪岭，吐蕃境上。” <br/>
 <br/>
-大臣吞弥自天竺改制文字，赞普因之建立十善法律品第十章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:41<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">第十一章 <br/>
+大臣吞弥自天竺改制文字，赞普因之建立十善法律品第十章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:41</span><div class="badge-floor">第 12 进</div></div><div class="post-body">第十一章 <br/>
 <br/>
 自天竺及尼婆罗迎请法王本尊佛像（315） <br/>
 <br/>
@@ -669,7 +690,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 于是，化身比丘将圣罗格肖热（332）像，即现供奉于布达拉山顶之喀萨巴哩，佛像迎请来至藏地，献于赞普松赞干布。赞普大悦，乃拜谒本尊圣像。自念今后利益有情，应无障难矣。此后化身比丘阿羯热摩地尸罗，复化为光明，仍融入于法王之眉间焉。 <br/>
 <br/>
-自天竺及尼婆罗迎请法王之本尊佛像品第十一章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">第十二章 <br/>
+自天竺及尼婆罗迎请法王之本尊佛像品第十一章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:42</span><div class="badge-floor">第 13 进</div></div><div class="post-body">第十二章 <br/>
 <br/>
 迎娶拜木萨赤尊公主 <br/>
 <br/>
@@ -736,7 +757,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 复次，王与王妃及诸臣下住宫内时，王常于本尊前，献诸供养，并作祈愿，而不外出。赤尊公主自作念言，藏王英俊神武，具诸才能，然绝不外出，定有边患之虞。今当谋一善策，以防未然，念此琉璃钵盂，向之祈请，即能出现无量酒食，可施于藏地众庶，使其充为役使，即能修建一大城堡。念已往白于王。当即召集大伦等内外诸臣，咸来聚议。尔时琉璃钵中，满盛诸种食品，置宝台上，发愿祈祷，则所欲酒食皆自然涌出，普施藏民。定于阳木羊年（342）为新城堡奠基。墙高约三十版土墙重叠之度，高而且阔，每侧长约一由旬余（343）。大门向南。红宫九百[九十九]（344）所，合顶上赞普寝宫共计宫室千所。飞檐女墙，走廊栏杆，以宝严饰，铃声震动，声音明亮，建造堂皇壮丽。论其精美，则等同于大自在天之胜妙宫殿，视无厌足，诸宝严饰，并以各种绫绸，作为采帷梁洛，美妙如意；论其威严，则等同罗刹城邑，楞伽布山（345）。诸宫室顶，竖立刀枪剑矛，每十长矛，悬挂红旗，而以采线连系之；论其坚固，设有强邻寇境，仅以五人则可守护。又南方城垣，掘有城壕，深约十排（346），上铺木板，再上铺以火砖，砖上仅纵一马，即有十马奔腾之声。其南方仿霍尔人城堡之式，建扎拉扎喜宫（347），作为赤尊王妃之寝宫，高达九层，宽敞雄伟，建造布局，极尽精美之能事。王宫及后妃宫二者之间，通以铁桥，桥下漫拂炫目，铃声煌销，王与王妃相互往来其间。如是王宫妙丽庄严，世绝其伦。修造完竣，王与臣民，大作庆会云。 <br/>
 <br/>
-迎娶拜木萨赤尊公主品第十二章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">第十三章 <br/>
+迎娶拜木萨赤尊公主品第十二章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:46</span><div class="badge-floor">第 14 进</div></div><div class="post-body">第十三章 <br/>
 <br/>
 迎娶甲本萨汉公主 <br/>
 <br/>
@@ -939,7 +960,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 赞普亦因一月之间，未与公主相见，心极歉悔，为安公主之心。故慰问公主云：“卿得无辛劳耶？得无烦恼耶？平安抵藏，实属难得。觉阿释迦像，如何迎来？山巅水涯，如何通过。”公主答曰：“觉阿置于车上，力士拉噶及鲁噶二人挽之，经甲曲库巴，以舟横渡。道路虽遥，巧施方便而行。越吉马拉古山口时，是绕冰而来者。黑暗之处，是擎灯而来者。紫檀之林，僵于道右而来者，刺黎之树，卧于道左而来者。汉地福运耗损，吐曹克亨康乐，然藏人实无良者也”语毕大哭。时诸臣等亦来斥责，作不平之鸣。伦布噶言：“本诸汉人皆轻视我等，除馆舍妇一人而外，更无同情于吐蕃者，尤以大唐天子偏私心重，即化人公主，汝亦对我吐蕃多所鄙薄轻视也。”汉公主闻之，亦生内疚，遂不作语矣。 <br/>
 <br/>
-迎娶甲木萨汉公主品第十三章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:47<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">第十四章 <br/>
+迎娶甲木萨汉公主品第十三章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:47</span><div class="badge-floor">第 15 进</div></div><div class="post-body">第十四章 <br/>
 <br/>
 修建镇边、重镇等庙和神变殿堂及绕木齐寺等 <br/>
 <br/>
@@ -976,7 +997,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 赤尊与公主二人所建统萨神变殿堂及甲达绕木齐寺庙，诸如彩络等工，一切营造，仅十二个月，则同时建造完竣。王修建镇边、重镇，压肢诸神庙亦告圆满。于是遂来昌诸，对如来教宝，虔诚承侍，礼拜供养。凡具沙门之相者，皆竭诚供奉，视如头顶，恭敬礼拜。并宣渝云：“凡我臣民，皆应如是恭敬。”某次王曾外出，见为杀蛇忏罪所建之五顶塔前，有一老丐僧，将破烂僧衣铺于地上，们虱而住。以此丐僧具沙门相，王遂礼拜，并语之曰：“余虽为主宰一邦之君主，然欲使如来圣教于此有雪边地，如日光照，大为显扬，故仍修建甚多之佛宇。在诸庙中，安置如来身、口、意所凭依之佛宝甚多，并恭敬供养。且发誓凡言具有沙门之相者，皆当礼拜。然此非甚奇希有之事乎。”丐僧乃起立，将破袖挂于肩上而对曰：“大王，汝为如来之教，故凡遇沙门，皆恭敬礼拜。拜我丐僧，固甚希有。然我此亦非甚奇希有者乎。”语毕将五顶塔取置于右手五指顶端，绕行一周。王颇赧颜，遂将头巾除去，示以顶上阿弥陀佛云：“汝行固奇矣。然我有此，非至奇乎。”丐僧又将胸间露开，以刃剖开胸腔，则内脏悉变为毗卢遮那等诸如来佛，咸住其中。亦示于王，因云：‘“大王，汝仅有一佛，我有如此之多，此非极为希有之事乎。”王大欢喜，立生敬信，遂迎而供奉之。王又出渝：凡于诸沙门，无论僧衣破烂，或服饰行动有何殊异，皆应以此为范，恭敬顶礼，不可妄生邪见也。 <br/>
 <br/>
-修建镇边、重镇等庙和神变殿、绕木齐寺等品第十四章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:48<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">第十五章 <br/>
+修建镇边、重镇等庙和神变殿、绕木齐寺等品第十四章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:48</span><div class="badge-floor">第 16 进</div></div><div class="post-body">第十五章 <br/>
 <br/>
 拉萨两寺庙及镇边、重镇诸神庙修造完成，迎神开光（468） <br/>
 <br/>
@@ -1098,7 +1119,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 复次，王又于扎拉鲁浦修建神庙，此庙主神为吐巴扎拉贡布（493），其右旁自现舍利佛，左旁目犍连，又右弥勒，左观世音，主从共五尊。虽然在岩石上已自然现出，但为未来众生培积福德，复由尼婆罗匠师将其刻接，更加显明。在转经堂岩壁上，所有雕刻均由藏民竣其事功。斯时盐价昂贵，至六十倍，王许其雕岩粉一升，即付以盐一升为酬。但又雕得岩灰半升，仍以一升与之交换。诸神殿彩增工程完毕，亦为其作迎神开光云。 <br/>
 <br/>
-拉萨两寺庙及镇边、重镇诸神庙修造完竣迎神开光品第十五章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">第十六章 <br/>
+拉萨两寺庙及镇边、重镇诸神庙修造完竣迎神开光品第十五章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:49</span><div class="badge-floor">第 17 进</div></div><div class="post-body">第十六章 <br/>
 <br/>
 求于未来能生利乐，秘藏伏藏，（494）化导所有臣民悉入正法 <br/>
 <br/>
@@ -1127,7 +1148,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如是王与王妃之事业，则圆满告成矣。夫王诚为雪域藏民依赖之如父母，如导引众生之商主，如出生财物之妙宝，如解除黑暗之明灯，无有亲疏爱憎，譬如日月。王之所行，英明善巧，使外无怨敌，内护属民，惠泽普被，所统领黎庶，悉获富裕，受用康乐者也。 <br/>
 <br/>
-求于未来能生利乐，秘藏伏藏，并化导所有臣民悉入正法品第十六章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 18 楼</span></div><div class="post-body">第十七章 <br/>
+求于未来能生利乐，秘藏伏藏，并化导所有臣民悉入正法品第十六章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:51</span><div class="badge-floor">第 18 进</div></div><div class="post-body">第十七章 <br/>
 <br/>
 王父王母事业圆满，即融入于自然生成之十一面大悲观音心间 <br/>
 <br/>
@@ -1392,7 +1413,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 祷请地方神护佑，启请事毕返故里， <br/>
 利乐光明遍十方。 <br/>
 <br/>
-如是赞云。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:52<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 19 楼</span></div><div class="post-body">第十八章 <br/>
+如是赞云。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:52</span><div class="badge-floor">第 19 进</div></div><div class="post-body">第十八章 <br/>
 <br/>
 王孙芒松芒赞事略 <br/>
 <br/>
@@ -1401,7 +1422,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 芒松陵墓上陵左，墓亦满以珠宝殉， <br/>
 名为俄希奢波陵。 <br/>
 <br/>
-第十八章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:53<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 20 楼</span></div><div class="post-body">第十九章 <br/>
+第十八章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:53</span><div class="badge-floor">第 20 进</div></div><div class="post-body">第十九章 <br/>
 <br/>
 都松·盂布吉·隆朝楚事略 <br/>
 <br/>
@@ -1410,7 +1431,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 王陵芒松王左侧，陵墓名为拉日坚， <br/>
 此为霍尔属民建，僧格孜巴是其名。 <br/>
 <br/>
-第十九章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:54<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 21 楼</span></div><div class="post-body">第二十章 <br/>
+第十九章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:54</span><div class="badge-floor">第 21 进</div></div><div class="post-body">第二十章 <br/>
 <br/>
 赤德祖赞·麦阿葱事略 <br/>
 <br/>
@@ -1456,7 +1477,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 墓建穆热山（586）顶上，位在松赞王陵左， <br/>
 拉日祖朗为名号。 <br/>
 <br/>
-第二十章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 22 楼</span></div><div class="post-body">第二十一章 <br/>
+第二十章竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:55</span><div class="badge-floor">第 22 进</div></div><div class="post-body">第二十一章 <br/>
 <br/>
 法王赤松德赞事略 <br/>
 <br/>
@@ -1583,7 +1604,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 此乃生前王自建，名为楚日租朗陵， <br/>
 其旁尚有一石碑，后世称为启晋京。” <br/>
 <br/>
-如是云云。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 23 楼</span></div><div class="post-body">第二十二章 <br/>
+如是云云。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:56</span><div class="badge-floor">第 23 进</div></div><div class="post-body">第二十二章 <br/>
 <br/>
 牟尼赞普事略 <br/>
 <br/>
@@ -1591,7 +1612,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 于是赞普乃大宏佛教，对诸受供大师与出家沙门，恭敬承侍，供其资养，奉如顶冠。以富强康乐之道护理王政。王妃卜容萨·甲摩尊者，乃昔王父之母甲摩萨之所转生也。王子少妃常绘于怀。及赴宋喀时，又殷切嘱托小王看顾，因此王子乃继纳其为妃。事为其母蔡邦萨所妒，遂藉口责谓王父去世时，卜容萨未曾卸装，来有悲伤，遣刑吏往杀之，殊为小王所救，其母愈生反见，乃进毒食而鸩杀王也。牟尼赞普在位一年零九月，寿二十九，卒于雍布王宫。王子牟尼赞普之陵传谓在： <br/>
 <br/>
-“阿葱王陵右前侧，命名拉日定波陵。” </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 24 楼</span></div><div class="post-body">第二十三章 <br/>
+“阿葱王陵右前侧，命名拉日定波陵。” </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:56</span><div class="badge-floor">第 24 进</div></div><div class="post-body">第二十三章 <br/>
 <br/>
 王子牟底赞普和赤德松赞·塞拉勒·江永之事略 <br/>
 <br/>
@@ -1599,7 +1620,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 “其陵建于顿喀达，命名甲日江定陵。” <br/>
 <br/>
-于是又以王位授与赤德松赞·塞拉勒·江永（687）统御工邦。招聚僧伽，翻译往昔未译竟之经论文典，供养受供之班智达毗首羯罗，毗卢遮那乔吉（688）、莲花戒等诸应供大德，并以香灯供品供把先王所建诸大伽蓝寺宇。年方十九（689），纳拉孜为妃，拉生一子，子年十三时，其父即逝，王墓建于顿喀达。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:57<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 25 楼</span></div><div class="post-body">第二十四章 <br/>
+于是又以王位授与赤德松赞·塞拉勒·江永（687）统御工邦。招聚僧伽，翻译往昔未译竟之经论文典，供养受供之班智达毗首羯罗，毗卢遮那乔吉（688）、莲花戒等诸应供大德，并以香灯供品供把先王所建诸大伽蓝寺宇。年方十九（689），纳拉孜为妃，拉生一子，子年十三时，其父即逝，王墓建于顿喀达。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:57</span><div class="badge-floor">第 25 进</div></div><div class="post-body">第二十四章 <br/>
 <br/>
 王子丁赤事略 <br/>
 <br/>
@@ -1608,7 +1629,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 “陵建神王之左侧，其中满以珍宝殉， <br/>
 王母墓注水使高，其名甲青蚌所陵”。 <br/>
 <br/>
-如是云云。（原注：或谓王母为求王朝兴盛，以甘露灌墓，致墓地高耸）（见德格版原注）。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:58<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 26 楼</span></div><div class="post-body">第二十五章 <br/>
+如是云云。（原注：或谓王母为求王朝兴盛，以甘露灌墓，致墓地高耸）（见德格版原注）。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:58</span><div class="badge-floor">第 26 进</div></div><div class="post-body">第二十五章 <br/>
 <br/>
 安达·热巴坚事略 <br/>
 <br/>
@@ -1631,7 +1652,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 “安达赤热王陵墓，位于顿喀左角旁， <br/>
 墓中满殉珠宝器，名称赤登芒日墓。” <br/>
 <br/>
-此后，王之疆土犹如冬水，日渐下落，十善法律，如坏麦束，绳断分散，藏民福德，如油尽灯，利乐王治，如虹散空，罪恶行径，如大漠风沙，狂吹乱起，行善之心，如昨夜梦，渐就忘失。至于诸译师和受供高僧，皆以服役无人，各返乡里。所翻经典，其未竟者，亦唯弃之而已。诸喜乐佛法臣民，徒有悲伤，而亦无可如之何也。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:58<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 27 楼</span></div><div class="post-body">第二十六章 <br/>
+此后，王之疆土犹如冬水，日渐下落，十善法律，如坏麦束，绳断分散，藏民福德，如油尽灯，利乐王治，如虹散空，罪恶行径，如大漠风沙，狂吹乱起，行善之心，如昨夜梦，渐就忘失。至于诸译师和受供高僧，皆以服役无人，各返乡里。所翻经典，其未竟者，亦唯弃之而已。诸喜乐佛法臣民，徒有悲伤，而亦无可如之何也。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:58</span><div class="badge-floor">第 27 进</div></div><div class="post-body">第二十六章 <br/>
 <br/>
 赤郎达玛乌冬赞事略 <br/>
 <br/>
@@ -1641,7 +1662,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 时曲阿日山（744）修道处，有约·格迥、藏·饶塞、玛·释迦牟尼三人在彼修行。约格调忽见一沙门，褪去围裙，手持弓矢，头戴羽毛，驱使猎犬，正从事于猎取野兽。指彼猎人问之曰：“老僧得勿迷误耶，抑大德疯狂耶，胡为如此？”二人答曰：“汝未迷误，大德狂矣。”遂招沙门来至其前，询问原委。大德云：“汝三人未受王之惩罚，亦大危殆。”因以恶王摧毁佛教详情告之。彼三人大恐，不敢须臾或留，即将律藏经籍，载以三骡（745），循北道（746）而走，逃入康地，止于丹底之协吉扎浦（747）。其后又有噶沃·乔扎巴及绒敦·僧格坚赞二人携《阿毗达摩》及《俱舍》等经论书籍甚多，亦遁来康地，住于安穹朗仲（748）之岩洞焉。 <br/>
 <br/>
-拉隆·白季多吉（749）时在耶巴山洞中修定。约当半夜，忽见拉萨护法神吉祥天母前来谓之曰：“今藏地获得成就者，唯汝一人，赞普朗达玛破坏如来圣教，汝可往诛此恶王，吾为臂助，望勿畏怯。”翌晨，询问侍者，始知实情。思为佛教，能舍生命，遂生起诛此恶王之勇气。又巧用各种方便：以炭屑涂马，令成黑色，所著袖衣，外染黑色，内作白色，头戴黑冠，油烟涂面，袖藏弓-箭，骑于黑马之上，口自念言“我不畏彼黑魔”旋即驰向拉萨。适赞普方在石碑之前，阅览碑文。彼即前来，佯作叩礼。默想本尊，暗诵咒言，袖内潜取弓-箭。初一礼指按于箭，再礼扣矢，三礼即对准王额放之，随即逃遁。王以两手拔额上箭，立即倒毙（原注：赞普朗达玛生于牛年，鸡年即位，摧毁佛教凡五年，寿三十八，于虎年被刺（750））。乃召谋者，向四方追缉。东行者云：“方将追及，至噶摩栋，天忽昏晦，遂迷失之。”西南行者云：“至志河边，天忽昏晦，遂迷失之。”西行者云：“至汛地边之草场时，天忽昏晦．遂迷失之。”北行者云：“至东噶前，天忽昏晦，遂迷失之。”然实逃于志之下方，潜入水内，涂炭之马，洗净成白。抛弃黑冠，洗去面上油烟，翻转袖衣白里雨衣之，伪称余乃拉隆铁噶布也，遂得适走。四方谍迫者，每一人前，各现一不同化身，以致彼此所不见不合，乃相谓曰：“殆决为拉隆·白季多吉之所为也。”遂派人前往耶巴山洞侦之。白季多吉居山洞中，伪作坐禅。并提一鹊使飞扬尘埃，又令虫蚁游行其上，布其迹相如此。使侦者见之，认为非是，遂各归还。乃有一智者来岩洞内，探彼心间，知心颤战，遂日：“本固坚密，我又何必多事。”言已遂去，于是白季多吉大为恐惧，不敢稍事停留，即逃赴康地矣。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:59<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 28 楼</span></div><div class="post-body">第二十七章 <br/>
+拉隆·白季多吉（749）时在耶巴山洞中修定。约当半夜，忽见拉萨护法神吉祥天母前来谓之曰：“今藏地获得成就者，唯汝一人，赞普朗达玛破坏如来圣教，汝可往诛此恶王，吾为臂助，望勿畏怯。”翌晨，询问侍者，始知实情。思为佛教，能舍生命，遂生起诛此恶王之勇气。又巧用各种方便：以炭屑涂马，令成黑色，所著袖衣，外染黑色，内作白色，头戴黑冠，油烟涂面，袖藏弓-箭，骑于黑马之上，口自念言“我不畏彼黑魔”旋即驰向拉萨。适赞普方在石碑之前，阅览碑文。彼即前来，佯作叩礼。默想本尊，暗诵咒言，袖内潜取弓-箭。初一礼指按于箭，再礼扣矢，三礼即对准王额放之，随即逃遁。王以两手拔额上箭，立即倒毙（原注：赞普朗达玛生于牛年，鸡年即位，摧毁佛教凡五年，寿三十八，于虎年被刺（750））。乃召谋者，向四方追缉。东行者云：“方将追及，至噶摩栋，天忽昏晦，遂迷失之。”西南行者云：“至志河边，天忽昏晦，遂迷失之。”西行者云：“至汛地边之草场时，天忽昏晦．遂迷失之。”北行者云：“至东噶前，天忽昏晦，遂迷失之。”然实逃于志之下方，潜入水内，涂炭之马，洗净成白。抛弃黑冠，洗去面上油烟，翻转袖衣白里雨衣之，伪称余乃拉隆铁噶布也，遂得适走。四方谍迫者，每一人前，各现一不同化身，以致彼此所不见不合，乃相谓曰：“殆决为拉隆·白季多吉之所为也。”遂派人前往耶巴山洞侦之。白季多吉居山洞中，伪作坐禅。并提一鹊使飞扬尘埃，又令虫蚁游行其上，布其迹相如此。使侦者见之，认为非是，遂各归还。乃有一智者来岩洞内，探彼心间，知心颤战，遂日：“本固坚密，我又何必多事。”言已遂去，于是白季多吉大为恐惧，不敢稍事停留，即逃赴康地矣。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:59</span><div class="badge-floor">第 28 进</div></div><div class="post-body">第二十七章 <br/>
 <br/>
 安达·沃松与安达·雍登二王事略 <br/>
 <br/>
@@ -1654,13 +1675,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 乞人之子，安达雍登出身下贱种， <br/>
 拥立为主，无复再见十善大法律， <br/>
 本为肉价而为芜菁之价所混乱， <br/>
-王朝世系已告结束王嗣亦中断。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-19 23:59<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 29 楼</span></div><div class="post-body">第二十八章 <br/>
+王朝世系已告结束王嗣亦中断。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-19 23:59</span><div class="badge-floor">第 29 进</div></div><div class="post-body">第二十八章 <br/>
 <br/>
 雍登王系概述 <br/>
 <br/>
 雍登之子赤德贡宁。彼又生二子：长名赤·日巴贡，幼名尼马贡。尼马贡之子尼沃白贡。其后裔在垅雪（756）彭域、朵康（757）者甚众。赤日巴贡生有二子：长名德沃、幼名多吉巴。德沃之裔为布巴坚巴及唐拉扎巴。多吉巴之子赤旺秋赞。旺秋赞子查那·耶协坚赞（758），查那子安达·赤巴。此父子二代时，佛教徐烬，始又复燃于朵康。 <br/>
 <br/>
-安达·赤巴有四子：阿咱热，格隆，喇嘛，拉尊·菩提热咱。阿咱热之裔，有充波瓦、江郊巴、拉巴浪巴、志巴、聂塘巴、吕巴藏布等。喇嘛无后。格隆之裔为柏西巴、温多、蒙喀瓦等。菩提热咱之后，为拉尊·恩摩、女绒巴（759）、拉止岗巴（760）等。今日桑耶尚有彼等之后裔。上列王族世系，各繁衍于四方，在机约者（761），即改称为觉阿。闻其种族多不纯净云。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-20 00:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 30 楼</span></div><div class="post-body">第二十九章 <br/>
+安达·赤巴有四子：阿咱热，格隆，喇嘛，拉尊·菩提热咱。阿咱热之裔，有充波瓦、江郊巴、拉巴浪巴、志巴、聂塘巴、吕巴藏布等。喇嘛无后。格隆之裔为柏西巴、温多、蒙喀瓦等。菩提热咱之后，为拉尊·恩摩、女绒巴（759）、拉止岗巴（760）等。今日桑耶尚有彼等之后裔。上列王族世系，各繁衍于四方，在机约者（761），即改称为觉阿。闻其种族多不纯净云。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-20 00:00</span><div class="badge-floor">第 30 进</div></div><div class="post-body">第二十九章 <br/>
 <br/>
 佛教从朵康中兴之情 <br/>
 <br/>
@@ -1672,23 +1693,23 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 斯时佛教已宏扬于朵康，而藏地反无佛教，成为黑暗之域。故当恶王灭佛后约八十徐年，桑耶安达·查那·耶协坚赞作为施主，始资送学人前往康地求戒。其首次求得律戒者，则号称为藏卫之七人也，有：鲁梅·喜饶楚称、志·耶协云丹、聪格·喜饶僧格、罗敦·多吉旺秋、松巴·耶协洛朱、甲·洛朱耶协、逊本·曲乔等是也。彼七人请仲·耶协坚赞为亲教师，觉若·喜饶降曲为轨范师，遂蒙宏恩传授律戒（767） <br/>
 <br/>
-其后又至五人者有：塔细杰拔热喜·楚称炯乃、巴尊·洛朱旺秋、吉烈·娘镇·曲郊、仲新·喜饶门朗等是也。先是首至七人往康求戒，求授戒已，返乡途中，遇后至五人，问其何往。云往康地求戒，先来请人云：“我辈已得三种律戒（768），可转授汝等，无庸远涉。”卒未听从，仍来康地，遇以上诸善巧大德。请授戒已，再返藏卫。时桑耶赞普·查那·耶协坚赞已卒，其子赞普赤巴作施主，鲁梅等人在藏卫各处建立寺宇，不可计量，且成立僧伽，使如来正教如枯木死柴，又得重燃，并使其广大显扬，遍及十方。由此观之，护持佛教命脉，重燃佛教徐烬，如高举明灯照彻藏地幽暗者，乃全仗如上所述次第示现之藏中诸大德善巧及安达·耶协坚赞父子二人之力也。彼等恩德实属非浅。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-20 00:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 31 楼</span></div><div class="post-body">第三十章 <br/>
+其后又至五人者有：塔细杰拔热喜·楚称炯乃、巴尊·洛朱旺秋、吉烈·娘镇·曲郊、仲新·喜饶门朗等是也。先是首至七人往康求戒，求授戒已，返乡途中，遇后至五人，问其何往。云往康地求戒，先来请人云：“我辈已得三种律戒（768），可转授汝等，无庸远涉。”卒未听从，仍来康地，遇以上诸善巧大德。请授戒已，再返藏卫。时桑耶赞普·查那·耶协坚赞已卒，其子赞普赤巴作施主，鲁梅等人在藏卫各处建立寺宇，不可计量，且成立僧伽，使如来正教如枯木死柴，又得重燃，并使其广大显扬，遍及十方。由此观之，护持佛教命脉，重燃佛教徐烬，如高举明灯照彻藏地幽暗者，乃全仗如上所述次第示现之藏中诸大德善巧及安达·耶协坚赞父子二人之力也。彼等恩德实属非浅。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-20 00:00</span><div class="badge-floor">第 31 进</div></div><div class="post-body">第三十章 <br/>
 <br/>
 沃松王系概述 <br/>
 <br/>
 如是，对如来正教恩德宏大之吐蕃赞普世系，已如上述。吉·巴柯赞之大妃子基德尼玛贡据阿里为王，并统辖布让等地。彼有三子：长子白季贡，据孟域。（原注：由此传至觉阿热钦之间）。次子札西贡，据布让幼子德尊贡，据象雄。此三子号称住上部三贡（769）。德尊贡有二子：柯热与松厄是也。 <br/>
 <br/>
-松厄上半世曾纳王妃，生二王子，即拉格热咱与德巴热咱。下半世出家，更名为拉喇嘛·耶协沃（770）。曾建吞庭巴吉拉康寺（771），派遣译师仁钦桑布（772）及俄·勒比喜饶（773）等上根利器二十一人往天竺学法，迎请班智达商揭罗及哇摩达二人，翻译显教经典及密教四续部并作抉择，宏扬上路律学法统等（774）。其长兄柯热修建喀卡寺。彼子拉德波，迎请班智达·苏波希与麦汝二人。拉德波有三子：长子希瓦沃，次子拉喇嘛降曲沃（775），幼子沃德（776）。彼三人时，拉喇嘛耶协沃为宏扬佛教，曾往天竺迎请班智达，行至中途，为外道军所掳（777），将其能生善品功德之脉门，用火烧毁，使成愚鲁。事为拉喇嘛降曲沃所闻，令人携带多量黄金，请求赎还。答谓须以等身重量之黄金。遂以所有黄金费往，衡于秤、尚不足一头之数，耶协沃乃曰：“今者汝等唤我，尚有何益，我之脉门既已烧坏，严如牲畜，不如我死，尚较胜也。可将赎我之金，携往天竺，寻求格瓦白王之子，此人在毗迦摩罗尸罗寺（778），通达三明学处，五班百智达之中如同室顶，极受敬重，其名称则为觉阿吉·底邦噶热（779）。即以此金，献与尊者，迎其来藏，使正觉之教法，显扬光大。”语毕即被害。乃将其遗体迎回本处，为之建一灵塔焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-20 00:01<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 32 楼</span></div><div class="post-body">第三十一章 <br/>
+松厄上半世曾纳王妃，生二王子，即拉格热咱与德巴热咱。下半世出家，更名为拉喇嘛·耶协沃（770）。曾建吞庭巴吉拉康寺（771），派遣译师仁钦桑布（772）及俄·勒比喜饶（773）等上根利器二十一人往天竺学法，迎请班智达商揭罗及哇摩达二人，翻译显教经典及密教四续部并作抉择，宏扬上路律学法统等（774）。其长兄柯热修建喀卡寺。彼子拉德波，迎请班智达·苏波希与麦汝二人。拉德波有三子：长子希瓦沃，次子拉喇嘛降曲沃（775），幼子沃德（776）。彼三人时，拉喇嘛耶协沃为宏扬佛教，曾往天竺迎请班智达，行至中途，为外道军所掳（777），将其能生善品功德之脉门，用火烧毁，使成愚鲁。事为拉喇嘛降曲沃所闻，令人携带多量黄金，请求赎还。答谓须以等身重量之黄金。遂以所有黄金费往，衡于秤、尚不足一头之数，耶协沃乃曰：“今者汝等唤我，尚有何益，我之脉门既已烧坏，严如牲畜，不如我死，尚较胜也。可将赎我之金，携往天竺，寻求格瓦白王之子，此人在毗迦摩罗尸罗寺（778），通达三明学处，五班百智达之中如同室顶，极受敬重，其名称则为觉阿吉·底邦噶热（779）。即以此金，献与尊者，迎其来藏，使正觉之教法，显扬光大。”语毕即被害。乃将其遗体迎回本处，为之建一灵塔焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-20 00:01</span><div class="badge-floor">第 32 进</div></div><div class="post-body">第三十一章 <br/>
 <br/>
 拉喇嘛降曲沃迎请阿底峡尊者之情 <br/>
 <br/>
-于是，降曲沃遵其所示，派遣嘉·尊僧等费黄金往迎觉阿吉。嘉以诸种方便恳请觉阿来藏，觉阿亦为悲悯藏地阿里之化机，又依尊胜度母所授记，遂来至藏地。其后作育出弟子有那错和库、俄、仲（780）三人，与及大译师仁钦桑布，小译师俄·勒比喜饶等诸喜巧德大为数甚多。彼等于此有雪邦土，宏扬如来正教，如同日光显照，功劳匪浅，其中拉喇嘛降曲沃于我藏地，厥功尤伟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-20 00:01<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 33 楼</span></div><div class="post-body">第三十二章 <br/>
+于是，降曲沃遵其所示，派遣嘉·尊僧等费黄金往迎觉阿吉。嘉以诸种方便恳请觉阿来藏，觉阿亦为悲悯藏地阿里之化机，又依尊胜度母所授记，遂来至藏地。其后作育出弟子有那错和库、俄、仲（780）三人，与及大译师仁钦桑布，小译师俄·勒比喜饶等诸喜巧德大为数甚多。彼等于此有雪邦土，宏扬如来正教，如同日光显照，功劳匪浅，其中拉喇嘛降曲沃于我藏地，厥功尤伟。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-20 00:01</span><div class="badge-floor">第 33 进</div></div><div class="post-body">第三十二章 <br/>
 <br/>
 亚泽王系概述 <br/>
 <br/>
 拉喇嘛降曲沃之弟沃德，又迎请罽宾班智达·达拉室利。沃德子赞德。赞子巴德。从此次第出现札喜德、巴热、纳格德等，其各分别统治谷格、布让、孟域等地（781）。 <br/>
 <br/>
-又纳格德之子赞劫德，往亚泽（782）为王。其于礼喜德。札子扎赞德。礼赞德子札巴德。巴德子阿着德。阿若子阿所德。阿所子孜达美与阿伦达美二人。阿伦达美之子日鲁美。日鲁美为拉萨觉阿宝像头顶建造一黄金顶盖。彼有二子，即桑格美与孜塔美二人。孜塔美之子阿哲美。其子噶伦美。其子巴底美。此后则亚泽王统绝其嗣承，乃由布让迎安达·索南德来亚泽继承王位，改名为布尼美。布尼美子孜底美与其家臣白丹札二人共为拉萨十一面尊像建造一黄金顶盖。以上住于上部之王育世系，乃系摘录自赛托巴·仁多所撰（档案文书）。若欲详知各王之丰功德业，则请详阅此文书可也。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-20 00:02<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 34 楼</span></div><div class="post-body">第三十三章 <br/>
+又纳格德之子赞劫德，往亚泽（782）为王。其于礼喜德。札子扎赞德。礼赞德子札巴德。巴德子阿着德。阿若子阿所德。阿所子孜达美与阿伦达美二人。阿伦达美之子日鲁美。日鲁美为拉萨觉阿宝像头顶建造一黄金顶盖。彼有二子，即桑格美与孜塔美二人。孜塔美之子阿哲美。其子噶伦美。其子巴底美。此后则亚泽王统绝其嗣承，乃由布让迎安达·索南德来亚泽继承王位，改名为布尼美。布尼美子孜底美与其家臣白丹札二人共为拉萨十一面尊像建造一黄金顶盖。以上住于上部之王育世系，乃系摘录自赛托巴·仁多所撰（档案文书）。若欲详知各王之丰功德业，则请详阅此文书可也。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-20 00:02</span><div class="badge-floor">第 34 进</div></div><div class="post-body">第三十三章 <br/>
 <br/>
 亚隆觉阿王系概述 <br/>
 <br/>
@@ -1718,7 +1739,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 夫此边区雪域藏地，无上正等党本师如来虽未践履，然其语教光明，早已周遍照射，由圣观世音，随数施教，令诸有情，悉登菩提正道。尤以圣者心密变化成为护法大王松赞干布等与及次第出现藏土之法王及诸臣辅，施设种种方便，使正党圣教，愈加光大显扬。其应化事迹，即此名为（教法源流明鉴）一书，乃为欲求知佛教宏扬之事实，使有信心者生欢喜故，岁次阳土龙年（813），萨迦派索南坚赞详为撰写于桑耶大伽蓝。愿现今和一切时处悉呈吉祥。 <br/>
 <br/>
-本书乃因三界法王艾旺大堪布·白丹曲炯之所劝请，由统领南赡广大地土大转轮王，大喇嘛衰噶赤乃嘉措发大宏愿，特新雕板，广为流通。愿此法施妙流，永无穷尽。（后一段刻板的话系按德格版本译出） </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-20 00:03<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 35 楼</span></div><div class="post-body">注释 <br/>
+本书乃因三界法王艾旺大堪布·白丹曲炯之所劝请，由统领南赡广大地土大转轮王，大喇嘛衰噶赤乃嘉措发大宏愿，特新雕板，广为流通。愿此法施妙流，永无穷尽。（后一段刻板的话系按德格版本译出） </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-20 00:03</span><div class="badge-floor">第 35 进</div></div><div class="post-body">注释 <br/>
 <br/>
 （1）这是观音菩萨的六字大明咒。观音是观世音的略称，又称为观自在菩萨。大明咒是属于密宗的秘密真言。佛经说人若诵此咒，可灭一切罪，生一切善，具有不可思议功德。它是最早传入西藏的一种简单易行的密宗法门，故在藏地传播极为广泛普遍。 <br/>
 （2）西藏学者在撰写著作时，按宗教习惯总是首先要顶礼佛菩萨，作赞颂诗来表示诚敬。这里顶礼的对象是观世音菩萨。传说观音曾经发誓愿化度藏地众生，把藏地作为他的教化之区。说藏王就是他的化身，来执行这种教化任务的。所以本书叙述藏史大部份都是记载观音的化度事迹。 <br/>
@@ -1819,7 +1840,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 （97）达磨波罗：是印度波罗王朝第四代君主，他与唐德宗大约同时，约在公元八世纪。下面提及与他交往的汉地君主又是支了咱耶。按支丁是姚秦符坚，公元四世纪时人，与印度的友多王朝月护王等约略同时，此处可能是传述有误。 <br/>
 （98）支丁咱耶：“支丁”是汉语“昭帝”的音转。昭帝，是东晋时前秦符坚的溢号“宣昭皇帝”之简称。“咱耶”印语，王者的意思。他曾遣吕光等往西域求佛，是最早派人通印度迎佛像的人。 <br/>
 （99）觉阿像迎至内地：觉阿像何时迎至内地，据西藏《红史》说前秦符坚曾派将军日光往西域迎请觉阿十二岁身量之像，与及舍利子和班智达鸠摩罗什等，但未说明时代。（晋书）说，前秦建元元年（365），遣将军吕光等往西域各地求佛。及吕光返国至凉州，符秦已经灭亡，后秦弘始三年姚兴出兵凉州，始将佛像等迎至长安。（土观宗派源流）说迎释迦像入内地是姚兴弘始年间。 <br/>
-（100）觉阿释迦与旃檀觉阿：此二像非同时迎至汉地。觉阿像是姚秦弘始时事，已如前述。旃檀像据《红史）注说，此像是天竺优填王用旃檀木雕刻的佛三十岁身量的像。汉籍（佛祖统记）说，梁武帝天监元年时，有人从中天竺舍卫国请来优填王所造旃檀佛像。可见铜质的觉阿释边像是在公元四O一年，旃檀佛像是在五O二年，其间相差约百余年。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-7-20 00:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 36 楼</span></div><div class="post-body">注释主要参考书目 <br/>
+（100）觉阿释迦与旃檀觉阿：此二像非同时迎至汉地。觉阿像是姚秦弘始时事，已如前述。旃檀像据《红史）注说，此像是天竺优填王用旃檀木雕刻的佛三十岁身量的像。汉籍（佛祖统记）说，梁武帝天监元年时，有人从中天竺舍卫国请来优填王所造旃檀佛像。可见铜质的觉阿释边像是在公元四O一年，旃檀佛像是在五O二年，其间相差约百余年。 </div></div><div class="post"><div class="post-header"><div class="avatar">法</div><span style="font-size:15px; letter-spacing:1px;">法成发表于 2007-7-20 00:04</span><div class="badge-floor">第 36 进</div></div><div class="post-body">注释主要参考书目 <br/>
 <br/>
 一、汉文部分： <br/>
 《旧唐书》，〔晋〕刘脑等撰，商务印书馆百袖本。 <br/>

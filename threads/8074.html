@@ -1,69 +1,90 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>藏传匝龙瑜伽七种妙莲功 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>藏传匝龙瑜伽七种妙莲功 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/金刚菩提遍庄严.html">金刚菩提遍庄严</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">藏传匝龙瑜伽七种妙莲功</h1>
-<div class="post"><div class="post-header"><div class="avatar">瑞</div>瑞祥发表于 2013-10-17 13:53<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">藏传匝龙瑜伽七种妙莲功 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/金刚菩提遍庄严.html">金刚菩提遍庄严</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">藏传匝龙瑜伽七种妙莲功</h1>
+<div class="post"><div class="post-header"><div class="avatar">瑞</div><span style="font-size:15px; letter-spacing:1px;">瑞祥发表于 2013-10-17 13:53</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">藏传匝龙瑜伽七种妙莲功 <br/>
 <br/>
       盛莲式 <br/>
 “盛莲举手抬臀部，满息细竹再下放，前额触地手后伸。” <br/>
 端坐，两脚前伸，两手抚膝。入息一细竹，两手用力上举，左脚朝内，结金刚跏趺坐。舒息一细竹，两手径直后伸，前额前俯。入息一细竹，双手用力高举，同时臀部上抬，两膝着地，上体直立。开口满息一细竹，腰腹尽量挺直。其后，双手左右平伸，抬膝放臀。舒息一细竹，双手径直后伸，前额贴前地。入息一细竹，双手用力上举，两脚用力前伸。舒息一细竹，前额俯膝，两手分别拉脚掌。 <br/>
 功效。《除隘法》云：“《脉络衰老除隘》云：精进妙莲盛开降，脉无绕僵裂断缩，诸疾消除器官明，身体爽朗脉堪能。” <br/>
 如上所说，盛莲式可祛除脉络老化、脉道萎缩、相互缠绕、硬化、破裂、脉络断、痉挛等脉病，具有增强眼、耳、鼻、舌、身、意诸根功能之作用。 <br/>
-<br/>
+83078308 <br/>
 <br/>
       仰莲式 <br/>
 “仰莲后仰握脚掌，腰腹后仰头触地， 压气细竹腰部卧，两手用力仲胯侧。” <br/>
 端坐，双脚前伸，两手抚膝。入息一细竹，双手上举，脚结跏趺。舒息一细竹，双手后伸，前额贴地。入息一细竹，双手分别握该侧的脚掌，腰腹前挺，头顶触地。压抑气息一细竹，腰腹尽量前挺，紧缩身体。舒息一细竹，卧放腰部，两手用力伸展放胯侧。入息一细竹，双手上举，两脚同时前伸。舒息一细竹，上体竖立，前额触膝，两手分别拉脚掌。 <br/>
 功效。《除隘法》云：“《明点寂静除隘》说：致力仰莲的功法，明点缺乏布关节，内漏不禁遗失等，仰莲式功能尽除。” <br/>
 如上所说，仰莲式可祛除男女缺乏白界，或者元气附于关节，白界或赤界等内漏不禁、遗失等症。它使身体健安，体力增强，肌肉发达，容光焕发，充满安乐。 <br/>
-<br/>
+83098310 <br/>
 <br/>
       旋莲式 <br/>
 “旋莲两手绕背后，和合细竹握脚掌，两手后伸束腰间，前额下俯触地铺。” <br/>
 端坐，双脚前伸，两手抚膝。入息一细竹，两手上举，脚结跏趺。舒息一细竹，右手从右肋后绕，握右脚；左手从左肋后绕，握左脚。入息一细竹，腰椎伸直，挺胸。上下体的气息汇合一细竹，随即约束于腰间。其后两手用力上举，同时解跏趺坐姿。舒息一细竹，两手后伸，前额俯地。入息一细竹，双手上举，两脚前伸。舒息一细竹，前额贴膝，双手分别拉脚掌。 <br/>
-<br/>
+83118312 <br/>
 功效。《除隘法》云：《气界停滞除隘》说：身体僵硬练旋莲。” <br/>
 如上所说，诸气不畅，离散和凝滞之症，特别是周身气息不畅者适合练旋莲式。 <br/>
 <br/>
@@ -73,12 +94,12 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 直，上抬跏趺，臂膀伸直，拳头支撑体重（译注：原文与图不符）。憋气一细竹，猛烈上引下体气息。其后，两手左右平伸，解跏趺坐姿，舒息一细竹，两手后伸，前额触地。入息一细竹，两手上举，双脚前伸。舒息一细竹，前额贴膝，两手分别拉脚掌。 <br/>
 功效。《除隘法》云：“《气界停滞除隘》云：脉络硬化练浮莲。” <br/>
 如上所说，诸气住在脉界，亦即脉络不畅，或者离散者，若勤练此功可全部祛除之。 <br/>
-<br/>
+8313 <br/>
 <br/>
       绕莲式 <br/>
 “绕莲两拳着地铺，上抬跏趺憋引气，个半细竹绕至七，遂解跏趺如上述。” <br/>
 端坐，两脚前伸，双手抚膝。入息一细竹，两手上举，脚结跏趺。舒息一细竹，两手攥拳，分别置胯侧地铺上。猛吸气两细卡，双肩后张，腰腹及臂膀挺直，上抬跏趺。憋气、运气一个半细竹，向前、向后晃动跏趺七次。其后，坐地，上体正直，两手左右平伸，遂解跏趺坐姿。舒息一细竹，两手后伸，前额触地。入息一细竹，两手上举，双脚前伸。舒息一细竹，双手分别拉脚掌，前额俯膝。 <br/>
-<br/>
+83148315 <br/>
 功效。《除隘法》云：“《气机停滞除隘》云：气凝于心练绕莲。” <br/>
 如上所说，修炼此功可消除诸气散失和停滞于心之疾。 <br/>
 <br/>
@@ -87,14 +108,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 端坐，两脚前伸，双手抚膝。入息一细竹，背脊贴地仰卧，两手用力向头顶方向伸展。舒息一细竹，两手伸展，着胯侧地铺，脚结跏跌，上体伸直，两手上抬跏趺。入息一细竹，下放跏趺，跪立，两手上举，伴随强烈的“哈”声两手左右平展，臀部下放。其后，舒息一细竹，两手背后合掌，前额触地。入息一细竹，两手上举，双脚前伸。舒息一细竹，双手分别拉脚掌，前额俯膝。 <br/>
 功效。《除隘法》云：“《气机停滞除隘》云：气不就位练降莲。” <br/>
 如上所说，持命气等五气各不就位，离散或停滞，凭借此功可使之就位。 <br/>
-<br/>
+83168317 <br/>
 <br/>
       闪莲式 <br/>
 “两手拄地闪莲式，抬膝腋下臂膀直，前胸触地膝下挪，空竹背后法印仰。” <br/>
 端坐，双脚前伸，两手抚膝。入息一细竹，双手上举，脚结跏趺。舒息一细竹，双手拄地，臂膀伸直，手掌和双膝着地，趴地。入息一细竹，抬膝至腋下，伸直的臂膀支撑体重。舒息一细竹，膝盖着地，身体下降，前胸和下颔触地。空闭气息一细竹，两手在背后结法印（译注：指合掌），上体、肩头和头后仰。入息一细竹，两手触及胯侧地铺，上体上抬。舒息一细竹，就地解跏趺，两手抚膝。 <br/>
 功效。《除隘法》云：“《气机停滞除隘》云：调和混乱练闪莲。” <br/>
 如上所说，闪莲式可祛除持命气、上行气、等住气、下行气、遍行气等五气所控制的部位混乱、功能失调等病症，具调和诸气功能之功效。 <br/>
-<br/>
+83188306 <br/>
 <br/>
 </div></div>
 </div>

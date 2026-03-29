@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>印光大师~念佛三昧 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>印光大师~念佛三昧 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">印光大师~念佛三昧</h1>
-<div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-4-26 17:11<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">岁在丙午, 予掩关于慈溪之宝庆寺。谢绝世缘, 修习净业。值寺主延谛闲法师, 讲弥陀疏钞于关傍。予遂效匡衡凿壁故事, 于关壁开一小窦。不离当处, 常参讲筵。从兹念佛, 愈觉亲切。佛号一举, 妄念全消。透体清凉, 中怀悦豫。直同甘露灌顶, 醍醐沃心。其为乐也, 莫能喻焉。一日, 有客诣关而问曰, 念佛一法, 吾已修持二十余年。于生信发愿修行, 非不真切。而业深障重, 终未能到一心不乱境界。窥吾根性, 只合带业往生。虽念佛三昧, 非此生所敢冀。其能得之法, 与所得之相, 师其为我言之。予曰, 三昧境相, 唯证方了。如人饮水, 冷暖自知。我既未证, 焉能宣说。客固请不已。予曰, 若论其法, 必须当念佛时, 即念返观。专注一境, 毋使外驰。念念照顾心源, 心心契合佛体。返念自念, 返观自观。即念即观, 即观即念。务使全念即观, 念外无观。全观即念, 观外无念。观念虽同水乳, 尚未鞫到根源。须向者一念南无阿弥陀佛上, 重重体究, 切切提撕。越究越切, 愈提愈亲。及至力极功纯, 豁然和念脱落, 证入无念无不念境界。所谓灵光独耀, 迥脱根尘。体露真常, 不拘文字。心性无染, 本自圆成。但离妄念, 即如如佛者。此之谓也。工夫至此, 念佛法得。【阿底注：此处用功，寂止、胜观具备。日久功深，不二本然现量体认。念佛之法，妙！妙！妙！】感应道交, 正好著力。其相如云散长空, 青天彻露。亲见本来, 本无所见。无见是真见, 有见即随尘。到此则山色溪声, 咸是第一义谛。鸦鸣鹊噪, 无非最上真乘。活泼泼应诸法, 而不住一法。光皎皎照诸境, 而了无一物。【阿底注：青青竹叶皆是法身，郁郁黄花无非般若。】语其用, 如旭日之东升, 圆明朗照。【阿底注：明者，报身。】语其体, 犹皓月之西落, 清净寂灭。【阿底注：空者，法身。】即照即寂, 即寂即照。双存双泯, 绝待圆融。【阿底注：不二周遍者，化身。】譬若雪覆千山, 海吞万派。唯是一色, 了无异味。无挂无碍, 自在自如。论其利益, 现在则未离娑婆, 常预海会。临终则一登上品, 顿证佛乘。唯有家里人, 方知家里事。语于门外汉, 遭谤定无疑。又问, 人于日用, 普应诸缘。何能触目菩提, 头头是道乎。答, 心生则种种法生, 心灭则种种法灭。万境不出一心, 一心融通万境。若了心体本空, 何妨该罗万象。须知万象如幻, 生灭唯是一心。诸缘无缚, 本自解脱。六尘不恶, 还同正觉。心境一如, 有何挂碍。不见华严事事无碍法界。所谓一一尘中一切刹, 一一心中一切心。一一心尘复互周, 重重无尽无障碍。以故器界毛尘, 云台宝网。咸宣性海, 悉演真乘。竖穷三际, 横遍十方。觅一毛头许不是道者, 亦不可得。【阿底注：大圆满】则法法头头, 无非大寂灭场。心心念念, 悉契萨婆若海。唯心妙境, 唯境妙心。离四句, 绝百非, 绝待圆融, 何可得而思议也哉。上来所说, 如盲摸象。虽未离象, 恐非全象。笔以记之, 以质诸亲见之者。~《文钞》之《念佛三昧摸象记》印光大师 著述 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">印光大师~念佛三昧</h1>
+<div class="post"><div class="post-header"><div class="avatar">格</div><span style="font-size:15px; letter-spacing:1px;">格力琼寺发表于 2024-4-26 17:11</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">岁在丙午, 予掩关于慈溪之宝庆寺。谢绝世缘, 修习净业。值寺主延谛闲法师, 讲弥陀疏钞于关傍。予遂效匡衡凿壁故事, 于关壁开一小窦。不离当处, 常参讲筵。从兹念佛, 愈觉亲切。佛号一举, 妄念全消。透体清凉, 中怀悦豫。直同甘露灌顶, 醍醐沃心。其为乐也, 莫能喻焉。一日, 有客诣关而问曰, 念佛一法, 吾已修持二十余年。于生信发愿修行, 非不真切。而业深障重, 终未能到一心不乱境界。窥吾根性, 只合带业往生。虽念佛三昧, 非此生所敢冀。其能得之法, 与所得之相, 师其为我言之。予曰, 三昧境相, 唯证方了。如人饮水, 冷暖自知。我既未证, 焉能宣说。客固请不已。予曰, 若论其法, 必须当念佛时, 即念返观。专注一境, 毋使外驰。念念照顾心源, 心心契合佛体。返念自念, 返观自观。即念即观, 即观即念。务使全念即观, 念外无观。全观即念, 观外无念。观念虽同水乳, 尚未鞫到根源。须向者一念南无阿弥陀佛上, 重重体究, 切切提撕。越究越切, 愈提愈亲。及至力极功纯, 豁然和念脱落, 证入无念无不念境界。所谓灵光独耀, 迥脱根尘。体露真常, 不拘文字。心性无染, 本自圆成。但离妄念, 即如如佛者。此之谓也。工夫至此, 念佛法得。【阿底注：此处用功，寂止、胜观具备。日久功深，不二本然现量体认。念佛之法，妙！妙！妙！】感应道交, 正好著力。其相如云散长空, 青天彻露。亲见本来, 本无所见。无见是真见, 有见即随尘。到此则山色溪声, 咸是第一义谛。鸦鸣鹊噪, 无非最上真乘。活泼泼应诸法, 而不住一法。光皎皎照诸境, 而了无一物。【阿底注：青青竹叶皆是法身，郁郁黄花无非般若。】语其用, 如旭日之东升, 圆明朗照。【阿底注：明者，报身。】语其体, 犹皓月之西落, 清净寂灭。【阿底注：空者，法身。】即照即寂, 即寂即照。双存双泯, 绝待圆融。【阿底注：不二周遍者，化身。】譬若雪覆千山, 海吞万派。唯是一色, 了无异味。无挂无碍, 自在自如。论其利益, 现在则未离娑婆, 常预海会。临终则一登上品, 顿证佛乘。唯有家里人, 方知家里事。语于门外汉, 遭谤定无疑。又问, 人于日用, 普应诸缘。何能触目菩提, 头头是道乎。答, 心生则种种法生, 心灭则种种法灭。万境不出一心, 一心融通万境。若了心体本空, 何妨该罗万象。须知万象如幻, 生灭唯是一心。诸缘无缚, 本自解脱。六尘不恶, 还同正觉。心境一如, 有何挂碍。不见华严事事无碍法界。所谓一一尘中一切刹, 一一心中一切心。一一心尘复互周, 重重无尽无障碍。以故器界毛尘, 云台宝网。咸宣性海, 悉演真乘。竖穷三际, 横遍十方。觅一毛头许不是道者, 亦不可得。【阿底注：大圆满】则法法头头, 无非大寂灭场。心心念念, 悉契萨婆若海。唯心妙境, 唯境妙心。离四句, 绝百非, 绝待圆融, 何可得而思议也哉。上来所说, 如盲摸象。虽未离象, 恐非全象。笔以记之, 以质诸亲见之者。~《文钞》之《念佛三昧摸象记》印光大师 著述 <br/>
 <br/>
 </div></div>
 </div>

@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>玛尔巴译师传 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>玛尔巴译师传 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">玛尔巴译师传</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-4-21 00:49<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">玛尔巴译师传 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">玛尔巴译师传</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-4-21 00:49</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">玛尔巴译师传 <br/>
  <br/>
 查同结布    著 <br/>
 张天锁  申新泰 <br/>
@@ -126,7 +147,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 【15】  回向──转变、增长，是回向意。转变因力之诸善根成为大菩提因，增长有尽 <br/>
 诸善根成为无尽。亦即 欲求转变、增长自他三世所积一切有漏无漏福泽皆为无上菩提之因，名为回向。通俗的讲，即把自己所修的功德转向众生，让众生得到幸福。 <br/>
 【16】  心传弟子──得到传授大法的最亲近的弟子。 <br/>
-【17】 此字原书不清楚，疑为左“口”右“四”，可字库中没有。根据下文“噜迦”二字，概为译音“赫如嘎”，因而用一字音字义相近的“呵”字。 （输入者注） </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 00:19<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">第一章  降生西藏，初遇佛法 <br/>
+【17】 此字原书不清楚，疑为左“口”右“四”，可字库中没有。根据下文“噜迦”二字，概为译音“赫如嘎”，因而用一字音字义相近的“呵”字。 （输入者注） </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 00:19</span><div class="badge-floor">第 2 进</div></div><div class="post-body">第一章  降生西藏，初遇佛法 <br/>
 <br/>
 圣者玛尔巴译师生于西藏山南洛扎秋切的卓窝隆•牌萨村。父名玛尔巴•旺秋维赛，母名佳姆萨朵黛，兼营农牧二业，资财颇为丰足。此对夫妇共生子女三个，尊者玛尔巴为最小者。该玛尔巴自幼心思敏捷而又秉性顽烈，因此，他父亲常说：“我的这个儿子，如果有心计，则无论出家在家都将出类拔萃，因而于己于人必多裨益；万一无心计，于己于人均遭祸殃。 <br/>
  <br/>
@@ -141,7 +162,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 【2】  灌顶──古印度国王即位以水灌顶，即有权管理国政。佛教密乘坛中授予灌顶，即使有权听闻、讲说、修习密宗，罪垢永净，身心留植修道缘分。换言之，灌顶即授权，上师传法时准许弟子修习，是密宗的一种宗教仪式。 <br/>
 <br/>
-【3】  教授──佛教术语，即口诀、窍门、教诲等意。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 00:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">第二章  三赴印度  求取佛法 <br/>
+【3】  教授──佛教术语，即口诀、窍门、教诲等意。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 00:24</span><div class="badge-floor">第 3 进</div></div><div class="post-body">第二章  三赴印度  求取佛法 <br/>
 <br/>
 第一节  首次赴印之事迹 <br/>
 <br/>
@@ -173,7 +194,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 【7】 拉堆绛──即北拉堆，今日日喀则行署昂仁县及其周围一带地方的古老称谓。 <br/>
 【8】 达孜──昂仁县北部一地名。 <br/>
 【9】 格西──善知识。指引取舍正道的师友。在僧众中辩论佛教经籍的学位名号。按拉萨三大寺制度，分拉让巴格西、错让巴格西、多让巴格西和岭赛格西四级。 <br/>
-【10】 班智达──佛学通人，佛学家，潘迪特。精通五明的佛教徒或学者的尊号。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 00:33<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">    玛尔巴作了如上请求之后，为了酬谢上师教他学完密宗本续之恩，便用身语意三业供养，深得上师欢心。之后，玛尔巴离开益喜宁保师父，仍旧回到布拉哈日来。行至半路，在一座庙中，又碰见虐译师。虐问：“玛尔巴你自去年至今又学了些什么法？”玛答：“我学了父续的集密法。”虐译师说：“那么，辩论一番怎样 <br/>
+【10】 班智达──佛学通人，佛学家，潘迪特。精通五明的佛教徒或学者的尊号。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 00:33</span><div class="badge-floor">第 4 进</div></div><div class="post-body">    玛尔巴作了如上请求之后，为了酬谢上师教他学完密宗本续之恩，便用身语意三业供养，深得上师欢心。之后，玛尔巴离开益喜宁保师父，仍旧回到布拉哈日来。行至半路，在一座庙中，又碰见虐译师。虐问：“玛尔巴你自去年至今又学了些什么法？”玛答：“我学了父续的集密法。”虐译师说：“那么，辩论一番怎样 <br/>
 ？”结果玛尔巴辩胜了。 <br/>
  <br/>
     虐译师便又嘲讽道：“父续的集密金刚法早以弘传西藏，不足为奇，现在应求的是母续【47】的摩诃麻耶法【48】。此法中有静的脉，动的风，庄严的菩提心等教授。”接着说了好多关于摩诃麻耶中的法语，玛尔巴均无言可答。于是又来拜谒上师那若巴。那若巴问道：“你是否已得了能生起正信的集密金刚大法？”玛尔巴回答说：“已得能生正信的集密金刚大法。只是在回来的途中又遇到那位旅伴虐译师。二人辩论集密法，为弟子我所胜。 <br/>
@@ -326,7 +347,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 【68】  七支行──在佛和上师面前祷告的七项例行内容：顶礼、供养、忏悔、随喜、请转法-轮、请住世、回向等。 <br/>
 【69】  补处菩萨──前佛而佛的菩萨，亦即佛之代理者。 <br/>
 【70】  十善──不杀生、不偷盗、不邪淫、不妄语、不两舌、不恶口、不绮语、不贪、不嗔、不邪见。 <br/>
-【71】  十不善──杀、盗、淫、妄语、离间语、恶语、绮语、贪欲、嗔和邪见。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 00:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">    玛尔巴既然已学会了大幻的摩诃麻耶法，便返回来，只走了三天就到了布拉哈日。他当即前去拜见师父那若巴，其时，法主那若巴正在给沙弥喜饶僧格单独传法，便以手示意玛尔巴不要进来，玛尔巴只好呆在外面，不断地向师父顶礼，直至传法完毕。法刚传完，玛尔巴随即来到师父面前叩求加持。 <br/>
+【71】  十不善──杀、盗、淫、妄语、离间语、恶语、绮语、贪欲、嗔和邪见。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 00:42</span><div class="badge-floor">第 5 进</div></div><div class="post-body">    玛尔巴既然已学会了大幻的摩诃麻耶法，便返回来，只走了三天就到了布拉哈日。他当即前去拜见师父那若巴，其时，法主那若巴正在给沙弥喜饶僧格单独传法，便以手示意玛尔巴不要进来，玛尔巴只好呆在外面，不断地向师父顶礼，直至传法完毕。法刚传完，玛尔巴随即来到师父面前叩求加持。 <br/>
  <br/>
     师父问：“你获得法了吗？”答：“获得了。”又问：“古古热巴他大概诽谤我了吧！”答：“是的，但他只不过是说说开个玩笑而以。”再问：“他是怎样说的呢？”玛尔巴便将古古热巴所讲的戏言向师父一一作了禀告。那若巴听后便说：“他自己恰是那种模样！无德又无能，方到毒海洲那无人之处居住。 <br/>
  <br/>
@@ -656,7 +677,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 【108】 二取──精神和物质，意识和外境。旧译二取、能取所取。 <br/>
 【109】 意识──依各自不共增上缘意根而生、自力能了别自境法处体性之识，如认取瓶之意识。 <br/>
 【110】 世间八法──八风，八世风。指对自己稍有损益即生喜怒的世间八事：利、衰、誉、毁、称、讥、苦、乐。 <br/>
-【111】 闻思二学──耳中听人讲解为闻，心中思考其意为思。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 00:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">三、 获得灌顶及教授等妙法后返回西藏的情形 <br/>
+【111】 闻思二学──耳中听人讲解为闻，心中思考其意为思。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 00:51</span><div class="badge-floor">第 6 进</div></div><div class="post-body">三、 获得灌顶及教授等妙法后返回西藏的情形 <br/>
 <br/>
 玛尔巴的衣食用品将尽，与此同时，虐译师的费用也已耗完，于是彼此约定时间结伴回藏。虐心里暗想：我二人中，论起金子固然我多，论起学法却是他精，因而生起嫉妒的恶念。那时，与虐译师一起的有两位班智达，一位游学僧，及几位旅伴。虐译师的书籍等物品全都托他们带着，而玛尔巴则将书籍打成包袱，自己背着行路。 <br/>
  <br/>
@@ -1027,7 +1048,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 【136】  本原心──原始心。正常状态的心意。佛书译作基位心，指与微细持命风并存不离之心而言。 <br/>
 【137】  对治──压服、医治、制止、灭除对立面事物的方法。 <br/>
 【138】  下劣行──粗暴行为，下流的行为。 <br/>
-【139】  无明──痴。六根本烦恼之一。是智慧异品，不能如实了知三界所有业果、谛实等道理，能令杂染生起。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 00:58<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">第二节 第二次赴印之事迹 <br/>
+【139】  无明──痴。六根本烦恼之一。是智慧异品，不能如实了知三界所有业果、谛实等道理，能令杂染生起。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 00:58</span><div class="badge-floor">第 7 进</div></div><div class="post-body">第二节 第二次赴印之事迹 <br/>
 中间这次赴印，与上次相同，分为三个部分。 <br/>
 <br/>
 一、寻求黄金，遇诸弟子的情形 <br/>
@@ -1174,7 +1195,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 不希通晓言词义， <br/>
 愿所讲文又皆欢喜。” <br/>
 <br/>
-歌毕，当地头目也对上师深生敬信之心，供养给上师所喜的庄园和土地。上师的声誉和福德大振，眷属。享用均甚圆满聚了无我女等好几个具德相的明母，生了达玛多德等诸子。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 01:03<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">二、到达印度后多礼大德、寻求正法的情形 <br/>
+歌毕，当地头目也对上师深生敬信之心，供养给上师所喜的庄园和土地。上师的声誉和福德大振，眷属。享用均甚圆满聚了无我女等好几个具德相的明母，生了达玛多德等诸子。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 01:03</span><div class="badge-floor">第 8 进</div></div><div class="post-body">二、到达印度后多礼大德、寻求正法的情形 <br/>
 <br/>
 玛尔巴在上师、本尊、护法诸神面前，为报答前恩，祈祷现在和未来，广作谢恩供养[154]，大供食子，摆设美妙集轮会供，遂携带黄金五十余两，准各起程赴印。有几位僧人请求同往，以为侍从，玛尔巴说：“我要只身前往。”未允所请。行至尼婆罗，拜见基特巴[155]及本达巴[156]二位大德，供养黄金，让师欢喜。 <br/>
  <br/>
@@ -1345,7 +1366,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 班智达阿迦悉地回到印度，见到玛尔巴后便说：“朋友你所顾虑的事我没有做，仅做了所希望的教化机缘的事业。”玛尔巴上师闻言心想：这位贤德的班智达，我一点小小的恶念，他都以神通知晓了，我心里并非常生恶念，心底里也无愧事。总之，自己要集中精力，不生恶念。便将心中所想先知班智达。阿迦悉地说：“ <br/>
 所言均属戏语。 <br/>
 <br/>
-你前生时即发殊圣诚心，所以现在深契上师之心。将来你定能饶益有情，光显佛法。”说完，便自往乌仗延那而去。此后，玛尔巴译师在诸位上师处圆满求得多种灌顶、教敕、要门口诀，特所求得之诸法典翻译成书，发大精进心而为之，所以他的事业得以迅速成就。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 01:06<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">三、返回西藏的情形 <br/>
+你前生时即发殊圣诚心，所以现在深契上师之心。将来你定能饶益有情，光显佛法。”说完，便自往乌仗延那而去。此后，玛尔巴译师在诸位上师处圆满求得多种灌顶、教敕、要门口诀，特所求得之诸法典翻译成书，发大精进心而为之，所以他的事业得以迅速成就。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 01:06</span><div class="badge-floor">第 9 进</div></div><div class="post-body">三、返回西藏的情形 <br/>
 <br/>
 玛尔巴上师为宏扬佛法，饶益有情，如愿完成了他的事业，心满意足，欲回西藏。于那若巴大师处幸行谢恩会供时，班勤那若巴以手加于玛尔巴之头顶而作歌云： <br/>
 <br/>
@@ -1474,7 +1495,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 有祝愿幸福之吉样， <br/>
 愿此吉祥更吉祥！” <br/>
 <br/>
-歌毕，玛尔巴接受了俄巴等弟子及诸位施主们的供品，为他们将此善根回向而成就无上菩提。以上为第二次赴印度的情形。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 01:12<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">第三节 第三次赴印之事迹 <br/>
+歌毕，玛尔巴接受了俄巴等弟子及诸位施主们的供品，为他们将此善根回向而成就无上菩提。以上为第二次赴印度的情形。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 01:12</span><div class="badge-floor">第 10 进</div></div><div class="post-body">第三节 第三次赴印之事迹 <br/>
 <br/>
 最后这次赴印度也和以前一样，分为三个部分。 <br/>
 <br/>
@@ -1582,7 +1603,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 命运莫测我要去印度， <br/>
 纵然冒死我也去印度。” <br/>
 <br/>
-如是歌毕。下定决心，前往印度。便将以前所收供养的金子以及弟子们所供养的东西也变卖成金子，共得黄金一碗，带上准备上路，其他人请求作为其待者一同前往，上师未允所请，只身一人，便往印度去了。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 01:26<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">二、 寻找那若巴上师求法的情形 <br/>
+如是歌毕。下定决心，前往印度。便将以前所收供养的金子以及弟子们所供养的东西也变卖成金子，共得黄金一碗，带上准备上路，其他人请求作为其待者一同前往，上师未允所请，只身一人，便往印度去了。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 01:26</span><div class="badge-floor">第 11 进</div></div><div class="post-body">二、 寻找那若巴上师求法的情形 <br/>
 <br/>
 玛尔巴上师一路前行，来至娘堆地方，适逢阿底峡[198]尊者来藏宏法，在香地的朗波拉彼此相遇。玛尔巴知道此人，从前在那若巴大师身边时，他便是那烂陀寺的掌堂师，[199]是位王族出身的班智达，心地善良，举止温和，并常常前来求法。他对法主麦哲巴使用“誓物”[200]心怀不满，稍生诽谤，然僧侣别解脱戒乃是共同之戒规，他并非有私欲。 <br/>
  <br/>
@@ -2064,7 +2085,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 就在玛尔巴这次去印度时，他遵从上师的旨意，前往麦哲巴大师处，求喜金刚灌顶时，天降神花之雨，散发出旃檀、沉香、速香等胜妙香气，空行母手执一把油松燃烧之火矩，飘飘然经历六日，天乐鸣空，爽心惬意。又求取胜乐金刚灌顶时，三地之勇士空行，皆不现身，念诵陀罗尼真言明咒。 <br/>
 <br/>
-施放朵玛时，护持刹土的空行生起变化身，化为七位红色狼女，前来领受施食。玛尔巴亲眼看到这一切，觉得自己仿佛不是在这个世界，恍如到了色究竟天一般，显得非常高兴。麦哲巴见此征兆，遂将印度所密封的法之枢要为其传授。所以，玛尔巴对那若巴与麦哲巴二位大师生起之净信，较佛尤为殊胜。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 01:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">三、  返回西藏的情形 <br/>
+施放朵玛时，护持刹土的空行生起变化身，化为七位红色狼女，前来领受施食。玛尔巴亲眼看到这一切，觉得自己仿佛不是在这个世界，恍如到了色究竟天一般，显得非常高兴。麦哲巴见此征兆，遂将印度所密封的法之枢要为其传授。所以，玛尔巴对那若巴与麦哲巴二位大师生起之净信，较佛尤为殊胜。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 01:29</span><div class="badge-floor">第 12 进</div></div><div class="post-body">三、  返回西藏的情形 <br/>
 <br/>
 玛尔巴拜辞了麦哲巴、贝希瓦桑波和益喜宁波等恩师回藏。冬天到达尼泊尔，稍作停留并温习佛法，随即边修边行而归。当行至尼泊尔的庞廷时，基特巴•曲杰兼金已经圆寂，只有本达巴为首的众法友前来迎接，并为其举行会供轮法会。在这个法会上，本达巴发言道：大译师，我早就说过，你们师徒二人，由于大悲与虔诚的感召，定能相会。 <br/>
  <br/>
@@ -2225,7 +2246,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 以此道歌供三宝，[232] <br/>
 在坐道友请欢喜！” <br/>
 <br/>
-众人听毕此歌，便对玛尔巴大师生起特别敬佩之心。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 01:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">    此后，玛尔巴便去梅朵林礼褐米娘多吉大师。此人是麦哲巴教下的一位法友，是教过玛尔巴一遍《事部》[233]法的导师。玛尔巴去时，适逢米娘多吉的朋友——迦什弥罗（喀什弥尔）的塑像师也正在那里为一吉祥密集金刚曼陀罗开光。 <br/>
+众人听毕此歌，便对玛尔巴大师生起特别敬佩之心。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 01:37</span><div class="badge-floor">第 13 进</div></div><div class="post-body">    此后，玛尔巴便去梅朵林礼褐米娘多吉大师。此人是麦哲巴教下的一位法友，是教过玛尔巴一遍《事部》[233]法的导师。玛尔巴去时，适逢米娘多吉的朋友——迦什弥罗（喀什弥尔）的塑像师也正在那里为一吉祥密集金刚曼陀罗开光。 <br/>
  <br/>
     玛尔巴到那法会上，他们便要求说：“译师，你去印度住了很久，你的上师那若巴名声很大，你依止于他多久？听了些什么法，你自己修持获得了些什么定见等，给我们唱一支你从印度来的见面歌！”于是便唱了一首《谒见那若巴之歌》： <br/>
  <br/>
@@ -3063,7 +3084,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 求法如此之艰辛， <br/>
 心勿懒惰勤修积。” <br/>
 <br/>
-以大弟子为首的在坐众人，听到此歌，都流下了眼泪。以上是玛尔巴最后一次去印度的情况。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 02:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">注释： <br/>
+以大弟子为首的在坐众人，听到此歌，都流下了眼泪。以上是玛尔巴最后一次去印度的情况。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 02:04</span><div class="badge-floor">第 14 进</div></div><div class="post-body">注释： <br/>
 【1】那若巴—公元十一世纪出生于印度，为得大成就者底洛巴弟子，西藏玛尔巴译师之师，对玛尔巴译师传授胜乐及那若六法等。 <br/>
  <br/>
 【2】至尊金刚瑜伽母—空行母。 <br/>
@@ -3403,7 +3424,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 【283】续部四经典—也作四续部，即佛教密宗的事部、行部、瑜伽部和无上瑜伽部。 <br/>
 【284】母续—以阐述智慧空分为主的佛教密宗经典。 <br/>
 【285】父续—金刚乘中，主要论述幻身或现分方便生起次第的经典。 <br/>
-【286】离戏—即离戏论。意谓远离生、灭、常、断、去、来、一、异等八种偏见，或作八迷，而达到空性或法性之境界。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 02:09<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">第三章  精修教诫 获得证悟 <br/>
+【286】离戏—即离戏论。意谓远离生、灭、常、断、去、来、一、异等八种偏见，或作八迷，而达到空性或法性之境界。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 02:09</span><div class="badge-floor">第 15 进</div></div><div class="post-body">第三章  精修教诫 获得证悟 <br/>
 <br/>
 一般说来，玛尔巴按所求教授修持，所证得的殊胜证验已在证悟道歌中讲了，这里特别谈谈他修证夺舍法[1]得到证验的情况。 <br/>
 <br/>
@@ -3597,7 +3618,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 【19】此句系据拉本第67页背面第4行而译。 <br/>
 【20】此句中的“水边”系据拉本第67页背面面5行而译。川本第141页中，作“荒地”。 <br/>
 【214】此句中的“获得”是据德本第55页前面第6行和拉本第68页前面第2行而译。 <br/>
-【22】拉让—大喇嘛居住的宅第。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 02:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">第四章  实现誓愿  宏法度生 <br/>
+【22】拉让—大喇嘛居住的宅第。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 02:24</span><div class="badge-floor">第 16 进</div></div><div class="post-body">第四章  实现誓愿  宏法度生 <br/>
 <br/>
 <br/>
 通常先叙述上师为俄巴等诸有缘弟子，灌顶、讲经使其获得成熟解脱。但，特地要简略叙述的是：一、因其儿子去世，发厌世出离[1]心，饶益众生修法；二、预示佛法宏扬，赐神物[2]及教授；三、为引众生生信，身显神通变化。 <br/>
@@ -3931,7 +3952,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 心情舒畅，达美玛！ <br/>
 除思子苦，达美玛！” <br/>
 <br/>
-唱完道歌之后，师母达美玛等人，都得到安慰，对一切修持发挥了效益。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 02:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">第二节   预示佛法宏扬，赐灵物及教授的情形 <br/>
+唱完道歌之后，师母达美玛等人，都得到安慰，对一切修持发挥了效益。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 02:25</span><div class="badge-floor">第 17 进</div></div><div class="post-body">第二节   预示佛法宏扬，赐灵物及教授的情形 <br/>
 <br/>
 僧众、弟子们全都来为多德修周年祭供法会，在法会上，诸大弟子向大师（玛尔巴）禀道：“师宝，师兄（多德）如同三世佛陀，我等众生之福德所不能及。师父您年事已高，今后噶举派将如何宏扬，我等弟子的教化功业如何？情给于授记。”师父说：“我们乃那若班钦的法嗣，对于缘起不但精通而且得心应手。关于宏扬噶举派，那若班钦也有很好的预言。 <br/>
  <br/>
@@ -4283,7 +4304,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 耳传教授好似如意宝， <br/>
 其它教派无此殊胜法。” <br/>
 <br/>
-米拉尊者得到其它教派所没有的殊胜之耳传教授，如同宝瓶装满水一样，饱学玛尔巴各种教授而心满意足。因此，雪域之地佛教如太阳东升，解除一切有情的无明之黑暗，智慧之光普照，如同白昼。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 02:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 18 楼</span></div><div class="post-body">第三节  为引众生生信，身显神通变化的情形 <br/>
+米拉尊者得到其它教派所没有的殊胜之耳传教授，如同宝瓶装满水一样，饱学玛尔巴各种教授而心满意足。因此，雪域之地佛教如太阳东升，解除一切有情的无明之黑暗，智慧之光普照，如同白昼。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 02:25</span><div class="badge-floor">第 18 进</div></div><div class="post-body">第三节  为引众生生信，身显神通变化的情形 <br/>
 <br/>
 米拉尊者离开上师之时，玛尔巴问：“上师我的身可显现各种佛身，或者现四大种，[37]或者什么也不现，或者如彩虹相，或者如光明相，显示种种神通变化，你看见了没有？相信吗？”米拉回答道：“看见了，不得不信服。我自己也想经过修习能够达到如此境界。” <br/>
 <br/>
@@ -4348,7 +4369,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 【36】诀窍续—《医学四续》之第三部。全书从实用解析，论断全身上下一切病症，共九十二章。 <br/>
 【37】四大—地、水、火、风四种元素。人是四大的产物，人终结时，同四大一齐坏败归空。 <br/>
 【38】脉、风、明点—寿未变异、命未止息时之识所依处。此三者互相依存，脉如居宅，明点如财宝，风心如主人。 <br/>
-【39】光音—二禅天之上层。生于此中诸天，所发光明，照耀其他天处，故名光音，亦称光音天，极光净。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-16 02:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 19 楼</span></div><div class="post-body">第五章 完成大业  隐入法界 <br/>
+【39】光音—二禅天之上层。生于此中诸天，所发光明，照耀其他天处，故名光音，亦称光音天，极光净。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-16 02:25</span><div class="badge-floor">第 19 进</div></div><div class="post-body">第五章 完成大业  隐入法界 <br/>
 <br/>
 玛尔巴一生专行宏扬佛教及利乐众生之事，到了八十八岁，鸡年，七月十五日，太阳刚出来时，他不但没一点病，而且现出恬静而舒适之状。此时，天上撑起了彩虹帐，空中降下各种花雨，无量香气四处漾溢。并有各种动人心弦的伎乐之声。他面带笑容、两颊挂着泪花，合掌、闭目、低头正在修习佛法加行七支[1]时。玛巴郭勒问道：“怎么啦！” <br/>
 <br/>
@@ -4421,7 +4442,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
  <br/>
  译    者 <br/>
-一九八八年元月于西藏民族学院 </div></div><div class="post"><div class="post-header"><div class="avatar">普</div>普賢菩薩发表于 2009-5-8 17:07<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 20 楼</span></div><div class="post-body">敬禮無上天人師  傳記之中藏妙法  有緣眾生皆受益  明空不二自然成 </div></div><div class="post"><div class="post-header"><div class="avatar">蓮</div>蓮師金剛发表于 2010-5-29 06:12<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 21 楼</span></div><div class="post-body">吽 <br/>
+一九八八年元月于西藏民族学院 </div></div><div class="post"><div class="post-header"><div class="avatar">普</div><span style="font-size:15px; letter-spacing:1px;">普賢菩薩发表于 2009-5-8 17:07</span><div class="badge-floor">第 20 进</div></div><div class="post-body">敬禮無上天人師  傳記之中藏妙法  有緣眾生皆受益  明空不二自然成 </div></div><div class="post"><div class="post-header"><div class="avatar">蓮</div><span style="font-size:15px; letter-spacing:1px;">蓮師金剛发表于 2010-5-29 06:12</span><div class="badge-floor">第 21 进</div></div><div class="post-body">吽 <br/>
 邬金刹土西北隅　莲茎花胚之座上 <br/>
 稀有殊胜成就者　世称名号莲花生 <br/>
 空行眷属众围绕　我随汝尊而修持 <br/>

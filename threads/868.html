@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>宗喀巴大师的那罗巴六瑜伽*实修教授 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>宗喀巴大师的那罗巴六瑜伽*实修教授 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/定慧禅修成就法.html">定慧禅修成就法</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">宗喀巴大师的那罗巴六瑜伽*实修教授</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-4-17 15:57<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">宗喀巴大师的那罗巴六瑜伽*实修教授导读 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/定慧禅修成就法.html">定慧禅修成就法</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">宗喀巴大师的那罗巴六瑜伽*实修教授</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-4-17 15:57</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">宗喀巴大师的那罗巴六瑜伽*实修教授导读 <br/>
 <br/>
 作者：弥勒若巴喇嘛 <br/>
 <br/>
@@ -124,7 +145,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 上述的引用句中，这些早期西藏上师，都提到杰先饶嘉措。早在两世纪之前，他就已介绍本书作者宗喀巴大师，以及他在传承中扮演的地位。十九世纪的杰先饶嘉措，当然是宗喀巴大师底下的格鲁学派僧侣，众他为宗喀巴大师思想所下的结论，可以明显看到这句话“基于这点，那罗巴六瑜伽成为今天格鲁派主要修行课程，是受宗喀巴大师的影响”。他的意思，是宗喀巴大师所他天分能力，花在那罗六法传承上，由于他对每一件接触的事物，都给予了独一无二的深度与光彩，而且对佛教全面的教义结构，也提出看法，使格鲁派传承值得到殊胜力量。他对当时西藏宗教精神世界、各派思想，做了比较，即使我们随意浏览他的文章，都可以看出文章题材的瑰丽与丰富性。 <br/>
 <br/>
-谈到宗喀巴大师时，我们已来到了十四世纪末叶，以及十五世纪实。或许，跳回到权藏传佛教宗的重要时代，也就是古老印度佛教宗传承的年代，会比较有帮助。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:02<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">印度佛教檀陀罗传承 <br/>
+谈到宗喀巴大师时，我们已来到了十四世纪末叶，以及十五世纪实。或许，跳回到权藏传佛教宗的重要时代，也就是古老印度佛教宗传承的年代，会比较有帮助。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:02</span><div class="badge-floor">第 2 进</div></div><div class="post-body">印度佛教檀陀罗传承 <br/>
 十一世纪北印度的佛遗产，在那罗巴和玛尔巴还活著的时代，是大乘（大从部）与小乘（上座部）融合的时代。或是说显宗，字面意义是“公开论述之道”，与秘宗（后来以讹传讹，称为密宗）并存的时代。密宗又称为真言乘，字义为“秘咒之道”，它是在大乘传承里，比较深奥难懂的佛学开示。 <br/>
 <br/>
 显宗（显乘）通常分类两方面： <br/>
@@ -157,7 +178,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 新的趋势，西藏人称为“密耳传承法”。刚开始，这些是从密宗精华要义中，整理出来的修行系统，也就是说，被主事者化繁为简的新生系统。远在此新趋势出现之前，各个不同密宗系统的要义，为了要得到最大效果，而有互相结合的趋势，于是，口耳相传的方式，就这样被最为同一类。或许可以说，系统化之后，印度佛教界流行的各种瑜伽修行与哲学理念、趋向大同小异。 <br/>
 <br/>
-修行法事学理，通常是经由整理者与推行者现而闻名，并根据这些人提倡的新法，去获得证悟境界。例如光是六瑜伽，就有母系神秘苏喀悉地六瑜伽、母系檀陀罗圣者悉怛罗尼的长寿祛疾瑜伽，以及当做“三信念书”主旨的那罗巴六瑜伽。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:03<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">大成就者那罗巴 <br/>
+修行法事学理，通常是经由整理者与推行者现而闻名，并根据这些人提倡的新法，去获得证悟境界。例如光是六瑜伽，就有母系神秘苏喀悉地六瑜伽、母系檀陀罗圣者悉怛罗尼的长寿祛疾瑜伽，以及当做“三信念书”主旨的那罗巴六瑜伽。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:03</span><div class="badge-floor">第 3 进</div></div><div class="post-body">大成就者那罗巴 <br/>
 那罗巴是那个时代，最优秀的印度佛学大师之一，在西藏佛教史上，特别重要。因为他的传承在他圆寂之后，一百年来，在西藏地区一直广为流布。人在檀陀罗传法上，扮演很重要的地位，闻名的秘法有时轮金刚、秘集金刚、喜金刚与胜乐轮金刚等之檀陀罗修行法。还有无上瑜伽檀陀罗修行法，如六瑜伽就是一个别例子。 <br/>
 <br/>
 有数篇西方资料，提到那罗巴的生平事迹。最具权威，而且值得一读的，是甘瑟写的“那罗巴生平与教法”，由牛津大学出版社于一九六三年出版。甘瑟教授是早期将西藏文翻译成英文的人，他描述那罗巴生平，并阐释十五世纪西藏的历史背景，是很好的翻译作品。难以置信的是，他竟然写出那罗巴在帝洛巴门下，修行十二年的过程。 <br/>
@@ -194,7 +215,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 帝洛巴适时在面前出现，教导他开始为期十二年的密集修行。西藏人喜欢一而再、再而三强调说：那罗巴如何在帝洛巴门下，是如何全心全意投入修行。帝洛巴又如何逼迫那罗巴，让他的修为达到人类耐力的极限。而那罗巴不畏艰辛，一路坚持下去，最后，才了悟究竟，成为摩诃悉达。 <br/>
 <br/>
-那罗的后半生，吸引许多来自印度、尼泊尔、西藏和印度半岛北部的信徒。藏传佛教史，记载他最成功的，是收了弟子玛尔巴，因为，从玛尔延续的传承，不但源远流长，而且几乎遍布整个亚佛教圈。那罗巴的传佛，由玛尔巴带到西藏，并由早期噶举派上师接捧传下去，又成为喀巴大师建构精神宅邸的主要梁柱。从“三信念书”可以看出，过喀巴特别珍视那罗巴传承，进而使“那罗巴六瑜伽”，在格鲁派诸修行法中，颇受重视。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">六瑜伽遗珍 <br/>
+那罗的后半生，吸引许多来自印度、尼泊尔、西藏和印度半岛北部的信徒。藏传佛教史，记载他最成功的，是收了弟子玛尔巴，因为，从玛尔延续的传承，不但源远流长，而且几乎遍布整个亚佛教圈。那罗巴的传佛，由玛尔巴带到西藏，并由早期噶举派上师接捧传下去，又成为喀巴大师建构精神宅邸的主要梁柱。从“三信念书”可以看出，过喀巴特别珍视那罗巴传承，进而使“那罗巴六瑜伽”，在格鲁派诸修行法中，颇受重视。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:04</span><div class="badge-floor">第 4 进</div></div><div class="post-body">六瑜伽遗珍 <br/>
 据说，“那罗巴六瑜伽”的整理者，事实上并非那罗巴本人，而是他们上师帝洛巴，针对这点，杰先饶嘉措说： <br/>
 <br/>
 ‘即使这六瑜伽，确实是那罗巴之前就存在于印度，但是，当时是否就已经有那么圆熟的结构，值得怀疑。’ <br/>
@@ -354,7 +375,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 嘉华温萨巴有“证悟之源：那罗六瑜伽印信”做总结说： <br/>
 <br/>
-因此，致力于深奥那罗巴六瑜伽修行，成就有如珠宝般珍贵的修行者，已经达到以其短暂一生，完成全然无误、证悟境界之道；即使是在堕落的年代。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">六瑜伽•三中阴身•九融合 <br/>
+因此，致力于深奥那罗巴六瑜伽修行，成就有如珠宝般珍贵的修行者，已经达到以其短暂一生，完成全然无误、证悟境界之道；即使是在堕落的年代。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:05</span><div class="badge-floor">第 5 进</div></div><div class="post-body">六瑜伽•三中阴身•九融合 <br/>
 宗喀巴大师在“三信念书”里，开宗明义说道： <br/>
 <br/>
 今人景仰的密勒日巴，教导“中阴身解脱口传”时，他说： <br/>
@@ -515,7 +536,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 接下来，对于圆满道次第修行的前置修行，我们必须完成结束粗糙身与微还乡团身生起道次第的修行，观想出生、死亡、中阴身以及修三身的之道，这些都是要被净化的基础。我们必须领受完整加持，观察灌顶的修行方式，使自己变得成熟。再者，进入檀陀罗修行之前，我们应该在普通修行上，从事心性修行，先与精神上师培养良好关系，之后才静虑禅修结合禅写与观想的修行。 <br/>
 <br/>
-珍贵如珠宝般的修行者，若依此致力于深奥的那罗巴六瑜伽修行，就会进入全无误境界，于短暂一生中，修成证悟；即使是在这个堕落、退化的年代。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:06<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">宗喀巴大师“三信念书” <br/>
+珍贵如珠宝般的修行者，若依此致力于深奥的那罗巴六瑜伽修行，就会进入全无误境界，于短暂一生中，修成证悟；即使是在这个堕落、退化的年代。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:06</span><div class="badge-floor">第 6 进</div></div><div class="post-body">宗喀巴大师“三信念书” <br/>
 <br/>
 作者：弥勒若巴喇嘛 <br/>
 <br/>
@@ -558,7 +579,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 玛尔巴译师首次前往印度旅程中，在尼泊尔花了三年时间，精通释吉祥四座大王檀陀罗，及室利恰都毘萨檀陀罗（即正见念光吉祥相合明点瑜祇母大王檀陀广注），构成迁识瑜伽与中阴瑜伽，这些，成为宗喀巴大师“三信念书”，第三阶段“进阶修行”的灵感来源。沽丘达摩巴卓提到： <br/>
 <br/>
-‘因为六瑜伽三支派的每一派，都是根据这样的权威来源，因此，宗喀巴大师便以此传承，将其论述题名为“三信念书”。’ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:07<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">宗喀巴大师著作的第一部分 <br/>
+‘因为六瑜伽三支派的每一派，都是根据这样的权威来源，因此，宗喀巴大师便以此传承，将其论述题名为“三信念书”。’ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:07</span><div class="badge-floor">第 7 进</div></div><div class="post-body">宗喀巴大师著作的第一部分 <br/>
 <br/>
 那罗马六瑜伽属于最高瑜伽檀陀罗教义之一，又属于修行的第二道次第，也就是所谓的“圆满道次第”。这方面的指导，是由已经完成基本修行的人来讲解，套句传承的说法，指导者就是“圆满加行”的修行者。 <br/>
 <br/>
@@ -674,7 +695,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 做这“五十万次加行”的传承，是由玛尔巴译师引介到西藏，而且，很快变成藏传佛教多数寺院的修行准则。此外还有，三年三个月又三天的“大闭关”风气，也是玛尔巴设计的，并且，这样的闭关天数，为大部分教派保留。 <br/>
 <br/>
-译作“三信念书”时，我更动宗喀巴大师对这两种禅修：金刚萨垛法与上師相應法的處理方式，将它们移到本书后半部，分别放在附录一与附录二。宗喀巴大师之所以详细传述两种禅修，是因为在他那个时代，这两种禅修法并未流行，他想把它们弄清楚，于是，非常用心地支持这两种禅修。由于文化及语言上的藩篱，我觉得，它们有可能扰乱读者对宗喀巴大师作品思路的欣赏程度。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">生起道次第瑜伽 <br/>
+译作“三信念书”时，我更动宗喀巴大师对这两种禅修：金刚萨垛法与上師相應法的處理方式，将它们移到本书后半部，分别放在附录一与附录二。宗喀巴大师之所以详细传述两种禅修，是因为在他那个时代，这两种禅修法并未流行，他想把它们弄清楚，于是，非常用心地支持这两种禅修。由于文化及语言上的藩篱，我觉得，它们有可能扰乱读者对宗喀巴大师作品思路的欣赏程度。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:08</span><div class="badge-floor">第 8 进</div></div><div class="post-body">生起道次第瑜伽 <br/>
 完成以上的加行之后，宗喀巴大师接著推荐修行者，致力于生起道次第的修行，亦即静虑禅个修曼荼罗以及本尊。他讨论到，生起道次第禅修传承，是进入六瑜伽，圆满道次第瑜伽的必备条件。他也探讨秘咒乘曼荼罗，认为，最好是用在生起道次第修行上。他提供我们一些指导方针，以及如何求得最好的修行法。宗喀巴大师推荐静虑禅修喜金刚法或遏罗迦罗乐轮金刚法，做为生起道次第修行的基础。之后，他接著阐释的内容，包括迈向修地之道的方法，以及运用曼荼罗观想的方法。 <br/>
 <br/>
 杰先饶嘉措的“三信念书释论”，谈到生起道次第修行，话题围饶在如何以“三种状况做为三身修行”的过程，正如本书之前所述，向修行者介绍“九融合”的过程。他提到格鲁派修得的生起道次第，与旧派（通常意指宁玛派）的修行法不同之处： <br/>
@@ -711,7 +732,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 刚开始，须想办法产生这个想法，但是慢慢地，这个想法会自然而然产生，而后在生起道次第的修行，会修成圣性檀陀罗荣耀的禅态（身）。完成道次第瑜伽修行之后，所做的修行是“金刚诵”，可以修得圣性檀陀荣耀的圣言（语）。最后，圣性檀陀罗荣耀的神圣念头（意），便在明光瑜伽道次第中修成。 <br/>
 <br/>
-编注：金刚诵，是在九接佛风之后，修“气”与“空”相应方法。名词中虽然有“诵”字，其实和字面上的诵无关。金刚诵有许多不同传承，观想方法亦不尽相同。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">心性本质释论 <br/>
+编注：金刚诵，是在九接佛风之后，修“气”与“空”相应方法。名词中虽然有“诵”字，其实和字面上的诵无关。金刚诵有许多不同传承，观想方法亦不尽相同。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:08</span><div class="badge-floor">第 9 进</div></div><div class="post-body">心性本质释论 <br/>
 讨论过大众化的大乘佛教，与一些独特檀陀罗初级修行之后，作者将话题朝向讨论圆满道次第檀陀罗瑜伽一般性原则上，这是从事六瑜伽时，精神上的要求。 <br/>
 <br/>
 以讨论“基础性质”为发端，帮修行者说明“身与意”的檀陀罗观。首先教导“意”的本质，觉醒是檀陀罗瑜伽应用的根本要道，这里讨论的主题，是空性教义，为心性空性与内心历练的原动力，以及觉知与知识程的涵义。 <br/>
@@ -778,7 +799,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 所以，让我们面对此事：如果两位西藏早期的伟大六瑜伽传承上师，玛尔巴与密勒日巴，并不知道与传承有关的羯磨印空性哲学特性，那么谁会知道呢？宗喀巴大师如此优雅地建议，采用超乎玛尔巴以及密勒日巴所教导的羯磨印教义，这将会与噶举派传承根本基础相应。 <br/>
 <br/>
-杰先饶嘉措接著解释，为什么自然心性的主题，会在龙公树、提婆、月称、梅纪巴、玛尔巴与勒密勒日巴的空性哲学上被讨论。他说，那是心性最微细的范围，有能力直接体认最终的空性，亦即物的终极性质，格鲁派的无上瑜伽文献，使用“羯磨印”这个词汇，来表示自然心性。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">世俗身本质的介绍 <br/>
+杰先饶嘉措接著解释，为什么自然心性的主题，会在龙公树、提婆、月称、梅纪巴、玛尔巴与勒密勒日巴的空性哲学上被讨论。他说，那是心性最微细的范围，有能力直接体认最终的空性，亦即物的终极性质，格鲁派的无上瑜伽文献，使用“羯磨印”这个词汇，来表示自然心性。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:10</span><div class="badge-floor">第 10 进</div></div><div class="post-body">世俗身本质的介绍 <br/>
 圆满道次第瑜伽描述的修行法，属于六瑜伽的一部分，身与意同时存在三个层面上，不同频率的意识，在三种世俗身基础中生起。这三个层面，包括身与意在内，可以略称为“粗糙”、“微细”与“极微细”。 <br/>
 <br/>
 粗糙身指我们血肉、骨髓与感官能量，所构成凡人身躯。“粗糙身”会产生“粗糙意识”，知觉状态，是由传递感觉的资讯，加上属于智慧与情感的官感经验而来。 <br/>
@@ -801,7 +822,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 圆满道次第瑜伽，主要目标是分离三种世俗身，以身躯为本，来分离意识。依照此方式，观想者会一点一点地，达到内在微细的禅修境地。 <br/>
 <br/>
-檀陀罗修行是快速证悟的修行。于静虑禅修期间，肉体越微细，所产生的意识也越微细。精神方面的意识越微细，成果就越有力量。这就是无上瑜伽檀陀罗的基本信条。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:12<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">锻炼世俗身与禅修身 <br/>
+檀陀罗修行是快速证悟的修行。于静虑禅修期间，肉体越微细，所产生的意识也越微细。精神方面的意识越微细，成果就越有力量。这就是无上瑜伽檀陀罗的基本信条。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:12</span><div class="badge-floor">第 11 进</div></div><div class="post-body">锻炼世俗身与禅修身 <br/>
 宗喀巴大师建议，进入真正六瑜伽修行之前，先要从事特别的锻炼，然后静虑禅修世俗身，成为一个空贝壳身。 <br/>
 <br/>
 这样做的目的，是当做六瑜伽每阶段禅修的热身运动。 <br/>
@@ -828,7 +849,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如果，我们进入圆满道次第瑜伽，就像那罗巴六瑜伽，却没有先生起道次第瑜伽中修成禅定，因改变能量的流动，身体将有受伤不轻的危险。为避免这样的伤害，我们应该尽可能多运动，以锻炼身体，搭醒静虑禅修世身体为空的贝壳。到已修成禅定时，我们将体验到喜悦，这种感觉遍及全身，世俗身或心性发生痛苦的可能性，便消失无踪。这样的修行过程进行顺利，没有痛苦或困难时，就表示修行示正确无误。 <br/>
 <br/>
-照这样准备好基础后，宗喀巴大师接著介绍的主题，是如何修行真正的六瑜伽。论述的其余部分，是有关个别六瑜伽的处理方式。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">宗喀巴大师著作的第二部分 <br/>
+照这样准备好基础后，宗喀巴大师接著介绍的主题，是如何修行真正的六瑜伽。论述的其余部分，是有关个别六瑜伽的处理方式。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:13</span><div class="badge-floor">第 12 进</div></div><div class="post-body">宗喀巴大师著作的第二部分 <br/>
 <br/>
 宗喀巴大师的那罗巴六瑜伽，结构如下： <br/>
 <br/>
@@ -934,7 +955,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 一位具有西方观点的禅修者，曾经向我表示他的意见。由于西藏气候严寒，使西藏人非常看重灵热瑜伽。西方人就不会如此，因为，西方人的住家，都有暖气设备。这位禅修者未能体认出：身体灵热，只是修行的附加效益而已，并非修行的目的与功用。从事灵热瑜伽教义，是为了能控制微细微的变化，做为融合明点与产生檀陀罗大喜乐的手段。 <br/>
 <br/>
-这个大喜乐，可被充当为修行檀陀罗时的燃料，有如太空梭要升空时的火箭燃料，控制太空梭的飞行过程。灵热功用，属于修行过程的一部分，并非修行的最主要的目标。如；宗喀巴大师所说，这种对细微身的控制过程，及引导微细身与明点的能量，是构成所有无上瑜伽修行，不可缺的功用，唤起这种控制能力，才是灵热瑜伽教义的根本目的。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:16<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">羯摩印瑜伽 <br/>
+这个大喜乐，可被充当为修行檀陀罗时的燃料，有如太空梭要升空时的火箭燃料，控制太空梭的飞行过程。灵热功用，属于修行过程的一部分，并非修行的最主要的目标。如；宗喀巴大师所说，这种对细微身的控制过程，及引导微细身与明点的能量，是构成所有无上瑜伽修行，不可缺的功用，唤起这种控制能力，才是灵热瑜伽教义的根本目的。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:16</span><div class="badge-floor">第 13 进</div></div><div class="post-body">羯摩印瑜伽 <br/>
 宗喀巴大师以最重要的羯磨印之“行为印（或称事业印）”来讨论，作为灵热瑜伽教义的结论，这是“双运本尊”的檀陀罗传承修行法。。 <br/>
 <br/>
 六瑜伽传承的早期上师，特别强调羯磨印修行法。玛尔巴谈到的教义，是他四个最珍贵指导里的一项。宗喀巴大师，引述密勒日巴六瑜伽的例子，其中，单独把羯磨印修行法，列为六瑜伽修行法之一。沽丘达摩巴卓喇嘛提到：宗喀巴大师虽然还有另一种六瑜伽传承，不这，仍然把羯磨印列为六瑜伽的结构之一，并把中阴瑜伽降级，放到幻身瑜伽教义底下。 <br/>
@@ -1006,7 +1027,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 由于格鲁派上师强调寺院纯洁，于是，格鲁派文献有关羯磨印修行的讨论态度，有点趋于谨慎保守。结果，这方面的知识，大部分只保存在口耳传承。这并不是说，在格鲁学派传承里，修行不被推崇、保留，而是说，格鲁派强调修行的秘密性。 <br/>
 <br/>
-灵热瑜伽针对这一点，第一次向修行者介绍羯磨印修行。在接下来的六瑜伽修行，它会一再出现，服来驱策修行者，从证悟阶段的最高点，到下阶段的开端。　 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:17<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">幻身瑜伽 <br/>
+灵热瑜伽针对这一点，第一次向修行者介绍羯磨印修行。在接下来的六瑜伽修行，它会一再出现，服来驱策修行者，从证悟阶段的最高点，到下阶段的开端。　 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:17</span><div class="badge-floor">第 14 进</div></div><div class="post-body">幻身瑜伽 <br/>
 宗喀巴大师，是以秘集金刚檀陀罗（编注：即佛说一切如来金刚三业最上秘密大教王经）传承的“幻身瑜伽”一词，来讨论幻身瑜伽教义，这个主题，自六瑜伽衍生而来。他也讨论到：如何将这主题。与大部分六瑜伽之口耳传承方法做比较。他并没出有特别受到标准版法本的影响，而明显地，偏爱比较精简的原始秘集金刚檀陀罗传承。 <br/>
 <br/>
 秘集金刚檀陀罗传承，谈到“身精炼”、“语精炼”与“意精炼”瑜伽。这些，是形体、能量与知觉的三层面，亦即粗糙、微细与极细微，互相离的过程。幻身瑜伽为这三种范畴的第三种，也就是说，我们只有在建立“身语意精炼”的前提下，才能够显现出幻身。倘若以幻身瑜伽教义，做为实际无上瑜伽檀陀罗修行的话，必须好好扎稳幻身瑜伽基础。 <br/>
@@ -1083,7 +1104,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 梦观瑜伽，刚开始地培养留住梦的能力，就是指在做梦时，具有了知“梦只是梦”的能力。换言之，我们要培养睡眠过程中，静虑禅修的能力。首先，全禅贯注在睡眠禅修的明光瑜伽，然后，梦开始要发生的时候，全禅贯注在梦观瑜伽里。 <br/>
 <br/>
-宗喀巴大师曾阐秋释，如何在过程中，以及在应用中，克服主要的障碍的大原则。之后更讨论一些方法，可以治愈在梦中出现的恐惧与梦魇，在睡眠里，学著培养脱离世俗身的经历。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:19<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">中阴瑜伽 <br/>
+宗喀巴大师曾阐秋释，如何在过程中，以及在应用中，克服主要的障碍的大原则。之后更讨论一些方法，可以治愈在梦中出现的恐惧与梦魇，在睡眠里，学著培养脱离世俗身的经历。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:19</span><div class="badge-floor">第 15 进</div></div><div class="post-body">中阴瑜伽 <br/>
 六瑜伽传承的梦观瑜伽和中阴瑜伽，通常与幻身瑜伽教义归为一类，如同宗喀巴大师所说，是“为了方便的缘故”。 <br/>
 <br/>
 这么归类比较方便，因为幻身、梦身与中阴身，有著共同要素。这三种身，有如此相似的修行经验：当某些所所有粗糙能量，从粗糙身退去的时候，三种身便会从微细身生起，粗糙的感官感觉与概念上的意识，都将退去，变成极微细身。根据世俗身的意识，相较于一般正常的觉醒意识而言，这三种身，多少是微细了些。 <br/>
@@ -1120,7 +1141,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 六瑜伽修行的排名，中阴身教义名列六瑜伽之末。然而，在解释次序上，却都把它与幻身瑜伽放在一起，因为中阴身有“幻身瑜伽”的性质。我们读过个章的节时，必须把这种特异的性质，牢记在心中。这里讨论的数个主师，也许不见得有道理，或许要到我们阅读下一个章节才会清楚，像是明光瑜伽，有些想法，就是从该教义借来的。 <br/>
 <br/>
-中阴身名列六瑜伽的最后一个，中阴身教义，便是适切地承续接下来的过程。灵热瑜伽是基础修行法，幻身瑜伽与光瑜伽是修行的主体，迁识瑜伽与（或）梦观瑜伽是修行的分支，只有在紧急的时候，或是我们晚年的时候才用得到。最后，如果这些修行，没有帮我们找到进入死亡大门的自己，没有关系，还有中阴瑜伽教义可以帮忙。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">明光瑜伽 <br/>
+中阴身名列六瑜伽的最后一个，中阴身教义，便是适切地承续接下来的过程。灵热瑜伽是基础修行法，幻身瑜伽与光瑜伽是修行的主体，迁识瑜伽与（或）梦观瑜伽是修行的分支，只有在紧急的时候，或是我们晚年的时候才用得到。最后，如果这些修行，没有帮我们找到进入死亡大门的自己，没有关系，还有中阴瑜伽教义可以帮忙。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:20</span><div class="badge-floor">第 16 进</div></div><div class="post-body">明光瑜伽 <br/>
 明光瑜伽教义有两种修行：在醒时禅修明光瑜伽，以及在睡时禅修明光瑜伽。 <br/>
 <br/>
 “三信念书”深入谈到“明光瑜伽”，这些名相，在各佛教典籍，都曾出现过。沽丘达摩巴卓总结宗喀巴大师“三信念书礼赞”的分析内容，做如下所示： <br/>
@@ -1181,7 +1202,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 幻身瑜伽与明光瑜伽教义，因为应用灵热瑜伽，而具有不可思议力量，这在先前已经解释过，它是修行的主要部分，为产生证悟经验的大原则。宗喀巴大师指出，佛说一切如来金刚三业最上秘密大教经（编注：别称秘集金刚檀陀罗、秘密集会檀陀罗）轮回教义说，想要很清楚一起呈现幻身与明光两个方法，应该就此部经（秘集金刚檀陀罗）修行，一点一滴地醖酿。 <br/>
 <br/>
-这让我们想到，那罗巴六瑜伽的最后两个瑜伽，都被归入“修行的分支”，名称就迁识瑜伽与梦观瑜伽。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:21<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">迁识瑜伽 <br/>
+这让我们想到，那罗巴六瑜伽的最后两个瑜伽，都被归入“修行的分支”，名称就迁识瑜伽与梦观瑜伽。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:21</span><div class="badge-floor">第 17 进</div></div><div class="post-body">迁识瑜伽 <br/>
 迁识瑜伽教义的范围，是指我们身心在死记那一瞬间，因死亡及中阴身经验不同，而影响往后转生的结果。 <br/>
 <br/>
 编注“迁识”，一般俗称“破瓦”，为藏语译者。又称转识、开顶。 <br/>
@@ -1216,7 +1237,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 ‘在没修行完成前面所解释过的灵热瑜伽，来净化世俗身之前，就想要修行迁识瑜伽的话，将不会得到意识的结果。’ <br/>
 <br/>
-换言之，用来清理死亡通道顺畅的力量，必须先从灵热瑜伽修行获得成就。宗喀巴大师继续论述迁识瑜伽教义，他在别的修行法上，针对这个主题，做了更翔实解说。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 18 楼</span></div><div class="post-body">梦观瑜伽 <br/>
+换言之，用来清理死亡通道顺畅的力量，必须先从灵热瑜伽修行获得成就。宗喀巴大师继续论述迁识瑜伽教义，他在别的修行法上，针对这个主题，做了更翔实解说。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:22</span><div class="badge-floor">第 18 进</div></div><div class="post-body">梦观瑜伽 <br/>
 大部分六瑜伽释论，在往后三、四百年之间，都没有说到梦观瑜伽或梦幻法。这也是六瑜伽之一，原本只在某一段，或某一行被提到，散见于各种迁识瑜伽释论里面。为递补它被删除的位置，羯磨印瑜伽或梦观瑜伽被提高地位，成为“六瑜伽”之一，以便在数目上，照样维持六瑜伽。在理论上，并不需要修行梦观瑜伽教义，或是说，如果要修的话，必段用最严密的方式来修行。一般的解释是说，梦观瑜伽修行法的真正传承，早已随著玛尔巴之子，达玛多迭的死亡而失传。 <br/>
 <br/>
 原注：关于这玛多迭的死亡，有许多不同传说。最普遍的说法就是，玛尔巴大师把那罗巴六瑜伽的第六个瑜伽——“换体”，传给弟子密勒日巴，并且要求需要以极秘密的方式去修行。玛尔巴同时又把换体瑜伽，传给他的儿子达玛多迭，这引起瑜伽修行者们的震惊，害怕此法会落入不肖分之圈内。 <br/>
@@ -1257,7 +1278,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 迁识与换体的修行者，必须具备的资格，宗喀巴这么说： <br/>
 <br/>
-所有这三种修行法——迁识瑜伽、梦观瑜伽转移意识到尸体，以及换掉某一个人的意识离开那人的身体，转而进入我们自己的身体——我们需要有能力释出口处的种子字，阻止能量作意流动。而且，还要有能力净化出口，加上运用宝瓶吸气，引导生命能量到中脉的修行法。我们还需要有能力控制住红色要素（即红菩提），以脐轮上的短阿种子字为象征代表，再利用灵热瑜伽，以心轮的吽种子字为象征代表，唤起驾驭微细身的意识。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 19 楼</span></div><div class="post-body">总结 <br/>
+所有这三种修行法——迁识瑜伽、梦观瑜伽转移意识到尸体，以及换掉某一个人的意识离开那人的身体，转而进入我们自己的身体——我们需要有能力释出口处的种子字，阻止能量作意流动。而且，还要有能力净化出口，加上运用宝瓶吸气，引导生命能量到中脉的修行法。我们还需要有能力控制住红色要素（即红菩提），以脐轮上的短阿种子字为象征代表，再利用灵热瑜伽，以心轮的吽种子字为象征代表，唤起驾驭微细身的意识。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:24</span><div class="badge-floor">第 19 进</div></div><div class="post-body">总结 <br/>
 前面已经很翔实阐述那罗六巴瑜伽传承的主要原则，宗喀巴大师，还对如何把这些原则，变成证悟经验的方法，如以解释，做为结束的部分。 <br/>
 <br/>
 修行者完成大结合道次第，便进入明光瑜伽观想，当下所有执著、迷悟状态的本能都会被冲洗掉，接著，最后法身显现时刻，在修行者大结合道次第上，禅修的幻身瑜伽，会完全转变成超大结合幻身瑜伽修行。只要轮回存在，瑜伽修行成果就不会动摇。 <br/>
@@ -1347,7 +1368,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 他完全误解这一段的本意。何以他要在文中加个括弧，写上“低等的学派”这一个愚蠢的形容词，来指摘格鲁派呢？真是一派胡言。 <br/>
 <br/>
-在翻译的注释中，我指出张最严重的一些错误，我已经指错误局限在离谱、扭曲历史或是哲学方面，此错误累积上百处。我认为，一定要说出这当中严重的部分，因为早期的翻译，就像他的译本一样，错误百出，却常常被引用，或使用为佛学参考资料，若没有好好地了解藏文，这些错误将会一直重复下去。  </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 20 楼</span></div><div class="post-body">DL喇嘛七世六瑜伽传承祈请文 <br/>
+在翻译的注释中，我指出张最严重的一些错误，我已经指错误局限在离谱、扭曲历史或是哲学方面，此错误累积上百处。我认为，一定要说出这当中严重的部分，因为早期的翻译，就像他的译本一样，错误百出，却常常被引用，或使用为佛学参考资料，若没有好好地了解藏文，这些错误将会一直重复下去。  </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:25</span><div class="badge-floor">第 20 进</div></div><div class="post-body">DL喇嘛七世六瑜伽传承祈请文 <br/>
 <br/>
 作者：弥勒若巴喇嘛 <br/>
 <br/>
@@ -1494,7 +1515,7 @@ DL喇嘛七世（生于一七０八年），从他年长的上师仁钦噶旺秋
 <br/>
 此所有传承祈请文里，拥有不同传承，是因为早期上师的诗文，并不都是出自于DL喇嘛七世之手，而是由一些已有的数段诗文组成，一代又一代地流传下来。DL喇嘛七世，或许只是加上他自己上师的尊名，仁钦噶旺秋登。剩下的取材资料，当然是流传下来的原来诗文。 <br/>
 <br/>
-我将DL喇嘛七世列出来的传承纪录，与其他数个传承法本的纪录，做核对比较，上至宗喀巴大师的时代，以及紧接著的继任者，其排列顺序都一致，除此之外，就不太一样了。似乎格鲁派自DL喇嘛七世起，就有主流地位的传承，此外，也有另一个传承，保留在中亚地区各寺院，以及闭关修行的地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2007-3-7 03:26<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 21 楼</span></div><div class="post-body">历史传承的考量 <br/>
+我将DL喇嘛七世列出来的传承纪录，与其他数个传承法本的纪录，做核对比较，上至宗喀巴大师的时代，以及紧接著的继任者，其排列顺序都一致，除此之外，就不太一样了。似乎格鲁派自DL喇嘛七世起，就有主流地位的传承，此外，也有另一个传承，保留在中亚地区各寺院，以及闭关修行的地方。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2007-3-7 03:26</span><div class="badge-floor">第 21 进</div></div><div class="post-body">历史传承的考量 <br/>
 <br/>
 <br/>
 格鲁派对早期噶举喇嘛的看法是：玛尔巴他的四大弟子，以及密勒日巴的两名大弟子，都是毫无瑕疵的阐释者，完美诠释玛尔巴印度收集的檀陀罗教义。 <br/>
@@ -1607,7 +1628,7 @@ DL喇嘛七世（生于一七０八年），从他年长的上师仁钦噶旺秋
 <br/>
 杰嘉佛宁巴（意为佛陀再纪，是对宗喀巴大师的尊称）拿掉这些错误，并厘订传承所有的重点与基本原则。基于这理由，那罗巴六瑜伽传承，在格鲁派中的修行法，变得特别有力量。 <br/>
 <br/>
-“三信念书”是那罗巴六瑜伽修行中，最完整的殊胜指导法本，即使我们在三界中寻找，也无法找到一本可能与宗喀巴大师著作相匹敌的作品。 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-10-11 21:26<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 22 楼</span></div><div class="post-body">南无空行勇父缘及空行母　　耶！ <br/>
+“三信念书”是那罗巴六瑜伽修行中，最完整的殊胜指导法本，即使我们在三界中寻找，也无法找到一本可能与宗喀巴大师著作相匹敌的作品。 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div><span style="font-size:15px; letter-spacing:1px;">大漠悲鸿发表于 2007-10-11 21:26</span><div class="badge-floor">第 22 进</div></div><div class="post-body">南无空行勇父缘及空行母　　耶！ <br/>
 <br/>
 哦　曼荼罗暨大乐喜金刚 <br/>
 哦　帝洛巴为殊胜智上师 <br/>
@@ -1652,7 +1673,7 @@ DL喇嘛七世（生于一七０八年），从他年长的上师仁钦噶旺秋
 哦　丘义多杰尽窥解脱境 <br/>
 精神上师手推温萨巴 <br/>
 祈请加持赐福圆修行 <br/>
-喜乐结合虚无聚智慧 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚震发表于 2007-10-31 19:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 23 楼</span></div><div class="post-body">南无空行勇父缘及空行母　　耶！ <br/>
+喜乐结合虚无聚智慧 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚震发表于 2007-10-31 19:05</span><div class="badge-floor">第 23 进</div></div><div class="post-body">南无空行勇父缘及空行母　　耶！ <br/>
 <br/>
 哦　曼荼罗暨大乐喜金刚 <br/>
 哦　帝洛巴为殊胜智上师 <br/>
@@ -1697,21 +1718,21 @@ DL喇嘛七世（生于一七０八年），从他年长的上师仁钦噶旺秋
 哦　丘义多杰尽窥解脱境 <br/>
 精神上师手推温萨巴 <br/>
 祈请加持赐福圆修行 <br/>
-喜乐结合虚无聚智慧 </div></div><div class="post"><div class="post-header"><div class="avatar">断</div>断翼天使发表于 2007-12-19 15:27<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 24 楼</span></div><div class="post-body">金刚寿师兄，真是了不起，发了很多好的贴，让我受益匪浅！~~~ </div></div><div class="post"><div class="post-header"><div class="avatar">修</div>修缘发表于 2009-2-13 10:57<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 25 楼</span></div><div class="post-body">系统的介绍,太好了 <br/>
+喜乐结合虚无聚智慧 </div></div><div class="post"><div class="post-header"><div class="avatar">断</div><span style="font-size:15px; letter-spacing:1px;">断翼天使发表于 2007-12-19 15:27</span><div class="badge-floor">第 24 进</div></div><div class="post-body">金刚寿师兄，真是了不起，发了很多好的贴，让我受益匪浅！~~~ </div></div><div class="post"><div class="post-header"><div class="avatar">修</div><span style="font-size:15px; letter-spacing:1px;">修缘发表于 2009-2-13 10:57</span><div class="badge-floor">第 25 进</div></div><div class="post-body">系统的介绍,太好了 <br/>
 <br/>
-谢谢了 </div></div><div class="post"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2009-3-25 18:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 26 楼</span></div><div class="post-body">丘义多杰尽窥解脱境 <br/>
+谢谢了 </div></div><div class="post"><div class="post-header"><div class="avatar">觉</div><span style="font-size:15px; letter-spacing:1px;">觉知发表于 2009-3-25 18:14</span><div class="badge-floor">第 26 进</div></div><div class="post-body">丘义多杰尽窥解脱境 <br/>
 精神上师手推温萨巴 <br/>
 祈请加持赐福圆修行 <br/>
-喜乐结合虚无聚智慧 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大本发表于 2009-4-9 21:36<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 27 楼</span></div><div class="post-body">太谢谢了 <br/>
+喜乐结合虚无聚智慧 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div><span style="font-size:15px; letter-spacing:1px;">大本发表于 2009-4-9 21:36</span><div class="badge-floor">第 27 进</div></div><div class="post-body">太谢谢了 <br/>
 精神上师手推温萨巴 <br/>
 祈请加持赐福圆修行 <br/>
-喜乐结合虚无聚智慧 </div></div><div class="post"><div class="post-header"><div class="avatar">普</div>普賢菩薩发表于 2009-8-26 16:09<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 28 楼</span></div><div class="post-body">文殊化現宗喀巴  金剛本母智慧尊 <br/>
-三界一切所有法  此是最勝妙明珠 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 08:39<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 29 楼</span></div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
+喜乐结合虚无聚智慧 </div></div><div class="post"><div class="post-header"><div class="avatar">普</div><span style="font-size:15px; letter-spacing:1px;">普賢菩薩发表于 2009-8-26 16:09</span><div class="badge-floor">第 28 进</div></div><div class="post-body">文殊化現宗喀巴  金剛本母智慧尊 <br/>
+三界一切所有法  此是最勝妙明珠 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div><span style="font-size:15px; letter-spacing:1px;">贝嘛埵吉发表于 2010-6-25 08:39</span><div class="badge-floor">第 29 进</div></div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
 众生善根尽随喜  正觉菩提意中持 <br/>
 正觉妙法及僧伽  直至菩提我皈依 <br/>
 所为利益自他故  我今即发菩提心 <br/>
 既发最上菩提心  饶益一切诸有情 <br/>
-菩提妙行皆修作  为利众生愿成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">山</div>山中发表于 2011-4-7 20:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 30 楼</span></div><div class="post-body">南无空行勇父缘及空行母　　耶！ <br/>
+菩提妙行皆修作  为利众生愿成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">山</div><span style="font-size:15px; letter-spacing:1px;">山中发表于 2011-4-7 20:00</span><div class="badge-floor">第 30 进</div></div><div class="post-body">南无空行勇父缘及空行母　　耶！ <br/>
 <br/>
 哦　曼荼罗暨大乐喜金刚 <br/>
 哦　帝洛巴为殊胜智上师 <br/>

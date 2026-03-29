@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>《觉囊派教法史》 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>《觉囊派教法史》 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">《觉囊派教法史》</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-6-1 10:50<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">　　《觉囊派教法史》 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">《觉囊派教法史》</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-6-1 10:50</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">　　《觉囊派教法史》 <br/>
 　　觉囊派前法王阿旺•洛追扎巴著 <br/>
 许得存译     前    记 　　嗡！愿得吉庆 <br/>
 随行徒众的界根， <br/>
@@ -70,7 +91,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　这里，我们的第四导师释迦牟尼佛从很早以前肩负起解救一切众生痛苦的重担，发伟大的菩提心，立下解脱众生的神奇宏愿，乃接受无上菩提之果位，受用五决定坛轮，圆满神通，极为庄严，不惧怕在若如虚空般宽阔的广博世界上一起调伏变化身的事业，诞生在圣地印度，为无比释迦族净饭王之子。 <br/>
 <br/>
 　　在共同化机方面，首先以凡俗世间菩提心大资粮道法规护持国政，然后出家苦行，最后初夜降伏妖魔，午夜入定，一夜之间从加行道暖位修行至无学道。黎明时分，胜利鼓敲响之时，因自身之力，现起无漏智慧，以所得的无上大菩提。为了使三种姓徒众逐步归依佛教，三次善转法-轮，其中随顺末次转法-轮的中观师在西藏出现后，在吉祥森林王修行处建立法基寺院，从此发展出的执持了义修行传承的教法即是觉囊派，或者说在西藏弘传的大手印、大圆满、中观三派之中，觉囊派执持中观自空、他空中的他空见。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 16:30<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">第一章　他空思想在印度的兴起 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 16:30</span><div class="badge-floor">第 2 进</div></div><div class="post-body">第一章　他空思想在印度的兴起 <br/>
 <br/>
 第一节　显教传承 <br/>
 <br/>
@@ -145,7 +166,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 如来胜义密意莲花林， <br/>
 随转季节暂时闭而合； <br/>
 弥勒佛语如太阳光芒， <br/>
-使得具缘的莲花开放。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 16:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">第二节　　觉囊派密法传承 <br/>
+使得具缘的莲花开放。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 16:37</span><div class="badge-floor">第 3 进</div></div><div class="post-body">第二节　　觉囊派密法传承 <br/>
 <br/>
 一、佛陀如何宣讲 <br/>
 <br/>
@@ -236,7 +257,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 从遍知却古俄色的弟子更邦巴突结尊追至大觉囊巴•笃补巴之间，密乘他空中观的观点教派的传承犹如流水长传不断。在西藏的传承次序上面已概要作了介绍，详细如《时轮教法史》所说。更钦钦波笃补巴以后的传承将要在后面介绍。有诗赞道： <br/>
 <br/>
-密乘法性光明清净界，圆满身智大海诸技能，远离戏论诸相具殊胜，凡彼各个唯是自证境。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 16:45<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">第二章　他空见在西藏的传播发展 <br/>
+密乘法性光明清净界，圆满身智大海诸技能，远离戏论诸相具殊胜，凡彼各个唯是自证境。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 16:45</span><div class="badge-floor">第 4 进</div></div><div class="post-body">第二章　他空见在西藏的传播发展 <br/>
 <br/>
 第一节　上部卫藏地区的传播 <br/>
 <br/>
@@ -333,7 +354,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 早已证悟之佛陀。 <br/>
 　 [此偈是说笃补巴在先世已经成佛，为教化众生而降世] <br/>
  <br/>
-如是以偈略述上师本生，现在概要叙述更钦大觉囊师于此浊时作为三界法王的示现的事迹。其中又分为：初期自利、中期利教益民、未期事业圆满。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 16:47<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">第一，先述初期自利之情形。 <br/>
+如是以偈略述上师本生，现在概要叙述更钦大觉囊师于此浊时作为三界法王的示现的事迹。其中又分为：初期自利、中期利教益民、未期事业圆满。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 16:47</span><div class="badge-floor">第 5 进</div></div><div class="post-body">第一，先述初期自利之情形。 <br/>
 <br/>
 笃补巴•喜饶坚赞，于阳水龙年(元至元二十九年，1292年)生于阿里地区笃补班仓地方的迦尤日城，父亲名叫益希旺秋。母亲名叫拉姆楚臣坚。降生的情形如同第二个王子顿珠一样希奇，其家族世代信奉旧密法(宁玛派)。他幼年依止喇嘛杰当巴等多位上师学习要玛派教法和《中观理聚六论》等，通晓工艺学。 <br/>
  <br/>
@@ -349,7 +370,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 三十一岁，他再次来到觉囊寺跟从克尊云丹嘉措闻习许多灌顶与教诫，专修六支瑜伽，除了特定的请求教法的时间外，不与任何人相见，住在喀觉德丹地方，通达六支瑜伽中的收摄、禅定的证悟。上师对他快速讲授，他请求上师纠正迷惑，即加以修持，按续部所说具有了通达命脉运气的征象。此后，他去拉萨祈愿，住在叶尔巴的一座楼房中静修。 <br/>
  <br/>
-然后返回上部在杰普为上师更邦曲扎贝重新讲授一次《时轮根本续广释》，又根据克尊钦波的指示，为五十名善知识讲授了一回《时轮根本续广释》。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 16:54<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">第二，中期利益教法及众生的情形。 <br/>
+然后返回上部在杰普为上师更邦曲扎贝重新讲授一次《时轮根本续广释》，又根据克尊钦波的指示，为五十名善知识讲授了一回《时轮根本续广释》。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 16:54</span><div class="badge-floor">第 6 进</div></div><div class="post-body">第二，中期利益教法及众生的情形。 <br/>
 <br/>
 此后，笃补巴遵照上师的严切指示，出任觉囊寺住持。克尊钦波云丹嘉措非常高兴，在将近两年的时间里不分昼夜地给他传授灌顶教理、注释续等他所掌握的一切教法。一般来说，更钦笃补巴从杰顿嘉央和克尊钦波闻习了无数难以记名的教法认真全面地阅读了一遍能够找到的翻译成藏文的经论著毫无混淆地掌握了各种经义。 <br/>
  <br/>
@@ -399,7 +420,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 若说更钦笃补巴与第二如来布顿大师的谈论，据说布顿大师不能与他辩论。在有这样一个故事，以前布顿大师想来觉囊寺看十万佛大塔，布顿在梦中梦见自己来到觉囊沟口时，更钦笃补巴说了声“帕”，布顿便从梦中惊醒，所以未能看到大佛塔。更钦笃补巴无论到什么地方，前来请求发菩提心和请求传授六字真言，授与沙弥、沙弥尼、出家、近圆戒者络绎不绝。 <br/>
  <br/>
-他从逝世前大约五年开始就停止了大小便，早上猛厉火暖乐拥起，无昼夜、时分之差别，不吃东西也不饥，吃了也能消化。由于这样，他有时许多天不吃饭，也不饥饿，仍有力量，间或一天不吃饭，多吃也没有水消化的现象。他这样的纯熟佛法的尊者和普通人绝对不同，具有密法教主金刚手菩萨的体性。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 17:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">第三，后期事业圆满的情形 <br/>
+他从逝世前大约五年开始就停止了大小便，早上猛厉火暖乐拥起，无昼夜、时分之差别，不吃东西也不饥，吃了也能消化。由于这样，他有时许多天不吃饭，也不饥饿，仍有力量，间或一天不吃饭，多吃也没有水消化的现象。他这样的纯熟佛法的尊者和普通人绝对不同，具有密法教主金刚手菩萨的体性。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 17:04</span><div class="badge-floor">第 7 进</div></div><div class="post-body">第三，后期事业圆满的情形 <br/>
 <br/>
 更钦笃补巴返回觉囊寺后将近两年时，登上了大法会的首座上，对僧众说：“《了义海》是你们的法缘，”身上光彩明亮，此时天空有声，花雨与虹光遍布。笃补大师说：“藏地夏热冬寒，我不习惯，今年要去找寻一个热地方。”近侍欧珠贝请问道：“去何热土？”大师回答说：“去极乐世界。”近侍等人理解为是指卧室德哇坚(意为“极乐世界”)。大师说：“把各位老僧大德唤来秘议。”各位老僧大德聚集大师前商谈，受听教诲。大师这样说： <br/>
 <br/>
@@ -548,7 +569,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 龙树师徒如云去， <br/>
 佛陀教法日光消， <br/>
 恶劣外道布黑暗， <br/>
-呜呼众生离盲相。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 17:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">    第二辈，《时轮根本摄续后续》说：“手持天杖、骨饰、长腰鼗、酒器，得到了“那波”之名。”如此所预言的阿舍黎黑行者，生于南印度桥萨罗国所的距孟加拉国不远的欧茹布夏地方的婆罗门家族。小时候即聪慧，通晓声学和医学、工艺学等，由于宿缘醒悟，亲见许多智慧瑜伽母。 <br/>
+呜呼众生离盲相。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 17:10</span><div class="badge-floor">第 8 进</div></div><div class="post-body">    第二辈，《时轮根本摄续后续》说：“手持天杖、骨饰、长腰鼗、酒器，得到了“那波”之名。”如此所预言的阿舍黎黑行者，生于南印度桥萨罗国所的距孟加拉国不远的欧茹布夏地方的婆罗门家族。小时候即聪慧，通晓声学和医学、工艺学等，由于宿缘醒悟，亲见许多智慧瑜伽母。 <br/>
  <br/>
 此后，来到拥有五百多班智达、佛法兴盛的那烂陀寺受五戒，居住多年，圆满闻习三藏、四续部，成就了各种密咒、禅定，住修时有多尊瑜伽母显现加持，使他获得了殊胜禅定。然后按照瑜伽母授记，抵达北印度城市杂兰达拉纳谒见了居住在这里的成就师杂兰达热巴，礼敬祈求摄受，杂兰达热巴发现他有缘，传授灌顶教诫。 <br/>
  <br/>
@@ -593,7 +614,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 当时，喇钦扎巴坚赞的四大弟子萨哇•旺秋扎、努巴•仁增扎、完德•喜涅扎、噶尔•释迦扎中的前三人各建造了一尊佛像，扎巴坚赞主持了开光仪式，当噶尔准备修建佛像时，剌钦说：“尚未到装藏的殊胜时间，”因而推迟一段时间。 <br/>
  <br/>
-后来，更邦俄色贝（阿哇都德巴）去世，喇嘛扎巴坚赞对噶尔说：“现在到了你建佛像时候，你去娘堆，在那里的山坞中有当年的黑行者为利益众生而示现的麻风身色，现在已经去世，你把他的头盖骨割下拿来，装藏塔内，这里从前有此所缘。”据说噶尔奉师命取来了头盖骨，放在喇钦手中观看时，头盖骨上显现出有六十二尊胜乐、天神的圆满坛城，把这些装入了佛像心脏。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 17:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">    第七辈，尚顿周扎坚赞(宁玛派大师)，生于山南和止贡两地交界处，父亲名叫尚阿仁特那，母亲名叫杰曼。从入胎到降生，父母都做了许多奇异的梦，出生时，天空电光闪动，雷声轰鸣，于是，被父亲取名为“周扎坚赞”（意为“雷声胜幢”）。早年，父亲给他传授本尊、阎曼德迦、时轮、黑敌阎曼德迦灌顶，讲授生圆二次第法。当他修念时，别人看见时轮、阎曼德迦等本尊身显现，他不看人间的食物，而是以食用退敌天母所赐的东北木里顶的甘露为生。 <br/>
+后来，更邦俄色贝（阿哇都德巴）去世，喇嘛扎巴坚赞对噶尔说：“现在到了你建佛像时候，你去娘堆，在那里的山坞中有当年的黑行者为利益众生而示现的麻风身色，现在已经去世，你把他的头盖骨割下拿来，装藏塔内，这里从前有此所缘。”据说噶尔奉师命取来了头盖骨，放在喇钦手中观看时，头盖骨上显现出有六十二尊胜乐、天神的圆满坛城，把这些装入了佛像心脏。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 17:24</span><div class="badge-floor">第 9 进</div></div><div class="post-body">    第七辈，尚顿周扎坚赞(宁玛派大师)，生于山南和止贡两地交界处，父亲名叫尚阿仁特那，母亲名叫杰曼。从入胎到降生，父母都做了许多奇异的梦，出生时，天空电光闪动，雷声轰鸣，于是，被父亲取名为“周扎坚赞”（意为“雷声胜幢”）。早年，父亲给他传授本尊、阎曼德迦、时轮、黑敌阎曼德迦灌顶，讲授生圆二次第法。当他修念时，别人看见时轮、阎曼德迦等本尊身显现，他不看人间的食物，而是以食用退敌天母所赐的东北木里顶的甘露为生。 <br/>
  <br/>
 此后，他奉父母之命，娶一位名叫杰巴宗的女子为妻。此外，巡礼萨绛洞的佛像时，天神和赞神聚集了山南四部的魔军制造障碍，他用时轮阎曼德迦敌身收有魔军。使他们各个忠诚于他。据说他按照尊者授记，以狠诛法降伏夺取萨尔地方人生命的魔女，以人皮为卡尔阿寺天女塑像制作一幅华盖。后来，用神通幻变出酒库为家乡人民造福。据说最后被邀请到萨迦派的拉章周卡尔讲经授教，利益众生，一直到逝世。 <br/>
 <br/>
@@ -615,7 +636,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 第十一辈，曲杰尼协，生于僧伽罗(即斯里兰卡)海彼岸的止桑布地方。父亲名叫扎哈玛室杂德。母亲名叫班玛。幼年从班智达弥耶尼玛等人受出家戒、近圆戒，弥耶尼玛大师曾授给他一尊姿优美的独髻母本尊像，他带着像在夏孜山（印度一山名）修行，亲见本尊母，得到了以后去五台山的授记。曾去印度朝拜了金刚座等佛教圣地，战败了外道僧的进攻。 <br/>
  <br/>
-二十三岁时，根据本尊母的授记，来到五台山，受到文殊菩萨的续加持。此后，随同数名藏族商人来到藏北达隆，拜见阿旺扎巴，一年后由达隆巴服侍来到噶玛曲杂嘉措(1454－1506)跟前习法。著作有《佛陀颂》、《忏悔》等。他在布达拉（宫）山建立住处，专讲印度所传的反映坛城尺度的《尺度经》，然后离开布达拉，经过贡嗄、后藏抵达色多坚寺传授十明和佛母开许法，从班钦释迦却丹闻习灌顶后，由杰更噶却的父母服侍北上来到阿里，对更噶周却之母说：“要借一住房。”之后，经过贡塘去尼泊尔，从班智达达孜萨赛学得总摄论(胜乐)灌顶，装扮成一位瑜伽师抵印度金刚座大菩提塔前礼供发愿，返回途中船毁遇难。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 17:30<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">    第十二辈，上师更噶周却，火兔年(明武宗正德二年，1507年)生于阿里下部地区洛吾曼塘的涅顿释迦牟尼的家族，当时父亲本仲•次旺桑波五十八岁，母亲二十二岁（次旺桑波的第二个妻子），请求热顿法王取名为“卓玛奔”（意为“十万度母”）。预言他具有良好的大德习气，因此他将入佛门。四岁时，从仲马曲杰受皈依戒和居士戒，念读《佛本生经》，掌握了基本内容。 <br/>
+二十三岁时，根据本尊母的授记，来到五台山，受到文殊菩萨的续加持。此后，随同数名藏族商人来到藏北达隆，拜见阿旺扎巴，一年后由达隆巴服侍来到噶玛曲杂嘉措(1454－1506)跟前习法。著作有《佛陀颂》、《忏悔》等。他在布达拉（宫）山建立住处，专讲印度所传的反映坛城尺度的《尺度经》，然后离开布达拉，经过贡嗄、后藏抵达色多坚寺传授十明和佛母开许法，从班钦释迦却丹闻习灌顶后，由杰更噶却的父母服侍北上来到阿里，对更噶周却之母说：“要借一住房。”之后，经过贡塘去尼泊尔，从班智达达孜萨赛学得总摄论(胜乐)灌顶，装扮成一位瑜伽师抵印度金刚座大菩提塔前礼供发愿，返回途中船毁遇难。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 17:30</span><div class="badge-floor">第 10 进</div></div><div class="post-body">    第十二辈，上师更噶周却，火兔年(明武宗正德二年，1507年)生于阿里下部地区洛吾曼塘的涅顿释迦牟尼的家族，当时父亲本仲•次旺桑波五十八岁，母亲二十二岁（次旺桑波的第二个妻子），请求热顿法王取名为“卓玛奔”（意为“十万度母”）。预言他具有良好的大德习气，因此他将入佛门。四岁时，从仲马曲杰受皈依戒和居士戒，念读《佛本生经》，掌握了基本内容。 <br/>
  <br/>
 七岁时，向仲马曲杰请求教授《红阎曼德迦五本尊灌顶》，取名为“协当南木达多杰”(意为“嗔清净金刚”)。这一年，他闻习了离弃四耽著教授，生起了殊胜证悟，掌握了摄类、历算及佛教经论内容，在济仲僧众面前进行了考试。另外，了解了《现观庄严论》、《释量论》、《俱舍论》、《律经》、《慈氏五论》后四论以及《入行论》、《致亲友书》的内容，在仲巴曲杰面前进行了考试。 <br/>
  <br/>
@@ -643,7 +664,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 从此以后，王子有时住在三位阿奢黎处，有时住在王宫，还经常与父亲一起去班遮巴哈等地，他曾从阿奢黎阿难达扎雪德学习度母念诵经，立刻显相，并以希奇神通游玩于拉杂止哈等圣地及森林、城市。据说他在八年中圆满完成了上等大士要百年才能完成的事业。以上为十三世本生的事迹。 <br/>
 <br/>
-第二十八代觉囊寺住持的事迹，分为初期、中期、末期三部份叙述。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 17:36<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">　　第十四辈，至尊贡噶宁布转世即是觉囊寺第二十八任住持，阴木猪年（明万历三年，1575年）箕宿月(藏历六月)十八日，生于保护藏区的永宁地母十二尊之中金刚翠聪绿炬地母守护之地卡热章沟头、以前热译师的传承次第出世的居处，即现在被叫做曲科顶地方的东西两部热氏之中的东热贡噶僧格所建的寺院的地方。 <br/>
+第二十八代觉囊寺住持的事迹，分为初期、中期、末期三部份叙述。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 17:36</span><div class="badge-floor">第 11 进</div></div><div class="post-body">　　第十四辈，至尊贡噶宁布转世即是觉囊寺第二十八任住持，阴木猪年（明万历三年，1575年）箕宿月(藏历六月)十八日，生于保护藏区的永宁地母十二尊之中金刚翠聪绿炬地母守护之地卡热章沟头、以前热译师的传承次第出世的居处，即现在被叫做曲科顶地方的东西两部热氏之中的东热贡噶僧格所建的寺院的地方。 <br/>
  <br/>
 其祖父持咒师楚臣嘉措有四个儿子，长子南杰平措为贡噶宁布之父，母亲名叫多杰布噶拉姆。他出生时被包在颜色象五色彩虹的肚子一样的东西里，将其破开后里面是一个婴儿，身上的皮肤有血脂明点若系有黄丹色的梵绳，手足上有法-轮之相，身上发出藏红花的芳香。 <br/>
  <br/>
@@ -663,7 +684,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 堪布隆热嘉措给地传授了时轮灌顶、《时轮续》、《注释续》、《口诀》、六支瑜伽的加持义传承，他深领诸义，证悟究竟。闻习觉囊派教法后开始钻研布顿派教法，闻习了各大上师的著作、印度文古书、更钦笃补巴全集，以及昆多种教诫论著。从克珠桑杰益希、持金刚益希旺波等著名学者是闻习萨迦、觉囊、香巴噶居、夏鲁、主巴噶居、达隆噶居等教派的教法和四续部一切灌顶教理、口诀；跟从印度大成就师格茹洛学巴桑杰贝巴贡波闻习了密乘续部生圆二次第全部灌顶，讲授了以前西藏没有的五百余部密乘无上瑜伽部中的发菩提心方面的教法，这样具有代表性的事迹还有很多。 <br/>
 <br/>
-另外，他前后向印度数名瑜伽师求授甚深法和内外明处、声明学等，熟习一切密意。到将近二十岁时，由持律师贡噶坚赞为堪布，强巴伦珠为阿奢黎（轨范师），杰仲更噶巴桑等为摩师和补缺师提前给他授了比丘戒，成为外如声闻乘，内如佛子菩提心的大持密咒师。前后请求了这些上师传授各种教法。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 17:45<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">中期事迹： <br/>
+另外，他前后向印度数名瑜伽师求授甚深法和内外明处、声明学等，熟习一切密意。到将近二十岁时，由持律师贡噶坚赞为堪布，强巴伦珠为阿奢黎（轨范师），杰仲更噶巴桑等为摩师和补缺师提前给他授了比丘戒，成为外如声闻乘，内如佛子菩提心的大持密咒师。前后请求了这些上师传授各种教法。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 17:45</span><div class="badge-floor">第 12 进</div></div><div class="post-body">中期事迹： <br/>
 <br/>
 贡噶宁布二十一岁时，根据上师贡噶坚赞、阿奢黎强巴伦珠的“住持觉囊寺”的口头命令，于阴历八月八日吉祥日正式登上了觉囊寺堪布宝座，发放任职茶，从准备到移交的顺缘都很好。之后，他住修于吉普，创立一年中不间断的觉囊大时轮的教授，每一次教授都很顺利。阴历一月初九日，举行大时轮教授朵玛仪轨，首先介绍净善教授。从印度阿奢黎素乃巴难室利和布拉哇杂拉等学者钻研一切甚深教授，深领全义。觉囊寺修供法会期间，又立时轮彩色细砂，为各修行院的七百余名僧人传授十一面观世音菩萨圆满顶。 <br/>
 <br/>
@@ -685,11 +706,11 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 虽然但辛巴活佛动身前去康区，但是根据以前多罗那他的授记行至吉雪扎噶尔进去世了。先前在达丹丹曲林寺经堂七世佛像建成的首次开光仪式上，第悉彭措南杰从前藏来到桑珠寺，授给大师羊脂玉的印，赐给管家更噶巴桑一枚红檀香木花押印。 <br/>
 <br/>
-以后，多罗那他大师逐渐广做利益法和众生的事。五十四岁时，他为益希嘉措详细讲授《胜乐根本续不共释》，作了很好的记录和解释。另外，他讲授显密经典注释、灌顶传承法门，使一切徒众成熟解脱。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 19:15<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">    五十九岁时的鸡年(明崇祯六年，1633年)二月二十四日，强佐更噶巴桑去世，他非常关心，给杰增成勒旺姆作了嘱托和安排，在他以前用的木碗的把柄上出现了天成阎曼德迦像。继后，他直接讲授法王羯磨的阎曼德迦诸口诀，写了《法王分别再释难易解》。这时，他说：“在清楚的见相中，具誓法王(羯磨法王)莅临此地，而明妃一回也没有来”。这清楚地证实明妃正在给兄妹护法供茶和接待。在这方面，大师为多麦巴伦珠嘉措传授了《宝帐怙主十忿怒护轮金刚石寨母讲义》和实修轨范仪则。 <br/>
+以后，多罗那他大师逐渐广做利益法和众生的事。五十四岁时，他为益希嘉措详细讲授《胜乐根本续不共释》，作了很好的记录和解释。另外，他讲授显密经典注释、灌顶传承法门，使一切徒众成熟解脱。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 19:15</span><div class="badge-floor">第 13 进</div></div><div class="post-body">    五十九岁时的鸡年(明崇祯六年，1633年)二月二十四日，强佐更噶巴桑去世，他非常关心，给杰增成勒旺姆作了嘱托和安排，在他以前用的木碗的把柄上出现了天成阎曼德迦像。继后，他直接讲授法王羯磨的阎曼德迦诸口诀，写了《法王分别再释难易解》。这时，他说：“在清楚的见相中，具誓法王(羯磨法王)莅临此地，而明妃一回也没有来”。这清楚地证实明妃正在给兄妹护法供茶和接待。在这方面，大师为多麦巴伦珠嘉措传授了《宝帐怙主十忿怒护轮金刚石寨母讲义》和实修轨范仪则。 <br/>
 <br/>
 总而言之，杰增仁波且多罗那他著作甚丰，包括《佛百业》、《印度佛教史》以及各大班智达传记多部。显教经典注释方面有《般若波罗蜜多心经释》、《普贤经释》等，大乘中观他空见与教派方面多部，《时轮》、《胜乐》、《集密》、《大威德》等密乘续部仪轨著作多部；《时轮》、《胜乐》、《集密》生圆二次第法注释等密乘经典注释方面多部，以及《佛陀赞》、《资粮》、《祈愿》等总共十四包，收成全集。 <br/>
  <br/>
-根据第二佛所说觉囊派意趣，对显密和了义大中观作了明确的说明解释和发展。对于我派历辈事业仪式，若如侍从一样的巴贡扎甘扩法、诺金盖扎巴、扎热巴巴孜嘉尚、独髻佛母南曼嘉姆、切巴赞扎杰、当噶尔扎赞、孜钦桑拉等奉命完成了。对巴科尔德庆、孜钦秀仇、嘉、桑丹(桑顶)、塔巴岭、达丹群昆佩等寺的保管员和卫藏地区不同派系的大多数寺院进行了卓有成效的管理和维护，根据藏巴第悉更噶饶丹旺格嘉波的安排，任命其侄拉巴更噶丹巴为强佐。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 22:11<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">后期的事业： <br/>
+根据第二佛所说觉囊派意趣，对显密和了义大中观作了明确的说明解释和发展。对于我派历辈事业仪式，若如侍从一样的巴贡扎甘扩法、诺金盖扎巴、扎热巴巴孜嘉尚、独髻佛母南曼嘉姆、切巴赞扎杰、当噶尔扎赞、孜钦桑拉等奉命完成了。对巴科尔德庆、孜钦秀仇、嘉、桑丹(桑顶)、塔巴岭、达丹群昆佩等寺的保管员和卫藏地区不同派系的大多数寺院进行了卓有成效的管理和维护，根据藏巴第悉更噶饶丹旺格嘉波的安排，任命其侄拉巴更噶丹巴为强佐。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 22:11</span><div class="badge-floor">第 14 进</div></div><div class="post-body">后期的事业： <br/>
 <br/>
 杰增仁波且杰增成勒旺姆和各位弟子讲述了关于未来的预言、佛教增减盈亏(兴盛衰败)以及国政的变化，任命嘉央活佛桑杰嘉措为了义教法的乐园达丹工林寺的住持。他说：“这一次之后，我再不在曲隆修行院和觉囊讲经了。”在觉囊讲授了时轮教诫和修持。他又说：“现在放心了，把桑杰嘉措活佛已安排在达丹丹曲林寺法座之上，在我去世后会忙碌一阵。”一般来说，他智慧广博，能与大家随顺，但是孜方面(指第悉藏巴)没有考虑过他，我与第悉藏巴同心同德，正是为此。现在负担轻了，除了今年，亦不再进行定时讲授。现在著作的事也是如此，除了不便拒绝的敦请者外，再不做任何事，闲坐为好。”成勒旺姆请求道：“总之，从整个佛教，尤其是了义教法考虑，请求你长寿。此外，即使转生，也请你转生为利益我们派的大德，请慈悲摄持。”多罗那他说：“大家能一心一意祈求，倘若了解缘起变化，亦可利益此教。” <br/>
 <br/>
@@ -717,7 +738,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 大乘佛教如意珠， <br/>
 善供讲说修行幢， <br/>
 众生愿满自在王， <br/>
-庆喜藏子愿成佛。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 22:16<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">第三章　觉囊派在多康多麦地区的传播发展 <br/>
+庆喜藏子愿成佛。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 22:16</span><div class="badge-floor">第 15 进</div></div><div class="post-body">第三章　觉囊派在多康多麦地区的传播发展 <br/>
 <br/>
 第一节 开始如何传播 <br/>
 <br/>
@@ -769,7 +790,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 根据大师的预言，为了寻找建寺的地方，仲仁特那室利从觉囊寺返回康区，由于则曲河水瀑涨，不能渡河，住在那里。他考虑“所预言的寺院地址就在这里，而且当地还有一所寺院，应如何做？”他首先的办法是提出：“需要借一住宿之地”送去了见面哈达，原来那所寺院是座本教寺院，寺院的本教僧也回赠了见面哈达和坐垫等，很好地建立了缘起。此后，仲仁特那室利显示了许多神变，使本教徒把寺院献给了他，他们各自归家。木蛇年(1365)年仲•噶细仁青贝（即仲•仁特那室利）在本教寺院的遗址上创建了吉祥壤塘大寺，建立了了义教法的根基，他主要发展讲修佛法，传授甚深善规修行教法，开始了弘传佛法的事业。这时正是觉囊寺由嘉央官却桑波住持寺院的时期。 <br/>
 <br/>
-从此，仲•噶细巴在多麦壤塘寺以无量息、增、怀、伏所化之业，教化边区一些难以教化的粗野的有情众生，引导进入了义密乘法门广利教法及众生，使佛教弘扬，众生幸福。据传当时全寺聚集了以寺院住持堪钦贡却坚赞、泽细•仁特那格尔底、阿盖尼玛俄色、曲杰宣努坚赞、嘉哇桑波等为首的僧人一千来名。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 22:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">    第二辈，曲杰嘉哇桑波，生于多康麦(多康下部)地区的雅雪巴姆宗巴地方。他在曲窘南喀宗建立了修行胜幢，获得很大成就后去世，留下了许多神奇的故事。他一生广做利教益民之事，被颂为弥勒佛的变化。 <br/>
+从此，仲•噶细巴在多麦壤塘寺以无量息、增、怀、伏所化之业，教化边区一些难以教化的粗野的有情众生，引导进入了义密乘法门广利教法及众生，使佛教弘扬，众生幸福。据传当时全寺聚集了以寺院住持堪钦贡却坚赞、泽细•仁特那格尔底、阿盖尼玛俄色、曲杰宣努坚赞、嘉哇桑波等为首的僧人一千来名。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 22:22</span><div class="badge-floor">第 16 进</div></div><div class="post-body">    第二辈，曲杰嘉哇桑波，生于多康麦(多康下部)地区的雅雪巴姆宗巴地方。他在曲窘南喀宗建立了修行胜幢，获得很大成就后去世，留下了许多神奇的故事。他一生广做利教益民之事，被颂为弥勒佛的变化。 <br/>
 <br/>
 在此略说嘉哇桑波之前的本生及其以后的化身的事迹。在无数劫以前，他是毗卢遮那佛(大日如来佛)身前的一位名叫绛赛杂雅迈智的人，具有殊胜菩提发心。以后在毗婆尸(即胜观佛)座前如大海般聚积二资粮(即福德资粮与智慧资粮)，还有一个时候在兜率天宫以后白幢执为弥勒佛。后来在印度生为圣者无著其后依次为精通梵藏两种语言的藏族著名译师绰普强巴贝、更钦笃补巴的心传弟子萨桑弥底班钦、生于多麦雅雪地方的曲杰嘉哇桑波、香拔拉法王多杰娘波(金刚藏)座前的大臣更噶帕以及后藏精通翻译、利益众生的大德、生于索康多（位于杜曲河流域，又名索青达木宗）地方的壤塘寺住持嘉哇僧格等。 <br/>
 <br/>
@@ -808,7 +829,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 成就近圆时轮生圆法， <br/>
 驾临康区途中空行迎。 <br/>
  <br/>
-根据这种说法，这一辈是在卫藏地区的本波徐仓的仁辛巴的化身，在来康区途中死在吉雪扎噶尔地方，如前述的多罗那他的事迹中所述。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 22:26<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">    第三辈，曲杰洛卡哇•扎巴俄色，生于西藏洛扎地区，迎请到壤塘寺后成为曲杰仁钦的弟子，实践时轮六支瑜伽，多作念静修，证悟广大。修缮了失毁的寺庙，建立大佛塔。根据“惩治教敌，利益佛法众生”之言，他以威力消灭了教敌，利教利民。但是和格尔底桑比试法力作者是否就是他还有疑问，可能是发生他的前辈时的事。 <br/>
+根据这种说法，这一辈是在卫藏地区的本波徐仓的仁辛巴的化身，在来康区途中死在吉雪扎噶尔地方，如前述的多罗那他的事迹中所述。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 22:26</span><div class="badge-floor">第 17 进</div></div><div class="post-body">    第三辈，曲杰洛卡哇•扎巴俄色，生于西藏洛扎地区，迎请到壤塘寺后成为曲杰仁钦的弟子，实践时轮六支瑜伽，多作念静修，证悟广大。修缮了失毁的寺庙，建立大佛塔。根据“惩治教敌，利益佛法众生”之言，他以威力消灭了教敌，利教利民。但是和格尔底桑比试法力作者是否就是他还有疑问，可能是发生他的前辈时的事。 <br/>
 <br/>
 第四辈，曲杰郭嘉哇•伦珠扎巴，通过修炼甚深法，威力很大，是一位利益教法众生之人。在这两辈住持寺院期间，克珠洛追南杰和阿旺南杰两人前后从后藏来到壤塘寺广做利教利民之事。关于他们俩人的事迹后面要介绍。 <br/>
 <br/>
@@ -827,7 +848,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 曲杰更钦笃补巴曾预言道：“河水倒流的南面，鸠摩罗(意为“青年”)来到康区，得我文集传康区，利教利民吉祥生。”曲杰宣努坚赞于则曲河上游创建寺院后，树立了义教法观修之独足(支撑点)，讲授传播笃补巴的文集六大函。他亦有数辈传承，后来在他的修行院遗址上阿什穹上师阿旺图旦新建寺院。有诗赞道： <br/>
 <br/>
 　悦意教法祥持宫，幼化门徒白顶髻， <br/>
-    执雾明点持幻术，此显秘密善作分。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 22:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 18 楼</span></div><div class="post-body">第二节 觉囊派在康区的发展 <br/>
+    执雾明点持幻术，此显秘密善作分。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 22:42</span><div class="badge-floor">第 18 进</div></div><div class="post-body">第二节 觉囊派在康区的发展 <br/>
 <br/>
 一、从后藏到壤塘的发展经过至尊多罗那他和法位继承贡噶仁钦嘉措二人的直传弟子克珠洛追南杰以后次第嗣继法位的有恰隆哇•阿旺成勒、藏巴•阿旺南杰这三位大德的生平事迹在这里要作概要介绍。 <br/>
 <br/>
@@ -853,7 +874,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 木马年，他去蒙古族地区，在一年多的时间里，以甚深教法给以大护持，使蒙古的王公和属下广积善业资粮。他带着许多酬金物品返回卫藏，途经玉树时听到艾杂兵攻下卫藏，杀害了拉藏汗和扎什伦布寺后裔，由于战乱大起，他在金沙江畔居住了一年，向丹玛的曲柯地方(即四川甘孜藏族自治州金沙江西岸地区)以西的人传授教法。然后，他又回到蒙古地区居住一年，修缮了一些寺院，新建了扎仓，广做利益佛教众生之事生，供施双方一起前往西藏，向各寺院发放布施、斋僧茶，以甚深教法满足了各部人众的愿望。他莅临扎什伦布寺后，为蒙古王公及其随从讲授了为期一个多月的各种灌顶传承、口诀，为班禅的经师仲然巴次旦多杰讲授了他以前没有听过的觉囊派教法。供施双方筹资修建了顶普彭措格佩寺(位于后藏)为远近的僧人讲了数月的法。尔后，他回到彭措林寺，在查岗（地方名）显示了圆寂的密意，由于弟子们的祈祷，身体象以前一样健康。由于弟子们的请求，他又活了一日，作了遗言授记等，于水兔年(雍正元年，1723年)神变月(藏历正月)初八日圆寂，终年七十岁。他的主要弟子有：温•阿旺南杰、杰•更桑旺波、堪钦恰巴群佩、周盖•曲窘顿珠等。 <br/>
 <br/>
-第三十二，藏巴•阿旺丹增南杰，阴铁羊年(清康熙三十年，1691年)生于协曲巴热哇尔玛地方，为前两世(指洛追南杰、阿旺成勒)的侄辈亲属，父亲名叫嘉卓，母亲名叫本姆布赤。八岁时，他跟从阿旺成勒学习读诵。十岁时，从金刚持恰隆巴钦波学得金刚瑜伽全部灌顶、口诀，并按照前世的传统进行两次七天的闭关静修。他说：“从此不断出现修持的体验。”十六岁时，在他供献胎发（即削发出家）时，恰隆巴说：“要获得前两辈上师的功业，”给他起名为“阿旺南杰”，以彭措达尔结为堪布授出家戒，以阿旺洛追为规范授圆近戒。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 22:52<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 19 楼</span></div><div class="post-body">     从十六岁开始到二十岁，他闭关静修金刚、大威德、毗卢遮那(大日如来)等多种本尊的念修，从轨范师阿旺洛追学习《修法百门》的开许法；从班禅洛桑益希(第五世班禅)学习《修行法海》灌顶；从法王贡桑旺波受学六支瑜伽口诀、修身及脉、明点、七教授，以及三十五部了义经论为主的一切经典教理，犹如盛满宝珠之瓶，掌握了全部内容。此后，他奉恰隆巴之命，举行本尊、护法酬补仪式，了解了格鲁派教理。 <br/>
+第三十二，藏巴•阿旺丹增南杰，阴铁羊年(清康熙三十年，1691年)生于协曲巴热哇尔玛地方，为前两世(指洛追南杰、阿旺成勒)的侄辈亲属，父亲名叫嘉卓，母亲名叫本姆布赤。八岁时，他跟从阿旺成勒学习读诵。十岁时，从金刚持恰隆巴钦波学得金刚瑜伽全部灌顶、口诀，并按照前世的传统进行两次七天的闭关静修。他说：“从此不断出现修持的体验。”十六岁时，在他供献胎发（即削发出家）时，恰隆巴说：“要获得前两辈上师的功业，”给他起名为“阿旺南杰”，以彭措达尔结为堪布授出家戒，以阿旺洛追为规范授圆近戒。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 22:52</span><div class="badge-floor">第 19 进</div></div><div class="post-body">     从十六岁开始到二十岁，他闭关静修金刚、大威德、毗卢遮那(大日如来)等多种本尊的念修，从轨范师阿旺洛追学习《修法百门》的开许法；从班禅洛桑益希(第五世班禅)学习《修行法海》灌顶；从法王贡桑旺波受学六支瑜伽口诀、修身及脉、明点、七教授，以及三十五部了义经论为主的一切经典教理，犹如盛满宝珠之瓶，掌握了全部内容。此后，他奉恰隆巴之命，举行本尊、护法酬补仪式，了解了格鲁派教理。 <br/>
  <br/>
 后来因蒙古亲王派人来迎请，他于木马年(1714年)四月上半月二十四岁时作为前辈的随从来到蒙古族地区，以前辈的侍从的身份长期居住，受到了施主们的敬仰，了解了当地的仪轨习俗、念诵法，学会了蒙古语。他因当地人的恳请以各种方式讲授前辈所说的教法。此后不久，察科囊索和壤塘寺法王嘉哇伦珠扎巴(曲杰寺第四辈活佛)商议后派遣使者前来说：“最好是藏巴上师本人前来，实在不行也要请侄子温波前来。”由于前辈不能前去温波自己启程前去动身时前辈给他的名字增加为“阿旺丹增南杰”，一切施主都赠送了所需的物品。 <br/>
  <br/>
@@ -881,7 +902,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 水鼠年(雍正十年，1732年)四月，他返回壤塘寺。这期间，彭措宗嘉前后三次派人来请，他于娄宿月(藏历九月)抵达彭措宗嘉为在此之前久患疾病以各种经忏未能治好而去世的完德加王办理丧事，其子次旺扎嘉嗣位，按其意愿传授了嗣位灌顶，次旺扎嘉把萨热寺(萨拉寺)及其田地和此王所管辖的寺院扎仓全部献给藏巴活佛，作为僧源，作了以后定时来的教语诺言。他回到自己的住处壤塘寺后，为聚集在这里的各地僧人讲授为期三个月的《修法百门》灌顶传承、教理。 <br/>
  <br/>
-木虎年(雍正十二年，1734年)，法王次旺扎嘉为举行护佑仪轨，遣使者前来邀请，他前去修行了数日大威德铁城朵玛，放咒时真言芥子顶端喷火，粉碎了敌方之山，各种奇相显现，使法王及其侍从敬心大增。举行大威德金刚、长寿仪轨灌顶和长寿灌顶千供时，作了长寿灌顶偈献给次旺扎嘉王，出现了平息违缘的吉兆，法王次旺扎嘉再三尊他为上师。他返回壤塘寺后，根据萨拉哇指示，于木兔年(雍正十三年，1735年)去萨拉寺讲经，然后返回，火龙年(1736年)从壤塘寺被迎请到阿科地区讲授《修法宝生如来》等教法，为期四个月。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 22:54<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 20 楼</span></div><div class="post-body">    火蛇年(乾隆二年，1737年)，他在壤塘寺卧室念诵咒语，如仪修习，很好地完成了以前修立身、语、意三所依时没有完成的工作。在进行相顺灌顶、口决、传承之心的教授期间，果洛、瓦述两族发生械斗纠纷，都希望有人调解说合，他虽然公正判明彼此真伪，但是由于瓦述南杰扎西的心为魔鬼罪恶所鼓动，以坏心对他进毒，大师虽然知道他的情况，但是想到自己在这里的教化事业即将结束，应前去他界，故作出完成恶人心愿之状，饮下毒药，示现病状。在卧室中，大师为弟子讲业果法。弟子中最著名的要推克增达结和普尔杂群佩，他把法位传给这两个人，将教法全部托付给他俩。土马年(乾隆三年，1738年)逝往法界，享年四十八岁。他为壤塘寺第一辈藏巴活佛。 <br/>
+木虎年(雍正十二年，1734年)，法王次旺扎嘉为举行护佑仪轨，遣使者前来邀请，他前去修行了数日大威德铁城朵玛，放咒时真言芥子顶端喷火，粉碎了敌方之山，各种奇相显现，使法王及其侍从敬心大增。举行大威德金刚、长寿仪轨灌顶和长寿灌顶千供时，作了长寿灌顶偈献给次旺扎嘉王，出现了平息违缘的吉兆，法王次旺扎嘉再三尊他为上师。他返回壤塘寺后，根据萨拉哇指示，于木兔年(雍正十三年，1735年)去萨拉寺讲经，然后返回，火龙年(1736年)从壤塘寺被迎请到阿科地区讲授《修法宝生如来》等教法，为期四个月。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 22:54</span><div class="badge-floor">第 20 进</div></div><div class="post-body">    火蛇年(乾隆二年，1737年)，他在壤塘寺卧室念诵咒语，如仪修习，很好地完成了以前修立身、语、意三所依时没有完成的工作。在进行相顺灌顶、口决、传承之心的教授期间，果洛、瓦述两族发生械斗纠纷，都希望有人调解说合，他虽然公正判明彼此真伪，但是由于瓦述南杰扎西的心为魔鬼罪恶所鼓动，以坏心对他进毒，大师虽然知道他的情况，但是想到自己在这里的教化事业即将结束，应前去他界，故作出完成恶人心愿之状，饮下毒药，示现病状。在卧室中，大师为弟子讲业果法。弟子中最著名的要推克增达结和普尔杂群佩，他把法位传给这两个人，将教法全部托付给他俩。土马年(乾隆三年，1738年)逝往法界，享年四十八岁。他为壤塘寺第一辈藏巴活佛。 <br/>
 <br/>
 第三十三，克增达结，拥有克增桑波的一切殊胜功德，尤其是具有证悟的根基，熟习灌顶、教诫传承，执掌六支瑜伽无碍证悟的不灭传承，具有持命之相。更噶群佩的弟子夏玉群觉具有宿慧，是一名具预知神通者，这样的直传弟子很多。 <br/>
 <br/>
@@ -907,7 +928,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
    从久迈南杰的再世化身久迈秀勒南杰开始正式确立了藏巴(重洼)活佛系统。其中需要介绍之事迹很多，唯恐字多不再赘述。有诗赞道： <br/>
 　　执持智慧童子身，大悲白莲若柽柳， <br/>
-    秘持威力大轮主，承法弟子福缘成。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 21 楼</span></div><div class="post-body">二、觉囊派在康区其他地方的发展 <br/>
+    秘持威力大轮主，承法弟子福缘成。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:00</span><div class="badge-floor">第 21 进</div></div><div class="post-body">二、觉囊派在康区其他地方的发展 <br/>
 <br/>
 （一）觉囊派教法从壤塘向多康地区的传播 <br/>
 <br/>
@@ -931,7 +952,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (8)更噶云丹嘉措，曾于孜朗寺建立了大经堂和僧舍、经院，开创了时供祈愿法会，为寺院取名为：“吉祥弥居艾郭德庆林”(意为“吉祥不变了义大乐洲)。在曲宁创建了麻泥塔尔么寺，起名为“扎西彭措林” (意为“吉祥圆满洲”)，整修了蔡达阿华寺。安排了新建赛贡图旦秀勒南杰林寺(即赛贡巴寺)的事务，举行了净地仪式。 <br/>
 <br/>
-(9)更噶云丹嘉措的心传弟子贝•仁增南囊多杰，他于赛贡巴寺护法殿设立了佛母供物和长期朵玛仪轨，完成了朵玛修行和大朵玛常祷，现证威力技能速相，在康区下部建立了寺院，弘传了义教法修行传承。于此已叙述了种子之部份，不可能全部叙述。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 22 楼</span></div><div class="post-body">（二）略述对掌持觉囊派尊胜教法传承具有大恩者的事迹 <br/>
+(9)更噶云丹嘉措的心传弟子贝•仁增南囊多杰，他于赛贡巴寺护法殿设立了佛母供物和长期朵玛仪轨，完成了朵玛修行和大朵玛常祷，现证威力技能速相，在康区下部建立了寺院，弘传了义教法修行传承。于此已叙述了种子之部份，不可能全部叙述。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:08</span><div class="badge-floor">第 22 进</div></div><div class="post-body">（二）略述对掌持觉囊派尊胜教法传承具有大恩者的事迹 <br/>
 <br/>
 (1)成就自在更噶旺波，生于卫藏地区素尔家族，为达丹丹曲林寺高僧恰隆哇的直传弟子。 <br/>
 <br/>
@@ -1253,7 +1274,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 领受灌顶教诫， <br/>
 完满二次第之修行， <br/>
 证得金刚持之果位！” <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 23 楼</span></div><div class="post-body">　　附录: <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:14</span><div class="badge-floor">第 23 进</div></div><div class="post-body">　　附录: <br/>
 <br/>
 　　《时轮深道：佛教觉囊派显密传承概述》 <br/>
  <br/>
@@ -1320,13 +1341,13 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
  <br/>
 　　三昧耶弟子高毅斗胆作序于京 <br/>
-1996年5月4日 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:17<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 24 楼</span></div><div class="post-body">第一编    导  论 <br/>
+1996年5月4日 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:17</span><div class="badge-floor">第 24 进</div></div><div class="post-body">第一编    导  论 <br/>
 <br/>
 佛教大悲导师释迦牟尼如来在身语意三门都有不可思议和微妙功德。从现象上看，他在印度中土贝拿勒斯城、王舍城等地共讲二乘三转法-轮：初四谛十二因缘中为无相谈空，末了分别了义。初次为不了义，二次为依止了义，三次为究竟了义之相。初于波罗斯奈城说上乘四谛等法，集出《别解脱经》、《羯磨百论》及四种律等五十余部经律。次于灵鹫山讲无相门，集出《般若经》广中略三种。末于广严城转了义分别法-轮，后集出《楞伽经》、《如来藏经》等二十余部，关于三次讲法，并非世尊&quot;朝三暮四&quot;之戏说，而以《楞伽经》讲，&quot;如对病患者，医生布施药，佛思诸有情，如是示教法。&quot;觉囊派对经典的教法的承袭，正依止了末转法-轮之了义分别，并独到地总结提出了中观他空见地，既认为自空中观非了义，又反对唯识宗为误解究竟了义法-轮。觉囊派教法所依之经如《别解脱经》等许多了义之典，形成了其教派的显宗源流。 <br/>
  <br/>
 　　密法传承上依止《如意宝树史》记，释迦世尊以不同根器为准授小，大、密三乘法。曾以殊胜化身于色究天和须弥山讲密法事续，于妙花庄严佛（毗卢遮那佛）事说行续，于色究竟天与须弥山讲瑜伽续。佛讲无上瑜伽续为：兜率天讲《密集经》；金刚手住地说《红阎摩敌经》、《六面童子续》；于米聚塔、地下阎罗殿讲《大威德续》；须弥山顶讲《胜乐经》；米聚塔讲《时轮经》；无量宫讲《喜金刚经》；于人间向因陀罗菩提王说《密集经》。而觉囊派所重时轮金刚法，圆满次第讲求六支瑜伽。 <br/>
 <br/>
-　　这是觉囊派教法的简介。事实上觉囊为地名，在日喀则专区拉孜县的一座山沟内，地处雅鲁藏布江南岸。相传，十二护法女神之一的金刚母曾邀请喇嘛更邦•吐吉尊追到该地建寺，名号觉摩囊，形成了其派之主寺。因此，其教派以地为名。其始于宋，形成于元，后因中观他空见受它派非议，同时缺乏政治势力支持，从而一度衰落。明万历年间，觉囊寺主大师多罗那他中兴其派，并建达丹丹曲林寺，弘扬以教证二法通达佛法直谛之大法。觉囊派论点以大善知识更邦•吐吉尊追到笃布巴、多罗那他直到川地衮噶贝桑等多位圣道觉悟圆满、修习六支瑜伽了证圆满的大师编著了大量集论道果等论典。那么觉囊派的显密传承及当代情况又怎样呢？ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:18<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 25 楼</span></div><div class="post-body">第二编  教法史略 <br/>
+　　这是觉囊派教法的简介。事实上觉囊为地名，在日喀则专区拉孜县的一座山沟内，地处雅鲁藏布江南岸。相传，十二护法女神之一的金刚母曾邀请喇嘛更邦•吐吉尊追到该地建寺，名号觉摩囊，形成了其派之主寺。因此，其教派以地为名。其始于宋，形成于元，后因中观他空见受它派非议，同时缺乏政治势力支持，从而一度衰落。明万历年间，觉囊寺主大师多罗那他中兴其派，并建达丹丹曲林寺，弘扬以教证二法通达佛法直谛之大法。觉囊派论点以大善知识更邦•吐吉尊追到笃布巴、多罗那他直到川地衮噶贝桑等多位圣道觉悟圆满、修习六支瑜伽了证圆满的大师编著了大量集论道果等论典。那么觉囊派的显密传承及当代情况又怎样呢？ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:18</span><div class="badge-floor">第 25 进</div></div><div class="post-body">第二编  教法史略 <br/>
 <br/>
 第一章　传承概论 <br/>
 <br/>
@@ -1338,7 +1359,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 　　历代时轮教法传承上师从大时轮足直至当代，喇嘛都夏巴钦波（大时轮足）传说他曾亲见文殊菩萨化身，按本尊授记赴北印度，途具种王变化之身，传其灌顶。度夏巴钦波修习甚深瑜伽行六个月，以神通往香巴拉国闻习《时轮经》等一切续部以及三菩萨释等教法，于佛法一部分心记一部分撰写成卷迎回印度。他一般以修定为主，曾用眼观法降伏外道，显示了多种神通，离世时化为虹身。 <br/>
 <br/>
-　　以后依次师承都夏巴穷哇（小时轮足）、绛曲桑波。迦湿弥罗班智达月护、卓弥译师喜饶札，喇嘛杰宫巴贡却松、周顿•南木敦、域摩•弥觉多吉（&quot;他空见&quot;理论由释迦如来秘传至域摩•弥觉多吉，并由他依本尊预言开始广为弘扬，在此以前，他空见地是一代代上师间秘密口传）、曲杰旺秋，南喀俄色、觉奔木、赛莫且哇•南喀将木村、江木色哇•喜饶俄色、却古俄色、更邦巴突杰尊追直至大觉囊巴更钦•笃布巴•喜饶坚赞。历代大德之间，密乘和了义大中观教法传承犹如流水般绵绵不断，并且于显教佛学上有了更深入的发殿和研究。这基本上是觉囊派传承的历史概况。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:21<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 26 楼</span></div><div class="post-body">第二章  初期传法史 <br/>
+　　以后依次师承都夏巴穷哇（小时轮足）、绛曲桑波。迦湿弥罗班智达月护、卓弥译师喜饶札，喇嘛杰宫巴贡却松、周顿•南木敦、域摩•弥觉多吉（&quot;他空见&quot;理论由释迦如来秘传至域摩•弥觉多吉，并由他依本尊预言开始广为弘扬，在此以前，他空见地是一代代上师间秘密口传）、曲杰旺秋，南喀俄色、觉奔木、赛莫且哇•南喀将木村、江木色哇•喜饶俄色、却古俄色、更邦巴突杰尊追直至大觉囊巴更钦•笃布巴•喜饶坚赞。历代大德之间，密乘和了义大中观教法传承犹如流水般绵绵不断，并且于显教佛学上有了更深入的发殿和研究。这基本上是觉囊派传承的历史概况。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:21</span><div class="badge-floor">第 26 进</div></div><div class="post-body">第二章  初期传法史 <br/>
 <br/>
 第一节  早期祖师 <br/>
 <br/>
@@ -1356,7 +1377,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 　　公元1575年，一个男孩出世了。奇异的是出生地附近群花开放，并且一出生便道：&quot;我是喇嘛更噶周曲。&quot;后来这位神更是表现出非凡的大智。其学习了多种教派之法，受到了很全面很难得的四续灌顶传，亲近印度大德，精通声明学，熟悉密意。在他八岁出家时，印度学者杂拉那塔赐以罗那他之名。多罗那他二十六岁时，就在热振大寺法会中受到广大僧众的敬重。二十九岁那年，他前往觉寺，每天黎明修明弥勒法入定，体验向天及非天、夜叉说法之相，从根本上悟了中观他空见思想。他肉眼数次看到笃布巴大师法身，并给他授记。多罗那他在梦中前往香巴拉，清楚看到了广大庄严之地，公元1614年，藏巴第希彭措南杰向他敬献了寺院庄园，根据勘查修建了达丹丹曲林寺。 <br/>
 <br/>
-　　多罗那他一生弘扬佛法，真正地中兴了觉囊巴。这样，在大师完成了利益众生的大业后，于阴水猪年，四月二十八日往生药师佛土，享年六十一岁。达丹丹曲林寺和修寺院的弟子们广献供养，为他举行了盛大的超荐法会，其遗物中之袈裟现在正珍藏于四川省阿县的卓格寺内。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 27 楼</span></div><div class="post-body">第三节  弘法情况 <br/>
+　　多罗那他一生弘扬佛法，真正地中兴了觉囊巴。这样，在大师完成了利益众生的大业后，于阴水猪年，四月二十八日往生药师佛土，享年六十一岁。达丹丹曲林寺和修寺院的弟子们广献供养，为他举行了盛大的超荐法会，其遗物中之袈裟现在正珍藏于四川省阿县的卓格寺内。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:22</span><div class="badge-floor">第 27 进</div></div><div class="post-body">第三节  弘法情况 <br/>
 <br/>
 在觉派的传播过程中，历代上师们创作了大量佛教文献，并四处讲经传法。为大量僧俗弟子灌顶、受戒。期间出现了如《了义海论》、《印度佛教史》等许多论藏。 <br/>
  <br/>
@@ -1364,7 +1385,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 　　再有的大学者，就要算是多罗那他了。多罗那他一生亲近的了大批印度大德，求受甚深法门和风外明处及声明学等，熟悉一切密意，他一生讲授在西藏以前没有的五百部密乘无上瑜伽部中的发菩提心方面的教法，象这样具有代表性的事还有很多很多。前面提到过二十六岁时，他和热振寺等寺院建立了殊胜的法缘。特别是他在当年宗喀巴坐过的宝座上，向全体大众讲授菩提道次第法以后，更是名声大振。多罗他用两种语言(梵文和藏语)讲授《红黑阎曼德迦续》，其勇猛气概无碍之辩才使得热振僧众大感惊讶，交口称赞。 <br/>
 <br/>
-　　多罗那他是藏传佛教上公认的著名学者，他通各派显密教法，其著作也甚为广泛。其中《多罗那他全集》共有四十多函，最著名的就是闻名于世的《印度佛教史》以及阐觉囊派教义的著作二十四函。多罗那他上师修习精进，得到自主生死之功德，尤其闻习甚深道金刚瑜伽灌顶传承、口诀，通过修行证悟圆满，大大的发展了觉囊派讲修事业，其弟子洛追南杰和安多•衮噶巴桑等将其传承引入安多及康巴一带，广为流传。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 28 楼</span></div><div class="post-body">第三章  多康地区教派布流 <br/>
+　　多罗那他是藏传佛教上公认的著名学者，他通各派显密教法，其著作也甚为广泛。其中《多罗那他全集》共有四十多函，最著名的就是闻名于世的《印度佛教史》以及阐觉囊派教义的著作二十四函。多罗那他上师修习精进，得到自主生死之功德，尤其闻习甚深道金刚瑜伽灌顶传承、口诀，通过修行证悟圆满，大大的发展了觉囊派讲修事业，其弟子洛追南杰和安多•衮噶巴桑等将其传承引入安多及康巴一带，广为流传。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:25</span><div class="badge-floor">第 28 进</div></div><div class="post-body">第三章  多康地区教派布流 <br/>
 <br/>
 觉囊派教法的传播，不仅仅只限一卫藏地区，在广大藏区流传一样广泛。 <br/>
 <br/>
@@ -1393,7 +1414,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 　　这里，我们详细地介绍一下藏巴•阿旺丹增南杰，藏巴•阿旺丹增杰从金刚持恰隆巴学得金刚瑜伽全部灌顶、口诀，并按照传统进行了两次七天的闭关静修。公元1717年，由壤塘寺法王嘉哇伦珠扎巴邀请，在全寺各大活佛和僧俗群众的热烈欢迎下来寺内，当时曲杰郭嘉哇说：&quot;您的到来，显示出的恩德太大了，献上我的卧室作为您的居住处。&quot;在壤塘寺，阿旺丹增南杰被推选为金刚上师，为弘传觉囊派教法作出了很大的贡献。此后，克增达杰、伦珠迦木措、贡却久迈南杰，藏巴却旺群佩依次传承掌管藏巴寝宫。以阿旺曲吉帕巴、更钦阿旺巴丹、阿旺群佩迦木措、更钦克珠旺秀、阿旺丹巴萨协、阿旺多杰森波为金刚阿奢黎。从主迈南灯的再世代身久迈秀勒南杰开始正式确立了藏巴活佛系统。其中需要介绍事迹太多了，唯恐繁杂，不再瑶赘述。 <br/>
 <br/>
-　　就这样，渐渐地形成了壤塘曲杰寺院和藏巴寺院。目前壤塘县十几座觉囊派寺院，大约一千多出家众居住修法。他们主要学习时轮六支瑜伽（每人必须实修三年）和其他四续密典，其中得到一定证悟的也不乏其人。值得重视的是，壤塘曲杰寺和藏巴寺建成以后，觉囊派的教法很快传播到了四川各地青海甘等广大多康地区，大大全面弘扬藏传佛教觉囊派的教法，在当代重视时轮金刚生起、圆满次第全面修持的行者除了觉囊派以外太少太少了。记得黄教的开山祖师，真正具有无分别慈悲大智信心坚固不退弘扬佛法的站在所有大师肩头的高僧一宗喀巴曾讲：一切徒众应该以通达圣教无违之殊胜来弘法利生。我认为觉囊派的高僧大师们正是这样做的。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:27<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 29 楼</span></div><div class="post-body">第一章  中观他空见地 <br/>
+　　就这样，渐渐地形成了壤塘曲杰寺院和藏巴寺院。目前壤塘县十几座觉囊派寺院，大约一千多出家众居住修法。他们主要学习时轮六支瑜伽（每人必须实修三年）和其他四续密典，其中得到一定证悟的也不乏其人。值得重视的是，壤塘曲杰寺和藏巴寺建成以后，觉囊派的教法很快传播到了四川各地青海甘等广大多康地区，大大全面弘扬藏传佛教觉囊派的教法，在当代重视时轮金刚生起、圆满次第全面修持的行者除了觉囊派以外太少太少了。记得黄教的开山祖师，真正具有无分别慈悲大智信心坚固不退弘扬佛法的站在所有大师肩头的高僧一宗喀巴曾讲：一切徒众应该以通达圣教无违之殊胜来弘法利生。我认为觉囊派的高僧大师们正是这样做的。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:27</span><div class="badge-floor">第 29 进</div></div><div class="post-body">第一章  中观他空见地 <br/>
 <br/>
 觉囊派和其它藏传佛教的教派一样，不仅有自己独特的修行方法，而且在显宗理论方面也有不同于一般的解答。 <br/>
  <br/>
@@ -1409,7 +1430,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 　　觉囊派所持他空见地并不一味只谈有有有，也承认、强调空性。但空性只是因缘相合之诸起法，强调的目的是要破除我们对世俗的以虚妄为实的执着。真实之胜义谛是圆成实性的，不生灭的、不来去的，乃诸法之法性。更钦•笃布巴•喜饶坚赞大师说过：&quot;胜义圆成实，不论佛出世与不出世，法性和诸法所依之界常在而不可以为空&quot;。 <br/>
 <br/>
-　　顺便提一下，要是有谁想研究一派宗见的话低下头学才好，不然根本不懂就听人乱讲，自己也跟着乱说，不仅果报不好，更障碍了自己的解脱道路。这一定要小心！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 30 楼</span></div><div class="post-body">第二章  理论原渊源及当代学习情况 <br/>
+　　顺便提一下，要是有谁想研究一派宗见的话低下头学才好，不然根本不懂就听人乱讲，自己也跟着乱说，不仅果报不好，更障碍了自己的解脱道路。这一定要小心！ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:29</span><div class="badge-floor">第 30 进</div></div><div class="post-body">第二章  理论原渊源及当代学习情况 <br/>
 <br/>
 第一节　教法渊源 <br/>
 <br/>
@@ -1436,7 +1457,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　6.佛陀所说的《律分别》、《律事本》、《律上分》、《律杂事》等根本律典。 <br/>
 <br/>
 　　7.金刚曼、阎摩敌等各种本尊瑜伽密法。 <br/>
-一般考格西要学完因明学、般若学、俱舍学、中观学、戒律学，声明学和时轮经，各寺还有自己的寺规纪律。显宗的学习制度基本上就是这样。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:31<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 31 楼</span></div><div class="post-body">第三章　密法简要 <br/>
+一般考格西要学完因明学、般若学、俱舍学、中观学、戒律学，声明学和时轮经，各寺还有自己的寺规纪律。显宗的学习制度基本上就是这样。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:31</span><div class="badge-floor">第 31 进</div></div><div class="post-body">第三章　密法简要 <br/>
 <br/>
 密法是藏传佛教的重要修行内容。密法亦叫&quot;金刚乘&quot;，乃依止方便智慧无二分别的金刚道而现证三门金刚，觉悟成佛。各教派都有自己的具代表性的最高法门。觉囊派尤其重视密法修行。 <br/>
  <br/>
@@ -1446,7 +1467,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 　　在当代金刚上师中，青海果洛的嘉拉班朗、堪布西饶等正在传授密义。四川壤塘县的上师云登桑布、喇嘛龙成，喇嘛噶尔丹、藏巴机美多吉，活佛尼玛沃色等也在当地传授密法。四川阿坝县的大善知识喇嘛图基华金刚上师和卓格寺的堪布华尔丹等也在主讲时轮金刚六支瑜伽，此外的大德高僧还很多。 <br/>
 <br/>
-　　这里，我以我之所知简述了觉囊派的情况于中国藏语系高级佛学院，希望读者能有一定的收获。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:34<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 32 楼</span></div><div class="post-body">附录： <br/>
+　　这里，我以我之所知简述了觉囊派的情况于中国藏语系高级佛学院，希望读者能有一定的收获。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:34</span><div class="badge-floor">第 32 进</div></div><div class="post-body">附录： <br/>
 <br/>
 吉祥觉囊根钦法王------笃布巴略传 <br/>
 <br/>
@@ -1474,7 +1495,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 《觉囊派教法史》中讲，笃布巴一生著有《山法了义海论》等有关觉囊派教义的著作16种、《时轮科判》等有关时轮教法的著作18种、祈愿经文3部25种、大悲观音法类23种、赞颂类14种、《金刚曼灌顶》等灌顶法类3种、书信8种，另有《般若释》、《四吉祥经》等。今四川省阿坝藏族自治州壤塘县中壤塘藏哇寺印经院刻印的《笃布巴全集》共7函74种3289页。藏文木刻本传统计页法是每页分阳、阴两面，每页实为2而，故其全集实为6578页(或面)。这是觉囊派各寺院一直供奉的主要经典和僧人学习的主要教材之一。 <br/>
 <br/>
-笃布巴不仅有很高的佛学造诣，并且非常注重密法修炼，每学一法，必亲身实践，尤其在晚年除收徒讲经外，在修炼方面更下功夫。有关传记中有许多他修法成就的记述，说他在禅定中显见观音、文殊、金刚手、度母、药师佛、弥勒等多种佛菩萨身像和空行海、幻网、金刚亥母、金刚界等坛城，可随意役使帐面怙主和毗沙门天神等护法，可书写骂符压服鬼蜮的侵害，可幻化出多种自身同时做多种事情，去世前五年长期辟谷，二便断除，脐轮火乐暖，日夜循脉运行等等，不一而足，反映了觉囊派教徒对他的无限崇拜。甚至公认他为香拔拉天国白莲法王的转世，对他敬信备至。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:36<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 33 楼</span></div><div class="post-body">笃布巴著作全集目录 <br/>
+笃布巴不仅有很高的佛学造诣，并且非常注重密法修炼，每学一法，必亲身实践，尤其在晚年除收徒讲经外，在修炼方面更下功夫。有关传记中有许多他修法成就的记述，说他在禅定中显见观音、文殊、金刚手、度母、药师佛、弥勒等多种佛菩萨身像和空行海、幻网、金刚亥母、金刚界等坛城，可随意役使帐面怙主和毗沙门天神等护法，可书写骂符压服鬼蜮的侵害，可幻化出多种自身同时做多种事情，去世前五年长期辟谷，二便断除，脐轮火乐暖，日夜循脉运行等等，不一而足，反映了觉囊派教徒对他的无限崇拜。甚至公认他为香拔拉天国白莲法王的转世，对他敬信备至。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:36</span><div class="badge-floor">第 33 进</div></div><div class="post-body">笃布巴著作全集目录 <br/>
 <br/>
 1.《弟子衮蚌•曲扎贝详述笃布巴生平传记明灯》 <br/>
 2.《山法海论科判》 <br/>
@@ -1549,7 +1570,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 71.《佛子仁钦楚臣所着法王一切智之了义与六支加行教敕录--二资粮入道明灯》 <br/>
 72.《萨桑玛德班智达所着法王一切智之续部实践教敕录--与罗哲僧格问答笔录》 <br/>
 73.《法王一切智赞--上师传奇》 <br/>
-74.《中观殊胜秘诀》 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:41<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 34 楼</span></div><div class="post-body">附录： <br/>
+74.《中观殊胜秘诀》 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:41</span><div class="badge-floor">第 34 进</div></div><div class="post-body">附录： <br/>
 <br/>
 吉祥觉囊一切智－－－慈尊多罗拉他略传 <br/>
 <br/>
@@ -1567,7 +1588,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 八岁时，经过师徒商议，请来达隆巴钦波更噶坚赞前来授与出家戒，取名为“贡噶布扎西坚赞，”净相中变化的善知识印度学者杂拉那塔赐名为“多罗那他”（意为“救度怙主”）。以后他依止克却强巴伦珠闻习显密经论，得到了智者的学识；从多仁贡噶坚赞闻习以道果为主的多至不可思议的灌顶教诫；从扎堆却古拉旺扎巴闻习以那饶六法、大手印为主的一切无量口诀，现观开悟了内甚深道，获得了金刚十二地智慧，即成就自在之位；从杰仲更噶巴桑学习时轮和怙主教诫，被委任为觉囊（派）寺住持。 <br/>
 <br/>
-堪布隆热嘉措给地传授了时轮灌顶、《时轮续》、《注释续》、《口诀》、六支瑜伽的加持义传承，他深领诸义，证悟究竟。闻习觉囊派教法后开始钻研布顿派教法，闻习了各大上师的著作、印度文古书、更钦笃补巴全集，以及昆多种教诫论著。从克珠桑杰益希、持金刚益希旺波等著名学者是闻习萨迦、觉囊、香巴噶居、夏鲁、主巴噶居、达隆噶居等教派的教法和四续部一切灌顶教理、口诀；跟从印度大成就师格茹洛学巴桑杰贝巴贡波闻习了密乘续部生圆二次第全部灌顶，讲授了以前西藏没有的五百余部密乘无上瑜伽?另外，他前后向印度数名瑜伽师求授甚深法和内外明处、声明学等，熟习一切密意。到将近二十岁时，由持律师贡噶坚赞为堪布，强巴伦珠为阿奢黎（轨范师），杰仲更噶巴桑等为摩师和补缺师提前给他授了比丘戒，成为外如声闻乘，内如佛子菩提心的大持密咒师。前后请求了这些上师传授各种教法。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 35 楼</span></div><div class="post-body">中期事迹： <br/>
+堪布隆热嘉措给地传授了时轮灌顶、《时轮续》、《注释续》、《口诀》、六支瑜伽的加持义传承，他深领诸义，证悟究竟。闻习觉囊派教法后开始钻研布顿派教法，闻习了各大上师的著作、印度文古书、更钦笃补巴全集，以及昆多种教诫论著。从克珠桑杰益希、持金刚益希旺波等著名学者是闻习萨迦、觉囊、香巴噶居、夏鲁、主巴噶居、达隆噶居等教派的教法和四续部一切灌顶教理、口诀；跟从印度大成就师格茹洛学巴桑杰贝巴贡波闻习了密乘续部生圆二次第全部灌顶，讲授了以前西藏没有的五百余部密乘无上瑜伽?另外，他前后向印度数名瑜伽师求授甚深法和内外明处、声明学等，熟习一切密意。到将近二十岁时，由持律师贡噶坚赞为堪布，强巴伦珠为阿奢黎（轨范师），杰仲更噶巴桑等为摩师和补缺师提前给他授了比丘戒，成为外如声闻乘，内如佛子菩提心的大持密咒师。前后请求了这些上师传授各种教法。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:49</span><div class="badge-floor">第 35 进</div></div><div class="post-body">中期事迹： <br/>
 <br/>
 贡噶宁布二十一岁时，根据上师贡噶坚赞、阿奢黎强巴伦珠的“住持觉囊寺”的口头命令，于阴历八月八日吉祥日正式登上了觉囊寺堪布宝座，发放任职茶，从准备到移交的顺缘都很好。之后，他住修于吉普，创立一年中不间断的觉囊大时轮的教授，每一次教授都很顺利。阴历一月初九日，举行大时轮教授朵玛仪轨，首先介绍净善教授。从印度阿奢黎素乃巴难室利和布拉哇杂拉等学者钻研一切甚深教授，深领全义。觉囊寺修供法会期间，又立时轮彩色细砂，为各修行院的七百余名僧人传授十一面观世音菩萨圆满顶。 <br/>
 <br/>
@@ -1589,11 +1610,11 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 总而言之，杰增仁波且多罗那他著作甚丰，包括《佛百业》、《印度佛教史》以及各大班智达传记多部。显教经典注释方面有《般若波罗蜜多心经释》、《普贤经释》等，大乘中观他空见与教派方面多部，《时轮》、《胜乐》、《集密》、《大威德》等密乘续部仪轨著作多部；《时轮》、《胜乐》、《集密》生圆二次第法注释等密乘经典注释方面多部，以及《佛陀赞》、《资粮》、《祈愿》等总共十四包，收成全集。根据第二佛所说觉囊派意趣，对显密和了义大中观作了明确的说明解释和发展。 <br/>
 <br/>
-对于我派历辈事业仪式，若如侍从一样的巴贡扎甘扩法、诺金盖扎巴、扎热巴巴孜嘉尚、独髻佛母南曼嘉姆、切巴赞扎杰、当噶尔扎赞、孜钦桑拉等奉命完成了。对巴科尔德庆、孜钦秀仇、嘉、桑丹（桑顶）、塔巴岭、达丹群昆佩等寺的保管员和卫藏地区不同派系的大多数寺院进行了卓有成效的管理和维护，根据藏巴第悉更噶饶丹旺格嘉波的安排，任命其侄拉巴更噶丹巴为强佐。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:52<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 36 楼</span></div><div class="post-body">后期的事业： <br/>
+对于我派历辈事业仪式，若如侍从一样的巴贡扎甘扩法、诺金盖扎巴、扎热巴巴孜嘉尚、独髻佛母南曼嘉姆、切巴赞扎杰、当噶尔扎赞、孜钦桑拉等奉命完成了。对巴科尔德庆、孜钦秀仇、嘉、桑丹（桑顶）、塔巴岭、达丹群昆佩等寺的保管员和卫藏地区不同派系的大多数寺院进行了卓有成效的管理和维护，根据藏巴第悉更噶饶丹旺格嘉波的安排，任命其侄拉巴更噶丹巴为强佐。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:52</span><div class="badge-floor">第 36 进</div></div><div class="post-body">后期的事业： <br/>
 <br/>
 杰增仁波且杰增成勒旺姆和各位弟子讲述了关于未来的预言、佛教增减盈亏（兴盛衰败）以及国政的变化，?任命嘉央活佛桑杰嘉措为了义教法的乐园达丹工林寺的住持。他说：“这一次之后，我再不在曲隆修行院和觉囊讲经了。”在觉囊讲授了时轮教诫和修持。他又说：“现在放心了，把桑杰嘉措活佛已安排在达丹丹曲林寺法座之上，在我去世后会忙碌一阵。”一般来说，他智慧广博，能与大家随顺，但是孜方面（指第悉藏巴）没有考虑过他，我与第悉藏巴同心同德，正是为此。现在负担轻了，除了今年，亦不再进行定时讲授。现在著作的事也是如此，除了不便拒绝的敦请者外，再不做任何事，闲坐为好。“成勒旺姆请求道：”总之，从整个佛教，尤其是了义教法考虑，请求你长寿。此外，即使转生，也请你转生为利益我们派的大德，请慈悲摄持。“多罗那他说：”大家能一心一意祈求，倘若了解缘起变化，亦可利益此教。 <br/>
 <br/>
-这样，多罗那他大师完成利益教法和众生的大业后，于阴水猪年（明崇祯八年，1635年）四月二十八日为利益他界众生而逝往药师佛土，享年六十一岁。达丹丹曲林寺和各修行院的弟子们以及各们敬仰大师的首领广献供养，为他举行盛大的超荐。他的继承事业的无数弟中有执掌觉囊派的桑杰嘉措活佛、克旺益希嘉措、堪钦仁钦嘉措、克珠洛哲南杰、岗波活佛、曲杰阿旺巴、曲吾穷哇活佛、大师的堪布贡噶扎西坚赞、阿格旺波活佛、哲布活佛、夏仲上师仲、曲杰仁顶巴、时轮夏尔钦巴、曲杰拉欧巴、比丘宁波塔耶、强巴云丹贡波、阿旺更噶索南、更噶成勒旺姆、后藏王子贡噶丹贝坚赞等，除了这些弟子，上下一切弟子都主持自宗。佛教施主藏巴第悉彭措南杰父子、绛达扎西道吉、羊卓丹增弥居旺格嘉波（羊卓达垅万户的万户长。羊卓达垅，即今西藏浪卡子县）等许多有无限权势的人也对他礼敬供奉。上述简略介绍了第十四辈尊胜转世的事迹。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:53<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 37 楼</span></div><div class="post-body">藏哇寺印本《多罗那他全集》目录 <br/>
+这样，多罗那他大师完成利益教法和众生的大业后，于阴水猪年（明崇祯八年，1635年）四月二十八日为利益他界众生而逝往药师佛土，享年六十一岁。达丹丹曲林寺和各修行院的弟子们以及各们敬仰大师的首领广献供养，为他举行盛大的超荐。他的继承事业的无数弟中有执掌觉囊派的桑杰嘉措活佛、克旺益希嘉措、堪钦仁钦嘉措、克珠洛哲南杰、岗波活佛、曲杰阿旺巴、曲吾穷哇活佛、大师的堪布贡噶扎西坚赞、阿格旺波活佛、哲布活佛、夏仲上师仲、曲杰仁顶巴、时轮夏尔钦巴、曲杰拉欧巴、比丘宁波塔耶、强巴云丹贡波、阿旺更噶索南、更噶成勒旺姆、后藏王子贡噶丹贝坚赞等，除了这些弟子，上下一切弟子都主持自宗。佛教施主藏巴第悉彭措南杰父子、绛达扎西道吉、羊卓丹增弥居旺格嘉波（羊卓达垅万户的万户长。羊卓达垅，即今西藏浪卡子县）等许多有无限权势的人也对他礼敬供奉。上述简略介绍了第十四辈尊胜转世的事迹。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:53</span><div class="badge-floor">第 37 进</div></div><div class="post-body">藏哇寺印本《多罗那他全集》目录 <br/>
 <br/>
 1.《多罗那他详述自己生平》 <br/>
 2.《多罗那他秘传广本》 <br/>
@@ -1965,7 +1986,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 370.《大德上师所着自生修习法》 <br/>
 371.《大威德金刚之念修实施法》 <br/>
 372.《热译师耳传之非共妙吉祥怖畏金刚秘诀》 <br/>
-373.《著作全集目录》 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 38 楼</span></div><div class="post-body">曼木达哇•图登格勒嘉措著作全集目录 <br/>
+373.《著作全集目录》 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:56</span><div class="badge-floor">第 38 进</div></div><div class="post-body">曼木达哇•图登格勒嘉措著作全集目录 <br/>
 <br/>
 1.《堆扎总义--诸法性相明示宝灯》 <br/>
 2.《堆扎总义宝灯辨析日光》 <br/>
@@ -2165,7 +2186,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 196.《平时修持纠正等起法》 <br/>
 197.《暇满之身修持教诫》 <br/>
 198.《心识性相明义宝缦》 <br/>
-199.《祖拉楚历算著作之优劣辨析--开启无障晶屋宝钥》 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-17 23:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 39 楼</span></div><div class="post-body">藏哇寺金刚上师吉美多吉法王又应汉藏居士信众的请求，分别灌传了消除疫疾，魔障的愤怒摧碎金刚王灌顶，长寿无病的长寿佛三尊灌顶，如意轮观世音，如意宝观世音，密修作明佛母和白文殊的灌顶和修法传承。 <br/>
+199.《祖拉楚历算著作之优劣辨析--开启无障晶屋宝钥》 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-17 23:56</span><div class="badge-floor">第 39 进</div></div><div class="post-body">藏哇寺金刚上师吉美多吉法王又应汉藏居士信众的请求，分别灌传了消除疫疾，魔障的愤怒摧碎金刚王灌顶，长寿无病的长寿佛三尊灌顶，如意轮观世音，如意宝观世音，密修作明佛母和白文殊的灌顶和修法传承。 <br/>
 大威德金刚十四天的灌顶内容附录如下： <br/>
 （一）七天大灌顶仪轨 <br/>
 第一天，前行灌顶 <br/>
@@ -2186,7 +2207,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 （三）消除疫疾魔障，无病长寿 <br/>
 愤怒摧碎金刚王灌顶 <br/>
 长寿佛灌顶 <br/>
-白度母灌顶 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-20 23:39<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 40 楼</span></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+白度母灌顶 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金鑫发表于 2010-10-20 23:39</span><div class="badge-floor">第 40 进</div></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>

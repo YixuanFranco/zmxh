@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>药师琉璃光七佛本愿功德经 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>药师琉璃光七佛本愿功德经 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">药师琉璃光七佛本愿功德经</h1>
-<div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2008-7-10 23:46<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">药师琉璃光七佛本愿功德经 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">药师琉璃光七佛本愿功德经</h1>
+<div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2008-7-10 23:46</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">药师琉璃光七佛本愿功德经 <br/>
     如是我闻：一时，薄伽梵游化诸国，至广严城在乐音树下，与大苾刍众八千人俱，菩萨摩诃萨三万六千。其名曰：曼殊室利菩萨、观自在菩萨、慈氏菩萨、善现菩萨、大慧菩萨、明 慧菩萨、山峰菩萨、辩峰菩萨、持妙高峰菩萨、不空超越菩萨、彻妙音菩萨、常思惟菩萨、执金刚菩萨，如是等诸大菩萨而为上首。及诸国王、大臣、婆罗门、居士、天龙八部、人非人等，无量大众恭敬围绕而为说法，初中后善，文义巧妙，纯一圆满清净鲜白梵行之相，示教利喜，皆令具足微妙行愿趣大菩提。  <br/>
  <br/>
 尔时，曼殊室利法王子菩萨摩诃萨，承佛威神从座而起，偏袒右肩，右膝着地，合掌恭敬而白佛言：“世尊，今有无量人天大众，为听法故皆已云集。唯佛世尊从初发意乃至于今所有无量尘沙数劫，诸佛刹土无不知见。愿为我等及未来世像法众生，慈悲演说诸佛名号、本愿功德、国土庄严善巧方便差别之相，令诸闻者业障消除，乃至菩提得不退转。” <br/>
@@ -73,7 +94,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 “曼殊室利，是谓彼佛如来、应、正等觉行菩萨道时，所发八种微妙大愿。又彼世尊从初发心，常以定力成就众生，供养诸佛，严净佛土，菩萨眷属悉皆圆满。此之福德不可思议，一切声闻及诸独觉，纵经多劫说不能尽，唯除如来补处菩萨。 <br/>
 <br/>
-“曼殊室利，若有净信男子、女人，若王、大臣、长者、居士，心悕福德，断诸烦恼，称彼佛名，读斯经典，于彼如来至心尊重恭敬供养，所有一切罪恶业障及诸病苦悉皆消灭，诸有愿求无不随意，得不退转，乃至菩提。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2008-7-10 23:48<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">   “复次，曼殊室利，东方去此过五殑伽河沙佛土，有世界名曰妙宝，佛号宝月智严光音自在王如来、应、正等觉，有无量亿菩萨围绕现在说法，皆演大乘微妙深义。曼殊室利，彼佛如来从初发心行菩萨道时，发八大愿。云何为八？ <br/>
+“曼殊室利，若有净信男子、女人，若王、大臣、长者、居士，心悕福德，断诸烦恼，称彼佛名，读斯经典，于彼如来至心尊重恭敬供养，所有一切罪恶业障及诸病苦悉皆消灭，诸有愿求无不随意，得不退转，乃至菩提。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2008-7-10 23:48</span><div class="badge-floor">第 2 进</div></div><div class="post-body">   “复次，曼殊室利，东方去此过五殑伽河沙佛土，有世界名曰妙宝，佛号宝月智严光音自在王如来、应、正等觉，有无量亿菩萨围绕现在说法，皆演大乘微妙深义。曼殊室利，彼佛如来从初发心行菩萨道时，发八大愿。云何为八？ <br/>
  <br/>
 “第一大愿，愿我来世得菩提时，若有众生为营农业及商贾事，令心扰乱，废修菩提殊胜善法，于生死中不能出离，各各备受无边苦恼，若能至心称我名者，由是力故，衣服、饮食、资生之具、金银珍宝随愿充足，所有善根皆得增长，亦不舍离菩提之心，诸恶道苦咸蒙解脱，乃至菩提。 <br/>
 <br/>
@@ -93,7 +114,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 “曼殊室利，是为彼佛如来、应、正等觉行菩萨道时，所发八种微妙大愿。又彼如来所居佛土，广博严净，地平如掌，天妙香树而为行列，天华遍覆，天乐常鸣，天妙铃铎随处悬布，天宝庄严师子之座，天宝砌饰诸妙浴池，其地柔软无诸瓦砾，亦无女人及诸烦恼，皆是不退诸菩萨众莲华化生，若起念时饮食、衣服及诸资具随意现前，是故名为妙宝世界。 <br/>
 <br/>
-“曼殊室利，若有净信男子、女人，国王、王子、大臣、辅相、中宫婇女，昼夜六时殷重至心，恭敬供养彼佛世尊及称名号，并造形像，香华、音乐、烧香、末香、涂香而为奉献，清净严洁，于七日中持八戒斋，于诸众生起慈悲意，愿生彼土。彼佛世尊及诸菩萨护念是人，一切罪业悉皆消灭，无上菩提得不退转，于贪恚痴渐得微薄，无诸病苦，增益寿命，随有悕求悉皆如意，斗诤怨家咸生欢喜，舍此身已往彼刹土莲华化生，当生之时，念定总持悉皆明了。曼殊室利，如是当知彼佛名号无量功德，若得闻者所愿皆成。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2008-7-10 23:53<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">   “复次，曼殊室利，东方去此过六殑伽河沙佛土，有世界名曰圆满香积，佛号金色宝光妙行成就如来、应、正等觉，有无量亿万菩萨围绕现在说法。曼殊室利，彼佛如来从初发心行菩萨道时，发四大愿。云何为四？ <br/>
+“曼殊室利，若有净信男子、女人，国王、王子、大臣、辅相、中宫婇女，昼夜六时殷重至心，恭敬供养彼佛世尊及称名号，并造形像，香华、音乐、烧香、末香、涂香而为奉献，清净严洁，于七日中持八戒斋，于诸众生起慈悲意，愿生彼土。彼佛世尊及诸菩萨护念是人，一切罪业悉皆消灭，无上菩提得不退转，于贪恚痴渐得微薄，无诸病苦，增益寿命，随有悕求悉皆如意，斗诤怨家咸生欢喜，舍此身已往彼刹土莲华化生，当生之时，念定总持悉皆明了。曼殊室利，如是当知彼佛名号无量功德，若得闻者所愿皆成。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2008-7-10 23:53</span><div class="badge-floor">第 3 进</div></div><div class="post-body">   “复次，曼殊室利，东方去此过六殑伽河沙佛土，有世界名曰圆满香积，佛号金色宝光妙行成就如来、应、正等觉，有无量亿万菩萨围绕现在说法。曼殊室利，彼佛如来从初发心行菩萨道时，发四大愿。云何为四？ <br/>
  <br/>
 “第一大愿，愿我来世得菩提时，若有众生，造作种种屠害之业断诸生命，由斯恶业受地狱苦，设得为人短寿多病，或遭水火刀毒所伤当受死苦，若闻我名至心称念，由是力故，所有恶业悉皆消灭，无病长寿不遭横死，乃至菩提。 <br/>
 <br/>
@@ -109,7 +130,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 “呾侄他　悉睇悉睇　苏悉睇　谟折你　木刹你　目帝毗目帝　庵末丽　毗末丽　忙揭例　呬囒若揭鞞　曷喇呾娜　揭鞞　萨婆頞他　婆但你　钵啰摩頞他　娑但你　末捺细　莫诃末捺细　頞步帝　頞窒步帝　毗多婆曳　苏跋泥(去)　跋罗蚶摩　瞿侠(去)　跋啰蚶摩　柱侠帝　萨婆頞剃数　阿钵啰市帝　萨跋呾啰　阿钵喇底[口+歇]帝　折睹杀瑟[木+致]　勃陀俱胝　婆使帝　纳摩萨婆　但他揭多喃　莎诃 <br/>
 <br/>
-“尔时，世尊说此大力大明咒时，众中所有诸大菩萨、四大天王、释梵王等赞言：‘善哉！善哉！大悲世尊，能说如是过去如来大力神咒，为欲饶益无量众生，竭烦恼海，登涅盘岸，除去疾病，所愿皆满。’佛告大众：‘若有净信男子、女人，国王、王子、大臣、辅相、中宫婇女，情悕福德，于此神咒起敬信心，若读若诵，若为他人演说其义，于诸含识起大悲心，昼夜六时香华灯烛殷重供养，清净澡浴，持八戒斋至诚念诵，所有极重无边业障悉皆消灭，于现身中离诸烦恼，命欲终时诸佛护念，即于彼国莲华化生。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2008-7-10 23:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">   “复次，曼殊室利，东方去此过七殑伽河沙佛土，有世界名曰无忧，佛号无忧最胜吉祥如来、应、正等觉，今现在彼为众说法。又彼如来所居佛土，广博严净，地平如掌皆以宝成，细滑柔软常有香气，无忧苦声离诸烦恼，亦无恶趣及女人名，处处皆有金砌浴池香水盈满，宝树行列，华果滋茂，胜妙音乐不鼓自鸣，譬如西方极乐世界无量寿国功德庄严。曼殊室利，彼佛世尊行菩萨道时，发四大愿。云何为四？ <br/>
+“尔时，世尊说此大力大明咒时，众中所有诸大菩萨、四大天王、释梵王等赞言：‘善哉！善哉！大悲世尊，能说如是过去如来大力神咒，为欲饶益无量众生，竭烦恼海，登涅盘岸，除去疾病，所愿皆满。’佛告大众：‘若有净信男子、女人，国王、王子、大臣、辅相、中宫婇女，情悕福德，于此神咒起敬信心，若读若诵，若为他人演说其义，于诸含识起大悲心，昼夜六时香华灯烛殷重供养，清净澡浴，持八戒斋至诚念诵，所有极重无边业障悉皆消灭，于现身中离诸烦恼，命欲终时诸佛护念，即于彼国莲华化生。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2008-7-10 23:55</span><div class="badge-floor">第 4 进</div></div><div class="post-body">   “复次，曼殊室利，东方去此过七殑伽河沙佛土，有世界名曰无忧，佛号无忧最胜吉祥如来、应、正等觉，今现在彼为众说法。又彼如来所居佛土，广博严净，地平如掌皆以宝成，细滑柔软常有香气，无忧苦声离诸烦恼，亦无恶趣及女人名，处处皆有金砌浴池香水盈满，宝树行列，华果滋茂，胜妙音乐不鼓自鸣，譬如西方极乐世界无量寿国功德庄严。曼殊室利，彼佛世尊行菩萨道时，发四大愿。云何为四？ <br/>
  <br/>
 “第一大愿，愿我来世得菩提时，若有众生，常为忧苦之所缠逼，若闻我名至心称念，由是力故，所有忧悲及诸苦恼悉皆消灭，长寿安隐，乃至菩提。 <br/>
 <br/>
@@ -119,7 +140,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 “第四大愿，愿我来世得菩提时，若有众生，常为药叉诸恶鬼神之所娆乱，夺其精气受诸苦恼，若闻我名至心称念，由是力故，诸药叉等悉皆退散各起慈心，解脱众苦乃至菩提。 <br/>
 <br/>
-“曼殊室利，是为彼佛如来、应、正等觉，所发四种微妙大愿。若有众生闻彼佛名，昼夜六时称名礼敬至心供养，于众生处起慈悲心，业障消灭解脱忧苦，无病长寿得宿命智，于诸佛土莲华化生，常为诸天之所卫护。曼殊室利，称彼佛名能生如是无量福业，而彼佛土愿力庄严殊胜功德，声闻、独觉所不能知，唯除如来、应、正等觉。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2008-7-10 23:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">　　“复次，曼殊室利，东方去此过八殑伽河沙佛土，有世界名曰法幢，佛号法海雷音如来、应、正等觉，今现说法。曼殊室利，彼佛世尊所居国土清净无秽，其地平正玻璃所成，常有光明香气芬馥，以帝青宝而为城郭，有八街道砌以金银，楼阁、殿堂、飞甍、户牖、栏楯庄饰皆众宝成，天香宝树随处行列，于其枝上拄以天缯，复有宝铃处处垂下，微风吹动出妙音声，演畅无常、苦、空、无我，众生闻者舍离欲缠、习气渐除、证甚深定，天妙香华缤纷而下，于其四面有八浴池，底布金沙香水弥满。曼殊室利，于彼佛土无诸恶趣，亦无女人，莲华化生无复烦恼。彼佛如来行菩萨道时，发四大愿。云何为四？ <br/>
+“曼殊室利，是为彼佛如来、应、正等觉，所发四种微妙大愿。若有众生闻彼佛名，昼夜六时称名礼敬至心供养，于众生处起慈悲心，业障消灭解脱忧苦，无病长寿得宿命智，于诸佛土莲华化生，常为诸天之所卫护。曼殊室利，称彼佛名能生如是无量福业，而彼佛土愿力庄严殊胜功德，声闻、独觉所不能知，唯除如来、应、正等觉。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2008-7-10 23:55</span><div class="badge-floor">第 5 进</div></div><div class="post-body">　　“复次，曼殊室利，东方去此过八殑伽河沙佛土，有世界名曰法幢，佛号法海雷音如来、应、正等觉，今现说法。曼殊室利，彼佛世尊所居国土清净无秽，其地平正玻璃所成，常有光明香气芬馥，以帝青宝而为城郭，有八街道砌以金银，楼阁、殿堂、飞甍、户牖、栏楯庄饰皆众宝成，天香宝树随处行列，于其枝上拄以天缯，复有宝铃处处垂下，微风吹动出妙音声，演畅无常、苦、空、无我，众生闻者舍离欲缠、习气渐除、证甚深定，天妙香华缤纷而下，于其四面有八浴池，底布金沙香水弥满。曼殊室利，于彼佛土无诸恶趣，亦无女人，莲华化生无复烦恼。彼佛如来行菩萨道时，发四大愿。云何为四？ <br/>
  <br/>
 “第一大愿，愿我来世得菩提时，若有众生生邪见家，于佛法僧不生净信，远离无上菩提之心，若闻我名至心称念，由是力故，无明邪慧日夜消灭，于三宝所深生正信，不复退转，乃至菩提。 <br/>
 <br/>
@@ -129,7 +150,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 “第四大愿，愿我来世得菩提时，若有众生由先恶业，共相斗诤作不饶益，弓-箭刀杖互为伤损，若闻我名至心称念，由是力故，各起慈心不相损害，不善之念尚自不生，况于前人欲断其命？常行喜舍，乃至菩提。 <br/>
 <br/>
-“曼殊室利，是为彼佛如来、应、正等觉行菩萨道时，所发四种微妙大愿。若有净信男子、女人，闻彼佛名至心礼敬，殷勤供养受持念诵，业障消灭，得不退转菩提之心，具宿命智，所生之处常得见佛，无病长寿，命终之后生彼国中，衣服、饮食、资生之具随念皆至无所乏少。曼殊室利，彼佛世尊具足如是无量功德，是故众生常当忆念，勿令忘失。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2008-7-10 23:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">   “复次，曼殊室利，东方去此过九殑伽河沙佛土，有世界名曰善住宝海，佛号法海胜慧游戏神通如来、应、正等觉，现在说法。曼殊室利，彼佛如来行菩萨道时，发四大愿。云何为四？ <br/>
+“曼殊室利，是为彼佛如来、应、正等觉行菩萨道时，所发四种微妙大愿。若有净信男子、女人，闻彼佛名至心礼敬，殷勤供养受持念诵，业障消灭，得不退转菩提之心，具宿命智，所生之处常得见佛，无病长寿，命终之后生彼国中，衣服、饮食、资生之具随念皆至无所乏少。曼殊室利，彼佛世尊具足如是无量功德，是故众生常当忆念，勿令忘失。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2008-7-10 23:56</span><div class="badge-floor">第 6 进</div></div><div class="post-body">   “复次，曼殊室利，东方去此过九殑伽河沙佛土，有世界名曰善住宝海，佛号法海胜慧游戏神通如来、应、正等觉，现在说法。曼殊室利，彼佛如来行菩萨道时，发四大愿。云何为四？ <br/>
  <br/>
 “第一大愿，愿我来世得菩提时，若有众生造众恶业，种植耕耘损诸生命，或复兴易欺诳他人，战阵兵戈常为杀害，若闻我名至心称念，由是力故，资生之具不假营求随心满足，常修众善，乃至菩提。 <br/>
 <br/>
@@ -139,7 +160,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 “第四大愿，愿我来世得菩提时，若有众生造众恶业，不信三宝，随虚妄见，弃背正理，爱乐邪徒，谤毁佛经言非圣说，外道典籍恭敬受持，自作教人俱生迷惑，当堕地狱无有出期，设得为人生八难处，远离正道盲无慧目，如是之人若闻我名至心称念，由是力故，临命终时，正念现前解脱众难，常生中国受胜妙乐，乃至菩提。 <br/>
 <br/>
-“曼殊室利，是为彼佛如来、应、正等觉行菩萨道时，所发四种微妙大愿。曼殊室利，彼佛国土功德庄严，与上妙宝如来世界等无有异。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2008-7-10 23:58<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">   “复次，曼殊室利，东方去此过十殑伽河沙佛土，有世界名净琉璃，佛号药师琉璃光如来、应、正等觉。曼殊室利，彼佛世尊从初发心行菩萨道时，发十二大愿。云何十二？ <br/>
+“曼殊室利，是为彼佛如来、应、正等觉行菩萨道时，所发四种微妙大愿。曼殊室利，彼佛国土功德庄严，与上妙宝如来世界等无有异。 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2008-7-10 23:58</span><div class="badge-floor">第 7 进</div></div><div class="post-body">   “复次，曼殊室利，东方去此过十殑伽河沙佛土，有世界名净琉璃，佛号药师琉璃光如来、应、正等觉。曼殊室利，彼佛世尊从初发心行菩萨道时，发十二大愿。云何十二？ <br/>
  <br/>
 “第一大愿，愿我来世得菩提时，自身光明照无边界，三十二相、八十随好庄严其身，令诸有情如我无异。 <br/>
 <br/>
@@ -167,7 +188,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 “曼殊室利，是为药师琉璃光如来、应、正等觉行菩萨道时，所发十二微妙上愿。” <br/>
 <br/>
-药师琉璃光七佛本愿功德经卷上 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2008-7-11 00:01<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">    尔时，佛告曼殊室利：“彼药师琉璃光如来行菩萨道时，所发大愿及彼佛土功德庄严，我于一劫若过一劫说不能尽。然彼佛土纯一清净，无诸欲染，亦无女人及三恶趣苦恼之声，以净琉璃而为其地，城阙、宫殿及诸廊宇、轩窗、罗网皆七宝成，亦如西方极乐世界功德庄严。于彼国中有二菩萨，一名日光遍照，二名月光遍照，于彼无量菩萨众中而为上首，能持彼佛正法宝藏。是故，曼殊室利，若有净信男子、女人，应当愿生彼佛世界。 <br/>
+药师琉璃光七佛本愿功德经卷上 </div></div><div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2008-7-11 00:01</span><div class="badge-floor">第 8 进</div></div><div class="post-body">    尔时，佛告曼殊室利：“彼药师琉璃光如来行菩萨道时，所发大愿及彼佛土功德庄严，我于一劫若过一劫说不能尽。然彼佛土纯一清净，无诸欲染，亦无女人及三恶趣苦恼之声，以净琉璃而为其地，城阙、宫殿及诸廊宇、轩窗、罗网皆七宝成，亦如西方极乐世界功德庄严。于彼国中有二菩萨，一名日光遍照，二名月光遍照，于彼无量菩萨众中而为上首，能持彼佛正法宝藏。是故，曼殊室利，若有净信男子、女人，应当愿生彼佛世界。 <br/>
  <br/>
 “复次，曼殊室利，若有众生不识善恶，唯怀贪惜，不知惠施及施果报，愚痴少智无有信心，多畜珍财勤劳守护，见乞者来心生不喜，设不获已行惠施时，如割身肉深生吝惜。复有无量悭贪有情积集资财，然于自身尚不能用，况当供给父母、妻子、奴婢、仆使及来乞者？彼诸有情从此命终，生饿鬼中或傍生趣，由昔人间曾闻药师琉璃光如来名故，虽在恶趣还得忆念彼如来名，即于彼没生在人中，得宿命智，念畏恶趣苦，不乐欲乐，好行惠施，赞叹施者，所有财物无悭吝心，渐次尚能以头、目、手、足、血、肉、身分施来求者，况余财物！ <br/>
 <br/>

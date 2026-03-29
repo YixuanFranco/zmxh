@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>白度母如意轮修法仪轨及修法导论 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>白度母如意轮修法仪轨及修法导论 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/显密传修胜宝鬘.html">显密传修胜宝鬘</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">白度母如意轮修法仪轨及修法导论</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-4-23 14:53<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">http://www.zmxh.com/pics/_________20060215225638.jpg <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/显密传修胜宝鬘.html">显密传修胜宝鬘</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">白度母如意轮修法仪轨及修法导论</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-4-23 14:53</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">http://www.zmxh.com/pics/_________20060215225638.jpg <br/>
 <br/>
 白度母如意轮修法仪轨及修法导论 <br/>
 <br/>
@@ -189,7 +210,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 此仪轨乃是集帕邦喀大师所造之 《白度母如意轮仪轨修法》和达札呼图克图的《白度母如意轮仪轨修法》二者之精要而成。一九九九年十二月十六日，夏坝活佛翻译于理塘长青春科尔寺。比丘释法净、石磊整理。 <br/>
 <br/>
-吉祥圆满 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-10-17 17:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">白度母如意轮修法导论 <br/>
+吉祥圆满 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-10-17 17:22</span><div class="badge-floor">第 2 进</div></div><div class="post-body">白度母如意轮修法导论 <br/>
 夏坝活佛讲授 <br/>
  <br/>
 我们今生所得到的暇满人身，非常难得和珍贵。为什么呢？《菩提道次第广论》从三方面来讲这个问题。第一，从数量上讲：佛曾对弟子讲：“人死之后，堕落恶道者，多如大地土，生善趣者，如爪（佛爪）上土。”我们仔细观察一下周围的世界，人类有多少，旁生（畜生）有多少！就算是蚂蚁的数量，也不知要超过人类多少倍，更不要说大海里的、地上跑的、天上飞的等一切生物，还有一些肉眼无法看到的生物。它们的数量简直无法想象。如果再加上地狱和饿鬼道里的众生，那更加难以想象。 <br/>
@@ -214,7 +235,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 到了七十岁那年，他又祈祷白度母。白度母对他说：“你再造一尊白度母像，就可延寿十年。”于是，哲巴仁波切用青铜塑造了一尊白度母像。八十岁时，哲巴仁波切为了要利益更多的众生，他又祈祷白度母。本尊对他说：“你再造一尊白度母像，可以延寿许多年。”这次，哲巴仁波切在一座桥上画了一幅白度母像。这样，哲巴仁波切一生的利生事业，一直到九十五岁。另外在第一世DL喇嘛根敦珠巴的传记中也有类似的记载。因此，只要你虔诚祈祷白度母，也能获得这样不可思议的加持。 <br/>
  <br/>
-此白度母如意轮的修法是噶当派的修法仪轨和心法窍诀二者合一的不共的殊胜修法，一般其它教派是没有的。此修法一部分是噶当派原有的窍诀，而另一部分是由文殊菩萨亲自指点，所以它非常殊胜，是集二者的精华所成。此修法的传承，自白度母如意轮至我的上师，从未间断。我有几位传承上师，如嘉瓦仁波切、第十世班禅大师、永嘉仁波切、郭松仁波切、蒋次来绕央上师等，他们都曾给我授过灌顶及修法窍诀。所以我有很多灌顶传承，都非常圆满。以上是讲白度母如意轮修法传承的所来义。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-10-17 17:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">接下来我要讲仪轨修法部分。 <br/>
+此白度母如意轮的修法是噶当派的修法仪轨和心法窍诀二者合一的不共的殊胜修法，一般其它教派是没有的。此修法一部分是噶当派原有的窍诀，而另一部分是由文殊菩萨亲自指点，所以它非常殊胜，是集二者的精华所成。此修法的传承，自白度母如意轮至我的上师，从未间断。我有几位传承上师，如嘉瓦仁波切、第十世班禅大师、永嘉仁波切、郭松仁波切、蒋次来绕央上师等，他们都曾给我授过灌顶及修法窍诀。所以我有很多灌顶传承，都非常圆满。以上是讲白度母如意轮修法传承的所来义。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-10-17 17:25</span><div class="badge-floor">第 3 进</div></div><div class="post-body">接下来我要讲仪轨修法部分。 <br/>
 此修法在密宗四续密法中属于事部。四续金刚包括事部、行部、瑜伽部和无上瑜伽部。当你修炼密法之前，不管你修炼的是事部、行部或瑜伽部，还是无上瑜伽部的密法，首先必须要修炼非常圆满的前加行，也就是显宗里的皈依和发菩提心。如果你修炼密法时，没有皈依及菩提心，那么你修炼密法的结果是成佛还是下地狱，就很难说了。因此白度母如意轮的修法分两个部分，一是共同修法；二是不共修法。 <br/>
  <br/>
 所谓共同修法就是前加行，它一般包括四个部分：念四皈依、磕长头、念百字明和供曼陀罗。但是这些在前加行中并不是最主要的，最主要的，也是修行中不可缺少的部分，一是皈依上师三宝，二是发菩提心。如果详细的分就是三个，一是出离心；二是菩提心；三是性空正见。既然是三个，那么为什么把它说成皈依和菩提心两部分呢？因为出离心完全可以包括在皈依当中。因为一个人皈依必定会有原因，而绝对不会无缘无故的皈依。那么皈依的原因又是什么呢？ <br/>
@@ -265,7 +286,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 修炼密宗事部、行部和瑜伽部的密法，可以在七世或十世之内，得到无上正果。而修炼无上瑜伽部的密法，可以即身得到无上正果。在这些密法中，有的可以当做主要的修行方法，有的可以当做在修行当中不可缺少的条件，比如降魔、消除一切障碍等。但四部密法都是要修的，因为释迦牟尼佛讲了大乘和小乘、显宗和密宗。这是一个从头至尾修炼成佛的完整程序，没有需要和不需要，都是佛法修炼道路中不可缺少的部分。只不过你到了某个境界，需要修适合此境界的法，这样才能循序渐进，直趋觉路，这好比上楼，如果你没上第一层楼，是无法登上第二层的，这个道理在佛法的修炼过程中非常重要。 <br/>
  <br/>
-以上所讲的是修密宗不可缺少的前加行：出离心、菩提心和性空正见，是共同法，也是修炼密法绝对不可缺少的部分。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-10-17 17:31<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">不共修法分三部分：一、前行，二、正修，三、结行。 <br/>
+以上所讲的是修密宗不可缺少的前加行：出离心、菩提心和性空正见，是共同法，也是修炼密法绝对不可缺少的部分。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-10-17 17:31</span><div class="badge-floor">第 4 进</div></div><div class="post-body">不共修法分三部分：一、前行，二、正修，三、结行。 <br/>
  <br/>
 一、前行 <br/>
 首先准备一幅白度母如意轮的唐卡或佛像，然后制作朵玛。方法是：在一个圆盘上，放一张纸画的八叶莲花，然后将糌巴或面粉及牛奶、奶酪、酥油、冰糖、蜂蜜、红糖混合做成朵玛，放在莲花上。在朵玛顶上安一个札嘎利（朵玛上安有本尊像及伞盖的小木棒）。在这个有札嘎利的朵玛前再做一个非常漂亮的白色朵玛，作为供养。在两个朵玛前后，准备两排八供：前排自右至左，后排自左至右。左右方向以自己面对朵玛时的左右方向为准。只需具备这些供物即可，其它供品可有可无。但所有供品必须是全素，不能有任何一点酒、肉等。还需自制甘露丸。制作方法是：准备一碗牛奶，加入糌巴、酥油、白糖及各种具加持力的甘露丸，混合制成长寿甘露丸。 <br/>
@@ -311,7 +332,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 然后是把八供供养给不共皈依境中的所有圣尊。开始念： <br/>
 嗡 古汝 阿亚达热 萨巴日依瓦日阿 阿刚 巴当 布白 都白 阿洛格 更德 纳微德 下达 巴日底恰吽梭哈。 <br/>
  <br/>
-“古汝”是上师，“阿亚”是圣尊，“达热”是度母，“萨巴日瓦”是眷属，“阿刚”是水，“巴当”是洗足水，“布白”是花环，“都白”是香，“阿洛格”是灯，“更德”是涂香，“纳微德”是食品，“下达”是食品。“巴日底恰吽梭哈”是请受用的意思。观想自身白度母如意轮心中“东”字化出无数手持八供的供养天女，供养皈依境中诸位圣尊。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-10-17 17:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">接下来要重新发不共的皈依发心和受菩萨戒，就是受皈依戒和菩萨戒。虽然刚才前面已经简单地皈依了一次，受了一次简单的菩萨戒。但是在这里是比较正规的： <br/>
+“古汝”是上师，“阿亚”是圣尊，“达热”是度母，“萨巴日瓦”是眷属，“阿刚”是水，“巴当”是洗足水，“布白”是花环，“都白”是香，“阿洛格”是灯，“更德”是涂香，“纳微德”是食品，“下达”是食品。“巴日底恰吽梭哈”是请受用的意思。观想自身白度母如意轮心中“东”字化出无数手持八供的供养天女，供养皈依境中诸位圣尊。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-10-17 17:44</span><div class="badge-floor">第 5 进</div></div><div class="post-body">接下来要重新发不共的皈依发心和受菩萨戒，就是受皈依戒和菩萨戒。虽然刚才前面已经简单地皈依了一次，受了一次简单的菩萨戒。但是在这里是比较正规的： <br/>
 我今皈依胜三宝，一切罪业皆忏悔。随喜有情诸善事，至心受持佛菩提。 <br/>
 正觉妙法圣僧伽，乃至菩提我皈依。成就自利他利故，发起求证菩提心。 <br/>
 既发最胜菩提心，接引有情如大宾。乐行最胜菩萨行，利有情故当成佛。（三遍） <br/>
@@ -377,7 +398,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 灌顶诸佛入体内，阿弥陀佛顶庄严。 <br/>
 智慧身与萨玛雅身融为一体，二无分别之后，观想自身白度母如意轮心中“东”字发光，照明十方一切佛刹土，尤其五方佛（中央不动佛、东方毗卢遮那佛、南方宝生佛、西方阿弥陀佛、北方不空成就佛）刹土，把一切五方佛等等一切灌顶圣迎请到眼前虚空中。观想念灌顶咒：“嗡萨日瓦达塔噶达 阿必克依噶达 萨玛雅 希耶阿吽”并且内心向诸佛及佛母至诚祈祷，请赐灌顶。五方佛赐予加持灌顶，五佛母等一切佛母进行准备灌顶，佛母持着盛有五色甘露的五色宝瓶，从五色宝瓶中流出五色甘露水，如是在虚空中为你灌顶。 <br/>
  <br/>
-然后，宝瓶中的水通过顶轮往下融入到体内，彻底消除无始以来到现在为止的一切业障、疾病、污染等等，其所显现的黑墨从身体下面的两个道排出体外。你的体内充满了甘露圣水，得到了五方佛的加持。甘露在自身体内可以如是观想：从顶轮到印堂之间充满白色的甘露，从印堂到喉轮之间充满红色的甘露，从喉轮到心轮之间充满蓝色甘露，从心轮到丹田之间充满黄色甘露，丹田以下充满绿色的甘露。你也可以观想五色甘露混和在自己体内也可以。剩下来的水在头顶形成了一个阿弥陀佛作为自身白度母如意轮的顶庄严。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-10-17 18:27<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">如是自修的部分的已经完成了，下面开始供养等。 <br/>
+然后，宝瓶中的水通过顶轮往下融入到体内，彻底消除无始以来到现在为止的一切业障、疾病、污染等等，其所显现的黑墨从身体下面的两个道排出体外。你的体内充满了甘露圣水，得到了五方佛的加持。甘露在自身体内可以如是观想：从顶轮到印堂之间充满白色的甘露，从印堂到喉轮之间充满红色的甘露，从喉轮到心轮之间充满蓝色甘露，从心轮到丹田之间充满黄色甘露，丹田以下充满绿色的甘露。你也可以观想五色甘露混和在自己体内也可以。剩下来的水在头顶形成了一个阿弥陀佛作为自身白度母如意轮的顶庄严。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-10-17 18:27</span><div class="badge-floor">第 6 进</div></div><div class="post-body">如是自修的部分的已经完成了，下面开始供养等。 <br/>
 接下来念：  <br/>
 嗡 班甲日阿弥日答 滚扎利 哈纳哈纳吽呸（甘露明王咒） <br/>
 观想眼前的一切供品一切本性虚空，念甘露明王咒净化供品。净化八供的方法是：用事业宝瓶上的孔雀翎“群增”，边念甘露明王咒，边在空中划个藏文“恰”字，将“群增”上的甘露水洒向八供，观想洒出的甘露圣水化为无数的甘露明王，把供品中的一切妖魔鬼怪及供养时障法的一切魔鬼尽数遣除。 <br/>
@@ -421,7 +442,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 念此咒时，观想从自身白度母如意轮心中日轮上“东”字放光，化出无数的供养天女来到眼前，供养天女，手持各种美味天馐食品，供养自身白度母如意轮，供养妙食。念到“巴日底恰吽梭哈”的时候，供养天馔完毕，然后再把这些供养天女收回自心内“东”字。 <br/>
  <br/>
 嗡 阿亚达热 萨巴日依瓦日阿 下达 巴日底恰吽梭哈 <br/>
-最后，此咒时，观想从自身白度母如意轮心中日轮上“东”字放光，化出无数的供养天女来到眼前，供养天女，手持各种乐器，为自身白度母如意轮奏乐歌舞，供养音乐。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-10-17 19:57<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">八供完后，观想从自身白度母如意轮心中日轮上“东”字放光，化出无数的供养天女来到眼前跳起舞蹈，为你进行赞颂： <br/>
+最后，此咒时，观想从自身白度母如意轮心中日轮上“东”字放光，化出无数的供养天女来到眼前，供养天女，手持各种乐器，为自身白度母如意轮奏乐歌舞，供养音乐。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-10-17 19:57</span><div class="badge-floor">第 7 进</div></div><div class="post-body">八供完后，观想从自身白度母如意轮心中日轮上“东”字放光，化出无数的供养天女来到眼前跳起舞蹈，为你进行赞颂： <br/>
  <br/>
 嗡 救度轮回答热母，都答热字脱八难，都热解救诸病痛，救度佛母前敬礼。 <br/>
  <br/>
@@ -484,7 +505,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 在红色光球和蓝色光球，蓝色光球和绿色光球之间有很多刚刚盛开的乌巴拉花，就象一个一个网络似的围着，但是相互直接是没有空的。  <br/>
 如果要修共同护轮修法，则观想自身白度母如意轮心中“东”字和其周围的咒轮又发出许多光，在六色光球之外形成一个金刚地基，金刚地基上有一个金刚幔帐，在周围有金刚垣围，上面有金刚华盖。再外边还有一个智慧火所形成的火球，火中到处飞动着利箭。因为有的魔不怕火，但火中的利箭可以挡住他。以上就是比较普通（共同）的金刚护身轮的观修法。 <br/>
  <br/>
-在这样观想的同时就念长寿咒：“嗡 达热 都达热 都热 玛玛阿约 布尼亚加纳 布重古如梭哈”或念心咒“嗡达热 都达热 都热 梭哈”。咒语念得越多越好。咒和观想方法并不是分开的，两个咒哪个念得多一些，念的时候就观想得全一点而已。一般是后面长咒念的多一点。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-10-17 20:01<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">再讲一种消除魔难的不共护身轮的观修方法。 <br/>
+在这样观想的同时就念长寿咒：“嗡 达热 都达热 都热 玛玛阿约 布尼亚加纳 布重古如梭哈”或念心咒“嗡达热 都达热 都热 梭哈”。咒语念得越多越好。咒和观想方法并不是分开的，两个咒哪个念得多一些，念的时候就观想得全一点而已。一般是后面长咒念的多一点。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-10-17 20:01</span><div class="badge-floor">第 8 进</div></div><div class="post-body">再讲一种消除魔难的不共护身轮的观修方法。 <br/>
  <br/>
 观想自身白度母如意轮心中“东”字和其周围的咒轮发光，在六光球外，形成一个如金刚钻石般非常坚固的白色护轮。护轮形如一对扣在一起的钹（或者如两个扣在一起的草帽），中心形成一个球形空间，刚好将六光球及中心的自身白度母如意轮包在其中。护轮并非如钹一样是圆形的，而是上下两个部分各带有八个轮齿，但没有最外围的轮环、环圈（比如自行车轮，有辐条但是没有最外边的安置内胎、外车带的钢圈）。 <br/>
  <br/>
@@ -523,7 +544,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 而且这两个都是往左转的，就是逆时针的转。两个一个向下走，一个向上走，到了心脏为止两个就融合为一体了，就变成一个即白又红（白里带红）的一个整体了。这是修命根的方法，其中白色的代表白菩提，红色的代表红菩提。两个合起来后，在其中间观想一个非常细小的“东”字，就观想得到了空乐无二的智慧。 <br/>
  <br/>
-宝瓶气炼完后，进入结行。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-10-17 20:02<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">三、结行 <br/>
+宝瓶气炼完后，进入结行。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-10-17 20:02</span><div class="badge-floor">第 9 进</div></div><div class="post-body">三、结行 <br/>
  <br/>
 忏悔：（百字明） <br/>
 嗡 班甲日萨埵瓦 萨玛雅 玛努巴拉雅 班甲日萨埵瓦 底瓦诺巴底刹 德日卓美巴瓦  苏埵卡约右美巴瓦 苏波卡约右美巴瓦 阿努日阿格多美巴瓦萨日瓦悉地美巴日雅恰 萨日瓦噶日玛苏甲米 基当木谢日央木古汝吽 哈哈哈哈火 巴噶宛纳 萨日瓦达塔噶达 班甲日玛米木加 班杰日巴瓦 玛哈萨玛雅萨埵瓦 阿 吽呸（三遍） <br/>
@@ -564,7 +585,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 据上述两次之讲授，经合并整理而成此《白度母如意轮修法仪轨导论》。 <br/>
 以此功德回向一切众生脱离短寿之苦，证得永不死之长寿成就。 <br/>
   <br/>
-吉祥圆满 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-10-11 21:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">我今皈依胜三宝，一切罪业皆忏悔。随喜有情诸善事，至心受持佛菩提。 <br/>
+吉祥圆满 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div><span style="font-size:15px; letter-spacing:1px;">大漠悲鸿发表于 2007-10-11 21:37</span><div class="badge-floor">第 10 进</div></div><div class="post-body">我今皈依胜三宝，一切罪业皆忏悔。随喜有情诸善事，至心受持佛菩提。 <br/>
 正觉妙法圣僧伽，乃至菩提我皈依。成就自利他利故，发起求证菩提心。 <br/>
 既发最胜菩提心，接引有情如大宾。乐行最胜菩萨行，利有情故当成佛 <br/>
 <br/>

@@ -1,115 +1,152 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>定慧禅修成就法 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>定慧禅修成就法 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
+
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / 藏密修海成就法门</div>
-<h1 style="margin-bottom: 10px; font-size: 32px;">目录：定慧禅修成就法</h1>
-<p style="color:var(--text-muted); margin-bottom:40px;">共收录 54 篇主题</p>
-<a href="../threads/8988.html" class="thread-row"><h2>经行持诵动中定 行禅走转修三昧</h2><div class="th-meta">TID: 8988</div></a>
-<a href="../threads/8700.html" class="thread-row"><h2>身体透明动中定 如飘空中入三昧（动画观修）</h2><div class="th-meta">TID: 8700</div></a>
-<a href="../threads/8393.html" class="thread-row"><h2>《入出息念经》</h2><div class="th-meta">TID: 8393</div></a>
-<a href="../threads/8332.html" class="thread-row"><h2>动中禅简介</h2><div class="th-meta">TID: 8332</div></a>
-<a href="../threads/8201.html" class="thread-row"><h2>药师法门修行概要</h2><div class="th-meta">TID: 8201</div></a>
-<a href="../threads/7838.html" class="thread-row"><h2>经行三昧禅修的方法</h2><div class="th-meta">TID: 7838</div></a>
-<a href="../threads/7780.html" class="thread-row"><h2>如何修行安般念</h2><div class="th-meta">TID: 7780</div></a>
-<a href="../threads/7779.html" class="thread-row"><h2>大念处经  佛陀遗教：以戒为师，依四念处住</h2><div class="th-meta">TID: 7779</div></a>
-<a href="../threads/7298.html" class="thread-row"><h2>依世尊之教诲，在睡眠时应修光明想</h2><div class="th-meta">TID: 7298</div></a>
-<a href="../threads/7133.html" class="thread-row"><h2>药师定修持要点</h2><div class="th-meta">TID: 7133</div></a>
-<a href="../threads/6858.html" class="thread-row"><h2>阿姜苏美多《正念》</h2><div class="th-meta">TID: 6858</div></a>
-<a href="../threads/6828.html" class="thread-row"><h2>日常生活中的观想方法</h2><div class="th-meta">TID: 6828</div></a>
-<a href="../threads/6827.html" class="thread-row"><h2>诺那活佛开示:一切众生都观想为本尊</h2><div class="th-meta">TID: 6827</div></a>
-<a href="../threads/6799.html" class="thread-row"><h2>清净道论</h2><div class="th-meta">TID: 6799</div></a>
-<a href="../threads/6367.html" class="thread-row"><h2>森林寺院内观法——阿姜摩诃布瓦</h2><div class="th-meta">TID: 6367</div></a>
-<a href="../threads/6365.html" class="thread-row"><h2>道澄尊者讲安般(入出息念)修行方法</h2><div class="th-meta">TID: 6365</div></a>
-<a href="../threads/6289.html" class="thread-row"><h2>一切诸佛如来所 皆现从于三昧起</h2><div class="th-meta">TID: 6289</div></a>
-<a href="../threads/6185.html" class="thread-row"><h2>达摩多罗禅经</h2><div class="th-meta">TID: 6185</div></a>
-<a href="../threads/6149.html" class="thread-row"><h2>长寿佛</h2><div class="th-meta">TID: 6149</div></a>
-<a href="../threads/5016.html" class="thread-row"><h2>日常生活的修行表</h2><div class="th-meta">TID: 5016</div></a>
-<a href="../threads/4916.html" class="thread-row"><h2>舍利弗阿毗昙论---非问分禅品</h2><div class="th-meta">TID: 4916</div></a>
-<a href="../threads/4243.html" class="thread-row"><h2>舍利弗阿毗昙论禅定品学记</h2><div class="th-meta">TID: 4243</div></a>
-<a href="../threads/4118.html" class="thread-row"><h2>定学浅说</h2><div class="th-meta">TID: 4118</div></a>
-<a href="../threads/3942.html" class="thread-row"><h2>阿难尊者用这个法门一夜证阿罗汉果</h2><div class="th-meta">TID: 3942</div></a>
-<a href="../threads/3852.html" class="thread-row"><h2>佛教四护卫禅</h2><div class="th-meta">TID: 3852</div></a>
-<a href="../threads/3636.html" class="thread-row"><h2>正法念处经身念处品（节选）</h2><div class="th-meta">TID: 3636</div></a>
-<a href="../threads/3186.html" class="thread-row"><h2>瑜伽行者诵修真言口诀</h2><div class="th-meta">TID: 3186</div></a>
-<a href="../threads/2924.html" class="thread-row"><h2>呼吸（熄灭之时节选）</h2><div class="th-meta">TID: 2924</div></a>
-<a href="../threads/2619.html" class="thread-row"><h2>四念处内观智慧禅法</h2><div class="th-meta">TID: 2619</div></a>
-<a href="../threads/2611.html" class="thread-row"><h2>念住呼吸</h2><div class="th-meta">TID: 2611</div></a>
-<a href="../threads/2438.html" class="thread-row"><h2>阿格旺波尊者:座上禅修的要点</h2><div class="th-meta">TID: 2438</div></a>
-<a href="../threads/2312.html" class="thread-row"><h2>念处经</h2><div class="th-meta">TID: 2312</div></a>
-<a href="../threads/2308.html" class="thread-row"><h2>南传小部经典</h2><div class="th-meta">TID: 2308</div></a>
-<a href="../threads/2290.html" class="thread-row"><h2>世出世间真谛论——秋英多杰仁波切</h2><div class="th-meta">TID: 2290</div></a>
-<a href="../threads/2200.html" class="thread-row"><h2>定道资粮颂</h2><div class="th-meta">TID: 2200</div></a>
-<a href="../threads/2141.html" class="thread-row"><h2>三皈依观初修略法</h2><div class="th-meta">TID: 2141</div></a>
-<a href="../threads/1767.html" class="thread-row"><h2>释尊的禅修过程</h2><div class="th-meta">TID: 1767</div></a>
-<a href="../threads/1176.html" class="thread-row"><h2>四念处</h2><div class="th-meta">TID: 1176</div></a>
-<a href="../threads/1155.html" class="thread-row"><h2>如何修行安般念到入禅</h2><div class="th-meta">TID: 1155</div></a>
-<a href="../threads/1154.html" class="thread-row"><h2>三十七道品导引手册</h2><div class="th-meta">TID: 1154</div></a>
-<a href="../threads/1028.html" class="thread-row"><h2>内观禅修手册</h2><div class="th-meta">TID: 1028</div></a>
-<a href="../threads/877.html" class="thread-row"><h2>正念之道  大念处经析解与问答</h2><div class="th-meta">TID: 877</div></a>
-<a href="../threads/876.html" class="thread-row"><h2>四念处选章</h2><div class="th-meta">TID: 876</div></a>
-<a href="../threads/868.html" class="thread-row"><h2>宗喀巴大师的那罗巴六瑜伽*实修教授</h2><div class="th-meta">TID: 868</div></a>
-<a href="../threads/817.html" class="thread-row"><h2>大念住经</h2><div class="th-meta">TID: 817</div></a>
-<a href="../threads/700.html" class="thread-row"><h2>四念住经</h2><div class="th-meta">TID: 700</div></a>
-<a href="../threads/622.html" class="thread-row"><h2>以七觉支，成觉悟者—修习七觉支的方法</h2><div class="th-meta">TID: 622</div></a>
-<a href="../threads/227.html" class="thread-row"><h2>转经轮的利益</h2><div class="th-meta">TID: 227</div></a>
-<a href="../threads/196.html" class="thread-row"><h2>行禅  步步微风起，步步莲花开</h2><div class="th-meta">TID: 196</div></a>
-<a href="../threads/135.html" class="thread-row"><h2>修行问答／阿姜查  主答</h2><div class="th-meta">TID: 135</div></a>
-<a href="../threads/120.html" class="thread-row"><h2>如何修行安般念</h2><div class="th-meta">TID: 120</div></a>
-<a href="../threads/57.html" class="thread-row"><h2>四念处禅观之理论与实践</h2><div class="th-meta">TID: 57</div></a>
-<a href="../threads/30.html" class="thread-row"><h2>舍利弗阿毗昙论---绪分定品</h2><div class="th-meta">TID: 30</div></a>
-<a href="../threads/4.html" class="thread-row"><h2>白话《念身经》</h2><div class="th-meta">TID: 4</div></a>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / 藏密修海成就法门</div>
+<h1 style="margin-bottom: 10px; font-size: 36px; color:var(--primary); text-align:center;">定慧禅修成就法</h1>
+<p style="color:var(--text-muted); margin-bottom:50px; text-align:center; letter-spacing:2px;">此处蕴含 54 卷法轴汇集</p>
+<a href="../threads/8988.html" class="thread-row"><h2>经行持诵动中定 行禅走转修三昧</h2><div class="th-meta">轴号: 8988</div></a>
+<a href="../threads/8700.html" class="thread-row"><h2>身体透明动中定 如飘空中入三昧（动画观修）</h2><div class="th-meta">轴号: 8700</div></a>
+<a href="../threads/8393.html" class="thread-row"><h2>《入出息念经》</h2><div class="th-meta">轴号: 8393</div></a>
+<a href="../threads/8332.html" class="thread-row"><h2>动中禅简介</h2><div class="th-meta">轴号: 8332</div></a>
+<a href="../threads/8201.html" class="thread-row"><h2>药师法门修行概要</h2><div class="th-meta">轴号: 8201</div></a>
+<a href="../threads/7838.html" class="thread-row"><h2>经行三昧禅修的方法</h2><div class="th-meta">轴号: 7838</div></a>
+<a href="../threads/7780.html" class="thread-row"><h2>如何修行安般念</h2><div class="th-meta">轴号: 7780</div></a>
+<a href="../threads/7779.html" class="thread-row"><h2>大念处经  佛陀遗教：以戒为师，依四念处住</h2><div class="th-meta">轴号: 7779</div></a>
+<a href="../threads/7298.html" class="thread-row"><h2>依世尊之教诲，在睡眠时应修光明想</h2><div class="th-meta">轴号: 7298</div></a>
+<a href="../threads/7133.html" class="thread-row"><h2>药师定修持要点</h2><div class="th-meta">轴号: 7133</div></a>
+<a href="../threads/6858.html" class="thread-row"><h2>阿姜苏美多《正念》</h2><div class="th-meta">轴号: 6858</div></a>
+<a href="../threads/6828.html" class="thread-row"><h2>日常生活中的观想方法</h2><div class="th-meta">轴号: 6828</div></a>
+<a href="../threads/6827.html" class="thread-row"><h2>诺那活佛开示:一切众生都观想为本尊</h2><div class="th-meta">轴号: 6827</div></a>
+<a href="../threads/6799.html" class="thread-row"><h2>清净道论</h2><div class="th-meta">轴号: 6799</div></a>
+<a href="../threads/6367.html" class="thread-row"><h2>森林寺院内观法——阿姜摩诃布瓦</h2><div class="th-meta">轴号: 6367</div></a>
+<a href="../threads/6365.html" class="thread-row"><h2>道澄尊者讲安般(入出息念)修行方法</h2><div class="th-meta">轴号: 6365</div></a>
+<a href="../threads/6289.html" class="thread-row"><h2>一切诸佛如来所 皆现从于三昧起</h2><div class="th-meta">轴号: 6289</div></a>
+<a href="../threads/6185.html" class="thread-row"><h2>达摩多罗禅经</h2><div class="th-meta">轴号: 6185</div></a>
+<a href="../threads/6149.html" class="thread-row"><h2>长寿佛</h2><div class="th-meta">轴号: 6149</div></a>
+<a href="../threads/5016.html" class="thread-row"><h2>日常生活的修行表</h2><div class="th-meta">轴号: 5016</div></a>
+<a href="../threads/4916.html" class="thread-row"><h2>舍利弗阿毗昙论---非问分禅品</h2><div class="th-meta">轴号: 4916</div></a>
+<a href="../threads/4243.html" class="thread-row"><h2>舍利弗阿毗昙论禅定品学记</h2><div class="th-meta">轴号: 4243</div></a>
+<a href="../threads/4118.html" class="thread-row"><h2>定学浅说</h2><div class="th-meta">轴号: 4118</div></a>
+<a href="../threads/3942.html" class="thread-row"><h2>阿难尊者用这个法门一夜证阿罗汉果</h2><div class="th-meta">轴号: 3942</div></a>
+<a href="../threads/3852.html" class="thread-row"><h2>佛教四护卫禅</h2><div class="th-meta">轴号: 3852</div></a>
+<a href="../threads/3636.html" class="thread-row"><h2>正法念处经身念处品（节选）</h2><div class="th-meta">轴号: 3636</div></a>
+<a href="../threads/3186.html" class="thread-row"><h2>瑜伽行者诵修真言口诀</h2><div class="th-meta">轴号: 3186</div></a>
+<a href="../threads/2924.html" class="thread-row"><h2>呼吸（熄灭之时节选）</h2><div class="th-meta">轴号: 2924</div></a>
+<a href="../threads/2619.html" class="thread-row"><h2>四念处内观智慧禅法</h2><div class="th-meta">轴号: 2619</div></a>
+<a href="../threads/2611.html" class="thread-row"><h2>念住呼吸</h2><div class="th-meta">轴号: 2611</div></a>
+<a href="../threads/2438.html" class="thread-row"><h2>阿格旺波尊者:座上禅修的要点</h2><div class="th-meta">轴号: 2438</div></a>
+<a href="../threads/2312.html" class="thread-row"><h2>念处经</h2><div class="th-meta">轴号: 2312</div></a>
+<a href="../threads/2308.html" class="thread-row"><h2>南传小部经典</h2><div class="th-meta">轴号: 2308</div></a>
+<a href="../threads/2290.html" class="thread-row"><h2>世出世间真谛论——秋英多杰仁波切</h2><div class="th-meta">轴号: 2290</div></a>
+<a href="../threads/2200.html" class="thread-row"><h2>定道资粮颂</h2><div class="th-meta">轴号: 2200</div></a>
+<a href="../threads/2141.html" class="thread-row"><h2>三皈依观初修略法</h2><div class="th-meta">轴号: 2141</div></a>
+<a href="../threads/1767.html" class="thread-row"><h2>释尊的禅修过程</h2><div class="th-meta">轴号: 1767</div></a>
+<a href="../threads/1176.html" class="thread-row"><h2>四念处</h2><div class="th-meta">轴号: 1176</div></a>
+<a href="../threads/1155.html" class="thread-row"><h2>如何修行安般念到入禅</h2><div class="th-meta">轴号: 1155</div></a>
+<a href="../threads/1154.html" class="thread-row"><h2>三十七道品导引手册</h2><div class="th-meta">轴号: 1154</div></a>
+<a href="../threads/1028.html" class="thread-row"><h2>内观禅修手册</h2><div class="th-meta">轴号: 1028</div></a>
+<a href="../threads/877.html" class="thread-row"><h2>正念之道  大念处经析解与问答</h2><div class="th-meta">轴号: 877</div></a>
+<a href="../threads/876.html" class="thread-row"><h2>四念处选章</h2><div class="th-meta">轴号: 876</div></a>
+<a href="../threads/868.html" class="thread-row"><h2>宗喀巴大师的那罗巴六瑜伽*实修教授</h2><div class="th-meta">轴号: 868</div></a>
+<a href="../threads/817.html" class="thread-row"><h2>大念住经</h2><div class="th-meta">轴号: 817</div></a>
+<a href="../threads/700.html" class="thread-row"><h2>四念住经</h2><div class="th-meta">轴号: 700</div></a>
+<a href="../threads/622.html" class="thread-row"><h2>以七觉支，成觉悟者—修习七觉支的方法</h2><div class="th-meta">轴号: 622</div></a>
+<a href="../threads/227.html" class="thread-row"><h2>转经轮的利益</h2><div class="th-meta">轴号: 227</div></a>
+<a href="../threads/196.html" class="thread-row"><h2>行禅  步步微风起，步步莲花开</h2><div class="th-meta">轴号: 196</div></a>
+<a href="../threads/135.html" class="thread-row"><h2>修行问答／阿姜查  主答</h2><div class="th-meta">轴号: 135</div></a>
+<a href="../threads/120.html" class="thread-row"><h2>如何修行安般念</h2><div class="th-meta">轴号: 120</div></a>
+<a href="../threads/57.html" class="thread-row"><h2>四念处禅观之理论与实践</h2><div class="th-meta">轴号: 57</div></a>
+<a href="../threads/30.html" class="thread-row"><h2>舍利弗阿毗昙论---绪分定品</h2><div class="th-meta">轴号: 30</div></a>
+<a href="../threads/4.html" class="thread-row"><h2>白话《念身经》</h2><div class="th-meta">轴号: 4</div></a>
 
 </div>
+
 <script>
-// ---------- 沉浸式快速阅读弹窗引擎 ----------
+// ---------- 顶级沉浸式无缝卷轴弹窗 (Mobile Optimized) ----------
 (function() {
     if(document.getElementById('quickViewer')) return;
     const modalHTML = `
-    <div id="quickViewer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,0.6); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); opacity:0; transition:opacity 0.3s ease; box-sizing:border-box; align-items:center; justify-content:center; padding: 20px;">
-        <div id="quickViewerContent" style="background:var(--bg, #f9fafb); width:100%; max-width:850px; height:95%; max-height:95vh; border-radius:16px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.2); position:relative; transform:scale(0.95) translateY(30px); opacity:0; transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1); display:flex; flex-direction:column; overflow:hidden;">
-            <div style="padding:16px 24px; border-bottom:1px solid rgba(0,0,0,0.05); background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); display:flex; justify-content:space-between; align-items:center; z-index:10;">
-                <div style="font-weight:600; color:var(--primary, #3b82f6); font-size:16px; display:flex; align-items:center;"><span style="font-size:20px; margin-right:8px;">📄</span> 沉浸阅读模式</div>
-                <button id="quickViewerClose" style="background:#f1f5f9; border:none; width:36px; height:36px; border-radius:50%; font-size:20px; cursor:pointer; color:#475569; display:flex; align-items:center; justify-content:center; transition:all 0.2s; box-shadow:inset 0 2px 4px rgba(0,0,0,0.02)">×</button>
+    <style>
+    #quickViewer { display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,0.9); backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px); opacity:0; transition:opacity 0.3s ease; box-sizing:border-box; align-items:center; justify-content:center; }
+    #quickViewerContent { background:var(--bg); width:100%; height:100%; border-radius:0; position:relative; transform:translateY(100%); opacity:0; transition:transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 0 50px rgba(0,0,0,0.8); }
+    @media(min-width: 850px) {
+      #quickViewerContent { max-width:900px; height:95%; max-height:95vh; border-radius:16px; transform:translateY(30px) scale(0.95); border:1px solid rgba(212,175,55,0.2); }
+    }
+    #quickViewerHeader { padding:18px 24px; border-bottom:1px solid rgba(212,175,55,0.1); background:var(--surface-solid); display:flex; justify-content:space-between; align-items:center; z-index:10; }
+    #quickViewerBody { padding:0; overflow-y:auto; overflow-x:hidden; flex:1; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+    </style>
+    <div id="quickViewer">
+        <div id="quickViewerContent">
+            <div id="quickViewerHeader">
+                <div style="font-weight:700; color:var(--primary); font-size:17px; display:flex; align-items:center; letter-spacing:1px;"><span style="font-size:20px; margin-right:10px;">❖</span> 典藏经卷阅读</div>
+                <button id="quickViewerClose" style="background:rgba(255,255,255,0.1); border:none; width:36px; height:36px; border-radius:50%; font-size:18px; cursor:pointer; color:var(--text); display:flex; align-items:center; justify-content:center; transition:all 0.2s;">✕</button>
             </div>
-            <div id="quickViewerBody" style="padding:0; overflow-y:auto; flex:1; scroll-behavior: smooth;">
-                <div style="text-align:center; padding:80px; color:#94a3b8; font-weight:500;">
-                    <div style="font-size:30px; margin-bottom:15px; animation: pulse 1.5s infinite;">⚡</div>
-                    正在拉取数据...
+            <div id="quickViewerBody">
+                <div style="text-align:center; padding:100px; color:var(--primary); opacity:0.8;">
+                    <div style="font-size:40px; margin-bottom:20px; animation: pulse 1.5s infinite;">📿</div>
+                    <div style="font-weight:600; letter-spacing:2px; font-family:'Noto Serif SC', serif;">正在降临...</div>
                 </div>
             </div>
         </div>
@@ -128,10 +165,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
         void qv.offsetWidth; // trigger reflow
         qv.style.opacity = '1';
         qvContent.style.opacity = '1';
-        qvContent.style.transform = 'scale(1) translateY(0)';
-        document.body.style.overflow = 'hidden';
+        if(window.innerWidth >= 850) {
+            qvContent.style.transform = 'translateY(0) scale(1)';
+        } else {
+            qvContent.style.transform = 'translateY(0)';
+        }
+        document.body.style.overflow = 'hidden'; // Lock background scroll entirely
         
-        qvBody.innerHTML = '<div style="text-align:center; padding:100px; color:#94a3b8;"><div style="font-size:40px; margin-bottom:20px; animation: pulse 1.5s infinite;">⚡</div><div style="font-weight:600; font-size:18px;">正在穿梭时空抓取帖子...</div></div>';
+        qvBody.innerHTML = '<div style="text-align:center; padding:120px; color:var(--primary); opacity:0.8;"><div style="font-size:45px; margin-bottom:20px; animation: pulse 1.5s infinite;">📿</div><div style="font-family:\'Noto Serif SC\', serif; font-size:18px; letter-spacing:2px;">开启法卷...</div></div>';
         
         fetch(url).then(res => res.text()).then(html => {
             const parser = new DOMParser();
@@ -140,35 +181,39 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
             if(contentContainer) {
                 let bread = contentContainer.querySelector('.breadcrumb');
                 if(bread) bread.remove();
-                contentContainer.style.margin = '20px auto 40px';
+                contentContainer.style.margin = '20px auto 60px';
                 qvBody.innerHTML = '';
                 qvBody.appendChild(contentContainer);
                 qvBody.scrollTop = 0;
             } else {
-                qvBody.innerHTML = '<div style="padding:40px; text-align:center;">解析内容失败，该页可能已损坏。</div>';
+                window.location.href = url;
             }
         }).catch(err => {
-            window.location.href = url; // 如果遇到了文件系统拦截，自动降级为传统页面跳转加载
+            window.location.href = url;
         });
     }
 
     function closeViewer() {
         qv.style.opacity = '0';
         qvContent.style.opacity = '0';
-        qvContent.style.transform = 'scale(0.95) translateY(30px)';
+        if(window.innerWidth >= 850) {
+            qvContent.style.transform = 'translateY(30px) scale(0.95)';
+        } else {
+            qvContent.style.transform = 'translateY(100%)';
+        }
         setTimeout(() => {
             qv.style.display = 'none';
             document.body.style.overflow = '';
             qvBody.innerHTML = '';
-        }, 300);
+        }, 400);
     }
 
     qvClose.addEventListener('click', closeViewer);
-    qvClose.addEventListener('mouseover', () => qvClose.style.background = '#e2e8f0');
-    qvClose.addEventListener('mouseout', () => qvClose.style.background = '#f1f5f9');
+    qvClose.addEventListener('mouseover', () => qvClose.style.background = 'rgba(255,255,255,0.2)');
+    qvClose.addEventListener('mouseout', () => qvClose.style.background = 'rgba(255,255,255,0.1)');
     
     qv.addEventListener('click', (e) => {
-        if(e.target === qv) closeViewer();
+        if(e.target === qv && window.innerWidth >= 850) closeViewer();
     });
 
     document.addEventListener('click', (e) => {

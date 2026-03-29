@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>&lt;西藏的神灵和鬼怪&gt; - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>&lt;西藏的神灵和鬼怪&gt; - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/聊天广告资讯版.html">聊天广告资讯版</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">&lt;西藏的神灵和鬼怪&gt;</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2006-3-30 22:44<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">奥地利勒内德内贝斯基沃杰科维茨著 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/聊天广告资讯版.html">聊天广告资讯版</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">&lt;西藏的神灵和鬼怪&gt;</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚羽发表于 2006-3-30 22:44</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">奥地利勒内德内贝斯基沃杰科维茨著 <br/>
 &quot;内贝斯基1923-1959,生前曾用了三年时间,在喜马拉雅山东部地区收集了有关西藏宗教的大量的文献资料.&quot; <br/>
  <br/>
 &quot;本书中列举的涉及保护神及其崇拜的初次调查材料,大部分是我于1950年到1953年之间住在印度锡金边境地带时收集到的.&quot;&quot;主要给我提供资料的是三位选择噶伦堡为暂栖之地的活佛&quot;&quot;其中的两位名叫达多仁波且和札幢仁波且,是两位黄帽派的活佛.&quot;&quot;第三位给我提供资料和书籍的活佛是宁玛派的齐美仁增&quot; <br/>
@@ -62,7 +83,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 姐妹护法 <br/>
 白梵天神 <br/>
 马头金刚 <br/>
-阎罗敌” </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2006-3-31 23:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">前五位神灵属于出世间护法神;白梵天神划归于世间护法神.而马头金刚,人们认为他是控制许多护法神的一位神灵,阎罗敌(大威德)是属于本尊一类的神,因此后两位神将在我们讨论时省略掉. <br/>
+阎罗敌” </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚羽发表于 2006-3-31 23:24</span><div class="badge-floor">第 2 进</div></div><div class="post-body">前五位神灵属于出世间护法神;白梵天神划归于世间护法神.而马头金刚,人们认为他是控制许多护法神的一位神灵,阎罗敌(大威德)是属于本尊一类的神,因此后两位神将在我们讨论时省略掉. <br/>
  <br/>
 根据简称为&lt;宝生佛&gt;的造像学概要,班丹拉姆女神比较重要的化身有如下述: <br/>
 欲界自在天女 <br/>
@@ -112,7 +133,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 您还有黑女神伴神归您调遣，有罗刹和罗刹女做侍者。 <br/>
 有十亿玛姆、空行母和食肉魔做伴神。 <br/>
 <br/>
-（参考书目：夜叉大黑护法朵玛供法 木刻版 札西伦布寺刻本 伦敦印度事务部图书馆） </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2006-4-1 18:28<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">大黑护法如意宝 <br/>
+（参考书目：夜叉大黑护法朵玛供法 木刻版 札西伦布寺刻本 伦敦印度事务部图书馆） </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚羽发表于 2006-4-1 18:28</span><div class="badge-floor">第 3 进</div></div><div class="post-body">大黑护法如意宝 <br/>
 黄护法护财六手洛平协松 <br/>
 红护法具力大王 <br/>
 绿护法命主 <br/>
@@ -177,7 +198,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 ……在崇拜仪式，上供奉给白哈尔及其伴神的各种供品有：具魔串鼓（形似拨浪鼓）、焚烧的桑枝、烤肉、黑丝旗、五味供品、跳舞奏乐、尸肉脂、五官、血海、甘露、青稞酒和茶，还有朵玛。 <br/>
 <br/>
-……关于白哈尔神本身，也有一些补充的说明，有人认为他是阿弥陀佛的化身，我们也提到白哈尔是三百六十名王系魔的首领。……王系魔是招致瘟病的神魔，据说他可以引起精神病。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2006-4-2 08:54<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">第八章 金刚具力神 <br/>
+……关于白哈尔神本身，也有一些补充的说明，有人认为他是阿弥陀佛的化身，我们也提到白哈尔是三百六十名王系魔的首领。……王系魔是招致瘟病的神魔，据说他可以引起精神病。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚羽发表于 2006-4-2 08:54</span><div class="badge-floor">第 4 进</div></div><div class="post-body">第八章 金刚具力神 <br/>
 西藏有一则传说讲到护法神金刚具力神多吉秀丹在白哈尔神成为出世间神灵之际,将继任白哈尔作为从世间护法神之主神. <br/>
  <br/>
 ……在五世DL喇嘛（1617-1682）执政期间，哲蚌寺一位名叫索南札巴的活佛因其学识和智慧赢得了很高的声望，并逐渐地被他的同乡和弟子所推崇。但是另外一些活佛，甚至是噶厦政府对他日益增大的影响却非常嫉妒，于是，他们决定结果索南札巴的性命。然而，这位活佛由于他所获得的超凡法力的帮助，能够挫败威胁他性命的种种企图。最后，由于厌倦了无何止的私谋和共谋，索南札巴决定离开尘世，他召来大弟子，告诉他自己的决定，要弟子在他去世后烧掉他的躯体，他还预言说，如果他的敌手对他的种种指责被证明是没有根据的，就会从火葬的柴堆中冒出一股圆柱形的烟雾冲向天空，形成一块巨大的、张开手掌形的黑色烟云。 <br/>
@@ -188,7 +209,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 随后不久，占卜师和宣谕神就发现了是一位寻找仇敌得分的精魂导致了这一系列的麻烦，许多大德喇嘛和巫师试图摧毁这种恶有恶报力或者至少禳除其邪祟，但所有的努力都失败了，噶厦政府要求敏珠林寺的大德上师抓住，并毁掉这个漂荡的精魂。这位大德喇嘛在布达拉宫前落座，举行火供“护摩”仪式用魔咒之力吸引精魂到他手中准备好的长把勺中。在大德喇嘛正要焚烧他的捕获之物时，梵天的怒想身形犀甲护法决定帮助这位被囚禁的精魂。他在大德喇嘛的眼前霎那间变出一座巨大寺院的幻影，但是大德喇嘛立刻识破了这个骗局，没有松开捕获之物。接着，犀甲护法显形，将他的长矛戳到布达拉宫所在的红山脚下，好象要把DL喇嘛的这个居处掀翻。就在这一刻，大德喇嘛的注意力从长把勺移开，被囚禁的精魂立刻跳了出来。因为所有的企图都证明是徒劳的，噶厦政府和格鲁派的高僧大德现在才发现所有不幸的根源是他们过去曾经不公正地对待索南札巴。于是，他们决定祈请索南札巴的灵魂友善地对待他们，不要再引起进一步的伤害，成这格鲁派的护法神。精魂应允了这个请求，以金刚具力多吉秀丹的名字成了格鲁派一位主护法神和格鲁派寺院的守护神。 <br/>
 <br/>
-……象白哈尔神和他的伴神一样，金刚具力神和他的两位“大臣”据说也拥有代言神巫。充作金刚具力神代言神巫最著名的一位居住在拉萨一处叫做卓代康萨杰康或卓康德庆角神殿的神巫。他是西藏少数几位可以允许结婚的噶厦代言神巫之一。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2006-4-2 19:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">第九章 大梵天神 <br/>
+……象白哈尔神和他的伴神一样，金刚具力神和他的两位“大臣”据说也拥有代言神巫。充作金刚具力神代言神巫最著名的一位居住在拉萨一处叫做卓代康萨杰康或卓康德庆角神殿的神巫。他是西藏少数几位可以允许结婚的噶厦代言神巫之一。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚羽发表于 2006-4-2 19:24</span><div class="badge-floor">第 5 进</div></div><div class="post-body">第九章 大梵天神 <br/>
 梵天是印度万神殿中最重要的神灵之一,但他在藏传佛教中仅占一个次要的位置…… <br/>
 根据独具特征的发型，白梵天经常被称作具海螺髻白梵天。…… <br/>
 白梵天是三头六臂的马头金刚的伴神之一。…… <br/>
@@ -209,12 +230,12 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 尽管飞行得很快，甲顿瓦在到达印度以后还是发现，要在中午以前回到他濒死的上师身边还是不可能的，根据宗教的观念，师傅要在那一天吃一生最后的一餐。因此，甲顿瓦拿了一些“如热”种籽，尽全身之力把药往西藏方向猛力一掷。药籽在人们毫无觉察的情况下落入了上师正要吃饭的钵内，吃完药之后，上师立刻觉得好多了。在太阳东山时，甲顿瓦回到了修室，又三次吹响了胫骨法号，让人们知道他已经回来了。他随身带来了七颗“如热”种籽，在回来的路途中坏了四颗，已经不能药用了。但剩下的三颗足以完全医好上师的疾病。 <br/>
 此后，杰乔却杰宣布甲顿瓦是他最有学识的弟子……上师还确认了描述甲顿瓦所做的绝技属实。从那以后，甲顿瓦就可以到他选择的任何地方去了，因为他的上师不能够教授这位弟子，他已经都知道了。随后，甲顿瓦就去拜访热振寺，在热振寺小住之后又前往达隆寺……当前往达隆寺时，他来到一处十字路口，决定在那儿休息一会。就躺在他背的行囊上，并准备了一些茶。 <br/>
 <br/>
-（按：达隆寺的法主、达隆大居士和他开了个玩笑，变成老鼠咬坏了他的扁担，甲顿瓦用一块写有咒语的石头封住了法主溜进去的洞，达隆寺的活佛将法主救了出来，法主决定去报仇，让甲顿瓦淹死在了河里，甘丹却果林寺世间护法神主神却伦禅卡贝后将甲顿瓦的精魂收作了白毡神的伴神，给他一个新的名字佐热巾） </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2006-4-3 19:36<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">第十二章 载乌玛保与&quot;赞&quot;系神魔 <br/>
+（按：达隆寺的法主、达隆大居士和他开了个玩笑，变成老鼠咬坏了他的扁担，甲顿瓦用一块写有咒语的石头封住了法主溜进去的洞，达隆寺的活佛将法主救了出来，法主决定去报仇，让甲顿瓦淹死在了河里，甘丹却果林寺世间护法神主神却伦禅卡贝后将甲顿瓦的精魂收作了白毡神的伴神，给他一个新的名字佐热巾） </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚羽发表于 2006-4-3 19:36</span><div class="badge-floor">第 6 进</div></div><div class="post-body">第十二章 载乌玛保与&quot;赞&quot;系神魔 <br/>
 西藏最重要的世间护法神之一是&quot;赞&quot;系神载乌玛保,或者写作红夜叉护法神等. <br/>
 ……载乌玛保最主要的代言神巫住在桑耶寺的载乌玛保觉乌康。 <br/>
 ……载乌玛保是一组叫做“巴瓦七兄弟”的西藏古代神灵首领． <br/>
 ……巴瓦七兄弟崇拜最盛行的地方是羊卓雍湖的白地地方。 <br/>
-……赞神则是西藏最重要的魔神（即最初由魔转变而来的神灵）之一……由赞神施出的疾病，最典型的是腹绞痛，叫赞病。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2006-4-4 20:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">第十三章 长寿五姊妹及其相关的女神 <br/>
+……赞神则是西藏最重要的魔神（即最初由魔转变而来的神灵）之一……由赞神施出的疾病，最典型的是腹绞痛，叫赞病。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚羽发表于 2006-4-4 20:22</span><div class="badge-floor">第 7 进</div></div><div class="post-body">第十三章 长寿五姊妹及其相关的女神 <br/>
 一 长寿五姊妹 <br/>
 属于班丹玛索系统的众神，我们已经提到的有两组：一组是长寿五姊妹女神，另一组是十二丹玛女神。 <br/>
 长寿五姊妹女神都是山神。 <br/>
@@ -263,11 +284,11 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 三、勉系女神 <br/>
 ……勉姆住在不同的虚空中，其中有一部分勉姆住在天空，其他一些住在“平静的大湖中，绿色的草地上，茂密的森林中”，另有一些住在大地上。 <br/>
-……人们认为有一种勉姆是帝释天的女儿，全名叫“最胜明妃帝释天之女纳木措勉”，住在藏北的纳木措。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2006-4-5 19:12<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">第十四章 山神 <br/>
+……人们认为有一种勉姆是帝释天的女儿，全名叫“最胜明妃帝释天之女纳木措勉”，住在藏北的纳木措。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚羽发表于 2006-4-5 19:12</span><div class="badge-floor">第 8 进</div></div><div class="post-body">第十四章 山神 <br/>
 在提及的各类神灵中,我们已经碰到了这样的情况：有很多神灵居住在西藏境内的不同山峰之上，他们也同样属于世间护法神的神系。 <br/>
 ……念青唐古拉山神是居住在北方的山神，他大概是西藏几乎人人皆知的神灵。 <br/>
 ……念青唐古拉山神还被看作是建有布达拉宫的红山的保护神。 <br/>
-……根据笔者所掌握的资料，宁玛派僧人最崇拜的山神是扎桑雄窘，认为他是位于日喀则北十二驿站远、在羌塘之内的一座山峰的统治者． </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚羽发表于 2006-4-8 09:34<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">第二十章 护法神崇拜 <br/>
+……根据笔者所掌握的资料，宁玛派僧人最崇拜的山神是扎桑雄窘，认为他是位于日喀则北十二驿站远、在羌塘之内的一座山峰的统治者． </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚羽发表于 2006-4-8 09:34</span><div class="badge-floor">第 9 进</div></div><div class="post-body">第二十章 护法神崇拜 <br/>
 在崇拜护法神的仪式上演奏的音乐有两种类型:为善相护法神演奏的音乐轻柔和谐;欢娱怒相护法神的音乐则高亢刺耳.后一种音乐主要是由人骨制成的乐器演奏的。……胫骨法号应该用或者社会地位极高或者社会地位极低的人的胫骨、死于传染病的人的胫骨、死于偶然事故的人的胫骨或被人谋害的人的胫骨制成。据说最好的胫骨法号是用婆罗门的胫骨制做的，若用十六岁的婆罗门少女的左胫骨制成的法号，那是最值钱的。 <br/>
 ……在与护法神崇拜相关的大多数仪式中，都要奉献三种供品，即内供、外供和密供。 <br/>
  <br/>
@@ -275,7 +296,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 据说世间护法神和出世间护法神的主要区别之一在于：世间护法神中的许多神灵以确定的次数控制男人或女人作为他们的代言人；通过这些代言人在一定的场合神灵使他们的意愿为人所知，或者是给那些祈请答复的问题做出预言式的解答。 <br/>
 ……在每年一度的藏历5月15日举行的瞻部洲公众梵烟日的早晨，雪域所有的代言神巫都进入幻迷。 <br/>
 <br/>
-西藏人民出版社，1993第1版，2000第3次印刷 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚石发表于 2008-10-10 17:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">一本书不会只有这点字数吧!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! </div></div><div class="post"><div class="post-header"><div class="avatar">济</div>济清发表于 2008-11-7 12:03<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">这本书的作者是奥地利的勒内.德.内贝斯基.沃杰科维茨，又科瓦内尔、王尧等世界知名藏学家作序，由王尧的学生谢继胜翻译（现在社科院藏研中心供职），现在共计出了两版，17530本，我的是第二本，共690页。书中的资料很翔实，是研究藏学、民族学、宗教学不可多得的文本。但是可能是方言的原因，（笔者所学是安多方言），有些神灵找了半天才明白过来，原来是这样。所以在阅读时碰到名字最好是会卫藏方言，以免多走弯路。 <br/>
+西藏人民出版社，1993第1版，2000第3次印刷 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚石发表于 2008-10-10 17:37</span><div class="badge-floor">第 10 进</div></div><div class="post-body">一本书不会只有这点字数吧!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! </div></div><div class="post"><div class="post-header"><div class="avatar">济</div><span style="font-size:15px; letter-spacing:1px;">济清发表于 2008-11-7 12:03</span><div class="badge-floor">第 11 进</div></div><div class="post-body">这本书的作者是奥地利的勒内.德.内贝斯基.沃杰科维茨，又科瓦内尔、王尧等世界知名藏学家作序，由王尧的学生谢继胜翻译（现在社科院藏研中心供职），现在共计出了两版，17530本，我的是第二本，共690页。书中的资料很翔实，是研究藏学、民族学、宗教学不可多得的文本。但是可能是方言的原因，（笔者所学是安多方言），有些神灵找了半天才明白过来，原来是这样。所以在阅读时碰到名字最好是会卫藏方言，以免多走弯路。 <br/>
 <br/>
 </div></div>
 </div>

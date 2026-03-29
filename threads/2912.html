@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>准提法集 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>准提法集 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/准提佛母成就法.html">准提佛母成就法</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">准提法集</h1>
-<div class="post"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-9-30 10:08<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">准提宝镜开光仪轨 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/准提佛母成就法.html">准提佛母成就法</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">准提法集</h1>
+<div class="post"><div class="post-header"><div class="avatar">大</div><span style="font-size:15px; letter-spacing:1px;">大漠悲鸿发表于 2007-9-30 10:08</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">准提宝镜开光仪轨 <br/>
 <br/>
 一、将准提宝镜供于坛城上，其后供准提菩萨圣像。 <br/>
 二、随力供养（食物、鲜花、甘露水、实物或光明灯）。 <br/>
@@ -109,7 +130,7 @@ l·诵甘露水真言（七遍） <br/>
 七俱胝独部法 <br/>
 唐善无畏奉　诏译 <br/>
 第一坛法 <br/>
-佛言若求成就先作坛法不同诸部广修供养。掘地作坛香泥涂之所建立。但以一新净镜未曾用者。于佛像前月十五日夜。随力供养。烧安悉香及清净水。先当静心无所思惟。然后结印诵咒。咒镜一百八遍。以囊匣盛镜常持相随。欲诵但将此镜。置于面前结印诵咒。依镜为坛即得成就 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-10-8 21:38<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">刻准提心要序 <br/>
+佛言若求成就先作坛法不同诸部广修供养。掘地作坛香泥涂之所建立。但以一新净镜未曾用者。于佛像前月十五日夜。随力供养。烧安悉香及清净水。先当静心无所思惟。然后结印诵咒。咒镜一百八遍。以囊匣盛镜常持相随。欲诵但将此镜。置于面前结印诵咒。依镜为坛即得成就 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div><span style="font-size:15px; letter-spacing:1px;">大漠悲鸿发表于 2007-10-8 21:38</span><div class="badge-floor">第 2 进</div></div><div class="post-body">刻准提心要序 <br/>
 <br/>
 一切菩萨之德不可思议，况称七俱胝佛母乎？一切总持之功，不可测量况称陀罗尼之王乎？故念准提王者，速灭四重五逆；持其神咒者，顿生三昧智慧。灭恶生善，其用至矣哉！予师伯长寿香法师信奉准提诵持神咒有年矣！一日视予准提心要一册，而谓曰：“此之法也其行简易其效神速大有裨于叔世行人者也！请子傍加国训梓行于世焉，则其利亦岂鲜少哉！”予闻其言欣然乃诺，遂为校阅授之劂生，仍书数字冠于卷首。 <br/>
 <br/>
@@ -221,7 +242,7 @@ l·诵甘露水真言（七遍） <br/>
 佛弟子施(尧挺)谨述 <br/>
 此咒文所在必有天龙八部拥护最为灵应即不能持诵者亦当虔心奉祀与家中佛神供养一处获福无量切不可混置亵慢自取罪过敬之敬之。 <br/>
 <br/>
-福省南台后洲准提堂藏板 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-10-8 21:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">百丈丛林清规证义记卷第三 <br/>
+福省南台后洲准提堂藏板 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div><span style="font-size:15px; letter-spacing:1px;">大漠悲鸿发表于 2007-10-8 21:40</span><div class="badge-floor">第 3 进</div></div><div class="post-body">百丈丛林清规证义记卷第三 <br/>
 <br/>
 唐洪州百丈山沙门　怀海　集编 <br/>
 清古杭真寂寺苾刍　仪润　证义 <br/>
@@ -248,7 +269,7 @@ l·诵甘露水真言（七遍） <br/>
 <br/>
 回向偈云。我今持诵大准提。即发菩提广大愿。愿我定慧速圆明。愿我功德皆成就愿我胜福遍庄严。愿共众生成佛道。 <br/>
 <br/>
-(此约出世回向也。若求世法。当改云)奉佛持准提咒。弟子某甲。为求某事。令我早得成就云云(凡奉持准提咒者。每日六时。极少早晚二时。如一生长持。随意散诵。不必记数。但用准提镜一面。除早晚二时。对镜持诵外。即以囊盛镜。佩带在身。任意持诵。久久必获感应。除藏中诸准提经外。有显密圆通成佛心要集。准提净业集要等书流通) </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-10-8 21:41<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">水陆道场法-轮宝忏卷第九（奉请七俱胝佛母）＼卍新纂续藏经 <br/>
+(此约出世回向也。若求世法。当改云)奉佛持准提咒。弟子某甲。为求某事。令我早得成就云云(凡奉持准提咒者。每日六时。极少早晚二时。如一生长持。随意散诵。不必记数。但用准提镜一面。除早晚二时。对镜持诵外。即以囊盛镜。佩带在身。任意持诵。久久必获感应。除藏中诸准提经外。有显密圆通成佛心要集。准提净业集要等书流通) </div></div><div class="post"><div class="post-header"><div class="avatar">大</div><span style="font-size:15px; letter-spacing:1px;">大漠悲鸿发表于 2007-10-8 21:41</span><div class="badge-floor">第 4 进</div></div><div class="post-body">水陆道场法-轮宝忏卷第九（奉请七俱胝佛母）＼卍新纂续藏经 <br/>
 <br/>
 一心奉请七俱胝佛母尊那（即准提）菩萨真言曼荼罗法（拜观同上） <br/>
 <br/>
@@ -332,7 +353,7 @@ l·诵甘露水真言（七遍） <br/>
 <br/>
 或女人夫不敬重，取一新瓶，满盛水， 于瓶中著七宝及诸灵药五谷白芥子，以缯帛系瓶项， 以真言加持一百八遍，令女人结根本印，安顶上， 以水灌顶，即得宠爱敬重，亦令有子， 在胎牢固。 <br/>
 <br/>
-于高山顶上，诵一俱胝遍，金刚手菩萨， 将此人入阿修罗宫，寿命一劫，得见弥勒，听闻正法， 获不退转 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2007-10-8 21:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">天溪准提三昧行法序 <br/>
+于高山顶上，诵一俱胝遍，金刚手菩萨， 将此人入阿修罗宫，寿命一劫，得见弥勒，听闻正法， 获不退转 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div><span style="font-size:15px; letter-spacing:1px;">大漠悲鸿发表于 2007-10-8 21:49</span><div class="badge-floor">第 5 进</div></div><div class="post-body">天溪准提三昧行法序 <br/>
 准提忏仪从无善本者何也？世尊言：此大毗卢遮那如来瑜伽大教，三摩耶灌顶道场如来秘密法门，成佛心要。而世师以浅智测量，止顺初机，不知直接上根，超凡入圣，则体会宗趣之难也！根本微妙字轮，虽说文字，皆是善文字义。离一切相，自性虚空，亦复不生虚空之心。世尊教外别传之指，而世师以文字求之，变观行为名言，翻神宗为音韵，则离名离相之难也。龙树菩萨，于持明藏，略出大明，成就仪轨，凡戒行发心，布字结印，持诵忏摩，入三摩观智，各有规式。而世师株守，别忏遗文，概从疏略，则遵奉仪轨之难也。经咒自地婆诃罗译而外，有金刚智、不空、崛多、玄奘、天息灾、法贤、金刚幢诸译，句引不同，转读有注，音含长短，字有重轻。世师漫作声势，多乖梵韵，则指决字声之难也。经说念诵观行供养次第，先须受持禁戒，坚固不退，心不散乱，方许入此法门。今俗流带妻挟子，饮酒啖肉，缁素不分，混滥坛席，则严持戒律之难也。天溪老人，戒行精严，深入观智，穷理而无理障，证空而不堕空。一义差别则遍考群经，一字参差则研穷经岁。十章明法，三密加持，观其顿超地位，速离缠痾，则一行禅师之研通神变也。显教密宗，该性含相，则法幢[(厂@((既-旡)-日+口))*殳]公之圆通心要也。一字说千门之妙，多言总五部之归，则金刚幢之密咒圆因也。无相三昧，形如满月，佛性之义，廓然虚明，则龙树尊者之显密圆宗也。 <br/>
 以兹行法，方彼诸家，则妙高之落众峰，灵耀之掩群照，岂虚言哉！往予奉教天溪，归述旧闻十八章，面求指摘老人，往返酬答，动辄数千言，转综密部，深思观旨。参之以般若理趣，准之于瑜伽教王，两人见处，或有抵捂，罔不平心较量，可起改者起改之，可仍袭者仍袭之。予年耄学荒，交游星散，同好中有亦鉴无姑息者，非天溪吾谁自归欤？行法善本成，老人索予数言前之，因述予平时归向之诚如此，若夫树高招风，门庭党伐，此非吾两人之所知也。 <br/>
 康熙八年己酉秋八月行纯范骧拜书 <br/>
@@ -480,25 +501,25 @@ l·诵甘露水真言（七遍） <br/>
 尔时世尊，愍念未来薄福恶业诸众生故，即入准提三摩地，说过去七俱胝佛所说陀罗尼。(众共手结契印，口诵咒言，心存布梵，其契印法，以二手小指无名指，相叉入掌，二中指直竖相拄，二头指附二中指上节，二大指附二头指侧，即成)， <br/>
 南无飒哆南(一)　三藐三勃陀俱胝南(二)　怛侄他(长)(引)(三)唵折戾(四)　主戾(五)　准提(六)　莎婆诃(七)【◇】 <br/>
 (坛中不便列坐，但行立诵持一百八遍，是悉地满数。今求三品悉地，是宜三周百八，不多不少。首者依法持珠记数，数满归位，以印向顶解散，首者白闻咒证位)， <br/>
-佛说此大准提陀罗尼法时，无量众生远尘离垢，得证准提陀罗尼功德，得见十方诸佛菩萨圣众，决定成就阿耨多罗三藐三菩提。(白竟，同声作愿)， </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 16:52<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
+佛说此大准提陀罗尼法时，无量众生远尘离垢，得证准提陀罗尼功德，得见十方诸佛菩萨圣众，决定成就阿耨多罗三藐三菩提。(白竟，同声作愿)， </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div><span style="font-size:15px; letter-spacing:1px;">贝嘛埵吉发表于 2010-6-25 16:52</span><div class="badge-floor">第 6 进</div></div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
 众生善根尽随喜  正觉菩提意中持 <br/>
 正觉妙法及僧伽  直至菩提我皈依 <br/>
 所为利益自他故  我今即发菩提心 <br/>
 既发最上菩提心  饶益一切诸有情 <br/>
-菩提妙行皆修作  为利众生愿成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 17:03<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">我今持诵大准提，即发菩提广大愿 <br/>
+菩提妙行皆修作  为利众生愿成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div><span style="font-size:15px; letter-spacing:1px;">贝嘛埵吉发表于 2010-6-25 17:03</span><div class="badge-floor">第 7 进</div></div><div class="post-body">我今持诵大准提，即发菩提广大愿 <br/>
 愿我定慧速圆明，愿我功德皆成就 <br/>
 愿我胜福遍庄严，愿共众生成佛道 <br/>
 我昔所造诸恶业，皆由无始贪嗔痴 <br/>
 从身语意之所生，一切我今皆忏悔 <br/>
 愿我临欲命终时，尽除一切诸障碍 <br/>
-面见彼佛阿弥陀，即得往生安乐剎 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 17:12<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">我今持诵大准提，即发菩提广大愿 <br/>
+面见彼佛阿弥陀，即得往生安乐剎 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div><span style="font-size:15px; letter-spacing:1px;">贝嘛埵吉发表于 2010-6-25 17:12</span><div class="badge-floor">第 8 进</div></div><div class="post-body">我今持诵大准提，即发菩提广大愿 <br/>
 愿我定慧速圆明，愿我功德皆成就 <br/>
 愿我胜福遍庄严，愿共众生成佛道 <br/>
 我昔所造诸恶业，皆由无始贪嗔痴 <br/>
 从身语意之所生，一切我今皆忏悔 <br/>
 愿我临欲命终时，尽除一切诸障碍 <br/>
-面见彼佛阿弥陀，即得往生安乐剎 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 17:35<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">稽首皈依苏悉帝，头面顶礼七俱胝， <br/>
-我今称赞大准提，惟愿慈悲垂加护。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2011-2-18 23:17<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">诸法因缘生，如来说此因，彼法因缘尽，是大沙门说 <br/>
+面见彼佛阿弥陀，即得往生安乐剎 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div><span style="font-size:15px; letter-spacing:1px;">贝嘛埵吉发表于 2010-6-25 17:35</span><div class="badge-floor">第 9 进</div></div><div class="post-body">稽首皈依苏悉帝，头面顶礼七俱胝， <br/>
+我今称赞大准提，惟愿慈悲垂加护。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金鑫发表于 2011-2-18 23:17</span><div class="badge-floor">第 10 进</div></div><div class="post-body">诸法因缘生，如来说此因，彼法因缘尽，是大沙门说 <br/>
 <br/>
 </div></div>
 </div>

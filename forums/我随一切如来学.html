@@ -1,531 +1,568 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>我随一切如来学 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>我随一切如来学 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
+
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / 藏密修海显密教法</div>
-<h1 style="margin-bottom: 10px; font-size: 32px;">目录：我随一切如来学</h1>
-<p style="color:var(--text-muted); margin-bottom:40px;">共收录 470 篇主题</p>
-<a href="../threads/9887.html" class="thread-row"><h2>莲师教诫的最殊胜窍诀</h2><div class="th-meta">TID: 9887</div></a>
-<a href="../threads/8072.html" class="thread-row"><h2>《文殊菩萨祈请颂》</h2><div class="th-meta">TID: 8072</div></a>
-<a href="../threads/8065.html" class="thread-row"><h2>新帖：瑰美艳丽的密宗彩沙曼陀罗</h2><div class="th-meta">TID: 8065</div></a>
-<a href="../threads/8022.html" class="thread-row"><h2>《利益衆生九種觀察之記要》华智仁波切著</h2><div class="th-meta">TID: 8022</div></a>
-<a href="../threads/7999.html" class="thread-row"><h2>在家居士律仪五百答</h2><div class="th-meta">TID: 7999</div></a>
-<a href="../threads/7998.html" class="thread-row"><h2>五方佛及其图像考察</h2><div class="th-meta">TID: 7998</div></a>
-<a href="../threads/7987.html" class="thread-row"><h2>觉灯日光——《菩提道次第广论》教授</h2><div class="th-meta">TID: 7987</div></a>
-<a href="../threads/7949.html" class="thread-row"><h2>菩提道次第安乐道论——第四世班禅大师·善慧法幢造</h2><div class="th-meta">TID: 7949</div></a>
-<a href="../threads/7944.html" class="thread-row"><h2>佛教戒律简介</h2><div class="th-meta">TID: 7944</div></a>
-<a href="../threads/7815.html" class="thread-row"><h2>藏传佛教的四皈依及修习</h2><div class="th-meta">TID: 7815</div></a>
-<a href="../threads/7796.html" class="thread-row"><h2>八吉祥</h2><div class="th-meta">TID: 7796</div></a>
-<a href="../threads/7792.html" class="thread-row"><h2>菩萨摩诃萨有十种魔业 十种舍离魔业</h2><div class="th-meta">TID: 7792</div></a>
-<a href="../threads/7729.html" class="thread-row"><h2>《虔心悲切遥呼上师祈请文》</h2><div class="th-meta">TID: 7729</div></a>
-<a href="../threads/7715.html" class="thread-row"><h2>法界光明金刚藏</h2><div class="th-meta">TID: 7715</div></a>
-<a href="../threads/7693.html" class="thread-row"><h2>成就山法精华--大圆满修持精要</h2><div class="th-meta">TID: 7693</div></a>
-<a href="../threads/7690.html" class="thread-row"><h2>启请六臂摩呵黑怙主加持文</h2><div class="th-meta">TID: 7690</div></a>
-<a href="../threads/7688.html" class="thread-row"><h2>开光仪轨</h2><div class="th-meta">TID: 7688</div></a>
-<a href="../threads/7684.html" class="thread-row"><h2>皈依修法简明引导文</h2><div class="th-meta">TID: 7684</div></a>
-<a href="../threads/7682.html" class="thread-row"><h2>菩提道次第探玄捷径</h2><div class="th-meta">TID: 7682</div></a>
-<a href="../threads/7680.html" class="thread-row"><h2>俄藏黑水城文献-梦幻身要门、幻身要门</h2><div class="th-meta">TID: 7680</div></a>
-<a href="../threads/7679.html" class="thread-row"><h2>灌顶，为藏密重要而又神秘的仪式之一</h2><div class="th-meta">TID: 7679</div></a>
-<a href="../threads/7602.html" class="thread-row"><h2>圣观自在菩萨功德赞</h2><div class="th-meta">TID: 7602</div></a>
-<a href="../threads/7599.html" class="thread-row"><h2>三世十方诸佛赞</h2><div class="th-meta">TID: 7599</div></a>
-<a href="../threads/7578.html" class="thread-row"><h2>佛子行三十七颂——堪布久美多杰讲授</h2><div class="th-meta">TID: 7578</div></a>
-<a href="../threads/7577.html" class="thread-row"><h2>《入菩萨行》——久美多杰堪布 讲解</h2><div class="th-meta">TID: 7577</div></a>
-<a href="../threads/7576.html" class="thread-row"><h2>藏传佛教常识300题——消除常见误解</h2><div class="th-meta">TID: 7576</div></a>
-<a href="../threads/7575.html" class="thread-row"><h2>藏传佛教常识300题——相关密法解答</h2><div class="th-meta">TID: 7575</div></a>
-<a href="../threads/7574.html" class="thread-row"><h2>藏传佛教常识300题——教理修学相关解答</h2><div class="th-meta">TID: 7574</div></a>
-<a href="../threads/7573.html" class="thread-row"><h2>藏传佛教常识300题——佛教与现代社会</h2><div class="th-meta">TID: 7573</div></a>
-<a href="../threads/7572.html" class="thread-row"><h2>藏传佛教常识300题——佛教基础知识</h2><div class="th-meta">TID: 7572</div></a>
-<a href="../threads/7571.html" class="thread-row"><h2>佛教常识问答——佛教在中国的传播、发展和演变</h2><div class="th-meta">TID: 7571</div></a>
-<a href="../threads/7570.html" class="thread-row"><h2>佛教常识问答——佛教在印度的发展、衰灭和复兴</h2><div class="th-meta">TID: 7570</div></a>
-<a href="../threads/7568.html" class="thread-row"><h2>佛教常识问答——僧伽和佛的弟子</h2><div class="th-meta">TID: 7568</div></a>
-<a href="../threads/7567.html" class="thread-row"><h2>佛学常识问答——佛法的基本内容和佛教经籍</h2><div class="th-meta">TID: 7567</div></a>
-<a href="../threads/7566.html" class="thread-row"><h2>佛教常识问答——佛陀和佛教的创立</h2><div class="th-meta">TID: 7566</div></a>
-<a href="../threads/7550.html" class="thread-row"><h2>入菩萨行论释——佛子正道（102任甘丹赤巴 日宗仁波切）</h2><div class="th-meta">TID: 7550</div></a>
-<a href="../threads/7526.html" class="thread-row"><h2>修心七要——大堪布 贡噶旺秋 仁波切</h2><div class="th-meta">TID: 7526</div></a>
-<a href="../threads/7514.html" class="thread-row"><h2>萨千贡噶宁波之教授——远离四种执著(萨迦天津法王开示)</h2><div class="th-meta">TID: 7514</div></a>
-<a href="../threads/7503.html" class="thread-row"><h2>「远离四种执着」修心法（进入奥义之钥）详释</h2><div class="th-meta">TID: 7503</div></a>
-<a href="../threads/7502.html" class="thread-row"><h2>「远离四种执着」修心法开示——萨迦·班智达·贡噶·嘉晨</h2><div class="th-meta">TID: 7502</div></a>
-<a href="../threads/7501.html" class="thread-row"><h2>关于《远离四种执着》的开示——萨迦法王</h2><div class="th-meta">TID: 7501</div></a>
-<a href="../threads/7500.html" class="thread-row"><h2>远离四种执着——尊贵的究给崔钦仁波切开示</h2><div class="th-meta">TID: 7500</div></a>
-<a href="../threads/7499.html" class="thread-row"><h2>《甘露宝瓶》——佛子行三十七颂释</h2><div class="th-meta">TID: 7499</div></a>
-<a href="../threads/7498.html" class="thread-row"><h2>冈波巴大师全集选译——《成就胜道宝鬘集》</h2><div class="th-meta">TID: 7498</div></a>
-<a href="../threads/7482.html" class="thread-row"><h2>十善业道</h2><div class="th-meta">TID: 7482</div></a>
-<a href="../threads/7480.html" class="thread-row"><h2>业感缘起</h2><div class="th-meta">TID: 7480</div></a>
-<a href="../threads/7479.html" class="thread-row"><h2>有情之身心</h2><div class="th-meta">TID: 7479</div></a>
-<a href="../threads/7478.html" class="thread-row"><h2>四劫</h2><div class="th-meta">TID: 7478</div></a>
-<a href="../threads/7477.html" class="thread-row"><h2>三千大千世界</h2><div class="th-meta">TID: 7477</div></a>
-<a href="../threads/7476.html" class="thread-row"><h2>三界六道及九地</h2><div class="th-meta">TID: 7476</div></a>
-<a href="../threads/7475.html" class="thread-row"><h2>菩萨行果</h2><div class="th-meta">TID: 7475</div></a>
-<a href="../threads/7474.html" class="thread-row"><h2>缘觉行果</h2><div class="th-meta">TID: 7474</div></a>
-<a href="../threads/7473.html" class="thread-row"><h2>声闻行果</h2><div class="th-meta">TID: 7473</div></a>
-<a href="../threads/7472.html" class="thread-row"><h2>人天行果</h2><div class="th-meta">TID: 7472</div></a>
-<a href="../threads/7471.html" class="thread-row"><h2>中国之佛学</h2><div class="th-meta">TID: 7471</div></a>
-<a href="../threads/7470.html" class="thread-row"><h2>印度佛学略史</h2><div class="th-meta">TID: 7470</div></a>
-<a href="../threads/7469.html" class="thread-row"><h2>佛法僧三宝</h2><div class="th-meta">TID: 7469</div></a>
-<a href="../threads/7468.html" class="thread-row"><h2>六波罗蜜</h2><div class="th-meta">TID: 7468</div></a>
-<a href="../threads/7467.html" class="thread-row"><h2>四念处</h2><div class="th-meta">TID: 7467</div></a>
-<a href="../threads/7466.html" class="thread-row"><h2>声闻果与佛果</h2><div class="th-meta">TID: 7466</div></a>
-<a href="../threads/7465.html" class="thread-row"><h2>四禅八定与灭尽定</h2><div class="th-meta">TID: 7465</div></a>
-<a href="../threads/7464.html" class="thread-row"><h2>五蕴</h2><div class="th-meta">TID: 7464</div></a>
-<a href="../threads/7463.html" class="thread-row"><h2>三皈五戒</h2><div class="th-meta">TID: 7463</div></a>
-<a href="../threads/7462.html" class="thread-row"><h2>烦恼</h2><div class="th-meta">TID: 7462</div></a>
-<a href="../threads/7461.html" class="thread-row"><h2>四圣谛</h2><div class="th-meta">TID: 7461</div></a>
-<a href="../threads/7460.html" class="thread-row"><h2>三法印</h2><div class="th-meta">TID: 7460</div></a>
-<a href="../threads/7459.html" class="thread-row"><h2>十二因缘</h2><div class="th-meta">TID: 7459</div></a>
-<a href="../threads/7458.html" class="thread-row"><h2>业力与轮回</h2><div class="th-meta">TID: 7458</div></a>
-<a href="../threads/7358.html" class="thread-row"><h2>诸法因缘生,我说是因缘；因缘尽故灭，我作如是说</h2><div class="th-meta">TID: 7358</div></a>
-<a href="../threads/7337.html" class="thread-row"><h2>密宗纲要第二篇 密教之教相</h2><div class="th-meta">TID: 7337</div></a>
-<a href="../threads/7336.html" class="thread-row"><h2>密宗纲要 第一篇 印度之密教</h2><div class="th-meta">TID: 7336</div></a>
-<a href="../threads/7334.html" class="thread-row"><h2>藏传佛教的一些法相名词</h2><div class="th-meta">TID: 7334</div></a>
-<a href="../threads/7333.html" class="thread-row"><h2>即身成佛</h2><div class="th-meta">TID: 7333</div></a>
-<a href="../threads/7330.html" class="thread-row"><h2>【普贤菩萨】</h2><div class="th-meta">TID: 7330</div></a>
-<a href="../threads/7323.html" class="thread-row"><h2>修心八颂——朗日塘巴·金刚师子  造</h2><div class="th-meta">TID: 7323</div></a>
-<a href="../threads/7288.html" class="thread-row"><h2>白话佛经——《普贤菩萨行愿品》</h2><div class="th-meta">TID: 7288</div></a>
-<a href="../threads/7287.html" class="thread-row"><h2>《普贤行愿品颂解》——能海上师</h2><div class="th-meta">TID: 7287</div></a>
-<a href="../threads/7286.html" class="thread-row"><h2>普贤行愿颂讲记——隆莲法师讲</h2><div class="th-meta">TID: 7286</div></a>
-<a href="../threads/7285.html" class="thread-row"><h2>普贤行愿品讲记——广超法师</h2><div class="th-meta">TID: 7285</div></a>
-<a href="../threads/7284.html" class="thread-row"><h2>入菩萨行论白话——达瓦次仁译</h2><div class="th-meta">TID: 7284</div></a>
-<a href="../threads/7279.html" class="thread-row"><h2>入菩萨行论广解——杰操大师著、隆莲法师译解</h2><div class="th-meta">TID: 7279</div></a>
-<a href="../threads/7278.html" class="thread-row"><h2>《入菩萨行论》颂词——隆莲法师译</h2><div class="th-meta">TID: 7278</div></a>
-<a href="../threads/7266.html" class="thread-row"><h2>什么叫磕头?如何礼拜？(泽绒洛吾堪布)</h2><div class="th-meta">TID: 7266</div></a>
-<a href="../threads/7265.html" class="thread-row"><h2>简单介绍磕头——礼拜(泽绒洛吾堪布)</h2><div class="th-meta">TID: 7265</div></a>
-<a href="../threads/7263.html" class="thread-row"><h2>地藏菩薩淨障略軌</h2><div class="th-meta">TID: 7263</div></a>
-<a href="../threads/7249.html" class="thread-row"><h2>佛典譬喻经全集</h2><div class="th-meta">TID: 7249</div></a>
-<a href="../threads/7244.html" class="thread-row"><h2>《釋迦王祈請文》薩迦班智達造</h2><div class="th-meta">TID: 7244</div></a>
-<a href="../threads/7243.html" class="thread-row"><h2>《遣除障道祈请颂》略释——堪布丹熷扎拉译释</h2><div class="th-meta">TID: 7243</div></a>
-<a href="../threads/7242.html" class="thread-row"><h2>禄顶堪仟仁波切：修行、上师和法座</h2><div class="th-meta">TID: 7242</div></a>
-<a href="../threads/7241.html" class="thread-row"><h2>《入菩薩行論》雪歌仁波切講授 法炬法師翻譯</h2><div class="th-meta">TID: 7241</div></a>
-<a href="../threads/7181.html" class="thread-row"><h2>金刚萨埵百字明</h2><div class="th-meta">TID: 7181</div></a>
-<a href="../threads/7145.html" class="thread-row"><h2>阿弥陀佛睡修法门——祈竹仁波切开示</h2><div class="th-meta">TID: 7145</div></a>
-<a href="../threads/7059.html" class="thread-row"><h2>《文殊菩萨十大愿》</h2><div class="th-meta">TID: 7059</div></a>
-<a href="../threads/6891.html" class="thread-row"><h2>祈竹仁宝哲文集（三）</h2><div class="th-meta">TID: 6891</div></a>
-<a href="../threads/6889.html" class="thread-row"><h2>藏传佛教象征符号与器物图解（兵器）</h2><div class="th-meta">TID: 6889</div></a>
-<a href="../threads/6862.html" class="thread-row"><h2>现有自在摄受祈祷文——大加持云</h2><div class="th-meta">TID: 6862</div></a>
-<a href="../threads/6861.html" class="thread-row"><h2>八圣吉祥颂</h2><div class="th-meta">TID: 6861</div></a>
-<a href="../threads/6808.html" class="thread-row"><h2>耶喜喇嘛：菩提心的修行</h2><div class="th-meta">TID: 6808</div></a>
-<a href="../threads/6806.html" class="thread-row"><h2>觉囊密乘时轮立体大坛城建筑的文化内涵及意义</h2><div class="th-meta">TID: 6806</div></a>
-<a href="../threads/6803.html" class="thread-row"><h2>辩经--智慧的表达</h2><div class="th-meta">TID: 6803</div></a>
-<a href="../threads/6770.html" class="thread-row"><h2>觉囊课诵珠宝莲</h2><div class="th-meta">TID: 6770</div></a>
-<a href="../threads/6769.html" class="thread-row"><h2>香巴拉简颂</h2><div class="th-meta">TID: 6769</div></a>
-<a href="../threads/6768.html" class="thread-row"><h2>时轮共生简颂</h2><div class="th-meta">TID: 6768</div></a>
-<a href="../threads/6767.html" class="thread-row"><h2>时轮金刚——天降花雨的法缘</h2><div class="th-meta">TID: 6767</div></a>
-<a href="../threads/6765.html" class="thread-row"><h2>觉囊派的特点</h2><div class="th-meta">TID: 6765</div></a>
-<a href="../threads/6764.html" class="thread-row"><h2>觉囊派密法修炼</h2><div class="th-meta">TID: 6764</div></a>
-<a href="../threads/6758.html" class="thread-row"><h2>时轮灌顶简介</h2><div class="th-meta">TID: 6758</div></a>
-<a href="../threads/6756.html" class="thread-row"><h2>入菩萨行（入行论）原文——如石法师译</h2><div class="th-meta">TID: 6756</div></a>
-<a href="../threads/6755.html" class="thread-row"><h2>入菩萨行（入行论）——导论⊙释注⊙集要  如石法师著</h2><div class="th-meta">TID: 6755</div></a>
-<a href="../threads/6754.html" class="thread-row"><h2>入菩萨行（入行论）逐句释</h2><div class="th-meta">TID: 6754</div></a>
-<a href="../threads/6692.html" class="thread-row"><h2>二十五护戒善神说明表（参阅三藏法数）</h2><div class="th-meta">TID: 6692</div></a>
-<a href="../threads/6656.html" class="thread-row"><h2>菩萨十戒颂 现代文译</h2><div class="th-meta">TID: 6656</div></a>
-<a href="../threads/6627.html" class="thread-row"><h2>菩提道次第论极略颂</h2><div class="th-meta">TID: 6627</div></a>
-<a href="../threads/6427.html" class="thread-row"><h2>伏 藏(伏藏的起源、埋藏特点、解脱捷径）</h2><div class="th-meta">TID: 6427</div></a>
-<a href="../threads/6396.html" class="thread-row"><h2>十善业一一皆感四种果报——出自大乘理趣六波罗蜜多经</h2><div class="th-meta">TID: 6396</div></a>
-<a href="../threads/6381.html" class="thread-row"><h2>不可思议的布施不可思议的福报（精品）</h2><div class="th-meta">TID: 6381</div></a>
-<a href="../threads/6309.html" class="thread-row"><h2>观修献供系列——意幻供养与佛陀八瑞相</h2><div class="th-meta">TID: 6309</div></a>
-<a href="../threads/6305.html" class="thread-row"><h2>佛教的手印（连载带插图，暂勿跟帖）</h2><div class="th-meta">TID: 6305</div></a>
-<a href="../threads/6270.html" class="thread-row"><h2>敬信依止善知识</h2><div class="th-meta">TID: 6270</div></a>
-<a href="../threads/6233.html" class="thread-row"><h2>华严金师子章校释</h2><div class="th-meta">TID: 6233</div></a>
-<a href="../threads/6160.html" class="thread-row"><h2>究給企謙仁波切開示— 上師瑜珈</h2><div class="th-meta">TID: 6160</div></a>
-<a href="../threads/6143.html" class="thread-row"><h2>那惹空行茶供简儀</h2><div class="th-meta">TID: 6143</div></a>
-<a href="../threads/6135.html" class="thread-row"><h2>菩提道次第心传录 上 下</h2><div class="th-meta">TID: 6135</div></a>
-<a href="../threads/6077.html" class="thread-row"><h2>九乘佛法</h2><div class="th-meta">TID: 6077</div></a>
-<a href="../threads/6076.html" class="thread-row"><h2>时轮与时轮法的简要介绍</h2><div class="th-meta">TID: 6076</div></a>
-<a href="../threads/6060.html" class="thread-row"><h2>莲师忿怒金刚铠甲护身咒轮</h2><div class="th-meta">TID: 6060</div></a>
-<a href="../threads/6036.html" class="thread-row"><h2>奢摩他（止）的修习——色拉寺拉忍巴格西 赛康仁波切讲授</h2><div class="th-meta">TID: 6036</div></a>
-<a href="../threads/5973.html" class="thread-row"><h2>摩诃阿底瑜伽深法意趣涌现放生仪轨·吉祥寿命精华</h2><div class="th-meta">TID: 5973</div></a>
-<a href="../threads/5945.html" class="thread-row"><h2>菩提道次第纲要</h2><div class="th-meta">TID: 5945</div></a>
-<a href="../threads/5937.html" class="thread-row"><h2>大自在祈祷文</h2><div class="th-meta">TID: 5937</div></a>
-<a href="../threads/5916.html" class="thread-row"><h2>八十八佛大忏悔文</h2><div class="th-meta">TID: 5916</div></a>
-<a href="../threads/5215.html" class="thread-row"><h2>佛祖统纪（节录）</h2><div class="th-meta">TID: 5215</div></a>
-<a href="../threads/5132.html" class="thread-row"><h2>《上师五十颂显义》</h2><div class="th-meta">TID: 5132</div></a>
-<a href="../threads/5131.html" class="thread-row"><h2>《上师五十颂释·成满弟子希愿》</h2><div class="th-meta">TID: 5131</div></a>
-<a href="../threads/5120.html" class="thread-row"><h2>《上师五十颂》马鸣菩萨造</h2><div class="th-meta">TID: 5120</div></a>
-<a href="../threads/5111.html" class="thread-row"><h2>修心宝典---利器之轮、修心克毒孔雀</h2><div class="th-meta">TID: 5111</div></a>
-<a href="../threads/5077.html" class="thread-row"><h2>白度母赞</h2><div class="th-meta">TID: 5077</div></a>
-<a href="../threads/5067.html" class="thread-row"><h2>坚牢地神结界法</h2><div class="th-meta">TID: 5067</div></a>
-<a href="../threads/5042.html" class="thread-row"><h2>《速道》--藏传佛教迅速成就之路</h2><div class="th-meta">TID: 5042</div></a>
-<a href="../threads/5038.html" class="thread-row"><h2>略说萨迦不出墙的甚深密法-萨迦十三金法</h2><div class="th-meta">TID: 5038</div></a>
-<a href="../threads/5006.html" class="thread-row"><h2>岡波巴大師教言廣集</h2><div class="th-meta">TID: 5006</div></a>
-<a href="../threads/4976.html" class="thread-row"><h2>菩提道次第甚深教授修法·甘露藏 (基础功课常持诵)</h2><div class="th-meta">TID: 4976</div></a>
-<a href="../threads/4913.html" class="thread-row"><h2>菩提道次第修法笔记---善慧持教增广大师造</h2><div class="th-meta">TID: 4913</div></a>
-<a href="../threads/4857.html" class="thread-row"><h2>佛教名词释意</h2><div class="th-meta">TID: 4857</div></a>
-<a href="../threads/4853.html" class="thread-row"><h2>诺那活佛所传多杰卓罗法门介绍（诺门密幢传人慧庵法师）</h2><div class="th-meta">TID: 4853</div></a>
-<a href="../threads/4772.html" class="thread-row"><h2>咒语真言的殊胜功德</h2><div class="th-meta">TID: 4772</div></a>
-<a href="../threads/4708.html" class="thread-row"><h2>五戒十善六度四摄</h2><div class="th-meta">TID: 4708</div></a>
-<a href="../threads/4702.html" class="thread-row"><h2>怎样相应自己的上师</h2><div class="th-meta">TID: 4702</div></a>
-<a href="../threads/4693.html" class="thread-row"><h2>吉祥萨迦派第五世俄巴多杰邛活佛嘉雍丹巴旺许</h2><div class="th-meta">TID: 4693</div></a>
-<a href="../threads/4692.html" class="thread-row"><h2>萨迦法王访问记</h2><div class="th-meta">TID: 4692</div></a>
-<a href="../threads/4680.html" class="thread-row"><h2>降雨祈愿仪轨(格鲁派传承)</h2><div class="th-meta">TID: 4680</div></a>
-<a href="../threads/4667.html" class="thread-row"><h2>藏传佛教的内涵</h2><div class="th-meta">TID: 4667</div></a>
-<a href="../threads/4659.html" class="thread-row"><h2>仁波且谈密乘行者应避免的极重罪业</h2><div class="th-meta">TID: 4659</div></a>
-<a href="../threads/4597.html" class="thread-row"><h2>吽声金刚就是金刚吽迦罗？</h2><div class="th-meta">TID: 4597</div></a>
-<a href="../threads/4586.html" class="thread-row"><h2>噶陀寺蒋扬祖古：财神修持法的开示</h2><div class="th-meta">TID: 4586</div></a>
-<a href="../threads/4572.html" class="thread-row"><h2>水供的功德</h2><div class="th-meta">TID: 4572</div></a>
-<a href="../threads/4553.html" class="thread-row"><h2>愤怒莲师威猛炽燃火焰铁蝎咒轮</h2><div class="th-meta">TID: 4553</div></a>
-<a href="../threads/4542.html" class="thread-row"><h2>寿份无量---修持延寿本尊法门</h2><div class="th-meta">TID: 4542</div></a>
-<a href="../threads/4540.html" class="thread-row"><h2>根松仁波且谈脉气明点的要义</h2><div class="th-meta">TID: 4540</div></a>
-<a href="../threads/4526.html" class="thread-row"><h2>大威德金刚前行引导文</h2><div class="th-meta">TID: 4526</div></a>
-<a href="../threads/4517.html" class="thread-row"><h2>藏传佛教常见手印及持物的象征意义（不断更新中）</h2><div class="th-meta">TID: 4517</div></a>
-<a href="../threads/4450.html" class="thread-row"><h2>吉祥萨迦派玉隆拉加寺简介</h2><div class="th-meta">TID: 4450</div></a>
-<a href="../threads/4423.html" class="thread-row"><h2>吉祥时轮金刚.明咒集诵法</h2><div class="th-meta">TID: 4423</div></a>
-<a href="../threads/4394.html" class="thread-row"><h2>莲华生大士长寿法</h2><div class="th-meta">TID: 4394</div></a>
-<a href="../threads/4393.html" class="thread-row"><h2>莲华生大士狮子空行法</h2><div class="th-meta">TID: 4393</div></a>
-<a href="../threads/4389.html" class="thread-row"><h2>自生莲花心髓日修瑜伽心要 ----顶果钦哲法王伏藏法宝</h2><div class="th-meta">TID: 4389</div></a>
-<a href="../threads/4344.html" class="thread-row"><h2>大威德金刚法</h2><div class="th-meta">TID: 4344</div></a>
-<a href="../threads/4340.html" class="thread-row"><h2>马明金刚手大鹏合修法</h2><div class="th-meta">TID: 4340</div></a>
-<a href="../threads/4339.html" class="thread-row"><h2>施食简轨</h2><div class="th-meta">TID: 4339</div></a>
-<a href="../threads/4332.html" class="thread-row"><h2>文殊八字大威德陀罗尼咒</h2><div class="th-meta">TID: 4332</div></a>
-<a href="../threads/4329.html" class="thread-row"><h2>持五戒的意义和利益</h2><div class="th-meta">TID: 4329</div></a>
-<a href="../threads/4289.html" class="thread-row"><h2>巴楚仁波切 教言</h2><div class="th-meta">TID: 4289</div></a>
-<a href="../threads/4288.html" class="thread-row"><h2>天法白財神灌頂法會       傳法上師：瑪瓊祖古</h2><div class="th-meta">TID: 4288</div></a>
-<a href="../threads/4285.html" class="thread-row"><h2>《密义显说》（节录）</h2><div class="th-meta">TID: 4285</div></a>
-<a href="../threads/4260.html" class="thread-row"><h2>决定菩提道次第中所说实修之门一切善说精髓</h2><div class="th-meta">TID: 4260</div></a>
-<a href="../threads/4256.html" class="thread-row"><h2>诺门真言集</h2><div class="th-meta">TID: 4256</div></a>
-<a href="../threads/4230.html" class="thread-row"><h2>二十一度母赞——诸种译本</h2><div class="th-meta">TID: 4230</div></a>
-<a href="../threads/4221.html" class="thread-row"><h2>菩提道次第祈愿文——诸种译本</h2><div class="th-meta">TID: 4221</div></a>
-<a href="../threads/4213.html" class="thread-row"><h2>启胜道门·道次第传承祖师祈请——诸种译本</h2><div class="th-meta">TID: 4213</div></a>
-<a href="../threads/4210.html" class="thread-row"><h2>菩提道次第极略论——诸种译本</h2><div class="th-meta">TID: 4210</div></a>
-<a href="../threads/4207.html" class="thread-row"><h2>三主要道——诸种译本</h2><div class="th-meta">TID: 4207</div></a>
-<a href="../threads/4206.html" class="thread-row"><h2>功德本颂 诸种译本合集</h2><div class="th-meta">TID: 4206</div></a>
-<a href="../threads/4205.html" class="thread-row"><h2>缘起赞——诸种译本</h2><div class="th-meta">TID: 4205</div></a>
-<a href="../threads/4190.html" class="thread-row"><h2>大白伞盖佛母礼赞·回遮法——诸种译本</h2><div class="th-meta">TID: 4190</div></a>
-<a href="../threads/4180.html" class="thread-row"><h2>佛说守持不淫戒的五种功德利益（白话）</h2><div class="th-meta">TID: 4180</div></a>
-<a href="../threads/4119.html" class="thread-row"><h2>常守五戒．持菩萨行</h2><div class="th-meta">TID: 4119</div></a>
-<a href="../threads/4071.html" class="thread-row"><h2>泰国高僧龙婆托 (Long Por Thuat)的传奇事迹</h2><div class="th-meta">TID: 4071</div></a>
-<a href="../threads/3989.html" class="thread-row"><h2>热罗上师开示偏邪道与正道正行</h2><div class="th-meta">TID: 3989</div></a>
-<a href="../threads/3959.html" class="thread-row"><h2>菩提心海入门</h2><div class="th-meta">TID: 3959</div></a>
-<a href="../threads/3895.html" class="thread-row"><h2>《佛子行三十七颂》</h2><div class="th-meta">TID: 3895</div></a>
-<a href="../threads/3871.html" class="thread-row"><h2>禅定与解脱，福德智慧力，如斯诸力等，无常力最大</h2><div class="th-meta">TID: 3871</div></a>
-<a href="../threads/3868.html" class="thread-row"><h2>护法的故事--紫玛尔护法</h2><div class="th-meta">TID: 3868</div></a>
-<a href="../threads/3861.html" class="thread-row"><h2>白色如意摩尼怙主供养仪轨</h2><div class="th-meta">TID: 3861</div></a>
-<a href="../threads/3835.html" class="thread-row"><h2>大吉祥天女咒奥义分析</h2><div class="th-meta">TID: 3835</div></a>
-<a href="../threads/3824.html" class="thread-row"><h2>顶果钦则仁波切：上师瑜伽之精髓</h2><div class="th-meta">TID: 3824</div></a>
-<a href="../threads/3823.html" class="thread-row"><h2>噶陀寺大持明者龙萨宁波伏藏大师著《施身一座法》</h2><div class="th-meta">TID: 3823</div></a>
-<a href="../threads/3807.html" class="thread-row"><h2>朵玛的种类和功德</h2><div class="th-meta">TID: 3807</div></a>
-<a href="../threads/3777.html" class="thread-row"><h2>成熟灌顶的重要性</h2><div class="th-meta">TID: 3777</div></a>
-<a href="../threads/3760.html" class="thread-row"><h2>道果延晖集</h2><div class="th-meta">TID: 3760</div></a>
-<a href="../threads/3622.html" class="thread-row"><h2>佛陀涅槃前遗训 佛陀最后的教诲！</h2><div class="th-meta">TID: 3622</div></a>
-<a href="../threads/3558.html" class="thread-row"><h2>佛教密宗咒语集(藏密咒语参考)</h2><div class="th-meta">TID: 3558</div></a>
-<a href="../threads/3474.html" class="thread-row"><h2>兜率百尊</h2><div class="th-meta">TID: 3474</div></a>
-<a href="../threads/3457.html" class="thread-row"><h2>座上禅修之要点</h2><div class="th-meta">TID: 3457</div></a>
-<a href="../threads/3436.html" class="thread-row"><h2>时轮檀陀罗时代记事</h2><div class="th-meta">TID: 3436</div></a>
-<a href="../threads/3435.html" class="thread-row"><h2>下部三阶檀陀罗</h2><div class="th-meta">TID: 3435</div></a>
-<a href="../threads/3434.html" class="thread-row"><h2>进入无上瑜伽檀陀罗</h2><div class="th-meta">TID: 3434</div></a>
-<a href="../threads/3433.html" class="thread-row"><h2>空性大手印颂文---诸佛道迹</h2><div class="th-meta">TID: 3433</div></a>
-<a href="../threads/3431.html" class="thread-row"><h2>格鲁派不共三愿</h2><div class="th-meta">TID: 3431</div></a>
-<a href="../threads/3428.html" class="thread-row"><h2>时轮金刚瑜伽法</h2><div class="th-meta">TID: 3428</div></a>
-<a href="../threads/3419.html" class="thread-row"><h2>聖者心中之寶 （巴楚仁波切）</h2><div class="th-meta">TID: 3419</div></a>
-<a href="../threads/3418.html" class="thread-row"><h2>聖者心中之寶 （巴楚仁波切）</h2><div class="th-meta">TID: 3418</div></a>
-<a href="../threads/3412.html" class="thread-row"><h2>至尊不动怙主赞·加持海</h2><div class="th-meta">TID: 3412</div></a>
-<a href="../threads/3404.html" class="thread-row"><h2>噶当派祖师嘉言选录</h2><div class="th-meta">TID: 3404</div></a>
-<a href="../threads/3375.html" class="thread-row"><h2>五戒表解——淫戒</h2><div class="th-meta">TID: 3375</div></a>
-<a href="../threads/3361.html" class="thread-row"><h2>世出世间真谛论——秋英多杰仁波切</h2><div class="th-meta">TID: 3361</div></a>
-<a href="../threads/3359.html" class="thread-row"><h2>廣大發願頌 龍樹菩薩造</h2><div class="th-meta">TID: 3359</div></a>
-<a href="../threads/3356.html" class="thread-row"><h2>若传一人所有无间罪业悉得除灭永断轮回</h2><div class="th-meta">TID: 3356</div></a>
-<a href="../threads/3344.html" class="thread-row"><h2>远离谤僧无间罪！佛弟子必读、必知的《赞僧功德经》</h2><div class="th-meta">TID: 3344</div></a>
-<a href="../threads/3341.html" class="thread-row"><h2>当知是人临命终时定当得见阿弥陀佛菩萨大众之所围绕</h2><div class="th-meta">TID: 3341</div></a>
-<a href="../threads/3332.html" class="thread-row"><h2>法藏碎金·持戒门</h2><div class="th-meta">TID: 3332</div></a>
-<a href="../threads/3266.html" class="thread-row"><h2>最新转经轮奇迹感应</h2><div class="th-meta">TID: 3266</div></a>
-<a href="../threads/3222.html" class="thread-row"><h2>《祈祷文殊增长智慧》</h2><div class="th-meta">TID: 3222</div></a>
-<a href="../threads/3221.html" class="thread-row"><h2>《黄文殊&quot;牟&quot;字修法》</h2><div class="th-meta">TID: 3221</div></a>
-<a href="../threads/3220.html" class="thread-row"><h2>《红黄文殊成就诸事业——平日智慧修法精要仪轨》</h2><div class="th-meta">TID: 3220</div></a>
-<a href="../threads/3219.html" class="thread-row"><h2>《白文殊之“阿”字修法仪轨》</h2><div class="th-meta">TID: 3219</div></a>
-<a href="../threads/3218.html" class="thread-row"><h2>南卡宁波请问莲师颂</h2><div class="th-meta">TID: 3218</div></a>
-<a href="../threads/3217.html" class="thread-row"><h2>莲花生大师遂欲成就祈请颂</h2><div class="th-meta">TID: 3217</div></a>
-<a href="../threads/3216.html" class="thread-row"><h2>莲花生大师消除障道祈请颂</h2><div class="th-meta">TID: 3216</div></a>
-<a href="../threads/3215.html" class="thread-row"><h2>金刚七句祈请文</h2><div class="th-meta">TID: 3215</div></a>
-<a href="../threads/3214.html" class="thread-row"><h2>莲华生十方四时祈愿文</h2><div class="th-meta">TID: 3214</div></a>
-<a href="../threads/3190.html" class="thread-row"><h2>日常佛法修习</h2><div class="th-meta">TID: 3190</div></a>
-<a href="../threads/3163.html" class="thread-row"><h2>吉祥时轮心髓十相自在的意义——宝灯论释</h2><div class="th-meta">TID: 3163</div></a>
-<a href="../threads/3156.html" class="thread-row"><h2>修心七要</h2><div class="th-meta">TID: 3156</div></a>
-<a href="../threads/3155.html" class="thread-row"><h2>法器和唐卡（摄于藏密文化展览）</h2><div class="th-meta">TID: 3155</div></a>
-<a href="../threads/3139.html" class="thread-row"><h2>谛洛巴口传那若巴的二十八颂大手印教授</h2><div class="th-meta">TID: 3139</div></a>
-<a href="../threads/3128.html" class="thread-row"><h2>空行主母曼達拉娃佛母本生及解脫祈請文</h2><div class="th-meta">TID: 3128</div></a>
-<a href="../threads/3118.html" class="thread-row"><h2>藏传佛教英文词汇合集</h2><div class="th-meta">TID: 3118</div></a>
-<a href="../threads/3111.html" class="thread-row"><h2>俱生和合正行导文</h2><div class="th-meta">TID: 3111</div></a>
-<a href="../threads/3056.html" class="thread-row"><h2>宗喀巴大师的“律海心要摄颂”</h2><div class="th-meta">TID: 3056</div></a>
-<a href="../threads/3055.html" class="thread-row"><h2>菩提道次第师承简介</h2><div class="th-meta">TID: 3055</div></a>
-<a href="../threads/3023.html" class="thread-row"><h2>大圓滿最勝心中心引導略要</h2><div class="th-meta">TID: 3023</div></a>
-<a href="../threads/3017.html" class="thread-row"><h2>语狮子文殊修持仪轨</h2><div class="th-meta">TID: 3017</div></a>
-<a href="../threads/2976.html" class="thread-row"><h2>华严普贤行愿忏仪</h2><div class="th-meta">TID: 2976</div></a>
-<a href="../threads/2974.html" class="thread-row"><h2>明《大乘经咒》及其二十九幅插图</h2><div class="th-meta">TID: 2974</div></a>
-<a href="../threads/2969.html" class="thread-row"><h2>胜金光明忏</h2><div class="th-meta">TID: 2969</div></a>
-<a href="../threads/2937.html" class="thread-row"><h2>法尔不变难胜忿怒不动明王行法</h2><div class="th-meta">TID: 2937</div></a>
-<a href="../threads/2933.html" class="thread-row"><h2>深道海生(莲化生大师)心滴常修简轨</h2><div class="th-meta">TID: 2933</div></a>
-<a href="../threads/2902.html" class="thread-row"><h2>无始无初本具金刚——爱染明王最秘行法</h2><div class="th-meta">TID: 2902</div></a>
-<a href="../threads/2846.html" class="thread-row"><h2>《觉囊派宝镜明鉴及两部密修指南》</h2><div class="th-meta">TID: 2846</div></a>
-<a href="../threads/2826.html" class="thread-row"><h2>药师本愿功德琉璃鬘</h2><div class="th-meta">TID: 2826</div></a>
-<a href="../threads/2825.html" class="thread-row"><h2>速疾成就体性信爱——咕噜咕咧(作明)佛母大慈行法</h2><div class="th-meta">TID: 2825</div></a>
-<a href="../threads/2824.html" class="thread-row"><h2>伏魔庄严——体性顶髻出生具誓一髻母忿怒碎除众障行法</h2><div class="th-meta">TID: 2824</div></a>
-<a href="../threads/2823.html" class="thread-row"><h2>菩提道次第摄受求加持颂</h2><div class="th-meta">TID: 2823</div></a>
-<a href="../threads/2814.html" class="thread-row"><h2>香巴噶举五金法</h2><div class="th-meta">TID: 2814</div></a>
-<a href="../threads/2809.html" class="thread-row"><h2>法界体性——本初时轮金刚具力行法</h2><div class="th-meta">TID: 2809</div></a>
-<a href="../threads/2807.html" class="thread-row"><h2>俱生时轮金刚简轨</h2><div class="th-meta">TID: 2807</div></a>
-<a href="../threads/2805.html" class="thread-row"><h2>无死童瓶吉祥胜身普巴（橛）金刚成就法</h2><div class="th-meta">TID: 2805</div></a>
-<a href="../threads/2804.html" class="thread-row"><h2>二十诸天简介</h2><div class="th-meta">TID: 2804</div></a>
-<a href="../threads/2799.html" class="thread-row"><h2>忿怒之吉祥－－大悲黑袍金刚二臂玛哈嘎拉成就法</h2><div class="th-meta">TID: 2799</div></a>
-<a href="../threads/2796.html" class="thread-row"><h2>大悲空智忿怒密护大黑天行法</h2><div class="th-meta">TID: 2796</div></a>
-<a href="../threads/2793.html" class="thread-row"><h2>《大乘密藏现证本续摩尼树》片段汉藏对勘</h2><div class="th-meta">TID: 2793</div></a>
-<a href="../threads/2786.html" class="thread-row"><h2>大空胜乐金刚亥母密智行法</h2><div class="th-meta">TID: 2786</div></a>
-<a href="../threads/2759.html" class="thread-row"><h2>毗卢遮那大译师-安心歌</h2><div class="th-meta">TID: 2759</div></a>
-<a href="../threads/2758.html" class="thread-row"><h2>诀窍阿底瑜珈大圆满广大心髓之传承祈请文</h2><div class="th-meta">TID: 2758</div></a>
-<a href="../threads/2748.html" class="thread-row"><h2>极乐愿</h2><div class="th-meta">TID: 2748</div></a>
-<a href="../threads/2710.html" class="thread-row"><h2>即身成佛义</h2><div class="th-meta">TID: 2710</div></a>
-<a href="../threads/2685.html" class="thread-row"><h2>善知识者则是如来。善知识者一切法云</h2><div class="th-meta">TID: 2685</div></a>
-<a href="../threads/2644.html" class="thread-row"><h2>《心匙•策励自他一切人等痛念无常歌》</h2><div class="th-meta">TID: 2644</div></a>
-<a href="../threads/2640.html" class="thread-row"><h2>生死之轮——六道轮回图释义开示</h2><div class="th-meta">TID: 2640</div></a>
-<a href="../threads/2638.html" class="thread-row"><h2>生死自在——祈竹仁宝哲</h2><div class="th-meta">TID: 2638</div></a>
-<a href="../threads/2635.html" class="thread-row"><h2>「上师」简议</h2><div class="th-meta">TID: 2635</div></a>
-<a href="../threads/2633.html" class="thread-row"><h2>持戒窍诀</h2><div class="th-meta">TID: 2633</div></a>
-<a href="../threads/2632.html" class="thread-row"><h2>莲花心之庄严 • 金刚祈请文之释意</h2><div class="th-meta">TID: 2632</div></a>
-<a href="../threads/2630.html" class="thread-row"><h2>修行者的一日</h2><div class="th-meta">TID: 2630</div></a>
-<a href="../threads/2615.html" class="thread-row"><h2>金刚顶宗纲概</h2><div class="th-meta">TID: 2615</div></a>
-<a href="../threads/2612.html" class="thread-row"><h2>祈竹仁波切所传《黑文殊观修法广轨---》和导修讲解</h2><div class="th-meta">TID: 2612</div></a>
-<a href="../threads/2595.html" class="thread-row"><h2>部分佛教名词解释</h2><div class="th-meta">TID: 2595</div></a>
-<a href="../threads/2591.html" class="thread-row"><h2>华严发菩提心文</h2><div class="th-meta">TID: 2591</div></a>
-<a href="../threads/2584.html" class="thread-row"><h2>一师一法一本尊-根松成林曲杰嘉才仁波且</h2><div class="th-meta">TID: 2584</div></a>
-<a href="../threads/2570.html" class="thread-row"><h2>《甚深内义》讲解（节录）</h2><div class="th-meta">TID: 2570</div></a>
-<a href="../threads/2560.html" class="thread-row"><h2>对“萨迦远离四贪修心法要“的开示</h2><div class="th-meta">TID: 2560</div></a>
-<a href="../threads/2423.html" class="thread-row"><h2>菩提道次第广论</h2><div class="th-meta">TID: 2423</div></a>
-<a href="../threads/2421.html" class="thread-row"><h2>宁玛派的经典</h2><div class="th-meta">TID: 2421</div></a>
-<a href="../threads/2398.html" class="thread-row"><h2>跪请高人指点梦境</h2><div class="th-meta">TID: 2398</div></a>
-<a href="../threads/2396.html" class="thread-row"><h2>FIFTY STANZAS OF GURU DEVOTION—事师五十颂（英译）</h2><div class="th-meta">TID: 2396</div></a>
-<a href="../threads/2395.html" class="thread-row"><h2>A Guide To the Bodhisattva Way Of Life—入菩萨行论（英译）</h2><div class="th-meta">TID: 2395</div></a>
-<a href="../threads/2394.html" class="thread-row"><h2>A Lamp for the Enlightenment Path——菩提道灯论（英译）</h2><div class="th-meta">TID: 2394</div></a>
-<a href="../threads/2384.html" class="thread-row"><h2>试论藏传佛教寺院教育的特色及其作用</h2><div class="th-meta">TID: 2384</div></a>
-<a href="../threads/2368.html" class="thread-row"><h2>The Wheel of Sharp Weapons——利器之轮英文版</h2><div class="th-meta">TID: 2368</div></a>
-<a href="../threads/2367.html" class="thread-row"><h2>财续母修持仪轨</h2><div class="th-meta">TID: 2367</div></a>
-<a href="../threads/2365.html" class="thread-row"><h2>大白伞盖母修持仪轨</h2><div class="th-meta">TID: 2365</div></a>
-<a href="../threads/2349.html" class="thread-row"><h2>关于精进的开示</h2><div class="th-meta">TID: 2349</div></a>
-<a href="../threads/2278.html" class="thread-row"><h2>噶举的四大八小支派简介</h2><div class="th-meta">TID: 2278</div></a>
-<a href="../threads/2277.html" class="thread-row"><h2>庄严道场的佛具</h2><div class="th-meta">TID: 2277</div></a>
-<a href="../threads/2261.html" class="thread-row"><h2>窍诀奇妙海</h2><div class="th-meta">TID: 2261</div></a>
-<a href="../threads/2238.html" class="thread-row"><h2>空行圣地胜乐二十四境</h2><div class="th-meta">TID: 2238</div></a>
-<a href="../threads/2237.html" class="thread-row"><h2>事业的保证—金刚防护轮</h2><div class="th-meta">TID: 2237</div></a>
-<a href="../threads/2235.html" class="thread-row"><h2>江贡活佛谈传法上师之资格</h2><div class="th-meta">TID: 2235</div></a>
-<a href="../threads/2234.html" class="thread-row"><h2>略说五部大论</h2><div class="th-meta">TID: 2234</div></a>
-<a href="../threads/2214.html" class="thread-row"><h2>时轮金刚坛城简介</h2><div class="th-meta">TID: 2214</div></a>
-<a href="../threads/2199.html" class="thread-row"><h2>藏传佛教萨迦派简介</h2><div class="th-meta">TID: 2199</div></a>
-<a href="../threads/2195.html" class="thread-row"><h2>修习自在密哩呀巴(毗瓦巴)赞叹祈祷文</h2><div class="th-meta">TID: 2195</div></a>
-<a href="../threads/2184.html" class="thread-row"><h2>吉祥天母难量颂（七支供养）</h2><div class="th-meta">TID: 2184</div></a>
-<a href="../threads/2175.html" class="thread-row"><h2>广释菩提心论</h2><div class="th-meta">TID: 2175</div></a>
-<a href="../threads/2167.html" class="thread-row"><h2>口诀见鬘——大阿阇梨莲花生造</h2><div class="th-meta">TID: 2167</div></a>
-<a href="../threads/2153.html" class="thread-row"><h2>隆庆饶绛巴对大圆满法的解释</h2><div class="th-meta">TID: 2153</div></a>
-<a href="../threads/2138.html" class="thread-row"><h2>修心导论</h2><div class="th-meta">TID: 2138</div></a>
-<a href="../threads/2103.html" class="thread-row"><h2>瑰美艳丽的密宗彩沙曼陀罗</h2><div class="th-meta">TID: 2103</div></a>
-<a href="../threads/2088.html" class="thread-row"><h2>那洛六法概说</h2><div class="th-meta">TID: 2088</div></a>
-<a href="../threads/2070.html" class="thread-row"><h2>《大圆满传承源流---蓝宝石》节选</h2><div class="th-meta">TID: 2070</div></a>
-<a href="../threads/2063.html" class="thread-row"><h2>何谓菩萨十力四无畏十八不共法</h2><div class="th-meta">TID: 2063</div></a>
-<a href="../threads/2062.html" class="thread-row"><h2>密教首重师承论</h2><div class="th-meta">TID: 2062</div></a>
-<a href="../threads/2061.html" class="thread-row"><h2>藏传佛教宁玛巴之传统</h2><div class="th-meta">TID: 2061</div></a>
-<a href="../threads/2060.html" class="thread-row"><h2>藏传佛教称谓漫谈</h2><div class="th-meta">TID: 2060</div></a>
-<a href="../threads/2057.html" class="thread-row"><h2>《入菩萨行论》注释  大堪布贡噶旺秋仁波切</h2><div class="th-meta">TID: 2057</div></a>
-<a href="../threads/2016.html" class="thread-row"><h2>“六大”与曼荼罗艺术</h2><div class="th-meta">TID: 2016</div></a>
-<a href="../threads/2000.html" class="thread-row"><h2>何等为『如来毕竟成就三十二种大悲观心』</h2><div class="th-meta">TID: 2000</div></a>
-<a href="../threads/1988.html" class="thread-row"><h2>上下密院的组织与学经</h2><div class="th-meta">TID: 1988</div></a>
-<a href="../threads/1986.html" class="thread-row"><h2>格鲁的散居学派和温萨学派</h2><div class="th-meta">TID: 1986</div></a>
-<a href="../threads/1985.html" class="thread-row"><h2>格鲁派的密法辨析与修正</h2><div class="th-meta">TID: 1985</div></a>
-<a href="../threads/1982.html" class="thread-row"><h2>宗喀巴的密法思想与著述</h2><div class="th-meta">TID: 1982</div></a>
-<a href="../threads/1976.html" class="thread-row"><h2>藏传佛教法器简介</h2><div class="th-meta">TID: 1976</div></a>
-<a href="../threads/1929.html" class="thread-row"><h2>大手印法的推广与创新</h2><div class="th-meta">TID: 1929</div></a>
-<a href="../threads/1928.html" class="thread-row"><h2>时轮檀陀罗传承的传递</h2><div class="th-meta">TID: 1928</div></a>
-<a href="../threads/1926.html" class="thread-row"><h2>达波拉杰的大手印思想</h2><div class="th-meta">TID: 1926</div></a>
-<a href="../threads/1925.html" class="thread-row"><h2>大手印法的西藏化特点</h2><div class="th-meta">TID: 1925</div></a>
-<a href="../threads/1920.html" class="thread-row"><h2>大手印的名义、类别及传承</h2><div class="th-meta">TID: 1920</div></a>
-<a href="../threads/1907.html" class="thread-row"><h2>释尊的外修·内修与秘修开示</h2><div class="th-meta">TID: 1907</div></a>
-<a href="../threads/1875.html" class="thread-row"><h2>莲师净土云游记</h2><div class="th-meta">TID: 1875</div></a>
-<a href="../threads/1863.html" class="thread-row"><h2>求助！转动转经轮的时候是否能发出声音？</h2><div class="th-meta">TID: 1863</div></a>
-<a href="../threads/1851.html" class="thread-row"><h2>利美运动五大宝藏综述</h2><div class="th-meta">TID: 1851</div></a>
-<a href="../threads/1814.html" class="thread-row"><h2>道果法的主要派系</h2><div class="th-meta">TID: 1814</div></a>
-<a href="../threads/1809.html" class="thread-row"><h2>功德云——如何布置整理佛堂</h2><div class="th-meta">TID: 1809</div></a>
-<a href="../threads/1791.html" class="thread-row"><h2>明王</h2><div class="th-meta">TID: 1791</div></a>
-<a href="../threads/1785.html" class="thread-row"><h2>卓弥及其所传道果教授</h2><div class="th-meta">TID: 1785</div></a>
-<a href="../threads/1784.html" class="thread-row"><h2>求财的咒轮</h2><div class="th-meta">TID: 1784</div></a>
-<a href="../threads/1783.html" class="thread-row"><h2>多宝如来一切珍宝周遍法界大悲利益众生甚深观行密要</h2><div class="th-meta">TID: 1783</div></a>
-<a href="../threads/1699.html" class="thread-row"><h2>关于金刚橛</h2><div class="th-meta">TID: 1699</div></a>
-<a href="../threads/1696.html" class="thread-row"><h2>随念三宝经.三宝弟子每天都应该念的经</h2><div class="th-meta">TID: 1696</div></a>
-<a href="../threads/1695.html" class="thread-row"><h2>经旗之功德      登克活佛 译</h2><div class="th-meta">TID: 1695</div></a>
-<a href="../threads/1693.html" class="thread-row"><h2>玛钦护法</h2><div class="th-meta">TID: 1693</div></a>
-<a href="../threads/1678.html" class="thread-row"><h2>劝发诸王要偈</h2><div class="th-meta">TID: 1678</div></a>
-<a href="../threads/1677.html" class="thread-row"><h2>龙树菩萨劝诫王颂</h2><div class="th-meta">TID: 1677</div></a>
-<a href="../threads/1666.html" class="thread-row"><h2>菩萨五法忏悔文</h2><div class="th-meta">TID: 1666</div></a>
-<a href="../threads/1593.html" class="thread-row"><h2>大圆满法的主要内容和特点</h2><div class="th-meta">TID: 1593</div></a>
-<a href="../threads/1582.html" class="thread-row"><h2>佛教信徒出家手册</h2><div class="th-meta">TID: 1582</div></a>
-<a href="../threads/1577.html" class="thread-row"><h2>五色天馬旗殊勝功德利益介紹</h2><div class="th-meta">TID: 1577</div></a>
-<a href="../threads/1564.html" class="thread-row"><h2>菩提道次第传承诸师修心语录选集</h2><div class="th-meta">TID: 1564</div></a>
-<a href="../threads/1544.html" class="thread-row"><h2>咒语在藏传佛教中的特殊作用</h2><div class="th-meta">TID: 1544</div></a>
-<a href="../threads/1530.html" class="thread-row"><h2>西藏佛教密宗基本修持</h2><div class="th-meta">TID: 1530</div></a>
-<a href="../threads/1505.html" class="thread-row"><h2>菩提道次第明晰引导·趣一切智坦途</h2><div class="th-meta">TID: 1505</div></a>
-<a href="../threads/1498.html" class="thread-row"><h2>阿底峡所传乘龙白财尊简介</h2><div class="th-meta">TID: 1498</div></a>
-<a href="../threads/1496.html" class="thread-row"><h2>上师、灌顶及象征</h2><div class="th-meta">TID: 1496</div></a>
-<a href="../threads/1488.html" class="thread-row"><h2>佛教密宗女性神佛（仅供参考）</h2><div class="th-meta">TID: 1488</div></a>
-<a href="../threads/1470.html" class="thread-row"><h2>佛说优婆塞五戒相经......（在家镜鉴）</h2><div class="th-meta">TID: 1470</div></a>
-<a href="../threads/1468.html" class="thread-row"><h2>关于持戒的利益（功德）</h2><div class="th-meta">TID: 1468</div></a>
-<a href="../threads/1439.html" class="thread-row"><h2>藏传佛教格鲁派的学经辩经和学位制度</h2><div class="th-meta">TID: 1439</div></a>
-<a href="../threads/1431.html" class="thread-row"><h2>藏传佛教的女性僧团及女活佛转世传承体系</h2><div class="th-meta">TID: 1431</div></a>
-<a href="../threads/1427.html" class="thread-row"><h2>与时轮法修持仪规有关的问题</h2><div class="th-meta">TID: 1427</div></a>
-<a href="../threads/1409.html" class="thread-row"><h2>大圆满经籍在吐蕃时期的翻译</h2><div class="th-meta">TID: 1409</div></a>
-<a href="../threads/1408.html" class="thread-row"><h2>大圆满法的传规</h2><div class="th-meta">TID: 1408</div></a>
-<a href="../threads/1407.html" class="thread-row"><h2>遍照护及其所传的大圆满密法</h2><div class="th-meta">TID: 1407</div></a>
-<a href="../threads/1406.html" class="thread-row"><h2>绒•曲桑和大圆满绒派</h2><div class="th-meta">TID: 1406</div></a>
-<a href="../threads/1387.html" class="thread-row"><h2>阿底峽尊者的秘密本尊</h2><div class="th-meta">TID: 1387</div></a>
-<a href="../threads/1385.html" class="thread-row"><h2>圣救度母</h2><div class="th-meta">TID: 1385</div></a>
-<a href="../threads/1384.html" class="thread-row"><h2>圣救度母圣迹撮要 (诺那呼图克图法语开示)</h2><div class="th-meta">TID: 1384</div></a>
-<a href="../threads/1383.html" class="thread-row"><h2>几位成就者关于度母法门的开示</h2><div class="th-meta">TID: 1383</div></a>
-<a href="../threads/1379.html" class="thread-row"><h2>一切财神眷属配尊吐宝鼠殊胜由来</h2><div class="th-meta">TID: 1379</div></a>
-<a href="../threads/1371.html" class="thread-row"><h2>殊胜的药师法门</h2><div class="th-meta">TID: 1371</div></a>
-<a href="../threads/1369.html" class="thread-row"><h2>《清净道论》的修观次第与顿现观</h2><div class="th-meta">TID: 1369</div></a>
-<a href="../threads/1368.html" class="thread-row"><h2>莲师于伏藏的授记</h2><div class="th-meta">TID: 1368</div></a>
-<a href="../threads/1363.html" class="thread-row"><h2>大圆满教授及其特点</h2><div class="th-meta">TID: 1363</div></a>
-<a href="../threads/1329.html" class="thread-row"><h2>阿底峡所作秽积金刚赞</h2><div class="th-meta">TID: 1329</div></a>
-<a href="../threads/1327.html" class="thread-row"><h2>“空行母”的内意</h2><div class="th-meta">TID: 1327</div></a>
-<a href="../threads/1300.html" class="thread-row"><h2>莲花生与吐蕃密教</h2><div class="th-meta">TID: 1300</div></a>
-<a href="../threads/1299.html" class="thread-row"><h2>龙族（龙王）和龙的区别</h2><div class="th-meta">TID: 1299</div></a>
-<a href="../threads/1296.html" class="thread-row"><h2>《时轮》的宇宙观</h2><div class="th-meta">TID: 1296</div></a>
-<a href="../threads/1272.html" class="thread-row"><h2>显教与密教的差别</h2><div class="th-meta">TID: 1272</div></a>
-<a href="../threads/1269.html" class="thread-row"><h2>论蒙藏佛教的金刚驱魔神舞</h2><div class="th-meta">TID: 1269</div></a>
-<a href="../threads/1268.html" class="thread-row"><h2>《西藏密教》</h2><div class="th-meta">TID: 1268</div></a>
-<a href="../threads/1261.html" class="thread-row"><h2>三法印和四法印</h2><div class="th-meta">TID: 1261</div></a>
-<a href="../threads/1251.html" class="thread-row"><h2>持用念珠的方法</h2><div class="th-meta">TID: 1251</div></a>
-<a href="../threads/1248.html" class="thread-row"><h2>藏传佛教中的各类称谓</h2><div class="th-meta">TID: 1248</div></a>
-<a href="../threads/1240.html" class="thread-row"><h2>文殊菩萨名之略解</h2><div class="th-meta">TID: 1240</div></a>
-<a href="../threads/1235.html" class="thread-row"><h2>念珠与铃杵的运用与表义</h2><div class="th-meta">TID: 1235</div></a>
-<a href="../threads/1234.html" class="thread-row"><h2>松吉泽仁仁波切开示录</h2><div class="th-meta">TID: 1234</div></a>
-<a href="../threads/1231.html" class="thread-row"><h2>阿底峽傳承二十一度母灌頂</h2><div class="th-meta">TID: 1231</div></a>
-<a href="../threads/1229.html" class="thread-row"><h2>五佛</h2><div class="th-meta">TID: 1229</div></a>
-<a href="../threads/1227.html" class="thread-row"><h2>三昧耶戒</h2><div class="th-meta">TID: 1227</div></a>
-<a href="../threads/1214.html" class="thread-row"><h2>掌中解脱.菩提道次第二十四天教授</h2><div class="th-meta">TID: 1214</div></a>
-<a href="../threads/1206.html" class="thread-row"><h2>菩提道次第摄颂 宗喀巴大师造 法音法师译</h2><div class="th-meta">TID: 1206</div></a>
-<a href="../threads/1156.html" class="thread-row"><h2>佛陀法语</h2><div class="th-meta">TID: 1156</div></a>
-<a href="../threads/1116.html" class="thread-row"><h2>萨迦班智达赞</h2><div class="th-meta">TID: 1116</div></a>
-<a href="../threads/1115.html" class="thread-row"><h2>西藏佛教萨迦派“道果教授”</h2><div class="th-meta">TID: 1115</div></a>
-<a href="../threads/1096.html" class="thread-row"><h2>独具特色的时轮金刚大法</h2><div class="th-meta">TID: 1096</div></a>
-<a href="../threads/1081.html" class="thread-row"><h2>道果法前行三现分庄严宝论</h2><div class="th-meta">TID: 1081</div></a>
-<a href="../threads/1069.html" class="thread-row"><h2>藏传佛教的重要宗派*萨迦派</h2><div class="th-meta">TID: 1069</div></a>
-<a href="../threads/1040.html" class="thread-row"><h2>藏传佛教萨迦派概要</h2><div class="th-meta">TID: 1040</div></a>
-<a href="../threads/1037.html" class="thread-row"><h2>开启佛法</h2><div class="th-meta">TID: 1037</div></a>
-<a href="../threads/1033.html" class="thread-row"><h2>《生死的幻觉》</h2><div class="th-meta">TID: 1033</div></a>
-<a href="../threads/1018.html" class="thread-row"><h2>圣者贤行愿王释义（普贤行愿品释）——章嘉游戏金刚</h2><div class="th-meta">TID: 1018</div></a>
-<a href="../threads/978.html" class="thread-row"><h2>《心匙讲解》</h2><div class="th-meta">TID: 978</div></a>
-<a href="../threads/966.html" class="thread-row"><h2>智慧怙主——黑袍玛哈嘎拉</h2><div class="th-meta">TID: 966</div></a>
-<a href="../threads/905.html" class="thread-row"><h2>法王舞</h2><div class="th-meta">TID: 905</div></a>
-<a href="../threads/902.html" class="thread-row"><h2>殊胜的《文殊师利礼赞文》</h2><div class="th-meta">TID: 902</div></a>
-<a href="../threads/893.html" class="thread-row"><h2>修次中篇*莲花戒大师作</h2><div class="th-meta">TID: 893</div></a>
-<a href="../threads/890.html" class="thread-row"><h2>菩提道次第教诲·调伏自心狂象之铁钩</h2><div class="th-meta">TID: 890</div></a>
-<a href="../threads/889.html" class="thread-row"><h2>本尊与坛城</h2><div class="th-meta">TID: 889</div></a>
-<a href="../threads/878.html" class="thread-row"><h2>格鲁派概要</h2><div class="th-meta">TID: 878</div></a>
-<a href="../threads/841.html" class="thread-row"><h2>古鲁寺“次九”金刚舞考察</h2><div class="th-meta">TID: 841</div></a>
-<a href="../threads/836.html" class="thread-row"><h2>菩提道次第直授</h2><div class="th-meta">TID: 836</div></a>
-<a href="../threads/829.html" class="thread-row"><h2>菩提道次第心论卷第三</h2><div class="th-meta">TID: 829</div></a>
-<a href="../threads/828.html" class="thread-row"><h2>菩提道次第心论卷第二</h2><div class="th-meta">TID: 828</div></a>
-<a href="../threads/827.html" class="thread-row"><h2>菩提道次第心论卷第一</h2><div class="th-meta">TID: 827</div></a>
-<a href="../threads/826.html" class="thread-row"><h2>《菩提道灯难处释》探微</h2><div class="th-meta">TID: 826</div></a>
-<a href="../threads/804.html" class="thread-row"><h2>噶当四本尊——不动明王仪轨</h2><div class="th-meta">TID: 804</div></a>
-<a href="../threads/763.html" class="thread-row"><h2>白度母法门导修</h2><div class="th-meta">TID: 763</div></a>
-<a href="../threads/732.html" class="thread-row"><h2>华严经善财二十七参观自在菩萨章（法华部·华严部）</h2><div class="th-meta">TID: 732</div></a>
-<a href="../threads/718.html" class="thread-row"><h2>西藏密宗</h2><div class="th-meta">TID: 718</div></a>
-<a href="../threads/717.html" class="thread-row"><h2>祈求福运升腾的象征物——经幡</h2><div class="th-meta">TID: 717</div></a>
-<a href="../threads/713.html" class="thread-row"><h2>八圣吉祥颂</h2><div class="th-meta">TID: 713</div></a>
-<a href="../threads/691.html" class="thread-row"><h2>佛陀的一天</h2><div class="th-meta">TID: 691</div></a>
-<a href="../threads/674.html" class="thread-row"><h2>剑轮修心法The Wheel of Sharp Weapons</h2><div class="th-meta">TID: 674</div></a>
-<a href="../threads/673.html" class="thread-row"><h2>菩提道次第略论</h2><div class="th-meta">TID: 673</div></a>
-<a href="../threads/672.html" class="thread-row"><h2>菩提道次第求加持颂</h2><div class="th-meta">TID: 672</div></a>
-<a href="../threads/671.html" class="thread-row"><h2>菩提大道</h2><div class="th-meta">TID: 671</div></a>
-<a href="../threads/666.html" class="thread-row"><h2>缘起赞五十八颂</h2><div class="th-meta">TID: 666</div></a>
-<a href="../threads/658.html" class="thread-row"><h2>菩提道次第直授•趣入一切种智速疾道</h2><div class="th-meta">TID: 658</div></a>
-<a href="../threads/559.html" class="thread-row"><h2>加被聚化论---总摄显密修行次第</h2><div class="th-meta">TID: 559</div></a>
-<a href="../threads/546.html" class="thread-row"><h2>龙树菩萨为禅陀迦王说法要偈</h2><div class="th-meta">TID: 546</div></a>
-<a href="../threads/542.html" class="thread-row"><h2>菩提道次第摄颂略解</h2><div class="th-meta">TID: 542</div></a>
-<a href="../threads/541.html" class="thread-row"><h2>《菩提道灯论》</h2><div class="th-meta">TID: 541</div></a>
-<a href="../threads/525.html" class="thread-row"><h2>菩提道次第明晰引导速道前行念诵次第易行仪轨•有缘颈严</h2><div class="th-meta">TID: 525</div></a>
-<a href="../threads/513.html" class="thread-row"><h2>略谈大年初一到十五之佛陀神变</h2><div class="th-meta">TID: 513</div></a>
-<a href="../threads/475.html" class="thread-row"><h2>格鲁巴 梭巴仁波切开示 ---- 闻法发心</h2><div class="th-meta">TID: 475</div></a>
-<a href="../threads/474.html" class="thread-row"><h2>什么是密宗的五正学</h2><div class="th-meta">TID: 474</div></a>
-<a href="../threads/473.html" class="thread-row"><h2>上师五十法颂</h2><div class="th-meta">TID: 473</div></a>
-<a href="../threads/470.html" class="thread-row"><h2>如何听经与修行</h2><div class="th-meta">TID: 470</div></a>
-<a href="../threads/452.html" class="thread-row"><h2>比丘圆真的前世</h2><div class="th-meta">TID: 452</div></a>
-<a href="../threads/439.html" class="thread-row"><h2>三主要道</h2><div class="th-meta">TID: 439</div></a>
-<a href="../threads/436.html" class="thread-row"><h2>贡噶法狮子讲授《抉择见》</h2><div class="th-meta">TID: 436</div></a>
-<a href="../threads/429.html" class="thread-row"><h2>初级佛学 第一课　佛</h2><div class="th-meta">TID: 429</div></a>
-<a href="../threads/427.html" class="thread-row"><h2>莲苑歌舞</h2><div class="th-meta">TID: 427</div></a>
-<a href="../threads/425.html" class="thread-row"><h2>敦珠法王普巴金刚的开示</h2><div class="th-meta">TID: 425</div></a>
-<a href="../threads/404.html" class="thread-row"><h2>冈波巴大师著-----成就胜道宝鬘集</h2><div class="th-meta">TID: 404</div></a>
-<a href="../threads/400.html" class="thread-row"><h2>尊者密勒日巴尊者的无常水泡歌</h2><div class="th-meta">TID: 400</div></a>
-<a href="../threads/397.html" class="thread-row"><h2>菩提道次第心论</h2><div class="th-meta">TID: 397</div></a>
-<a href="../threads/390.html" class="thread-row"><h2>“利美运动”精神导师 巴楚仁波切的忠告</h2><div class="th-meta">TID: 390</div></a>
-<a href="../threads/376.html" class="thread-row"><h2>藏传佛教禁忌</h2><div class="th-meta">TID: 376</div></a>
-<a href="../threads/372.html" class="thread-row"><h2>藏传佛教中的多玛</h2><div class="th-meta">TID: 372</div></a>
-<a href="../threads/359.html" class="thread-row"><h2>三昧耶戒恐怖吗？</h2><div class="th-meta">TID: 359</div></a>
-<a href="../threads/357.html" class="thread-row"><h2>择师十条件</h2><div class="th-meta">TID: 357</div></a>
-<a href="../threads/350.html" class="thread-row"><h2>热罗大师对喜辩论者的实证教育</h2><div class="th-meta">TID: 350</div></a>
-<a href="../threads/332.html" class="thread-row"><h2>试论《十二因缘图》</h2><div class="th-meta">TID: 332</div></a>
-<a href="../threads/294.html" class="thread-row"><h2>大乘菩提心法</h2><div class="th-meta">TID: 294</div></a>
-<a href="../threads/270.html" class="thread-row"><h2>菩提道次第摄颂</h2><div class="th-meta">TID: 270</div></a>
-<a href="../threads/266.html" class="thread-row"><h2>萨迦派概要</h2><div class="th-meta">TID: 266</div></a>
-<a href="../threads/163.html" class="thread-row"><h2>戒行及金刚乘十四根本堕</h2><div class="th-meta">TID: 163</div></a>
-<a href="../threads/141.html" class="thread-row"><h2>密乘之门--空行护法</h2><div class="th-meta">TID: 141</div></a>
-<a href="../threads/140.html" class="thread-row"><h2>密乘之门--本尊部</h2><div class="th-meta">TID: 140</div></a>
-<a href="../threads/136.html" class="thread-row"><h2>一切修行以三昧耶为最重</h2><div class="th-meta">TID: 136</div></a>
-<a href="../threads/122.html" class="thread-row"><h2>萨迦法王访问录   (第六部分)</h2><div class="th-meta">TID: 122</div></a>
-<a href="../threads/107.html" class="thread-row"><h2>“远离四种执著”修心法精要开示</h2><div class="th-meta">TID: 107</div></a>
-<a href="../threads/70.html" class="thread-row"><h2>秋英多杰仁波且道歌</h2><div class="th-meta">TID: 70</div></a>
-<a href="../threads/67.html" class="thread-row"><h2>根松成林曲杰嘉才仁波且《关于根本上师与三恩上师》</h2><div class="th-meta">TID: 67</div></a>
-<a href="../threads/63.html" class="thread-row"><h2>噶当十秘财</h2><div class="th-meta">TID: 63</div></a>
-<a href="../threads/46.html" class="thread-row"><h2>关于十四根本戒</h2><div class="th-meta">TID: 46</div></a>
-<a href="../threads/36.html" class="thread-row"><h2>三根本——上师·本尊·护法的教导</h2><div class="th-meta">TID: 36</div></a>
-<a href="../threads/20.html" class="thread-row"><h2>文殊师利菩萨授予萨迦贡嘎宁布远离四种执著心要</h2><div class="th-meta">TID: 20</div></a>
-<a href="../threads/11.html" class="thread-row"><h2>格鲁巴 甘珠尔瓦呼图克图开示 --- 恭敬上师为成就之本</h2><div class="th-meta">TID: 11</div></a>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / 藏密修海显密教法</div>
+<h1 style="margin-bottom: 10px; font-size: 36px; color:var(--primary); text-align:center;">我随一切如来学</h1>
+<p style="color:var(--text-muted); margin-bottom:50px; text-align:center; letter-spacing:2px;">此处蕴含 470 卷法轴汇集</p>
+<a href="../threads/9887.html" class="thread-row"><h2>莲师教诫的最殊胜窍诀</h2><div class="th-meta">轴号: 9887</div></a>
+<a href="../threads/8072.html" class="thread-row"><h2>《文殊菩萨祈请颂》</h2><div class="th-meta">轴号: 8072</div></a>
+<a href="../threads/8065.html" class="thread-row"><h2>新帖：瑰美艳丽的密宗彩沙曼陀罗</h2><div class="th-meta">轴号: 8065</div></a>
+<a href="../threads/8022.html" class="thread-row"><h2>《利益衆生九種觀察之記要》华智仁波切著</h2><div class="th-meta">轴号: 8022</div></a>
+<a href="../threads/7999.html" class="thread-row"><h2>在家居士律仪五百答</h2><div class="th-meta">轴号: 7999</div></a>
+<a href="../threads/7998.html" class="thread-row"><h2>五方佛及其图像考察</h2><div class="th-meta">轴号: 7998</div></a>
+<a href="../threads/7987.html" class="thread-row"><h2>觉灯日光——《菩提道次第广论》教授</h2><div class="th-meta">轴号: 7987</div></a>
+<a href="../threads/7949.html" class="thread-row"><h2>菩提道次第安乐道论——第四世班禅大师·善慧法幢造</h2><div class="th-meta">轴号: 7949</div></a>
+<a href="../threads/7944.html" class="thread-row"><h2>佛教戒律简介</h2><div class="th-meta">轴号: 7944</div></a>
+<a href="../threads/7815.html" class="thread-row"><h2>藏传佛教的四皈依及修习</h2><div class="th-meta">轴号: 7815</div></a>
+<a href="../threads/7796.html" class="thread-row"><h2>八吉祥</h2><div class="th-meta">轴号: 7796</div></a>
+<a href="../threads/7792.html" class="thread-row"><h2>菩萨摩诃萨有十种魔业 十种舍离魔业</h2><div class="th-meta">轴号: 7792</div></a>
+<a href="../threads/7729.html" class="thread-row"><h2>《虔心悲切遥呼上师祈请文》</h2><div class="th-meta">轴号: 7729</div></a>
+<a href="../threads/7715.html" class="thread-row"><h2>法界光明金刚藏</h2><div class="th-meta">轴号: 7715</div></a>
+<a href="../threads/7693.html" class="thread-row"><h2>成就山法精华--大圆满修持精要</h2><div class="th-meta">轴号: 7693</div></a>
+<a href="../threads/7690.html" class="thread-row"><h2>启请六臂摩呵黑怙主加持文</h2><div class="th-meta">轴号: 7690</div></a>
+<a href="../threads/7688.html" class="thread-row"><h2>开光仪轨</h2><div class="th-meta">轴号: 7688</div></a>
+<a href="../threads/7684.html" class="thread-row"><h2>皈依修法简明引导文</h2><div class="th-meta">轴号: 7684</div></a>
+<a href="../threads/7682.html" class="thread-row"><h2>菩提道次第探玄捷径</h2><div class="th-meta">轴号: 7682</div></a>
+<a href="../threads/7680.html" class="thread-row"><h2>俄藏黑水城文献-梦幻身要门、幻身要门</h2><div class="th-meta">轴号: 7680</div></a>
+<a href="../threads/7679.html" class="thread-row"><h2>灌顶，为藏密重要而又神秘的仪式之一</h2><div class="th-meta">轴号: 7679</div></a>
+<a href="../threads/7602.html" class="thread-row"><h2>圣观自在菩萨功德赞</h2><div class="th-meta">轴号: 7602</div></a>
+<a href="../threads/7599.html" class="thread-row"><h2>三世十方诸佛赞</h2><div class="th-meta">轴号: 7599</div></a>
+<a href="../threads/7578.html" class="thread-row"><h2>佛子行三十七颂——堪布久美多杰讲授</h2><div class="th-meta">轴号: 7578</div></a>
+<a href="../threads/7577.html" class="thread-row"><h2>《入菩萨行》——久美多杰堪布 讲解</h2><div class="th-meta">轴号: 7577</div></a>
+<a href="../threads/7576.html" class="thread-row"><h2>藏传佛教常识300题——消除常见误解</h2><div class="th-meta">轴号: 7576</div></a>
+<a href="../threads/7575.html" class="thread-row"><h2>藏传佛教常识300题——相关密法解答</h2><div class="th-meta">轴号: 7575</div></a>
+<a href="../threads/7574.html" class="thread-row"><h2>藏传佛教常识300题——教理修学相关解答</h2><div class="th-meta">轴号: 7574</div></a>
+<a href="../threads/7573.html" class="thread-row"><h2>藏传佛教常识300题——佛教与现代社会</h2><div class="th-meta">轴号: 7573</div></a>
+<a href="../threads/7572.html" class="thread-row"><h2>藏传佛教常识300题——佛教基础知识</h2><div class="th-meta">轴号: 7572</div></a>
+<a href="../threads/7571.html" class="thread-row"><h2>佛教常识问答——佛教在中国的传播、发展和演变</h2><div class="th-meta">轴号: 7571</div></a>
+<a href="../threads/7570.html" class="thread-row"><h2>佛教常识问答——佛教在印度的发展、衰灭和复兴</h2><div class="th-meta">轴号: 7570</div></a>
+<a href="../threads/7568.html" class="thread-row"><h2>佛教常识问答——僧伽和佛的弟子</h2><div class="th-meta">轴号: 7568</div></a>
+<a href="../threads/7567.html" class="thread-row"><h2>佛学常识问答——佛法的基本内容和佛教经籍</h2><div class="th-meta">轴号: 7567</div></a>
+<a href="../threads/7566.html" class="thread-row"><h2>佛教常识问答——佛陀和佛教的创立</h2><div class="th-meta">轴号: 7566</div></a>
+<a href="../threads/7550.html" class="thread-row"><h2>入菩萨行论释——佛子正道（102任甘丹赤巴 日宗仁波切）</h2><div class="th-meta">轴号: 7550</div></a>
+<a href="../threads/7526.html" class="thread-row"><h2>修心七要——大堪布 贡噶旺秋 仁波切</h2><div class="th-meta">轴号: 7526</div></a>
+<a href="../threads/7514.html" class="thread-row"><h2>萨千贡噶宁波之教授——远离四种执著(萨迦天津法王开示)</h2><div class="th-meta">轴号: 7514</div></a>
+<a href="../threads/7503.html" class="thread-row"><h2>「远离四种执着」修心法（进入奥义之钥）详释</h2><div class="th-meta">轴号: 7503</div></a>
+<a href="../threads/7502.html" class="thread-row"><h2>「远离四种执着」修心法开示——萨迦·班智达·贡噶·嘉晨</h2><div class="th-meta">轴号: 7502</div></a>
+<a href="../threads/7501.html" class="thread-row"><h2>关于《远离四种执着》的开示——萨迦法王</h2><div class="th-meta">轴号: 7501</div></a>
+<a href="../threads/7500.html" class="thread-row"><h2>远离四种执着——尊贵的究给崔钦仁波切开示</h2><div class="th-meta">轴号: 7500</div></a>
+<a href="../threads/7499.html" class="thread-row"><h2>《甘露宝瓶》——佛子行三十七颂释</h2><div class="th-meta">轴号: 7499</div></a>
+<a href="../threads/7498.html" class="thread-row"><h2>冈波巴大师全集选译——《成就胜道宝鬘集》</h2><div class="th-meta">轴号: 7498</div></a>
+<a href="../threads/7482.html" class="thread-row"><h2>十善业道</h2><div class="th-meta">轴号: 7482</div></a>
+<a href="../threads/7480.html" class="thread-row"><h2>业感缘起</h2><div class="th-meta">轴号: 7480</div></a>
+<a href="../threads/7479.html" class="thread-row"><h2>有情之身心</h2><div class="th-meta">轴号: 7479</div></a>
+<a href="../threads/7478.html" class="thread-row"><h2>四劫</h2><div class="th-meta">轴号: 7478</div></a>
+<a href="../threads/7477.html" class="thread-row"><h2>三千大千世界</h2><div class="th-meta">轴号: 7477</div></a>
+<a href="../threads/7476.html" class="thread-row"><h2>三界六道及九地</h2><div class="th-meta">轴号: 7476</div></a>
+<a href="../threads/7475.html" class="thread-row"><h2>菩萨行果</h2><div class="th-meta">轴号: 7475</div></a>
+<a href="../threads/7474.html" class="thread-row"><h2>缘觉行果</h2><div class="th-meta">轴号: 7474</div></a>
+<a href="../threads/7473.html" class="thread-row"><h2>声闻行果</h2><div class="th-meta">轴号: 7473</div></a>
+<a href="../threads/7472.html" class="thread-row"><h2>人天行果</h2><div class="th-meta">轴号: 7472</div></a>
+<a href="../threads/7471.html" class="thread-row"><h2>中国之佛学</h2><div class="th-meta">轴号: 7471</div></a>
+<a href="../threads/7470.html" class="thread-row"><h2>印度佛学略史</h2><div class="th-meta">轴号: 7470</div></a>
+<a href="../threads/7469.html" class="thread-row"><h2>佛法僧三宝</h2><div class="th-meta">轴号: 7469</div></a>
+<a href="../threads/7468.html" class="thread-row"><h2>六波罗蜜</h2><div class="th-meta">轴号: 7468</div></a>
+<a href="../threads/7467.html" class="thread-row"><h2>四念处</h2><div class="th-meta">轴号: 7467</div></a>
+<a href="../threads/7466.html" class="thread-row"><h2>声闻果与佛果</h2><div class="th-meta">轴号: 7466</div></a>
+<a href="../threads/7465.html" class="thread-row"><h2>四禅八定与灭尽定</h2><div class="th-meta">轴号: 7465</div></a>
+<a href="../threads/7464.html" class="thread-row"><h2>五蕴</h2><div class="th-meta">轴号: 7464</div></a>
+<a href="../threads/7463.html" class="thread-row"><h2>三皈五戒</h2><div class="th-meta">轴号: 7463</div></a>
+<a href="../threads/7462.html" class="thread-row"><h2>烦恼</h2><div class="th-meta">轴号: 7462</div></a>
+<a href="../threads/7461.html" class="thread-row"><h2>四圣谛</h2><div class="th-meta">轴号: 7461</div></a>
+<a href="../threads/7460.html" class="thread-row"><h2>三法印</h2><div class="th-meta">轴号: 7460</div></a>
+<a href="../threads/7459.html" class="thread-row"><h2>十二因缘</h2><div class="th-meta">轴号: 7459</div></a>
+<a href="../threads/7458.html" class="thread-row"><h2>业力与轮回</h2><div class="th-meta">轴号: 7458</div></a>
+<a href="../threads/7358.html" class="thread-row"><h2>诸法因缘生,我说是因缘；因缘尽故灭，我作如是说</h2><div class="th-meta">轴号: 7358</div></a>
+<a href="../threads/7337.html" class="thread-row"><h2>密宗纲要第二篇 密教之教相</h2><div class="th-meta">轴号: 7337</div></a>
+<a href="../threads/7336.html" class="thread-row"><h2>密宗纲要 第一篇 印度之密教</h2><div class="th-meta">轴号: 7336</div></a>
+<a href="../threads/7334.html" class="thread-row"><h2>藏传佛教的一些法相名词</h2><div class="th-meta">轴号: 7334</div></a>
+<a href="../threads/7333.html" class="thread-row"><h2>即身成佛</h2><div class="th-meta">轴号: 7333</div></a>
+<a href="../threads/7330.html" class="thread-row"><h2>【普贤菩萨】</h2><div class="th-meta">轴号: 7330</div></a>
+<a href="../threads/7323.html" class="thread-row"><h2>修心八颂——朗日塘巴·金刚师子  造</h2><div class="th-meta">轴号: 7323</div></a>
+<a href="../threads/7288.html" class="thread-row"><h2>白话佛经——《普贤菩萨行愿品》</h2><div class="th-meta">轴号: 7288</div></a>
+<a href="../threads/7287.html" class="thread-row"><h2>《普贤行愿品颂解》——能海上师</h2><div class="th-meta">轴号: 7287</div></a>
+<a href="../threads/7286.html" class="thread-row"><h2>普贤行愿颂讲记——隆莲法师讲</h2><div class="th-meta">轴号: 7286</div></a>
+<a href="../threads/7285.html" class="thread-row"><h2>普贤行愿品讲记——广超法师</h2><div class="th-meta">轴号: 7285</div></a>
+<a href="../threads/7284.html" class="thread-row"><h2>入菩萨行论白话——达瓦次仁译</h2><div class="th-meta">轴号: 7284</div></a>
+<a href="../threads/7279.html" class="thread-row"><h2>入菩萨行论广解——杰操大师著、隆莲法师译解</h2><div class="th-meta">轴号: 7279</div></a>
+<a href="../threads/7278.html" class="thread-row"><h2>《入菩萨行论》颂词——隆莲法师译</h2><div class="th-meta">轴号: 7278</div></a>
+<a href="../threads/7266.html" class="thread-row"><h2>什么叫磕头?如何礼拜？(泽绒洛吾堪布)</h2><div class="th-meta">轴号: 7266</div></a>
+<a href="../threads/7265.html" class="thread-row"><h2>简单介绍磕头——礼拜(泽绒洛吾堪布)</h2><div class="th-meta">轴号: 7265</div></a>
+<a href="../threads/7263.html" class="thread-row"><h2>地藏菩薩淨障略軌</h2><div class="th-meta">轴号: 7263</div></a>
+<a href="../threads/7249.html" class="thread-row"><h2>佛典譬喻经全集</h2><div class="th-meta">轴号: 7249</div></a>
+<a href="../threads/7244.html" class="thread-row"><h2>《釋迦王祈請文》薩迦班智達造</h2><div class="th-meta">轴号: 7244</div></a>
+<a href="../threads/7243.html" class="thread-row"><h2>《遣除障道祈请颂》略释——堪布丹熷扎拉译释</h2><div class="th-meta">轴号: 7243</div></a>
+<a href="../threads/7242.html" class="thread-row"><h2>禄顶堪仟仁波切：修行、上师和法座</h2><div class="th-meta">轴号: 7242</div></a>
+<a href="../threads/7241.html" class="thread-row"><h2>《入菩薩行論》雪歌仁波切講授 法炬法師翻譯</h2><div class="th-meta">轴号: 7241</div></a>
+<a href="../threads/7181.html" class="thread-row"><h2>金刚萨埵百字明</h2><div class="th-meta">轴号: 7181</div></a>
+<a href="../threads/7145.html" class="thread-row"><h2>阿弥陀佛睡修法门——祈竹仁波切开示</h2><div class="th-meta">轴号: 7145</div></a>
+<a href="../threads/7059.html" class="thread-row"><h2>《文殊菩萨十大愿》</h2><div class="th-meta">轴号: 7059</div></a>
+<a href="../threads/6891.html" class="thread-row"><h2>祈竹仁宝哲文集（三）</h2><div class="th-meta">轴号: 6891</div></a>
+<a href="../threads/6889.html" class="thread-row"><h2>藏传佛教象征符号与器物图解（兵器）</h2><div class="th-meta">轴号: 6889</div></a>
+<a href="../threads/6862.html" class="thread-row"><h2>现有自在摄受祈祷文——大加持云</h2><div class="th-meta">轴号: 6862</div></a>
+<a href="../threads/6861.html" class="thread-row"><h2>八圣吉祥颂</h2><div class="th-meta">轴号: 6861</div></a>
+<a href="../threads/6808.html" class="thread-row"><h2>耶喜喇嘛：菩提心的修行</h2><div class="th-meta">轴号: 6808</div></a>
+<a href="../threads/6806.html" class="thread-row"><h2>觉囊密乘时轮立体大坛城建筑的文化内涵及意义</h2><div class="th-meta">轴号: 6806</div></a>
+<a href="../threads/6803.html" class="thread-row"><h2>辩经--智慧的表达</h2><div class="th-meta">轴号: 6803</div></a>
+<a href="../threads/6770.html" class="thread-row"><h2>觉囊课诵珠宝莲</h2><div class="th-meta">轴号: 6770</div></a>
+<a href="../threads/6769.html" class="thread-row"><h2>香巴拉简颂</h2><div class="th-meta">轴号: 6769</div></a>
+<a href="../threads/6768.html" class="thread-row"><h2>时轮共生简颂</h2><div class="th-meta">轴号: 6768</div></a>
+<a href="../threads/6767.html" class="thread-row"><h2>时轮金刚——天降花雨的法缘</h2><div class="th-meta">轴号: 6767</div></a>
+<a href="../threads/6765.html" class="thread-row"><h2>觉囊派的特点</h2><div class="th-meta">轴号: 6765</div></a>
+<a href="../threads/6764.html" class="thread-row"><h2>觉囊派密法修炼</h2><div class="th-meta">轴号: 6764</div></a>
+<a href="../threads/6758.html" class="thread-row"><h2>时轮灌顶简介</h2><div class="th-meta">轴号: 6758</div></a>
+<a href="../threads/6756.html" class="thread-row"><h2>入菩萨行（入行论）原文——如石法师译</h2><div class="th-meta">轴号: 6756</div></a>
+<a href="../threads/6755.html" class="thread-row"><h2>入菩萨行（入行论）——导论⊙释注⊙集要  如石法师著</h2><div class="th-meta">轴号: 6755</div></a>
+<a href="../threads/6754.html" class="thread-row"><h2>入菩萨行（入行论）逐句释</h2><div class="th-meta">轴号: 6754</div></a>
+<a href="../threads/6692.html" class="thread-row"><h2>二十五护戒善神说明表（参阅三藏法数）</h2><div class="th-meta">轴号: 6692</div></a>
+<a href="../threads/6656.html" class="thread-row"><h2>菩萨十戒颂 现代文译</h2><div class="th-meta">轴号: 6656</div></a>
+<a href="../threads/6627.html" class="thread-row"><h2>菩提道次第论极略颂</h2><div class="th-meta">轴号: 6627</div></a>
+<a href="../threads/6427.html" class="thread-row"><h2>伏 藏(伏藏的起源、埋藏特点、解脱捷径）</h2><div class="th-meta">轴号: 6427</div></a>
+<a href="../threads/6396.html" class="thread-row"><h2>十善业一一皆感四种果报——出自大乘理趣六波罗蜜多经</h2><div class="th-meta">轴号: 6396</div></a>
+<a href="../threads/6381.html" class="thread-row"><h2>不可思议的布施不可思议的福报（精品）</h2><div class="th-meta">轴号: 6381</div></a>
+<a href="../threads/6309.html" class="thread-row"><h2>观修献供系列——意幻供养与佛陀八瑞相</h2><div class="th-meta">轴号: 6309</div></a>
+<a href="../threads/6305.html" class="thread-row"><h2>佛教的手印（连载带插图，暂勿跟帖）</h2><div class="th-meta">轴号: 6305</div></a>
+<a href="../threads/6270.html" class="thread-row"><h2>敬信依止善知识</h2><div class="th-meta">轴号: 6270</div></a>
+<a href="../threads/6233.html" class="thread-row"><h2>华严金师子章校释</h2><div class="th-meta">轴号: 6233</div></a>
+<a href="../threads/6160.html" class="thread-row"><h2>究給企謙仁波切開示— 上師瑜珈</h2><div class="th-meta">轴号: 6160</div></a>
+<a href="../threads/6143.html" class="thread-row"><h2>那惹空行茶供简儀</h2><div class="th-meta">轴号: 6143</div></a>
+<a href="../threads/6135.html" class="thread-row"><h2>菩提道次第心传录 上 下</h2><div class="th-meta">轴号: 6135</div></a>
+<a href="../threads/6077.html" class="thread-row"><h2>九乘佛法</h2><div class="th-meta">轴号: 6077</div></a>
+<a href="../threads/6076.html" class="thread-row"><h2>时轮与时轮法的简要介绍</h2><div class="th-meta">轴号: 6076</div></a>
+<a href="../threads/6060.html" class="thread-row"><h2>莲师忿怒金刚铠甲护身咒轮</h2><div class="th-meta">轴号: 6060</div></a>
+<a href="../threads/6036.html" class="thread-row"><h2>奢摩他（止）的修习——色拉寺拉忍巴格西 赛康仁波切讲授</h2><div class="th-meta">轴号: 6036</div></a>
+<a href="../threads/5973.html" class="thread-row"><h2>摩诃阿底瑜伽深法意趣涌现放生仪轨·吉祥寿命精华</h2><div class="th-meta">轴号: 5973</div></a>
+<a href="../threads/5945.html" class="thread-row"><h2>菩提道次第纲要</h2><div class="th-meta">轴号: 5945</div></a>
+<a href="../threads/5937.html" class="thread-row"><h2>大自在祈祷文</h2><div class="th-meta">轴号: 5937</div></a>
+<a href="../threads/5916.html" class="thread-row"><h2>八十八佛大忏悔文</h2><div class="th-meta">轴号: 5916</div></a>
+<a href="../threads/5215.html" class="thread-row"><h2>佛祖统纪（节录）</h2><div class="th-meta">轴号: 5215</div></a>
+<a href="../threads/5132.html" class="thread-row"><h2>《上师五十颂显义》</h2><div class="th-meta">轴号: 5132</div></a>
+<a href="../threads/5131.html" class="thread-row"><h2>《上师五十颂释·成满弟子希愿》</h2><div class="th-meta">轴号: 5131</div></a>
+<a href="../threads/5120.html" class="thread-row"><h2>《上师五十颂》马鸣菩萨造</h2><div class="th-meta">轴号: 5120</div></a>
+<a href="../threads/5111.html" class="thread-row"><h2>修心宝典---利器之轮、修心克毒孔雀</h2><div class="th-meta">轴号: 5111</div></a>
+<a href="../threads/5077.html" class="thread-row"><h2>白度母赞</h2><div class="th-meta">轴号: 5077</div></a>
+<a href="../threads/5067.html" class="thread-row"><h2>坚牢地神结界法</h2><div class="th-meta">轴号: 5067</div></a>
+<a href="../threads/5042.html" class="thread-row"><h2>《速道》--藏传佛教迅速成就之路</h2><div class="th-meta">轴号: 5042</div></a>
+<a href="../threads/5038.html" class="thread-row"><h2>略说萨迦不出墙的甚深密法-萨迦十三金法</h2><div class="th-meta">轴号: 5038</div></a>
+<a href="../threads/5006.html" class="thread-row"><h2>岡波巴大師教言廣集</h2><div class="th-meta">轴号: 5006</div></a>
+<a href="../threads/4976.html" class="thread-row"><h2>菩提道次第甚深教授修法·甘露藏 (基础功课常持诵)</h2><div class="th-meta">轴号: 4976</div></a>
+<a href="../threads/4913.html" class="thread-row"><h2>菩提道次第修法笔记---善慧持教增广大师造</h2><div class="th-meta">轴号: 4913</div></a>
+<a href="../threads/4857.html" class="thread-row"><h2>佛教名词释意</h2><div class="th-meta">轴号: 4857</div></a>
+<a href="../threads/4853.html" class="thread-row"><h2>诺那活佛所传多杰卓罗法门介绍（诺门密幢传人慧庵法师）</h2><div class="th-meta">轴号: 4853</div></a>
+<a href="../threads/4772.html" class="thread-row"><h2>咒语真言的殊胜功德</h2><div class="th-meta">轴号: 4772</div></a>
+<a href="../threads/4708.html" class="thread-row"><h2>五戒十善六度四摄</h2><div class="th-meta">轴号: 4708</div></a>
+<a href="../threads/4702.html" class="thread-row"><h2>怎样相应自己的上师</h2><div class="th-meta">轴号: 4702</div></a>
+<a href="../threads/4693.html" class="thread-row"><h2>吉祥萨迦派第五世俄巴多杰邛活佛嘉雍丹巴旺许</h2><div class="th-meta">轴号: 4693</div></a>
+<a href="../threads/4692.html" class="thread-row"><h2>萨迦法王访问记</h2><div class="th-meta">轴号: 4692</div></a>
+<a href="../threads/4680.html" class="thread-row"><h2>降雨祈愿仪轨(格鲁派传承)</h2><div class="th-meta">轴号: 4680</div></a>
+<a href="../threads/4667.html" class="thread-row"><h2>藏传佛教的内涵</h2><div class="th-meta">轴号: 4667</div></a>
+<a href="../threads/4659.html" class="thread-row"><h2>仁波且谈密乘行者应避免的极重罪业</h2><div class="th-meta">轴号: 4659</div></a>
+<a href="../threads/4597.html" class="thread-row"><h2>吽声金刚就是金刚吽迦罗？</h2><div class="th-meta">轴号: 4597</div></a>
+<a href="../threads/4586.html" class="thread-row"><h2>噶陀寺蒋扬祖古：财神修持法的开示</h2><div class="th-meta">轴号: 4586</div></a>
+<a href="../threads/4572.html" class="thread-row"><h2>水供的功德</h2><div class="th-meta">轴号: 4572</div></a>
+<a href="../threads/4553.html" class="thread-row"><h2>愤怒莲师威猛炽燃火焰铁蝎咒轮</h2><div class="th-meta">轴号: 4553</div></a>
+<a href="../threads/4542.html" class="thread-row"><h2>寿份无量---修持延寿本尊法门</h2><div class="th-meta">轴号: 4542</div></a>
+<a href="../threads/4540.html" class="thread-row"><h2>根松仁波且谈脉气明点的要义</h2><div class="th-meta">轴号: 4540</div></a>
+<a href="../threads/4526.html" class="thread-row"><h2>大威德金刚前行引导文</h2><div class="th-meta">轴号: 4526</div></a>
+<a href="../threads/4517.html" class="thread-row"><h2>藏传佛教常见手印及持物的象征意义（不断更新中）</h2><div class="th-meta">轴号: 4517</div></a>
+<a href="../threads/4450.html" class="thread-row"><h2>吉祥萨迦派玉隆拉加寺简介</h2><div class="th-meta">轴号: 4450</div></a>
+<a href="../threads/4423.html" class="thread-row"><h2>吉祥时轮金刚.明咒集诵法</h2><div class="th-meta">轴号: 4423</div></a>
+<a href="../threads/4394.html" class="thread-row"><h2>莲华生大士长寿法</h2><div class="th-meta">轴号: 4394</div></a>
+<a href="../threads/4393.html" class="thread-row"><h2>莲华生大士狮子空行法</h2><div class="th-meta">轴号: 4393</div></a>
+<a href="../threads/4389.html" class="thread-row"><h2>自生莲花心髓日修瑜伽心要 ----顶果钦哲法王伏藏法宝</h2><div class="th-meta">轴号: 4389</div></a>
+<a href="../threads/4344.html" class="thread-row"><h2>大威德金刚法</h2><div class="th-meta">轴号: 4344</div></a>
+<a href="../threads/4340.html" class="thread-row"><h2>马明金刚手大鹏合修法</h2><div class="th-meta">轴号: 4340</div></a>
+<a href="../threads/4339.html" class="thread-row"><h2>施食简轨</h2><div class="th-meta">轴号: 4339</div></a>
+<a href="../threads/4332.html" class="thread-row"><h2>文殊八字大威德陀罗尼咒</h2><div class="th-meta">轴号: 4332</div></a>
+<a href="../threads/4329.html" class="thread-row"><h2>持五戒的意义和利益</h2><div class="th-meta">轴号: 4329</div></a>
+<a href="../threads/4289.html" class="thread-row"><h2>巴楚仁波切 教言</h2><div class="th-meta">轴号: 4289</div></a>
+<a href="../threads/4288.html" class="thread-row"><h2>天法白財神灌頂法會       傳法上師：瑪瓊祖古</h2><div class="th-meta">轴号: 4288</div></a>
+<a href="../threads/4285.html" class="thread-row"><h2>《密义显说》（节录）</h2><div class="th-meta">轴号: 4285</div></a>
+<a href="../threads/4260.html" class="thread-row"><h2>决定菩提道次第中所说实修之门一切善说精髓</h2><div class="th-meta">轴号: 4260</div></a>
+<a href="../threads/4256.html" class="thread-row"><h2>诺门真言集</h2><div class="th-meta">轴号: 4256</div></a>
+<a href="../threads/4230.html" class="thread-row"><h2>二十一度母赞——诸种译本</h2><div class="th-meta">轴号: 4230</div></a>
+<a href="../threads/4221.html" class="thread-row"><h2>菩提道次第祈愿文——诸种译本</h2><div class="th-meta">轴号: 4221</div></a>
+<a href="../threads/4213.html" class="thread-row"><h2>启胜道门·道次第传承祖师祈请——诸种译本</h2><div class="th-meta">轴号: 4213</div></a>
+<a href="../threads/4210.html" class="thread-row"><h2>菩提道次第极略论——诸种译本</h2><div class="th-meta">轴号: 4210</div></a>
+<a href="../threads/4207.html" class="thread-row"><h2>三主要道——诸种译本</h2><div class="th-meta">轴号: 4207</div></a>
+<a href="../threads/4206.html" class="thread-row"><h2>功德本颂 诸种译本合集</h2><div class="th-meta">轴号: 4206</div></a>
+<a href="../threads/4205.html" class="thread-row"><h2>缘起赞——诸种译本</h2><div class="th-meta">轴号: 4205</div></a>
+<a href="../threads/4190.html" class="thread-row"><h2>大白伞盖佛母礼赞·回遮法——诸种译本</h2><div class="th-meta">轴号: 4190</div></a>
+<a href="../threads/4180.html" class="thread-row"><h2>佛说守持不淫戒的五种功德利益（白话）</h2><div class="th-meta">轴号: 4180</div></a>
+<a href="../threads/4119.html" class="thread-row"><h2>常守五戒．持菩萨行</h2><div class="th-meta">轴号: 4119</div></a>
+<a href="../threads/4071.html" class="thread-row"><h2>泰国高僧龙婆托 (Long Por Thuat)的传奇事迹</h2><div class="th-meta">轴号: 4071</div></a>
+<a href="../threads/3989.html" class="thread-row"><h2>热罗上师开示偏邪道与正道正行</h2><div class="th-meta">轴号: 3989</div></a>
+<a href="../threads/3959.html" class="thread-row"><h2>菩提心海入门</h2><div class="th-meta">轴号: 3959</div></a>
+<a href="../threads/3895.html" class="thread-row"><h2>《佛子行三十七颂》</h2><div class="th-meta">轴号: 3895</div></a>
+<a href="../threads/3871.html" class="thread-row"><h2>禅定与解脱，福德智慧力，如斯诸力等，无常力最大</h2><div class="th-meta">轴号: 3871</div></a>
+<a href="../threads/3868.html" class="thread-row"><h2>护法的故事--紫玛尔护法</h2><div class="th-meta">轴号: 3868</div></a>
+<a href="../threads/3861.html" class="thread-row"><h2>白色如意摩尼怙主供养仪轨</h2><div class="th-meta">轴号: 3861</div></a>
+<a href="../threads/3835.html" class="thread-row"><h2>大吉祥天女咒奥义分析</h2><div class="th-meta">轴号: 3835</div></a>
+<a href="../threads/3824.html" class="thread-row"><h2>顶果钦则仁波切：上师瑜伽之精髓</h2><div class="th-meta">轴号: 3824</div></a>
+<a href="../threads/3823.html" class="thread-row"><h2>噶陀寺大持明者龙萨宁波伏藏大师著《施身一座法》</h2><div class="th-meta">轴号: 3823</div></a>
+<a href="../threads/3807.html" class="thread-row"><h2>朵玛的种类和功德</h2><div class="th-meta">轴号: 3807</div></a>
+<a href="../threads/3777.html" class="thread-row"><h2>成熟灌顶的重要性</h2><div class="th-meta">轴号: 3777</div></a>
+<a href="../threads/3760.html" class="thread-row"><h2>道果延晖集</h2><div class="th-meta">轴号: 3760</div></a>
+<a href="../threads/3622.html" class="thread-row"><h2>佛陀涅槃前遗训 佛陀最后的教诲！</h2><div class="th-meta">轴号: 3622</div></a>
+<a href="../threads/3558.html" class="thread-row"><h2>佛教密宗咒语集(藏密咒语参考)</h2><div class="th-meta">轴号: 3558</div></a>
+<a href="../threads/3474.html" class="thread-row"><h2>兜率百尊</h2><div class="th-meta">轴号: 3474</div></a>
+<a href="../threads/3457.html" class="thread-row"><h2>座上禅修之要点</h2><div class="th-meta">轴号: 3457</div></a>
+<a href="../threads/3436.html" class="thread-row"><h2>时轮檀陀罗时代记事</h2><div class="th-meta">轴号: 3436</div></a>
+<a href="../threads/3435.html" class="thread-row"><h2>下部三阶檀陀罗</h2><div class="th-meta">轴号: 3435</div></a>
+<a href="../threads/3434.html" class="thread-row"><h2>进入无上瑜伽檀陀罗</h2><div class="th-meta">轴号: 3434</div></a>
+<a href="../threads/3433.html" class="thread-row"><h2>空性大手印颂文---诸佛道迹</h2><div class="th-meta">轴号: 3433</div></a>
+<a href="../threads/3431.html" class="thread-row"><h2>格鲁派不共三愿</h2><div class="th-meta">轴号: 3431</div></a>
+<a href="../threads/3428.html" class="thread-row"><h2>时轮金刚瑜伽法</h2><div class="th-meta">轴号: 3428</div></a>
+<a href="../threads/3419.html" class="thread-row"><h2>聖者心中之寶 （巴楚仁波切）</h2><div class="th-meta">轴号: 3419</div></a>
+<a href="../threads/3418.html" class="thread-row"><h2>聖者心中之寶 （巴楚仁波切）</h2><div class="th-meta">轴号: 3418</div></a>
+<a href="../threads/3412.html" class="thread-row"><h2>至尊不动怙主赞·加持海</h2><div class="th-meta">轴号: 3412</div></a>
+<a href="../threads/3404.html" class="thread-row"><h2>噶当派祖师嘉言选录</h2><div class="th-meta">轴号: 3404</div></a>
+<a href="../threads/3375.html" class="thread-row"><h2>五戒表解——淫戒</h2><div class="th-meta">轴号: 3375</div></a>
+<a href="../threads/3361.html" class="thread-row"><h2>世出世间真谛论——秋英多杰仁波切</h2><div class="th-meta">轴号: 3361</div></a>
+<a href="../threads/3359.html" class="thread-row"><h2>廣大發願頌 龍樹菩薩造</h2><div class="th-meta">轴号: 3359</div></a>
+<a href="../threads/3356.html" class="thread-row"><h2>若传一人所有无间罪业悉得除灭永断轮回</h2><div class="th-meta">轴号: 3356</div></a>
+<a href="../threads/3344.html" class="thread-row"><h2>远离谤僧无间罪！佛弟子必读、必知的《赞僧功德经》</h2><div class="th-meta">轴号: 3344</div></a>
+<a href="../threads/3341.html" class="thread-row"><h2>当知是人临命终时定当得见阿弥陀佛菩萨大众之所围绕</h2><div class="th-meta">轴号: 3341</div></a>
+<a href="../threads/3332.html" class="thread-row"><h2>法藏碎金·持戒门</h2><div class="th-meta">轴号: 3332</div></a>
+<a href="../threads/3266.html" class="thread-row"><h2>最新转经轮奇迹感应</h2><div class="th-meta">轴号: 3266</div></a>
+<a href="../threads/3222.html" class="thread-row"><h2>《祈祷文殊增长智慧》</h2><div class="th-meta">轴号: 3222</div></a>
+<a href="../threads/3221.html" class="thread-row"><h2>《黄文殊&quot;牟&quot;字修法》</h2><div class="th-meta">轴号: 3221</div></a>
+<a href="../threads/3220.html" class="thread-row"><h2>《红黄文殊成就诸事业——平日智慧修法精要仪轨》</h2><div class="th-meta">轴号: 3220</div></a>
+<a href="../threads/3219.html" class="thread-row"><h2>《白文殊之“阿”字修法仪轨》</h2><div class="th-meta">轴号: 3219</div></a>
+<a href="../threads/3218.html" class="thread-row"><h2>南卡宁波请问莲师颂</h2><div class="th-meta">轴号: 3218</div></a>
+<a href="../threads/3217.html" class="thread-row"><h2>莲花生大师遂欲成就祈请颂</h2><div class="th-meta">轴号: 3217</div></a>
+<a href="../threads/3216.html" class="thread-row"><h2>莲花生大师消除障道祈请颂</h2><div class="th-meta">轴号: 3216</div></a>
+<a href="../threads/3215.html" class="thread-row"><h2>金刚七句祈请文</h2><div class="th-meta">轴号: 3215</div></a>
+<a href="../threads/3214.html" class="thread-row"><h2>莲华生十方四时祈愿文</h2><div class="th-meta">轴号: 3214</div></a>
+<a href="../threads/3190.html" class="thread-row"><h2>日常佛法修习</h2><div class="th-meta">轴号: 3190</div></a>
+<a href="../threads/3163.html" class="thread-row"><h2>吉祥时轮心髓十相自在的意义——宝灯论释</h2><div class="th-meta">轴号: 3163</div></a>
+<a href="../threads/3156.html" class="thread-row"><h2>修心七要</h2><div class="th-meta">轴号: 3156</div></a>
+<a href="../threads/3155.html" class="thread-row"><h2>法器和唐卡（摄于藏密文化展览）</h2><div class="th-meta">轴号: 3155</div></a>
+<a href="../threads/3139.html" class="thread-row"><h2>谛洛巴口传那若巴的二十八颂大手印教授</h2><div class="th-meta">轴号: 3139</div></a>
+<a href="../threads/3128.html" class="thread-row"><h2>空行主母曼達拉娃佛母本生及解脫祈請文</h2><div class="th-meta">轴号: 3128</div></a>
+<a href="../threads/3118.html" class="thread-row"><h2>藏传佛教英文词汇合集</h2><div class="th-meta">轴号: 3118</div></a>
+<a href="../threads/3111.html" class="thread-row"><h2>俱生和合正行导文</h2><div class="th-meta">轴号: 3111</div></a>
+<a href="../threads/3056.html" class="thread-row"><h2>宗喀巴大师的“律海心要摄颂”</h2><div class="th-meta">轴号: 3056</div></a>
+<a href="../threads/3055.html" class="thread-row"><h2>菩提道次第师承简介</h2><div class="th-meta">轴号: 3055</div></a>
+<a href="../threads/3023.html" class="thread-row"><h2>大圓滿最勝心中心引導略要</h2><div class="th-meta">轴号: 3023</div></a>
+<a href="../threads/3017.html" class="thread-row"><h2>语狮子文殊修持仪轨</h2><div class="th-meta">轴号: 3017</div></a>
+<a href="../threads/2976.html" class="thread-row"><h2>华严普贤行愿忏仪</h2><div class="th-meta">轴号: 2976</div></a>
+<a href="../threads/2974.html" class="thread-row"><h2>明《大乘经咒》及其二十九幅插图</h2><div class="th-meta">轴号: 2974</div></a>
+<a href="../threads/2969.html" class="thread-row"><h2>胜金光明忏</h2><div class="th-meta">轴号: 2969</div></a>
+<a href="../threads/2937.html" class="thread-row"><h2>法尔不变难胜忿怒不动明王行法</h2><div class="th-meta">轴号: 2937</div></a>
+<a href="../threads/2933.html" class="thread-row"><h2>深道海生(莲化生大师)心滴常修简轨</h2><div class="th-meta">轴号: 2933</div></a>
+<a href="../threads/2902.html" class="thread-row"><h2>无始无初本具金刚——爱染明王最秘行法</h2><div class="th-meta">轴号: 2902</div></a>
+<a href="../threads/2846.html" class="thread-row"><h2>《觉囊派宝镜明鉴及两部密修指南》</h2><div class="th-meta">轴号: 2846</div></a>
+<a href="../threads/2826.html" class="thread-row"><h2>药师本愿功德琉璃鬘</h2><div class="th-meta">轴号: 2826</div></a>
+<a href="../threads/2825.html" class="thread-row"><h2>速疾成就体性信爱——咕噜咕咧(作明)佛母大慈行法</h2><div class="th-meta">轴号: 2825</div></a>
+<a href="../threads/2824.html" class="thread-row"><h2>伏魔庄严——体性顶髻出生具誓一髻母忿怒碎除众障行法</h2><div class="th-meta">轴号: 2824</div></a>
+<a href="../threads/2823.html" class="thread-row"><h2>菩提道次第摄受求加持颂</h2><div class="th-meta">轴号: 2823</div></a>
+<a href="../threads/2814.html" class="thread-row"><h2>香巴噶举五金法</h2><div class="th-meta">轴号: 2814</div></a>
+<a href="../threads/2809.html" class="thread-row"><h2>法界体性——本初时轮金刚具力行法</h2><div class="th-meta">轴号: 2809</div></a>
+<a href="../threads/2807.html" class="thread-row"><h2>俱生时轮金刚简轨</h2><div class="th-meta">轴号: 2807</div></a>
+<a href="../threads/2805.html" class="thread-row"><h2>无死童瓶吉祥胜身普巴（橛）金刚成就法</h2><div class="th-meta">轴号: 2805</div></a>
+<a href="../threads/2804.html" class="thread-row"><h2>二十诸天简介</h2><div class="th-meta">轴号: 2804</div></a>
+<a href="../threads/2799.html" class="thread-row"><h2>忿怒之吉祥－－大悲黑袍金刚二臂玛哈嘎拉成就法</h2><div class="th-meta">轴号: 2799</div></a>
+<a href="../threads/2796.html" class="thread-row"><h2>大悲空智忿怒密护大黑天行法</h2><div class="th-meta">轴号: 2796</div></a>
+<a href="../threads/2793.html" class="thread-row"><h2>《大乘密藏现证本续摩尼树》片段汉藏对勘</h2><div class="th-meta">轴号: 2793</div></a>
+<a href="../threads/2786.html" class="thread-row"><h2>大空胜乐金刚亥母密智行法</h2><div class="th-meta">轴号: 2786</div></a>
+<a href="../threads/2759.html" class="thread-row"><h2>毗卢遮那大译师-安心歌</h2><div class="th-meta">轴号: 2759</div></a>
+<a href="../threads/2758.html" class="thread-row"><h2>诀窍阿底瑜珈大圆满广大心髓之传承祈请文</h2><div class="th-meta">轴号: 2758</div></a>
+<a href="../threads/2748.html" class="thread-row"><h2>极乐愿</h2><div class="th-meta">轴号: 2748</div></a>
+<a href="../threads/2710.html" class="thread-row"><h2>即身成佛义</h2><div class="th-meta">轴号: 2710</div></a>
+<a href="../threads/2685.html" class="thread-row"><h2>善知识者则是如来。善知识者一切法云</h2><div class="th-meta">轴号: 2685</div></a>
+<a href="../threads/2644.html" class="thread-row"><h2>《心匙•策励自他一切人等痛念无常歌》</h2><div class="th-meta">轴号: 2644</div></a>
+<a href="../threads/2640.html" class="thread-row"><h2>生死之轮——六道轮回图释义开示</h2><div class="th-meta">轴号: 2640</div></a>
+<a href="../threads/2638.html" class="thread-row"><h2>生死自在——祈竹仁宝哲</h2><div class="th-meta">轴号: 2638</div></a>
+<a href="../threads/2635.html" class="thread-row"><h2>「上师」简议</h2><div class="th-meta">轴号: 2635</div></a>
+<a href="../threads/2633.html" class="thread-row"><h2>持戒窍诀</h2><div class="th-meta">轴号: 2633</div></a>
+<a href="../threads/2632.html" class="thread-row"><h2>莲花心之庄严 • 金刚祈请文之释意</h2><div class="th-meta">轴号: 2632</div></a>
+<a href="../threads/2630.html" class="thread-row"><h2>修行者的一日</h2><div class="th-meta">轴号: 2630</div></a>
+<a href="../threads/2615.html" class="thread-row"><h2>金刚顶宗纲概</h2><div class="th-meta">轴号: 2615</div></a>
+<a href="../threads/2612.html" class="thread-row"><h2>祈竹仁波切所传《黑文殊观修法广轨---》和导修讲解</h2><div class="th-meta">轴号: 2612</div></a>
+<a href="../threads/2595.html" class="thread-row"><h2>部分佛教名词解释</h2><div class="th-meta">轴号: 2595</div></a>
+<a href="../threads/2591.html" class="thread-row"><h2>华严发菩提心文</h2><div class="th-meta">轴号: 2591</div></a>
+<a href="../threads/2584.html" class="thread-row"><h2>一师一法一本尊-根松成林曲杰嘉才仁波且</h2><div class="th-meta">轴号: 2584</div></a>
+<a href="../threads/2570.html" class="thread-row"><h2>《甚深内义》讲解（节录）</h2><div class="th-meta">轴号: 2570</div></a>
+<a href="../threads/2560.html" class="thread-row"><h2>对“萨迦远离四贪修心法要“的开示</h2><div class="th-meta">轴号: 2560</div></a>
+<a href="../threads/2423.html" class="thread-row"><h2>菩提道次第广论</h2><div class="th-meta">轴号: 2423</div></a>
+<a href="../threads/2421.html" class="thread-row"><h2>宁玛派的经典</h2><div class="th-meta">轴号: 2421</div></a>
+<a href="../threads/2398.html" class="thread-row"><h2>跪请高人指点梦境</h2><div class="th-meta">轴号: 2398</div></a>
+<a href="../threads/2396.html" class="thread-row"><h2>FIFTY STANZAS OF GURU DEVOTION—事师五十颂（英译）</h2><div class="th-meta">轴号: 2396</div></a>
+<a href="../threads/2395.html" class="thread-row"><h2>A Guide To the Bodhisattva Way Of Life—入菩萨行论（英译）</h2><div class="th-meta">轴号: 2395</div></a>
+<a href="../threads/2394.html" class="thread-row"><h2>A Lamp for the Enlightenment Path——菩提道灯论（英译）</h2><div class="th-meta">轴号: 2394</div></a>
+<a href="../threads/2384.html" class="thread-row"><h2>试论藏传佛教寺院教育的特色及其作用</h2><div class="th-meta">轴号: 2384</div></a>
+<a href="../threads/2368.html" class="thread-row"><h2>The Wheel of Sharp Weapons——利器之轮英文版</h2><div class="th-meta">轴号: 2368</div></a>
+<a href="../threads/2367.html" class="thread-row"><h2>财续母修持仪轨</h2><div class="th-meta">轴号: 2367</div></a>
+<a href="../threads/2365.html" class="thread-row"><h2>大白伞盖母修持仪轨</h2><div class="th-meta">轴号: 2365</div></a>
+<a href="../threads/2349.html" class="thread-row"><h2>关于精进的开示</h2><div class="th-meta">轴号: 2349</div></a>
+<a href="../threads/2278.html" class="thread-row"><h2>噶举的四大八小支派简介</h2><div class="th-meta">轴号: 2278</div></a>
+<a href="../threads/2277.html" class="thread-row"><h2>庄严道场的佛具</h2><div class="th-meta">轴号: 2277</div></a>
+<a href="../threads/2261.html" class="thread-row"><h2>窍诀奇妙海</h2><div class="th-meta">轴号: 2261</div></a>
+<a href="../threads/2238.html" class="thread-row"><h2>空行圣地胜乐二十四境</h2><div class="th-meta">轴号: 2238</div></a>
+<a href="../threads/2237.html" class="thread-row"><h2>事业的保证—金刚防护轮</h2><div class="th-meta">轴号: 2237</div></a>
+<a href="../threads/2235.html" class="thread-row"><h2>江贡活佛谈传法上师之资格</h2><div class="th-meta">轴号: 2235</div></a>
+<a href="../threads/2234.html" class="thread-row"><h2>略说五部大论</h2><div class="th-meta">轴号: 2234</div></a>
+<a href="../threads/2214.html" class="thread-row"><h2>时轮金刚坛城简介</h2><div class="th-meta">轴号: 2214</div></a>
+<a href="../threads/2199.html" class="thread-row"><h2>藏传佛教萨迦派简介</h2><div class="th-meta">轴号: 2199</div></a>
+<a href="../threads/2195.html" class="thread-row"><h2>修习自在密哩呀巴(毗瓦巴)赞叹祈祷文</h2><div class="th-meta">轴号: 2195</div></a>
+<a href="../threads/2184.html" class="thread-row"><h2>吉祥天母难量颂（七支供养）</h2><div class="th-meta">轴号: 2184</div></a>
+<a href="../threads/2175.html" class="thread-row"><h2>广释菩提心论</h2><div class="th-meta">轴号: 2175</div></a>
+<a href="../threads/2167.html" class="thread-row"><h2>口诀见鬘——大阿阇梨莲花生造</h2><div class="th-meta">轴号: 2167</div></a>
+<a href="../threads/2153.html" class="thread-row"><h2>隆庆饶绛巴对大圆满法的解释</h2><div class="th-meta">轴号: 2153</div></a>
+<a href="../threads/2138.html" class="thread-row"><h2>修心导论</h2><div class="th-meta">轴号: 2138</div></a>
+<a href="../threads/2103.html" class="thread-row"><h2>瑰美艳丽的密宗彩沙曼陀罗</h2><div class="th-meta">轴号: 2103</div></a>
+<a href="../threads/2088.html" class="thread-row"><h2>那洛六法概说</h2><div class="th-meta">轴号: 2088</div></a>
+<a href="../threads/2070.html" class="thread-row"><h2>《大圆满传承源流---蓝宝石》节选</h2><div class="th-meta">轴号: 2070</div></a>
+<a href="../threads/2063.html" class="thread-row"><h2>何谓菩萨十力四无畏十八不共法</h2><div class="th-meta">轴号: 2063</div></a>
+<a href="../threads/2062.html" class="thread-row"><h2>密教首重师承论</h2><div class="th-meta">轴号: 2062</div></a>
+<a href="../threads/2061.html" class="thread-row"><h2>藏传佛教宁玛巴之传统</h2><div class="th-meta">轴号: 2061</div></a>
+<a href="../threads/2060.html" class="thread-row"><h2>藏传佛教称谓漫谈</h2><div class="th-meta">轴号: 2060</div></a>
+<a href="../threads/2057.html" class="thread-row"><h2>《入菩萨行论》注释  大堪布贡噶旺秋仁波切</h2><div class="th-meta">轴号: 2057</div></a>
+<a href="../threads/2016.html" class="thread-row"><h2>“六大”与曼荼罗艺术</h2><div class="th-meta">轴号: 2016</div></a>
+<a href="../threads/2000.html" class="thread-row"><h2>何等为『如来毕竟成就三十二种大悲观心』</h2><div class="th-meta">轴号: 2000</div></a>
+<a href="../threads/1988.html" class="thread-row"><h2>上下密院的组织与学经</h2><div class="th-meta">轴号: 1988</div></a>
+<a href="../threads/1986.html" class="thread-row"><h2>格鲁的散居学派和温萨学派</h2><div class="th-meta">轴号: 1986</div></a>
+<a href="../threads/1985.html" class="thread-row"><h2>格鲁派的密法辨析与修正</h2><div class="th-meta">轴号: 1985</div></a>
+<a href="../threads/1982.html" class="thread-row"><h2>宗喀巴的密法思想与著述</h2><div class="th-meta">轴号: 1982</div></a>
+<a href="../threads/1976.html" class="thread-row"><h2>藏传佛教法器简介</h2><div class="th-meta">轴号: 1976</div></a>
+<a href="../threads/1929.html" class="thread-row"><h2>大手印法的推广与创新</h2><div class="th-meta">轴号: 1929</div></a>
+<a href="../threads/1928.html" class="thread-row"><h2>时轮檀陀罗传承的传递</h2><div class="th-meta">轴号: 1928</div></a>
+<a href="../threads/1926.html" class="thread-row"><h2>达波拉杰的大手印思想</h2><div class="th-meta">轴号: 1926</div></a>
+<a href="../threads/1925.html" class="thread-row"><h2>大手印法的西藏化特点</h2><div class="th-meta">轴号: 1925</div></a>
+<a href="../threads/1920.html" class="thread-row"><h2>大手印的名义、类别及传承</h2><div class="th-meta">轴号: 1920</div></a>
+<a href="../threads/1907.html" class="thread-row"><h2>释尊的外修·内修与秘修开示</h2><div class="th-meta">轴号: 1907</div></a>
+<a href="../threads/1875.html" class="thread-row"><h2>莲师净土云游记</h2><div class="th-meta">轴号: 1875</div></a>
+<a href="../threads/1863.html" class="thread-row"><h2>求助！转动转经轮的时候是否能发出声音？</h2><div class="th-meta">轴号: 1863</div></a>
+<a href="../threads/1851.html" class="thread-row"><h2>利美运动五大宝藏综述</h2><div class="th-meta">轴号: 1851</div></a>
+<a href="../threads/1814.html" class="thread-row"><h2>道果法的主要派系</h2><div class="th-meta">轴号: 1814</div></a>
+<a href="../threads/1809.html" class="thread-row"><h2>功德云——如何布置整理佛堂</h2><div class="th-meta">轴号: 1809</div></a>
+<a href="../threads/1791.html" class="thread-row"><h2>明王</h2><div class="th-meta">轴号: 1791</div></a>
+<a href="../threads/1785.html" class="thread-row"><h2>卓弥及其所传道果教授</h2><div class="th-meta">轴号: 1785</div></a>
+<a href="../threads/1784.html" class="thread-row"><h2>求财的咒轮</h2><div class="th-meta">轴号: 1784</div></a>
+<a href="../threads/1783.html" class="thread-row"><h2>多宝如来一切珍宝周遍法界大悲利益众生甚深观行密要</h2><div class="th-meta">轴号: 1783</div></a>
+<a href="../threads/1699.html" class="thread-row"><h2>关于金刚橛</h2><div class="th-meta">轴号: 1699</div></a>
+<a href="../threads/1696.html" class="thread-row"><h2>随念三宝经.三宝弟子每天都应该念的经</h2><div class="th-meta">轴号: 1696</div></a>
+<a href="../threads/1695.html" class="thread-row"><h2>经旗之功德      登克活佛 译</h2><div class="th-meta">轴号: 1695</div></a>
+<a href="../threads/1693.html" class="thread-row"><h2>玛钦护法</h2><div class="th-meta">轴号: 1693</div></a>
+<a href="../threads/1678.html" class="thread-row"><h2>劝发诸王要偈</h2><div class="th-meta">轴号: 1678</div></a>
+<a href="../threads/1677.html" class="thread-row"><h2>龙树菩萨劝诫王颂</h2><div class="th-meta">轴号: 1677</div></a>
+<a href="../threads/1666.html" class="thread-row"><h2>菩萨五法忏悔文</h2><div class="th-meta">轴号: 1666</div></a>
+<a href="../threads/1593.html" class="thread-row"><h2>大圆满法的主要内容和特点</h2><div class="th-meta">轴号: 1593</div></a>
+<a href="../threads/1582.html" class="thread-row"><h2>佛教信徒出家手册</h2><div class="th-meta">轴号: 1582</div></a>
+<a href="../threads/1577.html" class="thread-row"><h2>五色天馬旗殊勝功德利益介紹</h2><div class="th-meta">轴号: 1577</div></a>
+<a href="../threads/1564.html" class="thread-row"><h2>菩提道次第传承诸师修心语录选集</h2><div class="th-meta">轴号: 1564</div></a>
+<a href="../threads/1544.html" class="thread-row"><h2>咒语在藏传佛教中的特殊作用</h2><div class="th-meta">轴号: 1544</div></a>
+<a href="../threads/1530.html" class="thread-row"><h2>西藏佛教密宗基本修持</h2><div class="th-meta">轴号: 1530</div></a>
+<a href="../threads/1505.html" class="thread-row"><h2>菩提道次第明晰引导·趣一切智坦途</h2><div class="th-meta">轴号: 1505</div></a>
+<a href="../threads/1498.html" class="thread-row"><h2>阿底峡所传乘龙白财尊简介</h2><div class="th-meta">轴号: 1498</div></a>
+<a href="../threads/1496.html" class="thread-row"><h2>上师、灌顶及象征</h2><div class="th-meta">轴号: 1496</div></a>
+<a href="../threads/1488.html" class="thread-row"><h2>佛教密宗女性神佛（仅供参考）</h2><div class="th-meta">轴号: 1488</div></a>
+<a href="../threads/1470.html" class="thread-row"><h2>佛说优婆塞五戒相经......（在家镜鉴）</h2><div class="th-meta">轴号: 1470</div></a>
+<a href="../threads/1468.html" class="thread-row"><h2>关于持戒的利益（功德）</h2><div class="th-meta">轴号: 1468</div></a>
+<a href="../threads/1439.html" class="thread-row"><h2>藏传佛教格鲁派的学经辩经和学位制度</h2><div class="th-meta">轴号: 1439</div></a>
+<a href="../threads/1431.html" class="thread-row"><h2>藏传佛教的女性僧团及女活佛转世传承体系</h2><div class="th-meta">轴号: 1431</div></a>
+<a href="../threads/1427.html" class="thread-row"><h2>与时轮法修持仪规有关的问题</h2><div class="th-meta">轴号: 1427</div></a>
+<a href="../threads/1409.html" class="thread-row"><h2>大圆满经籍在吐蕃时期的翻译</h2><div class="th-meta">轴号: 1409</div></a>
+<a href="../threads/1408.html" class="thread-row"><h2>大圆满法的传规</h2><div class="th-meta">轴号: 1408</div></a>
+<a href="../threads/1407.html" class="thread-row"><h2>遍照护及其所传的大圆满密法</h2><div class="th-meta">轴号: 1407</div></a>
+<a href="../threads/1406.html" class="thread-row"><h2>绒•曲桑和大圆满绒派</h2><div class="th-meta">轴号: 1406</div></a>
+<a href="../threads/1387.html" class="thread-row"><h2>阿底峽尊者的秘密本尊</h2><div class="th-meta">轴号: 1387</div></a>
+<a href="../threads/1385.html" class="thread-row"><h2>圣救度母</h2><div class="th-meta">轴号: 1385</div></a>
+<a href="../threads/1384.html" class="thread-row"><h2>圣救度母圣迹撮要 (诺那呼图克图法语开示)</h2><div class="th-meta">轴号: 1384</div></a>
+<a href="../threads/1383.html" class="thread-row"><h2>几位成就者关于度母法门的开示</h2><div class="th-meta">轴号: 1383</div></a>
+<a href="../threads/1379.html" class="thread-row"><h2>一切财神眷属配尊吐宝鼠殊胜由来</h2><div class="th-meta">轴号: 1379</div></a>
+<a href="../threads/1371.html" class="thread-row"><h2>殊胜的药师法门</h2><div class="th-meta">轴号: 1371</div></a>
+<a href="../threads/1369.html" class="thread-row"><h2>《清净道论》的修观次第与顿现观</h2><div class="th-meta">轴号: 1369</div></a>
+<a href="../threads/1368.html" class="thread-row"><h2>莲师于伏藏的授记</h2><div class="th-meta">轴号: 1368</div></a>
+<a href="../threads/1363.html" class="thread-row"><h2>大圆满教授及其特点</h2><div class="th-meta">轴号: 1363</div></a>
+<a href="../threads/1329.html" class="thread-row"><h2>阿底峡所作秽积金刚赞</h2><div class="th-meta">轴号: 1329</div></a>
+<a href="../threads/1327.html" class="thread-row"><h2>“空行母”的内意</h2><div class="th-meta">轴号: 1327</div></a>
+<a href="../threads/1300.html" class="thread-row"><h2>莲花生与吐蕃密教</h2><div class="th-meta">轴号: 1300</div></a>
+<a href="../threads/1299.html" class="thread-row"><h2>龙族（龙王）和龙的区别</h2><div class="th-meta">轴号: 1299</div></a>
+<a href="../threads/1296.html" class="thread-row"><h2>《时轮》的宇宙观</h2><div class="th-meta">轴号: 1296</div></a>
+<a href="../threads/1272.html" class="thread-row"><h2>显教与密教的差别</h2><div class="th-meta">轴号: 1272</div></a>
+<a href="../threads/1269.html" class="thread-row"><h2>论蒙藏佛教的金刚驱魔神舞</h2><div class="th-meta">轴号: 1269</div></a>
+<a href="../threads/1268.html" class="thread-row"><h2>《西藏密教》</h2><div class="th-meta">轴号: 1268</div></a>
+<a href="../threads/1261.html" class="thread-row"><h2>三法印和四法印</h2><div class="th-meta">轴号: 1261</div></a>
+<a href="../threads/1251.html" class="thread-row"><h2>持用念珠的方法</h2><div class="th-meta">轴号: 1251</div></a>
+<a href="../threads/1248.html" class="thread-row"><h2>藏传佛教中的各类称谓</h2><div class="th-meta">轴号: 1248</div></a>
+<a href="../threads/1240.html" class="thread-row"><h2>文殊菩萨名之略解</h2><div class="th-meta">轴号: 1240</div></a>
+<a href="../threads/1235.html" class="thread-row"><h2>念珠与铃杵的运用与表义</h2><div class="th-meta">轴号: 1235</div></a>
+<a href="../threads/1234.html" class="thread-row"><h2>松吉泽仁仁波切开示录</h2><div class="th-meta">轴号: 1234</div></a>
+<a href="../threads/1231.html" class="thread-row"><h2>阿底峽傳承二十一度母灌頂</h2><div class="th-meta">轴号: 1231</div></a>
+<a href="../threads/1229.html" class="thread-row"><h2>五佛</h2><div class="th-meta">轴号: 1229</div></a>
+<a href="../threads/1227.html" class="thread-row"><h2>三昧耶戒</h2><div class="th-meta">轴号: 1227</div></a>
+<a href="../threads/1214.html" class="thread-row"><h2>掌中解脱.菩提道次第二十四天教授</h2><div class="th-meta">轴号: 1214</div></a>
+<a href="../threads/1206.html" class="thread-row"><h2>菩提道次第摄颂 宗喀巴大师造 法音法师译</h2><div class="th-meta">轴号: 1206</div></a>
+<a href="../threads/1156.html" class="thread-row"><h2>佛陀法语</h2><div class="th-meta">轴号: 1156</div></a>
+<a href="../threads/1116.html" class="thread-row"><h2>萨迦班智达赞</h2><div class="th-meta">轴号: 1116</div></a>
+<a href="../threads/1115.html" class="thread-row"><h2>西藏佛教萨迦派“道果教授”</h2><div class="th-meta">轴号: 1115</div></a>
+<a href="../threads/1096.html" class="thread-row"><h2>独具特色的时轮金刚大法</h2><div class="th-meta">轴号: 1096</div></a>
+<a href="../threads/1081.html" class="thread-row"><h2>道果法前行三现分庄严宝论</h2><div class="th-meta">轴号: 1081</div></a>
+<a href="../threads/1069.html" class="thread-row"><h2>藏传佛教的重要宗派*萨迦派</h2><div class="th-meta">轴号: 1069</div></a>
+<a href="../threads/1040.html" class="thread-row"><h2>藏传佛教萨迦派概要</h2><div class="th-meta">轴号: 1040</div></a>
+<a href="../threads/1037.html" class="thread-row"><h2>开启佛法</h2><div class="th-meta">轴号: 1037</div></a>
+<a href="../threads/1033.html" class="thread-row"><h2>《生死的幻觉》</h2><div class="th-meta">轴号: 1033</div></a>
+<a href="../threads/1018.html" class="thread-row"><h2>圣者贤行愿王释义（普贤行愿品释）——章嘉游戏金刚</h2><div class="th-meta">轴号: 1018</div></a>
+<a href="../threads/978.html" class="thread-row"><h2>《心匙讲解》</h2><div class="th-meta">轴号: 978</div></a>
+<a href="../threads/966.html" class="thread-row"><h2>智慧怙主——黑袍玛哈嘎拉</h2><div class="th-meta">轴号: 966</div></a>
+<a href="../threads/905.html" class="thread-row"><h2>法王舞</h2><div class="th-meta">轴号: 905</div></a>
+<a href="../threads/902.html" class="thread-row"><h2>殊胜的《文殊师利礼赞文》</h2><div class="th-meta">轴号: 902</div></a>
+<a href="../threads/893.html" class="thread-row"><h2>修次中篇*莲花戒大师作</h2><div class="th-meta">轴号: 893</div></a>
+<a href="../threads/890.html" class="thread-row"><h2>菩提道次第教诲·调伏自心狂象之铁钩</h2><div class="th-meta">轴号: 890</div></a>
+<a href="../threads/889.html" class="thread-row"><h2>本尊与坛城</h2><div class="th-meta">轴号: 889</div></a>
+<a href="../threads/878.html" class="thread-row"><h2>格鲁派概要</h2><div class="th-meta">轴号: 878</div></a>
+<a href="../threads/841.html" class="thread-row"><h2>古鲁寺“次九”金刚舞考察</h2><div class="th-meta">轴号: 841</div></a>
+<a href="../threads/836.html" class="thread-row"><h2>菩提道次第直授</h2><div class="th-meta">轴号: 836</div></a>
+<a href="../threads/829.html" class="thread-row"><h2>菩提道次第心论卷第三</h2><div class="th-meta">轴号: 829</div></a>
+<a href="../threads/828.html" class="thread-row"><h2>菩提道次第心论卷第二</h2><div class="th-meta">轴号: 828</div></a>
+<a href="../threads/827.html" class="thread-row"><h2>菩提道次第心论卷第一</h2><div class="th-meta">轴号: 827</div></a>
+<a href="../threads/826.html" class="thread-row"><h2>《菩提道灯难处释》探微</h2><div class="th-meta">轴号: 826</div></a>
+<a href="../threads/804.html" class="thread-row"><h2>噶当四本尊——不动明王仪轨</h2><div class="th-meta">轴号: 804</div></a>
+<a href="../threads/763.html" class="thread-row"><h2>白度母法门导修</h2><div class="th-meta">轴号: 763</div></a>
+<a href="../threads/732.html" class="thread-row"><h2>华严经善财二十七参观自在菩萨章（法华部·华严部）</h2><div class="th-meta">轴号: 732</div></a>
+<a href="../threads/718.html" class="thread-row"><h2>西藏密宗</h2><div class="th-meta">轴号: 718</div></a>
+<a href="../threads/717.html" class="thread-row"><h2>祈求福运升腾的象征物——经幡</h2><div class="th-meta">轴号: 717</div></a>
+<a href="../threads/713.html" class="thread-row"><h2>八圣吉祥颂</h2><div class="th-meta">轴号: 713</div></a>
+<a href="../threads/691.html" class="thread-row"><h2>佛陀的一天</h2><div class="th-meta">轴号: 691</div></a>
+<a href="../threads/674.html" class="thread-row"><h2>剑轮修心法The Wheel of Sharp Weapons</h2><div class="th-meta">轴号: 674</div></a>
+<a href="../threads/673.html" class="thread-row"><h2>菩提道次第略论</h2><div class="th-meta">轴号: 673</div></a>
+<a href="../threads/672.html" class="thread-row"><h2>菩提道次第求加持颂</h2><div class="th-meta">轴号: 672</div></a>
+<a href="../threads/671.html" class="thread-row"><h2>菩提大道</h2><div class="th-meta">轴号: 671</div></a>
+<a href="../threads/666.html" class="thread-row"><h2>缘起赞五十八颂</h2><div class="th-meta">轴号: 666</div></a>
+<a href="../threads/658.html" class="thread-row"><h2>菩提道次第直授•趣入一切种智速疾道</h2><div class="th-meta">轴号: 658</div></a>
+<a href="../threads/559.html" class="thread-row"><h2>加被聚化论---总摄显密修行次第</h2><div class="th-meta">轴号: 559</div></a>
+<a href="../threads/546.html" class="thread-row"><h2>龙树菩萨为禅陀迦王说法要偈</h2><div class="th-meta">轴号: 546</div></a>
+<a href="../threads/542.html" class="thread-row"><h2>菩提道次第摄颂略解</h2><div class="th-meta">轴号: 542</div></a>
+<a href="../threads/541.html" class="thread-row"><h2>《菩提道灯论》</h2><div class="th-meta">轴号: 541</div></a>
+<a href="../threads/525.html" class="thread-row"><h2>菩提道次第明晰引导速道前行念诵次第易行仪轨•有缘颈严</h2><div class="th-meta">轴号: 525</div></a>
+<a href="../threads/513.html" class="thread-row"><h2>略谈大年初一到十五之佛陀神变</h2><div class="th-meta">轴号: 513</div></a>
+<a href="../threads/475.html" class="thread-row"><h2>格鲁巴 梭巴仁波切开示 ---- 闻法发心</h2><div class="th-meta">轴号: 475</div></a>
+<a href="../threads/474.html" class="thread-row"><h2>什么是密宗的五正学</h2><div class="th-meta">轴号: 474</div></a>
+<a href="../threads/473.html" class="thread-row"><h2>上师五十法颂</h2><div class="th-meta">轴号: 473</div></a>
+<a href="../threads/470.html" class="thread-row"><h2>如何听经与修行</h2><div class="th-meta">轴号: 470</div></a>
+<a href="../threads/452.html" class="thread-row"><h2>比丘圆真的前世</h2><div class="th-meta">轴号: 452</div></a>
+<a href="../threads/439.html" class="thread-row"><h2>三主要道</h2><div class="th-meta">轴号: 439</div></a>
+<a href="../threads/436.html" class="thread-row"><h2>贡噶法狮子讲授《抉择见》</h2><div class="th-meta">轴号: 436</div></a>
+<a href="../threads/429.html" class="thread-row"><h2>初级佛学 第一课　佛</h2><div class="th-meta">轴号: 429</div></a>
+<a href="../threads/427.html" class="thread-row"><h2>莲苑歌舞</h2><div class="th-meta">轴号: 427</div></a>
+<a href="../threads/425.html" class="thread-row"><h2>敦珠法王普巴金刚的开示</h2><div class="th-meta">轴号: 425</div></a>
+<a href="../threads/404.html" class="thread-row"><h2>冈波巴大师著-----成就胜道宝鬘集</h2><div class="th-meta">轴号: 404</div></a>
+<a href="../threads/400.html" class="thread-row"><h2>尊者密勒日巴尊者的无常水泡歌</h2><div class="th-meta">轴号: 400</div></a>
+<a href="../threads/397.html" class="thread-row"><h2>菩提道次第心论</h2><div class="th-meta">轴号: 397</div></a>
+<a href="../threads/390.html" class="thread-row"><h2>“利美运动”精神导师 巴楚仁波切的忠告</h2><div class="th-meta">轴号: 390</div></a>
+<a href="../threads/376.html" class="thread-row"><h2>藏传佛教禁忌</h2><div class="th-meta">轴号: 376</div></a>
+<a href="../threads/372.html" class="thread-row"><h2>藏传佛教中的多玛</h2><div class="th-meta">轴号: 372</div></a>
+<a href="../threads/359.html" class="thread-row"><h2>三昧耶戒恐怖吗？</h2><div class="th-meta">轴号: 359</div></a>
+<a href="../threads/357.html" class="thread-row"><h2>择师十条件</h2><div class="th-meta">轴号: 357</div></a>
+<a href="../threads/350.html" class="thread-row"><h2>热罗大师对喜辩论者的实证教育</h2><div class="th-meta">轴号: 350</div></a>
+<a href="../threads/332.html" class="thread-row"><h2>试论《十二因缘图》</h2><div class="th-meta">轴号: 332</div></a>
+<a href="../threads/294.html" class="thread-row"><h2>大乘菩提心法</h2><div class="th-meta">轴号: 294</div></a>
+<a href="../threads/270.html" class="thread-row"><h2>菩提道次第摄颂</h2><div class="th-meta">轴号: 270</div></a>
+<a href="../threads/266.html" class="thread-row"><h2>萨迦派概要</h2><div class="th-meta">轴号: 266</div></a>
+<a href="../threads/163.html" class="thread-row"><h2>戒行及金刚乘十四根本堕</h2><div class="th-meta">轴号: 163</div></a>
+<a href="../threads/141.html" class="thread-row"><h2>密乘之门--空行护法</h2><div class="th-meta">轴号: 141</div></a>
+<a href="../threads/140.html" class="thread-row"><h2>密乘之门--本尊部</h2><div class="th-meta">轴号: 140</div></a>
+<a href="../threads/136.html" class="thread-row"><h2>一切修行以三昧耶为最重</h2><div class="th-meta">轴号: 136</div></a>
+<a href="../threads/122.html" class="thread-row"><h2>萨迦法王访问录   (第六部分)</h2><div class="th-meta">轴号: 122</div></a>
+<a href="../threads/107.html" class="thread-row"><h2>“远离四种执著”修心法精要开示</h2><div class="th-meta">轴号: 107</div></a>
+<a href="../threads/70.html" class="thread-row"><h2>秋英多杰仁波且道歌</h2><div class="th-meta">轴号: 70</div></a>
+<a href="../threads/67.html" class="thread-row"><h2>根松成林曲杰嘉才仁波且《关于根本上师与三恩上师》</h2><div class="th-meta">轴号: 67</div></a>
+<a href="../threads/63.html" class="thread-row"><h2>噶当十秘财</h2><div class="th-meta">轴号: 63</div></a>
+<a href="../threads/46.html" class="thread-row"><h2>关于十四根本戒</h2><div class="th-meta">轴号: 46</div></a>
+<a href="../threads/36.html" class="thread-row"><h2>三根本——上师·本尊·护法的教导</h2><div class="th-meta">轴号: 36</div></a>
+<a href="../threads/20.html" class="thread-row"><h2>文殊师利菩萨授予萨迦贡嘎宁布远离四种执著心要</h2><div class="th-meta">轴号: 20</div></a>
+<a href="../threads/11.html" class="thread-row"><h2>格鲁巴 甘珠尔瓦呼图克图开示 --- 恭敬上师为成就之本</h2><div class="th-meta">轴号: 11</div></a>
 
 </div>
+
 <script>
-// ---------- 沉浸式快速阅读弹窗引擎 ----------
+// ---------- 顶级沉浸式无缝卷轴弹窗 (Mobile Optimized) ----------
 (function() {
     if(document.getElementById('quickViewer')) return;
     const modalHTML = `
-    <div id="quickViewer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,0.6); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); opacity:0; transition:opacity 0.3s ease; box-sizing:border-box; align-items:center; justify-content:center; padding: 20px;">
-        <div id="quickViewerContent" style="background:var(--bg, #f9fafb); width:100%; max-width:850px; height:95%; max-height:95vh; border-radius:16px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.2); position:relative; transform:scale(0.95) translateY(30px); opacity:0; transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1); display:flex; flex-direction:column; overflow:hidden;">
-            <div style="padding:16px 24px; border-bottom:1px solid rgba(0,0,0,0.05); background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); display:flex; justify-content:space-between; align-items:center; z-index:10;">
-                <div style="font-weight:600; color:var(--primary, #3b82f6); font-size:16px; display:flex; align-items:center;"><span style="font-size:20px; margin-right:8px;">📄</span> 沉浸阅读模式</div>
-                <button id="quickViewerClose" style="background:#f1f5f9; border:none; width:36px; height:36px; border-radius:50%; font-size:20px; cursor:pointer; color:#475569; display:flex; align-items:center; justify-content:center; transition:all 0.2s; box-shadow:inset 0 2px 4px rgba(0,0,0,0.02)">×</button>
+    <style>
+    #quickViewer { display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,0.9); backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px); opacity:0; transition:opacity 0.3s ease; box-sizing:border-box; align-items:center; justify-content:center; }
+    #quickViewerContent { background:var(--bg); width:100%; height:100%; border-radius:0; position:relative; transform:translateY(100%); opacity:0; transition:transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 0 50px rgba(0,0,0,0.8); }
+    @media(min-width: 850px) {
+      #quickViewerContent { max-width:900px; height:95%; max-height:95vh; border-radius:16px; transform:translateY(30px) scale(0.95); border:1px solid rgba(212,175,55,0.2); }
+    }
+    #quickViewerHeader { padding:18px 24px; border-bottom:1px solid rgba(212,175,55,0.1); background:var(--surface-solid); display:flex; justify-content:space-between; align-items:center; z-index:10; }
+    #quickViewerBody { padding:0; overflow-y:auto; overflow-x:hidden; flex:1; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+    </style>
+    <div id="quickViewer">
+        <div id="quickViewerContent">
+            <div id="quickViewerHeader">
+                <div style="font-weight:700; color:var(--primary); font-size:17px; display:flex; align-items:center; letter-spacing:1px;"><span style="font-size:20px; margin-right:10px;">❖</span> 典藏经卷阅读</div>
+                <button id="quickViewerClose" style="background:rgba(255,255,255,0.1); border:none; width:36px; height:36px; border-radius:50%; font-size:18px; cursor:pointer; color:var(--text); display:flex; align-items:center; justify-content:center; transition:all 0.2s;">✕</button>
             </div>
-            <div id="quickViewerBody" style="padding:0; overflow-y:auto; flex:1; scroll-behavior: smooth;">
-                <div style="text-align:center; padding:80px; color:#94a3b8; font-weight:500;">
-                    <div style="font-size:30px; margin-bottom:15px; animation: pulse 1.5s infinite;">⚡</div>
-                    正在拉取数据...
+            <div id="quickViewerBody">
+                <div style="text-align:center; padding:100px; color:var(--primary); opacity:0.8;">
+                    <div style="font-size:40px; margin-bottom:20px; animation: pulse 1.5s infinite;">📿</div>
+                    <div style="font-weight:600; letter-spacing:2px; font-family:'Noto Serif SC', serif;">正在降临...</div>
                 </div>
             </div>
         </div>
@@ -544,10 +581,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
         void qv.offsetWidth; // trigger reflow
         qv.style.opacity = '1';
         qvContent.style.opacity = '1';
-        qvContent.style.transform = 'scale(1) translateY(0)';
-        document.body.style.overflow = 'hidden';
+        if(window.innerWidth >= 850) {
+            qvContent.style.transform = 'translateY(0) scale(1)';
+        } else {
+            qvContent.style.transform = 'translateY(0)';
+        }
+        document.body.style.overflow = 'hidden'; // Lock background scroll entirely
         
-        qvBody.innerHTML = '<div style="text-align:center; padding:100px; color:#94a3b8;"><div style="font-size:40px; margin-bottom:20px; animation: pulse 1.5s infinite;">⚡</div><div style="font-weight:600; font-size:18px;">正在穿梭时空抓取帖子...</div></div>';
+        qvBody.innerHTML = '<div style="text-align:center; padding:120px; color:var(--primary); opacity:0.8;"><div style="font-size:45px; margin-bottom:20px; animation: pulse 1.5s infinite;">📿</div><div style="font-family:\'Noto Serif SC\', serif; font-size:18px; letter-spacing:2px;">开启法卷...</div></div>';
         
         fetch(url).then(res => res.text()).then(html => {
             const parser = new DOMParser();
@@ -556,35 +597,39 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
             if(contentContainer) {
                 let bread = contentContainer.querySelector('.breadcrumb');
                 if(bread) bread.remove();
-                contentContainer.style.margin = '20px auto 40px';
+                contentContainer.style.margin = '20px auto 60px';
                 qvBody.innerHTML = '';
                 qvBody.appendChild(contentContainer);
                 qvBody.scrollTop = 0;
             } else {
-                qvBody.innerHTML = '<div style="padding:40px; text-align:center;">解析内容失败，该页可能已损坏。</div>';
+                window.location.href = url;
             }
         }).catch(err => {
-            window.location.href = url; // 如果遇到了文件系统拦截，自动降级为传统页面跳转加载
+            window.location.href = url;
         });
     }
 
     function closeViewer() {
         qv.style.opacity = '0';
         qvContent.style.opacity = '0';
-        qvContent.style.transform = 'scale(0.95) translateY(30px)';
+        if(window.innerWidth >= 850) {
+            qvContent.style.transform = 'translateY(30px) scale(0.95)';
+        } else {
+            qvContent.style.transform = 'translateY(100%)';
+        }
         setTimeout(() => {
             qv.style.display = 'none';
             document.body.style.overflow = '';
             qvBody.innerHTML = '';
-        }, 300);
+        }, 400);
     }
 
     qvClose.addEventListener('click', closeViewer);
-    qvClose.addEventListener('mouseover', () => qvClose.style.background = '#e2e8f0');
-    qvClose.addEventListener('mouseout', () => qvClose.style.background = '#f1f5f9');
+    qvClose.addEventListener('mouseover', () => qvClose.style.background = 'rgba(255,255,255,0.2)');
+    qvClose.addEventListener('mouseout', () => qvClose.style.background = 'rgba(255,255,255,0.1)');
     
     qv.addEventListener('click', (e) => {
-        if(e.target === qv) closeViewer();
+        if(e.target === qv && window.innerWidth >= 850) closeViewer();
     });
 
     document.addEventListener('click', (e) => {

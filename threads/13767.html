@@ -1,63 +1,84 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>法门虽多，其能为解脱因者有三 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>法门虽多，其能为解脱因者有三 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">法门虽多，其能为解脱因者有三</h1>
-<div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-12 09:07<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">总之法门虽多，其能为解脱因者有三，谓出离心、菩提心、清净见。现在况云对此三法，发生证受，即能清净了解此三法者，亦甚少。其中初二之了解，不能安立解脱种子，后者力强，即能安立。若于前二，不仅了解，由发生转变心意之证受，安立解脱种子。又以猛利精进，思维其所缘行相，由修习力，转变心意，发生有功用之证受者，虽能安立解脱种子，然尚未入道。若于三有安乐及诸有情，略一思念，即能相续发生出离心、菩提心之证受者，方安立为下品资粮道。 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">法门虽多，其能为解脱因者有三</h1>
+<div class="post"><div class="post-header"><div class="avatar">格</div><span style="font-size:15px; letter-spacing:1px;">格力琼寺发表于 2024-10-12 09:07</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">总之法门虽多，其能为解脱因者有三，谓出离心、菩提心、清净见。现在况云对此三法，发生证受，即能清净了解此三法者，亦甚少。其中初二之了解，不能安立解脱种子，后者力强，即能安立。若于前二，不仅了解，由发生转变心意之证受，安立解脱种子。又以猛利精进，思维其所缘行相，由修习力，转变心意，发生有功用之证受者，虽能安立解脱种子，然尚未入道。若于三有安乐及诸有情，略一思念，即能相续发生出离心、菩提心之证受者，方安立为下品资粮道。 <br/>
 <br/>
 由见世间光荣和涅槃功德，相续依止正念正知，不使自心趣向光荣，乃能关闭三有。若不能持心修习涅槃功德之所缘行相，于出离心，发生证受者，纵修布施、持戒、忍辱、精进、静虑等善根，决定不能成为解脱之因，故求解脱者，当暂放置一切甚深教授，须先观察修出离心。修大乘者，若不于专求自利之过患、及利他之功德，相续依止正念正知，于菩提心，发生证受之所缘行相，精勤修习者，随作何事皆不成道（不成大乘道。）。余诸善根随自利作意转，唯成小乘菩提之因故。如若不于出离心，依止正念正知，修所缘行相，一切善法皆随光荣 转，唯作生死 之因耳。以是当暂放置密咒等，所谓甚深教授，须先于出离心、菩提心、发生证受。若彼心生起，则一切善法，自然皆成解脱与一切种智之因。故认为此无可修价值者，是全不了知修道的要义。 <br/>
 如是先以彼二，成熟相续，次解脱者，先当于全无分别，依止正念正知，求坚稳安住之止，能与行住坐卧一切威仪相融会之住分。次须修观。此复于未得心住分之前，纵然修观，亦必散动，不能起证受。若未以清净听闻力于无我义，引起定解，则引生毘钵舍那之清净证受，亦无是处。（此说缘胜义之观。）故得住分时，次乃于观发生证受。此后若决择余境无自性，而修，虽亦能生证受。然主要者当先观人无我，如以七相寻求，所通达无我。善以正理决择而无所得。即于彼中，依止正念正知而修定。若时散动，仍以前理观察，至无所得，即安住其中。每日若多于十二次，则太散动，不能生证受。以是如现在教授者所许，心全不分别住，次以见抉择真理都无名言可立，二者合一而修，都不作意而住者，此仅能得止，定不能于观，生起证受。故得止后，若不修相乘（显教）所说之观察修，则于正见，不能发生证受。故当作观修。观察修也是如前所说。非如有者说，常时观察，亦非不求住分，而修正见。以是现在修行者全未得道体。（批评了当时一般修行家。）（次有一段决择空理。） <br/>
 如是于人无我，由观察修引生证受，次于法无我之所缘行相，多方练习。密咒之圆满次第中，亦无此相乘正见之证受。即有正见之了解，亦不入道。其生乐明无分别之殊胜定力者，名言分别毕竟不转，即或转动，然住分力强，亦不能二念相续 ，则觉所缘，似全消灭。亦能见一切境相，皆如幻事。是由住分力强，以止力故遮止名言、分别、则觉所缘似皆消灭。然未超出二相分别，故不能灭此。如是亦有得四静虑者，在住空时，一切五欲境相，亦现如烟雾。又非仅此。若得无色定，则住定时，现相皆灭。但此非由观力，是由止力使然。境相虽如是现，然内心感受，仍不能舍，以于正见，未起证受故。所谓咒道速疾者，是有诸修止速疾，及止具力法，是相乘所无者。如止力有几许强大，则于正见亦引生有力证受。故能速疾。 <br/>
-以是如龙猛、月称，即有上说相乘之三种要义，后有密咒方便道之扼要教授，则较单修相乘之机，实速疾、殊胜。若无相乘道之要义，仅修密咒不共法之机，实较相乘机为劣。以彼依彼道不能成佛。而相乘者能成佛，故殊胜。如是就不共道即说相乘殊胜，密咒太随烦恼力转，仅对相续未清净之所化，示以生善趣之方便修止，故反劣也。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-12 09:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">阿姜放有一位弟子——一位女裁缝师——被一位顾客批评道：“你修习佛法，不是吗？那么为什么你那么贪心，要价那么高？修法的人应当只取足够活命的收益才对。” <br/>
+以是如龙猛、月称，即有上说相乘之三种要义，后有密咒方便道之扼要教授，则较单修相乘之机，实速疾、殊胜。若无相乘道之要义，仅修密咒不共法之机，实较相乘机为劣。以彼依彼道不能成佛。而相乘者能成佛，故殊胜。如是就不共道即说相乘殊胜，密咒太随烦恼力转，仅对相续未清净之所化，示以生善趣之方便修止，故反劣也。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div><span style="font-size:15px; letter-spacing:1px;">格力琼寺发表于 2024-10-12 09:22</span><div class="badge-floor">第 2 进</div></div><div class="post-body">阿姜放有一位弟子——一位女裁缝师——被一位顾客批评道：“你修习佛法，不是吗？那么为什么你那么贪心，要价那么高？修法的人应当只取足够活命的收益才对。” <br/>
 <br/>
 尽管她知道自己的定价是公道的，却想不出一个好的答复，于是下一次见到阿姜放尊者时，把这事告诉了他。 <br/>
 <br/>
-他答道：“他们再这么说时，你告诉他们：&#x27;听着，我修习佛法，不是为了当傻瓜。&#x27;” </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-12 09:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">在临死之时，不要存有还没完成事情的想法，更不要感到内疚。这是所有修行中最重要的要点之所在！当死到临头之时，你应该把你所拥有的一切，加以布施，不能执著，（甚至於小如一支针的财物）。在将死之刹那，大修行者会感觉愉快，中等的修行者亦不会有疑虑，而普通的修行者也不会觉得後悔。当你了悟死时的光明，能不断照耀昼夜，则决不会有中阴的出现；死亡只不过是把这个色身加以破坏而已。 <br/>
+他答道：“他们再这么说时，你告诉他们：&#x27;听着，我修习佛法，不是为了当傻瓜。&#x27;” </div></div><div class="post"><div class="post-header"><div class="avatar">格</div><span style="font-size:15px; letter-spacing:1px;">格力琼寺发表于 2024-10-12 09:24</span><div class="badge-floor">第 3 进</div></div><div class="post-body">在临死之时，不要存有还没完成事情的想法，更不要感到内疚。这是所有修行中最重要的要点之所在！当死到临头之时，你应该把你所拥有的一切，加以布施，不能执著，（甚至於小如一支针的财物）。在将死之刹那，大修行者会感觉愉快，中等的修行者亦不会有疑虑，而普通的修行者也不会觉得後悔。当你了悟死时的光明，能不断照耀昼夜，则决不会有中阴的出现；死亡只不过是把这个色身加以破坏而已。 <br/>
 ​ <br/>
-~~~​ </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-12 09:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">没有任何一个人是自由的，这是非常清楚的状况。我们活在专制的压迫下：习气与烦恼决定了我们每一个行动，而我们所处的环境更强化了它们。世界上所有的产品，从iPhone 到蕾丝内衣，都是设计来强化并刺激我们的期待、恐惧与情绪的反应，同时也增强我们的依赖性。 <br/>
+~~~​ </div></div><div class="post"><div class="post-header"><div class="avatar">格</div><span style="font-size:15px; letter-spacing:1px;">格力琼寺发表于 2024-10-12 09:25</span><div class="badge-floor">第 4 进</div></div><div class="post-body">没有任何一个人是自由的，这是非常清楚的状况。我们活在专制的压迫下：习气与烦恼决定了我们每一个行动，而我们所处的环境更强化了它们。世界上所有的产品，从iPhone 到蕾丝内衣，都是设计来强化并刺激我们的期待、恐惧与情绪的反应，同时也增强我们的依赖性。 <br/>
 <br/>
-~~~ </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-12 09:27<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">当你止静时，魔也是止静的；当你被平抚时，魔也被平抚了；当你解脱了，魔也解脱了；当你被调伏时，魔也被调伏了。这个魔是你自身的魔，因此，斩断此魔，便会平抚你自身。因此，勇敢去面对一个恐怖之地，比起三年的禅修，更有增益禅修的作用。 <br/>
+~~~ </div></div><div class="post"><div class="post-header"><div class="avatar">格</div><span style="font-size:15px; letter-spacing:1px;">格力琼寺发表于 2024-10-12 09:27</span><div class="badge-floor">第 5 进</div></div><div class="post-body">当你止静时，魔也是止静的；当你被平抚时，魔也被平抚了；当你解脱了，魔也解脱了；当你被调伏时，魔也被调伏了。这个魔是你自身的魔，因此，斩断此魔，便会平抚你自身。因此，勇敢去面对一个恐怖之地，比起三年的禅修，更有增益禅修的作用。 <br/>
 <br/>
 ~~~ <br/>
 <br/>

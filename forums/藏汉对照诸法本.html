@@ -1,127 +1,164 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>藏汉对照诸法本 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>藏汉对照诸法本 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
+
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / 藏密修海显密教法</div>
-<h1 style="margin-bottom: 10px; font-size: 32px;">目录：藏汉对照诸法本</h1>
-<p style="color:var(--text-muted); margin-bottom:40px;">共收录 66 篇主题</p>
-<a href="../threads/6691.html" class="thread-row"><h2>秘密主金刚钻秘密成就(金刚手)</h2><div class="th-meta">TID: 6691</div></a>
-<a href="../threads/6690.html" class="thread-row"><h2>长寿成就付无死吉祥．更密成就心印</h2><div class="th-meta">TID: 6690</div></a>
-<a href="../threads/6689.html" class="thread-row"><h2>杰尊宁体事业仪轨合集</h2><div class="th-meta">TID: 6689</div></a>
-<a href="../threads/6688.html" class="thread-row"><h2>杰尊宁体前行课诵(短轨)</h2><div class="th-meta">TID: 6688</div></a>
-<a href="../threads/6687.html" class="thread-row"><h2>大圆满口诀部．杰尊宁体导引文</h2><div class="th-meta">TID: 6687</div></a>
-<a href="../threads/6686.html" class="thread-row"><h2>杰尊宁体前行课诵．本智妙道</h2><div class="th-meta">TID: 6686</div></a>
-<a href="../threads/6685.html" class="thread-row"><h2>摩利支天成就法</h2><div class="th-meta">TID: 6685</div></a>
-<a href="../threads/6612.html" class="thread-row"><h2>生起次第仪轨结合阐明．双运穗</h2><div class="th-meta">TID: 6612</div></a>
-<a href="../threads/6611.html" class="thread-row"><h2>吉祥喜金刚现证法宝集</h2><div class="th-meta">TID: 6611</div></a>
-<a href="../threads/6610.html" class="thread-row"><h2>龙萨金刚藏．甘露漩明王成就法(噶陀传规)</h2><div class="th-meta">TID: 6610</div></a>
-<a href="../threads/6609.html" class="thread-row"><h2>伊喜朗霸．生起圆满中品事业仪轨 (噶陀传规)</h2><div class="th-meta">TID: 6609</div></a>
-<a href="../threads/6608.html" class="thread-row"><h2>深法寂忿密意自解脱．寂忿文武百尊仪轨集</h2><div class="th-meta">TID: 6608</div></a>
-<a href="../threads/4197.html" class="thread-row"><h2>所有藏汉对照法本只有书籍流通，没有电子版！！！</h2><div class="th-meta">TID: 4197</div></a>
-<a href="../threads/3648.html" class="thread-row"><h2>关于大藏</h2><div class="th-meta">TID: 3648</div></a>
-<a href="../threads/2984.html" class="thread-row"><h2>尊勝佛母千供儀軌</h2><div class="th-meta">TID: 2984</div></a>
-<a href="../threads/2272.html" class="thread-row"><h2>喜金刚道位-无讹显义</h2><div class="th-meta">TID: 2272</div></a>
-<a href="../threads/1186.html" class="thread-row"><h2>藏汉对照仪轨法本目录</h2><div class="th-meta">TID: 1186</div></a>
-<a href="../threads/1008.html" class="thread-row"><h2>龙萨多杰宁波-共通前行课诵</h2><div class="th-meta">TID: 1008</div></a>
-<a href="../threads/1006.html" class="thread-row"><h2>四百禳解略轨</h2><div class="th-meta">TID: 1006</div></a>
-<a href="../threads/1005.html" class="thread-row"><h2>至尊毕瓦巴外内守护口诀合集</h2><div class="th-meta">TID: 1005</div></a>
-<a href="../threads/1004.html" class="thread-row"><h2>替身食子略轨</h2><div class="th-meta">TID: 1004</div></a>
-<a href="../threads/1003.html" class="thread-row"><h2>具誓总食子略轨(护法供养)</h2><div class="th-meta">TID: 1003</div></a>
-<a href="../threads/1002.html" class="thread-row"><h2>那洛密行课诵(施身法)</h2><div class="th-meta">TID: 1002</div></a>
-<a href="../threads/1001.html" class="thread-row"><h2>甘丹教传大手印疏释</h2><div class="th-meta">TID: 1001</div></a>
-<a href="../threads/1000.html" class="thread-row"><h2>吉祥伏魔金刚手成就法明释-皓日</h2><div class="th-meta">TID: 1000</div></a>
-<a href="../threads/999.html" class="thread-row"><h2>龙钦宁体-大乐佛母讲解合集</h2><div class="th-meta">TID: 999</div></a>
-<a href="../threads/998.html" class="thread-row"><h2>上师供养仪轨不共甚深导引-具传承上师口授</h2><div class="th-meta">TID: 998</div></a>
-<a href="../threads/996.html" class="thread-row"><h2>生起次第释论集</h2><div class="th-meta">TID: 996</div></a>
-<a href="../threads/995.html" class="thread-row"><h2>圆满次第脉气幻轮法集</h2><div class="th-meta">TID: 995</div></a>
-<a href="../threads/886.html" class="thread-row"><h2>萨迦传规藏汉对照法本目录</h2><div class="th-meta">TID: 886</div></a>
-<a href="../threads/657.html" class="thread-row"><h2>至尊那若空行会供仪轨</h2><div class="th-meta">TID: 657</div></a>
-<a href="../threads/656.html" class="thread-row"><h2>至尊那若空行食子仪轨</h2><div class="th-meta">TID: 656</div></a>
-<a href="../threads/655.html" class="thread-row"><h2>语狮子文殊修持仪轨</h2><div class="th-meta">TID: 655</div></a>
-<a href="../threads/653.html" class="thread-row"><h2>三分食子仪轨</h2><div class="th-meta">TID: 653</div></a>
-<a href="../threads/652.html" class="thread-row"><h2>山净烟供课诵(哩沃桑却)</h2><div class="th-meta">TID: 652</div></a>
-<a href="../threads/651.html" class="thread-row"><h2>龙钦宁体-忿怒上师马鹏炽燃仪轨</h2><div class="th-meta">TID: 651</div></a>
-<a href="../threads/602.html" class="thread-row"><h2>餗烟供回向-智慧云层</h2><div class="th-meta">TID: 602</div></a>
-<a href="../threads/601.html" class="thread-row"><h2>水食子</h2><div class="th-meta">TID: 601</div></a>
-<a href="../threads/600.html" class="thread-row"><h2>龙钦宁体-狮面空行秘密成就法仪轨</h2><div class="th-meta">TID: 600</div></a>
-<a href="../threads/599.html" class="thread-row"><h2>龙钦宁体-母尊密成就狮面空行仪轨</h2><div class="th-meta">TID: 599</div></a>
-<a href="../threads/598.html" class="thread-row"><h2>狮面空行母成就法摄略-降魔笑声</h2><div class="th-meta">TID: 598</div></a>
-<a href="../threads/597.html" class="thread-row"><h2>甚深道上师供养仪轨-乐空无别合辑</h2><div class="th-meta">TID: 597</div></a>
-<a href="../threads/596.html" class="thread-row"><h2>至尊金刚瑜伽母那洛空行仪轨合集</h2><div class="th-meta">TID: 596</div></a>
-<a href="../threads/595.html" class="thread-row"><h2>弥勒佛修持简轨</h2><div class="th-meta">TID: 595</div></a>
-<a href="../threads/594.html" class="thread-row"><h2>财宝佛母简修仪轨</h2><div class="th-meta">TID: 594</div></a>
-<a href="../threads/593.html" class="thread-row"><h2>宝帐怙主仪轨</h2><div class="th-meta">TID: 593</div></a>
-<a href="../threads/589.html" class="thread-row"><h2>吉祥喜金刚现证中品事业六支妙严</h2><div class="th-meta">TID: 589</div></a>
-<a href="../threads/588.html" class="thread-row"><h2>吉祥喜金刚道位极略轨</h2><div class="th-meta">TID: 588</div></a>
-<a href="../threads/587.html" class="thread-row"><h2>六臂怙主食子供养法简轨</h2><div class="th-meta">TID: 587</div></a>
-<a href="../threads/586.html" class="thread-row"><h2>金刚亥母日修仪轨</h2><div class="th-meta">TID: 586</div></a>
-<a href="../threads/585.html" class="thread-row"><h2>龙钦宁体-大乐佛母根本成就法</h2><div class="th-meta">TID: 585</div></a>
-<a href="../threads/584.html" class="thread-row"><h2>龙钦宁体-密成就大悲观音</h2><div class="th-meta">TID: 584</div></a>
-<a href="../threads/583.html" class="thread-row"><h2>龙钦宁体-内成就持明总集</h2><div class="th-meta">TID: 583</div></a>
-<a href="../threads/582.html" class="thread-row"><h2>龙萨多杰宁波-共通前行及迁识、护法供食课诵仪轨</h2><div class="th-meta">TID: 582</div></a>
-<a href="../threads/576.html" class="thread-row"><h2>道果上师传承祈请文</h2><div class="th-meta">TID: 576</div></a>
-<a href="../threads/575.html" class="thread-row"><h2>二臂玛哈嘎拉祈请简修仪轨</h2><div class="th-meta">TID: 575</div></a>
-<a href="../threads/573.html" class="thread-row"><h2>吉祥伏魔金刚手成就法</h2><div class="th-meta">TID: 573</div></a>
-<a href="../threads/572.html" class="thread-row"><h2>黑财神水供</h2><div class="th-meta">TID: 572</div></a>
-<a href="../threads/571.html" class="thread-row"><h2>观音修持仪轨</h2><div class="th-meta">TID: 571</div></a>
-<a href="../threads/570.html" class="thread-row"><h2>咕噜咕咧生起圆满实修不共理趣</h2><div class="th-meta">TID: 570</div></a>
-<a href="../threads/557.html" class="thread-row"><h2>大圆满三宝总摄前行课诵仪轨</h2><div class="th-meta">TID: 557</div></a>
-<a href="../threads/556.html" class="thread-row"><h2>大圆满三宝总摄羯磨仪轨</h2><div class="th-meta">TID: 556</div></a>
-<a href="../threads/555.html" class="thread-row"><h2>长寿财运勾召事业仪轨-付予福寿满愿吉祥</h2><div class="th-meta">TID: 555</div></a>
-<a href="../threads/554.html" class="thread-row"><h2>白度母如意轮长寿导引月河实修摄要</h2><div class="th-meta">TID: 554</div></a>
-<a href="../threads/553.html" class="thread-row"><h2>旃陀离火修炼讲记-智慧火聚</h2><div class="th-meta">TID: 553</div></a>
-<a href="../threads/552.html" class="thread-row"><h2>龙钦宁体-大吉祥集会八大黑鲁噶仪轨</h2><div class="th-meta">TID: 552</div></a>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / 藏密修海显密教法</div>
+<h1 style="margin-bottom: 10px; font-size: 36px; color:var(--primary); text-align:center;">藏汉对照诸法本</h1>
+<p style="color:var(--text-muted); margin-bottom:50px; text-align:center; letter-spacing:2px;">此处蕴含 66 卷法轴汇集</p>
+<a href="../threads/6691.html" class="thread-row"><h2>秘密主金刚钻秘密成就(金刚手)</h2><div class="th-meta">轴号: 6691</div></a>
+<a href="../threads/6690.html" class="thread-row"><h2>长寿成就付无死吉祥．更密成就心印</h2><div class="th-meta">轴号: 6690</div></a>
+<a href="../threads/6689.html" class="thread-row"><h2>杰尊宁体事业仪轨合集</h2><div class="th-meta">轴号: 6689</div></a>
+<a href="../threads/6688.html" class="thread-row"><h2>杰尊宁体前行课诵(短轨)</h2><div class="th-meta">轴号: 6688</div></a>
+<a href="../threads/6687.html" class="thread-row"><h2>大圆满口诀部．杰尊宁体导引文</h2><div class="th-meta">轴号: 6687</div></a>
+<a href="../threads/6686.html" class="thread-row"><h2>杰尊宁体前行课诵．本智妙道</h2><div class="th-meta">轴号: 6686</div></a>
+<a href="../threads/6685.html" class="thread-row"><h2>摩利支天成就法</h2><div class="th-meta">轴号: 6685</div></a>
+<a href="../threads/6612.html" class="thread-row"><h2>生起次第仪轨结合阐明．双运穗</h2><div class="th-meta">轴号: 6612</div></a>
+<a href="../threads/6611.html" class="thread-row"><h2>吉祥喜金刚现证法宝集</h2><div class="th-meta">轴号: 6611</div></a>
+<a href="../threads/6610.html" class="thread-row"><h2>龙萨金刚藏．甘露漩明王成就法(噶陀传规)</h2><div class="th-meta">轴号: 6610</div></a>
+<a href="../threads/6609.html" class="thread-row"><h2>伊喜朗霸．生起圆满中品事业仪轨 (噶陀传规)</h2><div class="th-meta">轴号: 6609</div></a>
+<a href="../threads/6608.html" class="thread-row"><h2>深法寂忿密意自解脱．寂忿文武百尊仪轨集</h2><div class="th-meta">轴号: 6608</div></a>
+<a href="../threads/4197.html" class="thread-row"><h2>所有藏汉对照法本只有书籍流通，没有电子版！！！</h2><div class="th-meta">轴号: 4197</div></a>
+<a href="../threads/3648.html" class="thread-row"><h2>关于大藏</h2><div class="th-meta">轴号: 3648</div></a>
+<a href="../threads/2984.html" class="thread-row"><h2>尊勝佛母千供儀軌</h2><div class="th-meta">轴号: 2984</div></a>
+<a href="../threads/2272.html" class="thread-row"><h2>喜金刚道位-无讹显义</h2><div class="th-meta">轴号: 2272</div></a>
+<a href="../threads/1186.html" class="thread-row"><h2>藏汉对照仪轨法本目录</h2><div class="th-meta">轴号: 1186</div></a>
+<a href="../threads/1008.html" class="thread-row"><h2>龙萨多杰宁波-共通前行课诵</h2><div class="th-meta">轴号: 1008</div></a>
+<a href="../threads/1006.html" class="thread-row"><h2>四百禳解略轨</h2><div class="th-meta">轴号: 1006</div></a>
+<a href="../threads/1005.html" class="thread-row"><h2>至尊毕瓦巴外内守护口诀合集</h2><div class="th-meta">轴号: 1005</div></a>
+<a href="../threads/1004.html" class="thread-row"><h2>替身食子略轨</h2><div class="th-meta">轴号: 1004</div></a>
+<a href="../threads/1003.html" class="thread-row"><h2>具誓总食子略轨(护法供养)</h2><div class="th-meta">轴号: 1003</div></a>
+<a href="../threads/1002.html" class="thread-row"><h2>那洛密行课诵(施身法)</h2><div class="th-meta">轴号: 1002</div></a>
+<a href="../threads/1001.html" class="thread-row"><h2>甘丹教传大手印疏释</h2><div class="th-meta">轴号: 1001</div></a>
+<a href="../threads/1000.html" class="thread-row"><h2>吉祥伏魔金刚手成就法明释-皓日</h2><div class="th-meta">轴号: 1000</div></a>
+<a href="../threads/999.html" class="thread-row"><h2>龙钦宁体-大乐佛母讲解合集</h2><div class="th-meta">轴号: 999</div></a>
+<a href="../threads/998.html" class="thread-row"><h2>上师供养仪轨不共甚深导引-具传承上师口授</h2><div class="th-meta">轴号: 998</div></a>
+<a href="../threads/996.html" class="thread-row"><h2>生起次第释论集</h2><div class="th-meta">轴号: 996</div></a>
+<a href="../threads/995.html" class="thread-row"><h2>圆满次第脉气幻轮法集</h2><div class="th-meta">轴号: 995</div></a>
+<a href="../threads/886.html" class="thread-row"><h2>萨迦传规藏汉对照法本目录</h2><div class="th-meta">轴号: 886</div></a>
+<a href="../threads/657.html" class="thread-row"><h2>至尊那若空行会供仪轨</h2><div class="th-meta">轴号: 657</div></a>
+<a href="../threads/656.html" class="thread-row"><h2>至尊那若空行食子仪轨</h2><div class="th-meta">轴号: 656</div></a>
+<a href="../threads/655.html" class="thread-row"><h2>语狮子文殊修持仪轨</h2><div class="th-meta">轴号: 655</div></a>
+<a href="../threads/653.html" class="thread-row"><h2>三分食子仪轨</h2><div class="th-meta">轴号: 653</div></a>
+<a href="../threads/652.html" class="thread-row"><h2>山净烟供课诵(哩沃桑却)</h2><div class="th-meta">轴号: 652</div></a>
+<a href="../threads/651.html" class="thread-row"><h2>龙钦宁体-忿怒上师马鹏炽燃仪轨</h2><div class="th-meta">轴号: 651</div></a>
+<a href="../threads/602.html" class="thread-row"><h2>餗烟供回向-智慧云层</h2><div class="th-meta">轴号: 602</div></a>
+<a href="../threads/601.html" class="thread-row"><h2>水食子</h2><div class="th-meta">轴号: 601</div></a>
+<a href="../threads/600.html" class="thread-row"><h2>龙钦宁体-狮面空行秘密成就法仪轨</h2><div class="th-meta">轴号: 600</div></a>
+<a href="../threads/599.html" class="thread-row"><h2>龙钦宁体-母尊密成就狮面空行仪轨</h2><div class="th-meta">轴号: 599</div></a>
+<a href="../threads/598.html" class="thread-row"><h2>狮面空行母成就法摄略-降魔笑声</h2><div class="th-meta">轴号: 598</div></a>
+<a href="../threads/597.html" class="thread-row"><h2>甚深道上师供养仪轨-乐空无别合辑</h2><div class="th-meta">轴号: 597</div></a>
+<a href="../threads/596.html" class="thread-row"><h2>至尊金刚瑜伽母那洛空行仪轨合集</h2><div class="th-meta">轴号: 596</div></a>
+<a href="../threads/595.html" class="thread-row"><h2>弥勒佛修持简轨</h2><div class="th-meta">轴号: 595</div></a>
+<a href="../threads/594.html" class="thread-row"><h2>财宝佛母简修仪轨</h2><div class="th-meta">轴号: 594</div></a>
+<a href="../threads/593.html" class="thread-row"><h2>宝帐怙主仪轨</h2><div class="th-meta">轴号: 593</div></a>
+<a href="../threads/589.html" class="thread-row"><h2>吉祥喜金刚现证中品事业六支妙严</h2><div class="th-meta">轴号: 589</div></a>
+<a href="../threads/588.html" class="thread-row"><h2>吉祥喜金刚道位极略轨</h2><div class="th-meta">轴号: 588</div></a>
+<a href="../threads/587.html" class="thread-row"><h2>六臂怙主食子供养法简轨</h2><div class="th-meta">轴号: 587</div></a>
+<a href="../threads/586.html" class="thread-row"><h2>金刚亥母日修仪轨</h2><div class="th-meta">轴号: 586</div></a>
+<a href="../threads/585.html" class="thread-row"><h2>龙钦宁体-大乐佛母根本成就法</h2><div class="th-meta">轴号: 585</div></a>
+<a href="../threads/584.html" class="thread-row"><h2>龙钦宁体-密成就大悲观音</h2><div class="th-meta">轴号: 584</div></a>
+<a href="../threads/583.html" class="thread-row"><h2>龙钦宁体-内成就持明总集</h2><div class="th-meta">轴号: 583</div></a>
+<a href="../threads/582.html" class="thread-row"><h2>龙萨多杰宁波-共通前行及迁识、护法供食课诵仪轨</h2><div class="th-meta">轴号: 582</div></a>
+<a href="../threads/576.html" class="thread-row"><h2>道果上师传承祈请文</h2><div class="th-meta">轴号: 576</div></a>
+<a href="../threads/575.html" class="thread-row"><h2>二臂玛哈嘎拉祈请简修仪轨</h2><div class="th-meta">轴号: 575</div></a>
+<a href="../threads/573.html" class="thread-row"><h2>吉祥伏魔金刚手成就法</h2><div class="th-meta">轴号: 573</div></a>
+<a href="../threads/572.html" class="thread-row"><h2>黑财神水供</h2><div class="th-meta">轴号: 572</div></a>
+<a href="../threads/571.html" class="thread-row"><h2>观音修持仪轨</h2><div class="th-meta">轴号: 571</div></a>
+<a href="../threads/570.html" class="thread-row"><h2>咕噜咕咧生起圆满实修不共理趣</h2><div class="th-meta">轴号: 570</div></a>
+<a href="../threads/557.html" class="thread-row"><h2>大圆满三宝总摄前行课诵仪轨</h2><div class="th-meta">轴号: 557</div></a>
+<a href="../threads/556.html" class="thread-row"><h2>大圆满三宝总摄羯磨仪轨</h2><div class="th-meta">轴号: 556</div></a>
+<a href="../threads/555.html" class="thread-row"><h2>长寿财运勾召事业仪轨-付予福寿满愿吉祥</h2><div class="th-meta">轴号: 555</div></a>
+<a href="../threads/554.html" class="thread-row"><h2>白度母如意轮长寿导引月河实修摄要</h2><div class="th-meta">轴号: 554</div></a>
+<a href="../threads/553.html" class="thread-row"><h2>旃陀离火修炼讲记-智慧火聚</h2><div class="th-meta">轴号: 553</div></a>
+<a href="../threads/552.html" class="thread-row"><h2>龙钦宁体-大吉祥集会八大黑鲁噶仪轨</h2><div class="th-meta">轴号: 552</div></a>
 
 </div>
+
 <script>
-// ---------- 沉浸式快速阅读弹窗引擎 ----------
+// ---------- 顶级沉浸式无缝卷轴弹窗 (Mobile Optimized) ----------
 (function() {
     if(document.getElementById('quickViewer')) return;
     const modalHTML = `
-    <div id="quickViewer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,0.6); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); opacity:0; transition:opacity 0.3s ease; box-sizing:border-box; align-items:center; justify-content:center; padding: 20px;">
-        <div id="quickViewerContent" style="background:var(--bg, #f9fafb); width:100%; max-width:850px; height:95%; max-height:95vh; border-radius:16px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.2); position:relative; transform:scale(0.95) translateY(30px); opacity:0; transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1); display:flex; flex-direction:column; overflow:hidden;">
-            <div style="padding:16px 24px; border-bottom:1px solid rgba(0,0,0,0.05); background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); display:flex; justify-content:space-between; align-items:center; z-index:10;">
-                <div style="font-weight:600; color:var(--primary, #3b82f6); font-size:16px; display:flex; align-items:center;"><span style="font-size:20px; margin-right:8px;">📄</span> 沉浸阅读模式</div>
-                <button id="quickViewerClose" style="background:#f1f5f9; border:none; width:36px; height:36px; border-radius:50%; font-size:20px; cursor:pointer; color:#475569; display:flex; align-items:center; justify-content:center; transition:all 0.2s; box-shadow:inset 0 2px 4px rgba(0,0,0,0.02)">×</button>
+    <style>
+    #quickViewer { display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,0.9); backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px); opacity:0; transition:opacity 0.3s ease; box-sizing:border-box; align-items:center; justify-content:center; }
+    #quickViewerContent { background:var(--bg); width:100%; height:100%; border-radius:0; position:relative; transform:translateY(100%); opacity:0; transition:transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 0 50px rgba(0,0,0,0.8); }
+    @media(min-width: 850px) {
+      #quickViewerContent { max-width:900px; height:95%; max-height:95vh; border-radius:16px; transform:translateY(30px) scale(0.95); border:1px solid rgba(212,175,55,0.2); }
+    }
+    #quickViewerHeader { padding:18px 24px; border-bottom:1px solid rgba(212,175,55,0.1); background:var(--surface-solid); display:flex; justify-content:space-between; align-items:center; z-index:10; }
+    #quickViewerBody { padding:0; overflow-y:auto; overflow-x:hidden; flex:1; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+    </style>
+    <div id="quickViewer">
+        <div id="quickViewerContent">
+            <div id="quickViewerHeader">
+                <div style="font-weight:700; color:var(--primary); font-size:17px; display:flex; align-items:center; letter-spacing:1px;"><span style="font-size:20px; margin-right:10px;">❖</span> 典藏经卷阅读</div>
+                <button id="quickViewerClose" style="background:rgba(255,255,255,0.1); border:none; width:36px; height:36px; border-radius:50%; font-size:18px; cursor:pointer; color:var(--text); display:flex; align-items:center; justify-content:center; transition:all 0.2s;">✕</button>
             </div>
-            <div id="quickViewerBody" style="padding:0; overflow-y:auto; flex:1; scroll-behavior: smooth;">
-                <div style="text-align:center; padding:80px; color:#94a3b8; font-weight:500;">
-                    <div style="font-size:30px; margin-bottom:15px; animation: pulse 1.5s infinite;">⚡</div>
-                    正在拉取数据...
+            <div id="quickViewerBody">
+                <div style="text-align:center; padding:100px; color:var(--primary); opacity:0.8;">
+                    <div style="font-size:40px; margin-bottom:20px; animation: pulse 1.5s infinite;">📿</div>
+                    <div style="font-weight:600; letter-spacing:2px; font-family:'Noto Serif SC', serif;">正在降临...</div>
                 </div>
             </div>
         </div>
@@ -140,10 +177,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
         void qv.offsetWidth; // trigger reflow
         qv.style.opacity = '1';
         qvContent.style.opacity = '1';
-        qvContent.style.transform = 'scale(1) translateY(0)';
-        document.body.style.overflow = 'hidden';
+        if(window.innerWidth >= 850) {
+            qvContent.style.transform = 'translateY(0) scale(1)';
+        } else {
+            qvContent.style.transform = 'translateY(0)';
+        }
+        document.body.style.overflow = 'hidden'; // Lock background scroll entirely
         
-        qvBody.innerHTML = '<div style="text-align:center; padding:100px; color:#94a3b8;"><div style="font-size:40px; margin-bottom:20px; animation: pulse 1.5s infinite;">⚡</div><div style="font-weight:600; font-size:18px;">正在穿梭时空抓取帖子...</div></div>';
+        qvBody.innerHTML = '<div style="text-align:center; padding:120px; color:var(--primary); opacity:0.8;"><div style="font-size:45px; margin-bottom:20px; animation: pulse 1.5s infinite;">📿</div><div style="font-family:\'Noto Serif SC\', serif; font-size:18px; letter-spacing:2px;">开启法卷...</div></div>';
         
         fetch(url).then(res => res.text()).then(html => {
             const parser = new DOMParser();
@@ -152,35 +193,39 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
             if(contentContainer) {
                 let bread = contentContainer.querySelector('.breadcrumb');
                 if(bread) bread.remove();
-                contentContainer.style.margin = '20px auto 40px';
+                contentContainer.style.margin = '20px auto 60px';
                 qvBody.innerHTML = '';
                 qvBody.appendChild(contentContainer);
                 qvBody.scrollTop = 0;
             } else {
-                qvBody.innerHTML = '<div style="padding:40px; text-align:center;">解析内容失败，该页可能已损坏。</div>';
+                window.location.href = url;
             }
         }).catch(err => {
-            window.location.href = url; // 如果遇到了文件系统拦截，自动降级为传统页面跳转加载
+            window.location.href = url;
         });
     }
 
     function closeViewer() {
         qv.style.opacity = '0';
         qvContent.style.opacity = '0';
-        qvContent.style.transform = 'scale(0.95) translateY(30px)';
+        if(window.innerWidth >= 850) {
+            qvContent.style.transform = 'translateY(30px) scale(0.95)';
+        } else {
+            qvContent.style.transform = 'translateY(100%)';
+        }
         setTimeout(() => {
             qv.style.display = 'none';
             document.body.style.overflow = '';
             qvBody.innerHTML = '';
-        }, 300);
+        }, 400);
     }
 
     qvClose.addEventListener('click', closeViewer);
-    qvClose.addEventListener('mouseover', () => qvClose.style.background = '#e2e8f0');
-    qvClose.addEventListener('mouseout', () => qvClose.style.background = '#f1f5f9');
+    qvClose.addEventListener('mouseover', () => qvClose.style.background = 'rgba(255,255,255,0.2)');
+    qvClose.addEventListener('mouseout', () => qvClose.style.background = 'rgba(255,255,255,0.1)');
     
     qv.addEventListener('click', (e) => {
-        if(e.target === qv) closeViewer();
+        if(e.target === qv && window.innerWidth >= 850) closeViewer();
     });
 
     document.addEventListener('click', (e) => {

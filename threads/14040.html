@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>修行人的日常生活 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>修行人的日常生活 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">修行人的日常生活</h1>
-<div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-18 11:35<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">我们必需知道什么是修行，什么不是修行；或者什么是佛法，什么不是佛法。了解这一点、拥有这种智慧的利益是不可思议、无穷尽的。 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">修行人的日常生活</h1>
+<div class="post"><div class="post-header"><div class="avatar">格</div><span style="font-size:15px; letter-spacing:1px;">格力琼寺发表于 2024-11-18 11:35</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">我们必需知道什么是修行，什么不是修行；或者什么是佛法，什么不是佛法。了解这一点、拥有这种智慧的利益是不可思议、无穷尽的。 <br/>
 <br/>
 我们必需了解，一天二十四小时中，我们所有的行为──行、住、坐、卧、谈话、工作──都可以变成证悟的因、解脱的因、来世安乐的因、或是堕入三恶趣的因，一切都依我们的发心而定。 <br/>
 <br/>
@@ -68,7 +89,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 但如果你以贪着今生的心工作，它全变成恶业，三恶趣苦的因。如果我们一天二十四小时都以发菩提心做一切事，我们将累积无量的功德。 <br/>
 <br/>
-不仅如此，任何一项行为也变成解脱的因，成为每位有情的乐因。透过这种方式，能使你日复一日的生命过得最有意义，最为富足 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-19 11:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">任何时侯，我们都应该一而再地为所有众生的利益，许下广大的愿望。 <br/>
+不仅如此，任何一项行为也变成解脱的因，成为每位有情的乐因。透过这种方式，能使你日复一日的生命过得最有意义，最为富足 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div><span style="font-size:15px; letter-spacing:1px;">格力琼寺发表于 2024-11-19 11:29</span><div class="badge-floor">第 2 进</div></div><div class="post-body">任何时侯，我们都应该一而再地为所有众生的利益，许下广大的愿望。 <br/>
 当我们睡觉的时候，我们应该想:“愿一切众生达到究竟之境。” <br/>
 当我们醒来的时候，我们应该想:“愿一切众生觉醒于证悟之境。” <br/>
 当我们起床的时候，我们应该想:“愿一切众生均得佛身。 <br/>
@@ -81,7 +102,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 当我们上坡的时候，让我们想:“但愿我能带领众生走向上三道。” <br/>
 当我们下坡的时候，让我们想：“但愿我能去下三道解放众生。” <br/>
 当我们看到快乐的时候，让我们想:“愿一切众生达到成佛至乐。” <br/>
-当我们看到痛苦的时候,让我们想:“愿所有众生之痛苦平息。” </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-19 11:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">讨论菩萨行的经典指出：开门、关门是一种中性的行为，通常不会累积善业或恶业，但你却能以一种让我们可以累积功德的心态来做同样的事。例如：开门时，你可以观想自己正为一切众生打开解脱之门；关门时，你也可以想像自己正为一切众生关起投生恶道之门。如此一来，你便能随时都保持在禅观中，培养出使自己的精神修持成长的果实。藉由菩萨愿心，这些平凡之举都能转为功德的累积，并能以同样的发心将一切行为由恶转善。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-19 11:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">《宝云经》中也讲了，作为发心的人，开门时应想打开解脱之门，关门时应想关闭轮回之门，走路、烧火等威仪也有明确观想。但这些如果要一一行持，对我们来讲也有点困难，就算无法全部做到，也应尽量按照这些来要求自己。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-19 11:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">我们修行就是要改变自己的心，正所谓“诸恶莫作，众善奉行，自净其意，是诸佛教”，就是自己心里面的贪嗔痴慢等等烦恼要降服或者消除的意思，不是其他的。 <br/>
+当我们看到痛苦的时候,让我们想:“愿所有众生之痛苦平息。” </div></div><div class="post"><div class="post-header"><div class="avatar">格</div><span style="font-size:15px; letter-spacing:1px;">格力琼寺发表于 2024-11-19 11:37</span><div class="badge-floor">第 3 进</div></div><div class="post-body">讨论菩萨行的经典指出：开门、关门是一种中性的行为，通常不会累积善业或恶业，但你却能以一种让我们可以累积功德的心态来做同样的事。例如：开门时，你可以观想自己正为一切众生打开解脱之门；关门时，你也可以想像自己正为一切众生关起投生恶道之门。如此一来，你便能随时都保持在禅观中，培养出使自己的精神修持成长的果实。藉由菩萨愿心，这些平凡之举都能转为功德的累积，并能以同样的发心将一切行为由恶转善。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div><span style="font-size:15px; letter-spacing:1px;">格力琼寺发表于 2024-11-19 11:40</span><div class="badge-floor">第 4 进</div></div><div class="post-body">《宝云经》中也讲了，作为发心的人，开门时应想打开解脱之门，关门时应想关闭轮回之门，走路、烧火等威仪也有明确观想。但这些如果要一一行持，对我们来讲也有点困难，就算无法全部做到，也应尽量按照这些来要求自己。 </div></div><div class="post"><div class="post-header"><div class="avatar">格</div><span style="font-size:15px; letter-spacing:1px;">格力琼寺发表于 2024-11-19 11:43</span><div class="badge-floor">第 5 进</div></div><div class="post-body">我们修行就是要改变自己的心，正所谓“诸恶莫作，众善奉行，自净其意，是诸佛教”，就是自己心里面的贪嗔痴慢等等烦恼要降服或者消除的意思，不是其他的。 <br/>
 假如我们上座修行时候做的很如理如法，但下座之后却散乱放逸，这样肯定不行。上座修行固然很重要，但其他时间无论是吃饭、走路、工作、做家务还是晚上睡觉同样不能忘记修心。为什么要这样做呢？这是因为我们造作不善业和无记业的习气很重，假如不能长期修行，则改变自己心的力量就会很弱，如此一来，当我们临终之际、身处中阴之时，平日里的修行便想不起来。彼时，能被我们想起来的一定是那些由平素所造不善业、无记业串习而成的有害或者没有意义的事，这样我们就会不由自主地在轮回里转来转去。所以，真正的修行即昼夜不断地改变自己的心，下面主要为大家开示每天下座之后的修心方法。 <br/>
 第一、醒来的时候  要想从无明中醒来，从醒来到起床之间要观察思考一下昨夜梦里的善与恶。如果梦到善的就随喜，如果梦到恶的就忏悔，而且感恩上师三宝加持，万幸昨晚没有死，今天有起来的机会。然后发愿我今天要不做这样、那样的恶业，要做各种善业，想着这些就起床。如果自己是个脾气不好的人，就发愿无论遇到任何人和事都不生气，还可以发愿不抽烟、不喝酒、不吃肉等等。再者还可以发愿为别人做各种善事。穿衣服时，观想自己穿上忏悔衣。系腰带时，要想自己不离善根。 <br/>
 第二、起床后洗漱时  边念百字明或金刚萨埵心咒，边观想五方佛手持宝瓶给自己灌顶，甘露从自身头顶流降，疾病、魔障、罪过皆消除。 <br/>
@@ -92,7 +113,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 第七、做各种事情时  坐下时，愿得到无上菩提的金刚座；靠着时，愿得到菩提树；出门时，愿出离轮回城；下楼梯时，愿为了利益众生入轮回；开门时，愿打开解脱城的门；关门时，愿关上三恶趣的门；上路时，愿上圣道路；上坡时，愿一切众生安置三善趣；上楼梯时，愿逐渐登上十地果位。到家时，愿到达佛国；下坡时，愿断除通往三恶趣的心相续；见到别人时，就像拜见佛陀；见到装满物品的容器时，愿一切众生具足无上圆满的功德；见到空的容器时，愿众生抛弃一切过患；见到高兴的众生时，愿他不接受一切有为法；见到安乐的众生时，愿一切众生得到安乐；见到痛苦的众生时，愿一切众生远离痛苦；见到生病的众生时，愿一切众生远离疾病；见到美丽可爱的众生时，愿一切众生得到美丽可爱；见到相貌丑陋的众生时，愿一切众生远离恶的师友；见到僧人时，愿众生都能趋入圣法；见到众生刻苦努力时，愿众生都能精勤修习正法；听到别人赞扬众生时，愿他们赞扬一切佛菩萨；见到城市时，愿我们见到解脱城；见到讲法时，愿众生都有佛法的无尽辩才；见到过河时，愿众生都能渡过轮回苦海；见到众生遭受热苦时，愿众生得到清凉；见到众生遭受寒苦时，愿众生都能得到涅槃的温暖；见到众生谈佛法时，愿他们得到一切佛法；见到佛像时，愿众生都能得到见佛无碍的眼；见到佛塔时，愿众生都能把佛塔作为应供处；见到自己或别人做生意时，愿众生都能得到“七圣财”（信、戒、闻、舍、惭、愧、慧）；见到种地时，愿众生都能得到菩提种；见到别人往牛身上套犁铧时，愿众生都能得到智慧方便双运；见到耕地时，愿众生都能耕整自己的烦恼荒地；见到洒水施肥时，愿众生都能增长菩提心的庄稼；见到除田中杂草时，愿众生把烦恼的杂草除掉；见到收获庄稼时，愿众生都收获到智慧的庄稼；见到庄稼脱粒时，愿众生都能消除罪障习气；见到筛选谷粒时，愿一切众生得到佛果。 <br/>
 第八、睡觉时  首先磕三个头，然后吉祥卧躺下，再思考一天做不善业等恶的过失，做了不好的事就忏悔，发愿不再造同样的恶业；如有做善事，就随喜和回向。如果知道睡瑜伽的话就那样睡，吉祥卧躺下。不会的话就思考轮回的痛苦，想着脱离它，同时发菩提心，想三宝的功德，祈祷三宝，如能这样，梦就能变善的梦。若心思散乱随意睡下就会变成恶梦。人生的一半时间是在睡梦中度过的，因此为了把梦变成善的而努力这非常重要。第二天梦醒时，庆幸自己还活着，发愿做一件圆满的善事等等，然后起床。因此，今天的时间不要浪费，如果今天浪费的话明天也会这样，如此下去就会虚度一生。所以像我们这样暇满人身的如意宝不要浪费，要过真正有意义的人生。 <br/>
 如果能在这些方面长期努力的话，慢慢就会熟悉，当我们临终以及中阴身的时候平时所修的法就会很容易想起来，如此绝不至于堕落三恶道，修行好的也容易去三善道，甚至往生净土也不成问题。        无论在任何时间、地点，做任何事时，身口意都不要直接、间接地给任何众生丝毫的伤害，哪怕蚂蚁那么小都不要伤害。恶口说伤害他人的话，意瞋恨别人，要知道这些都是不能做的。要尽力用自己慈悲的身口意去利益他人，去除他人的痛苦。 <br/>
-我们这辈子其实是很短的，未来生生世世却是很长的，真的很长，不是一辈子两辈子的事，固然我们现在需要幸福快乐，未来生生世世更需要幸福快乐，既然未来需要幸福快乐，现在不做准备等到老的时候会后悔，可是那时后悔也没有用。如果不想后悔，那么，从今天开始就像前面说的那样每天都改变自己的心！ </div></div><div class="post"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-11-20 09:07<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">讲一个小路尊者的公案，小路尊者当时出了家之后，什么都学不会，一句偈，四句话，念了前头忘了后头，记了后头忘了前头。没有办法，佛只好叫他扫地。扫地，就是把心里的烦恼扫掉。他倒很听话，佛的教诫，非常听从，他就扫地。那个时候，僧团里的规矩是要轮班说法的，说法的时候铺个高座，就坐在那里说法。 <br/>
+我们这辈子其实是很短的，未来生生世世却是很长的，真的很长，不是一辈子两辈子的事，固然我们现在需要幸福快乐，未来生生世世更需要幸福快乐，既然未来需要幸福快乐，现在不做准备等到老的时候会后悔，可是那时后悔也没有用。如果不想后悔，那么，从今天开始就像前面说的那样每天都改变自己的心！ </div></div><div class="post"><div class="post-header"><div class="avatar">格</div><span style="font-size:15px; letter-spacing:1px;">格力琼寺发表于 2024-11-20 09:07</span><div class="badge-floor">第 6 进</div></div><div class="post-body">讲一个小路尊者的公案，小路尊者当时出了家之后，什么都学不会，一句偈，四句话，念了前头忘了后头，记了后头忘了前头。没有办法，佛只好叫他扫地。扫地，就是把心里的烦恼扫掉。他倒很听话，佛的教诫，非常听从，他就扫地。那个时候，僧团里的规矩是要轮班说法的，说法的时候铺个高座，就坐在那里说法。 <br/>
 <br/>
 这一次轮到小路尊者说法，他的笨是出了名的，大家就看热闹去了。所谓高座，就是把自己穿的衣堆在一起，这次小路尊者说法，大家就把衣服全都拿出来，堆了个高高的座，让他坐上之后出洋相。佛叫小路尊者上去，小路尊者上去之后，竟然很聪明地说了一套非常微妙的法。 <br/>
 <br/>

@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>中有教授听闻解脱密法(对应文武百尊坛城图) - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>中有教授听闻解脱密法(对应文武百尊坛城图) - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/往生佛土普超度.html">往生佛土普超度</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">中有教授听闻解脱密法(对应文武百尊坛城图)</h1>
-<div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-1 18:57<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">中有教授听闻解脱密法 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/往生佛土普超度.html">往生佛土普超度</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">中有教授听闻解脱密法(对应文武百尊坛城图)</h1>
+<div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-1 18:57</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">中有教授听闻解脱密法 <br/>
 <br/>
 孙景风敬译 <br/>
 目　　录 <br/>
@@ -64,7 +85,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 第一章　死后之境界 <br/>
 第二章　转生方式 <br/>
 附编 <br/>
-表解与咒轮 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-1 18:59<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">中有教授听闻解脱密法（藏名巴多脱卓） <br/>
+表解与咒轮 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-1 18:59</span><div class="badge-floor">第 2 进</div></div><div class="post-body">中有教授听闻解脱密法（藏名巴多脱卓） <br/>
 <br/>
 西藏密教初祖莲华生大士心传宝典 <br/>
 取库藏者持明羯磨大师自黄金河畔堪波达山请出流通 <br/>
@@ -72,7 +93,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 流传本法莲华生大士应化事略 <br/>
 <br/>
- <br/>
+1683 <br/>
 <br/>
 南无金刚不生不灭莲华生大士 <br/>
 <br/>
@@ -92,7 +113,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 以上所述，略举其要，大士事迹，散见藏中未曾翻来之经甚多，据藏经记载，大小广略种类典籍，都万有九百，皆为接引未来有缘之用，后世供奉大士者，所有息增怀诛四法，如治病求权求财降魔等，皆能满愿。一切地水火风空诸多灾难，皆得免除，犹如摩尼宝珠，所求如意云云。 <br/>
 <br/>
-凡学佛者，信心真实，念诵真言圣号，随时随地，得见大士，特于农历每月初十日，为其殊胜日期，是日必乘愿而来视诸弟子。大士为海中莲华化生，不生不灭，金刚体性身，永久住世度生。据藏中传述，大士并未入灭，尚在世间。行者于时虔诚供养礼诵修法，即在面前，不离自身，随愿祈求，无不成就，如本经中“不二启请颂”（见附编）云：“当兹恶世惟依尊无他”，敬请读者深切长思三致意焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-1 19:01<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">翻译缘起 <br/>
+凡学佛者，信心真实，念诵真言圣号，随时随地，得见大士，特于农历每月初十日，为其殊胜日期，是日必乘愿而来视诸弟子。大士为海中莲华化生，不生不灭，金刚体性身，永久住世度生。据藏中传述，大士并未入灭，尚在世间。行者于时虔诚供养礼诵修法，即在面前，不离自身，随愿祈求，无不成就，如本经中“不二启请颂”（见附编）云：“当兹恶世惟依尊无他”，敬请读者深切长思三致意焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-1 19:01</span><div class="badge-floor">第 3 进</div></div><div class="post-body">翻译缘起 <br/>
 <br/>
 <br/>
 人生在世，一死一生，是何等重大的事！愚者碌碌一生，转眼混过，既不知生从何来，更不知死从何去，这一类人，实占多数。智者觉悟到此问题重要，但又没法解决，就在宗教或哲学上寻找答案。于是佛教所说的“因果轮回”“无常迅速”种种警策的话，不啻当头棒喝，才知道人的一生过程，逃不出生、老、病、死四种苦处，特别是死的时候，四大解体，犹如生龟剥壳，苦不堪言。因此有些人，专为“怖畏生死”而学佛的；又有一类发大心学佛的人，体会到六道众生，都是我过去的父母，沉沦苦海，头出头没，无有出期，因而要依大乘教义，无我精神，由“观无常”，了生死，进一步发四无量心，学六度万行，行菩萨道，愿众生都成佛，并愿众生先我而成佛，这才合乎佛教的为法为人的精神。凡此种种知见，都是佛教徒所知道的。但是生死问题如何解决？学佛要从何处入手？成佛有什么把握？提到这些问题，就无人能肯定的解答了。 <br/>
@@ -115,7 +136,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 莲华生大士威力神通，不可思议，流传此法，本为末法众生难施救度，而有此悲心之流露。有此宝经在手，对于生死大事成佛法门，完全迎刃而解。特别是生存时期，听过七遍，或平时熟谙于胸中，到了死后中阴显现，自能了悟实相，不致误入迷途。所谓在生之时修未成佛，中阴身成佛者，即指此法而言也。有缘遇此，可谓庆幸万分！佛所言说，皆为佛所亲证，不容怀疑。孔子云：“朝闻道，夕死可矣。”此语正可为本法的写照。昔张赵两居士及屈文六老师兄（即现在法贤大师）“均愿有人取藏文原本译成巨帙，以资普利”（见张译本中屈映光居士序文）。我因此不揣谫陋，勉力译成，以竞前人未了之愿。惟自惭年迈力衰，学力修持，均感匮乏，惧难胜任，疏漏之咎，在所难免，敬希十方贤达，大德通家，审阅匡正；并望读者悉心研习，兼图利他，广布流通。如本经说：“对于世人，广为详说，诸病人前，或亡者耳旁，高声朗诵。”以此功德，回施有情。编译既成，爰缀数语，志其缘起，以告来兹。 <br/>
 <br/>
-佛历二五○三年秋日诺门金刚乘弟子寿固金刚孙景风写于密严室 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-1 19:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">例　言 <br/>
+佛历二五○三年秋日诺门金刚乘弟子寿固金刚孙景风写于密严室 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-1 19:04</span><div class="badge-floor">第 4 进</div></div><div class="post-body">例　言 <br/>
 <br/>
 一、本经西藏文手抄写本，共有二二九梵页，内容计十四种：(1)法行习气自解脱法（此即张本所称之解业集颂）二六页；(2)法性中有教授听闻解脱法（即今所据译之上卷正文）六五页；(3)寂怒两部曼荼罗发露忏悔自然解脱法二八页；(4)轮回中有之指示（此即今所据译之下卷正文）三九页；(5)指示尸林诫示无常文六页；(6)指示本体明光之补充六页；(7)启请诸佛菩萨加被偈六页；(8)法身普贤双尊暨传承诸师救怖颂三页；（以上(7)(8)两种均见附编。）(9)轮回中有指示之补充六页；(10)大圆满三身直指四页；（11）救脱中有怖畏险峡偈一一页；（12）中有六纲二页；（13）中有救怖愿偈一三页；（以上（11）（12）（13）三种，均见附编）（14）假名解脱如意妙宝一二页；（此即张本所称之答卓咒本，又名无为刹那证智经。）以上十四种中，除(3)(5)(9)三种尚待补译外，今译出者十一种。为便利读者以醒眉目起见，系变更上列次序，分为正续两编。正编上下两卷，皆为度亡正法，下卷之末，系以附编，均载有关度亡所需之各种经咒，及与正法上所必需念诵之各种偈文，故在附编中，除将(7)(8)（11）（12）（13）五种收入外，尚有采自他经者，亦编在其内，至于正附两编中未能编入者，均纳入续编之中以完成之。 <br/>
 <br/>
@@ -131,7 +152,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 一、流传本法莲华生大士像、藏密所传四臂观音像、藏密所传红色阿弥陀佛像在本密法中，为法、报、化三身一体之尊。为一般未曾修过密法者奉为本尊，以便观想念诵；并敬绘三尊圣像，刊印在本经卷首，为行者瞻仰礼拜之需。 <br/>
 <br/>
-一、本经经过多次整理，历时甚久，方始完成。译者年迈力衰，精神难以贯注，乃承大善知识，草成正文，商榷字句；或于稿成之后，详加厘订，润饰文词，或悉心校对，或抄写复缮；或绘制佛像图表，或布施纸张用品，或对本经随喜赞叹，发心设法流通，或因未能多印，预定借抄以资研习普利；均为不可思议难得之因缘。虽诸仁者，资助本经，不肯显露姓名，但其功不唐捐，可以断定，书此以誌谢忱。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-1 19:06<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">卷头语 <br/>
+一、本经经过多次整理，历时甚久，方始完成。译者年迈力衰，精神难以贯注，乃承大善知识，草成正文，商榷字句；或于稿成之后，详加厘订，润饰文词，或悉心校对，或抄写复缮；或绘制佛像图表，或布施纸张用品，或对本经随喜赞叹，发心设法流通，或因未能多印，预定借抄以资研习普利；均为不可思议难得之因缘。虽诸仁者，资助本经，不肯显露姓名，但其功不唐捐，可以断定，书此以誌谢忱。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-1 19:06</span><div class="badge-floor">第 5 进</div></div><div class="post-body">卷头语 <br/>
 <br/>
 一、中有种类时期及成就 <br/>
 <br/>
@@ -189,7 +210,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 （十三）、密教首重师承，故度亡时，当以敦请曾得此法之金刚阿阇黎上师传授，方为合法。若一时因缘不凑，则于每读诵时，至诚恭敬观想流传此法之莲华生大士、或观想大悲观自在菩萨即我上师，现住我顶上或面前空中为说此法，我随之念诵，亦可获蒙加被，如是则存亡俱利。因此法纯系大悲心之所流露，大士为传本法之主，大悲圣者广大灵感，无时无刹不现身，恒能寻声应念而至，但以后遇缘，仍应补请师授，更为如法。 <br/>
 <br/>
-（十四）、按我国风俗，人死后三日小殓，七日大殓，大殓日盖棺封钉。盖亦以为死者在三四日内，其神识尚未完全离开尸体，兼防其复苏也。佛制僧人坐缸火化，亦必经过三七以后举行。依照本经指示，人在死后，外气虽断，内息未绝，为识闷绝位（俗称昏厥），其中停留时间，常人为三日半（见本经上卷四大融入指示文前段中），若有定力之人，亦有为期四日或一七之后，神识方能完全脱体者。今日各地多行火葬，本为节省财力物力与时间，法良意美，特点甚多，亦合佛制，惟为死者安全起见，决不可朝死而夕即焚，似宜仍从旧俗：在都市，死后辇入殡仪馆冷气间，停至三日后再殓；在内地若无冷气设备，或权以薄棺暂殓，经过一七再焚；或用布裹起，以盒盛之，临葬时将盒底抽去入土，如是既可利死者之安全，亦可节省物力财力，而不妨碍家属工作。特附一言，治丧者其注意焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-1 19:09<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">前导和正述 <br/>
+（十四）、按我国风俗，人死后三日小殓，七日大殓，大殓日盖棺封钉。盖亦以为死者在三四日内，其神识尚未完全离开尸体，兼防其复苏也。佛制僧人坐缸火化，亦必经过三七以后举行。依照本经指示，人在死后，外气虽断，内息未绝，为识闷绝位（俗称昏厥），其中停留时间，常人为三日半（见本经上卷四大融入指示文前段中），若有定力之人，亦有为期四日或一七之后，神识方能完全脱体者。今日各地多行火葬，本为节省财力物力与时间，法良意美，特点甚多，亦合佛制，惟为死者安全起见，决不可朝死而夕即焚，似宜仍从旧俗：在都市，死后辇入殡仪馆冷气间，停至三日后再殓；在内地若无冷气设备，或权以薄棺暂殓，经过一七再焚；或用布裹起，以盒盛之，临葬时将盒底抽去入土，如是既可利死者之安全，亦可节省物力财力，而不妨碍家属工作。特附一言，治丧者其注意焉。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-1 19:09</span><div class="badge-floor">第 6 进</div></div><div class="post-body">前导和正述 <br/>
 <br/>
 正编上卷　死位中有与法性中有 <br/>
 <br/>
@@ -232,7 +253,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 （三）中有六纲 <br/>
 （四）中有救怖愿 <br/>
 <br/>
-以上四种偈文（均见下卷末附编中）。各念三至七遍，当视时间之长短而定。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-1 19:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">第一章　命终时变化状态 <br/>
+以上四种偈文（均见下卷末附编中）。各念三至七遍，当视时间之长短而定。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-1 19:13</span><div class="badge-floor">第 7 进</div></div><div class="post-body">第一章　命终时变化状态 <br/>
 <br/>
 第一节　死位中有指授 <br/>
 <br/>
@@ -341,7 +362,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 嗟！善男子（某某）：汝于身心分离之时，法性清净净相，自性微妙明光，灿然照耀，惊心动魄，犹如春日原野，阳焰闪动，此中景象，人人皆现，勿怖勿畏，勿生惊恐，当知即汝法性本光。又从光内突发洪厉法性本声，犹如千雷一时齐震，应即认识，此亦汝自己法性本声也，镇定勿乱，勿怖勿惧。盖汝此时，已具有所谓习气意生之身，非复质碍血肉之躯，“声”、“光”、“辉”三项，任起于前，亦于汝身无能为害，以汝此时无死因也。汝今若能认识自识所现本来境相，当可认知即是“中有”。 <br/>
 <br/>
-嗟！善男子！若未认识当下本来境相，纵于人间如何观修，而未遇此指授诀要，则定于“光”生怖、于“声”生恐、于“辉”生惧。若不了知此教授之要点，则不认识“声”、“光”、“辉”三项，仍当流转生死轮回苦海而已。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-1 19:21<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">第二章　法性中有业力幻象 <br/>
+嗟！善男子！若未认识当下本来境相，纵于人间如何观修，而未遇此指授诀要，则定于“光”生怖、于“声”生恐、于“辉”生惧。若不了知此教授之要点，则不认识“声”、“光”、“辉”三项，仍当流转生死轮回苦海而已。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-1 19:21</span><div class="badge-floor">第 8 进</div></div><div class="post-body">第二章　法性中有业力幻象 <br/>
 <br/>
 丁、初周证入寂相部尊 <br/>
 <br/>
@@ -351,11 +372,11 @@ http://www.zmxh.com/pics/________________01_20060117134612.jpg <br/>
 <br/>
 嗟！善男子（某某）：汝已闷绝三日有半至四日，从闷绝而复苏，自设问曰：“我今何故起现如是境相”？汝当了知、此即“中有”。此时正际返入轮回，所有一切境相，悉皆现为明光佛身，虚空遍现蔚蓝色光。 <br/>
 <br/>
-<br/>
+1684 <br/>
 毗卢遮那如来父母双尊 <br/>
-<br/>
+1685 <br/>
 毗卢遮那如来 <br/>
-<br/>
+1686 <br/>
 法界自在母 <br/>
 <br/>
 尔时中央密严刹土（一称明点勇现刹土，一称奥明天。）世尊“毗卢遮那如来”（亦称“大日如来”或称“光明遍照佛”。），其身白色，坐狮子宝座；手持八辐金轮，与虚空法界自在母面合交抱，来现汝前，此为“色蕴”法尔清净兰光，此光晃耀，严以明点及微光点，灿然明澈，自“毗卢遮那如来”父母双尊胸中照临汝前，直射汝心，眩目难睁，不敢逼视。而与此同时，又有“天道”白光不起怖畏者，并临汝前。此时汝为“愚痴”业力所牵，怖畏兰光，故于“法界体性智”光，生起恐怖而欲逃避；反于“天道”白光不生怖者，起欣乐想，而欲趋入。我今告汝，此时汝当于彼灿然明澈晃耀眩目之兰光，勿怖勿畏，不可逃避，此即所谓如来光明法界体性智也。当于其中，深生信乐，起渴仰心，而自念言：“此是世尊毗卢遮那大悲恩光”，亟起皈依，恭敬祈请。尔时世尊毗卢遮那、即接引汝出离“中有险峡”。汝对“天道”白光不眩目者，切勿欣乐，勿贪勿著。若生贪著，即沦天趣，复转六道，以是障碍，阻解脱道。故当于彼，眼避勿睹；而于闪烁眩目之兰光，当起欣乐，发猛利心，渴仰世尊毗卢遮那如来，至心专注，念诵下偈，随我发如是愿： <br/>
@@ -374,23 +395,23 @@ http://www.zmxh.com/pics/________________01_20060117134612.jpg <br/>
 <br/>
 又虽已如前指示，然缘于“嗔”“恚”业障，对“光”与“辉”、惧而逃避，虽发是愿，仍复迷而不悟，则第二日中，有“金刚萨埵不动如来”圣众、及“地狱”恶业之光，同时并来现前，此时当复指示，呼亡者之名，念诵下文而告之曰： <br/>
 <br/>
-<br/>
+1687 <br/>
 金刚萨埵不动如来父母双尊 <br/>
-<br/>
+1688 <br/>
 金刚萨埵不动如来 <br/>
-<br/>
+1689 <br/>
 玛嘛几母 <br/>
 <br/>
-<br/>
+16961697 <br/>
 地藏菩萨 <br/>
 <br/>
-<br/>
+16981699 <br/>
 弥勒菩萨 <br/>
 <br/>
-<br/>
+17171718 <br/>
 金刚舞女 <br/>
 <br/>
-<br/>
+17191720 <br/>
 金刚花女 <br/>
 <br/>
 嗟！善男子（某某）：谛听勿乱！此第二日，有“水大”白色净光，来现汝前。尔时，东方蓝色“现喜刹土”（梵名：阿比罗提。藏名：恩巴尔嘎哇。）世尊“金刚萨埵不动如来”，其身蓝色，手执五钴金刚杵，坐大象宝座，与“玛嘛几母”面合交抱，现临汝前；“地藏”“弥勒”二菩萨、与“拉先女”（舞女）“补艹别女”（花女）双尊围绕于虹光曼荼罗海，六尊齐现而来。此为“识蕴”法尔清净白光，即“大圆境智”。此光晃耀，严以明点及微光点，惊眩欲绝，自金刚萨埵不动如来父母双尊胸中，照临汝前，直射汝心，眩目难睁，不敢逼视。而与此同时，又有“地狱道”不眩目之烟灰色光，亦与智光并临汝前。此时汝为“嗔”“恚”业力所制，怖惧白光而欲逃避；反于地狱道不眩目之烟灰色光，起欣乐想而欲趋入。我今告汝！此时汝当于彼晃耀眩目之白光灿然透明者，勿怖勿畏，不可逃避。彼即汝自内证智本体具足力用，应于光中明了任运，坦然而住，更当于彼，信乐渴仰。汝若认知自内证智本体光明，纵欠虔诚发愿，亦得一切诸佛光明与汝融合，无二无别，而证佛位。若不认知为汝自内证智本光，则当对之信乐渴仰而自念言：“此是金刚萨埵不动如来大悲恩光”，亟起皈依，深心祈请，自维此即金刚萨埵不动如来大悲光钩，不可逃避。要知汝纵欲逃避，亦与汝身不能分离，故勿怖畏，当欣乐祈请。尔时金刚萨埵不动如来，即来接引，拔汝出离“中有险峡”。又当于彼地狱烟光不眩目者，勿生欢喜。此为汝“嗔”“恚”炽盛所积罪障而来诱引之光，汝若贪着彼光，当堕“那落迦”（地狱）处，陷于苦不堪忍泥涂之中，永无出期，此是障碍，阻解脱道。故当于彼，眼避勿视，断除“嗔”“恚”，勿贪勿着；而于炳然照耀之白光，深生敬仰，至心专注金刚萨埵不动如来尊前，生起猛利欲乐，念诵下偈，随我发如是愿： <br/>
@@ -409,23 +430,23 @@ http://www.zmxh.com/pics/________________01_20060117134612.jpg <br/>
 <br/>
 又虽已如上指授，然有补特伽罗（即众生之异名）我慢贡高，罪业深重，于大悲光钩，怖而逃避。迨至第三日，则有世尊“宝生如来”与圣众俱，前来接引；同时又有“人道”之光，并来现前。其指示法，当呼亡者之名，念诵下文而告之曰： <br/>
 <br/>
-<br/>
+1690 <br/>
 宝生如来父母双尊 <br/>
-<br/>
+1691 <br/>
 宝生如来 <br/>
-<br/>
+1692 <br/>
 佛眼母 <br/>
 <br/>
-<br/>
+170017011702 <br/>
 虚空藏菩萨 <br/>
 <br/>
-<br/>
+170317041705 <br/>
 普贤菩萨 <br/>
 <br/>
-<br/>
+17211722 <br/>
 金刚鬘女 <br/>
 <br/>
-<br/>
+17321733 <br/>
 金刚香女 <br/>
 <br/>
 嗟！善男子（某某）：谛听勿乱！今第三日，有地大黄色净光，来现汝前。尔时，南方黄色“光荣佛土”（藏文贝登，此云吉祥，或译具德）世尊“宝生如来”，其身黄色，手持摩尼妙宝，坐宝马宝座，与“佛眼母”面合交抱，现临汝前：“虚空藏”“普贤”二菩萨、与摩梨女（鬘女）都毗女（香女）双尊围绕于虹光曼荼罗海，六尊齐现而来。此为“受蕴”法尔清净黄光，即“平等性智”。此光晃耀，严以明点及微光点，自宝生如来父母双尊胸中照临汝前，直射汝心，眩目难睁，不敢逼视；而与此同时，又有“人道”之淡黄光不眩目者，亦与智光并临汝前，直射汝心。此时汝为“我慢”业力所制，于彼眩目之黄光，生起惊怖而欲逃避；反于人道不眩目之淡黄光起乐着想、而欲趣入。我今告汝，此时汝于彼晃耀眩目之黄光灿然透明者，勿怖勿畏，不可逃避。彼即汝自内证智本体具足力用，应于光中明了任运、坦然而住，更当于彼信乐渴仰。汝若认知自内证智本体光明，纵欠虔诚发愿，亦得一切诸佛光明与汝融合，无二无别，而证佛位。若不认知为汝自内证智本光，则当对之信乐渴仰而自念言：“此经是宝生如来大悲恩光”，亟起皈依，深心祈请。自维此即宝生如来大悲光钩，不可逃避。要知汝纵欲逃避，亦与汝身不能分离，故勿怖畏，当欣乐祈请。尔时宝生如来即来接引，拔汝出离中有险峡。又当于彼人道淡黄光勿生欢喜，彼乃为汝“我慢”炽盛所积习气而来诱引之光，汝若贪著，当堕人道，复受生老病死之苦，沦没于生死泥涂之中，无解脱期，以是障碍，阻解脱道。故当于彼，眼避勿视，断舍我慢，并断习气，及对彼光，勿贪勿着；而于彼灿然眩目之黄光，深生信乐，至心专注，渴仰世尊宝生如来，念诵下偈，随我发如是愿： <br/>
@@ -444,23 +465,23 @@ http://www.zmxh.com/pics/________________01_20060117134612.jpg <br/>
 <br/>
 如上指示，纵其根器如何下劣，亦必解脱无疑。然有曾造大罪之人、及失坏三昧耶戒等、或断善根之类，迄尚不能认取者，遂为“贪欲”及罪障所制，对于“声”“光”，怖而逃避，则第四日有世尊“无量光如来”（即阿弥陀佛）圣众，及由“贪”“悭”所酿成“饿鬼道”之暗红光， 同时并来现前。其指示法，当呼亡者之名，念诵下文而告之曰： <br/>
 <br/>
-<br/>
+1693 <br/>
 无量光如来父母双尊 <br/>
-<br/>
+1694 <br/>
 无量光如来 <br/>
-<br/>
+1695 <br/>
 白衣母 <br/>
 <br/>
-<br/>
+170617071708 <br/>
 观自在菩萨 <br/>
 <br/>
-<br/>
+17091710 <br/>
 妙吉祥菩萨 <br/>
 <br/>
-<br/>
+17251726 <br/>
 金刚歌女 <br/>
 <br/>
-<br/>
+17271728 <br/>
 金刚灯女 <br/>
 <br/>
 嗟！善男子（某某）：谛听勿乱！今第四日，有“火大”红色净光，起现汝前，尔时西方红色“极乐刹土”“世尊无量光如来”，其身红色，手执莲华，坐孔雀宝座，与“白衣母”面合交抱，现临汝前，“观自在”“妙吉祥”二菩萨与“吉地女”（歌女）“阿洛哥女”（灯女）双尊围绕于虹光曼荼罗海，六尊齐现而来。此为“想蕴”法尔清净红光，即“妙观察智”。此光晃耀，严以明点及微光点，眩目难睁，自无量光如来父母双尊胸中，照临汝前，直射汝心，不敢逼视，汝当对之，勿生怖畏；而与此同时，又有“饿鬼道”暗淡红光不眩目者，亦与智光并来照临，当于其光，勿生欢喜，亦勿贪着。尔时，汝为“贪欲”炽盛业力所制，于彼眩目之红光，生起怖畏而欲逃避；反于“饿鬼道”暗淡红之光不眩目者，起乐着想、而欲趋入。我今告汝，此时汝当于彼晃耀眩目之红光灿然透明者，勿怖勿畏，不可逃避。彼即汝自内证智本体具足力用，应于光中，明了任运，坦然而住，更当于彼信乐渴仰。汝若认知自内证智本体光明，纵欠虔诚发愿，亦得一切诸佛光明与汝融合，无二无别，而证佛位。若不认知为汝自内证智本光，则当对之信乐渴仰而自念言：“此是无量光如来大悲恩光”，亟起皈依，深心祈请，自维此即无量光如来大悲光钩，不可逃避。要知汝纵欲逃避，亦与汝身不能分离，故勿怖畏，当欣乐祈请。尔时无量光如来即来接引，拔汝出离中有险峡。又当于彼饿鬼道暗淡红光不眩目者，勿得贪着。彼乃为汝“贪欲”炽盛所积习气而来诱引之光，汝若贪着，即堕饿鬼道，而受极难堪忍饥渴之苦，以是障碍，阻解脱道。故当于彼，勿生贪着，断除习气，勿起爱恋；而于灿然眩目之红光，对之生起欣乐，专注渴仰世尊无量光如来父母双尊，念诵下偈，随我发如是愿： <br/>
@@ -479,23 +500,23 @@ http://www.zmxh.com/pics/________________01_20060117134612.jpg <br/>
 <br/>
 如上指示、纵其根器如何下劣，未有不解脱者。又虽已指示，而有一类有情，久狃结习，终为强盛之习气所制，不能克服，而为“嫉妒”恶业支配，于“声”及“光”生起恐惧，大悲光钩，未能认取。迄至第五日间，仍复飘泊无依。尔时有世尊“不空成就如来”圣众大悲恩光前来接引；同时又有“嫉妒”烦恼所感“阿修罗道”之光，亦来诱引。此时指授之法，当呼亡者之名，念诵下文而告之曰： <br/>
 <br/>
-<br/>
+1711 <br/>
 不空成就如来父母双尊 <br/>
-<br/>
+1712 <br/>
 不空成就如来 <br/>
-<br/>
+1713 <br/>
 三昧耶多罗母 <br/>
 <br/>
-<br/>
+171417151716 <br/>
 金刚手菩萨 <br/>
 <br/>
-<br/>
+172917301731 <br/>
 除盖障菩萨 <br/>
 <br/>
-<br/>
+17231724 <br/>
 金刚涂女 <br/>
 <br/>
-<br/>
+17341735 <br/>
 金刚食女 <br/>
 <br/>
 嗟！善男子（某某）：谛听勿乱！今第五日，有“风大”绿色净光，来现汝前。尔时，北方绿色“胜圆刹土”世尊“不空成就如来”，其身绿色，手执交叉金刚杵，坐大鹏宝座，与“三昧耶多罗母”（即绿度母）面合交抱，现临汝前；“金刚手”“除盖障”二菩萨与“健第女”（涂女）“尼得女”（食女）双尊围绕于虹光曼荼罗海，六尊齐现而来。此为“行蕴”法尔清净绿光，即“成所作智”。此光晃耀，严以明点及微光点，眩目难睁，自不空成就如来父母双尊胸中，照临汝前，直射汝心，不敢逼视；而与此同时，又有“阿修罗道”暗绿光、乃“嫉妒”为因所成不眩目之光，亦与智光并临汝前。汝当对之勿生爱憎而修等舍（安住于非苦非乐之境，谓之等舍。）；并当对之不可欢喜。尔时，汝为嫉妒炽盛业力所制，于彼眩目之绿光，惧而逃避；反于阿修罗道不眩目之暗绿光起乐着想，而欲趋入。我今告汝、此时汝当于彼晃耀眩目之绿光灿然透明者，勿怖勿畏，不可逃避。彼即汝自内证智本体具足力用，应于光中，明了任运，坦然而住，更当于彼信乐渴仰。汝若认知自内证智本体光明，纵欠虔诚发愿，亦得一切诸佛光明，与汝融合，无二无别，而证佛位。若不认知为汝自内证智本光，则当对之信乐渴仰，而自念言：“此是不空成就如来大悲恩光”，亟起皈依，深心祈请，自维此即不空成就如来大悲光钩，不可逃避。要知汝纵欲逃避，亦与汝身不能分离，故勿怖畏，当欣乐祈请。尔时，不空成就如来即来接引拔汝出离“中有险峡”。又当于彼阿修罗道不眩目之暗绿光，勿生贪着。彼乃汝嫉妒炽盛所积业力而来诱引之光，汝若贪着，则堕阿修罗道，感极难忍受斗诤之苦，以是障碍，阻解脱道。故当于彼，断除习气，勿贪勿着；而于晃耀眩目之绿光、生起信乐，专注渴仰世尊不空成就如来父母双尊，念诵下偈，随发如是愿： <br/>
@@ -516,15 +537,15 @@ http://www.zmxh.com/pics/________________01_20060117134612.jpg <br/>
 <br/>
 嗟！善男子（某某）：谛听勿乱！迄至昨日，五部如来，各现其相，虽已指示，而汝为恶习所牵，于彼起怖，故迄今日，仍留于此。汝先若能于五部如来智慧本光，识为本体境相，则于五部各佛身中，早已化为虹光，汝已成为圆满受用佛身。以汝无知，故今仍复漂泊于此，故当谛实观察，勿得散乱。今有五部如来具足境相，名为“四智和合之光”，前来迎汝，当认取之。 <br/>
 <br/>
-<br/>
+1736 <br/>
 1.中央密严刹土毗卢遮那如来父母双尊及与眷属 <br/>
-<br/>
+1737 <br/>
 2.东方现喜刹土金刚萨埵不动如来父母双尊及与眷属 <br/>
-<br/>
+1738 <br/>
 3.南方光荣刹土宝生如来父母双尊及与眷属 <br/>
-<br/>
+1739 <br/>
 4.西方极乐刹土无量光如来父母双尊及与眷属 <br/>
- <br/>
+1740 <br/>
 5.北方胜圆刹土不空成就如来父母双尊及与眷属 <br/>
     <br/>
 1.中央密严刹土毗卢遮那如来父母双尊及与眷属 <br/>
@@ -535,49 +556,49 @@ http://www.zmxh.com/pics/________________01_20060117134612.jpg <br/>
  <br/>
 嗟！善男子：四大清净四色之光，今来现前。此时，中央“密严刹土”“毗卢遮那”父母双尊及与眷属，俱来现前；东方“现喜刹土”“金刚萨埵”父母双尊及与眷属，俱来现前；南方“光荣刹土”“宝生”父母双尊及与眷属，俱来现前；西方“极乐刹土”“无量光”父母双尊及与眷属，俱来现前；北方“胜圆刹土”“不空成就”父母双尊及与眷属，俱从虹光曼荼罗海，来现汝前。 <br/>
 <br/>
-<br/>
+17411742 <br/>
 无能胜明王父母双尊     无能胜明王 <br/>
 <br/>
-<br/>
+17431744 <br/>
 大威德明王父母双尊       大威德明王 <br/>
 <br/>
-<br/>
+17451746 <br/>
 马头明王父母双尊          马头明王 <br/>
 <br/>
-<br/>
+17471748 <br/>
 甘露军荼利明王父母双尊  甘露军荼利明王 <br/>
 <br/>
-<br/>
+1749 <br/>
 持钩女 <br/>
 <br/>
-<br/>
+1751 <br/>
 持索女 <br/>
 <br/>
-<br/>
+1753 <br/>
 持锁女 <br/>
 <br/>
-<br/>
+1755 <br/>
 持铃女 <br/>
 <br/>
-<br/>
+17571758 <br/>
 天道之佛“帝释” <br/>
 <br/>
-<br/>
+17591760 <br/>
 阿修罗道佛“诤心” <br/>
 <br/>
-<br/>
+17611762 <br/>
 人道佛“释迦狮子” <br/>
 <br/>
-<br/>
+17631764 <br/>
 傍生道佛“狮子善住” <br/>
 <br/>
-<br/>
+17651766 <br/>
 饿鬼道佛“焰口” <br/>
 <br/>
-<br/>
+17671768 <br/>
 地狱道佛“法王” <br/>
 <br/>
-<br/>
+17691770 <br/>
 普贤如来父母双尊 <br/>
 <br/>
 嗟！善男子：此五部双尊之外，又有四门守护明王：即“降三世明王”“大威德”“马头”“甘露军荼利”等四大明王；及四门守护明妃：所谓持“钩”女、持“索”女、持“锁”女、持“铃”女；及天道之佛“帝释”、阿修罗道佛“诤心”（梵名毗摩罗质多。藏名塔桑日。或译净心。）、人道佛“释迦狮子”、傍生道佛“狮子善住”、饿鬼道佛“焰口”、地狱道佛“法王”等诸佛世尊，六道六佛，俱来现前；又有“普贤如来”“普贤佛母”，即诸佛之祖普贤父母双尊（详附注六），亦来现前。以上共有报身佛四十二尊，自汝心内外出，来现汝前。此皆为汝本来清净境中之所显现，当认取之。 <br/>
@@ -624,32 +645,32 @@ http://www.zmxh.com/pics/________________01_20060117134612.jpg <br/>
 <br/>
 复次，如是详明指示，由此认识而得解脱者，为数极多。然有下下根器，其在人间，对于正法，素未薰习，有大罪障，及失坏三昧耶等人，为业力迷惑，虽有指示，亦不认取，终仍漂转。兹第七日，有“清净空行刹土”“持明部”圣众，前来接引。尔时，为烦恼愚痴所酿成之“傍生道”光，亦来诱引。 <br/>
 <br/>
-<br/>
+1771 <br/>
 清净空行刹土持明诸尊圣众 <br/>
 <br/>
 嗟！善男子（某某）：谛听勿乱！兹第七日，有法尔清净杂色光明，起现于前；此时“清净空行刹土”“持明”诸尊圣众，前来接引，融为虹光曼荼罗海。 <br/>
 <br/>
-<br/>
+1772 <br/>
 异熟无上持明莲华舞自在与明妃红色智慧空行 <br/>
 <br/>
 曼荼罗中央“异熟无上持明”名“莲华舞自在”，其身具五光绚彩；明妃“红色智慧空行”，拥抱尊身；右持弯刀，左持注满血液之颅器，而作舞式；以瞪视印相，注目虚空，来现汝前。 <br/>
 <br/>
-<br/>
+1773 <br/>
 地居持明与明妃白色空行 <br/>
 <br/>
 曼荼罗东，“地居持明”，其身白色，微含笑容，明妃“白色空行”，拥抱尊身；右持弯刀，左持注满血液之颅器，而作舞式；以瞪视印相，注目虚空，来现汝前。 <br/>
 <br/>
-<br/>
+1774 <br/>
 寿自在持明与明妃黄色空行 <br/>
 <br/>
 曼荼罗南，“寿自在持明”，其身黄色，妙好庄严，明妃“黄色空行”，拥抱尊身；右持弯刀，左持注满血液之颅器，而作舞式；以瞪视印相，注目虚空，来现汝前。 <br/>
 <br/>
-<br/>
+1775 <br/>
 大手印持明与明妃红色空行 <br/>
 <br/>
 曼荼罗西，“大手印持明”，其身红色，微含笑容；明妃“红色空行”，拥抱尊身；右持弯刀，左持注满血液之颅器，而作舞式；以瞪视印相，注目虚空，来现汝前。 <br/>
 <br/>
-<br/>
+1776 <br/>
 任运持明与明妃绿色空行 <br/>
 <br/>
 曼荼罗北，“任运持明”，其身绿色，半怒半笑容，明妃“绿色空行”，拥抱尊身；右持弯刀，左持注满血液之颅器，而作舞式；以瞪视印相，注目虚空，来现汝前。 <br/>
@@ -682,7 +703,7 @@ http://www.zmxh.com/pics/________________01_20060117134612.jpg <br/>
 <br/>
 如上虔诚殷重发愿，则化虹光，融于“持明”部众胸中，当生“清净空行刹土”，无可置疑；诸有一切善知识种姓，唯依上文之指示，而认取之，即可解脱，纵有恶业习气，亦定解脱。 <br/>
 <br/>
-以上为“死位中有”明光直指教授，及“法性寂相中有教授听闻解脱密法”，全文已竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-1 19:27<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">    戊、次周证入怒相部尊 <br/>
+以上为“死位中有”明光直指教授，及“法性寂相中有教授听闻解脱密法”，全文已竟。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-1 19:27</span><div class="badge-floor">第 9 进</div></div><div class="post-body">    戊、次周证入怒相部尊 <br/>
 <br/>
 http://www.zmxh.com/pics/________________01_20060117134540.jpg <br/>
 <br/>
@@ -706,7 +727,7 @@ http://www.zmxh.com/pics/________________01_20060117134540.jpg <br/>
 <br/>
 嗟！善男子（某某）：谛听勿乱！以前“法性中有”寂相起现、汝未认取，故今仍复漂泊无依。兹第八日，有饮血忿怒圣众，来现当汝前，当勿迷乱。而认取之。 <br/>
 <br/>
-<br/>
+177717781783 <br/>
 佛陀兮噜迦父母双尊       佛陀兮噜迦     佛母佛陀讫洛底湿缚哩玛 <br/>
 <br/>
 嗟！善男子（某某）：此大吉祥主尊为饮血佛部世尊，名“佛陀兮噜迦”。身深棕色，三面、六臂，四足展立。其面右白、左红、正面深棕色；周身光蕴，如火炽然。九目圆睁，怒视可怖；眉耸如电；獠牙外露，吼声大笑，作“阿拉拉”及“哈哈”声；又发“嘎呜”及宏大尖锐之声；头发红黄，炽然上竖；冠饰骷髅，象征日月；黑蛇及鲜显人头为身严。六手之中：右上持“轮”，右中持“钺”，右下持“剑”；左上持“铃”，左中持“颅”，左下持“犁”。明母名“佛陀讫洛底湿缚哩玛”，拥抱尊身；右搂尊颈，左捧“红螺”（红色螺贝之碗），内贮阳精，献于尊口，吮咂作响，并发轰声，犹如雷震。于金刚炽焰毛孔中，发出智火，熊熊有光；两足右卷左展，立于大鹏座上。此乃从汝脑内“中央”所出，以如是状，现临汝前。汝当于彼，勿惊勿怖！勿生恐惧！当即认取为汝自证智身，即汝本尊；勿惊勿惧！实则仍为世尊“毗卢遮那”父母双身之体，故勿生畏怖；若能认取，立即解脱。 <br/>
@@ -717,7 +738,7 @@ http://www.zmxh.com/pics/________________01_20060117134540.jpg <br/>
 <br/>
 又复于彼，怖而逃避，而不认者，则于第九日，有饮血金刚部世尊，前来接引。其指示法，当呼亡者之名，念诵下文而告之曰： <br/>
 <br/>
-<br/>
+177917801784 <br/>
 金刚兮噜迦父母双尊       金刚兮噜迦      佛母金刚讫洛底湿缚哩玛 <br/>
 <br/>
 嗟！善男子（某某），啼听勿乱！今第九日，有饮血金刚部世尊，名“金刚兮噜迦”。身深蓝色，三面、六臂，四足展立。其面右白、左红、正面兰色。六手之中：右上持“杵”，右中持“颅”，右下持“钺”；左上持“铃”，左中持“颅”，左下持“犁”。明母名“金刚讫洛底湿缚哩玛”，拥抱尊身；右搂尊颈，左手捧红螺，内贮阳精，献于尊口，双身交抱。此乃从汝脑内东隅而出，来现汝前。汝当于彼，勿惊、勿怖，勿生恐惧！当认为汝自证智身，即汝本尊，故当认取，切勿生怖！实则仍为世尊“金刚萨埵”父母双身之体，当起欣乐；若能认取，立即解脱。 <br/>
@@ -728,7 +749,7 @@ http://www.zmxh.com/pics/________________01_20060117134540.jpg <br/>
 <br/>
 如上所示，亦有诸人，业障深重，遂于其境，生起怖畏，避而未证。今第十日，有饮血宝部世尊前来接引。其指示法，当呼亡者之名，念诵下文而告之曰： <br/>
 <br/>
-<br/>
+178117821785 <br/>
 珍宝兮噜迦父母双尊        珍宝兮噜迦    佛母珍宝讫洛底湿缚哩玛 <br/>
 <br/>
 嗟！善男子（某某）：善自谛听！今第十日，有饮血宝部世尊、名“珍宝兮噜迦”。身深黄色，三面六臂，四足展立，其面右白、左红、正面深黄。六手之中：右上持“宝”，右中持“天杖”，右下持“棒”；左上持“铃”，左中持“颅”，左下持“钢叉”。明母名“珍宝讫洛底湿缚哩玛”，拥抱尊身；右搂尊颈，左捧红螺，内贮阳精，献于尊口，双身交抱。此乃从汝脑内南隅所出，来现汝前。汝当于彼，勿惊、勿怖、勿生恐惧！当认为汝自证智身，即汝本尊，当即认取，切勿生怖！实则仍为世尊“宝生如来”父母双身之体，故当虔敬信乐；若能认取，立即解脱。 <br/>
@@ -739,7 +760,7 @@ http://www.zmxh.com/pics/________________01_20060117134540.jpg <br/>
 <br/>
 又虽如上指示，然为习气所薰，生起怖畏，仍复逃避，不识为本尊而见为阎罗法王，故未证取；则第十一日，有饮血“莲花部”世尊前来接引。其指示法，当呼亡者之名，念诵下文而告之曰： <br/>
 <br/>
-<br/>
+178617871788 <br/>
 莲花兮噜迦父母双尊        莲花兮噜迦     佛母莲花讫洛底湿缚哩玛 <br/>
 <br/>
 嗟！善男子（某某）：谛听勿乱！今第十一日，有饮血“莲花部”世尊，名“莲花兮噜迦”。身深红色，三面、六臂、四足展立。其面右白、左青，正面深红。六手之中：右上持“莲”，右中持“天杖”，右下持“棒”；左下持“铃”，左中持“满血颅器”，左下持“兆鼗”。明母名“莲花讫洛底湿缚哩玛”，拥抱尊身；右搂尊颈，左捧红螺，内贮阳精，献于尊口，双身交抱。此乃从汝脑内西隅所出，来现汝前，汝当于彼，勿惊、勿怖、勿生恐惧！实则仍为世尊“无量光如来”父母双身，故当欣敬；若能认取，立即解脱。 <br/>
@@ -750,7 +771,7 @@ http://www.zmxh.com/pics/________________01_20060117134540.jpg <br/>
 <br/>
 又虽如前指示，然为恶业习气，牵引于外，生起怖畏，仍复逃避，以不识为本尊，故不认取；则第十二日，有饮血“羯摩部”圣众，及在此日以后，又有八大“寒林”女神“吉坞哩玛”，八境兽首女神“颇罗闷玛”，兽面忿怒女神四门守护，及异类面首女神二十八自在女“汪鸠玛”等，前来接引；若不认取，即生怖畏；故当指示。此时呼亡者之名，念诵下文而告之曰： <br/>
 <br/>
-<br/>
+178917901791 <br/>
 羯摩兮噜迦父母双尊      羯摩兮噜迦     佛母羯摩讫洛底湿缚哩玛 <br/>
 <br/>
 嗟！善男子（某某）：今第十二日，有饮血羯摩部（梵文羯摩此云事业）世尊，名“羯摩兮噜迦”。身深绿色，三面、六臂，四足展立。其面右白、左红、正面深绿，现威猛可怖相。六手之中：右上持“剑”，右中持“天杖”，右下持“棒”；左上持“铃”；左中持“颅”，左下捧“犁”。明母名“羯摩讫洛底湿缚哩玛”，拥抱尊身；右搂尊颈，左捧红螺，内贮阳精，献于尊口，面合交抱。此乃从汝脑内北隅所出，来现汝前，汝当于彼，勿惊、勿怖、勿生恐惧！当即认知为自证智身，即汝本尊，故当勿怖。实则仍为世尊“不空成就如来”父母双身之体，故当虔敬，深生渴仰；若能认取，立即解脱。 <br/>
@@ -765,41 +786,41 @@ http://www.zmxh.com/pics/________________01_20060117134540.jpg <br/>
 <br/>
 嗟！善男子（某某）：谛听勿乱！今汝脑中八方位，复出八尊“吉坞哩玛”，来现汝前，汝当于彼，勿生怖畏！详述如下： <br/>
 <br/>
-<br/>
+17921793 <br/>
 白衣忿怒母White Kerima <br/>
 <br/>
 汝脑东隅：出白色“吉坞哩玛”，右手高举人尸骨杖，左手持颅，满贮鲜血，来现汝前； <br/>
 <br/>
-<br/>
+17941795 <br/>
 http://www.zmxh.com/zi/11.gif箭忿怒母Yellow Tseurima <br/>
 汝离南隅，出黄色“资坞哩玛”，手张弓矢。 <br/>
 <br/>
-<br/>
+17961797 <br/>
 摩羯鱼幢忿怒母Red Pramoha <br/>
 <br/>
 汝脑西隅：出红色“波罗谟诃玛”，手持“摩羯幢”； <br/>
 <br/>
-<br/>
+17981799 <br/>
 持金刚杵忿怒母Black Petali <br/>
 <br/>
 汝脑北隅：出黑色“培多梨玛”，右手持杵，左手持颅盖，满贮鲜血； <br/>
 <br/>
-<br/>
+18001801 <br/>
 抽肠忿怒母Red Pukkase <br/>
 <br/>
 汝脑东南隅：出红黄色“布斯迦私玛”，右手持“人肠”，左手取食； <br/>
 <br/>
-<br/>
+18021803 <br/>
 饮血忿怒母Dark-green Ghasmari <br/>
 <br/>
 汝脑西南隅：出深绿色“伽斯摩哩玛”，左手持颅盖，满贮鲜血，右手持杵搅动，现威吓状，取而饮之； <br/>
 <br/>
-<br/>
+18041805 <br/>
 食心忿怒母Yellowish-white Tsaandhal <br/>
 <br/>
 汝脑西北隅；出淡黄色“赞驮哩玛”，裂人身首，右手摘取其心，左手食其躯体； <br/>
 <br/>
-<br/>
+18061807 <br/>
 断身忿怒母Dark-blue Smasha <br/>
 <br/>
 汝脑东北隅：出深黄色“斯迷奢梨玛”，撕裂腐尸身首，取而食之。 <br/>
@@ -807,42 +828,42 @@ http://www.zmxh.com/zi/11.gif箭忿怒母Yellow Tseurima <br/>
 <br/>
 嗟！善男子（某某）：其在外围（即上说之八方位之外）复有八境兽首女神“颇罗闷玛”出现汝前： <br/>
 <br/>
-<br/>
+18081809 <br/>
 狮首紫黑忿怒母1Dark-brown Lion-headed Goddess <br/>
 <br/>
 东：有深紫色“狮首僧贺女”，双手交叉，口衔死尸，摇震鬃发； <br/>
 <br/>
-<br/>
+18101811 <br/>
 虎首忿怒母Red Tiger-headed Goddess <br/>
 <br/>
 南：有红色虎首“毗耶讫哩目佉女”，双手下叉，目睛凝视，露齿蹙眉； <br/>
 <br/>
-<br/>
+18121813 <br/>
 狐首忿怒母Black Fox-headed Goddess <br/>
 <br/>
 西：有黑色狐首“悉哩罗目佉女”，右举利刃，左持人肠，咀食吮血； <br/>
 <br/>
-<br/>
+18141815 <br/>
 狼首忿怒母Dark Blue Wolf-headed Goddess <br/>
 <br/>
 北：有深兰色狼首“湿缚南目佉女”，双手撕尸，目睛凝视； <br/>
 <br/>
-<br/>
+18161817 <br/>
 鹫首忿怒母Yellowish-white Vulture-Headed Goddess <br/>
 <br/>
 东南：有淡黄色鹫首“讫哩陀目佉女”，肩负巨尸，手举骸骨； <br/>
 <br/>
-<br/>
+18181819 <br/>
 猫头鹰首忿怒母Dark-Blue Owl-headed Goddess <br/>
 <br/>
 东北：有兰色枭首“呼鲁目佉女”，右手持杵，左手举刀，割食人肉； <br/>
 <br/>
-<br/>
+18201821 <br/>
 尸陀林鹰首忿怒母Dark-red Cenetery-bird-headed Goddess <br/>
 <br/>
 西南：有深红色鸱首“冈迦目佉女”，亦负巨尸； <br/>
 <br/>
-<br/>
+18221823 <br/>
 鸦首忿怒母Black Crow-headed Goddess <br/>
 <br/>
 西北：有黑色鸦首“佉佉目佉女”，左举颅盖，右持利剑，割取心肝。 <br/>
@@ -852,22 +873,22 @@ http://www.zmxh.com/zi/11.gif箭忿怒母Yellow Tseurima <br/>
 <br/>
 嗟！善男子（某某）：此第十四日者（按、此句英译本有，藏本无。）有兽面忿怒女神四门守护，自汝脑中，出现于外，现临汝前，亟当认取；详如下述： <br/>
 <br/>
-<br/>
+18241825 <br/>
 马面女（马首忿怒母White-Horse-headed Goad-holding Goddess） <br/>
 <br/>
 汝脑东隅：出白色“虎面女”，右手持钩，左举“红颅”，满贮鲜血；（注：此处依西藏大多数传承改为“马面女”） <br/>
 <br/>
-<br/>
+18261827 <br/>
 豕面女（猪首忿怒母Yellow Sow-headed Noose-holding Goddeaa） <br/>
 <br/>
 汝脑南隅：出黄色“豕面女”，手持“羂索”， <br/>
 <br/>
-<br/>
+18281829 <br/>
 狮面女（狮首忿怒母Red Lion-headed Iron-holding Goddess） <br/>
 <br/>
 汝脑西隅：出红色“狮面女”，手中持“锁”， <br/>
 <br/>
-<br/>
+18301831 <br/>
 蛇面女（蛇首忿怒母Green Serpent-headed Bell-holding Goddess） <br/>
 <br/>
 汝脑北隅：出绿色“蛇面女”，手中持“铃”， <br/>
@@ -875,96 +896,96 @@ http://www.zmxh.com/zi/11.gif箭忿怒母Yellow Tseurima <br/>
 <br/>
 嗟！善男子（某某）：三十忿怒相“兮鲁迦”之外围，复有异类面首二十八瑜伽自在女“汪鸠玛”，形相面首各异，手持种种兵器，自汝脑中来现汝前；汝当于彼，勿生怖畏，一切所现，皆当认取为汝本来境证智力用；临此时机，正逢阻碍大利时，当细加审量，故当忆念上师教授！ <br/>
 <br/>
-<br/>
+18321833 <br/>
 牛首罗刹女 <br/>
 <br/>
-<br/>
+18341835 <br/>
 蛇首梵天女 <br/>
 <br/>
-<br/>
+18361837 <br/>
 豹首大天女 <br/>
 <br/>
-<br/>
+18381839 <br/>
 猿首欲天女 <br/>
 <br/>
-<br/>
+18401841 <br/>
 熊首童贞女 <br/>
 <br/>
-<br/>
+18421843 <br/>
 羆首帝释女 <br/>
 <br/>
 嗟！善男子：汝脑之东，出：深紫色“牛首罗刹女”，手中持“杵”及“颅器盖”；红黄色“蛇首梵天女”，手执“莲花”。墨绿色“豹首大天女”手执“钢叉”，青色“猿首欲天女”，手中执“轮”，红色“熊首童贞女”，手执“短矛”，白色“羆首帝释女”，手执“串肠”。如是东方六瑜伽自在女，皆自汝脑东隅而出，现在汝前；汝当于彼，勿生怖畏！ <br/>
 <br/>
-<br/>
+18441845 <br/>
 蝙蝠首金刚女 <br/>
 <br/>
-<br/>
+18461847 <br/>
 摩竭鱼首寂静女 <br/>
 <br/>
-<br/>
+18481849 <br/>
 蝎首甘露女 <br/>
 <br/>
-<br/>
+18501851 <br/>
 鹞首月明女 <br/>
 <br/>
-<br/>
+18521853 <br/>
 狐首持棍女 <br/>
 <br/>
-<br/>
+18541855 <br/>
 虎首罗刹女 <br/>
 <br/>
 嗟！善男子：汝脑之南，出：黄色“蝙蝠首金刚女”，手举“利刃”，红色“摩竭鱼首寂静女”，手执“宝瓶”，红色“蝎首甘露女”，手执“莲花”，白色“鹞首月明女”，手中执“杵”，绿色“狐首持棍女”，手中执“棍”，深黄色“虎首罗刹女”，手执“血颅”。如是南方六瑜伽自在女，皆自汝脑南隅而出，现在汝前；汝当于彼，勿生怖畏！ <br/>
 <br/>
-<br/>
+18561857 <br/>
 鹫首肉食女 <br/>
 <br/>
-<br/>
+18581859 <br/>
 马首欢喜女 <br/>
 <br/>
-<br/>
+18601861 <br/>
 鹏首大力女 <br/>
 <br/>
-<br/>
+18621863 <br/>
 犬首罗刹女 <br/>
 <br/>
-<br/>
+18641865 <br/>
 戴胜鸟首爱染女 <br/>
 <br/>
-<br/>
+18661867 <br/>
 麋首护财女 <br/>
 <br/>
 嗟！善男子：汝脑之西，出：墨绿色“鹫首肉食女”，手中持“棍”；红色“马首欢喜女”，手执“体腔”；白色“鹏首大力女”，手中执“杖”；黄色“犬首罗刹女”，一手持“杵”，一以“刀”割；红色“戴胜鸟首爱染女”，手张弓矢，绿色“麋首护财女”，手执“宝瓶”。如是西方六瑜伽自在女，皆自汝脑西隅而出，现在汝前；汝当于彼，勿生怖畏！ <br/>
 <br/>
-<br/>
+18681869 <br/>
 狼首风神女 <br/>
 <br/>
-<br/>
+18701871 <br/>
 羊首妙妇女 <br/>
 <br/>
-<br/>
+18721873 <br/>
 豕首亥女 <br/>
 <br/>
-<br/>
+18741875 <br/>
 鸦首金刚女 <br/>
 <br/>
-<br/>
+18761877 <br/>
 象首大鼻女 <br/>
 <br/>
-<br/>
+18781879 <br/>
 蛇首水天女 <br/>
 <br/>
 嗟！善男子：汝脑之北，出蓝色“狼首风神女”，手展旌旗；红色“羊首妙妇女”，手持“人签”（剌人的一种尖杆刑具。）；黑色“豕首亥女”，手持“齿索”（以齿穿贯之绳索。）红色“鸦首金刚女”，手持“孩尸”；墨绿色“象首大鼻女”，手持“巨尸”，饮其颅盖之血；青色“蛇首水天女”，手持“蛇索”。如是北方六瑜伽自在女，皆自汝脑北隅而出，现在汝前；汝当于彼，勿生怖畏！ <br/>
 <br/>
-<br/>
+18801881 <br/>
 杜鹃首金刚女 <br/>
 <br/>
-<br/>
+18821883 <br/>
 山羊金刚女 <br/>
 <br/>
-<br/>
+18841885 <br/>
 狮首金刚女 <br/>
 <br/>
-<br/>
+18861887 <br/>
 蛇首金刚女 <br/>
 <br/>
 嗟！善男子：此外复有四门守护四瑜伽女，从汝脑中来现汝前。汝脑东隅，出白色“杜鹃首金刚女”，手中持“钩”；汝脑南隅，出黄色“山羊金刚女”，手中持“索”；汝脑西隅，出红色“狮首金刚女”，手中持“锁”；汝脑北隅，出绿色“蛇首金刚女”，手中持“铃”。此四门四瑜伽女，皆自汝脑中出，而来现前。以上二十八自在女，亦为“兮噜迦”忿怒尊自生之身力用所现，故当认取。 <br/>
@@ -1016,7 +1037,7 @@ http://www.zmxh.com/zi/11.gif箭忿怒母Yellow Tseurima <br/>
 <br/>
 本密法乃一切法中续部心要，中有教授要诀，仅由耳闻即得解脱。若获目见，亦得解脱。凡在临命终时，多为每一种习气之所惑乱，除此“听闻解脱密法”，更无其他方便。惟诸胜上修行人，平日熟修薰习，于证智上，曾有指证及觉受者，到身心分离时，法性显现，则于“死位中有”明光初现之时，在认识上极为有力，故此法当于在生之时，奉为课诵，明记勿忘，是为至要！并于此文字句义，涵泳玩味，通达了解，如理作意，三时念诵，习以为常；如能明白句义，牢记于心，纵有百鬼驱逐，于此句义亦不忘失。若复有人，经过一次听闻，虽其人曾积无间大罪，亦得解脱。故对此微妙密法，当于大众中，广为朗诵，令其一度听闻。虽复不解其义，但在“中有”时，自内证智，豁然开朗，记忆力强，较在生前，超过九倍，其在尔时，一字亦不忘失而能记忆。故当于世间之人，广为详说；诸病人前，当为朗诵；亡者耳旁，亦当朗诵。对此妙法，广为流通，有缘之人逢遇此法，极为庆幸！其有未积善根资粮，或未净垢障者，甚难遭遇，纵使得遇，亦难容心信受，坐失大利而已。凡有阅此法者，仅需对之不起颠倒妄见，即可解脱，是故对之极宜珍重！ <br/>
 <br/>
-法性中有指示终。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-1 19:31<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">正编下卷　轮回中有教授 <br/>
+法性中有指示终。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-1 19:31</span><div class="badge-floor">第 10 进</div></div><div class="post-body">正编下卷　轮回中有教授 <br/>
 <br/>
 皈敬偈 <br/>
 <br/>
@@ -1149,7 +1170,7 @@ http://www.zmxh.com/zi/11.gif箭忿怒母Yellow Tseurima <br/>
 <br/>
 嗟！善男子（某某）：谛听！何谓六道之光？此谓天道之光，其色灰白，修罗道光，其色黯绿；人道之光，其色浅黄；傍生道光，暗兰为色；饿鬼道光，色为淡红；惟有地狱，光如烟雾。当诸光起现时，汝之身色，感生何道，亦即现何道之光色。 <br/>
 <br/>
-嗟！善男子（某某）：在此时际，教授之法，最为重要，任何光现，皆当观为“大悲怙主”放光，存想其光冉冉而来者，即是大悲至尊（圣观自在菩萨），此为最极深要之导示，而能遮闭投生之处。又或汝已曾修习随一之本尊，观如幻境，毫无自性，持久观修，则知此所谓“净幻身”也。次观本尊身形，自外而内，渐渐隐没，至不可得，则于“明”“空”无执之状，安住顷刻于法界中。再次观本尊，次观明光，如是轮流观想；再观自内证智，亦自外而内，渐皆隐没，空遍一切，明遍一切，法身遍一切，平等安住于法身离戏境相中。在此境上，自能遮止投生之处而成佛矣。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-1 19:34<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">第二章　转生方式 <br/>
+嗟！善男子（某某）：在此时际，教授之法，最为重要，任何光现，皆当观为“大悲怙主”放光，存想其光冉冉而来者，即是大悲至尊（圣观自在菩萨），此为最极深要之导示，而能遮闭投生之处。又或汝已曾修习随一之本尊，观如幻境，毫无自性，持久观修，则知此所谓“净幻身”也。次观本尊身形，自外而内，渐渐隐没，至不可得，则于“明”“空”无执之状，安住顷刻于法界中。再次观本尊，次观明光，如是轮流观想；再观自内证智，亦自外而内，渐皆隐没，空遍一切，明遍一切，法身遍一切，平等安住于法身离戏境相中。在此境上，自能遮止投生之处而成佛矣。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-1 19:34</span><div class="badge-floor">第 11 进</div></div><div class="post-body">第二章　转生方式 <br/>
 <br/>
 己、避免生死闭塞胎门 <br/>
 <br/>
@@ -1301,7 +1322,7 @@ http://www.zmxh.com/zi/11.gif箭忿怒母Yellow Tseurima <br/>
 复次，此法当在生前常时念诵，对于文句，熟记于心，一旦报尽命终，证知定时死相起现时，若自有气力，自己念诵，思维句义；若自力不继时，则由侣伴照此经本宣读，高声朗诵，务必字句分明，定得解脱，决无疑义，又此法为不需修习禅观、见法即得解脱之甚深教授，又为罪障深重者、从狭道中救度之甚深教授，有缘见者，对此深妙之法，纵有七犬吠逐，于此文句，当勿忘失！临命终时，诸佛言教，三世佛力，亦无有胜于此者。 <br/>
 <br/>
 中有教授能度同体一切有情名曰中有教授听闻解脱密法终 <br/>
-一切吉祥　善哉 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-1 19:47<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">附编 <br/>
+一切吉祥　善哉 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-1 19:47</span><div class="badge-floor">第 12 进</div></div><div class="post-body">附编 <br/>
 <br/>
 汉文咒音表 <br/>
 <br/>

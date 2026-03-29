@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>释迦牟尼佛传 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>释迦牟尼佛传 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">释迦牟尼佛传</h1>
-<div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 04:39<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">释迦牟尼佛传 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/教法传记传承史.html">教法传记传承史</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">释迦牟尼佛传</h1>
+<div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 04:39</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">释迦牟尼佛传 <br/>
 星云大师 著 <br/>
 <br/>
 初版自序 <br/>
@@ -74,7 +95,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 南无本师释迦牟尼佛！ <br/>
 <br/>
 世界佛教纪元二四九九年八月 <br/>
-星云写于宜兰念佛会  </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 04:41<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">第一章　序　说 <br/>
+星云写于宜兰念佛会  </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 04:41</span><div class="badge-floor">第 2 进</div></div><div class="post-body">第一章　序　说 <br/>
 <br/>
 我们要想了解一个宗教的内容，以及一个宗教是否为我们人生所需要，则我们一定先要了解一个宗教的教主。他的人格、智慧，是否值得我们崇拜信奉？以及我们崇拜信奉了他，他是否真能指示我们解脱人生的烦恼痛苦？我想：这是我们信仰宗教首先需要知道的课题。 <br/>
 <br/>
@@ -85,7 +106,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 我们皈投在佛教的怀抱之中，既可以把佛教当一种宗教来信仰，也可以把佛教当一种学术来研究。同时，创立佛教的教主释迦牟尼佛，更可以作我们每一个人做人的最高模范。 <br/>
 <br/>
-救世主释迦牟尼佛是世间上最崇高伟大的圣者，佛教是世界上最博大精深的宗教。佛教流传至今日，虽然已遍及全球，但遗憾的是宣扬圣教的教徒，都重在玄谈，而忽略了佛陀应化在世间上的精神。理论超过现实，都没有体会到佛陀住世的本怀。唯有发扬佛陀觉人救世的精神，佛教才能更令人有所敬仰，有所效法。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 04:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">第二章　佛陀住世时的印度社会 <br/>
+救世主释迦牟尼佛是世间上最崇高伟大的圣者，佛教是世界上最博大精深的宗教。佛教流传至今日，虽然已遍及全球，但遗憾的是宣扬圣教的教徒，都重在玄谈，而忽略了佛陀应化在世间上的精神。理论超过现实，都没有体会到佛陀住世的本怀。唯有发扬佛陀觉人救世的精神，佛教才能更令人有所敬仰，有所效法。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 04:43</span><div class="badge-floor">第 3 进</div></div><div class="post-body">第二章　佛陀住世时的印度社会 <br/>
 <br/>
 很多人都以为今日学佛的人，是逃避现实，消极厌世，这实在是误解了学佛的本义。佛陀所以出家修道成佛，一方面当然是为了解救自己生死苦恼的问题，但另一方面是为了救济被压迫的人民。我们如果知道救主释迦牟尼佛住世奋斗的经过，一定就会明白他实在是一位伟大的慈悲的革命者。 <br/>
 <br/>
@@ -119,19 +140,19 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 教主释迦牟尼佛，就是出生在这样一个阶级悬殊的社会里，他自己虽是剎帝力的王族，但他并不想用剎帝力的权威去统治人民，压迫人民。相反的，他用慈悲平等的真理，毅然的向阶级森严的社会宣战。关于这个事实，后来到他成道时就有证明，他在菩提树下初成正觉的时候，就发出了「大地众生皆有如来智慧德相」的平等主张，后来又有「四姓出家，同为释氏」的四海皆兄弟的宣言，佛陀慈悲平等的主义，终于给数千年来被奴役的印度人民带来了光明。 <br/>
 <br/>
-优波离本是一个首陀罗族中的剃头匠，后来在佛陀的弟子中被奉为是十大弟子之一；摩登伽女是首陀罗族中的一名贱女，她为了爱恋阿难的美貌，受佛陀的感化而即刻证得阿罗汉果。由于这些事实证明，旧有的阶级社会，不得不在佛陀大慈悲真平等的主义下失去统制者的力量！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 04:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">第三章 佛陀住世时的印度思想界 <br/>
+优波离本是一个首陀罗族中的剃头匠，后来在佛陀的弟子中被奉为是十大弟子之一；摩登伽女是首陀罗族中的一名贱女，她为了爱恋阿难的美貌，受佛陀的感化而即刻证得阿罗汉果。由于这些事实证明，旧有的阶级社会，不得不在佛陀大慈悲真平等的主义下失去统制者的力量！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 04:44</span><div class="badge-floor">第 4 进</div></div><div class="post-body">第三章 佛陀住世时的印度思想界 <br/>
 <br/>
 印度是一个文化古国，因为群雄拥兵自重，在思想界方面是极其发达，要知三千年前印度的思想界，正有如我国春秋战国时代。 <br/>
 <br/>
 三千年前的印度思想界，虽是非常发达，但又陷入十分混乱的状态。因为，婆罗门教把传习赞颂和仪式，认做是一种专有的东西，把文句定得十分详密，义理说得十分幽玄，形成一种繁琐的神秘作风。他们处处称天意做事，任何事件都含着秘密。人民的智识总是要发展的，所以很容易引起脱离神话，走向理智去探索。后来有自然派的哲学兴起，就宇宙物质方面加以说明的，如地论、水论、火论等；另有一派，就宇宙抽象观念方面加以说明的，如时论、方论、虚空论等。从此各种思潮纷纷起来，复杂到极顶，一般人民，更是给这搞得混淆不清。在这个时候，很需要宇宙的究竟真理指出人生应行的大道；在这个时候，很需要有一种圆满的革新宗教。佛陀生在这个时候，像一粒定水珠一样，把一塘混浊之水的印度思想界澄清，指示徘徊在岐途上的人们一条应行的大道。 <br/>
 <br/>
-因为那时的阶级制度的不平，人的思想和生活极端的不自由，意志薄弱的人，在这阶级制度之下，感叹身世的不幸，多倾向消极方面；意志坚强的人，就对古宗教起了疑惑，暗地里发生了反动的思想。加之婆罗门教徒，专横暴戾，处处丧失人心。因此人们大都走上了两个极端的思想，一个是顺世享乐，一个是遁世苦行。顺世享乐的物质乐观主义，偏入于有；遁世苦行的精神厌世主义，倾向于空。这是当时思想界的矛盾，佛陀生当在这个时候，眼看着这思想界不正常的发展，他就尽力的排斥这两种偏左偏右的思想。佛陀成道后对人生的说法，不偏于物质，也不偏于精神，而是发自一种缘起中道的思想。这种思想演为教说，救了当时的印度，也救了千万年后的我们。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 04:45<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">第四章　佛陀的家谱 <br/>
+因为那时的阶级制度的不平，人的思想和生活极端的不自由，意志薄弱的人，在这阶级制度之下，感叹身世的不幸，多倾向消极方面；意志坚强的人，就对古宗教起了疑惑，暗地里发生了反动的思想。加之婆罗门教徒，专横暴戾，处处丧失人心。因此人们大都走上了两个极端的思想，一个是顺世享乐，一个是遁世苦行。顺世享乐的物质乐观主义，偏入于有；遁世苦行的精神厌世主义，倾向于空。这是当时思想界的矛盾，佛陀生当在这个时候，眼看着这思想界不正常的发展，他就尽力的排斥这两种偏左偏右的思想。佛陀成道后对人生的说法，不偏于物质，也不偏于精神，而是发自一种缘起中道的思想。这种思想演为教说，救了当时的印度，也救了千万年后的我们。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 04:45</span><div class="badge-floor">第 5 进</div></div><div class="post-body">第四章　佛陀的家谱 <br/>
 <br/>
 起佛陀的家谱，先要知道释迦族的来由。那还是在佛纪前二三千年的时候，居住在中亚细亚的雅利安民族，发起了一次移民运动，开始往印度和波斯移殖。起初印度当地其他的种族也曾作强烈的抵抗，因为雅利安人的体质强壮，皮肤白皙，终于征服了其中最有势力而又体质矮小皮肤黝黑的达罗毘茶族。雅利安族因此控制了印度，在那里建立许多国家，奠定了印度民族的基础。这其中有名为释迦族的征服者，就是这雅利安族的一派。 <br/>
 <br/>
 释迦族的远祖，其最初的王名叫众所许，同姓相承到大善生王，这就是释迦牟尼佛的七世祖。大善生王有子名师摩懿，师摩懿有子忧陀罗，忧陀罗有子瞿罗，瞿罗生有一男一女，男名师子颊，女名耶输陀罗。师子颊王生有四子，长子净饭大王，就是后来释迦牟尼佛的父王。 <br/>
 <br/>
-净饭大王在他亲族中迎娶了拘利族王国天臂城阿拏释迦王的公主摩耶和其妹摩诃波阇波提为妻，摩耶夫人就是后来出家修行成道的佛陀的母后。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 04:47<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">第五章 净饭大王与摩耶夫人 <br/>
+净饭大王在他亲族中迎娶了拘利族王国天臂城阿拏释迦王的公主摩耶和其妹摩诃波阇波提为妻，摩耶夫人就是后来出家修行成道的佛陀的母后。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 04:47</span><div class="badge-floor">第 6 进</div></div><div class="post-body">第五章 净饭大王与摩耶夫人 <br/>
 <br/>
 在靠近雪山南麓森林繁茂的地方，有一个很富裕的国家建立在此，这就是有名的迦毘罗卫国。国王净饭大王是释迦族中的族长。他英勇能干，智胜德高，自从做了国王以后，把一个迦毘罗卫国治理得真是风调雨顺，国泰民安。因为他是一位威爱兼备的大王，所以很受臣民的拥戴。全国的人民，在他英明的领导之下，都丰衣足食，和平安乐的度着宝贵的岁月。 <br/>
 <br/>
@@ -167,7 +188,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 夫人自从做了这个梦之后，就和通常的女人两样。她每天幸福安乐的过着日子，没有忧患，没有苦恼，更没有瞋怒、贪欲、和虚伪的心生起来。她不喜欢喧闹的地方，每天只喜欢在空闲幽静的林旁或水边游乐。 <br/>
 <br/>
-没有过了多久，夫人把怀妊的喜讯告诉国王，净饭大王这一听之下，喜得真是心花怒放，他得悉了这个希望二十余年的喜讯，把往日积郁在心中的忧闷，完全扫除。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 04:48<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">第六章　蓝毘尼园中太子降诞 <br/>
+没有过了多久，夫人把怀妊的喜讯告诉国王，净饭大王这一听之下，喜得真是心花怒放，他得悉了这个希望二十余年的喜讯，把往日积郁在心中的忧闷，完全扫除。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 04:48</span><div class="badge-floor">第 7 进</div></div><div class="post-body">第六章　蓝毘尼园中太子降诞 <br/>
 <br/>
 日子在欢乐中过去，王妃摩耶夫人十月怀胎渐渐的满足，但她还是照样的喜欢到寂静的郊野去散步。青枝绿叶的草木，潺潺有声的流泉，夫人认为这都有助于人生的修养。一天，正在春末夏初的月圆之日，这是一个风和日暖天朗气清的好日子，夫人向净饭大王说明要到迦毘罗卫国的国都郊外的蓝毘尼花园中去郊游，并且也打算游园后依着风俗应回母家去生产，净饭大王听后，想到夫人怀妊已经足月，回到母家生育，这是不可违背的风俗，但夫人为什么还有这游园的奇特的兴趣和请求，他考虑一会，即刻命令更多的侍女，并亲自护送夫人经过蓝毘尼花园到她母家天臂城去。 <br/>
 <br/>
@@ -179,7 +200,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 空中来了很多的天王和梵神，天王举起琉璃床的四足，梵神恭敬的捧着珍贵的伞盖，无数的天人都出现在空中，他们都来赞美这位现在的太子，未来的佛陀的降诞。 <br/>
 <br/>
-太子和夫人舒服的卧在床上，净饭大王欢喜惊奇的站立在旁边。就在这当儿，天衣从空中飘覆在太子的身上，世间上燃尽了的薪又炽盛起来，溷浊的流水都变成了清净可爱，各色的花儿开得比前更美妙芬芳，凶恶的人一时也生起慈悲的心来，呻吟着的病者不要医药就自然痊愈，很多乱鸣着的禽兽都忽然静止下来，虐待国民的暴君都转为贤明，世间上的一切都得到了安稳。即使深居在幽静偏僻地方的人民，都知道这稀有的瑞相，成千上万的人民，都争先恐后的聚集到蓝毘尼花园而来。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 04:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">第七章　相者的预言 <br/>
+太子和夫人舒服的卧在床上，净饭大王欢喜惊奇的站立在旁边。就在这当儿，天衣从空中飘覆在太子的身上，世间上燃尽了的薪又炽盛起来，溷浊的流水都变成了清净可爱，各色的花儿开得比前更美妙芬芳，凶恶的人一时也生起慈悲的心来，呻吟着的病者不要医药就自然痊愈，很多乱鸣着的禽兽都忽然静止下来，虐待国民的暴君都转为贤明，世间上的一切都得到了安稳。即使深居在幽静偏僻地方的人民，都知道这稀有的瑞相，成千上万的人民，都争先恐后的聚集到蓝毘尼花园而来。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 04:51</span><div class="badge-floor">第 8 进</div></div><div class="post-body">第七章　相者的预言 <br/>
 <br/>
 净饭大王在夫人与太子的身旁，见到世间上都在变动的情形，一面欢喜，一面又在忧惧。 <br/>
 <br/>
@@ -251,7 +272,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 阿私陀仙说后，对太子恭敬作礼就告辞而去。 <br/>
 <br/>
-净饭大王此时心中虽然生起失望空虚的感觉，但他对太子却更生有一种敬重之心。他即刻命令全国，把牢狱开放，大赦所有的囚犯：劳动的苦役，也特别给假休息；供养婆罗门的上等食品，祭祀一切祠宇里的善神，赏赐大臣们珍贵的物品，国中贫乏乞食的丐者都施以饮食，侍从宫女都分有牛马象等与金银，整个迦毘罗卫国中的上上下下的人民，都狂欢鼓舞起来，全国的人民都为国家降诞了太子而庆祝欢呼！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 04:54<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">第八章 太子少年时的教育 <br/>
+净饭大王此时心中虽然生起失望空虚的感觉，但他对太子却更生有一种敬重之心。他即刻命令全国，把牢狱开放，大赦所有的囚犯：劳动的苦役，也特别给假休息；供养婆罗门的上等食品，祭祀一切祠宇里的善神，赏赐大臣们珍贵的物品，国中贫乏乞食的丐者都施以饮食，侍从宫女都分有牛马象等与金银，整个迦毘罗卫国中的上上下下的人民，都狂欢鼓舞起来，全国的人民都为国家降诞了太子而庆祝欢呼！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 04:54</span><div class="badge-floor">第 9 进</div></div><div class="post-body">第八章 太子少年时的教育 <br/>
 <br/>
 迦毘罗卫国中净饭大王生下稀有的太子，宗族王亲，都呈献无数的象马宝车；邻国的国王，也赠送很多七宝的器具，这表示祝贺王家及太子万岁之忱。 <br/>
 <br/>
@@ -304,7 +325,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 有一次，净饭大王为了提倡武术，下令诸释种童子，举办一次武艺竞赛大会。在竞赛的时候，太子的堂弟提婆达多一箭射穿三鼓，太子的亲弟难陀也是一箭射穿三鼓，赢得观众无数的掌声，轮到太子的时候，他嫌弓力太弱，令到武库里取来祖用的良弓，牵挽平胸，一箭射去，穿过七个铁鼓，四周的观众，欢呼喝彩，鼓掌若雷，他们看到太子的武艺，大家共庆未来的国王一定能统一印度。 <br/>
 <br/>
-净饭大王看看太子，望望观众，骄傲的微笑了。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 04:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">第九章 美丽的耶输陀罗妃 <br/>
+净饭大王看看太子，望望观众，骄傲的微笑了。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 04:56</span><div class="badge-floor">第 10 进</div></div><div class="post-body">第九章 美丽的耶输陀罗妃 <br/>
 <br/>
 年轻的太子，长得是仪表堂堂，因此，常有很多贵门的少女，王族的千金，想博得他的宠爱。豪华的宴会，欢狂的歌舞，一日都不停息的烦扰着太子。 <br/>
 <br/>
@@ -340,7 +361,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 净饭大王心中高兴的想着：「我爱我的太子悉达多，悉达多一定爱子如我爱他，那么他当然不会生起出家的思想，这是我唯一的希望。」 <br/>
 <br/>
-世间上无论那一个国王对他的太子，都怕将来生性流于放纵，沉迷情欲，容易染着声色的快乐。可是净饭大王却和这种念头相反，自从悉达多太子长成以后，他的心中就无时不在希望太子能恣情纵欲，爱名好利，千万不能在年轻的时候就有悠闲的思想。其他的圣者修行得到金刚的大道，都是他享尽现实世间的快乐以后才去修行。现在是应该自己来让位给太子而去山林深处修行，因为这时太子正该享受人间福乐的时候。太子的一切，一定要特别的注意与关怀。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 05:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">第十章 太子出城去郊游 <br/>
+世间上无论那一个国王对他的太子，都怕将来生性流于放纵，沉迷情欲，容易染着声色的快乐。可是净饭大王却和这种念头相反，自从悉达多太子长成以后，他的心中就无时不在希望太子能恣情纵欲，爱名好利，千万不能在年轻的时候就有悠闲的思想。其他的圣者修行得到金刚的大道，都是他享尽现实世间的快乐以后才去修行。现在是应该自己来让位给太子而去山林深处修行，因为这时太子正该享受人间福乐的时候。太子的一切，一定要特别的注意与关怀。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 05:00</span><div class="badge-floor">第 11 进</div></div><div class="post-body">第十章 太子出城去郊游 <br/>
 <br/>
 王城的欢乐，一日复一日，然而太子却又渐渐的厌烦起喧骚的烦嚣来了。那些芸芸受苦的众生，他们的影子清楚的印在太子的心中。美丽的耶输陀罗，初生的罗侯罗，在太子的心中，实在没有占到重要的地位。因为除了这些，他心中还有一个更高的理想，还有更多的众生。 <br/>
 太子虽住在声色俱娱的宫中，但他却欢喜散步在幽静的地方，或者是在寂静的环境中沉思默想。好比一头大象，虽然给人系缚在美好的房中，但是他的心还是回忆着在青草繁茂的旷野遨游。 <br/>
@@ -425,7 +446,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 太子即刻命令御者车匿返城，车匿这次是奉王命不能早归的，他很畏怖的不敢转车，马奔走得很快，太子的马车终于到达游玩的园林。 <br/>
 <br/>
-马车走进园林，太子注意一看，这里是水清树茂，灵禽飞鸣，其幽美好似那天上的乐园。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 05:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">第十一章　最大的诱惑 <br/>
+马车走进园林，太子注意一看，这里是水清树茂，灵禽飞鸣，其幽美好似那天上的乐园。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 05:04</span><div class="badge-floor">第 12 进</div></div><div class="post-body">第十一章　最大的诱惑 <br/>
 <br/>
 悉达多太子走进园林，许多被国王选派来的宫女，都出来迎接。她们竞向太子献媚，极尽妖艳之姿，努力想要博得太子的欢心。 <br/>
 <br/>
@@ -489,7 +510,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 诸大臣都异口同声的回答： <br/>
 <br/>
-『除了增加五欲之乐能够改变太子的心外，再也找不出其他更好的方法！』 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 05:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">第十二章　太子立志去出家 <br/>
+『除了增加五欲之乐能够改变太子的心外，再也找不出其他更好的方法！』 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 05:08</span><div class="badge-floor">第 13 进</div></div><div class="post-body">第十二章　太子立志去出家 <br/>
 <br/>
 从此，净饭大王又在太子的宫中，增添更多的财宝、美女，他想用这些来不分昼夜的娱乐太子的心，但是，太子对这些一点留恋的心情都没有，每天他都为老病死而忧患而烦恼！他好像是锐箭射中的狮子，在高山茂密的林中着急。 <br/>
 <br/>
@@ -579,7 +600,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 太子说罢，跨上了马，马鞭一扬，命令车匿一同出城了。 <br/>
 <br/>
-人，像天上静静满轮的明月；马，像上空迅速飘浮的白云；没有喘息，没有嘶声，城内的万象都寂寂的在睡眠，唯有太子和马的心很锐，奔驰如流星一般，东方还未白，已经行程数十里了。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 05:12<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">第十三章　车匿和犍陟 <br/>
+人，像天上静静满轮的明月；马，像上空迅速飘浮的白云；没有喘息，没有嘶声，城内的万象都寂寂的在睡眠，唯有太子和马的心很锐，奔驰如流星一般，东方还未白，已经行程数十里了。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 05:12</span><div class="badge-floor">第 14 进</div></div><div class="post-body">第十三章　车匿和犍陟 <br/>
 <br/>
 黑黝黝的夜，终于过去了，光明的世界，又出现在眼前。 <br/>
 <br/>
@@ -661,7 +682,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『唉！太子啊！你舍弃大王和一切眷属，现在你又舍弃了我！』 <br/>
 <br/>
-车匿拖着两条沉重的腿，只得悲悲切切的叹息流泪着回城，走在途中，他老是回身反顾着枝叶婆娑的苦行林。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 05:15<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">第十四章 苦行林中劝谏仙人 <br/>
+车匿拖着两条沉重的腿，只得悲悲切切的叹息流泪着回城，走在途中，他老是回身反顾着枝叶婆娑的苦行林。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 05:15</span><div class="badge-floor">第 15 进</div></div><div class="post-body">第十四章 苦行林中劝谏仙人 <br/>
 <br/>
 太子走到远远的地方，迅速的回过头来一看，见到悲啼着的车匿牵着白马向王城的路上走去，他这才毫无罣碍的进入跋伽仙人的苦行林。 <br/>
 <br/>
@@ -715,7 +736,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『这个苦行林，不是你应居住的处所，你赶快到频陀山去，那个地方有一位大圣者名阿罗蓝的修道者，你如果去的话，必定能听到真实的大道。但是我看你的志向，或者那里也不能令你满足，那时，你可以舍弃他去另求大道！』 <br/>
 <br/>
-太子听了这位苦行者的话，心中既感激又欢喜，他在苦行林住了一宿，第二天就和那些苦行者一一辞行，太子就在这些苦行者叹息声中告别苦行林。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 05:19<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">第十五章 都城中的悲哀 <br/>
+太子听了这位苦行者的话，心中既感激又欢喜，他在苦行林住了一宿，第二天就和那些苦行者一一辞行，太子就在这些苦行者叹息声中告别苦行林。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 05:19</span><div class="badge-floor">第 16 进</div></div><div class="post-body">第十五章 都城中的悲哀 <br/>
 <br/>
 现在再说离开太子的车匿，他不断的流着眼泪，心里充满了绝望与悲哀，一边走，一边不住的叹息道： <br/>
 <br/>
@@ -809,7 +830,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『好！好！你们赶快去！我的心早已飞到太子那里去了！』 <br/>
 <br/>
-这两位大臣奉命之后，即刻准备出发。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 05:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">第十六章 王师追至苦行林 <br/>
+这两位大臣奉命之后，即刻准备出发。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 05:24</span><div class="badge-floor">第 17 进</div></div><div class="post-body">第十六章 王师追至苦行林 <br/>
 <br/>
 净饭大王正在悲痛而又没有办法的时候，听到两位大臣自告奋勇，愿意去把太子追回来，心里才稍稍感到安慰，他选派不少王族中的子弟，另外派遣一队勇猛的兵士，跟随那两位大臣，浩浩荡荡的向着苦行林进发。 <br/>
 <br/>
@@ -907,7 +928,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『我现在告诉你们关于我的决心，日月可以堕在地上，雪山的顶上可以成海，而我金刚的信念，到永劫都不变易！假若我要退堕道心，还不如把身子投入烈火里化为灰烬，我绝不会做出这反复不定的事来！』 <br/>
 <br/>
-太子说出求道的理由和志愿，二位大臣见太子如此坚决，没有话可再回答，他俩和王师在如日月之相的太子前伏倒顶礼起来，他们计已穷尽，只得辞退而返，但又不敢疾速的归去，徘徊在途中，真是万分狼狈！他们深深为太子感动，恭敬佩服到五体投地，因此就在王师中选出憍如、陈舍婆誓、摩男跋提、十力迦叶、摩男俱利等五人，伴随侍奉太子去学道。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 05:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 18 楼</span></div><div class="post-body">第十七章 频婆娑罗王俗利劝诱 <br/>
+太子说出求道的理由和志愿，二位大臣见太子如此坚决，没有话可再回答，他俩和王师在如日月之相的太子前伏倒顶礼起来，他们计已穷尽，只得辞退而返，但又不敢疾速的归去，徘徊在途中，真是万分狼狈！他们深深为太子感动，恭敬佩服到五体投地，因此就在王师中选出憍如、陈舍婆誓、摩男跋提、十力迦叶、摩男俱利等五人，伴随侍奉太子去学道。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 05:29</span><div class="badge-floor">第 18 进</div></div><div class="post-body">第十七章 频婆娑罗王俗利劝诱 <br/>
 <br/>
 既已舍弃国家，又和二位大臣告别的太子，渡过恒河的急流，经过灵鹫山，进入摩竭陀国的首都王舍城。 <br/>
 <br/>
@@ -1019,7 +1040,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 太子说后，即刻告辞，急急的寻路又往各处去云游参访。 <br/>
 <br/>
-频婆娑罗王和他很多的臣下，合掌拜送太子去后，他们在回归王舍城的途中都希望那正觉的日光早日再回来！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 05:31<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 19 楼</span></div><div class="post-body">第十八章　访问阿罗蓝仙人 <br/>
+频婆娑罗王和他很多的臣下，合掌拜送太子去后，他们在回归王舍城的途中都希望那正觉的日光早日再回来！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 05:31</span><div class="badge-floor">第 19 进</div></div><div class="post-body">第十八章　访问阿罗蓝仙人 <br/>
 <br/>
 太子辞别频婆娑罗王以后，披星戴月，忍饥受饿的又开始踏上他追求真理的征途。有一天，他到了一座寂静的森林，森林中有一位阿罗蓝大仙人在那里修行，太子记起苦行林中一位苦行者临别时的介绍，他即刻就想走进森林往访这位阿罗蓝仙人。 <br/>
 <br/>
@@ -1064,7 +1085,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 但是郁陀仙人也是数论派的学者，和阿罗蓝仙人，没有分别，一个是五十步，一个是一百步。 <br/>
 <br/>
-太子为了追求甚深微妙的真理，感到全印度都没有一个可以师事的人。所以他觉得除了自己修持觉悟外，再去东跑西奔的只是浪费时间和精神。因此，他又告别郁陀仙人，在各方云游不久，最后进入尼连禅河的东岸，登上钵罗笈菩提山，可是觉得这里也不是一个寂静的地方，因此，渡过尼连禅河，想去伽耶山的苦行林修道。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 05:35<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 20 楼</span></div><div class="post-body">第十九章　伽耶山太子修行 <br/>
+太子为了追求甚深微妙的真理，感到全印度都没有一个可以师事的人。所以他觉得除了自己修持觉悟外，再去东跑西奔的只是浪费时间和精神。因此，他又告别郁陀仙人，在各方云游不久，最后进入尼连禅河的东岸，登上钵罗笈菩提山，可是觉得这里也不是一个寂静的地方，因此，渡过尼连禅河，想去伽耶山的苦行林修道。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 05:35</span><div class="badge-floor">第 20 进</div></div><div class="post-body">第十九章　伽耶山太子修行 <br/>
 <br/>
 太子各方寻师访道，光阴茌苒，不觉度过五、六年之久的岁月。 <br/>
 <br/>
@@ -1147,7 +1168,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『我若不能了脱生死，到达正觉涅盘的希望，誓不起此座！』 <br/>
 <br/>
-太子发誓后，心中非常欢喜，默然的思索解决生死的问题。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 05:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 21 楼</span></div><div class="post-body">第二十章　降伏魔军与魔女 <br/>
+太子发誓后，心中非常欢喜，默然的思索解决生死的问题。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 05:37</span><div class="badge-floor">第 21 进</div></div><div class="post-body">第二十章　降伏魔军与魔女 <br/>
 <br/>
 太子在菩提树下金刚座上发出坚固的誓愿以后，世间上很多修道者，以及天上的天神，都生大欢喜，他们一心祈祷太子早日启开正觉的大门。 <br/>
 <br/>
@@ -1200,7 +1221,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『这一位大求道者，不久必定要达到真实的解脱，你们赶快远离一切骄慢，生起惭愧的心，赶快归顺今日的大修道者──未来的世尊之前！』 <br/>
 <br/>
-天大将军向魔王训斥以后又归返到天上，魔军一听天大将军的吼声，很快的都撤退了。太子此刻的心，像无风的水面，更加的平静；像正午的太阳，更加光明。天空散下来的花朵，好像是等待着供养即将成就正等正觉的太子。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 05:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 22 楼</span></div><div class="post-body">第廿一章　成就无上正觉的佛陀 <br/>
+天大将军向魔王训斥以后又归返到天上，魔军一听天大将军的吼声，很快的都撤退了。太子此刻的心，像无风的水面，更加的平静；像正午的太阳，更加光明。天空散下来的花朵，好像是等待着供养即将成就正等正觉的太子。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 05:40</span><div class="badge-floor">第 22 进</div></div><div class="post-body">第廿一章　成就无上正觉的佛陀 <br/>
 <br/>
 降伏恶魔以后的太子，志愿更加坚固，心中更加平静，深入在三昧的禅定境界中，已经到达无念无想的领域，可以说光天化日的觉悟世界，就将现在眼前。 <br/>
 <br/>
@@ -1258,7 +1279,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『至尊至贵的佛陀！我们是一群天神，我们在这里向您致最恭敬虔诚的礼拜，我们是来祝贺您获得正觉的解脱。您在这个世间上，能走上不生不死的境界，实在是这个世间上所有众生的幸福与光荣。您像一盏慧灯，黑暗的世间需要您的光明。您不要忧虑愚痴的人类毁谤您的正法而造罪，这是他们自作自受！您应该依照您的本怀，传播您的福音，让那些迷途的羔羊，早日能够回头，早日登上觉岸。希望您佛陀，伸出慈悲的手，垂无缘的大悲，永作这世间上的救世主啊！』 <br/>
 <br/>
-佛陀听了天上善神至诚劝请的言辞，心中非常欢喜，即刻离开伽耶山菩提树下金刚座，怀着一颗救济众生的大悲心，预备向迦尸城的方向走去。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 23:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 23 楼</span></div><div class="post-body">第廿二章　初转法-轮教团成立 <br/>
+佛陀听了天上善神至诚劝请的言辞，心中非常欢喜，即刻离开伽耶山菩提树下金刚座，怀着一颗救济众生的大悲心，预备向迦尸城的方向走去。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 23:05</span><div class="badge-floor">第 23 进</div></div><div class="post-body">第廿二章　初转法-轮教团成立 <br/>
 <br/>
 佛陀踏着慈悲的步伐，独自向迦尸城而来，途中，忽然逢到一个名叫优波迦的求道者，他见到佛陀威严的相好，不知不觉生起恭敬的心，用很尊敬的礼节站在路旁，待佛陀经过他身边的时候，跪下来问道： <br/>
 <br/>
@@ -1339,7 +1360,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『好！你们现在都能解脱，从此再不会生出众苦，你们就做我的弟子为比丘僧吧，我和你们将是世间上的第一福田。现在佛（释尊）法（四圣谛）僧（五比丘）都已具备，这名之为三宝。这三宝的佛宝、法宝、僧宝合作起来，佛陀的教化就可以广布天下，就可以指导接引一切众生都进入光明的大道，获得究竟圆满的解脱。』 <br/>
 <br/>
-憍陈如、阿舍婆誓、摩诃跋提、摩男俱利、十方迦叶等五位比丘僧，听佛陀的法语，欢喜踊跃，信受奉行，从此随侍佛陀，做着自利利人的工作。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 23:08<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 24 楼</span></div><div class="post-body">第廿三章　最初的居士和信女 <br/>
+憍陈如、阿舍婆誓、摩诃跋提、摩男俱利、十方迦叶等五位比丘僧，听佛陀的法语，欢喜踊跃，信受奉行，从此随侍佛陀，做着自利利人的工作。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 23:08</span><div class="badge-floor">第 24 进</div></div><div class="post-body">第廿三章　最初的居士和信女 <br/>
 <br/>
 自从憍陈如等五人皈依佛陀以后，佛陀就常带着他们行化在缚啰迦河的沿岸，那里的一切，都是很适宜佛化的地方，佛陀对这个地方非常中意，因此就暂时住下来。 <br/>
 <br/>
@@ -1391,7 +1412,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『我现在也要和你们暂时告别，我要到伽耶山去，离那里不远，有一位名叫优楼频罗迦叶的苦行仙人，他的修行和名望很高；非常受世人尊敬，很多修道者，都认为在他的门下苦练修学而引以为荣，我想即刻先去济度他来弃邪归正！』 <br/>
 <br/>
-佛陀吩咐以后，五十多名弟子，欢喜踊跃，依教奉行，因此就随缘往各方出发，开始过他们自利利人的第一次布教生活！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 23:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 25 楼</span></div><div class="post-body">第廿四章　三迦叶弃邪归正 <br/>
+佛陀吩咐以后，五十多名弟子，欢喜踊跃，依教奉行，因此就随缘往各方出发，开始过他们自利利人的第一次布教生活！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 23:14</span><div class="badge-floor">第 25 进</div></div><div class="post-body">第廿四章　三迦叶弃邪归正 <br/>
 <br/>
 佛陀现在是独自一人，踏着庄严而稳重的步伐，渐渐的走上胜利的大道。 <br/>
 <br/>
@@ -1499,7 +1520,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 佛陀说法以后，就领着这一千名弟子，应摩竭陀国频婆娑罗王昔日的邀约，向摩竭陀国的首都王舍城而来。 <br/>
 <br/>
-佛陀带领弟子走后，留下迦叶的这座苦行林，人去林空，寂寞萧条，风儿吹动着树梢，鸟儿也很少飞来啼叫，这座苦行林，从此失去了迷妄的荣耀！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 23:18<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 26 楼</span></div><div class="post-body">第廿五章　频婆娑罗王的皈依 <br/>
+佛陀带领弟子走后，留下迦叶的这座苦行林，人去林空，寂寞萧条，风儿吹动着树梢，鸟儿也很少飞来啼叫，这座苦行林，从此失去了迷妄的荣耀！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 23:18</span><div class="badge-floor">第 26 进</div></div><div class="post-body">第廿五章　频婆娑罗王的皈依 <br/>
 <br/>
 现在说到佛陀离开尼连禅河优楼频罗迦叶的苦行林，有一天来到灵鹫山顶，这里茂林修行，花卉争艳，是一个风景美好的地方，佛陀就暂时在这里住下来休息。王舍城的人民，对于佛陀光临的消息已很早获知，他们都准备要用香花欢迎于道旁。尤其社会上一些敏感的人，知道三迦叶兄弟皈依佛陀经过，都在谈论不休。舆论界更是惊奇的赞仰佛陀，这些出人意料的消息，就这样传入国王的耳中。 <br/>
 <br/>
@@ -1547,7 +1568,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『忘了我而只为一切众生，再忘了我及一切众生而进入不动心的领域，把心扩大与宇宙一体时，那就是「我」进入涅盘之时，大王这才是人间本来的实相，那个地方才没有生死。』 <br/>
 <br/>
-佛陀讲到这里的时候，频婆娑罗王和一切听众，内心清凉，得到无上的喜悦，得到法眼净。频婆娑罗王欢喜非常，大众也感动得流着眼泪，他们都皈依了佛陀。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 23:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 27 楼</span></div><div class="post-body">第廿六章　在竹林精舍的教化 <br/>
+佛陀讲到这里的时候，频婆娑罗王和一切听众，内心清凉，得到无上的喜悦，得到法眼净。频婆娑罗王欢喜非常，大众也感动得流着眼泪，他们都皈依了佛陀。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 23:25</span><div class="badge-floor">第 27 进</div></div><div class="post-body">第廿六章　在竹林精舍的教化 <br/>
 <br/>
 频婆娑罗王迎接佛陀住在王宫中，得到无上的法乐，他心中老是想着不知如何报答佛陀才好。 <br/>
 <br/>
@@ -1669,7 +1690,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『我早就知道今天是你得度的日期！很好，未来佛法的流传，用着你的地方非常之多。』 <br/>
 <br/>
-佛陀度化大迦叶以后，王舍城的佛法，已经打好基础，灵鹫山的精舍也成于此时，国王学者，纷纷的皈投而来，佛陀的教化，更是普遍各方了。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 23:29<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 28 楼</span></div><div class="post-body">第廿七章　祇园精舍的建立 <br/>
+佛陀度化大迦叶以后，王舍城的佛法，已经打好基础，灵鹫山的精舍也成于此时，国王学者，纷纷的皈投而来，佛陀的教化，更是普遍各方了。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 23:29</span><div class="badge-floor">第 28 进</div></div><div class="post-body">第廿七章　祇园精舍的建立 <br/>
 <br/>
 佛陀在竹林精舍，环绕在左右的弟子，逐渐的加多，弟子多了，发心供养的人也是与日俱增。 <br/>
 <br/>
@@ -1788,7 +1809,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 佛陀受给孤独的迎请，带领弟子暂时离开王舍城竹林精舍向北方的祇园精舍而来，佛陀知道机缘成熟，沿途都施以教化。 <br/>
 <br/>
-佛陀到达舍卫城祇树给孤独园的时候，人人都很欢喜，佛陀受他们全城人民盛大的热烈的欢迎。佛陀在北方从此也有了佛化的根据地。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 23:32<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 29 楼</span></div><div class="post-body">第廿八章　波斯匿王的皈依 <br/>
+佛陀到达舍卫城祇树给孤独园的时候，人人都很欢喜，佛陀受他们全城人民盛大的热烈的欢迎。佛陀在北方从此也有了佛化的根据地。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 23:32</span><div class="badge-floor">第 29 进</div></div><div class="post-body">第廿八章　波斯匿王的皈依 <br/>
 <br/>
 佛陀被给孤独长者迎接到祇园精舍，这里的环境和风景优美得好比人间天上。园中有的是奇花异木，精舍建筑得又富丽堂皇。禽鸟婉转的鸣叫，流泉潺潺的有声，佛陀和弟子们就在这里安住下来。 <br/>
 <br/>
@@ -1836,7 +1857,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『大王！我再告诉你，你不要以为修善学道就非要出家不可，修学真正的大道，出家与在家都没有分别。有的深山之中学道而堕落，有的在家庭里面修行而获福。修行学道是不分甚么人的，做王的人，一样的可以修行。』 <br/>
 <br/>
-佛陀的法语，每一句都使波斯匿王听了非常恳切的信服。从此，波斯匿王做了佛陀忠诚的护法，皈依佛陀做了得力的弟子。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 23:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 30 楼</span></div><div class="post-body">第廿九章　归城施法语 <br/>
+佛陀的法语，每一句都使波斯匿王听了非常恳切的信服。从此，波斯匿王做了佛陀忠诚的护法，皈依佛陀做了得力的弟子。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 23:40</span><div class="badge-floor">第 30 进</div></div><div class="post-body">第廿九章　归城施法语 <br/>
 <br/>
 佛陀和弟子们所住的舍卫城祇园精舍，和佛陀的祖国迦毘罗城相距不远，因此迦毘罗城中人民，都纷纷的传说佛陀不久就要回国来了。净饭大王耳闻这些风声，他并不敢妄想和佛陀相逢，不过他也曾想派遣使者前去迎接，但又恐怕遭受佛陀的拒绝。经验告诉净饭大王，佛陀虽然是他的太子，但佛陀有佛陀的思想，佛陀有佛陀的责任，他知道佛陀这个人不是听人话的人。要回来的时候他自然回来，否则，千请万请，也没有用。净饭大王越是思念越是能忍耐，这反而助长他的修养。 <br/>
 <br/>
@@ -1998,7 +2019,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『我明白的告诉你们，我现在是把生活安住在涅盘的里面，而你们却还是生活在无常、迷惑、苦恼之中。假若你们要进入清净自由解脱的涅槃，唯有修学八正道。八正道是：正见、正思惟、正语、正业、正命、正精进、正念、正定，这就是走向正道之路．．．。』 <br/>
 <br/>
-佛陀说法时，大家都全神注意倾听，佛陀的归城，以无价的真理之宝，赠送给大家，大家除了欢喜信受之外，每一个人此刻都感到佛陀降生在迦毘罗卫国是他们无比的光荣。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 23:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 31 楼</span></div><div class="post-body">第三十章 诸王子出家得度 <br/>
+佛陀说法时，大家都全神注意倾听，佛陀的归城，以无价的真理之宝，赠送给大家，大家除了欢喜信受之外，每一个人此刻都感到佛陀降生在迦毘罗卫国是他们无比的光荣。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 23:46</span><div class="badge-floor">第 31 进</div></div><div class="post-body">第三十章 诸王子出家得度 <br/>
 <br/>
 佛陀在故乡迦毘罗卫国，随缘方便的说几次佛法，这些菩提种子，逐渐的在人内心中发芽，跟随净饭大王左右的人，以及释迦族中佛陀的王弟等，都想披剃出家。净饭大王的心中，是欢喜抑是悲哀，自己也不知道。他也想信仰佛陀，他知道他是不能反对佛陀的。 <br/>
 <br/>
@@ -2134,7 +2155,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『佛陀！我以前住在好像铜墙铁壁的宫中，有着很多拿着武器的勇士护卫，但我仍然惧怕怨贼歹徒来对我的伤害，我时时都对生命发生死慌和忧虑。可是我现在即使独自一人，在静静的林中坐禅，心中却有说不出的愉快。世俗上的奢华生活，吃的虽是美味，穿的又是绫罗，但一点安定都没有。现在的生活，倒可以自由的睡，自由的坐，一点没有不安的感觉。没有忧虑，也没有烦闷，所以不知不觉中，我时常说现在生活的快乐。』 <br/>
 佛陀听后就非常欢喜的说道： <br/>
-『你很有善根，我过去也是和你一样。』 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-22 23:48<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 32 楼</span></div><div class="post-body">第卅一章　净饭大王的逝世 <br/>
+『你很有善根，我过去也是和你一样。』 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-22 23:48</span><div class="badge-floor">第 32 进</div></div><div class="post-body">第卅一章　净饭大王的逝世 <br/>
 <br/>
 佛陀在祖国逗留约三个月左右的时间，然后他就带领弟子回祇园精舍说法，经过数年，又再回到王舍城灵鹫山的竹林精舍去安居。 <br/>
 <br/>
@@ -2176,7 +2197,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 释迦族中，有一位英武的王子大将，名叫摩诃那摩，是阿那律的哥哥，大家都同意他来摄政，佛陀非常欢喜，匆匆的领着亲随的弟子告别迦毘罗城，暂住在城外的尼拘陀林。 <br/>
 <br/>
-摩诃那摩承担迦毘罗卫国的摄政，所以一时还能维持小康的局面，至于迦毘罗卫国未来的悲运，仍然是无法避免，这在大觉佛陀的心中，早就知道。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-23 01:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 33 楼</span></div><div class="post-body">第卅二章　最初的比丘尼 <br/>
+摩诃那摩承担迦毘罗卫国的摄政，所以一时还能维持小康的局面，至于迦毘罗卫国未来的悲运，仍然是无法避免，这在大觉佛陀的心中，早就知道。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-23 01:20</span><div class="badge-floor">第 33 进</div></div><div class="post-body">第卅二章　最初的比丘尼 <br/>
 <br/>
 佛陀暂住在尼拘陀林中，有一天，佛陀的姨母摩诃波阇波提夫人带领约有五百人之多的释迦种族中的女人，到尼拘陀树林中拜访佛陀，并以两件新织的衣服供奉给佛陀。 <br/>
 <br/>
@@ -2314,7 +2335,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 不久，耶输陀罗也加入摩诃波阇波提夫人的比丘尼教团中出家了。 <br/>
 <br/>
-耶输陀罗出家这一回事，佛陀的心中并没有和过去一样的不高兴，他像把心上的一个很重的包袱放下一般。佛陀不是不知道人情的人，而是知道得过多人情的人。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-23 07:07<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 34 楼</span></div><div class="post-body">第卅三章　制戒的因缘 <br/>
+耶输陀罗出家这一回事，佛陀的心中并没有和过去一样的不高兴，他像把心上的一个很重的包袱放下一般。佛陀不是不知道人情的人，而是知道得过多人情的人。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-23 07:07</span><div class="badge-floor">第 34 进</div></div><div class="post-body">第卅三章　制戒的因缘 <br/>
 <br/>
 佛陀的弟子群中，有着种种不同的人物。假若把佛陀的弟子，一律要求他们都具备圣贤的条件，这是错误的想法。佛弟子终究是佛弟子，他们并不是佛陀，自有种种贤愚不肖的分别。 <br/>
 <br/>
@@ -2391,7 +2412,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 佛陀制定根本大戒以后，仍然有少数的弟子做出违背佛陀教诫的事来，佛陀经过很长的时间，很多的事实，制定四波罗夷、十三僧残、二不定、三十尼萨耆波逸提、九十波逸提、四波罗夷提舍尼、七灭诤、百众学等的比丘的戒律，比丘尼则有三百五十条戒。菩萨有十重四十八轻戒。在家皈依三宝的弟子，则可以受五戒，或六重二十八轻的菩萨戒而作优婆塞及优婆夷。 <br/>
 <br/>
-戒，维系了僧团的清净，各人遵照戒律而行，过法制的生活，僧团就是自治民主的象征，佛陀又规定每半月布萨诵戒一次，集合说戒，使诸比丘都能在清净戒法之中长养善心。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-23 07:11<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 35 楼</span></div><div class="post-body">第卅四章　僧团中的争执与安乐 <br/>
+戒，维系了僧团的清净，各人遵照戒律而行，过法制的生活，僧团就是自治民主的象征，佛陀又规定每半月布萨诵戒一次，集合说戒，使诸比丘都能在清净戒法之中长养善心。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-23 07:11</span><div class="badge-floor">第 35 进</div></div><div class="post-body">第卅四章　僧团中的争执与安乐 <br/>
 <br/>
 佛陀传道初期，常随众的比丘弟子，光是度了三迦叶及舍利弗和目犍连以后，就有千余人之多，随后又有很多的求道者加入僧团，这么多的比丘住在一起，常有些意见的争执，这自是免不了的事。 <br/>
 <br/>
@@ -2477,7 +2498,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 非法喜争的人，一部份反省觉悟，一部份大家共同压制他，他们这才忏悔，才知道大海流出的百川，是不能分的。 <br/>
 <br/>
-世间上争执的烦恼，和乐的安静，原是各人自找的，僧团中的学道者，在大圣佛陀的德化之下，因为根机的不同也有着圣凡之分。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-23 07:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 36 楼</span></div><div class="post-body">第卅五章　毘舍佉大心布施 <br/>
+世间上争执的烦恼，和乐的安静，原是各人自找的，僧团中的学道者，在大圣佛陀的德化之下，因为根机的不同也有着圣凡之分。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-23 07:14</span><div class="badge-floor">第 36 进</div></div><div class="post-body">第卅五章　毘舍佉大心布施 <br/>
 <br/>
 佛陀在祇园精舍教化的时候，一天，当佛陀托钵经过街道，有一对夫妇供养佛陀一钵饭，佛陀说： <br/>
 <br/>
@@ -2575,7 +2596,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 佛陀的僧团中，比丘和比丘尼过的什么生活，不难想象而知。 <br/>
 <br/>
-不过，他们的物质生活虽很贫乏，但心内却充满欢喜，因为他们是已接触到佛陀的爱的人！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-23 07:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 37 楼</span></div><div class="post-body">第卅六章　迦留陀夷其人其事 <br/>
+不过，他们的物质生活虽很贫乏，但心内却充满欢喜，因为他们是已接触到佛陀的爱的人！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-23 07:20</span><div class="badge-floor">第 37 进</div></div><div class="post-body">第卅六章　迦留陀夷其人其事 <br/>
 <br/>
 佛陀的弟子中，有着各种各样的人，安份守己的好人固多，兴风作浪的人也不能说没有。 <br/>
 <br/>
@@ -2695,7 +2716,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 不久，杀害迦留陀夷的那个盗匪被捕，民众中有人说那天还看到迦留陀夷和姑娘同走的，因此姑娘和盗匪经过审问后，波斯匿王下令判处极刑。 <br/>
 <br/>
-从此，迦留陀夷的身体是毁灭了，但他的性灵却得救了。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-24 02:19<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 38 楼</span></div><div class="post-body">第卅七章　玉耶女的悔改 <br/>
+从此，迦留陀夷的身体是毁灭了，但他的性灵却得救了。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-24 02:19</span><div class="badge-floor">第 38 进</div></div><div class="post-body">第卅七章　玉耶女的悔改 <br/>
 <br/>
 用黄金铺地建立祇园精舍的须达长者，他的第七个最小的儿子，迎娶王舍城护弥长者的女儿玉耶为妻，玉耶生长得姿容秀美，身材楚楚动人，她自恃自己的美丽，对公婆固然是没有孝顺服侍，就是对丈夫或亲朋也看不在眼中，有时眉目言谈之间，还有轻慢侮辱的意思。 <br/>
 <br/>
@@ -2809,7 +2830,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『做人谁能无过呢？知过必改，就是聪明的贤人了。』 <br/>
 <br/>
-玉耶最后哀求佛陀为她授说六重二十八轻戒，她愿世世生生，作一家庭佛化的优婆夷，须达长者的全家，也都为她祝贺新生。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-24 02:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 39 楼</span></div><div class="post-body">第卅八章　善生长者归佛化 <br/>
+玉耶最后哀求佛陀为她授说六重二十八轻戒，她愿世世生生，作一家庭佛化的优婆夷，须达长者的全家，也都为她祝贺新生。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-24 02:24</span><div class="badge-floor">第 39 进</div></div><div class="post-body">第卅八章　善生长者归佛化 <br/>
 <br/>
 佛陀有一次从憍萨弥罗国顺着恒河的流水，进入摩竭陀国的罗阅祇城内。这时城内有一位富家的公子，早上起来就来到郊外园中，先湿了衣服，然后湿了头发，恭敬合十，先向东方礼拜，然后再向南西北方，以及上方下方顶礼。 <br/>
 <br/>
@@ -2955,7 +2976,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『善生！礼拜这圣贤法中的东方父母，南方的师长，西方的妻子，北方的亲友，下方的僮仆，上方的沙门，则行为端正，心离顽愚，努力工作，精进行道。他一定更会广交善友，亲近善知识，多行慈悲喜舍，发四无量心，多作布施爱语，行四摄法，这才是真正的孝养之心。』 <br/>
 <br/>
-善生听了佛陀的教示，开智慧眼，无量欢喜，信受奉行。他当即皈依佛陀，从此舍弃他过去那愚昧的礼拜六方，做了三宝的信者。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-24 02:34<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 40 楼</span></div><div class="post-body">第卅九章　摩登伽女出家证圣果 <br/>
+善生听了佛陀的教示，开智慧眼，无量欢喜，信受奉行。他当即皈依佛陀，从此舍弃他过去那愚昧的礼拜六方，做了三宝的信者。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-24 02:34</span><div class="badge-floor">第 40 进</div></div><div class="post-body">第卅九章　摩登伽女出家证圣果 <br/>
 <br/>
 佛陀的比丘弟子中，长得最年轻最漂亮的是阿难尊者，他有庄严得如满月似的面容，有清净得如莲花似的眼珠，加之他非常聪明伶俐，佛陀所有应机的说法，听到他的耳中，他就不会忘记。 <br/>
 <br/>
@@ -3086,7 +3107,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 波斯匿王本来想劝谏佛陀的，但佛陀倒先开示波斯匿王。波斯匿王听佛陀的开示后，更加恭敬佩服佛陀，他带着清净的心回入王宫。 <br/>
 <br/>
-摩登伽女出家后的不久，即证得四圣果中最高的阿罗汉果，很多的比丘见到她都很惭愧！她的美德圣行传扬出来，社会上的人也很感动，大家对她都生起恭敬供养之心，但社会上这时候却很少有人记得先知先觉者佛陀当初的用心了！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-24 02:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 41 楼</span></div><div class="post-body">第四十章　最初的迫害 <br/>
+摩登伽女出家后的不久，即证得四圣果中最高的阿罗汉果，很多的比丘见到她都很惭愧！她的美德圣行传扬出来，社会上的人也很感动，大家对她都生起恭敬供养之心，但社会上这时候却很少有人记得先知先觉者佛陀当初的用心了！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-24 02:37</span><div class="badge-floor">第 41 进</div></div><div class="post-body">第四十章　最初的迫害 <br/>
 <br/>
 没有黑暗显不出光明，没有罪恶不知道善美，大觉佛陀的僧团中，遭遇种种的迫害，那像是注定的天经地义之事。然而每次中伤与迫害，反而助长佛陀的威望，佛法的宣扬。 <br/>
 <br/>
@@ -3137,7 +3158,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『你有儿女情长的私爱，我很同情你的用心，可是，你在真理的佛陀之前，这种用心早就应该舍弃。请你仔细的想想，你就可以知道城市既不是你的，粮食也非你一人所有，你所有的是善恶行业。城民、粮食，你有离开的一日，善恶的行业却时时跟着你。』 <br/>
 <br/>
-佛陀的法语，善觉王听后仍不觉悟，他对佛陀的无礼，佛陀虽慈悲的没有怀恨在心，但每个人造作的业力，是不能逃出自作自受的因果定律，善觉王以后不到七日，就不幸的得暴病死亡。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-24 02:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 42 楼</span></div><div class="post-body">第四十一章　提婆达多叛逆遭报 <br/>
+佛陀的法语，善觉王听后仍不觉悟，他对佛陀的无礼，佛陀虽慈悲的没有怀恨在心，但每个人造作的业力，是不能逃出自作自受的因果定律，善觉王以后不到七日，就不幸的得暴病死亡。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-24 02:46</span><div class="badge-floor">第 42 进</div></div><div class="post-body">第四十一章　提婆达多叛逆遭报 <br/>
 <br/>
 佛陀自从证得正觉以来，无论甚么人，都可以皈依佛陀。出家的男子叫做比丘，女子叫做比丘尼；在家的男子叫优婆塞，女子叫优婆夷。究竟有多少人做佛陀的弟子，佛陀从没有计算。佛陀在灵鹫山宣讲《妙法莲华经》的时候，光是在王舍城的一地听众，就有以舍利弗、目犍连、大迦叶等为上首的比丘弟子一万二千人，有以摩诃波阇波提为上首的比丘尼及其眷属六千人，有以观音、文殊他方而来的诸大菩萨八万人，此外还有国王、大臣、学者、人民，其数之多，是很难统计。 <br/>
 <br/>
@@ -3416,7 +3437,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 没有凶恶的计谋，见不着慈悲的心肠；没有卑劣的行为，见不到崇高的人格。正因为提婆达多，佛陀的威德，像朗朗高照的太阳，像巍峨耸立的高山，更使人敬仰！崇拜！皈依！ <br/>
 <br/>
-提婆达多的势力不会长久，镀的金一定要剥落的，剥落的时候就无法收拾，提婆达多后来有人说他失踪，其实他是犯了五逆重罪，招感的果报是即身堕入地狱，地狱之苦，绵绵无尽期，提婆达多的命运是够悲惨的！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-24 02:50<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 43 楼</span></div><div class="post-body">第四十二章　阿阇世王忏悔得救 <br/>
+提婆达多的势力不会长久，镀的金一定要剥落的，剥落的时候就无法收拾，提婆达多后来有人说他失踪，其实他是犯了五逆重罪，招感的果报是即身堕入地狱，地狱之苦，绵绵无尽期，提婆达多的命运是够悲惨的！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-24 02:50</span><div class="badge-floor">第 43 进</div></div><div class="post-body">第四十二章　阿阇世王忏悔得救 <br/>
 <br/>
 提婆达多灭亡以后，阿阇世王并不因他的灭亡而悲哀，反而在他的八识田中，感到这是罪有应得。原来，阿阇世王已逐渐有了悔意。 <br/>
 <br/>
@@ -3539,7 +3560,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 阿阇世王听了佛陀的开示，对新的生命充满希望和信心，他生大欢喜，万有迷妄的乌云扫去，他感激涕零的跪在佛陀的座前。 <br/>
 <br/>
-浪子回头金不换，阿阇世王终于皈依佛陀得救了！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-24 02:57<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 44 楼</span></div><div class="post-body">第四十三章　迦毘罗城的悲运 <br/>
+浪子回头金不换，阿阇世王终于皈依佛陀得救了！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-24 02:57</span><div class="badge-floor">第 44 进</div></div><div class="post-body">第四十三章　迦毘罗城的悲运 <br/>
 <br/>
 佛陀应身的年龄，随着春花秋月在增加；佛陀的态度，更慈和、更沉着、更庄严。 <br/>
 <br/>
@@ -3685,7 +3706,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 摩诃那摩的孙儿，波斯匿王的太子琉璃王，就这样占有了迦毘罗卫国。 <br/>
 <br/>
-琉璃王极为专横，后来杀死他的长兄祇陀太子，疏远谏臣，怠于政治，不久，宫城忽然被火焚烧，琉璃王和他的爱妃都被大火烧死。这时，已向佛陀忏悔皈依的摩竭陀国的阿阇世王，受着情势的需要，就把憍萨弥罗国和迦毘罗卫国归入自己的版图。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-24 03:23<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 45 楼</span></div><div class="post-body">第四十四章　特别的教化 <br/>
+琉璃王极为专横，后来杀死他的长兄祇陀太子，疏远谏臣，怠于政治，不久，宫城忽然被火焚烧，琉璃王和他的爱妃都被大火烧死。这时，已向佛陀忏悔皈依的摩竭陀国的阿阇世王，受着情势的需要，就把憍萨弥罗国和迦毘罗卫国归入自己的版图。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-24 03:23</span><div class="badge-floor">第 45 进</div></div><div class="post-body">第四十四章　特别的教化 <br/>
 <br/>
 伟大的佛陀，施恩惠给众生，到处普洒甘露法雨，滋润着众生枯干的心田。佛陀的教示，又是苦海中的法船，能够接引众生从生死的此岸，到达涅盘的彼岸。 <br/>
 <br/>
@@ -3903,7 +3924,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『你从今以后，第一不要乱杀生，第二不要乱盗取，第三不要乱邪淫，第四不要乱妄言，第五不要乱饮食，并且要用慈母的天性，照顾天下的孩子。』 <br/>
 <br/>
-鬼子母诚恳的接受佛陀的教诫，佛陀归还她的孩子嫔伽罗，她内心的欢喜不能用言语文字形容，她发愿从此做天下孩子们的保护者。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-24 04:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 46 楼</span></div><div class="post-body">第四十五章　十大比丘弟子 <br/>
+鬼子母诚恳的接受佛陀的教诫，佛陀归还她的孩子嫔伽罗，她内心的欢喜不能用言语文字形容，她发愿从此做天下孩子们的保护者。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-24 04:04</span><div class="badge-floor">第 46 进</div></div><div class="post-body">第四十五章　十大比丘弟子 <br/>
 <br/>
 佛陀的弟子，有在家与出家之分，在家的弟子，千千万万，其数之多，很难用数目去统计，就是出家的弟子，光是证得阿罗汉果的常随众的比丘就有一千二百五十五人之多，其他分散在各地的以及后来出家证果的尚不算在内，在这些弟子中，更有最特出的所谓十大比丘弟子。 <br/>
 <br/>
@@ -4874,7 +4895,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 布施第一──毘舍佉　　   　多闻第一──郁多罗 <br/>
 看病第一──须彼耶　　     信仰坚固第一──迦帝耳 <br/>
-传三宝第一──迦利 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-24 04:11<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 47 楼</span></div><div class="post-body">第四十六章　从越祇国到毘舍离国 <br/>
+传三宝第一──迦利 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-24 04:11</span><div class="badge-floor">第 47 进</div></div><div class="post-body">第四十六章　从越祇国到毘舍离国 <br/>
 <br/>
 佛陀有一次离开王舍城的耆阇窟山，度过恒河进入越祇国，在那边说教的次数很多，经过很多的乡村，又经过很多的市镇，佛陀知道以应身佛陀住世度化的因缘，总要有完的时候，佛陀很想把要教示的完全教给大家。 <br/>
 <br/>
@@ -5080,7 +5101,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『佛陀！毘舍离城中的花园，以我的这个花园最优美，我现在供养给佛陀，请佛陀怜愍到我，慈悲的纳受。』 <br/>
 <br/>
-佛陀很欢喜的接受下来，命令不少跟随的弟子留在毘舍离国说法度生，自己和阿难等，就和毘舍离城告别。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-24 04:16<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 48 楼</span></div><div class="post-body">第四十七章　最后的弟子及遗教 <br/>
+佛陀很欢喜的接受下来，命令不少跟随的弟子留在毘舍离国说法度生，自己和阿难等，就和毘舍离城告别。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-24 04:16</span><div class="badge-floor">第 48 进</div></div><div class="post-body">第四十七章　最后的弟子及遗教 <br/>
 <br/>
 伟大的佛陀，应身的年龄到了八十岁的时候，带着阿难行化到遮婆罗塔的地方，许多比丘也都来聚会在这里，佛陀就对大家说道： <br/>
 <br/>
@@ -5235,7 +5256,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 『佛陀！我们了解四圣谛和十二因缘的真理，在这个世间上，月可令热，日可令冷，佛陀的四圣谛和十二因缘的教法不可令异。』 <br/>
 <br/>
-佛陀非常安静，没有一点疲倦的样子，这就是将要进入涅盘的佛陀吗？叫人真难以了解，诸比丘弟子都在黯然的啜泣。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-5-24 04:18<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 49 楼</span></div><div class="post-body">第四十八章　涅　　盘 <br/>
+佛陀非常安静，没有一点疲倦的样子，这就是将要进入涅盘的佛陀吗？叫人真难以了解，诸比丘弟子都在黯然的啜泣。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-5-24 04:18</span><div class="badge-floor">第 49 进</div></div><div class="post-body">第四十八章　涅　　盘 <br/>
 <br/>
 西山上高悬着一轮满月，在二月十五日的午夜时分，它显得是更大更美，但谁也不去注意，大家只沐浴在佛陀的爱的慈光中。 <br/>
 <br/>

@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>藏传佛教象征符号与器物图解（主要礼仪和密宗器具） - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>藏传佛教象征符号与器物图解（主要礼仪和密宗器具） - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/金刚菩提遍庄严.html">金刚菩提遍庄严</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">藏传佛教象征符号与器物图解（主要礼仪和密宗器具）</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2011-3-21 21:43<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">金刚杵（梵文：vajra;藏文：rDo-rje） <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/金刚菩提遍庄严.html">金刚菩提遍庄严</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">藏传佛教象征符号与器物图解（主要礼仪和密宗器具）</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚竹发表于 2011-3-21 21:43</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">金刚杵（梵文：vajra;藏文：rDo-rje） <br/>
 <br/>
 金刚杵是金刚乘坚不可摧的典型象征。“金刚”二字既是金刚杵的名称，也是一群以金刚冠名的神灵、器物和性质的称号或前缀。梵文“vajra” 意为“坚固”或“力大无比”。而藏文的对应词“多吉” 则是“石王”之意，表明它和金刚石 一样具有坚不可摧的硬度和璀璨之光。这种坚硬无比的石头不易切割也不会破损。从根本上来讲，佛教的金刚杵象征着绝对现实的难以捉摸、不会毁灭、不可撼动、不可改变、无形和坚固的状态，即：佛性的圆满。 <br/>
 在印度吠陀时期，金刚杵最初是大天神因陀罗的主要武器或“霹雳闪电”。因陀罗神运用神力控制季雨期的电闪雷鸣并杀死了“810”条龙 。据说，因陀罗神的金刚杵是用大贤哲 陀提吉 坚硬的颅骨制成的。这个金刚杵常被画成中间有洞的圆盘，上面有一对交叉的涡杆或一根带槽的金属棒，棒上有一百颗或一千颗尖钉。作为霹雳闪电，金刚杵可能相当于条顿 民族雷神 的流行斧、希腊天神宙斯 的霹雳王杖和罗马朱庇特神 的三道霹雳闪电。作为一件投掷武器，因陀罗神的坚不可摧的霹雳闪电宛如火球般的流星划过天界，在雷暴的大漩涡中发出闪电和火光。在早期印度和中亚艺术中，金刚杵通常被画成短而坚硬的棍棒，两端各有一个尖利的股叉。这或许是对这个令人生畏之武器的最精准的描述。据说，佛陀从因陀罗神手中接过这个武器，将股叉折在一起使之变成了一根和平王杖。 <br/>
@@ -58,7 +79,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 五股金刚杵是金刚乘佛教最常使用的形式。它有一个中轴股叉，在四大基本方位上还有四个弯曲的外股叉。四个外股叉同样从摩羯嘴里伸出，与中央股叉末端连为一体。四个摩羯象征着“四无量”、“四解脱门”、战胜“四魔” 、“四业” “四喜” 、四大基本方位和土、水、火、风四大纯净要素。五个上股叉代表五佛智，这些智慧源于已经改变的“五毒” 和已经净化的“五蕴” 。四个外股叉向内弯曲，与中心股叉连为一体，象征着色、受、想、行“四蕴”是以第五蕴“识”为依据的。五个较低的股叉代表着“五佛母”，即：五佛的女性伴偶，象征着地、水、火、风、空五大纯净要素。五个上股叉和五个下股叉也代表着五妙欲和五官。总体上来说，五股金刚杵的十个股叉代表着十大方位、“十度” 和菩提修行的十地 。 <br/>
 九股金刚杵上有一个中轴股叉和八个弯曲的外股叉，它们直接插在金刚杵两端的四大基本方位和四小基本方位上。八个外股叉同样从摩羯嘴伸出，象征着八识 和引导人们摆脱轮回之苦的佛陀的“八正道”。中央股叉和四大方位的上股叉代表着五佛，而四小方位上的股叉代表着“四佛母”，即：占据四方之四佛的女性伴偶。中央和四个较低位置上的股叉代表“五佛智”，而四小方位的股叉代表“四无量”。九股金刚杵基本上象征着对宁玛派九乘 的彻悟。九股叉也象征着八大菩萨簇拥下的金刚持、佛陀及其“八正道”和坛城的主要中心和八大方位。 <br/>
 在更神秘的层面上，金刚杵这个象征物经常是众多神灵生成时所使用的直观修持的“前奏”。此时，将第一个种子符号画成生成于空性，或出现在修持者的面前或在他们心中。随后，这个种子符号融入光中，以八瓣莲花的形状显现，并在莲花上生成日月圆盘。另一个种子符号从这个圆盘上升起，然后，变成一个金刚杵，其中心有另一个种子符号。最后，这个金刚杵又变成神的化身。种子符号显现的三个阶段被称作“金刚三昧” 。第一阶段，种子符号从空性中产生；第二阶段，生成修持者的智慧或金刚心；第三阶段，金刚智度心转化成神的化身。从象征意义上来说，莲花用八个莲瓣代表心轮 ；日月圆盘作为方便和智慧代表着红白滴露，是相对和绝对菩提心露的结合。金刚杵中股叉垂直延伸的部分代表着中脉，周围的八个股叉代表生成心轮的八大脉道。在中心点两侧的三个圈代表符号，代表着心中的“金刚滴露”。修持者从这个“金刚滴露”中生成的觉识成为所观修之神的“明相”。 <br/>
-同样，在金刚乘神殿众多的神灵中，每一位神都被说成出自五佛部，每位神都冠以自己独特的佛部手印。善相神头顶上常绘有其父佛陀的小像或他的种子符号，而怒相神头顶的顶冠上更常画有半截金刚杵，中央点上绘有其父佛陀的种子符号。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2011-3-21 21:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">法铃（梵文：ghanta;藏文：Dril-bu） <br/>
+同样，在金刚乘神殿众多的神灵中，每一位神都被说成出自五佛部，每位神都冠以自己独特的佛部手印。善相神头顶上常绘有其父佛陀的小像或他的种子符号，而怒相神头顶的顶冠上更常画有半截金刚杵，中央点上绘有其父佛陀的种子符号。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚竹发表于 2011-3-21 21:43</span><div class="badge-floor">第 2 进</div></div><div class="post-body">法铃（梵文：ghanta;藏文：Dril-bu） <br/>
 <br/>
 法铃代表“般若波罗蜜多” 的阴性，它直接体现着空性。据说，每次摇法铃都在“宣告空性之声”。该铃也被称作金刚法铃 。神或修持者的“智慧”左手总是拿着阴性法铃，通常与握在“方法”右手的阳性金刚杵相配。它们合在一起象征着智慧或空性（铃）与方法或方便（金刚杵）的完美结合。铃代表空，金刚杵代表色。金刚杵的五个股叉代表六度的“阳性”五度，即：布施、持戒、忍辱、精进、禅定。法铃的开口部分代表六度中第六“阴性”度——智慧。 <br/>
 在传统上，要用熟练的砂铸技术分别用青铜或钟铜 铸成藏式法铃。在铸铃时要先准备好内外铸模，铸模在密实的优质砂中成型。要将砂与一种红色汁液或红糖原料类似的黏合剂混合在一起。要用一块无饰纹的铃“胎”作为模具进行铸造，然后，将铃内层精心装饰的图案小心地印刻在砂制模具的外层。要经过一系列金属压花工艺并刻上装饰铃外表面的各种图案才能完成。铃上半部的图案是一圈莲花，装饰华丽的莲瓣和种子符号已经刻在铃板的肩部。铃上部的青铜手柄是用青铜铸造的脱蜡法分别铸造而成，随后可能会进行镀金。最后，用沥青树脂把铸件和手柄粘在一起。金属铃舌 挂在铃内一个小插件上或铸件内中心点上一个焊接好的环上。 <br/>
@@ -67,14 +88,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 铃的开口和边缘稍稍向内锤打以形成一个薄金属圈，这个金属圈可以使铃发出的声音持续不断，使“空性之音”产生共鸣。铃边代表坛城外层的“宇宙圆盘”，是用线条勾勒出的、环围坛城的一片区域。在锥形边缘的上方是一圈直立的金刚杵，处于两排珍珠或砗磲念珠 之间。较低的一排珍珠代表坛城“光圈” 的外保护圈湖“火山” 。火山由三十二堆火焰组成，四五种颜色交叠排序。三十二或六十四个直立金刚杵象征着“金刚栏” ，是坛城中不可侵入的保护圈。上面一排珍珠代表着“莲花子宫”这个第三层保护圈，“莲花子宫”由三十二个或六十四个形状各异的莲瓣组成。三层保护圈可以使坛城分别免遭大火、地震和洪水的侵袭，象征性地代表着断灭贪、嗔、痴“三毒”。 <br/>
 在较低的横装饰带的下面有一片毫无装饰的开阔区域，代表坛城的地圆盘。在这篇开阔区域上面有一个横饰带，上面有八张饕餮脸。饕餮脸上挂有成串的珍珠，它们令人生畏的大嘴上挂有珠宝。八张饕餮脸代表着大十字金刚杵 的八大摩羯头。大十字金刚杵承托着位于中央的坛城宫，挂着珠宝的珠宝网和悬挂的珠宝代表着坛城宫宫墙复杂的装饰性结构。有时，饕餮脸有另一个象征符号，代表坛城的八大尸林。在饕餮脸中间或在珠宝圈的拱形处都有八大菩萨的象征物。它们常有的形式如下：1）轮（前面，东）；2）莲花（东南）；3）珠宝（南）；4）轮（西南）；5）莲花（西）；6）金刚杵（西北）；7）剑（北）；8）莲花（东北）。在菩萨象征物和饕餮脸横饰带上面还有两排珍珠，环围着八个或十六个水瓶放置的金刚杵。这两排珍珠代表着坛城供养女神圣坛和内墙的装饰。水平放置的一圈金刚杵代表着坛城中隆起的中央台座具有坚不可摧的金刚特质，也象征着“八空”或“十六空”。在金刚铃铸件上肩部有坛城中央台座的八瓣莲花，每个莲瓣上都刻有一个特定的藏文字母。莲花的八个莲瓣象征着八大男性菩萨，八个字符象征着八大女性菩萨或八大供养天女。八大菩萨最常见的排列顺序如下：1）地藏菩萨 （东，前面）；2）弥勒菩萨（东南）；3）虚空藏菩萨 （南）；4）普贤菩萨 （西南）；5）观音菩萨（西）；6）文殊菩萨（西北）；7）金刚手菩萨（北）；8）除盖障菩萨 （东北）。八大供养天女及其字符的排列顺序如下：1）华蔓天女 （东，字符Tam）；2）供花天女 （东南，字符Mam）；3）花蔓天女 （南，字符Lam）；4）供香天女 （西南，字符Pam）；5）妙音天女 （西，字符Mam）；6）灯明天女 （西北，字符Tsum）；7）舞蹈天女 （西，字符Pam）；8）涂香天女 （东北，Bhrum）。从金刚铃肩部的圈形设计上可以看到这些字符的排列。四大方位上的字符也与四佛母（四方佛的伴偶）相符。度母（Tam）在东莲瓣上，卢舍那 （Lam）在南莲瓣上，金刚母（Mam）在西莲瓣上，而大白衣观音 （Pam）在北莲瓣上。 <br/>
 八瓣菩萨莲花中有一个更小的圈，上面有二十四、三十二或四十个向四方散射的小莲瓣或莲幅，金刚铃的铃杆从中伸出。这个内圈代表坛城中央神的莲花宝座。如果是金刚铃，这个神就是大智慧波罗蜜多女神。 <br/>
-金刚铃的铃杆常比铃肩部高出一指，铃杆与青铜手柄在肩部合为一体。青铜手柄的底部有三小圈珍珠饰，它们和金刚铃顶部金刚铃顶部金刚杵上的另一组三个小圈连在一起，象征着六度波罗蜜多。长寿甘露瓶的方形或圆形底座放在这三个较低的圈上。长寿瓶有四个叶状悬饰，它把大智慧波罗蜜多女神体内的甘露比作“圆满甘露”。大智慧波罗蜜多女神的头从瓶顶伸出，她戴着珠宝头冠，头发拢在脑后形成发髻，代表着把一切观点束缚在一个单一、非二元的现实中。其头冠上的五智宝珠叠列在金刚杵的莲花基座上。作为五佛智，它构成了金刚铃的冠状。在一些金刚铃上，带断口的圈替代了甘露瓶。在手持金刚铃时，中指和无名指可以插在圈的断口处。这个带断口的圈将大智慧波罗蜜多女神身体的智慧比作纯净的空性。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2011-3-21 21:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">十字金刚杵（梵文：vishva-vajra;藏文：rDo-rje-rgya-gram） <br/>
+金刚铃的铃杆常比铃肩部高出一指，铃杆与青铜手柄在肩部合为一体。青铜手柄的底部有三小圈珍珠饰，它们和金刚铃顶部金刚铃顶部金刚杵上的另一组三个小圈连在一起，象征着六度波罗蜜多。长寿甘露瓶的方形或圆形底座放在这三个较低的圈上。长寿瓶有四个叶状悬饰，它把大智慧波罗蜜多女神体内的甘露比作“圆满甘露”。大智慧波罗蜜多女神的头从瓶顶伸出，她戴着珠宝头冠，头发拢在脑后形成发髻，代表着把一切观点束缚在一个单一、非二元的现实中。其头冠上的五智宝珠叠列在金刚杵的莲花基座上。作为五佛智，它构成了金刚铃的冠状。在一些金刚铃上，带断口的圈替代了甘露瓶。在手持金刚铃时，中指和无名指可以插在圈的断口处。这个带断口的圈将大智慧波罗蜜多女神身体的智慧比作纯净的空性。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚竹发表于 2011-3-21 21:44</span><div class="badge-floor">第 3 进</div></div><div class="post-body">十字金刚杵（梵文：vishva-vajra;藏文：rDo-rje-rgya-gram） <br/>
 <br/>
 十字金刚杵是由四个带有莲花座的金刚杵组成，四个金刚杵的杵头从中心点向四大方位散射，象征着绝对的定力。在对须弥山进行宇宙学的描述中，巨大的十字金刚杵承托着物质宇宙或横在其下面。同样，在描述坛城时，巨大的十字金刚杵是坛城宫不可撼动的支撑物或地基。佛陀释迦牟尼得道的圣地菩提伽耶被称作“金刚座” ，而佛陀不动的坐姿及大部分所绘坐神的纹丝不动的姿态被称作“金刚跏趺” 。在传统上，德高望重的佛教大师所坐的高高隆起的木制宝座前面都有一块方形锦缎，其中央处都有一个彩色十字金刚杵图，四角有四个小卐字符。这块锦缎代表不可撼动的大地或佛陀圆满的实现。在众多有形的观修中，特别是长时间的闭关静修中，十字金刚杵既可以画在或冥想成在修持者禅座的下面，同样，十字金刚杵标识也刻在金属板上，青铜佛像加持后须用它来封底。如果垂直十字金刚杵代表可视神灵的生成，那么，水平十字金刚杵则代表神灵之坛城宫所在的金刚地具有不可摧毁的稳定性。 <br/>
-十字金刚杵的中心点通常呈深蓝色，四大方位的金刚杵头的颜色分别为：1）白色（东）；2）黄色（南）；3）红色（西）；4）绿色（北）。它们都与五大要素和五佛的位置和品性相符。蓝色的不动金刚佛居于中央。十字金刚杵是绿色北方不空成就如来的标识，表示其成就一切的智慧是“佛部怙主”的“业” 。无上瑜伽密宗的许多男性本尊神被画成头冠上冠有形状各异的十字金刚杵饰，象征着它们利益众生所做的“业”。十字金刚杵的四个杵头代表着密宗的“四业”：1）怀业（白色）；2）增业（黄色）；3）息业（红色）；4）诛业（蓝色）。第五种“一切业”（绿色）有时也在此列。承托坛城宫或装饰在坛城宫基面上的巨大十字金刚杵所涂的颜色也要与四大要素、四业和坛城四方佛的颜色相符。根据对不同坛城的描述，这些十字金刚杵或是扁平的，每个金刚杵只有三个股叉；或是立体的，有五个或九个股叉。从总体上来看，这三组十字金刚杵共有十二、二十或三十六个股叉。三股金刚杵的十二个股叉象征着净化“十二因缘”及环围须弥山的十二个大小瞻部洲。五股金刚杵的二十个股叉象征着净化二十种谬见。九股金刚杵的三十六个股叉及其中心点象征着“三十七道品” （参阅词汇表）。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2011-3-21 21:45<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">卐字符（梵文：savstika;藏文：g•Yung-drung） <br/>
+十字金刚杵的中心点通常呈深蓝色，四大方位的金刚杵头的颜色分别为：1）白色（东）；2）黄色（南）；3）红色（西）；4）绿色（北）。它们都与五大要素和五佛的位置和品性相符。蓝色的不动金刚佛居于中央。十字金刚杵是绿色北方不空成就如来的标识，表示其成就一切的智慧是“佛部怙主”的“业” 。无上瑜伽密宗的许多男性本尊神被画成头冠上冠有形状各异的十字金刚杵饰，象征着它们利益众生所做的“业”。十字金刚杵的四个杵头代表着密宗的“四业”：1）怀业（白色）；2）增业（黄色）；3）息业（红色）；4）诛业（蓝色）。第五种“一切业”（绿色）有时也在此列。承托坛城宫或装饰在坛城宫基面上的巨大十字金刚杵所涂的颜色也要与四大要素、四业和坛城四方佛的颜色相符。根据对不同坛城的描述，这些十字金刚杵或是扁平的，每个金刚杵只有三个股叉；或是立体的，有五个或九个股叉。从总体上来看，这三组十字金刚杵共有十二、二十或三十六个股叉。三股金刚杵的十二个股叉象征着净化“十二因缘”及环围须弥山的十二个大小瞻部洲。五股金刚杵的二十个股叉象征着净化二十种谬见。九股金刚杵的三十六个股叉及其中心点象征着“三十七道品” （参阅词汇表）。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚竹发表于 2011-3-21 21:45</span><div class="badge-floor">第 4 进</div></div><div class="post-body">卐字符（梵文：savstika;藏文：g•Yung-drung） <br/>
 <br/>
 卐字符是最古老、最常见的象征符号之一，但令人遗憾的是德国纳粹党选用它作为第三帝国的象征，这就使得这个曾经是吉祥的卐字符带上了邪恶的国家主义的色彩。在世界的每一个已知文化中都可以发现卐字符的形成过程。印度用它作为象征符号，这可以追溯到印度河流域莫亨朱达罗 哈拉帕古城（死亡之城）发掘出的人工制品上。卐字符最初被认为是吠陀神湿奴的太阳象征物火轮或是毗湿奴独特的发旋或胸前徽相。在印度艺术中，佛陀是毗湿奴十大化身中的第九大化身，他的胸前常画有卐字符。在古代中国汉地，卐字符最初是道教永生的象征，“万字”代表世间万事。 <br/>
 梵文词汇“svastika”源自词根“sv-asti”，其意为“福祉”、“好运”、“成功”或“繁荣”。有关该符号源自印度的说法不一。普遍接受的观点认为它最初是太阳的象征，源于太阳在四方和四季的运行。作为火的象征，它也被视为源于吠陀时期的火棍 。人们一起搓火棍就可以点燃神圣的护摩之火。另一说法认为，这个象征物是词根为“sv-asti”的一些字母的堆叠，被写入佛教阿育王 设计的一个早期字母表的字体中，形成了卐字符这个拼合文字。还有一种说法认为，卐字符是早期佛教巴利文字母“su”和“ti”的合成，而这两个字母又是源自梵文“sv”（意为“好”）和“asti”（意为“它是”）。 <br/>
-在西藏苯教中，雍仲卍 之意是“永生或不变”，本质上与佛教的金刚相符。与印度金刚杵的象征物使金刚乘佛教之“金刚之道”兴起一样，雍仲卍字符也象征着雍仲苯教的兴起。与印度教、佛教和耆那教顺时针旋转不同，苯教的卍字符是逆时针旋转的。出于这个原因，苯教修持者要在圣殿和圣地逆时针方向进行转经。在印度象征主义中，右旋 或顺时针旋转的卐字符被视为神的阳性，而左旋 或逆时针旋转的卍字符表明神的阴性。在梵文中，左旋卍字符叫“sauvastika”。在金刚乘佛教中，卍字符基本上象征着四大要素之一“地”及其不可摧毁的稳定性。在这一方面，它与十字金刚杵象征物关系密切。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2011-3-21 21:45<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">金刚橛（梵文：kila;藏文：Phur-pa） <br/>
+在西藏苯教中，雍仲卍 之意是“永生或不变”，本质上与佛教的金刚相符。与印度金刚杵的象征物使金刚乘佛教之“金刚之道”兴起一样，雍仲卍字符也象征着雍仲苯教的兴起。与印度教、佛教和耆那教顺时针旋转不同，苯教的卍字符是逆时针旋转的。出于这个原因，苯教修持者要在圣殿和圣地逆时针方向进行转经。在印度象征主义中，右旋 或顺时针旋转的卐字符被视为神的阳性，而左旋 或逆时针旋转的卍字符表明神的阴性。在梵文中，左旋卍字符叫“sauvastika”。在金刚乘佛教中，卍字符基本上象征着四大要素之一“地”及其不可摧毁的稳定性。在这一方面，它与十字金刚杵象征物关系密切。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚竹发表于 2011-3-21 21:45</span><div class="badge-floor">第 5 进</div></div><div class="post-body">金刚橛（梵文：kila;藏文：Phur-pa） <br/>
 <br/>
 三棱金刚橛主要象征着怒相神金刚橛神 强力无比的佛性，金刚橛神有效地灭除一切障。梵文词汇“kila”有“道钉”或“大钉”之意。在吠陀时代，“kila”一词可能源于拴捆牲畜或祭祀动物的木桩。同样，藏文对应词“Phur-pa”也指的是桩子或帐篷桩子。在吠陀时期的泥土占卜仪式中，也要用一根木桩定位并钉住居于地下“地龙”的头以便在修建圣坛或火坑之前使地基稳固。在西藏，寺院、庙宇或佛塔修造之前也要举行类似的仪式以确定“蛇尾土地神” 的精确位置。这个仪式起源于早期的创世神话，在这个神话中，大因陀罗神用其金刚杵杵尖钉住了大龙神 的头。大龙神盘绕着迈达拉山附近的一座小圣山，其头堵住了“生命之源”的流淌。“indrakila”一词也用来指从塔或大神像中穿过的、象征着中脉的木制轴杆。 <br/>
 最早的木制金刚橛被刻成神灵状，已在和阗 地区出土。在巴基斯坦北部吉尔吉特 的一座古代佛塔中最近发现了有关金刚橛仪式记载的最早的贝叶经，年代可以追溯到公元前五世纪。在莲花生大师传中，有记载说，他曾到过卡沙卡玛拉 北部地区，该地盛行金刚橛崇拜。后来，在加德满都峡谷帕尔平 阿修罗洞 中静修时，他遭遇恶魔制造的种种障碍。为了应付这些难题，他要求从印度带去《金刚橛密法》 。这些经文一到尼泊尔，人们就开始修持，自此之后，一切障都戛然停止。在抵达西藏时，莲花生大师向他的二十五位心传弟子授了《金刚橛密法》。莲花生大师教授这些经文旨在除障，以在西藏弘传佛法。宁玛派最早把金刚橛神作为能够除障的本尊神进行修持，而这种修持也被吸纳到藏传佛教的各个教派之中。 <br/>
@@ -83,7 +104,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 橛杆的两个对称的半部通常画在一个被拉长的八瓣莲花图案上，其顶尖部触到橛杆的鳞状体的中心点。从密宗意义上来说，它们代表红白菩提心露的结合，红白菩提心露将“觉识”包在心轮的“金刚滴露”里。八面橛杆及其两个封印纽结代表着发自心轮的八大脉道，两个起着压缩作用的脉轮结丛将八大脉道封死。 <br/>
 金刚橛的顶部通常有三个怒相神头饰。这些神灵是应召住在金刚橛上的。在绘制它们的化身时，要分别画成白色、蓝色和红色，代表着嗔、痴、贪。右边的白脸通常被视为怖畏金刚 （或降三世明王）的脸，代表“身”和断灭“嗔”。中央的蓝色脸是甘露王的脸，代表“意”和断灭“痴”。左面的红脸是马头金刚的脸，代表“语”和断灭“贪”。就身、语、意而言，这三个神灵也代表“三身” 。九只眼睛象征着宁玛派的“九乘”和五佛及四佛母的九大智慧。三个恐怖的人头连在一起构成一个骷髅冠，是一圈十二个骷髅头的冕状头饰，代表战胜十二因缘的十二节链环。花环上部中央处有一个发髻，是用三个金刚神的头发拢绾而成，既象征着把一切极端之事和争执束缚在一个简单的现实之中，也象征着对密宗的承诺或誓言的约束。顶髻上通常用半截金刚杵做饰顶，有时是无装饰的扁平头顶，象征着用金刚橛把四处游走的精灵模拟像钉住。 <br/>
 作为手持器物，由于体积相对小巧，金刚橛经常以更为简洁的形式出现在藏族绘画作品中。然而，就其立体雕刻形似而言，金刚橛常受到各种肖像表现形式的约束。例如，其手柄可做成两臂或六臂中央金刚橛神上半身的样子。此外，金刚橛神的三个上半身也可分刻在三个橛身的任何一面上。金刚橛神的两只主手转动着一个金刚橛，四只向外伸出的手也挥舞着金刚橛。这些神灵也长有金翅鸟羽翼，有时金翅鸟也可与金刚橛神的下身合二为一，有时金翅鸟的头也可以换成摩羯头。手柄上的纽结也可以是镂空的，编成八角形的篮子状。第三个中心纽结在橛杆中部，代表马头金刚的一个或三个马头也可成为某些金刚橛的饰顶。在彩绘木制金刚橛上，金翅鸟、老虎和狮子这样的“图腾动物”及金刚杵和法-轮这样的武器和护蔽众神和阿修罗兵众的承包甬道都可以画在金刚橛纽结上或橛杆八角形的杆面上。 <br/>
-金刚橛是许多宁玛派传承大师或“伏藏师” 常用的器物。他们右手挥舞金刚橛或将其别在腰带上。手持金刚橛可以刺杀十方障魔。但左手挥舞金刚橛时，右手一般要配有一个金刚杵或金刚锤，表示钉住了障魔。金刚橛神双手转动的大金刚橛被称作“须弥山金刚橛”，其带焰的橛尖将一切敌人碾压成灰。作为礼器，金刚橛常画成垂直状，橛尖刺向一个三角形木架台或“铁狱”。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2011-3-21 21:45<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">天杖（梵文：Khatvanga;藏文：Kha-tam-ga,Kha-twam-ga） <br/>
+金刚橛是许多宁玛派传承大师或“伏藏师” 常用的器物。他们右手挥舞金刚橛或将其别在腰带上。手持金刚橛可以刺杀十方障魔。但左手挥舞金刚橛时，右手一般要配有一个金刚杵或金刚锤，表示钉住了障魔。金刚橛神双手转动的大金刚橛被称作“须弥山金刚橛”，其带焰的橛尖将一切敌人碾压成灰。作为礼器，金刚橛常画成垂直状，橛尖刺向一个三角形木架台或“铁狱”。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚竹发表于 2011-3-21 21:45</span><div class="badge-floor">第 6 进</div></div><div class="post-body">天杖（梵文：Khatvanga;藏文：Kha-tam-ga,Kha-twam-ga） <br/>
 <br/>
 天杖 的字面含义是“吊床 的交脚或腿”，是金刚乘佛教中具有象征意义的最复杂的器物之一。其构成是：一根八面白檀香长木杆（杆底以单股金刚杵或半截金刚杵为饰，十字金刚杵为饰顶）、一个金色宝瓶、一颗血淋淋的人头、一颗腐烂的人头、一个干枯的颅骨、一个直立的金刚杵或一个喷焰三股叉。从十字金刚杵和宝瓶上垂下一根丝带和一、两颗悬珠。丝带上面有太阳和月亮标识、一个三角幡、一个达玛茹和一个法铃。 <br/>
 佛教天杖的形状源自早期印度湿婆教瑜伽师的标志性手杖，瑜伽师被称作“持颅骨者” 。他们最初是异教徒，因随意杀死一名婆罗门而被判处十二年徒刑。这些赎罪者住在林中茅屋、人迹罕见的路口、尸林或树下，靠乞讨为生。他们要进行苦修，要穿麻皮围腰或身披狗皮或驴皮。他们必须随身携带用人的颅骨做成的僧钵，把被他们杀死的婆罗门的颅骨插在木棍上当作旗帜。这些印度教持颅骨者的苦修很快就成了明妃 或女神崇拜中“左手”密法道 的一个极端的外道派别。早期的密宗佛教的瑜伽师和瑜伽母选用了持颅骨者所持的女神或空行母器物。这些器物包括骨饰物、动物皮围腰、骨灰标识、颅器、达玛茹、利刃、胫骨号筒及用颅骨作饰顶的天杖。 <br/>
@@ -94,7 +115,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 在更深的密宗层面上，三股叉代表三大脉道的结合。喷焰的中央杖杆象征着内火 经中脉向上升腾。天杖的白色杖象征着中脉里盈涌着白色菩提心露，头部（白色颅骨）顶部的露珠融溶形成白色菩提心露。杖杆的八面代表着从心轮中发出的八大脉道。十字金刚杵（地）、甘露瓶（水）、红色人头（火）、绿色人头（气）和白色颅骨（空）代表着正在升腾的五大元素。颅骨上方有整个或半截金刚杵，代表第六大智。悬挂的月牙和太阳标识代表着方法和智慧的结合，其意为阴阳脉道的进入、滞留和融入中脉的统一能量。成对的达玛茹和法铃方法和智慧，其意为大乐和空性的结合。飘拂的白丝带代表着白色菩提心露的融溶和倾洒。白色菩提心露使瑜伽师内心充满大乐之心。 <br/>
 在神秘的层面上，转轮王的身体和天杖分别代表他的坛城宫和居住在那里的六十二位神。转轮王的双腿呈弓步张开，拱形的风坛城就在其双腿间生成。三角形火坛城在其勃起的三角形阴茎和睾丸上生成，圆形水坛城从其圆形腹部生成，而方形地坛城从其方形胸部生成，其脊骨代表须弥山。头部上的三十二个莲瓣构成了坛城莲花子宫的护圈。其整个身体和伸出的手臂构成了坛城宫四个对称的围墙。其四肢的八块连在一起的骨头构成了宫殿的八大支柱。而其三十二大相和八十小相构成了坛城宫的一百一十二件饰物。 <br/>
 在天杖“中心点”的金色宝瓶代表着转轮王宫的中央祭坛。宝瓶内的甘露代表着转轮王和金刚瑜伽母的“大乐结合” 。十字金刚杵代表坛城“三昧耶轮” 上的八位神灵。它们生成了八大脉轮，把“气”传送到舌头、肚脐、性器官、肛门、眉、耳、眼和鼻孔。较低处的蓝色人头代表着坛城“心轮”上的十六位蓝色神。中间的红色人头代表着坛城“语轮”上的十六位红色神灵。白色颅骨代表着坛城“身轮”上的十六位白色神灵。天杖冠顶的五股金刚杵代表着“大乐轮”上的四位方位神。这四位方位神把转轮王和金刚瑜伽母围在坛城中央。八面白色檀香木杖杆象征着坛城八大尸林的保护圈，杖杆底部的半截金刚杵代表着八大尸林四周的金刚帐护法圈。 <br/>
-某些神灵所持天杖是上述标准天杖的变体。例如，杖杆可能是由红色檀香木或“微红色的白色檀香木”制成；悬挂的饰物和丝带不一定要画出来；整根天杖可以是骨制的，上面的三个白色颅骨从白色颅骨从宝瓶伸出。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2011-3-21 21:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">达玛茹（梵文：Damaru;藏文：Da-ma-ru,rNga-chung） <br/>
+某些神灵所持天杖是上述标准天杖的变体。例如，杖杆可能是由红色檀香木或“微红色的白色檀香木”制成；悬挂的饰物和丝带不一定要画出来；整根天杖可以是骨制的，上面的三个白色颅骨从白色颅骨从宝瓶伸出。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚竹发表于 2011-3-21 21:46</span><div class="badge-floor">第 7 进</div></div><div class="post-body">达玛茹（梵文：Damaru;藏文：Da-ma-ru,rNga-chung） <br/>
 <br/>
 达玛茹的起源可以追溯到早期的哈拉帕文明，最初是以象形文字出现在古代印度河流域的文字中。作为湿婆教的早期标识，达玛茹是以“舞蹈之王” 化身显现的湿婆右手所持的一件器物。湿婆奋力击鼓，形成雄浑的节奏 ，以说明柔美的曲调节奏（贪欲 ）是世界结构的基础。自远古以来，游商和街头艺人曾使用印度的达玛茹或“猴鼓”来“召引”观众，其时断时续的演奏很快就把人们聚集在一起。达玛茹被做成沙漏状的小鼓，用木料车制而成，有两个对称的羊皮鼓槌。用系在两张鼓皮间的一根Z型长绳将湿婆教达玛茹的鼓面绷紧，这样，通过挤压鼓腰上的绳格就可以提高它的音调。两个小圆鼓槌或两个小球固定在达玛茹鼓腰的两侧。高举右手前后快速摇动时，鼓槌轮流敲击鼓面，发出颇具特色的“铃鼓”般的音色。西藏艺术作品中有时也有沙漏形状的湿婆教达玛茹。 <br/>
 佛教的木制达玛茹或小鼓是由两个空心的半圆组成，半圆的拱顶处连在一起。达玛茹的尺寸各异，从直径大约四英寸到十六英寸的巨型断行鼓 不等。更小的达玛茹常常是手工雕刻成圆形、四叶形或与人的颅骨相似的椭圆形，形状要根据颅骨进行设计。两个羊皮鼓槌的皮是从同一张整张羊羔皮上割下来的，现将皮放在水中浸泡，然后将其粘在两个木半球的边缘上。这样，在皮干了之后，两张皮能够发出相同的音调。羊皮常要经过染色或涂成绿色，也可用蛇皮或鱼皮制作小型达玛茹。 <br/>
@@ -103,17 +124,17 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 藏式达玛茹一度相当的多，是用从尸林或天葬场得到的人的颅骨制成。但现在，这样的礼器在东方艺术市场上已寥寥无几，且售价极高。现代“仿造品”是印度工厂用“再生骨”制成的。工厂把遭意外伤害的无主颅骨和骨头清洗和漂白后用于出口。但根据密宗的规定，在即使使用这种颅骨的仪式中，它们已毫无效力。现在还可以地道用猴子颅骨制成的小巧玲珑的达玛茹。 <br/>
 男女神灵或密宗修持者的阳性“方法”右手总是手持达玛茹。其功能是召唤一切佛陀、菩萨和空行母，用大乐激励他们。“阳性”达玛茹发出“大乐之声”，它经常与法铃相配，握在“阴性”的左手上，发出“空性之声”。空行母的达玛茹召集并激励所有空行母发出大乐之声。大乐源自邬摩天女 或“外道女” 噼啪作响的内火，因为，在藏族瑜伽修法中，这个喷焰“天女”从中脉中升腾。 <br/>
 大型的木制达玛茹用于藏族的“断行” 修法中，能够发出“无常之声”。它召唤所有空行和空行母共跳“断我之舞”，并召唤一切精灵赴“盛宴”，一起吞食修持者的尸体。断我修持是大成就者帕•当巴桑杰 从印度传入西藏的，又经其著名的藏族女弟子玛久拉珍 传承下来。断我修法是让人亲眼目睹自己被肢解的尸体献给众神和心怀不满的鬼怪来清还业债的方法，寻求断灭“二执” 和自爱。这个有效的断执修法在传统上要在夜间的一个与世隔绝或超自然的地方进行，如鬼怪出没的十字路口或尸林。断行鼓的典型尺寸在直径八~十六英寸之间，鼓边常饰有莲花生八大化身或八大尸林袖珍画。在蒙贴鼓皮之前，达玛茹内侧面上常要刻上咒语。 <br/>
-达玛茹的空心鼓体象征着法身，两个鼓槌头象征着相与空的结合。鼓中腰处有一圈起装饰性作用的箍条，箍条上可以装饰宝石或子安贝壳 ，代表着应身的三十二大相。两个鼓槌把报身比作方法与智慧的结合。填充而成的三叶云纹代表着三角形的“法相”。五色丝绸帐幔的尾边代表五佛。达玛茹上半部手柄有时是用海螺壳的某一部分制成，代表着“语”。鼓本身代表“身”，丝制帐幔的尾边代表“意”。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2011-3-21 21:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">胫骨号筒（藏文：rKang-gling,rKang-dung） <br/>
+达玛茹的空心鼓体象征着法身，两个鼓槌头象征着相与空的结合。鼓中腰处有一圈起装饰性作用的箍条，箍条上可以装饰宝石或子安贝壳 ，代表着应身的三十二大相。两个鼓槌把报身比作方法与智慧的结合。填充而成的三叶云纹代表着三角形的“法相”。五色丝绸帐幔的尾边代表五佛。达玛茹上半部手柄有时是用海螺壳的某一部分制成，代表着“语”。鼓本身代表“身”，丝制帐幔的尾边代表“意”。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚竹发表于 2011-3-21 21:46</span><div class="badge-floor">第 8 进</div></div><div class="post-body">胫骨号筒（藏文：rKang-gling,rKang-dung） <br/>
 <br/>
 藏式胫骨号筒是用人的大腿骨制成的带孔号筒。据说，它发出的声音可以取悦一切怒相神，也能恫吓一切邪恶精灵和恶魔。瑜伽师、瑜伽母和大成就者，特别是那些与断行派或与尸林有关之人的“智慧”左手常持有这个器物。在驱魔仪式和呼风唤雨的仪式中，西藏的萨满 或持咒者 也使用胫骨号筒。仅有几个主神，如：持胫骨号筒大红护法 和令人生畏的忿怒女神 ，将其作为手持器物拿在手中。从断行修法来看，忿怒女神是尸林的女性保护神。拥有胫骨号筒主要象征着神对三界的控制。 <br/>
 密宗教派认为信奉婆罗门教的十六岁少女的左大腿骨最具效力，可以掌控精灵及其部众。信奉婆罗门教的十六岁少男的右大腿骨在功效上略低于上述大腿骨。而受害者的大腿骨、遭枪杀者或以外亡故者的大腿骨、死于病毒性或传染性疾病之人的大腿骨的效力依次降低。人们认为，老年亡故者或自然死亡者的大腿骨在降魔上的效力微弱。老虎的大腿骨 也用来制作胫骨号筒，因为，人们认为它能显示老虎的凶猛威力。 <br/>
-要将大腿骨的球状关节精心锯下制成单管号筒或双管号筒。常用铜丝缠绕较薄的号嘴或用一个金属套将号嘴套上。大腿骨内的髓管成了乐器天然的中空孔道。由于是寺院乐器，胫骨号筒也可以用青铜模仿人的大腿骨制成。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2011-3-21 21:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">嘎布拉碗（梵文：Kapala;藏文：Thod-pa,Ka-pa-la,Ban-dha,Dung-chen） <br/>
+要将大腿骨的球状关节精心锯下制成单管号筒或双管号筒。常用铜丝缠绕较薄的号嘴或用一个金属套将号嘴套上。大腿骨内的髓管成了乐器天然的中空孔道。由于是寺院乐器，胫骨号筒也可以用青铜模仿人的大腿骨制成。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚竹发表于 2011-3-21 21:46</span><div class="badge-floor">第 9 进</div></div><div class="post-body">嘎布拉碗（梵文：Kapala;藏文：Thod-pa,Ka-pa-la,Ban-dha,Dung-chen） <br/>
 <br/>
 嘎布拉碗（颅器）是y偶那个人颅骨椭圆形的上半部制成，是为数众多的金刚乘神灵的供器、饭碗或祭祀用碗。瑜伽师、大成就者、空行母、本尊神和护法神的左手都持有嘎布拉碗。碗内盛有甘露、精液、酒、朵玛供品、化现为恶魔和魔 的邪恶之敌的鲜血、骨髓、肠子、脂肪、大脑和心肺。制作制作嘎布拉碗所使用的人骨来源不同，因此，在效力方面与上述胫骨号筒的情形相同。人们认为婆罗门的颅骨或被谋杀或被处决之人的颅骨是修怒相神时最有效力的中介物。青春发育期死去是小孩的颅骨也具有极大的潜力，七、八岁私生子的颅骨 亦是如此。用私生子颅骨制成的、盈满真言芥子血 的嘎布拉碗是以“吉祥退敌大咒王妃” 化身显现的怒相吉祥天女持有的器物。 <br/>
 “智慧”左手通常将嘎布拉碗捧在神灵胸前。与之相配的“方法”右手持有金刚杵或钺刀之类的器物。许多怒相护法神和本尊神都握有钺刀，放在胸前嘎布拉碗的上方，象征着它们的方法与智慧的结合。钺刀或砍刀作为“方法”武器，可以斩断邪恶怨敌的命脉和重要器官。嘎布拉碗是“智慧”皿，内盛收集来的供神食用的鲜血和器官。对怒相女神来说，这个象征主义有时恰恰相反，钺刀可以代表断灭一切概念化的智慧，而嘎布拉碗则把方法比作“留有慈悲”（白色菩提心）。某些教派也认为，男性神手持的嘎布拉碗是用旧颅骨或“干”颅骨制成的，而女性神所持的嘎布拉碗则是用新鲜颅骨或“湿”颅骨制成。 <br/>
 嘎布拉碗中的血 通常被画成一个“旋转供物”，血呈汹涌或沸腾的液体状，象征着红色菩提心露的“燃烧和滴沥”。红色菩提心露从中升腾，形成内火。据说，供物会在怒相神或女神显现之地沸腾。《父续》 强调的是方法的发展，因此，在修《父续》时，血顺时针旋转。《母续》 强调的是智慧的培养，因此，在修《母续》时，血会逆时针旋转。从男性头顶中央生成的白色颅骨把“色”比作阳性的白色菩提心露，而源自女性脐部温暖的红色血液把“空”比作阴性的红色菩提心露。从密宗上看，盈血嘎布拉碗代表神的心（白色颅骨）内盈大乐（红色鲜血）。从更深层意义上来看，着代表“幻身”（白色颅骨）生成于“明光” （红色血液）。 <br/>
 天杖、达玛茹和嘎布拉碗是印度教嘎布拉派 瑜伽母的三大器物。这三大器物被密宗佛教成就大师所吸纳，代表着神的身、语、意。天杖代表“身”或伴偶（善举或善业）；达玛茹代表“语”（动听的话语）；嘎布拉碗代表“意”（被净化的思想）。 <br/>
-作为苦行僧的乞讨钵或饭碗，嘎布拉碗呈现出最温婉慈悲的一面，它时时提醒人们牢记死亡、无常及造成生死离别的生命的短暂和稍纵即逝。作为温和相神或略带怒相之神的器物，嘎布拉碗也可被视为一个“大海螺” ，内盈甘露、水果、药品、食物、珠宝或一个盈满甘露的长寿瓶。在更多的怒相神手中，嘎布拉碗上通常带有“金刚标识”。碗内的具体东西是：温暖的血和脑浆或四魔之血。颅器正中央的裂隙通常都画在中央部位，呈Y字形。两个半圆形的裂隙画在嘎布拉碗的两侧。这些裂隙被画成三角形的红色Z字形线条，它们把嘎布拉碗分成五片，代表五佛。为“内供”所画的嘎布拉碗只在中央处有一条裂隙，象征着方法和智慧密不可分的结合。人们认为带有六条裂隙的颅骨十分异常，只能在某些神秘仪式上使用它。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2011-3-21 21:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">钺刀（梵文：Kartri,Katari;藏文：Gri-gug） <br/>
+作为苦行僧的乞讨钵或饭碗，嘎布拉碗呈现出最温婉慈悲的一面，它时时提醒人们牢记死亡、无常及造成生死离别的生命的短暂和稍纵即逝。作为温和相神或略带怒相之神的器物，嘎布拉碗也可被视为一个“大海螺” ，内盈甘露、水果、药品、食物、珠宝或一个盈满甘露的长寿瓶。在更多的怒相神手中，嘎布拉碗上通常带有“金刚标识”。碗内的具体东西是：温暖的血和脑浆或四魔之血。颅器正中央的裂隙通常都画在中央部位，呈Y字形。两个半圆形的裂隙画在嘎布拉碗的两侧。这些裂隙被画成三角形的红色Z字形线条，它们把嘎布拉碗分成五片，代表五佛。为“内供”所画的嘎布拉碗只在中央处有一条裂隙，象征着方法和智慧密不可分的结合。人们认为带有六条裂隙的颅骨十分异常，只能在某些神秘仪式上使用它。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚竹发表于 2011-3-21 21:46</span><div class="badge-floor">第 10 进</div></div><div class="post-body">钺刀（梵文：Kartri,Katari;藏文：Gri-gug） <br/>
 <br/>
 带金刚杵头的弯形钺刀被称作“空行母刀”，握在女神的右手。天杖、达玛茹和嘎布拉碗是密宗男性瑜伽师或大成就者的三大嘎布拉标识。而天杖、钺刀和嘎布拉碗是密宗女性瑜伽母和空行母的三大主要器物。钺刀带有尖利、扁平的蓝色铁身，末端有一个弯钩。因此，用该钺刀可以进行砍、刮、勾等砍杀动作。金色叶状柄托或金色摩羯张开的大嘴把带刻面的手柄或八面手柄与钺刀的上刀身连接起来。手柄有一个半截金刚杵顶饰。 <br/>
 空行母“向十大方向挥舞钺刀”，来恫吓h 战胜一切恶魔和邪恶力量。钺刀代表可以断灭一切情感污秽和精神感知的阴性智慧。锋利的刀身可以斩断二大“障蔽” ，一是惑障 ，例如：我慢、嗔恚、嫉妒和欲望。另一个是智障 ，例如：根本痴愚的谬见。彻底断灭二大“障蔽”标志着获得圆满。刀身还可以斩断六蔽（悭贪、破戒、嗔恚、懈怠、散乱、愚痴）使人进入禅修状态。因此，空行母的钺刀把智慧和空性比作断灭和一切概念化的空性。她的嘎布拉碗把方法比作对大乐的培养。她的天杖象征着乐与空的紧密结合，就像被空行母（智慧）拥抱的伴偶（结合）。空行母胜利般地向上挥舞钺刀，象征着她胜利地斩断了对主客观特性的依附。她把钺刀放在齐胸的位置，置于嘎布拉碗之上，象征着其智慧和慈悲的结合。这种结合能洞察“待出现”的一切观念，进而深谙自性的空性。她的钺刀可以指向下方，这象征着她已经彻底断灭了轮回的本源。 <br/>

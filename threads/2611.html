@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>念住呼吸 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>念住呼吸 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/定慧禅修成就法.html">定慧禅修成就法</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">念住呼吸</h1>
-<div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-19 09:11<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">序 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/定慧禅修成就法.html">定慧禅修成就法</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">念住呼吸</h1>
+<div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-19 09:11</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">序 <br/>
 <br/>
 这本书是练习集中心意的一个引导。它们有二部份：第一部份几乎都是专门在处理心意，但是，因为心意的安宁，若干程度地依赖于身体，所以我又增加了第二部份，显示如何运用身体来饶益心意。 <br/>
 <br/>
@@ -85,7 +106,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 因此，我汇集了下列两部份作为念住呼吸的指引。祝安详。 <br/>
 <br/>
 长老阿迦李达摩达罗 <br/>
-巴洛尼瓦寺•曼谷1953 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-19 09:12<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">中译前言 <br/>
+巴洛尼瓦寺•曼谷1953 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-19 09:12</span><div class="badge-floor">第 2 进</div></div><div class="post-body">中译前言 <br/>
 <br/>
 根据英译者的叙述，尊者阿迦李达摩达罗(1906-1961)是泰国近代最著名的禅师之一，他喜欢隐居在森林里修习禅思，因此他的教导系来自个人实际的修行经验，当然也与佛教的法义相关。 <br/>
 <br/>
@@ -96,7 +117,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 请尊重法义，勿以任何商品交易的方式来流通此书。 <br/>
 <br/>
 曾银湖 <br/>
-2000/5/11于埔里迎福门 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-19 09:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">禅思之始 <br/>
+2000/5/11于埔里迎福门 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-19 09:14</span><div class="badge-floor">第 3 进</div></div><div class="post-body">禅思之始 <br/>
 <br/>
 现在我来解说如何进行修习集中心意。在开始之前，跪下来，双手合十举在前额之上虔诚地敬礼三宝，口诵如下： <br/>
 <br/>
@@ -133,7 +154,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 Metta(慈爱，愿你自己和一切众生都幸福) <br/>
 Karuna(悲悯你自己和别人) <br/>
 Mudita(随喜，欣悦你自己和别人的善行) <br/>
-Upekkha(泰然舍弃那些应当放下的事物) </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-19 09:16<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">第一个方法 <br/>
+Upekkha(泰然舍弃那些应当放下的事物) </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-19 09:16</span><div class="badge-floor">第 4 进</div></div><div class="post-body">第一个方法 <br/>
 <br/>
 单盘半莲花坐，右腿在左腿上，手掌向上交迭于大腿之间，右手在左手之上，保持身体正直，心意就绪，合掌于胸前致敬，忆念佛法僧的功德： <br/>
 <br/>
@@ -180,7 +201,7 @@ Upekkha(泰然舍弃那些应当放下的事物) </div></div><div class="post"><
 <br/>
 当你能够追随这五个步骤时，你将会发现奇迹出现在你的心里。修习宁静和内明禅思的成果，已经说过，分为二类：世间的可以提供自己身体的安宁和世人的安宁；超越世间的，提供自己心意的安宁，带来平静、清凉、神采奕奕的幸福，一路通向解脱涅盘——免于生老病死。这是就呼吸禅思的主要原则做简要的解说。如果你有任何问题，或是在应用这些原则于修习时，遇到任何困难，而你也希望直接地向教授此法的人学习的话，我将会尽最大的能力来帮助你，好让我们都能达到佛教的安详与宁静。 <br/>
 <br/>
-大部份的人们都会觉得下一章的第二个方法，比上述的第一个方法容易而且轻松。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-19 09:19<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">第二个方法 <br/>
+大部份的人们都会觉得下一章的第二个方法，比上述的第一个方法容易而且轻松。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-19 09:19</span><div class="badge-floor">第 5 进</div></div><div class="post-body">第二个方法 <br/>
 <br/>
 有七个步骤： <br/>
 <br/>
@@ -271,7 +292,7 @@ f.腹部(或上面的某一点) <br/>
 奋起吧！训练你自己的心意！ <br/>
 <br/>
 开始评量你自己， <br/>
-吸入、呼出。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-19 09:21<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">禅那 <br/>
+吸入、呼出。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-19 09:21</span><div class="badge-floor">第 6 进</div></div><div class="post-body">禅那 <br/>
 <br/>
 现在我们要以禅那的标题来摘录呼吸禅思的方法。 <br/>
 <br/>
@@ -340,7 +361,7 @@ f.腹部(或上面的某一点) <br/>
 <br/>
 8漏尽智：减少和消除内心烦恼渗漏(中译注：诸漏)的能力。 <br/>
 <br/>
-这八种善巧唯独从心意的专注而来，因此写下这个浓缩的纲要，基于心意持续念住呼吸的技术来达到禅定和禅那。如果你热爱这些事情所产生的好处，你就必须转移你的注意力去训练你自己的心意。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-19 09:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">开示(1) <br/>
+这八种善巧唯独从心意的专注而来，因此写下这个浓缩的纲要，基于心意持续念住呼吸的技术来达到禅定和禅那。如果你热爱这些事情所产生的好处，你就必须转移你的注意力去训练你自己的心意。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-19 09:22</span><div class="badge-floor">第 7 进</div></div><div class="post-body">开示(1) <br/>
 1956/7/30 <br/>
 <br/>
 如果，当你在静坐而尚未能观察到呼吸时，告诉你自己：「现在我正在吸入…现在我正在呼出。」换言之，在这个阶段里，你是在做呼吸的人，你不是让呼吸自然地在进出着。如果你在每一次呼吸时，心里都能记住这个，不久你就可以抓得住呼吸了。 <br/>
@@ -359,7 +380,7 @@ f.腹部(或上面的某一点) <br/>
 <br/>
 这里的田园是指我们的身体，如果我们在呼吸里放进了许多忆念和评量，身体的四大性质就会平衡而安详，身体将会健康而强壮，心意则会轻松而开阔，无所障碍。 <br/>
 <br/>
-当你把田园像这样地清理和整平，你的稻子一定是欣欣向荣的，就在你把心意带入呼吸时，你就会感到一种欢喜和复苏的感受。四种成就的基础(中译注：四如意足)---?修行的满意(欲如意足)，修行的精进(进如意足)，修行的热心(念如意足)，修行的明辨(慧如意足)，将会一步一步地开发。这四项品德就像健康滋补品的成份，任何人吃了这个补品就会长寿。如果你想死就不必吃，但如果你不想死，你就要多吃；你吃得愈多，你心里的疾病就愈快消失。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-19 09:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">开示(2) <br/>
+当你把田园像这样地清理和整平，你的稻子一定是欣欣向荣的，就在你把心意带入呼吸时，你就会感到一种欢喜和复苏的感受。四种成就的基础(中译注：四如意足)---?修行的满意(欲如意足)，修行的精进(进如意足)，修行的热心(念如意足)，修行的明辨(慧如意足)，将会一步一步地开发。这四项品德就像健康滋补品的成份，任何人吃了这个补品就会长寿。如果你想死就不必吃，但如果你不想死，你就要多吃；你吃得愈多，你心里的疾病就愈快消失。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-19 09:24</span><div class="badge-floor">第 8 进</div></div><div class="post-body">开示(2) <br/>
 1956/8/17 <br/>
 <br/>
 当你静坐禅思时，即使你没有得到任何直觉的内明，请相信你至少知道了不少。当呼吸进入时，你知道了；当它出去时，你知道了；当它是长呼吸时，你知道了；当它是短呼吸时，你知道了；不论它是愉快或不愉快的，你知道了。如果你能知道这么多，你就做得很好了。至于各种思想和念头跑进心里时，就排除它们，不论它们是好的还是坏的，不论它们是在想念过去或是未来，不要让它们干扰你正在进行的，不要追逐着要理出头绪来。当这种思想闯入时，就让它过去，保持你的觉知，安于现在。 <br/>
@@ -393,7 +414,7 @@ f.腹部(或上面的某一点) <br/>
 <br/>
 因此我们必须视佛陀为典范，如果我们认为五蕴是没有价值的，无常、苦、无我的，由于轻忽而放下它们，我们一定会以匮乏收场。就像一个愚人，他很厌恶身上脓肿的疼痛，因此就不去碰它，随它去也不照料它，这一来，疼痛是没办法痊愈的。然而聪明的人，他们知道怎样清洗伤痛，敷药并缠上绷带，因此，最后一定会康复的。 <br/>
 <br/>
-同样的，当人们只看到五蕴的缺点，却没有看到它们好的一面，未将它们作任何有价值的运用就放下它们时，是不会产生任何好处的。但是，如果我们有足够的智慧去看到五蕴，除了坏处之外，也有它们好的一面，然后善用它们于禅思，来获得身体和心理现象的辨识(分别)智，我们将会很富有。一旦我们有了真理——法——做为我们的财富，那么有钱、没钱，我们都不会痛苦，因为我们的心意将会超越一切。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-19 09:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">开示(3) <br/>
+同样的，当人们只看到五蕴的缺点，却没有看到它们好的一面，未将它们作任何有价值的运用就放下它们时，是不会产生任何好处的。但是，如果我们有足够的智慧去看到五蕴，除了坏处之外，也有它们好的一面，然后善用它们于禅思，来获得身体和心理现象的辨识(分别)智，我们将会很富有。一旦我们有了真理——法——做为我们的财富，那么有钱、没钱，我们都不会痛苦，因为我们的心意将会超越一切。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-19 09:25</span><div class="badge-floor">第 9 进</div></div><div class="post-body">开示(3) <br/>
 1957/8/26 <br/>
 <br/>
 当你静坐禅思时，如果疼痛或不舒服的感觉生起时，检查它们，看看是从那儿产生的，不要让你自己痛苦或难过。如果身体的某些部份不如你所想要的，不要忧虑，顺其自然——因为你的身体跟别人，乃至于世间的人类、动物都是一样的——无常、苦而且不能予以强迫的，所以就留在你所喜欢的部份，保持它的舒适。 <br/>
@@ -420,7 +441,7 @@ f.腹部(或上面的某一点) <br/>
 <br/>
 涅盘并不在遥远的地方，它就在我们的嘴唇，就在我们的鼻端，我们到处摸索却从未找到它。如果你真的有心要寻求清净的话，那么把你的心安置在禅思上面，不管别的，当任何其它的事情来了，你就说：「不，谢了！」，欢乐？「不，谢了！」，痛苦？「不，谢了！」，善行？「不，谢了！」，恶行？「不，谢了！」，果证？「不，谢了！」，涅盘？「不，谢了！」。如果什么都是「不，谢了！」，那你还会剩下什么？你并不需要剩下些什么，那就是涅盘。就像一个没有任何钱财的人，盗贼怎么来抢他？如果你有钱又要持有它，你将会被杀。如果这个贼不杀你，那个也会。带着你的一切，直到你整个被压垮为止，你将永远无法脱身。 <br/>
 <br/>
-在这个世界上，我们必须与善恶同住。那些已经开发而远离的人们，充满善行，也完全了解罪恶，但是都不执着，都不宣称两者为他们所有，他们把它们摆在一边而放下它们，因此能够幽游自在。涅盘并不是那么困难的事情，在佛陀的时代，有些人在托钵时成为阿罗汉，有些在小便时，有些在看着农夫耕田时。至高无上的善行难在于开始，在做基本功夫时——持续地念住，全程检查并评量你的呼吸。如果你能够坚持不放弃，你终必成功。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-19 09:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">开示(4) <br/>
+在这个世界上，我们必须与善恶同住。那些已经开发而远离的人们，充满善行，也完全了解罪恶，但是都不执着，都不宣称两者为他们所有，他们把它们摆在一边而放下它们，因此能够幽游自在。涅盘并不是那么困难的事情，在佛陀的时代，有些人在托钵时成为阿罗汉，有些在小便时，有些在看着农夫耕田时。至高无上的善行难在于开始，在做基本功夫时——持续地念住，全程检查并评量你的呼吸。如果你能够坚持不放弃，你终必成功。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-19 09:25</span><div class="badge-floor">第 10 进</div></div><div class="post-body">开示(4) <br/>
 1959/5/7 <br/>
 <br/>
 呼吸乃是心意的镜子，如果镜子不正常，就会有不正常的反射。假如你往凸面镜里看，你的影像就会比你高；如果你往凹面镜里看，你的影像就会不正常地短缩；但是，如果你往平面镜里看，平滑而正常，它就会给你一个真实的影像。 <br/>
@@ -441,7 +462,7 @@ f.腹部(或上面的某一点) <br/>
 <br/>
 当人们不晓得如何去调整和评量他们的呼吸时，就会发生这种情况，他们永远找不到自己一直所要追寻的，因此调整和觉想（忆念）呼吸在修习呼吸禅思中是很重要的一部份。 <br/>
 <br/>
-要认识你自己——熟悉你的身体，你的心意，各种元素(地、水、火、风、空、识)，知道它们从何而来，如何生起，如何消失，它们是如何地无常、苦、无我，这一切你都必须经由探索自己去找寻。如果你的知识只是从书本上而来，或别人告诉你的，那么这样的知识就是来自记诵和概念，不是来自你自己的辨识智，那不是真正的知识。如果你只知道别人告诉你，你就一路跟随着他们，那会有什么好处呢？他们可能会把你引入歧途；而且，如果路上有很多尘土的话，他们可能还会把灰尘飞溅到你的耳目里。所以在你追寻真理的道上，不要只相信别人说的，不要相信记诵之学。练习集中心意，直到获得你自己的知识为止。唯有如此才是内明，唯有如此才有价值。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-19 09:27<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">开示(5) <br/>
+要认识你自己——熟悉你的身体，你的心意，各种元素(地、水、火、风、空、识)，知道它们从何而来，如何生起，如何消失，它们是如何地无常、苦、无我，这一切你都必须经由探索自己去找寻。如果你的知识只是从书本上而来，或别人告诉你的，那么这样的知识就是来自记诵和概念，不是来自你自己的辨识智，那不是真正的知识。如果你只知道别人告诉你，你就一路跟随着他们，那会有什么好处呢？他们可能会把你引入歧途；而且，如果路上有很多尘土的话，他们可能还会把灰尘飞溅到你的耳目里。所以在你追寻真理的道上，不要只相信别人说的，不要相信记诵之学。练习集中心意，直到获得你自己的知识为止。唯有如此才是内明，唯有如此才有价值。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-19 09:27</span><div class="badge-floor">第 11 进</div></div><div class="post-body">开示(5) <br/>
 1960/10/4 <br/>
 <br/>
 当你禅思时，你必须忆念(觉想)，如果你不忆念，你就无法禅思，因为忆念乃是构成禅思的必要部份。例如：得到禅那，乃运用忆念的力量，把你的心意带到禅思的对象上；并运用评量的力量去辨识你所选定的禅思对象，检查你的禅思对象，直到它正好适合你。你可以选择慢的呼吸，快的呼吸，短的呼吸，长的呼吸，狭窄的呼吸，宽广的呼吸，热的、冷的或温暖的呼吸；就只在鼻子一带的呼吸，就只在喉咙一带的呼吸，全程下到心脏的呼吸。当你已经找到一个适合自己节奏的对象，抓住它并——专精一致---使其一心，专注于单一的对象。引导你的忆念让它凸显出来，别让心意离开禅思的对象，别让禅思的对象离开心意。告诉你自己，那就像吃东西，配合你的嘴巴把食物送进去，配合食物把你的嘴送过去，不要失误了。如果你弄错了，把食物黏在你的耳朵、下巴、眼睛或前额上，你就什么也吃不到了。 <br/>
@@ -484,7 +505,7 @@ f.腹部(或上面的某一点) <br/>
 <br/>
 佛陀教导说，任何缺乏辨识智的人，就是没有善巧的人；任何不修习禅定以通达解脱内明的人，就必须要担负痛苦，永远要被压垮，真可怜！真可羞！他们永远不得脱身，他们的腿上、肩上都有重担，他们能走到那里去呢？前进三步，退后两步，一下子，他们就灰心气馁了。可是过了一会儿，他们又得再站起来继续走。 <br/>
 <br/>
-现在，当我们看到无常——一切形成的事物，不论是我们的内在或外在，都是不可靠的；当我们看到它们是痛苦的，当我们看到它们是无我的，它们只是自己在那儿轮回不已。当我们获得这些内明，我们就能放下自己的重担，也就是放下自己的执着。我们能够放下过去，不再停驻于过去；我们能够放下未来，停止渴望未来；我们能够放下现在，不再宣称它是自我。一旦我们放下了自己的重担，我们就能用轻快的脚步走路，甚至还能手舞足蹈，多么美好！我们走到那里，人们都很高兴认识我们，为什么？因为我们无所障碍，我们所做的任何事情，都以安详的方式为之。我们能走、能跑、能舞、能唱——都以轻快的心情而为之。我们是佛教之美，令人赏心悦目，所到之处都是优雅合宜的，不再有重担，不再有所障碍，我们能够自得其乐，这就是毗婆舍那智。 </div></div><div class="post"><div class="post-header"><div class="avatar">蓮</div>蓮師金剛发表于 2010-6-25 05:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">頂禮蓮師！ <br/>
+现在，当我们看到无常——一切形成的事物，不论是我们的内在或外在，都是不可靠的；当我们看到它们是痛苦的，当我们看到它们是无我的，它们只是自己在那儿轮回不已。当我们获得这些内明，我们就能放下自己的重担，也就是放下自己的执着。我们能够放下过去，不再停驻于过去；我们能够放下未来，停止渴望未来；我们能够放下现在，不再宣称它是自我。一旦我们放下了自己的重担，我们就能用轻快的脚步走路，甚至还能手舞足蹈，多么美好！我们走到那里，人们都很高兴认识我们，为什么？因为我们无所障碍，我们所做的任何事情，都以安详的方式为之。我们能走、能跑、能舞、能唱——都以轻快的心情而为之。我们是佛教之美，令人赏心悦目，所到之处都是优雅合宜的，不再有重担，不再有所障碍，我们能够自得其乐，这就是毗婆舍那智。 </div></div><div class="post"><div class="post-header"><div class="avatar">蓮</div><span style="font-size:15px; letter-spacing:1px;">蓮師金剛发表于 2010-6-25 05:43</span><div class="badge-floor">第 12 进</div></div><div class="post-body">頂禮蓮師！ <br/>
 最上三寶我皈依，一切罪業皆懺悔 <br/>
 眾生善根盡隨喜，正覺菩提意中持 <br/>
 <br/>
@@ -492,7 +513,7 @@ f.腹部(或上面的某一点) <br/>
 所為利益自他故，我今即發菩提心 <br/>
 <br/>
 即發最上菩提心，饒益一切諸有情 <br/>
-菩提妙行皆修作，為利眾生願成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 08:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
+菩提妙行皆修作，為利眾生願成佛 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div><span style="font-size:15px; letter-spacing:1px;">贝嘛埵吉发表于 2010-6-25 08:13</span><div class="badge-floor">第 13 进</div></div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
 众生善根尽随喜  正觉菩提意中持 <br/>
 正觉妙法及僧伽  直至菩提我皈依 <br/>
 所为利益自他故  我今即发菩提心 <br/>

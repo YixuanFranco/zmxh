@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>罗布林卡的壁画 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>罗布林卡的壁画 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/圣地游览贴图区.html">圣地游览贴图区</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">罗布林卡的壁画</h1>
-<div class="post"><div class="post-header"><div class="avatar">誓</div>誓言三昧耶发表于 2006-10-29 17:30<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">     <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/圣地游览贴图区.html">圣地游览贴图区</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">罗布林卡的壁画</h1>
+<div class="post"><div class="post-header"><div class="avatar">誓</div><span style="font-size:15px; letter-spacing:1px;">誓言三昧耶发表于 2006-10-29 17:30</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">    943 <br/>
     罗布林卡意为“宝贝园林”，是历代DL喇嘛的夏宫。据说，这里曾是一片灌木丛生，野兽出没的地方，人称“拉瓦采”（灌木林）。 <br/>
  <br/>
 　　传说中的一天，晴朗的天空飘着淡淡的白云，在“拉瓦采”的上空突然出现了一道奇异的彩虹，形似祥瑞的宝物，“罗布林卡”由此得名。  <br/>
@@ -52,36 +73,36 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　　罗布林卡位于拉萨老城区的西面约一公里处。东朝布达拉宫、大昭寺，西背哲蚌寺，北望色拉寺，南临拉萨吉曲河。据史料记载，五世DL喇嘛因此处有一眼能治百病的清泉，而时常驻足此地。七世DL喇嘛更是每到夏天便在泉边搭上帐篷，在泉中沐浴，久而久之不但医好了他的皮肤病，而且变的身强体健。由于七世DL喇嘛偏爱此处，1751年清朝驻藏大臣便出资修建了罗布林卡内最早的一座建筑“乌尧颇章”即凉亭宫，供其沐浴后小憩。此后，历代DL喇嘛便与这片灌木林结下不解之缘。 <br/>
  <br/>
  <br/>
-<br/>
+944 <br/>
     18世纪至20世纪中叶,罗布林卡历经数次扩建,先后建成了格桑颇章、准曾颇章、金色颇章、达旦明久颇章、夏殿拉康等建筑,逐步形成了今天占地约40公顷的西藏大型宫廷式的园林。从七世DL喇嘛开始成为历代DL喇嘛夏季避暑和处理政务的地方。图为壁画中的罗布林卡。 <br/>
  <br/>
 　　18世纪至20世纪中叶，罗布林卡历经数次扩建，先后建成了格桑颇章、准增颇章、金色颇章、达旦明久颇章、夏殿拉康等建筑，逐步形成了今天占地约40公顷的西藏大型宫廷式的园林。从七世DL喇嘛开始成为历代DL喇嘛夏季避暑和处理政务的地方。 <br/>
  <br/>
 　　罗布林卡殿堂林立，树木葱郁，建筑错落有致，是一座集园林建筑、宫殿建筑、高原动植物、民俗文物于一体的多学科、多门类的博物馆，内中展示了西藏-独有的历史、人文、自然等风貌，尤其是各殿堂的壁画，堪称18—20世纪西藏壁画之精华，集中体现了西藏绘画艺术画派中“卫赤”的特征。“卫赤”是以拉萨为主的西藏中部地区绘画风格,这种风格是在15世纪门唐画派基础上发展起来的一种绘画技艺，其特点是注重景物的描绘，线条工整流畅，色调变化丰富、活泼鲜亮，画风严谨细腻，是藏族绘画艺术宝库中的奇葩。 <br/>
  <br/>
-           <br/>
+          945 <br/>
     西藏的绘画艺术可追溯到史前，寺院壁画艺术的起源和发展，应与佛教的传入和发展同步。与西藏的寺院壁画一样，罗布林卡壁画的用色，以红、黄、蓝三原色为主，有时配以白和绿，形成强烈的色彩对比。而这几种颜料，大多是采用世界屋脊丰富的矿物、植物颜料，如用朱砂配成红色，用硫磺和砒霜合成黄色，用一种蓝色的植物提炼绿色和蓝色，用一种叫做“嘎日”的白质矿物制成白色。壁画制作的每一道工序也都非常严谨，都要经过壁面处理、举行宗教仪式、起草、落稿、着色、晕染、描金眼、沥粉堆金、勾线、开眉眼、压磨金线、罩光和开光等步骤和方法。 <br/>
  <br/>
 　　罗布林卡的壁画与大多数藏传佛教寺庙一样分为宗教和非宗教两种题材。其一为宗教题材。如达旦明久颇章、金色颇章大殿及经堂内绘有释迦牟尼佛一生教化事迹的故事，以及宗喀巴、历代DL喇嘛和高僧的传记，以烘托宗教气氛；各殿堂的密宗室、护法神殿里绘有显、密二宗崇仰的无量寿佛、观音菩萨、文殊菩萨、尊圣佛母、各色度母、空行母、四大天王、吉祥天母、贡布恰楚（六臂护法神）、十六罗汉等诸佛肖像图；辨经室内描绘辨经、跳神、弘传佛法等宗教活动场面图；措吉颇章四周的墙壁描绘西藏各大寺庙的修建过程，如大昭寺、布达拉宫、桑耶寺、扎什伦布寺、色拉寺、哲蚌寺等宗教建筑图；回廊墙壁上的六道轮回图、十相自在图、须弥山、回纹图、宇宙形成图等一些旨在阐释佛教经义的壁画。其二为非宗教题材。主要是节日庆典、赛马射箭、商业以及人类生老病死、婚丧嫁娶等内容的世俗风情图；四周廊壁上的莲花、仙桃、菩提树、八吉祥、七珍宝、四瑞和睦图、六长寿图、福禄寿禧图、八仙过海、蒙人伏虎、财神牵象等含有祝福象征意义的花卉、植物及其它图案。 <br/>
  <br/>
  <br/>
-<br/>
+946 <br/>
     罗布林卡更有许多鲜为人知、令世人为之惊叹不已的壁画，其绘画艺术之成熟，工艺之精湛，用料之考究无以伦比，其中乌尧颇章和达旦明久颇章的壁画更是独具特色。 <br/>
  <br/>
 　　乌尧颇章是罗布林卡最早的一座宫殿，其中，一间房子的墙壁上有一幅拉萨全景图，图中湛蓝的天空，吉祥的彩云，雄伟的布达拉宫、神圣的大昭寺，人群拥挤的八廓街，碧玉般的“玉妥桑巴”（琉璃桥）下面，涓涓河水自东向西流过，“白米”堆放似的哲蚌寺，金碧辉煌的色拉寺，树木葱郁的罗布林卡，还有小昭寺、楚布寺......，东边不远处便是被松林环绕的热振寺，蜿蜒盘旋的山路引向庄严肃穆的直贡寺、甘丹寺。祥云缭绕的群山把圣地拉萨包得严严实实，让人留连忘返。这幅壁画是以宗教建筑为题材，拉萨及周边的佛教寺庙为线索的拉萨全景图。从壁画的局部，不难看出此画与建筑并非同一时期，画中罗布林卡的金色颇章正在修葺当中，两只白象正用鼻子卷着椽子木，工匠们正忙得不亦乐乎。由此可以推断此画应为1922—1926年之间所绘。其画面自然流畅、笔画超凡脱俗、远的山、近的景，无不给人一种置身于仙境的感觉。  <br/>
  <br/>
 　　乌尧颇章内的一幅鲜为人知的密宗修行图，给罗布林卡凭添了一层神秘的幕纱。据说这与拉萨龙王潭湖心岛龙王庙内的壁画极其相似，画中的修行者做着各种非常有规律的姿势，动作极其连贯，时而伸手，时而盘腿曲腰。像这样具体、细致地描述密宗修行方法的题材，在西藏绘画中十分罕见。对于西藏密宗修行，具有极高的研究价值，是西藏壁画艺术的经典之作。 <br/>
  <br/>
-<br/>
+947 <br/>
     达旦明久颇章内一组精美绝伦的连环画，再现了西藏的整个历史。据史料记载，这种以历史为题材的绘画艺术，始于公元前二世纪，吐蕃第一代赞普聂赤赞普时期。五世DL喇嘛时期，就绘制了一套体现西藏历史的唐卡（现仍保存在西藏博物馆和布达拉宫），此后便出现了更多的以历史为题材的绘画艺术。罗布林卡的这组壁画，绘制于1954年，自西壁至东壁从藏族的起源开始，描绘了西藏的第一块农田、第一代藏王、第一座宫殿、第一座寺庙、第一批佛教僧人、历代吐蕃赞普传记、赤尊公主和文成公主进藏、DL喇嘛的传记以及以寺庙发展为主线的藏传佛教兴衰发展史、元明清以来中央对西藏地方采取的多封众建制度、顺治皇帝为五世DL喇嘛颁布金册金印，直至和平解放后1954年十四世DL喇嘛、十世班禅进京参加第一届全国人民代表大会，于1955年2月28日毛泽东主席在北京中南海接见十四世DL喇嘛、十世班禅，并共庆藏历新年的情景。总共301幅画面以连环画形式追溯了西藏的主要历史事件，每一幅下面都注有详细的藏文说明，达到了史书的效果，是迄今为止以西藏历史为题材的最完整的壁画，更是西藏历史的见证。 <br/>
  <br/>
-     <br/>
+    948 <br/>
     此外，达旦明久颇章密宗室的一幅“释迦牟尼讲经”图，更是让世人惊叹不已。这幅壁画是西藏著名的画家安多强巴大师绘制的。他是20世纪西藏最著名的画家之一，他的绘画是在传统绘画艺术基础上吸收了西方美术绘画技艺。这种绘画崇尚自然的写实风气，极富想象力和创造力，具有生动活泼，形象逼真、贴近自然的特征，有浓郁的现代气息，突破了西藏传统《绘画度量经》的束缚，开辟了西藏绘画的新纪元。  <br/>
  <br/>
-     <br/>
+    949 <br/>
     此图描绘的是佛祖释迦牟尼在鹿野苑讲经场面，画面气势宏伟、色彩富丽而不失沉稳，画中人物衣着简约轻柔，均袒右臂，枝繁叶茂的热带植物，大大小小的沼泽，透露出浓郁的热带气息。佛祖释迦牟尼跏趺于一棵伞状的菩提树下，双手结说法印，衣纹流畅飘逸、体态优美，面带微笑、气质高雅，惟妙惟肖，完美至极。在他身旁的僧人也都身着黄色的袈裟，各自在树下手捧经文和法器，神情姿态各异。前来倾听的善男信女神情专注，显得十分虔诚。笔者曾仔细数过，在这约8平方米的壁面上有近60个大大小小的人物，但却主次分明，由近及远，不显拥挤 。突出体现了安多强巴大师精湛的绘画技艺，独具匠心的表现手法和丰富的想象力，是这位现代西藏绘画大师最具代表的作品之一，所有见过此幅画的人，无不为之赞叹。 <br/>
  <br/>
-　　罗布林卡内年代最久的壁画虽然不过200余年，但却荟萃了自18世纪以来西藏众多名家作品之精华。除将图案绘制于墙壁上，还在殿堂的梁、柱、甚至在所有藏柜、藏桌之上绘有佛传、八大药师佛、清朝婴戏图、奇花异草、灵禽益兽等图案,可谓一处壁画王国。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-12-5 21:31<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">顶礼上师本尊！！！ <br/>
+　　罗布林卡内年代最久的壁画虽然不过200余年，但却荟萃了自18世纪以来西藏众多名家作品之精华。除将图案绘制于墙壁上，还在殿堂的梁、柱、甚至在所有藏柜、藏桌之上绘有佛传、八大药师佛、清朝婴戏图、奇花异草、灵禽益兽等图案,可谓一处壁画王国。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金鑫发表于 2010-12-5 21:31</span><div class="badge-floor">第 2 进</div></div><div class="post-body">顶礼上师本尊！！！ <br/>
 那摩古如呗  皈依上师 <br/>
 那摩布达呀  皈依佛 <br/>
 那摩达嘛呀  皈依法 <br/>

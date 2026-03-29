@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>金剛空行母續後篇 藏汉 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>金剛空行母續後篇 藏汉 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">金剛空行母續後篇 藏汉</h1>
-<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2025-12-18 23:31<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">d0371金剛空行母續後篇new c3.5s <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">金剛空行母續後篇 藏汉</h1>
+<div class="post"><div class="post-header"><div class="avatar">班</div><span style="font-size:15px; letter-spacing:1px;">班匝咕汝发表于 2025-12-18 23:31</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">d0371金剛空行母續後篇new c3.5s <br/>
 d0371位於德格甘珠爾第78函，沒有相當的大正藏所收譯經 <br/>
 @##། །རྒྱ་གར་སྐད་དུ། བཛྲ་ཌཱ་ཀ་ནཱ་མ་ཨུཏྟ་ར་ཏནྟྲ། བོད་སྐད་དུ། རྡོ་རྗེ་མཁའ་འགྲོ་ཞེས་བྱ་བའི་རྒྱུད་ཕྱི་མ། འཇིག་རྟེན་དབང་ཕྱུག་ལ་ཕྱག་འཚལ་ལོ། །གསང་དང་མཆོག་དང་དགྱེས་པ་དང་། །ཐམས་ཅད་བདག་ཉིད་ལ་རྟག་བཞུགས། །མཁའ་འགྲོ་ཀུན་དངོས སེམས་དཔའ་སྟེ།།རྡོ་རྗེ་མཁའ་འགྲོ་བདེ་བའི་མཆོག་།འདི་ནི་རང་བྱུང་བཅོམ་ལྡན་འདས། །འདི་ཉིད་གཅིག་པུ་ལྷག་པའི་ལྷ། །འབྱུང་གནས་སྒྲ་གཟུགས་ལས་ངེས་འབྱུང་། །དམ་ཚིག་སྤྱོད་ཡུལ་བཅོམ་ལྡན་རྣམས། །ཐོག་མཐའ་དབུས་མཐར་ཡང་དག་གནས། །འཇིག་ རྟེན་གསུམ་རྣམས་ན་རྙེད་དཀའ།།འདོད་ཆགས་མ་ཡིན་ཆགས་བྲལ་མིན། །དབུ་མར་ཡང་ནི་དམིགས་པ་མེད། །སྒྱུ་མའི་ཕྱག་རྒྱ་བུད་མེད་ཀུན། །གཉིས་མེད་ཡེ་ཤེས་དམ་པ་ཡིན། །སྤྱོད་ན་མ་ཡང་འགྲུབ་འགྱུར་ཏེ། །བདེ་དང་སྤྲོ་བས་ཐམས་ཅད་འཐོབ། །ནམ་མཁའ་ ཀུན་དུ་སྤྱོད་འགྲུབ་པ།།མཁའ་འགྲོ་མ་ཞེས་རབ་ཏུ་གྲགས། །སྣ་ཚོགས་ཕྱག་རྒྱ་ཐམས་ཅད་དང་། །ཀུན་ནས་སྣ་ཚོགས་སྡོམ་པ་ནི། །མཁའ་འགྲོ་མ་ཀུན་མཉམ་སྦྱོར་བས། །རྡོ་རྗེ་མཁའ་འགྲོར་རབ་ཏུ་གྲགས། །སོ་སོའི་ལྷ་ལ་དམིགས་པ་ནི། །དེ་ཉིད་བསམ་བྲལ་རྣལ་འབྱོར་ ཏེ།།དབང་བསྐུར་བ་ལས་ངེས་པར་སྐྱེ། །གཟུགས་བརྙན་རང་བཞིན་རྣལ་འབྱོར་ཏེ། །རྣལ་འབྱོར་ཆེན་པོ་བྱང་ཆུབ་སེམས། །རྣལ་འབྱོར་དབང་ཕྱུག་བདག་པོ་རང་། །བྱང་ཆུབ་སེམས་ནི་རྡོ་རྗེ་སྟེ། །སངས་རྒྱས་ཀུན་གྱི་རང་བཞིན་ཕྱིར། །དེ་ཕྱིར་ཀུན་ནས་འབད་པ་ཡིས། །སྣ་ཚོགས་ རང་བཞིན་ལ་མཆོད་བྱ།།གཉིས་གཉིས་འཁྱུད་པའི་རང་བཞིན་གྱིས། །སྣ་ཚོགས་འགྲོ་བ་ཁྱབ་པར་གནས། །སངས་རྒྱས་ཉིད་དང་བདག་དང་ནི། །སེམས་ཅན་དང་ནི་ནུས་ལྡན་རྣམས། །རང་གི་ལྷ་ཡི་རྣལ་འབྱོར་པས། །བསྒྲུབ་བྱའི་བདག་ཉིད་དེ་ཡི་ཕྱིར། །འདི་ཡིས་སངས་རྒྱས་ ཐམས་ཅད་དང་།།ནུས་ལྡན་ཀུན་གྱི་དེ་ཉིད་ནི། །ཐམས་ཅད་རྡོ་རྗེ་འཛིན་ཉིད་དུ། །སྐྱེ་བ་འདིར་ནི་འགྲུབ་པར་འགྱུར། །ཞེས་བཅོམ་ལྡན་འདས་དཔལ་རྡོ་རྗེ་སེམས་དཔའ་དེ་བཞིན་གཤེགས་པས་བཀའ་སྩལ་ཏོ། །རྡོ་རྗེ་མཁའ་འགྲོ་བདེ་བའི་མཆོག་།མཁའ་འགྲོ་ཐམས་ཅད་མཉམ་སྦྱོར་ཏེ། ། ཁམས་གསུམ་པོ་ནི་མ་ལུས་པ། །ནམ་མཁའ་པ་ཡི་མཚན་ཉིད་དུ། །ཐམས་ཅད་ནམ་མཁའི་མཚན་ཉིད་དང་། །ཐམས་ཅད་སྒྱུ་མ་ལྟ་བུའོ། །མཐོང་བ་དང་ནི་རེག་པ་རྣམས། །ཐམས་ཅད་སྒྱུ་མ་ཇི་བཞིན་དུ། །འགྲོ་བ་ཀུན་དུ་གནས་པ་རྣམས། །འགའ་ཡང་དམིགས པ་མ་ཡིན་ནོ། <br/>
 以下是對原文的完整直譯： 梵語：Vajra Dakini Nama Uttara Tantra 藏語：རྡོ་རྗེ་མཁའ་འགྲོ་ཞེས་བྱ་བའི་རྒྱུད་ཕྱི་མ། 漢語：金剛空行母續後篇 禮敬世間自在主。 秘密、殊勝與喜悅， 恒常安住于自身。 空行眾生皆菩薩， 金剛空行樂中尊。 此乃自生薄伽梵， 唯此一尊勝諸天。 源自音形而出生， 誓言行境諸佛陀。 始終中際皆安住， 三界難得而尋覓。 非貪非離貪慾者， 中道亦無所緣執。 幻化手印諸女性， 無二智慧最殊勝。 若行即可成就之， 樂與喜悅皆可得。 遍空一切行成就， 空行女名廣流傳。 種種手印悉具足， 普遍種種誓言者。 空行女眾等和合， 金剛空行廣聞名。 各自本尊作意觀， 即是離思瑜伽者。 灌頂之後定生起， 影像自性瑜伽者。 大瑜伽即菩提心， 瑜伽自在主即我。 菩提心乃金剛性， 諸佛本性故如是。 是故當以諸方便， 供養種種自性相。 二二相擁自性中， 遍及種種諸眾生。 佛性與我及有情， 以及具力諸尊眾。 自身本尊瑜伽者， 所修本體故如是。 以此諸佛悉皆成， 具力眾生之本性。 一切金剛持自性， 此生即可得成就。 如是，世尊吉祥金剛薩埵如來宣說。 金剛空行樂中尊， 空行眾生皆和合。 三界一切無餘盡， 悉具虛空之性相。 一切皆具空性相， 一切如同幻化現。 所見及諸觸境等， 一切如同幻化相。 遍及一切眾生界， 無有一法可緣執。 <br/>

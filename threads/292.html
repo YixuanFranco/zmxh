@@ -1,51 +1,72 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>卧房风水布局 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>卧房风水布局 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">卧房风水布局</h1>
-<div class="post"><div class="post-header"><div class="avatar">喜</div>喜鹊七子发表于 2005-11-22 17:48<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">卧房风水布局 <br/>
-    依照每天睡眠八小时计算，则每个人在一天当中平均有三分之一的时间是在卧室。也就是说在人一生的旅途当中，就有三分之一的岁月是在床上度过。依照每天睡眠八小时计算，则每个人在一天当中平均有三分之一的时间是在卧室。也就是说在人一生的旅途当中，就有三分之一的岁月是在床上度过。卧室为私人睡眠休息处，其配置时应以宁静、温馨，达到充分休息为目的，必须有适当的私密性及安宁性，卧室亦可成为写日记，听音乐思想问题，养精蓄锐的重要处所，故隔音及吸音效果应考虑到。要注意到通风是否良好，且没有噪音、嘈杂、风沙、臭气。卧室属个人使用的范围，造型以居住者个人性及喜好为优先考虑。因为较不容易损坏，故视觉美感可重于耐用及保养性。卧室的形式 卧室依年纪与地位不同， 分为多种不同形式，如主卧室、单人成年卧室、老年房、青少年房、小孩卧室、幼儿房‥等。主卧室主卧室是夫妻共有的生活空间，所以必需兼顾双方的需要，良好的设计，适当的隐密性，可促进夫妻间的感情。单人成年卧室是属于未结婚的成年人而言，其设计较具个人化，也比较随兴、简单，合于年命、卦位即可。老年房因年纪大，且需有充分休息空间，故设计要以安全、休闲、实用的生活方式为主，安静，也是老年房的要件之一，老年房最好不要在宅的正中央，或者是走动频繁及噪音大的地方。并要考虑到其健康与行动方便的功能，老人易患泌尿系统疾病，卧室离厕所不要太远使其如厕方便。老人的抵抗力比较弱，常有骨胳关节酸痛的症状，最忌潮湿，应随时保持干燥，注意通风问题。青少年房大部分活动在户外，也在求学阶段，故设计以简单有充分读书环境为主。青少年血气方刚，特别要留意房间的布局阳气不能太盛。小孩房是读书、游戏兼具的空间，故设计以良好读书环境及宽畅活动空间、足够玩具收藏空间为重点。墙壁及装饰品以趣味、纯真为主。幼儿房其生活方式大都是在游戏，故设计以足够的活动空间、游戏安全、玩具收藏为主。尤其要注意光线的柔和，太强或太弱均不适宜。幼儿最重要的是睡眠充足，发育才能健全，须格外留意采光的温和明朗。卧室空间1．睡眠区是卧室主要区域，其主要由床、床头柜、床边柜形成，此区的设计需注意睡眠及床边阅读的功能，需有舒适的睡眠气氛及短暂阅读的光线。2．更衣区主要设备是衣橱及更衣空间， 卧室最好有单独更衣空间，但因为卧室空间小，大都无法规划出来，如地方大时，则可采更衣室设计为佳。3．化妆台主要设备以化妆台、化妆镜为生，其活动除可单独进行外，通常与更衣室大都在一个区域。一般化妆镜以不直接面对到床铺。也不宜进门就看到镜子。4．休闲区其主要活动以阅读为生，其次以看电视、听音乐，主要设备依功能而有不同。电视、电话等动态的物件以零神方为吉。床的位置床一般长度固定为191公分，宽度依个人需要及空间人小而定，一般幼儿房或胃少年房床宽度为91公分宽，空间大时用121公分床，成年单人房床用91或121公分，空间大时用151公分，主卧室床一般采用151公分，但也常有人要求181公分，另外有的夫妻是采分床睡眠，即各使用91公分床分开睡，中间以床边柜隔开。在双人房空间可能会因睡眠习惯不同，而需有不同的考虑，一般床有双人床及两人分睡两张单人床型式，前者，较具亲密关系，可憎加夫妻情感，但易受个人睡眠习惯不同而有干扰，后者则相反，有的适合新婚夫妻，有的适合中老年夫妻。卧室的摆设 1．床位不宜直接暴露于进口处或对门床的最大作用是要达到休息的效果，如果床位对冲着门，只要是门一开一关，就会影人的安宁，也就失去休息的作用。床位对着门，若从卧室外面一眼就可以看到床上的情形，对于睡在床上的人毫无隐密性，会有心理上的不自在而造成压力，缺乏安全感。2.床头不宜背着房门睡在床上不能轻易看到门口的情形，对于从门外进来的人必须要转身才能看清楚。在突然之间门外有动静，往往会受到惊吓，对情绪及健康都不是一件好事，日久容易引起心神不宁，脑神经衰弱。3.床头不可压梁在建筑结构中，一般梁会突出壁面，如床位置上方有梁突出，基于阳宅的观点，床头最好不要对着屋顶上的梁，卧房中有大梁，最好是隔上天花板将梁遮蔽起来，若从心理学上来看，躺在床上若面对一根梁，潜意识中就会感受到压迫，一个人被压迫感围绕着，久而久之，睡眠不安，常会作恶梦，心神不安，对于人生观及处理事物的态度都会产生偏差，情绪上的不安也会间接地影响了个人际关系。4.床位不宜在光线太强的地方俗语说：「光厅暗房。」指的是客厅要明亮，而卧室不要太亮。又中医的说法，肝开窍于眼，眼睛代表的是肝，阳光太强对眼睛造成刺激，则会伤肝，使肝火上升，脾气会变得不好。光线太强可以做窗帘，白天打开尽量让光线进来，晚上再拉起窗帘。5.房门不可对厨房、储藏室、厕所之门厨房为烹调食物之处，虽然有排油烟机抽取油烟，难免还会有热气溢出，又参杂着湿气与浊气，若厨房门与卧室的门相对，冷空气与热空气的相互对流，使卧室里吸进油烟浊气，就会有碍于健康。古书云：忌房前、房后是厨灶，房前起青烟，主眼目昏花。房后起青烟，妇女经痛。储藏室、厕所中多有霉气与晦气存在，对于身体亦有不良影响，其门不宜与卧室门相对。6.楼下当仓库，楼上当卧房，主多病，尤其是呼吸系统方面的疾病。7.卧房窗前正中，对着直屋檐滴水，称为“流泪煞”。8.卧房的来水方有屋脊、高墙、牌坊逼压卧房，主绝嗣、不育。9.房前种芭蕉，主血症，芭蕉属阴，久而引鬼。10.忌卧房在祖祠、祖先香火后面、下面。11.卧房内不可开太多门窗。12.房门对柱子，主孤寡。13.各种家俱排列，避免各在一面墙上，家俱与家俱应尽量连在一起，以免形成过多角落，使空间零乱变小。14.床头柜不一定须设立，如有需要则视末尾是否有足够的活动空间而定，否则，可以床头板来取代，现代设计中均以床头板设计较多，使空间有宽畅感。15．书桌位置书桌位置设立时需注意采光问题，应在光线充足地方，但其不是唯一考虑的因素，因为光线也可惜照明加强，千万不要因为只注意采光，只将窗户边视为书桌唯一位置，而忽略书桌位置对空间感是否有不当影响，如因为采光而造成空间小或不完整感时是得不偿失的。如果有参加考试或者是作进修，特别要留意书桌位置的摆设，要合于本命的卦位，再配合宅的文昌方，及个人的文昌方来设计。16．化妆台位置化妆台其活动一般与更衣、盥洗有关，故位置除考虑采光因素外，尚须注意与更衣区及浴厕间之动线关系是否流畅，使用是否顺畅等因素，以利卧室生活活动进行，一般是在浴厕及更衣区附近。要注意床不能正对镜子，镜子会反射到其他的人与事，使睡在床上的人十分不宁，有时在昏昏欲睡或刚睡醒时，无意间看到自己的影子，也会受到惊吓。化妆台不能正对着卧室的门，化妆台上都有镜子，从外面进入卧室的时候，在心理毫未设防的情形下，容易被映在镜子里的身影所吓到，久而久之对精神上会产生不良的影响。如果是限于房间的格局，实在无法克服以上状况，不妨在镜子前作一布帘围起来，须要用到化妆台时再拉开布帘。17．隔屏位置如卧室坪数较大或区域太多时，则需适当的以隔间技巧来划分，如透空隔屏、复式地板。大空间的平面规划要有层次感，充实不空洞，否则会过于呆板，与空间显的零散不完整，小空间则尽量要简单、俐落处理，使空间有一整体宽畅感。18．其它空间位置家俱位置考虑对有经验而言，是一起思考其位置，但对初学者而言，恐怕无法做到，故可依所占面积大者优先考虑，一个一个安排，一般先决定床组位置再决定衣橱、化妆台，将卧室主要家俱先考虑安排位置后，有多余的空间或角落再考虑其它空间如更衣间、休闲区、阅读区的设置。19．一个空间可分为家俱面积与活动面积，其必需成一适当比例，卧室家俱所占面积不可太多，否则使空间有拥挤感觉，也造成空间压迫感，宽畅的空间是平面设计的第一优先要求。20．卧室是个人经常逗留的隐秘空间，因此色彩计画可依个人、夫妻的嗜好来配置，卧室的颜色亦非常重要，色彩对于人的情绪、感情、与行为都有相当的影响力。一般在炎夏出生的人，火气比较旺，卧室的色彩最好采用青色、浅蓝色、浅绿色或其他较为寒色的系列。而在秋冬出生的人，卧室的色彩最好采用粉红色、咖啡色、黄、橙、红、紫色系列，或其他较为暖色的系列。再进一步最好是取八字的用神、喜神来配色：八字喜木：宜用绿色系列：黄绿、草绿、翠绿、橄榄绿、石绿、苍绿、浅绿。八字喜火：宜用暖色系列：黄、橙、红、紫色。八字喜土：宜用中性色系列：土黄、米色、乳黄、茶色、咖啡色、褐色、皮肤色。八字喜金：宜用白色、银色系列：浅灰、金黄色，及质感平滑的材料。八字喜水：宜用寒色系列：蓝色、青色、青紫、青绿、黑色。 </div></div><div class="post"><div class="post-header"><div class="avatar">一</div>一杯菠萝蜜发表于 2012-1-6 20:28<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">我能深入于未来  尽一切劫为一念 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/佛友修学交流苑.html">佛友修学交流苑</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">卧房风水布局</h1>
+<div class="post"><div class="post-header"><div class="avatar">喜</div><span style="font-size:15px; letter-spacing:1px;">喜鹊七子发表于 2005-11-22 17:48</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">卧房风水布局 <br/>
+    依照每天睡眠八小时计算，则每个人在一天当中平均有三分之一的时间是在卧室。也就是说在人一生的旅途当中，就有三分之一的岁月是在床上度过。依照每天睡眠八小时计算，则每个人在一天当中平均有三分之一的时间是在卧室。也就是说在人一生的旅途当中，就有三分之一的岁月是在床上度过。卧室为私人睡眠休息处，其配置时应以宁静、温馨，达到充分休息为目的，必须有适当的私密性及安宁性，卧室亦可成为写日记，听音乐思想问题，养精蓄锐的重要处所，故隔音及吸音效果应考虑到。要注意到通风是否良好，且没有噪音、嘈杂、风沙、臭气。卧室属个人使用的范围，造型以居住者个人性及喜好为优先考虑。因为较不容易损坏，故视觉美感可重于耐用及保养性。卧室的形式 卧室依年纪与地位不同， 分为多种不同形式，如主卧室、单人成年卧室、老年房、青少年房、小孩卧室、幼儿房‥等。主卧室主卧室是夫妻共有的生活空间，所以必需兼顾双方的需要，良好的设计，适当的隐密性，可促进夫妻间的感情。单人成年卧室是属于未结婚的成年人而言，其设计较具个人化，也比较随兴、简单，合于年命、卦位即可。老年房因年纪大，且需有充分休息空间，故设计要以安全、休闲、实用的生活方式为主，安静，也是老年房的要件之一，老年房最好不要在宅的正中央，或者是走动频繁及噪音大的地方。并要考虑到其健康与行动方便的功能，老人易患泌尿系统疾病，卧室离厕所不要太远使其如厕方便。老人的抵抗力比较弱，常有骨胳关节酸痛的症状，最忌潮湿，应随时保持干燥，注意通风问题。青少年房大部分活动在户外，也在求学阶段，故设计以简单有充分读书环境为主。青少年血气方刚，特别要留意房间的布局阳气不能太盛。小孩房是读书、游戏兼具的空间，故设计以良好读书环境及宽畅活动空间、足够玩具收藏空间为重点。墙壁及装饰品以趣味、纯真为主。幼儿房其生活方式大都是在游戏，故设计以足够的活动空间、游戏安全、玩具收藏为主。尤其要注意光线的柔和，太强或太弱均不适宜。幼儿最重要的是睡眠充足，发育才能健全，须格外留意采光的温和明朗。卧室空间1．睡眠区是卧室主要区域，其主要由床、床头柜、床边柜形成，此区的设计需注意睡眠及床边阅读的功能，需有舒适的睡眠气氛及短暂阅读的光线。2．更衣区主要设备是衣橱及更衣空间， 卧室最好有单独更衣空间，但因为卧室空间小，大都无法规划出来，如地方大时，则可采更衣室设计为佳。3．化妆台主要设备以化妆台、化妆镜为生，其活动除可单独进行外，通常与更衣室大都在一个区域。一般化妆镜以不直接面对到床铺。也不宜进门就看到镜子。4．休闲区其主要活动以阅读为生，其次以看电视、听音乐，主要设备依功能而有不同。电视、电话等动态的物件以零神方为吉。床的位置床一般长度固定为191公分，宽度依个人需要及空间人小而定，一般幼儿房或胃少年房床宽度为91公分宽，空间大时用121公分床，成年单人房床用91或121公分，空间大时用151公分，主卧室床一般采用151公分，但也常有人要求181公分，另外有的夫妻是采分床睡眠，即各使用91公分床分开睡，中间以床边柜隔开。在双人房空间可能会因睡眠习惯不同，而需有不同的考虑，一般床有双人床及两人分睡两张单人床型式，前者，较具亲密关系，可憎加夫妻情感，但易受个人睡眠习惯不同而有干扰，后者则相反，有的适合新婚夫妻，有的适合中老年夫妻。卧室的摆设 1．床位不宜直接暴露于进口处或对门床的最大作用是要达到休息的效果，如果床位对冲着门，只要是门一开一关，就会影人的安宁，也就失去休息的作用。床位对着门，若从卧室外面一眼就可以看到床上的情形，对于睡在床上的人毫无隐密性，会有心理上的不自在而造成压力，缺乏安全感。2.床头不宜背着房门睡在床上不能轻易看到门口的情形，对于从门外进来的人必须要转身才能看清楚。在突然之间门外有动静，往往会受到惊吓，对情绪及健康都不是一件好事，日久容易引起心神不宁，脑神经衰弱。3.床头不可压梁在建筑结构中，一般梁会突出壁面，如床位置上方有梁突出，基于阳宅的观点，床头最好不要对着屋顶上的梁，卧房中有大梁，最好是隔上天花板将梁遮蔽起来，若从心理学上来看，躺在床上若面对一根梁，潜意识中就会感受到压迫，一个人被压迫感围绕着，久而久之，睡眠不安，常会作恶梦，心神不安，对于人生观及处理事物的态度都会产生偏差，情绪上的不安也会间接地影响了个人际关系。4.床位不宜在光线太强的地方俗语说：「光厅暗房。」指的是客厅要明亮，而卧室不要太亮。又中医的说法，肝开窍于眼，眼睛代表的是肝，阳光太强对眼睛造成刺激，则会伤肝，使肝火上升，脾气会变得不好。光线太强可以做窗帘，白天打开尽量让光线进来，晚上再拉起窗帘。5.房门不可对厨房、储藏室、厕所之门厨房为烹调食物之处，虽然有排油烟机抽取油烟，难免还会有热气溢出，又参杂着湿气与浊气，若厨房门与卧室的门相对，冷空气与热空气的相互对流，使卧室里吸进油烟浊气，就会有碍于健康。古书云：忌房前、房后是厨灶，房前起青烟，主眼目昏花。房后起青烟，妇女经痛。储藏室、厕所中多有霉气与晦气存在，对于身体亦有不良影响，其门不宜与卧室门相对。6.楼下当仓库，楼上当卧房，主多病，尤其是呼吸系统方面的疾病。7.卧房窗前正中，对着直屋檐滴水，称为“流泪煞”。8.卧房的来水方有屋脊、高墙、牌坊逼压卧房，主绝嗣、不育。9.房前种芭蕉，主血症，芭蕉属阴，久而引鬼。10.忌卧房在祖祠、祖先香火后面、下面。11.卧房内不可开太多门窗。12.房门对柱子，主孤寡。13.各种家俱排列，避免各在一面墙上，家俱与家俱应尽量连在一起，以免形成过多角落，使空间零乱变小。14.床头柜不一定须设立，如有需要则视末尾是否有足够的活动空间而定，否则，可以床头板来取代，现代设计中均以床头板设计较多，使空间有宽畅感。15．书桌位置书桌位置设立时需注意采光问题，应在光线充足地方，但其不是唯一考虑的因素，因为光线也可惜照明加强，千万不要因为只注意采光，只将窗户边视为书桌唯一位置，而忽略书桌位置对空间感是否有不当影响，如因为采光而造成空间小或不完整感时是得不偿失的。如果有参加考试或者是作进修，特别要留意书桌位置的摆设，要合于本命的卦位，再配合宅的文昌方，及个人的文昌方来设计。16．化妆台位置化妆台其活动一般与更衣、盥洗有关，故位置除考虑采光因素外，尚须注意与更衣区及浴厕间之动线关系是否流畅，使用是否顺畅等因素，以利卧室生活活动进行，一般是在浴厕及更衣区附近。要注意床不能正对镜子，镜子会反射到其他的人与事，使睡在床上的人十分不宁，有时在昏昏欲睡或刚睡醒时，无意间看到自己的影子，也会受到惊吓。化妆台不能正对着卧室的门，化妆台上都有镜子，从外面进入卧室的时候，在心理毫未设防的情形下，容易被映在镜子里的身影所吓到，久而久之对精神上会产生不良的影响。如果是限于房间的格局，实在无法克服以上状况，不妨在镜子前作一布帘围起来，须要用到化妆台时再拉开布帘。17．隔屏位置如卧室坪数较大或区域太多时，则需适当的以隔间技巧来划分，如透空隔屏、复式地板。大空间的平面规划要有层次感，充实不空洞，否则会过于呆板，与空间显的零散不完整，小空间则尽量要简单、俐落处理，使空间有一整体宽畅感。18．其它空间位置家俱位置考虑对有经验而言，是一起思考其位置，但对初学者而言，恐怕无法做到，故可依所占面积大者优先考虑，一个一个安排，一般先决定床组位置再决定衣橱、化妆台，将卧室主要家俱先考虑安排位置后，有多余的空间或角落再考虑其它空间如更衣间、休闲区、阅读区的设置。19．一个空间可分为家俱面积与活动面积，其必需成一适当比例，卧室家俱所占面积不可太多，否则使空间有拥挤感觉，也造成空间压迫感，宽畅的空间是平面设计的第一优先要求。20．卧室是个人经常逗留的隐秘空间，因此色彩计画可依个人、夫妻的嗜好来配置，卧室的颜色亦非常重要，色彩对于人的情绪、感情、与行为都有相当的影响力。一般在炎夏出生的人，火气比较旺，卧室的色彩最好采用青色、浅蓝色、浅绿色或其他较为寒色的系列。而在秋冬出生的人，卧室的色彩最好采用粉红色、咖啡色、黄、橙、红、紫色系列，或其他较为暖色的系列。再进一步最好是取八字的用神、喜神来配色：八字喜木：宜用绿色系列：黄绿、草绿、翠绿、橄榄绿、石绿、苍绿、浅绿。八字喜火：宜用暖色系列：黄、橙、红、紫色。八字喜土：宜用中性色系列：土黄、米色、乳黄、茶色、咖啡色、褐色、皮肤色。八字喜金：宜用白色、银色系列：浅灰、金黄色，及质感平滑的材料。八字喜水：宜用寒色系列：蓝色、青色、青紫、青绿、黑色。 </div></div><div class="post"><div class="post-header"><div class="avatar">一</div><span style="font-size:15px; letter-spacing:1px;">一杯菠萝蜜发表于 2012-1-6 20:28</span><div class="badge-floor">第 2 进</div></div><div class="post-body">我能深入于未来  尽一切劫为一念 <br/>
 三世所有一切劫  为一念际我皆入 <br/>
 我于一念见三世  所有一切人师子 <br/>
 亦常入佛境界中  如幻解脱及威力 <br/>

@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>梵天火罗九曜 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>梵天火罗九曜 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/时岁宿值诸天众.html">时岁宿值诸天众</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">梵天火罗九曜</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2010-1-16 15:29<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">梵天火罗九曜 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/时岁宿值诸天众.html">时岁宿值诸天众</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">梵天火罗九曜</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚娴发表于 2010-1-16 15:29</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">梵天火罗九曜 <br/>
 <br/>
 梵天火罗九曜 <br/>
 <br/>
@@ -55,7 +76,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 罗睺星以钱供养口决云向丑寅供之。年一十十九二十八三十七四十六五十五六十四七十三八十二九十一并大凶。 <br/>
 <br/>
-<br/>
+3385 <br/>
 行年至此宿者凶。星隐而不见。一名罗睺。一名罗师。一名黄幡。一名火阳。临人本命。忧官失位。重病相缠。财物破散丧服愁口舌。国王以神不祭至此宿修福攘之。元神钱画所犯神形供养大吉云云(人命属大清天。此年百事如意。所求必得。行来出入皆大吉利)。 <br/>
 <br/>
 二中宫土宿星(王在四季)鸡缓　真言。 <br/>
@@ -69,7 +90,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 春巽夏坤秋干冬艮　季夏月果子一盘祭之　口决云其方不定。春季向巽余以次知之。年二十一二十二十九三十八四十七五十六六十五七十四八十三九十二并大凶。 <br/>
 <br/>
-<br/>
+3386 <br/>
 行年至此宿者是中宫土星。其星周九十里属楚国之分。其宿最凶。偏临宫之然及遮人此宿贞慎疾病牢狱。君子重厄之年号曰土星。不欲犯之。其形如波罗门。牛冠首手持锡杖。与为祸国王以季夏月果子一槃祭之。宜送本命元神钱。画所犯神形供养。黄衣攘之。必消灾增福寿命本命。属赤虚天百事不如意。男不宜官女不宜夫。忌三月九月庚辛日。 <br/>
 <br/>
 三嘀北辰星(水星王在冬三月)明曰。 <br/>
@@ -83,7 +104,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 以中夏之月用油祭向北方供之年三十二二十一三十三十九四十八五十七六十六七十五八十四九十三少吉。 <br/>
 <br/>
-<br/>
+3387 <br/>
 行年至此宿名北辰。一名毚星一名滴星。周回一百里属燕赵之分野。若临人本命。主阴愁口舌盗贼牵唤。其神状妇人。头首戴猿冠手持纸笔。国王以仲夏之月用油祭。宜醮北斗穰之。数此十二宫。从生月下一宿为一日。左数至生日止即知也云云。已行无(异本)人命属游咸天百事不成。男不宜官女不宜夫。忌四月丙戌日。 <br/>
 <br/>
 四西方大白星(金星金神也王在秋三月)明曰。 <br/>
@@ -94,7 +115,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 常以仲秋之月用生钱祭之向。西方供之年四十三二十二三十一四十四十九五十八六十七七十六八十五九十四少凶。 <br/>
 <br/>
-<br/>
+3388 <br/>
 行年至那颉。是太白星西方金精也。其星一名大白。一名长庚。一名那颉。其星周回一百里属秦国之分野。若临人年本命。至有哭泣刀兵。形如女人。头戴首冠。白练衣弹弦。与人为患。国王常以仲秋之月用生钱祭之。行年至此星。宜著白衣醮谢本命元神作福田。大吉也。人命属飞揰天百事皆吉忧解患。男财宜官妇子相系。治生万倍。 <br/>
 <br/>
 五大阳密日星真言曰。 <br/>
@@ -102,7 +123,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 以冬至之日用众宝祭之。向卯辰供之年五十四二十三三十二四十一五十五十九六十八七十七八十六九十五大吉。 <br/>
 行年至此宿者。主大阳属日。其星周回一千五百里。一日一周天。若临人本命。加官进禄有喜事。常得贵人接引。所作通达。国王以冬至之日用众宝祭之大吉矣　此星真言不可思议。若至心带佩并供养一年。非横不死云云。人命属通光百事如意。天神相保终无实难。所向开通福禄自至。 <br/>
-<br/>
+3389 <br/>
 <br/>
 六南方火荧惑星(火王在夏三月)火星真言曰。 <br/>
 归命唵摩诃利多莎婆诃 <br/>
@@ -113,7 +134,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 以仲夏之月火祭之。向南方供之。年六十五二十四三十三四十二五十一六十六十九七十八八十七九十六并是凶年也。 <br/>
 <br/>
 行年至此星。一名南方荧惑星。一名四利星。一名虚汉。其星周回七十里。属魏国之分。若临人命。必生口舌。疾病相缠。神形如外道。首戴驴冠。四手兵器刀刃。国王以仲夏之月。用火祭之。行年至此者。君子临福。职事进益。小人临福。灾害不生。敬之即无殃咎。人命属云霄。天神相保。不敢蘖祸。钱财满盈。福禄广至。虽有少忧。自解无苦。 <br/>
-<br/>
+3390 <br/>
 <br/>
 七计都蚀神星明曰。 <br/>
 唵缚日罗(二合)计都曩(引)曩乞杀(二合)怛罗(二合)逻惹野(名位)吽 <br/>
@@ -121,7 +142,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 画此形深室供养禳之。回祸为福。向未申供之。罗睺带珠宝。并日月计都着锦绣衣。年七十六二十五三十四四十三五十二六十一七十九八十八九十七并凶也。 <br/>
 <br/>
 行年至此计都亦是隐星。一名豹尾。一名大隐。首隐不见。不见而行无定形。若临人名。官最多逼塞。求官不遂。务被迁移。官符相缠。多忧疾病。此星凶。国王不祭。 <br/>
-<br/>
+3391 <br/>
 <br/>
 行年至此须送五道司命。画此神形。深室供养禳之。回祸作福。人命属温独天。所向不如意。行■无利。夫妇哭泣。或夫流泪。忌五月六月甲乙日。 <br/>
 <br/>
@@ -130,7 +151,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 常以夏至之日。众宝玉及水祭之向申酉供之。年八十七二十六三十五四十四五十三六十二七十一八十八十九九十八。 <br/>
 <br/>
-<br/>
+3392 <br/>
 行年至此宿位者。是太阴。也属月。其月周回一千五百里。一日周回天下。若临人本命大吉。加官进禄所作通达。得贵人接引。长有喜庆之事。国王以夏至之日。用众珍玉及水祭之。行年至此方。事通和求官得遂所作大吉。人命属微供天千百事皆凶。遭病恐死田蚕不收忧县官事。忌正月九月丙丁日。 <br/>
 <br/>
 九东方岁星(王在春三月)木星明曰。 <br/>
@@ -143,7 +164,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 行年至嗢没斯者是岁星。东方木精。一名摄提。其星周回一百里属鲁卫之分。临人本命。加官进禄。万事吉祥。其神形如卿相。着青衣。戴亥冠。手执华果。国王常以仲春月。用众宝祭之。 <br/>
 <br/>
-<br/>
+3393 <br/>
 行年至此宿宜与贵人交通婚姻和合。此年■■大吉之事也。人命属高仓天万事皆谐。所向如意往来有利。居为平安子孙炽昌。 <br/>
 <br/>
 北斗七星明曰。 <br/>
@@ -152,7 +173,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 九执明曰。 <br/>
 归命唵蘖罗(二)醯涅嚩(二合)哩也(二合)钵啰钵多(二合)底啰摩野(三)娑婆(二合)贺 <br/>
 <br/>
-蚀神头从正月至年终常居二宿翼宿张宿(罗)尾宿低宿(计)蚀神尾从正月至年终带居此二宿(以上无异本)按聿斯经云。凡人只知有七曜不晴虚星号曰罗睺计都。此星在隐位而不见。逢日月即蚀。号曰蚀神。计都者蚀神之尾也。号豹尾。若行年到此宿。切须画所犯神形。深室供养烧钱攘之。即灾害不生。若遇恶星须攘之。诸不逆其所犯。即变凶成吉。不信即变吉成凶。遇吉星喜庆重重福德自在。遇恶星灾害竞生。王侯犯之即谪官降职。但以亥时面向北斗。至心祭拜本命星。切不得向北小便折人寿命。宜思真念善获福宜财。若不穰之灾害竞起。 <br/>
+蚀神头从正月至年终常居二宿33943395339633973398翼宿3399张宿(罗)3400尾宿3401低宿(计)蚀神尾从正月至年终带居此二宿(以上无异本)按聿斯经云。凡人只知有七曜不晴虚星号曰罗睺计都。此星在隐位而不见。逢日月即蚀。号曰蚀神。计都者蚀神之尾也。号豹尾。若行年到此宿。切须画所犯神形。深室供养烧钱攘之。即灾害不生。若遇恶星须攘之。诸不逆其所犯。即变凶成吉。不信即变吉成凶。遇吉星喜庆重重福德自在。遇恶星灾害竞生。王侯犯之即谪官降职。但以亥时面向北斗。至心祭拜本命星。切不得向北小便折人寿命。宜思真念善获福宜财。若不穰之灾害竞起。 <br/>
 <br/>
 葛仙公礼北斗法 <br/>
 <br/>
@@ -205,7 +226,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 和州丰山长谷寺欢喜院沙门快道记 <br/>
 以传领之本对挍加笔毕　　慈顺 <br/>
 文政三岁次庚辰季秋朔日以秀阳阇梨去享和三年住丰山之日令密荣传写之本于东武汤岛根生役寮自手写挍之了 <br/>
-龙肝(年四十三戒三十七) </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-9-12 15:57<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">唵路迦　迦路野曳　娑婆贺 <br/>
+龙肝(年四十三戒三十七) </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金鑫发表于 2010-9-12 15:57</span><div class="badge-floor">第 2 进</div></div><div class="post-body">唵路迦　迦路野曳　娑婆贺 <br/>
 <br/>
 </div></div>
 </div>

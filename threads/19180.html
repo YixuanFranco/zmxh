@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>时轮歌詠現證 聖文殊真實名稱現觀大悲觀世音  藏汉 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>时轮歌詠現證 聖文殊真實名稱現觀大悲觀世音  藏汉 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">时轮歌詠現證 聖文殊真實名稱現觀大悲觀世音  藏汉</h1>
-<div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2025-12-25 02:20<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">d1400聖文殊真實名稱現觀大悲觀世音 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/密续法宝梵藏汉.html">密续法宝梵藏汉</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">时轮歌詠現證 聖文殊真實名稱現觀大悲觀世音  藏汉</h1>
+<div class="post"><div class="post-header"><div class="avatar">班</div><span style="font-size:15px; letter-spacing:1px;">班匝咕汝发表于 2025-12-25 02:20</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">d1400聖文殊真實名稱現觀大悲觀世音 <br/>
 D1400 <br/>
 @##། །རྒྱ་གར་སྐད་དུ། ཨཱརྱ་མཉྫུ་ཤྲཱི་ནཱ་མ་སངྒཱི་ཏི་ཨ་བྷི་ས་མ་ཡ། བོད་སྐད་དུ། འཕགས་པ་འཇམ་དཔལ་གྱི་མཚན་ཡང་དག་པར་བརྗོད་པའི་མངོན་པར་རྟོགས་པ། འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ལ་ཕྱག་འཚལ་ལོ། །བཅོམ་ལྡན་བསོད་ནམས་ཡེ་ཤེས་ཚོགས་སྤྲུལ་པ། ། སྐྱེ་བོ་དྲེགས་ལྡན་དྲེགས་པ་མེད་གཟིགས་ནས། །གདུལ་དཀའ་སེམས་ཅན་རྣམས་ནི་རྟག་པ་རུ། །འཇིགས་བྱེད་འཇིགས་པའི་གཟུགས་ཀྱིས་འདུལ་བྱེད་པའི། །རང་སྣང་ཀུན་སྐད་ཀྱིས་ཐོས་ཕ་རོལ་ཕྱིན། །སེམས་ཅན་བསམ་པའི་དབང་གིས་མོས་པ་བཞིན། །མ་ནོར་འཁྲུལ་སྔངས ལམ་ནི་སྟོན་མཛད་པའི།།སྟོན་མཆོག་གང་ཡིན་དེ་ལ་ཕྱག་འཚལ་ལོ། །དོན་གཉིས་ལྡན་པར་རབ་གྲུབ་ཕྱིར། །ཡང་དག་རིམ་པ་ལ་བརྟེན་ནས། །སངས་རྒྱས་ཀུན་གྱི་ཡེ་ཤེས་སྐུ། །མངོན་པར་རྟོགས་པར་བྱ་ཕྱིར་བརྗོད། །སྦྱིན་བདག་ཆེན་པོ་གཙོ་བོ་སྟེ། །ཚུལ་ཁྲིམས་ཆེན་པོ་འཆང་བའི་ མཆོག་།བཟོད་ཆེན་འཆང་བ་བརྟན་པ་པོ། །བརྩོན་འགྲུས་ཆེན་པོ་བརྟུལ་བ་ཡིན། །བསམ་གཏན་ཆེན་པོ་ཏིང་འཛིན་གནས། །ཤེས་རབ་ཆེན་པོ་ལུས་འཆང་བ། །སྟོབས་པོ་ཆེ་ལ་ཐབས་ཆེ་བ། །སྨོན་ལམ་ཡེ་ཤེས་རྒྱ་མཚོ་སྟེ། །བྱམས་ཆེན་རང་བཞིན་དཔག་ཏུ་མེད། །སྙིང་རྗེ་ཆེན་པོ་བློ ཡི་མཆོག་།ཅེས་བྱ་བ་ལ་སོགས་པ་མདོའི་དོན་ལ་འཇུག་པར་བྱ་སྟེ། གསང་སྔགས་ཀྱི་སྒོའི་སྤྱད་པ་སྤྱོད་པར་འདོད་པའི་རིགས་ཀྱི་བུའམ་རིགས་ཀྱི་བུ་མོ་གང་ལ་ལ་འཁོར་བའི་རྒྱ་མཚོའི་ཕ་རོལ་ཏུ་ཕྱིན་པར་འདོད་པས་ཉོན་མོངས་པས་སེམས་དཀྲུགས་ཤིང་། །མི་ཤེས་པའི་འདམ་གྱི ཚོགས་ཆེན་པོར་བྱིང་བའི་སེམས་ཅན་རྣམས་ལ་ཕན་པར་འདོད་པའི་བློས་དམ་པ་ཉེ་བར་བསྟེན་ཅིང་འདོད་པའི་ལྷ་དང་དམ་ཚིག་ལ་གུས་པས་ཚེ་འདིའི་ཆོས་ལ་ཞེན་པ་སྤངས་ལ།ཇི་སྐད་གསུངས་པའི་གནས་ཁང་སྟོང་དང་། རི་དང་། ཆུ་ཀླུང་དང་། ནགས་ཚང་ཚིང་ལ་སོགས་པ་ལས་དང་ རྗེས་སུ་མཐུན་པར་གསུངས་པ་གང་དུ་སེམས་དགའ་བ་དེར་སའི་བདག་པོའམ།སྐྱེ་དགུ་དམ་པ་གནས་པའི་ས། འབྱུང་པོའི་གནོད་པ་ལ་སོགས་པ་མི་མཐུན་པ་མེད་པ་དེར་རྣལ་འབྱོར་བ་བརྩམ་པར་བྱའོ། །སྒྲུབ་པ་པོའི་མཚན་ཉིད་དང་གནས་ཀྱི་ངེས་པ་བསྟན་པ་སྟེ་དང་ པོའོ།། །།དེ་ནས་བྱང་ཆུབ་ཀྱི་ཡན་ལག་ཏུ་དཀྱིལ་འཁོར་ལེགས་པར་བྱ་ཞིང་། མེ་ཏོག་དང་། སྤོས་ལ་སོགས་པ་ཅི་ནུས་པས་ཚོགས་པར་བྱའོ། །དེ་ནས་བསམ་གཏན་དང་། སྔགས་དང་། རྫས་རྣམས་ཀྱིས་གདོང་ལ་སོགས་པ་དག་པར་བྱས་ལ་བདེ་བའི་སྟན་ལ་འདུག་པར བྱའོ། <br/>
 以下是完整的中文直譯： <br/>
@@ -415,7 +436,7 @@ oṃ sumbha ni sumbha hūṃ hūṃ phaṭ&quot;、&quot;oṃ gṛhṇa gṛhṇ
 一切剎那&quot;者，即&quot;剎那一切皆分別&quot;之剎那，&quot;證悟一切剎那&quot;，&quot;心剎那知一切義&quot;，&quot;一剎那成正等覺&quot;等。 <br/>
 於此不動禪定剎那中，三時蘊等輪迴法，以及吉祥最勝等涅槃法，皆成一味，由此現證而證悟。 <br/>
 知&quot;即體驗或了悟之義。由此于剎那成佛，如雲：&quot;因智慧覺悟故為佛。&quot; 其方式如何？以五相成就五主尊為近修方式，以二十相成就眷屬為近行，以剎那成就圓滿佛果為修行方式。 <br/>
-于大成就中，父母融化無二，成為無字大明點，度母以慈氏本性喚醒吉祥最勝心。 其復云：&quot;度母我為熱，我為無垢瑜伽母，我為壇城自性故，祈請尊勝聖者心。&quot; </div></div><div class="post"><div class="post-header"><div class="avatar">班</div>班匝咕汝发表于 2025-12-25 08:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">།དེ་ནས་མཱ་མ་ཀཱི་ས་སྙིང་རྗེའི་ངོ་བོས་སྐུ་རྡོ་རྗེ་བསྐུལ་བའི་ཕྱིར། མཱ་མ་ཀཱི་ས་ནི་སྲིང་མོ་དང་། །རྣམ་པར་སྨིན་པའི་ སྦྱོར་གནས་པས།།བདག་ནི་དཀྱིལ་འཁོར་རང་བཞིན་པས། །དང་པོའི་སངས་རྒྱས་ཁྱོད་བཞེངས་ཤིག་།ཅེས་པའོ། །དེ་ནས་གོས་དཀར་མོ་དགའ་བའི་ངོ་བོས་གསུང་རྡོ་རྗེ་བསྐུལ་བའི་ཕྱིར། གོས་དཀར་ང་ནི་བུ་མོ་བས། །སྐྱེས་བུ་མེད་པའི་སྦྱོར་གནས་པས། །བདག་ནི་ དཀྱིལ་འཁོར་རང་བཞིན་པས།།གསུང་གི་བདག་པོ་ཁྱོད་བཞེངས་ཤིག་།ཅེའོ། །དེ་ནས་སྤྱན་མ་བཏང་སྙོམས་ཀྱི་ངོ་བོས་ཡེ་ཤེས་ཀྱི་རྡོ་རྗེ་བསྐུལ་བའི་ཕྱིར། །བདག་གི་རང་བཞིན་འགྲོ་བའི་མ། །རྒྱུ་མཐུན་རྣལ་འབྱོར་ལ་གནས་པ། །བདག་ནི་དཀྱིལ་འཁོར་རང་བཞིན་ པས།།ཡེ་ཤེས་སྐུ་ལྔ་ཁྱོད་བཞེངས་ཤིག་།ཅེའོ། །ཞེས་པ་ནི་གླུས་བསྐུལ་བའི་ངེས་པ་སྟེ་བཅུ་བཞི་པའོ།། །།དེ་ལྟར་མི་གཡོ་བ་ལ་སོགས་པའི་བསམ་གཏན་དང་། སྔར་བསྟན་པ་དེ་ཐམས་ཅད་ཤེས་རབ་ཀྱི་ཡན་ལག་ཏུ་བསྟན་ལ། ཤེས་རབ་ཡན་ལག་ཏུ་འདུས་ པ་ནི་རྣམ་པ་ཐམས་ཅད་ཀྱི་མཆོག་དང་ལྡན་པའི་སྐུ་བསྐྱེད་དེ།ཟླ་བ་དང་ཉི་མ་གཉིས་འདུས་པ་ལས། ཧཱུཾ་ལས་བྱུང་བའི་རྡོ་རྗེ་ལས་ས་བོན་དེ་ཉིད་ཀྱིས་མཚན་ནས་སྐད་ཅིག་དེ་ཉིད་ལ། བཅོམ་ལྡན་འདས་སྒྱུ་མ་ལྟ་བུར་མཐའ་དག་ལ་གཟིགས་ཏེ། སེམས་ཅན་ཐམས་ཅད་ཀྱི་ དོན་གྱི་ཕྱིར་ཤེས་རབ་ཆེན་པོའི་ལུས་སུ་བཞེངས་ཏེ།གཟུགས་མེད་གཟུགས་བཟང་དམ་པ་སྟེ། །སྣ་ཚོགས་གཟུགས་ཅན་ཡིད་ལས་སྐྱེས། །གཟུགས་རྣམས་ཐམས་ཅད་སྣང་བའི་དཔལ། །གཟུགས་བརྙན་མ་ལུས་འཆང་བའི་མཆོག་།ཚུགས་པ་མེད་ཅིང་ཆེར་གྲགས་ པ།།ཁམས་གསུམ་དབང་ཕྱུག་ཆེན་པོ་སྟེ། །འཕགས་ལམ་ཤིན་ཏུ་མཐོ་ལ་གནས། །དར་བ་ཆེན་པོ་ཆོས་ཀྱི་ཏོག་།འཇིག་རྟེན་གསུམ་ན་གཞོན་ལུས་གཅིག་།གནས་བརྟན་རྒན་པོ་སྐྱེ་དགུའི་བདག་།སུམ་ཅུ་རྩ་གཉིས་མཚན་འཆང་བ། །སྡུ་གུ་འཇིག་རྟེན་ གསུམ་ན་མཛེས།།ཞེས་ཚིགས་སུ་བཅད་པའི་དོན་དང་ལྡན་པའི་བཅོམ་ལྡན་འདས་འཇམ་དཔལ་དང་པོའི་སངས་རྒྱས་སྐད་ཅིག་གིས་མངོན་པར་རྫོགས་པར་བྱང་ཆུབ་པ་ཞལ་ཕྱག་ལ་སོགས་པ་སྔར་བསྟན་པའི་ཚུལ་བཞིན་དུ་ཡུམ་དང་ཁ་སྦྱོར་དུ་བཞེངས་པ་ནི་རེག་པ་ ཡོངས་སུ་དག་པའོ།།སྔར་མི་གཡོ་བ་ལྷན་ཅིག་སྐྱེས་པ་བཞིན་སྐུར་བཞེངས་པ་གནས་པ་ནི་ཚོར་བ་ཡོངས་སུ་དག་པའོ། །དེས་ནི་རྫོགས་པའི་སངས་རྒྱས་བཞེངས་པའི་ངེས་པ་སྟེ་བཅོ་ལྔ་པའོ།། །།དེ་ལ་རྣམ་པ་ལྔས་མངོན་པར་བྱང་ཆུབ་པ་ནི་ མངལ་ནས་སྐྱེས་པའོ། <br/>
+于大成就中，父母融化無二，成為無字大明點，度母以慈氏本性喚醒吉祥最勝心。 其復云：&quot;度母我為熱，我為無垢瑜伽母，我為壇城自性故，祈請尊勝聖者心。&quot; </div></div><div class="post"><div class="post-header"><div class="avatar">班</div><span style="font-size:15px; letter-spacing:1px;">班匝咕汝发表于 2025-12-25 08:44</span><div class="badge-floor">第 2 进</div></div><div class="post-body">།དེ་ནས་མཱ་མ་ཀཱི་ས་སྙིང་རྗེའི་ངོ་བོས་སྐུ་རྡོ་རྗེ་བསྐུལ་བའི་ཕྱིར། མཱ་མ་ཀཱི་ས་ནི་སྲིང་མོ་དང་། །རྣམ་པར་སྨིན་པའི་ སྦྱོར་གནས་པས།།བདག་ནི་དཀྱིལ་འཁོར་རང་བཞིན་པས། །དང་པོའི་སངས་རྒྱས་ཁྱོད་བཞེངས་ཤིག་།ཅེས་པའོ། །དེ་ནས་གོས་དཀར་མོ་དགའ་བའི་ངོ་བོས་གསུང་རྡོ་རྗེ་བསྐུལ་བའི་ཕྱིར། གོས་དཀར་ང་ནི་བུ་མོ་བས། །སྐྱེས་བུ་མེད་པའི་སྦྱོར་གནས་པས། །བདག་ནི་ དཀྱིལ་འཁོར་རང་བཞིན་པས།།གསུང་གི་བདག་པོ་ཁྱོད་བཞེངས་ཤིག་།ཅེའོ། །དེ་ནས་སྤྱན་མ་བཏང་སྙོམས་ཀྱི་ངོ་བོས་ཡེ་ཤེས་ཀྱི་རྡོ་རྗེ་བསྐུལ་བའི་ཕྱིར། །བདག་གི་རང་བཞིན་འགྲོ་བའི་མ། །རྒྱུ་མཐུན་རྣལ་འབྱོར་ལ་གནས་པ། །བདག་ནི་དཀྱིལ་འཁོར་རང་བཞིན་ པས།།ཡེ་ཤེས་སྐུ་ལྔ་ཁྱོད་བཞེངས་ཤིག་།ཅེའོ། །ཞེས་པ་ནི་གླུས་བསྐུལ་བའི་ངེས་པ་སྟེ་བཅུ་བཞི་པའོ།། །།དེ་ལྟར་མི་གཡོ་བ་ལ་སོགས་པའི་བསམ་གཏན་དང་། སྔར་བསྟན་པ་དེ་ཐམས་ཅད་ཤེས་རབ་ཀྱི་ཡན་ལག་ཏུ་བསྟན་ལ། ཤེས་རབ་ཡན་ལག་ཏུ་འདུས་ པ་ནི་རྣམ་པ་ཐམས་ཅད་ཀྱི་མཆོག་དང་ལྡན་པའི་སྐུ་བསྐྱེད་དེ།ཟླ་བ་དང་ཉི་མ་གཉིས་འདུས་པ་ལས། ཧཱུཾ་ལས་བྱུང་བའི་རྡོ་རྗེ་ལས་ས་བོན་དེ་ཉིད་ཀྱིས་མཚན་ནས་སྐད་ཅིག་དེ་ཉིད་ལ། བཅོམ་ལྡན་འདས་སྒྱུ་མ་ལྟ་བུར་མཐའ་དག་ལ་གཟིགས་ཏེ། སེམས་ཅན་ཐམས་ཅད་ཀྱི་ དོན་གྱི་ཕྱིར་ཤེས་རབ་ཆེན་པོའི་ལུས་སུ་བཞེངས་ཏེ།གཟུགས་མེད་གཟུགས་བཟང་དམ་པ་སྟེ། །སྣ་ཚོགས་གཟུགས་ཅན་ཡིད་ལས་སྐྱེས། །གཟུགས་རྣམས་ཐམས་ཅད་སྣང་བའི་དཔལ། །གཟུགས་བརྙན་མ་ལུས་འཆང་བའི་མཆོག་།ཚུགས་པ་མེད་ཅིང་ཆེར་གྲགས་ པ།།ཁམས་གསུམ་དབང་ཕྱུག་ཆེན་པོ་སྟེ། །འཕགས་ལམ་ཤིན་ཏུ་མཐོ་ལ་གནས། །དར་བ་ཆེན་པོ་ཆོས་ཀྱི་ཏོག་།འཇིག་རྟེན་གསུམ་ན་གཞོན་ལུས་གཅིག་།གནས་བརྟན་རྒན་པོ་སྐྱེ་དགུའི་བདག་།སུམ་ཅུ་རྩ་གཉིས་མཚན་འཆང་བ། །སྡུ་གུ་འཇིག་རྟེན་ གསུམ་ན་མཛེས།།ཞེས་ཚིགས་སུ་བཅད་པའི་དོན་དང་ལྡན་པའི་བཅོམ་ལྡན་འདས་འཇམ་དཔལ་དང་པོའི་སངས་རྒྱས་སྐད་ཅིག་གིས་མངོན་པར་རྫོགས་པར་བྱང་ཆུབ་པ་ཞལ་ཕྱག་ལ་སོགས་པ་སྔར་བསྟན་པའི་ཚུལ་བཞིན་དུ་ཡུམ་དང་ཁ་སྦྱོར་དུ་བཞེངས་པ་ནི་རེག་པ་ ཡོངས་སུ་དག་པའོ།།སྔར་མི་གཡོ་བ་ལྷན་ཅིག་སྐྱེས་པ་བཞིན་སྐུར་བཞེངས་པ་གནས་པ་ནི་ཚོར་བ་ཡོངས་སུ་དག་པའོ། །དེས་ནི་རྫོགས་པའི་སངས་རྒྱས་བཞེངས་པའི་ངེས་པ་སྟེ་བཅོ་ལྔ་པའོ།། །།དེ་ལ་རྣམ་པ་ལྔས་མངོན་པར་བྱང་ཆུབ་པ་ནི་ མངལ་ནས་སྐྱེས་པའོ། <br/>
 然後摩摩基以大悲本性喚醒金剛身，故云：&quot;摩摩基我為姊妹，安住異熟瑜伽中，我為壇城自性故，祈請初佛尊起身。&quot; <br/>
 然後白衣母以歡喜本性喚醒語金剛，故云：&quot;白衣我為少女故，安住無人瑜伽中，我為壇城自性故，祈請語主尊起身。&quot; 然後準提以舍心本性喚醒智慧金剛，故云：&quot;我性一切眾生母，安住因順瑜伽中，我為壇城自性故，祈請五智身起身。&quot; <br/>
 此為以歌喚醒之確定，為第十四。 <br/>

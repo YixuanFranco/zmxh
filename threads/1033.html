@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>《生死的幻觉》 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>《生死的幻觉》 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">《生死的幻觉》</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-5-10 17:27<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">《生 死 的 幻 觉》 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/我随一切如来学.html">我随一切如来学</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">《生死的幻觉》</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-5-10 17:27</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">《生 死 的 幻 觉》 <br/>
 <br/>
                             作者：白玛格桑仁波切 <br/>
  <br/>
@@ -97,7 +118,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 尤其难得的是仁波切根据自己的实证经验，给修习显密佛法的善根信众们指点了成佛的捷径妙道，并在其中透露了由几位高僧大德上师亲传的深密窍诀。仁波切还根据他的亲身经历讲述了西藏的一些大成就者的传奇故事，令人受益无穷。 <br/>
  <br/>
-以弘扬佛法、利益众生为己任的白玛格桑仁波切，以无尽的慈悲之心，将这本智慧法宝甘露洒降给我们，愿我们都能蒙受白玛格桑仁波切的慈悲甘雨和加被助力，愿我们永离烦恼、恒具欢乐！愿世界和平、永远祥瑞！愿所有的众生离苦得乐、同登佛土！ </div></div><div class="post"><div class="post-header"><div class="avatar">绛</div>绛巴嘉措发表于 2006-5-10 17:33<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">序   我和我生长的地方 <br/>
+以弘扬佛法、利益众生为己任的白玛格桑仁波切，以无尽的慈悲之心，将这本智慧法宝甘露洒降给我们，愿我们都能蒙受白玛格桑仁波切的慈悲甘雨和加被助力，愿我们永离烦恼、恒具欢乐！愿世界和平、永远祥瑞！愿所有的众生离苦得乐、同登佛土！ </div></div><div class="post"><div class="post-header"><div class="avatar">绛</div><span style="font-size:15px; letter-spacing:1px;">绛巴嘉措发表于 2006-5-10 17:33</span><div class="badge-floor">第 2 进</div></div><div class="post-body">序   我和我生长的地方 <br/>
  <br/>
     我出生在世界屋脊的雪域高原，我的家乡位于康巴地区的北部、安多的南部，属于古代西藏东部六冈中的直杂冈区域，距离玛杂冈很近。人们称我的家乡为扎曲卡或果洛扎曲卡，意思是“雅砻江的源头”。 <br/>
  <br/>
@@ -258,7 +279,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 愿本书能穿越时空隧道，成为我和未来人之间的心灵对话! <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-13 22:33<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">第一章   昨天和明天的尽头 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-13 22:33</span><div class="badge-floor">第 3 进</div></div><div class="post-body">第一章   昨天和明天的尽头 <br/>
 <br/>
 在这里，我要和生活在地球上的人类同胞讨论与我们密切相关的重要大事——我们从哪里来？中途驻栖何地？最后会去到哪里？就在我说完上面几句话之后，“这里”二字已经成了过去，它将随着一瞬即逝的人生时光渐渐远离现在而去。 <br/>
  <br/>
@@ -384,7 +405,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 我们被迫踏上死亡之路后，因为必须承受此前所造众多恶业的报应苦果，从而反复流转于轮回世界里，也许能有幸再转生为人，也许转生为畜生，也许下地狱…… 面对无穷无尽的轮回，所有的人都会心灰意冷、束手无策。 <br/>
 <br/>
-因此，我们应该倍加珍惜稀有难得而且生命时光非常短暂的暇满人身，不要让今世拥有的暇满人身毫无意义地耗费在追求此生的短暂快乐上，我们要充分利用这个暇满人身修造恒久快乐的大业，要立即寻找使此生快乐、来生极乐的正道，赶快修完恒乐伟业，我们应该具备这样的决心和雄心。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-13 22:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">第二章   生命的奥秘 <br/>
+因此，我们应该倍加珍惜稀有难得而且生命时光非常短暂的暇满人身，不要让今世拥有的暇满人身毫无意义地耗费在追求此生的短暂快乐上，我们要充分利用这个暇满人身修造恒久快乐的大业，要立即寻找使此生快乐、来生极乐的正道，赶快修完恒乐伟业，我们应该具备这样的决心和雄心。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-13 22:42</span><div class="badge-floor">第 4 进</div></div><div class="post-body">第二章   生命的奥秘 <br/>
 <br/>
 寿、命、识三者当中的“寿”，指的是当身体和生命聚合在一起时，存在于体内命脉中的气与元气的结合体，这个像口水一样的东西里面有意识的依所“热体”，和“气”之精华犹如马尾毛丝一样的物体，当马尾毛丝状的物体破裂、倾斜或弯曲以后，就会产生多种疾病和遭遇各种灾祸；如果它没有破裂、倾斜、弯曲或毛丝状的物体较长的话，就会延年益寿。当以上物体能正常发挥作用的时候，我们就称其为“寿”。 <br/>
  <br/>
@@ -507,7 +528,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 从以上的故事我们可以看出：在佛、法、僧等殊胜福田中积德等善业，或者杀生、看见杀生心生随喜等恶业，都会有不可避免的业果要去体受。另外，在临死之际发愿，具有很大的威力，因此，要充分把握好这个机会。 <br/>
  <br/>
-以上是因果不灭的简要说明，希望有缘信众能够从中明白因果法义。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-13 22:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">第三章   无常的人生 <br/>
+以上是因果不灭的简要说明，希望有缘信众能够从中明白因果法义。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-13 22:56</span><div class="badge-floor">第 5 进</div></div><div class="post-body">第三章   无常的人生 <br/>
  <br/>
 外在世界有成、住、坏、空的过程，和外在世界一样内情众生也有出生和死亡的过程。在性空法界动起无明业风后形成的有情众生，具有最初形成、中间短住、最后死亡的明显规律，这个规律便是有为无常的现象。世间万法有聚就会有散，有为不离生灭，有生必有死亡。当死亡到来的时候，外四大会收入到内四大之中，内四大又融入光明之中，而光明将会展现为离戏空性。 <br/>
  <br/>
@@ -625,7 +646,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 一个人在临死的时候应该具备六随念，即忆念师、佛、法、僧、持戒和布施。佛祖曾经开示：“要作如下之忆念，诸法本性清净故，要修无相无实心；具足菩提心之故，要修广大慈悲心；自性无观光明故，要修无有执着心；心能生出智慧因，莫向别处求佛性。” <br/>
 <br/>
-除此之外，还要真实修证佛经中宣说的十一想，即不贪恋此生之想、发慈悲心于众生之想、舍去所有仇恨之想、渝戒众罪忏悔之想、接受清静众戒之想、减轻重大罪业之想、不畏往生世界之想、有为诸法无常之想、所有万法无我之想、涅槃寂静之想。还可以多多观想极乐净土全景，为往生极乐净土积累福慧二资粮，大发无上大乘菩提胜心，并且把全部善业回向于入登清净佛土之因。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-13 23:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">第四章  未来的神圣事业 <br/>
+除此之外，还要真实修证佛经中宣说的十一想，即不贪恋此生之想、发慈悲心于众生之想、舍去所有仇恨之想、渝戒众罪忏悔之想、接受清静众戒之想、减轻重大罪业之想、不畏往生世界之想、有为诸法无常之想、所有万法无我之想、涅槃寂静之想。还可以多多观想极乐净土全景，为往生极乐净土积累福慧二资粮，大发无上大乘菩提胜心，并且把全部善业回向于入登清净佛土之因。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-13 23:14</span><div class="badge-floor">第 6 进</div></div><div class="post-body">第四章  未来的神圣事业 <br/>
 <br/>
 无论是什么样的罪业和什么样的烦恼把我们投进轮回世界里，当我们投胎获得现在这个身体之后，我们暂时还无法把它改造成另一个更好的身体，但是我们始终需要明白的是，身体就像水中倒影一样不会恒久、像魔术师的魔术戏法一样不真实、像把阳焰当作河流一样迷惑人。在知道身体虚幻不实的情况下，众生还是因为无法阻挡各自的业果再现而堕入轮回尘世，对此，一方面看起来有点可笑，另一方面又觉得非常可悲。 <br/>
  <br/>
@@ -759,7 +780,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 佛祖释迦牟尼在《大悲白莲华经》中说道：“脱离八无暇而具足暇满功德非常难得，所以要特别精进修善，不然就会后悔莫及。”佛祖在《清净戒律经》中还说道：“为什么不持续精进修行呢? 要知道老、病、死正在的的确确向你们逼近，佛陀的教法也在不断地向灭亡靠近，往后你们会后悔莫及呀!” <br/>
  <br/>
-轮回苦海是无有边际的，我们既找不到它的开始，也找不到它的结束。在如此怖畏的轮回世界里，我们有幸能够获得像渡海木筏一样的修法人身，这是非常难得的。我们要抓住这个绝好的机会，一定要在今生今世登上解脱彼岸，摆脱让我们不堪忍受的轮回痛苦。今后我们很难再得到这样的暇满人身，所以就在获得如此绝好机会的今生今世，我们再也不能沉睡不醒，再也不能在迷妄中虚度一生，这是我劝告和我同样命运的人们的肺腑之言。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-13 23:30<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">第五章   微妙正道的路径 <br/>
+轮回苦海是无有边际的，我们既找不到它的开始，也找不到它的结束。在如此怖畏的轮回世界里，我们有幸能够获得像渡海木筏一样的修法人身，这是非常难得的。我们要抓住这个绝好的机会，一定要在今生今世登上解脱彼岸，摆脱让我们不堪忍受的轮回痛苦。今后我们很难再得到这样的暇满人身，所以就在获得如此绝好机会的今生今世，我们再也不能沉睡不醒，再也不能在迷妄中虚度一生，这是我劝告和我同样命运的人们的肺腑之言。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-13 23:30</span><div class="badge-floor">第 7 进</div></div><div class="post-body">第五章   微妙正道的路径 <br/>
  <br/>
     人们都知道佛教最初是从印度传过来的。在这个世界最初形成之时，浩瀚的大海中绽放出一千○二朵金莲，由此祥瑞之兆令今天的贤劫拥有一千○二位传法佛陀。在贤劫一千○二位佛陀当中，释迦牟尼佛是第四个来世间传法的大导师。释尊的本性虽然在本原已经体证了正觉佛果，但是在化机众生面前，还是显示了开悟成佛的圣迹，以十二功业先后转了三次大法-轮。 <br/>
  <br/>
@@ -878,7 +899,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 居士女儿发现小沙弥自杀身亡，产生了无限的悔恨和罪过感，她把家中所发生的一切如实地告诉了父亲。父亲把事情报告了国王，举国上下为之震惊。人们异口同声地称赞小沙弥守戒如护眼珠的梵行，小沙弥留下的一块小骨头都成了众人供奉膜拜的圣物。当时，小沙弥的上师也来到出事现场，在给众人宣讲了微妙善法后，当场有很多人出家为僧，发无上菩提心，上师也令其他人都得到了喜悦和满愿。 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-13 23:37<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">第六章  内在的寂静甘露 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-13 23:37</span><div class="badge-floor">第 8 进</div></div><div class="post-body">第六章  内在的寂静甘露 <br/>
 <br/>
 我们常说的甘露，是指既能治病又能救命的一种良药。甘露是天界众神靠前世福业得来的可延长寿命的圣物。我们把微妙佛法比喻为甘露，是因为佛法能医治并除灭轮回的痛苦。我们的这个由外四大和合而成的血肉蕴身，当四大不调的时候就会产生疾病。生病和饥渴寒暑都是外在的痛苦，对于外在的各种痛苦，我们可以采用生化药物和改善衣食等外在的方法来解除。 <br/>
  <br/>
@@ -958,7 +979,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 如果我们只求自己一个人解脱，不为众生着想，那是自私自利的行为，因此，我们要有报恩于众生父母的心愿，要有使众生幸福快乐的慈心和让众生永离痛苦的悲心。如果我们自己没有产生真正的菩提心，那么，无论我们修学什么样的殊胜道法，都不可能得到任何正道真功德，这与纸老虎、假油灯一样徒有其表，没有什么实际作用。 <br/>
  <br/>
-修学佛法的人，首先要有厌离心、菩提心和清净正见。在此基础上积累二资粮，勤修三学，常具四无量心，坚持行十善、六波罗蜜多法，最后，可以把解脱无上佛果在即身即世修炼成就，并可以向污秽轮回苦海说一声再见。这便是无与伦比的永恒快乐之寂静。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-13 23:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">第七章      迈向恒久快乐的步伐 <br/>
+修学佛法的人，首先要有厌离心、菩提心和清净正见。在此基础上积累二资粮，勤修三学，常具四无量心，坚持行十善、六波罗蜜多法，最后，可以把解脱无上佛果在即身即世修炼成就，并可以向污秽轮回苦海说一声再见。这便是无与伦比的永恒快乐之寂静。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-13 23:43</span><div class="badge-floor">第 9 进</div></div><div class="post-body">第七章      迈向恒久快乐的步伐 <br/>
 <br/>
 从无始轮回到今天，我们在无尽的轮回流转中忙碌不停，从未有过闲暇时光。前生前世的所作所为，就像昨夜的一场梦，总是处在连续不断的迷惑和没完没了的行动中。我们可以试问一下自己，我到底是谁呢? 在寻找答案的过程中,我们发现自己的名字是父母取的，不能说名字就是“我”。 <br/>
  <br/>
@@ -1036,7 +1057,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 产生轮回痛苦的根本原因、毁坏解脱种子的恶敌、集谛业缘和烦恼的根源就是——我执。所以，我们要努力修学我执的对治法——无我智慧，这就像没有魔术师后所有魔术幻相自动消失一样。尤其要修学无上极乘妙法大圆满究竟离戏本原法性，要超越以念治念，要在智慧本原解脱法界中断灭业缘、烦恼、所知及习气，从而即身成就佛果法身，这是最殊胜的修行方法。 <br/>
 <br/>
-在修法历程中的远道、近道、捷道和最快妙道的快慢分别，就像我们爬行、步行、乘车和坐飞机，有着很大的差别。修习捷径妙道之法，可以让我们在较短的时间里获证佛果。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-13 23:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">第八章        魔术游戏般的无常 <br/>
+在修法历程中的远道、近道、捷道和最快妙道的快慢分别，就像我们爬行、步行、乘车和坐飞机，有着很大的差别。修习捷径妙道之法，可以让我们在较短的时间里获证佛果。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-13 23:49</span><div class="badge-floor">第 10 进</div></div><div class="post-body">第八章        魔术游戏般的无常 <br/>
  <br/>
 我们的眼、耳、鼻、舌、身、意所对应的境界色、声、香、味、触、法，都是无常而且必将灭亡的东西。我们的眼睛所看到的色物，无论大小都是由“四大”作为基本因素的聚合体，而且都是无常、不断变化的物体，就连物质的基本组成成分“四大”也是在不断地生灭变化之中。由微尘堆积而成的坚固高山大地和大海湖泊围绕的世界也都会有毁灭的时候，同样，日月星辰等所有无生命和有生命的万物，都将会发生变化直至毁灭。 <br/>
  <br/>
@@ -1106,7 +1127,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 听到开示以后，自己顿时醒悟。心想早知有今日的下场，当初一定会努力积修善法，事到如今，后悔也没有用，无论生与死，一切愿听上师三宝的安排。自己还暗暗祈祷，希望上师能把自己从悬崖边救走。想到这里的时候，只见上师从心际放射出一道光芒，光芒照至自己心际时青草断了，自己立刻被那道光芒送入极乐世界。 <br/>
 <br/>
-到达极乐世界之后，从自己的心际再放射出无数道光芒，把三界众生也全都带入极乐世界，这样观想的时候，心中要充满慈悲感。如此观思各种死亡情景之后，对待死亡再也不能仅限于有所耳闻或知道会死，要时常观思死亡。观思死亡的做法可以视为心法的修持，没有修成这个心要法门，就不可能修成其他任何殊胜道法，所以，一定要经常用心观思死亡。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-13 23:53<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">第九章   虚妄和欺骗 <br/>
+到达极乐世界之后，从自己的心际再放射出无数道光芒，把三界众生也全都带入极乐世界，这样观想的时候，心中要充满慈悲感。如此观思各种死亡情景之后，对待死亡再也不能仅限于有所耳闻或知道会死，要时常观思死亡。观思死亡的做法可以视为心法的修持，没有修成这个心要法门，就不可能修成其他任何殊胜道法，所以，一定要经常用心观思死亡。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-13 23:53</span><div class="badge-floor">第 11 进</div></div><div class="post-body">第九章   虚妄和欺骗 <br/>
 <br/>
 我们从早到晚、从年初到年末、从出生到死亡一直在不停地忙碌着，目的只有一个，就是希望给自己创造安乐。我们积攒大量的衣食财物，希望享用它来给自己带来快乐。我们用一生的时间做准备，却在准备工作还没有做完之前，生命就走到了尽头。忙碌一生并没有给我们带来快乐，到头来一切准备工作成了枉费工夫，临死的时候后悔已来不及。 <br/>
  <br/>
@@ -1152,7 +1173,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 听到开示之后，自己立即思维：“就在这轮回火坑中，自己从前被焚烧了很长时间，现在，应该听取上师的教导，由此使自己从轮回火坑中解脱出来，而且还要把众生也从火坑中救出来。”这样发大愿心的时候，上师手中铁钩形的光芒立刻照到自己的心际，刹那间光芒就把自己送入了极乐世界。之后，自己手中也有了一道铁钩形光芒，并用这道光芒把所有有情都送入了极乐世界。 <br/>
  <br/>
-另外，我们还要经常认真详细地观思一切轮回痛苦。诚如莲花生大师所开示的那样，我们要坚持不懈地观思轮回痛苦，直至生出厌恶轮回之心。当对轮回世界产生出离心的时候，我们必然会修学殊胜善法，这可以看作是得生厌离此生的觉证。如果我们没有厌恶轮回，那么我们所修的法不会产生任何重大意义，不能算是清净的正法，从而很难令我们脱离轮回痛苦。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 00:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">第十章   三苦囹圄 <br/>
+另外，我们还要经常认真详细地观思一切轮回痛苦。诚如莲花生大师所开示的那样，我们要坚持不懈地观思轮回痛苦，直至生出厌恶轮回之心。当对轮回世界产生出离心的时候，我们必然会修学殊胜善法，这可以看作是得生厌离此生的觉证。如果我们没有厌恶轮回，那么我们所修的法不会产生任何重大意义，不能算是清净的正法，从而很难令我们脱离轮回痛苦。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 00:05</span><div class="badge-floor">第 12 进</div></div><div class="post-body">第十章   三苦囹圄 <br/>
 <br/>
 我们的所有感受都可以归入到乐受、苦受和舍受之中，这里要谈的痛苦也可以归类为三苦。我们平常视为快乐的东西，其实都不是快乐，而且最终都离不开三苦的范围。因此，“轮回之中无快乐，厕所里面无香味”这句话，成了含义深刻的哲理名言。 <br/>
  <br/>
@@ -1233,7 +1254,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 经常具有慈悲爱心和努力修习善法，就一定能得生证觉和改变凡心，因此，发心修法一定要努力精进。一个有情修道和成就佛果，说到底就是彻头彻尾地改变这个有情的身心。 <br/>
 <br/>
-我们这些充满过患和一直处在迷妄中的人，当从受尽折磨和痛苦的迷梦中醒来的时候，所有的痛苦便会就地消失。修法成佛的过程如同恶梦苏醒，在成就正觉佛果的那一刻，所有的迷妄便会全部消失，展现在佛面前的新景象就是：清净智慧中具有的功德圆满和任运成就利业。因此，我们一定要把握好现在用小努力就能得到大成就的绝好机会，努力修法，争取即身成佛。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 00:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">第十一章   永恒解脱的指路明灯 <br/>
+我们这些充满过患和一直处在迷妄中的人，当从受尽折磨和痛苦的迷梦中醒来的时候，所有的痛苦便会就地消失。修法成佛的过程如同恶梦苏醒，在成就正觉佛果的那一刻，所有的迷妄便会全部消失，展现在佛面前的新景象就是：清净智慧中具有的功德圆满和任运成就利业。因此，我们一定要把握好现在用小努力就能得到大成就的绝好机会，努力修法，争取即身成佛。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 00:13</span><div class="badge-floor">第 13 进</div></div><div class="post-body">第十一章   永恒解脱的指路明灯 <br/>
 <br/>
 三恶趣的痛苦是不堪忍受的，三善趣里也有很多难以计数的痛苦。但是，我们不能在痛苦中感到绝望，不能认为没有办法脱离痛苦，因为佛陀有能力和办法把众生从轮回世界的各种痛苦中解救出来。 <br/>
  <br/>
@@ -1316,7 +1337,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 八大派传承法脉是西藏历代高僧大德留给我们的珍贵遗产，是未来佛教发展的基础和未来众生的福份。西藏八大派传承教法是前人经过修炼得到成就后被证明为深密殊胜的心法，是成就无灭持明妙果的传家法宝，是无变恒久妙道的心要，是传承秘诀的精华，是众多大德圣贤曾经走过的胜道，是成就虹化光身的捷径。 <br/>
 <br/>
-我们要以无比虔诚的敬信心，去接受适合各自根基的正宗传承胜法。所有希望开悟解脱的众生，要真心礼奉壇城之主遍轮王（上师）宝足，这样才不会虚度年华。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 00:18<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">第十二章       如意宝藏 <br/>
+我们要以无比虔诚的敬信心，去接受适合各自根基的正宗传承胜法。所有希望开悟解脱的众生，要真心礼奉壇城之主遍轮王（上师）宝足，这样才不会虚度年华。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 00:18</span><div class="badge-floor">第 14 进</div></div><div class="post-body">第十二章       如意宝藏 <br/>
 <br/>
   从首先善于观察上师、其次善于依止上师和最后善于学习心法的原则出发，我们要依止善知识，学受深密广大、犹如甘露般能够治灭烦恼百病的良药善法。在学法修法的时候，我们不能停留在只是听受佛法的阶段，就像有了良药之后还要吃下去才能达到治病的疗效一样，我们要把所听受的善法，在无有散逸懈怠中一心一意地修炼才能取得解脱成就。如果只是求求法、听听法，而不把所求到的法切实修炼，那我们就不可能得到圆满清净的佛果。 <br/>
  <br/>
@@ -1346,7 +1367,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 我们还可以和法友一起进驻修法静地，这个法友应该具备三昧耶誓戒、五毒稀少、意志坚定、心胸宽广、勤于修炼、自有爱心。然后我们要依止上师，从共同与不共前行法门开始学修佛法。在充分知晓传承历史和佛法来源的基础上，接受灌顶，使身心成熟；接受正行心法秘诀的开示，使身心开悟解脱。一切开示修炼的次第要符合传统例规，对于自己产生的觉证要不失时机地与上师、与法友交流，通过交流体证来除障纠错并且令觉证增长。 <br/>
 <br/>
-在长期精进修炼之后，最终要达到不分入定与出定、不分白天与夜晚，光明觉证不修自现，每时每刻都在光明智慧中入定安住。还要与三时诸佛的法嗣——上师的密意无二无分，就在本原大乐法界中安住不动，这样能够任运成就此生与往生、自业与他业的恒久大业。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 00:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">第十三章   缘起因果的规律 <br/>
+在长期精进修炼之后，最终要达到不分入定与出定、不分白天与夜晚，光明觉证不修自现，每时每刻都在光明智慧中入定安住。还要与三时诸佛的法嗣——上师的密意无二无分，就在本原大乐法界中安住不动，这样能够任运成就此生与往生、自业与他业的恒久大业。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 00:22</span><div class="badge-floor">第 15 进</div></div><div class="post-body">第十三章   缘起因果的规律 <br/>
 <br/>
 我们照镜子看自己的脸时，随着心中产生高兴、忧伤、得意或失落等感觉，面部表情也跟着发生明显的变化。在镜子里，我们还会发现自己脸上的黑痣、斑点、污垢和散乱的头发等，镜子里所照的一切物体都自然清晰可见。其实，镜子里呈现的物体，我们可以在现实生活中找到它的原形。 <br/>
  <br/>
@@ -1387,7 +1408,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 在灭罪修法的时候，不能仅仅局限于畏罪和认识罪业的过患，还要以具足四力的忏罪修法和悔过之心学修菩提行。对于罪过虽然没有任何功德可言，但是值得庆幸的是罪过可以忏悔净灭。龙树大师曾经说过：“有谁从前大放逸，其后又能不放逸，犹如难陀指鬘王，利见以及乐行王”。我们要像龙树大师所说的难陀、指鬘王、利见和乐行王一样，从今日起，对自己从前的所作所为生起忏悔心，对将来的罪过行为有戒忌心。我们还要对世间作业生起彻底的厌离心，就像患有胆病的人看见油腻食物就想吐一样。 <br/>
  <br/>
-要把以上畏罪厌罪的观想一直坚持到生起厌离心为止，绝不能消极等待和不思悔过。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 00:26<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">第十四章   西方极乐净土 <br/>
+要把以上畏罪厌罪的观想一直坚持到生起厌离心为止，绝不能消极等待和不思悔过。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 00:26</span><div class="badge-floor">第 16 进</div></div><div class="post-body">第十四章   西方极乐净土 <br/>
 <br/>
 为使初入佛门的人精勤修法，并对修证佛果产生喜悦向往的心情，佛祖释迦牟尼在众多显密经典中称颂了庄严极乐世界，并宣说了往生极乐世界的四胜因。 <br/>
  <br/>
@@ -1451,7 +1472,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在极乐世界里，从莲花中化生之后，顿时具足所有微妙相好。之后，得见佛陀法相，能够听闻佛说善法。具足无碍神通，所需受用和供品随意可得。能够走遍无数佛国净土，学修菩萨众行，得到如来的何时何地以何名号成佛等预言。到那时，自己就有能力把曾是慈母的普天众生救出轮回苦海，引入解脱佛地。” <br/>
  <br/>
-像这样修造往生极乐净土的四胜因，死后就能往生到西方极乐净土，这是佛祖在众多显密经典中多次宣说的真言。因为佛从不说妄语，所以，我们完全可以如是修持。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 00:33<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">第十五章   正确永恒的微妙皈依 <br/>
+像这样修造往生极乐净土的四胜因，死后就能往生到西方极乐净土，这是佛祖在众多显密经典中多次宣说的真言。因为佛从不说妄语，所以，我们完全可以如是修持。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 00:33</span><div class="badge-floor">第 17 进</div></div><div class="post-body">第十五章   正确永恒的微妙皈依 <br/>
 <br/>
 皈依三宝是所有大小乘的基础，是学修佛法的入门和全部戒律的根基。需要皈依的原因是我们畏惧轮回痛苦，而只有三宝才能够把我们从轮回苦海中救出来，不皈依三宝则脱离轮回无望，因此，为了从轮回痛苦中解脱出来，我们必须皈依三宝。 <br/>
  <br/>
@@ -1539,7 +1560,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 还有，如果一个地方的君主或领导具有利他之心，那么，他管辖区域内的法律政策就能服务于人民、造福于人民，那个地方的百姓自然就可以过上幸福快乐的日子，国泰民安也就随之实现了。相反，君主伤害人民，人民就会起来反抗，国家就将陷入一片混乱之中。 <br/>
 <br/>
-修学佛法的人，当吸纳气息的时候，要观想把众生的全部痛苦都吸入到自己体内；当吐出气息的时候，要观想把自己的全部快乐都施给众生。这样的人，在所有的见、闻、思、触当中，都在发愿救度众生，故而与其结缘者，都能免入邪道。因此，我们要努力学做时时发愿度众生的佛门善众。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 00:38<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 18 楼</span></div><div class="post-body">第十六章    微 妙 心 宝 <br/>
+修学佛法的人，当吸纳气息的时候，要观想把众生的全部痛苦都吸入到自己体内；当吐出气息的时候，要观想把自己的全部快乐都施给众生。这样的人，在所有的见、闻、思、触当中，都在发愿救度众生，故而与其结缘者，都能免入邪道。因此，我们要努力学做时时发愿度众生的佛门善众。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 00:38</span><div class="badge-floor">第 18 进</div></div><div class="post-body">第十六章    微 妙 心 宝 <br/>
 <br/>
 在远离邪道而皈依无伪三宝的基础上，要放弃下士小道，大发微妙菩提心。学修菩提心之初，要观修慈、悲、喜、舍四无量。在观修四无量的过程中，为了防止慈、悲、喜三无量分别走向片面化，首先要观修犹如仙人请客般的舍无量。传说仙人请客的时候，来宾不分高低贵贱一律热情招待，我们修习舍无量也不能有分别取舍之心。 <br/>
  <br/>
@@ -1616,7 +1637,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在我们的六根面前所显见的从色相到遍知智慧的所有诸法，无一不是从心中产生的。把心领证为明空无二无别的自性就是正见；对所得的正见无有散逸地观思就是正修；在正修中积行梦幻般无有执着的二资粮就是正行。充分熟习以上见、修、行之后，根据梦境可以证明修习进度的规律，在梦里将不会再生出真正的迷妄。 <br/>
 <br/>
-如果能够昼夜不分地观修除离迷妄的正智，那么在关键的死亡时刻很可能不生迷妄。如果有把握在死亡时刻不生迷妄，那么在法性中阴和世间中阴都不会迷妄，不迷妄便是解脱。所以，能够脱离轮回痛苦的惟一方便胜法，就是以空性、慈悲为根本总义的佛说八万四千法门。知道这个道理以后，我们要努力修习，让空性、智慧在自己的心中生根发芽，这是学法修法的关键之中的关键。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 00:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 19 楼</span></div><div class="post-body">第十七章   清净的明月 <br/>
+如果能够昼夜不分地观修除离迷妄的正智，那么在关键的死亡时刻很可能不生迷妄。如果有把握在死亡时刻不生迷妄，那么在法性中阴和世间中阴都不会迷妄，不迷妄便是解脱。所以，能够脱离轮回痛苦的惟一方便胜法，就是以空性、慈悲为根本总义的佛说八万四千法门。知道这个道理以后，我们要努力修习，让空性、智慧在自己的心中生根发芽，这是学法修法的关键之中的关键。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 00:44</span><div class="badge-floor">第 19 进</div></div><div class="post-body">第十七章   清净的明月 <br/>
 <br/>
 佛家常说的烦恼，是与无明迷见同时产生的。我们因为有烦恼，所以出现了各种各样的痛苦。能够脱离烦恼和痛苦便是快乐，而且是殊胜的快乐。所有追求快乐者的目标是一致的，为求取快乐而努力劳作也是一样的，惟一不一样的就是求取快乐的方法。有的人在修造快乐之因，有的人在修取快乐之果，两者之间的差别就是一个在彻底除灭苦因，一个在短暂消灭痛苦。 <br/>
  <br/>
@@ -1653,7 +1674,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 最后，我们要观想外器世界全部融入内情众佛身中，内情众佛又融入五部金刚萨垛身中，五部金刚萨垛融入自己身中，自身又从边缘化成光芒逐渐消融于心际咒轮之嗡（1）字，“嗡”字融入班杂（19）二字，“班杂”二字又融入萨（20）字，“萨”字再融入垛（21）字，“垛”字最后融入吽（3）字的元音字母（8）中。然后，继续观想吽（3）字的元音字母（8）融入哇（9）字，“哇”字又融入哈（10）字的下半部分，哈（10）字的下半部分又融入上半部分，哈（10）字的上半部分融入上面的月符（11），月符融入上面的圆圈（12），圆圈融入微小超越色相的微细（13）中，微细（13）逐渐消失无踪，最后在无观法界入定安住片刻。这个便是对治力。 <br/>
 <br/>
-完成以上观修之后，就在出现第一个念想的时刻，再一次观想所有外器世界都是金刚萨垛佛国，所有内情众生都是金刚萨垛佛众，最后要修回向法和发愿心。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 00:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 20 楼</span></div><div class="post-body">第十八章   无量福源 <br/>
+完成以上观修之后，就在出现第一个念想的时刻，再一次观想所有外器世界都是金刚萨垛佛国，所有内情众生都是金刚萨垛佛众，最后要修回向法和发愿心。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 00:49</span><div class="badge-floor">第 20 进</div></div><div class="post-body">第十八章   无量福源 <br/>
 <br/>
 生在世间的人类都一样，同样有五官和四肢。但是，同样是人却有不同的处境，有些人富有幸福，有些人却贫困悲惨。出现这样的差异是有因有缘的，前世有广行布施等福德因缘在先，此生就会富足幸福；前世有吝啬或偷盗等罪过因缘在先，此生就会贫困悲惨。当有观福德资粮和无观智慧资粮圆满具足之后，可以断灭烦恼障和所知障二障，从而能够成就断证功德圆满的法身和色身二身佛。立志修取暂时的胜生天人身果和恒久正觉佛果，以断灭痛苦苦因的人们，必须做到的前提大事就是积福先行。 <br/>
  <br/>
@@ -1707,7 +1728,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 供奉不共报身曼茶罗的时候，观想在拥有化身佛供品的基础上，还有具足五庄严的五部佛净土，华丽的无量天宫，嬉戏天女等无数妙欲天女和无法思量的供品云海，全部供养给上师报身佛众。 <br/>
 供奉殊胜法身曼茶罗的时候，堆放堆粉时观想于无生心性法界，呈现无灭五智慧，或者观想于无生本原法界，呈现如意四觉相。 <br/>
 <br/>
-总之，堆放堆粉时一定要进行观想，并且要念诵经文“嗡啊吽……”记数供奉曼茶罗的时候，有时要按前面所讲的做广泛的供修，而大多数的时候可以做七堆粉供修，做七堆粉供修时念“沙西布区……”。供奉曼茶罗的数量一定要达到十万次，并且和其他修法一样要具足初善、中善和后善三善。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 00:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 21 楼</span></div><div class="post-body">第十九章        殊胜身供施 <br/>
+总之，堆放堆粉时一定要进行观想，并且要念诵经文“嗡啊吽……”记数供奉曼茶罗的时候，有时要按前面所讲的做广泛的供修，而大多数的时候可以做七堆粉供修，做七堆粉供修时念“沙西布区……”。供奉曼茶罗的数量一定要达到十万次，并且和其他修法一样要具足初善、中善和后善三善。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 00:51</span><div class="badge-floor">第 21 进</div></div><div class="post-body">第十九章        殊胜身供施 <br/>
 <br/>
 积修福德还有另外的殊胜方法：结合供曼茶罗积修古萨里（乞人）资粮，是指把倍加珍惜的自我身体化作无漏甘露，把无量妙欲受用供养给供施对象，这是修成圆满二资粮的殊胜方便法门。 <br/>
  <br/>
@@ -1731,7 +1752,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 修杂施的时候，观想煮沸的甘露产生蒸汽，上升的蒸汽给福田佛众供养五妙欲和八吉祥物等。把所有的天人受用及无量供品供养于福田之后，自他众生都得到圆满福德并清除了所有的障垢。往下施给六道众生各自渴求的无尽受用之后，使他们都得以心满意足，并且消除自他众生从无始轮回以来所累积的业债、习气和怨仇，清除所有的罪障。 <br/>
 <br/>
-接着，把其余的施供物品施给弱小和残疾的六道有情，使他们获得各自所求的起死回生之药、神足、智慧眼、无漏耳、智慧舌等。当弱小的六道有情心满意足之后，使他们脱离各自的业缘痛苦，男众都成为观世音菩萨，女众都成为至尊度母。最后，把施供物品和施供对象置于无观法界，并在其中入定安住。这样做可以除灭傲慢之魔，并且能够证见究竟胜义。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 01:01<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 22 楼</span></div><div class="post-body">第二十章  取得如意妙果的捷径——上师相应法 <br/>
+接着，把其余的施供物品施给弱小和残疾的六道有情，使他们获得各自所求的起死回生之药、神足、智慧眼、无漏耳、智慧舌等。当弱小的六道有情心满意足之后，使他们脱离各自的业缘痛苦，男众都成为观世音菩萨，女众都成为至尊度母。最后，把施供物品和施供对象置于无观法界，并在其中入定安住。这样做可以除灭傲慢之魔，并且能够证见究竟胜义。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 01:01</span><div class="badge-floor">第 22 进</div></div><div class="post-body">第二十章  取得如意妙果的捷径——上师相应法 <br/>
 <br/>
 我们所说的“成就”，指的是愿望得到实现或追求变成现实。我们可以通过修习任何一种佛法仪轨，供养佛和本尊等皈依对象，使其生喜之后助我们实现心愿大业。“成就”分为共同成就和殊胜成就两种。普通的神通和少量的他心通等法力是共同成就，证得遍知智慧或取得双运胜身是殊胜成就。要取得殊胜成就，可以观修上师相应法。 <br/>
  <br/>
@@ -1851,7 +1872,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 大圆满法殊胜至极，无需依靠众多无数贤劫和多生多世厉修二资粮，是即身即世能够成就正觉佛果的深密秘诀心法。但是，我们必须从前行法门开始次第修习，直至正行心法，这个过程就像爬楼梯，要从第一个阶梯开始次第爬到楼顶。美味佳肴要放在华贵的餐具里才能显出美食的价值，同样，我们在接受深密心法之前，首先要修习好前行法门，为修习正行心法打下坚实的基础，也可以说是为迎接正行心法贵宾而建造华丽的行宫。 <br/>
 <br/>
-前行法门就像护送自己度过恐怖险关的好保镖，如果没有这个保镖，携带财宝的人就无法通过充满怨敌与强盗的险关。同样，没有修习前行法门，就无法接受具有殊胜威力的正行心法，也不能从正行中获取任何利益。因此，从学修四出离心开始，要分别修习共同与不共前行法门，要把具足前行正行二法全部深密法要的上师相应法当作心法来修习，这是我对渴望解脱的人们所要说的、我认为是很有用很重要的心里话。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 01:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 23 楼</span></div><div class="post-body">第二十一章   临终的和合往生 <br/>
+前行法门就像护送自己度过恐怖险关的好保镖，如果没有这个保镖，携带财宝的人就无法通过充满怨敌与强盗的险关。同样，没有修习前行法门，就无法接受具有殊胜威力的正行心法，也不能从正行中获取任何利益。因此，从学修四出离心开始，要分别修习共同与不共前行法门，要把具足前行正行二法全部深密法要的上师相应法当作心法来修习，这是我对渴望解脱的人们所要说的、我认为是很有用很重要的心里话。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 01:14</span><div class="badge-floor">第 23 进</div></div><div class="post-body">第二十一章   临终的和合往生 <br/>
 <br/>
 佛祖给我们宣说了众多的法门，传承大师们对佛语经典的词义也作了大量的注疏论说，这一切的目的就在于通过修炼佛法，使人们做到不惧怕死亡，充满信心地迎接死亡。能够这样做的人，我们可以称其为佛门中人或修持佛法者。除此之外的所谓佛门中人或修法者，不论他生前能够轻松快速地背诵多少经续秘诀法宝，如果在临终时想不出任何有用的秘诀，那么他便是虚度年华，到头来一场空，这就像背水的人来到河边，又背着空木桶回去一样。 <br/>
  <br/>
@@ -2006,7 +2027,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在年轻力壮、四大协调、气脉明点旺盛的时候修颇瓦法并不容易修成，相反，年近古稀或临终的时候修颇瓦法更容易修炼成就，这个现象就像秋天的瓜熟蒂落。我们可以从现在开始修炼熟习颇瓦法，等到需要运用颇瓦法的时候，就会有足够的把握和信心。 <br/>
 <br/>
-另外，在遇到大惊吓的时候，要把心专注于头顶，观想头顶坐有根本上师，如果遇上突发事件而意外死亡的话，这种做法将会带给你很大的利益。所以，经常观想头顶有上师，是一门众人称赞、极为有益的殊胜心法。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 01:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 24 楼</span></div><div class="post-body">第二十二章   死亡征兆——时间明镜 <br/>
+另外，在遇到大惊吓的时候，要把心专注于头顶，观想头顶坐有根本上师，如果遇上突发事件而意外死亡的话，这种做法将会带给你很大的利益。所以，经常观想头顶有上师，是一门众人称赞、极为有益的殊胜心法。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 01:20</span><div class="badge-floor">第 24 进</div></div><div class="post-body">第二十二章   死亡征兆——时间明镜 <br/>
 <br/>
 我们倍加爱护的这个身体，要经过出生、发育、健壮、衰病、衰老等生命过程，最后结束全部的人生游戏。人生的整个生命过程又可以归入到生、老、病、死当中，其中的生与死是任何生命物体都无法躲避的，而老与病就不一定是全部生命物体都要去经受。部分有情会在刚出生，或出生后不久，或少年来不及衰老的时候就突然死去；还有部分有情在没有任何疾病的情况下，遭遇天灾人祸等各种逆缘而死去。因此，我们所面临的痛苦之门——生死二法，非常值得去认真仔细地分析和研究。 <br/>
  <br/>
@@ -2069,7 +2090,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 死亡时时刻刻就在我们的前面，对此我们不能掉以轻心。惧怕死亡而不敢谈论有关死亡的问题或者视谈论死亡为不吉祥而避之不提，都是愚昧无知的表现。死亡是无法掩盖的，提起“死亡”二字并不会使人快死，不提死亡之事也不能避开死亡。所以，我们要大胆揭开摆在我们面前的“死亡”的神秘面纱。 <br/>
 <br/>
-就像我在前面讲述的那样，死亡与我们此生的身体有着非常密切的关系，在研究死亡现象的时候，许多被医生用先进的现代仪器全面检查后认为身体健康无生命危险的人，有很多却被杀害、或自杀死亡、或遇上意外事故而死。如果我们能够懂得多种观测方法，那就可以很好地保护此生的身体性命；对于非时意外死亡，可以事先预测避开；即使观察出确实难逃一死，也有时间做好充分的准备。所以，观察死亡征兆的学问是很重要的，在修取此生与来生的利乐大业时，我们还真不能缺少它，它的确是一门非常重要的学问。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 01:23<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 25 楼</span></div><div class="post-body">第二十三章   赎死与延年长生 <br/>
+就像我在前面讲述的那样，死亡与我们此生的身体有着非常密切的关系，在研究死亡现象的时候，许多被医生用先进的现代仪器全面检查后认为身体健康无生命危险的人，有很多却被杀害、或自杀死亡、或遇上意外事故而死。如果我们能够懂得多种观测方法，那就可以很好地保护此生的身体性命；对于非时意外死亡，可以事先预测避开；即使观察出确实难逃一死，也有时间做好充分的准备。所以，观察死亡征兆的学问是很重要的，在修取此生与来生的利乐大业时，我们还真不能缺少它，它的确是一门非常重要的学问。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 01:23</span><div class="badge-floor">第 25 进</div></div><div class="post-body">第二十三章   赎死与延年长生 <br/>
 <br/>
 如果有人问我，到目前为止，这个世界上曾经有战胜过死亡大敌的人吗？我会非常肯定地回答说：“有，有很多人战胜过死亡。”为什么这么肯定呢？因为的确有很多人曾经战胜过死亡或者没有经历过死亡。这个避开死亡的法门，根据不同的修行方式和发心方式而有多种门类，有些人法体虹化后消失，有些人法体化为微尘后消失，还有部分人没有放弃身体，有意在累世累劫中长住不灭。如此众多的微妙成就，可以通过修持大圆满极乘深密瑜伽而在即身即世中获得。 <br/>
  <br/>
@@ -2110,7 +2131,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在大圆满法里，讲述了依修因缘玄机来推迟死亡、延长寿命的方法。其他的延寿方法还有：针对内在的死亡征兆，要修持宝瓶气，尽力修善法；针对秘密的死亡征兆，要多修三倍的善法，要多放生、塑造小佛像、修长寿法等等。 <br/>
 <br/>
-我们的寿命长短是由前世的业因和此生的缘来决定的，当寿命遇上逆缘的时候，寿依清净热气犹如马尾毛丝之物在命脉中遭到破损，此时就要修长寿法、炼避谷术、靠医药治疗等，使清净热气得以复原增长，这样才能健康长寿。福德善业也能成为寿命延长的胜因，但如果寿命、业缘和福德都已耗尽，就再也没有办法可以令其复原增长了。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 01:28<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 26 楼</span></div><div class="post-body">第二十四章   无常的死亡之路 <br/>
+我们的寿命长短是由前世的业因和此生的缘来决定的，当寿命遇上逆缘的时候，寿依清净热气犹如马尾毛丝之物在命脉中遭到破损，此时就要修长寿法、炼避谷术、靠医药治疗等，使清净热气得以复原增长，这样才能健康长寿。福德善业也能成为寿命延长的胜因，但如果寿命、业缘和福德都已耗尽，就再也没有办法可以令其复原增长了。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 01:28</span><div class="badge-floor">第 26 进</div></div><div class="post-body">第二十四章   无常的死亡之路 <br/>
 <br/>
 所谓的死亡就是吐出一口气之后再也不能吸纳另一口气的那一刻，或者是脉搏停止跳动以后心脏不能维持血液循环的当下。死亡就像一部电动机器由于电源线突然断路而停止了工作。我们都知道，所有的动物都在步入死亡之路中代代相传，用习惯性的不在意的眼光看待这个平常现象时，它不会引起我们的足够重视。但如果对这个平常现象做一次认真仔细的分析，我们将会发现电动机器的故障可以用换部件等方式来排除，动力电源的问题可以用重新连接电路来解决。 <br/>
  <br/>
@@ -2197,7 +2218,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 当死亡降临的时候，如果希望没有恐惧和痛苦，就得把握现在充足的时间和难得的机会，从今天开始做好准备工作，要知道今天才想起为迎接死亡而做准备，已经迟了一些。我们应该为必须经历的死亡多加考虑，做一些能切实发挥作用的准备工作。如果不是这样，而到临终时捶胸号叫，在永别的温床上洒泪痛苦，家人和亲友围着你悲伤哭泣…… 这些都不能给你带来任何好处。 <br/>
 <br/>
-对于步入死亡次第的人，医生和药物都不能提供任何延年益寿的帮助，就连让生命多延长一分钟也做不到。当死亡到来的那一刻，那些一生在造罪和痛苦中度过，而且罪业还没有结束的人，将找不到任何有利于自己的东西。因此，我们不能在为了今世过上好日子和长住于世的小作业中耗尽人生寿命，应该放弃那些没有意义的小作业，为往生大业尽早作充分的准备工作，我们要依照认识迷妄自相的秘诀，得到对死亡无所畏惧的把握。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 01:32<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 27 楼</span></div><div class="post-body">第二十五章   除灭二取迷妄顽症 <br/>
+对于步入死亡次第的人，医生和药物都不能提供任何延年益寿的帮助，就连让生命多延长一分钟也做不到。当死亡到来的那一刻，那些一生在造罪和痛苦中度过，而且罪业还没有结束的人，将找不到任何有利于自己的东西。因此，我们不能在为了今世过上好日子和长住于世的小作业中耗尽人生寿命，应该放弃那些没有意义的小作业，为往生大业尽早作充分的准备工作，我们要依照认识迷妄自相的秘诀，得到对死亡无所畏惧的把握。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 01:32</span><div class="badge-floor">第 27 进</div></div><div class="post-body">第二十五章   除灭二取迷妄顽症 <br/>
 <br/>
 众有情身口意三门的本性最初都是本原清净无染的，由于偶然产生的迷妄才使我们具有了“我”与“他”的分别二取之见。当出现这种二取迷见时，我们的心中便产生了快乐与痛苦、美与丑、净与染、对与错等无有穷尽的二取迷妄之见。一生接着一生的迷妄使我们累积了无始无终的迷妄，从而堕入六道轮回之中，投胎于不同的身体、说不同的语言、产生不同的念想，并随之受尽了各种不同的痛苦。 <br/>
  <br/>
@@ -2232,7 +2253,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 这个大分离修成之后，能断灭意的障碍，清除意的罪业，能解脱成为法身佛，最终可以成就诸佛意金刚本性的正果。 <br/>
 <br/>
-这样三门九修以后，外大分离便修持成就了，从此对身体的寒暑冷热等感觉不会有任何贪恋和取舍，口中会自动说出修持成就的不共智慧词义，心中会出现明空无灭大乐的觉证。要努力观修以上法门，如果心中出现了明空无灭大乐的觉证，修法就可以认定为成功了。照这样修法取得成就以后，就可以得到前面讲述的全部功德。因此，欲想脱离轮回痛苦过患的人，应该要修习前面讲述的那些道法，这是非常重要的心法秘诀。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 01:34<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 28 楼</span></div><div class="post-body">第二十六章   无念气轮 <br/>
+这样三门九修以后，外大分离便修持成就了，从此对身体的寒暑冷热等感觉不会有任何贪恋和取舍，口中会自动说出修持成就的不共智慧词义，心中会出现明空无灭大乐的觉证。要努力观修以上法门，如果心中出现了明空无灭大乐的觉证，修法就可以认定为成功了。照这样修法取得成就以后，就可以得到前面讲述的全部功德。因此，欲想脱离轮回痛苦过患的人，应该要修习前面讲述的那些道法，这是非常重要的心法秘诀。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 01:34</span><div class="badge-floor">第 28 进</div></div><div class="post-body">第二十六章   无念气轮 <br/>
 <br/>
 众生的心存在于身体之中，而身体是在心识的二取迷妄和贪执中产生的。在这一世里，身体和心是互相依赖而存在的，但是最初是由于心中出现迷妄之后才产生了身体。心中出现无明迷妄是直接因缘，父母精卵与中阴意识会合是间接助缘，然后是地、水、火、风、空与智慧等六界聚合，于是就出现了身体。这个身体一开始要经历疱状、凝酪状、块片状等次第形成的过程，最后到了分娩的时刻，业风把胎儿倒置起来，然后便出生了。 <br/>
  <br/>
@@ -2250,7 +2271,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 诚如莲花生大师所开示的那样，修炼这个平行气不仅有助于修心，而且还能成为修取菩提正果中所有胜道的有力助缘，我们应知道其中具有深密重要的意义。 <br/>
 <br/>
-从无始以来一直放逸无束的心，纷乱复杂而且又是各种念想的制造者，我们要把这个像野马、像狂人般的心用各种方便法门来逐渐修炼调伏成可以轻易塑造的心，用三无念法门来修心之后，可以使心轻松入定在任何观修境界里，使心在无念虚空的境界里长时间入定静住，这便是修炼成功的标志。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 01:38<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 29 楼</span></div><div class="post-body">第二十七章   修炼三门的要法 <br/>
+从无始以来一直放逸无束的心，纷乱复杂而且又是各种念想的制造者，我们要把这个像野马、像狂人般的心用各种方便法门来逐渐修炼调伏成可以轻易塑造的心，用三无念法门来修心之后，可以使心轻松入定在任何观修境界里，使心在无念虚空的境界里长时间入定静住，这便是修炼成功的标志。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 01:38</span><div class="badge-floor">第 29 进</div></div><div class="post-body">第二十七章   修炼三门的要法 <br/>
 <br/>
 这个世界上有各种各样的宗教，除了会伤害他人的邪教之外，以利益他人为出发点的善美教法，都有各自的终极修道目标，这种善美教法对社会和自然环境能够发挥积极有益的作用。在众多教法之中，能够发挥暂时和恒久的有益作用，并且经长期分析研究以后犹如切、磨、煅炼金子一般地显露出绝对永恒真谛的佛陀教法，在其内部也有大小乘的分类和了义与不了义的分别。总的来说，佛陀传扬的所有教法都能适合各种化机众生的多种欲求，从直接、间接和旁及三个方面都可以成为解脱之因，对此无需抱有任何怀疑。 <br/>
  <br/>
@@ -2302,7 +2323,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 所谓置于本体境界，其中的“本体”指的是本原无有修造的法体，“置于”就是说在本体境界里轻松放置。这里，要把身、口、意自在放松，身体不能摇动，口中不能言语，心离念静住。无论是出现应断轮回的法念，或是出现善法的心念，只要把心专注于所明见的法相上观修以后，就能使心入住于无念境界里，这就像把污浊的水稳定不动地放置以后，污水能沉淀清净下来，这样修炼的结果便是三门能够在本原法界清净静住。因此，这样的修行必将成为修炼定与止的殊胜妙因。 <br/>
 <br/>
-把置于本体境界的法门修炼成就的征象有：身静则无欲动走，口静则无欲言语，意静则断灭念想执着。另外，身静可以脱离四大不调，脱离四大不调就能不生疾病，从而使身体舒适、心情愉悦、菩提心增长，并且能自然静住于禅定妙境；口静可以登住离言胜境；心静可以自动脱离所有念想，自然入登无念胜义大圆满不可思议的妙境里。以上法门的殊胜作用便是三门静住于本体境界以后，可以体证微妙三身。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 01:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 30 楼</span></div><div class="post-body">第二十八章   根除轮回的污秽种子 <br/>
+把置于本体境界的法门修炼成就的征象有：身静则无欲动走，口静则无欲言语，意静则断灭念想执着。另外，身静可以脱离四大不调，脱离四大不调就能不生疾病，从而使身体舒适、心情愉悦、菩提心增长，并且能自然静住于禅定妙境；口静可以登住离言胜境；心静可以自动脱离所有念想，自然入登无念胜义大圆满不可思议的妙境里。以上法门的殊胜作用便是三门静住于本体境界以后，可以体证微妙三身。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 01:40</span><div class="badge-floor">第 30 进</div></div><div class="post-body">第二十八章   根除轮回的污秽种子 <br/>
 <br/>
 有情识的所有众生都渴望获得快乐，并且都在为得到快乐而奔波忙碌。人类在我们生存环境里的所有动物当中，是惟一具有理性思维能力和意识非常敏锐的动物，因此人类自称为万物之灵。其实，我们有别于其他动物的长处仅仅在于我们能够创造衣食住所、物质财富和机械电器等外部条件，除此之外，我们并不能阻灭生、老、病、死的痛苦，也没能找到脱离一切痛苦、得到永恒快乐的方便法门，没有找到使自己和他人都永不堕入痛苦境地的方便道法。 <br/>
  <br/>
@@ -2330,7 +2351,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在美妙动听的唱诵声中把“嗡、啊、吽”三字念诵七十万遍，并观想所有轮回众生的三处咒字都燃烧烈火，烧毁灭除众生分别堕入六道轮回的六道业种。然后，观想从自己的三处三字中放射出犹如火焰般的智慧光芒，顿时烧毁全部堕入六道的种子和无明迷妄的习气，除灭身、口、意的罪障，从而具足诸佛的一切功德，在观想过程中要继续以动听的声音诵唱“嗡、啊、吽”三咒字。 <br/>
 <br/>
-这个污秽习气之身是从三无明因中产生的，故而六道轮回的种子就在其中，而且本原具在法身的本觉就是三身本身，因此，应净、能净都在上述六种子字和“嗡、啊、吽”三咒字中圆满具足了。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 01:43<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 31 楼</span></div><div class="post-body">第二十九章   无动寂静的禅定 <br/>
+这个污秽习气之身是从三无明因中产生的，故而六道轮回的种子就在其中，而且本原具在法身的本觉就是三身本身，因此，应净、能净都在上述六种子字和“嗡、啊、吽”三咒字中圆满具足了。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 01:43</span><div class="badge-floor">第 31 进</div></div><div class="post-body">第二十九章   无动寂静的禅定 <br/>
 <br/>
 身、口、意三门当中意是最主要的，从无始轮回至今，众生在尘世中轮回流转的主要原因就是由于在迷心烦恼的直接作用下，使身与口造下恶业恶因之后，而堕入三界轮回的牢狱之中的。要从这个轮回中解脱出来，并且得到永恒涅槃的快乐，不能单靠身与口的积德行善，主要得依靠意来修炼禅定，这是惟一的最重要的方便法门，教言中说道：“意最主要最神速，诸法之前意在行”。另外，身、口、意三门还有着能依、所依的依附关系，所以在修炼过程中身、口、意都很重要。 <br/>
  <br/>
@@ -2372,7 +2393,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 无过具格的“止”就像没有风吹的油灯，明心会在所观想专注的境界里毫不动摇地静住，它会因为脱离魔障而清醒明白，因为脱离偶然生出的念想而平静安稳…… 就像水未被搅动时清净透明一样，当三门在本原法界清净无染以后，就可以在身体无欲动摇、口中无欲言语和心意自然脱离念想的禅定境界里自然而然地安住下去。 <br/>
 <br/>
-这个具足乐明无念觉证的殊胜妙“止”在身心之中产生以后，可以消除大的痛苦和烦恼，从而可以阻灭此生四大不调的疾病。当蕴、界、入等本位静住以后，可以助我们增长菩提，并且在妙观本原法性大圆满不可思议的境界里自在静住。所以，希望次第修炼道法后取得正果的人们要精进修习以上法门，这一点也非常重要。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 01:47<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 32 楼</span></div><div class="post-body">第三十章   脉、气和明点的作用 <br/>
+这个具足乐明无念觉证的殊胜妙“止”在身心之中产生以后，可以消除大的痛苦和烦恼，从而可以阻灭此生四大不调的疾病。当蕴、界、入等本位静住以后，可以助我们增长菩提，并且在妙观本原法性大圆满不可思议的境界里自在静住。所以，希望次第修炼道法后取得正果的人们要精进修习以上法门，这一点也非常重要。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 01:47</span><div class="badge-floor">第 32 进</div></div><div class="post-body">第三十章   脉、气和明点的作用 <br/>
 <br/>
 在讲述依附于金刚身而安住的脉、流动的气和散布的明点时，我们要知道心性本原清净并脱离迷妄污垢者被称作“智慧”，而在迷妄中造业以后具备投生的因缘便是轮回的由来。父母的精卵和中阴意识三者会合的当下，聚合了地、水、火、风、空五大，于是产生了身、口、意和人的身体。 <br/>
  <br/>
@@ -2404,7 +2425,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 之后，观想获受宝瓶灌顶、秘密灌顶、智慧灌顶和句义灌顶，从而体受喜乐、胜喜和殊喜的智慧。当明点甘露降至脐下三脉会合部位的红菩提阿（14）字上时，火焰和甘露合二为一并燃烧起来，观想火焰遍满世间万法的境界里，烧灭所有情器世间的执着心念和习气。最后，自己的身体和火焰一起逐渐缩小，消失在离戏法界，置于明空境界里。除灭魔障的时候，嘴里放出“哈”的一声的同时要抖动身体，并且轻轻拍打身体。 <br/>
 <br/>
-如果能够把以上法门修炼成功的话，可以生出微妙大乐热气，从而无需多穿衣服来抵御寒冷，还可以驾驭五大，清除污浊业气，得到神力和神通。如果在其中生出执着心念而且没有修炼除灭魔障的法门，则会误入魔法而堕入邪道之中，并且在此生会常生疾病和多灾多难，有非常大的危险，所以，欲修这个法门的人，一定要小心谨慎。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 01:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 33 楼</span></div><div class="post-body">第三十一章   成熟灌顶的重要性 <br/>
+如果能够把以上法门修炼成功的话，可以生出微妙大乐热气，从而无需多穿衣服来抵御寒冷，还可以驾驭五大，清除污浊业气，得到神力和神通。如果在其中生出执着心念而且没有修炼除灭魔障的法门，则会误入魔法而堕入邪道之中，并且在此生会常生疾病和多灾多难，有非常大的危险，所以，欲修这个法门的人，一定要小心谨慎。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 01:49</span><div class="badge-floor">第 33 进</div></div><div class="post-body">第三十一章   成熟灌顶的重要性 <br/>
 <br/>
 佛家常说的“灌顶”，从表面上看好像可以理解为一个有权位的人对另外一个没有权位的人授予权力和地位。一个拥有至高无上的封号和雄厚福业的大皇帝，有一天他把皇位传给太子的时候，就要举行盛大的登基仪式，在仪式上皇帝要把宝石皇冠等象征皇位的东西交给太子，人们称这种仪式为“皇冠灌顶”，“灌顶”一词从此就产生了。同样，自身已登上法王宝座的具格金刚上师，给善根善缘的徒弟传授成熟灌顶、解脱开示和微妙加被时，佛家就形象地称其为“灌顶”。 <br/>
  <br/>
@@ -2435,7 +2456,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 所有三昧耶戒的根本是学修从上师身、口、意三门中分类的全部分支三昧耶，以及本原守护离律三昧耶和无有、虚空、任运、惟独等法要。 <br/>
 <br/>
-接受灌顶的功德：这一生能够长寿、富足和心想事成，能除灭修法的障碍和逆缘，具足修法助缘；往生由于业障消除或业障减少而不会堕入地狱，并且长期受尽善道天人福乐之后，能够修炼灌顶中成熟的微妙道法，使此生或往生获得共同与不共殊胜成就，从而轻松体证二业圆满的无上菩提胜果。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 01:54<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 34 楼</span></div><div class="post-body">第三十三章   大圆满总纲 <br/>
+接受灌顶的功德：这一生能够长寿、富足和心想事成，能除灭修法的障碍和逆缘，具足修法助缘；往生由于业障消除或业障减少而不会堕入地狱，并且长期受尽善道天人福乐之后，能够修炼灌顶中成熟的微妙道法，使此生或往生获得共同与不共殊胜成就，从而轻松体证二业圆满的无上菩提胜果。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 01:54</span><div class="badge-floor">第 34 进</div></div><div class="post-body">第三十三章   大圆满总纲 <br/>
 <br/>
 所有乘门的极顶、诸佛胜意的究竟、三身无别普贤尊导师所宣说的光明大圆满续部中有很多共许与非共许的金刚境，这些法门首次传入人间时是由持明大师极喜金刚接受的。极喜金刚大师从金刚萨垛那里真实听取了全部大圆满法之后，与众多智慧空行母一起来到邬金国的北方日明山上，在那里进行了心法大集结，把大圆满法集结成二万四千部续部，其中共有六百四十万颂、三万五千品、二万一千卷和一百八十部装订本。 <br/>
  <br/>
@@ -2478,7 +2499,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 学修这门道法的人，在修习比喻说明的智慧而迎接微妙胜义觉证的时候，失去本性、脱离修造地观修性相而出现明力迷妄的心念时，善恶因果的利害关系依然是存在的，所以，直至到达圆满正觉佛的果地，我们一定要遵循世俗谛的因果规律，并且要努力奉行积福灭罪。我们应该想到前面多次提及的教言法义：“惟有积福灭罪的功德和觉悟上师的加被，才是体见胜义俱生智慧真相的原动力。”明智圆满而入登本原界地以后成就法身和色身二身，这便是我们需要修取的正果。 <br/>
 <br/>
 如是悟知大圆满有寂本原大解脱见要的无上利根瑜伽士，在持有圆满解脱本原胜义心要的基础上，如果日夜不离光明法性和如意顿超法门，修炼成熟而四相圆满具足，就可以即生即世入登本原法界的恒久果地；中根人士在脱离身体蕴网的那一刻，可以在法性中阴犹如子入母怀般地进入内在法性童子瓶身普贤尊的胜意法界，从而解脱成佛；下根人士可以在自性化身佛土成就现觉佛果。就这样，得到究竟正果断证功德圆满的佛位以后，自业能够真实体证法身而于法身法界从不动摇，他业两个色身犹如如意宝树和如意宝瓶一样能够施行无数应化利生事业，而恒久、遍满、如意的本性将展现至这个轮回空掉时为止。这是法性法界万法能见不灭，诸法自法界展现而灭于法界的惟一法性明点。 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚鱼发表于 2006-9-14 02:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 35 楼</span></div><div class="post-body">第三十三章   面对新世纪的话 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚鱼发表于 2006-9-14 02:05</span><div class="badge-floor">第 35 进</div></div><div class="post-body">第三十三章   面对新世纪的话 <br/>
  <br/>
     人们很关心步入二十一世纪即耶稣诞生至今两千年的时候，在将来未知的时代里世界会发生什么样的变化。在这世纪之交，有些人特意制作出很多世纪影像作品，以突然进入另外一个世界的心态面对世纪交替，这是比较幼稚的想法；有些人因为在二十世纪的大起大落中遭受过很多磨难，所以面对新世纪仍然摆脱不了恐惧和不安，甚至心里充满了忧伤和绝望，这是过度悲观的想法；有些人把世纪更替看作绝好的机遇，希望在新的世纪里得到大发展、大成功，甚至梦想获取无因之果，希望从天上掉下馅饼到自己手里，这是无知的空想；有些人历来就没有什么想法和抱负，他们除了今天不会想到明天和未来，面对新世纪自然是麻木不仁…… 这些想法虽然多种多样、千奇百怪，但有一个共同点，那就是人们都希望自己在未来的日子里幸福快乐。 <br/>
  <br/>
@@ -2607,7 +2628,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
  <br/>
 世界屋脊雪域高原的比丘——土登·龙多·丹贝坚赞（白玛格桑）于二十一世纪的二○○○年一月一日完成了这本献给人类的小礼物 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">很</div>很乖的发表于 2007-4-25 14:59<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 36 楼</span></div><div class="post-body">实在是感谢楼主，这么好的法本，我顶礼赞叹！ </div></div><div class="post"><div class="post-header"><div class="avatar">葛</div>葛达陇竹发表于 2010-7-20 18:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 37 楼</span></div><div class="post-body">顶礼白玛格桑法王 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">很</div><span style="font-size:15px; letter-spacing:1px;">很乖的发表于 2007-4-25 14:59</span><div class="badge-floor">第 36 进</div></div><div class="post-body">实在是感谢楼主，这么好的法本，我顶礼赞叹！ </div></div><div class="post"><div class="post-header"><div class="avatar">葛</div><span style="font-size:15px; letter-spacing:1px;">葛达陇竹发表于 2010-7-20 18:51</span><div class="badge-floor">第 37 进</div></div><div class="post-body">顶礼白玛格桑法王 <br/>
 <br/>
 </div></div>
 </div>

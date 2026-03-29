@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大乘密严经（经集部） - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>大乘密严经（经集部） - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大乘密严经（经集部）</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 13:38<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">         大乘密严经 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/深入经续法藏海.html">深入经续法藏海</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">大乘密严经（经集部）</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-26 13:38</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">         大乘密严经 <br/>
          大乘密严经卷上 <br/>
          　　　　唐天竺三藏地婆诃罗奉　制译 <br/>
          　　密严会品第一 <br/>
@@ -231,7 +252,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 　不见性有无　　亦无无有见 <br/>
 　于蕴瓶衣等　　微细而分别 <br/>
 　三百有六十　　邪宗坏正道 <br/>
-　往来生死中　　无有涅盘法　 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 13:48<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">　　大乘密严经妙身生品第二之一 <br/>
+　往来生死中　　无有涅盘法　 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-26 13:48</span><div class="badge-floor">第 2 进</div></div><div class="post-body">　　大乘密严经妙身生品第二之一 <br/>
  <br/>
 尔时如实见菩萨。有大威力世中自在。其身妙好上服庄严。在于佛前避座而立。曲躬合掌一心恭敬。向金刚藏菩萨摩诃萨而作是言。尊者。善能通达自智之境现法乐住。于三乘世间心得无违。为大定师于定自在。能随顺说诸地之相。常在一切佛国土中。为诸上首演深妙法。是故我今劝请尊者。说诸圣人不随他行。现法乐住内证之境。令我及余诸菩萨众得见斯法。安乐修行趣于佛地。获意生身及言说身。力通自在皆得具足。转所依止不住实际。如众彩摩尼现诸色像。于一切佛国说密严行。金刚藏菩萨摩诃萨言。善哉仁主。能请我说入于密严无我之法。仁主。先应觉了诸分别境。是心之相于境界中舍诸分别。仁主。一切世间是分别见见世间体。即于所缘而得三昧。我今为汝开示彼法王。应善听。即说偈言 <br/>
 <br/>
@@ -618,7 +639,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 是诸菩萨其身微妙不在有无。譬如天仙乾闼婆众。依须弥住或在虚空。地行众生所不能睹。彼诸菩萨亦复如是。非观行者不能得见。或说菩萨得禅自在三昧力故。于十方国土莲花之宫。示现受生及般涅盘。或说菩萨以三昧力。转于所依而不住实际。于一切有众生处差别现身。其心平等如地如水如日如月。或说菩萨以大悲心。愍诸众生轮转生死孤穷下贱众苦所逼。譬如黑蜂依船而住游于大海。随船飘荡或一由旬乃至百千无量由旬。 <br/>
  <br/>
-为说非我生死无常。令知速灭剎那不住。或说诸佛及诸菩萨。见一切众生渴爱迷乱。为分别苦之所逼迫。于无相法中而取于相。虚妄计着有能所取。是能所取缧绁其心。于生死海驰荡不息。贫穷孤露无有所依。如大海中蛛蝥之网。佛及菩萨犹住船人。于诸众生心生怜愍。欲令解脱生死苦难。随其所应而为现身。说布施等种种诸行。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 19:06<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">      大乘密严经卷中 <br/>
+为说非我生死无常。令知速灭剎那不住。或说诸佛及诸菩萨。见一切众生渴爱迷乱。为分别苦之所逼迫。于无相法中而取于相。虚妄计着有能所取。是能所取缧绁其心。于生死海驰荡不息。贫穷孤露无有所依。如大海中蛛蝥之网。佛及菩萨犹住船人。于诸众生心生怜愍。欲令解脱生死苦难。随其所应而为现身。说布施等种种诸行。 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-26 19:06</span><div class="badge-floor">第 3 进</div></div><div class="post-body">      大乘密严经卷中 <br/>
 唐天竺三藏地婆诃罗奉　制译 <br/>
 <br/>
 　　妙身生品第二之余 <br/>
@@ -843,11 +864,11 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
   　最上修行者　　地地而进修 <br/>
 了知一切法　　皆以心为性 <br/>
 善说阿赖耶　　三性法无我 <br/>
-其身转清净　　而来生此国　 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 21:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">　　大乘密严经胎生品第三 <br/>
+其身转清净　　而来生此国　 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-26 21:20</span><div class="badge-floor">第 4 进</div></div><div class="post-body">　　大乘密严经胎生品第三 <br/>
 <br/>
 尔时金刚藏菩萨摩诃萨。复告螺髻梵天王言。天主当知。众生之身九物为性。有为众相恒共迁动。大种诸色微尘之聚。以诸不净精血合成。为无量业常所缠覆。譬如毒树扶疏蓊郁。贪恚及痴而共增长。经于九月或十月余。业力驱驰生机运动。从于产门倒首而出。烦冤逼迫受无量苦。天主。此诸众生或从人中。或从畜生饿鬼罗剎阿修罗等而来生此。或有曾作转轮之王。乃至天中威力自在。或是持咒外道仙人并其眷属。或修禅者退失禅定。从如是等处而生此中。既生之已诸根长大。随所亲近宿习因缘而造诸业。复因此业轮回诸趣。若有智者遇善知识闻法思惟而得解悟。不着文字离诸分别。入三脱门见法真理。最上清净最上上清净。而来住此密严佛国。于无量亿诸佛土中随宜应现。天主。如是生者永得解脱生死险趣。名为丈夫名为智者。亦复说名天中之天。 <br/>
  <br/>
-诸佛子众所共围绕。天主。胎藏之身虚伪不实。非自性生亦非无明爱业所生。何以故。无明爱业因相而有。若能了达悉灭无余。亦无名字及以分别。斯人即生密严佛土。天主。若诸定者住于三昧。心有攀缘即为色声之所诳惑。而生取着不能坚固。此即名为散动之道。是三昧力生于欲界及色无色。乃至无想众生之处。是人即为三昧所缚。若住三昧善调其心离能所取。离二取已心即不生。是名真实观行之者。若欲生于密严佛国。常当住此真实三昧 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 21:27<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">　　大乘密严经显示自作品第四 <br/>
+诸佛子众所共围绕。天主。胎藏之身虚伪不实。非自性生亦非无明爱业所生。何以故。无明爱业因相而有。若能了达悉灭无余。亦无名字及以分别。斯人即生密严佛土。天主。若诸定者住于三昧。心有攀缘即为色声之所诳惑。而生取着不能坚固。此即名为散动之道。是三昧力生于欲界及色无色。乃至无想众生之处。是人即为三昧所缚。若住三昧善调其心离能所取。离二取已心即不生。是名真实观行之者。若欲生于密严佛国。常当住此真实三昧 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-26 21:27</span><div class="badge-floor">第 5 进</div></div><div class="post-body">　　大乘密严经显示自作品第四 <br/>
 <br/>
 尔时金刚藏菩萨摩诃萨。复告螺髻梵天王言。天主。心有八种或复有九。与无明俱为世间因。世间悉是心心法现。是心心法及以诸根。生灭流转为无明等之所变异。其根本心坚固不动。天主。世间因缘有十二分。若根若境能生所生剎那坏灭。从于梵世至非非想皆因缘起。唯有如来离诸因缘。天主。内外世间动不动法。皆如瓶等坏灭为性。天主。诸识微细迁流速疾。是佛境界非诸世间仙人外道所能知见。众仙外道为爱所缠。不能了知心相差别。天主。 <br/>
  <br/>
@@ -1009,7 +1030,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 智火焚业薪　　当知亦如是 <br/>
 又如灯破闇　　一念尽无余 <br/>
 诸业之闇冥　　多劫所熏聚 <br/>
-  　牟尼智灯照　　剎那悉除灭　 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 21:40<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">　　大乘密严经分别观行品第五 <br/>
+  　牟尼智灯照　　剎那悉除灭　 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-26 21:40</span><div class="badge-floor">第 6 进</div></div><div class="post-body">　　大乘密严经分别观行品第五 <br/>
 <br/>
 尔时金刚藏菩萨摩诃萨复告大众。诸仁者。譬如有人在空闲地。以泥瓦草木葺之成宇。既而谛观一一物中无舍可得。又如多指共合成拳。离指求拳即无所有。军徒车乘城邑山林。瓶衣等物一切皆是和合所成。智者观之悉如梦事。凡夫身宅亦复如是。诸界积集。譬如高山危脆不安同于朽屋。不生不灭非自非他。如乾闼婆城。如影如云如阳焰如缋像。虽可现睹性常清净。远离一切有无分别。如盲与跛相假而行无决定性。乃至分析至于微尘。但有空名都无实物。 <br/>
  <br/>
@@ -1038,7 +1059,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 如淡得蜜　　贪爱若除　　众缚悉解 <br/>
 如蛇螫物　　瞋毒亦然　　生死趣中 <br/>
 多所恼害　　诸仁若欲　　令彼除尽 <br/>
-宜各勤心　　修于观行　 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 21:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">　　大乘密严经阿赖耶建立品第六 <br/>
+宜各勤心　　修于观行　 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-26 21:51</span><div class="badge-floor">第 7 进</div></div><div class="post-body">　　大乘密严经阿赖耶建立品第六 <br/>
 <br/>
 尔时金刚藏菩萨摩诃萨复告众言。诸仁者。我念昔曾蒙佛与力而得妙定。廓然明见十方国土修世定人。及佛菩萨所住之处。于如是处中密严佛土安乐第一。诸佛菩萨数如微尘处莲华藏。我于尔时一心瞻仰。寻从定出即自见身。与诸菩萨在密严土。复于尔时见解脱藏住在宫中。其量大小如一指节。色相明洁如阿怛斯花。亦如空中清净满月。我时见已便生念言。此为是谁。而有如是不思议事。作是念时。即见我身在其身内。于中普见一切世间。尔时莲花藏中无量菩萨。以佛神力亦如是见咸生是念。此为希有不可思议。时天中天所为事毕还摄神力。 <br/>
  <br/>
@@ -1121,7 +1142,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 远离于断灭　　正道之标相 <br/>
  <br/>
   　修行妙定者　　至解脱之因 <br/>
-永离诸杂染　　转依而显现　 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 21:55<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">     大乘密严经卷下 <br/>
+永离诸杂染　　转依而显现　 </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-26 21:55</span><div class="badge-floor">第 8 进</div></div><div class="post-body">     大乘密严经卷下 <br/>
    　 　　　唐天竺三藏地婆诃罗奉　制译 <br/>
 　　 目识境界品第七 <br/>
  <br/>
@@ -1131,7 +1152,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
  <br/>
 令诸众生于生死中驰骛往来。不肯亲近佛及菩萨诸善知识。展转远离无归向时。违背圣道失于己利。于三乘中乃至不得一乘之法。为取所缚不见真谛。不得预于密严之土。乃至名字亦不得闻。仁主。诸观行人咸于此识净除我见。汝及诸菩萨摩诃萨亦应如是既自勤修。复为人说令具速入密严佛土。 <br/>
 <br/>
- </div></div><div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-26 22:23<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">　　大乘密严经阿赖耶微密品第八 <br/>
+ </div></div><div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2006-9-26 22:23</span><div class="badge-floor">第 9 进</div></div><div class="post-body">　　大乘密严经阿赖耶微密品第八 <br/>
 <br/>
 尔时众中有菩萨名曰宝手。白众色最胜王言。王应请问金刚藏。住三昧者。一切世间所有众法。离诸分别及以名字不相应名相应之名。彼法自性于何而住。此诸佛子专心愿闻。时众色最胜王。即随其义而问之曰。 <br/>
 <br/>
@@ -1863,7 +1884,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 意识所行境　　但缚于凡夫 <br/>
 圣见悉清净　　譬如阳焰等 <br/>
 <br/>
-    尔时世尊说是经已。金刚藏等无量菩萨摩诃萨。及从他方来此会者无央数众。闻佛所说皆大欢喜信受奉行。 </div></div><div class="post"><div class="post-header"><div class="avatar">乐</div>乐空不二发表于 2008-1-23 10:53<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">世尊真实语  安住于实法      由彼真实故  护持于此经 <br/>
+    尔时世尊说是经已。金刚藏等无量菩萨摩诃萨。及从他方来此会者无央数众。闻佛所说皆大欢喜信受奉行。 </div></div><div class="post"><div class="post-header"><div class="avatar">乐</div><span style="font-size:15px; letter-spacing:1px;">乐空不二发表于 2008-1-23 10:53</span><div class="badge-floor">第 10 进</div></div><div class="post-body">世尊真实语  安住于实法      由彼真实故  护持于此经 <br/>
 大悲为甲胄  安住于大慈      由彼慈悲力  护持于此经 <br/>
 福资粮圆满  生起智资粮      由资粮满故  护持于此经 <br/>
 降伏一切魔  破灭诸邪论      断除恶见故  护持于此经 <br/>

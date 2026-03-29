@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>四念处内观智慧禅法 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>四念处内观智慧禅法 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/定慧禅修成就法.html">定慧禅修成就法</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">四念处内观智慧禅法</h1>
-<div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 16:11<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">原著前序 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/定慧禅修成就法.html">定慧禅修成就法</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">四念处内观智慧禅法</h1>
+<div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 16:11</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">原著前序 <br/>
 <br/>
 近年来，越来越多受华文教育的人来习禅，而市面上有关此类——毗钵舍那（Vipassana Meditation）或称为四念处内观智慧禅（Insight Meditation）的中文版书籍却又缺乏得很。为了要增加修行者对此种禅定法的理论智识，于是便从我已出版的两本英文书翻译成中文，并合成此书。它们是： <br/>
 <br/>
@@ -64,7 +85,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 张振鹏与蔡伟恒于沙巴州禅园 <br/>
 <br/>
-一九九五年十二月 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 16:12<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">目　录 <br/>
+一九九五年十二月 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 16:12</span><div class="badge-floor">第 2 进</div></div><div class="post-body">目　录 <br/>
 <br/>
 四念处内观智慧禅法（实践篇）……………………………………………………1 <br/>
 <br/>
@@ -108,7 +129,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 习智慧禅途中的困境…………………………………………………………………151 <br/>
 <br/>
-如何在日常生活中修禅………………………………………………………………159 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 16:42<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">四念处内观智慧禅法 <br/>
+如何在日常生活中修禅………………………………………………………………159 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 16:42</span><div class="badge-floor">第 3 进</div></div><div class="post-body">四念处内观智慧禅法 <br/>
 （实践篇） <br/>
 <br/>
 内观智慧禅似乎近年来在马来西亚掀起一片热潮，可是有众多有趣于习禅的，却没有机会得到禅师的正确指示，这是由于没有足够的合格禅师，配合着此股突然蔚起的热潮，要训练一位好的禅师需要一段相当长的时间，而禅师对禅法的亲身经验亦是相当重要的。 <br/>
@@ -155,7 +176,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在开始时，习禅者应观照臀及腿部与坐垫接触的部位。其实，在坐禅里，有很多可供观照的接触点（见下图：4-12触点）。习禅者可以以有秩序的节奏观照这些触点以增强定力。花费在观照触点时间的长短应视习禅者的心念及目标现起的清晰程度而定。被观照的目标越清楚，停留下来的时间亦可久些。反过来说，如被观照的目标模糊不清，或习禅者已被昏昏睡意笼罩时，他应以较快的观照速度，去观注不同的触点。“触”及“坐”两者都应被观照。有如观照其他目标一样，在观照触点时，主要是观照事物生灭的特相。 <br/>
 <br/>
-<br/>
+1950 <br/>
 <br/>
 腹部上升及下降 <br/>
 <br/>
@@ -184,9 +205,9 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 在行禅时，一些外界的声音，及存于身躯里的种种感受，或发出身语意行为前的各种动机都可作为修习行禅时的次要观照目标。可是，若此些目标已呈现得非常明显，且干扰到行禅时，习禅者该停止行禅而去观照这些次要的目标。 <br/>
 <br/>
+19521953 <br/>
 <br/>
-<br/>
-<br/>
+1954 <br/>
 <br/>
 站（立） <br/>
 <br/>
@@ -345,7 +366,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 正定--平稳定住目标上之心力。 <br/>
 <br/>
-</div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 16:44<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">四念处内观智慧禅修法 <br/>
+1951 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 16:44</span><div class="badge-floor">第 4 进</div></div><div class="post-body">四念处内观智慧禅修法 <br/>
 （摘要篇） <br/>
 <br/>
 在许多佛教传统经典里，尤其是在此部（念住经》中可看到此种毗钵舍那或称为内观智慧，是依据四住（处）：身、受、心、法，为修行准则的基础。 <br/>
@@ -425,7 +446,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 （C）以正念直接的知道形成物质与精神的生灭过程 <br/>
 <br/>
-——这情形通常是一连串的生灭动态。这样的观察，智慧由此观照中而生。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 16:46<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">四念处内观智慧禅修法 <br/>
+——这情形通常是一连串的生灭动态。这样的观察，智慧由此观照中而生。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 16:46</span><div class="badge-floor">第 5 进</div></div><div class="post-body">四念处内观智慧禅修法 <br/>
 （正念的提升） <br/>
 <br/>
 不论是止（定）禅（Samatha Bhavana）或是内观智慧禅（Vipassana Bhavana），正念都在扮演着相当重要的角色。因为它可以使我们的心处于善境——即远离贪、嗔及痴。反之，一个人若无正念，往往会误入邪定。如果没有及早发现，也许会导致精神出问题。 <br/>
@@ -520,7 +541,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 知道，是指心识已意识到目标的存在。当我们知道某事项时，却并非意味着我们是有正念的意识到它。譬如，我们见到蛇时，由于心已被蛇吓到而感害怕。因此，这是一种没有正念的知道。 <br/>
 <br/>
-以上三个例子可协助我们断定自己是否有正念。当正念可持续不断时，那就可克服种种的烦恼或障碍。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 16:49<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">四念处内观智慧禅修法 <br/>
+以上三个例子可协助我们断定自己是否有正念。当正念可持续不断时，那就可克服种种的烦恼或障碍。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 16:49</span><div class="badge-floor">第 6 进</div></div><div class="post-body">四念处内观智慧禅修法 <br/>
 （五盖）  <br/>
 <br/>
 在密集修禅期的最初几天，或者初基修禅者所经历的最初阶段，一定会面对很多的障碍。这些障碍及污秽的心态，称为五盖： <br/>
@@ -795,7 +816,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 （4）注意观照恶念的形式及其作用。 <br/>
 <br/>
-（5）用坚强的意志力压制和迫退恶念。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 16:51<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">四念处内观智慧禅修法 <br/>
+（5）用坚强的意志力压制和迫退恶念。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 16:51</span><div class="badge-floor">第 7 进</div></div><div class="post-body">四念处内观智慧禅修法 <br/>
 （定） <br/>
 <br/>
 一般上，修禅者会有意或在潜意识里都把“定”列为修禅的目的。又由于这些人不了解“定”可分为正定和邪定，因此导致许多问题的产生，所以有必要在此解释“定的意义以及智慧禅修习者所力求达致的独特定境。 <br/>
@@ -833,7 +854,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 （二）要用规律性的方法来引导它，使它能在最有利的时机下培育起来。 <br/>
 <br/>
-（三）须把五根（信、进、念、定、慧）平衡（方法将在后面祥述）。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 16:54<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">四念处内观智慧禅修法 <br/>
+（三）须把五根（信、进、念、定、慧）平衡（方法将在后面祥述）。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 16:54</span><div class="badge-floor">第 8 进</div></div><div class="post-body">四念处内观智慧禅修法 <br/>
 （如何选择目标） <br/>
 <br/>
 系统性的观察和无择性的洞察。 <br/>
@@ -868,9 +889,9 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 下图说明在坐禅时有规律的观照及更换主要和次要目标的情形。 <br/>
 <br/>
+1955 <br/>
 <br/>
-<br/>
-<br/>
+1956 <br/>
 <br/>
 走禅 <br/>
 <br/>
@@ -918,7 +939,7 @@ c.不受控制及不可思议的现象使到修禅者感到恐惧。（六）当
 <br/>
 有些修禅者可能较注重于某一种念处，这是因为他们认为该念处比较适合他们的性格。在经论中也建议修禅者采用适宜个人的方法。 <br/>
 <br/>
-通过经验，大多数修禅者会发现如果他观照身念处以外的其他念住会较有趣味。但是先把身念处的观法掌握好是非常重要的。这是因为身念处是最容易使正念持续的根基。尤其是在平时碰到了挫折或在精进修禅期间遇到奇怪的境界时。若缺少了身念处观法的认识，修禅者会感到迷惑而不知该如何应付。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 16:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">四念处内观智慧禅修法 <br/>
+通过经验，大多数修禅者会发现如果他观照身念处以外的其他念住会较有趣味。但是先把身念处的观法掌握好是非常重要的。这是因为身念处是最容易使正念持续的根基。尤其是在平时碰到了挫折或在精进修禅期间遇到奇怪的境界时。若缺少了身念处观法的认识，修禅者会感到迷惑而不知该如何应付。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 16:56</span><div class="badge-floor">第 9 进</div></div><div class="post-body">四念处内观智慧禅修法 <br/>
 （四种护卫止禅法） <br/>
 <br/>
 对于那些拥有强烈烦恼的人，他们未给智慧禅一个合理的尝试便放弃修持是可理解的。因此，修习四种护卫止禅法能给予禅者信心，也能使他平静和乐观。进而能使习禅者接受较严格的内观智慧禅修法。除此之外，我们不能否认止（定）禅亦能帮助禅者更快的启发强而有力的定力。如果好好修持，它亦有助于我们的世俗事。 <br/>
@@ -951,7 +972,7 @@ c.不受控制及不可思议的现象使到修禅者感到恐惧。（六）当
 <br/>
 讲到精进，我们能以观想把悚惧基来激起精进。八悚惧基是：生、老、病、死、苦、以前的苦、将来的苦、现在的苦。禅者这样的观照一定能激起精进而努力修持直到苦尽。 <br/>
 <br/>
-愿你精进的奋斗，绝不停懈，直到最终的解脱及涅槃! </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 17:00<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">四念处内观智慧禅修法 <br/>
+愿你精进的奋斗，绝不停懈，直到最终的解脱及涅槃! </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 17:00</span><div class="badge-floor">第 10 进</div></div><div class="post-body">四念处内观智慧禅修法 <br/>
 （调御五根） <br/>
 <br/>
 提名为调御五根是因为它们的功能有如指挥官或控制员。这是Ven. Ledi Sayadaw在“佛教手册”（Manual Of Buddhism）里所立的定义。它们是：“能如实照见事物实相的正念，或那待揭发的灭苦之道。 <br/>
@@ -1119,11 +1140,11 @@ c.不受控制及不可思议的现象使到修禅者感到恐惧。（六）当
 <br/>
 以图解展示如下： <br/>
 <br/>
-<br/>
+1957 <br/>
 <br/>
 另一个譬喻是指这五根有如一座金字塔的各别五面，而那善心识既是金字塔的顶端点 <br/>
 <br/>
-<br/>
+1958 <br/>
 <br/>
 在这情况下，把正念置放在中间是因为在培育正智的过程，它扮演着领导与重心的角色。 <br/>
 <br/>
@@ -1139,11 +1160,11 @@ c.不受控制及不可思议的现象使到修禅者感到恐惧。（六）当
 <br/>
 其实，完美所谓的“过度”是指：若过于倾向于一方的成长会致使正念脱离中心点。也既是不平衡的提升将导致培育正智的反效果。 <br/>
 <br/>
-<br/>
+1959 <br/>
 <br/>
 以下的图解是以循环关系显示五根的平衡倾向： <br/>
 <br/>
-<br/>
+1960 <br/>
 <br/>
 注： <br/>
 <br/>
@@ -1161,7 +1182,7 @@ c.不受控制及不可思议的现象使到修禅者感到恐惧。（六）当
 <br/>
 （iv）念根也似精进根及信根般，培育起来。定根为培育的核心。 <br/>
 <br/>
-（v） 定根也似上述的三个根般，培育起来。慧根为培育的核心。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 17:03<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">四念处内观智慧禅法 <br/>
+（v） 定根也似上述的三个根般，培育起来。慧根为培育的核心。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 17:03</span><div class="badge-floor">第 11 进</div></div><div class="post-body">四念处内观智慧禅法 <br/>
 （平衡诸根力） <br/>
 <br/>
 首先，让我们先看看精进力（E）和定力（C）的平衡。 <br/>
@@ -1178,11 +1199,11 @@ c.不受控制及不可思议的现象使到修禅者感到恐惧。（六）当
 <br/>
 这三个可变的因素，在平衡五根中，扮演着一个极重要的角色。我们可采取分类表来分析解说，这三个可变的因素在各组的相应心识中是如何运作的。 <br/>
 <br/>
+1961 <br/>
 <br/>
+1962 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
+1963 <br/>
 <br/>
 从图表显示，当一个人从事精进习禅时，拥有正念（S）是非常重要的。这念根为心识的守护者，以免它误入邪定。如拥有某种程度的正念，无论在什么情形下都是好的。即使是对那些纯粹修习定禅者来说，如拥有某些程度的正念，也有利于他们的修行，可是他们却经常忽略了此个要素。 <br/>
 <br/>
@@ -1206,7 +1227,7 @@ P2（-E+C）--C＝P2（-E-C） <br/>
 <br/>
 P2（-E+C）＋＋E＝P2（+E+C） <br/>
 <br/>
-重要的不是加强或减弱任何根力，而是加强或减弱“多少”及“那一个”根力。它是凭经验而定，但以普通的判断准则是，当正念处于最稳的状态时，就要使定根尽量加深。换言之，当加深正念时，精进与定力也同时会相应增强。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 17:05<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">四念处内观智慧禅法 <br/>
+重要的不是加强或减弱任何根力，而是加强或减弱“多少”及“那一个”根力。它是凭经验而定，但以普通的判断准则是，当正念处于最稳的状态时，就要使定根尽量加深。换言之，当加深正念时，精进与定力也同时会相应增强。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 17:05</span><div class="badge-floor">第 12 进</div></div><div class="post-body">四念处内观智慧禅法 <br/>
 （平衡信心与智慧） <br/>
 <br/>
 我们看拔河或平衡赛的运作方式，它与平衡定根的功能有很多类似的地方，然而，说到平街信根与慧根时，却存有相异之处。因它们俩是关系带习禅的开始与结束，都存有互相牵涉的影响。智慧是通过习禅时才生起的（Bhavana Maya Panna）。此种智慧并不是一开始就能启发，它是通过习禅培育而来的。因此，任何拔河式或平衡式的角逐将牵涉到由思想生起的智慧（Cinta Maya Panna）,并非在真正观照时产生。由于，我们并没有在全部清醒的时刻投入于纯粹的观察，因此，在初期习禅时，有必要平衡信心与智慧以建立稳定的基础。不然的话，怀疑（因为困惑和推测的思想）可能生起，使修习瘫痪或过分的信心而导致错误的修习。这种平衡可由良师的开示引入，他也能激励一个信心正在衰退中的人，并在智慧缺乏时提供有利的知识和经验。 <br/>
@@ -1233,7 +1254,7 @@ P2（-E+C）＋＋E＝P2（+E+C） <br/>
 <br/>
 所以修行的最终目的，仍是能获得此种能导致一个人证得涅槃的智慧，而不是涅槃本身。就有如一人通过修行所证得的十六种正智般，是不能对它们有所执着的。 <br/>
 <br/>
-至于五根，慧根能使其他诸根的性质增强，犹如水泥般，紧紧地把它们结合在一起，并凝成自己所欲陶造成的形象，用来显示一切事物的真实面貌。因此，此种能帮助我们了解三法印的智慧，是永无过多的。相反的，它常常显得不足（觉者除外）。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 17:07<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">四念处内观智慧禅法 <br/>
+至于五根，慧根能使其他诸根的性质增强，犹如水泥般，紧紧地把它们结合在一起，并凝成自己所欲陶造成的形象，用来显示一切事物的真实面貌。因此，此种能帮助我们了解三法印的智慧，是永无过多的。相反的，它常常显得不足（觉者除外）。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 17:07</span><div class="badge-floor">第 13 进</div></div><div class="post-body">四念处内观智慧禅法 <br/>
 （平衡精进根与定根的法门） <br/>
 <br/>
 特别提出精进根与定根的平衡，其法如下： <br/>
@@ -1354,7 +1375,7 @@ P2（-E+C）＋＋E＝P2（+E+C） <br/>
 <br/>
 当不是我们选择的目标呈现时，我们可以采用撤消的方法，即时增强或减弱所需要的根力以平衡诸根。举个例子，疼痛可增强精进力，由此，就应以更放松的态度来观照以保持平衡。同样的，如有乐受目标的呈现，那应更需警觉与有力的观照。 <br/>
 <br/>
-另一点需记住的是一个人的性格亦可影响诸根的平衡。精力旺盛者，需要较多的定力，而懒散者则需要较多的精进力。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 17:09<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">四念处内观智慧禅法 <br/>
+另一点需记住的是一个人的性格亦可影响诸根的平衡。精力旺盛者，需要较多的定力，而懒散者则需要较多的精进力。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 17:09</span><div class="badge-floor">第 14 进</div></div><div class="post-body">四念处内观智慧禅法 <br/>
 （增锐诸根） <br/>
 <br/>
 刀能够切得很深，如果：（一）它的刀身金属坚固（二）它的刀锋锐利 <br/>
@@ -1481,11 +1502,11 @@ P2（-E+C）＋＋E＝P2（+E+C） <br/>
 <br/>
 五门的心路：（如在眼门起“看”的作用过程，即接受外界之情报） <br/>
 <br/>
-<br/>
+1964 <br/>
 <br/>
 意门的路线：起“认知”与“思”的作用 <br/>
 <br/>
-<br/>
+1965 <br/>
 <br/>
 说明： <br/>
 <br/>
@@ -1645,7 +1666,7 @@ P2（-E+C）＋＋E＝P2（+E+C） <br/>
 <br/>
 这三步骤符合 <br/>
 <br/>
-（一）探测遍知（二）觉察遍知（三）舍弃遍知 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 17:12<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 15 楼</span></div><div class="post-body">四念处内观智慧禅法 <br/>
+（一）探测遍知（二）觉察遍知（三）舍弃遍知 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 17:12</span><div class="badge-floor">第 15 进</div></div><div class="post-body">四念处内观智慧禅法 <br/>
 （九种致使诸根敏锐的要素） <br/>
 <br/>
 为了要使诸根敏锐有更好的轮廓，浏览（清净道论》中所述的九种方法是有用的。 <br/>
@@ -1886,7 +1907,7 @@ P2（-E+C）＋＋E＝P2（+E+C） <br/>
 <br/>
 （九）朝向最终目标不半途而废 <br/>
 <br/>
-最终目标即达致祛除诸苦的阿罗汉果。只要未达致此目标，苦还是可怕和难以忍受的。为达此目标，多数人需要经历一段时间奋斗，只要习禅者不退缩，拥有“不半途而废”的态度能令禅者继续奋力勤习。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 17:14<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 16 楼</span></div><div class="post-body">四念处内观智慧禅法 <br/>
+最终目标即达致祛除诸苦的阿罗汉果。只要未达致此目标，苦还是可怕和难以忍受的。为达此目标，多数人需要经历一段时间奋斗，只要习禅者不退缩，拥有“不半途而废”的态度能令禅者继续奋力勤习。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 17:14</span><div class="badge-floor">第 16 进</div></div><div class="post-body">四念处内观智慧禅法 <br/>
 （使诸根敏锐或成熟的其他要素） <br/>
 <br/>
 1.有更广的观照目标 <br/>
@@ -2013,7 +2034,7 @@ Magga Phala Nanassa Paccayo Hotu愿我获得道与果的智 <br/>
 <br/>
 （二）六根（Ayatana） <br/>
 <br/>
-（三）＋二因缘（Paticcasamuppada） </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 17:15<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 17 楼</span></div><div class="post-body">四念处内观智慧禅法 <br/>
+（三）＋二因缘（Paticcasamuppada） </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 17:15</span><div class="badge-floor">第 17 进</div></div><div class="post-body">四念处内观智慧禅法 <br/>
 （洞察诸行性质的正智） <br/>
 <br/>
 洞察正智是智慧根。在内观智慧禅来说，仍是一种超越观念，并能如实照见一切事相生灭本质之洞察。它是一种直接体验名色现象后，而有的成果。禅修者在初期时，只能洞察名与色的各别性质，到了后期，他便能觉察到它们总体的性质（指名色），即都是无常、苦、与无我的。 <br/>
@@ -2076,7 +2097,7 @@ Magga Phala Nanassa Paccayo Hotu愿我获得道与果的智 <br/>
 <br/>
 （11）证悟非缘生法 <br/>
 <br/>
-十六正智与七种净化的归类也和以上所述的意思相似。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 17:16<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 18 楼</span></div><div class="post-body">四念处内观智慧禅法 <br/>
+十六正智与七种净化的归类也和以上所述的意思相似。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 17:16</span><div class="badge-floor">第 18 进</div></div><div class="post-body">四念处内观智慧禅法 <br/>
 （三法印） <br/>
 <br/>
 我们通常以三种方法来形容一切有为事物的本质： <br/>
@@ -2207,7 +2228,7 @@ Magga Phala Nanassa Paccayo Hotu愿我获得道与果的智 <br/>
 <br/>
 当修禅者能够时时刻刻以正念去观照心法的各种现象。 <br/>
 <br/>
-名觉地去洞察它们刹那随刹那的变化。若修禅者能如此持续的观照，他对无常变化的认知，将引发起更深且不受观念影响的内观正智。修禅者就开始深入了解有为（世间）法。以及到最终的无为（出世间）法了。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 17:18<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 19 楼</span></div><div class="post-body">四念处内观智慧禅法 <br/>
+名觉地去洞察它们刹那随刹那的变化。若修禅者能如此持续的观照，他对无常变化的认知，将引发起更深且不受观念影响的内观正智。修禅者就开始深入了解有为（世间）法。以及到最终的无为（出世间）法了。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 17:18</span><div class="badge-floor">第 19 进</div></div><div class="post-body">四念处内观智慧禅法 <br/>
 （十种观的杂染） <br/>
 <br/>
 当修禅者的正念和正定增强时，一些奇异的现象或乐受将会相应生起，并能令修行者产生执着。这就是内观智的十种杂染。除了第十种是真正属于“杂染”外。其余的确实是正确修禅的成果。它们在习禅者体验较脆弱的第四内观正智初期时特别的显著（有时在其他内观智里也会显著的呈现）。若想要再有进步，修禅者必须了解这种境界并非是道和果识，亦非已达了心智培育的终站。习禅者不应该执取这些杂染。 <br/>
@@ -2325,7 +2346,7 @@ Magga Phala Nanassa Paccayo Hotu愿我获得道与果的智 <br/>
 <br/>
 （十）观的欲（Nikati） <br/>
 <br/>
-这是指对于以上九种杂染现起的执着。因满足于那些境界而不再努力及精进。如果他以为这是法的巅峰，那么他便歧入于邪见。而如果他自以为是已经获证圣道与圣果了，那就会偏向贡高我慢。若他继续执取并再渴求，他便会堕入有为法的缠缚中。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 17:19<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 20 楼</span></div><div class="post-body">四念处内观智慧禅法 <br/>
+这是指对于以上九种杂染现起的执着。因满足于那些境界而不再努力及精进。如果他以为这是法的巅峰，那么他便歧入于邪见。而如果他自以为是已经获证圣道与圣果了，那就会偏向贡高我慢。若他继续执取并再渴求，他便会堕入有为法的缠缚中。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 17:19</span><div class="badge-floor">第 20 进</div></div><div class="post-body">四念处内观智慧禅法 <br/>
 （超越观念的修禅） <br/>
 <br/>
 当修禅逐渐进步，至智慧成熟时，他便能舍弃所有的观念。唯有当正念自主及定力深厚时才能实现。 <br/>
@@ -2378,7 +2399,7 @@ Magga Phala Nanassa Paccayo Hotu愿我获得道与果的智 <br/>
 <br/>
 “善哉瞿昙（Gotama）善哉瞿昙，譬如有人，使倒者得起，隐者得现，迷途者示以认道，冥室燃灯，有目得视。世尊如是，以无数方便，说法示教，亦复如是。瞿县，我今日皈依佛，皈依法，皈依僧，唯愿世尊，摄受我，自今已后，尽寿皈依三宝。” <br/>
 <br/>
-如果真正体验到，这“法”将会常住，直到最终这五蕴灭尽。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 17:21<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 21 楼</span></div><div class="post-body">四念处内观智慧禅法 <br/>
+如果真正体验到，这“法”将会常住，直到最终这五蕴灭尽。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 17:21</span><div class="badge-floor">第 21 进</div></div><div class="post-body">四念处内观智慧禅法 <br/>
 （十六观智） <br/>
 <br/>
 （一）分别名色正智（Namarupa Pariccheda Nana） <br/>
@@ -2495,7 +2516,7 @@ Magga Phala Nanassa Paccayo Hotu愿我获得道与果的智 <br/>
 <br/>
 例如已誓愿要成为三藐三菩陀（Sammasambuddha），辟支佛（Paccekabuddha），或要渡尽所有众生等等菩萨誓愿的人，将不会在此佛法住世（指释迦）时期跨渡苦海，而进入无余涅槃。这是由于他们的誓愿所需要的条件阻止脱离苦海的道心。如禅者期望达致最少须陀洹圣道，那么他需放弃这种誓愿。 <br/>
 <br/>
-有很多人不同意这点，并争论这并非真实，但，这是不需要争论的，就如没有必要争论到底路将通往那里一般。如你不相信，那就继续前进吧！无可否认，有这种高尚的理想是非常神圣的。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 17:22<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 22 楼</span></div><div class="post-body">四念处内观智慧禅法 <br/>
+有很多人不同意这点，并争论这并非真实，但，这是不需要争论的，就如没有必要争论到底路将通往那里一般。如你不相信，那就继续前进吧！无可否认，有这种高尚的理想是非常神圣的。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 17:22</span><div class="badge-floor">第 22 进</div></div><div class="post-body">四念处内观智慧禅法 <br/>
 （涅槃） <br/>
 <br/>
 你如何知道是否真有涅槃？ <br/>
@@ -2548,7 +2569,7 @@ Magga Phala Nanassa Paccayo Hotu愿我获得道与果的智 <br/>
 <br/>
 那么，为何不用别的方法？ <br/>
 <br/>
-《羯腊摩经》（Kalama）里劝告不应为了传闻、谣言、经典等等而轻易的相信。禅者应继续的修禅，信心自然会建立，一切的疑惑将会消失。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 17:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 23 楼</span></div><div class="post-body">四念处内观智慧禅法 <br/>
+《羯腊摩经》（Kalama）里劝告不应为了传闻、谣言、经典等等而轻易的相信。禅者应继续的修禅，信心自然会建立，一切的疑惑将会消失。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 17:24</span><div class="badge-floor">第 23 进</div></div><div class="post-body">四念处内观智慧禅法 <br/>
 （习智慧禅途中的困境） <br/>
 <br/>
 这几年来，不少马来西亚人曾参加修练毗钵舍那禅（内观智慧禅）。并从他们的反应中，我们可以列下他们经常面对的困境。在此，我们大略讨论一些他们所经历过的困境或难题。 <br/>
@@ -2659,7 +2680,7 @@ Magga Phala Nanassa Paccayo Hotu愿我获得道与果的智 <br/>
 <br/>
 （3）你有没有得到正确和完整的指示？你有没有例常请示禅师？ <br/>
 <br/>
-如果你没有得到正确的教导，亦没有出差错那这真是奇迹。要得到完整和正确的教导，就得常与禅师会面请教。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-7-20 17:25<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 24 楼</span></div><div class="post-body">四念处内观智慧禅法 <br/>
+如果你没有得到正确的教导，亦没有出差错那这真是奇迹。要得到完整和正确的教导，就得常与禅师会面请教。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2007-7-20 17:25</span><div class="badge-floor">第 24 进</div></div><div class="post-body">四念处内观智慧禅法 <br/>
 （如何在日常生活中修禅） <br/>
 <br/>
 一般上，大多数修禅者只参加一个星期或更久的密集内观智慧禅修期。之后，当他们回想时，他们肯定是有所收获的。至少他们学过了基本的修禅法，即是如何应用正念来祛除五盖以便培育正定。如果修禅者能够超越观念来体证三法印，那时他们必定会对内观智慧禅有更深一层的认识。而对那些只参加一个星期禅修者来说，可能对内观智慧只有肤浅的了解。 <br/>
@@ -2702,7 +2723,7 @@ Magga Phala Nanassa Paccayo Hotu愿我获得道与果的智 <br/>
 <br/>
 一个人必须功德圆满方能跳出六道轮回。其中，如善助缘和波罗蜜能导致证入圣道。这些善行包括布施、持戒、服务、礼敬、勤修等等。奉行这些善行所带来的业报将引导外面倾向解脱苦海。因此，每当完成一个善行时，佛教徒都会誓下此愿： <br/>
 <br/>
-“愿以此功德，祛除内心的污秽，以证得涅槃。将此业报，集合成一股因缘，并导向脱离苦海的解脱道。” </div></div><div class="post"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2009-8-31 11:24<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 25 楼</span></div><div class="post-body">“愿以此功德，祛除内心的污秽，以证得涅槃。将此业报，集合成一股因缘，并导向脱离苦海的解脱道。” </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 08:39<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 26 楼</span></div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
+“愿以此功德，祛除内心的污秽，以证得涅槃。将此业报，集合成一股因缘，并导向脱离苦海的解脱道。” </div></div><div class="post"><div class="post-header"><div class="avatar">觉</div><span style="font-size:15px; letter-spacing:1px;">觉知发表于 2009-8-31 11:24</span><div class="badge-floor">第 25 进</div></div><div class="post-body">“愿以此功德，祛除内心的污秽，以证得涅槃。将此业报，集合成一股因缘，并导向脱离苦海的解脱道。” </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div><span style="font-size:15px; letter-spacing:1px;">贝嘛埵吉发表于 2010-6-25 08:39</span><div class="badge-floor">第 26 进</div></div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
 众生善根尽随喜  正觉菩提意中持 <br/>
 正觉妙法及僧伽  直至菩提我皈依 <br/>
 所为利益自他故  我今即发菩提心 <br/>

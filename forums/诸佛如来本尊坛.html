@@ -1,390 +1,427 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>诸佛如来本尊坛 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>诸佛如来本尊坛 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
+
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / 藏密修海上师本尊</div>
-<h1 style="margin-bottom: 10px; font-size: 32px;">目录：诸佛如来本尊坛</h1>
-<p style="color:var(--text-muted); margin-bottom:40px;">共收录 329 篇主题</p>
-<a href="../threads/13033.html" class="thread-row"><h2>韦驮尊天菩萨</h2><div class="th-meta">TID: 13033</div></a>
-<a href="../threads/13027.html" class="thread-row"><h2>四张宝帐怙主法相</h2><div class="th-meta">TID: 13027</div></a>
-<a href="../threads/13011.html" class="thread-row"><h2>象头护法</h2><div class="th-meta">TID: 13011</div></a>
-<a href="../threads/9885.html" class="thread-row"><h2>黑忿怒空行母</h2><div class="th-meta">TID: 9885</div></a>
-<a href="../threads/9241.html" class="thread-row"><h2>出有坏摧坏金刚简介</h2><div class="th-meta">TID: 9241</div></a>
-<a href="../threads/8237.html" class="thread-row"><h2>专利佛像——精铜鎏金彩绘药师佛</h2><div class="th-meta">TID: 8237</div></a>
-<a href="../threads/8229.html" class="thread-row"><h2>嘎巴拉碗</h2><div class="th-meta">TID: 8229</div></a>
-<a href="../threads/8228.html" class="thread-row"><h2>密集金刚</h2><div class="th-meta">TID: 8228</div></a>
-<a href="../threads/8227.html" class="thread-row"><h2>金刚萨埵</h2><div class="th-meta">TID: 8227</div></a>
-<a href="../threads/8226.html" class="thread-row"><h2>四臂金刚萨陲鎏金坐像</h2><div class="th-meta">TID: 8226</div></a>
-<a href="../threads/8182.html" class="thread-row"><h2>佛母大孔雀明王</h2><div class="th-meta">TID: 8182</div></a>
-<a href="../threads/8181.html" class="thread-row"><h2>孔雀明王的来历</h2><div class="th-meta">TID: 8181</div></a>
-<a href="../threads/8180.html" class="thread-row"><h2>修持佛母大金曜孔雀明王心咒与圣号功德</h2><div class="th-meta">TID: 8180</div></a>
-<a href="../threads/8043.html" class="thread-row"><h2>八十九佛庄严法相</h2><div class="th-meta">TID: 8043</div></a>
-<a href="../threads/7565.html" class="thread-row"><h2>释迦牟尼佛</h2><div class="th-meta">TID: 7565</div></a>
-<a href="../threads/7564.html" class="thread-row"><h2>五方佛之不空成就如来</h2><div class="th-meta">TID: 7564</div></a>
-<a href="../threads/7563.html" class="thread-row"><h2>五方佛之阿弥陀如来</h2><div class="th-meta">TID: 7563</div></a>
-<a href="../threads/7562.html" class="thread-row"><h2>五方佛之宝生如来</h2><div class="th-meta">TID: 7562</div></a>
-<a href="../threads/7561.html" class="thread-row"><h2>五方佛之金刚不动如来（阿閦佛）</h2><div class="th-meta">TID: 7561</div></a>
-<a href="../threads/7560.html" class="thread-row"><h2>五方佛之毗卢遮那佛（大日如来）</h2><div class="th-meta">TID: 7560</div></a>
-<a href="../threads/7559.html" class="thread-row"><h2>普贤王如来</h2><div class="th-meta">TID: 7559</div></a>
-<a href="../threads/7558.html" class="thread-row"><h2>阿底峡祖师</h2><div class="th-meta">TID: 7558</div></a>
-<a href="../threads/7557.html" class="thread-row"><h2>八十四大成就祖师</h2><div class="th-meta">TID: 7557</div></a>
-<a href="../threads/7556.html" class="thread-row"><h2>施身法派（觉宇派）皈依境</h2><div class="th-meta">TID: 7556</div></a>
-<a href="../threads/7555.html" class="thread-row"><h2>师徒三尊者</h2><div class="th-meta">TID: 7555</div></a>
-<a href="../threads/7554.html" class="thread-row"><h2>格鲁派皈依境</h2><div class="th-meta">TID: 7554</div></a>
-<a href="../threads/7553.html" class="thread-row"><h2>噶玛噶举三根本</h2><div class="th-meta">TID: 7553</div></a>
-<a href="../threads/7552.html" class="thread-row"><h2>金刚总持</h2><div class="th-meta">TID: 7552</div></a>
-<a href="../threads/7551.html" class="thread-row"><h2>噶玛噶举皈依境</h2><div class="th-meta">TID: 7551</div></a>
-<a href="../threads/7549.html" class="thread-row"><h2>萨迦五祖</h2><div class="th-meta">TID: 7549</div></a>
-<a href="../threads/7548.html" class="thread-row"><h2>龙钦巴祖师</h2><div class="th-meta">TID: 7548</div></a>
-<a href="../threads/7547.html" class="thread-row"><h2>莲师八相</h2><div class="th-meta">TID: 7547</div></a>
-<a href="../threads/7546.html" class="thread-row"><h2>莲花生大师</h2><div class="th-meta">TID: 7546</div></a>
-<a href="../threads/7545.html" class="thread-row"><h2>宁玛巴（红教）皈依境</h2><div class="th-meta">TID: 7545</div></a>
-<a href="../threads/7544.html" class="thread-row"><h2>幢顶臂严佛母</h2><div class="th-meta">TID: 7544</div></a>
-<a href="../threads/7543.html" class="thread-row"><h2>语狮子文殊菩萨</h2><div class="th-meta">TID: 7543</div></a>
-<a href="../threads/7542.html" class="thread-row"><h2>山居叶衣佛母</h2><div class="th-meta">TID: 7542</div></a>
-<a href="../threads/7541.html" class="thread-row"><h2>五明王母（瑞比加莫）</h2><div class="th-meta">TID: 7541</div></a>
-<a href="../threads/7540.html" class="thread-row"><h2>黑色铁发马头金刚勇士</h2><div class="th-meta">TID: 7540</div></a>
-<a href="../threads/7539.html" class="thread-row"><h2>真实名文殊（四臂文殊菩萨）</h2><div class="th-meta">TID: 7539</div></a>
-<a href="../threads/7538.html" class="thread-row"><h2>世间自在者（四臂观音）</h2><div class="th-meta">TID: 7538</div></a>
-<a href="../threads/7537.html" class="thread-row"><h2>伏魔金刚手</h2><div class="th-meta">TID: 7537</div></a>
-<a href="../threads/7536.html" class="thread-row"><h2>狮子吼声文殊菩萨</h2><div class="th-meta">TID: 7536</div></a>
-<a href="../threads/7535.html" class="thread-row"><h2>狮面空行母</h2><div class="th-meta">TID: 7535</div></a>
-<a href="../threads/7534.html" class="thread-row"><h2>三面六臂马头明王</h2><div class="th-meta">TID: 7534</div></a>
-<a href="../threads/7533.html" class="thread-row"><h2>六面黑色能怖金刚</h2><div class="th-meta">TID: 7533</div></a>
-<a href="../threads/7532.html" class="thread-row"><h2>青衣摧破金刚</h2><div class="th-meta">TID: 7532</div></a>
-<a href="../threads/7531.html" class="thread-row"><h2>青色不动明王</h2><div class="th-meta">TID: 7531</div></a>
-<a href="../threads/7530.html" class="thread-row"><h2>能动三界度母</h2><div class="th-meta">TID: 7530</div></a>
-<a href="../threads/7529.html" class="thread-row"><h2>摩利支天佛母</h2><div class="th-meta">TID: 7529</div></a>
-<a href="../threads/7528.html" class="thread-row"><h2>白色妙音天女</h2><div class="th-meta">TID: 7528</div></a>
-<a href="../threads/7527.html" class="thread-row"><h2>怙主弥勒</h2><div class="th-meta">TID: 7527</div></a>
-<a href="../threads/7525.html" class="thread-row"><h2>黑绿色忿怒秽迹金刚</h2><div class="th-meta">TID: 7525</div></a>
-<a href="../threads/7524.html" class="thread-row"><h2>紫檀林度母</h2><div class="th-meta">TID: 7524</div></a>
-<a href="../threads/7523.html" class="thread-row"><h2>猛厉金刚手（持杵结印）</h2><div class="th-meta">TID: 7523</div></a>
-<a href="../threads/7522.html" class="thread-row"><h2>金刚手（持杵及铃）</h2><div class="th-meta">TID: 7522</div></a>
-<a href="../threads/7521.html" class="thread-row"><h2>能作吉祥事成度母</h2><div class="th-meta">TID: 7521</div></a>
-<a href="../threads/7520.html" class="thread-row"><h2>忿怒秽迹金刚</h2><div class="th-meta">TID: 7520</div></a>
-<a href="../threads/7519.html" class="thread-row"><h2>红黄文殊父母尊</h2><div class="th-meta">TID: 7519</div></a>
-<a href="../threads/7518.html" class="thread-row"><h2>阿惹巴渣文殊菩萨</h2><div class="th-meta">TID: 7518</div></a>
-<a href="../threads/7517.html" class="thread-row"><h2>红马头金刚</h2><div class="th-meta">TID: 7517</div></a>
-<a href="../threads/7516.html" class="thread-row"><h2>红色能怖金刚</h2><div class="th-meta">TID: 7516</div></a>
-<a href="../threads/7515.html" class="thread-row"><h2>咕噜咕哩</h2><div class="th-meta">TID: 7515</div></a>
-<a href="../threads/7513.html" class="thread-row"><h2>甘露漩明王</h2><div class="th-meta">TID: 7513</div></a>
-<a href="../threads/7512.html" class="thread-row"><h2>二臂铁发黑马头明王</h2><div class="th-meta">TID: 7512</div></a>
-<a href="../threads/7511.html" class="thread-row"><h2>二臂黑色能怖金刚</h2><div class="th-meta">TID: 7511</div></a>
-<a href="../threads/7510.html" class="thread-row"><h2>二臂红马头明王</h2><div class="th-meta">TID: 7510</div></a>
-<a href="../threads/7509.html" class="thread-row"><h2>顶髻尊胜佛母</h2><div class="th-meta">TID: 7509</div></a>
-<a href="../threads/7508.html" class="thread-row"><h2>顶髻焰光母</h2><div class="th-meta">TID: 7508</div></a>
-<a href="../threads/7507.html" class="thread-row"><h2>忿怒自在大力明王</h2><div class="th-meta">TID: 7507</div></a>
-<a href="../threads/7506.html" class="thread-row"><h2>大白伞盖佛母</h2><div class="th-meta">TID: 7506</div></a>
-<a href="../threads/7505.html" class="thread-row"><h2>金刚除障明王</h2><div class="th-meta">TID: 7505</div></a>
-<a href="../threads/7504.html" class="thread-row"><h2>长寿佛</h2><div class="th-meta">TID: 7504</div></a>
-<a href="../threads/7497.html" class="thread-row"><h2>般若佛母</h2><div class="th-meta">TID: 7497</div></a>
-<a href="../threads/7496.html" class="thread-row"><h2>白文殊</h2><div class="th-meta">TID: 7496</div></a>
-<a href="../threads/7495.html" class="thread-row"><h2>白度母</h2><div class="th-meta">TID: 7495</div></a>
-<a href="../threads/7494.html" class="thread-row"><h2>白摧破金刚</h2><div class="th-meta">TID: 7494</div></a>
-<a href="../threads/7493.html" class="thread-row"><h2>白不动明王</h2><div class="th-meta">TID: 7493</div></a>
-<a href="../threads/7492.html" class="thread-row"><h2>普巴金刚</h2><div class="th-meta">TID: 7492</div></a>
-<a href="../threads/7491.html" class="thread-row"><h2>忿怒莲师金刚铠甲</h2><div class="th-meta">TID: 7491</div></a>
-<a href="../threads/7490.html" class="thread-row"><h2>外法王</h2><div class="th-meta">TID: 7490</div></a>
-<a href="../threads/7489.html" class="thread-row"><h2>作明佛母</h2><div class="th-meta">TID: 7489</div></a>
-<a href="../threads/7488.html" class="thread-row"><h2>金刚不动如来（阿閦佛）</h2><div class="th-meta">TID: 7488</div></a>
-<a href="../threads/7487.html" class="thread-row"><h2>妙音天女</h2><div class="th-meta">TID: 7487</div></a>
-<a href="../threads/7486.html" class="thread-row"><h2>千手千眼观世音</h2><div class="th-meta">TID: 7486</div></a>
-<a href="../threads/7485.html" class="thread-row"><h2>金刚善护法</h2><div class="th-meta">TID: 7485</div></a>
-<a href="../threads/7484.html" class="thread-row"><h2>阿弥陀佛</h2><div class="th-meta">TID: 7484</div></a>
-<a href="../threads/7483.html" class="thread-row"><h2>八十四大成就祖师</h2><div class="th-meta">TID: 7483</div></a>
-<a href="../threads/7455.html" class="thread-row"><h2>格鲁派皈依境</h2><div class="th-meta">TID: 7455</div></a>
-<a href="../threads/7454.html" class="thread-row"><h2>阿底峡祖师</h2><div class="th-meta">TID: 7454</div></a>
-<a href="../threads/7453.html" class="thread-row"><h2>顶髻大白伞盖佛母</h2><div class="th-meta">TID: 7453</div></a>
-<a href="../threads/7452.html" class="thread-row"><h2>财宝天王</h2><div class="th-meta">TID: 7452</div></a>
-<a href="../threads/7451.html" class="thread-row"><h2>五路财神之绿财神</h2><div class="th-meta">TID: 7451</div></a>
-<a href="../threads/7450.html" class="thread-row"><h2>东方持国天</h2><div class="th-meta">TID: 7450</div></a>
-<a href="../threads/7449.html" class="thread-row"><h2>南方增长天</h2><div class="th-meta">TID: 7449</div></a>
-<a href="../threads/7448.html" class="thread-row"><h2>西方广目天</h2><div class="th-meta">TID: 7448</div></a>
-<a href="../threads/7447.html" class="thread-row"><h2>普贤王如来</h2><div class="th-meta">TID: 7447</div></a>
-<a href="../threads/7446.html" class="thread-row"><h2>事部三怙主</h2><div class="th-meta">TID: 7446</div></a>
-<a href="../threads/7445.html" class="thread-row"><h2>山林叶衣佛母</h2><div class="th-meta">TID: 7445</div></a>
-<a href="../threads/7442.html" class="thread-row"><h2>竭地洛迦林度母</h2><div class="th-meta">TID: 7442</div></a>
-<a href="../threads/7441.html" class="thread-row"><h2>摩利支天母</h2><div class="th-meta">TID: 7441</div></a>
-<a href="../threads/7440.html" class="thread-row"><h2>施身法派（觉宇派）皈依境</h2><div class="th-meta">TID: 7440</div></a>
-<a href="../threads/7439.html" class="thread-row"><h2>黑袍金刚护法</h2><div class="th-meta">TID: 7439</div></a>
-<a href="../threads/7438.html" class="thread-row"><h2>般若佛母</h2><div class="th-meta">TID: 7438</div></a>
-<a href="../threads/7437.html" class="thread-row"><h2>龙钦巴祖师</h2><div class="th-meta">TID: 7437</div></a>
-<a href="../threads/7436.html" class="thread-row"><h2>噶玛噶举皈依境</h2><div class="th-meta">TID: 7436</div></a>
-<a href="../threads/7435.html" class="thread-row"><h2>四臂观音</h2><div class="th-meta">TID: 7435</div></a>
-<a href="../threads/7434.html" class="thread-row"><h2>文武百尊（忿怒尊）</h2><div class="th-meta">TID: 7434</div></a>
-<a href="../threads/7433.html" class="thread-row"><h2>文武百尊（寂静尊）</h2><div class="th-meta">TID: 7433</div></a>
-<a href="../threads/7432.html" class="thread-row"><h2>释迦牟尼佛</h2><div class="th-meta">TID: 7432</div></a>
-<a href="../threads/7431.html" class="thread-row"><h2>二十一尊度母</h2><div class="th-meta">TID: 7431</div></a>
-<a href="../threads/7430.html" class="thread-row"><h2>如意轮白度母</h2><div class="th-meta">TID: 7430</div></a>
-<a href="../threads/7429.html" class="thread-row"><h2>马头明王</h2><div class="th-meta">TID: 7429</div></a>
-<a href="../threads/7428.html" class="thread-row"><h2>噶玛噶举三根本</h2><div class="th-meta">TID: 7428</div></a>
-<a href="../threads/7427.html" class="thread-row"><h2>莲师财神总摄</h2><div class="th-meta">TID: 7427</div></a>
-<a href="../threads/7426.html" class="thread-row"><h2>妈吉拉尊母</h2><div class="th-meta">TID: 7426</div></a>
-<a href="../threads/7425.html" class="thread-row"><h2>五路财神之黑财神</h2><div class="th-meta">TID: 7425</div></a>
-<a href="../threads/7424.html" class="thread-row"><h2>财源天母</h2><div class="th-meta">TID: 7424</div></a>
-<a href="../threads/7423.html" class="thread-row"><h2>象头王财神（欢喜天）</h2><div class="th-meta">TID: 7423</div></a>
-<a href="../threads/7422.html" class="thread-row"><h2>四臂玛哈嘎拉</h2><div class="th-meta">TID: 7422</div></a>
-<a href="../threads/7421.html" class="thread-row"><h2>黑六臂玛哈嘎拉</h2><div class="th-meta">TID: 7421</div></a>
-<a href="../threads/7420.html" class="thread-row"><h2>白六臂玛哈嘎拉</h2><div class="th-meta">TID: 7420</div></a>
-<a href="../threads/7419.html" class="thread-row"><h2>北方多闻天</h2><div class="th-meta">TID: 7419</div></a>
-<a href="../threads/7418.html" class="thread-row"><h2>尸林主</h2><div class="th-meta">TID: 7418</div></a>
-<a href="../threads/7417.html" class="thread-row"><h2>大威德金刚（怖畏金刚）</h2><div class="th-meta">TID: 7417</div></a>
-<a href="../threads/7416.html" class="thread-row"><h2>普巴忿怒莲师</h2><div class="th-meta">TID: 7416</div></a>
-<a href="../threads/7415.html" class="thread-row"><h2>五路财神之红财神</h2><div class="th-meta">TID: 7415</div></a>
-<a href="../threads/7414.html" class="thread-row"><h2>三十五佛</h2><div class="th-meta">TID: 7414</div></a>
-<a href="../threads/7413.html" class="thread-row"><h2>欢喜金刚</h2><div class="th-meta">TID: 7413</div></a>
-<a href="../threads/7412.html" class="thread-row"><h2>时轮金刚</h2><div class="th-meta">TID: 7412</div></a>
-<a href="../threads/7411.html" class="thread-row"><h2>胜乐金刚</h2><div class="th-meta">TID: 7411</div></a>
-<a href="../threads/7410.html" class="thread-row"><h2>惹呼啦护法</h2><div class="th-meta">TID: 7410</div></a>
-<a href="../threads/7409.html" class="thread-row"><h2>五路财神之白财神</h2><div class="th-meta">TID: 7409</div></a>
-<a href="../threads/7408.html" class="thread-row"><h2>吉祥天母（玛哈嘎哩）</h2><div class="th-meta">TID: 7408</div></a>
-<a href="../threads/7407.html" class="thread-row"><h2>萨迦五祖</h2><div class="th-meta">TID: 7407</div></a>
-<a href="../threads/7406.html" class="thread-row"><h2>忿怒莲师多杰卓勒</h2><div class="th-meta">TID: 7406</div></a>
-<a href="../threads/7405.html" class="thread-row"><h2>红降阎魔</h2><div class="th-meta">TID: 7405</div></a>
-<a href="../threads/7404.html" class="thread-row"><h2>黄财神</h2><div class="th-meta">TID: 7404</div></a>
-<a href="../threads/7403.html" class="thread-row"><h2>宝生如来</h2><div class="th-meta">TID: 7403</div></a>
-<a href="../threads/7402.html" class="thread-row"><h2>四臂观音</h2><div class="th-meta">TID: 7402</div></a>
-<a href="../threads/7401.html" class="thread-row"><h2>释迦牟尼佛</h2><div class="th-meta">TID: 7401</div></a>
-<a href="../threads/7400.html" class="thread-row"><h2>顶髻尊胜佛母</h2><div class="th-meta">TID: 7400</div></a>
-<a href="../threads/7399.html" class="thread-row"><h2>红棒玛哈嘎拉</h2><div class="th-meta">TID: 7399</div></a>
-<a href="../threads/7398.html" class="thread-row"><h2>密集金刚</h2><div class="th-meta">TID: 7398</div></a>
-<a href="../threads/7397.html" class="thread-row"><h2>宝源度母</h2><div class="th-meta">TID: 7397</div></a>
-<a href="../threads/7396.html" class="thread-row"><h2>佛陀十二成道图</h2><div class="th-meta">TID: 7396</div></a>
-<a href="../threads/7395.html" class="thread-row"><h2>大悲胜海红观音</h2><div class="th-meta">TID: 7395</div></a>
-<a href="../threads/7394.html" class="thread-row"><h2>狮面空行母</h2><div class="th-meta">TID: 7394</div></a>
-<a href="../threads/7393.html" class="thread-row"><h2>金刚萨埵</h2><div class="th-meta">TID: 7393</div></a>
-<a href="../threads/7392.html" class="thread-row"><h2>宗喀巴师徒三尊者</h2><div class="th-meta">TID: 7392</div></a>
-<a href="../threads/7391.html" class="thread-row"><h2>阿弥陀如来</h2><div class="th-meta">TID: 7391</div></a>
-<a href="../threads/7390.html" class="thread-row"><h2>莲师皈依境</h2><div class="th-meta">TID: 7390</div></a>
-<a href="../threads/7389.html" class="thread-row"><h2>不空成就如来</h2><div class="th-meta">TID: 7389</div></a>
-<a href="../threads/7388.html" class="thread-row"><h2>金刚亥母</h2><div class="th-meta">TID: 7388</div></a>
-<a href="../threads/7387.html" class="thread-row"><h2>大日如来</h2><div class="th-meta">TID: 7387</div></a>
-<a href="../threads/7386.html" class="thread-row"><h2>准提佛母</h2><div class="th-meta">TID: 7386</div></a>
-<a href="../threads/7385.html" class="thread-row"><h2>大白伞盖佛母</h2><div class="th-meta">TID: 7385</div></a>
-<a href="../threads/7381.html" class="thread-row"><h2>文殊语狮子</h2><div class="th-meta">TID: 7381</div></a>
-<a href="../threads/7380.html" class="thread-row"><h2>金刚总持</h2><div class="th-meta">TID: 7380</div></a>
-<a href="../threads/7379.html" class="thread-row"><h2>弥勒菩萨</h2><div class="th-meta">TID: 7379</div></a>
-<a href="../threads/7378.html" class="thread-row"><h2>药师琉璃光佛</h2><div class="th-meta">TID: 7378</div></a>
-<a href="../threads/7377.html" class="thread-row"><h2>金刚手菩萨</h2><div class="th-meta">TID: 7377</div></a>
-<a href="../threads/7376.html" class="thread-row"><h2>观音、文殊、金刚手、弥勒——四大菩萨</h2><div class="th-meta">TID: 7376</div></a>
-<a href="../threads/7292.html" class="thread-row"><h2>莲师八相</h2><div class="th-meta">TID: 7292</div></a>
-<a href="../threads/7291.html" class="thread-row"><h2>无量寿佛</h2><div class="th-meta">TID: 7291</div></a>
-<a href="../threads/7290.html" class="thread-row"><h2>药师八佛</h2><div class="th-meta">TID: 7290</div></a>
-<a href="../threads/7117.html" class="thread-row"><h2>寸佛一尊 这尊左手宝瓶，右手火焰宝 地藏菩萨</h2><div class="th-meta">TID: 7117</div></a>
-<a href="../threads/7082.html" class="thread-row"><h2>大成就者咕噜那洛巴之木雕造像</h2><div class="th-meta">TID: 7082</div></a>
-<a href="../threads/7081.html" class="thread-row"><h2>明 铜鎏金大成就者立像</h2><div class="th-meta">TID: 7081</div></a>
-<a href="../threads/7076.html" class="thread-row"><h2>大成就者咕噜嘎巴拉之造像</h2><div class="th-meta">TID: 7076</div></a>
-<a href="../threads/6996.html" class="thread-row"><h2>一尊少见的四头八臂护法小唐卡（幢顶臂严佛母）</h2><div class="th-meta">TID: 6996</div></a>
-<a href="../threads/6918.html" class="thread-row"><h2>东方不动佛坛城本尊全图</h2><div class="th-meta">TID: 6918</div></a>
-<a href="../threads/6912.html" class="thread-row"><h2>时轮坛城本尊全图</h2><div class="th-meta">TID: 6912</div></a>
-<a href="../threads/6900.html" class="thread-row"><h2>印度八十四大成就者</h2><div class="th-meta">TID: 6900</div></a>
-<a href="../threads/6886.html" class="thread-row"><h2>莲师二十五弟子</h2><div class="th-meta">TID: 6886</div></a>
-<a href="../threads/6804.html" class="thread-row"><h2>时轮立体坛城</h2><div class="th-meta">TID: 6804</div></a>
-<a href="../threads/6801.html" class="thread-row"><h2>时轮金刚彩砂坛城</h2><div class="th-meta">TID: 6801</div></a>
-<a href="../threads/6800.html" class="thread-row"><h2>时轮金刚坛城线描图</h2><div class="th-meta">TID: 6800</div></a>
-<a href="../threads/6790.html" class="thread-row"><h2>药师佛十二药叉</h2><div class="th-meta">TID: 6790</div></a>
-<a href="../threads/6622.html" class="thread-row"><h2>佛顶骨舍利</h2><div class="th-meta">TID: 6622</div></a>
-<a href="../threads/6511.html" class="thread-row"><h2>二十一度母</h2><div class="th-meta">TID: 6511</div></a>
-<a href="../threads/6478.html" class="thread-row"><h2>六臂玛哈嘎啦供物图</h2><div class="th-meta">TID: 6478</div></a>
-<a href="../threads/6420.html" class="thread-row"><h2>萨迦寺镇寺之宝白海螺</h2><div class="th-meta">TID: 6420</div></a>
-<a href="../threads/4725.html" class="thread-row"><h2>夏日东•洛桑遐智嘉木措活佛</h2><div class="th-meta">TID: 4725</div></a>
-<a href="../threads/4520.html" class="thread-row"><h2>一些护法空行的简介 附图</h2><div class="th-meta">TID: 4520</div></a>
-<a href="../threads/4499.html" class="thread-row"><h2>莲师二十五心子</h2><div class="th-meta">TID: 4499</div></a>
-<a href="../threads/4428.html" class="thread-row"><h2>金刚善护法</h2><div class="th-meta">TID: 4428</div></a>
-<a href="../threads/4427.html" class="thread-row"><h2>惹呼拉护法</h2><div class="th-meta">TID: 4427</div></a>
-<a href="../threads/4426.html" class="thread-row"><h2>一髻佛母</h2><div class="th-meta">TID: 4426</div></a>
-<a href="../threads/4414.html" class="thread-row"><h2>吉祥天母（玛哈嘎哩）</h2><div class="th-meta">TID: 4414</div></a>
-<a href="../threads/4413.html" class="thread-row"><h2>红棒玛哈嘎拉</h2><div class="th-meta">TID: 4413</div></a>
-<a href="../threads/4410.html" class="thread-row"><h2>白六臂玛哈嘎拉</h2><div class="th-meta">TID: 4410</div></a>
-<a href="../threads/4409.html" class="thread-row"><h2>黑六臂玛哈嘎拉</h2><div class="th-meta">TID: 4409</div></a>
-<a href="../threads/4406.html" class="thread-row"><h2>黑袍金刚护法</h2><div class="th-meta">TID: 4406</div></a>
-<a href="../threads/3893.html" class="thread-row"><h2>八大菩萨</h2><div class="th-meta">TID: 3893</div></a>
-<a href="../threads/3889.html" class="thread-row"><h2>叶衣佛母和当木坚护法</h2><div class="th-meta">TID: 3889</div></a>
-<a href="../threads/3867.html" class="thread-row"><h2>护法的故事--丹坚护法</h2><div class="th-meta">TID: 3867</div></a>
-<a href="../threads/3866.html" class="thread-row"><h2>护法的故事--阿松玛(一髻佛母)</h2><div class="th-meta">TID: 3866</div></a>
-<a href="../threads/3709.html" class="thread-row"><h2>请斑竹师兄和诸位师兄，给找几幅唐卡，谢谢</h2><div class="th-meta">TID: 3709</div></a>
-<a href="../threads/3258.html" class="thread-row"><h2>亥母坛城</h2><div class="th-meta">TID: 3258</div></a>
-<a href="../threads/3256.html" class="thread-row"><h2>黑忿怒母</h2><div class="th-meta">TID: 3256</div></a>
-<a href="../threads/3255.html" class="thread-row"><h2>大殊胜嘿如嘎</h2><div class="th-meta">TID: 3255</div></a>
-<a href="../threads/3253.html" class="thread-row"><h2>汤东嘉波</h2><div class="th-meta">TID: 3253</div></a>
-<a href="../threads/3252.html" class="thread-row"><h2>马鹏三尊</h2><div class="th-meta">TID: 3252</div></a>
-<a href="../threads/3251.html" class="thread-row"><h2>大幻化网文武百尊</h2><div class="th-meta">TID: 3251</div></a>
-<a href="../threads/3250.html" class="thread-row"><h2>邬金财神</h2><div class="th-meta">TID: 3250</div></a>
-<a href="../threads/3249.html" class="thread-row"><h2>黑文殊</h2><div class="th-meta">TID: 3249</div></a>
-<a href="../threads/3248.html" class="thread-row"><h2>敦珠新宝藏之皈依境</h2><div class="th-meta">TID: 3248</div></a>
-<a href="../threads/3247.html" class="thread-row"><h2>敦珠法王降生授记图</h2><div class="th-meta">TID: 3247</div></a>
-<a href="../threads/3246.html" class="thread-row"><h2>敦珠新宝藏之大乐母</h2><div class="th-meta">TID: 3246</div></a>
-<a href="../threads/3245.html" class="thread-row"><h2>邬金药师</h2><div class="th-meta">TID: 3245</div></a>
-<a href="../threads/3002.html" class="thread-row"><h2>千手千眼观世音菩萨古唐卡</h2><div class="th-meta">TID: 3002</div></a>
-<a href="../threads/2967.html" class="thread-row"><h2>《吉祥喜金刚集轮甘露泉》与吉祥喜金刚坛城解说</h2><div class="th-meta">TID: 2967</div></a>
-<a href="../threads/2956.html" class="thread-row"><h2>收藏的文物级高僧舍利擦擦时轮金刚 具有很大加持力</h2><div class="th-meta">TID: 2956</div></a>
-<a href="../threads/2946.html" class="thread-row"><h2>大威德金刚擦擦（名擦）</h2><div class="th-meta">TID: 2946</div></a>
-<a href="../threads/2945.html" class="thread-row"><h2>千手千眼观世音菩萨的擦擦(精品)</h2><div class="th-meta">TID: 2945</div></a>
-<a href="../threads/2769.html" class="thread-row"><h2>阿企佛母</h2><div class="th-meta">TID: 2769</div></a>
-<a href="../threads/2660.html" class="thread-row"><h2>卡卓玛铜像</h2><div class="th-meta">TID: 2660</div></a>
-<a href="../threads/2658.html" class="thread-row"><h2>鎏金铜质宝帐护法神</h2><div class="th-meta">TID: 2658</div></a>
-<a href="../threads/2657.html" class="thread-row"><h2>四臂文殊菩萨鎏金铜像</h2><div class="th-meta">TID: 2657</div></a>
-<a href="../threads/2656.html" class="thread-row"><h2>密集金刚(Guhyasamaja)</h2><div class="th-meta">TID: 2656</div></a>
-<a href="../threads/2596.html" class="thread-row"><h2>最胜怀法本尊【咕噜咕列佛母】</h2><div class="th-meta">TID: 2596</div></a>
-<a href="../threads/2344.html" class="thread-row"><h2>金刚手菩萨</h2><div class="th-meta">TID: 2344</div></a>
-<a href="../threads/2343.html" class="thread-row"><h2>四臂观音</h2><div class="th-meta">TID: 2343</div></a>
-<a href="../threads/2340.html" class="thread-row"><h2>四臂观音</h2><div class="th-meta">TID: 2340</div></a>
-<a href="../threads/2339.html" class="thread-row"><h2>无量寿佛</h2><div class="th-meta">TID: 2339</div></a>
-<a href="../threads/2338.html" class="thread-row"><h2>长寿佛</h2><div class="th-meta">TID: 2338</div></a>
-<a href="../threads/2337.html" class="thread-row"><h2>阿弥陀佛</h2><div class="th-meta">TID: 2337</div></a>
-<a href="../threads/2336.html" class="thread-row"><h2>金刚不动如来（阿閦佛）</h2><div class="th-meta">TID: 2336</div></a>
-<a href="../threads/2335.html" class="thread-row"><h2>宝生如来</h2><div class="th-meta">TID: 2335</div></a>
-<a href="../threads/2334.html" class="thread-row"><h2>不空成就如来</h2><div class="th-meta">TID: 2334</div></a>
-<a href="../threads/2333.html" class="thread-row"><h2>毗卢遮那佛（大日如来）</h2><div class="th-meta">TID: 2333</div></a>
-<a href="../threads/2332.html" class="thread-row"><h2>噶玛噶举三根本</h2><div class="th-meta">TID: 2332</div></a>
-<a href="../threads/2329.html" class="thread-row"><h2>宁玛巴皈依境</h2><div class="th-meta">TID: 2329</div></a>
-<a href="../threads/2328.html" class="thread-row"><h2>愤怒莲师多杰卓勒</h2><div class="th-meta">TID: 2328</div></a>
-<a href="../threads/2327.html" class="thread-row"><h2>普巴忿怒莲师</h2><div class="th-meta">TID: 2327</div></a>
-<a href="../threads/2326.html" class="thread-row"><h2>愤怒莲师金刚铠甲</h2><div class="th-meta">TID: 2326</div></a>
-<a href="../threads/2325.html" class="thread-row"><h2>莲师法相之表义</h2><div class="th-meta">TID: 2325</div></a>
-<a href="../threads/2324.html" class="thread-row"><h2>莲花生大士</h2><div class="th-meta">TID: 2324</div></a>
-<a href="../threads/2323.html" class="thread-row"><h2>佛陀十二相成道图</h2><div class="th-meta">TID: 2323</div></a>
-<a href="../threads/2322.html" class="thread-row"><h2>释迦牟尼佛</h2><div class="th-meta">TID: 2322</div></a>
-<a href="../threads/2321.html" class="thread-row"><h2>释迦牟尼佛</h2><div class="th-meta">TID: 2321</div></a>
-<a href="../threads/2305.html" class="thread-row"><h2>贡噶活佛</h2><div class="th-meta">TID: 2305</div></a>
-<a href="../threads/2253.html" class="thread-row"><h2>西藏的唐卡艺术</h2><div class="th-meta">TID: 2253</div></a>
-<a href="../threads/2241.html" class="thread-row"><h2>一面六臂玛哈嘎拉</h2><div class="th-meta">TID: 2241</div></a>
-<a href="../threads/2230.html" class="thread-row"><h2>泰国国王曾亲见释迦牟尼显圣佛像</h2><div class="th-meta">TID: 2230</div></a>
-<a href="../threads/2190.html" class="thread-row"><h2>绿度母（Green  Tara）</h2><div class="th-meta">TID: 2190</div></a>
-<a href="../threads/2179.html" class="thread-row"><h2>莲花生大士之八大神变（莲师八变）的介绍</h2><div class="th-meta">TID: 2179</div></a>
-<a href="../threads/2109.html" class="thread-row"><h2>密集金刚</h2><div class="th-meta">TID: 2109</div></a>
-<a href="../threads/2107.html" class="thread-row"><h2>金刚萨埵</h2><div class="th-meta">TID: 2107</div></a>
-<a href="../threads/2097.html" class="thread-row"><h2>萨迦派茶巴法王究给崔钦仁波切</h2><div class="th-meta">TID: 2097</div></a>
-<a href="../threads/2025.html" class="thread-row"><h2>胜乐金刚</h2><div class="th-meta">TID: 2025</div></a>
-<a href="../threads/1903.html" class="thread-row"><h2>莲师庄严</h2><div class="th-meta">TID: 1903</div></a>
-<a href="../threads/1896.html" class="thread-row"><h2>殊胜本尊大鹏金翅鸟</h2><div class="th-meta">TID: 1896</div></a>
-<a href="../threads/1891.html" class="thread-row"><h2>藏传佛教艺术展——来自西方的收藏</h2><div class="th-meta">TID: 1891</div></a>
-<a href="../threads/1878.html" class="thread-row"><h2>六臂玛哈嘎拉</h2><div class="th-meta">TID: 1878</div></a>
-<a href="../threads/1854.html" class="thread-row"><h2>藏传佛教五大金刚的艺术特性</h2><div class="th-meta">TID: 1854</div></a>
-<a href="../threads/1811.html" class="thread-row"><h2>不动明王</h2><div class="th-meta">TID: 1811</div></a>
-<a href="../threads/1789.html" class="thread-row"><h2>咒轮种子字</h2><div class="th-meta">TID: 1789</div></a>
-<a href="../threads/1691.html" class="thread-row"><h2>黄财神</h2><div class="th-meta">TID: 1691</div></a>
-<a href="../threads/1690.html" class="thread-row"><h2>金刚手菩萨</h2><div class="th-meta">TID: 1690</div></a>
-<a href="../threads/1689.html" class="thread-row"><h2>惹呼啦</h2><div class="th-meta">TID: 1689</div></a>
-<a href="../threads/1688.html" class="thread-row"><h2>时轮金刚</h2><div class="th-meta">TID: 1688</div></a>
-<a href="../threads/1686.html" class="thread-row"><h2>大威德怖畏金刚</h2><div class="th-meta">TID: 1686</div></a>
-<a href="../threads/1685.html" class="thread-row"><h2>大白伞盖佛母</h2><div class="th-meta">TID: 1685</div></a>
-<a href="../threads/1684.html" class="thread-row"><h2>文殊菩萨</h2><div class="th-meta">TID: 1684</div></a>
-<a href="../threads/1676.html" class="thread-row"><h2>珍珠坛城</h2><div class="th-meta">TID: 1676</div></a>
-<a href="../threads/1674.html" class="thread-row"><h2>莲师和普巴供坛</h2><div class="th-meta">TID: 1674</div></a>
-<a href="../threads/1673.html" class="thread-row"><h2>释迦如来供坛</h2><div class="th-meta">TID: 1673</div></a>
-<a href="../threads/1672.html" class="thread-row"><h2>白玛哈嘎拉如意怙主的供坛</h2><div class="th-meta">TID: 1672</div></a>
-<a href="../threads/1654.html" class="thread-row"><h2>五文殊</h2><div class="th-meta">TID: 1654</div></a>
-<a href="../threads/1644.html" class="thread-row"><h2>宗喀巴大师</h2><div class="th-meta">TID: 1644</div></a>
-<a href="../threads/1614.html" class="thread-row"><h2>三十五佛专辑</h2><div class="th-meta">TID: 1614</div></a>
-<a href="../threads/1613.html" class="thread-row"><h2>白度母</h2><div class="th-meta">TID: 1613</div></a>
-<a href="../threads/1612.html" class="thread-row"><h2>吉祥天母</h2><div class="th-meta">TID: 1612</div></a>
-<a href="../threads/1611.html" class="thread-row"><h2>绿度母</h2><div class="th-meta">TID: 1611</div></a>
-<a href="../threads/1609.html" class="thread-row"><h2>黑袍金刚</h2><div class="th-meta">TID: 1609</div></a>
-<a href="../threads/1608.html" class="thread-row"><h2>一面二臂胜乐金刚</h2><div class="th-meta">TID: 1608</div></a>
-<a href="../threads/1607.html" class="thread-row"><h2>喜金刚</h2><div class="th-meta">TID: 1607</div></a>
-<a href="../threads/1606.html" class="thread-row"><h2>普巴金刚</h2><div class="th-meta">TID: 1606</div></a>
-<a href="../threads/1605.html" class="thread-row"><h2>马头明王</h2><div class="th-meta">TID: 1605</div></a>
-<a href="../threads/1604.html" class="thread-row"><h2>般若佛母</h2><div class="th-meta">TID: 1604</div></a>
-<a href="../threads/1603.html" class="thread-row"><h2>狮面空行母</h2><div class="th-meta">TID: 1603</div></a>
-<a href="../threads/1602.html" class="thread-row"><h2>玛吉拉尊母</h2><div class="th-meta">TID: 1602</div></a>
-<a href="../threads/1601.html" class="thread-row"><h2>药师七佛</h2><div class="th-meta">TID: 1601</div></a>
-<a href="../threads/1600.html" class="thread-row"><h2>顶髻尊胜佛母</h2><div class="th-meta">TID: 1600</div></a>
-<a href="../threads/1599.html" class="thread-row"><h2>山林叶衣佛母</h2><div class="th-meta">TID: 1599</div></a>
-<a href="../threads/1598.html" class="thread-row"><h2>觉宇巴皈依境</h2><div class="th-meta">TID: 1598</div></a>
-<a href="../threads/1587.html" class="thread-row"><h2>獨雄鉞刀馬頭金剛</h2><div class="th-meta">TID: 1587</div></a>
-<a href="../threads/1583.html" class="thread-row"><h2>上乐金刚坛城图</h2><div class="th-meta">TID: 1583</div></a>
-<a href="../threads/1575.html" class="thread-row"><h2>三十五佛</h2><div class="th-meta">TID: 1575</div></a>
-<a href="../threads/1499.html" class="thread-row"><h2>叶衣佛母</h2><div class="th-meta">TID: 1499</div></a>
-<a href="../threads/1464.html" class="thread-row"><h2>五方佛像</h2><div class="th-meta">TID: 1464</div></a>
-<a href="../threads/1377.html" class="thread-row"><h2>不动明王介紹</h2><div class="th-meta">TID: 1377</div></a>
-<a href="../threads/1230.html" class="thread-row"><h2>释迦牟尼佛12岁等身像</h2><div class="th-meta">TID: 1230</div></a>
-<a href="../threads/1225.html" class="thread-row"><h2>印度菩提迦耶正觉塔内之殊胜释迦摩尼佛像</h2><div class="th-meta">TID: 1225</div></a>
-<a href="../threads/1210.html" class="thread-row"><h2>释迦、弥陀、药师三佛</h2><div class="th-meta">TID: 1210</div></a>
-<a href="../threads/1209.html" class="thread-row"><h2>金刚总持</h2><div class="th-meta">TID: 1209</div></a>
-<a href="../threads/1197.html" class="thread-row"><h2>宝帐怙主</h2><div class="th-meta">TID: 1197</div></a>
-<a href="../threads/1195.html" class="thread-row"><h2>二十一度母</h2><div class="th-meta">TID: 1195</div></a>
-<a href="../threads/1174.html" class="thread-row"><h2>釋迦牟尼佛神變圖</h2><div class="th-meta">TID: 1174</div></a>
-<a href="../threads/1131.html" class="thread-row"><h2>佛前供品及其他</h2><div class="th-meta">TID: 1131</div></a>
-<a href="../threads/1128.html" class="thread-row"><h2>古汝毗瓦巴</h2><div class="th-meta">TID: 1128</div></a>
-<a href="../threads/1127.html" class="thread-row"><h2>萨迦五祖</h2><div class="th-meta">TID: 1127</div></a>
-<a href="../threads/1077.html" class="thread-row"><h2>金刚持与八十四大成就者</h2><div class="th-meta">TID: 1077</div></a>
-<a href="../threads/1076.html" class="thread-row"><h2>莲师财神总摄</h2><div class="th-meta">TID: 1076</div></a>
-<a href="../threads/1068.html" class="thread-row"><h2>文武百尊忿怒尊</h2><div class="th-meta">TID: 1068</div></a>
-<a href="../threads/1067.html" class="thread-row"><h2>文武百尊寂静尊</h2><div class="th-meta">TID: 1067</div></a>
-<a href="../threads/907.html" class="thread-row"><h2>佛坛八供</h2><div class="th-meta">TID: 907</div></a>
-<a href="../threads/854.html" class="thread-row"><h2>最向往的地方！</h2><div class="th-meta">TID: 854</div></a>
-<a href="../threads/440.html" class="thread-row"><h2>莲花生大士无死虹身铜色国</h2><div class="th-meta">TID: 440</div></a>
-<a href="../threads/437.html" class="thread-row"><h2>财宝天王</h2><div class="th-meta">TID: 437</div></a>
-<a href="../threads/419.html" class="thread-row"><h2>吉祥佛塔</h2><div class="th-meta">TID: 419</div></a>
-<a href="../threads/394.html" class="thread-row"><h2>十一面观音法相</h2><div class="th-meta">TID: 394</div></a>
-<a href="../threads/366.html" class="thread-row"><h2>四面四臂玛哈嘎拉护法</h2><div class="th-meta">TID: 366</div></a>
-<a href="../threads/363.html" class="thread-row"><h2>宝杖怙主护法</h2><div class="th-meta">TID: 363</div></a>
-<a href="../threads/362.html" class="thread-row"><h2>一面四臂玛哈嘎拉护法</h2><div class="th-meta">TID: 362</div></a>
-<a href="../threads/346.html" class="thread-row"><h2>龙王菩萨</h2><div class="th-meta">TID: 346</div></a>
-<a href="../threads/340.html" class="thread-row"><h2>宁玛巴皈依境</h2><div class="th-meta">TID: 340</div></a>
-<a href="../threads/339.html" class="thread-row"><h2>竹巴噶举皈依境</h2><div class="th-meta">TID: 339</div></a>
-<a href="../threads/338.html" class="thread-row"><h2>格鲁巴皈依境</h2><div class="th-meta">TID: 338</div></a>
-<a href="../threads/337.html" class="thread-row"><h2>萨迦巴皈依境</h2><div class="th-meta">TID: 337</div></a>
-<a href="../threads/336.html" class="thread-row"><h2>萨迦胜乐金刚</h2><div class="th-meta">TID: 336</div></a>
-<a href="../threads/335.html" class="thread-row"><h2>萨迦大威德怖畏金刚</h2><div class="th-meta">TID: 335</div></a>
-<a href="../threads/114.html" class="thread-row"><h2>佛牙舍利</h2><div class="th-meta">TID: 114</div></a>
-<a href="../threads/51.html" class="thread-row"><h2>权衡三界威罗瓦</h2><div class="th-meta">TID: 51</div></a>
-<a href="../threads/39.html" class="thread-row"><h2>噶玛噶举皈依境及皈依境详解</h2><div class="th-meta">TID: 39</div></a>
-<a href="../threads/38.html" class="thread-row"><h2>清  威罗瓦像</h2><div class="th-meta">TID: 38</div></a>
-<a href="../threads/23.html" class="thread-row"><h2>十相自在图 吉祥时轮心髓十相自在的意义—宝灯论释</h2><div class="th-meta">TID: 23</div></a>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / 藏密修海上师本尊</div>
+<h1 style="margin-bottom: 10px; font-size: 36px; color:var(--primary); text-align:center;">诸佛如来本尊坛</h1>
+<p style="color:var(--text-muted); margin-bottom:50px; text-align:center; letter-spacing:2px;">此处蕴含 329 卷法轴汇集</p>
+<a href="../threads/13033.html" class="thread-row"><h2>韦驮尊天菩萨</h2><div class="th-meta">轴号: 13033</div></a>
+<a href="../threads/13027.html" class="thread-row"><h2>四张宝帐怙主法相</h2><div class="th-meta">轴号: 13027</div></a>
+<a href="../threads/13011.html" class="thread-row"><h2>象头护法</h2><div class="th-meta">轴号: 13011</div></a>
+<a href="../threads/9885.html" class="thread-row"><h2>黑忿怒空行母</h2><div class="th-meta">轴号: 9885</div></a>
+<a href="../threads/9241.html" class="thread-row"><h2>出有坏摧坏金刚简介</h2><div class="th-meta">轴号: 9241</div></a>
+<a href="../threads/8237.html" class="thread-row"><h2>专利佛像——精铜鎏金彩绘药师佛</h2><div class="th-meta">轴号: 8237</div></a>
+<a href="../threads/8229.html" class="thread-row"><h2>嘎巴拉碗</h2><div class="th-meta">轴号: 8229</div></a>
+<a href="../threads/8228.html" class="thread-row"><h2>密集金刚</h2><div class="th-meta">轴号: 8228</div></a>
+<a href="../threads/8227.html" class="thread-row"><h2>金刚萨埵</h2><div class="th-meta">轴号: 8227</div></a>
+<a href="../threads/8226.html" class="thread-row"><h2>四臂金刚萨陲鎏金坐像</h2><div class="th-meta">轴号: 8226</div></a>
+<a href="../threads/8182.html" class="thread-row"><h2>佛母大孔雀明王</h2><div class="th-meta">轴号: 8182</div></a>
+<a href="../threads/8181.html" class="thread-row"><h2>孔雀明王的来历</h2><div class="th-meta">轴号: 8181</div></a>
+<a href="../threads/8180.html" class="thread-row"><h2>修持佛母大金曜孔雀明王心咒与圣号功德</h2><div class="th-meta">轴号: 8180</div></a>
+<a href="../threads/8043.html" class="thread-row"><h2>八十九佛庄严法相</h2><div class="th-meta">轴号: 8043</div></a>
+<a href="../threads/7565.html" class="thread-row"><h2>释迦牟尼佛</h2><div class="th-meta">轴号: 7565</div></a>
+<a href="../threads/7564.html" class="thread-row"><h2>五方佛之不空成就如来</h2><div class="th-meta">轴号: 7564</div></a>
+<a href="../threads/7563.html" class="thread-row"><h2>五方佛之阿弥陀如来</h2><div class="th-meta">轴号: 7563</div></a>
+<a href="../threads/7562.html" class="thread-row"><h2>五方佛之宝生如来</h2><div class="th-meta">轴号: 7562</div></a>
+<a href="../threads/7561.html" class="thread-row"><h2>五方佛之金刚不动如来（阿閦佛）</h2><div class="th-meta">轴号: 7561</div></a>
+<a href="../threads/7560.html" class="thread-row"><h2>五方佛之毗卢遮那佛（大日如来）</h2><div class="th-meta">轴号: 7560</div></a>
+<a href="../threads/7559.html" class="thread-row"><h2>普贤王如来</h2><div class="th-meta">轴号: 7559</div></a>
+<a href="../threads/7558.html" class="thread-row"><h2>阿底峡祖师</h2><div class="th-meta">轴号: 7558</div></a>
+<a href="../threads/7557.html" class="thread-row"><h2>八十四大成就祖师</h2><div class="th-meta">轴号: 7557</div></a>
+<a href="../threads/7556.html" class="thread-row"><h2>施身法派（觉宇派）皈依境</h2><div class="th-meta">轴号: 7556</div></a>
+<a href="../threads/7555.html" class="thread-row"><h2>师徒三尊者</h2><div class="th-meta">轴号: 7555</div></a>
+<a href="../threads/7554.html" class="thread-row"><h2>格鲁派皈依境</h2><div class="th-meta">轴号: 7554</div></a>
+<a href="../threads/7553.html" class="thread-row"><h2>噶玛噶举三根本</h2><div class="th-meta">轴号: 7553</div></a>
+<a href="../threads/7552.html" class="thread-row"><h2>金刚总持</h2><div class="th-meta">轴号: 7552</div></a>
+<a href="../threads/7551.html" class="thread-row"><h2>噶玛噶举皈依境</h2><div class="th-meta">轴号: 7551</div></a>
+<a href="../threads/7549.html" class="thread-row"><h2>萨迦五祖</h2><div class="th-meta">轴号: 7549</div></a>
+<a href="../threads/7548.html" class="thread-row"><h2>龙钦巴祖师</h2><div class="th-meta">轴号: 7548</div></a>
+<a href="../threads/7547.html" class="thread-row"><h2>莲师八相</h2><div class="th-meta">轴号: 7547</div></a>
+<a href="../threads/7546.html" class="thread-row"><h2>莲花生大师</h2><div class="th-meta">轴号: 7546</div></a>
+<a href="../threads/7545.html" class="thread-row"><h2>宁玛巴（红教）皈依境</h2><div class="th-meta">轴号: 7545</div></a>
+<a href="../threads/7544.html" class="thread-row"><h2>幢顶臂严佛母</h2><div class="th-meta">轴号: 7544</div></a>
+<a href="../threads/7543.html" class="thread-row"><h2>语狮子文殊菩萨</h2><div class="th-meta">轴号: 7543</div></a>
+<a href="../threads/7542.html" class="thread-row"><h2>山居叶衣佛母</h2><div class="th-meta">轴号: 7542</div></a>
+<a href="../threads/7541.html" class="thread-row"><h2>五明王母（瑞比加莫）</h2><div class="th-meta">轴号: 7541</div></a>
+<a href="../threads/7540.html" class="thread-row"><h2>黑色铁发马头金刚勇士</h2><div class="th-meta">轴号: 7540</div></a>
+<a href="../threads/7539.html" class="thread-row"><h2>真实名文殊（四臂文殊菩萨）</h2><div class="th-meta">轴号: 7539</div></a>
+<a href="../threads/7538.html" class="thread-row"><h2>世间自在者（四臂观音）</h2><div class="th-meta">轴号: 7538</div></a>
+<a href="../threads/7537.html" class="thread-row"><h2>伏魔金刚手</h2><div class="th-meta">轴号: 7537</div></a>
+<a href="../threads/7536.html" class="thread-row"><h2>狮子吼声文殊菩萨</h2><div class="th-meta">轴号: 7536</div></a>
+<a href="../threads/7535.html" class="thread-row"><h2>狮面空行母</h2><div class="th-meta">轴号: 7535</div></a>
+<a href="../threads/7534.html" class="thread-row"><h2>三面六臂马头明王</h2><div class="th-meta">轴号: 7534</div></a>
+<a href="../threads/7533.html" class="thread-row"><h2>六面黑色能怖金刚</h2><div class="th-meta">轴号: 7533</div></a>
+<a href="../threads/7532.html" class="thread-row"><h2>青衣摧破金刚</h2><div class="th-meta">轴号: 7532</div></a>
+<a href="../threads/7531.html" class="thread-row"><h2>青色不动明王</h2><div class="th-meta">轴号: 7531</div></a>
+<a href="../threads/7530.html" class="thread-row"><h2>能动三界度母</h2><div class="th-meta">轴号: 7530</div></a>
+<a href="../threads/7529.html" class="thread-row"><h2>摩利支天佛母</h2><div class="th-meta">轴号: 7529</div></a>
+<a href="../threads/7528.html" class="thread-row"><h2>白色妙音天女</h2><div class="th-meta">轴号: 7528</div></a>
+<a href="../threads/7527.html" class="thread-row"><h2>怙主弥勒</h2><div class="th-meta">轴号: 7527</div></a>
+<a href="../threads/7525.html" class="thread-row"><h2>黑绿色忿怒秽迹金刚</h2><div class="th-meta">轴号: 7525</div></a>
+<a href="../threads/7524.html" class="thread-row"><h2>紫檀林度母</h2><div class="th-meta">轴号: 7524</div></a>
+<a href="../threads/7523.html" class="thread-row"><h2>猛厉金刚手（持杵结印）</h2><div class="th-meta">轴号: 7523</div></a>
+<a href="../threads/7522.html" class="thread-row"><h2>金刚手（持杵及铃）</h2><div class="th-meta">轴号: 7522</div></a>
+<a href="../threads/7521.html" class="thread-row"><h2>能作吉祥事成度母</h2><div class="th-meta">轴号: 7521</div></a>
+<a href="../threads/7520.html" class="thread-row"><h2>忿怒秽迹金刚</h2><div class="th-meta">轴号: 7520</div></a>
+<a href="../threads/7519.html" class="thread-row"><h2>红黄文殊父母尊</h2><div class="th-meta">轴号: 7519</div></a>
+<a href="../threads/7518.html" class="thread-row"><h2>阿惹巴渣文殊菩萨</h2><div class="th-meta">轴号: 7518</div></a>
+<a href="../threads/7517.html" class="thread-row"><h2>红马头金刚</h2><div class="th-meta">轴号: 7517</div></a>
+<a href="../threads/7516.html" class="thread-row"><h2>红色能怖金刚</h2><div class="th-meta">轴号: 7516</div></a>
+<a href="../threads/7515.html" class="thread-row"><h2>咕噜咕哩</h2><div class="th-meta">轴号: 7515</div></a>
+<a href="../threads/7513.html" class="thread-row"><h2>甘露漩明王</h2><div class="th-meta">轴号: 7513</div></a>
+<a href="../threads/7512.html" class="thread-row"><h2>二臂铁发黑马头明王</h2><div class="th-meta">轴号: 7512</div></a>
+<a href="../threads/7511.html" class="thread-row"><h2>二臂黑色能怖金刚</h2><div class="th-meta">轴号: 7511</div></a>
+<a href="../threads/7510.html" class="thread-row"><h2>二臂红马头明王</h2><div class="th-meta">轴号: 7510</div></a>
+<a href="../threads/7509.html" class="thread-row"><h2>顶髻尊胜佛母</h2><div class="th-meta">轴号: 7509</div></a>
+<a href="../threads/7508.html" class="thread-row"><h2>顶髻焰光母</h2><div class="th-meta">轴号: 7508</div></a>
+<a href="../threads/7507.html" class="thread-row"><h2>忿怒自在大力明王</h2><div class="th-meta">轴号: 7507</div></a>
+<a href="../threads/7506.html" class="thread-row"><h2>大白伞盖佛母</h2><div class="th-meta">轴号: 7506</div></a>
+<a href="../threads/7505.html" class="thread-row"><h2>金刚除障明王</h2><div class="th-meta">轴号: 7505</div></a>
+<a href="../threads/7504.html" class="thread-row"><h2>长寿佛</h2><div class="th-meta">轴号: 7504</div></a>
+<a href="../threads/7497.html" class="thread-row"><h2>般若佛母</h2><div class="th-meta">轴号: 7497</div></a>
+<a href="../threads/7496.html" class="thread-row"><h2>白文殊</h2><div class="th-meta">轴号: 7496</div></a>
+<a href="../threads/7495.html" class="thread-row"><h2>白度母</h2><div class="th-meta">轴号: 7495</div></a>
+<a href="../threads/7494.html" class="thread-row"><h2>白摧破金刚</h2><div class="th-meta">轴号: 7494</div></a>
+<a href="../threads/7493.html" class="thread-row"><h2>白不动明王</h2><div class="th-meta">轴号: 7493</div></a>
+<a href="../threads/7492.html" class="thread-row"><h2>普巴金刚</h2><div class="th-meta">轴号: 7492</div></a>
+<a href="../threads/7491.html" class="thread-row"><h2>忿怒莲师金刚铠甲</h2><div class="th-meta">轴号: 7491</div></a>
+<a href="../threads/7490.html" class="thread-row"><h2>外法王</h2><div class="th-meta">轴号: 7490</div></a>
+<a href="../threads/7489.html" class="thread-row"><h2>作明佛母</h2><div class="th-meta">轴号: 7489</div></a>
+<a href="../threads/7488.html" class="thread-row"><h2>金刚不动如来（阿閦佛）</h2><div class="th-meta">轴号: 7488</div></a>
+<a href="../threads/7487.html" class="thread-row"><h2>妙音天女</h2><div class="th-meta">轴号: 7487</div></a>
+<a href="../threads/7486.html" class="thread-row"><h2>千手千眼观世音</h2><div class="th-meta">轴号: 7486</div></a>
+<a href="../threads/7485.html" class="thread-row"><h2>金刚善护法</h2><div class="th-meta">轴号: 7485</div></a>
+<a href="../threads/7484.html" class="thread-row"><h2>阿弥陀佛</h2><div class="th-meta">轴号: 7484</div></a>
+<a href="../threads/7483.html" class="thread-row"><h2>八十四大成就祖师</h2><div class="th-meta">轴号: 7483</div></a>
+<a href="../threads/7455.html" class="thread-row"><h2>格鲁派皈依境</h2><div class="th-meta">轴号: 7455</div></a>
+<a href="../threads/7454.html" class="thread-row"><h2>阿底峡祖师</h2><div class="th-meta">轴号: 7454</div></a>
+<a href="../threads/7453.html" class="thread-row"><h2>顶髻大白伞盖佛母</h2><div class="th-meta">轴号: 7453</div></a>
+<a href="../threads/7452.html" class="thread-row"><h2>财宝天王</h2><div class="th-meta">轴号: 7452</div></a>
+<a href="../threads/7451.html" class="thread-row"><h2>五路财神之绿财神</h2><div class="th-meta">轴号: 7451</div></a>
+<a href="../threads/7450.html" class="thread-row"><h2>东方持国天</h2><div class="th-meta">轴号: 7450</div></a>
+<a href="../threads/7449.html" class="thread-row"><h2>南方增长天</h2><div class="th-meta">轴号: 7449</div></a>
+<a href="../threads/7448.html" class="thread-row"><h2>西方广目天</h2><div class="th-meta">轴号: 7448</div></a>
+<a href="../threads/7447.html" class="thread-row"><h2>普贤王如来</h2><div class="th-meta">轴号: 7447</div></a>
+<a href="../threads/7446.html" class="thread-row"><h2>事部三怙主</h2><div class="th-meta">轴号: 7446</div></a>
+<a href="../threads/7445.html" class="thread-row"><h2>山林叶衣佛母</h2><div class="th-meta">轴号: 7445</div></a>
+<a href="../threads/7442.html" class="thread-row"><h2>竭地洛迦林度母</h2><div class="th-meta">轴号: 7442</div></a>
+<a href="../threads/7441.html" class="thread-row"><h2>摩利支天母</h2><div class="th-meta">轴号: 7441</div></a>
+<a href="../threads/7440.html" class="thread-row"><h2>施身法派（觉宇派）皈依境</h2><div class="th-meta">轴号: 7440</div></a>
+<a href="../threads/7439.html" class="thread-row"><h2>黑袍金刚护法</h2><div class="th-meta">轴号: 7439</div></a>
+<a href="../threads/7438.html" class="thread-row"><h2>般若佛母</h2><div class="th-meta">轴号: 7438</div></a>
+<a href="../threads/7437.html" class="thread-row"><h2>龙钦巴祖师</h2><div class="th-meta">轴号: 7437</div></a>
+<a href="../threads/7436.html" class="thread-row"><h2>噶玛噶举皈依境</h2><div class="th-meta">轴号: 7436</div></a>
+<a href="../threads/7435.html" class="thread-row"><h2>四臂观音</h2><div class="th-meta">轴号: 7435</div></a>
+<a href="../threads/7434.html" class="thread-row"><h2>文武百尊（忿怒尊）</h2><div class="th-meta">轴号: 7434</div></a>
+<a href="../threads/7433.html" class="thread-row"><h2>文武百尊（寂静尊）</h2><div class="th-meta">轴号: 7433</div></a>
+<a href="../threads/7432.html" class="thread-row"><h2>释迦牟尼佛</h2><div class="th-meta">轴号: 7432</div></a>
+<a href="../threads/7431.html" class="thread-row"><h2>二十一尊度母</h2><div class="th-meta">轴号: 7431</div></a>
+<a href="../threads/7430.html" class="thread-row"><h2>如意轮白度母</h2><div class="th-meta">轴号: 7430</div></a>
+<a href="../threads/7429.html" class="thread-row"><h2>马头明王</h2><div class="th-meta">轴号: 7429</div></a>
+<a href="../threads/7428.html" class="thread-row"><h2>噶玛噶举三根本</h2><div class="th-meta">轴号: 7428</div></a>
+<a href="../threads/7427.html" class="thread-row"><h2>莲师财神总摄</h2><div class="th-meta">轴号: 7427</div></a>
+<a href="../threads/7426.html" class="thread-row"><h2>妈吉拉尊母</h2><div class="th-meta">轴号: 7426</div></a>
+<a href="../threads/7425.html" class="thread-row"><h2>五路财神之黑财神</h2><div class="th-meta">轴号: 7425</div></a>
+<a href="../threads/7424.html" class="thread-row"><h2>财源天母</h2><div class="th-meta">轴号: 7424</div></a>
+<a href="../threads/7423.html" class="thread-row"><h2>象头王财神（欢喜天）</h2><div class="th-meta">轴号: 7423</div></a>
+<a href="../threads/7422.html" class="thread-row"><h2>四臂玛哈嘎拉</h2><div class="th-meta">轴号: 7422</div></a>
+<a href="../threads/7421.html" class="thread-row"><h2>黑六臂玛哈嘎拉</h2><div class="th-meta">轴号: 7421</div></a>
+<a href="../threads/7420.html" class="thread-row"><h2>白六臂玛哈嘎拉</h2><div class="th-meta">轴号: 7420</div></a>
+<a href="../threads/7419.html" class="thread-row"><h2>北方多闻天</h2><div class="th-meta">轴号: 7419</div></a>
+<a href="../threads/7418.html" class="thread-row"><h2>尸林主</h2><div class="th-meta">轴号: 7418</div></a>
+<a href="../threads/7417.html" class="thread-row"><h2>大威德金刚（怖畏金刚）</h2><div class="th-meta">轴号: 7417</div></a>
+<a href="../threads/7416.html" class="thread-row"><h2>普巴忿怒莲师</h2><div class="th-meta">轴号: 7416</div></a>
+<a href="../threads/7415.html" class="thread-row"><h2>五路财神之红财神</h2><div class="th-meta">轴号: 7415</div></a>
+<a href="../threads/7414.html" class="thread-row"><h2>三十五佛</h2><div class="th-meta">轴号: 7414</div></a>
+<a href="../threads/7413.html" class="thread-row"><h2>欢喜金刚</h2><div class="th-meta">轴号: 7413</div></a>
+<a href="../threads/7412.html" class="thread-row"><h2>时轮金刚</h2><div class="th-meta">轴号: 7412</div></a>
+<a href="../threads/7411.html" class="thread-row"><h2>胜乐金刚</h2><div class="th-meta">轴号: 7411</div></a>
+<a href="../threads/7410.html" class="thread-row"><h2>惹呼啦护法</h2><div class="th-meta">轴号: 7410</div></a>
+<a href="../threads/7409.html" class="thread-row"><h2>五路财神之白财神</h2><div class="th-meta">轴号: 7409</div></a>
+<a href="../threads/7408.html" class="thread-row"><h2>吉祥天母（玛哈嘎哩）</h2><div class="th-meta">轴号: 7408</div></a>
+<a href="../threads/7407.html" class="thread-row"><h2>萨迦五祖</h2><div class="th-meta">轴号: 7407</div></a>
+<a href="../threads/7406.html" class="thread-row"><h2>忿怒莲师多杰卓勒</h2><div class="th-meta">轴号: 7406</div></a>
+<a href="../threads/7405.html" class="thread-row"><h2>红降阎魔</h2><div class="th-meta">轴号: 7405</div></a>
+<a href="../threads/7404.html" class="thread-row"><h2>黄财神</h2><div class="th-meta">轴号: 7404</div></a>
+<a href="../threads/7403.html" class="thread-row"><h2>宝生如来</h2><div class="th-meta">轴号: 7403</div></a>
+<a href="../threads/7402.html" class="thread-row"><h2>四臂观音</h2><div class="th-meta">轴号: 7402</div></a>
+<a href="../threads/7401.html" class="thread-row"><h2>释迦牟尼佛</h2><div class="th-meta">轴号: 7401</div></a>
+<a href="../threads/7400.html" class="thread-row"><h2>顶髻尊胜佛母</h2><div class="th-meta">轴号: 7400</div></a>
+<a href="../threads/7399.html" class="thread-row"><h2>红棒玛哈嘎拉</h2><div class="th-meta">轴号: 7399</div></a>
+<a href="../threads/7398.html" class="thread-row"><h2>密集金刚</h2><div class="th-meta">轴号: 7398</div></a>
+<a href="../threads/7397.html" class="thread-row"><h2>宝源度母</h2><div class="th-meta">轴号: 7397</div></a>
+<a href="../threads/7396.html" class="thread-row"><h2>佛陀十二成道图</h2><div class="th-meta">轴号: 7396</div></a>
+<a href="../threads/7395.html" class="thread-row"><h2>大悲胜海红观音</h2><div class="th-meta">轴号: 7395</div></a>
+<a href="../threads/7394.html" class="thread-row"><h2>狮面空行母</h2><div class="th-meta">轴号: 7394</div></a>
+<a href="../threads/7393.html" class="thread-row"><h2>金刚萨埵</h2><div class="th-meta">轴号: 7393</div></a>
+<a href="../threads/7392.html" class="thread-row"><h2>宗喀巴师徒三尊者</h2><div class="th-meta">轴号: 7392</div></a>
+<a href="../threads/7391.html" class="thread-row"><h2>阿弥陀如来</h2><div class="th-meta">轴号: 7391</div></a>
+<a href="../threads/7390.html" class="thread-row"><h2>莲师皈依境</h2><div class="th-meta">轴号: 7390</div></a>
+<a href="../threads/7389.html" class="thread-row"><h2>不空成就如来</h2><div class="th-meta">轴号: 7389</div></a>
+<a href="../threads/7388.html" class="thread-row"><h2>金刚亥母</h2><div class="th-meta">轴号: 7388</div></a>
+<a href="../threads/7387.html" class="thread-row"><h2>大日如来</h2><div class="th-meta">轴号: 7387</div></a>
+<a href="../threads/7386.html" class="thread-row"><h2>准提佛母</h2><div class="th-meta">轴号: 7386</div></a>
+<a href="../threads/7385.html" class="thread-row"><h2>大白伞盖佛母</h2><div class="th-meta">轴号: 7385</div></a>
+<a href="../threads/7381.html" class="thread-row"><h2>文殊语狮子</h2><div class="th-meta">轴号: 7381</div></a>
+<a href="../threads/7380.html" class="thread-row"><h2>金刚总持</h2><div class="th-meta">轴号: 7380</div></a>
+<a href="../threads/7379.html" class="thread-row"><h2>弥勒菩萨</h2><div class="th-meta">轴号: 7379</div></a>
+<a href="../threads/7378.html" class="thread-row"><h2>药师琉璃光佛</h2><div class="th-meta">轴号: 7378</div></a>
+<a href="../threads/7377.html" class="thread-row"><h2>金刚手菩萨</h2><div class="th-meta">轴号: 7377</div></a>
+<a href="../threads/7376.html" class="thread-row"><h2>观音、文殊、金刚手、弥勒——四大菩萨</h2><div class="th-meta">轴号: 7376</div></a>
+<a href="../threads/7292.html" class="thread-row"><h2>莲师八相</h2><div class="th-meta">轴号: 7292</div></a>
+<a href="../threads/7291.html" class="thread-row"><h2>无量寿佛</h2><div class="th-meta">轴号: 7291</div></a>
+<a href="../threads/7290.html" class="thread-row"><h2>药师八佛</h2><div class="th-meta">轴号: 7290</div></a>
+<a href="../threads/7117.html" class="thread-row"><h2>寸佛一尊 这尊左手宝瓶，右手火焰宝 地藏菩萨</h2><div class="th-meta">轴号: 7117</div></a>
+<a href="../threads/7082.html" class="thread-row"><h2>大成就者咕噜那洛巴之木雕造像</h2><div class="th-meta">轴号: 7082</div></a>
+<a href="../threads/7081.html" class="thread-row"><h2>明 铜鎏金大成就者立像</h2><div class="th-meta">轴号: 7081</div></a>
+<a href="../threads/7076.html" class="thread-row"><h2>大成就者咕噜嘎巴拉之造像</h2><div class="th-meta">轴号: 7076</div></a>
+<a href="../threads/6996.html" class="thread-row"><h2>一尊少见的四头八臂护法小唐卡（幢顶臂严佛母）</h2><div class="th-meta">轴号: 6996</div></a>
+<a href="../threads/6918.html" class="thread-row"><h2>东方不动佛坛城本尊全图</h2><div class="th-meta">轴号: 6918</div></a>
+<a href="../threads/6912.html" class="thread-row"><h2>时轮坛城本尊全图</h2><div class="th-meta">轴号: 6912</div></a>
+<a href="../threads/6900.html" class="thread-row"><h2>印度八十四大成就者</h2><div class="th-meta">轴号: 6900</div></a>
+<a href="../threads/6886.html" class="thread-row"><h2>莲师二十五弟子</h2><div class="th-meta">轴号: 6886</div></a>
+<a href="../threads/6804.html" class="thread-row"><h2>时轮立体坛城</h2><div class="th-meta">轴号: 6804</div></a>
+<a href="../threads/6801.html" class="thread-row"><h2>时轮金刚彩砂坛城</h2><div class="th-meta">轴号: 6801</div></a>
+<a href="../threads/6800.html" class="thread-row"><h2>时轮金刚坛城线描图</h2><div class="th-meta">轴号: 6800</div></a>
+<a href="../threads/6790.html" class="thread-row"><h2>药师佛十二药叉</h2><div class="th-meta">轴号: 6790</div></a>
+<a href="../threads/6622.html" class="thread-row"><h2>佛顶骨舍利</h2><div class="th-meta">轴号: 6622</div></a>
+<a href="../threads/6511.html" class="thread-row"><h2>二十一度母</h2><div class="th-meta">轴号: 6511</div></a>
+<a href="../threads/6478.html" class="thread-row"><h2>六臂玛哈嘎啦供物图</h2><div class="th-meta">轴号: 6478</div></a>
+<a href="../threads/6420.html" class="thread-row"><h2>萨迦寺镇寺之宝白海螺</h2><div class="th-meta">轴号: 6420</div></a>
+<a href="../threads/4725.html" class="thread-row"><h2>夏日东•洛桑遐智嘉木措活佛</h2><div class="th-meta">轴号: 4725</div></a>
+<a href="../threads/4520.html" class="thread-row"><h2>一些护法空行的简介 附图</h2><div class="th-meta">轴号: 4520</div></a>
+<a href="../threads/4499.html" class="thread-row"><h2>莲师二十五心子</h2><div class="th-meta">轴号: 4499</div></a>
+<a href="../threads/4428.html" class="thread-row"><h2>金刚善护法</h2><div class="th-meta">轴号: 4428</div></a>
+<a href="../threads/4427.html" class="thread-row"><h2>惹呼拉护法</h2><div class="th-meta">轴号: 4427</div></a>
+<a href="../threads/4426.html" class="thread-row"><h2>一髻佛母</h2><div class="th-meta">轴号: 4426</div></a>
+<a href="../threads/4414.html" class="thread-row"><h2>吉祥天母（玛哈嘎哩）</h2><div class="th-meta">轴号: 4414</div></a>
+<a href="../threads/4413.html" class="thread-row"><h2>红棒玛哈嘎拉</h2><div class="th-meta">轴号: 4413</div></a>
+<a href="../threads/4410.html" class="thread-row"><h2>白六臂玛哈嘎拉</h2><div class="th-meta">轴号: 4410</div></a>
+<a href="../threads/4409.html" class="thread-row"><h2>黑六臂玛哈嘎拉</h2><div class="th-meta">轴号: 4409</div></a>
+<a href="../threads/4406.html" class="thread-row"><h2>黑袍金刚护法</h2><div class="th-meta">轴号: 4406</div></a>
+<a href="../threads/3893.html" class="thread-row"><h2>八大菩萨</h2><div class="th-meta">轴号: 3893</div></a>
+<a href="../threads/3889.html" class="thread-row"><h2>叶衣佛母和当木坚护法</h2><div class="th-meta">轴号: 3889</div></a>
+<a href="../threads/3867.html" class="thread-row"><h2>护法的故事--丹坚护法</h2><div class="th-meta">轴号: 3867</div></a>
+<a href="../threads/3866.html" class="thread-row"><h2>护法的故事--阿松玛(一髻佛母)</h2><div class="th-meta">轴号: 3866</div></a>
+<a href="../threads/3709.html" class="thread-row"><h2>请斑竹师兄和诸位师兄，给找几幅唐卡，谢谢</h2><div class="th-meta">轴号: 3709</div></a>
+<a href="../threads/3258.html" class="thread-row"><h2>亥母坛城</h2><div class="th-meta">轴号: 3258</div></a>
+<a href="../threads/3256.html" class="thread-row"><h2>黑忿怒母</h2><div class="th-meta">轴号: 3256</div></a>
+<a href="../threads/3255.html" class="thread-row"><h2>大殊胜嘿如嘎</h2><div class="th-meta">轴号: 3255</div></a>
+<a href="../threads/3253.html" class="thread-row"><h2>汤东嘉波</h2><div class="th-meta">轴号: 3253</div></a>
+<a href="../threads/3252.html" class="thread-row"><h2>马鹏三尊</h2><div class="th-meta">轴号: 3252</div></a>
+<a href="../threads/3251.html" class="thread-row"><h2>大幻化网文武百尊</h2><div class="th-meta">轴号: 3251</div></a>
+<a href="../threads/3250.html" class="thread-row"><h2>邬金财神</h2><div class="th-meta">轴号: 3250</div></a>
+<a href="../threads/3249.html" class="thread-row"><h2>黑文殊</h2><div class="th-meta">轴号: 3249</div></a>
+<a href="../threads/3248.html" class="thread-row"><h2>敦珠新宝藏之皈依境</h2><div class="th-meta">轴号: 3248</div></a>
+<a href="../threads/3247.html" class="thread-row"><h2>敦珠法王降生授记图</h2><div class="th-meta">轴号: 3247</div></a>
+<a href="../threads/3246.html" class="thread-row"><h2>敦珠新宝藏之大乐母</h2><div class="th-meta">轴号: 3246</div></a>
+<a href="../threads/3245.html" class="thread-row"><h2>邬金药师</h2><div class="th-meta">轴号: 3245</div></a>
+<a href="../threads/3002.html" class="thread-row"><h2>千手千眼观世音菩萨古唐卡</h2><div class="th-meta">轴号: 3002</div></a>
+<a href="../threads/2967.html" class="thread-row"><h2>《吉祥喜金刚集轮甘露泉》与吉祥喜金刚坛城解说</h2><div class="th-meta">轴号: 2967</div></a>
+<a href="../threads/2956.html" class="thread-row"><h2>收藏的文物级高僧舍利擦擦时轮金刚 具有很大加持力</h2><div class="th-meta">轴号: 2956</div></a>
+<a href="../threads/2946.html" class="thread-row"><h2>大威德金刚擦擦（名擦）</h2><div class="th-meta">轴号: 2946</div></a>
+<a href="../threads/2945.html" class="thread-row"><h2>千手千眼观世音菩萨的擦擦(精品)</h2><div class="th-meta">轴号: 2945</div></a>
+<a href="../threads/2769.html" class="thread-row"><h2>阿企佛母</h2><div class="th-meta">轴号: 2769</div></a>
+<a href="../threads/2660.html" class="thread-row"><h2>卡卓玛铜像</h2><div class="th-meta">轴号: 2660</div></a>
+<a href="../threads/2658.html" class="thread-row"><h2>鎏金铜质宝帐护法神</h2><div class="th-meta">轴号: 2658</div></a>
+<a href="../threads/2657.html" class="thread-row"><h2>四臂文殊菩萨鎏金铜像</h2><div class="th-meta">轴号: 2657</div></a>
+<a href="../threads/2656.html" class="thread-row"><h2>密集金刚(Guhyasamaja)</h2><div class="th-meta">轴号: 2656</div></a>
+<a href="../threads/2596.html" class="thread-row"><h2>最胜怀法本尊【咕噜咕列佛母】</h2><div class="th-meta">轴号: 2596</div></a>
+<a href="../threads/2344.html" class="thread-row"><h2>金刚手菩萨</h2><div class="th-meta">轴号: 2344</div></a>
+<a href="../threads/2343.html" class="thread-row"><h2>四臂观音</h2><div class="th-meta">轴号: 2343</div></a>
+<a href="../threads/2340.html" class="thread-row"><h2>四臂观音</h2><div class="th-meta">轴号: 2340</div></a>
+<a href="../threads/2339.html" class="thread-row"><h2>无量寿佛</h2><div class="th-meta">轴号: 2339</div></a>
+<a href="../threads/2338.html" class="thread-row"><h2>长寿佛</h2><div class="th-meta">轴号: 2338</div></a>
+<a href="../threads/2337.html" class="thread-row"><h2>阿弥陀佛</h2><div class="th-meta">轴号: 2337</div></a>
+<a href="../threads/2336.html" class="thread-row"><h2>金刚不动如来（阿閦佛）</h2><div class="th-meta">轴号: 2336</div></a>
+<a href="../threads/2335.html" class="thread-row"><h2>宝生如来</h2><div class="th-meta">轴号: 2335</div></a>
+<a href="../threads/2334.html" class="thread-row"><h2>不空成就如来</h2><div class="th-meta">轴号: 2334</div></a>
+<a href="../threads/2333.html" class="thread-row"><h2>毗卢遮那佛（大日如来）</h2><div class="th-meta">轴号: 2333</div></a>
+<a href="../threads/2332.html" class="thread-row"><h2>噶玛噶举三根本</h2><div class="th-meta">轴号: 2332</div></a>
+<a href="../threads/2329.html" class="thread-row"><h2>宁玛巴皈依境</h2><div class="th-meta">轴号: 2329</div></a>
+<a href="../threads/2328.html" class="thread-row"><h2>愤怒莲师多杰卓勒</h2><div class="th-meta">轴号: 2328</div></a>
+<a href="../threads/2327.html" class="thread-row"><h2>普巴忿怒莲师</h2><div class="th-meta">轴号: 2327</div></a>
+<a href="../threads/2326.html" class="thread-row"><h2>愤怒莲师金刚铠甲</h2><div class="th-meta">轴号: 2326</div></a>
+<a href="../threads/2325.html" class="thread-row"><h2>莲师法相之表义</h2><div class="th-meta">轴号: 2325</div></a>
+<a href="../threads/2324.html" class="thread-row"><h2>莲花生大士</h2><div class="th-meta">轴号: 2324</div></a>
+<a href="../threads/2323.html" class="thread-row"><h2>佛陀十二相成道图</h2><div class="th-meta">轴号: 2323</div></a>
+<a href="../threads/2322.html" class="thread-row"><h2>释迦牟尼佛</h2><div class="th-meta">轴号: 2322</div></a>
+<a href="../threads/2321.html" class="thread-row"><h2>释迦牟尼佛</h2><div class="th-meta">轴号: 2321</div></a>
+<a href="../threads/2305.html" class="thread-row"><h2>贡噶活佛</h2><div class="th-meta">轴号: 2305</div></a>
+<a href="../threads/2253.html" class="thread-row"><h2>西藏的唐卡艺术</h2><div class="th-meta">轴号: 2253</div></a>
+<a href="../threads/2241.html" class="thread-row"><h2>一面六臂玛哈嘎拉</h2><div class="th-meta">轴号: 2241</div></a>
+<a href="../threads/2230.html" class="thread-row"><h2>泰国国王曾亲见释迦牟尼显圣佛像</h2><div class="th-meta">轴号: 2230</div></a>
+<a href="../threads/2190.html" class="thread-row"><h2>绿度母（Green  Tara）</h2><div class="th-meta">轴号: 2190</div></a>
+<a href="../threads/2179.html" class="thread-row"><h2>莲花生大士之八大神变（莲师八变）的介绍</h2><div class="th-meta">轴号: 2179</div></a>
+<a href="../threads/2109.html" class="thread-row"><h2>密集金刚</h2><div class="th-meta">轴号: 2109</div></a>
+<a href="../threads/2107.html" class="thread-row"><h2>金刚萨埵</h2><div class="th-meta">轴号: 2107</div></a>
+<a href="../threads/2097.html" class="thread-row"><h2>萨迦派茶巴法王究给崔钦仁波切</h2><div class="th-meta">轴号: 2097</div></a>
+<a href="../threads/2025.html" class="thread-row"><h2>胜乐金刚</h2><div class="th-meta">轴号: 2025</div></a>
+<a href="../threads/1903.html" class="thread-row"><h2>莲师庄严</h2><div class="th-meta">轴号: 1903</div></a>
+<a href="../threads/1896.html" class="thread-row"><h2>殊胜本尊大鹏金翅鸟</h2><div class="th-meta">轴号: 1896</div></a>
+<a href="../threads/1891.html" class="thread-row"><h2>藏传佛教艺术展——来自西方的收藏</h2><div class="th-meta">轴号: 1891</div></a>
+<a href="../threads/1878.html" class="thread-row"><h2>六臂玛哈嘎拉</h2><div class="th-meta">轴号: 1878</div></a>
+<a href="../threads/1854.html" class="thread-row"><h2>藏传佛教五大金刚的艺术特性</h2><div class="th-meta">轴号: 1854</div></a>
+<a href="../threads/1811.html" class="thread-row"><h2>不动明王</h2><div class="th-meta">轴号: 1811</div></a>
+<a href="../threads/1789.html" class="thread-row"><h2>咒轮种子字</h2><div class="th-meta">轴号: 1789</div></a>
+<a href="../threads/1691.html" class="thread-row"><h2>黄财神</h2><div class="th-meta">轴号: 1691</div></a>
+<a href="../threads/1690.html" class="thread-row"><h2>金刚手菩萨</h2><div class="th-meta">轴号: 1690</div></a>
+<a href="../threads/1689.html" class="thread-row"><h2>惹呼啦</h2><div class="th-meta">轴号: 1689</div></a>
+<a href="../threads/1688.html" class="thread-row"><h2>时轮金刚</h2><div class="th-meta">轴号: 1688</div></a>
+<a href="../threads/1686.html" class="thread-row"><h2>大威德怖畏金刚</h2><div class="th-meta">轴号: 1686</div></a>
+<a href="../threads/1685.html" class="thread-row"><h2>大白伞盖佛母</h2><div class="th-meta">轴号: 1685</div></a>
+<a href="../threads/1684.html" class="thread-row"><h2>文殊菩萨</h2><div class="th-meta">轴号: 1684</div></a>
+<a href="../threads/1676.html" class="thread-row"><h2>珍珠坛城</h2><div class="th-meta">轴号: 1676</div></a>
+<a href="../threads/1674.html" class="thread-row"><h2>莲师和普巴供坛</h2><div class="th-meta">轴号: 1674</div></a>
+<a href="../threads/1673.html" class="thread-row"><h2>释迦如来供坛</h2><div class="th-meta">轴号: 1673</div></a>
+<a href="../threads/1672.html" class="thread-row"><h2>白玛哈嘎拉如意怙主的供坛</h2><div class="th-meta">轴号: 1672</div></a>
+<a href="../threads/1654.html" class="thread-row"><h2>五文殊</h2><div class="th-meta">轴号: 1654</div></a>
+<a href="../threads/1644.html" class="thread-row"><h2>宗喀巴大师</h2><div class="th-meta">轴号: 1644</div></a>
+<a href="../threads/1614.html" class="thread-row"><h2>三十五佛专辑</h2><div class="th-meta">轴号: 1614</div></a>
+<a href="../threads/1613.html" class="thread-row"><h2>白度母</h2><div class="th-meta">轴号: 1613</div></a>
+<a href="../threads/1612.html" class="thread-row"><h2>吉祥天母</h2><div class="th-meta">轴号: 1612</div></a>
+<a href="../threads/1611.html" class="thread-row"><h2>绿度母</h2><div class="th-meta">轴号: 1611</div></a>
+<a href="../threads/1609.html" class="thread-row"><h2>黑袍金刚</h2><div class="th-meta">轴号: 1609</div></a>
+<a href="../threads/1608.html" class="thread-row"><h2>一面二臂胜乐金刚</h2><div class="th-meta">轴号: 1608</div></a>
+<a href="../threads/1607.html" class="thread-row"><h2>喜金刚</h2><div class="th-meta">轴号: 1607</div></a>
+<a href="../threads/1606.html" class="thread-row"><h2>普巴金刚</h2><div class="th-meta">轴号: 1606</div></a>
+<a href="../threads/1605.html" class="thread-row"><h2>马头明王</h2><div class="th-meta">轴号: 1605</div></a>
+<a href="../threads/1604.html" class="thread-row"><h2>般若佛母</h2><div class="th-meta">轴号: 1604</div></a>
+<a href="../threads/1603.html" class="thread-row"><h2>狮面空行母</h2><div class="th-meta">轴号: 1603</div></a>
+<a href="../threads/1602.html" class="thread-row"><h2>玛吉拉尊母</h2><div class="th-meta">轴号: 1602</div></a>
+<a href="../threads/1601.html" class="thread-row"><h2>药师七佛</h2><div class="th-meta">轴号: 1601</div></a>
+<a href="../threads/1600.html" class="thread-row"><h2>顶髻尊胜佛母</h2><div class="th-meta">轴号: 1600</div></a>
+<a href="../threads/1599.html" class="thread-row"><h2>山林叶衣佛母</h2><div class="th-meta">轴号: 1599</div></a>
+<a href="../threads/1598.html" class="thread-row"><h2>觉宇巴皈依境</h2><div class="th-meta">轴号: 1598</div></a>
+<a href="../threads/1587.html" class="thread-row"><h2>獨雄鉞刀馬頭金剛</h2><div class="th-meta">轴号: 1587</div></a>
+<a href="../threads/1583.html" class="thread-row"><h2>上乐金刚坛城图</h2><div class="th-meta">轴号: 1583</div></a>
+<a href="../threads/1575.html" class="thread-row"><h2>三十五佛</h2><div class="th-meta">轴号: 1575</div></a>
+<a href="../threads/1499.html" class="thread-row"><h2>叶衣佛母</h2><div class="th-meta">轴号: 1499</div></a>
+<a href="../threads/1464.html" class="thread-row"><h2>五方佛像</h2><div class="th-meta">轴号: 1464</div></a>
+<a href="../threads/1377.html" class="thread-row"><h2>不动明王介紹</h2><div class="th-meta">轴号: 1377</div></a>
+<a href="../threads/1230.html" class="thread-row"><h2>释迦牟尼佛12岁等身像</h2><div class="th-meta">轴号: 1230</div></a>
+<a href="../threads/1225.html" class="thread-row"><h2>印度菩提迦耶正觉塔内之殊胜释迦摩尼佛像</h2><div class="th-meta">轴号: 1225</div></a>
+<a href="../threads/1210.html" class="thread-row"><h2>释迦、弥陀、药师三佛</h2><div class="th-meta">轴号: 1210</div></a>
+<a href="../threads/1209.html" class="thread-row"><h2>金刚总持</h2><div class="th-meta">轴号: 1209</div></a>
+<a href="../threads/1197.html" class="thread-row"><h2>宝帐怙主</h2><div class="th-meta">轴号: 1197</div></a>
+<a href="../threads/1195.html" class="thread-row"><h2>二十一度母</h2><div class="th-meta">轴号: 1195</div></a>
+<a href="../threads/1174.html" class="thread-row"><h2>釋迦牟尼佛神變圖</h2><div class="th-meta">轴号: 1174</div></a>
+<a href="../threads/1131.html" class="thread-row"><h2>佛前供品及其他</h2><div class="th-meta">轴号: 1131</div></a>
+<a href="../threads/1128.html" class="thread-row"><h2>古汝毗瓦巴</h2><div class="th-meta">轴号: 1128</div></a>
+<a href="../threads/1127.html" class="thread-row"><h2>萨迦五祖</h2><div class="th-meta">轴号: 1127</div></a>
+<a href="../threads/1077.html" class="thread-row"><h2>金刚持与八十四大成就者</h2><div class="th-meta">轴号: 1077</div></a>
+<a href="../threads/1076.html" class="thread-row"><h2>莲师财神总摄</h2><div class="th-meta">轴号: 1076</div></a>
+<a href="../threads/1068.html" class="thread-row"><h2>文武百尊忿怒尊</h2><div class="th-meta">轴号: 1068</div></a>
+<a href="../threads/1067.html" class="thread-row"><h2>文武百尊寂静尊</h2><div class="th-meta">轴号: 1067</div></a>
+<a href="../threads/907.html" class="thread-row"><h2>佛坛八供</h2><div class="th-meta">轴号: 907</div></a>
+<a href="../threads/854.html" class="thread-row"><h2>最向往的地方！</h2><div class="th-meta">轴号: 854</div></a>
+<a href="../threads/440.html" class="thread-row"><h2>莲花生大士无死虹身铜色国</h2><div class="th-meta">轴号: 440</div></a>
+<a href="../threads/437.html" class="thread-row"><h2>财宝天王</h2><div class="th-meta">轴号: 437</div></a>
+<a href="../threads/419.html" class="thread-row"><h2>吉祥佛塔</h2><div class="th-meta">轴号: 419</div></a>
+<a href="../threads/394.html" class="thread-row"><h2>十一面观音法相</h2><div class="th-meta">轴号: 394</div></a>
+<a href="../threads/366.html" class="thread-row"><h2>四面四臂玛哈嘎拉护法</h2><div class="th-meta">轴号: 366</div></a>
+<a href="../threads/363.html" class="thread-row"><h2>宝杖怙主护法</h2><div class="th-meta">轴号: 363</div></a>
+<a href="../threads/362.html" class="thread-row"><h2>一面四臂玛哈嘎拉护法</h2><div class="th-meta">轴号: 362</div></a>
+<a href="../threads/346.html" class="thread-row"><h2>龙王菩萨</h2><div class="th-meta">轴号: 346</div></a>
+<a href="../threads/340.html" class="thread-row"><h2>宁玛巴皈依境</h2><div class="th-meta">轴号: 340</div></a>
+<a href="../threads/339.html" class="thread-row"><h2>竹巴噶举皈依境</h2><div class="th-meta">轴号: 339</div></a>
+<a href="../threads/338.html" class="thread-row"><h2>格鲁巴皈依境</h2><div class="th-meta">轴号: 338</div></a>
+<a href="../threads/337.html" class="thread-row"><h2>萨迦巴皈依境</h2><div class="th-meta">轴号: 337</div></a>
+<a href="../threads/336.html" class="thread-row"><h2>萨迦胜乐金刚</h2><div class="th-meta">轴号: 336</div></a>
+<a href="../threads/335.html" class="thread-row"><h2>萨迦大威德怖畏金刚</h2><div class="th-meta">轴号: 335</div></a>
+<a href="../threads/114.html" class="thread-row"><h2>佛牙舍利</h2><div class="th-meta">轴号: 114</div></a>
+<a href="../threads/51.html" class="thread-row"><h2>权衡三界威罗瓦</h2><div class="th-meta">轴号: 51</div></a>
+<a href="../threads/39.html" class="thread-row"><h2>噶玛噶举皈依境及皈依境详解</h2><div class="th-meta">轴号: 39</div></a>
+<a href="../threads/38.html" class="thread-row"><h2>清  威罗瓦像</h2><div class="th-meta">轴号: 38</div></a>
+<a href="../threads/23.html" class="thread-row"><h2>十相自在图 吉祥时轮心髓十相自在的意义—宝灯论释</h2><div class="th-meta">轴号: 23</div></a>
 
 </div>
+
 <script>
-// ---------- 沉浸式快速阅读弹窗引擎 ----------
+// ---------- 顶级沉浸式无缝卷轴弹窗 (Mobile Optimized) ----------
 (function() {
     if(document.getElementById('quickViewer')) return;
     const modalHTML = `
-    <div id="quickViewer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,0.6); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); opacity:0; transition:opacity 0.3s ease; box-sizing:border-box; align-items:center; justify-content:center; padding: 20px;">
-        <div id="quickViewerContent" style="background:var(--bg, #f9fafb); width:100%; max-width:850px; height:95%; max-height:95vh; border-radius:16px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.2); position:relative; transform:scale(0.95) translateY(30px); opacity:0; transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1); display:flex; flex-direction:column; overflow:hidden;">
-            <div style="padding:16px 24px; border-bottom:1px solid rgba(0,0,0,0.05); background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); display:flex; justify-content:space-between; align-items:center; z-index:10;">
-                <div style="font-weight:600; color:var(--primary, #3b82f6); font-size:16px; display:flex; align-items:center;"><span style="font-size:20px; margin-right:8px;">📄</span> 沉浸阅读模式</div>
-                <button id="quickViewerClose" style="background:#f1f5f9; border:none; width:36px; height:36px; border-radius:50%; font-size:20px; cursor:pointer; color:#475569; display:flex; align-items:center; justify-content:center; transition:all 0.2s; box-shadow:inset 0 2px 4px rgba(0,0,0,0.02)">×</button>
+    <style>
+    #quickViewer { display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,0.9); backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px); opacity:0; transition:opacity 0.3s ease; box-sizing:border-box; align-items:center; justify-content:center; }
+    #quickViewerContent { background:var(--bg); width:100%; height:100%; border-radius:0; position:relative; transform:translateY(100%); opacity:0; transition:transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 0 50px rgba(0,0,0,0.8); }
+    @media(min-width: 850px) {
+      #quickViewerContent { max-width:900px; height:95%; max-height:95vh; border-radius:16px; transform:translateY(30px) scale(0.95); border:1px solid rgba(212,175,55,0.2); }
+    }
+    #quickViewerHeader { padding:18px 24px; border-bottom:1px solid rgba(212,175,55,0.1); background:var(--surface-solid); display:flex; justify-content:space-between; align-items:center; z-index:10; }
+    #quickViewerBody { padding:0; overflow-y:auto; overflow-x:hidden; flex:1; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+    </style>
+    <div id="quickViewer">
+        <div id="quickViewerContent">
+            <div id="quickViewerHeader">
+                <div style="font-weight:700; color:var(--primary); font-size:17px; display:flex; align-items:center; letter-spacing:1px;"><span style="font-size:20px; margin-right:10px;">❖</span> 典藏经卷阅读</div>
+                <button id="quickViewerClose" style="background:rgba(255,255,255,0.1); border:none; width:36px; height:36px; border-radius:50%; font-size:18px; cursor:pointer; color:var(--text); display:flex; align-items:center; justify-content:center; transition:all 0.2s;">✕</button>
             </div>
-            <div id="quickViewerBody" style="padding:0; overflow-y:auto; flex:1; scroll-behavior: smooth;">
-                <div style="text-align:center; padding:80px; color:#94a3b8; font-weight:500;">
-                    <div style="font-size:30px; margin-bottom:15px; animation: pulse 1.5s infinite;">⚡</div>
-                    正在拉取数据...
+            <div id="quickViewerBody">
+                <div style="text-align:center; padding:100px; color:var(--primary); opacity:0.8;">
+                    <div style="font-size:40px; margin-bottom:20px; animation: pulse 1.5s infinite;">📿</div>
+                    <div style="font-weight:600; letter-spacing:2px; font-family:'Noto Serif SC', serif;">正在降临...</div>
                 </div>
             </div>
         </div>
@@ -403,10 +440,14 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
         void qv.offsetWidth; // trigger reflow
         qv.style.opacity = '1';
         qvContent.style.opacity = '1';
-        qvContent.style.transform = 'scale(1) translateY(0)';
-        document.body.style.overflow = 'hidden';
+        if(window.innerWidth >= 850) {
+            qvContent.style.transform = 'translateY(0) scale(1)';
+        } else {
+            qvContent.style.transform = 'translateY(0)';
+        }
+        document.body.style.overflow = 'hidden'; // Lock background scroll entirely
         
-        qvBody.innerHTML = '<div style="text-align:center; padding:100px; color:#94a3b8;"><div style="font-size:40px; margin-bottom:20px; animation: pulse 1.5s infinite;">⚡</div><div style="font-weight:600; font-size:18px;">正在穿梭时空抓取帖子...</div></div>';
+        qvBody.innerHTML = '<div style="text-align:center; padding:120px; color:var(--primary); opacity:0.8;"><div style="font-size:45px; margin-bottom:20px; animation: pulse 1.5s infinite;">📿</div><div style="font-family:\'Noto Serif SC\', serif; font-size:18px; letter-spacing:2px;">开启法卷...</div></div>';
         
         fetch(url).then(res => res.text()).then(html => {
             const parser = new DOMParser();
@@ -415,35 +456,39 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
             if(contentContainer) {
                 let bread = contentContainer.querySelector('.breadcrumb');
                 if(bread) bread.remove();
-                contentContainer.style.margin = '20px auto 40px';
+                contentContainer.style.margin = '20px auto 60px';
                 qvBody.innerHTML = '';
                 qvBody.appendChild(contentContainer);
                 qvBody.scrollTop = 0;
             } else {
-                qvBody.innerHTML = '<div style="padding:40px; text-align:center;">解析内容失败，该页可能已损坏。</div>';
+                window.location.href = url;
             }
         }).catch(err => {
-            window.location.href = url; // 如果遇到了文件系统拦截，自动降级为传统页面跳转加载
+            window.location.href = url;
         });
     }
 
     function closeViewer() {
         qv.style.opacity = '0';
         qvContent.style.opacity = '0';
-        qvContent.style.transform = 'scale(0.95) translateY(30px)';
+        if(window.innerWidth >= 850) {
+            qvContent.style.transform = 'translateY(30px) scale(0.95)';
+        } else {
+            qvContent.style.transform = 'translateY(100%)';
+        }
         setTimeout(() => {
             qv.style.display = 'none';
             document.body.style.overflow = '';
             qvBody.innerHTML = '';
-        }, 300);
+        }, 400);
     }
 
     qvClose.addEventListener('click', closeViewer);
-    qvClose.addEventListener('mouseover', () => qvClose.style.background = '#e2e8f0');
-    qvClose.addEventListener('mouseout', () => qvClose.style.background = '#f1f5f9');
+    qvClose.addEventListener('mouseover', () => qvClose.style.background = 'rgba(255,255,255,0.2)');
+    qvClose.addEventListener('mouseout', () => qvClose.style.background = 'rgba(255,255,255,0.1)');
     
     qv.addEventListener('click', (e) => {
-        if(e.target === qv) closeViewer();
+        if(e.target === qv && window.innerWidth >= 850) closeViewer();
     });
 
     document.addEventListener('click', (e) => {

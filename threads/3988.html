@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>瑜伽焰口注集纂要仪轨 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>瑜伽焰口注集纂要仪轨 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/瑜伽施食成就法.html">瑜伽施食成就法</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">瑜伽焰口注集纂要仪轨</h1>
-<div class="post"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2008-12-27 09:28<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">瑜伽焰口注集纂要仪轨 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/瑜伽施食成就法.html">瑜伽施食成就法</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">瑜伽焰口注集纂要仪轨</h1>
+<div class="post"><div class="post-header"><div class="avatar">金</div><span style="font-size:15px; letter-spacing:1px;">金刚瑜发表于 2008-12-27 09:28</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">瑜伽焰口注集纂要仪轨 <br/>
 清 寂暹纂 <br/>
 <br/>
 纂要序 <br/>
@@ -140,7 +161,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (诵真言时。调伏身心。想顶脐两处。具唵嚂二字。令清净故。以表福智圆满)。 <br/>
 唵囕◇◇莎诃 <br/>
-<br/>
+2975 <br/>
 (成就妙法莲华经王瑜伽观智仪轨云。应结法界生印。二手各作金刚拳。舒二头指侧相拄。即成安印于顶。于其印中。想法界种子◇[嚂-皿+见]字。其色皓白。徧流光明。普照一切有情界。能破一切有情虗妄烦恼。当观自身。及诸有情。同一法界。无二无别。 <br/>
 <br/>
 大毗卢遮那成佛神变加持经第二卷中。法界真言曰。嚂。瑜伽莲花部念诵法云。当观顶上有法界生字。放赤色光。所谓嚂字。显密圆通云。此梵书嚂字。若想若诵。能令三业。悉皆清净。一切罪障尽得消除。又能成办一切胜事。随所住处。悉得清净。衣服不净。便成净衣。身不澡浴。便当澡浴。若用水作净。不名真净。用此法界心嚂字净之。即名毕竟清净。譬如灵丹一粒。点铁成金。真言一字。变染成净。 <br/>
@@ -151,7 +172,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (诵真言时。用右手无名指。搵取香水。弹洒虗空。并涂掌。想坛场内外。悉令清净)。 <br/>
 唵哑穆葛拶啰弥麻迎苏噜苏噜莎诃 <br/>
-<br/>
+2976 <br/>
 (此真言名。出不空罥索经。用右手无名指。搵取白檀香水。涂二手掌。甘露军茶利仪轨云。修瑜伽者。不应执着外净。当以胜义自性清净法水。洗涤身心。如理相应。守护国界主陀罗尼经云。金刚结跏。端身正坐。左手仰掌。当于脐上。右手仰掌。重左手上。以大拇指令头相拄。此印名为第一最胜三昧之印。能灭狂乱。一切妄念。令心一境。澄定身心。方入法界三昧)。 <br/>
 <br/>
 ∴加持花米真言 <br/>
@@ -192,7 +213,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 唵耶答儿麻(二合)兮都不啰(二合)巴斡兮敦的山答塔葛答歇斡怛的山拶约尼噜怛耶[口*邦]叭谛麻曷释啰(二合)麻纳耶莎诃 <br/>
 (密呪圆因徃生集中。准经翻译。即为颂曰。诸法从缘起。如来说是因。彼法因缘尽。是大沙门说此呪两用。今始开坛。是缘起义)。 <br/>
-<br/>
+2977 <br/>
 <br/>
 加持灌顶真言 <br/>
 <br/>
@@ -291,7 +312,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 (佛说金刚手菩萨。降伏一切部多大教王经云。告大部多主无能胜言。所有四大洲界。阎浮提内一切众生。作法诵持。悉令成就。今此亦用四洲为限。是故加持。唱此二山为地界)。 <br/>
 金刚地胜金刚地基吽◇字而作拥护(佛说大教王经云。复想曼拏啰地。即成金刚地。徧满炽盛。时阿阇黎即称己名。同诵吽字。大乐金刚不空理趣释下卷云。◇字者。是因义。即一切如来菩提心。亦是一切如来不共真如妙体。恒沙功德。皆从此生)。 <br/>
 诵一真言　　拈一花米　　排列须弥　　等位如图 <br/>
-<br/>
+2978 <br/>
 南北东西四部洲　　百千剎土亦能酬 <br/>
 须弥顶上安宫殿　　大地孤魂脱苦坵 <br/>
 <br/>
@@ -386,7 +407,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (以二手作金刚拳。手背相靠。二小指相钩。二头指直竖。结印当胷。想手印出火光。而遣境界魔)。 <br/>
 唵斡资啰(二合)哑弥哩达昆咤唎曷纳曷纳吽吽癹咤 <br/>
-<br/>
+2979 <br/>
 (此印呪出佛说大乘观想曼拏啰下卷。想手印上。出金刚焰。遣境界魔。金刚顶经修习毗卢遮那三摩地法云。 <br/>
 次以威怒降三世。净治内外所生障。 <br/>
 二羽交臂金刚拳。檀慧相钩进力竖。 <br/>
@@ -396,19 +417,19 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 遣魔真言 <br/>
 <br/>
 唵斡资啰(二合)牙恰吽 <br/>
-<br/>
+2980 <br/>
 (二手外相义。二头指直竖。结印当胷。手动似扇。印出火光。而遣诸魔)。 <br/>
 <br/>
 遣魔真言 <br/>
 <br/>
 唵斡资啰(二合)佐辣哑捺辣曷捺答曷巴拶么塔班拶啰纳吽帕咤 <br/>
-<br/>
+2981 <br/>
 (二手内相义。十指仰上。结印当胷。想印中放出金刚焰。令诸魔远离)。 <br/>
 <br/>
 真空呪印 <br/>
 <br/>
 (二手内相义。进禅力智直竖念真言)。 <br/>
-<br/>
+2982 <br/>
 唵莎帕斡顺牙(二合)萨哩斡(二合)答哩麻(二合)莎帕斡顺牙(二合)达(二合) <br/>
 (侍者白云)于空性中想(阿阇黎观想此梵书九字)[口*(隆-一)][口*(隆-一)](二合)◇喷[口*(隆-一)](二合)◇喷[口*(隆-一)](二合)◇哑哑哑◇吽吽◇(此下众和)吽而成十方世界所有天妙曼怛哑哩干濯足花香灯涂食乐。清彻无碍。犹如普贤化现。种种云集供养。徧满虗空。充塞法界。尽轮回际。无有间断。 <br/>
 (二手内相义。进力禅智直竖。大毗卢遮那成佛神变加持经第四云。由结此印诵真言故。其坛中诸佛菩萨。及诸圣众。量同虗空。徧周法界。成报土佛剎。佛说一切如来金刚三业最上秘密大教王经第二云。当观想勃笼字。即成虗空金刚心曼拏啰。一切金刚周匝围绕。故云于空性中等。大威怒乌刍仪轨云。当奉阏伽香水器浴圣众足。故云哑哩干濯足。此中皆是无碍报土不思议境界。故云犹如普贤等。勃笼◇字即喷[口*(隆-一)]。唐言佛宝阁)。 <br/>
@@ -506,12 +527,12 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 默念大轮明王呪七遍 <br/>
 <br/>
 (金刚顶略出念诵经四种念诵。一音声念诵。一切声是也。二金刚念诵。合口动舌。默念是也。三三摩地念诵。心念是也。四真实念诵。如字义修行是也。佛说秘密相经云。若持诵时。不动舌端。唇齿相合。离诸音声。但以金刚语音而为持诵。即能成就一切仪轨)。 <br/>
-<br/>
+2983 <br/>
 <br/>
 捺麻斯得哩(二合)野脱夷(二合)葛喃萨哩斡(二合)怛塔葛达喃唵微啰积微啰积麻曷拶葛啰(二合)斡资哩(二合)斡资哩(二合)萨怛萨怛萨啰谛萨啰谛得啰(二合)夷得啰(二合)夷微驮麻尼(二合)三攀拶纳祢得啰(二合)麻祢的席塔[口*纥]哩(二合)得兰(二合)颜席提脱夷(二合)莎诃 <br/>
 <br/>
 (甘露军茶利仪轨云。二手内相义。进力并伸直。忍愿缠进力初节前。各以峯相拄。禅智并伸直。又云。应结金刚轮菩萨印。诵密语。以入曼拏啰者。受得三世无障碍。三种菩萨律仪。由入曼拏啰。身心备十微尘剎世界。微尘数三昧耶。无作戒禁。或因屈伸俯仰。发言吐气。起心动念。废忘菩提之心。退失善根。以此印契密言。殊胜方便。诵持作意。能除违犯愆咎。三昧耶如故。倍加光显。能净身口意故。则成入一切曼拏啰。获得灌顶三摩耶。唐沙门慧日云。有人未曾经和尚阿阇黎入大曼茶啰坛场者。但宽取大轮明王金刚呪。诵二十一遍。即当入坛。然后作诸呪法。悉得成就。又云。诵密言时。作是观想。尽虗空。徧法界。三界生死。六趣有情。速得入金刚界大曼拏啰等。同金刚萨埵大菩萨)。 <br/>
-<br/>
+2984 <br/>
 <br/>
 (师印呪可知。应想面前空处。离身七肘高八肘。现一金色喷[口*(隆-一)]（二合）◇字种。变成胜妙宫殿。以大千国土。合为一国土。以此国土。融成一宫殿。一一庄严。皆准华严经说。胜妙。乐事。问。此大千国土。合而为一。云何合耶。答。一切国土。体自空寂。谁立强界。若离众生。见则国土自一。问。此土众生。置于何处。答。自中众生。即诸佛心中之众生。同佛受用。复何用置。问。何全依心想。便成宫殿。答。彼大千国土等。咸是妙明真心所现若离真心。毕竟无有。全依幻化力故。复以大千国土而为宫殿。是为万法而由我者也)。 <br/>
 归命十方调御师　　演扬清净微玅法 <br/>
@@ -531,7 +552,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (千手眼修行仪云。二手各作金刚拳。施进慧力相钩。胷前微动。诵真言曰)。 <br/>
 唵斡资啰(二合)拶裓啰(二合)吽[口*邦]斛 <br/>
-<br/>
+2985 <br/>
 <br/>
 (师印呪可知。应想心间字种放光。至色究竟天上。召请智观世音。来入道场。此智观世音。即放无量光。召请一切三宝。及显密护神。来至道场。重重无尽。问。于此教门。但说果主因伴。今何得因为主。果为伴耶。答。此有二义。一。行者以观音为所缘熟境。故先契此境。后契诸佛之境。然观音放光召请诸佛。亦犹行者召请观音者也。今藉观音请佛。非为主也。二。此菩萨。即是过去威德自在光明王如来退位度生。即果位也。若或为主。亦无过也建坛仪云。若无坛佛。应结纔发意转法-轮印。印现坛仪。千手眼观自在仪轨云。二手各作金刚拳。进力檀慧相钩结。又云。即结纔发意转法-轮菩萨印。以印置于身前。坛上即成莲花部徧调伏大曼拏啰。以印安于心上。即自身成大曼拏啰。以印触本尊像等。皆成大曼拏啰。以印置身前空中。即满虗空界。成大曼拏啰。行者设有越法。悞失三业。破三昧耶戒。由结此印。诵真言。加持故。能除诸过。皆得圆满。然后恭申情旨)。 <br/>
 <br/>
@@ -603,7 +624,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 次结运心供养印 <br/>
 <br/>
-<br/>
+2986 <br/>
 那麻萨哩斡(二合)答塔葛的毗牙(二合)月说穆契毗牙(二合)唵(引)萨哩斡(二合)哩塔乌忒葛(二合)的斯帕啰纳兮慢葛葛捺龛莎诃 <br/>
 <br/>
 (苏悉地羯罗供养法云。两手外相义合掌。以右压左。置于顶上。凡作供养。应具此法。至诚信心。及奉阏伽。皆以真言手印。持诵成就。及以运心合掌。至顶方成圆满供养之法。 <br/>
@@ -620,7 +641,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (一旧作遣魔印)。 <br/>
 唵(引)斡资啰(二合)拽屹彻(二合)吽 <br/>
-<br/>
+2987 <br/>
 (师印呪可知。应想掌中。有赤色◇字。字脚放光。从三尖出。作摇扇势。遣食器上魔。问。食器上有何等魔。答有寻香食施食等魔碍。故今遣之也藏本云。将奉三宝施食。先结三尖印。圣宝藏神仪轨经云。献佛印。以右手大指捻小指甲。余三指如金刚杵。相向上而转作献佛印)。 <br/>
 我以佛神力　　依教诵密言 <br/>
 加持甘露食　　变满虗空界 <br/>
@@ -629,7 +650,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (二羽虚合掌。如莲花状。竖立胷前诵真言)。 <br/>
 唵莎巴斡秫塔萨哩斡(二合)塔哩麻(二合)莎巴斡秫徒[亢*欠]唵(引)哑吽 <br/>
-<br/>
+2988 <br/>
 <br/>
 (师印呪可知。应想食器及食悉皆空寂。以分断食。多染触故。故今空之。极令清净。于其空处。应想三个◇喷[口*(隆-一)]（二合）字。字皆金色。变成食器。于食器中。想白色◇唵字。变成胜妙饮食。皆醍醐奶酪。及麨蜜等味。默净念唵哑吽二十一遍。极令广大已。复念拶吽[口*邦]斛。而作手印。想令前来所观三宝海会。分明显现。再伸五供养施宝错念思麻啰等呪。想三宝摄受。初一分奉佛并法。衣一分奉菩萨圣僧。后一分奉显密护神等。既奉献已。然后作掬水势念云)。 <br/>
 以此甘露食　　奉献诸圣贤 <br/>
@@ -637,7 +658,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 次结奉食印 <br/>
 <br/>
-<br/>
+2989 <br/>
 唵(引)哑葛噜穆看萨哩斡(二合)塔哩麻(二合)喃哑牒耶(二合)奴忒班答奴唵哑吽帕咤莎诃 <br/>
 (仰二手二掌向前侧相着。二无名指头侧相着。微曲二头指博着中指侧。二大指博着头指侧。小似掬水相。想诸佛子等。徧奉受用。生欢喜心。求索显事。必蒙允许。广迎圣众入坛。即以香花灯涂等。而为供养之)。 <br/>
 <br/>
@@ -666,7 +687,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 次入观音禅定 <br/>
 <br/>
-<br/>
+2990 <br/>
 (以上供养三宝。是作福门。有福而无智。则落于人天因果。今若修习此观音禅定。则有智。既具福智。即同诸佛。然后于法界众生能作利益。侍者白云。次入观音禅定。师作禅定。维那伸偈。其声贵柔和清亮。不可雄厉。恐妨观想。又不可太近世俗儿女之声。 <br/>
 <br/>
 当入定时。闭目澄心。观想自身中。圆满洁白。犹如净月。于心净月上。想[口*纥]哩字放大光明。其字变成八叶莲花。上有观自在菩萨相好分明。左手持莲花。右手作开敷势。作是思惟。一切有情身中。有此觉悟之花。清净法界。不染烦恼。莲花八叶上。各有如来入定跏趺而坐。面向观自在。项佩圆光。身如金色。光明晃曜。想此八叶莲花。渐舒渐大。量等虗空。以此觉花照触如来海会愿成广大供养。以此觉花蒙照触者。于诸苦恼。悉得解脱。等同菩萨相好。即想莲花渐收。量等己身。结印念呪。加持四处。以此加持。令身坚固。所谓顶喉心脐。每于印处成[口*纥]哩（二合）◇字。其字印以二手外相叉。二头指相拄如莲花叶。二大指并竖。即诵观自在菩萨真言。观音禅定偈)。 <br/>
@@ -700,7 +721,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 观音禅定印 <br/>
 <br/>
 唵(引)斡资啰(二合)塔啰麻(二合)[口*纥]哩(二合) <br/>
-<br/>
+2991 <br/>
 (次入。蹑前生后。三摩地。即是闻尘。澄心。则清净之时也。内不放出。闭目。则观想之时也。外缘不入。 <br/>
 问。心无所在。安得有中。 <br/>
 答。此明肉团心也。以灵知之心。栖止于肉团之心内。故师当于此。作六禁反偈之略也。其说应当于心尖上想一红色◇[口*邦]字。变成杂色。八叶莲花。花上想白色◇阿字。变成月轮也。圆满皎洁者。心之体用也。圆而满。则无德不备体也。 <br/>
@@ -730,7 +751,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (两羽金刚拳。施慧两相钩进力竖相拄。念想开地狱三诵三掣开。真言曰)。 <br/>
 那麻阿瑟咤(二合)瑟咤(二合)摄谛喃三藐三勃塔俱胝喃唵(引)撮(引)辣(引)纳嚩婆细提哩提哩吽 <br/>
-<br/>
+2992 <br/>
 <br/>
 (师印呪可知。应想自身增长红色观音。一面二臂。舌上。心间。印上。三处皆有红色[口*纥]哩（二合）◇字放光。如日初出之光。照触地狱。悉皆破坏。 <br/>
 问。一处放光。足以破之。何用三乎。 <br/>
@@ -743,8 +764,8 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 答。我虽以智照。知其本空。彼无智照。焉得不苦。故圆觉经云。梦时非无。及至于醒。了无所得。今正欲破此地狱及苦空也若惟原之。彼以恶业因缘而成。地狱则知非本有矣。我今以智照因缘。而为之破。岂不破乎一禅定。二手印。三真言。四作观。五智照。有此五种因缘。何事不办。岂惟破地狱乎。今世学者。滥称阇黎。惟是音声振铃击节。虑恐负于请主之意者。多矣。可不慎与)。 <br/>
 <br/>
 (此印呪出破阿毗地狱智炬陀罗尼经。又准灭恶趣王本续说。手结密印。从印流出火光。口诵神呪。口出无量火光。心月轮上。红色[口*纥]哩（二合）◇字放赤色火光。三光同照。阿毗地狱等。三诵三掣。关鎻自开。所有罪人。悉皆得出)。 <br/>
-<br/>
-<br/>
+2993 <br/>
+2994 <br/>
 <br/>
 (此举难破。偏言地狱。若准下文。理应光照。通余五趣。意令专注。故偏举此。别行经云。此呪若诵一遍。无间地狱。碎如微尘。于中受苦众生。悉生极乐世界。金刚顶莲花部心念诵仪轨。云。次结开门契。二羽金刚拳。檀慧相应钩。进力竖侧合。每诵真言时。应吽而擘开。千手千眼修行仪轨云。此印亦名警觉一切如来印。由结此警觉一切如来印故。一切如来。皆从定起。加护摄受。云云)。 <br/>
 <br/>
@@ -831,7 +852,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (左羽作无畏相直前舒掌竖掌向外右羽向前竖四度微曲进度钩召真言曰)。 <br/>
 唵即纳即葛移希曳(二合)歇莎诃 <br/>
-<br/>
+2995 <br/>
 (此印呪。出焰炽饿鬼母本续。自身想观自在菩萨。心月轮上想。红色◇[口*纥]哩（二合）字。印及字母。流出光明。照彼罪人。口诵神呪。随光来至行者面前。大众赞善安慰。既至道场。遶佛三匝。投身布礼。至回向已。还礼圣众。退坐一面。从坛东门至于南门。地狱众居。南门至西南隅。饿鬼众居西南隅至西门。畜生趣居。自西门至西北隅。人趣宫室。西北隅至北门。修罗所居。北门至东门。天仙所居。或无坛室。自上至下。胜劣居之。亦得重座。色印如开合录说)。 <br/>
 既召请已。普皆云集。以愍念心。赞叹慰喻。令欢喜已。渴仰于法。 <br/>
 善来诸佛子。曾结胜缘故。 <br/>
@@ -846,7 +867,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (二羽金刚缚忍愿伸如针进力曲如钩召罪真言曰)。 <br/>
 唵萨哩斡(二合)巴钵羯哩(二合)沙拏(二合)月戍驮纳斡资啰(二合)萨埵萨麻耶吽拶 <br/>
-<br/>
+2996 <br/>
 (师印呪可知。应想于二中指尖上。想白色[口*纥]哩（二合）◇字出光。入彼身中。出其罪犹如烟雾而合。问。罪无实体。云何今说。如彼烟雾出。有实体耶。答虽无实体能充塞天地。障蔽心目。不能得见诸佛清净境界。今借诸雾。为所缘相。以召其罪。钩罪契经云。曲进力度于忍愿。皆作跋折啰服形。勿相拄着。观自身成观自在菩萨。心月轮上。想白色[口*纥]哩字。出钩火光。口出秘密言。钩摄一切有情。三恶趣业。并自身三恶趣业。黑色如云雾。众罪召入掌。变成诸鬼形。金刚顶瑜伽念诵云。诵此秘密时。想彼罪形。如鬼。黑色发竖。即以二羽诸度。各各相钩。头入掌内。想以进力二度。钩夹彼罪。令入掌中。随结摧罪印相余度面各相捻。忍愿二度直伸如针)。 <br/>
 摧罪诸恶业　　犹如劫火灭 <br/>
 火灭还曾有　　金刚碎微尘 <br/>
@@ -854,7 +875,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 次结摧罪印 <br/>
 <br/>
 唵斡资啰(二合)巴尼月斯普(二合)咤耶萨哩斡(二合)阿巴耶班塔拏尼不啰(二合)穆恰耶萨哩斡(二合)阿巴耶葛谛毗药(二合)萨哩斡(二合)萨埵喃萨哩斡(二合)答塔葛达斡资啰(二合)三麻耶吽怛啰咤 <br/>
-<br/>
+2997 <br/>
 <br/>
 (师印呪可知。于二中指尖上。左想怛啰（二合）◇卂字。右想咤◇字。并金色。廖当行人身自增长作青色绿色。观音菩萨之身。每念呪一遍。二中指摩摇。至后一遍叉过拍手作声。想彼罪山。犹如瓦塌而倒。前来所召之罪。如烟雾者。应念而散。问。罪无体相。云何摧耶。答。正谓之无故摧也。若决定有。岂能摧耶。卂◇)。 <br/>
 <br/>
@@ -866,7 +887,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (二羽金刚掌进力屈二节禅智押二度净业真言曰)。 <br/>
 唵斡资啰(二合)葛哩麻(二合)月束塔耶萨哩斡(二合)阿咓啰拏你(二合)菩塔萨底曳(二合)纳三麻耶吽 <br/>
-<br/>
+2998 <br/>
 <br/>
 (师印呪可知。心月轮上。想一青色[口*纥]哩（二合）◇字出光。照前诸鬼众。所有诸佛出世不通忏悔之业。应想自性清净。本无作想。观彼鬼众。及佛与心。三无差别。是名破决定业也。此一法正是断所知障。学者须知之)。 <br/>
 <br/>
@@ -878,7 +899,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (二羽金刚缚进力屈二节禅智押二度忏悔真言曰)。 <br/>
 唵萨哩斡(二合)巴钵月斯普(二合)咤怛贺纳斡资啰(二合)耶莎诃 <br/>
-<br/>
+2999 <br/>
 <br/>
 (师印呪可知。应想二屈指上。有白色[口*纥]哩（二合）◇字。入彼鬼身。如日烁露之状。罪垢销镕。犹如墨汁。从足流下。渗入地中。至金刚际。问。前来既召既摧既破。今复为忏悔何耶。答。前来并是理忏悔。今者方是事忏悔。理事无碍故不滥也。又问。何罪如墨汁。答罪者。黑业也。故以黑表。汁有流注之义。故云。如墨汁者也)。 <br/>
 诸佛子等。既忏悔已。百劫积集罪。一念顿消除。如火焚枯草。灭尽无有余。 <br/>
@@ -888,7 +909,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (或云施清凉印。即以右羽转腕向前。进禅度相弹。施甘露真言)。 <br/>
 那谟苏噜帕耶答塔葛达耶怛牒塔唵酥噜酥噜钵啰(二合)酥噜钵啰(二合)酥噜莎诃 <br/>
-<br/>
+3000 <br/>
 <br/>
 (师印呪可知。结印诵呪想左手愿上。有一白色鑁◇字。流出甘露如水。银。色。是真智所成。右手点取。弹洒虚空。想诸天及人鬼等类。触此甘露悉具色相。猛火悉灭。普得清凉。离饥渴想灭心执障)。 <br/>
 <br/>
@@ -898,7 +919,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (仪轨经云。左羽想持莲花。右羽忍禅弹作声。随诵而弹之开咽喉真言曰)。 <br/>
 唵那谟巴葛咓谛月补辣葛得啰(二合)耶答塔葛达耶 <br/>
-<br/>
+3001 <br/>
 <br/>
 (师印呪可知。结印诵呪。左手掌中。想一青色莲花莲花上想一白色阿◇字。流出性水。极甚清冷。右手点取。弹洒虚空。想诸鬼众。得触此水。咽喉广大。清凉润泽。无所障碍。问。何前来多用[口*纥]哩（二合）◇字。此独用◇字。何也。答。阿字是语种。故依三本而续用之也)(此广博身如来开咽喉印。依唧怛哩法师说。师是加行位菩萨知之。自身想观自在菩萨。心月轮上。想白色[口*纥]哩（二合）◇字出光。照前鬼神等。手结施清凉印。口诵心密言。并忍禅开左手莲花时。想鬼神等咽喉自开。通达无碍。便得出声。接得名号。随闻记云。右手禅度上。想一月轮。轮上想一白色阿◇字。流出般若甘露法水。以忍禅弹时。左手莲花开拆。甘露满中。想诸鬼神。咽喉开通。清凉润泽。无所障碍)。 <br/>
 语诸佛子。今为汝等。作印呪已。咽喉自开。通达无碍。离诸障难。 <br/>
@@ -908,7 +929,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (二羽金刚掌。六度内相义。进力头相拄。禅二羽金刚。掌。六度内相义。进力头相拄。禅智侧竖立。称赞七佛。由二益故一则总能灭除诸业报障。二乃庄严役等令成法器)。 <br/>
 那谟啰怛纳(二合)怛啰耶答塔葛达耶 <br/>
-<br/>
+3002 <br/>
 (诵彼如来。结彼手印。应不离自身观音也)。 <br/>
 诸佛子等。若闻宝胜如来名号。能令汝等。尘劳业火。悉皆消灭。 <br/>
 <br/>
@@ -916,19 +937,19 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (右羽胸前竖。忍禅智相捻。掌覆指下垂。左掌仰上舒)。 <br/>
 那谟微葛怛得啰(二合)纳耶答塔葛达耶 <br/>
-<br/>
+3003 <br/>
 诸佛子等。若闻离怖畏如来名号。能令汝等。常得安乐。永离惊怖。清净快乐。 <br/>
 <br/>
 南无广博身如来 <br/>
 <br/>
 那谟巴葛咓谛月补辣葛得啰(二合)耶答塔葛达耶 <br/>
-<br/>
+3004 <br/>
 诸佛子等。若闻广博身如来名号。能令汝等。饿鬼针咽。业火停烧。清凉通达。所受饮食。得甘露味。 <br/>
 <br/>
 南无妙色身如来 <br/>
 <br/>
 那谟苏噜叭耶答塔葛达耶 <br/>
-<br/>
+3005 <br/>
 诸佛子等。若闻妙色身如来名号。能令汝等。不受丑陋。诸根具足。相好圆满。殊胜端严。天上人间。最为第一。 <br/>
 <br/>
 南无多宝如来 <br/>
@@ -936,12 +957,12 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 (二羽虚合掌。胷前莲花状)。 <br/>
 那谟波虎啰怛纳(二合)耶答塔葛达耶 <br/>
 诸佛子等。若闻多宝如来名号。能令汝等。具足财宝。称意所须。受用无尽。 <br/>
-<br/>
+3006 <br/>
 <br/>
 南无阿弥陀如来 <br/>
 <br/>
 (以右压左。禅智相拄)。 <br/>
-<br/>
+3007 <br/>
 那谟阿弥哆婆耶答塔葛达耶 <br/>
 诸佛子等。若闻阿弥陀如来名号。能令汝等。往生西方。极乐净土。莲花化生。入不退地。 <br/>
 <br/>
@@ -949,7 +970,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 那谟卢迦委斯的(二合)呤捺(二合)第唧说啰不啰(二合)帕耶答塔葛达耶 <br/>
 (右羽曲仰拳。忍禅度相弹。左掌仰上。五指皆舒)。 <br/>
-<br/>
+3008 <br/>
 诸佛子等。若闻世间广大。威德自在。光明如来名号。能令汝等。获得五种功德。一者于诸世间。最为第一二者得菩萨身。端严殊胜。三者威德广大。超过一切外道天魔。如日照世。显于大海。功德巍巍。四者得大自在。所向如意。似鸟飞空。而无阻碍。五者得大坚固。智慧光明。身心明彻。如琉璃珠。 <br/>
 (称赞毕。阿阇黎白云)。 <br/>
 诸佛子等。此七如来。以誓愿力。拔济众生。永离烦恼。脱三涂苦。安隐常乐。一称其名。千生离苦。证无上道(三说)。 <br/>
@@ -963,7 +984,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 次结三宝印 <br/>
 <br/>
 (左羽作拳相竖进度当胷。右手屈力度。心想诵真言)。 <br/>
-<br/>
+3009 <br/>
 唵婆(重呼)龛 <br/>
 南无佛。南无法。南无僧。我今发心。不为自求人天福报。声闻缘觉。乃至权乘诸位菩萨。唯依最上乘发菩提心。愿与法界众生。一时同得阿耨多罗三藐三菩提。 <br/>
 今所发觉心。远离诸性相。蕴处及界等。能取所取执。诸法悉无我。平等如虗空。自心本不生。空性圆寂故。如诸佛菩萨发大菩提心。我亦如是发。是故至心礼。 <br/>
@@ -978,7 +999,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (二羽虚合。如莲花状。以印心上)。 <br/>
 唵补提即答没怛巴达野弥 <br/>
-<br/>
+3010 <br/>
 <br/>
 (师印呪可知应想心佛众生。三无差别。于一念间。融成一广大月轮。如八月十五日夜。中宵无云之时。极甚清凉。皎洁与虚空齐等。于月轮中。想一金色阿◇字。如秋毫之末。非有非无故。当尔之时不得加了于知。上无佛可成下无生可度。中无行可修。烦恼菩提。生死涅盘净尽。此为大要。宜善用心焉。不惟为鬼神作利益。行人不久亦即就此中了解者矣。师诵呪众和三声次白云)。 <br/>
 <br/>
@@ -996,7 +1017,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (二羽金刚缚。忍愿申如针。诵真言曰)。 <br/>
 唵三摩耶萨埵鑁 <br/>
-<br/>
+3011 <br/>
 <br/>
 (师印呪可知。应想印中有白色鑁◇字。放大光明。普照所请一切有情。彼诸有情。蒙光照及三世诸佛。戒波罗蜜。一时圆满。法界善法。想为光明。流光灌顶。贮彼身中。身同普贤。坐大月轮。绍诸佛职。为佛嫡子也据本文义。无别观想。但如印呪。自成受忏。如金刚顶经说。若诵此呪一遍。如入坛轮。证三摩提。一切善法。皆悉满足。三聚净戒。俱时圆满。身同普贤。坐大月轮。一切诸佛。忆昔本誓观察护念。设有人曾受佛戒。恶心破毁。不复清净者。若诵此呪一七遍已。破戒罪垢。悉得清净。一切戒品。还得如故。一切坛法。未经师受诵呪七遍。即许行作。不成盗法)。 <br/>
 <br/>
@@ -1008,7 +1029,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (藏本云。左印想持器右羽弹忍禅。随闻记云。想字有据作如字。理甚允当。行者思之)。 <br/>
 嚩萨哩斡(二合)答塔葛达阿咓卢揭谛鑁婆啰鑁婆啰三婆啰三婆啰吽 <br/>
-<br/>
+3012 <br/>
 <br/>
 (师印呪可知。侍者取水点腕中及桶中。退坐本位。师应以右手怖畏弹指遣左手魔碍。念云吽吽癹怛。念三遍。问。手有何魔耶答。为手中有诸尸虫。次变空念云。唵[亢*欠]或三遍。问。变空此手。其意如何。答。以此手是赤白二种不净所成。故空之。令成胜妙功德庄严手也。问。前来入禅定。则自己是菩萨。今复何故又遣魔变空。答。法华经云。世尊说无量义已。又入三昧放光。至开宝塔又入定放光。岂不滥耶。盖因一事而彰一法。譬乎世礼。祀宗庙之人。非不斋戒沐浴。及至登殿之时。却又盥手。何也。为表敬也。今再遣魔变空。表慈之深。悲之极。用心之切也。次于一念间。顿成胜妙之手。于手掌中。出一红色[口*邦]◇字。变成红色莲花。花上想一白色鑁◇字。明点中流出无尽饮食。想面前水器。尽成摩竭陀国之斛。七宝严饰。满盛胜妙食等。然后想此字种。流出无尽饮食变满法界。念唵◇阿◇[口*纥]哩（二合）◇吽◇呪一百八遍。或四十九遍。当自知时。次念变食呪。每一念于明点中。想取饮食弹洒虗空)。 <br/>
 <br/>
@@ -1020,7 +1041,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 复结前印诵乳海真言 <br/>
 <br/>
 那麻三鬘哆勃塔喃鑁 <br/>
-<br/>
+3013 <br/>
 <br/>
 (师印呪可知。应想明点中。流出甘露。以右手点取。弹洒虗空。如雨注下。凡所至处。即成长河酥酪也。问。何以少小器水等。徧满法界。答。心力难思。故也。况又藉神呪。及字种观想等力乃至诸佛。冥加禅定之力。岂不能变小成大。化少为多也。且如乐巴一巵之酒。以术力尚能化为霖雨。何呪神呪难思之力者乎。行者亦不可不专注用心也。又问。何故不以饮食施之。却用水也。答。彼鬼趣多为业火所烧。故今以水施之。沃灭其业火。佛云。彼鬼等。百千万劫。不闻浆水之名。何况得饮。又云。彼鬼在恒河边而不见水。设使得见。变成脓血。若饮之时。入腹化为猛焰。热烧心腹。难堪痛苦。悲哉。悲哉。故今以水施之。体此意也。又番本云。苏噜巴。此云水。施食则知本乎施水矣。今世俗不知。多用施食水亦失矣。况今施食。亦不专用水。彼器中皆投饭。七粒徧十方是也。故勿疑诸耳)。 <br/>
 <br/>
@@ -1030,7 +1051,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 次诵障施鬼真言 <br/>
 <br/>
 唵哑吽拶辣弥担萨哩斡(二合)不哩(二合)的毗牙(二合)莎诃 <br/>
-<br/>
+3014 <br/>
 (师印呪可知。应埀展右羽想右掌中有一鑁◇字。明点中流出甘露。从左掌而下。念唵◇哑◇[口*纥]哩（二合）◇吽◇字一百八遍。或三七遍皆可。侍者至师前作礼。取净瓶出坛将净水徐徐注下。师至唱时。想彼障施鬼。悉皆胡跪。师想自身观音。徧至其前。而施甘露。从顶上入。灭其业火而得清凉。呪三遍各弹指一下。呪三遍或七遍。障施鬼等饱满欢喜。弹指一下。是时行者。即以右羽持甘露器。面向东立。泻于坛前。或净地上。或于石上。或新净瓦盆。亦名盂兰盆。生台亦得。或泉池河海长流水中。不得泻于石榴桃树之下。鬼神惧怕。不得食之。若圣众坛中。明王诸天。若施饮食。置生台上。是本法也。若供养诸佛圣众。于上五更晨朝日出是供养时。若鬼神法。于人定亥时。本人定时。阿阇黎法。若于斋时。尽于一日。但加持饮食水等。布施飞空乌兽水族之类。不拣时节。但用施之。若作饿鬼施食之法。当于亥时。若于斋时施饿鬼食者。徒设功劳。终无効也。不是时节。妄生虗诳。鬼神不得食也。不从师得。自招殃咎。成盗法罪。佛说普贤曼拏罗经云。左手弹指。一切善事。速疾成就。右手弹指。速疾集会苏悉地羯罗供养法云。两手各作弹指。是辟除法也)。 <br/>
 <br/>
 诸佛子等。虽复方以类聚。物以羣分。然我所施。一切无碍。无高无下。平等普徧。不择冤亲。汝等今日。勿得以贵轻贱。以强凌弱。拥遏孤幼。令不得食。使不均平。越佛慈济。必须互相爱念。犹如父母忆子之想。语诸佛子。汝等各有父母。兄弟姊妹。妻子眷属。善友亲戚。或有事缘。来不得者。汝等佛子。慈心爱念。各各賷持饮食钱财物等。递相布施。充足饱满。无有乏少。令发道意。永离三涂。长越四流。当舍此身。速超道果。又为汝等。将此净食。分为三分。一施水族。令获人空。二施毛羣。令获法寂。三施他方。禀识陶形。悉令充足。获无生忍。 <br/>
@@ -1040,7 +1061,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 次结普供养印 <br/>
 <br/>
 唵葛葛纳三婆斡斡资啰(二合)斛 <br/>
-　　(师印呪可知。应想屈中指处。想白色唵◇字。明点中流出无尽供养。具足庄严平等供养。同声念普供养真言或五遍或七遍。问。最初既奉献三宝施食已竟。今复何故作此供养。答。前来所作。由拣圣凡。故奉献三宝后施鬼众。今融以平等故。圣凡交彻。所以普供养也。维那白从来所受饮食文毕。师应作五供养施宝错。念斯麻啰等呪)。 <br/>
+3015　　(师印呪可知。应想屈中指处。想白色唵◇字。明点中流出无尽供养。具足庄严平等供养。同声念普供养真言或五遍或七遍。问。最初既奉献三宝施食已竟。今复何故作此供养。答。前来所作。由拣圣凡。故奉献三宝后施鬼众。今融以平等故。圣凡交彻。所以普供养也。维那白从来所受饮食文毕。师应作五供养施宝错。念斯麻啰等呪)。 <br/>
 <br/>
 (无量寿如来仪轨云。次结大虗空菩萨印。二手合掌。二中指。右押左。外相叉。博着手背。二头指相蹙如宝形。即成想从印中流出。无量诸供养具。衣服饮食等)。 <br/>
 <br/>
@@ -1104,7 +1125,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 (二羽金刚拳。进力两相钩。随诵而掣开。金刚解脱真言曰)。 <br/>
 唵斡资啰(二合)穆 <br/>
-<br/>
+3016 <br/>
 (师印呪可知。想诸佛菩萨。及六道四生。悉皆不现。二善根圆满者。谓举施食功德殊胜行偈。众同音和。问。既是奉送已。诸佛菩萨不现。谁为证明。答。此显来实无来。去实无去也。三宝常住世间。且如法华经云。多宝佛塔。还可如故。而妙音菩萨来。多宝佛与塔。未常不在也。若夫请之则实来。送之则实去。何异鬼乎。学者思之。复念金刚萨埵百字呪。三遍补阙)。 <br/>
 <br/>
 金刚萨埵百字呪 <br/>
@@ -1157,7 +1178,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 跋 <br/>
 <br/>
 余髫年时。侧聆先师。祖垂训曰。既得出俗为僧。当发大弘誓愿。凡利生接物之阴功。惟焰口一事为最大因。二六铭心。随取瑜伽密部。澄神而习绎之。不辍昼夜者。今将二十年矣。盖阅诸家登坛演习。繁简不同。为有七家焰口八家忏之讹传。致令好新奇杜撰之端。因兹始矣。所以参差百等。诸方不能一揆也。故今繁简得中悉遵天机大师行[窾-士+上]。并纂内法师所集本部注文。合成一帙。名注集纂要。呈鉴诸方高贤达士。若以为可。愿广流通大地。若以为不可。乞垂慈诲片言。愽笑大方。合十云耳。 <br/>
-旹丙辰秋日法云后学寂暹跋并书 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div>大地修行者发表于 2010-2-3 15:41<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">现世之中未证菩提间　　愿无内外障难恶缘等 <br/>
+旹丙辰秋日法云后学寂暹跋并书 </div></div><div class="post"><div class="post-header"><div class="avatar">大</div><span style="font-size:15px; letter-spacing:1px;">大地修行者发表于 2010-2-3 15:41</span><div class="badge-floor">第 2 进</div></div><div class="post-body">现世之中未证菩提间　　愿无内外障难恶缘等 <br/>
 恒常遇逢最妙善知识　　所修善事行愿速成就 <br/>
 最上三宝 <br/>
 临命终时识性无迷惑　　愿生西方净土如来前 <br/>

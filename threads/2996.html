@@ -1,50 +1,71 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>依《十住毗婆沙论》谈念佛与般舟三昧修持 - 藏密修海</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>依《十住毗婆沙论》谈念佛与般舟三昧修持 - 藏密修海典藏</title>
 <style>
-:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
-.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
-.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+:root { 
+    --bg: #0d0a09; 
+    --surface: rgba(24, 18, 16, 0.85); 
+    --surface-solid: #1a1412;
+    --text: #dfd5c5; 
+    --text-muted: #8b8073; 
+    --primary: #d4af37; 
+    --primary-hover: #f1c40f; 
+    --accent: #8a1c1c; 
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
+h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto Serif SC', serif; }
+.navbar { background: rgba(13, 10, 9, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212, 175, 55, 0.15); position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+.navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-.hero { position: relative; text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; margin-bottom: 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; bottom: -50px; left: 0; right: 0; height: 100px; background: var(--bg); transform: skewY(-3deg); }
-.hero h1 { font-size: 42px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-.hero p { font-size: 18px; opacity: 0.8; margin: 0; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.hero { position: relative; text-align: center; padding: 100px 20px; background: radial-gradient(circle at center, #2d0f0f 0%, #0d0a09 100%); color: var(--primary); margin-bottom: 20px; overflow: hidden; border-bottom: 2px solid rgba(212, 175, 55, 0.1); }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.5; }
+.hero::before { content: '༄༅།།'; position: absolute; font-size: 180px; opacity: 0.05; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); white-space: nowrap; pointer-events: none;}
+.hero h1 { font-size: 46px; margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
+.hero p { font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; letter-spacing: 1px;}
 
-.cat-title { font-size: 24px; font-weight: 700; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; color: #111827; }
-.cat-title::before { content: ""; display: inline-block; width: 6px; height: 24px; background: var(--primary); margin-right: 12px; border-radius: 3px; }
-.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.forum-card { display: flex; align-items: center; background: white; padding: 20px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; }
-.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 20px -5px rgba(0,0,0,0.1); border-color: rgba(59, 130, 246, 0.3); }
-.f-icon { font-size: 32px; margin-right: 16px; opacity: 0.9; }
-.f-name { font-weight: 600; font-size: 16px; color: #1f2937; margin-bottom: 4px;}
-.f-count { font-size: 13px; color: var(--primary); font-weight: 500;}
+.cat-title { font-size: 24px; font-weight: 700; margin: 50px 0 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; color: var(--primary); }
+.cat-title::before { content: "❖"; margin-right: 12px; font-size: 20px; opacity:0.8;}
+.forums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.forum-card { display: flex; align-items: center; background: var(--surface); padding: 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-decoration: none; color: inherit; transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.03); position:relative; overflow:hidden;}
+.forum-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: var(--accent); transition: width 0.3s ease; opacity: 0.8;}
+.forum-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.8); border-color: rgba(212, 175, 55, 0.3); }
+.forum-card:hover::before { width: 100%; opacity: 0.05; background: var(--primary);}
+.f-icon { font-size: 34px; margin-right: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.f-name { font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 1px;}
+.f-count { font-size: 13px; color: var(--primary); font-weight: 500; opacity: 0.8;}
 
 /* Threads UI */
-.breadcrumb { font-size: 14px; margin-bottom: 20px; color: var(--text-muted); }
-.breadcrumb a { color: var(--primary); text-decoration: none; }
-.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb { font-size: 14px; margin-bottom: 25px; color: var(--text-muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; transition: 0.2s;}
+.breadcrumb a:hover { color: #fff; text-shadow: 0 0 10px rgba(212,175,55,0.5); }
 
-.thread-row { display: flex; align-items: center; justify-content: space-between; background: white; padding: 18px 24px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border: 1px solid #f3f4f6; transition: all 0.2s; text-decoration: none; color: inherit; }
-.thread-row:hover { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0,0,0,0.05); border-color: #dbeafe; }
-.thread-row h2 { font-size: 18px; margin: 0; font-weight: 600; color: #1e293b; }
-.th-meta { font-size: 13px; color: #94a3b8; }
+.thread-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-solid); padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; color: inherit; border-left: 3px solid rgba(212,175,55,0.2);}
+.thread-row:hover { transform: translateX(5px); border-left-color: var(--primary); background: #221a18; }
+.thread-row h2 { font-size: 17px; margin: 0; font-weight: 600; color: #f5eedf; line-height: 1.5; padding-right: 15px;}
+.th-meta { font-size: 12px; color: #786d62; font-family: monospace;}
 
-.post { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
-.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; }
-.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
-.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; }
+.post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
+.post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
+.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
+.post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
+.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+
+.search-container { margin-bottom: 50px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
+.search-container input::placeholder { color: #6b6054; }
+.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
+.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
+.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
-<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="navbar"><a href="../index.html">← 归转主脉</a><h1>藏密修海 ❖ 典藏经阁</h1><div style="width:70px"></div></div>
 <div class="container">
-<div class="breadcrumb"><a href="../index.html">首页</a> / <a href="../forums/般舟三昧成就法.html">般舟三昧成就法</a> / 正文</div>
-<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">依《十住毗婆沙论》谈念佛与般舟三昧修持</h1>
-<div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-1-8 09:55<span style="margin-left:auto; background:linear-gradient(135deg, #10b981 0%, #059669 100%); color:white; padding:4px 10px; border-radius:12px; font-size:12px; font-weight:bold; letter-spacing:1px; box-shadow:0 2px 6px rgba(16,185,129,0.3); border:1px solid #34d399;">👑 楼主 / 主帖</span></div><div class="post-body">依《十住毗婆沙论》谈念佛与般舟三昧修持 <br/>
+<div class="breadcrumb"><a href="../index.html">宗纲概览</a> / <a href="../forums/般舟三昧成就法.html">般舟三昧成就法</a> / 经轴正文</div>
+<h1 style="margin-bottom: 50px; font-size: 32px; line-height: 1.4; font-weight: 700; color: var(--primary); text-align:center;">依《十住毗婆沙论》谈念佛与般舟三昧修持</h1>
+<div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2008-1-8 09:55</span><div class="badge-op">❖ 首发主帖</div></div><div class="post-body">依《十住毗婆沙论》谈念佛与般舟三昧修持 <br/>
 <br/>
 根据慈法法师开示录音整理 <br/>
 <br/>
@@ -58,7 +79,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 般舟三昧进趣细则：在家二十法 <br/>
 般舟三昧进趣细则：出家六十法之一 <br/>
 般舟三昧进趣细则：出家六十法之二 <br/>
-般舟三昧五十余助法及修持果报 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-1-8 09:59<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 2 楼</span></div><div class="post-body">生如来家：般舟三昧为父，大悲为母 <br/>
+般舟三昧五十余助法及修持果报 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2008-1-8 09:59</span><div class="badge-floor">第 2 进</div></div><div class="post-body">生如来家：般舟三昧为父，大悲为母 <br/>
 开启心灵如意宝藏，是我们大家的一个共同愿望，或称目的、发心、动机。因为从佛菩萨声闻缘觉到地狱饿鬼畜生，十法界有情没有一个能离开心灵的含摄，心灵之宝藏，各个有情悉皆具足，只是其开启方法，形形色色、随机不同。我们如何来运用这个宝藏、在此得到如意自在呢？这就需要用法则来纯熟我们心灵的自在之力、本源之力，使其庄严世间、利益有情。所以，接下来我们以“开启心灵如意宝藏”之愿望为纲要，依《十住毗婆沙论》中有关念佛及般舟三昧修持的法则进行深入学习。 <br/>
 <br/>
 《十住毗婆沙论》，是圣龙树菩萨所施教的文字。学习论之前，我们需要先对论主有所了解, 不讲论主生平，犹如此水无源。圣龙树菩萨，在中国佛教史上被尊为“印度第二世尊”、“八宗之祖”、“唐密初祖”。对于龙树菩萨的应世时间，显密二宗是有差异的。若依唐密说法，龙树菩萨约在世尊灭度500岁后，从其国土来此释迦佛遗教国土，打开南天门铁塔，把世尊在世时所施教的教法传播于末世有情。显教中则说龙树菩萨于世尊灭度700岁后应现于世。 <br/>
@@ -81,7 +102,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 龙树菩萨出家后，龙王请其到龙宫诵读经典，于后豁然通达，善了一切相，深入无生，二忍具足。其时，有一国王，甚邪慢，大兴外道、诽谤正法。龙树菩萨为度化他，催伏其邪慢心，恭持赤幡在王宫前经行了七年。幡，有唤醒人之意，过去寺院念佛堂口必有幡，若有人困了，巡幡人就会拿幡在其面前晃一下。于后此王受其教化，尤为恭敬。 <br/>
 龙树菩萨一生奇迹很多，一直到最后用草把脑袋割下来。记载说龙树菩萨活了八百岁，他修有长寿法，活一劫两劫其实是不成问题的，但在八百岁时，有一个国王当时三百多岁不死，其太子已两百多岁，说，王者不死，我何时登位？谋臣就说：若要父亡，需龙树亡。因他们都是随龙树菩萨学的长寿法。于是王子就找到龙树菩萨，说：我闻菩萨行法忍，一切物皆予布施，我要菩萨的头。龙树菩萨说：行啊。但王子怎么也砍不下龙树的头。龙树菩萨说，我杀业已尽，用刀是不行的，只是尘沙劫前，我用草斩杀虫命，此报未尽。于是太子就摘了一根草，一划就取下了龙树菩萨的头。 <br/>
 <br/>
-龙树菩萨做了很多奇特之事，因为是他方世尊，很清晰、不迷失。所谓迷失，就是不能自制，迷失自己身口意三业的自制力，迷失三业的抉择，迷失三业的未来延续。我们大家不要认为“迷失”二字是别人的事，一天中真正有多少时间，我们的身口意三业是自主的、依正二报是调柔的？这是我们需要自己审视的 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-1-8 10:02<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 3 楼</span></div><div class="post-body">十住毗婆沙论 <br/>
+龙树菩萨做了很多奇特之事，因为是他方世尊，很清晰、不迷失。所谓迷失，就是不能自制，迷失自己身口意三业的自制力，迷失三业的抉择，迷失三业的未来延续。我们大家不要认为“迷失”二字是别人的事，一天中真正有多少时间，我们的身口意三业是自主的、依正二报是调柔的？这是我们需要自己审视的 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2008-1-8 10:02</span><div class="badge-floor">第 3 进</div></div><div class="post-body">十住毗婆沙论 <br/>
 <br/>
 圣者龙树菩萨造 <br/>
 后秦龟兹国三藏鸠摩罗什译 <br/>
@@ -139,7 +160,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 念佛是崇高的，缘佛是究竟的，相应是真实的。但很多人轻谤于念佛法，嫌谤于念佛人，而不知念佛法门这种崇高、不可思议的缘起，结果遭到丢失大利的果报。例如经常有念佛人去诽谤修密参禅的，修密参禅的反过来轻贱念佛人，如此大家都有谤法罪。此罪蔽障了法门的传播与清净心智的生起，毁灭人的清净眼目，令人心智混乱、法则混乱，不得安住，有破法、灭法之嫌，是很大的过失。 <br/>
 <br/>
-念南无阿弥陀佛实在是不可思议的福德因缘的成熟，如果没有阿弥陀佛誓愿力的加持，我们不会有这样的福德。所以，念佛人一定不能轻贱，更不要贱他，而应该谦下、慈悲、调柔，不舍苦恼有情。佛在念佛经教中讲：莫生增上慢心，要善密护于身口，何以故？莫做增上慢人，若增上慢人念佛，已失甘露味，不得佛法利益。何以故？此人入魔罥网，已生邪见心，如狂象踏入莲池，会坏人的清净道业、埋没人的清净心智，这是念佛人一定要守护的问题。在果地教言中，密护口业是十分重要的，调柔身心是十分必要的。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-1-8 10:10<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 4 楼</span></div><div class="post-body">十住毗婆沙论卷第九 <br/>
+念南无阿弥陀佛实在是不可思议的福德因缘的成熟，如果没有阿弥陀佛誓愿力的加持，我们不会有这样的福德。所以，念佛人一定不能轻贱，更不要贱他，而应该谦下、慈悲、调柔，不舍苦恼有情。佛在念佛经教中讲：莫生增上慢心，要善密护于身口，何以故？莫做增上慢人，若增上慢人念佛，已失甘露味，不得佛法利益。何以故？此人入魔罥网，已生邪见心，如狂象踏入莲池，会坏人的清净道业、埋没人的清净心智，这是念佛人一定要守护的问题。在果地教言中，密护口业是十分重要的，调柔身心是十分必要的。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2008-1-8 10:10</span><div class="badge-floor">第 4 进</div></div><div class="post-body">十住毗婆沙论卷第九 <br/>
 念佛品第二十 <br/>
 <br/>
 菩萨于初地。究竟所行处。自以善根力能见数百佛菩萨。如是降伏其心深爱佛道。如所闻初地行具足究竟。自以善根福德力故能见十方现在诸佛皆在目前。问曰。但以善根福德力故得见诸佛。为更有余法耶。答曰 <br/>
@@ -154,7 +175,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
     问曰，但以善根福德力故得见诸佛，为更有余法耶？除了以善根福德力见佛，还有别的办法吗？后面答道：佛为跋陀婆，所说深三昧。得是三昧宝，能得见诸佛。龙树菩萨称般舟三昧为深三昧，在蕅益大师所编《净土十要》中有宝王三昧的说法。世尊在成佛后第七年，于竹林精舍为跋陀和菩萨讲《般舟三昧经》，依此三昧修持可得见十方诸佛悉皆现前立。能否得到这样的利益因缘，还是在于大家清净、深入、长久的实践。 <br/>
 <br/>
-若见十方诸佛悉皆现前立，这是个大方便。于此大方便处无染无着，才能清净闻法，与圣义谛教言相应，是为正观。若与圣义谛教言不相应，即染著了，则为邪见，例如有人见过佛后心生骄慢，就看不起念佛没有征兆的人，且不密护三业，而减损自己的福德因缘，结果造成失心果报，这样是说念佛很危险吗？其实我们不念佛更危险，因为我们天天都在失心状态。我们真正能如实知自心吗？真正清净念佛又密护的人是调柔的，是得见自心的人，所以说“见诸佛以明自心”。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-1-8 10:20<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 5 楼</span></div><div class="post-body">跋陀婆罗是在家菩萨。能行头陀。佛为是菩萨说般舟三昧经。般舟三昧名见诸佛现前菩萨。得是大宝三昧。虽未得天眼天耳而能得见十方诸佛。亦闻诸佛所说经法。问曰。是三昧者当以何道可得。答曰 <br/>
+若见十方诸佛悉皆现前立，这是个大方便。于此大方便处无染无着，才能清净闻法，与圣义谛教言相应，是为正观。若与圣义谛教言不相应，即染著了，则为邪见，例如有人见过佛后心生骄慢，就看不起念佛没有征兆的人，且不密护三业，而减损自己的福德因缘，结果造成失心果报，这样是说念佛很危险吗？其实我们不念佛更危险，因为我们天天都在失心状态。我们真正能如实知自心吗？真正清净念佛又密护的人是调柔的，是得见自心的人，所以说“见诸佛以明自心”。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2008-1-8 10:20</span><div class="badge-floor">第 5 进</div></div><div class="post-body">跋陀婆罗是在家菩萨。能行头陀。佛为是菩萨说般舟三昧经。般舟三昧名见诸佛现前菩萨。得是大宝三昧。虽未得天眼天耳而能得见十方诸佛。亦闻诸佛所说经法。问曰。是三昧者当以何道可得。答曰 <br/>
 <br/>
 当念于诸佛　　处在大众中 <br/>
 三十二相具　　八十好严身 <br/>
@@ -202,7 +223,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
     具行毗梨耶波罗蜜精进超绝。即精进。 <br/>
 <br/>
-    具行禅波罗蜜灭诸定障。具行般若波罗蜜能破智慧障碍。具行禅波罗蜜，灭除定障后，则会得定业善巧。人天善巧皆来自于定力，没有定力，是不能促成世间事业之成就的。很多人说自己怎么做事不能成就呢？即是定力不具，福德力不具，智能力不具故。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-1-8 15:47<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 6 楼</span></div><div class="post-body">观佛三十二相八十种好 <br/>
+    具行禅波罗蜜灭诸定障。具行般若波罗蜜能破智慧障碍。具行禅波罗蜜，灭除定障后，则会得定业善巧。人天善巧皆来自于定力，没有定力，是不能促成世间事业之成就的。很多人说自己怎么做事不能成就呢？即是定力不具，福德力不具，智能力不具故。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2008-1-8 15:47</span><div class="badge-floor">第 6 进</div></div><div class="post-body">观佛三十二相八十种好 <br/>
 <br/>
 我们做人做事如何明白自己的心愿？如何恰当地运用自己的发心？如何处理当下的抉择？这都是开启心灵宝藏的话题，对此我们应不断思维、观察、实践、勤奋、正行。在八正道中，正业、正命、正思维是正行的实质内容；正智、正定是正行之力的表现；正见是正行的入手处。在此我们主要谈论的都是正见、正念问题，因为做任何事情，心念为前导，没有正念的支配，我们往往就会心智混乱、迷失前景。 <br/>
 <br/>
@@ -412,7 +433,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 这个次第是十分重要的，因为生喜，心结就容易消除，这是修法的一个状态。“由喜悦而生定”，于是就能真正解决深层次的心结，这样就能令法次第彰显在我们的修行过程中。如果不知道这个次第，有时人会产生一种偶遇的法喜，比如就会说“哎呀，今天打坐念佛很欢喜、很相应！”没有真正于法得到条理性，只是偶然碰上，这样不能形成修法善巧，佛法很难成就。 <br/>
 <br/>
-我们在法的次第上一旦成熟，就可以于有意无意之中进趣胜法之乐。在这个胜法中，我们能战胜贪嗔痴慢疑邪见的逼迫、侵凌，或说缠缚，故有法之乐。这个“胜”，就是不被逼迫、侵害，而可以依其现缘即做师导，即做善友，即做法则，即做成就，也就是在贪嗔痴慢疑生起之刹那、之当下依法而得胜，故所以乐。这是特别重要的修法机遇，就在贪嗔痴慢疑邪见生起之刹那，这个现下若能依法而修持，依法而观察，依法而审视，那就是我们的良师益导，就是我们成道的资粮，由此就会生喜。这个喜就来自于贪嗔痴慢疑生起的当下，一定不要错过这个机会！有人认为等以后没烦恼了再修行，或对自己现前的业习感到自责、后悔，或想逃失、回避，那可就是错失良机了。这真是良机，唯有此处才能真正修行！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-1-8 15:59<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 7 楼</span></div><div class="post-body">观佛法身无染无着 <br/>
+我们在法的次第上一旦成熟，就可以于有意无意之中进趣胜法之乐。在这个胜法中，我们能战胜贪嗔痴慢疑邪见的逼迫、侵凌，或说缠缚，故有法之乐。这个“胜”，就是不被逼迫、侵害，而可以依其现缘即做师导，即做善友，即做法则，即做成就，也就是在贪嗔痴慢疑生起之刹那、之当下依法而得胜，故所以乐。这是特别重要的修法机遇，就在贪嗔痴慢疑邪见生起之刹那，这个现下若能依法而修持，依法而观察，依法而审视，那就是我们的良师益导，就是我们成道的资粮，由此就会生喜。这个喜就来自于贪嗔痴慢疑生起的当下，一定不要错过这个机会！有人认为等以后没烦恼了再修行，或对自己现前的业习感到自责、后悔，或想逃失、回避，那可就是错失良机了。这真是良机，唯有此处才能真正修行！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2008-1-8 15:59</span><div class="badge-floor">第 7 进</div></div><div class="post-body">观佛法身无染无着 <br/>
 <br/>
 净土念佛法门，按教中所说，唯佛与佛能宣化，是三藏十二部中的无问自说之教言，因为一切贤圣都无法涉足于此，唯佛圆满觉者，才能知念佛甚深功德利益，所以又称果地教言。果地，即佛所证，是圣者菩萨无法证到，穷极所思也不能知晓的。净土一法，以果地觉为因地心，是不可思议的大善巧教言，能真正开启一切众生之心智。 <br/>
 <br/>
@@ -488,7 +509,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
     初时随先所念佛见其色像。此处若念阿弥陀佛就见阿弥陀佛，如果见到其他佛了，一定要知道不去随他。因为念不相应，也会出魔乱。但这里不要害怕，所谓乱，就是动摇，就是被蒙蔽，如果择取清晰，就不会乱。比如有人说：“我念阿弥陀佛时出现的是药师佛，那我就改去东方吧。”心一动，就出魔乱了，结果阿弥陀佛念不好了，药师佛也念不好。这是一个不动决定的问题。我们念佛不能动摇，要抉择，如何抉择呢？药师佛来了，我才不管呢，我就念阿弥陀佛，就去西方极乐世界，东方再好也不要去。一旦清净抉择了，就远离魔乱，念佛人在这里一定要清晰、一定要认准。 <br/>
 <br/>
-    见是像已后。若欲见他方诸佛随所念方得见诸佛无所障碍。这里就是一个清晰的抉择，龙树菩萨为我们做了一个佐证：想见阿弥陀佛就见阿弥陀佛，见真切之后，若还想再见药师佛，就可以念药师佛。然后我们还可以问法，乃至问：药师佛，你的十二大愿是真的假的？你什么时候发的愿？这完全可以问啊！我们不要害怕，不要跟佛这么大的距离，这不是轻慢，而是亲近佛。亲近佛，就是不来客套、虚假的！如果明明想问但是不敢问，那不行！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-1-8 16:13<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 8 楼</span></div><div class="post-body">般舟三昧行持法则之一 <br/>
+    见是像已后。若欲见他方诸佛随所念方得见诸佛无所障碍。这里就是一个清晰的抉择，龙树菩萨为我们做了一个佐证：想见阿弥陀佛就见阿弥陀佛，见真切之后，若还想再见药师佛，就可以念药师佛。然后我们还可以问法，乃至问：药师佛，你的十二大愿是真的假的？你什么时候发的愿？这完全可以问啊！我们不要害怕，不要跟佛这么大的距离，这不是轻慢，而是亲近佛。亲近佛，就是不来客套、虚假的！如果明明想问但是不敢问，那不行！ </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2008-1-8 16:13</span><div class="badge-floor">第 8 进</div></div><div class="post-body">般舟三昧行持法则之一 <br/>
 <br/>
 无始以来，生命所延续的本质、本源的法则，为诸佛如来所完整地表达、使用，故为得大自在者，具大雄大力大慈悲。所谓大自在，是本源心智的流淌，它是具足的，无遮无盖的，无有任何变形，无有任何杂染，清净地滋润着世间。 <br/>
 <br/>
@@ -619,7 +640,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 菩提心是我们学佛的基础，实际就是我们现下之心具足大智、大愿、大悲，若能这样认识自己的菩提心，我们就远离了分别对待，可以说是一个真正的学佛者了。 <br/>
 <br/>
-“四能集菩萨所行道法”。行法是一个坚持深入的过程，是需要郑重对待的。如果不见佛，我们怎能闻法？不闻法，怎么自劝劝他？没有意乐和誓愿来自劝劝他，又怎么了晓菩提心？这也是行法的一个次第。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-1-8 16:21<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 9 楼</span></div><div class="post-body">般舟三昧行持法则之二 <br/>
+“四能集菩萨所行道法”。行法是一个坚持深入的过程，是需要郑重对待的。如果不见佛，我们怎能闻法？不闻法，怎么自劝劝他？没有意乐和誓愿来自劝劝他，又怎么了晓菩提心？这也是行法的一个次第。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2008-1-8 16:21</span><div class="badge-floor">第 9 进</div></div><div class="post-body">般舟三昧行持法则之二 <br/>
 <br/>
 人生短暂历程中，我们能自主运用生命的机会有多少？有人计算说，就按人生百年，除去从婴儿、少年到成熟的过程，再除去衰老、病弱、睡眠和烦恼不能自制的时间，我们能比较健康、自主生活的时间大概只有十五年，不到六千天！ <br/>
 <br/>
@@ -705,7 +726,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
 四心无妒嫉。不自高身不下他人。除睡眠盖。 <br/>
 <br/>
-五于佛法僧宝信心清净。与上中下坐深心供养。他有小恩常忆不忘。常住真实语中。是为五。不嫉妒；不贡高、不下劣；不忘人恩德，哪怕点滴；在上、中、下三坐中，即一切因缘中能够欢喜共住，都是我们学佛的好因缘。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-1-8 16:23<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 10 楼</span></div><div class="post-body">般舟三昧进趣细则：在家二十法 <br/>
+五于佛法僧宝信心清净。与上中下坐深心供养。他有小恩常忆不忘。常住真实语中。是为五。不嫉妒；不贡高、不下劣；不忘人恩德，哪怕点滴；在上、中、下三坐中，即一切因缘中能够欢喜共住，都是我们学佛的好因缘。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2008-1-8 16:23</span><div class="badge-floor">第 10 进</div></div><div class="post-body">般舟三昧进趣细则：在家二十法 <br/>
 <br/>
 在难得的人生中洗涤无始以来的心垢，的确需要教法传承，若是没有，洗涤的机会是没有的。虽然此心垢无所得、无所失，一旦蒙上就会使我们在千劫万劫中轮回不休。而世尊住世之传承，能把心垢的本质揭示出来，令我们清净安住，一时回归，也就是说，令我们得到“就路还家”的机遇。还家，即启开如意宝藏，令我们得见自性之取之不尽用之不竭，成就阿耨多罗三藐三菩提。能否就路还家，还在于我们个人现前学佛机遇成熟与否，若成熟，言下即可还家，因为此路就在教言之下、传承之中。 <br/>
 <br/>
@@ -804,7 +825,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
     如是在家菩萨。住如是等功德者。则能学此三昧。此处之“学”，称为因。对因三昧认识不透，则果三昧也不可得。细微法则是因三昧的下手处，因果本来同时，若不知细微法则，就会丢失利益，其果不现，不得三昧力。故以上每一条，实际都是三昧力。 <br/>
 <br/>
-龙树菩萨如此细心地审观这些法则，并给我们罗列出来，让我们来洗涤、照耀自己的心垢，令我们进趣成就，这是不可思议的恩德的加持。因为这些法则就如一个平面镜，能细腻、如实地把我们的现状表达出来，一条一条，让我们照一照自己的心理、业相、承受力，这样对修法无疑是一个正面的辅助、正面的审观，正面的起修缘起。而我们在所遇法则不够细腻，或自己不能细致审观的情况下，看到的都是哈哈镜，这样就无法知道自己的现状究竟如何，自己的荷负力究竟怎样，也许我们的脸明明是很丑的，但用哈哈镜照后还以为自己刚好适中。所以，我们若能真正不厌其烦地把这些不如实之处照出来，那就能正确面对自己了。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-1-8 16:39<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 11 楼</span></div><div class="post-body">般舟三昧进趣细则：出家六十法之一 <br/>
+龙树菩萨如此细心地审观这些法则，并给我们罗列出来，让我们来洗涤、照耀自己的心垢，令我们进趣成就，这是不可思议的恩德的加持。因为这些法则就如一个平面镜，能细腻、如实地把我们的现状表达出来，一条一条，让我们照一照自己的心理、业相、承受力，这样对修法无疑是一个正面的辅助、正面的审观，正面的起修缘起。而我们在所遇法则不够细腻，或自己不能细致审观的情况下，看到的都是哈哈镜，这样就无法知道自己的现状究竟如何，自己的荷负力究竟怎样，也许我们的脸明明是很丑的，但用哈哈镜照后还以为自己刚好适中。所以，我们若能真正不厌其烦地把这些不如实之处照出来，那就能正确面对自己了。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2008-1-8 16:39</span><div class="badge-floor">第 11 进</div></div><div class="post-body">般舟三昧进趣细则：出家六十法之一 <br/>
 <br/>
 十号，是佛十种力之表达。如世尊，是十号之一，表达了佛在三界中至上的尊贵，能令欲界、色界、无色界三界有情得以出离、得以善巧。对学佛人来说，启开佛的十八不共十力四无畏，即每个有情都具有的心灵宝藏，是我们学佛的愿望，或说机遇。 <br/>
 <br/>
@@ -912,7 +933,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
     三十知报恩。在任何佛法的教导中，知恩报恩都十分重要。出家人要知佛恩、众生恩、国土恩、父母养育恩。我们每个有情之间能见面、能相认识、能交流、能生活在一起，都是应该相互感恩的。 <br/>
 <br/>
-    三十一知作恩报恩。知作恩是对知恩的深入延续。世尊给予众生的教言中有三德，其中之一就是恩德，另外是智德与断德。世尊给我们的恩德是由作而显的，是由无量兆载的修持而得，所以称为作恩，此处当知！许许多多所谓学大乘法的人不知作恩，空谈、奢谈自性，结果相互冷漠、互不尊重。我们于世尊法的应作分去做，于不应作分不做，这样来细微地报佛恩，实际就是知诸佛如来对我们的修德回施，感谢佛陀的教育之恩，使出离三界苦海之恩。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-1-8 16:47<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 12 楼</span></div><div class="post-body">般舟三昧进趣细则：出家六十法之二 <br/>
+    三十一知作恩报恩。知作恩是对知恩的深入延续。世尊给予众生的教言中有三德，其中之一就是恩德，另外是智德与断德。世尊给我们的恩德是由作而显的，是由无量兆载的修持而得，所以称为作恩，此处当知！许许多多所谓学大乘法的人不知作恩，空谈、奢谈自性，结果相互冷漠、互不尊重。我们于世尊法的应作分去做，于不应作分不做，这样来细微地报佛恩，实际就是知诸佛如来对我们的修德回施，感谢佛陀的教育之恩，使出离三界苦海之恩。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2008-1-8 16:47</span><div class="badge-floor">第 12 进</div></div><div class="post-body">般舟三昧进趣细则：出家六十法之二 <br/>
 <br/>
 围绕“开启心灵如意宝藏”这个题目，希望我们在学佛的历程中，或说人生的历程中，能真正了解生命，了解生命的依止，以及心地运用的法则。我们总说当下，但对当下之心念，能够清晰把握的却十分稀少，有时我们看似宽容，实是模糊，看似随缘，实是无力。 <br/>
 <br/>
@@ -1022,7 +1043,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 <br/>
     六十除睡眠。除睡眠的人，天人会敬仰，龙天护法会守护，世人会爱乐；而多贪睡眠，世人会轻贱，天人会远离，这是因果相。 <br/>
 <br/>
-出家菩萨住如是等法中。应修习是三昧。出家人若如是修持，必得三昧，虽是作意分，但我们要知道作意的重要性，在此有应作之意，不应作之意，若知道了，就能让我们更加清晰，断除很多徘徊和疑虑。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2008-1-8 17:04<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 13 楼</span></div><div class="post-body">般舟三昧五十余助法及修持果报 <br/>
+出家菩萨住如是等法中。应修习是三昧。出家人若如是修持，必得三昧，虽是作意分，但我们要知道作意的重要性，在此有应作之意，不应作之意，若知道了，就能让我们更加清晰，断除很多徘徊和疑虑。 </div></div><div class="post"><div class="post-header"><div class="avatar">雄</div><span style="font-size:15px; letter-spacing:1px;">雄天护法发表于 2008-1-8 17:04</span><div class="badge-floor">第 13 进</div></div><div class="post-body">般舟三昧五十余助法及修持果报 <br/>
 <br/>
 世尊出世，的确没有离开对我们心灵的展示。世尊之所以对我们有莫大的恩德，就是因其兆载永劫的修持，证实了一切众生皆具如来智能德相这样一个正见、究竟见，并把此知见传达给十方九界有情，令我们依此正见证得无上菩提，或说彻还本源、成就本源心智，真正了解四生九有之类一切生命之究竟所依，这实在是不可思议的事情，所以我们称佛陀是我们的法身父母。 <br/>
 <br/>
@@ -1268,7 +1289,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
 得见诸佛已　　勤心而供养 <br/>
 善根得增长　　能疾化众生 <br/>
 <br/>
-供养名心意清净。恭敬欢喜念佛有无量功德。以种种赞叹名口供养。敬礼华香等名身供养。是故福德转更增长。如谷子在地雨润生长。疾教化者令众生住三乘中。如是菩萨增长善根。在此法中，供养十分重要，我们念佛之时就是在供养，也就是在守护法。 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 17:56<span style="margin-left:auto; background:#e2e8f0; color:#475569; padding:4px 10px; border-radius:12px; font-size:13px; font-weight:600; border:1px solid #cbd5e1;"># 14 楼</span></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+供养名心意清净。恭敬欢喜念佛有无量功德。以种种赞叹名口供养。敬礼华香等名身供养。是故福德转更增长。如谷子在地雨润生长。疾教化者令众生住三乘中。如是菩萨增长善根。在此法中，供养十分重要，我们念佛之时就是在供养，也就是在守护法。 </div></div><div class="post"><div class="post-header"><div class="avatar">贝</div><span style="font-size:15px; letter-spacing:1px;">贝嘛埵吉发表于 2010-6-25 17:56</span><div class="badge-floor">第 14 进</div></div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
 大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
 宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
 弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
