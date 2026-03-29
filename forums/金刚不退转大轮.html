@@ -104,7 +104,7 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: v
                 qvBody.innerHTML = '<div style="padding:40px; text-align:center;">解析内容失败，该页可能已损坏。</div>';
             }
         }).catch(err => {
-            qvBody.innerHTML = '<div style="padding:40px; text-align:center; color:#ef4444;">拉取失败: '+err+'</div>';
+            window.location.href = url; // 如果遇到了文件系统拦截，自动降级为传统页面跳转加载
         });
     }
 
