@@ -1,0 +1,314 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>声点奥义书 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">声点奥义书</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">宝</div>宝莲定觉发表于 2013-10-6 18:04</div><div class="post-body">[size=5][font=楷体_GB2312] <br/>
+声点奥义书 <br/>
+徐梵澄 译 <br/>
+<br/>
+引      言 <br/>
+《声点奥义书》一卷，不分章，凡五十六颂。 <br/>
+此书诸集中多收，波斯文译本中无有。德文译本仅二十颂，则此书之初二十颂也。似其所据原本与此译本所据“百二十集”本，文字颇有异同。自来杜森译本精密，超出诸家而上，而其发凡提要及注释，皆极详明也，故不疑于误译。 <br/>
+且何谓“声点”也？“点”“ 滴”之说，在《大梵点奥义书》小引中，已曾说及，兹不赘言。“声”，则指“唵”声。为阿（a），乌(u)，门(m)，三音,及第四半音，则鼻音之收声也。此收声在字母上作一圆点，则为“声点”，原义为此而更无余说。此三半音（或迳曰四音）又各为三分（Kala），姑谓之三调。初以发音器官之上部分发出者，声锐（udatta）;次以发音器官之下部分发出者，声沈（anudatta），末为前二者之交合，声平（ svarita）；盖伊古《韦陀》诵读法而衍出者。于是此一“唵”声之变，似可尽矣。 <br/>
+今先观此二十颂，据杜森则析为五分而各有标题： <br/>
+颂一至六（上半）——“自我”乌喻分。 <br/>
+颂六（下半）至七——三音半“唵”分。 <br/>
+颂八至十一——十二音调分。 <br/>
+颂十二至十七——去世定想分。 <br/>
+颂十八至二十——瑜伽与果分。 <br/>
+此五分诚颇古奥，乌喻，七界，及持咒诸说，似直承《阿他婆韦陀》传统；分析至凡人逝世时所持十二音之一，则继“黑、白半月，祖灵，天乘”之后，见解愈加幽深，立说更为细密，不失其为韦檀多学中期之一作品，精神仍是一贯也。 <br/>
+更观其余三十六颂——如实仅三十五颂半，——则亦可分别标以七题： <br/>
+颂二十一至三十——销出宿业分。 <br/>
+颂三十一至三十二——静坐习听分。 <br/>
+颂三十三至三十五——声音区别分。 <br/>
+颂三十六至三十九——凝虑抉择分。 <br/>
+颂四十至四十五——制念归寂分。 <br/>
+颂四十六至五十（上半）——“唵”声大梵分。 <br/>
+颂五十（下半）至五十六——修士得果分。 <br/>
+如是，可知此三十六颂，自体固为完整，内容亦殊充实。倘假定原书出自一手而经剪截，毋宁谓原书二十颂而经后人扩大。盖前部于一“唵”声分析虽微，而义实有未尽。分别后三十六颂独立，则又不成格局，可知非两书合成。其事颇类吾华古书之内外篇；兹两出之，而厘定为上下二卷；颂之次第则仍其旧，未始非合法处置也。 <br/>
+据下卷观之，则知所谓“点声”，又不止“唵”字上之一圆点矣。然则谓“声有千俱胝，点有百俱胝”，——一“俱胝”为一千万，见颂五十，——则必后起推广之说也。两卷主旨皆在闻声入道。其事始于持“唵”，中间习听，听入无声，终得“唵”之内中声音相。是则与宇宙创造之原始合契，个人心灵返乎至上心灵本原，谓之为入“涅槃”则不然，谓之为见“顽空”更不可；要之非语言思虑所行境界矣。——以此书列入《瑜伽奥义书》一类，固宜。 <br/>
+诸颂分别，多在不当处，然如连环串结，正见其妙。兹皆以五言出之，大多不求合韵，句数多寡不定，分别悉依原文，以便稽考。 <br/>
+<br/>
+<br/>
+声点奥义书 <br/>
+徐梵澄 译 <br/>
+卷          上 <br/>
+<br/>
+（“唵”声入乌①。） <br/>
+唵！ <br/>
+“阿”字母右翼，         “乌”字母左翼， <br/>
+“门”字母尾羽，          半拍名为头。  （一） <br/>
+<br/>
+足等为功德，            诸谛名为躯②， <br/>
+谓“法”为左目，         “非法”为右目。（二） <br/>
+<br/>
+“颇诃”界在足，         “颇婆”界在膝， <br/>
+“娑婆”界在腰，         “摩诃”界在脐③。（三） <br/>
+<br/>
+“瞻那”界在心，         “多婆”界在喉， <br/>
+“萨梯阿”世界，          居额两眉间④。（四） <br/>
+<br/>
+“彼”上千光辉，          此咒当解说； <br/>
+瑜伽明辨士，            乘此飞鸿起⑤。（五） <br/>
+<br/>
+业行不能牵，            虽百千万恶。（六） <br/>
+初音奉火神，            次音敬风神， <br/>
+<br/>
+三音以次起，            辉辉明月轮， <br/>
+超上又半音，            敬水知智人。（七） <br/>
+<br/>
+凡此诸音节，            亦又分三调， <br/>
+此之谓“唵”声，          存持始知妙⑥，（八） <br/>
+<br/>
+初声调已喧，            次声入电掣， <br/>
+其三如乌逝，            第四如风烈⑦，（九） <br/>
+<br/>
+第五为有名，            六属因陀罗， <br/>
+七属维师鲁，            八名依湿婆⑧。（十） <br/>
+<br/>
+第九名为大，            第十为坚定， <br/>
+十一属玄微，            十二归大梵⑨。（十一） <br/>
+<br/>
+定念在初音，            生命舍以逝， <br/>
+则生婆罗多，            兹土为君王。⑩（十二） <br/>
+<br/>
+若逝在次音，            则生为夜叉， <br/>
+而为巨神灵；            若逝在三音， <br/>
+毗提夜陀罗；            四音乾闼婆□11。（十三） <br/>
+<br/>
+若在第五音，            离生溘然蜕， <br/>
+乃居月光界，            群神等尊大。（十四） <br/>
+<br/>
+在六音陀罗，            合契谐相俱， <br/>
+第七逍遥游，            维师鲁高都， <br/>
+八往楼达罗，            百兽主□12所居。（十五） <br/>
+<br/>
+九游摩诃界，            十往瞻那界， <br/>
+十一多波界，            十二永梵界□13。（十六） <br/>
+<br/>
+于是臻无上，            清净，遍在者， <br/>
+地垢，褔乐者，          永恒当前者， <br/>
+超级之大梵，            一切光明源□14（十七） <br/>
+<br/>
+超功德，诸根，          意念此消入， <br/>
+褔、乐，无可喻，        瑜伽用常习□15。（十八） <br/>
+<br/>
+此合且此成，            于身渐解缚， <br/>
+安处瑜伽行，            世情尽无着。（十九） <br/>
+<br/>
+于是解缠网，            皇华如富神， <br/>
+以此成大梵，            享受极乐真□16。（二十） <br/>
+<br/>
+卷   下 <br/>
+<br/>
+大慧！当常知，          自我”度岁月， <br/>
+过去宿业全，            迅宜使销竭。（二十一） <br/>
+<br/>
+虽起实谛知，            宿业不销溶，□17 <br/>
+唯超此知上，            宿业斯无从。（二十二） <br/>
+<br/>
+身等实无实，            当知如梦中， <br/>
+醒觉梦非真，            始知梦身空。 <br/>
+<br/>
+前生所作业，            是名为宿业。 <br/>
+人觉生前空，            宿业何由接？（二十三） <br/>
+<br/>
+梦中身妄加，            此身亦如是， <br/>
+妄加焉有生？            无生住奚止？（二十四） <br/>
+<br/>
+<br/>
+宇宙显了因，            如泥埴瓶器， <br/>
+韦檀多所云，            兹因是“无智” □18。（二十五） <br/>
+<br/>
+时若此因灭，            宇宙何由存？ <br/>
+唯由视妄倒，            麻绳幻蛇蚖。（二十六） <br/>
+<br/>
+愚者不识真，            见世为实有， <br/>
+似此知为绳，            蛇相自无取。（二十七） <br/>
+<br/>
+若知此非实，            万有入于空； <br/>
+宿业又安在？            宇宙、身性同。（二十八） <br/>
+<br/>
+觉醒无智人，            故为宿业说； <br/>
+于是唯以时，            宿业自消灭。（二十九） <br/>
+<br/>
+以“唵”合大梵，          光明成此声， <br/>
+褔乐自辉赫，            云散还天青□19。（三十） <br/>
+<br/>
+瑜伽师静坐，            当作“成就式”， <br/>
+结“维师鲁印”。          更当在右耳。□20 <br/>
+常闻内中声。             （三十一） <br/>
+<br/>
+习此大梵声，            他声尽皆掩， <br/>
+困难全克除，            修之半月后， <br/>
+可入第四境。             （三十二） <br/>
+<br/>
+闻之在初修，            声音种种大， <br/>
+修习倘精进，            所闻愈微妙。（三十三） <br/>
+<br/>
+初声如起自              海洋与云雷， <br/>
+大鼓与悬瀑。 <br/>
+中声如细鼓，            铜钟与吹角。（三十四） <br/>
+<br/>
+末声如轻铃，            吹管与琵琶， <br/>
+蜜蜂及无声。 <br/>
+种种声得闻，            微妙愈微妙。（三十五） <br/>
+<br/>
+然闻巨声时，            适如大鼓等， <br/>
+其中当返寻，            愈妙愈微者。（三十六） <br/>
+<br/>
+细声中弃大，            大中或弃细， <br/>
+意注虽转移，            不可驰他处。（三十七） <br/>
+<br/>
+其初心意著，            无论声何处， <br/>
+便当专是处，            与俱得凝虑。（三十八） <br/>
+<br/>
+外物若全忘，            意与声音合， <br/>
+如水乳交融；            遂尔归于一， <br/>
+心空顿然入。            □21        （三十九） <br/>
+<br/>
+高居离二边，            链士常自饬， <br/>
+专持唯听声，            心思迅归寂。（四十） <br/>
+<br/>
+一切念皆捐，            有为尽无执， <br/>
+专注唯在声，            心思自融入。（四十一） <br/>
+<br/>
+<br/>
+如蜂饮蜜汁，            不复顾芬芳， <br/>
+心常与声合，            物境遂已忘。（四十二） <br/>
+<br/>
+声音所约束，            顿捐诸躁扰， <br/>
+内心譬如蛇，            闻声静然好。（四十三） <br/>
+<br/>
+万物皆已忘，            定止在专一， <br/>
+摄心不散乱，            任处无奔轶。 <br/>
+心如狂象王，            游豫物欲园，（四十四） <br/>
+声音乃制之，            有如利钩援。 <br/>
+<br/>
+心鹿止飞奔，            有声如絷樊，（四十五） <br/>
+或如堤岸立，            心海波涛反。 <br/>
+<br/>
+大梵是“唵”声，          声音密相敦， <br/>
+其中复何有，            自性光明存。□22（四十六） <br/>
+<br/>
+心思此中逝，            此是维师鲁， <br/>
+至上之居所。 <br/>
+时若有声起，            时犹有空想。（四十七） <br/>
+<br/>
+乃至更无声，            此为超上梵， <br/>
+无上之“自我”，          是为同一者。 <br/>
+<br/>
+时若有声音，            时犹有心意， <br/>
+时若声响寂，            乃至定心位。（四十八） <br/>
+<br/>
+有人入“无灭”，          无声至上道。□23 <br/>
+常时与声合，            熏习遂灭没，（四十九） <br/>
+<br/>
+心思与气息，            消逝入湿婆□24； <br/>
+于此故无疑。 <br/>
+声有千俱胝，            点有百俱胝，（五十） <br/>
+<br/>
+一切此中逝，            入大梵“唵”声， <br/>
+一切位解脱，            一切思弃捐。（五十一） <br/>
+<br/>
+修士如尸居，            彼为解脱者， <br/>
+于此亦无疑。 <br/>
+螺、鼓之声喧，          无时而或闻。（五十二） <br/>
+<br/>
+心思恒定止，            其身如槁木， <br/>
+不复知寒、暑，          焉知苦与乐。（五十三） <br/>
+<br/>
+无荣亦无辱，            一切皆除弃， <br/>
+修士之心思，            以入三摩地， <br/>
+常不居三位，             （五十四） <br/>
+<br/>
+醒、眠俱解除，          自相位斯至□25。（五十五） <br/>
+<br/>
+其见为凝定，            无有同见者； <br/>
+气息亦静定，            无有勤勇处□26； <br/>
+心思亦坚定，            无有其所缘； <br/>
+彼为大梵“唵”，          内中声音相。（五十六） <br/>
+<br/>
+此《奥义书》也。 <br/>
+<br/>
+<br/>
+①“乌”取义于“鸿”，即“汉萨”。 <br/>
+②另本似原作“刺阇”“答摩”为双足；“萨”为身躯。此作pādādikam gunāstasya  śarīram  tattvamucyate <br/>
+③参《泰书》一，五。 <br/>
+<br/>
+④参《蒙书》一，二，三。 <br/>
+⑤此咒出《阿他婆韦陀》13,3,14.其他句为sahasrānyamvyatām……。 <br/>
+⑥“存持”dhārana，即集中意念于每一声调上也。 <br/>
+⑦此颂“百二十集”疑有误字，据译本推之，“电掣”作vidyā,疑当作vidyut。 <br/>
+“风烈”作cāyuvegini；作vāyuvegini较佳。 <br/>
+<br/>
+⑧此“依”“属”在梵文不过首末微变。 <br/>
+六为aindrī,属因陀罗或奉之为主者。 <br/>
+七为vaisnavī,属维师鲁或奉之为主者。 <br/>
+八为 属商羯罗即湿婆神。 <br/>
+“有名”即始有名谓。 <br/>
+⑨“玄微”谓“精神”，nārī不作“妇女”解。而德文译作die schweigsame,原文异字。 <br/>
+分三音为十二事，凡此名谓在可解与不可解之间。注家谓此皆属“存持”之事。初声Ghosinī（义译“有哗声者”）起智；次如电，乃以此而入“电光界”者Vidyunmālī;第三P ,谓持此音节，使人得升空，如飞鸟也；第四Vāyuveginī,则使人行空如风也。“有名”则始有称名，可入乎“祖灵界”也。六、七、八使人能入此三神之世界也。“大”，“坚定”皆“界”或“世界”名。Maharloka，Dhruvaloka，能入者谓为mahatī与dhrtī。“玄微” <br/>
+nārī，原文作maunī（寂然）者，较胜，即德文译本。；义为能入“牟尼”界，此界亦称Janaloka，“归大梵”brāhmī既入“大梵界”Brahmaloka也。 <br/>
+⑩Bhāratavarsa即婆罗多国；印度也。 <br/>
+<br/>
+□11夜叉yaksa，属天仙道。毗提夜陀罗vidyādhara，乾闼婆gāndharva，皆天仙名，后者为天仙中歌伎。 <br/>
+□12 “兽主”（paśupati），遵唐译。如实义为“家畜之主者”，在游牧时代为极尊之神也。 <br/>
+□13 “界”即世界。此四者为Maharloka,Jana(r)loka,Tapoloka,Brahma <br/>
+(loka),皆见前。 <br/>
+<br/>
+□14超凡此诸界而上，更无时分可言，故为永恒之现在。sadoditam(sakrdvibhātam,《唱书》八，四，二)。 <br/>
+自第十二至第十七颂，参《六问书》五。 <br/>
+“光明源”参《羯书》五，一五。 <br/>
+□15此颂下半似原本各有不同。 <br/>
+□16德文译本重此颂末一句遂完。兹厘为上卷。 <br/>
+<br/>
+□17tattvajñāna，此译“实谛知”，盖谓数论哲学也。字义亦可谓“真性知”。——换言之，此颂说是“断所知障”。 <br/>
+<br/>
+□18 “无智”（ajñāna）,在佛法则谓之“无明”。 <br/>
+□19此喻声入太阳，宿业如浮云，祛之尔。 <br/>
+<br/>
+□20 “成就式”（siddhāsana）,为体式之一。“维师鲁印”（vaisnavimudrā）,为结印之一。 <br/>
+<br/>
+□21 “心空”（cidākāśa）,姑译“心空”，实义是唯有知觉性或智弥漫之空间。 <br/>
+<br/>
+□22 “其中”五字凑成填颂。 <br/>
+<br/>
+□23 “无灭”即“无灭者”，谓宇宙心灵，亦个人心灵。 <br/>
+□24 “湿婆”（Nirañjaña）,字义为“无尘者”，亦指“无上有体”。 <br/>
+<br/>
+□25 “自相位”谓第四。——此颂原文存半。下颂则每节十一音，格变则亦无混淆。 <br/>
+□26 “勤勇”遵唐译。此句俗言“不费气力”。[/font][/size] <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

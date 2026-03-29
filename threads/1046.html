@@ -1,0 +1,293 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>食物相克与药物相克表 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">食物相克与药物相克表</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">福</div>福喜发表于 2006-5-13 22:37</div><div class="post-body">[font=楷体_GB2312][size=5]猪肉与豆类同食易引起腹胀气滞 <br/>
+<br/>
+羊肉与荞面热寒相反不宜同食 <br/>
+<br/>
+牛肉与栗子同食不易消化吸收 <br/>
+<br/>
+鸡肉与芥末同食会伤元气 <br/>
+<br/>
+兔肉与橘子同食导致腹泻 <br/>
+<br/>
+鸡蛋与豆浆同食影响蛋白质吸收 <br/>
+<br/>
+狗肉与大蒜同食刺激肠胃黏膜 <br/>
+<br/>
+鲤鱼与咸菜同食容易致癌 <br/>
+<br/>
+河虾与番茄同食易食物中毒 <br/>
+<br/>
+螃蟹与茄子同食容易致癌 <br/>
+<br/>
+芹菜与黄瓜同食会破坏VC <br/>
+<br/>
+黄瓜与辣椒同食会破坏VC <br/>
+<br/>
+大葱与枣同食脾胃不和 <br/>
+<br/>
+胡萝卜与白萝卜同食会破坏VC <br/>
+<br/>
+萝卜与橘子同食会诱发甲状腺肿 <br/>
+<br/>
+韭菜与酒同食易引起胃肠疾病 <br/>
+<br/>
+菠菜与豆腐同食影响Ca的吸收 <br/>
+<br/>
+花生与黄瓜同食易导致腹泻 <br/>
+<br/>
+南瓜与羊肉同食会胸闷发胀 <br/>
+<br/>
+金瓜与螃蟹同食会损伤肠胃 <br/>
+<br/>
+柿子与白薯同食易生成结石 <br/>
+<br/>
+山楂与海味同食会引起便秘腹痛 <br/>
+<br/>
+醋会破坏胡萝卜中的胡萝卜素 <br/>
+<br/>
+蜂蜜与豆腐同食易导致腹泻 <br/>
+<br/>
+牛奶放红糖影响蛋白质的吸收 <br/>
+<br/>
+茶与酒同饮会损伤大脑 <br/>
+<br/>
+啤酒与腌熏食物同食会致癌 <br/>
+<br/>
+白酒掺啤酒刺激心肝肾肠胃 <br/>
+<br/>
+维生素A与热米汤同食会破坏Va <br/>
+<br/>
+饮酒会影响维生素B的吸收 <br/>
+<br/>
+Va与黑木耳同食导致药物积蓄 <br/>
+<br/>
+氯霉素与茶同食会降低药效 <br/>
+<br/>
+磺胺药与茶同食会降低药效 <br/>
+<br/>
+红霉素与海味同食难以吸收 <br/>
+<br/>
+服灭滴灵饮酒会乙醛中毒 <br/>
+<br/>
+服痢特灵饮茶、咖啡恶心呕吐 <br/>
+<br/>
+四环素与黑米同食形成不溶物 <br/>
+<br/>
+阿司匹林与咸鸭蛋同食易诱发癌症 <br/>
+<br/>
+阿司匹林与果汁同食伤胃黏膜 <br/>
+<br/>
+服硝酸甘油饮酒导致血压下降 <br/>
+<br/>
+服氨茶碱饮咖啡刺激胃黏膜 <br/>
+<br/>
+服安定饮酒会导致中枢麻痹 <br/>
+<br/>
+浓茶会驱蛔灵失效 <br/>
+<br/>
+萝卜与人参同食失去滋补作用 <br/>
+<br/>
+服滋补药喝牛奶无滋补作用 <br/>
+<br/>
+腹泻病人吃大蒜会加重病情 <br/>
+<br/>
+腹泻病人喝牛奶不利康复 <br/>
+<br/>
+便秘病人吃莲子加重便秘 <br/>
+<br/>
+高蛋白食物会使胰腺炎加重 <br/>
+<br/>
+胰腺炎病人饮酒会导致胰管阴塞 <br/>
+<br/>
+糖烟酒会使糖尿病人血糖升高 <br/>
+<br/>
+高蛋白食物使糖尿病病人酸中毒 <br/>
+<br/>
+脑血管病人吃狗肉诱发脑出血 <br/>
+<br/>
+冠心病人吃高脂食物使血脂升高 <br/>
+<br/>
+冠心病人喝酒会导致心肌缺血 <br/>
+<br/>
+冠心病病人吸烟会使病情恶化 <br/>
+<br/>
+浓茶、咖啡会使心肌炎病人心律失常 <br/>
+<br/>
+酒会加重心肌梗死病人的病情 <br/>
+<br/>
+辛辣食物会使心肌梗死病情加重 <br/>
+<br/>
+高脂食物会使心胶痛病人心律失常 <br/>
+<br/>
+高血压病应限制食盐摄入 <br/>
+<br/>
+鸡汤会使高血压病人病情加重 <br/>
+<br/>
+高血压病人吃狗肉对病情不利 <br/>
+<br/>
+百日咳病人吃海鲜会加重咳嗽 <br/>
+<br/>
+百日咳病人吃甜食会增加痰液分泌 <br/>
+<br/>
+糖会使肺结核病人病情加重 <br/>
+<br/>
+辛辣食物会使支气管炎病情加重 <br/>
+<br/>
+哮喘病人吃海鲜会导致过敏 <br/>
+<br/>
+肺气肿吃腥膻发物会助邪生痰 <br/>
+<br/>
+胃溃疡病人吃豆类导致胀气 <br/>
+<br/>
+胃溃疡病人吃辛辣食物刺激胃黏膜 <br/>
+<br/>
+浓茶会增加胃溃疡创面侵蚀 <br/>
+<br/>
+橘子、柠檬会导致消化道溃疡穿孔 <br/>
+<br/>
+胃炎病人吃丁香病情加重 <br/>
+<br/>
+胃炎病人吃花生米引起消化不良 <br/>
+<br/>
+汽水会使萎缩性胃炎病人胃脘疼痛 <br/>
+<br/>
+胃病病人喝牛奶会使病情恶化 <br/>
+<br/>
+胃病病人喝稀饭反而不易消化 <br/>
+<br/>
+生冷食物不利猩红热病康复 <br/>
+<br/>
+猩红热病原菌吃多纤维食物对咽部不利 <br/>
+<br/>
+感冒病人吸烟会引起支气管炎 <br/>
+<br/>
+感冒多汗吃大葱会导致虚脱 <br/>
+<br/>
+强烈调味品会加重流行性感冒症状 <br/>
+<br/>
+胆囊病病人吃高脂食物会加剧疼痛 <br/>
+<br/>
+豆类会使胆囊病病人引发胆绞痛 <br/>
+<br/>
+乳腺炎病人吃羊肉狗肉增加内热 <br/>
+<br/>
+辛辣食物会使神经衰弱病人失眠 <br/>
+<br/>
+神经衰弱病人吃鹿茸牛鞭病情加重 <br/>
+<br/>
+头痛喝酒会损伤脑动脉内膜 <br/>
+<br/>
+头痛喝浓茶会引起动脉痉挛 <br/>
+<br/>
+贫血吃大蒜会引起红细胞减少 <br/>
+<br/>
+贫血吃油炸食物导致肠功能紊乱 <br/>
+<br/>
+贫血病人喝牛奶影响铁的吸收 <br/>
+<br/>
+尿路结石病人吃菠菜会增大结石 <br/>
+<br/>
+啤酒会使尿路结石发展增大 <br/>
+<br/>
+肾炎病人吃香蕉可能导致浮肿 <br/>
+<br/>
+鸡蛋会增加重慢性肾炎病情 <br/>
+<br/>
+豆制品会加重肾炎病代谢负担 <br/>
+<br/>
+高蛋白食物会诱发肾功能衰竭 <br/>
+<br/>
+哈密瓜会使肾衰病人出现意外 <br/>
+<br/>
+关节炎病人吃海产品加重症状 <br/>
+<br/>
+香蕉会使关节炎病人肌肉疼痛 <br/>
+<br/>
+烧伤病人吃狗肉羊肉疼痛红肿 <br/>
+<br/>
+骨折后吃花生会加重瘀肿 <br/>
+<br/>
+骨折后喝骨头汤反而阻碍愈合 <br/>
+<br/>
+食物相克，有人相信，有人不信。但是，生活实践证明：食物相克 从科学的角度来说是有其道理的。食用相克食物后，有人反应轻微，甚 至无任何反应，这并不代表这种现象不存在，事实上，有许多人在食用 或接触相克食物后会出现中度、重度不适反应，甚至引起中毒，危及生 命。 <br/>
+<br/>
+一般人都知道，吃蟹时离不开两样作 料：一是醋，一是姜。蘸醋的主要作用是消除腥味，而蘸姜的作用则是 为了驱寒。蟹是寒性动物，姜是热性植物，两者中和便可防止食蟹致寒 得病。此例说明，食物相克是符合人体医学科学的。 <br/>
+<br/>
+另外再举一例：许多人在食用芥菜后身上出现不同程度的反应，有 的皮肤泛红，身上起疹子，有的反应很严重，甚至呼吸急促，浑身冒汗 ，不得不入院治疗。人们把芥菜、蚕豆等称为“发物”，而把荠菜等蔬 菜称为“寒物”。这说明，各种荤、素肉食、蔬菜都有它的“性”：有 热性、温性、寒性几大类。 <br/>
+<br/>
+由于与人体生活习性相抵触，我们的胃不能在“饥饿”－即空腹时 接受一些食物，如糖、牛奶、柿子、香蕉、西红柿、大蒜、山楂等，空 腹的时候，胃里的胃酸无法中和上述食物中的某些化学物质，造成某些 食物对胃的不良反应。 <br/>
+<br/>
+民间有以下说法：蟹与柿子同食会肚痛，牛肉栗子同食会呕吐，蜂 蜜洋葱同食伤眼睛，蜂蜜豆腐同食致耳聋，鸡蛋糖精同食可能致命，此 外，还有人认为甲鱼与苋菜、花生与黄瓜同食也会中毒。也有人对我们 日常生活中的一些习以为常的膳食习俗提出了相克的见解，如“小葱拌 豆腐”成了一句很普遍的俗话，还有“豆浆冲鸡蛋”也是人们经常食用 的“营养餐”。这些俗语和营养餐是否有相克的依据，众说纷纭，还有 待科学研究。 <br/>
+<br/>
+部分食物相克的说法，已为医学界所认同，另有一些食物相克的例 子，也仅仅是民间的流传，尚未得到有力的佐证。即使真的吃了被科学 证实的确存在的相克食物，有人有症状，有人无症状。这里主要是由于 以下几种情况：一是有人抗病力强，有人抗病力弱；二是有人食用得多 ，有人食用得少；还有人同时食用了三种以上互克食物，没显示出相克 的反应。但不管怎样说，食物相克的说法是有其一定的科学依据的，并 非民间杜撰。民间的传说也是百姓在长期生活中得出的经验，也值得重 视。对食物相克的说法不屑一顾的态度是不对的，也是不尊重科学的生 活态度。 <br/>
+<br/>
+对于食物相克，还是“宁可信其有，不可信其无”，对“相克食物 ”还是尽量小心谨慎些，不食或少食为好。[/size][/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">福</div>福喜发表于 2006-5-13 22:47</div><div class="post-body">[font=楷体_GB2312][size=5][b]        10种蔬菜搭配禁忌[/b] <br/>
+[/size][/font] <br/>
+[font=楷体_GB2312][size=5]    合理的膳食构成，科学而营养地搭配，是维持人体健康的重要方面。蔬菜类食物更是与我们的一日之餐密切相关。要正确食用蔬菜，除尽量减少其维生素的损失和毒性外，更重要的是正确地搭配。下面给读者介绍10种重要的蔬菜搭配禁忌，希望对你能有所帮助。 <br/>
+[/size][/font] <br/>
+[font=楷体_GB2312][size=5]1．萝卜(莱菔、芦菔) <br/>
+[/size][/font][font=楷体_GB2312][size=5]    严禁与橘子同食，否则易患甲状腺肿；忌与胡萝卜、何首乌、地黄同食；服人参时也应忌食。 <br/>
+[/size][/font] <br/>
+[font=楷体_GB2312][size=5]2．甘薯(红薯、白薯、地瓜、山芋) <br/>
+[/size][/font][font=楷体_GB2312][size=5]    不能与柿子同食，两者相聚后会形成胃柿石，引起胃胀、腹痛、呕吐、严重时可导致胃出血等，危及生命；也不宜与香蕉同食。 <br/>
+[/size][/font] <br/>
+[font=楷体_GB2312][size=5]3．韭菜(起阳草、懒人菜) <br/>
+[/size][/font][font=楷体_GB2312][size=5]    不可与菠菜同食，二者同食有滑肠作用，易引起腹泻；不可与蜂蜜同食，同食易引起心痛；不可与牛肉同食，同食令人发热动火。这里要特别提醒农村的朋友，炒蔬菜时注意不要放韭菜，况且色泽搭配也不科学。 <br/>
+[/size][/font] <br/>
+[font=楷体_GB2312][size=5]4．茄子(落苏、昆仑紫瓜) <br/>
+忌与黑鱼、蟹同食，同食有损肠胃，并且，一般过老熟的茄子不宜食，易引起中毒。 <br/>
+[/size][/font] <br/>
+[font=楷体_GB2312][size=5]5．菠菜(菠棱莱、赤根菜) <br/>
+不宜与豆腐同食，易使人缺钙，当然亦忌与韭菜同食。 <br/>
+[/size][/font] <br/>
+[font=楷体_GB2312][size=5]6．南瓜(番瓜、倭瓜、饭瓜) <br/>
+不可与富含维生素C的蔬菜、水果同食；不可与羊肉同食，否则易发生黄疸和脚气病。 <br/>
+[/size][/font] <br/>
+[font=楷体_GB2312][size=5]7．竹笋(笋) <br/>
+不宜与豆腐同食，同食易生结石；不可与鹧鸪肉同食，同食令人腹胀；不可与糖同食；不宜与羊肝同食。 <br/>
+[/size][/font] <br/>
+[font=楷体_GB2312][size=5]8．茭白(茭瓜、茭笋) <br/>
+不宜与豆腐同食，否则易形成结石。 <br/>
+[/size][/font] <br/>
+[font=楷体_GB2312][size=5]9．芹菜(芹、旱芹、药芹、香芹) <br/>
+忌同醋食，否则易损伤牙齿；不宜与黄瓜同食。 <br/>
+[/size][/font] <br/>
+[font=楷体_GB2312][size=5]10．芥菜(护生草、菱角莱) <br/>
+忌与鲫鱼同食，否则易引发水肿。[/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">青</div>青卿发表于 2008-1-8 08:33</div><div class="post-body">阿弥陀佛阿弥陀佛阿弥陀佛阿弥陀佛阿弥陀佛阿弥陀佛 <br/>
+阿弥陀佛阿弥陀佛阿弥陀佛阿弥陀佛阿弥陀佛阿弥陀佛 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

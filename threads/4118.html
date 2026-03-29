@@ -1,0 +1,107 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>定学浅说 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">定学浅说</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">司</div>司马司发表于 2009-2-2 11:31</div><div class="post-body">[font=楷体_GB2312][size=5]定学浅说 <br/>
+<br/>
+一个人在实修禅定时会碰到什么状况呢？所谓的入定是一切无念吗？不知定相的人，可能在要入初禅时，产生了十六种特殊现象（见初禅之「十六触」）之际还以为是「散心」升起而退堕，不明定学者，常常把「善根发相」的见佛显像或宿慧空胜解视为解脱妙悟，其实还在欲界呢！ <br/>
+<br/>
+一、善根发相 <br/>
+二、欲界定 <br/>
+三、未到地定 <br/>
+四、初禅（有觉有观，不须段食，故无鼻、舌二识，唯有乐受，与眼耳身三受相应，喜受与意识相应） <br/>
+五、二禅(无觉无观，默然定。无前五识，仅有意识，有喜、舍二受与意识相应) <br/>
+六、三禅：（无觉无观，识受与二禅略同，但意识怡悦之相，较为净妙！） <br/>
+七、四禅：（无觉无观，前五识俱无，亦无喜受，仅有舍受，与意识相应） <br/>
+<br/>
+<br/>
+一个人在实修禅定时会碰到什么状况呢？所谓的入定是一切无念吗？不知定相的人，可能在要入初禅时，产生了十六种特殊现象（见初禅之「十六触」）之际还以为是「散心」升起而退堕，不明定学者，常常把「善根发相」的见佛显像或宿慧空胜解视为解脱妙悟，其实还在欲界呢！ <br/>
+不论是修习「数息观」或「不净观」，或是念住一处， 或是以佛号摄心，都能慢慢内心澄静， 相应禅定。当然专修禅定还是有很多前行的，如忏悔业障、持戒清净、深入经论、培福利他等，都是有助于定学的增上。但此处我们只言及禅定的层次。 <br/>
+<br/>
+一、善根发相 <br/>
+身心宁静，尚未入定，还在散心，但会影响过去所修善境而呈现境相。此中又分报因与习因。报因是过去持戒、善行的善根浮现；习因不是看到某些善境界，而是自然而然地性格改变，如心调柔软，慈悲一切，或引发过去宿慧，忽然看懂过去不能理解的经典。 <br/>
+<br/>
+二、欲界定 <br/>
+三界中欲界有六天，色界十八天，无色界四天（共二十八天）。在欲界定中，心理上会有轻松之感，生理上则因定的过程中排除了很多身体上的障碍，所以身心同感轻利轻安；而欲界六天的心理过程就是欲界定。欲界定有一个特殊现象，就是「有法持身」！这是身心放松、气机改善，身子自然挺直、久坐不累的状态。好的「持身法」下座时身心如在云里，走起路来脚如踏在软垫上。在到达欲界定前，若要细分，则仍可分粗住、细住二者，行者端坐摄心，气息调和，内心澄净安稳，其心在缘而不驰散，是名粗住；住此心后，恬静更胜前，名为细住，因无明显身心变化，故略而不述。 <br/>
+<br/>
+三、未到地定 <br/>
+这时感到身体突然消失，或是头消失、手不见－那不是真消失，而是以心眼观察消失了！修「随息法」者，有时会忽见自身五脏六腑；修「通明禅」者甚至能见皮肤每层结构肤腠，所以修持法门深度不同，造成现象也不一！内在结构在「未到地定」会消失是因为从有男女之别的欲界要进化到单性的色界天之过渡现象，此时不属欲界，也不属色界，所以不能长久安住，不进色界则退欲界！ <br/>
+<br/>
+四、初禅（有觉有观，不须段食，故无鼻、舌二识，唯有乐受，与眼耳身三受相应，喜受与意识相应） <br/>
+于未到地定，证得「十六触」（前八项为「八触」）：一动、二痒、三凉、四暖、五轻、六重、七涩、八滑、九掉、十猗、十一冷、十二热、十三浮、十四沉、十五坚、十六软之成就， 是为「初禅发相」！行者于未到地定中，入定渐深，身心虚寂，内不见身，外不见物，经一段时间，定心不坏，守护增长；在此定中，忽觉身心凝然，运运而动， 乃因心渐微细，色界净色触及欲界身之故。若动触起，或从头、背、腰、肋、足等处，渐渐遍身，身内觉动而外无动相！当动之时，觉渐渐有身，如云如影，宛如风发，微微而动；或从上发、下发、腰发，渐渐遍身。从头至足，由上而发者 多成退分；从足而发者， 多成进分。初禅动触发时有无量功德，略说有「十种善法眷属」与动俱起。 <br/>
+一、定：指的是一心安稳，无有散动。 <br/>
+二、空：动触发时，空心虚豁，无诸障碍之感。 <br/>
+三、明净：清净美妙，皎明无比。 <br/>
+四、喜悦：于所得法，心生庆悦。 <br/>
+五、乐：觉触法娱心，恬愉美好。 <br/>
+六、善心生：生起惭愧、敬、信之心，惭念昔未得此妙法，以为惭愧；敬信一切贤圣，具深妙之法。 <br/>
+七、知见明了：不复恼迷，心解明利。 <br/>
+八、无累解脱：无复贪、瞋、痴、掉悔、疑等五盖，离欲界诸障，入清净大池。 <br/>
+九、境界现前：心与动触诸功德相应不乱，初禅境界，次第现前。 <br/>
+十、心调柔软：离弃欲界，心刚粗旷现象，心行调柔，能随意舒卷！ <br/>
+以上「十种善法眷属」与动具起，有无量胜妙功德，动触发后，其余诸触，次第发起，皆为四大所生现象，如前所言「十六触」。色界五阴，住欲界身中，由于粗细不同，故诸触次第生起，即色界定法与欲界报身相触，故十六触次第生起，互为兼蓄。行者勿因法相烦杂，心生厌烦，须知此皆自心所现，但以境界不同，因缘交感，故境相万别。 <br/>
+<br/>
+五、二禅(无觉无观，默然定。无前五识，仅有意识，有喜、舍二受与意识相应)： <br/>
+而二禅，如得无漏正慧而入此定，名「圣默然定」。由初禅上修二禅，心理需具备「六行观」，即在初禅之中： <br/>
+一、 厌离觉观：知觉、观二法动乱，通恼定心，观初禅为「下苦」。 <br/>
+二、 初禅乃由觉观触动而生喜乐之定，故名为「粗」。 <br/>
+三、 此觉观之法，名为「外垢」，能障「二禅内净」，名之为「障」。 <br/>
+四、 二禅「内净安稳」胜初禅「觉观动乱」之定，故当「攀上胜」。 <br/>
+五、 二禅喜定「内净而发」，故为「微妙」。 <br/>
+六、 若得二禅，则心能出离觉观障碍，名之为「出」。 <br/>
+二禅喜乐发起，不从外来，乃于一心澄净，而生大喜美妙，清净胜初禅；初禅从觉观中生喜乐，与身体相应，而二禅之喜乐乃从心生，与意识相应，两者不同。 <br/>
+<br/>
+六、三禅：（无觉无观，识受与二禅略同，但意识怡悦之相，较为净妙！） <br/>
+欲得三禅，须观二禅过失，诃责初禅之法。 <br/>
+二禅虽由「内净」所生，然「大喜」涌动，定境不牢固，此时不生恋者，一心专念三禅功德，能舍「大喜」、「二禅默然心体」，如初禅时所用之法： <br/>
+一、 不受不着。 <br/>
+二、 苛责。 <br/>
+三、 观察分析而离二禅「大喜粗相」。 <br/>
+三禅乃世间第一大乐！禅发之时，若心沉没，当用正念、精进、慧观等法 <br/>
+，警策使起。若心涌发，当以「三昧法」摄心，使之静定。若心迷醉，当念其后之大乐胜境及一切胜妙法门，自为醒悟，使心不着。 <br/>
+<br/>
+七、四禅：（无觉无观，前五识俱无，亦无喜受，仅有舍受，与意识相应） <br/>
+四禅亦名为「不动定」、「舍具禅」，欲修四禅，当深观三禅过患：辛苦勤求，获得之后，必勤加守护，亦为之苦，一但定境退失，则再受诸苦，所谓「三禅中乐，无常动故苦」，以乐念覆盖内心，使心念不净。行者深见三禅大乐，后有大苦过患，应当一心厌离，求取四禅「不动定」！应用「不着、诃责、观析」三法；使三禅境灭，至四禅方便定，而后豁然，定心安稳，出入息断。四禅定发之时，与「舍」俱生，无苦无乐，空明寂静，善法眷属功德现前，但此时，心如明镜不动，如净水无波，绝诸乱想，无喜乐动转之患，正念坚固，犹如虚空，名「世间真实禅定」，无诸垢染，而色法转妙，内成就「净色」之法，此时心中，无形无质，无诸色相，但以心中有净色根，于空中对因缘时，能发种种妙色，可通「四无量心」、「八胜处」(八种能引发胜知见以舍弃贪爱的禅定)等色，不可以其不见诸色，而说是「无色定」，因虚空处定以上，一切色法都不现前，而现在一切色法，皆能自在得现。四禅为诸大禅定乃至成佛根本！在此禅中，如欲转缘，学一切事，随意成就；一切神通变化、演说胜法，莫不从此定出。 <br/>
+就四禅总体而言，可以「十八支」来分辨诸禅之特性：初禅五支、二禅四支、三禅五支、四禅四支；以此等之功德法支持诸禅，故名为支。 <br/>
+初禅五支：觉（寻）、观（伺）、喜、乐、一心（定）； <br/>
+二禅四支：内净、喜、乐、一心； <br/>
+三禅五支：慧（三禅乐极胜，为不染着故要正慧）、乐、舍（是行舍，非舍受）、念（三禅乐极胜，为不染着故要正念）、一心； <br/>
+四禅四支：不苦不乐、舍（舍三禅之乐受）、念（念下地之过）、一心。 <br/>
+依大般涅盘经所说，初禅天人，心中有粗细思想，所以外面有火灾（内有觉观，外有火灾）；二禅天人，于禅定生喜乐心，所以外有水灾（内有欢喜，外有水灾）；三禅天人，呼吸粗重，因此外有风灾（内有喘息，外有风灾）；唯独四禅，内外祸患，一切均无，为诸灾所不及（内外过患，一切悉无）！四禅定力继续细深，可深入「四空定」。 <br/>
+以上略举欲界，色界定相，盼能有助于学者由定的娴熟出入，而圆满持戒，成就胜慧；因为定学为戒学与慧学的枢纽，无定之戒相必多持犯，无定之智慧多沦为空洞的理解，无法于身心细腻处起真实的反观、针砭之受用呀！[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">一</div>一杯菠萝蜜发表于 2012-1-6 21:28</div><div class="post-body">我能深入于未来  尽一切劫为一念 <br/>
+三世所有一切劫  为一念际我皆入 <br/>
+我于一念见三世  所有一切人师子 <br/>
+亦常入佛境界中  如幻解脱及威力 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

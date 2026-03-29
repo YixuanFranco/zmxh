@@ -1,0 +1,73 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>禅密初体验 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">禅密初体验</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">守</div>守望幸福发表于 2008-9-17 12:12</div><div class="post-body">禅密初体验 <br/>
+‘ 佛陀常说在人中富楼那是第一。富楼那菩萨称，每个人的自性真心与佛本来都是一样清静圆满。因人自始以为被妄想牵缠，长久在世间轮回中流转不停，只要不坚执着物理的形器世界相，不再造做业果，不随狂妄的众生相去追逐不舍，这三种原因不生起时。我们心里的狂性自然休歇，狂心一旦自歇，自然‘歇即菩提’了。殊胜清静灵明的真心，本来充满周布在宇宙间，并不需要从别人那里得到，何必要劳苦身心去修持，才能证得呢？’ <br/>
+<br/>
+进入初次禅定的体验之前，我想我只做了以下两件事。 <br/>
+<br/>
+一，尊守了一个清静轻松的衣食住行的生活方式。 <br/>
+<br/>
+二，选择了一些强度适中的体育项目来进行晨练。 <br/>
+<br/>
+灵力的发生 <br/>
+<br/>
+灵力的发生是自然的，三个月中，沿中脉一线时有灵力的发生。灵力发生时获得空行母的咒语的加持。（关键时会显现，如灵力透顶时）灵力发生前微妙的预兆，如身体上乍冷乍热的变化，小腿骨髓中有如蚁行。 <br/>
+<br/>
+灵力的牵引 <br/>
+<br/>
+灵力从海底轮沿脊椎到头部一线，灵力经由一些日子从弱变强发生透顶。（有强烈痛疼感） <br/>
+<br/>
+依靠灵力牵引进入光明的定境，发生在灵力透顶以后的日子，身体姿势，仰卧，头部略枕高，两手掌大拇指交叉捧于小腹部，并将右脚踝置于左脚踝上。时间农历九月至十月间凌晨，也就是一觉睡醒以后，（因为平常的晨练，思维在此时保持在一清晰的水平线上。后来也总结出一经验，晨练六，七日后再做一次这样的静修）。 <br/>
+<br/>
+以清晰的思维细心、安祥的等待， <br/>
+<br/>
+（什么也不用想，没有昏沉，没有散乱，也没有无记，一片天真，这个时间约合半小时） <br/>
+<br/>
+当要进入下一个睡眠状态的瞬间，灵力牵引心识进入自性光明的境定。 <br/>
+<br/>
+光明的显现 <br/>
+<br/>
+根据灵力集结中脉的轮点的不同，显现的光明是不相同的，如集结眉间轮时，以眼睛来观察会看到橙黄，天蓝，粉红颜色的三个日轮。当于喉轮集结时会观察到智慧的火焰环绕身前。 <br/>
+<br/>
+因为那时也就十七八岁，在此之前没接触过有关此类的经验，可能也就是于一个特定的环境中发生的一个偶然性事件吧。 <br/>
+<br/>
+灵力集结的能量球为乒乓球大小，意识上的我也在其中。能随意运转于任督二脉，并于两腿内侧阴跷脉有微细粒子状能量上行会入会阴穴，为灵力补充能量，灵力球能随意识出入顶门，嬉戏于空中。如此约一个小时，因无心再坚持下去，灵力球自动散去。散去去感觉有如登山归来般身心上的邂怡与舒适。并沉沉睡去，产生些离奇的梦境，如在上学的路上遭遇一群蛇吞噬，虽然有些恐惧，但在心境上是超然的，心灵因此得到净化。。。 <br/>
+<br/>
+那年春节过后，就离开家门走上了社会。在以后的日子里，自已便找了些佛家道家的书籍来阅读，从中得到许多有益的启发。 <br/>
+<br/>
+平凡的世界，平凡的生活，需要用一份淡定坦然的心情去面对 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">走</div>走进佛法发表于 2008-10-9 17:08</div><div class="post-body">搂主大概是二十年前气功热时学的“密宗气功”。我觉得，既然是佛门的法，还是找位善知识比较好。最起码有问题的时候，可以请教并帮助解决。 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

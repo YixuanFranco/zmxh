@@ -1,0 +1,203 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>十善业道 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">十善业道</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-6-29 08:33</div><div class="post-body">《十善业道经》，中文版本为唐朝实叉难陀翻译，北宋施护所译《佛为娑伽罗龙王所说大乘经》为同经异译，本经出自西晋月氏国三藏竺法护译《佛说海龙王经》，为其第十一品《十德六度》，是释迦牟尼佛在娑竭罗（意为：咸水海）龙宫，为龙王所宣说的经典，即诸佛菩萨有一方法，能断除一切痛苦，获取极大利益，这个方法就是修行十善业道，即从行为上远离杀生、偷盗、邪淫；从语言上远离妄语（说谎）、两舌（挑唆）、恶口（语言粗俗）、绮语（花言巧语）；从思想上远离贪欲、瞋恚、愚痴。离此十种恶业，就是修行十种善业。十善业是佛法修行的最基本法，无论大乘、小乘佛教都视此经为基础教材。 <br/>
+<br/>
+释迦牟尼佛在《十善业道经》中详细地说明了造十恶业将要受的各种恶报，以及修行十善业的功德，内容提要如下： <br/>
+1. 离杀生者成就十种离恼法； <br/>
+2. 离偷盗者得十种可保信法； <br/>
+3. 离邪行者得四种智所赞法； <br/>
+4. 离妄语者得八种天所赞法； <br/>
+5. 离两舌者得五种不可坏法； <br/>
+6. 离恶口者得成就八种净业； <br/>
+7. 离绮语者得成就三种决定； <br/>
+8. 离贪欲者得成就五种自在； <br/>
+9. 离嗔恚者得八种喜悦心法； <br/>
+10. 离邪见者得成就十功德法。 <br/>
+<br/>
+一、离杀生者成就十种离恼法 <br/>
+1、于诸众生普施无畏； <br/>
+2、常于众生起大慈心； <br/>
+3、永断一切嗔恚习气； <br/>
+4、身常无病； <br/>
+5、寿命长远； <br/>
+6、恒为非人之所守护； <br/>
+7、常无恶梦，寝觉快乐； <br/>
+8、灭除怨结，众怨自解； <br/>
+9、无恶道怖； <br/>
+10、命终生天。 <br/>
+<br/>
+二、离偷盗者得十种可保信法 <br/>
+1、资财盈积，王贼水火及非爱子，不能散灭； <br/>
+2、多人爱念； <br/>
+3、人不欺负； <br/>
+4、十方赞美； <br/>
+5、不忧损害； <br/>
+6、善名流布； <br/>
+7、处众无畏； <br/>
+8、财命色力安乐，辩才具足无缺； <br/>
+9、常怀施意； <br/>
+10、命终生天。 <br/>
+<br/>
+三、离邪行者得四种智所赞法 <br/>
+1、诸根调顺； <br/>
+2、永离喧掉； <br/>
+3、世所称叹； <br/>
+4、妻莫能侵。 <br/>
+<br/>
+四、离妄语者得八种天所赞法 <br/>
+1、口常清净，优钵花香； <br/>
+2、为诸世间之所信伏； <br/>
+3、发言成证，人天敬爱； <br/>
+4、常以爱语，安慰众生； <br/>
+5、得胜意乐，三业清净； <br/>
+6、言无误失，心常欢喜； <br/>
+7、发言尊重，人天奉行； <br/>
+8、智慧殊胜，无能制伏。 <br/>
+<br/>
+五、离两舌者得五种不可坏法 <br/>
+1、得不坏身，无能害故； <br/>
+2、得不坏眷属，无能破故； <br/>
+3、得不坏信，顺本业故； <br/>
+4、得不坏法行，所修坚固故； <br/>
+5、得不坏善知识，不诳惑故。 <br/>
+<br/>
+六、离恶口者得成就八种净业 <br/>
+1、言不乖度； <br/>
+2、言皆利益； <br/>
+3、言必契理； <br/>
+4、言词美妙； <br/>
+5、言可承领； <br/>
+6、言则信用； <br/>
+7、言无可讥； <br/>
+8、言尽爱乐。 <br/>
+<br/>
+七、离绮语者得成就三种决定 <br/>
+1、定为智人所爱； <br/>
+2、定能以智如实答问； <br/>
+3、定于人天威德最胜，无有虚妄。 <br/>
+<br/>
+八、离贪欲者得成就五种自在 <br/>
+1、三业自在，诸根具足故； <br/>
+2、财物自在，一切怨贼，不能夺故； <br/>
+3、福德自在，随心所欲，物皆备故； <br/>
+4、王位自在，珍奇妙物，皆奉献故； <br/>
+5、所获之物，过本所求百倍殊胜，由于昔时不悭嫉故。 <br/>
+<br/>
+九、离嗔恚者得八种喜悦心法 <br/>
+1、无损恼心； <br/>
+2、无嗔恚心； <br/>
+3、无诤讼心； <br/>
+4、柔和质直心； <br/>
+5、得圣者慈心； <br/>
+6、常作利益，安众生心； <br/>
+7、身相端严，众共尊敬； <br/>
+8、以和忍故，速生梵世。 <br/>
+<br/>
+十、离邪见者得成就十功德法 <br/>
+1、得真善意乐、真善等侣； <br/>
+2、深信因果，宁殒身命，终不作恶； <br/>
+3、唯归依佛，非余天等； <br/>
+4、直心正见，永离一切吉凶疑网； <br/>
+5、常生人天，不更恶道； <br/>
+6、无量福慧，转转增胜； <br/>
+7、永离邪道，行于圣道； <br/>
+8、不起身见，舍诸恶业； <br/>
+9、住无碍见； <br/>
+10、不堕诸难。 <br/>
+<br/>
+<br/>
+《佛说十善业道经》 <br/>
+[url]http://www.zmxh.com/bbs/viewthread.php?tid=7165&amp;extra=page%3D1[/url] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-6-29 09:20</div><div class="post-body">[b][font=黑体][size=5]《华严经》中说十善业道[/size][/font][/b] <br/>
+<br/>
+佛子。菩萨住离垢地。 <br/>
+<br/>
+1.性自远离一切杀生。不畜刀杖。不怀怨恨。有惭有愧。仁恕具足。于一切众生。有命之者。常生利益慈念之心。是菩萨。尚不恶心恼诸众生。何况于他。起众生想。故以重意。而行杀害。 <br/>
+<br/>
+2.性不偷盗。菩萨于自资财。常知止足。于他慈恕。不欲侵损。若物属他。起他物想。终不于此。而生盗心。乃至草叶。不与不取。何况其余。资生之具。 <br/>
+<br/>
+3.性不邪淫。菩萨于自妻知足。不求他妻。于他妻妾。他所护女。亲族媒定。及为法所护。尚不生于贪染之心。何况从事。况于非道。 <br/>
+<br/>
+4.性不妄语。菩萨常作实语。真语时语。乃至梦中。亦不忍作覆藏之语。无心欲作。何况故犯。 <br/>
+<br/>
+5.性不两舌。菩萨于诸众生。无离间心。无恼害心。不将此语。为破彼故。而向彼说。不将彼语。为破此故。而向此说。未破者不令破。已破者不增长。不喜离间。不乐离间。不作离间语。不说离间语。若实若不实。 <br/>
+<br/>
+6.性不恶口。所谓毒害语。粗犷语。苦他语。令他嗔恨语。现前语。不现前语。鄙恶语。庸贱语。不可乐闻语。闻者不悦语。嗔忿语。如火烧心语。怨结语。热恼语。不可爱语。不可乐语。能坏自身他身语。如是等语。皆悉舍离。常作润泽语。柔软语。悦意语。可乐闻语。闻者喜悦语。善入人心语。风雅典则语。多人爱乐语。多人悦乐语。身心踊悦语。 <br/>
+<br/>
+7.性不绮语。菩萨常乐思审语。时语实语。义语法语。顺道理语。巧调伏语。随时筹量决定语。是菩萨。乃至戏笑尚恒思审。何况故出散乱之言。 <br/>
+<br/>
+8.性不贪欲。菩萨于他财物。他所资用。不生贪心。不愿。不求。 <br/>
+<br/>
+9.性离嗔恚。菩萨于一切众生。恒起慈心。利益心。哀愍心。欢喜心。和润心。摄受心。永舍嗔恨。怨害热恼。常思顺行。仁慈佑益。 <br/>
+<br/>
+10.又离邪见。菩萨住于正道。不行占卜。不取恶戒。心见正直。无诳无谄。于佛法僧。起决定信。 <br/>
+<br/>
+佛子。菩萨摩诃萨。如是护持十善业道。常无间断。复作是念。一切众生。堕恶趣者。莫不皆以十不善业。是故我当自修正行。亦劝于他。令修正行。何以故。若自不能修行正行。令他修者。无有是处。 <br/>
+<br/>
+佛子。此菩萨摩诃萨。复作是念。十不善业道。是地狱畜生饿鬼受生因。十善业道。是人天乃至有顶处受生因。 <br/>
+<br/>
+又此上品。十善业道。以智慧修习。心狭劣故。怖三界故。阙大悲故。从他闻声。而解了故。成声闻乘。 <br/>
+<br/>
+又此上品。十善业道。修治清净。不从他教。自觉悟故。大悲方便。不具足故。悟解甚深。因缘法故。成独觉乘。 <br/>
+<br/>
+又此上品。十善业道。修治清净。心广无量故。具足悲愍故。方便所摄故。发生大愿故。不舍众生故。希求诸佛大智故。净治菩萨诸地故。净修一切诸度故。成菩萨广大行。 <br/>
+<br/>
+又此上上。十善业道。一切种清净故。乃至证十力四无畏故。一切佛法。皆得成就。是故我今。等行十善。应令一切具足清净。如是方便。菩萨当学。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-6-29 09:22</div><div class="post-body">[b][font=黑体][size=5]《华严经》中说十不善业道[/size][/font][/b] <br/>
+<br/>
+佛子。此菩萨摩诃萨。又作是念。十不善业道。上者地狱因。中者畜生因。下者饿鬼因。 <br/>
+<br/>
+1.于中杀生之罪。能令众生堕于地狱畜生饿鬼。若生人中。得二种果报。一者短命。二者多病。 <br/>
+<br/>
+2.偷盗之罪。亦令众生。堕三恶道。若生人中。得二种果报。一者贫穷。二者共财不得自在。 <br/>
+<br/>
+3.邪淫之罪。亦令众生。堕三恶道。若生人中。得二种果报。一者妻不贞良。二者不得随意眷属。 <br/>
+<br/>
+4.妄语之罪。亦令众生。堕三恶道。若生人中。得二种果报。一者多被诽谤。二者为他所诳。 <br/>
+<br/>
+5.两舌之罪。亦令众生。堕三恶道。若生人中。得二种果报。一者眷属乖离。二者亲族毙恶。 <br/>
+<br/>
+6.恶口之罪。亦令众生。堕三恶道。若生人中。得二种果报。一者常闻恶声。二者言多诤讼。 <br/>
+<br/>
+7.绮语之罪。亦令众生堕三恶道。若生人中。得二种果报。一者言无人受。二者语不明了。 <br/>
+<br/>
+8.贪欲之罪。亦令众生。堕三恶道。若生人中。得二种果报。一者心不知足。二者多欲无厌。 <br/>
+<br/>
+9.嗔恚之罪。亦令众生。堕三恶道。若生人中。得二种果报。一者常被他人求其长短。二者恒被于他之所恼害。 <br/>
+<br/>
+10.邪见之罪。亦令众生。堕三恶道。若生人中。得二种果报。一者生邪见家。二者其心谄曲。 <br/>
+<br/>
+佛子。十不善业道。能生此等无量无边众大苦聚。是故菩萨。作如是念。我当远离十不善道。以十善道。为法园苑。爱乐安住。自住其中。亦劝他人。令住其中。 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

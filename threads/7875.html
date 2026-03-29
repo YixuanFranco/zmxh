@@ -1,0 +1,92 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大藏治病药 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">大藏治病药</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">民</div>民间中医发表于 2013-6-18 14:50</div><div class="post-body">唐释灵澈 <br/>
+大藏经曰：救灾解难，不如防之为易。疗疾治病，不如避之为吉。今人见左，不务防之而务救之，不务避之而务药之。譬之有君者，不思励治以求安。有身者，不惜保养以全寿。是以圣人求福于未兆，绝祸于未萌。盖灾生于稍稍，病起于微微。人以小善为无益而不为，以小恶为无损而不改。孰知小善不起，灾难立成；小恶不止，大祸立至。故太上特指心病要目百行，以为病者之鉴。人能静坐持照察病有无，心病心医，治以心药。奚伺卢扁，以疗厥疾。无使病积于中。倾溃莫遏，萧墙祸起，恐非金石草木可攻。所为长年，因无病故，智者勉焉。 <br/>
+喜怒偏执是一病。亡义取利是一病。好色坏德是一病。专心系爱是一病。 <br/>
+纵欲无理是一病。纵贪蔽过是一病。毁人自誉是一病。擅变自可是一病。 <br/>
+轻口喜言是一病。快意逐非是一病。以智轻人是一病。乘权纵横是一病。 <br/>
+非人自是是一病。侮易孤寡是一病。以力胜人是一病。威势自胁是一病。 <br/>
+语欲胜人是一病。货不念偿是一病。曲人自直是一病。以直伤人是一病。 <br/>
+与恶人交是一病。喜怒自伐是一病。愚人自贤是一病。以功自矜是一病。 <br/>
+诽议名贤是一病。以劳自怨是一病。以虚为实是一病。喜说人过是一病。 <br/>
+以富骄人是一病。以贱讪贵是一病。谗人求媚是一病。以德自显是一病。 <br/>
+以贵轻人是一病。以贫妒富是一病。败人成功是一病。以私乱公是一病。 <br/>
+好自掩饰是一病。危人自安是一病。阴阳嫉妒是一病。激厉旁悖是一病。 <br/>
+多憎少爱是一病。坚执争斗是一病。推负着人是一病。文拒钩剔是一病。 <br/>
+持人长短是一病。假人自信是一病。施人望报是一病。无施责人是一病。 <br/>
+与人追悔是一病。好自怨憎是一病。好杀虫畜是一病。蛊道厌人是一病。 <br/>
+毁訾高才是一病。憎人胜己是一病。毒药耽饮是一病。心不平等是一病。 <br/>
+以贤贡犒是一病。追念旧恶是一病。不受谏谕是一病。内疏外亲是一病。 <br/>
+投书败人是一病。笑愚痴人是一病。烦苛轻躁是一病。挝捶无理是一病。 <br/>
+好自作正是一病。多疑少信是一病。笑颠狂人是一病。蹲踞无礼是一病。 <br/>
+丑言恶语是一病。轻慢老少是一病。恶态丑对是一病。了戾自用是一病。 <br/>
+好喜嗜笑是一病。当权任性是一病。诡谲谀谄是一病。嗜得怀诈是一病。 <br/>
+两舌无信是一病。乘酒凶横是一病。骂詈风雨是一病。恶言好杀是一病。 <br/>
+杀人堕胎是一病。干预人事是一病。钻穴窥人是一病。不借怀怨是一病。 <br/>
+负债逃走是一病。背向异词是一病。喜抵捍戾是一病。调戏必固是一病。 <br/>
+故迷误人是一病。探巢破卵是一病。惊胎损形是一病。水火败伤是一病。 <br/>
+笑盲聋哑是一病。乱人嫁娶是一病。放人捶挝是一病。教人作恶是一病。 <br/>
+含祸离爱是一病。唱祸道非是一病。见货欲得是一病。强夺人物是一病。 <br/>
+此为百病也。人能一念，除此百病。日逐检点，使一病不作，决无灾害痛苦，烦恼凶危。不惟自己保命延年，子孙百世，永受其福矣。 <br/>
+大藏经曰：古之圣人，其为善也，无小而不崇。其于恶也，无微而不改。改恶崇善，是药饵也。录所谓百药以治之： <br/>
+恩无邪辟是一药。行宽心和是一药。动静有礼是一药。起居有度是一药。 <br/>
+近德远色是一药。清心寡欲是一药。推分引义是一药。不取非分是一药。 <br/>
+虽憎犹爱是一药。心无嫉妒是一药。教化愚顽是一药。谏正邪乱是一药。 <br/>
+戒敕恶仆是一药。开导迷误是一药。扶接老幼是一药。心无狡诈是一药。 <br/>
+拔祸济难是一药。常行方便是一药。怜孤恤寡是一药。矜贫救厄是一药。 <br/>
+位高下士是一药。语言谦逊是一药。不负宿债是一药。愍慰笃信是一药。 <br/>
+敬爱卑微是一药。语言端悫是一药。推直引曲是一药。不争是非是一药。 <br/>
+逢侵不鄙是一药。受辱能忍是一药。扬善隐恶是一药。推好取丑是一药。 <br/>
+与多取少是一药。称叹贤良是一药。见贤内省是一药。不自夸彰是一药。 <br/>
+推功引善是一药。不自伐善是一药。不掩人功是一药。劳苦不恨是一药。 <br/>
+怀试抱信是一药。覆蔽阴恶是一药。崇尚胜己是一药。安贫自乐是一药。 <br/>
+不自尊大是一药。好成人功是一药。不好阴谋是一药。得失不形是一药。 <br/>
+积德树恩是一药。生不骂詈是一药。不评论人是一药。甜言美语是一药。 <br/>
+灾病自咎是一药。恶不归人是一药。施不望报是一药。不杀生命是一药。 <br/>
+心平气和是一药。不忌人美是一药。心静气定是一药。不念旧恶是一药。 <br/>
+匡邪弼恶是一药。听教伏善是一药。忿怒能制是一药。不干求人是一药。 <br/>
+无思无虑是一药。尊奉高年是一药。对人恭肃是一药。内修孝悌是一药。 <br/>
+恬静守分是一药。和悦妻孥是一药。以食饮人是一药。勖修善事是一药。 <br/>
+乐天知命是一药。远嫌避疑是一药。宽舒大度是一药。敬信经典是一药。 <br/>
+息心抱道是一药。为善不倦是一药。济度贫穷是一药。舍药救疾是一药。 <br/>
+信礼神佛是一药。知机知足是一药。清闲无欲是一药。仁慈谦爱是一药。 <br/>
+好生恶杀是一药。不宝厚藏是一药。不犯禁忌是一药。节俭守中是一药。 <br/>
+谏己下人是一药。随事不慢是一药。喜谈人德是一药。不造妄语是一药。 <br/>
+贵能援人是一药。富能救人是一药。不尚争斗是一药。不淫妓青是一药。 <br/>
+不生奸盗是一药。不怀咒厌是一药。不乐词讼是一药。扶老挈幼是一药。 <br/>
+此为百药也。人有疾病，皆因过恶阴掩不见，故应以疾病，因缘饮食风寒恶气而起。由人犯违圣教以致魂迷魄丧，不在形容，肌体空虚，精气不守，故风寒恶气，得以中之。是以有德者，虽处幽闇，不敢为非。虽居荣禄，不敢为恶。量身而衣，随分而食。虽富且贵，不敢恣欲。虽贫且贱，不敢为非。是以外无残暴，内无疾病。然吾人可不以自维自究，以百药自治，养吾天和，一吾胸臆，以期长寿之地也哉。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚呈发表于 2013-8-31 00:24</div><div class="post-body">测试  111111111111111111111111111111111111111111111111111111111111111 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

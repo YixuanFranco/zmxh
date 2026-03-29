@@ -1,0 +1,111 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>明王 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">明王</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2006-10-12 13:13</div><div class="post-body">[font=楷体_GB2312][size=5]    明王在佛教中的身份就是佛的“忿化身”。俗话说：佛都有火，佛一旦发火后会怎样呢？那就是变身啦。每个佛都有个对应的“忿化身”，如释牟尼如来佛的“忿化身”是无能胜明王，弥勒佛的“忿化身”是中央不动尊明王等。密宗中的明王有很多，常见的有五大明王，八大明王，十大明王，比较有名的有不动明王，降三世明王，大威德明王，金刚夜叉明王等最为人所乐道的当然是孔雀明王。 <br/>
+<br/>
+密宗把真言和陀罗尼称为“明”，又将具有这种咒力的人称为“持明王”，所以，由真言和陀罗尼的神秘能力产生的尊格，就叫做明王。如果说，如来代表佛的实际悟道，菩萨掌握慈悲救济，那么，明王就让人的内心培养出坚强的意志。 <br/>
+<br/>
+诸佛菩萨的造像大致有二种类型；一是柔和相，即安祥相；一是忿怒相，即恐怖相。明王大多属于忿怒尊式恐怖尊，这种尊格都处于曼荼罗的边缘和角落位置。他们不但担负防卫的任务，而且随时要积极出击歼灭邪魔。 <br/>
+<br/>
+１、五大明王。明王最为人知最流行的是五大明王。在新、旧两译的《仁王经》中，出现了五大明王的名称。他们是： <br/>
+<br/>
+①不动明王。他是明王之中最重要的尊格，被称为不动尊或无动尊，与观音和地藏菩萨并列，成为民间佛像的三大主尊。 <br/>
+<br/>
+不动明王居于五大明王中心位置，亦即居于首位，另四尊明王围绕在他身边。不动明王和大日如来关系密切，被视为大日如来的化身或使者。西藏大多数不动明王的造像都是三头六臂或一面八臂的忿怒尊，右手拿剑，左手握罗索，而且多是坐像，少有立像，是沿袭了印度教的忿怒尊的湿婆神的信仰。 <br/>
+<br/>
+②降三世明王。第二位是东方的降三明王，意为“降服三个世界”，他经常和不动明王并列成一对出现，是密宗名第二的金刚萨多。 <br/>
+<br/>
+降三世明王也是由印度教的忿怒尊湿婆神演变出来，其造像多是三头六臂或一面八臂的恐惧模样，其额头中央有湿婆神特征的第三只眼睛，身上穿着虎皮裙，两足之下分别踩着相当于湿婆神的大自在人及其明妃乌摩，表示自己比模仿对象更强有力。降三世明王两手的小指在胸前勾合结成降三世印，表示降伏过去、现在、未来与佛教为敌的一切障碍。 <br/>
+<br/>
+②军荼利明王。第三位是南方的军荼利明王，意为“盘绕的东西”。由图像来看，军荼利明王身体各部，都戴着蛇的装饰物。军荼又意为“拙火”，乃是象蛇一样沉睡于身体海底轮之灵热。 <br/>
+<br/>
+军荼利明王又和不死妙药“甘露”的信仰有密切关系，故军荼利明王亦称为甘露军荼利明王。 <br/>
+<br/>
+军荼利明王的造像，通常是一面八臂，左足稍稍上举，做出踏空的姿态，而中央的左右两手各自伸直食、中、无名指，然后再用大拇指掐住小指，将两手在胸前交叉，这种威吓对方的印相，是军荼利明王的代表姿态，其余的手，分别拿着金刚杵、宝轮、三叉戟等法具，表示以他强大的力量祛除种种障碍。 <br/>
+<br/>
+④大威德明王。第四位是西方的大威德明王，意为“具有大威力德性”。他被视为文殊菩萨的眷属或化身。 <br/>
+<br/>
+大威德明王的一项特性，是他一定骑着水牛，这是反应原始社会所谓魔神征服水牛的神话。大威德明王的造像多是六面、六臂、六足的姿态，因此，又此，又有“六足尊”之称。他的六只手所握持的东西是剑、戟、棒、索、弓、箭。但演变到最后，大威德明王竟然是九面三十四臂十六足的形态，同时脸部成为牛面。 <br/>
+<br/>
+⑤金刚夜叉明王。这是五大明王中的最后一位，也是五大明王中唯一拥有“金刚”的称号的一位，与拥有古老历史的其他明王比较，金刚夜叉明王似乎是后来才出现的尊格。 <br/>
+<br/>
+金刚夜叉明王的造像的特色，是他脸上的五只眼睛，有两对是两只眼睛左右上下并排，然后在额头中央，再放置第五只眼睛。五只眼和三张脸，使人有恐怖之感。除此之外，金刚夜叉明王将左脚举高，摆出了丁字形站立的姿势也很特别。他的左右第一只手，分别握着金刚铃和金刚杵，显示他是金刚界体系的尊格。 <br/>
+<br/>
+２、八大明王 <br/>
+<br/>
+八大明王出自《大妙金刚经》，由八大菩萨衍生出来。八大菩萨即上述的观音、金刚手、文殊、弥勒、地藏、虚空藏、普贤、盖障等。这八大明王虽和上述五大明王不同，但其中的不动、降三世、大威德和军荼利等四位明王却是共通的，只是没有最后的金刚夜叉明王而已。 <br/>
+<br/>
+八大明王由八大菩萨衍生或化身成忿怒尊，他们分别是： <br/>
+<br/>
+降三世明王──文殊菩萨； <br/>
+<br/>
+军荼利明王──虚空藏菩萨； <br/>
+<br/>
+大轮明王──弥勒菩萨； <br/>
+<br/>
+马头明王──观音菩萨； <br/>
+<br/>
+无能胜明王──地藏菩萨； <br/>
+<br/>
+不动明王──除盖障菩萨； <br/>
+<br/>
+步掷明王──普贤菩萨。 <br/>
+<br/>
+大轮明王是转法-轮明王之意。法-轮是佛教的真理教义。大轮明被画成戴冠上面有逆立的火发，左手持独钴杵，右手高举大法-轮。 <br/>
+<br/>
+马头明王以观音为自性身，把马置于头。又因他有忿怒威猛之形，帮称马头明王。其模样是一面二臂，红色。右手拿着莲花，左手拿着水瓶，脖子和四肢都有蛇缠绕，表现出明王独特的忿怒姿态。 <br/>
+<br/>
+无能胜明王，意为“不被任何东西所打倒”。其造像有四面四臂、三面四臂、一面二臂等，具三上。三面四臂形像的，右边第一只手竖起食指做出威吓对方的期克印，第二只手拿着独钴杵。左边的第一只手拿着斧钺，第二只手拿着三叉戟。 <br/>
+<br/>
+步掷明王，是“放开步伐”之意。有记载说此明王有十八臂，但也有记载说只有二臂，右手拿着大伞盖，左手拿着金刚杵。伞盖可说是步掷明王的特征。 <br/>
+<br/>
+３、爱和美的明王 <br/>
+<br/>
+①爱染明王是密宗许多明王中代表爱的明王。爱染，是指迷恋色、声、香、味、触、法等六尘，表示贪爱，贪爱过度，像被染过色的东西，洗也洗不掉。唐朝诗人王维有句云：“爱染日以薄，禅寂日以固”，就说明了爱染二字之意。 <br/>
+<br/>
+爱染明王的造像是红色、一面六臂，在莲花跏趺坐，具三只眼睛，现出忿怒的形像，头发呈倒立或怒发状。这种发怒的姿态，配合红色身体的色相，代表“激烈的恩爱”，实际上，信仰爱染明王的人以女性为多。 <br/>
+<br/>
+爱染明王头戴狮子冠，他的六只手中，第一双手的右手握着金刚杵，左手在腰部附近执金刚铃，和金刚萨多的手印相同。第二双手的左右手各自拿着弓和箭，做出欲射向目标的动作。第三双手则右手拿着莲花，而左手结金刚拳手印，或配合修法，改变所拿的东西。在莲花座下，还有能吐出各种宝物的宝瓶，以及形成光圈的鲜红日轮。 <br/>
+<br/>
+②孔雀明王是密宗许多明王中代表美的明王，从拥有美丽的孔雀尊格变化而来。孔雀除外表温雅之外，乃是蛇的天敌，因此，自古以来饱受毒蛇祸害的印度人民对蛇的克★孔雀特别崇拜。孔雀明王在印度被当作女性尊格来信仰，在我国也被译为“孔雀佛母”等。 <br/>
+<br/>
+孔雀明王形态的特征是，左右手中总是有一只手拿着孔雀的羽毛，同时，坐孔雀背上。孔雀明王的造像有二臂、四臂、六臂、八臂像等，拿的东西增加了佛手果、吉祥果、莲花、月轮、梵夹等。 <br/>
+<br/>
+从们信仰孔雀明王认为真正具有威力的是孔雀明王的咒语，所以佛教历代关于孔雀明王的经轨，大多称为孔雀明王《咒经》。[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">一</div>一杯菠萝蜜发表于 2012-1-6 21:26</div><div class="post-body">我能深入于未来  尽一切劫为一念 <br/>
+三世所有一切劫  为一念际我皆入 <br/>
+我于一念见三世  所有一切人师子 <br/>
+亦常入佛境界中  如幻解脱及威力 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

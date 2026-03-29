@@ -1,0 +1,65 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>莲池大师与《竹窗随笔》 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">莲池大师与《竹窗随笔》</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-8-9 11:13</div><div class="post-body">《随笔》概述 <br/>
+莲池大师著作颇多，如《楞严经摸象记》、《遗教经论疏节要》、《梵网经菩萨戒疏发隐》、《沙弥律仪要略》、《禅关策进》、《直道录》、《山房杂录》、《云栖遗稿》等，后来被门人汇编为《云栖法汇》，堪称度世之宝筏，法门之圭臬。其中《阿弥陀经疏钞》一书，阐发事理一心，至为渊奥，自莲宗建立以来所未曾有。 <br/>
+《竹窗随笔》及《二笔》、《三笔》，是莲池大师的随笔集。他在《竹窗三笔序》中说：“古有《容斋随笔》，予效之竹窗之下，时有所感，笔焉；时有所见，笔焉。”又说：“所感所见，积之岁月，忽复成帙。虽东语西话，宾叩主酬，种种不一，要归于整饬行门、平治心地而已。” <br/>
+从内容上看，随笔集或借事抒情，意味隽永；或有感而发，夹叙夹议；或感慨教门中的流弊和败坏；或纠正疑误，论证自己的宗教实践与见解；或阐发他对儒佛调和的主张；或宣扬净土及因果报应等。辞约而义丰，言简而意赅，每一则都能给人以深刻新颖的教育与启发，读之可以使人辨别是非，端正知见，消除俗念，促进道心，可谓获益良多。 <br/>
+<br/>
+<br/>
+<br/>
+《随笔》摘录 <br/>
+《竹窗随笔》、《二笔》、《三笔》三卷，凡四百二十七则。兹摘录数则，以期警策，自利利他。 <br/>
+<br/>
+01出世间大孝 <br/>
+人子于父母，服劳奉养以安之，孝也。立身行道以显之，大孝也。劝以念佛法门，俾得生净土，大孝之大孝也。予生晚，甫闻佛法，而风木之悲已至，痛极终天，虽欲追之，末繇也已。奉告诸人，父母在堂，早劝念佛。父母亡日，课佛三年。其不能者，或一周岁，或七七日，皆可也。孝子欲报劬劳之恩，不可不知此。 <br/>
+02预了 <br/>
+无常迅速，虽老少无别。然年少人犹处未定之天，妄冀长寿。若老年人，则定然光景无多矣，须把身世事处分了当，从他无常朝到暮到，撒手便行，无所系累，此晚境大要紧处，不可忽，不可忽。 <br/>
+<br/>
+03人命呼吸间 <br/>
+一僧瘵疾经年，久惫枕席，众知必死，而彼无死想。语之死，辄不怿（yì 欢喜，高兴）。予使人直告，令速治后事，一心正念。彼谓男病忌生日前，过期当徐议之耳，本月十七日乃其始生，先一日奄忽。吁，“人命在呼吸间。”佛为无病人言之也，况垂死而不悟！悲夫！ <br/>
+<br/>
+04汤厄 <br/>
+佛言：“人命在呼吸间。”予平日亦常举此以警策大众，而实未尝身亲经历之也。及予之罹汤厄也，方其入浴，身安心泰，洋洋自如。俄而蹈沸釜中，几死矣。其得生者，幸也，龙天救之也。夫为时刹那耳，而死生系焉。命在呼吸，岂不诚然乎哉？则知为僧者，于佛所说以劝他人恒切，而以劝自己或疏，通弊也。予于是大愧大骇而大自戢！ <br/>
+05无常信 <br/>
+谚有警世语，谓一老人死见阎王，咎王不早与通信。王言：“吾信数矣。汝目渐昏，一信也；汝耳渐聋，二信也；汝齿渐损，三信也；汝百体日益衰，信不知其几也。然此特为老人言耳，今更续之。”一少年亦咎王云：“吾目明，耳聪，齿利，百体强健，王胡不以信及我？”王言：“亦有信及君，君自不察明。东邻有四、五十而亡者乎？西邻有三、二十而亡者乎？更有不及十岁，与孩提乳哺而亡者乎？非信乎？良马见鞭影而行，必俟锥入于肤者，骛骀也。嗟何及矣？ <br/>
+06醉生梦死 <br/>
+醉生梦死，恒言也，实至言也。世人大约贫贱、富贵二种。贫贱者，固朝忙夕忙以营衣食；富贵者，亦朝忙夕忙以享欲乐。受用不同，其忙一也。忙至死而后已，而心未已也。赍此心以往，而复生，而复忙，而复死。死生生死，昏昏蒙蒙，如醉如梦，经百千劫，曾无了期。朗然独醒，大丈夫当如是矣。 <br/>
+<br/>
+正如莲池大师所云： <br/>
+“人生母子、夫妻、一家眷属，俱是宿世虚缘。暂时会聚，终必别离，不足悲苦。可悲可苦者，乃是空过一生，不念佛耳。今但万缘放下，回光返照念佛，即是一生要紧大事，更无多语。此外只管纯一念佛。其念佛，要字字心上照过，历历分明，时刻切心，不容些许妄想杂念。早晚礼佛时，恳苦发愿求生净土。如此捱到临命终时，自然正念现前，往生阿弥陀佛极乐净土，莲华化生，永离诸苦。” <br/>
+我等净业行人，当信受奉行，求生净土，一生成办。 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>学习大藏经 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">学习大藏经</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-15 19:07</div><div class="post-body">录制钦赐《龙藏》之简介 <br/>
+<br/>
+<br/>
+佛法！自东汉孝明帝永平10年（公元67年）由迦叶摩腾和竺法兰两位尊者将传入中土, 迄今已近两千年的历史。期间，佛经经过历代的翻译、流通，数量日益增多，但最后汇集、编纂成“藏”的却屈指可数，国内可考的不过十余次；乾隆版《大藏经》为清代官刻汉文大藏经，始刻于清雍正十一年 (1733) ，完成于乾隆三年（1738），是我国历代官刻大藏经极为重要的一部，全藏共收录了经、律、论、杂著等1669部，7168卷，亦称《清藏》，又因经页边栏饰以龙纹，故又称为《龙藏》。乾隆版《大藏经》经版保存至今，其完整印本极其少见。因此，它在世界佛教史上占有重要地位。 <br/>
+<br/>
+<br/>
+《大藏经》代表着佛陀全部的智慧，总集佛的一切法身舍利。《法华经》云：“诸佛唯以一大事因缘故出现于世，即为众生开示佛知佛见使令悟入。”近代以来，由于历次运动所造成的中华传统文化传承的断裂，使现今广大佛教信众深入经藏、依法修行变得困难重重，《大藏经》渐渐变成了只是四众弟子供奉礼拜的圣物，而其中所包含的八万四千法门无法得到真正的广利宏传。另外，佛经中大量的古汉语词汇发音与现代汉语不尽相同，文中的多音字、生僻字、通假字众多，难以正确发音及流畅诵读。再者，现世正经历着世尊灭度以来前所未有的巨变，尤其是互联网及数码信息的兴起，使得人们阅读和学习的方式都在发生着根本性的变化，知识和信息的载体正在从过去的纸质时代快速向电子数码时代转型。籍此，巴登嘉措堪布仁波切恒顺众生所求，发大菩提心，创立显密经藏公益团队，带领四众弟子发弘誓愿，将藏版大藏经《甘珠尔》、与清代官刻汉文钦赐《龙藏》制作成现代语音电子书，使广大信众阅藏的愿望得以实现，使六道有情众生得以听闻佛陀的妙慧法语。 <br/>
+<br/>
+<br/>
+历史上佛典的每次结集，莫不是举倾国之力，集诸大德之智。其功之繁浩，力之倾注，非常人所能想象。尽管如此，在众多高僧大德与发心功德主的护持下，藏文版大藏经《甘珠尔》的录制已圆满成功。同时，汉文版大藏经钦赐《龙藏》经部也已九转功成，共计时长约三千多小时，寒暑无返，历时数载，今终得以问世，现奉与广大信众，借此，随喜赞叹为“显密经藏”有声佛经付出的每一位成员。另，特别鸣谢：释本愿法师、传喜法师，谛性法师、释广胜法师等诸多高僧大德全程监制，以及宁波阿育王寺界源法师倾力协助并提供钦赐《龙藏》原版校本；在点校标点及注音方面，根秋登子教授组织了数位宗教学研究的专家团队给予了大力的支持与帮助。 <br/>
+<br/>
+<br/>
+众生若有福报，正法方能久住。愿有缘之士共同发心和合增上！愿十方善信、龙天护法能共襄盛举，成就菩提，祝愿此工程顺利完成！普愿以此功德，消弭天灾人祸，维护世界和平！凡有缘见闻者，随喜为功德，同行而吉祥。 <br/>
+<br/>
+<br/>
+藏、汉《大藏经》有关的所有产品均版权所有。播经机将免费结缘于各寺院、佛学院、图书馆、用以实修的广大佛教团体及个人，若有以商品形式出售获利者，将依照版权法追究责任。 <br/>
+<br/>
+<br/>
+——显密经藏工作室 <br/>
+（2016年07月07日） </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-15 19:09</div><div class="post-body">推荐大家一个有声佛经网站，里面有《乾隆大藏经》、《大藏全咒》、《甘珠尔》、《丹珠尔》内经文、咒语的念诵音频。《龙藏》经文部分可以听经，也可以阅读经文的影印版、简繁拼音对照等等，功能齐全，内容专业 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2023-12-15 19:11</div><div class="post-body">显密经藏公共号阿弥陀佛南无阿弥陀佛 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>四劫 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">四劫</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-6-27 12:29</div><div class="post-body">四劫 <br/>
+<br/>
+佛典分世界之成坏为成住坏空四期，或称四劫。劫者，译云时分、大时、长时，此大时不能以通常之年月日计算，时极少为刹那，时极长为劫。从人寿无量岁，每百年减一岁如是减至十岁；又从十岁每百年增至一岁，如是增至八万四千岁。此一增一减为一小劫，即一千六百八十万年。二十个小劫为一中劫，中劫又分成住坏空四劫。在成劫中有二十个增减，即三亿三千六百六十万年。住坏空亦如是，有四个中劫共有八十个增减，即有十三亿四千四百万年为一大劫。 <br/>
+<br/>
+（一）成劫：成劫为世界成立时的第一期。初一小劫成器世间，后十九小劫成有情世间。一切有情业增上力，空中渐有微细风生，风渐增盛乃至金轮的成立。成劫初有一有情从光音天（极光净天）下生初禅大梵天中，是为梵王。后诸有情渐次有生梵辅梵众，下生六欲诸天乃至畜生饿鬼，至最后一有情生无间地狱，成劫满。 <br/>
+<br/>
+（二）住劫：世界成立后安稳存在时，初人寿极长，住劫初寿渐减，每百年减一岁，减至十岁为减劫，无增；第二十劫唯有增劫，无减。于劫末刀兵疾横起。坏正报。 <br/>
+<br/>
+（三）坏劫：安住既去归于灭坏，初十九劫坏有情世间，后一劫坏器世间。坏劫与成劫相反，从地狱渐渐上升，至地狱都尽，各随其业因，或升之禅，或转生他方世界。末劫大火烧尽初禅以下，二禅有水起，三禅风起，此器世间坏。 <br/>
+<br/>
+（四）空劫：此为破坏后唯有虚空时，亦有二十小劫。此时世界空虚，犹如墨穴，地昼夜日月，唯有大冥。 <br/>
+<br/>
+宇宙法界，虚空则无边无际，世界有无量无边，成住坏空四时展转不停，时则无始无终，绝前后本末，因果相连续，因前有因，永不能知其始；果后有果，亦不能测其终。 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

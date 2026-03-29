@@ -1,0 +1,74 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>竹窗随笔 | 大鉴大通 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">竹窗随笔 | 大鉴大通</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-1-6 18:27</div><div class="post-body">“惟莲池大师的才具，足以经邦济世；悟性，足以传承心印；教理，足以契合根机；戒律，足以护持正法；操守，足以警励世人；规约，足以疗救时弊；若不是法身大士来开朗末世重重昏暗，谁又能做到这些呢？” <br/>
+——憨山大师赞 <br/>
+<br/>
+大鉴大通（一） <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+大鉴能禅师世称南宗，大通秀禅师世称北宗。然黄梅衣钵不付“时时勤拂拭”之大通，而独付“本来无一物”之大鉴，何宗镜录谓大鉴止具一只眼，大通则双眼圆明？信如是，何以不得衣钵？夫曹溪亲接黄梅，远承达摩，又远之承迦叶，又远之承释迦，乃永明传道于天台韶国师，而为此说者何也？抑随时救弊之说也？昔人言晋宋以来，竞以禅观相高，而不复知直指人心见性成佛之旨，故初祖西来。至永明时，又或以为一悟即了，故宗镜及万善同归等书力赞修持，则似乎南宗专于顿悟，而北宗顿悟渐修、智行双备，故有只眼双眼之喻。万松老人①独奋笔曰：此一只眼。是之谓尽大地是沙门一只眼也，是之谓把定乾坤眼也，是之谓顶门金刚眼也。倘新学辈诸浅见者，执宗镜所云，作实法会，则大鉴止是空谛，而大通方始是中道第一义谛，可乎？ <br/>
+或曰：“曹溪六代传衣，举世靡不知之。而当是时，何为惟见两京法主、二帝门师，北宗大著于天下，而不及曹溪者，又何也？”曰：曹溪既承印记，秘其衣钵，为猎人守网，潜光匿彩，至于一十八年，大通之道盛行，曹溪之名未显也。迨风幡之对，而后道播万世矣！曹溪潜龙深渊，不自炫耀；大通见龙在田，不自满盈，其言曰：“彼亲传吾师衣钵者也。”盖善知识之相与以有成也如是。 <br/>
+<br/>
+<br/>
+【注释】①万松老人：元朝行秀禅师。俗姓蔡，字报恩，号万松老人，河南洛阳人。得法于雪岩如满禅师。著有《从容录》、《祖灯录》等。 <br/>
+<br/>
+<br/>
+大鉴大通（二） <br/>
+<br/>
+<br/>
+<br/>
+予又思宗门赏鉴许可，抑扬与夺，越格超情，不可以世法之是非论也。石巩①之得所传也，曰：“三十年张弓，只射得半个圣人。”曹溪之一只眼，半个圣人之谓也。中峰邈②高峰之真求赞，赞曰：“我相不思议，佛祖莫能视，独许不肖儿，见得半边鼻。”曹溪之一只眼，半边鼻之谓也。普化③之于临济也，曰：“河阳新妇子，木塔老婆禅，临济小厮儿，却具一只眼。”曹溪之一只眼，即临济之一只眼也。 <br/>
+【注释】 <br/>
+①石巩：即唐朝慧藏禅师，抚州（今江西临川）人。本以田猎为务，因逐鹿遇马祖道一禅师，马祖示以禅机，于言下得悟，乃折毁弓-箭，依马祖出家，得受心印。后入石巩山结茅而居，人称“石巩和尚”。 <br/>
+②邈：描绘,摹写。邈真，即描绘图像。 <br/>
+③普化：唐朝普化禅师。师事盘山宝积禅师，密受真诀，深入堂奥。宝积禅师示寂后，师即游化河北镇州。出言佯狂，行为简放，居处不定，常出入城市或冢间，时而歌舞，时而悲号，时人称之为“普化和尚”。 <br/>
+<br/>
+译文 <br/>
+（一） <br/>
+<br/>
+<br/>
+世称大鉴惠能禅师为南宗，称大通神秀禅师为北宗。当年黄梅五祖不把衣钵付给“时时勤拂拭”的大通，而付给“本来无一物”的大鉴，为什么《宗镜录》评大鉴禅师只具一只眼，大通禅师则双眼圆明？如果真是这样的话，大通禅师为什么不得衣钵？曹溪惠能大师是得法于黄梅五祖的，若推远一些则是传承于达摩祖师，由此上溯则是传承于迦叶尊者，再往上溯便是传承于释迦如来。然而永明延寿大师是得法于天台德韶国师的，为什么会有这种说法？这大概是永明大师随时救弊之说吧？昔人认为自后晋至宋以来，禅林中都着重修习禅观，不再理会“直指人心，见性成佛”的旨意。是以自初祖西来至永明大师的那个时代，又有人认为只要一悟即了，因而《宗镜录》及《万善同归》等书极力称赞修持。然则似乎南宗专于顿悟，北宗却是顿悟渐修、智行双备，故而才有只眼、双眼的比喻。唯独万松老人奋笔谓：“到这里返观大鉴祗具一只眼，原来尽大地是沙门一只眼，又唤作把定乾坤眼。绵绵不漏丝毫，亦名顶门具金刚眼。”如果新学之辈或浅见的人，执泥《宗镜录》所言而当做实法去领会，则大鉴禅师所悟的只是空谛，而大通禅师所悟的才是中道第一义谛，这说得通吗？ <br/>
+有人问道：“五祖传衣与曹溪六祖的事，举世皆知，无人不晓。但在当时，人们为什么只传扬神秀禅师为两京法主、二帝门师，北宗大著于天下，却没有人提及曹溪，这又如何解释？”我答：曹溪既承五祖印记之后，为了秘护其衣钵，隐遁于四会、怀集二县间，并替猎人守网，潜光匿彩达十八年之久，当大通禅师道法盛行时，曹溪的名声还未显扬出去。及至后来机缘成熟，在广州法性寺谈论风、幡之语，才名扬宇内，道播万世！因此，曹溪惠能大师是深渊中的潜龙，不自炫耀。大通神秀禅师是见龙在田，不自满盈，他曾说：“彼（指惠能大师）是亲传我师衣钵的人。”可见善知识总是希望共同都有成就。 <br/>
+<br/>
+<br/>
+（二） <br/>
+<br/>
+<br/>
+我又想到宗门赏鉴许可，抑扬与夺，总是越出常规，超乎情识，不能用世间法的是非来评论。譬如石巩和尚得马祖真传后说：“三十年张弓，只射得半个圣人。”曹溪的一只眼，就是这半个圣人。中峰禅师于高峰禅师画像上题了一首偈赞，赞道：“我相不思议，佛祖莫能视，独许不肖儿，见得半边鼻。”曹溪的一只眼，即是这半边鼻。普化禅师对于临济义玄禅师的评语说：“河阳新妇子，木塔老婆禅，临济小厮儿，却具一只眼。”曹溪的一只眼，也正是临济的一只眼。 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

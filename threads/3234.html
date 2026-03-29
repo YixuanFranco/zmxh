@@ -1,0 +1,78 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>浅谈燃灯供佛 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">浅谈燃灯供佛</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">司</div>司马司发表于 2008-5-10 23:19</div><div class="post-body">浅谈燃灯供佛 <br/>
+---常静---- <br/>
+<br/>
+灯为佛教的六种供品之一，其他如水、涂香、花、饮食、烧香，取之配以六度，则水表布施，涂香表持戒，花表忍辱，饮食表禅定，灯明表智慧，烧香表精进。从古至今，花、香、灯火仍为最通常之供物。 <br/>
+<br/>
+在佛教中，灯代表光明和智慧，意即提醒世人要追求智慧，以去除愚痴。以灯供佛，隐含着以灯破暗、象征以智能除惑的深义。新《华严经》第七十八说：“善男子!譬如一灯，入于暗室；百千年暗，悉能破尽。菩萨摩诃萨菩提心灯，亦复如是；入于众生心室，百千万亿不可说劫，诸烦恼业，种种暗障，悉能除尽。” <br/>
+<br/>
+佛教中燃灯供佛的起源来自于一则“贫女供灯”的佛教故事。这则故事说，佛在舍卫国祗树给孤独园时，有一个贫穷而孤独的女人名叫难陀，以乞讨为生。 <br/>
+<br/>
+难陀经常看到国王、臣民不论大小都供养佛和僧众，心想：“因我前世罪业深重，今生才这样贫贱，虽然遇到了福田，却没有资财可供养。”想到这些，难陀不觉悲上心头，自责悔恨，感伤不已。难陀希望能得到少许的钱物供养佛，结果乞讨了一整天，只得到了一个钱。她就拿着钱到油店，想用来买油。店主问她：“拿一个钱买油，只能买到一点点，你作什么用呢?”难陀把心中的想法都告诉了他。店主心生怜悯，给了她双倍的油，足够作一盏灯。 <br/>
+<br/>
+难陀非常高兴，来到精舍，将灯供养给世尊。她把灯放在佛前的众灯之中，并发愿：“我今贫穷，除了这盏小灯，我没有什么可供养佛的，但我希望以此供养的功德，将来能够得到智慧之灯，灭除众生的无明黑暗，引导他们觉悟。” <br/>
+<br/>
+一夜过去了，其它的灯都熄灭了，只有贫女所供养的灯还在燃烧。第二天，正是目犍连尊者值日，他看天色已经拂晓，便来到殿中收拾灯盏，看见难陀供养的这盏灯明亮地燃着，而且灯油和灯芯都没有丝毫减损，同新点燃的灯一样。心想：“白天点灯没什么用，不如先把灯熄灭，到晚上再点。”他就举手扇灯，灯依旧燃烧，没有熄灭。又用衣扇，还是明亮如故。这时，佛陀看到目犍连的举动，便对他说道：“这盏油灯不是你能熄灭的，就算用四大海的水灌注或是强风狂吹，也无法熄灭，因为这是发大菩提心之人所布施。” <br/>
+<br/>
+佛陀说完此话，正好难陀再次来礼拜佛陀，佛陀便对她说：“你将于来世二阿僧祗劫，得以成佛，佛号为灯光。”难陀得到佛陀的授记后，内心非常欢喜，并且立刻向佛陀请求出家，佛陀也允许她的请求，让她成为僧团的一员。 <br/>
+<br/>
+因为“贫女点灯”的典故，佛教徒认为点灯供养佛菩萨可获得很大的利益，因而燃灯供佛求福报的仪式也一直流传至今。 <br/>
+<br/>
+以灯供佛有很大的功德。据经典中说：若在佛塔、佛寺、佛像、以及经卷之间，燃灯供养，有很大的功德。《佛为首迦长者说业报差别经》中说：“若人奉施灯明，能有十种功德：一者照世如灯；二者随所生处，肉眼不坏；三者得天眼通；四者于善恶法，得善智慧；五者减除大暗；六者得智慧明；七者流转世间，常离暗处；八者具大福报；九者命终生天；十者速证涅槃。”据《佛说施灯功德经》云：“若有众生于佛塔庙，施灯明者，得于四种可乐之法。何等为四，一者色身，二者资财，三者大善，四者智慧。”也就是说，点灯供佛的人，可以获得相貌庄严、资财充足，具备善根和大智慧。 <br/>
+<br/>
+古时代的“灯”，都是用“盏”盛油，投“炷”点火的油灯。灯盏的质料，是用金、银、赤铜、瓷、瓦等物做的。灯炷(灯心)则是用白勰花、新勰布、或新净的布缕、线索等物做的。灯盏的形状：有碗式的、盘式的；有长方形炉式的、有鼎式的、有勺子式的；有平底的、有有脚的、有高柱的。这些都是“座灯”之类。油灯所用的油料，有动物油、植物油、矿物油，种类名目很多。 <br/>
+<br/>
+现代寺院中所用供佛的灯除了传统的油灯之外，还采用蜡烛点灯供佛，以及使用各种色泽的电灯供佛。在以油灯和蜡烛供佛之后，若要熄灭灯时，不可用嘴吹和扇挥，也不可用襟扑，应该从烧焦的灯炷折熄下去。 <br/>
+<br/>
+在寺院中点灯，还有一种共修的意义，点灯就是在庄严道场，令众生生起敬仰之心，而点灯又象征光明的智慧，能除黑暗的烦恼。因此，近年来，许多寺院都会应信徒的要求在春节和元宵节期间举办灯供法会。 <br/>
+<br/>
+按照佛教的说法，在新的一年里燃灯供佛，有照耀前途之意。祈求佛菩萨加持新的一年平安顺利，再加上人们在新年时，都希望未来能有个光明的开始，为了满足这样的心情，于是便向佛教寻求能祝福来年的祈愿仪式。尤其是在新春阖家团圆时，将到寺院点灯当成全家共同参与的新春活动，别有一番凝聚和乐的气氛。佛教的点灯，尚有以供养诸佛菩萨，来培养内在的供养心与恭敬心，同时也希望藉由灯的象征意义，来激励自己能够精进不懈、破除内心的无明黑暗。 <br/>
+<br/>
+佛教鼓励人们点光明灯的原因，除了祈福之外，主要是希望人们能够发善心、立善愿，进而接触佛法，为自己积聚觉悟成佛的资粮，这样才是真正的消灾解厄、转运得福。 <br/>
+<br/>
+其实，燃灯的真正意义在于，它是点一盏油灯献给诸佛菩萨，藉著点灯的形式，让自己内在的愿望，藉由供养佛前的灯，受到佛陀的护佑，藉光亮扫除我们生命的愚暗，提醒自己时时关照自身，进而产生行为动力。 <br/>
+<br/>
+<br/>
+供灯的利益 <br/>
+<br/>
+《地藏十轮经》上说，世间一切令人感到舒适的用具、一切利益与安乐，都来自对三宝的供养；因此，追求舒适、利乐的人应时时勤于供佛、供法、供僧。一般而言，生死、涅槃所有善法，都是供养三宝的果报，而种种差别的利益，乃是因各种不同的供养所获得。十力导师·世尊在《佛为首迦长者说业报差别经》上说：「若有众生奉施灯明，得十种功德：一者、照世如灯；二者、随所生处，肉眼不坏；三者、得于天眼；四者、于善、恶法得智能；五者、除灭大闇；六者、得智能明；七者、流转世间，常不在于黑闇之处；八者、具大福报；九者、命终生天；十者、速证涅槃。」 <br/>
+<br/>
+曾供过一盏灯、一把花的人或天，都将亲见弥勒如来。在《圣弥勒经》上记载，供千盏灯或千朵优婆罗华，造塔顶或佛像的人，到弥勒示现成道时，当生为其眷属，并闻佛初转法lun。即使仅仅供一朵花或随喜他人供养的功德，也都将成就佛果。意思是说，这样的人在释迦世尊的教法中未能成佛，在弥勒的教法下，心一定会成熟、解脱。尤其供灯是一个殊胜的圆满资粮、速得加持的缘起门。《胜乐轮根本续第二品》上说:「欲成胜悉地，应供百盏灯。」 <br/>
+<br/>
+有关供养圣物、奉事佛陀果报的细节，可以参考《观世音经》、《波斯匿王经》或《大方广总持宝光明经》。《不死鼓音陀罗尼》上说：「奉事不思议尊，当获不思议果。」同样，《观世音经》说，如来的法(功德)既然无量，供养如来也有无量、无边、无比、无数、不思议的利益。 据《阿含小事》，月亮、星星坠地，山岭、森林升天，大海竭尽干涸，都有可能，但是佛陀说谎是不可能的。这点应牢记在心。要对一切安乐、善法的根本──业果及三宝的加持——生起深切的信心。这个人身及这一辈子的财富只不过是暂借几年、几个月、几天。它的无常犹如闪电。既然有了人身，就应该昼夜不断撷取它的精华，尽力在殊胜的福田播种。 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中国之佛学 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">中国之佛学</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-6-27 11:55</div><div class="post-body">中国之佛学 <br/>
+<br/>
+一、经律论之翻译 <br/>
+<br/>
+佛教传入中国时间，有种种异说。为一般所公认有后汉明帝永平十年（公元67年）和水平七年（公元64年）。但在此之前，即前汉哀帝元寿元年（前2年）有博士弟子秦景宪，受大月氏王使伊存口授浮屠经的记载（《三国志、魏志·卷三十裴松之注）。最初有迎叶摩腾、竺法兰二人以白马载佛像经卷来洛阳，后建白马寺。此为我国有沙门、有寺院之始。此二人并在白马寺译出四十二章经，亦为译经之始。 <br/>
+<br/>
+至汉末西域译经师相续而来，初有支娄迦谶自月支国来，首译道行般苦、般舟三昧经等。安世高自安息国来华，译经达九十余部。三国至西晋，有康僧会、竺法护等泽师来华。东晋时有佛图澄、道安等传译。姚秦有鸠摩罗什来长安，广泽大乘经论，且宏讲之，随后有佛陀跋多罗，县无诚、菩提流支，译有华严、涅梁、地持对地经论等流行予世。至陈真谛斯泽唯识请经论，至唐代玄奥时泽传最富。至玄类时译经分新旧之别，玄类之前为旧泽，之后为新泽。还有义净所泽亦间及唯识。开元时有善无畏，金刚智、不空，传从事密教传译，宋时，施护天息灾、法天亦从密部翻译。 <br/>
+<br/>
+又曹魏时，昙摩迹罗译有增抵戒心，立揭磨法授戒。至罗什始与弗若多罗共译萨姿多部之十诵律，事半米就，得昙摩流支及卑摩罗叉续成，为中国有广律之始。复由佛陀耶舍译出昙无德部之四分律。佛陀跋多罗共法显泽之增抵律。佛陀什译弥沙皇部之五分律。当时四并传行，唯后代独宏昙无德部之四分律。至迹叶遗律，唯传戒本，其广律未传。 <br/>
+<br/>
+二、宗派之成立 <br/>
+<br/>
+宗派之成立，首为姚秦时罗什所译的中、百、十二门，大智度四论为主而立三论宗。同时以成实论为主，立小乘成实宗。以北凉昙无依所泽大般涅筹经，而立涅梁宗。以北魏菩提流支所泽的十地经论，而立地论宗。除真谛所译摄大乘论，立摄论宗。梁达磨来华传佛心印为禅宗之起源。又有依仅舍论而立小乘俱舍宗。陈本隋初智者依法华经开天台宗。至唐时，重四分律的道宣，立南山律宗。玄类西行东归开法相宗之端绪。杜顺、智严、贤首依华严经，创华严宗。净土宗则萌芽于庐山慧远之莲社。成立于唐之善导。依善无畏等所传的密教而立密宗。 <br/>
+<br/>
+除俱舍、成实二宗为小乘外，余均为大乘宗派，总称十三宗。涅效地论、摄论、归人天台、华严、法相，则为十宗。总结为大乘九宗，小乘二宗。 <br/>
+<br/>
+三、唐末以来之变迁 <br/>
+<br/>
+唐武宗毁佛教而各宗衰落，禅宗以简单易行，恢复后遂独盛弘，人宋之后，影响为宋明理学，与中国之思想界发生极大关系。如天台宗、华严宗之学说，赵宋以来亦流传不绝，而亦为能调和中国思想。至深入通俗之心理者，则为三世因果六道轮回之说。普及民间者，则为密宗之诵诗，与净土宗之度亡。历元明而入清，禅宗既衰，求简易笃切之行，颇有会归净土法门。而南山律宗，在宋及明清间亦有继承者，故至今犹不绝。 <br/>
+<br/>
+早在七世纪顷，西藏国王双赞思甘普在位，极信奉佛教，遣大臣端美三菩提，往印度求之。留学南天竺七年，带许多经卷回国，根据梵语造西藏文字，翻译经典，为藏语佛典。元代忽必烈侵入西藏，采用喇嘛教，从西，藏佛典译成蒙古大藏经。自元明时西藏蒙古的刺嘛教人居中国北方各省，但与华主僧俗末发生大关系。清代佛教衰败，诸宗不传，唯有喇嘛教盛行于西藏蒙古，当时清廷亦奉此教。此时居土弘传很多，如杨仁山，创车金陵刻经处，并从日本取回中国失传的唯识典籍。近几十年来，以日本及南洋西洋之交通便利，思想输灌之影响，遍究佛典，非拘泥于宗派传统，可谓佛教之新时代。 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

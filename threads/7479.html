@@ -1,0 +1,100 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>有情之身心 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">有情之身心</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-6-27 12:32</div><div class="post-body">有情之身心 <br/>
+<br/>
+第一节 五蕴 <br/>
+<br/>
+佛法以有情为中心为根本，情是情感活动，小至蝼蚁，大至人类，时刻在情感的生命狂流中。但有情各类有迷悟、有思想境界不同，总不外有情是物质和精神的和合物，故佛不偏物质，不偏精神，而二者合论。有情的身心不外乎五蕴、十二处、十八界之范筹，亦即以此三科观察有情之真相。 <br/>
+<br/>
+一、色蕴 <br/>
+<br/>
+五蕴，色受想行识。蕴是积聚义。色蕴，四大种及四大种所造色，即十一处色，此等色法有种种差别和合积集为一聚故名色蕴。色是质碍变坏义，身上皮肉筋骨等有形可见都是色蕴积聚。四大种是地水火风，此四大为质碍的色法所不可缺，故有称四大为能造。地是物质的坚性，作用是任持；水是物质的湿性，作用是摄聚；火是物质的暖性，作用为熟变；风为物质的动性，作用是轻动。大有四义：一为所依大，与一切所造色为的所依处，二体性宽广大，地等四种，遍在一切色上，无一物而非所造，三形相大，大地大山为地大；大江大海为水大；猛焰赤红为火大；疾猛大风为风大。种是因义类义。此四法能起造众色为因义，种类各别不同是为类义。 <br/>
+<br/>
+地与风相对，水与火相对。地以任持为用，在因缘和合中，有相当的安定性。坚定的反面是轻动性，如物质没有轻动的性能，那永不会有变动的可能。地为物质的静性，风是动性，为物质的两大特性。水有摄聚的作用，即凝聚性能，火的作用是熟变，如人身有温暖可消化食物，一切固定物的动变，都由熟变力，使他融解或分化。水是凝聚，火是分化，此又是物质的两性。四大是相互依存而不相离，从凝摄而成坚定，从分化而成动乱；动乱而又凝合。坚定而又分化；物质于此不断过程为通遍特性。若加空识为六界，空是无碍性的空隙，由此无碍性，一切色法才能占有而离合其间。有虚空才有四大，此为器世间，若有觉了的特性——识，即成有情了。 <br/>
+<br/>
+以上说明构成色的因素，此所造色有五根五境及法处。法处所摄色是意识所缘色，有五种：（一）极略色（极微）（二）极迥色（空界）、（三）受所引色（无表色）、（四）遍计所起色（水月镜像）、（五）定所引色（定力所变之色）。前四种是假法，无别实体，定所引色有实有假。 <br/>
+<br/>
+二、受想行识 <br/>
+<br/>
+色蕴是属物质范筹，受想行识有属精神范筹。 <br/>
+<br/>
+受蕴：领纳为受相。受有三种：苦、乐、舍、即按违顺等境，领纳苦乐舍集为一聚故名受。有有形和无形之不同，接触冷暖涩滑为有形，喜怒哀乐为无形。 <br/>
+<br/>
+想蕴：想是构想，取相为义。于境界取种种相，随施设种种名言。或乱思不定为想，念一切法谓之想。 <br/>
+<br/>
+行蕴：行为迁流造作为义，五十一个心所中，除受想两个心所外，其余相应心所和不相应行法，都是行蕴所摄，一切有为法皆念念不住迁变流动故名行。 <br/>
+<br/>
+识蕴：识以了别为义。于色等诸法，能觉了分别。 <br/>
+<br/>
+第二节 处与界 <br/>
+<br/>
+处是十二处，处亦云入，生长义。六根六境能生长心心所法之作用，六识必托根方能生起。内六根处是识所依，外六境处是识所缘。由根及境为增上缘，识得生起。意即认识的产生，有能取的六根和所取的六境。此中以六境为中心，没有此六境、能认识和所分别失去联络，不能分别境界。 <br/>
+<br/>
+界是十八界，界是种族义，谓十八法种类自性各别不同。又能持义，能持诸法自相义名界。又种子义，十八界种各别为因。六根缘六境而生起六识的觉了。识所依所缘的六根六境为能生因，六识是所生界。此为十八界。 <br/>
+<br/>
+第三节 佛说三科的意趣 <br/>
+<br/>
+如来说蕴、处、界三科的意趣，如《俱舍论》说：“愚根乐三故，说蕴处界三。”众生愚执不同，法有区别，此为如来说的意趣。有愚心执为我，有愚色法执为实我，有愚执色心二法以为我。为破此三愚故说三科以对治其执，五蕴破愚执心，五蕴中多说心心所，分析无我之理。十二处除意法二处外，其余十处皆是色法，为愚执色法有情，广详色相。十八界破色心之愚，广详色心二法。此为愚执不同。二者根器不同，利根略说法义，便能解悟；施五蕴法；中根略加开演，方能了知，为说十二处；下根暗钝，须广说，才能开解，为说十八界。三者乐欲不同，乐略者为说五蕴，乐中者为说十二处，乐广者为说十八界。 <br/>
+<br/>
+说此三科，意在说明有情身心的存在，是由众多的原素和合体，是无常的相续，人我的假现，知此意故，则破我法二种实执，令证寂静的涅槃。 <br/>
+<br/>
+第四节 有情的延续 <br/>
+<br/>
+有情是蕴、处、界和合的生命流，非一期死了为结束，在因缘合会时，他将无限止的延续下去。能无限延续，须因缘的资粮。如灯有不断加油，才能永放光明。约一期生命说，即须四食的资养。《杂阿含》云：“有四食益众生，令得住世摄受长养。何等为四？谓一粗抟食，二细触食，三意思食，四识食。”食有资益增长之认，能使有情维持延长其生命扩展长大。经中常言道：“一切有情皆依食住。”此意对外道苦行不依饮食的破斥。 <br/>
+<br/>
+一抟食：译为段食。以香味分段而食。尤其欲色众生，若无此段食，生命无法存法。 <br/>
+<br/>
+二触食：亦云乐食。根、境、识三者和合时所起合意感觉或不合意为触食。合意触生喜乐受，能资益生命力。如近代所言乐观能使身心健康，失意、忧愁能令人生病甚至死亡。又如修定的人得到定中的喜乐，身心轻安，可少食少眠。 <br/>
+<br/>
+三思食：又云念食，意识思念所欲之境，即生希望之愿欲，有此希能愿欲，能使人精神振作，有资益身心。 <br/>
+<br/>
+四识食：以第八阿赖耶识为体。有识则身有知觉，无识如死尸。识缘名色，此就是生命的展开，若无识的持轨，有情生命就不能增长。 <br/>
+<br/>
+四食不但有关一期生命的延续，未来生命的延续，也依于思食和识食的再创。有思食的愿欲，希望再生的力量，并有识的执持，便可构成将来生命之主体。 <br/>
+<br/>
+第五节        有情的出生 <br/>
+<br/>
+有情是生死死生，生生不已，一旦前一生命结束，即转为另一生命。有情新生形态有四类：胎、卵、湿、化。 <br/>
+<br/>
+胎生：如人、牛、羊等。最初自体，必须寄于母胎中，待身形完成，才离母体而出生。出胎后，有相当幼稚期，不能独立求生，须依生母乳哺抚养。人类再需父母师长教养，方能自立。 <br/>
+<br/>
+卵生：如鸡、鸭、雀、鸽等，不同胎生，离母体时，未完成身形，须孵化脱壳而出生，或有哺养，或自动生存。 <br/>
+<br/>
+湿生：如鱼、虾等，母体生下卵以后，便脱离关系，待一定时期，自从卵而生，或一再蜕变，自谋生存。湿生与母体关系最为疏远。 <br/>
+<br/>
+化生：如劫初入。从变化而生，不须父母外缘，凭自己之业力，忽然产生。胎与卵必依二性和合为助缘；湿生即有但以自生分裂成为新的生命；化生更不需此肉体为凭籍，即随业发生。 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

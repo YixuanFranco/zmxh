@@ -1,0 +1,90 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>浅析西藏镇魔图 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">浅析西藏镇魔图</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2006-9-20 13:57</div><div class="post-body">[font=楷体_GB2312][size=5]    很早就听说西藏的地形为女魔仰卧之形，藏文史籍中也不乏藏王松赞干布修建十二镇魔寺以镇压女魔四肢关节的记载。但没有见过女魔的形象。新近自治区文物管理委员会在整理罗布林卡文物时，发现两幅《西藏镇魔图》的唐卡，一睹魔女尊容，真乃喜不自胜。这两幅唐卡大小一致，内容相同，画面高152。5厘米，宽72厘米。图上的女魔裸体仰卧，双脚微曲，左腿遮住阴部，不致有失观瞻，画师的构图是巧妙的，意境是高雅的。魔女右臂上举，手腕下垂；左臂上抬，手腕弯过头顶。身上有山有水，脉络清晰，各处修了许多大小寺庙，其中包括传为公元七世纪修建的镇肢、再镇肢等十二镇魔神庙。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    关于西藏地形是女魔仰卧之形的传说还要追溯到公元七世纪文成公主进藏的时候，吐蕃当时正是佛法初传的时期，它从多方面吸收外来的佛教文化。唐朝文成公主和尼泊尔赤尊公主各自从本国带了一尊释迦牟尼佛像进藏（注1）就是吐蕃当时接受佛教文化的重要标志。有了佛像就得有安置佛像的寺庙佛堂，这也是佛教文化的重要组成部分。先是赤尊公主在宫前修建寺庙不成（注2），于是以重金礼请文成公主为其推测建寺地址。“文成公主依据中原的《八十种五行算观察法》来细推观察，而知道雪域西藏的地形，俨若罗刹魔女仰卧的形状”、（注3）而且进一步勘察得知，拉萨平地卧塘湖为女魔心血聚集之地。三山（注4）乃女魔的心窍脉络，在布达拉红山上已修建了王宫，镇住了女魔的心骨。尼泊尔公主乃依照文成公主的推算，以山羊驮土，填平卧塘湖，在其上修建了大昭寺，供奉佛像，镇压女魔心胸，为了进一步镇压女魔的四肢关节，保护西藏平安幸福，在女魔四肢关节部位，修建了所谓的镇魔十二神庙，据说这是制伏魔女的十二不移之钉。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    先在卫藏四茹（注5）建四镇边寺，即在约茹女魔的左肩上建昌珠寺，地在今山南地区乃东县昌珠区，今仍在，建筑规模宏大，寺内文物很多，系全国重点文物保护单位。[/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    在伍茹女魔的右肩上建噶泽寺，地在今拉萨以东墨竹工卡县的秀绒河与马曲河汇合处的马曲河东岸。噶泽寺的明王护法中心是由两个佛堂组成。另据英籍藏学家黎吉生先生称噶泽寺是莲花生大师调伏一条龙以后建造的。其北边紧挨着松赞干布创建的祈愿寺，它是在那个时代出现的小型的典型建筑，是古老而原本的建筑形式。并称：塘迦是“镇度寺庙之一”，其后（后宏期）为鲁梅所重建。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    在茹拉女魔的左足上建仲巴江寺，或译为仲巴杰，又译章巴炯，地在今日喀则地区拉孜县与彭措林联界处，古属茹拉范围，今属拉孜县。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    在叶茹女魔的右足上建仗章寺，地在今日喀则地区南木林县东南土布加地方的雅鲁藏布江北岸，前临大江，后靠山岩，极为险峻壮丽。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    以上为镇肢或镇边四大寺。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    根据勘察，“若尚不能克制”女魔，当“再修四大重镇神庙”（注6）。即在女魔左肘上建洛扎空厅寺，亦译昆延寺，今名洛扎拉康。地在今山南地区洛扎县境夏曲河与怒曲河汇合处，其南面接近不丹山。据称，洛扎拉康是一个木顶的朴实且散乱的建筑，它曾修茸而宏伟，但依旧保持了其简单的特点。在主殿附近的另一个殿堂里有著名译师那若巴的红陵。在其前面还有一神奇的小型圣祠。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    在右肘上建布曲寺，寺在工布（今林芝）地区林芝县布久区。该寺在铁虎年（1930）大地震中遭到严重破坏，后奉命修复，然建筑和壁画艺术均非昔比。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    在左膝上建江扎东哲寺，亦译诈顿拉康，地在今日喀则地区仲巴县境。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    在右膝上建绛真格杰寺（意为慈云宏善寺），地在今日喀则地区吉隆县南部，靠近中尼边界处。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    以上四寺，史称镇节或再镇边四寺。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    接着，根据推算，又修建四大镇翼寺。即在康区，女魔左掌心上建隆塘卓玛寺，地在今四川甘孜藏族自治州邓柯县境。据说是延请弭（即西夏）工匠建造。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    在右掌心上建朋塘吉曲寺。据刘立千先生考证，朋塘是不丹中部的地名，吉曲为河流名，从洛扎西部经过洛扎西南角的麦拉嘎俊山西流入不丹的朋塘。此庙在朋塘吉曲河畔，故名朋塘吉曲寺。据说是延请吐火罗的匠师兴建的。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    在左足心上建日喜卓玛寺，地在今拉达克地区境内，原为西藏辖地。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    在右足心上建仓巴弄寺，地在藏北草原，系延请霍尔工匠建造。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    以上史称镇翼四寺，共为十二镇魔寺。这些只是镇伏女魔的主要寺庙。为了改变一些恶劣风水、完善八吉祥的征相，在女魔身上还修建了许多大小寺庙、佛塔等。为了对治“地水风水” 四大灾害，在东方修噶曲、冈曲、林曲三庙；在西方修谷郎、兴昆二庙；在南方修涅之郎卓庙及林塘庙；在北方修格日、巴日二庙。还有桑耶寺、扎耶巴等也都具有镇慑作用。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    从《西藏镇魔图》上的寺庙位置看，女魔是头东脚西仰卧，其心脏在西藏政治、经济、文化的中心首府拉萨。这样的构图是合理的，安排是恰当的。其地理范围不仅包括了卫藏四茹。而且部分超出了现在的区域境界。西至拉达克，南抵不丹境、东到四川藏区邓柯，北边包括羌塘草原。当然，传说毕竟是传说，它与历史有着一定的联系，但同史实还有一定的距离。西藏画师根据传说而绘成的《西藏镇魔图》也与西藏的地形图不尽相同。既然要画成魔女的形象，就不可能同地形图完全吻合。所以，镇魔图上的寺庙位置也仅是示意，不会十分准确，有的甚至有错位的可能。《西藏镇魔图》中的这个罗刹女魔仰卧之地，只是以拉萨为中心的极为有限的一部分地方，远非当代概念的西藏全貌。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    罗刹魔女，在许多人看来那都是恶鬼的代名词。而且佛书也说：“罗刹是恶鬼之通名也” （注7）罗刹女乃“食人之鬼女也”（注8）佛书所载罗刹女很多，有八大罗刹女，十大罗刹女，七十二罗刹女，五百罗刹女等等，都把罗刹女的形象描绘得十分狰狞可怖，说她们是青面獠牙，血盆大口，是吃人肉、喝人血的恶鬼。总之是非镇压不可的凶神，不镇伏，西藏就没有安宁的日子。然而展开镇魔图一看，魔女虽然长着长长的指甲和两颗外突的门牙，但其形象并不那么可怖。相反，魔女画得异常丰满，有脉有肉，似乎血液还在流动，而又带一点曲线之美，虽说不上什么“绝美妇人”（注9）但也并没不让人十分厌恶。当然，谁也没见过罗刹女魔是什么模样？《西藏镇魔图》中的魔女形象，只是凭着画师的灵感想象出来的，俗话说画鬼容易画人难嘛，从来没人见过的事物画出来最像，画成什么样子都行，画好了，得到大家认可，后人便照样画葫芦。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    西藏传说中有两个重要的罗刹女，一个是同西藏人的起源有密切关系的岩罗刹，这后来与观音菩萨点化的猕猴相恋结合，繁衍出数百万藏族男女，成为西藏人的始祖母，受到人们的崇敬和乐道。另一个就是养育了西藏人民的罗刹魔女，成为哺育西藏人成长壮大的大地母亲。这两者在形象上都是丑恶的魔类。但在心灵上却是人们亲近和崇拜的偶像。所以，画师在构思这幅《西藏镇魔图》的时候是颇费匠心的，既要表达魔女的形态，又要迎合人们崇拜的心理状况。看来这两幅清初唐卡的作者通过他精心的构思和娴熟的绘画技法，已经达到了这两者的高度统一和结合，成为一幅思想内容和绘画技法都很完美的绝妙的艺术佳作。 [/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[size=4][font=楷体_GB2312]注释 [/font] <br/>
+[font=楷体_GB2312][注1] 文成公主所带释迦牟尼十二岁时的身量像，先修甲达然莫切（小昭寺）供奉，后来移奉大昭寺。赤尊公主所带不动明王等圣像，先修祖拉康（大昭寺）供奉，后来移奉小昭寺。 [/font] <br/>
+[font=楷体_GB2312][/font] <br/>
+[font=楷体_GB2312][注2] 《西藏王臣记》第三十六面载称，“王妃赤准便同松赞干布商量修建寺庙事宜，松赞王说：‘由你尽量往好的方面修建吧’！她依照松赞王的吩咐，当即在山前的草地上修建庙宇。不幸的是，白天所修的建筑物，晚间即遭鬼神捣毁”。 [/font] <br/>
+[font=楷体_GB2312][/font] <br/>
+[font=楷体_GB2312][注3] 见《西藏王臣记》汉译本第37页。另《汉藏史集》第97页载称：“于是由（文成）公主摆开卦具，运用八卦进行推算，推算结果是，拉萨这个地方并不具足八种吉祥之相，而且有八种或五种地煞。原来雪域吐蕃这个地方，形如一个仰卧的女魔。” [/font] <br/>
+[font=楷体_GB2312][/font] <br/>
+[font=楷体_GB2312][注4] 三山，指玛波日山，即布达拉红山；甲波日山，在布达拉西南孤峰耸出，俗称药王山；帕玛日山，在甲波日之西北，连岗稍低，清乾隆时期在山上修建关帝庙，俗称魔盘山。三山为拉萨平原突起之三峰。 [/font] <br/>
+[font=楷体_GB2312][/font] <br/>
+[/font][font=楷体_GB2312][size=5][size=4][注5] 四茹，公元七世纪松赞干布统一西藏各部，建立起强盛的吐蕃王朝以后的行政区划。起初只有卫藏四茹，即卫地的约茹、伍茹，藏地的叶茹、茹拉。后来征服苏毗和羊同以后又增设孙波茹和羊同茹等。[/size] [/size][/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">一</div>一杯菠萝蜜发表于 2012-1-6 20:53</div><div class="post-body">我能深入于未来  尽一切劫为一念 <br/>
+三世所有一切劫  为一念际我皆入 <br/>
+我于一念见三世  所有一切人师子 <br/>
+亦常入佛境界中  如幻解脱及威力 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>持咒须知 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">持咒须知</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">司</div>司马司发表于 2008-12-11 13:51</div><div class="post-body">持咒须知 <br/>
+<br/>
+印光法师说：“须知律为教禅密净之基址，若不严持禁戒，则教禅密净之真益莫得，如修万丈高楼，地基不固，则未成即坏。”〔1〕所以说，欲学经咒者，须先从持戒入手。不能住菩萨戒，也须能持五戒。况杀盗淫妄是性戒，无论你信不信佛，受戒未受戒，犯戒者都要受地狱的苦报。《七佛经》说：“若有人能受持五戒，感得二十五神侍卫。”〔2〕 <br/>
+有人说：“我能戒杀。”谈何容易。 <br/>
+如广净法师在《信佛的基本概念》中说：“不杀生。生是众生，包括一切有情识的动物。不得杀害有情识的众生，叫不杀生戒。上至诸佛圣人师僧父母，下至蜎飞蠕动，微细昆虫，但有命者，不得故杀。”〔3〕自己不杀生，亦不教他杀，见杀勿欢喜，悲悯诸众生。亦不可从事与杀生有关的行业，如：养鸡、养鱼、捕捉、贩卖生物等，亦不可制造和贩卖杀众生具（如鱼钩、鱼网、粘网、鸟枪及捕杀小飞虫和小爬虫的器具药物等）有则毁之，勿扔勿送人，且勿结杀缘，你真能做得到吗？ <br/>
+有人又说：“我能守盗戒。” <br/>
+偷盗抢劫之事，稍知礼仪之人，便不能为之。然细论之，若非大圣大贤，亦难免不犯。 <br/>
+广净法师说：“偷盗是未得到应允而侵占别人的所有物，或以武力强夺他人财物。从房屋、田园、珍宝等贵重器物乃至微小细物如针线等，不与而自取，即为偷盗。”〔4〕 <br/>
+不要说偷盗抢劫了，如以权取财，假公济私搞回扣等，以及打单位的电话办个人的私事，用公家的信纸写个人的家书，皆犯盗戒。又如损人利己、放高利贷、短斤少两、牟取暴利、走私漏税、坐车不起票、赌博、买股票、诈骗、借钱不还，以及买东西时，多找给我们钱，竟生欢喜心舍不得退回。明知是假钱，舍不得销毁，故意往外花等皆为盗。 <br/>
+不与而取人之财物为盗，不与而取畜生物亦未必不为盗。如《十诵律》云：“若取他虎残肉者，犯小罪，由不断望故。若取狮子残者不犯，由断望故。”又《萨婆多论》云：“盗一切鸟兽残者得小罪。”小注：“今时俭世，多有俗人毁坏他鼠窟，取其貯粟、胡桃、杂果子等，准此犯罪。”〔5〕鼠类的粮食被人抢光了，它们有的因饥寒而亡，你不又犯了杀戒吗？ <br/>
+还有容易被人忽略的一点就是，拣到钱物归己所有，也算犯盗戒。那么拣到东西该怎么办呢？《正法念处经》说：“若见道边遗落之物，若金若银，及余财宝，取已唱令，此是谁物，若有人言此是我物，当问其相，实者当还。若无人认，七日持行，日日唱之，若无主认，以此宝物，付王大臣，州郡令长。若王大臣州郡令长，见福德人，不取此物，后当持与佛法众僧，是名不偷盗。”〔6〕 <br/>
+那么，采矿算不算偷盗呢？《成实论》云：“伏藏取用无罪。”〔7〕 <br/>
+但是，取用活的生物却有罪。譬如你看见一只飞虫，毫不客气的就把它拍死了，这是犯杀戒不难理解。其实也犯了盗戒。为什么这么说呢？这是不与取。你没有取得飞虫的同意，就无缘无故的取了它的命，这怎么说得过去呢。 <br/>
+又如见色、闻声、嗅香，心一贪恋即有所取。所以说：“人非圣贤，欲持盗戒，谈何容易，但也不要知难而退。” <br/>
+人物，非人及畜生物皆不可盗。更不可盗佛、法、僧物。 <br/>
+何谓盗佛物？ <br/>
+如《十诵》，偷佛舍利，《萨婆多论》盗佛像，并为净心供养。自念云：“彼亦弟子，我亦弟子，如是之人，虽不语取，供养皆不犯罪。”若依《摩德勒伽论》云：“为转卖活命故盗佛像舍利者，犯大重罪。”〔8〕 <br/>
+何谓盗法物？ <br/>
+如《四分律》云：“时有人盗他经卷。佛言：佛语无价，计纸墨犯重罪。”《十诵律》云：“借他经拒逆不还，令主生疑者，犯方便罪。”《正法念经》云：“若盗他秘方者犯重罪。”《唯识并决论》云：“暗取他经论读乃至一句，皆犯盗窃文句罪。”《五百问事口诀》云：“不得口吹经尘，以口气恶故。若烧故经得重罪，如烧父母，不知有罪者犯轻。”〔9〕如今有人把四众弟子施舍的经书，拿去卖钱，你说：“该犯何罪？” <br/>
+何谓盗僧物？ <br/>
+如《五分律》云：“贷僧物不还，计直犯罪。”又《观佛三昧经》云：“盗僧鬘物者，过杀八万四千父母等罪。”又《宝梁经》云：“宁啖身肉终不得用三宝物。”又依《方等经》云：“华聚菩萨云，五逆四重我亦能救，盗僧物者，我不能救。”又《大集经济龙品》云：“时有诸龙得宿命心，自念过去业涕泣雨泪。来至佛前各如是言：我忆往昔，于佛法中或为俗人亲属因缘，或复听法因缘，所有信心舍施种种花果饮食，共诸比丘依次而食。或有说言：我曾吃啖四方众僧花果饮食。或有说言：我往寺舍布施众僧，或复礼拜如是吃啖，乃至七佛已来，曾作俗人有信心人，为供养故施诸花果种种饮食，比丘得已迥施于我，我得便食。由彼业缘，于地狱中，经无量劫，大猛火中，或烧或煮，或饮洋铜，或吞铁丸，从地狱出堕畜生中，捨畜生身生饿鬼中，如是种种备受辛苦。佛告诸龙：此之恶业与盗佛物，等无差别，比丘逆业其罪如半。然此罪报难可得脱，于贤劫中值最后佛，名曰楼至，于彼佛世罪得除灭。” <br/>
+述曰：“何故盗用僧物其罪偏重耶？答曰：随盗一物，即望十方凡圣，上至诸佛，下及凡僧，随境无边，还结无边等罪，微尘尚可知数，此人罪报不可测量。所以者何？为其施主本舍一毫一粒拟供十方出家凡圣，令其食用日夜修道，不欲供俗。是以鸣钟一响遐迩同食，凡圣并资俱成道业，冥资施主得益无边，惟斯福利功齐法界，招善既多获罪宁少。今见愚迷众生，不简贵贱不信三宝，苟贪福物将用资身。或食啖僧食受用花果，或骑僧杂畜将僧奴用，或借贷僧物经久不还，见僧屡索反加凌毁，或倚官刑势伺求僧过，如是等损具列难尽，静思此咎岂不痛心。今惜不与者，非是悭惜不惠，为慈愍白衣虑受来苦。若当与者非直损俗，亦罪及知事，未来生处同受其殃。”故《佛本行经》云：“一念之恶能开五不善门。一恶能烧人善根。二从恶更生恶。三为圣人所呵。四退失道果。五死入恶道。既知不易诚为大诫。后时取受省用之也。”〔10〕 <br/>
+又钱物互用亦有过失。 <br/>
+如《宝梁宝印经》云：“佛法二物不得互用。”又《十诵律》云：“佛听僧坊佛图，畜使人及象马牛羊等，各有所属不得互用。”又《善见论》云：“佛前献佛饭食，侍佛比丘得食，若无比丘白衣侍佛亦得食。”又《罪福决疑经》云：“初献佛时，上中下座，必教白衣奉佛及僧，献佛竟行与僧食不犯。若不尔者，食佛物故，千亿岁堕阿鼻地狱，檀越不受师教，亦招前罪。若生人间，九百万岁堕下贱处。何以故，佛物无人能评价故。”《四分律》云：“许此处乃与彼处，皆得罪也。”〔11〕 <br/>
+如：用放生款济贫，用救灾的钱修庙，甚至入了个人的私囊，以及许愿不还，皆为钱物互用，犯盗戒。可不要轻视钱物互用的过失啊！如倓虚老法师的《影尘回忆录》说：“有一个宦官人家，把救灾款私吞，饿死了成千上万的灾民。后来修庙，大做善事功德。但他死后仍立入地狱。”〔12〕你说多可怕啊！ <br/>
+问：“何谓不犯耶？”答：“律有五种、皆谓无盗心也。一与想、意谓他与也。二己有想、谓非他物也。三粪扫想、谓无主也。四暂取想、即持还也。五亲厚意、无彼此也。” <br/>
+问：“何谓亲厚耶？”答：“律有七法。一难作能作、二难与能与、三难忍能忍、四密事相告、五互相覆藏、六遭苦不舍、七贫贱不轻。能行是七法者、是善亲友也。”〔13〕 <br/>
+有人说：“我能持淫戒。”果真如此吗？对于一个稍有修养的人来说，决无奸污邪淫之事。 <br/>
+但是，你若看见一位衣着整洁的年轻女子向你微微一笑，你能不动心吗？你若听了一首优美的女声独唱，你能不神魂飘荡吗？其实，一切所谓美好的东西都应舍弃。若能美色当前如畏虎狼蛇蝎，这才算具有一点修行人的清净本色。你若心起微波，那么，你还是一个凡夫俗子。 <br/>
+有人说：“我的心不动。” <br/>
+请不要妄言，出言即为动心。须知男人喜欢与女人同行，女人喜欢和男人说话，乃至男女之间，亲友之间，稍有一丝怀念，依恋之心，意地即不清净。 <br/>
+印光法师说：“最难断者唯淫……淫则稍知自爱者犹能制而不犯，然欲其意地清净，了无丝毫蒂芥者，唯断惑证真之阿罗汉方能之耳。”〔14〕 <br/>
+《中阿含经》说：“薄拘罗乞食来八十年……未曾视女人面。”〔15〕 <br/>
+你能做得到吗？ <br/>
+又《慧上菩萨经》说：“重胜王与女人一处为阿难所讥，时重胜王菩萨即自涌身住于虚空中去地四丈九尺……”〔16〕 <br/>
+你能做得到吗？ <br/>
+我没有这种神通。叫我如何利益众生。 <br/>
+若有女人喜杀飞虫，喜杀鸡鱼，我若好言相劝，讲明因果，她或可慈心不杀。我若不闻不问，她还是要杀。你说我该怎么办？ <br/>
+若为自利，如《增一阿含经》所说：“亦莫与女人，往来与言语。”〔17〕 <br/>
+若为利他，如《瑜伽师地论》所说：“若诸菩萨，安住菩萨净戒律仪，善权方便，为利他故……于菩萨戒，无所违犯，生多功德。”〔18〕 <br/>
+有人说：“我不妄语。”可是他为什么言而无信！言而无信即是妄语。妄语之人，有时既有绮语之过，又犯了杀戒和盗戒……为什么这么说呢？请您自悟。 <br/>
+妄语即是说谎，我真不敢相信世界上还有不说谎的人呢。甚至有人能把谎言说得和真话一样。你可曾知道，哄骗了别人就是哄骗了自己吗？ <br/>
+为了个人的利益而说谎算犯戒。为了利益众生而说谎是开缘，不算犯戒。譬如室内有一条蚰蜒，妈妈想拍死它，在她回身取拖鞋之际，蚰蜒趁机逃脱了。你看得一清二楚，但千万不要告诉她，告诉她即犯杀戒，哄骗她是开缘，不算犯戒。况救一微命亦胜造七级浮屠。 <br/>
+还有一种人胆大包天，竟敢犯大妄语戒。何谓大妄语？应受何报？印光法师说：“又若自未断惑，谓为断惑，自未得道，谓为得道，名大妄语。其罪极重，命终之后，决定直堕阿鼻地狱，永无出期。”〔19〕如此痴人，何不力忏？ <br/>
+酒戒往往为修行人所忽略，你可曾知道，因酒醉而致杀人、偷盗、奸污、骂人者，古往今来屡见不鲜吗？所以说，酒戒是遮戒，遮是遮止的意思。〔20〕学佛之人，不是为了利乐有情，慎勿饮酒。 <br/>
+《长阿含经》说：“其饮酒者有六种失：一者失财。二者生病。三者斗争。四者恶名流布。五者恚怒暴生。六者智慧日损。”〔21〕 <br/>
+又《梵网经》说：“若自身手过酒器与人饮酒者，五百世中无手。何况自饮。不得教一切人饮及一切众生饮酒，况自饮酒。”〔22〕 <br/>
+如此五戒，互相照应，开遮持犯，了了分明。若能严持五戒，再能精诚持咒，即可自利利他，利益无穷。不要说五戒难持，只须都摄六根〔23〕，即可纤毫不犯。 <br/>
+<br/>
+文献索引 <br/>
+〔1〕、增广印光法师文钞，卷第二，55页。 <br/>
+〔2〕、法苑珠林，〔唐〕道世撰集，上海古籍出版社，1991年8月第一版，下略，卷第八十八，第612页。 <br/>
+〔3〕、信佛的基本概念，广净法师著，香港佛经流通处，佛历二五三七年印，下略，第52页。 <br/>
+〔4〕、信佛的基本概念，广净法师著，第54页。 <br/>
+〔5〕、法苑珠林，卷第七十四，第534页。 <br/>
+〔6〕、大正新修大藏经，佛陀教育基金会印，1990年3月初版，下略，总卷第十七，正法念处经，卷第35，第206页。 <br/>
+〔7〕、法苑珠林，卷第七十四，第535页。 <br/>
+〔8〕、法苑珠林，卷第七十四，第532－533页。 <br/>
+〔9〕、法苑珠林，卷第七十四，第533页。 <br/>
+〔10〕、法苑珠林，卷第七十四，第533页。 <br/>
+〔11〕、法苑珠林，卷第七十四，第533页。 <br/>
+〔12〕、影尘回忆录，倓虚法师著，第八章，第82－87页。 <br/>
+〔13〕、盗戒释相概略问答，弘一律师编，莆田广化寺1987年春节印，第14－15页。 <br/>
+〔14〕、增广印光法师文钞，卷三，第13页。 <br/>
+〔15〕、大正新修大藏经，总第一卷，中阿含经卷八，第475页。 <br/>
+〔16〕、经律异相〔南朝·梁〕僧旻·宝唱等撰，上海古籍出版社1988年10月第一版，卷第九，第49页。 <br/>
+〔17〕、大正新修大藏经，总第二卷，增一阿含经卷第四，第563页。 <br/>
+〔18〕、瑜伽师地论，弥勒菩萨述，玄奘法师译，佛陀教育基金会印，卷四十一，第5－6页。 <br/>
+〔19〕、增广印光法师文钞，卷四，第40页。 <br/>
+〔20〕、三藏法数〔明〕释一如撰，浙江古籍出版社，1991年2月印，第43页。 <br/>
+〔21〕、法苑珠林，卷第九十三，第650页。 <br/>
+〔22〕、同上。 <br/>
+〔23〕、净土五经，上海佛教协会1989年版，第62页。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">一</div>一杯菠萝蜜发表于 2012-1-6 21:22</div><div class="post-body">我能深入于未来  尽一切劫为一念 <br/>
+三世所有一切劫  为一念际我皆入 <br/>
+我于一念见三世  所有一切人师子 <br/>
+亦常入佛境界中  如幻解脱及威力 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

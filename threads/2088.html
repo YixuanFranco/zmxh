@@ -1,0 +1,173 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>那洛六法概说 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">那洛六法概说</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-1-17 14:59</div><div class="post-body">[font=楷体_GB2312][size=5][color=Navy]《那洛六法概说》 <br/>
+<br/>
+<br/>
+[b]「那洛六法」：[/b] <br/>
+<br/>
+西藏的「那洛卓竹」Naro&#x27;i chos drug传承，直译虽是「那洛六法」Naro&#x27;s Six Doctrines，但对于西方的藏传佛教学人而言，「那洛巴六瑜伽」The Six Yogas of Naropa一名更为人所熟悉。由于温慈伊文斯博士Dr.Evans-Wentz、海拔根特教授Prof. Herbert Guenther及噶玛张澄基教授Garma C.C.Chang等前辈学者皆探用这个译名，故「那洛巴六瑜伽」一词已成为西方佛教界的标准用语，所以我在本书及过去的译文中亦沿用这个名祠（中译则仍依汉地惯例译为「那洛六法」——译按）。 <br/>
+<br/>
+「那洛六法：的传授方式在过去数世纪以来亦随著不同的传承而有所改变，宗喀巴大士曾在其广释中对此作出深入的探讨（宗喀巴大士所造的六法论典有两种，篇幅较长者是《深道那洛六法导引次第论•具三信念》，较简略者为《那洛六法实修手册•掌中修法扼要》，后者是用作行者闭关的指导手册——译按），此法虽有：那洛二法、三法、四法、六法、八法及十法等多种传承，但它们的异处仅是在於判摄六法的方式，在内容方面实无多大的分别。宗喀巴大士在其广、略二论中是用一种颇为微细复杂的纲领，以求融通这些由不同方法成立的那洛六法教规。他除了分六章开示六法外，更铺排出一条细密的理路来贯彻全论，虽然因此而令使其广、略二论远较一般的法本难明，但却能准确地处理及反映出传统上对安立「六法：一名的灵活性及随意性。后世的格鲁派论典一般亦以宗喀巴大士的指导为楷模把「那洛六法」别分六章而说。 <br/>
+<br/>
+[b]「那洛六法的背景及性质」：[/b] <br/>
+<br/>
+格鲁派Geluk是於十五世纪初叶形成的宗派，她融合了早期的多种传承，其六法传承主要是来自萨迦派Sakya的一个支派一夏鲁派Zhalu。夏鲁派的那洛六法传承是得自迦举派八小派中的止贡迦举Drikung Kargyu；止贡迦举则为迦举四大传承中的帕摩竹巴迦举PakmoDrupa Kargyu的支系。所以格鲁派是依此派的创立人吉祥帕摩竹巴Pakmo Drupa传予止贡迦举派初祖即丹颂恭Jigten Sumgon的法规来开示那洛六法。 <br/>
+<br/>
+帕摩竹巴所传的那洛六法是：拙火瑜伽、幻身瑜伽、光明瑜伽、迁识瑜伽、夺舍瑜伽及中有瑜伽。在这六法的铺排中，拙火是一切瑜伽的基础；幻身及光明二者皆为引生证德的根本正行；迁识、夺舍是（上述）修法的支分助行，此即占了六法的五种，而第六法——「中有瑜伽」则被视为「幻身瑜伽」的第三种支分助行。 <br/>
+<br/>
+换言之，前三瑜伽——拙火、幻身、光明皆是达至即身成佛的正方便；後三者——迁识、夺舍及中有，仅是在临终前仍未成就正觉的行者才需要修习的最後自保方法。一世班禅喇嘛（善慧法幢）於《那洛六法甚深导引•金钥》中，作出以下的解释： <br/>
+<br/>
+此意乃谓行者於身坏命终前未能成办一切达至正觉之法，则可趣修迁识及夺舍以圆满自他之大愿。如未堪能成就迁识或图於中有成办圆满正觉者，则可实行中有瑜伽之修法…… <br/>
+<br/>
+在宗喀巴大士的广、略二论中，对那洛六法之首——「拙火瑜伽」特加重视，因为能娴熟拙火的修持才能成办其馀五法。如宗喀巴大士於《深道那洛六法导引次第论•具三信念》所言： <br/>
+<br/>
+总之，凡是无上续部圆满次第法轨均需具足驾御流动於左、右二脉之命力，令彼趋入中脉之前行方便，此实不可缺少。然而能成办此义之法甚多，天竺诸大成就之传承皆各依不同续部法规为根本，於六法中则以生起脐间「变化轮」之拙火为根本方便，复藉「短啊字」驾御命力，把种种微细命勤气摄入中脉，此命力趣入中脉即引发「四喜」，行者即以此法为基长养定力，令「大印俱生本智」现起…… <br/>
+<br/>
+众所共知，此传承有云：「道之根本为拙火」，盖因行者於圆满次第中，是先以拙火为收摄微细命勤气趣入中脉之方便，复藉此引发「俱生大乐」，此为一切修法所依之真实基础。拙火乃是成立彼道基之法门，往后所有圆满次第瑜伽皆依此建立。拙火的修持是导引命勤气入、住、消融於中脉，当行者於此法善巧串习后，此证德即具有阻止菩提心漏失之力。行者依此势力便可依止业印作为助缘引生「四喜」，复依四喜而引发俱生大乐，故修持拙火及事业手印之目标便是生起俱生大乐“行者复把俱生大乐与空性和合，并于醒位中精进事修幻身之法门，藉修习「幻身」之觉受证德，行者即可趣修「光明」之法，后于夜简睡眠时，即能长养梦境自性虚幻之正知。 <br/>
+<br/>
+欲要修持得力，行者必先于任持「睡光明」之瑜伽获得善巧，然后由此胜观趣入梦位，又因任持「睡光明」之力乃是凭藉驾御命力而成办，故行者必须在醒位之修持中善巧娴熟驾御之法，并增长风入中脉之堪能，由此可知睡、梦二位修法之根本乃为拙火。又行者于成办「梦瑜伽」后，方具足修持「中有瑜伽」之量，故尔其根基亦如是得力于拙火修法。以上三位之瑜伽全皆摄于「幻身瑜伽」之内。不共的「迁识瑜伽」及「射识瑜伽」之加行亦须依于长养风入中脉之堪能，是尔拙火也是此二法门之根本基石。 <br/>
+<br/>
+由此可知，「拙火瑜伽」是其于五法的成就基础，所以宗喀巴大士及后代格鲁派论师皆著力阐述这种修法。 <br/>
+<br/>
+近数世纪以来，在迦举（四大八小）十二支派上师所造的论典中，、皆未曾说及「夺舍法」。据说，在那洛巴传承的这种瑜伽修法已随著玛尔巴的儿子达玛多德Darma Dodey之死而失传。於是后代迦举诸师便把「梦瑜伽」视为「幻身瑜伽」以外的一种独立修法而列为六法之一。 <br/>
+<br/>
+宗喀巴大士的说法却如帕摩竹巴一般，把「梦瑜伽」视作「幻身瑜伽」的三位修法之一，所以格鲁派的论典亦承袭了这种风规。宗喀巴大士在《深道那洛六法导引次第论•具三信念》对「夺舍法」虽有详细的分析，但於《那洛六法实修手册•掌中修法扼要》中，却只提到其名目而未有作出解释，也许宗喀巴大士认为此法於大多数人而言皆难以胜任。即使有说这种那洛巴所传的「夺舍法」已经失传（这种推论并不可靠），但切不可忘记此法的根源出处——《吉祥四座根本续》Chaturpita Tantra及其口授传承仍然流传於世。但无论如何，「夺舍瑜伽」肯定是一种极少被采用的修法，实在仅流传於从前大德祖师的事迹中。 <br/>
+<br/>
+[b]「早期的那洛六法文献」：[/b] <br/>
+<br/>
+一般常说，六法是先由谛洛巴所传出，后再传予那洛巴；那洛巴又将这个传承交付给其西藏弟子马尔巴译师，最后经由此师传入藏土。然而在这一段期间之中的六法文献却极鲜见，在里塘版的丹珠尔论藏中，仅有一首由谛洛巴所造的简短六法偈颂，那洛巴的论释更是完全欠缺。但是数个世纪后，在藏东德格寺刻板的德格丹珠尔除收录了这首谛洛巴的六法偈颂外，更收有一本篇幅较长，并且是那洛巴所造的文献。（亦即《六法口诀要门论》及《耳传金刚句》——译按） <br/>
+<br/>
+这样看来，玛尔巴译师在十一世纪中叶将那洛六法传入西藏时，并未有大量撰写六法的论释，宗喀巴大士在《深道那洛六法导引次第论•具三信念》中提到一本被许多西藏人视为玛尔巴所造的论典，但他指出从此论的风格看来却有可议之处，所以众多大师皆不同意这种说法。至放马尔巴的亲炙弟子密勒日巴亦同样没有那洛六法的著作传世，如宗喀巴大士在《深道那洛六法导引次第论•具三信念》中说： <br/>
+<br/>
+于《根本教义摄要前集》及《根本教义摄要后集》二书中（注1），前者中似有二相违处，又一类传承则许后者为玛尔巴大师所结集…… <br/>
+<br/>
+我等虽见有如是之说法，然却难定其真伪。另一被许为玛尔巴所造之论名为《八大导引偈颂长行》，内文由偈颂及长行合成，复有一书名《六法金刚歌》，然此二者唯欲植下口传教授之种子，由极简略故难尽其义。 <br/>
+<br/>
+早期的六法文献会这样简短精要，是因为这种法轨在当时纯粹是一种耳传教授snyan brgyud。正如宗喀巴大士所言，这种精简的论文仅是为了在弟子的心相续中植下种子，并不是作为实修导引之用。至於後者（导引）则需由传承上师亲授口诀才能发挥出其效用。 <br/>
+<br/>
+不过在数个世纪之後，六法却成为许多论释的题材，数百种六法的论释相继出现，这种情况并非因为西藏人对续义的守密态度有变，而是完全应验了那洛巴的授记，他在《耳传金刚句》的结赞中曾说： <br/>
+<br/>
+此等教法需於一十三代中（注2) <br/>
+应以口耳相传隐密印封藏 <br/>
+是为一切显经密续之心要 <br/>
+依此教授当能成就大义利 <br/>
+<br/>
+由於那洛巴明言六法传承在西藏应以口耳相传严加保密十三代，不能书於文字详细公开，此授记即暗示了那洛六法在十三代後将会成为论书中的题材。这裹所指的可能就是西藏最伟大的论师宗喀巴，因为他便是公开撰写六法论著的第十四代西藏上师。他所造的两本论典对保存六法传承作出巨大的贡献，令此法能弘传於後世。 <br/>
+<br/>
+谛洛巴及那洛巴并不入於十三代之数，因为「保密十三代」是那洛巴给予玛尔巴的授记，所以玛尔巴才是十三代祖师的第一位。历代相传至宗喀巴大士的传承上师尊名如下： <br/>
+<br/>
+(1)玛尔巴译师Marpa Lotsawa，他由那洛巴处获得六法传承。 <br/>
+<br/>
+(2)密勒日巴Milarepa，获得玛尔巴此传承的三位大弟子之一。 <br/>
+<br/>
+(3)刚波巴Gompopa，密勒日巴两位成就最大的心子之一。 <br/>
+<br/>
+(4)吉祥帕摩竹巴Pal Pakmo Drupa，刚波巴四大弟子之一，帕摩竹巴迦举的创立者（刚波巴的四大弟子各为迦举四大传承的祖师）。 <br/>
+<br/>
+(5)止贡即丹颂恭Drikung Jigten Sumgon，止贡迦举的创立者，吉祥帕摩竹巴的八大弟子之一（八大弟子各为迦举八小派的祖师）。 <br/>
+<br/>
+(6）藏巴惹琼Tsangpa Rechung，早期止贡迦举的大师。 <br/>
+<br/>
+(7）增巴具哇Jampa Palwa，亦为止贡迦举的大师。 <br/>
+<br/>
+(8)索南旺波Sonam Wangpo,另一位即生成佛的止贡迦举的大瑜伽士。 <br/>
+<br/>
+(9)索南僧格Sonam Sengey，瑜伽士中的狮子。 <br/>
+<br/>
+(10)扬泽哇Yangtsewa，天才洋溢，著作等身的止贡迦举的大论师。 <br/>
+<br/>
+(11）布顿仁青竹巴Buton Rinchen Drubpa，萨迦派的上师，后开创夏鲁派傅承。 <br/>
+<br/>
+(12）克主增巴具Khedrub，布顿六法傅承的心子。 <br/>
+<br/>
+(13)喇嘛札巴增促Lama Drakpa Jangchup，声名显赫的夏鲁派大德。 <br/>
+<br/>
+(14)至尊宗喀巴Lama Jey Tsongkhapa，甘丹寺及格鲁派的创立者。（注3) <br/>
+<br/>
+由此可见，至尊宗喀巴大士是属於西藏的第十四代那洛六法祖师，他正如授记所说广大撰造六法的论释。 <br/>
+<br/>
+[b]「六法的来源」：[/b] <br/>
+<br/>
+正如所有佛法传承一般，「那洛六法」的来源亦非佛陀本人莫属，佛世尊於二仟五佰年前传出种种不同的显经密续；显经sutra是公开的教典，而密续tantra则是秘密金刚乘的教典。「那洛六法」是一个集合多种佛说根本密续内义的法门，宗喀巴大士在《深道那洛六法导引次第论•具三信念》中说： <br/>
+<br/>
+「拙火瑜伽」之口授乃经由谛洛巴传至我辈，谛洛巴自说此为大成就者黑行藏名「洛本阿阇雅巴」（揉合《喜金刚本续》及《胜乐根本续》的而成）之传规。「幻身」及「光明」乃源自《密集派》之口耳传承，复由大成就者智藏传下，是尔此法乃 <br/>
+以《密集根本续》为本，此论即依玛派所传「圣父子派」（圣父即龙树，圣子即圣天及月称）密集口授传承为基。「迁识」及「射识夺舍」修法源出於《吉祥四座续》。(注4) <br/>
+<br/>
+此说「那洛六法」皆源出於佛说的续典，「拙火瑜伽」是由《喜金刚根本续》Hevajra Tantra及《嘿噜噶胜乐轮根本续》Heruka Chakrasamvara Tantra的教法结合而成：「幻身瑜伽」及「光明瑜伽」是源於《密集根本续》Guhyasamaja Tantra「迁识瑜伽」及「夺舍瑜伽」则出於《吉祥四座续》Shri Chaturpita Tantra。这些根本续皆是出自佛陀的金口所说。宗喀巴大士在论中并没有特别提及「中有瑜伽」，这是由於「中有瑜伽」在六法传承中乃被视为「幻身瑜伽」的延续，所以亦同样是出於《密集根本续》。 <br/>
+<br/>
+所有由梵文译为藏文的根本续皆被收入甘珠尔经藏Kangyur中，至於後代印度佛教大德对各根本续所造的大量释论，则全收於丹珠尔论藏Tengyur之内。宗喀巴大士更指出黑行论师Krishnacharya所造的拙火瑜伽论释对於六法传承是最为重要。 <br/>
+<br/>
+[b]「传承的名称」：[/b] <br/>
+<br/>
+正如在谛洛巴所造的简短六法偈颂《六法口诀要门论》所见，谛洛巴主要是吸收了印度的四种传承而创立出名扬青史的六法教规。此论的名称大有可能是藏人后来加上的，它是一本以六种瑜伽修法来演绎谛洛巴四大教授的导引手册。 <br/>
+<br/>
+至於另一本篇幅稍长的偈颂体文献，其论名是谛洛巴的印度弟子那洛巴所立，但之後的藏人法统名称（即《耳传金刚句》一译按）大概也是西藏人后来浮加的。事实指出早期的西藏传承是有二法、三法、四法、六法、八法及十法等多种不同的法统。若谛洛巴及那洛巴刻意标出「六法」来作为这二论的书名，那西藏人自当遵循祖训，不会另立各类数量有别的瑜伽法统。但事实上这个版本的名称乃是《金刚句•智慧空行母之教授》，它才是见於丹珠尔论藏中的正式书名，而《耳传金刚句》一名，在此书中并未有提及。 <br/>
+<br/>
+令「那洛六法」一名变得家传户晓的人，很有可能是密勒日巴尊者的心子及开创出达波迦举传承DakpoKargyu的刚波巴大师（达波迦举后来又分成四大八小等支派）。在刚波巴大师的全集中有一本以「六法」为书名的简要论释。虽然「六法」一名亦同样见於密勒日巴的传记中，但由於这部传记是在数世纪後才结集成书，所以亦大有可能采纳了后来的术语。 <br/>
+<br/>
+玛尔巴与密勒日巴似乎多把这传承称为「中有解脱口授」，宗喀巴大士在《深道那洛六法导引次第论•具三信念》的前言中详述行者在趣修「那洛六法」等高级的密续修法前？定必首先成办基本的佛法修行： <br/>
+<br/>
+密勒日巴尊者於传授《中有解脱口授》时亦有言：「首应修持皈依三宝及愿、行二菩提心等法以奠定根基，否则师徒二人即犹如二牛互系於牛轭，双双同堕於苦境中。」是尔於其人不善加观察便即授予密轨，定必令师徒二者同陷於苦境，正如二牛犊共系於一轭套中……。上文所说之《中有解脱口授》即等同於本法。 <br/>
+<br/>
+在法王温萨巴Gyalwa Wensapa的《深道那洛六法笔录•悉地普生》中，我们会进一步得知这种名为「中有解脱口授」之六法传承。这位十五世纪的格鲁巴大德曾用了一生中的大部份时进行闭关修习，他以其睿见详细讨论有关「三身」与三种「中有」bardo合修之法。这三种中有便是：醒位中有、睡梦位中有及命终与转生间之中有。这种名为「三会合」（或名「三身九会合」——译按）的修法亦是六法的别名。 <br/>
+<br/>
+[b]「现存的六法传承」：[/b] <br/>
+<br/>
+「那洛六法」已经历了千多年的历史，在这段悠长的岁月中，它曾令到无数中亚地区的修行者获得启发，迄今未替。虽然那洛六法在迦举派及格鲁派中特受推崇，但在某种程度上所有西藏的佛教皆有传习此法。在印度的西藏难民区生活的十二年中，我曾有幸能遇上多位善於修持六法的瑜伽士。在达兰沙拿境内山上的洞穴及茅蓬中，常有大量格鲁派的僧尼独居勤修。於距离喜玛拉雅山东南方四十公哩的藏人聚居地札西仲Tashi Jong一地，竹巴迦举派的长发吐登tokden瑜伽士则致力进行为期六年的那洛六法闭关苦修。位於玛拿里Manali东南方五十公哩高山上的咕鲁村Kulu Vally中，阿布仁波切Apo Rinpoche长期带领著一莅拉达克籍Ladakhi的僧侣修习此法。此外在喜玛拉雅山的另一边亦有其他的精进修持六法的团体，例如：噶玛迦举派Karma Kargyu的行者在隆德Rumtek及锡金Sikkim的出洞中修持；香巴迦举Shangpa Kargyu的行者在大吉岭Darjeeling一地的山中苦修；止贡迦举派Drikung Kargyu的行者居於拉达克Ladakh的洞穴及静处；竹巴迦举Drukpa Kargyu的行者在不丹Bhutan；宁玛派Nyingma的行者则住於尼泊尔Nepal一地。这些行者皆秉承了这个由谛洛巴、那洛巴、玛尔巴及密勒日巴传下的古老六法传承。 <br/>
+<br/>
+西藏佛教名大传承皆以其独特的方式发扬六法，各自形成了与他派迥异的不共风格。我希望能在这两本六法的书籍中反映出格鲁派自宗在这方面所作出的贡献。（格连慕尼曾把宗喀巴大士的《深道那洛六法导引次第论•具三信念》及后代格鲁派大德的多种六法论释翻译为英文，两书的名称分别是：Tsongkhapa&#x27;s Six Yogas of Naropa及Readings on the Six Yogas of Naropa雪狮出版社出版——译按。） <br/>
+<br/>
+在前书中（Tsongkhapa&#x27;s Six Yogas of Naropa），我尝试将宗喀巴大士处理六法的功力及广大性呈现於读者面前，在另一书中（Readings on the Six Yogas of  Naropa），我试图展示出谛洛巴及那洛巴最初是怎檬铺设其法轨，并尝试显出经宗喀巴大士所阐明的法规是如何以其深厚的力量，在过去数世纪以来策发着无数的修行者。 <br/>
+<br/>
+（全文完）[/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">雄</div>雄天护法发表于 2007-1-17 15:00</div><div class="post-body">[font=楷体_GB2312][size=4][color=Navy]「注释」： <br/>
+<br/>
+(1）杰喜饶嘉措Jey Sherab Gyatso在《三信念笔记》亦曾提及此二书，但却用了略为不同的书名：「六法传承之教典根源乃是名为一《迦举派二部教典》bKa&#x27; rgyud pa ka dpe gnyis之两卷论集。」就我个人所知，此二书被视为极秘密的典籍，并未公开印行流通。 <br/>
+<br/>
+(2）「代」之一词非指一段固定的时问，而是说前后十三代传承法脉，即是十三代的传承上师。从一位上师圆寂後，直至其法子亦圆寂为止便是一代，所以每一代的时问是随著每位祖师住世的寿量而有长短之别。 <br/>
+<br/>
+(3)这当然只是六法传承其中一系的说法，也就是说这仅是六法传至宗喀巴大士及格鲁派的方式而已。譬如说，噶玛迦举及帕摩竹巴迦举二派所持的传承，在刚波巴大师之前仅是一脉相承，到了刚波巴大师之後才发展为多系不同的传承，所以从此以後，迦举传承的四大派及八小派皆各有其不同的师承法脉。 <br/>
+<br/>
+(4）玛尔巴译师获得多种不同密续传承的事迹，在其藏文的各种传记中有精彩的述，其中被翻译成英文的亦有数种之多，但最为广大详尽的是那难陀翻译组Nalanda Translation Committee所译的《玛尔巴译师传》The Life of Marpa the Translator（此书已由缪树廉居士汉译并分期登於《法露杂志》——译按）。 <br/>
+<br/>
+(5）密勒日巴尊者说：「首应修持皈依三宝及愿、行二菩提心等法以奠定根基。」其短短数语便是对向修习佛法根本基础的教授。皈依佛、法、僧三宝意谓行者要认知自身的根本处境，而将生命转向圣道。「愿菩提心」及「行菩提心」是大乘内观，「愿菩提心」是由慈悲起动为一切有情而成佛的愿心；「行菩提心」是为了实现此愿心而修习布施、持戒、安忍、精进、禅定、般若等六波罗密多。 <br/>
+<br/>
+(6)六法又名为「中有解脱口授」bar do &#x27;phrang sgrol gyi man ngag，因为行者凭藉这些瑜伽便能够在「醒位中有」、「睡位中有」及死后之「转生中有」成办正觉。[/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金刚境发表于 2007-8-11 21:03</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
+宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
+弥陀无量寿金刚，胜中胜天无分别，证得大贪波罗蜜，胜金刚语我敬礼！ <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

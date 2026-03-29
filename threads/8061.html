@@ -1,0 +1,329 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>光明点奥义书 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">光明点奥义书</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">宝</div>宝莲定觉发表于 2013-10-6 18:32</div><div class="post-body">[size=5][font=楷体_GB2312] <br/>
+光明点奥义书 <br/>
+徐梵澄  译 <br/>
+<br/>
+引       言 <br/>
+此书据一九四八年孟买本《百二十奥义书集》译出。同时参校K.N.Aiyar《三十小奥义书》英文译本，及P.Deussen《六十奥义书集》德文译本。二家所据梵本，原自不同。德文本仅有十四颂，而判为五分，译为每行八音，四行三十二音，恰与梵文二行三十二音同式。然“小引”中已称原义之晦，诸注疏家为说之难，其出义甚卓。英译本则为散文，而篇幅宏大。其原文与此“百二十集”所收者，似不甚相远，或者句乙稍有不同，出义间有未当，要皆语文形体之所限也。此译仍以颂体出之，酬其雅制，句数或多或少，要皆五言。然既有千余年佛典译文为背景，而梵道与佛法又同此天竺文化渊源，其于吾华必不似于欧西之为生涩为可知也。名词与佛乘中者不二，则迳取旧有；其义有别，则稍加注明；音翻亦从玄奘译，盖梵音今古无变，取惯熟于眼目者。兹姑取第一章五十颂而止，以下五章，重文累句，反复不已，姑存之以备他年。 <br/>
+<br/>
+<br/>
+光明点奥义书 <br/>
+徐梵澄  译 <br/>
+<br/>
+光明一点在，     无上静虑任。 <br/>
+是宇宙“自我”，   端居藏内心。 <br/>
+其细如元微，     福乐安和愔。 <br/>
+初粗转微妙，     遥遥愈微深①。（一） <br/>
+<br/>
+痛苦自充满，     艰难得容与。 <br/>
+辛勤罕见之，     解脱，不灭去。 <br/>
+牟尼及智士，     亦难得静虑②。（二） <br/>
+<br/>
+<br/>
+<br/>
+节食，平忿怒，   解执，制诸根， <br/>
+超对，无我慢，   窒欲，销冤恩。 <br/>
+无道成有道，     有道非思存， <br/>
+初始能得三，     三界飞鸿尊。③（三、四） <br/>
+<br/>
+故尔当知此，     太上之玄虚， <br/>
+无寐亦无依，     明月分光如， <br/>
+微妙维师鲁，     无上之安居。④（五） <br/>
+<br/>
+其居有三面，     三界，三功德。 <br/>
+无依，不动、变， 无相，无形色。⑤（六） <br/>
+<br/>
+是处无幻加，     言、思境超绝。 <br/>
+自性性所摄       不系，行迹灭。⑥（七） <br/>
+<br/>
+自是“阿难陀”，   然已超众乐， <br/>
+难见者，离系，   思虑非所托， <br/>
+不朽，自永恒，   坚贞无坠落。⑦（八） <br/>
+<br/>
+此属大梵神，     此是“内自我”， <br/>
+此属维师鲁，     此高无上座。 <br/>
+此不可思量。     此唯“智成我”， <br/>
+此是穹窿天⑧，    太上宅安妥。（九） <br/>
+<br/>
+非空，是空性，   超空，内心定。 <br/>
+非静虑、能、所， 静虑唯可证。⑨（十） <br/>
+<br/>
+万有非外，空，   非上，非非上， <br/>
+非思，非寐觉，   非真，非外想⑩。（十一） <br/>
+<br/>
+牟尼精证入，     诸天犹未能， <br/>
+未知太上者。     贪，痴，畏，骄矜， <br/>
+情欲，与忿怒，   罪业伊何曾□11（十二） <br/>
+<br/>
+寒、暑与饥、渴， 想、非想不入， <br/>
+梵族无虚矜，     亦无解结集。（十三） <br/>
+<br/>
+无畏，无苦、乐， 乃尔无荣、辱， <br/>
+凡此境皆蠲， <br/>
+此是所当摄，     大梵最高躅□12（十四） <br/>
+<br/>
+持戒与精修，     出世耽玄默， <br/>
+宜处，复以时，   根结，炼体式， <br/>
+身和，眼凝视，   导引，敛根、识， <br/>
+摄念，静虑“我”， 三摩地可得， <br/>
+说此瑜伽支，     依次倘无惑□13（十五、十六） <br/>
+<br/>
+“万有皆大梵”，   人唯是当知， <br/>
+尽摄业、识根，   始谓戒已持， <br/>
+缓缓宜渐习，     精修在游思， <br/>
+同类相续流，     异类远尔离， <br/>
+享受超极乐，     智者精修为□14。（十七、十八） <br/>
+<br/>
+巨人崇出世，     顿然得解脱。 <br/>
+（由知真、智“我”，宇宙万类豁□15。）（十九） <br/>
+<br/>
+语言自之返，     心思并不及， <br/>
+智者常敬崇，     玄默修士入□16（二十） <br/>
+<br/>
+语言返自兹，     云谁尚能说？ <br/>
+宇宙傥可云，     是亦名言辍。（二十一） <br/>
+<br/>
+玄默固可知，     万有自然与。 <br/>
+是或“彼”如是。   儿童默有语， <br/>
+若彼梵明士，     寂无语依处□17  （二十二） <br/>
+<br/>
+始、末、中无人， 识为闲寂处， <br/>
+由之此宇宙，     恒常遍漫伫□18。（二十三） <br/>
+<br/>
+凡一切众生，     大梵等成作， <br/>
+皆在眨眼际，     时间固可度， <br/>
+谓言此无二，     永永为极乐□19。（二十四） <br/>
+<br/>
+思存大梵身，     恒行健不息， <br/>
+唯以安乐行，     当知为体式， <br/>
+非此灭福乐□20。                    （二十五） <br/>
+<br/>
+证会不二者，     宇宙罗万有， <br/>
+成就示入之，     体式名成就□21。（二十六） <br/>
+<br/>
+彼诸世界根，     彼根心思结， <br/>
+根结常宜用，     梵道之明哲□22。（二十七） <br/>
+<br/>
+诸体皆等平，     销入大梵中， <br/>
+当知平等性，     无知固无功， <br/>
+譬如枯乾树，     僵直性已同□23。（二十八） <br/>
+<br/>
+既成智成见，     世界大梵观。 <br/>
+此为超上见，     非视凝鼻端□24。（二十九） <br/>
+<br/>
+见者、见、所见， 彼处皆止息， <br/>
+当唯视彼处，     非视鼻端白。（三十） <br/>
+<br/>
+心等一切境，     中见大梵尽。 <br/>
+息心诸动转，     是名为导引□25。（三十一） <br/>
+<br/>
+外绝此宇宙，     是名气吐出。 <br/>
+思“我唯大梵”，   是为吸气术。□26（三十二） <br/>
+<br/>
+凝思此无动，     是乃气持 ， <br/>
+明哲亦尔为，     愚者徒鼻擫□27。（三十三） <br/>
+<br/>
+于境见“自我”，   以意愉心思， <br/>
+可知敛识、根，   缓缓宜修为。（三十四） <br/>
+<br/>
+念往随处驰，     随处大梵见。 <br/>
+唯是念已摄，     超上持云善。（三十五） <br/>
+<br/>
+“我唯是大梵”，   善思住无缘， <br/>
+超上乐施者，     禅定斯名诠□28。（三十六） <br/>
+<br/>
+心思弗动转，     梵相更深视， <br/>
+以此忘存心，     名正三摩地□29。（三十七） <br/>
+<br/>
+自然阿难陀，     时当善修人， <br/>
+时见者瞬间，     自与对性和□30。（三十八） <br/>
+<br/>
+于是瑜伽师，     乃释修持助， <br/>
+有得“彼”自相，   斯人曰“成就”， <br/>
+其境超思惟，     谅非语言囿□31。（三十九） <br/>
+<br/>
+修行三昧时，     障碍猛纷至， <br/>
+懈弛，失精审，   欲望享乐事， <br/>
+迷诱于外物，     散乱难定意， <br/>
+冥顽，与内热，   发汗，空无记， <br/>
+如是障碍多，     障入三摩地， <br/>
+独有明梵人，     决然尽除弃□32。（四十，四十一） <br/>
+<br/>
+存心于万有，     所见是有性； <br/>
+存心于尽空，     所入市空性； <br/>
+存心于大梵，     乃得圆满性； <br/>
+以此当修持，     大梵圆满性。（四十二） <br/>
+<br/>
+人而弃除此，     大梵心存转， <br/>
+至高无上者，     净洁氛垢遣， <br/>
+其人实虚生，     有似禽兽 。（四十三） <br/>
+<br/>
+人知此定心，     知之更增上， <br/>
+彼等善人乐，     三界皆敬仰。（四十四） <br/>
+<br/>
+定心平等增，     操之更圆熟， <br/>
+乃臻萨梵道，     非徒诵篇牍□33。（四十五） <br/>
+<br/>
+善巧论梵道，     而无定心行， <br/>
+耽此世间乐，     彼等终无明， <br/>
+还来生世间，     流转死与生。（四十六） <br/>
+<br/>
+定心梵道成，     人非一瞬间， <br/>
+无此而能存，     有如大梵等， <br/>
+如删那恪等，     如戍羯等人□34。（四十七） <br/>
+<br/>
+是因有其果，     果必更为因。 <br/>
+如实因已灭，     果无辨当真□35。（四十八） <br/>
+<br/>
+于是得清净，     其事非言境。 <br/>
+心思清净中，     定智起超颖□36。（四十九） <br/>
+<br/>
+猛力参斯事，     确然见无妄， <br/>
+引显入不显，     思以大梵相□37。（五十） <br/>
+<br/>
+学者以其慧，     充满智真元， <br/>
+当常住福乐□38。 <br/>
+<br/>
+光明点奥义书 <br/>
+<br/>
+①“光明一点”，杜森谓为梵文“唵”字上之一圆点。表“力”，即“大梵”云。彼必有所据而云然，实则以“唵”声而入静虑者，乃可有此解释。 <br/>
+“光明”自是精神光明。 <br/>
+“点”另义为“滴”，为“种子”。引申义为“渊源”。 <br/>
+“静虑”（Dhyāna） <br/>
+“福乐”（śāmbhavam），另译为“属于商波（śambhu）即湿婆(śiva)神者”。 <br/>
+末句英译为“又超出凡此诸德性以上”。意谓“微，乐，安，粗，微妙”。义固可通，但此颂本旨在言深入静虑，故取愈转愈深之义为允。 <br/>
+<br/>
+②此颂英，德文译本所据原文互异，与此梵文本又不同。据德译第一语当作： <br/>
+“艰难得圆满”。 <br/>
+第四句当作：“艰难得恒处”。 <br/>
+盖全颂皆就“静虑”之事言。此则就事与境而言。 <br/>
+manīsin此译“智士”，德译“孤独者”；英译“凡人”，必另本也。 <br/>
+末二句原文有“虽是牟尼及智士，亦难得此”之义。“虽是”之义，在此译只于“亦”字中暗涵。 <br/>
+初二颂言“静虑”非容易之事。 <br/>
+<br/>
+③“平”，“解”“制”，原文皆只jita一字，义为“战胜”或“克服”。 <br/>
+——“解执”于华文义甚明白，然从英译必曰“已弃除对社会之一切眷爱”，或从德译可曰“克服对世间之眷念”，皆未若用此华文古译之优雅也。学术之贵传统，于此可见。 <br/>
+“超对”即双超二端，如寒暑，苦乐等。重在平等处之而双超，此义通于儒修之“不动心”。 <br/>
+第四语原文甚明白：nirāśiraparigrahah，直译为“无所欲望，无所亲属”。英译作“不祝福他人，亦不取他人任何物”。德译作“无有于冀望，无有于妻与子”。二说皆不误，存参。 <br/>
+第四颂之第一语为 <br/>
+agamyāgamakartā   yo   gamyā΄   gamanamānasa <br/>
+谓“超上者”无道可通，然人修静虑，则有道可通也。此之谓“无道成有道”。然所行之道终超于思虑以上，故曰“有道非思存”也。 <br/>
+英译作“彼往其自然所不当往之处，又自然不往其所欲往之处”。似甚未谛。而“有道”句德译作“唯致力于师尊之荣誉与利益”。必所据原本有异。 <br/>
+“初始能得三”——mukham之第七啭“所于声”作mukhe——此字有二十余义。如头，口，门，方向，起始……等。德译作： <br/>
+“人行过三门”谓为“弃世，忍受，尊师”三者为“三门”；盖必据某疏云然，英译作： <br/>
+于面能得三”。据文无误，但“三”者何物而现之于面，则注谓“或者指三角形之现于学徒中者”，说亦未谛。 <br/>
+窃意颂文义在下句。“飞鸿”即修士之常称，超然长往之人也。古典中常谓其为“胜得三界者”。故“门”，“面”，二译当作“起始”。即修习至此，始可胜得三界，“飞鸿”固尊称为胜得三界者也。三界谓地，空，天。据文即为“三居所”或“三居处”。 <br/>
+此二颂言修习静虑之条件。 <br/>
+<br/>
+④初半颂得三句，后半颂亦三句。 <br/>
+“太上”句即“秘密中之至秘”也。所指者为维师鲁之居处，言其微妙，则如明月光之可分为尘为缕也。 <br/>
+somarupakalā 。 <br/>
+“梭摩”（soma）在英译存音翻，在德译曰“以太”，不知何据。本为汁液可醉人者，而另义为月，亦久已成定诂。 <br/>
+<br/>
+⑤德译“三面”作“三目”。并谓“或系三《韦陀》”。 <br/>
+“三功德”即“萨埵，刺阇，答摩”三德也。 <br/>
+窃意作“三面”者，当取超上义，即“成，住，坏”三方面也。印度教中雕像，有一神一头而三面者，说者谓即大梵神，维师鲁神，湿婆神，分表成即创造，住即存持，坏即毁灭。 <br/>
+无依，谓非别有所依附也。 <br/>
+<br/>
+⑥“是处”即上颂所言“居”处。 <br/>
+“幻加”（upādhi），即安加于万有之名色。 <br/>
+“自性”句，英译“此为‘自性’即自然或‘自我’，仅能为“性”即有体或存在所达”。 <br/>
+德译作“只可入自我深化而得解”。 <br/>
+二说皆可存。禅宗人士，于此必无间然。 <br/>
+“行迹灭”，原义是“自行迹堕离”。而德译又以此字为“语言文字构造”。英译脱漏此语。 <br/>
+<br/>
+⑦德译本“难见者”后，不作“离系”而作“无终，无始”。所据梵本异也。 <br/>
+以上四颂言“大梵”为静虑之事 <br/>
+<br/>
+⑧Vyoma，此译“穹窿天”，英译引原文作ākāaśa，固知所据本异也。 <br/>
+<br/>
+⑨第三句译文稍节，析之则为： <br/>
+⑴非静虑， <br/>
+⑵非能静虑者， <br/>
+⑶非所静虑者。 <br/>
+益以第四句，则为： <br/>
+⑷非非静虑。 <br/>
+<br/>
+⑩此颂诸字皆顺原文次第。 <br/>
+诸译互有出入。 <br/>
+“外”义亦是“他”是“上”，“上”亦谓“至上者”。 <br/>
+“想”字原义是“皆知”。 <br/>
+九至十一颂专言“此”大梵。 <br/>
+<br/>
+□11此初半颂译为前三句。后半颂至十四颂末当一贯读。 <br/>
+□12自第十二颂至此，言解脱者。 <br/>
+德文译本止此，而以末句“大梵”云云重复一句作结。 <br/>
+□13此二颂总摄瑜伽诸支，然后于以下诸颂一一分述，至第三十九颂止。皆以韦檀多义出之。 <br/>
+据原文次第，“体式”在“根结”前，余皆依序无变。 <br/>
+□14韦檀多学言诸“根”，必分业根与识根二汇，直译为“收摄诸根聚”。 <br/>
+“游思”二字乃据下文足成，谓思想当流赴同类见解，即“万有皆大梵”也。 <br/>
+□15出世，本义为“弃绝世事”。 <br/>
+此译所据《百二十集》，此颂仅存其半，即初二句也。 <br/>
+后二句据英译本足成，而意稍广。 <br/>
+□16初二句原文见另书，义同；次二句义异。 <br/>
+此论“玄默”，与万有同存并在。（字义为“同生”或“俱起”）。 <br/>
+□17“彼”为玄默。如儿童之沈默，则乃有文字语言；然“大梵明者”，其寂寞并无文字语言。 <br/>
+□18此颂言修习处所或地方。而此空旷通于大字之空旷。非此“无”不能成其为“有”也。 <br/>
+□19 “成作”（kalpanā）,另义谓“幻觉”。似取寻常“成作”义较佳，盖与下“眨眼际”（nimesatah）较联贯也。 <br/>
+此颂言时间，即一瞬即永恒，所谓前后际断也。 <br/>
+□20此颂谓虽练习种种体式，而措心当仍在大梵。非此则足以毁灭福乐。且唯以安乐行之，非以痛苦出之，乃习体式之要。 <br/>
+英译此颂窜入上颂。 <br/>
+□21 “成就体式”，原文siddhāsana. <br/>
+□22 “根结”（mūlabandha）,在罗遮瑜伽中为一种手势。此以韦檀多义出之。 <br/>
+“梵道之明哲”即“大梵明者”。 <br/>
+英译至此分段。 <br/>
+□23诸体之平等，即上第十六颂所言“身和”。非谓瑜伽诸支。 <br/>
+□24第二句谓观此世界乃大梵所成。 <br/>
+□25导引即prānāyām a，今言制气术。此书纯以尽见皆为大梵而息灭心思之一切动转释之，未始非胜义也。 <br/>
+□26吐气(recaka)，乃以一鼻孔吐出空气。吸气（pūraka）,乃以指擫左鼻孔而以右鼻孔吸气，或反之。 <br/>
+□27持气（kumbhaka）,则不吐不吸也。此以观心修定，代导引三术。 <br/>
+□28第三句谓禅定能使人得超上阿难陀。 <br/>
+□29 “存心”二字译vrtti。以下又译“定心”。“三藐三摩地”，义为“正定”。 <br/>
+□30 “时当善修人，时见者瞬间”，两“时”字相联属。此颂谓在一瞬间，能见者自起对侍者之性，pratyaktvam。换言之，识与境性相合，即同体知也。 <br/>
+□31此译颇有填字。“成就”乃术语，即修瑜伽而有所成就之人。初句据字义当谓为“修瑜伽者之王”，今译“瑜伽师”而已。 <br/>
+□32以上二颂共举九种障碍。“冥顽”即“答摩”；“内热”即烦燥无耐性。“无记”即沈空，如善忘等。 “三昧”即“三摩地”之旧译；兹重一句，次序稍变。 <br/>
+□33 “圆熟”（paripakvā）,如义如文。英译增注曰“过去业因之熟”，似甚未谛 <br/>
+“萨的”义为真、善。参拙译《薄伽梵歌》，拾柒，二十六。   末句谓“非徒为背诵语言文句之人”。 <br/>
+□34 “定心”即vrtti，见前注。 <br/>
+“删那恪”（Sanaka）乃《古事记》中四童身仙之一。 <br/>
+“戍羯”（Śuka）乃维耶索之子（Vedavyāsa），古之作者。 <br/>
+□35此章至上颂，发挥已尽矣，乃于此忽出“因果”一义，由此可见制作之鸿裁。 <br/>
+□36超上之定智，起于心思寂静清虚之后，千古学道人无异说也。 <br/>
+□37第一、二句英译“由以超上之能力而静虑此事，遂起坚定之确信”云云，出义甚到，可知该译本亦有未可厚非者。 <br/>
+□38此章末又出半颂，想系古本之末页磨损。无所据，故不妄加填补。[/font][/size] <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

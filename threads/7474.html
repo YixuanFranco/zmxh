@@ -1,0 +1,85 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>缘觉行果 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">缘觉行果</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">法</div>法成发表于 2012-6-27 12:21</div><div class="post-body">缘觉行果 <br/>
+<br/>
+一、名义 <br/>
+<br/>
+缘觉乘，又云中乘，亦云辟支佛乘，速则四生，迟则百劫间，修空法，不依如来声教，感飞花落叶之外缘，证辟支佛果，译云缘觉，或独觉。言缘觉者，一谓因观十二因缘，断惑证理，一谓因观飞花落叶之外缘，感世无常，断惑证理。言独觉者，谓于无佛世，或观十二因缘，或观飞花落叶，独自善证寂灭理。《瑜伽师地论》云：“初发心时，亦值佛世，闻法思惟。后得道身，出无佛世，性乐寂静，不欲杂居，修加行满，无师友教，自然独悟，永出世间，中行中果故名独觉。”《大智度论》云：“出值佛世，闻因缘法，名为缘觉。出无佛世，自然得悟，名为独觉。”总之是所悟不出十二因缘之义理。 <br/>
+<br/>
+二、十二因缘 <br/>
+<br/>
+１、略释十二因缘 <br/>
+<br/>
+佛陀成道，悟得有情之流转生死，皆由无明为缘，造业受果，而轮转不息。观其循环的因果关系，不出十二有支，即：无明、行、识、名色、六处、触、受、爱、取、有、生、老死。有即三有，支是支分，无明等十二法，是有情流转三有的支分。言十二因缘者，因是顺益义，无明等十二法，展转能为顺益生果。缘是相借义，由十二法互相借助，生死相续无有穷尽。 <br/>
+<br/>
+无明：总称过去世所起诸烦恼，此烦恼虽有种种，然一切诸烦恼，皆与无明相应。暗于事理，覆于本性，无所明了。 <br/>
+<br/>
+行：由过去世烦恼所造一切善不善行业，名为行。业名行者，造作义故。 <br/>
+<br/>
+识：由过去惑业相牵，至令此识，一刹那间，染爱为种，幻想成胎。于母胎正结生时一刹那位五蕴。此结生之初念位，色心二法中，心识力偏胜，故别标识。 <br/>
+<br/>
+名色：名即是心，心法不能以体示，但以名诠，故云名。色即色质，从托胎后，至第五个七日，身心渐发育位。于此位，不唯身体支节未完备，心识亦昧劣，故曰名色。住胎间发育有五个阶段：一凝滑位，二疮疱形位（二七日），三血肉位（三七日），四坚肉凝厚位（四七日），五支节形位（以五七日乃至出生前） <br/>
+<br/>
+六处：从名色以后，生眼等六根，为六处。形体完备，将出胎位。识之所依故名处。 <br/>
+触：根、境、识三和合曰触。根与境接触时，主观上所引起，冷热痛痒的感觉。从出胎后一至三岁虽有三合，却未了知能生苦乐舍受三因差别，触相显故，独标触名。 <br/>
+受：五六岁至十二、三岁时，心识渐次发达，因六境触对六根，即能领受前境，了知苦乐舍在受境之差别相。 <br/>
+爱：十四五岁至十八九岁时，起食爱淫资具爱等。 <br/>
+取：二十岁后，贪欲转盛，为得种种上妙境界，周遍驰求，不辞劳倦。取有欲取：五欲追求。见取：对真理起谬解。戒取：生活放荡，起杀盗淫。我语取：于所受事物起我所有执。 <br/>
+有：因驰求诸境，积集能牵未来当有果之善恶业。有者业也，善恶业能有当来果，故名为有。此业能导至未来之果不亡曰有。 <br/>
+生：有爱取有之感业，必有当来受生的果报。生即命、存、活义。从生至死期间的生命活动阶段曰生。 <br/>
+老死：从未来结生以后至死灭，是为老死。 <br/>
+<br/>
+２、以时观十二因缘 <br/>
+<br/>
+十二因缘，不外详示有情生死流转的因果。此中无明行是过去世起惑造业之原因，由此原因，而招感现在识、名色、六处、触、受之果报。由现在世之果报又起惑造业，即爱取有为未来世之原因。有现在世之惑业因，招未来世生老之果报。此为三世二重因果。 <br/>
+<br/>
+或过去无明行之因，招感现在识乃至老死之十支果报。或以无明至有为现在因，感未来生老死之果报。此为二世一重因果。 <br/>
+<br/>
+３、按性质观十二因缘 <br/>
+<br/>
+无明是烦恼的根本，亦为生死之根本。爱染和取著亦是流转生死之根本，所以无明、爱、取称为惑，迷惑事理故。行与有为业，有过去现在的惑，以及过去和现在的业，必有现在和未来的果报，此果报称为苦，即识、名色、六处、触、受和生、老死是。此惑业苦，驱使众生生死流转无有穷尽。 <br/>
+<br/>
+４、顺逆观十二因缘 <br/>
+<br/>
+顺是顺生死流，即是流转门。由无明的蒙昧，而造身口意等业，由业力而引牵托胎受报（识），此报由心识与色蕴的和合体（名色），具足六根，此六根与六境相接触，而产生苦乐舍之感受。对可乐境发生种种欲望（爱），并逐渐取为已有，又结下了定业，决定后之三有流转。因此有他生的生命诞生，有生必有老死的终归。此为流转的生死。 <br/>
+<br/>
+还灭观即是逆观，是佛陀在菩提树下观想的缘由。以老死的由来推至无明为根源。有生方有死，生命的根源是身口意行为造作而招感。业（有）的产生是由追求五欲而来（取）有五欲的追求由可乐之感受，感受是由根境相触。此能感触是六处，六处是五蕴和合体（名色）识之了别托于名色。此识之托胎受生是由业力所牵，此业因无明遮覆本性而妄执造业。 <br/>
+<br/>
+无明是不明事物之真相。万法之真实相了不可得，悟此理则无明灭，无明灭则无有后之诸法，乃至老死灭。 <br/>
+<br/>
+十二因缘顺观，则为苦集二谛，逆观则为灭道二谛。无明行爱取有是集谛，识名色六处触受生老死是为苦谛。彼等十二支灭，为灭谛，若于缘生如实能知，是道谛。故云如来一期出世，初后不同，同明四谛。 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

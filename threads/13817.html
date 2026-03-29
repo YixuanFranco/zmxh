@@ -1,0 +1,103 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>做一个有菩提心的行者 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">做一个有菩提心的行者</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-15 08:59</div><div class="post-body">共善业，增长福禄寿 <br/>
+我们共同修善的人越多，善业就会叠加，叠加之后形成总的功德，每个人都会得这个总的功德。 <br/>
+<br/>
+<br/>
+佛经里说，万人来造宝塔，每个人都能获得造宝塔的功德。我们这次菩萨戒法会，传戒、学戒，学菩萨发菩提心、闻思菩萨学处，很多众生在法会中业障消除、福慧增长，甚至在这里脱胎换骨，开启了菩萨的人生。尤其是在这里建设寺院的人，这个空间所有成就的功德，他都会获得。 <br/>
+<br/>
+<br/>
+在这个娑婆世界，我们的生命能够“充电”，能够增长福禄寿，这太稀有了。因为大多数人在这个娑婆世界属于消费型的人生，享福、消福的多，这都是减少福禄寿的。 <br/>
+PART TWO <br/>
+<br/>
+<br/>
+从此，有了菩萨的生命体 <br/>
+<br/>
+<br/>
+从生命科学的角度来说，每个人的基因都会影响下一代，比如一些家族性的病，一代一代都会传的。佛陀告诉我们，这叫“业生色”，八识田里的业产生了这个色身。我们的生命相续从父母开始，自己过去的业力、家族的业力，这些种子起现行，进而变成了我们现在的这个生命。 <br/>
+<br/>
+<br/>
+如果这就是世间所认为的“宿命”的话，那我们佛教认为这不完全是宿命，它是有可变性的。佛教认为生命不是无缘无故的，它是有来源的，有因、缘、果，佛的智慧就看到因、缘和果的复杂性。缘可以变，果就可以变。 <br/>
+<br/>
+<br/>
+<br/>
+佛教的缘起法认为，虽然过去的因我们没办法决定，但是我们可以改变当下的缘。佛甚深的功德与光明是超越未来、现在和过去的，佛的不可思议功德，虽然我们凡夫很难想像，但可以理解为当下的缘是可以改变的。 <br/>
+<br/>
+<br/>
+<br/>
+还有一种色法，叫“心生色”，心生的色法。 <br/>
+在菩萨戒的戒坛里，在作法的仪轨里，在无量诸佛菩萨的加持下，我们发起了菩提心，就能得到一个菩萨的生命体。 <br/>
+<br/>
+<br/>
+<br/>
+这个崭新的生命产生了新的“业生色”和“心生色”，这个色就是“无漏色法”，这个就是戒体，叫“无作妙体”。 <br/>
+<br/>
+<br/>
+PART THREE <br/>
+<br/>
+<br/>
+做一个解脱道的践行者 <br/>
+<br/>
+当下，我们生命里的福禄寿就好像过电一样，就给你充电器充进去了。这个“电”来自哪里啊？无漏色法！这个金刚宝戒就是无漏色法，它是具有解脱性质的。 <br/>
+<br/>
+<br/>
+根器大的人就很珍惜它，用它来驾驭自己崭新的生命，做一个有菩提心的行者。这样子念念增明，菩提路上的福慧资粮就越来越多，菩萨的功德积累得就越来越多，六度万行的事业也越来越大。 <br/>
+<br/>
+<br/>
+也有一些人，不知道金刚宝戒难值难遇，是救我们出轮回的，虽然也得“充电”了，但回去又开始经营他的轮回了，有可能把诸佛菩萨的加持变成轮回的资粮了，这就把无漏色法转换成了有漏的福报。 <br/>
+<br/>
+<br/>
+我们大家要警惕这个。我们是自己轮回的制造者，也是自己解脱道的践行者，是自己积累成佛资粮的行者，这些是需要我们想清楚的。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-15 09:07</div><div class="post-body">想象喜马拉雅山中的某个洞穴里，有位瑜伽士在静坐禅修。他日复一日地修持相对菩提心，然而在此同时，他周遭山村里的婴儿们正以可怕的速度因饥饿而死亡。 <br/>
+<br/>
+这些婴儿显然需要迅速而实际的援助，可是这位瑜伽士依旧在他的山洞里，思维他多么希望能引领所有的婴儿、他们的父母与一切有情众生都证悟成佛。 <br/>
+<br/>
+无论从世俗的角度看起来多么怪诞，但这位山洞隐士远比最终提供人道援助的国际组织更值得礼敬。为什么？因为真诚且由衷地希望他人证悟成佛，是惊人地困难，只是供给食物、药品与教育，则容易得多。不理解证悟真正价值的人，很难接受这种看法。…… <br/>
+<br/>
+解救身体的病苦是一种世间行，而且只能短暂地解除痛苦；筹划一切众生的解脱，则是永久解决所有痛苦的方案。相对于仅给予我们短暂喘息的人，我们对那些希望永远除去我们所有痛苦的人，难道不应该更感谢吗？ <br/>
+<br/>
+遗憾的是，大多数人都未能觉察这两者的不同，因为我们从未诚挚地希望他人达到证悟。如果有人提供我们一张通往证悟的单程票，我们一定紧抓在手中，根本不会想到要送给他人。 <br/>
+<br/>
+设想你得到了一剂灵药，喝下去就能获得天眼通与遍知力。你会把它全部喝下去，还是会与他人分享？ <br/>
+<br/>
+在你决定之前，想一想，修行者如何经常嫉妒那些看似比自己更精进的法友，或者，当得知另一位同修接受了一个你未被邀请的更高法教时，你有多么嫉妒！ <br/>
+<br/>
+如果心中生起真正的菩提心，你会开心地看到朋友们如此努力修持，并随喜他们所得到的一切教授。有一点很容易被遗忘，那就是假如有任何人证悟成佛，这就意味着，你的希望与祈愿终于实现了。 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-15 09:08</div><div class="post-body">有人问我：“菩萨在空中吗？” <br/>
+我说：“菩萨不在空中，菩萨不在天上，菩萨平常很忙，因为菩萨的任务是救度众生，哪里有苦难、哪里有人需要被救度，菩萨就在哪里。菩萨是救苦救难的，怎么会悠闲地待在虚空中呢？” <br/>
+事实上，就像渴望炒股赚钱的人会特别关注自己的股票，一刻都离不开股票，菩萨特别渴望救度一切众生，所以一刹那都不会离开众生。 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">格</div>格力琼寺发表于 2024-10-15 09:14</div><div class="post-body">没有慈悲，纵然微笑也是恶； <br/>
+<br/>
+怀有慈悲，即使怒目也是善。 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

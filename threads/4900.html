@@ -1,0 +1,61 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>憨山大师醒世歌 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">憨山大师醒世歌</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">姚</div>姚进发表于 2009-9-11 16:56</div><div class="post-body">憨山大师醒世歌 <br/>
+整理者  净意无尘 <br/>
+南普陀寺是厦门著名古刹，位于市区五老峰下，南面紧邻厦门大学。寺内一块巨石上镌刻了憨山大师的《醒世歌》，书法遒劲有力，潇洒超脱。读书时经常穿寺而过登临五老峰顶，面对蓝天白云大海，大声背诵课文。其间每每驻足巨石前，轻声默读这首《醒世歌》，久而久之，竟是烂熟于心。现在回味，《醒世歌》实在是憨山大师劝慰众生修心养性积德行善之至理名言。特抄录如下，与各位有心之人有识之士共勉： <br/>
+红尘白浪两茫茫，忍辱柔和是妙方, <br/>
+到处随缘延岁月，终身安分度时光, <br/>
+休将自己心田昧，莫把他人过失扬, <br/>
+谨慎应酬无懊恼，耐烦做事好商量, <br/>
+从来硬弩弦先断，每见钢刀口易伤, <br/>
+惹祸只因闲口舌，招愆多为狠心肠, <br/>
+是非不必争人我，彼此何须论短长, <br/>
+世事由来多缺陷，幻躯焉得免无常, <br/>
+吃些亏处原无碍，退让三分也不妨, <br/>
+春日才看杨柳绿，秋风又见菊花黄, <br/>
+荣华终是三更梦，富贵还同九月霜, <br/>
+老病生死谁替得，酸甜苦辣自承当, <br/>
+人从巧计夸伶俐，天自从容定主张, <br/>
+诌曲贪嗔堕地狱，公平正直即天堂, <br/>
+麝因香重身先死，蚕为丝多命早亡, <br/>
+一剂养神平胃散，两钟和气二陈汤, <br/>
+生前枉费心千万，死后空持手一双, <br/>
+悲欢离合朝朝闹，寿夭穷通日日忙, <br/>
+休得争强来斗胜，百年浑是戏文场, <br/>
+顷刻一声锣鼓歇，不知何处是家乡。 <br/>
+注：憨山禅师(1546—1623年)乃明代四大高僧之一，安徽和县绰庙人，俗姓蔡，名德清，字澄印，别号憨山。大师幼结佛缘，十二岁寻佛金陵报恩寺，十九岁削发为僧。大师博学多才，通诗文，精书法，终生学佛、拜佛、参禅，著述颇丰，当时誉为中兴祖庭宗师。 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

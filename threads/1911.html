@@ -1,0 +1,181 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>初步的显宗修行 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">初步的显宗修行</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">江</div>江孜NILU发表于 2006-11-9 20:16</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy]初步的显宗修行 <br/>
+<br/>
+以“璀璨时轮檀陀罗二瑜伽次第释论”来训勉修行者： <br/>
+<br/>
+“我们，首先应该运用平常的显宗修行法，来提升心识智慧。特别是培养无我静思、坚定的认知。” <br/>
+<br/>
+所有传承的著作都肯定一点，在进入檀陀罗修行之前，人们应该先发展好精神的稳定性，这可参考释迦牟尼的修行法而获取经验。第二部分中，有三种藏文翻译作品，在本书第十三章到十五章可以看到，主要是探讨显宗的初步修法。其余四个章节，主要是谈论结果论的密宗修行方法。 <br/>
+<br/>
+在第十三章，班禅喇嘛六世的时轮檀陀罗妙法短诗，最先强调无常、因果定律、爱与真诚等，这些全是显宗教义；当中只有两首诗与密宗有关。 <br/>
+<br/>
+在第十四章，细审一般佛教徒对人类精神状态的看法，并就参加时轮檀陀罗妙法灌顶法会这点，加入个人看法。谈到造就佛教徒基本条件的四项崇高真理，并且探究造成人类困惑的根源，以及对自我天生本质，我、我们其他现况的误解。并指出，显宗所建议的治疗方法为： <br/>
+<br/>
+“菩萨乘的方法论中，我们静虑禅修自己做的每一件事，都是为了众生。一旦了解到所有众生和自己一样，都是希望获得快乐、讨厌痛苦。那么，对所有生命的责任感便油然而生。这种态度是震撼的、强劲的、具最勇敢的力量，比任何其他事物珍贵。 <br/>
+<br/>
+“当我们将这一力量，作为静虑禅修万物最终形式的基础时，就能轻易培养出破除我执与邪念的力量。” <br/>
+<br/>
+显宗的初步修行法，在第十五章会提到，主要源自“檀陀罗灌顶前行法”。在这里，作者是就自我心识充实，以领受檀陀罗灌顶的立场来讨论。他的目标要突显精神节操的重要，并让显宗修行厚实我们的心识。这是必要的内修基础，如此才可以进入檀陀罗修行，并且领受接下来的灌顶。 <br/>
+<br/>
+介绍四种“单纯觉知”，作为那篇论文开头。我们应该带着这四种“单纯觉知”：单纯的动机、对环境的单纯感受、对其他生命的单纯感受、对生活力的单纯感受，一起带到灌顶现场。 <br/>
+<br/>
+这样才能够很快改变想法，以扎实的显宗修行，作为金刚乘的预备修行（前行），并培养对人类生命珍贵本质的体认，了解人类生命拥有自由和证悟明心是可能的。同时培养对死亡与无常的体认、对投胎转世及因果业律的感恩，以及对未知现象不圆满本质的体认。更培养安于佛法僧三宝庇护的体认、利他的菩萨道态度、热忱追求最高证悟、圆觉以利益众生，以及无我智慧的养成、事物空性本质的体认。 <br/>
+<br/>
+由于西藏作家们的习惯，特别是格鲁巴学派，大都引用印度大成就者们的名言来佐证论点。 <br/>
+<br/>
+他们偏好的考据作品是龙树菩萨的“劝诫引正王颂”、提婆的“心清净论”、寂天的重要纪念性作品“入菩提行论（或称为菩提行经）”、月官的“劝诫弟子书简”、印度大乘佛教经典摘要“百五十赞”，此为释迦牟尼讲授的教义精髓，是关于精神生活的所有重要观点，经过挑选编排，而成韵文体的文章。 <br/>
+<br/>
+编注：“劝诫引正王颂”或译劝诫王颂、劝诫宝行王颂。提婆又名圣提婆、圣天，梵名迦那提婆，意即只有一只眼睛的提婆。 <br/>
+<br/>
+原注：甘丹巴学派因阿底峡尊者而创立，这学派中的所有传承上师和佛学理论都特别重要。有两位上师的地位无比崇高，他们是龙树菩萨和寂天，都是启发阿底峡证悟修行理念的重要人物。这两位同时也是伟大的佛学思想家，他们的著作，激发遍及亚洲和世界数百万名佛教徒。 <br/>
+<br/>
+这里提到两位重要印度上师（没有特别引述确实出处），他们是阿阇耶毗罗（或译阿阇黎毗罗）和阿底峡。 <br/>
+<br/>
+阿阇耶毗罗以马鸣（梵名阿湿缚篓沙，篓读音具）之称而闻名，他是印度最重要的佛教叙事诗作家代表，本来是反佛教的好辩者，因为反驳龙树的重要弟子提婆，并与他辩论起来，最后被提婆击败，所以改宗信仰佛教。他将余生投入静虑修行，以及佛教信仰的诗文创作。 <br/>
+<br/>
+原注：大成就者阿阇黎毗罗，有许多诗作被翻译主要西藏佛教传承的起源，最后演变成格鲁巴学派的基本精神架构；所有班禅喇嘛的转世传承，都属于这学派。阿底峡对在西藏弘扬时轮檀陀罗妙法，是一位重要人物，我们在后面还会谈到他的成就。 <br/>
+<br/>
+历代喇嘛，无论如何都会引用至尊上师的说法，他就是格鲁巴学派创始人宗喀巴大师；可见对这位名声显赫之上师的尊敬。每一条西藏佛教的教诫，都提供一些自行达成显宗修行的方法。例如，萨迦学派谈到“道果法”、噶举巴使用的方法叫做“四加行”、格鲁巴谈到“菩提道次第”，而宁玛巴将显宗修行法，分成“大圆满共加行”以及“大圆满不共加行”。 <br/>
+<br/>
+宗喀巴大师教导显宗修行的三层次，在西藏很有名的是菩提道次第广论，或“三士道主要修行法”，这项传承把所有“共通乘”修行，简单分类成三个主题：一、培养今生今世的方便自利。二、遮除恶业，追求解脱此生世间轮回之苦。三、以修行培养无我、不恋栈世俗的智慧，进而普度众生。 <br/>
+<br/>
+所有小乘、大乘的经典开示，都汇集这三个主题在内。 <br/>
+<br/>
+当我们依这样的阶梯，循序渐进之时，就会对人生真谛深入观想，并培养与精神上师之间的良好关系来作为这三门学问范畴的根本。虔敬皈依佛法僧三宝、沉思观想死亡和无常的现象、转世轮回与六道的生命本质。 <br/>
+<br/>
+这三项主要修行道的第二项是中士道，修行重点在护持戒定慧三学，进而及力行六度精义、培养佛的善心，以便能够进入上士道境界。 <br/>
+<br/>
+引述宗喀巴大师的话说： <br/>
+<br/>
+“只信仰大乘佛教是不够的，修行者还必须有大乘‘佛家’的远见。此外，还要拥有不输给菩提心成就的特质：具有菩提心才算是大乘佛教论者。没有菩提心，表示还未踏上大乘佛法之道。因此，要衷心地发菩提心…… <br/>
+<br/>
+“为了发扬对菩提心的认知，我们必须培养两种特质：关怀众生的思想，和关注证悟明心的思考。” <br/>
+<br/>
+何谓关注证悟明心的思考： <br/>
+<br/>
+“虽然生命都会获得快乐幸福，但是，人的本身受到世俗事物牵绊，忘记自己可以为其他有情众生，提供无比协助……” <br/>
+<br/>
+“即使最强大的神，若受到轮回束缚的设限，便不能全心全意为其他生命造福。阿罗汉（意指证得最高果位的人）不能，辟支佛（此处意指不必依止上师而能证悟的人）也不能避免所有锁链牵绊……” <br/>
+<br/>
+“如果我们能达到完美佛性的境界，没有错误、看透所有法相、克服所有缺陷，才符合证悟条件。此时，身上拥有完美标帜与印相，内心唯一的觉知就是造福他人。我们对芸芸众生，不再存着径渭分明的喜恶感觉。对一切众生同样热爱，并有能力真正去造福他们。” <br/>
+<br/>
+“简而言之，动机应该是‘我要为芸芸众生谋求最终福祗，因为众生多如天星、难以计数，所以，必须发心比众生早一步达到超凡入圣、完美、纯净的佛境’。” <br/>
+<br/>
+最后以大乘佛教修行者的宇宙观，作为结论： <br/>
+<br/>
+“……崇高众生的心识特质，是拒绝一己私利，只想到如何去造福他人。” <br/>
+<br/>
+“因此，它像太阳不倦地照耀居住在四大洲的众生，像伟大的大地，承载所有在它表面生活的生命重量，具有这种胸襟的菩萨，不会喜欢任何以自我为中心的业力，他们只会用提升芸芸众生幸福快乐的方法，当做生活重心。” <br/>
+<br/>
+我们也许认为这样做有点不太寻常，“檀陀罗灌顶前行法”并没有把太多注意力，放在培养空性智慧，即宗喀巴大师“三士道”的第三道。这或许是因为他看重的是达成空性的方法，就像显宗所看到的，并非檀陀罗修行不可或缺的条件，所以，只在檀陀罗修行本身，培养空性智慧就足够了。 <br/>
+<br/>
+当代法王曾经告诉我这种观点，“那是在一九七O年中期的一场演讲，我是他的听众之一。当时，我请他为宗喀巴大师三士道的界限下定义，这三大主要修行成就，显示精神状态足够成熟，才能够进入檀陀罗瑜伽修行。法王答复说： <br/>
+<br/>
+“借静虑禅修无常、业力本质、生死轮回等方式，我们经历某种程度的心灵超脱，如果我们看到特别的行为是明显错误，并对精神成长有害，则我们要有种内在力量，保持不动并且不继续陷下去。关于菩萨道精神的培养，我们将想要完成证悟的欲念，视为首要条件，而我们对他人的态度，应该是种关心，是视同一家人的情感。 <br/>
+<br/>
+“应该要有修成菩萨道的强烈使命感，至于空性智慧的经验程度，并没有特别的先决条件，因为有很多非常有效的方法，可以从密宗修行中找出空性的意义。修行者应该要有显宗修行的基本训练，然而，某些天赋异禀的修行者，可以没有前置的显宗训练而进入密宗修行，他们可以仅依赖檀陀罗就获得空性智慧。” <br/>
+<br/>
+无论我们是否身处修行者之列，都应该先从显宗观点研读空性教义。即使没有此前置训练，而直接进入檀陀罗修行的话，对基本空性的了解，仍然是不可或缺的檀陀罗静虑禅修起点。例如在灌顶仪式当中，空性是观想的主题，我们从事成就法修行，空性秘咒就会作为这场仪式的启钥。 <br/>
+<br/>
+原注：昂旺秋登，在他的著作“秘密集会檀陀罗生起道次第瑜伽灯论”里，列出六大理由，说明为什么每次檀陀罗成就法开始的时候，都要先念诵和沉思空性秘咒。 <br/>
+<br/>
+为什么修行一开始的时候，要禅修空性（以空性秘咒进行观想）？ <br/>
+<br/>
+阿底峡尊者在为鲁易巴尊者的成就法评注，曾写到原因何在；他提供了六大理由。首先，修行是为了要加强洞见空性的业果。第二，是加强对一般事物空性的觉知。第三，禅修空性可以入定，这对任何想要禅修的人都有莫大用处。第四，它可以增加我们福报和智慧的力量。第五，使我们超脱于一切表象之身语意的观念。第六，从念诵空性明咒和禅修它的意义，可以看见主流与非主流檀陀罗，并使我们可以修行成就法，从空性之观想中升华。 <br/>
+<br/>
+在“时轮金刚灌顶论”中提到，任何想参加时轮金刚灌顶的人，都应该考虑三项基本特质。 <br/>
+<br/>
+第一项特质，是菩提心，即迈向最高证悟的利他心、看重他人更甚于自己。据说上士修行者，是处于这种用心体验的崇高境界。中士修行者可以在静虑禅修中，稍微窥见菩提心自性。下士修行者，至少要有与发扬菩提心的意愿和兴趣。 <br/>
+<br/>
+第二项特质，是对智慧或特殊观察力的训练，以培养空性经验。据说，上士修行者如同大乘佛教中观派或瑜伽行派所解释的，可以如实体验最终真实自性。中士修行者则根据一般研习，而正确了解空性。下士修行者对上述任何学派的空性哲学思想，至少应要有很大兴趣。 <br/>
+<br/>
+此外，追求时轮金刚灌顶的修行者，应该对特殊的檀陀罗传承感到兴趣。因为，灌顶的目的，是为了要在领受者心中，种下特殊业因。如果他或是她，在基本程度上对檀陀罗的精神不感兴趣，那么业因很难产生任何善性影响。 <br/>
+<br/>
+对显宗的基本修行法，想要得到更详尽的解释，并对檀陀罗修行做好心理准备的读者们，可以参阅我早期的著作，雪狮出版公司的“真金粹链”，现以颂偈方式，说明如何以显宗作为金刚乘的前置修行法； <br/>
+<br/>
+随时看透死亡与无常 <br/>
+熟悉业力定律去生活 <br/>
+时刻心怀三宝佛法僧 <br/>
+接近转世下界的大门 <br/>
+<br/>
+让心识永远追随诸法 <br/>
+这是应该直走的正途 <br/>
+轮回是一座挫折的山 <br/>
+受苦根源定义由你订 <br/>
+<br/>
+看清通往最终解脱门 <br/>
+以进入解脱崇高境界 <br/>
+严密从事高等三修行 <br/>
+亦即持戒观想与智慧 <br/>
+<br/>
+走向通往全知之大道 <br/>
+这是应该直走的正途 <br/>
+芸芸有情曾经是父母 <br/>
+对众生贯彻爱与怜悯 <br/>
+<br/>
+培养两种成熟菩提心 <br/>
+传承菩提道的菩提心 <br/>
+及最终空性智菩提心 <br/>
+巧妙应用方法与智慧 <br/>
+<br/>
+培养无与伦比证悟境 <br/>
+这是应该直走的正途 <br/>
+抓住一切不放是错误 <br/>
+要觉知因果之间关系 <br/>
+<br/>
+要看清一切虚空自性 <br/>
+并体验众生最高视界 <br/>
+这就是意谓着要跟随 <br/>
+龙树菩萨阐扬的圣道 <br/>
+<br/>
+这是应该直走的正途 <br/>
+借着灌顶而滋润丰盈 <br/>
+了解精深檀陀罗开示 <br/>
+培养檀陀罗二道次第 <br/>
+<br/>
+如是快速达到证悟地 <br/>
+掌握佛性在我们掌中 <br/>
+这是应该直走的正途[/color][/color][/color] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚瑄发表于 2007-3-23 17:40</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
+眾生善根盡隨喜 正覺菩提意中持 <br/>
+<br/>
+正覺妙法及僧伽 直至菩提我皈依 <br/>
+所為利益自他故 我今即發菩提心 <br/>
+<br/>
+既發最上菩提心 饒益一切諸有情 <br/>
+菩提妙行皆修作 為利眾生願成佛 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

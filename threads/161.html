@@ -1,0 +1,696 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>佛说般舟三昧经 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">佛说般舟三昧经</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">绛</div>绛巴嘉措发表于 2005-11-15 12:54</div><div class="post-body">[size=5]佛说般舟三昧经 <br/>
+后汉月支三藏支娄迦谶 译 <br/>
+<br/>
+问事品 第一 <br/>
+闻如是：一时，佛在罗阅祇加邻竹园中，与大菩萨、比丘、比丘尼、优婆塞，优婆夷及诸天龙、阿须轮、诸夜叉、迦楼罗、甄陀罗、摩雎勒等无央数众，一切都在大会坐。 <br/>
+是时，跋陀和菩萨从坐起，整衣服，长跪叉手白佛：“愿欲有所问，听者今当问？” <br/>
+佛言：“善哉！恣汝所问，今当为汝说之。” <br/>
+<br/>
+跋陀和问佛言：“ <br/>
+菩萨当行何等法，得智慧如巨海揽万流？ <br/>
+云何行？博达众智，所闻悉解而不疑； <br/>
+云何行？自识宿命所从来生； <br/>
+云何行？得长寿； <br/>
+<br/>
+云何行？常在大姓家生，父母、兄弟、宗亲、知识无不爱敬； <br/>
+云何行？得端正，颜好美艳； <br/>
+云何行？得高才与众绝异，智慧通达，无所不包； <br/>
+云何行？功立相满，自致成佛，威神无量，成佛境界，庄严国土； <br/>
+<br/>
+云何行？降魔怨； <br/>
+云何行？而得自在，所愿不违； <br/>
+云何行？得入总持门； <br/>
+云何行？得神足，遍至诸佛土； <br/>
+<br/>
+云何行？得勇猛如狮子，无所谓一切，魔不能动； <br/>
+云何行？得佛圣性，诸经法悉受持，皆了知而不忘； <br/>
+云何行？得自足，离谀谄，不著三处； <br/>
+云何行？得无挂碍，持萨云若教，不失佛意； <br/>
+<br/>
+云何行？得人信； <br/>
+云何行？得八种声入万亿音； <br/>
+云何行？得具足相好； <br/>
+云何行？得彻听； <br/>
+云何行？得道眼观未然； <br/>
+<br/>
+云何行？得十力正真慧； <br/>
+云何行？心一等念，十方诸佛悉现在前； <br/>
+云何行？知四事之本无； <br/>
+云何行？便于此间见十方无数佛土，其中人民、天龙、鬼神及蠕动之类，善恶归趣，皆了知。 <br/>
+所问如是，当云何行？愿佛说之，释一切疑。” <br/>
+<br/>
+佛告跋陀和：“善哉！汝所问，多所过度，不可复计……汝所以能作是问者，汝乃前世过去佛时，所作功德供养诸佛，乐于经法，守禁戒行清净所致；常行乞食，不就请，多成就诸菩萨合会教语，令弃众恶，视一切悉平等所致；常有大慈大悲所致，汝功德不可复计。” <br/>
+<br/>
+佛告跋陀和：“有三昧名‘十方诸佛悉在前立’能行是法，汝之所问悉可得也。” <br/>
+跋陀和白佛：“愿为说之，今佛说者多所过度，安隐十方，为诸菩萨现大明相。” <br/>
+佛告跋陀和：“有三昧名：定意，菩萨常当守习持，不得复随余法，功德中最第一。” <br/>
+<br/>
+行品 第二 <br/>
+<br/>
+佛告跋陀和菩萨：“欲疾得是定者，常立大信，如法行之，则可得也，勿有疑想如毛发许。是‘定意’法名为：菩萨超众行。 <br/>
+<br/>
+立一念，信是法，随所闻，念其方； <br/>
+宜一念，断诸想，立定信，勿狐疑。 <br/>
+精进行，无懈怠；勿起想，有与无。 <br/>
+勿念进，勿念退；勿念前，勿念后。 <br/>
+<br/>
+勿念左，勿念右；勿念无，勿念有。 <br/>
+勿念远，勿念近；勿念痛，勿念痒。 <br/>
+勿念饥，勿念渴；勿念寒，勿念热。 <br/>
+勿念苦，勿念乐；勿念生，勿念老。 <br/>
+<br/>
+勿念病，勿念死，勿念身，勿念命， <br/>
+勿念寿。勿念贫，勿念富；勿念贵， <br/>
+勿念贱。勿念色，勿念欲；勿念小， <br/>
+勿念大。勿念长，勿念短；勿念好， <br/>
+<br/>
+勿念丑。勿念恶，勿念善；勿念嗔， <br/>
+勿念喜。勿念坐，勿念起；勿念行， <br/>
+勿念止。勿念经，勿念法；勿念是， <br/>
+勿念非。勿念舍，勿念取；勿念想， <br/>
+<br/>
+勿念识。勿念断，勿念著；勿念空， <br/>
+勿念实。勿念轻，勿念重；勿念难， <br/>
+勿念易。勿念深，勿念浅；勿念广， <br/>
+勿念狭。勿念父，勿念母；勿念妻， <br/>
+<br/>
+勿念子。勿念亲，勿念疏；勿念憎， <br/>
+勿念爱。勿念得，勿念失；勿念成， <br/>
+勿念败。勿念清，勿念浊，断诸念。 <br/>
+一期念，意勿乱，常精进，勿懈怠。 <br/>
+<br/>
+勿岁计，勿日倦，立一念，勿中忽。 <br/>
+除睡眠，精其意，常独处，勿聚会。 <br/>
+避恶人，近善友，亲明师，视如佛。 <br/>
+执其志，常柔弱，观平等，于一切。 <br/>
+<br/>
+避乡里，远亲族，弃爱欲，履清净。 <br/>
+行无为，断诸欲，舍乱意，习定行。 <br/>
+学文慧，必如禅，除三秽，去六入。 <br/>
+绝淫色，离众受，勿贪财，多蓄积。 <br/>
+<br/>
+食知足，勿贪味，众生命，慎勿食。 <br/>
+衣如法，勿绮饰，勿调戏，勿骄慢。 <br/>
+勿自大，勿贡高，若说经，当如法。 <br/>
+了身本，犹如幻，勿受阴，勿入界。 <br/>
+<br/>
+阴如罪，四如蛇，为无常，为恍惚。 <br/>
+无常主，了本无，因缘会，因缘散。 <br/>
+悉了是，知本无，加慈哀，于一切。 <br/>
+施贫穷，济不还，是为定，菩萨行。 <br/>
+至要慧，起众智。” <br/>
+<br/>
+佛告跋陀和：“持是三昧行法，便得三昧，现在诸佛悉在前立。其有比丘、比丘尼、优婆塞、优婆夷如法行，持戒完具，独一处止，念西方阿弥陀佛，今现在随所闻，当念去此千亿万佛刹，其国名须摩提，一心念之，一日一夜，若七日七夜，过七日已，后见之。 <br/>
+<br/>
+譬如人梦中所见，不知昼夜，亦不知内外不用，在冥中，有所蔽碍，故不见。 <br/>
+<br/>
+跋陀和菩萨当作是念：时诸佛国境界中，诸大山须弥山，其有幽冥之处，悉为开辟，无所蔽碍。是菩萨不持天眼彻视，不持天耳彻听，不持神足到其佛刹，不于此间，终生彼间，便于此坐见之。 <br/>
+<br/>
+譬如人间，堕舍利国有淫女，字须门；复有人闻淫女阿凡和利；复有人闻优婆洹，复作淫女时，其人未曾见此三女人，闻之，淫意即动。是三人皆在罗阅祗国，同时念，各于梦中到其女边，与共栖宿，觉已，各自念之。” <br/>
+<br/>
+佛告跋陀和：“我持是三女人以为喻，汝持是事为人说经，使解此慧至不退转地，无上正真道，若后得佛号曰：善觉。” <br/>
+佛言：“菩萨于此间国土，念阿弥陀佛，专念故得见之。即问：‘持何法得生此国？’阿弥陀佛报言：‘欲来生者，当念我名，莫有休息，则得来生。’” <br/>
+<br/>
+佛言：“专念故得往生，常念佛身有三十二相，八十种好，巨亿光明彻照，端正无比，在菩萨、僧中说法不坏色，何以故？色、痛痒，思想、生死，识、魂神、地、水、火、风、世间、天上、上至梵摩诃梵，不坏色，用念佛故，得是三昧。” <br/>
+<br/>
+佛告跋陀和：“是菩萨三昧谁证者？我弟子摩诃迦叶、因垣达、须真天子及时知者、有行得者是为证也。如是，跋陀和，欲得见十方诸现在佛者，当一心念其方，莫得异想。如是即可得见。 <br/>
+譬如人远出到他郡国，念本乡里家室、亲族，其人于梦中归到故乡里，见家室、亲属，喜共言语，觉为知识，说之如是。” <br/>
+<br/>
+佛言：“菩萨闻佛名字，欲得见者，常念其方，即得见之。 <br/>
+譬如比丘观死人骨著前，观之有青时、有白时、有赤时、有黑时，其色无有持来者，是意所想耳。 <br/>
+菩萨如是，持佛威神力，于三昧中立自在，欲见何方佛，即得见。何以故？持佛力、三昧力、本功德力，用是三事故得见。 <br/>
+<br/>
+譬如，人年少端正，著好衣服，欲自见其形，若以持镜，若麻油，若净水、水精，于中照，自见之。云何，宁有影从外入镜、麻油、水、水精中不也？” <br/>
+跋陀和言：“不也，天中天，以镜、麻油、水、水精净故，自见其影耳，影不从中出，亦不从外入。” <br/>
+<br/>
+佛言：“善哉！跋陀和，色清净故，所有者清净。欲见佛即见，见即问，问即报，闻经大欢喜，作是念：佛从何所来？我为到何所？ <br/>
+自念：佛无所从来，我亦无所至。 <br/>
+自念：欲处，色处，无色处，是三处，意所作耳。 <br/>
+<br/>
+我所念即见心，作佛心，自见心，是佛心，佛心是我身心。见佛心不自知，心心不自见，心心有想为痴心，无想是涅槃。是法无可乐者，设使念为空耳，无所有也。 <br/>
+菩萨在三昧中立者，所见如是。” <br/>
+<br/>
+佛尔时说偈言：“ <br/>
+心者不自知，有心不见心。 <br/>
+心起想则痴，无心是涅槃。 <br/>
+是法无坚固，常立在于念。 <br/>
+以解见空者，一切无想愿。” <br/>
+<br/>
+四事品 第三 <br/>
+<br/>
+菩萨有四事法疾逮得是三昧： <br/>
+一者、所信无有能坏者； <br/>
+二者、精进无有能退者； <br/>
+三者、智慧无有能及者； <br/>
+四者、常与善师从事， <br/>
+是为四。 <br/>
+<br/>
+复有四事疾得是三昧： <br/>
+一者、不得有世间思想如弹指顷三月； <br/>
+二者、不得睡眠三月如弹指顷； <br/>
+三者、经行不得休息三月，除其饭食左右； <br/>
+四者、为人说经不得望人供养， <br/>
+是为四。 <br/>
+<br/>
+复有四者疾得是三昧： <br/>
+一者、合会人至佛所； <br/>
+二者、合会人使听经； <br/>
+三者、不嫉； <br/>
+四者、教人学佛道， <br/>
+是为四。 <br/>
+<br/>
+复有四事疾得是三昧： <br/>
+一者、作佛形象，用成是三昧故； <br/>
+二者、持好素，写是三昧； <br/>
+三者、教自贡高人，内佛道中； <br/>
+四者、常护佛法， <br/>
+是为四。 <br/>
+<br/>
+佛尔时说偈言：“ <br/>
+常信乐于佛法，精进行解深慧。 <br/>
+广分布为人说，慎无得贪供养。 <br/>
+意善解便离欲，常念佛有威德。 <br/>
+悉见知无数变，过去佛及当来， <br/>
+<br/>
+并现在人中尊，诸相好若干种。 <br/>
+黄金色无秽漏，坚固教无极慧。 <br/>
+听是法无乱心，常舍离懈怠行。 <br/>
+无恚害向他人，敬于师当如佛。 <br/>
+<br/>
+慎无得疑斯经，一切佛所歌叹。 <br/>
+常造立佛形象，常教人学是法， <br/>
+行如是得三昧。” <br/>
+<br/>
+佛告跋陀和：“欲学是三昧者，当敬于师，承事供养，视当如佛，视善师不如佛者，得三昧难。菩萨敬善师，从学得是三昧已，持佛威神于中立，东向视见若干百千万亿佛，十方等悉见之。 <br/>
+譬如人夜起，观星宿甚众多，菩萨欲得见，今现在佛悉在前立者，当敬善师，不得视师长短，当具足布施、持戒、忍辱、精进，一心不得懈怠。” <br/>
+<br/>
+譬喻品 第四 <br/>
+<br/>
+佛告跋陀和菩萨“得是三昧不精进行者，譬如人载满船珍宝渡大海，船中道坏，阎浮 利人愁忧，念失我尔所宝。菩萨闻是三昧不学者，一切诸天人民皆悲忧，言乃失我尔所经宝。” <br/>
+<br/>
+佛言：“是三昧经者，是佛所嘱，佛所称举。闻是深三昧，不书、学、诵、中持如法者，是为愚痴。 <br/>
+譬如痴子，人持旃檀香与，而不肯受，谓之不净。香主言：此旃檀香也，卿莫谓不净，嗅之知香，视之知净。其人闭目，不嗅，不视也。” <br/>
+<br/>
+佛言：“闻是三昧，不肯受持者，如彼痴子，是为无知。反呼世间为有，不入空，不知无，自谓如法反作轻戏言：佛亦有深经乎？亦有威神乎？反相形言：世间亦有比丘如阿难乎？” <br/>
+佛言：“其人从持是三昧者，所去两两三三，相与语言：是何等说，从何得是语，为自合会作，是经非佛说。” <br/>
+<br/>
+佛告跋陀和：“譬如贾客，持摩尼珠，示田家痴子曰：‘评此值几钱？’贾客言：‘持是珠置冥中，其光所照直满中宝。’” <br/>
+佛言：“其人不知是珠，而言：‘其价能与一头牛等不？宁可贸一头牛与我者善，不肯者休如是。’跋陀和菩萨，闻是三昧不信，反形相者，如彼痴子。” <br/>
+<br/>
+佛言：“菩萨闻是三昧，信、受持、修行者，四面皆拥护，无所畏，持戒完具，是为高明，智慧深入。当分布语人，展转相教，当令是三昧处在世间。” <br/>
+佛言：“痴人自于前世，不供养作功德，反自贡高，多行诽谤，嫉妒，贪财利，故欲求名誉，但欲哗说，不信深经，闻是三昧，不信，不乐，不学，反诽谤是经，言非佛所说。” <br/>
+<br/>
+佛告跋陀和：“今我故语汝，如是，若善男子、善女人持珍宝满三千国土布施，设有是功德，不如闻是三昧信乐者，其福过彼上。” <br/>
+佛告跋陀和：“如我所说，无有异，今故说是语耳。今见我说是三昧有疑者，其人却后，除在恶师边，正使善师所，其功德不足言。如是辈人转与恶师从事，闻是三昧不信、不乐、不学，何以故，其人所更佛少，智慧少故，不信耳。” <br/>
+<br/>
+佛告跋陀和：“有闻是三昧不轻笑，不诽谤，不疑，不乍信，乍不信，欢喜，乐书学，诵持者，我悉豫知见之，其人不独于一佛、二佛所作功德，悉于百佛所闻是三昧。却后世时，闻是三昧，书学诵持，守之一日一夜，其福不可计，自致得阿惟越致，所愿者得。” <br/>
+<br/>
+佛告跋陀和：“听我说譬喻，有人取一佛刹，悉碎如尘，取一尘，皆复尽破如一佛刹尘，云何，是尘数宁多不也？” <br/>
+跋陀和言：“甚多！甚多！天中天！” <br/>
+佛言：“有菩萨尽取一尘，置一佛刹，其数尔所佛刹，满中珍宝，悉持供养诸佛，其福功德少少耳。不如闻是三昧，学书诵持，为他人说，守须臾间。闻是功德不可复计，何况已得是三昧悉具足者。” <br/>
+<br/>
+佛尔时说偈言：“ <br/>
+若有菩萨求众德，当说奉行是三昧。 <br/>
+信乐讽诵不疑者，其功德福无齐限。 <br/>
+如一佛国之世界，皆破坏碎以为尘。 <br/>
+一切佛土过是数，满中珍宝用布施。 <br/>
+<br/>
+不如闻是三昧者，其功德福过上施。 <br/>
+引譬功德不可喻，嘱累汝等当劝教。 <br/>
+力行精进无懈怠，其有诵持是三昧， <br/>
+已为面见百千佛，假使最后大恐惧。 <br/>
+<br/>
+持是三昧无所畏，行是比丘已见我。 <br/>
+常为随佛不远离，如佛所言无有异。 <br/>
+菩萨常当随其教，疾得正觉智慧海。” <br/>
+<br/>
+四辈品第五 <br/>
+<br/>
+跋陀和白佛：“难及天中天，若有弃爱欲作比丘，闻是三昧，当云何学？云何持？云何行？” <br/>
+佛言：“弃爱欲作比丘，欲学是三昧者，当清净持戒，不得缺如毛发，常怖畏于地狱痛苦，远离于谀谄是为清净。云何为缺戒也？” <br/>
+<br/>
+佛言：“求色云何为求色？” <br/>
+佛言：“其人意念：我持戒自守，使我后世生，若作天，若作遮迦越王，如是为乐爱欲，是为缺戒。” <br/>
+佛告跋陀和：“其有欲学是三昧者，清净自守，持戒完具，不谀诌，常为智所称誉，于经中当布施，当精进，所志当强，当多信，当劝乐承事于师，视当如佛，得三昧疾。设不恭敬，轻易欺调于师，正使久学是三昧，疾忘之。” <br/>
+<br/>
+佛告跋陀和：“是菩萨若从比丘、比丘尼、优婆塞、优婆夷闻是三昧，当视如佛，常尊敬，不当持谄意，向菩萨不得有谄意，常当至诚，常乐独处，止不惜身命，不得希望人所索，常行乞食不受请，自守节度，所有趣足而已，经行不得懈卧。如是经中教学是三昧，当守如是。” <br/>
+<br/>
+跋陀和白佛：“难及天中天，后世若有懈怠菩萨，闻是三昧不肯精进学，当云何？若有菩萨精进欲学者，我辈当随是经教之。” <br/>
+佛言：“善哉!跋陀和，我助其欢喜，过去、当来、今现在佛皆助欢喜。” <br/>
+<br/>
+佛尔时颂偈言：“ <br/>
+如我所说悉受持，常独处止行功德。 <br/>
+自守节度不聚会，常行乞食不受请。 <br/>
+敬于法师视如佛，除去睡眠志开解。 <br/>
+常自精进无懈怠，如是行者得三昧。” <br/>
+跋陀和白佛：“比丘尼求菩萨道，欲学是三昧，当云何行？” <br/>
+佛言：“比丘尼求是三昧者，不得自高， 常当卑谦，不得自贵，不得自大，不得嫉妒，不得嗔恚，不得贪财利色，常当清净，不得惜躯命，常乐经法，念多学问，当弃淫怒痴，不得贪好服饰、珠环，当为智者称誉，当敬善师视如佛，不得有谄意。” <br/>
+<br/>
+佛尔时颂偈言：“ <br/>
+若比丘尼求三昧，常当精进勿懈怠。 <br/>
+无得听于食欲心，除去嗔恚自高贵。 <br/>
+不得慢欺及调戏，常行至诚立一信。 <br/>
+恭敬善师视如佛，如是行者得三昧。” <br/>
+<br/>
+跋陀和白佛：“若有居士修道，闻是三昧欲学者，当云何行？” <br/>
+佛言：“居士欲学是三昧者，当持五戒令坚，不得饮酒，亦不得饮他人；不得与女亲熟，不得教他人；不得有恩爱于妻子，男女不得贪财产，常念欲弃家作沙门，常持八关斋，当于佛寺中，常当念布施，布施已不念我，自当得其福田，为一切施，常当大慈敬于善师，见持戒比丘，不得轻易说其恶，作是行已，当学守是三昧。” <br/>
+<br/>
+佛尔时颂偈言：“ <br/>
+居士欲学是三昧，当持五戒勿毁缺。 <br/>
+常当思欲作沙门，不贪妻子及财色。 <br/>
+常八关斋于佛寺，不得贡高轻蔑人。 <br/>
+心无荣誉思所欲，奉行经法心无谄。 <br/>
+<br/>
+弃舍悭贪常惠施，常当奉敬比丘僧。 <br/>
+常志一行勿懈怠，学是三昧当如是。” <br/>
+<br/>
+跋陀和白佛：“优婆夷闻是三昧欲学者，当云何行？” <br/>
+佛言：“优婆夷欲学者，当持五戒，自归于三，何等为三：自归命佛，归命法，归命比丘僧。不得事余道，不得拜于天，不得祠鬼神，不得视吉良日，不得调戏，不得慢恣有色想，不得有贪欲之心，常当念布施，欢乐欲闻经，念力学问，敬重善师，心常拳拳，不得有懈。若有比丘，比丘尼过者，以坐席宾食之。” <br/>
+<br/>
+佛尔时颂偈言：“ <br/>
+优婆夷欲学三昧，奉持五戒勿缺毁。 <br/>
+承事善师视如佛，不得拜天祠祀神。 <br/>
+除去杀盗及嫉妒，不得两舌斗彼此。 <br/>
+不得悭贪常念施，见恶覆藏唯叹善。 <br/>
+不得谀谄有邪淫，常当早谦勿自大。 <br/>
+敬事比丘比丘尼，如是行者得三昧。” <br/>
+<br/>
+<br/>
+拥护品 第六 <br/>
+<br/>
+陀和菩萨、罗邻那竭菩萨、骄日兜菩萨、那罗达菩萨、须深菩萨、摩诃须萨和菩萨、因垣达菩萨、和轮调菩萨是八菩萨见佛所说，皆大欢喜，持五百劫波育衣布施，持身自归，持珍宝供养。 <br/>
+佛告阿难、跋陀和等五百人：“人中之师常持正法，随顿教化，莫不欢喜，乐随侍者，心净无欲。” <br/>
+<br/>
+时五百人皆叉手立佛前，跋陀和白佛：“菩萨持几事疾得是三昧？” <br/>
+佛言：“有四事： <br/>
+一者、不信余道； <br/>
+二者、断爱欲； <br/>
+三者、当清净行； <br/>
+四者、无所贪， <br/>
+是为四。如是行者，今世即得五百功德。 <br/>
+<br/>
+譬如，慈心比丘终不中毒，兵刃不加，火不能烧，入水不溺，不害。正使劫尽烧时，堕是火中，火即为灭，喻如大水灭小火。 <br/>
+菩萨持是三昧者，若帝王、若贼、若水火、若龙、夜叉、蟒、狮子、虎、狼、加瞿、薜荔鸠垣一切毒兽及鬼神，欲娆人，欲杀人，欲夺人衣钵，坏人禅，夺人念故，欲中是菩萨，终不能也。除其宿命不请，如我语无异也。” <br/>
+<br/>
+佛言：“持是三昧者，终不痛目，若耳、鼻、口、身体、心终不忧，除其宿命所作。” <br/>
+佛言：“是菩萨为诸天龙神及阿须轮、夜叉鬼神、迦楼罗鬼神、甄陀罗鬼神、摩雎勒鬼神，若人非人皆共赞誉，是菩萨皆共拥护，承事供养，瞻视敬仰，思欲相见，诸佛世尊亦然。 <br/>
+<br/>
+是菩萨所未诵经，前所不闻，持是三昧，威神悉自得之，若昼日不得者，夜于梦中悉得之。” <br/>
+佛告跋陀和：“其有持是三昧者，我说其功德，一劫复过一劫不可尽，竟略说其要尔。” <br/>
+<br/>
+劝助品 第七 <br/>
+<br/>
+佛告跋陀和菩萨：“于是三昧中将有四事助其欢喜。过去佛持是三昧助欢喜，自致得阿耨多罗三耶三菩阿惟三佛，其智悉具足。今现在十方无央数佛，亦于是三昧中四事助欢喜得，当来亦当从是四事助欢喜得，我悉助欢喜。” <br/>
+佛告跋陀和：“是三昧中四事助欢喜，我于是中说少所譬喻，人寿百岁随地行至者不休息，其人行过于疾风，宁有能计其道里不？” <br/>
+<br/>
+跋陀和言：“无有能计者，独佛弟子舍利弗、罗阿惟致菩萨乃能计之耳。” <br/>
+佛言：“我故语诸菩萨，若有善男子、善女人取是人所行处，满中珍宝布施，不如闻是三昧四事助欢喜，其福过布施者千万亿倍，当知是助欢喜福甚尊大。” <br/>
+佛告跋陀和：“乃久远不可计阿僧祗，尔时，有佛名私诃摩提，等正觉、无上士、道法御、天人师、佛、世尊在空闲之处，是时阎浮利纵广十八万亿里，凡有六百四十万国悉丰熟，人民炽盛，有大国名跋陀和，有转轮王惟斯芩，往到佛所，礼毕却坐一面，佛知其意，便为说是三昧，其王闻之助欢喜，即持珍宝散佛上，自念曰：持是功德，令十方人民皆安隐。 <br/>
+<br/>
+时私诃提佛般涅槃后，惟斯苓王寿终，还自生其家作太子，名梵摩达。尔时，有比丘名珍宝，是时，为四部弟子说是三昧，梵摩达闻之助欢喜，踊跃持宝值百亿，散其上，复持好衣供养之，以发意求佛道，与千人俱于是比丘作沙门，求学是三昧。与千人共承事师八千岁不休懈，得一闻是三昧，四事助欢喜，入高明智。因是却后，更见六万八千佛，于一一佛所，闻是三昧，自致得佛，名垣罗惟，逮等正觉、无上士、道法御、天人师、佛、世尊。 <br/>
+是时，千比丘从，得等正觉，皆名垣罗爵，沉教不可计，人民皆求佛道。” <br/>
+<br/>
+佛告跋陀和：“何人闻是三昧不助欢喜，学持守诵为人说者也！” <br/>
+佛言：“若有守是三昧者，疾逮得佛，但闻其功德不可计，何况学持者。若去百里千里，有是三昧，当求之，何况近而不求学也。若有闻是三昧欲学者，当承事其师十岁供养，瞻视不得自用，当随师教，常念师恩。” <br/>
+<br/>
+佛言：“我故为汝说之，闻是三昧，去四千里者，往到其所，正使不得闻，其功德不可计也，所以何？专精进故，会当得之，自致作佛。” <br/>
+<br/>
+至诚品 第八 <br/>
+佛言：“乃往昔，有佛名萨遮那摩，等正觉、无上士、天人师、佛、世尊。时有比丘名和轮，其佛般涅槃后，是比丘持是三昧，我时作国王，刹利种，于梦中闻是三昧，觉已，便行求是比丘，即依作沙门，欲得闻是三昧，承事其师三万六千岁，魔事数数起，竟不得闻。” <br/>
+<br/>
+佛告比丘、比丘尼，优婆塞，优婆夷：“我故语汝等，疾取是三昧，无得忘失，善承事其师，持是三昧至一劫，若百劫，若百千劫，莫得有懈倦。守善师不离，若饮食、资用、衣被、床卧、珍宝，以上勿有爱惜，设无者，当行乞食，给师趣。当得是三昧莫厌，常当自割身肉，供养于善师，何况宝物，此不足言耳。承事善师当如奴事，大家求是三昧者，当如是。 <br/>
+<br/>
+得三昧已，当坚持常念师恩。是三昧难得值，正使求是三昧，至百千劫，但欲得闻其名不可得，何况学而不精进。得是三昧精进学，转教人者，正使如恒河沙佛刹满中珍宝用布施甚多，不如学是三昧者。” <br/>
+<br/>
+佛告跋陀和：“若有人欲学者，当助欢喜，欲学而得学者，持佛威神使学，当好书是三昧著素上，当得佛印。 <br/>
+所谓不当行，无所贪，无所求，无所想，无所著，无所愿，无所向生，无所取，无所顾，无所住，无所碍，无所结，无所有尽，于欲无所生，无所灭，无所坏，无所败，道要道，本是印。阿罗汉、辟支佛所不能及，何况愚痴者，是印是为佛印。” <br/>
+<br/>
+佛言：“我今说三昧时，千八百亿诸天、阿须轮鬼神、龙、人民得须陀洹道；八百比丘得阿罗汉；五百比丘尼得阿罗汉；万菩萨得是三昧，得无从生法于中立，万二千菩萨不复退转。” <br/>
+<br/>
+佛告舍利弗、目键连比丘、跋陀和等：“我从无数劫求道，今已得作佛，持是经嘱累汝等，学诵持守，无得忘失。若有欲学者，当具足安谛教之，其欲闻者，当为具足说之。” <br/>
+<br/>
+佛说经竟，跋陀和菩萨等、舍利弗、目连比丘、阿难及诸天阿须轮、龙、鬼神、人民皆大欢喜，为佛作礼而去。 <br/>
+<br/>
+<br/>
+《佛说般舟三昧经》终 <br/>
+己亥岁高丽国大藏都监奉敕造[/size] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚誓言发表于 2005-11-17 15:56</div><div class="post-body">阿弥陀佛身金色　相好光明无等伦 <br/>
+白毫宛转五须弥　绀目澄清四大海 <br/>
+光中化佛无数亿　化菩萨众亦无边 <br/>
+四十八愿度众生　九品咸令登彼岸 <br/>
+<br/>
+无上甚深微妙法，百千万劫难遭遇 <br/>
+我今见闻得受持，愿解如来真实意 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">乐</div>乐空不二发表于 2008-1-14 18:58</div><div class="post-body">[font=楷体_GB2312][size=5][b]御制无量寿佛赞 <br/>
+<br/>
+西方极乐世界尊，无量寿佛世希有， <br/>
+能灭无始亿劫业，令彼苦恼悉消除。 <br/>
+若人能以微妙心，常以极乐为观想， <br/>
+广与众生分别说，举目即见阿弥陀。 <br/>
+<br/>
+佛身色相显光明，阎浮檀金无与等， <br/>
+其高无比由旬数，六十万亿那由他。 <br/>
+眉间白毫五须弥，绀眼泓澄四大海， <br/>
+光明演出诸毛孔，一孔遍含诸大千。 <br/>
+<br/>
+一界中有河沙佛，佛有八万四千相， <br/>
+一一相中复如是，作是观者随现前。 <br/>
+以观佛身见佛心，众生忆想见化佛， <br/>
+从相入得无生忍，以三昧受无边慈。 <br/>
+<br/>
+佛身无量广无边，化导以彼宿愿力， <br/>
+有忆想者得成就，神通如意满虚空。 <br/>
+众生三种具三心，精进勇猛无退转， <br/>
+即得如来手接引，七宝宫殿大光明。 <br/>
+<br/>
+其身踊跃金刚台，随从佛后弹指顷， <br/>
+行大乘解第一义，即生七宝莲池中。 <br/>
+阿弥陀佛大慈悲，十力威德难赞说， <br/>
+称名一声起一念，八十亿劫罪皆除， <br/>
+<br/>
+以是济拔无有穷，是以名为无量寿。 <br/>
+昔世尊居耆阇崛，与大众说妙因缘。 <br/>
+离忧恼与阎浮提，超脱一切诸苦趣， <br/>
+净妙国即极乐界，修三福发菩提心。 <br/>
+<br/>
+作是念者住坚专，故说无量寿佛观， <br/>
+如是功德不可说，不可说者妙光明。 <br/>
+无量清净平等施，五浊众生咸作佛， <br/>
+断彼一切颠倒想，犹如以水投海中。 <br/>
+<br/>
+湿性混合无不同，虽有圣智难分别， <br/>
+人人皆为无量寿，稽首瞻礼即西方。[/b][/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">白</div>白玛动拉发表于 2008-2-27 08:55</div><div class="post-body">已收藏将认真拜读,感谢师兄提供经文. <br/>
+南无阿弥陀佛! </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">金</div>金刚瑜发表于 2009-6-8 09:06</div><div class="post-body">Buddha Pronounces the Sūtra of the Pratyutpanna Buddha Sammukhāvasthita Samādhi <br/>
+Translated from Sanskrit into Chinese during the Later Han Dynasty <br/>
+by <br/>
+The Tripiṭaka Master Lokakṣema from the Yuezhi Land <br/>
+Chapter 1 <br/>
+The Questions <br/>
+Thus I have heard: <br/>
+At one time the Bhagavān was in the Karaṇḍa Bamboo Garden of the city of Rājagṛha, together with an innumerable multitude of great Bodhisattvas, bhikṣus, bhikṣuṇīs, upāsakas, and upāsikās, as well as gods, dragons, asuras, yakṣas, garuḍas, kiṁnaras, and mahoragas. All were seated in the huge assembly. <br/>
+At that time Bhadrapāla Bodhisattva rose from his seat, arranged his attire, and fell on his knees. He joined his palms and asked the Buddha, &quot;I would like to ask some questions. May I have Your permission to ask them now?&quot; <br/>
+The Buddha replied, &quot;Very good! Ask any questions as you wish. I will answer them to you.&quot; <br/>
+Bhadrapāla Bodhisattva asked the Buddha, &quot;What Dharmas should Bodhisattvas carry out in order to develop wisdom, like the immense ocean accepting myriads of streams? What should they do in order to acquire broad knowledge and understand what they have heard without doubts? What should they do in order to know their past lives and the reasons why they have been reborn? What should they do in order to live a long life? What should they do in order to be reborn into a family with a great name and to be loved and respected by their parents, brothers, relatives, and friends? What should they do in order to be endowed with even, comely good features? What should they do in order to acquire superb talents, outstanding in the multitude, and to develop penetrating and all-encompassing wisdom? What should they do in order to fulfill the merit and the sublime appearance of a Buddha, to have immeasurable awesome powers, and to form a magnificent Buddha Land? What should they do in order to subjugate the hostile māras? What should they do in order to achieve self-mastery so that their vows will never fail? What should they do in order to enter the Door of Total Retention? What should they do in order to acquire the transcendental powers to travel to Buddha Lands everywhere? What should they do in order to acquire fierce valiance like that of a lion, with nothing to fear, untouchable by māras? What should they do in order to realize their holy Buddha nature and to accept and uphold the Dharma in the sūtras with understanding, without forgetting? What should they do in order to have contentment, free from sycophancy and flattery and untouched by the three forces—arrogance, the five desires, and the wrong views? What should they do in order to hold the overall wisdom-knowledge without any hindrance, never deviating from the Buddha&#x27;s intention? What should they do in order to win people&#x27;s trust? What should they do in order to acquire the eight tones [of a Buddha] and master 10,000 koṭi tones? What should they do in order to fulfill the sublime appearance of a Buddha? What should they do in order to acquire the power of all-hearing? What should they do in order to acquire the Bodhi-eye for seeing into the future? What should they do in order to acquire the Ten Powers and the true wisdom? What should they do in order to see, with a single thought, all Buddhas from the ten directions appearing before them? What should they do in order to know that the four appearances of dharmas have never had any reality? What should they do in order to see right here innumerable Buddha Lands in the ten directions and to know the good and evil life-journeys there of the people, gods, dragons, spirits, and wriggly insects? These are my questions. I pray that the Buddha will explain and resolve all of my doubts.&quot; <br/>
+The Buddha said to Bhadrapāla, &quot;Very good! Your questions are so comprehensive that they are beyond measure. The reason why you are able to ask these questions is that you have achieved merit in your past lives under past Buddhas. It is because you have made offerings to Buddhas, delighted in the Dharma in the sūtras, observed your precepts, and lived in purity. It is because you have always begged for food, not accepting meal invitations, convened the assemblies of Bodhisattvas, taught people to stop doing evil, and seen the equality in all. It is because you have always had great lovingkindness and great compassion. Your merit is beyond measure.&quot; <br/>
+The Buddha told Bhadrapāla, &quot;There is a samādhi called Buddhas from the Ten Directions All Standing Before One. If you can train in this Dharma, you will have the answers to all of your questions.&quot; <br/>
+Bhadrapāla asked the Buddha, &quot;I pray that You will pronounce it. What the Buddha will now pronounce is all-encompassing. It will give peace to sentient beings in the ten directions and present great illumination to Bodhisattvas.&quot; <br/>
+The Buddha told Bhadrapāla, &quot;There is a samādhi called Concentrated Mind. Bodhisattvas should constantly guard, learn, and uphold it, never to follow other ways. Of all virtuous ways, this is the foremost.&quot; <br/>
+<br/>
+Chapter 2 <br/>
+The Training <br/>
+The Buddha told Bhadrapāla, &quot;If Bodhisattvas wish to attain this samādhi quickly, they should stand in great faith. Those who implement it in accord with the Dharma can attain this samādhi. Do not allow any doubt to arise, even as slight as a hair. This Dharma of Concentrated Mind is also called the Bodhisattva Way Surpassing All Others.&quot; <br/>
+[The Buddha then spoke in verse:] <br/>
+<br/>
+&quot;With a single thought, believe in this Dharma. <br/>
+Following the teachings heard, think only of one course. <br/>
+Keep only one thought, ceasing all other thoughts. <br/>
+Stand firm in your faith, without any doubts. <br/>
+Progress energetically, never negligent or indolent. <br/>
+Think of neither existence nor nonexistence, neither progress nor regress. <br/>
+Think of neither front nor back, neither left nor right. <br/>
+Think of neither nonexistence nor existence, neither far nor near. <br/>
+Think of neither pain nor itch, neither hunger nor thirst. <br/>
+Think of neither cold nor hot, neither suffering nor pleasure. <br/>
+Think of neither birth nor old age, neither illness nor death. <br/>
+Think of neither body nor life, nor longevity. <br/>
+Think of neither wealth nor poverty, neither nobility nor lowliness. <br/>
+Think of neither sense objects nor desires. <br/>
+Think of neither large nor small, neither long nor short. <br/>
+Think of neither fineness nor coarseness. <br/>
+Think of neither evil nor goodness, neither anger nor delight. <br/>
+Think of neither rising nor sitting, neither proceeding nor stopping. <br/>
+Think of neither the sūtras nor the Dharma. <br/>
+Think of neither right nor wrong, neither grasping nor abandoning. <br/>
+Think of neither perception nor consciousness. <br/>
+Think of neither cessation nor continuation. <br/>
+Think of neither emptiness nor true reality. <br/>
+Think of neither heavy nor light, neither hard nor easy. <br/>
+Think of neither deep nor shallow, neither broad nor narrow. <br/>
+Think of neither father nor mother, neither wife nor children. <br/>
+Think of neither friends nor acquaintances, neither love nor hatred. <br/>
+Think of neither gain nor loss, neither success nor failure. <br/>
+Think of neither clarity nor confusion. <br/>
+Cease all thoughts and be vigilant for a period of time, never distracted. <br/>
+Progress energetically, never negligent or indolent. <br/>
+Do not count the years, nor feel tired in a single day. <br/>
+Hold one thought, never losing it. <br/>
+Avoid sleep and keep the mind alert. <br/>
+Always live alone and avoid gatherings. <br/>
+Shun evil ones but link with beneficent friends. <br/>
+Stay close to illuminated teachers, regarding them as a Buddha. <br/>
+Hold firm your resolve, but always be gentle. <br/>
+Meditate on equality in all things. <br/>
+Evade hometown and keep distance from relatives. <br/>
+Abandon love and desire and live in purity. <br/>
+Train for that which is asaṁskṛta and cease desires. <br/>
+Drop distracting thoughts and learn the way of concentration. <br/>
+Gain wisdom from words in accord with dhyāna. <br/>
+Remove the three defilements and purify the six faculties. <br/>
+Cease lustful pursuits and leave sensory experiences behind. <br/>
+Do not be greedy for wealth or accumulate things. <br/>
+Know contentment in eating food and do not covet flavors. <br/>
+Be cautious never to eat any sentient being, dead or alive. <br/>
+Dress in accord with the Dharma, and do not be ornately adorned. <br/>
+Do not tease others, nor be proud or arrogant. <br/>
+Do not be conceited, nor elevate yourself. <br/>
+Expound sūtras in accord with the Dharma. <br/>
+Understand that the body has always been like an illusion. <br/>
+Do not be engrossed by the aggregates, nor revel in the sensory fields. <br/>
+The five aggregates are like bandits, and the four domains are like snakes. <br/>
+All are impermanent and all are unstable. <br/>
+Recognize that there has never been an everlasting lord, <br/>
+Only meetings and partings of causes and conditions. <br/>
+Understand and know that nothing in existence is real. <br/>
+Bestow lovingkindness and sympathy on all. <br/>
+Give alms to the poor and relief to the unfortunate. <br/>
+This is meditative concentration in the Bodhisattva Way, which <br/>
+Unfolds the fundamental wisdom and elicits myriads of knowledge.&quot; <br/>
+The Buddha told Bhadrapāla, &quot;Those who train in this way will attain this samādhi, during which present Buddhas all stand before them. If, among bhikṣus, bhikṣuṇīs, upāsakas, and upāsikās, there are those who want to train according to this Dharma, they should observe their precepts completely and live alone in a place to think of Amitābha Buddha, who is in the west. According to the teachings heard, one should also think of His land called Sukhāvatī, which is 10 million koṭi Buddha Lands away from here. Contemplate single-mindedly for one day and one night, or even seven days and seven nights. After the seventh day, one will see Him. <br/>
+&quot;By analogy, one sees things in a dream, not knowing whether it is day or night, indoors or outdoors, and one&#x27;s sight is impervious to darkness or obstructions. Bhadrapāla, Bodhisattvas should do this contemplation. Then huge mountains, Sumeru Mountains, and dark places in the intervening Buddha Lands will all open wide, not posing any obstruction. These Bodhisattvas will see across without having the God-eye, hear across without having the God-ear, and travel to that Buddha Land without possessing transcendental powers. It is not that they have died here and been reborn there, but that they can sit here and see everything there. <br/>
+&quot;As an analogy, a man hears that, in the kingdom of Vaiśālī, there is a prostitute named Sumanā; a second man hears of a prostitute called Āmrapālī; and a third man hears that Utpalavarṇā has become a prostitute. These three men have never seen those three women, but they have heard of them and their lust is ignited. They all live in Rājagṛha, and they have lustful thoughts concurrently. Each of them goes, in a dream, to the woman he thinks of and spends the night with her. When they wake up, they all remember their own dreams.&quot; <br/>
+The Buddha said to Bhadrapāla, &quot;The three women I have mentioned serve as an analogy. You may use suitable ways to expound the Dharma, enabling others to unfold their wisdom so that they will arrive at the Ground of No Regress on the unsurpassed true Way. When they attain Buddhahood eventually, they all will be called Superb Enlightenment.&quot; <br/>
+The Buddha continued, &quot;Bodhisattvas in this land can see Amitābha Buddha by thinking intently only of Him. When they see Him, they can ask, &#x27;What Dharma should I uphold in order to be reborn in Your land?&#x27; Amitābha Buddha will reply, &#x27;Those who desire to be reborn in my land should think of my name. If they can continue without taking rest, they will succeed in being reborn here.&#x27;&quot; <br/>
+The Buddha said, &quot;Because of concentrated thinking, one will achieve rebirth there. One should always think of Amitābha Buddha&#x27;s body with thirty-two major marks and eighty excellent characteristics, unequaled in its sublimity, radiating enormous bright light to illuminate everywhere. He teaches, in the assembly of Bodhisattvas and bhikṣus, that dharmas [in true reality] are empty and indestructible. Why? Indestructible are all [empty] dharmas, such as form, pain, itch, thinking, perception, birth, death, consciousness, spirit, earth, water, fire, and wind, the human world, Brahma Heaven, and Great Brahma Heaven. By thinking of a Buddha, one attains the Samādhi of Emptiness.&quot; <br/>
+The Buddha told Bhadrapāla, &quot;Who have attained this Bodhisattva samādhi? My disciple Mahākāśyapa, Indraguṇa Bodhisattva, the god-son Good Virtue, and those who already know this samādhi have attained it by training. Hence, Bhadrapāla, those who wish to see present Buddhas in the ten directions should think in their directions single-mindedly, without other thoughts. Then they will be able to see them. As an analogy, one travels to distant lands and thinks of family and kin in one&#x27;s hometown. In a dream, one returns home, sees one&#x27;s family and relatives, and enjoys talking to them. After waking, one tells one&#x27;s dream to friends.&quot; <br/>
+The Buddha said, &quot;If Bodhisattvas hear of a Buddha&#x27;s name and desire to see Him, they will be able to see Him by continuously thinking of Him and His land. For example, a bhikṣu visualizes before him the bones of a corpse, turning blue, white, red, or black. The colors are not brought by anyone, but are imagined by his mind. Likewise, by virtue of the awesome spiritual power of the Buddha, Bodhisattvas who commandingly abide in this samādhi can see Buddhas in any directions as they wish. Why? They are able to see them by virtue of three powers—the power of Buddhas, the power of the samādhi, and the power of their own merit. <br/>
+&quot;As an analogy, a handsome young man dressed in fine clothes wants to see his own image. He can see his reflection by looking into a hand mirror, hemp oil, clear water, or a crystal. Does his reflection come from the outside into the mirror, oil, water, or crystal?&quot; <br/>
+Bhadrapāla replied, &quot;No, it does not. God of Gods, it is because of the clarity of the mirror, oil, water, or crystal, that the man can see his reflection. His reflection comes from neither the inside [of the medium] nor the outside.&quot; <br/>
+The Buddha said, &quot;Very good, Bhadrapāla. Because the medium is clear, the reflection is clear. Likewise, if one wishes to see a Buddha, one with a pure mind will be able to see. When one sees Him, one can ask questions, and He will give a reply. Having heard the teachings, one will be exultant and think this thought: &#x27;Where does this Buddha come from and where am I going? As I think of this Buddha, He comes from nowhere. Nor am I going anywhere. As I think of the desire realm, the form realm, and the formless realm, these three realms are formed by my mind. I can see what I think of. The mind creates a Buddha for itself to see. The mind is the Buddha mind. My mind forms the Buddha. My mind is the Buddha, the Tathāgata, and my body.&#x27; <br/>
+&quot;Although the mind sees a Buddha, the mind neither knows itself nor sees itself. The mind with perception is the false mind; the mind without perception is nirvāṇa. Dharmas as perceived are not something pleasurable. They are empty thoughts, nothing real in existence. This is what is seen by Bodhisattvas who abide in this samādhi.&quot; <br/>
+Then the Buddha spoke in verse: <br/>
+<br/>
+&quot;The mind does not know itself; the mind does not see itself. <br/>
+The mind that fabricates perception is false; the mind without perception is nirvāṇa. <br/>
+Dharmas are not firm, always founded upon thinking. <br/>
+Those who see emptiness with this understanding <br/>
+Are free from perceptions and expectations.&quot; <br/>
+Chapter 3 <br/>
+Four Things to Do <br/>
+The Buddha continued, &quot;There are four things through which Bodhisattvas can quickly attain this samādhi. First, have indestructible faith. Second, make energetic progress that nothing can deter. Third, have wisdom-knowledge that no one can compare. Fourth, always work under a beneficent teacher. These are the four things. There are another four things which will enable one to acquire this samādhi quickly. First, do not engage in worldly thinking for three months, not even during a finger snap. Second, do not sleep for three months, not even during a finger snap. Third, do walking meditation for three months without any rest, except for eating food and so forth. Fourth, expound sūtras to others, not expecting their offerings. These are the four things. There are another four things which will enable one to attain this samādhi quickly. First, take people to the place where the Buddha is. Second, gather people to have them hear the teachings. Third, have no jealousy. Fourth, have people learn the Buddha Way. These are the four things. There are another four things which will enable one to acquire this samādhi quickly. First, construct the images of Buddhas and persuade people to make offerings. Second, copy this sūtra on fine fabric and have people read and recite it. Third, teach the self-elevated ones to enter the Buddha Way. Fourth, protect and uphold the true Dharma to make it endure as long as possible. These are the four things.&quot; <br/>
+At that time the Buddha spoke in verse: <br/>
+<br/>
+&quot;Always believe and delight in the Buddha Dharma. <br/>
+Progress energetically to attain profound wisdom. <br/>
+Disseminate and pronounce the Dharma to others. <br/>
+Guard against greed for offerings. <br/>
+With good understanding, turn away from desires. <br/>
+Always think of the Buddha, <br/>
+Who has awesome virtues, sees, and knows countless diversities of dharmas. <br/>
+Past Buddhas, future Buddhas, <br/>
+And present Buddhas revered among men, <br/>
+With no afflictions to discharge, <br/>
+Are golden in color and have superb physical marks. <br/>
+Their teachings are firm, and their wisdom beyond the ultimate. <br/>
+Listen to this Dharma with an undistracted mind. <br/>
+Forever discard the way of negligence and indolence. <br/>
+Never bear malice toward others. <br/>
+Respect teachers like a Buddha. <br/>
+Be cautious not to have doubts about this sūtra, <br/>
+Which is praised by all Buddhas. <br/>
+Always construct the images of Buddhas. <br/>
+Always persuade people to learn this Dharma <br/>
+And implement it to attain this samādhi.&quot; <br/>
+The Buddha told Bhadrapāla, &quot;Those who want to learn this samādhi should respect their teachers, serve them, and make offerings to them, regarding them as a Buddha. Those who see their teachers as less than a Buddha will have difficulty attaining this samādhi. Bodhisattvas who respect teachers from whom they have learned this samādhi can advance, relying on the Buddha&#x27;s awesome spiritual power. As they face the east, they will see a billion koṭi Buddhas. In the same way, they will see Buddhas in the ten directions. By analogy, one observes the night sky and sees myriads of stars. Bodhisattvas who desire to see present Buddhas all standing before them should respect beneficent teachers, not looking for their faults. Never negligent or indolent, they should perfect their training in giving alms, observing their precepts, enduring adversities, and making energetic progress single-mindedly. <br/>
+<br/>
+Chapter 4 <br/>
+The Analogies <br/>
+The Buddha told Bhadrapāla, &quot;Bodhisattvas who have attained this samādhi but do not progress energetically are like those who are shipwrecked midway crossing an immense ocean on a ship fully loaded with treasures. People in Jambudvīpa will all be in tremendous anguish, concerned about the loss of their treasures. If Bodhisattvas have heard this samādhi but do not learn it, gods will all sadly say, &#x27;This is a loss to our treasured sūtra.&#x27;&quot; <br/>
+The Buddha said, &quot;This samādhi is entrusted and praised by all Buddhas. If those who have heard this profound samādhi sūtra do not copy, study, recite, or uphold it in accord with the Dharma, they are foolish. As an analogy, someone gives sandalwood incense to a fool, but he refuses to accept it, saying that the incense is impure. The donor says, &#x27;This is sandalwood incense. Do not say that it is impure. If you smell it, you will know that it is fragrant. If you look at it, you will know that it is pure.&#x27; That fool closes his eyes, refusing to smell or see it.&quot; <br/>
+The Budddha said, &quot;Those who have heard this samādhi sūtra but refuse to accept it are as ignorant as that fool. They instead argue that the world is existent. Not having realized emptiness, they do not know nonexistence. Alleging that their views were in accord with the Dharma, they say in mockery, &#x27;Does the Buddha have profound sūtras? Does He have awesome spiritual powers?&#x27; They say these contradictory words: &#x27;Are there bhikṣus in the world who are like Ānanda?&#x27;&quot; <br/>
+The Buddha said, &quot;Those people walk away from the ones who uphold this samādhi. In twos and threes, they say to one another, &#x27;What do these words mean? Where did they obtain these words? They must have gathered together to forge this sūtra. It is not pronounced by the Buddha.&#x27;&quot; <br/>
+The Buddha told Bhadrapāla, &quot;As an analogy, a merchant shows a precious gem to a foolish farm boy. The boy asks, &#x27;How much is this gem worth?&#x27; The merchant replies, &#x27;If you place this gem in the dark, its light shines on the treasures that fill up an area.&#x27;&quot; <br/>
+The Buddha continued, &quot;The foolish boy still does not know that this gem is precious. He asks, &#x27;Can its value be compared with that of a cow? I would rather trade it for a cow. If you agree, it is good. If you disagree, forget it.&#x27; Bhadrapāla, Bodhisattvas who, having heard this samādhi, do not believe it and make contradictory remarks are like that foolish boy.&quot; <br/>
+The Buddha said, &quot;Bodhisattvas who, having heard this samādhi sūtra, believe it, accept and uphold it, and train accordingly are supported by those around them, and they have nothing to fear. Complete in observance of their precepts, they are brilliant, and their wisdom is profound. They disseminate the Dharma, telling people to teach one another successively, enabling this samādhi sūtra to remain as long as possible in the world.&quot; <br/>
+The Buddha said, &quot;The fools have not made offerings or cultivated virtues in their past lives. They have instead elevated themselves, carrying out slanderous and jealous ways. Greedy for wealth and benefits, they seek fame and reputation. They only want to make noisy remarks because they do not believe in profound sūtras. Having heard this samādhi sūtra, they neither believe nor appreciate it, nor learn it. Instead, they malign this sūtra, alleging that it is not pronounced by the Buddha.&quot; <br/>
+The Buddha said to Bhadrapāla, &quot;Now I tell you the way it is. If good men and good women take treasures that fill up the Three-Thousand Great Thousandfold World to give away as alms, their merit is less than that of those who hear this samādhi sūtra and believe and delight in it. Their merit is greater than that of the almsgivers.&quot; <br/>
+The Buddha told Bhadrapāla, &quot;My words never change. I now say these words. Setting aside those who in future lives will follow evil teachers, if there are those who now have doubts about this samādhi I have pronounced, their merit are not worth mentioning even if they in future lives follow good teachers. These people will still turn to work under evil teachers. What is the reason why they, having heard this samādhi, neither believe nor appreciate it, and choose not to learn it? They disbelieve because they have seen few Buddhas in the past and have little wisdom.&quot; <br/>
+The Buddha told Bhadrapāla, &quot;I have the foresight and foreknowledge of those who, having heard this samādhi sūtra, will not laugh in contempt, malign, doubt, or suddenly believe and suddenly disbelieve, but will delight in copying, learning, reciting, and upholding it. They not only have accumulated merit under one or two Buddhas, but have heard this samādhi at the places where 100 Buddhas were. When they hear this samādhi sūtra in their future lives, if they copy, learn, recite, and uphold it even for only one day and one night, their merit is beyond calculation. They will arrive at the spiritual level of avinivartanīya on their own as they wish.&quot; <br/>
+The Buddha told Bhadrapāla, &quot;Hear this analogy. Suppose someone crushes a Buddha Land into dust, and then further pulverizes each dust particle into more particles. Is the number of dust particles produced from a Buddha Land very huge?&quot; <br/>
+Bhadrapāla replied, &quot;Very huge, God of Gods.&quot; <br/>
+The Buddha said, &quot;Suppose a Bodhisattva takes all these dust particles and places each in a Buddha Land. Then, he takes treasures that fill up all these Buddha Lands to make an offering to Buddhas. His merit is very little in comparison with that of those who have heard this samādhi sūtra and have learned, copied, recited, and upheld it. Even if they only advise others to guard it, enabling them to hear it for a short while, this merit is beyond calculation. Even more is the merit of those who have fully attained this samādhi.&quot; <br/>
+At that time the Buddha spoke in verse: <br/>
+<br/>
+&quot;If there are Bodhisattvas who seek merit, <br/>
+They should pronounce and train in this samādhi. <br/>
+Those who believe, delight in, and recite it without doubts <br/>
+Have immeasurable merit. <br/>
+Crushing one Buddha Land into dust particles, <br/>
+One can give as alms treasures filling Buddha Lands that are <br/>
+As numerous as dust particles. <br/>
+Those who have heard this samādhi <br/>
+Have merit greater than that of the almsgiver. <br/>
+Their merit is beyond analogy. <br/>
+I entrust you all to teach others <br/>
+To progress energetically without negligence or indolence. <br/>
+Those who recite and uphold this samādhi sūtra <br/>
+Have already seen 100,000 Buddhas. <br/>
+As for the huge dread at the final moment of life, <br/>
+Those abiding in this samādhi will have no fear. <br/>
+Bhikṣus who go this way have already seen me. <br/>
+They always follow the Buddha, never far from Him. <br/>
+The Buddha&#x27;s words never change. <br/>
+Bodhisattvas should always follow His teachings <br/>
+To attain quickly samyak-saṁbodhi, the ocean of wisdom.&quot; <br/>
+Chapter 5 <br/>
+The Four Groups of Disciples <br/>
+Bhadrapāla asked the Buddha, &quot;Unrivaled God of Gods, if there are those who, having abandoned love and desires to become bhikṣus, have heard this samādhi, how should they learn, uphold, and implement it?&quot; <br/>
+The Buddha said, &quot;Those who, having abandoned love and desires and become bhikṣus, want to learn this samādhi should observe their precepts purely without any flaw even as slight as a hair. To be pure, they should dread the suffering of hell and refrain from sycophancy. <br/>
+&quot;What is a flaw in observing the precepts?&quot; <br/>
+The Buddha replied, &quot;Seeking form.&quot; <br/>
+&quot;What is meant by seeking form?&quot; <br/>
+The Buddha replied, &quot;If the motive of a person who observes his precepts with self-control is to be reborn in the next life as a god or a Wheel-Turning King, such intent for pleasures, loves, and desires is called a flaw in his observance of the precepts.&quot; <br/>
+The Buddha continued, &quot;Those who restrain themselves properly, observe their precepts completely, and do not flatter others are always praised by the wise. They should give alms and progress energetically in accordance with the sūtras. Their resolve should be strong, and they should have a great deal of faith and sympathetic joy. Those who serve their teachers like a Buddha will attain this samādhi quickly. Those who are disrespectful and readily deceitful to their teachers will quickly lose this samādhi even if they have been training for a long time.&quot; <br/>
+The Buddha told Bhadrapāla, &quot;Bodhisattvas who have heard this samādhi from bhikṣus, bhikṣuṇīs, upāsakas, or upāsikās should regard them as respectfully as a Buddha, without any intent for sycophancy. Bodhisattvas should always be earnest. They should always delight in living alone. Though not begrudging even their lives, they should not hope for others to make requests to them. They should always beg for food, not accepting meal invitations. They should guard their moral integrity and be content with what they have. They should do walking meditation, not lying down to relax. Those who are learning this samādhi should abide by the teachings in the sūtras.&quot; <br/>
+Bhadrapāla said to the Buddha, &quot;Unrivaled God of Gods, in future times, if there are Bodhisattvas who want to learn this samādhi and progress energetically, we will teach them according to this sūtra. If there are negligent and indolent Bodhisattvas who, after hearing this samādhi, do not learn it diligently, what can be done?&quot; <br/>
+The Buddha said, &quot;Very good, Bhadrapāla, I will aid them to have joy. All Buddhas of the past, future, and present will also aid them to have joy. At that time the Buddha spoke in verse: <br/>
+<br/>
+Accept and uphold all that I say. <br/>
+Always live alone and cultivate virtues. <br/>
+Guarding your moral integrity, do not join crowds. <br/>
+Always beg for food, not accepting meal invitations. <br/>
+Respect Dharma masters and regard them as a Buddha. <br/>
+Avoid sleep and strengthen aspirations. <br/>
+Always progress energetically, without negligence or indolence. <br/>
+Those who train in this way will attain this samādhi.&quot; <br/>
+Bhadrapāla asked the Buddha, &quot;If bhikṣuṇīs, seeking the Bodhisattva Way, want to learn this samādhi, what should they do?&quot; <br/>
+The Buddha replied, &quot;Bhikṣuṇīs who seek this samādhi should not elevate themselves. They should be humble, neither self-dignified nor self-aggrandized. They should harbor neither jealousy nor anger, nor greed for wealth, benefits, or sense objects. They should protect their purity, even at the cost of their lives. They should always delight in the Dharma in the sūtras and learn as much as possible. They should discard desire, anger, and delusion, and they should not be greedy for fine clothing or adornments, such as necklaces of gems. Then they will be praised by the wise. They should respect beneficent teachers and regard them as a Buddha, without any intent for sycophancy.&quot; <br/>
+At that time the Buddha spoke in verse: <br/>
+<br/>
+&quot;If bhikṣuṇīs seek this samādhi, <br/>
+They should progress energetically, never negligent or indolent. <br/>
+Forbid the mind of greed. <br/>
+Remove anger and self-glorification. <br/>
+Do not be arrogant, deceitful, or playful. <br/>
+Always act in earnest, standing in the one faith. <br/>
+Respect beneficent teachers and regard them as a Buddha. <br/>
+Those who train in this way will attain this samādhi.&quot; <br/>
+Bhadrapāla asked the Buddha, &quot;If upāsakas, training in the Way, have heard this samādhi and want to learn it, what should they do?&quot; <br/>
+The Buddha replied, &quot;Upāsakas who desire to learn this samādhi should firmly observe the five precepts. They should not drink alcohol, nor should they have others drink it. They should not be intimate with women, nor should they have others do so. They should not be attached to their wives, nor men or other women. They should not have greed for assets. They should constantly think of renouncing family life to become śramaṇas. They should regularly observe the eight precepts in a Buddhist temple. They should always remember to give alms. After giving alms, they should not think, &#x27;I have gained merit,&#x27; because alms should be given to others for their benefit. They should have great lovingkindness and respect for their beneficent teachers. When they see bhikṣus who observe their precepts, they should not readily talk about their faults. Having carried out these actions, they should learn to abide in this samādhi.&quot; <br/>
+At that time the Buddha spoke in verse: <br/>
+<br/>
+&quot;Upāsakas who desire to learn this samādhi <br/>
+Should observe the five precepts without breach or flaw. <br/>
+They should always think of becoming śramaṇas, <br/>
+Not greedy for wives, riches, or sense objects. <br/>
+They should regularly observe the eight precepts in a Buddhist temple. <br/>
+Neither self-elevated nor contemptuous of others, <br/>
+Their minds do not expect glory, nor think of wants. <br/>
+They should carry out the Dharma in the sūtras, without a sycophantic mind. <br/>
+Abandoning stinginess and greed, they should give generous alms. <br/>
+They should always respect bhikṣus and make offerings to them. <br/>
+Resolved to take the one training, they should never be negligent or indolent. <br/>
+Those who are learning this samādhi should act in this way.&quot; <br/>
+Bhadrapāla asked the Buddha, &quot;If upāsikās have heard of this samādhi and want to learn it, what should they do?&quot; <br/>
+The Buddha replied, &quot;If upāsikās desire to learn this samādhi, they should observe the five precepts and willingly take refuge in the Three Jewels. What are these three? They should take refuge in the Buddha, the Dharma, and the Saṅgha, never to follow other paths. They should not make obeisance to gods, nor worship spirits. They should not select auspicious dates. They should not tease others, be indulgent, or think of sensory pleasures. Subjugating the mind of greed and desire, they should remember to give alms. Delighting in hearing the sūtras, they should remember to study hard and respect beneficent teachers. Their minds should be vigilant, never negligent or indolent. They should offer a sit-down meal to bhikṣus or bhikṣuṇīs who pass by.&quot; <br/>
+At that time the Buddha spoke in verse: <br/>
+<br/>
+&quot;Upāsikās who desire to learn this samādhi <br/>
+Should observe the five precepts without breach or flaw. <br/>
+They should serve beneficent teachers and regard them as a Buddha. <br/>
+They should not make obeisance to gods, nor worship spirits. <br/>
+They should stop killing, stealing, and jealousy, <br/>
+Never saying divisive words to incite conflict among people. <br/>
+They should be neither stingy nor greedy, <br/>
+Always remembering to give alms. <br/>
+Not publicizing the evil, they should praise the good. <br/>
+They should refrain from sycophancy and sexual misconduct. <br/>
+They should respectfully serve bhikṣus and bhikṣuṇīs. <br/>
+Those who train in this way will attain this samādhi.&quot; <br/>
+Chapter 6 <br/>
+Support and Protection <br/>
+The eight Bodhisattvas—Bhadrapāla, Ralinnāga, Gaujata, Naradatta, Suṣama, Mahāsusaha, Indrada, and Harandha—having heard the Buddha&#x27;s words, greatly rejoiced. They gave away 500 cotton garments as alms. They willingly took refuge and made offerings of precious jewels. The Buddha said to Ānanda, &quot;These 500 people, including Bhadrapāla, are teachers among men. They will uphold the true Dharma and teach and transform others accordingly, and all will be joyful. Those who delight in serving them will have pure minds without desires.&quot; <br/>
+At that time these 500 people joined their palms, standing before the Buddha. Bhadrapāla asked the Buddha, &quot;How many things should Bodhisattvas uphold in order to attain this samādhi quickly? <br/>
+The Buddha replied, &quot;There are four things. First, do not believe in other paths. Second, cease love and desires. Third, carry out the pure ways. Fourth, have no greed. These are the four. Those who implement them will earn 500 merits in their present life. For example, bhikṣus with the mind of lovingkindness will never be poisoned, subjected to knives or weapons, burned in fire, or drowned or harmed in water. Even when a kalpa is burning away, if they fall into that fire, it will extinguish, just like a small fire put out by a massive amount of water. Whether kings, bandits, water, or fire, whether dragons, yakṣas, serpents, lions, tigers, or wolves, whether forest phantoms, hungry ghosts, or kumbhānḍas, those who, targeting at Bodhisattvas who abide in this samādhi, desire to bewitch them, kill them, rob their monastic robe and bowl, or destroy their meditation and mindfulness will never succeed. Unless such misfortune is summoned by their past karma, things will be as I say, not different.&quot; <br/>
+The Buddha said, &quot;Those who uphold this samādhi will not have ailments of the eye, ear, nose, mouth, or body, nor will they have anxiety in their minds, except for misfortune in response to deeds in their past lives.&quot; <br/>
+The Buddha continued, &quot;Gods, dragons, asuras, yakṣas, garuḍas, kiṁnaras, and mahoragas, as well as humans and nonhumans, will all acclaim these Bodhisattvas. They all will support, protect, and serve these Bodhisattvas, and make offering to them. As they regard these Bodhisattvas with respect and want to see them, so too do Buddha-Bhagavāns. If there are sūtras that these Bodhisattvas did not hear or uphold before, they will obtain them because of the awesome power of this samādhi. If they do not obtain them during the day, they will receive them in a night dream.&quot; <br/>
+The Buddha told Bhadrapāla, &quot;I can describe, for one kalpa after another, the merit of those who abide in this samādhi, but still cannot cover them all. I have only briefly mentioned a few essential ones.&quot; <br/>
+<br/>
+Chapter 7 <br/>
+Sympathetic Joy <br/>
+The Buddha told Bhadrapāla, &quot;Bodhisattvas who uphold this samādhi can think four thoughts to activate their sympathetic joy: First, past Buddhas who upheld this samādhi with sympathetic joy all attained, through self-realization, anuttara-samyak-saṁbodhi, fulfilling their wisdom-knowledge. Second, the innumerable present Buddhas in the ten directions, by thinking these four thoughts, have attained Buddhahood by upholding this samādhi with sympathetic joy. Third, future Buddhas will attain Buddhahood by thinking these four thoughts as well to activate their sympathetic joy. Fourth, I too have sympathetic joy.&quot; <br/>
+The Buddha told Bhadrapāla, &quot;In regard to the four thoughts to activate one&#x27;s sympathetic joy, I will use a few analogies. A person walks during his 100-year life span without any rest, and he walks faster than the wind. Can you figure out the area he has covered?&quot; <br/>
+Bhadrapāla replied, &quot;No one can calculate this. Only the Buddha&#x27;s disciple Śāriputra and Bodhisattvas at the spiritual level of avinivartanīya can figure this out.&quot; <br/>
+The Buddha said, &quot;Therefore, I say to Bodhisattvas that if there are good men and good women who give away as alms treasures that fill up the area traversed by that person, this merit is less than that of hearing this samādhi and having sympathetic joy by thinking these four thoughts. The merit of the latter is a billion koṭi times more than that from giving alms. Know that the merit of having sympathetic joy is great.&quot; <br/>
+The Buddha told Bhadrapāla, &quot;Far back, incalculable asaṁkhyeyas of kalpas ago, in a remote place, there was a Buddha called Siṁhamati, the Tathāgata, Arhat, Samyak-Saṁbuddha, Unsurpassed One, Tamer of Men, Teacher to Gods and Men, Buddha the World-Honored One. At that time the continent of Jambudvīpa was 180,000 koṭi lis in length and width. There were 6,400,000 kingdoms, prosperous and densely populated. There was a great kingdom called Bhadrakara, ruled by a Wheel-Turning King named Vaiścin. He went to the place where that Buddha was, made obeisance, and stepped back to sit on one side. That Buddha knew his intent and pronounced this samādhi sūtra to him. Having heard it, the King, with sympathetic joy, scattered jewels over that Buddha as he thought to himself: &#x27;I should transfer this merit to people in the ten directions to give them peace.&#x27; <br/>
+&quot;After Siṁhamati Buddha entered parinirvāṇa, the king Vaiścin died. He was reborn in his own family and became the crown prince called Brahmada. At that time there was a bhikṣu called Jewel, who was pronouncing this samādhi sūtra to his four groups of disciples. Brahmada heard of it, and sympathetic joy arose in him. Exuberantly he took jewels worth hundreds of koṭis of great price and scattered them over that bhikṣu, and he also offered him fine clothing. Resolved to seek the Buddha Way, together with 1,000 people, Brahmada became a śramaṇa under that bhikṣu. To hear this samādhi sūtra, he and the 1,000 people served their teacher tirelessly for 8,000 years. Because of hearing this samādhi sūtra, albeit only once, and having the four thoughts that activated his sympathetic joy, he acquired excellent knowledge. For this reason, he subsequently saw 68,000 Buddhas. At the place of each of these Buddhas, he heard this samādhi sūtra again. Through self-realization, he has become a Buddha called Tilavida, the Tathāgata, Samyak-Saṁbuddha, Unsurpassed One, Tamer of Men, Teacher to Gods and Humans, Buddha the World-Honored One. Those 1,000 bhikṣus have also attained Samyak-Saṁbodhi, and all of them are called Tilajuṣa. They have taught innumerable people to seek the Buddha Way.&quot; <br/>
+The Buddha asked Bhadrapāla, &quot;After hearing this samādhi sūtra, who would not have sympathetic joy? Who would rather not learn, uphold, and recite it, and explain it to others?&quot; <br/>
+The Buddha said, &quot;Those who abide in this samādhi will quickly attain Buddhahood. Even the merit of hearing it is incalculable, much more from learning and upholding it. One should seek for it even if this samādhi teaching is 100 or 1,000 lis away. How can one not seek to learn it when it is close by? Those who have heard of this samādhi and want to learn and uphold it should serve their teachers for ten years, paying visits and making offerings, which they dare not use for themselves. They should follow the teachings of their teachers and always remember their kindness.&quot; <br/>
+The Buddha said, &quot;Therefore, I tell you this. If one travels 4,000 lis to hear this samādhi sūtra, one&#x27;s merit is incalculable even though one fails to hear it. Why? Because of one&#x27;s motivation to progress, one will attain Buddhahood through self-realization.&quot; <br/>
+<br/>
+Chapter 8 <br/>
+Utmost Sincerity <br/>
+The Buddha said, &quot;In the distant past, there was a Buddha called Sacanama, the Samyak-Saṁbuddha, Unsurpassed One, Teacher to Gods and Men, Buddha the World-Honored One. At that time there was a bhikṣu named Halan. After that Buddha entered parinirvāṇa, that bhikṣu upheld this samādhi sūtra. At that time I was a king, in the kṣatriya caste, and I heard of this samādhi sūtra in a dream. Upon waking, I immediately went to that bhikṣu and became a śramaṇa under him. For the sake of hearing this samādhi sūtra, I served that teacher for 36,000 years. However, I was unable to hear it because time and again māra matters arose.&quot; <br/>
+The Buddha told the bhikṣus, bhikṣuṇīs, upāsakas, and upāsikās: &quot;Hence I tell you all to learn this samādhi as soon as possible, never to lose it. You should properly serve your teacher and uphold this samādhi sūtra for one kalpa, 100 kalpas, or even 100,000 kalpas, never negligent or indolent. You should stay with a beneficent teacher, never leaving him. Do not begrudge food, drink, life-supporting goods, clothing, bedding, beds, and precious jewels. If you do not have any, you should beg for food and offer it to your teacher. Work tirelessly for attaining this samādhi. You should even cut off your own flesh to offer to your beneficent teacher, not to mention giving precious things. Serve your beneficent teacher, like a slave serving a great family. Those who seek this samādhi should act in this way. <br/>
+&quot;Having attained this samādhi, one should abide in it and always remember the kindness of one&#x27;s teacher. This samādhi is hard to encounter. There are those who seek for 100,000 kalpas but cannot even hear the name of this samādhi. How could anyone who has learned it not progress diligently? If there are those who give as alms treasures filling as many Buddha Lands as the sands of the Ganges, they cannot be compared to the one who is learning this samādhi or the one who has attained it, is progressing energetically, and is teaching it to others.&quot; <br/>
+The Buddha told Bhadrapāla, &quot;If there are those who want to learn this samādhi, they need to have sympathetic joy in order to succeed. Students are enabled to learn it by virtue of the awesome spiritual power of the Buddha. They should copy this samādhi sūtra on fine fabric, seal the copies with the Buddha Seal, and make offerings. What is the Buddha Seal? It refers to actions that should not be taken—no greed, no quest, no thinking, no attachment, no wish for rebirth, no intended life form for rebirth, no grasping, no concern, no abiding, no obstruction, no bondage, no existence, no desire, no birth, no death, no destruction, and no decay. This seal is the essentials and the base of bodhi. Even Arhats and Pratyekabuddhas cannot access, not to mention the foolish ones. This seal is the Buddha Seal.&quot; <br/>
+The Buddha said, &quot;As I now pronounce this samādhi, 1,800 koṭi gods, asuras, spirits, dragons, and their retinues have entered the holy stream, becoming Srotāpannas, and 800 bhikṣus and 500 bhikṣuṇīs have become Arhats. Ten thousand Bodhisattvas have attained this samādhi, realizing the Dharma of No-birth. Twelve thousand Bodhisattvas have attained the spiritual level of no regress.&quot; <br/>
+The Buddha told the bhikṣus Śāriputra and Maudgalyāyana, as well as Bhadrapāla Bodhisattva and others: &quot;I sought the Way for uncountable kalpas, and I now have attained Buddhahood. I uphold this sūtra and entrust it to you all. Study and recite it, uphold and guard it, and do not forget or lose it. If there are those who want to learn it, you should teach them completely in accord with the Dharma. You should pronounce it completely to those who want to hear it.&quot; <br/>
+After the Buddha had pronounced this sūtra, Bhadrapāla Bodhisattva and the bhikṣus Śāriputra, Maudgalyāyana, and Ānanda, as well as gods, asuras, dragons, spirits, and their retinues, greatly rejoiced. They made obeisance to the Buddha and departed. <br/>
+<br/>
+<br/>
+<br/>
+—Buddha Pronounces the Sūtra of the Pratyutpanna Buddha Sammukhāvasthita Samādhi <br/>
+Translated from the Chinese Canon (CBETA, T13n0417) </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金刚力发表于 2009-10-18 18:03</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
+宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
+弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 17:46</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
+宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
+弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

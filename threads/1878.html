@@ -1,0 +1,103 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>六臂玛哈嘎拉 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">六臂玛哈嘎拉</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚竹发表于 2006-10-31 10:51</div><div class="post-body">[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]梵名Maha^ka^la，汉译有嘛哈嘎拉、摩诃迦罗、大黑天、大黑天神等名。东密相传此尊系大日如来为降伏恶魔所示现的忿怒药叉形天神，藏密相传系观世音菩萨显化的大护法。这是日本与西藏两系密教都相当重视的修法对象。大黑天具有战斗神、厨房神、冢间神与福德神之四种性格。其故如次：其一，由于此神有无量鬼神眷属，且长于隐形飞行之药术，因此能在战争时加护那些向他祈求的众生。其二，此神能使食物经常丰足，因此印度寺院与我国江南民间，常有人在厨房祀奉。其三，此神也是佛教徒在坟场中祀奉的神祇之一。其四，相传此神及其眷属七母女天，能予贫困者以大福德。关于此一天神的形像，通常分为二类。一类作忿怒形，依‘现图胎藏界曼荼罗’外金刚部所载，其身现黑色，坐在圆座上，火炎发上竖，三面六臂。右第一手执偃月刀，二执骨念珠，三执小鼓。左第一手执天灵盖，二执三叉戟，三执金刚绳，左右方之上双手握住一张展开的象皮。另一类作凡人形，戴圆帽，背负一囊，持小槌，踏米袋。在修法时，忿怒形多用在作降魔法时；凡人形则用在求福德之时。[/size][/font] <br/>
+[font=楷体_GB2312][size=5] <br/>
+修习东密与藏密的人，对大黑天法颇为重视，其目标大多在祈祷为行者除魔，修行胜利成就与求福德。依‘大黑天神法秘密成就次第’所述，此法至为秘密，非入室弟子不传，甚至于付予万金也不轻传。 <br/>
+密教守护神之一。音译为摩诃迦罗、莫诃哥罗，意译为大黑或大时，又称摩诃迦神，或摩诃迦罗神、大黑神、大黑天神。印度教以此神为湿婆神的别名，或为湿婆之后突迦的化身（或侍者），主破坏、战斗；佛教则视之为大自在天的化身，或是毗卢遮那佛的化身等，诸说不一，概述如下： <br/>
+<br/>
+(1)《大日经疏》等以此天为毗卢遮那佛的化身，即降伏荼吉尼的忿怒神。《大日经疏》卷十谓（大正39·687b）：‘毗卢遮那以降伏三世法门，欲除彼故化作大黑神。’ <br/>
+(2)以此天为药叉王，为波罗奈国的守护神。据《大方等大集经》卷五十五〈分布阎浮提品〉所载，大黑天女与善发乾闼婆等俱护持养育波罗奈国。不空译《佛母大孔雀明王经》卷中谓：‘大黑药叉王，婆罗拏斯国。’ <br/>
+(3)以此天神为摩醯首罗之化身，亦即冢间神、战斗神。《仁王护国般若波罗蜜多经》卷下〈护国品〉：‘乃令斑足取千王头，以祀冢间摩诃迦罗大黑天神。’唐·良贲于《仁王护国般若波罗蜜多经疏》卷下谓：‘言冢间者，所住处也。言摩诃者，此翻云大。言迦罗者，此云黑天也。（中略）大黑天神，斗战神也，若礼彼神增其威德，举事皆胜，故向祀也。’良贲且引不空三藏之说，谓大黑天神系摩醯首罗变化之身，与诸鬼神无量眷属常于夜间游行林中，食生人血肉，有大力，所作勇猛，战斗等法皆得胜，故大黑天神即战斗神。 <br/>
+(4)《玄法寺仪轨》卷二列出暗夜神（即黑闇天）之真言，其下注为大黑天神。此即以大黑天神为黑闇天。 <br/>
+(5)以此天为财福神，司饮食。《南海寄归内法传》卷一〈受斋轨则〉条载‘又复西方诸大寺处，咸于食厨柱侧，或在大库门前，雕木表形，（中略）黑色为形，号曰莫诃哥罗，即大黑神也。古代相承云：是大天之部属，性爱三宝，护持五众，使无损耗，求者称情。但至食时，厨家每荐香火，所有饮食随列于前。（中略）淮北虽复先无，江南多有置处，求者效验，神道非虚。’ <br/>
+<br/>
+日本诸寺根据《南海寄归传》所说，盛行于库厨安置二臂大黑天像。后世更以之为七福神之一，有时且与大国主命混同，谓其乃授与世间富贵官位之福神，其信仰之风颇盛。 <br/>
+<br/>
+关于其形像，《最胜心明王经》谓，大黑天被象皮，横把一枪，一端穿人头，一端穿羊。《大黑天神法》载，青色三面六臂，最前面的左右手横执剑，左次手提取人之发髻，右次手执牝羊，次二手于背后张被象皮，以髑髅为璎珞。《胎藏现图曼荼罗》之像同此，唯羊与人头左右相反。《慧琳音义》卷十说是八臂，身青黑云色，二手于怀中横把三戟叉，右第二手捉青羖羊，左第二手捉一饿鬼头髻，右第三手把剑，左第三手执朅吒罔迦髑髅钟，此是破坏灾祸之标帜），后二手各于肩上共张一白象皮如披势，以毒蛇贯穿髑髅以为璎珞，虎牙上出，作大忿怒形，足下有地神女天，以两手承足。《南海寄归传》则说是神王形，把金囊，踞于小床而垂一脚。 <br/>
+<br/>
+[b]大黑天[/b] <br/>
+又，此天神的三昧耶形为剑，种子是‘琰’。《大黑天神法》载其真言为：唵蜜止蜜止，降伏）舍婆隶（自在）多罗羯帝（救度）娑婆诃。 <br/>
+<br/>
+此外，藏传佛教名之为玛哈嘎拉，为护法之主尊。其形像颇多，性质皆异，兹分述如下：(1)萨迦派二臂大黑天，又名刑罚主大黑天，由元代八思巴帝师传入宫廷。一面二臂，头戴五骷髅佛冠，须发红赤上扬，身蓝黑色，右手持金刚钺刀，左手持颅器，两手捧杖刀，刀内隐有神兵无数。主要在保护喜金刚行者。 <br/>
+<br/>
+(2)四臂大黑天，传为胜乐金刚之化身，身青蓝，持杵、剑、戟及嘎巴拉，有双身相者。主要护持大手印行者。 <br/>
+(3)六臂大黑天，有黑、白等。黑色为香巴噶举、觉囊及格鲁派之主护法，手持钺刀、小鼓、人骨念珠及颅器、三叉、金刚绳。 <br/>
+(4)白色六臂大黑天，为财神之一，手持摩尼宝、钺刀、小鼓及三叉、颅器等，威神甚大。 <br/>
+［参考资料］　《不空罥索神变真言经》卷七、卷十五、卷二十五、卷二十七；《理趣释》卷下；《青龙寺仪轨》卷下；《诸说不同记》卷十；《寂照堂谷响集》卷四。 <br/>
+<br/>
+[/size][/font][font=楷体_GB2312][size=5][color=#000000][b]六　臂　玛　哈　嘎　拉 <br/>
+[/b][/color] <br/>
+六臂玛哈嘎拉原是印度教之魔神（一说即大黑天），观音入其神识，故成佛教之护法、观音之化身。平常随侍观音，具有息、增、怀、诛四种事业法。[/size][/font] <br/>
+[font=楷体_GB2312][size=5] <br/>
+此尊一面六臂，红圆三目怒睁，身色黑蓝，遍体发出烈火光焰，狰狞无比。身披一张白象皮，象头朝下，四腿搭在两肩和双腿后。最上右手向上抓着象脚，左手拿三叉戟，中间两只手，右手拿骷髅鼓，左手拿索子，主臂两手拿髑髅碗和月刀。尊身上除了象皮，脖子上青蛇、项链，脚脖和手腕上还缠着白蛇，象征着把龙王和药叉都降服，腰间围着虎皮裙，环绕着颗颗人头。 <br/>
+<br/>
+虽然有六条胳膊，但只有两条腿，右屈左展，跨在一头仰卧的白象身上，白象左手拿着髑髅碗，右手拿着大萝卜。据说这象王也是个财神，非常凶暴，后来被玛哈嘎拉降服了。 <br/>
+<br/>
+据观音菩萨所发深宏誓愿，修持六臂玛哈嘎拉能降服和救度末法时期中逐渐恶化之众生；能庇护众生，脱离中阴身之苦；能解除众生生活的艰困及贫穷，圆满众生一切善愿。玛哈嘎拉是佛法中最重要之智慧护法，宜秘密供养、修持，则其加持迅速，日夜不断。 [/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚瑄发表于 2007-2-9 20:59</div><div class="post-body">皈依上师金刚持 <br/>
+皈依本尊金刚佛 <br/>
+皈依空行护法众 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">心</div>心路发表于 2007-3-29 21:28</div><div class="post-body">最上三宝我皈依，一切罪业皆忏悔 <br/>
+众生善根尽随喜，正觉菩提意中持 <br/>
+<br/>
+正觉妙法及僧伽，直至菩提我皈依 <br/>
+所为利益自他故，我今即发菩提心 <br/>
+<br/>
+即发最上菩提心，饶益一切诸有情 <br/>
+菩提妙行皆修作，为利众生愿成佛 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">密</div>密海明灯发表于 2009-11-18 13:00</div><div class="post-body">最上三宝我皈依，一切罪业皆忏悔 <br/>
+众生善根尽随喜，正觉菩提意中持 <br/>
+<br/>
+正觉妙法及僧伽，直至菩提我皈依 <br/>
+所为利益自他故，我今即发菩提心 <br/>
+<br/>
+即发最上菩提心，饶益一切诸有情 <br/>
+菩提妙行皆修作，为利众生愿成佛 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-23 20:26</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
+眾生善根盡隨喜 正覺菩提意中持 <br/>
+<br/>
+正覺妙法及僧伽 直至菩提我皈依 <br/>
+所為利益自他故 我今即發菩提心 <br/>
+<br/>
+既發最上菩提心 饒益一切諸有情 <br/>
+菩提妙行皆修作 為利眾生願成佛 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">踏</div>踏雪发表于 2011-2-27 16:15</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
+眾生善根盡隨喜 正覺菩提意中持 <br/>
+<br/>
+正覺妙法及僧伽 直至菩提我皈依 <br/>
+所為利益自他故 我今即發菩提心 <br/>
+<br/>
+既發最上菩提心 饒益一切諸有情 <br/>
+菩提妙行皆修作 為利眾生願成佛 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

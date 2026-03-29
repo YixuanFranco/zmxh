@@ -1,0 +1,85 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>另类的行者 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">另类的行者</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚娴发表于 2006-10-6 11:34</div><div class="post-body">[font=楷体_GB2312][size=5][color=navy][font=宋体][font=宋体] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　缘起：是前世种下的宿因，让我在20年前的夏天，只为了炎炎褥暑无事可做，抱着度假的心情，去参加了生平第一次的「佛学营」。一周下来，糊里糊涂似懂非懂，但总觉得这里面有东西吸引着我，虽陌生、虽不解；第二年我仍不忘再加入了相同的「佛学营」。至此，一股脑栽进了这个圈子，在浏览『沿途风光』之余，还遍尝酸、甜、苦、辣诸天厨妙味。从此生死凡夫虽然照旧在业海中日日轮转，因循苟且下饱受无常的拨弄；但是，随着月圆月缺，我竟得来全不费工夫的，觅得了驶向彼岸的方向，驿动的心终于安顿在一座「道场」里了。[/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　回首来时路，菩提道上，我从来不知道自己的学佛因缘会如此之殊胜。多少年来我走东到西，未曾遇过一个外道、未曾听闻一句邪说、未曾兜过圈子、未曾走错一步寃枉路，所遇皆是善人罗列。虽然我冥顽愚痴，未能紧随善知识踏入庙堂之上，但踟蹰在门口张望，仍然让我见到了佛家的富贵和妙有。这就是为什么我走走停停，郄从未见异思迁，仍还在这条正道上蹓跶的原因。[/color][/size][/font][/size] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　师父领进门，修『行』在各人；岁岁年年随着佛门里的熏习，理入、事入上的长养，慢慢的菜鸟变成了他人口中的「老参」。我没有沾沾自喜，反而惊觉到僵硬的教理，成为套在身心上挣脱不开的桎梏。活水源头也成了一池臭水塘，「老参」什么时候变成了「老惨」？[/color][/size][/font][/size] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　于是日日坐困井底，目光短浅。虽知修行要证到「心包太虚，量周沙界」，自己仍是陷在『依文解义，令三世佛寃！』的泥淖里，愈发的「不自在」。我开始自我检视问题出在哪里？以往的禅悦、法喜是什么时候淡化的？而今主人翁安在？《华严经》云：「应观法界性，一切唯心造！」全是客尘妄想所覆，致使流浪诸有，处处贪着、弃本逐末、背觉合尘、暗夜长迷、苦恼交煎，令生灭变异、虚伪无主，皆因心是恶源，不能开显真性。《观无量寿经》云：「是心是佛，是心作佛」。怎么作？郄没有个下手处？？？我疑云满天，遍寻不着一帖密方。是业果成熟了？缘生缘灭，在2003年八月，我逃离了安住法身慧命十一载的『家』！[/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　拖着累劫受染的不净身、习气心，我再踏上生死疲劳的不归路，茫茫人海何处是家乡？何时才到家？[/color][/size][/font][/size] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　不灭：过去世到底我敲破了多少个木鱼呀？！今生才能每遇滞碍难行处，总有天龙八部适时出现，拉拔我度脱尘劳苦海，还我本来清净！佛恩浩荡！每一个当下，都应验人有诚心，菩萨感应！！[/color][/size][/font][/size] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　九月中旬，意外的我撞见了东北老师，听闻他遍洒甘露法雨。对科班出身的我，乍见老师用颠覆传统的法药，来阐述佛法心要；在思维理念上，真是大革命，自我斗争下遍地烽火，处处血迹、斑斑泪痕！佛法怎么会这么变调？！三大阿僧祇劫都做不到的事，怎么会变成只要48分钟持续的观照就可『当下』即身成佛？没有佛门礼仪、没有诵经、没有念佛、没有法会、没有制式的规矩；有的只是简单的——你就是佛！大家平等！！[/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　认识了他，你就找到他，得到他！不认识，穷今累月枉作功夫！！而要找到他的简易方便下手处，竟是三岁小儿皆作得，多数佛子「行」不得的---走路！[/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　对我，佛门生涯里，好不容易驯服了酸、胀、麻、痛，可以让双腿弯曲盘起，怎么？这会儿竟又变成要再打直两腿去从头学走路？对已经习惯于持咒、打坐、礼佛等佛门常课之后，现在要一切舍下，一时之间还真搞不清楚。这算不算也是一种解脱？还是从大梦里醒来？反正不是「放下」，就是「提起」；不二佛法里直下承担就是了！[/color][/size][/font][/size] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　经过内心翻搅、挣扎、矛盾、怀疑；几天之后，我交叉整合出的影像，愈来愈鲜明。在老师的法音宣流里，盖天铺地都是曼陀罗华，声声融入真如，法法流归性海。源头有了活水，慈云布护下，小大何殊，一多无碍。固知实际理地，不着一尘；万行门中，不舍一法。其实，也无有一法，无有一舍，一切本自具足。很快的我明白了这「向上一路，千圣不传」的真谛，竟轻易的就在老师不舍一众生的老婆心切下，舌粲莲花般兜底和盘托出，全给了我们。醍醐灌顶下，我畅饮甘露。在言简意赅的秘意里，扫除掉满腹问号，全都化为金光闪闪的惊叹号！至此在不见顶相里，才将我以往的相似佛理，起承转合成逐渐统一。[/color][/size][/font][/size] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　此番从佛门出走，碰上的竟是谁啊？凡夫俗眼莫辨，未能看出真正的善知识，寻寻觅觅难遭遇，我今见闻得依恃！浪荡子多少年流浪在外，今天终于回到家了。摄受在此佛光注照下，让我有勇气待重头收拾破碎的旧山河！从此我将不再是过客，而愿做个真正的归人。[/color][/size][/font][/size] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　今觉悟再回头，才看清浪掷了多少流金岁月，郄换不回已褪色的过去，真正枉得人身。天地覆载我，日月照临我，父母生养我，师友教化我，午夜扪心自问，受之于人太多，付出于己太少。实不知自己何徳何能？领纳如此丰溢之恩情？！真正愧煞！有负佛恩、有负师恩、有负众生恩！！昊天罔极，无以为报！[/color][/size][/font][/size] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　加行：从来我就是一个不爱走路的人。要跨出第一步还真是举足千万难！因此在这「知足光明行」的团体里，我是新脚上路，还在摇摆学步之中。所谓走路的心得，也正好落在「应无所得」里。对老师时时挂在口上的六字真言要「无所求、无所得」，也成了我最光彩炫耀的护身符！！理该如此。[/color][/size][/font][/size] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　抱着这样心态，刚开始起步时，路面对我尽是崎岖难行的羊肠小径，一路颠簸转身维艰，走十步停百步，正好吻合我的习性，放逸懈怠、理所当然。是老师的不厌其烦，苦口婆心，一遍遍、一声声的呼唤大家「去走路」，是同修的督促叮咛，是我难违众意，深感愧对圈内人的希望。于是我开始强迫自己，被动的、不甘愿的去勉强走路。[/color][/size][/font][/size] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　我走呀走，找呀找，就是什么也找不到，只证明了自己是个感觉麻木，没有神经的人。这发现教我沮丧不已，差点又想放弃走路。为什么我就不能像别人那么的「过敏」呢？说出的故事内容是如此之神变难测，简直就像奇幻电影般的炫惑，叫人目眩神迷。唉！我只有认命的拜倒在这些前辈的足下，自叹弗如！谁让我没有一颗魔术师的心呢？天知道，我有的只是一颗很阿Q的心。在老师的座下，有许多健步如飞，一日千里的行者；但也有一个属于笨鸟慢飞，乌龟爬行的我。因此在台湾班的「走路排行榜」上，我总是周周敬陪末座。还能「安心」的原因，是我总不忘调侃自己，那个人尽皆知的故事----龟兔赛跑里，最后终于到达终点的，是谁啊？！[/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　美国林肯总统说过的一句名言：「我走路很慢，但是我絶不倒退！」现在这句话成为我心里最坚定的盘石。千里之行，始于『足下』。回家的路，不论山高路遥，终有尽头。循着前辈走过的轨迹，让我这「乌龟行者」可跟在后面慢慢追随。或许有朝一日，我自己也能走出一片天地。[/color][/size][/font][/size] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　虽然我偷心不死地进进退退，一年以后，竟也奇妙的变成常「不自觉」的自动去走路。而且惊喜、安慰地发现，往往是两脚带着身体在走路，心郄不知道。稍顷，待心发觉的时候，才会注意到，为什么我在走路？对于这种转变，我知道我渐渐摆脱掉了一个旧习惯，而另一个新习惯正在悄悄的养成。吹毛用了急需磨！对于「散心」走路，还能冒出嫩芽，我除了感恩！还是感恩！！期待日日茁壮，早见大树成林。古徳常谓：「修行人，要耐得住寂寞。」而心底深处愈鼓荡愈大声的吶喊则是：[/color][/size][/font][/size] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　华严经．普贤行愿品——的经文[/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　所有与我同行者于一切处同集会[/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　身口意业皆同等一切行愿同修学[/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　所有益我善知识为我显示普贤行[/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　常愿与我同集会于我常生欢喜心[/color][/size][/font][/size] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=12pt][font=楷体_GB2312][size=5][color=navy]　　字字都成了烙在八识田中，永远磨不掉的印痕。修「行」路上，有你有我，一路行来皆是道侣，何有寂寞？！然兄弟上山，仍须各自努力！向前行！前方有般若火炬照引，走路走到生命的尽头，走路走到恢复本来面目，必可通达至大圆满觉！！悟无生！！供养大家！[/color][/size][/font][/size][/font][/size][/font][/font][/size][/font][/size][/font][/size][/font][/size][/font][/size][/font][/font][/size][/font][/font][/size][/font][/size][/font][/size][/font][/font][/size][/font][/font][/size][/font][/font][/size][/font][/font][/size][/font][/font][/size][/font][/font][/size][/font][/size][/font][/size][/font][/size][/font][/font][/size][/font][/font][/size][/font][/size][/font][/size][/font][/font][/size][/font][/font][/size][/font][/size][/font][/font][/font][/color][/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">桑</div>桑吉康珠发表于 2009-3-11 13:16</div><div class="post-body">你好！ <br/>
+今天读到你的文章我感动得泪流满面。 <br/>
+你走路的决心感动我，你走路的坚定感动我！ </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">大</div>大地修行者发表于 2009-3-11 14:37</div><div class="post-body">前方有般若火炬照引，走路走到生命的尽头，走路走到恢复本来面目，必可通达至大圆满觉！！悟无生！！ <br/>
+赞叹 </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 18:30</div><div class="post-body">不动金刚广大智，金刚界中大善巧，金刚身语意坛城，于尔密界恭敬礼！ <br/>
+大日如来至清净，寂静金刚大欢喜，自性光明胜中胜，毘卢导师我敬礼！ <br/>
+宝生法王极甚深，如天中天无垢染，最胜金刚无自性，胜金刚身我敬礼！ <br/>
+弥陀无量寿金刚，胜中胜天无分别，离欲获证到彼岸，胜金刚语我敬礼！ <br/>
+不空金刚圆满佛，一切行思皆成就，清净自性胜中生，金刚勇士我敬礼！ <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

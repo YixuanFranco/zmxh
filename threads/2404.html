@@ -1,0 +1,176 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>准提法脉络分析略谈 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">准提法脉络分析略谈</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">法</div>法成发表于 2007-5-21 05:13</div><div class="post-body">[font=楷体_GB2312][size=5]准提法脉络分析略谈 <br/>
+<br/>
+壹、前言 <br/>
+<br/>
+准提法相传是龙树菩萨于持明藏中取出之法要。并作一首偈而赞叹之： <br/>
+<br/>
+[b]『稽首皈依苏悉帝，头面顶礼七俱胝， <br/>
+我今称赞大准提，惟愿慈悲垂加护。』[/b] <br/>
+<br/>
+此准提法依经中言，有十万偈，可想而知，翻译到中土的应该不是全部的准提法。 <br/>
+<br/>
+而本文要探讨的是翻译至中土的准提经典，其中的脉络体系，不包含《显密圆通成佛心要集》等中土自行发展出的准提法系统。若有文中错谬之处请诸高明不吝指教，诸佛菩萨本尊龙天护法加持希能如法。 <br/>
+<br/>
+贰、脉络分析 <br/>
+<br/>
+关于准提法修持系统，可以从下列几点来观察： <br/>
+<br/>
+一、 杂部法。二、仪轨法。三、独部法 <br/>
+<br/>
+一、 杂部法： <br/>
+<br/>
+此法的内涵类似于杂部密法，有种种的成验法及持咒功德，应该是准提法最雏形的修持方式。以单纯持诵陀罗尼就能获得诸般功德及应用陀罗尼济世度人的法门。 <br/>
+<br/>
+记载此类修法的有三部经： <br/>
+（1）佛说七俱胝佛母心大准提陀罗尼经 <br/>
+（2）佛说七俱胝佛母准提大明陀罗尼经 <br/>
+（3）七俱胝佛母所说准提陀罗尼经 <br/>
+<br/>
+这三部经通常在大藏经中都附有仪轨法。从经中的描述来看应该是不同脉络的。仪轨法通常是祖师菩萨所作的，如显密圆通集也算是一种仪轨法。 <br/>
+<br/>
+此法又分为两种： <br/>
+<br/>
+（一） 持咒门： <br/>
+这一类的修法通常只有持诵咒语，并宣说持咒的功能而已。类似于陀罗尼法门。此类修法从经文中整理出来的功能大略如下： <br/>
+（1）灭罪无余益（2）值遇诸佛益（3）生处富足益（4）常得出家益（5）具戒速证益（6）生天不堕益（7）人道尊贵益（8）无灾敬爱益（9）无畏脱难益（10）蛇囓病愈益（11）增寿除病益（12）诤讼获胜益（13）念诵如意益（14）见圣随求益（15）菩萨胜友益（16）根被薄福益（17）往生净土益 <br/>
+<br/>
+（二） 加持门： <br/>
+这一类的修法是以陀罗尼加持物品以应用于解决问题的方法，如护摩等等。此类修法从经文中整理出来的功能大略如下： <br/>
+（1） 能知善恶法（2）鬼祟除愈法（3）止儿夜啼法（4）疫病除差法（5）降伏鬼神法（6）丰饶财宝法（7）能得子息法（8）夫妇和合法（9）闻持聪明法（10）能见鬼神法（11）摧破敌军法 <br/>
+<br/>
+二、 仪轨法： <br/>
+<br/>
+此类修法是有着非常繁复的修持程序适合专修条件具足的行者修持，类似纯密的修法。这一类的修法还存在于日本的东密里。相关文献有以下： <br/>
+（1）说七俱胝佛母准提陀罗尼念诵法 <br/>
+（2）七俱胝准提陀罗尼念诵仪轨 <br/>
+（3）佛说持明藏瑜伽大教尊那菩萨大明成就仪轨经 <br/>
+<br/>
+此类修法条件比较严格，如下所说： <br/>
+<br/>
+（一） 行者条件： <br/>
+『有苾刍苾刍尼邬波索迦邬波斯迦。发菩提心行菩萨行。求速出离生死者。先须入三摩耶灌顶道场。受持禁戒坚固不退。爱乐大乘菩萨戒行。于四威仪修四无量。发四弘愿永离三途。于一切事业心不散乱。方可入此秘密法门。凡念诵供养法。于所在处。皆须清净澡浴着新净衣。严饰道场随力所办。』（金刚智译） <br/>
+<br/>
+（二） 道场条件： <br/>
+『其道场法。先须选隐便胜地。东西南北各量取四肘。作方曼茶罗。掘深一肘。除去骨石砖瓦恶土发毛灰炭糠棘虫蚁之类。以好净土填满筑平。取新瞿摩夷并好土。以香汤相和涂地。若在楼阁或居船上。依法泥涂。若在山中及好净屋。不须掘地依前涂饰。即张天盖四面悬幡。若有本尊七俱胝佛母形像。安置曼茶罗中。面向西。 <br/>
+若无本尊。有诸佛像舍利及大乘经典供养亦得。磨白檀香涂作八角曼茶罗。犹如满月或似八叶莲华。即以新净供具金银熟铜商佉贝玉石瓷木等器。盛诸饮食及好香花灯明遏伽香水。随力所有布置供养。』（金刚智译） <br/>
+<br/>
+（三） 修法内涵： <br/>
+此类法门有一定的规范行仪，需修持种种印契以迎请本尊及恭送本尊。大概有以下内容： <br/>
+（1）念诵供养法（2）道场法（3）十八道印契（4）准提求愿观想法（5）布字法（6）字母种子义（7）息增怀诛法（8）画像法 <br/>
+其中详细内容请自行参阅经文，在此不多作赘述。 <br/>
+<br/>
+三、 独部法： <br/>
+<br/>
+此法为独部别行，经中言：『总摄二十五部大漫荼罗印』。独部是谓总摄二十五部。有哪二十五部呢？且看以下： <br/>
+一、佛部谓诸佛咒。 <br/>
+二、莲华部谓诸菩萨咒。 <br/>
+三、金刚部谓诸金刚神咒。 <br/>
+四、宝部谓诸天咒。 <br/>
+五、羯磨部谓诸鬼神咒。 <br/>
+此五部每部复各有五。即成二十五部。 <br/>
+<br/>
+此种修法条件最为宽容，如下： <br/>
+<br/>
+（一） 行者条件： <br/>
+作此法不简在家出家。若在家人饮酒食肉有妻子不简净秽。但依我法无不成就。 <br/>
+<br/>
+（二） 道场条件： <br/>
+佛言若求成就先作坛法不同诸部广修供养。掘地作坛香泥涂之所建立。但以一新净镜未曾用者。于佛像前月十五日夜。随力供养。烧安悉香及清净水。先当静心无所思惟。然后结印诵咒。咒镜一百八遍。以囊匣盛镜常持相随。欲诵但将此镜。置于面前结印诵咒。依镜为坛即得成就 <br/>
+<br/>
+（三） 修法内涵： <br/>
+（1）坛法（2）念诵法（3）成验法（4）广明自在法（5）得大神足（6）准提别法。 <br/>
+其中详细内容请自行参阅经文，在此不多作赘述。 <br/>
+<br/>
+参、结语： <br/>
+<br/>
+（1）杂部法与仪轨法之分际： <br/>
+杂部法这一类修法与仪轨不同的是并无很严格之规定。如仪轨中要求发菩提心方能修持或要修大乘等菩萨行方能修持，但此一类修法在「根被薄福益」中有说到： <br/>
+『1、若有薄福众生。无少善根者。无有根器之者。无有菩提分法者。若得闻此陀罗尼法。速疾证得阿耨多罗三藐三菩提。（诃罗译） <br/>
+<br/>
+2、若有薄福众生无有少善根者。无有根器之者。无有菩提分者。是人若得闻此准提大明陀罗尼。若读一遍即得菩提分根器芽生。何况诵持常不懈废。由此善根速成佛种。无量功德皆悉成就。（智译） <br/>
+<br/>
+3、若人无宿善根。无菩提种不修菩提行。纔诵一遍则生菩提法芽。何况常能念诵受持（不空译） <br/>
+<br/>
+4、若有众生。作大恶业无有善种。于菩提心无由生起。菩提分法永不获得。如是之人忽遇知识。诵此大明一历耳根。重罪减劣善种即生。何况行人恒常持诵专注精懃。如是之人求成就者决定获得（法贤译）』 <br/>
+显然与仪轨所言：『若有苾刍苾刍尼邬波索迦邬波斯迦。发菩提心行菩萨行。求速出离生死者。先须入三摩耶灌顶道场。受持禁戒坚固不退。爱乐大乘菩萨戒行。于四威仪修四无量。发四弘愿永离三途。于一切事业心不散乱。方可入此秘密法门。』 <br/>
+此两者有严宽之别。何以见得，如经中言：『若有薄福众生。无少善根者。无有根器之者。无有菩提分法者。』、『大恶业无有善种。于菩提心无由生起。菩提分法永不获得』此条件与『爱乐大乘菩萨戒行。发四弘愿永离三途』等所说显然不符合，可知两者体系之分际。 <br/>
+<br/>
+（2）独部法与仪轨法之分际： <br/>
+<br/>
+独部法与仪轨之不同处在于独部法修学条件之宽及摄受之广。如下所云： <br/>
+<br/>
+独部法道场的建立并不需要「严饰道场」、「选隐便胜地」，独部法云：『不同诸部广修供养。掘地作坛香泥涂之所建立。』这句就显示出了独部的特质，即是不同于其他部的繁复及需广修供养。由此可知与仪轨之修法依应属不同传承脉络。 <br/>
+<br/>
+在行者的条件方面独部法也放宽了，其认为『不简在家出家。若在家人饮酒食肉有妻子不简净秽。』此处也与仪轨法所说不同，仪轨要求『受持禁戒坚固不退。爱乐大乘菩萨戒行。于四威仪修四无量。发四弘愿永离三途。于一切事业心不散乱。方可入此秘密法门。』，故可知两者有一定程度上之差别的。 <br/>
+<br/>
+除此外独部法更是总摄二十五部大漫荼罗印。也与仪轨有所不同。其条件不可不谓宽、摄受不可不谓广。 <br/>
+<br/>
+故此法为道殿大师所推崇。认为是准提诸法中之纲要者。[/size][/font] <br/>
+<br/>
+</div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">觉</div>觉知发表于 2008-6-27 14:26</div><div class="post-body">稽首皈依苏悉帝，头面顶礼七俱胝， <br/>
+我今称赞大准提，惟愿慈悲垂加护 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">大</div>大漠悲鸿发表于 2009-2-22 11:16</div><div class="post-body">稽首皈依苏悉帝，头面顶礼七俱胝， <br/>
+我今称赞大准提，惟愿慈悲垂加护。 <br/>
+嗡 者利 主利 准提 梭哈！ </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 16:54</div><div class="post-body">最上三宝我皈依  一切罪业皆忏悔 <br/>
+众生善根尽随喜  正觉菩提意中持 <br/>
+正觉妙法及僧伽  直至菩提我皈依 <br/>
+所为利益自他故  我今即发菩提心 <br/>
+既发最上菩提心  饶益一切诸有情 <br/>
+菩提妙行皆修作  为利众生愿成佛 </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 16:59</div><div class="post-body">我今持诵大准提，即发菩提广大愿 <br/>
+愿我定慧速圆明，愿我功德皆成就 <br/>
+愿我胜福遍庄严，愿共众生成佛道 <br/>
+我昔所造诸恶业，皆由无始贪嗔痴 <br/>
+从身语意之所生，一切我今皆忏悔 <br/>
+愿我临欲命终时，尽除一切诸障碍 <br/>
+面见彼佛阿弥陀，即得往生安乐剎 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-21 00:06</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
+眾生善根盡隨喜 正覺菩提意中持 <br/>
+<br/>
+正覺妙法及僧伽 直至菩提我皈依 <br/>
+所為利益自他故 我今即發菩提心 <br/>
+<br/>
+既發最上菩提心 饒益一切諸有情 <br/>
+菩提妙行皆修作 為利眾生願成佛 </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-12-4 20:30</div><div class="post-body">顶礼上师本尊！！！ <br/>
+那摩古如呗  皈依上师 <br/>
+那摩布达呀  皈依佛 <br/>
+那摩达嘛呀  皈依法 <br/>
+那摩僧嘎呀  皈依僧 <br/>
+弟子精进修行！ <br/>
+于诸佛前法供养！！！ <br/>
+随喜赞叹！ </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">萨</div>萨杰多吉发表于 2011-3-25 10:54</div><div class="post-body">稽首皈依苏悉帝，头面顶礼七俱胝， <br/>
+我今称赞大准提，惟愿慈悲垂加护 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>藏医学介绍 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">藏医学介绍</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">喜</div>喜鹊七子发表于 2005-11-21 14:44</div><div class="post-body">[font=楷体_GB2312][size=5]藏 医 学 <br/>
+<br/>
+藏医的起源 <br/>
+<br/>
+藏医藏药历史悠久。早在远古时代，生活在西藏高原的居民在同大自然作斗争中逐步认识到了一些植物的性能及其用于治疗的经验；在狩猎过程中，又逐渐知道了一些动物的药理作用。相传在公元前三世纪，就有了“有毒就有药”的说法。据《玉妥·云登贡布传》记载，西藏最早流行的一种医学叫《本医》，当时还没有系统的理论，主要靠三种疗法，即放血法、火疗法、涂摩疗法来治病。同时，还用酥油止血，用青稞酒治疗外伤等等原始简单的办法。 <br/>
+<br/>
+公元四世纪，天竺的著名医学家碧棋嘎齐和碧拉孜入藏，传播了《脉经》、《药物经》、《治伤经》等五部医典，对《本医》的发展起了积极的作用。公元六世纪以来，从内地传来了医学和天文历算；七世纪，文成公主入藏，带来了“四百零四种病方，五种诊断法，六种医疗器械”以及四种医学论著如《门介钦莫》（即《医学大全》） <br/>
+等。八世纪，金城公主入藏时又带来了许多医药人员和医学论著，并把其中一些著作译成了藏文，如《索玛拉扎》（即《月王药珍》）等等。 <br/>
+<br/>
+赤松德赞时期，藏医有了很大发展，出现了九大著名医学家，即玉妥.云登贡布、碧棋列贡、吾巴曲桑、齐齐谢布、米娘绒吉、昌提杰桑、聂巴曲桑、冬门塔杰和塔西塔布。其中玉妥.云登贡布最为有名。 <br/>
+<br/>
+玉妥·云登贡布（708—835年）是吐蕃王朝时期最杰出的医学家，曾担任过赞普的御医，是藏医学理论体系的奠基人。他走遍西藏各地，广泛搜集和研究民间医方，总结民间医药经验，还多次赴内地五台山以及印度、尼泊尔等地，拜中外名医为师，曾邀请著名中医学家东松（即韩文海）、印度医学家新提嘎瓦、尼泊尔医学家达玛锡拉、克什米尔医学家库雅巴等来藏研讨学术。他结合中外医学成果，编著了三十多部医学论著从而形成了藏医的一整套体系。 <br/>
+<br/>
+四部医典 <br/>
+<br/>
+藏医学的主要医典是《居悉》（即《四部医典》），相传为玉妥.云登贡布编著。但据《玉妥·云登贡布》记载，又说此医典是译师白若杂纳翻译的作品，云登贡布对它进行了补充和注释.目前见到的几种版本，已不是原来版本了。相传了十一世纪时，云登贡布的后裔玉妥.萨玛吸收《月王药珍》的精华，对《四部医典》的内容作了进一步充实。五世DL喇嘛时期，著名学者第司.桑嘉措对《四部医典》进行了校对和修订；十三世DL喇嘛时，又组织人员对《四部医典》的文字进行修订。[/size][/size] <br/>
+[font=楷体_GB2312][size=5] <br/>
+《四部医典》的内容十分丰富，包括各种疾病的分类以及生理、病理、诊断治疗、药物配方等等。世界上很多国家和地区正在研究藏医学。前苏联艺术家出版社曾出版《藏医图集》，他们认为《四部医典》和《藏医图集》是举世无双的藏医文献，对它所引起的兴趣远远超出了医学范围。 <br/>
+<br/>
+藏医的原理 <br/>
+<br/>
+藏医把人体的生理功能概括为“隆”（指气、风）、“赤巴”（指火）、“培根”（指粘液）三大因素。 <br/>
+<br/>
+“隆”在人体中的功能是维持生命、气血运行、肢体的活动和分解食物等等。“隆”基本分为五种；即：“持命隆”、“下泄隆”、“上行隆”、“平住隆”和“通行隆”。 <br/>
+<br/>
+“赤巴”就是胆汁，在人体内的功能是产生和调节体温、保持气色，生智慧、助消化等等。“赤巴”基本分为五种，即，消化赤巴、容光赤巴、行动赤巴、视力赤巴和增色赤巴。 <br/>
+<br/>
+“培根”即诞液，在人体内的功能是供营养、长脂肪、调皮肤、正常睡眠等。“培根”也基本分为五种，即：根基培根、研磨培根、尝味培根、餍足培根和粘合培根。 <br/>
+<br/>
+藏医认为，以上三种因素的机能如果在人体内维持了平衡，就出现正常的生理现象。反之，就会产生各种疾病。 <br/>
+<br/>
+藏医还认为，人体是由七种物质组成的，即：饮食的精微及血、肉、脂、骨、髓、精。人体的五脏六腑，不是孤立的存在物，通过经络与其他器官联系在一起，构成了人体有机的整体，人与自然界有密切关系，各项生理功能随着自然界的变化而受到影响。 <br/>
+<br/>
+藏医的诊断，采用“望、摸、问”的方法，切脉时，同样以“寸、关、尺”配属五脏六腑，而且十分重视“尿诊”。 <br/>
+<br/>
+治疗时，除使用植物、动物、矿物等药物外，还配以穿刺、放血等疗法。 <br/>
+<br/>
+胚胎学是藏医学的重要组成部分。早在公元七世纪，藏医就开始了对胚胎学的研究，并初步记述了人体的胚胎发育，《四部医典》中详细记述了胚胎发育的整个过程。《五部遗教》之一的《洛本嘎唐》中也记载：“胚胎首先要经历鱼期，其次要经历龟期和猪期”。藏医对人体发育的研究，在许多方面要早于外国学者。 <br/>
+<br/>
+藏医的分支与发展 <br/>
+<br/>
+随着医疗实践的发展，十五世纪以后，藏医逐渐形成了北方和南方两大派。北方派稍早于南方派，以强巴·南杰查桑为代表，南方派则以舒卡.年姆尼多吉为代表，他们分别总结了北部高寒地区和南部河谷地带的多发病及其治疗的经验，各有特点。 <br/>
+<br/>
+十八世纪以后，著名医学家第玛.旦增平措广泛收集药物标本，编著了《晶珠本草》，收载藏区药名两千余种，对药物的形态、性味及功能等均讲述得十分详细。 <br/>
+<br/>
+公元一九一六年，十三世DL喇嘛创办了“门孜康”（医算局），广招门徒，教授医药理论，对藏医藏药的发展，起到了积极的推动作用。 <br/>
+<br/>
+藏医的医德 <br/>
+<br/>
+藏医学除了具有悠久的历史之外,还有着十分丰富发医学道德。大致有以下几点，如：[/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    一、对病人要一视同仁，《玉妥·云登贡布传》中说：“把六方俗世的众生，视为自己的父母”“爱护他人胜于爱护自己，不论是敌人还是朋友，不加敌视”。[/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    二、医生要有高尚的品质，应该对贵贱使药无别，扶贫济困，不论男女，美丑，不贪女色，不得谋取私利，要舍弃自私和贪婪、狡诈。[/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    三、对病人的病情要保守机密，如《玉妥·云登贡布传》中说：“医生不应在没有进行适当的诊断时，就猜测是什么病，只有在诊断有绝对把握的情况下，才向病人透露疾病的情况，应该告诉病人他是否能复之。”[/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    四、医生在技术上要精益求精，云登贡布曾经指出：当还不甚了解病情时，就想试掌握病人的生命而去进行操作，是可鄙的；缺少知识而又没有有关的经验，却对病人提出许多劝告和解释的人，也不是好医生。用治寒的药去治疗热病，或者相反的人，都是江湖医生。老玉妥常说，作为一个好医生，如果你轻易伤害一个病人，你的罪过和杀死一个人是一样大的。[/size][/size] <br/>
+[font=楷体_GB2312][size=5][/size][/size] <br/>
+[font=楷体_GB2312][size=5]    五、医者之间要互相尊重，《藏医学·誓约》指出：“正在接受医药训练的人，对自己的老师应当给予极大的关心，把他当成一个神来看待。与同学必须保持良好的关系，互相友爱、互相尊重、互相关心。”[/size][/size] <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

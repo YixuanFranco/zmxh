@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>茶　灵 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">茶　灵</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">民</div>民间中医发表于 2013-6-23 20:19</div><div class="post-body">茶有灵性。若与其灵未冥、其性未合、其境未契、其器未容，则一半的茶味会在饮茶时悄悄溜走。所余者，徒为茶之形骸；所饮者，不过是唯剩茶羹的白水而已，仅有解渴之用和充雅之功，而难为体道之佳偶、修心之绝配、参禅之助缘矣。 <br/>
+茶当是草木精华累世修炼而成。天地之清气所养、山间之灵坡所育、雨前之甘露所滋。最宜农家处于新沐后无语采摘、竹篓中轻放浮搁；最宜汲深山清泉盛于沙壶，拾林间松枝燃于泥炉，壶置炉上，火烧水开，俟温度适中后备冲茶之用；最宜形拙貌朴之泥砂壶泡茶、外赭内青之泥瓷杯饮茶，既可醇其原味，复可赏其形色；最宜二、三素心野老、散淡闲人处江湖之远，栖泉石之间，琴舞松鼠，棋敲闲花。风过竹响，云飘水流。无心有意间啜饮一口，言来语往中齿舌余香。一分苦涩，几丝清凉。茶灵充满，茶意本然。似有人生之况味，又似有宇宙之禅机。此乃饮茶之至境。至若红尘之所谓茶道或街面施设之茶事，虽为俗中求雅、闹中求静之佳选，但一落规制、一涉人为，茶灵便如惊鹿般即刻远遁，茶境也失其天然而退得其次。即使器具再考究、程序再规范、环境再舒适，即使再张以“和、清、雅、寂”之虚目，也总有塑料感、无机感、作秀感、表演感、模拟感、利用感或别的什么味道。但能臻此境已属不易，毕竟还是与茶有关的雅人雅事。姑可称之为饮茶之雅境。 <br/>
+当外感都市喧嚣、内觉身心俱疲之时，不问独处还是群聚，不论绿茗还是红茶，不管泥壶还是瓷杯，就其所便，随其所宜，冲上一壶，泡上一杯，倒也沁人心脾，提神解乏。虽未得茶灵之真体，但也可在恍惚间寻出其远去的踪影和留下的余味。此乃饮茶之常境。 <br/>
+不时可见城中为生计奔忙的贩夫走卒或村里起梁造屋的山民壮汉于烈日当头、大汗淋漓之时，捧起瓷缸大杯或粗笨钵碗，开怀牛饮那种煮得浓浓的砖茶，感到虽不是饮茶之雅境，但觉得茶灵似乎又以别样的面目附着在他们体上。这不足为怪，大俗大雅处往往见至情至性。这恐怕也是茶灵经常出没的地方。 <br/>
+茶禅一味。饮茶最易将人导入禅境。茶性清凉，可伏心中燥热，可涤体内沉浊；茶味枯淡，可去名利之欲、可息奔竞之心。由实物之茶冲水泡为有形有态有色、可视可触可饮之茶汤，茶汤复冒出丝丝缕缕、飘飘渺渺、视之则无、嗅之若有之茶味，茶味又让人进入无限广大、清朗空明、不可言说之茶境，这是茶逐渐由“有”入“无”、由形而下升华为形而上的过程，这是茶在虚化、淡化中不断超越自身、超越时空的过程，这是茶由“形质”蜕变为“精神”、由“实物”蜕变为“灵物”的“返魅”与“显灵”过程。入此境者，即茶即禅，即禅即茶，饮茶即是参禅，参禅即是饮茶。唯恍唯惚，若有若无，非出非入，不即不离。道心冥契，天人合一。可观照实相，可体悟本真。其妙味佳境，唯宜心领，实难言传，如赵州禅师，只是一味“吃茶去”。 <br/>
+其实，心静之处就是最好的茶场。深谙此道者，无论行走坐卧，无论有茶与否，他随时都在“吃茶”。直如淤泥之中可绽莲花、火宅之上可得清凉。饮此心茶者。不拘茶迹，不落茶痕。不取茶相，不取非茶相。有茶亦饮。无茶亦饮。饮而不饮，不饮而饮。无心用茶，茶灵自附。茶灵附体者，心饮之间，与空相应，与真相冥，与外相通，与内相融，与物相谐，与人相和。看得破，想得通。提得起，放得下。进得去，出得来，来无所从，去无所至。事来即应，事过即忘。无所不备，无所不可。随其所便，因其所宜。随时做主，立处皆真。在世出世，妙行无住。轻安自在，活泼空灵。情不随境转，心不被物迷。生死一瞬，常作终极之想；自他不二，尽可悲天悯人。荣辱在所不计，毁誉无动于衷。信念八风不动，名利云淡风轻。直饮得地老天荒乾坤转，直饮得神清气爽逍遥游。 <br/>
+心静茶至，茶至灵来。灵来神往，到现其中。善饮心茶者，最得茶灵三昧。此乃饮茶之上上境。 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

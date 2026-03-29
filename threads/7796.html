@@ -1,0 +1,330 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>八吉祥 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">八吉祥</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-1-25 12:04</div><div class="post-body">[font=黑体][size=5] <br/>
+八吉祥，又称佛教八宝，象征佛教威力的八种物象。由八种识智即眼、耳、鼻、音、心、身、意、藏所感悟显现。描绘成八种图案纹饰。作为佛教艺术的装饰。 <br/>
+<br/>
+八吉祥藏语称“扎西达杰”，是藏族绘画里最常见而又赋予深刻内涵的一种组合式绘画精品。大多运用在壁画、金银铜雕、木雕刻和塑造的形式出现，这八吉祥物的标志与佛陀或佛法息息相关。 <br/>
+<br/>
+八吉祥图分别为：宝伞、金鱼、宝瓶、莲花、白海螺、吉祥结、胜利幢、金轮。 <br/>
+<br/>
+<br/>
+<br/>
+宝伞 <br/>
+古印度时，贵族、皇室成员出行时，以伞蔽阳，后演化为仪仗器具，寓意为至上权威。佛教以伞象征遮蔽魔障，守护佛法。藏传佛教亦认为，宝伞象征着佛陀教诲的权威。 <br/>
+<br/>
+<br/>
+<br/>
+金鱼（双鱼） <br/>
+鱼行水中，畅通无碍。佛教以其喻示超越世间、自由豁达得解脱的修行者。藏传佛教中，常以一对金鱼象征解脱的境地，又象征着复苏、永生、再生等意。 <br/>
+<br/>
+<br/>
+<br/>
+宝瓶 <br/>
+藏传佛教寺院中的瓶内装净水（甘露）和宝石，瓶中插有孔雀翎或如意树。即象征着吉祥、清净和财运，又象征着俱宝无漏、福智圆满、永生不死。 <br/>
+<br/>
+<br/>
+<br/>
+莲花 <br/>
+莲花出污泥而不染，至清至纯。藏传佛教认为莲花象征着最终的目标，即修成正果。 <br/>
+<br/>
+<br/>
+<br/>
+白海螺（法螺） <br/>
+佛经载，释迦牟尼说法时声震四方，如海螺之音。故今法会之际常吹鸣海螺。在西藏，以右旋白海螺最受尊崇，被视为名声远扬三千世界之象征，也即象征着达摩（法）回荡不息的声音。 <br/>
+<br/>
+<br/>
+<br/>
+吉祥结（长盘） <br/>
+吉祥结较为原初的意义象征爱情和献身。近佛教的解释，吉祥结还象征着如若跟随佛陀，就有能力从生存的海洋中打捞起智慧珍珠和觉悟珍宝。 <br/>
+<br/>
+<br/>
+<br/>
+胜利幢（宝幢） <br/>
+为古印度时的一种军旗。佛教用幢寓意烦恼孽根得以解脱，觉悟得正果。藏传佛教更用其比喻十一种烦恼对治力，即戒，定、慧、解脱、大悲、空无相无愿、方便、无我、悟缘起、离偏见、受佛之加持得自心自情清净。 <br/>
+<br/>
+<br/>
+<br/>
+金轮（法-轮） <br/>
+古印度时，轮是一种杀伤力强大的武器，后为佛教借用，象征佛法象轮子一样旋转不停，永不停息。 <br/>
+<br/>
+<br/>
+<br/>
+这八个图案可以单独成形，也可堆成一个整体图案，这种整体图案在藏语中称“达杰朋苏”意为吉祥八图宝瓶状。&quot;[/size][/font] <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-1-25 12:11</div><div class="post-body">[size=5][font=黑体] <br/>
+莲花 <br/>
+<br/>
+<br/>
+<br/>
+胜利幢（宝幢） <br/>
+<br/>
+<br/>
+<br/>
+宝伞 <br/>
+<br/>
+<br/>
+<br/>
+金鱼（双鱼） <br/>
+<br/>
+<br/>
+<br/>
+吉祥结（长盘） <br/>
+<br/>
+<br/>
+<br/>
+白海螺（法螺） <br/>
+<br/>
+<br/>
+<br/>
+金轮（法-轮） <br/>
+<br/>
+<br/>
+<br/>
+宝瓶[/font][/size] </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-1-25 12:16</div><div class="post-body">[font=黑体][size=5] <br/>
+金轮（法-轮） <br/>
+<br/>
+<br/>
+<br/>
+吉祥结（长盘） <br/>
+<br/>
+<br/>
+<br/>
+白海螺（法螺） <br/>
+<br/>
+<br/>
+<br/>
+莲花 <br/>
+<br/>
+<br/>
+<br/>
+胜利幢（宝幢） <br/>
+<br/>
+<br/>
+<br/>
+金鱼（双鱼） <br/>
+<br/>
+<br/>
+<br/>
+宝瓶 <br/>
+<br/>
+<br/>
+<br/>
+宝伞[/size][/font] </div></div><div class="post" style="animation-delay: 0.30000000000000004s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-1-25 12:29</div><div class="post-body">[font=黑体][size=5] <br/>
+宝瓶 <br/>
+<br/>
+<br/>
+<br/>
+金鱼（双鱼） <br/>
+<br/>
+<br/>
+<br/>
+莲花 <br/>
+<br/>
+<br/>
+<br/>
+宝伞 <br/>
+<br/>
+<br/>
+<br/>
+白海螺（法螺） <br/>
+<br/>
+<br/>
+<br/>
+吉祥结（长盘） <br/>
+<br/>
+<br/>
+<br/>
+金轮（法-轮） <br/>
+<br/>
+<br/>
+<br/>
+胜利幢（宝幢）[/size][/font] </div></div><div class="post" style="animation-delay: 0.4s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-1-25 13:00</div><div class="post-body">[font=黑体][size=5] <br/>
+金轮（法-轮） <br/>
+<br/>
+<br/>
+<br/>
+宝瓶 <br/>
+<br/>
+<br/>
+<br/>
+胜利幢（宝幢） <br/>
+<br/>
+<br/>
+<br/>
+吉祥结（长盘） <br/>
+<br/>
+<br/>
+<br/>
+莲花 <br/>
+<br/>
+<br/>
+<br/>
+白海螺（法螺） <br/>
+<br/>
+<br/>
+<br/>
+宝伞[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-1-25 13:24</div><div class="post-body">[font=黑体][size=5] <br/>
+白海螺（法螺） <br/>
+<br/>
+<br/>
+<br/>
+莲花 <br/>
+<br/>
+<br/>
+<br/>
+金鱼（双鱼） <br/>
+<br/>
+<br/>
+<br/>
+吉祥结（长盘） <br/>
+<br/>
+<br/>
+<br/>
+宝瓶 <br/>
+<br/>
+<br/>
+<br/>
+金轮（法-轮） <br/>
+<br/>
+<br/>
+<br/>
+宝伞 <br/>
+<br/>
+<br/>
+<br/>
+胜利幢（宝幢）[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-1-25 13:37</div><div class="post-body">[font=黑体][size=5] <br/>
+金鱼（双鱼） <br/>
+<br/>
+<br/>
+<br/>
+宝伞 <br/>
+<br/>
+<br/>
+<br/>
+胜利幢（宝幢） <br/>
+<br/>
+<br/>
+<br/>
+吉祥结（长盘） <br/>
+<br/>
+<br/>
+<br/>
+莲花 <br/>
+<br/>
+<br/>
+<br/>
+白海螺（法螺） <br/>
+<br/>
+<br/>
+<br/>
+宝瓶 <br/>
+<br/>
+<br/>
+<br/>
+金轮（法-轮）[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-1-25 14:01</div><div class="post-body">[font=黑体][size=5] <br/>
+金轮（法-轮） <br/>
+<br/>
+<br/>
+<br/>
+宝伞 <br/>
+<br/>
+<br/>
+<br/>
+白海螺（法螺） <br/>
+<br/>
+<br/>
+<br/>
+金鱼（双鱼） <br/>
+<br/>
+<br/>
+<br/>
+吉祥结（长盘） <br/>
+<br/>
+<br/>
+<br/>
+宝瓶 <br/>
+<br/>
+<br/>
+<br/>
+胜利幢（宝幢） <br/>
+<br/>
+<br/>
+<br/>
+莲花[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-1-25 14:09</div><div class="post-body">[font=黑体][size=5] <br/>
+金鱼（双鱼） <br/>
+<br/>
+<br/>
+<br/>
+莲花 <br/>
+<br/>
+<br/>
+<br/>
+宝瓶 <br/>
+<br/>
+<br/>
+<br/>
+白海螺（法螺） <br/>
+<br/>
+<br/>
+<br/>
+胜利幢（宝幢） <br/>
+<br/>
+<br/>
+<br/>
+吉祥结（长盘） <br/>
+<br/>
+<br/>
+<br/>
+金轮（法-轮） <br/>
+<br/>
+<br/>
+<br/>
+宝伞[/size][/font] </div></div><div class="post" style="animation-delay: 0.5s"><div class="post-header"><div class="avatar">法</div>法成发表于 2013-1-25 14:16</div><div class="post-body"><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</div></div>
+</div>
+</body></html>

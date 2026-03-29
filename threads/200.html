@@ -1,0 +1,79 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>藏医学简介 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">藏医学简介</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">金</div>金刚霆发表于 2005-11-18 11:58</div><div class="post-body">[font=楷体_GB2312][size=5]    藏医学在分析判断某一病症在病理上的远近诸种病因时，离不开卜算占卦，因此，在以五明之学分类时，这种卜算占卦之术便收类于医方明之中。辛饶弥沃奇在为恰辛祖飞列加等人开示恰辛苯教之法时，亦将“度”（禳解）、疗方、“求提”、占卜、圆光、占音、算学、医药学合融在一起，也鉴于此理。[/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]　　藏医最基本的典籍是《医学四续》，即《本续》，《释续》，《诀窍续》和《后续》。《贤者喜宴》载：“集一切秘诀之精华的《医学四续》系由玉妥贡布所著，玉妥贡布乃真正的应化身，汇集了藏地所有医典诀窍之传承，六度赴印”，又载“赤列法王云：（玉妥贡布）乃真正之殊胜化身。他住地之东面山上长满各类药草如香山，南面山上长满热性药草，北面雪山上生长凉性药草，西面有森林，尤如奇妙医药城（药师佛净土），他的心性法界为药师佛，以各种思维为四部眷属，着念为益列吉仙，本明之性为本明智慧仙而开示四续”。[/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]又载“有的认为是药师佛所说，有的认为如同化身毗卢遮那开示瑜伽密续，于须弥山之颠一样，乃为释迦佛祖之化身示教，也有认为是伏藏，有的认为原有一小《本续》而由玉妥贡布作广本，如此等等，不一而足。但以果证而论，此著者应为化身佛，而以切脉、视尿诊断者，未见于其它医方，乃世界医学之殊胜者，尤其切合藏地之地理气候，惠泽无量，是故顶礼如佛。”《知识总汇》载：“关于《四续》，有认为是佛说与论典之任一者，有认为佛说与论典兼而有之者，即使认为是论典者，亦有众多不同说法，但旦白宁奇法王师徒等认为：外为佛说，内为伏藏，秘为玉妥巴之作为佳。”《善说宝串》中说：适宜藏地地理气候之《四续》，即由此化身佛所撰，如同玉妥巴在其《宁提》中所说，然而大多认为是佛说，由扎巴恩息坚掘藏而得。宁玛巴之《十万密续》中亦持此论。[/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]    在藏医学基础理论方面。人体内存在的三大因素、七种物质和三种排泄物，认为它们是维持生命的物质基础。三大因素中的隆是气，聚集在脑髓、心肺和骨骼里，主管呼吸、循环、感觉、运动；赤巴是火，分散在肝脏和血液中，促进、消化吸收及热能和智慧的产生；培根是水和土，存在于脾、胃、膀胱内，可以调节消化及水份代谢，影响人的体重和性情。七种物质包括乳糜、血、肉、脂、骨、髓和精，它们均可在赤巴产生的热能作用下，渐变成“精华”，精华散布全身，使人发育、成长、保持健康。三种排泄物包括粪便、尿和汗，可以通过它们将体内的废物排出体外。[/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]    隆、赤巴、培根既被用来解释人的生理活动，还被用于区分人的类型。根据身材、肤色、性格特点，人被区分为隆型、赤巴型、培根型和各种混合型。隆型的人身材窈窕、肤色微黑、性情活泼，特点是多愁善感、性欲旺盛、喜好娱乐；赤巴型的人身材适中、肤色微黄、性情急躁，特点是才智聪明、嫉妒心强、喜好争斗；培根型的人身材魁梧、肤色白润、性情温和，特点是举止稳重、胸有成竹、喜好娴静。《挂图》反映出，疾病的内因决定于人的类型和年龄，外因则主要是季节、气候、环境、起居和饮食的变化。三大因素、七种物质、三种排泄物平衡失调，均可导致疾病。         [/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]     隆：相当于中医的“气”、“风”，便其作用与含义比气，风更广。从生理意义讲，它的功能是主呼吸、肢体活动、感觉思维、循环、排泄，是推动人体正常生理活动的动力。从病理意义讲，由于内外因素，使隆的平衡失调，从而产生各种疾病。因疾病部位不同，分为头隆、索隆、心隆、肺隆、胆隆、胃隆、小肠隆、大肠隆、肾隆、骨隆等；其它疾病并发产生各种合并症，分为赤隆、肾隆、血隆等。 [/size][/font] <br/>
+<br/>
+[font=楷体_GB2312][size=5]  [/size][/font][font=楷体_GB2312][size=5]   索隆：即五种隆之一的索培隆失调，殃及白色命脉(中枢神经)的一种神经机能性疾病，症状为晕、心神不宁，精神错乱、呼吸困难等。印象为神经官能症或精神病。 [/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]    心隆：主心脏活动的隆失调，出现心慌气短，神志模糊，心悸烦躁，背痛失眠。印象为心脏病。[/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]    赤隆：赤巴和隆紊乱引起的疾病。症状为头昏、头痛、发烧、发抖，前额眼眶和面颊疼痛。饥饿时复发。[/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]    血隆上雍：体内坏血被遍行隆扰乱，向上体雍塞，阻碍气和血流通的脉道而产生的疾病。此时如果血偏盛，则印象为高血压证；若隆偏盛，症状为头昏目眩、耳鸣、多嘘叹、神志不安、失眠健忘、疲乏无力、膨体颤抖、多语、怕冷等。老年人多易发此病。[/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]    赤巴：相当于中医的“火”，但其作用与含义更广。它在生理方面的主要功能是产生热，调节体温、助消化。从病理意义讲，因赤巴失调产生症状为身热、皮肤、巩膜、颜面及小便发黄、口渴、呕吐下泻、腹部胀满、喜凉恶热等的各种疾病。[/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]   培根：相当于中医的“水”、“土”，但其作用与含义更广。它的生理功能为运化食物、调节水液等。培根失调，病理方面可引起脾、胃等消化系统疾病和体液失调，若与隆、赤巴、血等为伍，则形成多种复杂疾病。[/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]    白脉病：藏医解剖学把人体的经脉分为白脉和黑脉。黑脉泛指血管，包括整个血液循环系统；白脉泛指系统，包括大脑、小脑、延脑、脊髓、及多种神经。白脉病是指神经系统的功能障碍或病理损害，症状一般为口眼斜歪、四肢麻木不仁偏废不用、拘挛僵直、角弓反张、瘫痪、偏瘫、意识不清、头部震颤、失语蹇言等。  郞脱：胃部疼痛剧烈，上腹如刀剜。印象为肠梗酌、胃肠穿孔、胆囊炎、结石等腹部剧痛疾病。[/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]    黄水病：藏医认为，干黄水是血的糟粕进入胆囊分解为胆汁，胆汁的精华便为黄水，充斥于肌肤及关节中间。由于内外因素影响，黄水偏盛偏衰则产生黄水病，导致浮肿、水肿、湿疹、关节炎、关节肿胀、脏腑和水脓疡等。[/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]   干黄水：藏医认为，干黄水其意相似于除湿。[/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]   木布症：又称紫色培根症，是隆、赤巴、培根、血与黄水相凝结而引起的综合症。分热性、寒性两种。跌打操作所致的瘀血降于肝脏，或者过食热性、酸性食物引起肝血增盛，肝血不能生化为正精，逆行入胃、小肠形成败血，引起的热性木布症。过食不易消化的食物，胃液增多，导致担负产生胃热和消化隆，赤巴机能衰败，引起寒性木布症。木布症的症状为嘈杂泛酸、胸腹灼痛、消化不良、中期呕吐胆汁，后期吐烟汁色粘液和血，大便燥结，肌肉消瘦，出现肝脾胃肠痞瘤。印象为胃肠溃疡等症。患有“木布症”忌吃辣、生、醋、酱、油、泡菜及不易消化的食物。 [/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]    瘟疫症：传染性疾病。分脑炎、喉哦、“急刺痛”、“郞脱”、痢疾、丹毒、淋巴腺炎、霍乱转筯、炭疽、破伤风、急性黄胆型肝炎、急性肾炎、炎症结核、颈部淋巴结核、痄腮、“安如”等18种。藏医认为，瘟疫症是由肉眼看不见的“虫”(病菌)侵入人体造成的，具有来热猛、高热、病程短、危险性大等特征。 [/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]    急刺痛：侵入上体的一种瘟疫病。症状是左右肋剧痛、目赤、咳嗽、口苦、恶寒身颤。印象为大叶性肺炎、肺脓肿、结核性脑膜炎之类。    亚玛虫：藏医认为是一种亚玛的虫(细菌)侵入脑膜引起的头痛病。症状为烦燥不安、牙和面颊痛、鼻涕色红、眼睛痒痛、眵目糊、头颅骨缝间肿大、剧烈陈旧性头痛、偏头痛。                   　   [/size][/font] <br/>
+[font=楷体_GB2312][size=5]     坏血：藏医认为，由跌打操作，疮疡引起瘀血；肝脏遭受外伤引起瘀血或吃过量食盐经常性吃酒和酸性食物，致使血增盛充斥于肝脏，未能生化为正血；胃功能消弱，蕴积不化，精微清浊不分，漏入肝脏，不能生化为正血。上述瘀血和不能生化为正血的血液，皆称为坏血和病血。 [/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]    班木病：有的译为冈班母病和八木病。风驱赶坏血注于肌肤，筋腱及骨节而发病，病初上半身疼痛、胸闷、心跳、头痛、目赤鼻衄、齿龈红肿发青出血、嘴唇变棕色等。病热严重时，足部疼痛肿大，然后膝盖、大腿、小腿足部肿胀疼痛，出现黑斑，屈伸艰难，后脚跟站不起等。印象为中医的青腿牙疳。有的不一定有上体症状。  肾病：藏医所说的肾病不单纯指肾脏疾病，也泛指泌尿系统的有关疾病。  [/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]     血淫病：经血被黄水和风激之逆行而窜散于血管及脏腑器宫的一种妇女疾病。早期，因血偏盛，称为血淫病。症状为腰及阴部骨头阵阵作痛，有时鼻流血，心脏蹦跳感觉不舒，小腹灼痛好击打，腹背彻痛，子宫流血，血凝瘀结形成脓疡。                   　   [/size][/font] <br/>
+[font=楷体_GB2312][size=5][/size][/font] <br/>
+[font=楷体_GB2312][size=5]    风淫病：血淫病的晚期，因风偏盛助长病势，称为风淫病。症状为全身骨头阵痛麻木，头昏眩晕、感觉不舒、失眠、全身浮肿、小腹及阴部疼痛，月经淋沥不止。[/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">金</div>金刚皑发表于 2005-11-18 22:54</div><div class="post-body">一飘而过 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

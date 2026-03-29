@@ -1,0 +1,80 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>一个比丘的轮回 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">一个比丘的轮回</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">佛</div>佛客游发表于 2008-7-12 11:43</div><div class="post-body">六百年前，我是一位出家比丘。我二十岁出家，曾授三堂大戒，修行五十余年。学佛修行中做了不少好 <br/>
+事、善事，但由于贪恋尘事，想人天福报，最终不但没有脱离六道轮回，反沦入三恶道中受苦。我由比丘身 <br/>
+死后，投生一有钱的财主家庭。长大成为一名公子哥儿，成天享受着花天酒地的生活。身边有侍女八名，虽 <br/>
+不好色，但贪名、贪财、贪利十分严重，造下了不少恶因。这一世死后，又投生一个当官的家庭。长成人后 <br/>
+，我当上了领兵将军。当时身边有侍女二十四位，威风凛凛，要什么有什么，享不完的荣华富贵，吃不完的 <br/>
+山珍海味，整天过着花天酒地的生活。由于吃、喝、玩、乐再次造下种种恶因。特别是领兵杀了不少的人， <br/>
+将人头砍下，抛尸于江河。当对方士兵藏于草丛中都要找到拉出来杀掉，给后世结下怨缘。 <br/>
+我由将军死后，投生三恶道变蛤蟆三次。由于将人头砍了，所以变蛤蟆无颈。杀人抛尸于江河，我变蛤 <br/>
+蟆时遭捧打、钩钓、翻腹死于水面，腐烂发臭，甚至遭受抽筋剥皮之苦来偿还前世之报。三次蛤蟆完后，又 <br/>
+投生变山鸡四次，来偿还我为将军时，指挥士兵将藏于草丛中人杀掉之债。我当财主将军时，贪于口福，整 <br/>
+天吃香的、喝辣的，所以变山鸡遭枪打、刀砍，烹、煮、炒、煲之苦来偿还宿债。当四次山鸡偿报死后，又 <br/>
+投生猪胎，变猪三次。这就是我当财主将军时，好吃懒做，饭来张口，衣来伸手，老想吃肉造下的恶因，只 <br/>
+好变猪来偿还。变猪吃剩食、酸食、鞭抽棒打不算，还要遭千刀万剐，以及上述种种苦来偿还两次人生贪口 <br/>
+福欠下的恶报。 <br/>
+各位同修，当时我知道我轮回过程受种种苦时，我非常伤心地哭了。我是一个极难流泪的人，当时我想， <br/>
+我已修到这种程度了，我为什么要贪人天福报呢？由一个贪字，临命终时一念之差竟沦入三恶道十次，又怎 <br/>
+么不叫人伤心后悔呢？六百年！多么宝贵的时间，就这样懵懵懂懂地过去，又怎么不流泪呢。我由一个不信 <br/>
+任何鬼神的人，学佛后成为一个相信因果的人，而且又真实见到自己果报轮回的时候，又怎么不感激本师释 <br/>
+逝牟尼佛、本尊观世音菩萨及十方三世一切诸佛、诸大菩萨的加持呢？当一个佛子跪在自己的本师、本尊面 <br/>
+前时，他明白了自己的宿命，在学佛的道路上又前进一步的时候，又怎么不激动. <br/>
+当时我想我以什么来报答佛、菩萨的大恩大德，只有好好学佛。想到人生难得，佛法难闻；好不易又得人 <br/>
+生，再不好好习修就对不起佛、菩萨，对不起父母众生。先德常讲：此生不为今生度，待到何时度此生。今 <br/>
+生必须抓紧时间习修，要不然，待死神一到，不知所然。一个人当你快死的时候，三口粗气一出，你的心里 <br/>
+是否是只有一个正念——到西方极乐世界去，好好再修直至成佛。我做到了吗？没有！我睡觉时做梦妄念很 <br/>
+多。如果修到连做每个梦都是正念了，临命终时必到西方极乐世界。我誓言：[url=http://www.559xp.com.cn][color=blue]五月天[/color][/url]要时时牢记戒条，用持 <br/>
+戒这个金刚利刃，斩掉[url=http://www.ppmmw.com][color=blue]美女图片[/color][/url]，消灭三毒。时时常思四圣谛，修慈悲心，视一切众生为我累生累劫之父母 <br/>
+，牢牢记住上师三宝的恩德，念念不忘无上菩提，勇猛精进，永不退转直至成佛，解救六道有情众生，度己 <br/>
+度人，不度尽众生，誓不成佛。 <br/>
+一世比丘，得两世人生福报，不知积善积德，反而造下种种恶因，轮回到三恶道十次。以极苦的果报， <br/>
+还清债后再投生人世，这就是因果不差毫厘。有人会问，为什么没有[url=http://www.ffd700.com][color=blue]网速测试[/color][/url]到饿鬼、地狱道受苦？这是因 <br/>
+为我前生学佛的好处，所以只在三恶道的畜生道轮回，到恶缘尽时，佛种在遇善缘时又会发芽，这就是今生 <br/>
+又学佛的原因。一个学佛人种下佛种后，这颗种子永远不变质；只要遇到适宜的水土、温度的时候，她就会 <br/>
+发芽、开花、结果的。 <br/>
+出家修行五十年，命终一念决非然。 <br/>
+只因贪嗔一念差，穿上锦袍脱袈裟。 <br/>
+娑婆世上五蕴贪，水禽兽族走一转。 <br/>
+六道生中把债还，蒙蒙已过六百年。 <br/>
+参禅明了宿世事，师是圣来我是凡。 <br/>
+今生确因前生缘，拜师再修金刚禅。 <br/>
+精进勤修永不退，直登菩提九品莲。 </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">一</div>一杯菠萝蜜发表于 2012-1-6 21:10</div><div class="post-body">我能深入于未来  尽一切劫为一念 <br/>
+三世所有一切劫  为一念际我皆入 <br/>
+我于一念见三世  所有一切人师子 <br/>
+亦常入佛境界中  如幻解脱及威力 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>

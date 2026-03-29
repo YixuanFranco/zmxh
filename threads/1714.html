@@ -1,0 +1,65 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>好好走路 - 藏密修海典藏</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f9fafb; --surface: rgba(255,255,255,0.85); --text: #1f2937; --text-muted: #6b7280; --primary: #3b82f6; --primary-hover: #2563eb; }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.7; background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+.navbar { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.navbar h1 { margin: 0; font-size: 18px; color: var(--primary); font-weight: 600; letter-spacing: 0.5px; }
+.navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.navbar a:hover { color: var(--primary); transform: translateX(-3px); }
+.container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+.thread-card { background: var(--surface); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 15px -1px rgba(0,0,0,0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; display: block; color: inherit; position: relative; overflow: hidden; }
+.thread-card::before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: bottom; }
+.thread-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: transparent; }
+.thread-card:hover::before { transform: scaleY(1); }
+.thread-card h2 { margin: 0 0 10px 0; font-size: 20px; font-weight: 600; line-height: 1.4; color: #111827; }
+.post { background: var(--surface); backdrop-filter: blur(10px); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); overflow: hidden; animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-header { background: linear-gradient(135deg, rgba(219, 234, 254, 0.7) 0%, rgba(191, 219, 254, 0.7) 100%); padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,0.5); font-weight: 600; color: #1e40af; display: flex; align-items: center; }
+.post-header .avatar { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: #fff; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3); }
+.post-body { padding: 24px; font-size: 16px; overflow-wrap: break-word; color: #374151; }
+.post-body img { max-width: 100%; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.search-container { margin-bottom: 40px; position: relative; }
+.search-container input { width: 100%; padding: 20px 20px 20px 50px; border: none; background: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-radius: 16px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
+.search-container input:focus { box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.3); transform: translateY(-2px); }
+.search-container::before { content: "🔍"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--text-muted); opacity: 0.6; }
+button { background: var(--surface); border: 1px solid #e5e7eb; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-weight: 500; color: var(--text); }
+button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+</style>
+</head><body>
+<div class="navbar"><a href="../index.html">← 返回主页</a><h1>藏密修海典藏</h1><div style="width:70px"></div></div>
+<div class="container">
+<h1 style="margin-bottom: 40px; font-size: 28px; line-height: 1.3; font-weight: 700;">好好走路</h1>
+<div class="post" style="animation-delay: 0.0s"><div class="post-header"><div class="avatar">3</div>3737发表于 2006-10-4 08:17</div><div class="post-body">[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy]好好走路，找回来时路[/color][/size][/font] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy]我开始学佛，是从读诵经典和打坐着手。那时以为走路经行，只是为了舒活筋骨，帮助熬腿的一个运动而已。不过事后证明，这个观念正是我的一个大颠倒。那时打坐，也不过一个礼拜坐一次，这就像要烧开水，搁在火上一会儿就拿开，等下一个礼拜再继续烧。这样就算烧了一辈子，也听不到一点声音。 [/color][/size][/font] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy]　　师父说走路很重要，可是我实在看不出来，耳根圆通和走路会有什么关系？何况又听说，没有人悟道的方式是相同的。既然八万四千法都可以成就，为什么一定要走路？[/color][/size][/font][/size] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy]　　那时突然看到憨山大师年谱，顺手一翻，正好就是大师走路突破色蕴的故事。大师十岁就立志不做大官，要做大和尚。因为作官不免要罢官，做僧人自由自在，行遍天下，最后还可以成佛作祖。他在十九岁出家以前，世间学问已经是一流的，随时可以考功名。出家之后的前十年间，认真修证自不在话下。[/color][/size][/font][/size][/font][/size][/font][/font][/size][/font][/size][/font][/size][/font] <br/>
+[font=宋体][size=16pt][font=宋体][size=16pt][font=宋体][size=16pt][font=宋体][font=宋体][size=16pt][font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font][/size][/font][/size][/font][/font][/size][/font][/size][/font][/size][/font] <br/>
+[font=宋体][size=16pt][font=宋体][size=16pt][font=宋体][size=16pt][font=宋体][font=宋体][size=16pt][font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy]以一位年轻、聪明、学问、佛经、修证、样样不含糊的人，他入佛法大城的因缘是什么呢？当时他二十八岁，本来要去五台山，可是为了要等妙峰师，所以有一天他先独自去爬河北盘山。到山顶上，遇到一位隐者，每天晚上走路，也不跟他说话。大师就每天跟着隐者走路。七天以后，那隐士才第一次和他打招呼。大师就住下来，每晚跟着走路。有一天晚上走路的时候，忽然顶门一响。轰如乍雷，山河大地，身心世界，豁然顿空。那隐士告诉他，这不过色阴境界而已。看到这里我实在忏悔，以大师顶级的人物，出家十年，都要走路。我多年随六尘流浪生死，不知来时路。怎么还能不好好走路，浪费生命呢？[/color][/size][/font][/size] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy]　　第一次走路，本来计画走一个钟头。结果迷路了，绕了四个多小时才回来。右脚中趾肿起来，瘸了一个礼拜才好。之后继续走路，身体开始出疹子，我不理它，一阵子过后就好了。只是右脚脚底一直脱皮，有点像香港脚，可是不会传染。左脚一直好好的，一点都没有脱皮。有人说开始打坐，身上会发痒、长疱、长脓。这是在把身体内的毒素逼出来。我不知道这走路，是不是也产生了和打坐一样的效果？！[/color][/size][/font][/size] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy]　　就这样漫无目的的走了半年多。心里也有点儿纳闷，有点儿嘀咕，只是头脑不太管用，嘀嘀咕咕的一出来，就不知道跑那儿去了？就这么傻傻的走下去。那段日子开车时，有时眼前一亮，就好像到了一个陌生的地方，开陌生的路，突然问自己要去哪？可是该弯的时候，还是转弯了，继续开下去就知道要去哪里了。[/color][/size][/font][/size] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy]　　有一次，走路走了一上午后，休息一下，再站起来的时候，突然完全感觉到了整个脚底。以前脚底从来没有这么踏实过，那天走起路来，每一步都那么脚踏实地，举足下足，清清楚楚，好奇妙。真不知道以前脚到哪里去了？那天傍晚，在家里上楼梯短短几步路，突然一股清凉，从后脑流下来，遍满整个背部。以前静坐也有类似的情形，只是清凉只流到脖子，还不到肩膀就没了。从此走路更轻松，不需用力，脚底的感觉就在那里。脚在时，头脑就不在，头脑不在时，感觉更敏锐。这才了解耳根圆通，实在是比喻。真正圆通的，就是这个闻性。观音法门，要想容易进入，还不能不走路。[/color][/size][/font][/size] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy]　　现在生活、上班、做事，当头脑跳出来忙一忙的时候，脚常常就不见了。一会儿（不管工作是不是告一个段落），脚又回来了。有时继续忙，两者也能同时知道。但是只要工作告一个段落，我就会趁机起来走一走，那时的走路就好像在静坐时一般地宁静踏实。[/color][/size][/font][/size] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy]　　走路，实在非常方便。不论在任何时间、任何地点，也不需要特别的装备，随时都可以开始走路。就这样，透过走路，我能够不断地想起来，随着脚愈来愈常回来，我烧开水的机会不但增多了，开水也能保持在一定的温度。想要烧开，就只是时间问题而已。路已经清楚在面前了，不管远近，只要走出去一定能到。[/color][/size][/font][/size] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy][/color][/size][/font] <br/>
+[font=宋体][size=16pt][font=楷体_GB2312][size=5][color=navy]　　走路的奇妙，真不是用头脑能想象的，也不是用逻辑能推理的。只有亲自实实在在地走几个月，那时冷暖自在汝心头。[/color][/size][/font][/size][/font][/size][/font][/font][/size][/font][/font][/size][/font][/font][/size][/font][/font][/size][/font][/font][/size][/font][/font][/size][/font][/font][/size][/font][/size][/font][/size][/font] </div></div><div class="post" style="animation-delay: 0.1s"><div class="post-header"><div class="avatar">贝</div>贝嘛埵吉发表于 2010-6-25 19:00</div><div class="post-body">烦恼敌中独勇猛 威猛能破愚痴怨 具吉祥智而严身 执持坚固之恶相 <br/>
+能令动于百种手 举步相中而作舞 吉祥百手皆圆满 遍空界中令作舞 </div></div><div class="post" style="animation-delay: 0.2s"><div class="post-header"><div class="avatar">金</div>金鑫发表于 2010-10-21 00:11</div><div class="post-body">最上三宝我皈依 一切罪业皆忏悔 <br/>
+眾生善根盡隨喜 正覺菩提意中持 <br/>
+<br/>
+正覺妙法及僧伽 直至菩提我皈依 <br/>
+所為利益自他故 我今即發菩提心 <br/>
+<br/>
+既發最上菩提心 饒益一切諸有情 <br/>
+菩提妙行皆修作 為利眾生願成佛 <br/>
+<br/>
+</div></div>
+</div>
+</body></html>
