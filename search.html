@@ -55,7 +55,8 @@ h1, h2, h3 { font-family: 'Noto Serif SC', serif; }
 <script src="./pagefind/pagefind-ui.js"></script>
 <script>
 window.addEventListener('DOMContentLoaded', () => {
-    new PagefindUI({ 
+    // 1. 初始化 Pagefind UI
+    window.pui = new PagefindUI({ 
         element: "#search", 
         showSubResults: true,
         translations: {
@@ -67,6 +68,19 @@ window.addEventListener('DOMContentLoaded', () => {
             searching: "法界观照中..."
         }
     });
+
+    // 2. 处理 URL 参数自动搜索
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q');
+    if (query) {
+        setTimeout(() => {
+            const inp = document.querySelector('.pagefind-ui__search-input');
+            if (inp) {
+                inp.value = query;
+                inp.dispatchEvent(new Event('input', { bubbles: true }));
+            }
+        }, 300);
+    }
 
     const style = document.createElement('style');
     style.innerHTML = `
