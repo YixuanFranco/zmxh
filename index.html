@@ -18,6 +18,18 @@ h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto S
 .search-hero-btn:hover { background: var(--primary); color: #000; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212,175,55,0.4); }
 .navbar { position: sticky; top: 0; z-index: 100; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; background: rgba(13,10,9,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(212,175,55,0.1); }
 .navbar h1 { margin: 0; font-size: 20px; color: var(--primary); font-weight: 700; letter-spacing: 2px; }
+
+/* Reader Modal UI */
+#qv { position: fixed; inset: 0; z-index: 2000; display: none; align-items: center; justify-content: center; background: rgba(13,10,9,0.85); opacity: 0; transition: opacity 0.3s; backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); }
+#qv-content { position: relative; width: 95%; max-width: 1000px; height: 90vh; background: var(--bg); border: 1px solid rgba(212,175,55,0.2); border-radius: 16px; display: flex; flex-direction: column; overflow: hidden; transform: translateY(30px); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 30px 60px rgba(0,0,0,0.8); }
+#qv-head { padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; background: rgba(30,25,20,0.9); border-bottom: 1px solid rgba(212,175,55,0.1); }
+#qv-title { color: var(--primary); font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 16px; letter-spacing: 1px; }
+#qv-close { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); color: #fff; text-decoration: none; font-size: 20px; transition: 0.3s; cursor: pointer; }
+#qv-close:hover { background: rgba(138,28,28,0.8); transform: rotate(90deg); }
+#qv-body { flex: 1; overflow-y: auto; padding: 20px; background-image: radial-gradient(rgba(212,175,55,0.05) 1px, transparent 1px); background-size: 30px 30px; }
+#qv-body .container { max-width: 800px; margin: 0 auto; padding: 20px 0; }
+#qv-body .hero, #qv-body .navbar { display: none; }
+
 .navbar a { text-decoration: none; color: var(--text); font-weight: 500; transition: all 0.3s; display: inline-block; font-size: 15px;}
 .navbar a:hover { color: var(--primary); transform: translateX(-3px); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
@@ -65,10 +77,22 @@ h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto S
 <div class="container" style="margin-top: 60px; margin-bottom: 100px;">
 
 <div class="oracle-container" style="text-align:center; padding: 75px 20px 60px; background: linear-gradient(180deg, rgba(212,175,55,0.08) 0%, transparent 100%); border-radius: 20px; margin: -20px 0 60px 0; border: 1px solid rgba(212,175,55,0.15); position: relative; overflow: hidden; box-shadow: inset 0 0 50px rgba(0,0,0,0.5);">
-    <div id="oracleSyllable" style="font-size: 90px; color: var(--primary); text-shadow: 0 0 30px rgba(212,175,55,0.5); margin-bottom: 25px; font-family: sans-serif; animation: breath 4s ease-in-out infinite;">ཧཱུྃ</div>
-    <h2 style="color: var(--primary); letter-spacing: 6px; font-size: 24px; margin-bottom: 15px;">❖ 赛博灵签 · 观机逗教 ❖</h2>
-    <p style="color: var(--text-muted); font-size: 16px; margin-bottom: 40px; letter-spacing: 2px; line-height: 2.2;">静息三次，观照呼吸。<br>心中结印，默念当下的迷途与困惑，向法界叩问。</p>
-    <button id="oracleBtn" style="background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); border: none; padding: 14px 45px; border-radius: 30px; color: #000; font-size: 18px; font-weight: 800; letter-spacing: 8px; cursor: pointer; transition: all 0.3s; box-shadow: 0 5px 20px rgba(212,175,55,0.3); text-indent: 8px;">叩 问</button>
+    <center>
+    <div style="font-size: 44px; margin-bottom: 20px; color: var(--primary); font-family: 'Noto Serif SC', serif;" id="oracleSyllable">ༀ</div>
+    <button class="merit-btn" id="oracleBtn">叩问须弥</button>
+</center>
+
+<!-- Modal Container -->
+<div id="qv"><div id="qv-content">
+    <div id="qv-head">
+        <div style="display:flex; align-items:center; gap:10px;">
+            <span style="color:var(--primary);">❖</span>
+            <span id="qv-title">典藏经卷阅读</span>
+        </div>
+        <div id="qv-close" onclick="window.closeReader()">×</div>
+    </div>
+    <div id="qv-body"></div>
+</div></div>
 </div>
 <style>
 @keyframes breath { 0% { opacity: 0.7; transform: scale(0.98); } 50% { opacity: 1; transform: scale(1.02); text-shadow: 0 0 60px rgba(212,175,55,1); } 100% { opacity: 0.7; transform: scale(0.98); } }
@@ -112,27 +136,47 @@ h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto S
             syl.classList.add('oracle-spin');
             ob.innerText = "正在观照...";
             
-            let foundUrl = 'threads/1000.html'; // 备选，万一多次随机都失败
+            let foundUrl = 'threads/1000.html';
             const maxAttempts = 3;
-            
             for(let i=0; i<maxAttempts; i++) {
-                // 根据 ls 结果，数字范围是 4 - 19675
                 const tid = Math.floor(Math.random() * 19600) + 4;
                 const testUrl = `threads/${tid}.html`;
                 try {
                     const resp = await fetch(testUrl, { method: 'HEAD' });
-                    if(resp.ok) {
-                        foundUrl = testUrl;
-                        break;
-                    }
+                    if(resp.ok) { foundUrl = testUrl; break; }
                 } catch(e) {}
             }
             
             setTimeout(() => {
-                window.location.href = foundUrl;
+                syl.classList.remove('oracle-spin');
+                ob.innerText = "叩问须弥";
+                if(window.openReader) window.openReader(foundUrl);
             }, 800);
         };
     }
+
+    // ── 弹窗阅读引擎 ────────────────────────────────────
+    const qv = document.getElementById('qv'), qvc = document.getElementById('qv-content'), qvb = document.getElementById('qv-body');
+    window.openReader = function(url) {
+        qv.style.display = 'flex'; void qv.offsetWidth; qv.style.opacity = '1'; qvc.style.transform = 'translateY(0)';
+        document.body.style.overflow = 'hidden';
+        qvb.innerHTML = '<div style="text-align:center; padding:120px; color:var(--primary);">观照中...</div>';
+        fetch(url).then(r => r.text()).then(h => {
+            const d = new DOMParser().parseFromString(h, 'text/html');
+            const titleEl = d.querySelector('title');
+            if (titleEl) {
+                const rawTitle = titleEl.textContent.split(' - ')[0].trim();
+                document.getElementById('qv-title').innerText = rawTitle;
+            }
+            const c = d.querySelector('.container') || d.body;
+            const b = c.querySelector('.breadcrumb'); if(b) b.remove();
+            qvb.innerHTML = ''; qvb.appendChild(c); qvb.scrollTop = 0;
+        });
+    };
+    window.closeReader = function() {
+        qv.style.opacity = '0'; qvc.style.transform = 'translateY(30px)';
+        setTimeout(() => { qv.style.display = 'none'; document.body.style.overflow = ''; }, 300);
+    };
 
     // 音频引擎
     let audioCtx, droneOsc1, droneOsc2, droneGain, isPlaying = false;
