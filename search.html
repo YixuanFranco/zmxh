@@ -137,20 +137,38 @@ window.addEventListener('DOMContentLoaded', () => {
             border-color: rgba(212,175,55,0.6) !important;
         }
 
-        /* 5. 结果行：紧凑，可点击 */
+        /* 5. 结果行：紧凑 */
         .pagefind-ui__result {
             border-bottom: 1px solid rgba(212,175,55,0.1) !important;
-            padding: 12px 10px !important;
+            padding: 14px 10px !important;
             margin: 0 !important;
             display: block !important;
-            cursor: pointer;
         }
         .pagefind-ui__result:hover { background: rgba(212,175,55,0.04); }
 
-        /* 6. 把整个标题链接块隐掉（它是造成大空白的罪魁祸首，同时消除标题） */
-        .pagefind-ui__result-link { display: none !important; }
+        /* 6. 标题链接块：显示，不再隐藏 */
+        .pagefind-ui__result-link {
+            display: block !important;
+            text-decoration: none !important;
+            padding: 0 0 6px 0 !important;
+            margin: 0 !important;
+            cursor: pointer;
+        }
+        .pagefind-ui__result-link:hover { opacity: 0.85; }
 
-        /* 7. 正文摘要 */
+        /* 7. 标题文字：金色加粗 */
+        .pagefind-ui__result-title {
+            display: block !important;
+            color: var(--primary, #d4af37) !important;
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            font-family: 'Noto Serif SC', serif !important;
+            letter-spacing: 1px !important;
+            margin: 0 0 4px 0 !important;
+            line-height: 1.5 !important;
+        }
+
+        /* 8. 摘要正文 */
         .pagefind-ui__result-excerpt {
             display: block !important;
             color: #d5ccbd !important;
@@ -241,17 +259,13 @@ window.addEventListener('DOMContentLoaded', () => {
         if (isProcessing) return;
         isProcessing = true;
         try {
-            // 为每个新结果行添加点击（先读 href 再隐藏 link）
-            document.querySelectorAll('.pagefind-ui__result:not([data-ready])').forEach(result => {
-                result.dataset.ready = 'true';
-                const linkEl = result.querySelector('.pagefind-ui__result-link');
-                if (linkEl && linkEl.href && linkEl.href.includes('threads/')) {
-                    const href = linkEl.href; // 先拿到 href
-                    result.onclick = e => {
-                        e.preventDefault();
-                        if (window.openReader) window.openReader(href);
-                    };
-                }
+            // 拦截标题链接点击，全部在 reader 里打开
+            document.querySelectorAll('.pagefind-ui__result-link:not([data-handled])').forEach(link => {
+                link.dataset.handled = 'true';
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+                    if (window.openReader && link.href) window.openReader(link.href);
+                });
             });
             // 全词高亮 + 合并相邻 mark
             document.querySelectorAll('.pagefind-ui__result-excerpt:not([data-processed])').forEach(excerpt => {
