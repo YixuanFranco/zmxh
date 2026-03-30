@@ -6,15 +6,15 @@
 <title>藏密修海 ❖ 须弥法眼搜索</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
-:root { 
-    --bg: #0d0a09; 
-    --surface: rgba(24, 18, 16, 0.85); 
+:root {
+    --bg: #0d0a09;
+    --surface: rgba(24, 18, 16, 0.85);
     --surface-solid: #1a1412;
-    --text: #dfd5c5; 
-    --text-muted: #8b8073; 
-    --primary: #d4af37; 
-    --primary-hover: #f1c40f; 
-    --accent: #8a1c1c; 
+    --text: #dfd5c5;
+    --text-muted: #8b8073;
+    --primary: #d4af37;
+    --primary-hover: #f1c40f;
+    --accent: #8a1c1c;
 }
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text); padding: 0; margin: 0; line-height: 1.8; background-image: radial-gradient(#241b18 1px, transparent 1px); background-size: 30px 30px; overflow-x: hidden; -webkit-tap-highlight-color: transparent;}
 h1, h2, h3 { font-family: 'Noto Serif SC', serif; }
@@ -26,9 +26,8 @@ h1, h2, h3 { font-family: 'Noto Serif SC', serif; }
 .cloud-badge:hover { background: rgba(212,175,55,0.15) !important; color: var(--primary) !important; transform: translateY(-2px); border-color: var(--primary); box-shadow: 0 5px 15px rgba(212,175,55,0.2); }
 .cloud-badge.active { background: rgba(212,175,55,0.2) !important; color: var(--primary) !important; border-color: var(--primary); box-shadow: 0 0 15px rgba(212,175,55,0.3); }
 
-/* Pagefind Global Styles Override */
+/* Pagefind Global Styles */
 .pagefind-ui { --pagefind-ui-primary: #d4af37; --pagefind-ui-text: #dfd5c5; --pagefind-ui-background: transparent; --pagefind-ui-border: rgba(212, 175, 55, 0.3); --pagefind-ui-font: inherit; }
-.pagefind-ui .pagefind-ui__drawer:has(.pagefind-ui__results:empty) { display: none; }
 </style>
 <link href="./pagefind/pagefind-ui.css" rel="stylesheet">
 </head>
@@ -55,21 +54,21 @@ h1, h2, h3 { font-family: 'Noto Serif SC', serif; }
 <script src="./pagefind/pagefind-ui.js"></script>
 <script>
 window.addEventListener('DOMContentLoaded', () => {
-    // 1. 初始化 Pagefind UI
-    window.pui = new PagefindUI({ 
-        element: "#search", 
+    // 初始化 Pagefind
+    window.pui = new PagefindUI({
+        element: "#search",
         showSubResults: true,
         translations: {
             placeholder: "输入法言、经名、仪轨...",
             clear_search: "清 净",
             load_more: "更多法缘",
             zero_results: "法界未显示【[SEARCH_TERM]】之痕迹",
-            many_results: "为您呈现 [COUNT] 卷法轴",
+            many_results: "",
             searching: "法界观照中..."
         }
     });
 
-    // 2. 处理 URL 参数自动搜索
+    // URL 参数自动搜索
     const urlParams = new URLSearchParams(window.location.search);
     const query = urlParams.get('q');
     if (query) {
@@ -82,91 +81,94 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 300);
     }
 
+    // ── 样式覆盖 ─────────────────────────────────────
     const style = document.createElement('style');
     style.innerHTML = `
-        .pagefind-ui__search-input { background: rgba(0,0,0,0.5) !important; color: #d5ccbd !important; border: 1px solid rgba(212,175,55,0.3) !important; border-radius: 12px !important; padding-left: 20px !important; height: 60px !important; font-size: 18px !important; }
-        /* Hide the magnifying glass (it crashes into words) */
-        .pagefind-ui__search-input::placeholder { padding-left: 0; }
-        .pagefind-ui__search-input + .pagefind-ui__search-clear::before { content: ""; display:none; }
-        .pagefind-ui__search-input { background-image: none !important; }
+        /* 1. 放大镜图标彻底消失 */
+        .pagefind-ui__search-icon,
+        svg.pagefind-ui__search-icon { display: none !important; }
 
-        .pagefind-ui__search-clear { 
-            background: rgba(212,175,55,0.1) !important; 
-            color: #d4af37 !important; 
-            border: 1px solid rgba(212,175,55,0.3) !important; 
-            border-radius: 20px !important; 
-            padding: 4px 15px !important; 
-            font-size: 12px !important; 
-            font-weight: bold !important; 
+        /* 2. 搜索框 */
+        .pagefind-ui__search-input {
+            background: rgba(0,0,0,0.5) !important;
+            background-image: none !important;
+            color: #d5ccbd !important;
+            border: 1px solid rgba(212,175,55,0.3) !important;
+            border-radius: 12px !important;
+            padding-left: 20px !important;
+            height: 60px !important;
+            font-size: 18px !important;
+        }
+
+        /* 3. 清除按钮 */
+        .pagefind-ui__search-clear {
+            background: rgba(212,175,55,0.1) !important;
+            color: #d4af37 !important;
+            border: 1px solid rgba(212,175,55,0.3) !important;
+            border-radius: 20px !important;
+            padding: 4px 15px !important;
+            font-size: 12px !important;
+            font-weight: bold !important;
             height: 30px !important;
             margin-right: 15px !important;
             transition: all 0.3s !important;
-            display: flex !important; align-items: center !important;
+            display: flex !important;
+            align-items: center !important;
         }
+
+        /* 4. 隐藏无用提示和加载更多 */
         .pagefind-ui__message { display: none !important; }
-        .pagefind-ui__button { display: none !important; } /* 彻底去掉“加载更多”按钮 */
-        .pagefind-ui__result { border-bottom: 1px solid rgba(212,175,55,0.1) !important; padding: 15px 0 !important; display: block !important; }
-        
-        /* 彻底干掉标题栏，红框里的东西全部消失，但不影响点击跳转 */
+        .pagefind-ui__button { display: none !important; }
+
+        /* 5. 结果行：紧凑，无大空白 */
+        .pagefind-ui__result {
+            border-bottom: 1px solid rgba(212,175,55,0.1) !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            display: block !important;
+            cursor: pointer;
+        }
+        .pagefind-ui__result:hover { background: rgba(212,175,55,0.03); }
+
+        /* 6. 标题彻底不显示（但 <a> href 保留供 JS 读取） */
         .pagefind-ui__result-title { display: none !important; }
-        
-        /* 让整个结果行都变得可点击，解决点不动的问题 */
-        .pagefind-ui__result-link { 
-            text-decoration: none !important; 
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; 
+
+        /* 7. 内容链接区域：不再有额外的内边距叠加 */
+        .pagefind-ui__result-link {
+            text-decoration: none !important;
             display: block !important;
-            padding: 24px 15px !important;
-            margin: 10px 0 !important;
-            border-radius: 12px;
-            background: rgba(255,255,255,0.01);
-            border: 1px solid transparent;
+            padding: 16px 10px !important;
+            margin: 0 !important;
+            pointer-events: none; /* 由父级 result 的 onclick 处理点击 */
         }
-        .pagefind-ui__result-link:hover {
-            background: rgba(212,175,55,0.04);
-            border-color: rgba(212,175,55,0.15);
-            transform: translateX(8px);
-        }
-        
-        .pagefind-ui__result-excerpt { 
+
+        /* 8. 正文摘要 */
+        .pagefind-ui__result-excerpt {
             display: block !important;
-            color: #d5ccbd !important; 
-            line-height: 2 !important; 
-            font-size: 17px !important; 
-            opacity: 0.95; 
+            color: #d5ccbd !important;
+            line-height: 1.9 !important;
+            font-size: 16px !important;
+            opacity: 0.9;
             padding: 0 !important;
             margin: 0 !important;
             font-family: 'Noto Serif SC', serif !important;
         }
-        
-        /* 针对高亮块的终极合并样式 */
-        .pagefind-ui__result-excerpt mark { 
-            background: rgba(212,175,55,0.3) !important; 
-            color: #fff !important; 
-            font-weight: 800 !important; 
-            padding: 2px 0; /* 左右不留白，方便视觉合并 */
-            border-radius: 0;
-            box-shadow: 0 0 10px rgba(212,175,55,0.2);
+
+        /* 9. 高亮词样式 */
+        .pagefind-ui__result-excerpt mark {
+            background: rgba(212,175,55,0.35) !important;
+            color: #fff !important;
+            font-weight: 800 !important;
+            padding: 1px 3px;
+            border-radius: 3px;
         }
-        /* 第一个高亮词左圆角，最后一个右圆角 */
-        .pagefind-ui__result-excerpt mark:first-of-type { border-radius: 4px 0 0 4px; padding-left: 4px; }
-        .pagefind-ui__result-excerpt mark:last-of-type { border-radius: 0 4px 4px 0; padding-right: 4px; }
-        
-        .pagefind-ui__button { 
-            width: 100% !important; 
-            background: rgba(255,255,255,0.05) !important; 
-            border: 1px solid rgba(212,175,55,0.3) !important; 
-            color: var(--primary) !important; 
-            border-radius: 12px !important; 
-            padding: 15px !important; 
-            margin-top: 30px !important;
-        }
-        /* Mobile Scroll Optimization */
+
         #search { height: auto; }
     `;
     document.head.appendChild(style);
 
+    // ── 词云 ────────────────────────────────────────
     const keywords = ["大圆满", "妥噶", "彻却", "大手印", "上师瑜伽", "大威德", "时轮金刚", "胜乐金刚", "玛哈嘎拉", "绿度母", "莲花生", "宗喀巴", "中阴救度", "颇瓦法", "金刚萨埵", "观世音", "药师佛", "阿弥陀佛", "菩提道", "拙火", "金刚经", "实修"];
-    
     const cloud = document.getElementById('wordCloud');
     keywords.sort(() => Math.random() - 0.5).forEach(k => {
         const badge = document.createElement('div');
@@ -176,7 +178,7 @@ window.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.cloud-badge').forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             const inp = document.querySelector('.pagefind-ui__search-input');
-            if(inp) {
+            if (inp) {
                 inp.value = k;
                 inp.dispatchEvent(new Event('input', { bubbles: true }));
             }
@@ -184,48 +186,70 @@ window.addEventListener('DOMContentLoaded', () => {
         cloud.appendChild(badge);
     });
 
-    // 核心：处理标题冗余与高亮合并，增加锁防止死循环
+    // ── 跟踪当前搜索词 ───────────────────────────────
+    let currentQuery = '';
+    setTimeout(() => {
+        const inp = document.querySelector('.pagefind-ui__search-input');
+        if (inp) inp.addEventListener('input', e => { currentQuery = e.target.value.trim(); });
+    }, 500);
+
+    // ── 安全全词高亮（用 TreeWalker 处理文本节点）────
+    function highlightFullQuery(container, query) {
+        if (!query || query.length < 2) return;
+        const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, {
+            acceptNode(node) {
+                const tag = node.parentNode.tagName;
+                if (tag === 'MARK' || tag === 'SCRIPT' || tag === 'STYLE') return NodeFilter.FILTER_REJECT;
+                return node.textContent.includes(query) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+            }
+        });
+        const nodes = [];
+        let n;
+        while ((n = walker.nextNode())) nodes.push(n);
+        nodes.reverse().forEach(textNode => {
+            const text = textNode.textContent;
+            const idx = text.indexOf(query);
+            if (idx === -1) return;
+            const frag = document.createDocumentFragment();
+            frag.appendChild(document.createTextNode(text.slice(0, idx)));
+            const mark = document.createElement('mark');
+            mark.textContent = text.slice(idx, idx + query.length);
+            frag.appendChild(mark);
+            frag.appendChild(document.createTextNode(text.slice(idx + query.length)));
+            textNode.parentNode.replaceChild(frag, textNode);
+        });
+    }
+
+    function mergeAdjacentMarks(container) {
+        let html = container.innerHTML;
+        let last;
+        do { last = html; html = html.replace(/<\/mark>(\s*)<mark>/g, '$1'); } while (html !== last);
+        container.innerHTML = html;
+    }
+
+    // ── MutationObserver：结果出现时处理 ───────────
     let isProcessing = false;
     const observer = new MutationObserver(() => {
         if (isProcessing) return;
         isProcessing = true;
-        
         try {
-            // 1. 彻底剔除垃圾标题文字
-            document.querySelectorAll('.pagefind-ui__result-title').forEach(el => {
-                if(el.dataset.cleaned) return;
-                let text = el.innerText;
-                text = text.replace(/藏密修海\s*❖\s*典藏经阁/g, '')
-                            .replace(/藏密修海/g, '')
-                            .replace(/典藏经阁/g, '')
-                            .replace(/^-+\s*/, '')
-                            .replace(/\s*-+\s*$/, '')
-                            .trim();
-                
-                // 如果标题里全是干扰词，或者为空，直接标记隐藏
-                if(!text || text === "无题法轴") {
-                    el.style.display = 'none';
-                    el.dataset.empty = "true";
-                } else {
-                    el.innerText = text;
+            // 为每个新结果行添加点击（从隐藏的 <a> 取 href）
+            document.querySelectorAll('.pagefind-ui__result:not([data-ready])').forEach(result => {
+                result.dataset.ready = 'true';
+                const linkEl = result.querySelector('a');
+                if (linkEl && linkEl.href && linkEl.href.includes('threads/')) {
+                    const href = linkEl.href;
+                    result.addEventListener('click', e => {
+                        e.preventDefault();
+                        if (window.openReader) window.openReader(href);
+                    });
                 }
-                el.dataset.cleaned = "true";
             });
-            
-            // 2. 强力补救 Highlight 颗粒度问题 (如将 "妥" "噶" 合并)
-            document.querySelectorAll('.pagefind-ui__result-excerpt').forEach(excerpt => {
-                if(excerpt.dataset.repaired) return;
-                
-                // 循环合并直到没有相邻的 mark
-                let html = excerpt.innerHTML;
-                let lastHtml;
-                do {
-                    lastHtml = html;
-                    html = html.replace(/<\/mark>(\s*)<mark>/g, '$1'); 
-                } while (html !== lastHtml);
-                
-                excerpt.innerHTML = html;
-                excerpt.dataset.repaired = "true";
+            // 全词高亮 + 合并相邻 mark
+            document.querySelectorAll('.pagefind-ui__result-excerpt:not([data-processed])').forEach(excerpt => {
+                excerpt.dataset.processed = 'true';
+                if (currentQuery) highlightFullQuery(excerpt, currentQuery);
+                mergeAdjacentMarks(excerpt);
             });
         } finally {
             setTimeout(() => { isProcessing = false; }, 50);
@@ -234,7 +258,7 @@ window.addEventListener('DOMContentLoaded', () => {
     observer.observe(document.getElementById('search'), { childList: true, subtree: true });
 });
 
-// ---------- 卷轴弹窗阅读引擎 ----------
+// ── 卷轴阅读弹窗 ──────────────────────────────────
 (function() {
     const modalHTML = `
     <style>
@@ -260,6 +284,19 @@ window.addEventListener('DOMContentLoaded', () => {
     const qv = document.getElementById('qv'), qvc = document.getElementById('qv-c'), qvb = document.getElementById('qv-b');
     let speaker = false;
 
+    // 暴露给全局，让 observer 里的 onclick 能调用
+    window.openReader = function(url) {
+        qv.style.display = 'flex'; void qv.offsetWidth; qv.style.opacity = '1'; qvc.style.transform = 'translateY(0)';
+        document.body.style.overflow = 'hidden';
+        qvb.innerHTML = '<div style="text-align:center; padding:120px; color:var(--primary);">加载中...</div>';
+        fetch(url).then(r => r.text()).then(h => {
+            const d = new DOMParser().parseFromString(h, 'text/html'), c = d.querySelector('.container') || d.body;
+            const b = c.querySelector('.breadcrumb'); if(b) b.remove();
+            const h1 = d.querySelector('h1'); if(h1) document.getElementById('qv-title').innerText = h1.innerText;
+            qvb.innerHTML = ''; qvb.appendChild(c); qvb.scrollTop = 0;
+        });
+    };
+
     function stop() { if(window.speechSynthesis) { window.speechSynthesis.cancel(); speaker = false; document.getElementById('qv-tts').innerHTML="🎧 聆听开示"; } }
     function close() { stop(); qv.style.opacity = '0'; qvc.style.transform = window.innerWidth >= 850 ? 'translateY(50px)' : 'translateY(100%)'; setTimeout(() => { qv.style.display = 'none'; document.body.style.overflow = ''; }, 400); }
     document.getElementById('qv-x').onclick = close;
@@ -271,22 +308,6 @@ window.addEventListener('DOMContentLoaded', () => {
         u.lang = 'zh-CN'; u.rate = 0.9; u.onend = stop;
         window.speechSynthesis.speak(u); speaker = true; this.innerHTML = "⏹ 止息开示";
     };
-
-    document.addEventListener('click', e => {
-        const a = e.target.closest('a');
-        if(a && a.href && a.href.includes('threads/')) {
-            e.preventDefault();
-            qv.style.display = 'flex'; void qv.offsetWidth; qv.style.opacity = '1'; qvc.style.transform = 'translateY(0)';
-            document.body.style.overflow = 'hidden';
-            qvb.innerHTML = '<div style="text-align:center; padding:120px; color:var(--primary);">加载中...</div>';
-            fetch(a.href).then(r => r.text()).then(h => {
-                const d = new DOMParser().parseFromString(h, 'text/html'), c = d.querySelector('.container') || d.body;
-                const b = c.querySelector('.breadcrumb'); if(b) b.remove();
-                const h1 = d.querySelector('h1'); if(h1) document.getElementById('qv-title').innerText = h1.innerText;
-                qvb.innerHTML = ''; qvb.appendChild(c); qvb.scrollTop = 0;
-            });
-        }
-    });
 })();
 </script>
 </body>
