@@ -103,18 +103,18 @@ window.addEventListener('DOMContentLoaded', () => {
             transition: all 0.3s !important;
             display: flex !important; align-items: center !important;
         }
-        .pagefind-ui__message { color: #d4af37 !important; font-family: 'Noto Serif SC', serif !important; font-size: 18px !important; font-weight: bold; margin-bottom: 20px !important; }
-        .pagefind-ui__result { border-bottom: 1px solid rgba(212,175,55,0.1) !important; padding: 25px 0 !important; display: block !important; }
+        .pagefind-ui__message { display: none !important; }
+        .pagefind-ui__result { border-bottom: 1px solid rgba(212,175,55,0.1) !important; padding: 20px 0 !important; display: block !important; }
         .pagefind-ui__result-link { text-decoration: none !important; transition: 0.3s; display: block; }
         .pagefind-ui__result-title { 
             display: block !important;
             color: #d4af37 !important; 
-            font-size: 24px !important; 
+            font-size: 20px !important; 
             font-weight: 700 !important;
-            margin-bottom: 10px !important; 
+            margin-bottom: 8px !important; 
             font-family: 'Noto Serif SC', serif !important; 
-            line-height: 1.3 !important;
-            border-left: 4px solid var(--accent);
+            line-height: 1.4 !important;
+            border-left: 3px solid var(--accent);
             padding-left: 15px;
         }
         .pagefind-ui__result-link:hover .pagefind-ui__result-title { color: #fff !important; border-left-color: var(--primary); }
@@ -168,26 +168,42 @@ window.addEventListener('DOMContentLoaded', () => {
         isProcessing = true;
         
         try {
+            // 1. 彻底剔除垃圾标题文字
             document.querySelectorAll('.pagefind-ui__result-title').forEach(el => {
                 if(el.dataset.cleaned) return;
                 let text = el.innerText;
-                text = text.replace(/藏密修海\s*❖\s*典藏经阁\s*-\s*/g, '')
-                            .replace(/\s*-\s*藏密修海典藏/g, '')
-                            .replace(/藏密修海/g, '');
+                // 更加激进的清理：去掉所有包含“藏密修海”、“典藏”、“经阁”的干扰项
+                text = text.replace(/藏密修海\s*❖\s*典藏经阁/g, '')
+                            .replace(/藏密修海\s*典藏经阁/g, '')
+                            .replace(/藏密修海典藏/g, '')
+                            .replace(/藏密修海/g, '')
+                            .replace(/典藏经阁/g, '')
+                            .replace(/^-+\s*/, '') // 去掉开头的连字符
+                            .replace(/\s*-+\s*$/, '') // 去掉结尾的连字符
+                            .trim();
+                
+                // 如果清理后标题为空（说明全是垃圾信息），给个默认值
+                if(!text) text = "无题法轴";
                 el.innerText = text;
                 el.dataset.cleaned = "true";
             });
             
+            // 2. 强力补救 Highlight 颗粒度问题 (如将 "妥" "噶" 合并)
             document.querySelectorAll('.pagefind-ui__result-excerpt').forEach(excerpt => {
                 if(excerpt.dataset.repaired) return;
+                
+                // 循环合并直到没有相邻的 mark
                 let html = excerpt.innerHTML;
-                if(html.includes('</mark><mark>')) {
-                    excerpt.innerHTML = html.replace(/<\/mark><mark>/g, '');
-                }
+                let lastHtml;
+                do {
+                    lastHtml = html;
+                    html = html.replace(/<\/mark>(\s*)<mark>/g, '$1'); 
+                } while (html !== lastHtml);
+                
+                excerpt.innerHTML = html;
                 excerpt.dataset.repaired = "true";
             });
         } finally {
-            // 延迟重置，确保 DOM 稳定
             setTimeout(() => { isProcessing = false; }, 50);
         }
     });
