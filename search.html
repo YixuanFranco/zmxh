@@ -104,6 +104,7 @@ window.addEventListener('DOMContentLoaded', () => {
             display: flex !important; align-items: center !important;
         }
         .pagefind-ui__message { display: none !important; }
+        .pagefind-ui__button { display: none !important; } /* 彻底去掉“加载更多”按钮 */
         .pagefind-ui__result { border-bottom: 1px solid rgba(212,175,55,0.1) !important; padding: 20px 0 !important; display: block !important; }
         .pagefind-ui__result-link { text-decoration: none !important; transition: 0.3s; display: block; }
         .pagefind-ui__result-title { 
@@ -117,6 +118,9 @@ window.addEventListener('DOMContentLoaded', () => {
             border-left: 3px solid var(--accent);
             padding-left: 15px;
         }
+        /* 针对无题的文章，直接隐藏整行标题，只看内容 */
+        .pagefind-ui__result-title:empty, 
+        .pagefind-ui__result-title[data-empty="true"] { display: none !important; }
         .pagefind-ui__result-link:hover .pagefind-ui__result-title { color: #fff !important; border-left-color: var(--primary); }
         .pagefind-ui__result-excerpt { 
             display: block !important;
@@ -172,19 +176,20 @@ window.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.pagefind-ui__result-title').forEach(el => {
                 if(el.dataset.cleaned) return;
                 let text = el.innerText;
-                // 更加激进的清理：去掉所有包含“藏密修海”、“典藏”、“经阁”的干扰项
                 text = text.replace(/藏密修海\s*❖\s*典藏经阁/g, '')
-                            .replace(/藏密修海\s*典藏经阁/g, '')
-                            .replace(/藏密修海典藏/g, '')
                             .replace(/藏密修海/g, '')
                             .replace(/典藏经阁/g, '')
-                            .replace(/^-+\s*/, '') // 去掉开头的连字符
-                            .replace(/\s*-+\s*$/, '') // 去掉结尾的连字符
+                            .replace(/^-+\s*/, '')
+                            .replace(/\s*-+\s*$/, '')
                             .trim();
                 
-                // 如果清理后标题为空（说明全是垃圾信息），给个默认值
-                if(!text) text = "无题法轴";
-                el.innerText = text;
+                // 如果标题里全是干扰词，或者为空，直接标记隐藏
+                if(!text || text === "无题法轴") {
+                    el.style.display = 'none';
+                    el.dataset.empty = "true";
+                } else {
+                    el.innerText = text;
+                }
                 el.dataset.cleaned = "true";
             });
             

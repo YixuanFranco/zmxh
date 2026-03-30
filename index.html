@@ -97,17 +97,22 @@ h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto S
     `;
     const st = document.createElement('style'); st.innerHTML = ritualCSS; document.head.appendChild(st);
 
-    // 叩问逻辑修复
+    // 叩问逻辑修复：回归“惊喜感”，直接跳转到随机文章
     const ob = document.getElementById('oracleBtn');
     if(ob) {
         ob.onclick = function() {
             const syl = document.getElementById('oracleSyllable');
             syl.classList.add('oracle-spin');
             ob.innerText = "正在观想...";
+            
+            // 这里随机选一个 TID (目前库里约有 4600+ 篇)
+            // 以后可以根据精选列表来随机，目前先在 1000-5000 之间随机
+            const randomTid = Math.floor(Math.random() * 4000) + 1000;
+            const url = `threads/${randomTid}.html`;
+            
             setTimeout(() => {
-                const words = ["大圆满", "莲花生", "法身", "真言", "成就", "灌顶", "般若"];
-                const rnd = words[Math.floor(Math.random()*words.length)];
-                window.location.href = 'search.html?q=' + encodeURIComponent(rnd);
+                // 采用快速跳转
+                window.location.href = url;
             }, 1500);
         };
     }
