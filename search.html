@@ -57,11 +57,12 @@ window.addEventListener('DOMContentLoaded', () => {
     // 初始化 Pagefind
     window.pui = new PagefindUI({
         element: "#search",
-        showSubResults: true,
+        showSubResults: false,
+        pageSize: 20,
         translations: {
             placeholder: "输入法言、经名、仪轨...",
             clear_search: "清 净",
-            load_more: "更多法缘",
+            load_more: "更多法缘 ↓",
             zero_results: "法界未显示【[SEARCH_TERM]】之痕迹",
             many_results: "",
             searching: "法界观照中..."
@@ -117,7 +118,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
         /* 4. 隐藏无用提示和加载更多 */
         .pagefind-ui__message { display: none !important; }
-        .pagefind-ui__button { display: none !important; }
+        /* 加载更多按钮：简洁风格 */
+        .pagefind-ui__button {
+            display: block !important;
+            margin: 20px auto !important;
+            width: auto !important;
+            padding: 10px 30px !important;
+            background: rgba(212,175,55,0.08) !important;
+            border: 1px solid rgba(212,175,55,0.3) !important;
+            border-radius: 20px !important;
+            color: #d4af37 !important;
+            font-size: 14px !important;
+            cursor: pointer !important;
+            transition: all 0.3s !important;
+        }
+        .pagefind-ui__button:hover {
+            background: rgba(212,175,55,0.15) !important;
+            border-color: rgba(212,175,55,0.6) !important;
+        }
 
         /* 5. 结果行：紧凑，可点击 */
         .pagefind-ui__result {
@@ -280,9 +298,15 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
         qvb.innerHTML = '<div style="text-align:center; padding:120px; color:var(--primary);">加载中...</div>';
         fetch(url).then(r => r.text()).then(h => {
-            const d = new DOMParser().parseFromString(h, 'text/html'), c = d.querySelector('.container') || d.body;
+            const d = new DOMParser().parseFromString(h, 'text/html');
+            // 从 <title> 标签取文章标题（第一个 h1 是站名，不可信）
+            const titleEl = d.querySelector('title');
+            if (titleEl) {
+                const rawTitle = titleEl.textContent.split(' - ')[0].trim();
+                document.getElementById('qv-title').innerText = rawTitle;
+            }
+            const c = d.querySelector('.container') || d.body;
             const b = c.querySelector('.breadcrumb'); if(b) b.remove();
-            const h1 = d.querySelector('h1'); if(h1) document.getElementById('qv-title').innerText = h1.innerText;
             qvb.innerHTML = ''; qvb.appendChild(c); qvb.scrollTop = 0;
         });
     };
