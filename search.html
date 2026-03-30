@@ -106,31 +106,51 @@ window.addEventListener('DOMContentLoaded', () => {
         .pagefind-ui__message { display: none !important; }
         .pagefind-ui__button { display: none !important; } /* 彻底去掉“加载更多”按钮 */
         .pagefind-ui__result { border-bottom: 1px solid rgba(212,175,55,0.1) !important; padding: 15px 0 !important; display: block !important; }
-        .pagefind-ui__result-link { text-decoration: none !important; transition: 0.3s; display: block; }
         
-        /* 彻底干掉标题栏，红框里的东西全部消失 */
+        /* 彻底干掉标题栏，红框里的东西全部消失，但不影响点击跳转 */
         .pagefind-ui__result-title { display: none !important; }
         
+        /* 让整个结果行都变得可点击，解决点不动的问题 */
+        .pagefind-ui__result-link { 
+            text-decoration: none !important; 
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; 
+            display: block !important;
+            padding: 24px 15px !important;
+            margin: 10px 0 !important;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.01);
+            border: 1px solid transparent;
+        }
+        .pagefind-ui__result-link:hover {
+            background: rgba(212,175,55,0.04);
+            border-color: rgba(212,175,55,0.15);
+            transform: translateX(8px);
+        }
+        
         .pagefind-ui__result-excerpt { 
             display: block !important;
             color: #d5ccbd !important; 
-            line-height: 1.8 !important; 
-            font-size: 16px; 
-            opacity: 0.9; 
-            padding-left: 5px;
-            margin-top: 5px !important;
+            line-height: 2 !important; 
+            font-size: 17px !important; 
+            opacity: 0.95; 
+            padding: 0 !important;
+            margin: 0 !important;
+            font-family: 'Noto Serif SC', serif !important;
         }
-        .pagefind-ui__result-link:hover .pagefind-ui__result-title { color: #fff !important; border-left-color: var(--primary); }
-        .pagefind-ui__result-excerpt { 
-            display: block !important;
-            color: #d5ccbd !important; 
-            line-height: 1.8 !important; 
-            font-size: 16px; 
-            opacity: 0.85; 
-            padding-left: 19px;
-            margin-top: 10px !important;
+        
+        /* 针对高亮块的终极合并样式 */
+        .pagefind-ui__result-excerpt mark { 
+            background: rgba(212,175,55,0.3) !important; 
+            color: #fff !important; 
+            font-weight: 800 !important; 
+            padding: 2px 0; /* 左右不留白，方便视觉合并 */
+            border-radius: 0;
+            box-shadow: 0 0 10px rgba(212,175,55,0.2);
         }
-        .pagefind-ui__result-excerpt mark { background: rgba(212,175,55,0.35) !important; color: #fff !important; font-weight: 800 !important; padding: 1px 4px; border-radius: 3px; }
+        /* 第一个高亮词左圆角，最后一个右圆角 */
+        .pagefind-ui__result-excerpt mark:first-of-type { border-radius: 4px 0 0 4px; padding-left: 4px; }
+        .pagefind-ui__result-excerpt mark:last-of-type { border-radius: 0 4px 4px 0; padding-right: 4px; }
+        
         .pagefind-ui__button { 
             width: 100% !important; 
             background: rgba(255,255,255,0.05) !important; 
