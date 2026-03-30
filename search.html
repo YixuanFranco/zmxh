@@ -147,28 +147,35 @@ window.addEventListener('DOMContentLoaded', () => {
         cloud.appendChild(badge);
     });
 
-    // 核心：彻底解决标题冗余、Highlight 颗粒度、无限加载体验
+    // 核心：处理标题冗余与高亮合并，增加锁防止死循环
+    let isProcessing = false;
     const observer = new MutationObserver(() => {
-        document.querySelectorAll('.pagefind-ui__result-title').forEach(el => {
-            // 1. 彻底剔除垃圾标题
-            let text = el.innerText;
-            text = text.replace(/藏密修海\s*❖\s*典藏经阁\s*-\s*/g, '')
-                        .replace(/\s*-\s*藏密修海典藏/g, '')
-                        .replace(/藏密修海/g, '');
-            el.innerText = text;
-            el.dataset.cleaned = "true";
-        });
+        if (isProcessing) return;
+        isProcessing = true;
         
-        // 2. 补救 Highlight 问题 (Pagefind 默认逻辑较死，手动合并相连 mark)
-        document.querySelectorAll('.pagefind-ui__result-excerpt').forEach(excerpt => {
-            if(excerpt.dataset.repaired) return;
-            // 这是一个 Hack 处理：如果连续两个 mark 之间没有字符，合并它们
-            let html = excerpt.innerHTML;
-            if(html.includes('</mark><mark>')) {
-                excerpt.innerHTML = html.replace(/<\/mark><mark>/g, '');
-            }
-            excerpt.dataset.repaired = "true";
-        });
+        try {
+            document.querySelectorAll('.pagefind-ui__result-title').forEach(el => {
+                if(el.dataset.cleaned) return;
+                let text = el.innerText;
+                text = text.replace(/藏密修海\s*❖\s*典藏经阁\s*-\s*/g, '')
+                            .replace(/\s*-\s*藏密修海典藏/g, '')
+                            .replace(/藏密修海/g, '');
+                el.innerText = text;
+                el.dataset.cleaned = "true";
+            });
+            
+            document.querySelectorAll('.pagefind-ui__result-excerpt').forEach(excerpt => {
+                if(excerpt.dataset.repaired) return;
+                let html = excerpt.innerHTML;
+                if(html.includes('</mark><mark>')) {
+                    excerpt.innerHTML = html.replace(/<\/mark><mark>/g, '');
+                }
+                excerpt.dataset.repaired = "true";
+            });
+        } finally {
+            // 延迟重置，确保 DOM 稳定
+            setTimeout(() => { isProcessing = false; }, 50);
+        }
     });
     observer.observe(document.getElementById('search'), { childList: true, subtree: true });
 });
