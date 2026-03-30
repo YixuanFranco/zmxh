@@ -100,21 +100,8 @@ window.addEventListener('DOMContentLoaded', () => {
             font-size: 18px !important;
         }
 
-        /* 3. 清除按钮 */
-        .pagefind-ui__search-clear {
-            background: rgba(212,175,55,0.1) !important;
-            color: #d4af37 !important;
-            border: 1px solid rgba(212,175,55,0.3) !important;
-            border-radius: 20px !important;
-            padding: 4px 15px !important;
-            font-size: 12px !important;
-            font-weight: bold !important;
-            height: 30px !important;
-            margin-right: 15px !important;
-            transition: all 0.3s !important;
-            display: flex !important;
-            align-items: center !important;
-        }
+        /* 3. 清除按钮：隐藏，视觉更简洁 */
+        .pagefind-ui__search-clear { display: none !important; }
 
         /* 4. 隐藏无用提示和加载更多 */
         .pagefind-ui__message { display: none !important; }
