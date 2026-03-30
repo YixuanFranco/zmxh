@@ -22,8 +22,9 @@ h1, h2, h3 { font-family: 'Noto Serif SC', serif; }
 .hero h1 { font-size: clamp(24px, 8vw, 46px); margin: 0 0 16px 0; font-weight: 700; letter-spacing: 4px; text-shadow: 0 2px 20px rgba(212, 175, 55, 0.4); }
 .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
 .cloud-card { background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(20,10,10,0.9) 100%); border: 1px solid rgba(212,175,55,0.2); border-radius: 16px; padding: 25px; margin-bottom: 50px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-.cloud-badge { padding: 8px 16px; border-radius: 30px; cursor: pointer; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); font-family: 'Noto Serif SC', serif; margin: 6px; display: inline-block; }
-.cloud-badge:hover { background: rgba(212,175,55,0.2) !important; color: #fff !important; transform: scale(1.1) translateY(-2px); box-shadow: 0 5px 15px rgba(212,175,55,0.3);}
+.cloud-badge { padding: 8px 18px; border-radius: 30px; cursor: pointer; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); font-family: 'Noto Serif SC', serif; margin: 6px; display: inline-block; border: 1px solid rgba(212,175,55,0.25); color: var(--text-muted); background: rgba(255,255,255,0.02); font-size: 15px; }
+.cloud-badge:hover { background: rgba(212,175,55,0.15) !important; color: var(--primary) !important; transform: translateY(-2px); border-color: var(--primary); box-shadow: 0 5px 15px rgba(212,175,55,0.2); }
+.cloud-badge.active { background: rgba(212,175,55,0.2) !important; color: var(--primary) !important; border-color: var(--primary); box-shadow: 0 0 15px rgba(212,175,55,0.3); }
 </style>
 <link href="./pagefind/pagefind-ui.css" rel="stylesheet">
 </head>
@@ -36,12 +37,14 @@ h1, h2, h3 { font-family: 'Noto Serif SC', serif; }
 </div>
 
 <div class="container">
+    <!-- Word Cloud Section -->
     <div class="cloud-card">
         <h2 style="color: var(--primary); font-size: 20px; letter-spacing: 4px; margin-bottom: 10px;">❖ 万象词典云 ❖</h2>
         <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 25px;">点击法词，即刻照见三千大千世界</p>
         <div id="wordCloud"></div>
     </div>
 
+    <!-- Pagefind UI -->
     <div id="search"></div>
 </div>
 
@@ -52,95 +55,126 @@ window.addEventListener('DOMContentLoaded', () => {
         element: "#search", 
         showSubResults: true,
         translations: {
-            placeholder: "输入法言、经名、仪轨，叩问法界...",
-            clear_search: "清除",
+            placeholder: "输入法言、经名、仪轨...",
+            clear_search: "清 净",
             load_more: "加载更多法卷",
-            search_label: "全站搜索",
-            filters_label: "过滤器",
             zero_results: "法界未显示【[SEARCH_TERM]】之痕迹",
             many_results: "为【[SEARCH_TERM]】显现 [COUNT] 卷法轴",
-            one_result: "为【[SEARCH_TERM]】显现 [COUNT] 卷法轴",
-            alt_search: "未获结果，但发现相近法音：[SEARCH_TERM]",
-            search_suggestion: "为您建议：[SEARCH_TERM]",
             searching: "正在法界观照中..."
         }
     });
 
     const style = document.createElement('style');
     style.innerHTML = `
-        .pagefind-ui__search-input { background: rgba(0,0,0,0.5) !important; color: #d5ccbd !important; border: 1px solid rgba(212,175,55,0.3) !important; border-radius: 12px !important; padding-left: 20px !important; }
+        .pagefind-ui__search-input { background: rgba(0,0,0,0.5) !important; color: #d5ccbd !important; border: 1px solid rgba(212,175,55,0.3) !important; border-radius: 12px !important; padding-left: 20px !important; height: 60px !important; font-size: 18px !important; }
         .pagefind-ui__search-input:focus { border-color: #d4af37 !important; box-shadow: 0 0 15px rgba(212,175,55,0.2) !important; }
-        .pagefind-ui__message { color: #d4af37 !important; font-family: 'Noto Serif SC', serif !important; font-size: 18px !important; font-weight: bold; margin-bottom: 30px !important;}
-        .pagefind-ui__result { border-bottom: 1px solid rgba(212,175,55,0.1) !important; padding: 25px 0 !important; }
-        .pagefind-ui__result-title { color: #d4af37 !important; font-size: 22px !important; margin-bottom: 10px !important; font-family: 'Noto Serif SC', serif !important; }
+        .pagefind-ui__search-clear { 
+            background: rgba(212,175,55,0.1) !important; 
+            color: #d4af37 !important; 
+            border: 1px solid rgba(212,175,55,0.3) !important; 
+            border-radius: 20px !important; 
+            padding: 4px 15px !important; 
+            font-size: 12px !important; 
+            font-weight: bold !important; 
+            height: 30px !important;
+            margin-right: 15px !important;
+            transition: all 0.3s !important;
+        }
+        .pagefind-ui__search-clear:hover { background: rgba(212,175,55,0.2) !important; box-shadow: 0 0 10px rgba(212,175,55,0.4) !important; }
+        .pagefind-ui__message { color: #d4af37 !important; font-family: 'Noto Serif SC', serif !important; font-size: 18px !important; font-weight: bold; margin-bottom: 30px !important; border-bottom: 1px solid rgba(212,175,55,0.1); padding-bottom: 15px;}
+        .pagefind-ui__result { border-bottom: 1px solid rgba(212,175,55,0.1) !important; padding: 30px 0 !important; }
+        .pagefind-ui__result-title { color: #d4af37 !important; font-size: 22px !important; margin-bottom: 12px !important; font-family: 'Noto Serif SC', serif !important; line-height: 1.4 !important;}
         .pagefind-ui__result-link { text-decoration: none !important; }
-        .pagefind-ui__result-link:hover .pagefind-ui__result-title { color: #fff !important; text-decoration: underline !important; }
-        .pagefind-ui__result-excerpt { color: #d5ccbd !important; line-height: 1.8 !important; font-size: 15px; }
-        .pagefind-ui__result-excerpt mark { background: rgba(212,175,55,0.3) !important; color: #fff !important; font-weight: bold; padding: 0 4px; border-radius: 2px;}
-        .pagefind-ui__button { background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%) !important; color: #000 !important; border: none !important; border-radius: 20px !important; font-weight: bold !important; cursor: pointer !important;}
+        .pagefind-ui__result-link:hover .pagefind-ui__result-title { color: #fff !important; text-shadow: 0 0 10px rgba(212,175,55,0.3); }
+        .pagefind-ui__result-excerpt { color: #d5ccbd !important; line-height: 2 !important; font-size: 15px; opacity: 0.9; }
+        .pagefind-ui__result-excerpt mark { background: rgba(212,175,55,0.25) !important; color: #fff !important; font-weight: bold; padding: 2px 6px; border-radius: 4px;}
+        .pagefind-ui__button { background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%) !important; color: #000 !important; border: none !important; border-radius: 30px !important; font-weight: 800 !important; cursor: pointer !important; padding: 12px 30px !important; height: auto !important; margin-top: 20px !important;}
     `;
     document.head.appendChild(style);
 
-    const keywords = [
-        {k: "大圆满", w: 30}, {k: "妥噶", w: 30}, {k: "彻却", w: 28}, {k: "大手印", w: 28}, {k: "上师瑜伽", w: 25}, 
-        {k: "大威德", w: 22}, {k: "时轮金刚", w: 22}, {k: "胜乐金刚", w: 20}, {k: "玛哈嘎拉", w: 18}, {k: "绿度母", w: 18},
-        {k: "莲花生", w: 25}, {k: "宗喀巴", w: 16}, {k: "中阴救度", w: 15}, {k: "颇瓦法", w: 15}, {k: "金刚萨埵", w: 25},
-        {k: "观世音", w: 18}, {k: "药师佛", w: 15}, {k: "阿弥陀佛", w: 14}, {k: "菩提道", w: 20}, {k: "拙火", w: 15},
-        {k: "普巴金刚", w: 15}, {k: "仪式", w: 15}, {k: "灌顶", w: 18}, {k: "修法", w: 15}, {k: "心要", w: 18}
-    ];
+    const keywords = ["大圆满", "妥噶", "彻却", "大手印", "上师瑜伽", "大威德", "时轮金刚", "胜乐金刚", "玛哈嘎拉", "绿度母", "莲花生", "宗喀巴", "中阴救度", "颇瓦法", "金刚萨埵", "观世音", "药师佛", "阿弥陀佛", "菩提道", "拙火", "曼陀罗", "五加行", "灌顶", "仪轨", "实修"];
     
     const cloud = document.getElementById('wordCloud');
-    keywords.sort(() => Math.random() - 0.5).forEach(item => {
+    keywords.sort(() => Math.random() - 0.5).forEach(k => {
         const badge = document.createElement('div');
         badge.className = 'cloud-badge';
-        badge.innerText = item.k;
-        badge.style.fontSize = Math.min(24, Math.max(13, 12 + (item.w / 30) * 12)) + "px";
-        if(Math.random() > 0.5) {
-            badge.style.border = "1px solid rgba(212,175,55,0.4)";
-            badge.style.color = "#d4af37";
-            badge.style.background = "rgba(212,175,55,0.05)";
-        } else {
-            badge.style.border = "1px solid rgba(255,255,255,0.15)";
-            badge.style.color = "#d5ccbd";
-        }
-        badge.onclick = () => {
+        badge.innerText = k;
+        badge.onclick = function() {
+            document.querySelectorAll('.cloud-badge').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
             const inp = document.querySelector('.pagefind-ui__search-input');
             if(inp) {
-                inp.value = item.k;
+                inp.value = k;
                 inp.dispatchEvent(new Event('input', { bubbles: true }));
             }
         };
         cloud.appendChild(badge);
     });
+
+    // 拦截结果渲染，剔除标题冗余信息
+    const observer = new MutationObserver(() => {
+        document.querySelectorAll('.pagefind-ui__result-title').forEach(el => {
+            if(!el.dataset.cleaned) {
+                el.innerHTML = el.innerHTML.replace(/藏密修海\s*❖\s*典藏经阁\s*-\s*/, '').replace(/\s*-\s*藏密修海典藏/, '');
+                el.dataset.cleaned = "true";
+            }
+        });
+    });
+    observer.observe(document.getElementById('search'), { childList: true, subtree: true });
 });
 
 // ---------- 卷轴弹窗阅读引擎 ----------
 (function() {
     const modalHTML = `
     <style>
-    #qv { display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,0.85); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); opacity:0; transition:opacity 0.3s; align-items:center; justify-content:center; }
-    #qv-c { background:var(--bg); width:100%; height:100%; position:relative; transform:translateY(50px); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1); display:flex; flex-direction:column; overflow:hidden; }
-    @media(min-width: 850px) { #qv-c { max-width:900px; height:92%; border-radius:12px; border:1px solid rgba(212,175,55,0.2); } }
-    #qv-h { padding:15px 20px; border-bottom:1px solid rgba(212,175,55,0.1); background:var(--surface-solid); display:flex; justify-content:space-between; align-items:center; }
-    #qv-b { padding:0; overflow-y:auto; flex:1; -webkit-overflow-scrolling: touch; }
+    #qv { display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,0.9); backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px); opacity:0; transition:opacity 0.3s; align-items:center; justify-content:center; }
+    #qv-c { background:var(--bg); width:100%; height:100%; position:relative; transform:translateY(100%); transition:all 0.5s cubic-bezier(0.16, 1, 0.3, 1); display:flex; flex-direction:column; overflow:hidden; }
+    @media(min-width: 850px) { #qv-c { max-width:900px; height:95%; border-radius:16px; border:1px solid rgba(212,175,55,0.2); transform:translateY(50px); } }
+    #qv-h { padding:18px 24px; border-bottom:1px solid rgba(212,175,55,0.1); background:var(--surface-solid); display:flex; justify-content:space-between; align-items:center; z-index:10; }
+    #qv-b { padding:0; overflow-y:auto; flex:1; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; }
+    #qv-x { background:rgba(255,255,255,0.1); border:none; width:36px; height:36px; border-radius:50%; color:#fff; cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center; transition:0.3s; }
+    #qv-x:hover { background:var(--accent); }
     </style>
     <div id="qv"><div id="qv-c">
         <div id="qv-h">
-            <div style="font-weight:700; color:var(--primary); font-family:'Noto Serif SC', serif;">❖ 典藏经卷阅读</div>
-            <button id="qv-x" style="background:rgba(255,255,255,0.1); border:none; width:32px; height:32px; border-radius:50%; color:#fff; cursor:pointer;">✕</button>
+            <div id="qv-title" style="font-weight:700; color:var(--primary); font-family:'Noto Serif SC', serif; letter-spacing:1px;">❖ 典藏经卷阅读</div>
+            <div id="qv-controls" style="display:flex; gap:12px; align-items:center;">
+                <button id="qv-tts" style="background:rgba(212,175,55,0.15); border:1px solid var(--primary); color:var(--primary); padding:5px 15px; border-radius:20px; cursor:pointer; font-size:13px; font-weight:bold;">🎧 聆听开示</button>
+                <button id="qv-x">✕</button>
+            </div>
         </div>
         <div id="qv-b"></div>
     </div></div>`;
     document.body.insertAdjacentHTML('beforeend', modalHTML);
 
     const qv = document.getElementById('qv'), qvc = document.getElementById('qv-c'), qvb = document.getElementById('qv-b');
-    
+    let isSpeaking = false;
+
+    function stopSpeak() {
+        if(window.speechSynthesis) window.speechSynthesis.cancel();
+        isSpeaking = false;
+        document.getElementById('qv-tts').innerHTML = "🎧 聆听开示";
+    }
+
     function close() {
-        qv.style.opacity = '0'; qvc.style.transform = 'translateY(50px)';
-        setTimeout(() => { qv.style.display = 'none'; document.body.style.overflow = ''; }, 300);
+        stopSpeak();
+        qv.style.opacity = '0'; 
+        qvc.style.transform = window.innerWidth >= 850 ? 'translateY(50px)' : 'translateY(100%)';
+        setTimeout(() => { qv.style.display = 'none'; document.body.style.overflow = ''; }, 400);
     }
     document.getElementById('qv-x').onclick = close;
-    qv.onclick = (e) => { if(e.target === qv) close(); };
+    qv.onclick = (e) => { if(e.target === qv && window.innerWidth >= 850) close(); };
+
+    document.getElementById('qv-tts').onclick = function() {
+        if(isSpeaking) { stopSpeak(); return; }
+        const text = qvb.innerText.replace(/[❖📿🧘]/g, '').slice(0, 5000);
+        const ut = new SpeechSynthesisUtterance(text);
+        ut.lang = 'zh-CN'; ut.rate = 0.9;
+        ut.onend = () => { isSpeaking = false; this.innerHTML = "🎧 聆听开示"; };
+        window.speechSynthesis.speak(ut);
+        isSpeaking = true;
+        this.innerHTML = "⏹ 止息开示";
+    };
 
     document.addEventListener('click', e => {
         const a = e.target.closest('a');
@@ -149,12 +183,13 @@ window.addEventListener('DOMContentLoaded', () => {
             qv.style.display = 'flex'; void qv.offsetWidth;
             qv.style.opacity = '1'; qvc.style.transform = 'translateY(0)';
             document.body.style.overflow = 'hidden';
-            qvb.innerHTML = '<div style="text-align:center; padding:100px; color:var(--primary);">观想加载中...</div>';
+            qvb.innerHTML = '<div style="text-align:center; padding:120px; color:var(--primary); font-family:serif; letter-spacing:2px; animation:blink 1.5s infinite;">观想降临中...</div>';
             
             fetch(a.href).then(r => r.text()).then(html => {
                 const doc = new DOMParser().parseFromString(html, 'text/html');
                 const content = doc.querySelector('.container') || doc.body;
                 const b = content.querySelector('.breadcrumb'); if(b) b.remove();
+                const h1 = content.querySelector('h1'); if(h1) document.getElementById('qv-title').innerText = h1.innerText;
                 qvb.innerHTML = '';
                 qvb.appendChild(content);
                 qvb.scrollTop = 0;
@@ -164,9 +199,6 @@ window.addEventListener('DOMContentLoaded', () => {
 })();
 </script>
 
-<div style="text-align: center; color: rgba(212,175,55,0.3); font-size: 12px; padding: 40px 0; font-family:'Noto Serif SC', serif;">
-    ❖ 大千法界，唯心所造 ❖
-</div>
-
+<style>@keyframes blink { 0% {opacity:0.3;} 50% {opacity:1;} 100% {opacity:0.3;} }</style>
 </body>
 </html>

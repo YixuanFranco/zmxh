@@ -48,17 +48,7 @@ h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto S
 
 .post { background: var(--surface-solid); border-radius: 12px; margin-bottom: 35px; border: 1px solid rgba(255,255,255,0.03); box-shadow: 0 10px 30px rgba(0,0,0,0.4); overflow: hidden;}
 .post-header { background: linear-gradient(90deg, #1d1412 0%, #291c18 100%); padding: 16px 24px; border-bottom: 1px solid rgba(212,175,55,0.1); font-weight: 600; color: var(--primary); display: flex; align-items: center; flex-wrap: wrap; gap: 10px;}
-.post-header .avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); color: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; border: 2px solid rgba(212,175,55,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.5); margin-right: 8px;}
 .post-body { padding: 30px 24px; font-size: 16px; overflow-wrap: break-word; color: #d5ccbd; line-height: 2; font-family: 'Noto Serif SC', serif; }
-.post-body img { max-width: 100%; border-radius: 8px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
-
-.search-container { margin-bottom: 50px; position: relative; }
-.search-container input { width: 100%; padding: 20px 20px 20px 55px; border: 1px solid rgba(212,175,55,0.2); background: rgba(0,0,0,0.5); color: var(--text); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-radius: 12px; font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; outline: none; }
-.search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(212,175,55,0.15); background: rgba(20,15,10,0.8); }
-.search-container input::placeholder { color: #6b6054; }
-.search-container::before { content: "❖"; position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font-size: 18px; color: var(--primary); opacity: 0.8; }
-.badge-op { margin-left:auto; background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 2px 10px rgba(212,175,55,0.4);}
-.badge-floor { margin-left:auto; background: rgba(255,255,255,0.05); color: #9e9389; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
 </style>
 </head><body>
 <div class="hero">
@@ -78,49 +68,6 @@ h1, h2, h3, .cat-title, .f-name, .hero h1, .thread-row h2 { font-family: 'Noto S
 .oracle-spin { animation: oracleSpin 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards; pointer-events: none; }
 @keyframes oracleSpin { 0% { transform: scale(1) rotate(0deg); filter: blur(0px); opacity:1;} 50% { transform: scale(1.5) rotate(180deg); filter: blur(4px); opacity:0.8;} 100% { transform: scale(4) rotate(360deg); filter: blur(10px); opacity:0;} }
 </style>
-<script>
-const oracleTids = [8192, 8193, 8194, 3257, 4, 8197, 8201, 11, 12, 8206, 14, 19542, 19, 20, 8214, 23, 8216, 30, 31, 8223, 8226, 8227, 8228, 8229, 38, 39, 36, 40, 8237, 19214, 46, 51, 52, 57, 8250, 2933, 63, 67, 8260, 70, 102, 8294, 107, 19560, 114, 120, 122, 130, 135, 136, 140, 141, 8332, 160, 161, 163, 164, 169, 186, 192, 196, 8393, 202, 206, 8401, 8405, 217, 222, 8415, 227, 8423, 8424, 8430, 8432, 8433, 8434, 8435, 8436, 245, 8438, 8437, 8440, 8441, 241, 8453, 8454, 8455, 8456, 8457, 8458, 8459, 8460, 8461, 8462, 8463, 8464, 8465, 19593, 270, 277, 8484, 294, 296, 298, 316, 8510, 8511, 332, 335, 336, 337, 338, 339, 340, 346, 8539, 350, 357, 1699, 359, 362, 363, 366, 372, 376, 378, 390, 394, 397, 398, 19618, 400, 404, 408, 414, 419, 425, 427, 429, 433, 436, 437, 439, 440, 443, 19628, 452, 19629, 19630, 19631, 469, 19632, 470, 473, 474, 475, 19634, 19635, 19636, 494, 497, 498, 500, 8694, 19639, 8698, 8700, 8701, 510, 513, 520, 523, 524, 19643, 525, 527, 531, 19645, 536, 535, 539, 541, 542, 545, 546, 550, 552, 553, 554, 555, 556, 557, 558, 559, 570, 571, 572, 573, 575, 576, 577, 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 9887, 593, 594, 595, 596, 597, 598, 599, 600, 601, 602, 612, 619, 622, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 635, 636, 639, 641, 650, 651, 652, 653, 655, 656, 657, 658, 659, 666, 668, 669, 671, 672, 673, 674, 680, 690, 691, 692, 699, 700, 703, 704, 708, 713, 717, 718, 725, 726, 732, 734, 735, 758, 763, 8982, 790, 8988, 8992, 804, 817, 822, 9015, 824, 9018, 826, 9020, 827, 829, 828, 832, 9027, 836, 841, 854, 868, 872, 876, 877, 878, 881, 883, 886, 889, 890, 893, 895, 896, 897, 898, 902, 904, 905, 906, 907, 966, 967, 968, 971, 972, 973, 974, 976, 978, 985, 990, 991, 992, 993, 995, 996, 998, 999, 1000, 1001, 1002, 1003, 1004, 1005, 1006, 1008, 1018, 1019, 1028, 1029, 1032, 1033, 1037, 1038, 9232, 9233, 9234, 1040, 9238, 9239, 9240, 1049, 9242, 9241, 1053, 1058, 1059, 1060, 9250, 9253, 9251, 9256, 9254, 9258, 1067, 1068, 1069, 1070, 1071, 1072, 9264, 9263, 9260, 1076, 1077, 9261, 1079, 1080, 1081, 9274, 1083, 9271, 9277, 9273, 9276, 9280, 9272, 9282, 9281, 9275, 9286, 1095, 1096, 1097, 9288, 9291, 9292, 9287, 9290, 9293, 9289, 9297, 9298, 9299, 9300, 9301, 9302, 9303, 9304, 9305, 9306, 1115, 1116, 1118, 1119, 1120, 9313, 1122, 9314, 1124, 9315, 9318, 1127, 1128, 1129, 1130, 1131, 9321, 9317, 1134, 9319, 9328, 1137, 9329, 9334, 9339, 1148, 1149, 9341, 9343, 1152, 9345, 1154, 1155, 1156, 9344, 9349, 9351, 9348, 9346, 9355, 9358, 9360, 9363, 9364, 9365, 1174, 9367, 1176, 9366, 9369, 1182, 1184, 1186, 1188, 1191, 1194, 1195, 1197, 1199, 1206, 1209, 1210, 1214, 1216, 1225, 1227, 1229, 1230, 1231, 1232, 1233, 1234, 1235, 1236, 1237, 1240, 1245, 1248, 1251, 1252, 1253, 1254, 1255, 1261, 1262, 1266, 1268, 1269, 1272, 1286, 1289, 1296, 1297, 1298, 1299, 1300, 1301, 1320, 1326, 1327, 264, 1329, 1334, 1335, 1336, 1339, 1340, 1341, 1342, 1343, 1344, 266, 1346, 1347, 1348, 1356, 1363, 1364, 1368, 1369, 1371, 1372, 1373, 1376, 1377, 1379, 1381, 1382, 1383, 1384, 1385, 1386, 1387, 1390, 1393, 1406, 1407, 1408, 1409, 1410, 1411, 9603, 9604, 1414, 9606, 9607, 1417, 1418, 9605, 1427, 1430, 1431, 1439, 1446, 1452, 1459, 1464, 1468, 1470, 1476, 1488, 1489, 1495, 1496, 1498, 1499, 1500, 1502, 1505, 1515, 1521, 1522, 1523, 1524, 1525, 1530, 1533, 1534, 1535, 1540, 1541, 1544, 1548, 1549, 1550, 1554, 1561, 1563, 1564, 1567, 1569, 1575, 1577, 1580, 1582, 1583, 1586, 1587, 1589, 1593, 1594, 1598, 1599, 1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1611, 1612, 1613, 1614, 1616, 1617, 1621, 1623, 1625, 1626, 1629, 1632, 1637, 1639, 1640, 1641, 1642, 1643, 1644, 1647, 1648, 1651, 1654, 1656, 1657, 1658, 1661, 1663, 1664, 1666, 1667, 1668, 1669, 1670, 1672, 1673, 1674, 1675, 1676, 1677, 1678, 1681, 1684, 1685, 1686, 1688, 1689, 1690, 1691, 9885, 9886, 1695, 9888, 9889, 9890, 9891, 9892, 1698, 1693, 1696, 1704, 1705, 1706, 1707, 1708, 1709, 1710, 1711, 1712, 1713, 1714, 1715, 1719, 1720, 1721, 1722, 1723, 1724, 1725, 1726, 1727, 1728, 1729, 1730, 1731, 1732, 1734, 1735, 1736, 1739, 1740, 1741, 1743, 1744, 1745, 1746, 9939, 9940, 1748, 1747, 1751, 1752, 1753, 1749, 1754, 1756, 1757, 1758, 1759, 1760, 1761, 1763, 1765, 1766, 1767, 1768, 1769, 1771, 1772, 1774, 1776, 1778, 1779, 1780, 1783, 1784, 1785, 1789, 1791, 1796, 1797, 1800, 1804, 1809, 1811, 1814, 1816, 1818, 1819, 1821, 1822, 1834, 1835, 1836, 1837, 1838, 1839, 1847, 1850, 1851, 1853, 1854, 1855, 1856, 1857, 1858, 1863, 1875, 1878, 1881, 1882, 1884, 1885, 1887, 1888, 1889, 10082, 1891, 10079, 1896, 1898, 1903, 1907, 1917, 1918, 1919, 1920, 1922, 1925, 1926, 1927, 1928, 1929, 1930, 1947, 1971, 1972, 1975, 10168, 1977, 1976, 1982, 1984, 1985, 1986, 1988, 1990, 2000, 2016, 2025, 2057, 2060, 2061, 2062, 2063, 2064, 2067, 2070, 2075, 2088, 2089, 2097, 10292, 2103, 2107, 2109, 2121, 2138, 2141, 2146, 2147, 2153, 2157, 2158, 2165, 2167, 2169, 2170, 2171, 2172, 2175, 2177, 2179, 2180, 2183, 2184, 2185, 2186, 2189, 2190, 2195, 2196, 2198, 2199, 2200, 2203, 2214, 2230, 2233, 2234, 2235, 2237, 2238, 2239, 2241, 2243, 2245, 2246, 2247, 2249, 2250, 2251, 2252, 2253, 2260, 2261, 2262, 2263, 2264, 2265, 2266, 2268, 2269, 2270, 2272, 2274, 2275, 2276, 2277, 2278, 2279, 2280, 2281, 2282, 2283, 2284, 2285, 2286, 2287, 2288, 2290, 2291, 2292, 2296, 2297, 2301, 2302, 2304, 2305, 2308, 2312, 2319, 2321, 2322, 2323, 2324, 2325, 2326, 2327, 2328, 2329, 2331, 2332, 2333, 2334, 2335, 2336, 2337, 2338, 2339, 2340, 2341, 2343, 2344, 2349, 2354, 2355, 2357, 2359, 2361, 2362, 2363, 2364, 2365, 2367, 2368, 2369, 2370, 2371, 2372, 2375, 2376, 2377, 2378, 2379, 2381, 2382, 2384, 2385, 2386, 2387, 2394, 2395, 2396, 2397, 2398, 2399, 2400, 2401, 2402, 2403, 2404, 2405, 2406, 2407, 2408, 2409, 2410, 2411, 2412, 2413, 2414, 2415, 2416, 2417, 2418, 2419, 2420, 2421, 2422, 2423, 2424, 2427, 2428, 2434, 2438, 2555, 2556, 2560, 2567, 2568, 2570, 2572, 2584, 2588, 2589, 2590, 2591, 2592, 2594, 2595, 2596, 2607, 2608, 2609, 2611, 2612, 2613, 2614, 2615, 2616, 2617, 2618, 2619, 2622, 2625, 2626, 2627, 2629, 2630, 2632, 2633, 2634, 2635, 2637, 2638, 2639, 2640, 2642, 2644, 2645, 2646, 2649, 2651, 2652, 2653, 2654, 2655, 2656, 2657, 2658, 2660, 2663, 2664, 2665, 2666, 2667, 2668, 2669, 2670, 2681, 2683, 2684, 2685, 2687, 2688, 19083, 19086, 19087, 19088, 19089, 19090, 19091, 19092, 19093, 19094, 2711, 19095, 19096, 19098, 19099, 19100, 2717, 19102, 19097, 19104, 19105, 19101, 19107, 19106, 19103, 19110, 19109, 19112, 19113, 19114, 19115, 19116, 19117, 19118, 19119, 2736, 19121, 19120, 19123, 19124, 19125, 19126, 19122, 19128, 19129, 19130, 2747, 19131, 2749, 19133, 2751, 19136, 19137, 19135, 19139, 19134, 2757, 19142, 19143, 19144, 19141, 19140, 19147, 19148, 19149, 19150, 19151, 19152, 2769, 19154, 19155, 19156, 19157, 19158, 19159, 19160, 19161, 19162, 19163, 19164, 19165, 19166, 19167, 19168, 19169, 19170, 2787, 19171, 19172, 2790, 19175, 19176, 19177, 19178, 2795, 19180, 19181, 19182, 19183, 19184, 19185, 19186, 19187, 19188, 19189, 2806, 19191, 2808, 19193, 19194, 19195, 19192, 19190, 19197, 19196, 19199, 19200, 19202, 19203, 19204, 19205, 2822, 19206, 19208, 19209, 19210, 19211, 19212, 19213, 2830, 2831, 19215, 2833, 2834, 19218, 19219, 19221, 19217, 2839, 19224, 19216, 19226, 19220, 19228, 19229, 19227, 19222, 19232, 19233, 2850, 19235, 2852, 2853, 19237, 19234, 2856, 19241, 19242, 19243, 19244, 19245, 19239, 19247, 19248, 19240, 19250, 19251, 19249, 19253, 19254, 19255, 19256, 19257, 19258, 19259, 19260, 19261, 19262, 19263, 19264, 19265, 19266, 19267, 2884, 19268, 19269, 19271, 19272, 19273, 19274, 19275, 19276, 2893, 19277, 2895, 2896, 19279, 19281, 19283, 19284, 19285, 19286, 19287, 19288, 19289, 19290, 2907, 2908, 2909, 19292, 19291, 2912, 19297, 2914, 2915, 2916, 19299, 19302, 19296, 19301, 19305, 19306, 19298, 19308, 19309, 19307, 19311, 19312, 19313, 19314, 2931, 19315, 19317, 19318, 19319, 19320, 19321, 19322, 19323, 19324, 19325, 2937, 19327, 19328, 2945, 2946, 19331, 19332, 19333, 19334, 19335, 19336, 19337, 19338, 19330, 2956, 19340, 19342, 19343, 19344, 19341, 19346, 19345, 19347, 19349, 19348, 2967, 2968, 19351, 2970, 19352, 19356, 2973, 19357, 19353, 19360, 19358, 19362, 19359, 19364, 19365, 19366, 19367, 2984, 19368, 19370, 19369, 19372, 19373, 19374, 2991, 19375, 19377, 19378, 19379, 2996, 2997, 19381, 2999, 19384, 3001, 3002, 19383, 3004, 19388, 3006, 19390, 19387, 3009, 3010, 19393, 19396, 3012, 19398, 19397, 19395, 19400, 3018, 3019, 3020, 19403, 19406, 19399, 19408, 3025, 3026, 19410, 3028, 3029, 3030, 3031, 19413, 19415, 19417, 19416, 19420, 3037, 19419, 19418, 3040, 3041, 19422, 3043, 3044, 3045, 3046, 19431, 19430, 19424, 19434, 19428, 19432, 19437, 19438, 19439, 19440, 19441, 19442, 19443, 19436, 19445, 19446, 19447, 19448, 19449, 19444, 19451, 19452, 19453, 19454, 19455, 19456, 19450, 19458, 19459, 19460, 3076, 19462, 19463, 19464, 19465, 19466, 19467, 19468, 19469, 19470, 19471, 19472, 19473, 19474, 3087, 19476, 19477, 19478, 19479, 19480, 19481, 3097, 19483, 3100, 19485, 19486, 19487, 19488, 19489, 19490, 19491, 19492, 19493, 19494, 19495, 3112, 19497, 19498, 3115, 3116, 19501, 19502, 19503, 19500, 19504, 19506, 19505, 19508, 19509, 19510, 3127, 19511, 19512, 19514, 19515, 19507, 19517, 19518, 19519, 19520, 19513, 19521, 19523, 19524, 19525, 19526, 19527, 19528, 19529, 19530, 3147, 19532, 19531, 19534, 19535, 19536, 19537, 19538, 19539, 19540, 19541, 19533, 3156, 19544, 19545, 19546, 19547, 19548, 19549, 3166, 19551, 19550, 19553, 19552, 19555, 3172, 19556, 19558, 19559, 19557, 19561, 19562, 19563, 19564, 19565, 19566, 19567, 3184, 19568, 19570, 19569, 19572, 19573, 19574, 19575, 19571, 19577, 3190, 19579, 19580, 19581, 19582, 19583, 3200, 19585, 19584, 19587, 19588, 19589, 19590, 19591, 19592, 19586, 19594, 3211, 19596, 19597, 19598, 19599, 19595, 19601, 19600, 19603, 19604, 19605, 19606, 19602, 19608, 19609, 19610, 19607, 19612, 19613, 19614, 19615, 19611, 19617, 3234, 3235, 19620, 19621, 19619, 19623, 19624, 19625, 19622, 19627, 19626, 3245, 3246, 3247, 3248, 3249, 3250, 3251, 3252, 3253, 19633, 3255, 3256, 19638, 3258, 19641, 19644, 19642, 19637, 19647, 19648, 19640, 19650, 19649, 19652, 19653, 19654, 19646, 19651, 3266, 19658, 19659, 19660, 19661, 3271, 19666, 19667, 19668, 3285, 19669, 19670, 19672, 19673, 19674, 19675, 19671, 3298, 3316, 3327, 3328, 3329, 3330, 3332, 3334, 3341, 3344, 3351, 3355, 3356, 3359, 3361, 3375, 3376, 3382, 3389, 3390, 3393, 3402, 3404, 3408, 3411, 3412, 3413, 3414, 3415, 3418, 3419, 3421, 3424, 3426, 3428, 3431, 3433, 3434, 3435, 3436, 3437, 3438, 3441, 3445, 3446, 3447, 3448, 3450, 3454, 3457, 3460, 3466, 3469, 3473, 3474, 3479, 3480, 3492, 3504, 3507, 3520, 3522, 3523, 3558, 3586, 3594, 3606, 3608, 3609, 3610, 3611, 3622, 3624, 3636, 3648, 3652, 3658, 3659, 3673, 3676, 3681, 3701, 3702, 3707, 3709, 3712, 3714, 3715, 3722, 3733, 3760, 3766, 3767, 3777, 3795, 3804, 3806, 3807, 3815, 3816, 3817, 3818, 3820, 3821, 3823, 3824, 3835, 3836, 3837, 3852, 3861, 3866, 3867, 3868, 3871, 3872, 3875, 3889, 3893, 3895, 3899, 3901, 3904, 3905, 3906, 3907, 3918, 3942, 3959, 3963, 3964, 3969, 3975, 3976, 3988, 3989, 3990, 3991, 4006, 4008, 4009, 4043, 4046, 4052, 4054, 4058, 4061, 4071, 4076, 4102, 4107, 4108, 3094, 4118, 4119, 4122, 4128, 3096, 4180, 4189, 4190, 4191, 4193, 4197, 4202, 4203, 4204, 4205, 4206, 4207, 4208, 4209, 4210, 4211, 4212, 3098, 4214, 4215, 4216, 4217, 4218, 4213, 4220, 19380, 4222, 4221, 4225, 4226, 4227, 4228, 4229, 4230, 4231, 4233, 4234, 3099, 4243, 4248, 4256, 4260, 4261, 4263, 4268, 4269, 4271, 19382, 4285, 3101, 4288, 4289, 3102, 4321, 4329, 4332, 4333, 4334, 4335, 3103, 4337, 4338, 4339, 4340, 4341, 4344, 4346, 19385, 4352, 3104, 4368, 19386, 4374, 4388, 4389, 4390, 4391, 4392, 3105, 4394, 4393, 4406, 4408, 4409, 4410, 4413, 4414, 3106, 4423, 4426, 4427, 4428, 4437, 3107, 12636, 12638, 4450, 4459, 4460, 3108, 12666, 4486, 4499, 4508, 4515, 4517, 4520, 4526, 4530, 12727, 12728, 4540, 4541, 4542, 4547, 4550, 4551, 4553, 4564, 4572, 4586, 4587, 4597, 4603, 4607, 4608, 3114, 4656, 4659, 4667, 4680, 12877, 4692, 4693, 4702, 4704, 4708, 4713, 4717, 4718, 4720, 4725, 4746, 4748, 4749, 4750, 4753, 7458, 4764, 4765, 12964, 12965, 4772, 7462, 12969, 12970, 12971, 12972, 12973, 12974, 12975, 12976, 12977, 12978, 12979, 12980, 12981, 12982, 12983, 12984, 12985, 12986, 12987, 12988, 12989, 12990, 12991, 12992, 12993, 7467, 12995, 12996, 12994, 7468, 12999, 12998, 13006, 13007, 13008, 13009, 13010, 4819, 4820, 4821, 13011, 13012, 13013, 19404, 4829, 4831, 13024, 13025, 13026, 13027, 13028, 13029, 13030, 13031, 7474, 13033, 13038, 13041, 13044, 13045, 13046, 4855, 13047, 13049, 13050, 13048, 13051, 13053, 13054, 13055, 4857, 3124, 4869, 4881, 4897, 4899, 19407, 4913, 4916, 4937, 4943, 19409, 7498, 4963, 3128, 7500, 4970, 4971, 4976, 4978, 5003, 5006, 5015, 5016, 19412, 5029, 5032, 5033, 7514, 5038, 5039, 5042, 5048, 5067, 5074, 5075, 5077, 7526, 5099, 5106, 5109, 5110, 5111, 5119, 5120, 5121, 5128, 5131, 5132, 5136, 5139, 5141, 5144, 5145, 5146, 5147, 5149, 5166, 5172, 5174, 5194, 5198, 5199, 5200, 5202, 5206, 5207, 5208, 5209, 5210, 5211, 5212, 5213, 5214, 5215, 5216, 5920, 7550, 5219, 5222, 5223, 5227, 5228, 5230, 13426, 13427, 13428, 13429, 13430, 5239, 13433, 13440, 13441, 13446, 13456, 13459, 13460, 13462, 13463, 13464, 13467, 13468, 13527, 13528, 13534, 13546, 2710, 13747, 13748, 13749, 9252, 9255, 2748, 2758, 2759, 2786, 2791, 2793, 2796, 9311, 2799, 9312, 5914, 14107, 14108, 5915, 2804, 5916, 14109, 2805, 5922, 5919, 5924, 14117, 5925, 5927, 5926, 5921, 5923, 2807, 5933, 5934, 5937, 2809, 5943, 5944, 5945, 5947, 5954, 5959, 5961, 5962, 5963, 5965, 2814, 5969, 5970, 5971, 5972, 5973, 5976, 5984, 5985, 2823, 6015, 2824, 2825, 6025, 2826, 6030, 6031, 9340, 6036, 19111, 6055, 6060, 6076, 6077, 6082, 6083, 6084, 6101, 6115, 19127, 6123, 2846, 6129, 6131, 6132, 6135, 6136, 6137, 6143, 19132, 6149, 6150, 6153, 6154, 6155, 6156, 6160, 6161, 6164, 6167, 6168, 6169, 6170, 6171, 19138, 6185, 6190, 6191, 6192, 6193, 6194, 19145, 6213, 19146, 6227, 6232, 6233, 6234, 6235, 6240, 6247, 6250, 6251, 6252, 19153, 6255, 6256, 6257, 6258, 6259, 6260, 6261, 6262, 6264, 6265, 6267, 6270, 6271, 6272, 6273, 6275, 6280, 6283, 6287, 6288, 6289, 6291, 6293, 6305, 6307, 6308, 6309, 6310, 6311, 6317, 6319, 6324, 6336, 6344, 19173, 6354, 6356, 19174, 6361, 6365, 6366, 6367, 6381, 19179, 2899, 6396, 6398, 6406, 2902, 6409, 6411, 6412, 6420, 6425, 6427, 6429, 6443, 6478, 19198, 6487, 19201, 6511, 6513, 2924, 19207, 2925, 6544, 6556, 6557, 6558, 6559, 6560, 6561, 6562, 6563, 6564, 6565, 6566, 6567, 6568, 6569, 6570, 6571, 6572, 6573, 6574, 6575, 6576, 6577, 6578, 6579, 6580, 6581, 6582, 6583, 6584, 6585, 6586, 6587, 6588, 6589, 6590, 6591, 6592, 6593, 6594, 6595, 6596, 6597, 6598, 6599, 6600, 6601, 6602, 6603, 6604, 6605, 6606, 6607, 6608, 6609, 6610, 6611, 6612, 19223, 19225, 6616, 6622, 6623, 6626, 6627, 19230, 6643, 6656, 19236, 6671, 19238, 6683, 6685, 6686, 6687, 6688, 6689, 6690, 6691, 6692, 6700, 6710, 6713, 6714, 6715, 6716, 6717, 6720, 6721, 6722, 6723, 6724, 19246, 6726, 6727, 6728, 2966, 6735, 6738, 2969, 6754, 6755, 6756, 6757, 6758, 6759, 6760, 6761, 6762, 6763, 2972, 6765, 6764, 6767, 6768, 6769, 6770, 2974, 6778, 2976, 6790, 6794, 6799, 6800, 6801, 6803, 6804, 6805, 6806, 6808, 6826, 6827, 6828, 6830, 6831, 6834, 6835, 6854, 6855, 6856, 6858, 6859, 6861, 6862, 6873, 6876, 6878, 6879, 6880, 19278, 6886, 6888, 6889, 19280, 6891, 6894, 6895, 6900, 19282, 6912, 6918, 6926, 6927, 6928, 6943, 19293, 3011, 19294, 6966, 6967, 19295, 6969, 3013, 3017, 19300, 6996, 7005, 7006, 19303, 19304, 3023, 7033, 19310, 7044, 7051, 7059, 7071, 7072, 19316, 7076, 7081, 7082, 3038, 7112, 7114, 7117, 7129, 7131, 7133, 19329, 3048, 7145, 3049, 3050, 7155, 7154, 7158, 7159, 7160, 3051, 7162, 7163, 3052, 7165, 7168, 3053, 3054, 3055, 7180, 7181, 7182, 3056, 7186, 19339, 3057, 3058, 3059, 3060, 3061, 7214, 3062, 7217, 3063, 3064, 3065, 7231, 3066, 3067, 7241, 7242, 19350, 3068, 7243, 7244, 3069, 7249, 7252, 3070, 7255, 7256, 3071, 7262, 19354, 7264, 3072, 7263, 7266, 19355, 7269, 3073, 7271, 7272, 7265, 7274, 7275, 7276, 3074, 7278, 7279, 3075, 7284, 7285, 7286, 7287, 7288, 7290, 7291, 7292, 3077, 7294, 3078, 7298, 19361, 3079, 3080, 7307, 7308, 19363, 7310, 3081, 7312, 7309, 7314, 7315, 7316, 7317, 7318, 7319, 3083, 7321, 7322, 3082, 7323, 3084, 7327, 7328, 7329, 3085, 7330, 7333, 7334, 3086, 7336, 7337, 7340, 7341, 7344, 3088, 7348, 7349, 19371, 3089, 7355, 3090, 7358, 3091, 7363, 7364, 7365, 7366, 7367, 3092, 3093, 7373, 19376, 7375, 7376, 7377, 7378, 7379, 7380, 7381, 7382, 7383, 3095, 7385, 7386, 7387, 7388, 7389, 7390, 7391, 7392, 7393, 7394, 7395, 7396, 7397, 7398, 7399, 7400, 7401, 7402, 7403, 7404, 7405, 7406, 7407, 7408, 7409, 7410, 7411, 7412, 7413, 7414, 7415, 7416, 7417, 7418, 7419, 7420, 7421, 7422, 7423, 7424, 7425, 7426, 7427, 7428, 7429, 7430, 7431, 7432, 7433, 7434, 7435, 7436, 7437, 7438, 7439, 7440, 7441, 7442, 7443, 19389, 7445, 7446, 7447, 7448, 7449, 7450, 7451, 7452, 7453, 7454, 7455, 7456, 7457, 19391, 19392, 3109, 3110, 7460, 7459, 3111, 19394, 7465, 7463, 7464, 7469, 7461, 7466, 7472, 7470, 7473, 7471, 7476, 7477, 7478, 7479, 7480, 7475, 7482, 7483, 7484, 7485, 7486, 7487, 7488, 7489, 7490, 7491, 7492, 7493, 7494, 7495, 7496, 7497, 3118, 7499, 19401, 7501, 7502, 7503, 7504, 7505, 7506, 7507, 7508, 7509, 7510, 7511, 7512, 7513, 19402, 7515, 7516, 7517, 7518, 7519, 7520, 7521, 7522, 7523, 7524, 7525, 19405, 7527, 7528, 7529, 7530, 7531, 7532, 7533, 7534, 7535, 7536, 7537, 7538, 7539, 7540, 7541, 7542, 7543, 7544, 7545, 7546, 7547, 7548, 7549, 19411, 7551, 7552, 7553, 7554, 7555, 7556, 7557, 7558, 7559, 7560, 7561, 7562, 7563, 7564, 7565, 19414, 7566, 7568, 7567, 7570, 7571, 7572, 7573, 7574, 7575, 7576, 7577, 7578, 3138, 7599, 7600, 7601, 19421, 7602, 3139, 19423, 19425, 19426, 7666, 7667, 7670, 19435, 7679, 7680, 7681, 7682, 3155, 7684, 7685, 7683, 7688, 7690, 7692, 7693, 7695, 7700, 7702, 7703, 7710, 7715, 7716, 3163, 7729, 7733, 7745, 7748, 7749, 7753, 7768, 7779, 7780, 7787, 7792, 7796, 7800, 7813, 7814, 7815, 7816, 7817, 7818, 7819, 7820, 7821, 7827, 7829, 7830, 7833, 7835, 7836, 7837, 7838, 3186, 7840, 7841, 7843, 7847, 7848, 7914, 7930, 7931, 7932, 7936, 7937, 7944, 7946, 7949, 7953, 19496, 3214, 7980, 7982, 7983, 3215, 7987, 3216, 7990, 7991, 7992, 19499, 3217, 7993, 7994, 7989, 7998, 3218, 7999, 8001, 3219, 8005, 8006, 8007, 8008, 8009, 3220, 8011, 8012, 8013, 3221, 8015, 8010, 3222, 8022, 8027, 8030, 8031, 4853, 8033, 8040, 8043, 8045, 8054, 8056, 8058, 8059, 8060, 8061, 8063, 8065, 8067, 8070, 8071, 8072, 8074, 19516, 19522, 8174, 8176, 8177, 8180, 8181, 8182, 8187, 8188, 8189, 8190, 8191];
-document.getElementById('oracleBtn').addEventListener('click', function(e) {
-    const btn = this;
-    const syllable = document.getElementById('oracleSyllable');
-    
-    btn.style.opacity = 0.5;
-    btn.style.pointerEvents = 'none';
-    btn.innerText = "法 谛 降 临";
-    btn.style.letterSpacing = "4px";
-    
-    syllable.style.animation = 'none';
-    void syllable.offsetWidth;
-    syllable.classList.add('oracle-spin');
-    
-    setTimeout(() => {
-        setTimeout(() => {
-            btn.innerText = "叩 问";
-            btn.style.opacity = 1;
-            btn.style.pointerEvents = 'auto';
-            btn.style.letterSpacing = "8px";
-            syllable.classList.remove('oracle-spin');
-            syllable.style.animation = 'breath 4s ease-in-out infinite';
-        }, 500);
-        
-        if(oracleTids.length > 0) {
-            const randomTid = oracleTids[Math.floor(Math.random() * oracleTids.length)];
-            // 巧用系统已有的卷轴拦截器
-            let dummyLink = document.createElement('a');
-            dummyLink.className = 'thread-row';
-            dummyLink.href = 'threads/' + randomTid + '.html';
-            document.body.appendChild(dummyLink);
-            setTimeout(() => {
-                dummyLink.click();
-                setTimeout(() => dummyLink.remove(), 100);
-            }, 10);
-        } else {
-            alert("宗库法阵尚未凝结完成。");
-        }
-    }, 1300);
-});
-</script>
-
 
 <!-- Search Section -->
 <div class="search-section" style="margin-bottom: 80px; padding: 0 10px; text-align: center;">
@@ -129,366 +76,86 @@ document.getElementById('oracleBtn').addEventListener('click', function(e) {
         <span style="color: var(--primary); margin-right: 10px; font-size: 20px;">❖</span> 进入须弥法界全搜索 (包含模糊搜索与云词典)
     </a>
 </div>
-<!-- /Search Section -->
 
-<div class="category"><div class="cat-title">藏密修海上师本尊</div><div class="forums-grid"><a class="forum-card" href="forums/金刚上师金刚持.html"><div class="f-icon">🧘</div><div class="f-info"><div class="f-name">金刚上师金刚持</div><div class="f-count">包含 31 部传承法轴</div></div></a><a class="forum-card" href="forums/诸佛如来本尊坛.html"><div class="f-icon">📿</div><div class="f-info"><div class="f-name">诸佛如来本尊坛</div><div class="f-count">包含 329 部传承法轴</div></div></a></div></div><div class="category"><div class="cat-title">藏密修海金刚宝藏</div><div class="forums-grid"><a class="forum-card" href="forums/密续法宝梵藏汉.html"><div class="f-icon">🕉</div><div class="f-info"><div class="f-name">密续法宝梵藏汉</div><div class="f-count">包含 522 部传承法轴</div></div></a></div></div><div class="category"><div class="cat-title">藏密修海持诵功课</div><div class="forums-grid"><a class="forum-card" href="forums/密乘行者日诵课.html"><div class="f-icon">🏮</div><div class="f-info"><div class="f-name">密乘行者日诵课</div><div class="f-count">包含 36 部传承法轴</div></div></a><a class="forum-card" href="forums/七日一期持诵课.html"><div class="f-icon">📜</div><div class="f-info"><div class="f-name">七日一期持诵课</div><div class="f-count">包含 71 部传承法轴</div></div></a></div></div><div class="category"><div class="cat-title">藏密修海实修实证</div><div class="forums-grid"><a class="forum-card" href="forums/实证传承金刚藏.html"><div class="f-icon">🕯</div><div class="f-info"><div class="f-name">实证传承金刚藏</div><div class="f-count">包含 70 部传承法轴</div></div></a><a class="forum-card" href="forums/金刚菩提遍庄严.html"><div class="f-icon">🌺</div><div class="f-info"><div class="f-name">金刚菩提遍庄严</div><div class="f-count">包含 77 部传承法轴</div></div></a><a class="forum-card" href="forums/时岁宿值诸天众.html"><div class="f-icon">🐘</div><div class="f-info"><div class="f-name">时岁宿值诸天众</div><div class="f-count">包含 31 部传承法轴</div></div></a><a class="forum-card" href="forums/金刚不退转大轮.html"><div class="f-icon">🌙</div><div class="f-info"><div class="f-name">金刚不退转大轮</div><div class="f-count">包含 10 部传承法轴</div></div></a><a class="forum-card" href="forums/往生佛土普超度.html"><div class="f-icon">🧘</div><div class="f-info"><div class="f-name">往生佛土普超度</div><div class="f-count">包含 25 部传承法轴</div></div></a><a class="forum-card" href="forums/与神合一瑜伽行.html"><div class="f-icon">📿</div><div class="f-info"><div class="f-name">与神合一瑜伽行</div><div class="f-count">包含 115 部传承法轴</div></div></a></div></div><div class="category"><div class="cat-title">藏密修海显密教法</div><div class="forums-grid"><a class="forum-card" href="forums/深入经续法藏海.html"><div class="f-icon">🕉</div><div class="f-info"><div class="f-name">深入经续法藏海</div><div class="f-count">包含 335 部传承法轴</div></div></a><a class="forum-card" href="forums/显密传修胜宝鬘.html"><div class="f-icon">🏮</div><div class="f-info"><div class="f-name">显密传修胜宝鬘</div><div class="f-count">包含 174 部传承法轴</div></div></a><a class="forum-card" href="forums/加行实修入正道.html"><div class="f-icon">📜</div><div class="f-info"><div class="f-name">加行实修入正道</div><div class="f-count">包含 104 部传承法轴</div></div></a><a class="forum-card" href="forums/教法传记传承史.html"><div class="f-icon">🕯</div><div class="f-info"><div class="f-name">教法传记传承史</div><div class="f-count">包含 167 部传承法轴</div></div></a><a class="forum-card" href="forums/藏汉对照诸法本.html"><div class="f-icon">🌺</div><div class="f-info"><div class="f-name">藏汉对照诸法本</div><div class="f-count">包含 66 部传承法轴</div></div></a><a class="forum-card" href="forums/藏汉新译法宝藏.html"><div class="f-icon">🐘</div><div class="f-info"><div class="f-name">藏汉新译法宝藏</div><div class="f-count">包含 52 部传承法轴</div></div></a><a class="forum-card" href="forums/我随一切如来学.html"><div class="f-icon">🌙</div><div class="f-info"><div class="f-name">我随一切如来学</div><div class="f-count">包含 470 部传承法轴</div></div></a></div></div><div class="category"><div class="cat-title">藏密修海成就法门</div><div class="forums-grid"><a class="forum-card" href="forums/定慧禅修成就法.html"><div class="f-icon">🧘</div><div class="f-info"><div class="f-name">定慧禅修成就法</div><div class="f-count">包含 54 部传承法轴</div></div></a><a class="forum-card" href="forums/念佛三昧成就法.html"><div class="f-icon">📿</div><div class="f-info"><div class="f-name">念佛三昧成就法</div><div class="f-count">包含 36 部传承法轴</div></div></a><a class="forum-card" href="forums/瑜伽施食成就法.html"><div class="f-icon">🕉</div><div class="f-info"><div class="f-name">瑜伽施食成就法</div><div class="f-count">包含 9 部传承法轴</div></div></a><a class="forum-card" href="forums/大悲观音成就法.html"><div class="f-icon">🏮</div><div class="f-info"><div class="f-name">大悲观音成就法</div><div class="f-count">包含 64 部传承法轴</div></div></a><a class="forum-card" href="forums/准提佛母成就法.html"><div class="f-icon">📜</div><div class="f-info"><div class="f-name">准提佛母成就法</div><div class="f-count">包含 34 部传承法轴</div></div></a><a class="forum-card" href="forums/般舟三昧成就法.html"><div class="f-icon">🕯</div><div class="f-info"><div class="f-name">般舟三昧成就法</div><div class="f-count">包含 99 部传承法轴</div></div></a></div></div><div class="category"><div class="cat-title">藏密修海护摩咒轮</div><div class="forums-grid"><a class="forum-card" href="forums/护摩内外密火供.html"><div class="f-icon">🌺</div><div class="f-info"><div class="f-name">护摩内外密火供</div><div class="f-count">包含 58 部传承法轴</div></div></a></div></div><div class="category"><div class="cat-title">藏密修海佛友社区</div><div class="forums-grid"><a class="forum-card" href="forums/佛友修学交流苑.html"><div class="f-icon">🐘</div><div class="f-info"><div class="f-name">佛友修学交流苑</div><div class="f-count">包含 1240 部传承法轴</div></div></a><a class="forum-card" href="forums/圣地游览贴图区.html"><div class="f-icon">🌙</div><div class="f-info"><div class="f-name">圣地游览贴图区</div><div class="f-count">包含 40 部传承法轴</div></div></a><a class="forum-card" href="forums/聊天广告资讯版.html"><div class="f-icon">🧘</div><div class="f-info"><div class="f-name">聊天广告资讯版</div><div class="f-count">包含 315 部传承法轴</div></div></a></div></div>
+<div class="category"><div class="cat-title">藏密修海上师本尊</div><div class="forums-grid"><a class="forum-card" href="forums/金刚上师金刚持.html"><div class="f-icon">🧘</div><div class="f-info"><div class="f-name">金刚上师金刚持</div><div class="f-count">包含 31 部法轴</div></div></a><a class="forum-card" href="forums/诸佛如来本尊坛.html"><div class="f-icon">📿</div><div class="f-info"><div class="f-name">诸佛如来本尊坛</div><div class="f-count">包含 329 部法轴</div></div></a></div></div><div class="category"><div class="cat-title">藏密修海实修实证</div><div class="forums-grid"><a class="forum-card" href="forums/实证传承金刚藏.html"><div class="f-icon">🕯</div><div class="f-info"><div class="f-name">实证传承金刚藏</div><div class="f-count">包含 70 部法轴</div></div></a><a class="forum-card" href="forums/藏汉对照诸法本.html"><div class="f-icon">🌺</div><div class="f-info"><div class="f-name">藏汉对照诸法本</div><div class="f-count">包含 66 部法轴</div></div></a></div></div>
 </div>
 
 <script>
-// ---------- 顶级沉浸式无缝卷轴弹窗 (Mobile Optimized) ----------
 (function() {
-    if(document.getElementById('quickViewer')) return;
-    const modalHTML = `
-    <style>
-    #quickViewer { display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,0.9); backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px); opacity:0; transition:opacity 0.3s ease; box-sizing:border-box; align-items:center; justify-content:center; }
-    #quickViewerContent { background:var(--bg); width:100%; height:100%; border-radius:0; position:relative; transform:translateY(100%); opacity:0; transition:transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 0 50px rgba(0,0,0,0.8); }
-    @media(min-width: 850px) {
-      #quickViewerContent { max-width:900px; height:95%; max-height:95vh; border-radius:16px; transform:translateY(30px) scale(0.95); border:1px solid rgba(212,175,55,0.2); }
-    }
-    #quickViewerHeader { padding:18px 24px; border-bottom:1px solid rgba(212,175,55,0.1); background:var(--surface-solid); display:flex; justify-content:space-between; align-items:center; z-index:10; }
-    #quickViewerBody { padding:0; overflow-y:auto; overflow-x:hidden; flex:1; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
-    </style>
-    <div id="quickViewer">
-        <div id="quickViewerContent">
-            <div id="quickViewerHeader">
-                <div style="font-weight:700; color:var(--primary); font-size:17px; display:flex; align-items:center; letter-spacing:1px;"><span style="font-size:20px; margin-right:10px;">❖</span> 典藏经卷阅读</div>
-                <button id="quickViewerClose" style="background:rgba(255,255,255,0.1); border:none; width:36px; height:36px; border-radius:50%; font-size:18px; cursor:pointer; color:var(--text); display:flex; align-items:center; justify-content:center; transition:all 0.2s;">✕</button>
-            </div>
-            <div id="quickViewerBody">
-                <div style="text-align:center; padding:100px; color:var(--primary); opacity:0.8;">
-                    <div style="font-size:40px; margin-bottom:20px; animation: pulse 1.5s infinite;">📿</div>
-                    <div style="font-weight:600; letter-spacing:2px; font-family:'Noto Serif SC', serif;">正在降临...</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <style>@keyframes pulse { 0% {transform:scale(0.95); opacity:0.5;} 50% {transform:scale(1.05); opacity:1;} 100% {transform:scale(0.95); opacity:0.5;} }</style>
+    // 仪式感核心脚本
+    const ritualCSS = `
+    .merit-btn { display: block; margin: 60px auto 40px; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); border: 1px solid rgba(212,175,55,0.4); border-radius: 12px; color: #f5eedf; padding: 18px 45px; font-size: 20px; cursor: pointer; transition: all 0.4s; font-family: 'Noto Serif SC', serif; letter-spacing: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+    #droneToggle { position: fixed; bottom: 30px; right: 30px; width: 55px; height: 55px; border-radius: 50%; background: rgba(26,20,18,0.9); border: 1px solid rgba(212,175,55,0.3); color: var(--primary); font-size: 26px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; }
+    #droneToggle.playing { animation: pulseBg 3s infinite; }
+    @keyframes pulseBg { 0% {box-shadow:0 0 0 0 rgba(212,175,55,0.5);} 70% {box-shadow:0 0 0 20px rgba(212,175,55,0);} 100% {box-shadow:0 0 0 0 rgba(212,175,55,0);} }
     `;
-    document.body.insertAdjacentHTML('beforeend', modalHTML);
+    const st = document.createElement('style'); st.innerHTML = ritualCSS; document.head.appendChild(st);
 
-    const qv = document.getElementById('quickViewer');
-    const qvContent = document.getElementById('quickViewerContent');
-    const qvBody = document.getElementById('quickViewerBody');
-    const qvClose = document.getElementById('quickViewerClose');
-
-    function openViewer(url) {
-        qv.style.display = 'flex';
-        void qv.offsetWidth; // trigger reflow
-        qv.style.opacity = '1';
-        qvContent.style.opacity = '1';
-        if(window.innerWidth >= 850) {
-            qvContent.style.transform = 'translateY(0) scale(1)';
+    // 音频引擎
+    let audioCtx, droneOsc1, droneOsc2, droneGain, isPlaying = false;
+    window.toggleDrone = () => {
+        if(!audioCtx) {
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            droneOsc1 = audioCtx.createOscillator(); droneOsc2 = audioCtx.createOscillator(); droneGain = audioCtx.createGain();
+            droneOsc1.frequency.value = 108; droneOsc2.frequency.value = 110; droneGain.gain.value = 0;
+            droneOsc1.connect(droneGain); droneOsc2.connect(droneGain); droneGain.connect(audioCtx.destination);
+            droneOsc1.start(); droneOsc2.start();
+        }
+        if(audioCtx.state === 'suspended') audioCtx.resume();
+        const btn = document.getElementById('droneToggle');
+        if(!isPlaying) {
+            droneGain.gain.setTargetAtTime(0.1, audioCtx.currentTime, 2);
+            isPlaying = true; btn.classList.add('playing'); btn.innerHTML = '🧘';
         } else {
-            qvContent.style.transform = 'translateY(0)';
+            droneGain.gain.setTargetAtTime(0, audioCtx.currentTime, 1);
+            isPlaying = false; btn.classList.remove('playing'); btn.innerHTML = '📿';
         }
-        document.body.style.overflow = 'hidden'; // Lock background scroll entirely
-        
-        qvBody.innerHTML = '<div style="text-align:center; padding:120px; color:var(--primary); opacity:0.8;"><div style="font-size:45px; margin-bottom:20px; animation: pulse 1.5s infinite;">📿</div><div style="font-family:\'Noto Serif SC\', serif; font-size:18px; letter-spacing:2px;">开启法卷...</div></div>';
-        
-        fetch(url).then(res => res.text()).then(html => {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            let contentContainer = doc.querySelector('.container');
-            if(contentContainer) {
-                let bread = contentContainer.querySelector('.breadcrumb');
-                if(bread) bread.remove();
-                contentContainer.style.margin = '20px auto 60px';
-                qvBody.innerHTML = '';
-                qvBody.appendChild(contentContainer);
-                qvBody.scrollTop = 0;
-            } else {
-                window.location.href = url;
-            }
-        }).catch(err => {
-            window.location.href = url;
-        });
-    }
-
-    function closeViewer() {
-        qv.style.opacity = '0';
-        qvContent.style.opacity = '0';
-        if(window.innerWidth >= 850) {
-            qvContent.style.transform = 'translateY(30px) scale(0.95)';
-        } else {
-            qvContent.style.transform = 'translateY(100%)';
-        }
-        setTimeout(() => {
-            qv.style.display = 'none';
-            document.body.style.overflow = '';
-            qvBody.innerHTML = '';
-        }, 400);
-    }
-
-    qvClose.addEventListener('click', closeViewer);
-    qvClose.addEventListener('mouseover', () => qvClose.style.background = 'rgba(255,255,255,0.2)');
-    qvClose.addEventListener('mouseout', () => qvClose.style.background = 'rgba(255,255,255,0.1)');
-    
-    qv.addEventListener('click', (e) => {
-        if(e.target === qv && window.innerWidth >= 850) closeViewer();
-    });
-
-    document.addEventListener('click', (e) => {
-        let link = e.target.closest('a.thread-card, a.thread-row, a.pagefind-ui__result-link');
-        if(link && link.href && link.href.includes('threads/')) {
-            e.preventDefault();
-            openViewer(link.href);
-        }
-    });
+    };
+    const db = document.createElement('div'); db.id='droneToggle'; db.innerHTML='📿'; db.onclick=window.toggleDrone; document.body.appendChild(db);
 })();
 </script>
 
+<!-- 阅读弹窗 HTML (简版) -->
+<div id="quickViewer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,0.9); backdrop-filter:blur(15px); align-items:center; justify-content:center;">
+    <div id="quickViewerContent" style="background:var(--bg); width:100%; height:100%; display:flex; flex-direction:column; overflow:hidden;">
+        <div style="padding:15px 20px; border-bottom:1px solid rgba(212,175,55,0.1); background:var(--surface-solid); display:flex; justify-content:space-between; align-items:center;">
+             <div style="font-weight:700; color:var(--primary);">❖ 典藏经卷阅读</div>
+             <div id="qv-controls" style="display:flex; gap:10px;">
+                <button id="qv-tts-btn" style="background:rgba(212,175,55,0.2); border:1px solid var(--primary); color:var(--primary); padding:4px 12px; border-radius:15px; cursor:pointer;">🎧 聆听开示</button>
+                <button id="quickViewerClose" style="background:rgba(255,255,255,0.1); border:none; width:30px; height:30px; border-radius:50%; color:#fff; cursor:pointer;">✕</button>
+             </div>
+        </div>
+        <div id="quickViewerBody" style="flex:1; overflow-y:auto; padding:20px;"></div>
+    </div>
+</div>
 
-<!-- ================= 观想与仪式引擎 (Ritual Engine) ================= -->
 <script>
 (function() {
-    // 注入庄严的样式
-    const ritualCSS = `
-    .ritual-btn { 
-        background: rgba(212,175,55,0.05); border: 1px solid rgba(212,175,55,0.3); border-radius: 20px; color: var(--primary); padding: 8px 20px; font-size: 15px; cursor: pointer; transition: all 0.3s; margin-right: 10px; display: inline-flex; align-items: center; gap: 8px; font-family: 'Noto Serif SC', serif; letter-spacing: 2px;
-    }
-    .ritual-btn:hover { background: rgba(212,175,55,0.15); box-shadow: 0 0 15px rgba(212,175,55,0.4); transform: translateY(-2px);}
-    .ritual-btn.active { background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); color: #000; font-weight: bold; border:none;}
-    .merit-btn { 
-        display: block; margin: 60px auto 40px; background: linear-gradient(135deg, #8a1c1c 0%, #4a0f0f 100%); border: 1px solid rgba(212,175,55,0.4); border-radius: 12px; color: #f5eedf; padding: 18px 45px; font-size: 20px; cursor: pointer; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); font-family: 'Noto Serif SC', serif; letter-spacing: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); position: relative; overflow: hidden;
-    }
-    .merit-btn::after { content: ''; position: absolute; top:0; left:-100%; width:50%; height:100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: 0.5s; }
-    .merit-btn:hover { transform: scale(1.03) translateY(-5px); box-shadow: 0 15px 40px rgba(138,28,28,0.7); border-color: rgba(212,175,55,0.8);}
-    .merit-btn:hover::after { left: 100%; }
-    .merit-btn:active { transform: scale(0.97); }
-    .toast { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%) translateY(100px); background: rgba(14,10,9,0.95); border: 1px solid rgba(212,175,55,0.6); color: var(--primary); padding: 18px 35px; border-radius: 30px; font-family: 'Noto Serif SC', serif; font-size: 16px; letter-spacing: 2px; box-shadow: 0 15px 50px rgba(0,0,0,0.9); backdrop-filter: blur(10px); z-index: 10000; transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); opacity: 0; pointer-events: none; text-align:center;}
-    .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
-    #droneToggle { position: fixed; bottom: 30px; right: 30px; width: 55px; height: 55px; border-radius: 50%; background: rgba(26,20,18,0.9); border: 1px solid rgba(212,175,55,0.3); color: var(--primary); font-size: 26px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 999; box-shadow: 0 5px 20px rgba(0,0,0,0.6); transition: all 0.4s; user-select: none; }
-    #droneToggle:hover { background: rgba(40,30,25,0.95); border-color: var(--primary); transform: scale(1.1);}
-    #droneToggle.playing { animation: pulseBg 3s infinite; background: rgba(40,30,25,0.95); border-color: var(--primary);}
-    @keyframes pulseBg { 0% {box-shadow: 0 0 0 0 rgba(212,175,55,0.5);} 70% {box-shadow: 0 0 0 20px rgba(212,175,55,0);} 100% {box-shadow: 0 0 0 0 rgba(212,175,55,0);} }
-    `;
-    const style = document.createElement('style');
-    style.innerHTML = ritualCSS;
-    document.head.appendChild(style);
+    const qv = document.getElementById('quickViewer'), qvb = document.getElementById('quickViewerBody');
+    let speaker = null;
 
-    // 1. 全局提示框 (Toast)
-    const toast = document.createElement('div');
-    toast.className = 'toast';
-    document.body.appendChild(toast);
-    let toastTimer;
-    window.showToast = function(msg, ms=3500) {
-        toast.innerHTML = msg;
-        toast.classList.add('show');
-        clearTimeout(toastTimer);
-        toastTimer = setTimeout(() => toast.classList.remove('show'), ms);
-    }
-
-    // 2. 纯代码合成颂钵环境音 (Web Audio API)
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    let audioCtx, droneOsc1, droneOsc2, droneGain;
-
-    function initAudio() {
-        if(!audioCtx) {
-            audioCtx = new AudioContext();
-            // Theta 脑波双频颂钵合成 (108Hz 为神圣基频, 加上一点偏移产生4Hz嗡嗡声)
-            droneOsc1 = audioCtx.createOscillator();
-            droneOsc2 = audioCtx.createOscillator();
-            droneGain = audioCtx.createGain();
-            
-            droneOsc1.type = 'sine';
-            droneOsc2.type = 'triangle';
-            droneOsc1.frequency.setValueAtTime(108.0, audioCtx.currentTime); 
-            droneOsc2.frequency.setValueAtTime(112.0, audioCtx.currentTime);
-            
-            const filter = audioCtx.createBiquadFilter();
-            filter.type = 'lowpass';
-            filter.frequency.value = 350; // 只保留深邃低频
-            
-            droneGain.gain.setValueAtTime(0, audioCtx.currentTime);
-            
-            droneOsc1.connect(filter);
-            droneOsc2.connect(filter);
-            filter.connect(droneGain);
-            droneGain.connect(audioCtx.destination);
-            
-            droneOsc1.start();
-            droneOsc2.start();
-        }
-    }
-
-    let isDronePlaying = false;
-    window.toggleDrone = function() {
-        if(!audioCtx) initAudio();
-        if(audioCtx.state === 'suspended') audioCtx.resume();
-        
-        const toggleBtn = document.getElementById('droneToggle');
-        if(!isDronePlaying) {
-            droneGain.gain.setTargetAtTime(0.08, audioCtx.currentTime, 2.0); // 丝滑淡入
-            isDronePlaying = true;
-            toggleBtn.classList.add('playing');
-            toggleBtn.innerHTML = '🧘';
-            showToast('入定模式开启 · 聆听法音', 3000);
-        } else {
-            droneGain.gain.setTargetAtTime(0, audioCtx.currentTime, 1.5); // 丝滑淡出
-            isDronePlaying = false;
-            toggleBtn.classList.remove('playing');
-            toggleBtn.innerHTML = '📿';
-            showToast('入定模式已止息', 2000);
-        }
-    }
-
-    // 击磬/引磬 声音 (清脆的高频空灵法音)
-    window.playBellStrike = function() {
-        if(!audioCtx) initAudio();
-        if(audioCtx.state === 'suspended') audioCtx.resume();
-        
-        const osc = audioCtx.createOscillator();
-        const osc2 = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        
-        osc.type = 'sine';
-        osc2.type = 'sine';
-        osc.frequency.setValueAtTime(864, audioCtx.currentTime); // 108 * 8
-        osc2.frequency.setValueAtTime(1728, audioCtx.currentTime); // 泛音
-        
-        osc.connect(gain);
-        osc2.connect(gain);
-        gain.connect(audioCtx.destination);
-        
-        osc.start();
-        osc2.start();
-        
-        // 瞬间敲击，并带着极长、空灵的回声衰减
-        gain.gain.setValueAtTime(0, audioCtx.currentTime);
-        gain.gain.linearRampToValueAtTime(0.2, audioCtx.currentTime + 0.02);
-        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 5.0);
-        
-        setTimeout(() => { osc.stop(); osc2.stop(); }, 5100);
-    }
-
-    // 注入白噪音悬浮按钮
-    const droneBtn = document.createElement('div');
-    droneBtn.id = 'droneToggle';
-    droneBtn.innerHTML = '📿';
-    droneBtn.title = "开启/关闭 深渊颂钵环境白噪音";
-    droneBtn.onclick = window.toggleDrone;
-    document.body.appendChild(droneBtn);
-
-
-    // 3. Web 原生语音朗读系统 (Text-to-Speech)
-    let isSpeaking = false;
-    let utterance = null;
-    
-    // 强制冷启动加载语音包，避免延时
-    if(window.speechSynthesis) window.speechSynthesis.getVoices();
-
-    window.stopSpeaking = function() {
-        if(window.speechSynthesis) window.speechSynthesis.cancel();
-        isSpeaking = false;
-    }
-
-    window.speakText = function(text, btnElement) {
-        if(isSpeaking) {
-            window.stopSpeaking();
-            btnElement.innerHTML = '🎧 聆听开示';
-            btnElement.classList.remove('active');
-            return;
-        }
-        if(!window.speechSynthesis) {
-            showToast("抱歉，您的设备内核似乎不支持开示。");
-            return;
-        }
-        
-        // 净化文本符号
-        let cleanText = text.replace(/[\n\r]+/g, '。').replace(/[❖📿🧘]/g, '');
-        utterance = new SpeechSynthesisUtterance(cleanText);
-        utterance.lang = 'zh-CN';
-        utterance.rate = 0.9; // 语速减慢，显得庄重
-        utterance.pitch = 0.9; 
-        
-        // 尽力找一个好听的中文女声或男声
-        const voices = window.speechSynthesis.getVoices();
-        for(let i=0; i<voices.length; i++) {
-            if(voices[i].lang.includes('zh') && (voices[i].name.includes('Ting-Ting') || voices[i].name.includes('Lilian'))) {
-                utterance.voice = voices[i];
-                break;
-            }
-        }
-        
-        utterance.onend = () => {
-            isSpeaking = false;
-            btnElement.innerHTML = '🎧 聆听开示';
-            btnElement.classList.remove('active');
-        };
-        
-        isSpeaking = true;
-        btnElement.innerHTML = '⏹ 止息聆听';
-        btnElement.classList.add('active');
-        window.speechSynthesis.speak(utterance);
-    }
-
-    // 4. 利用监听器拦截并注入元素到全屏弹窗中
-    const viewerBody = document.getElementById('quickViewerBody');
-    if(viewerBody) {
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach(m => {
-                if(m.addedNodes.length > 0) {
-                    const container = viewerBody.querySelector('.container');
-                    if(container && !container.dataset.ritualized) {
-                        container.dataset.ritualized = "true";
-                        
-                        // A: 在首个大标题下注入【朗读按键】
-                        const h1 = container.querySelector('h1');
-                        if(h1) {
-                            const controlDiv = document.createElement('div');
-                            controlDiv.style.textAlign = 'center';
-                            controlDiv.style.marginBottom = '40px';
-                            
-                            const ttsBtn = document.createElement('button');
-                            ttsBtn.className = 'ritual-btn';
-                            ttsBtn.innerHTML = '🎧 聆听开示';
-                            ttsBtn.onclick = function() {
-                                // 提取整个文章内容进行朗读
-                                let pTexts = [];
-                                container.querySelectorAll('.post-body').forEach(pb => {
-                                    pTexts.push(pb.innerText);
-                                });
-                                if(pTexts.length === 0) pTexts.push(container.innerText);
-                                window.speakText(pTexts.join("。下一楼传法提示："), this);
-                            };
-                            controlDiv.appendChild(ttsBtn);
-                            h1.parentNode.insertBefore(controlDiv, h1.nextSibling);
-                        }
-                        
-                        // B: 在文章极致处注入【功德回向/电子木鱼大按键】
-                        const meritBtn = document.createElement('button');
-                        meritBtn.className = 'merit-btn';
-                        meritBtn.innerHTML = '🙏 阅毕 · 善根供养';
-                        meritBtn.onclick = function() {
-                            window.playBellStrike(); // 清脆梵钟
-                            
-                            let count = parseInt(localStorage.getItem('zmxh_merit') || '0');
-                            count++;
-                            localStorage.setItem('zmxh_merit', count);
-                            
-                            this.innerHTML = `✨ 法喜充满 (共参阅 ${count} 卷)`;
-                            this.style.pointerEvents = 'none'; 
-                            this.style.background = 'linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%)';
-                            this.style.color = '#000';
-                            this.style.borderColor = 'transparent';
-                            
-                            showToast(`结缘圆满，加持不散。<br>您已在此法阵参阅 <strong style="font-size:22px; color:#fff;">${count}</strong> 部经卷。`, 5000);
-                        };
-                        container.appendChild(meritBtn);
-                    }
-                }
-            });
+    function open(url) {
+        qv.style.display = 'flex'; qvb.innerHTML = '<div style="text-align:center;color:var(--primary);margin-top:100px;">观想中...</div>';
+        fetch(url).then(r => r.text()).then(h => {
+            const d = new DOMParser().parseFromString(h, 'text/html');
+            const c = d.querySelector('.container') || d.body;
+            const b = c.querySelector('.breadcrumb'); if(b) b.remove();
+            qvb.innerHTML = ''; qvb.appendChild(c);
         });
-        observer.observe(viewerBody, {childList: true, subtree: true});
-        
-        // 当用户关闭阅读弹窗时，强制停止朗诵！避免在后台继续念经的灵异事件。
-        const closeBtn = document.getElementById('quickViewerClose');
-        if(closeBtn) closeBtn.addEventListener('click', () => window.stopSpeaking());
-        const qv = document.getElementById('quickViewer');
-        qv.addEventListener('click', (e) => { if(e.target === qv) window.stopSpeaking(); });
     }
+
+    document.getElementById('quickViewerClose').onclick = () => { qv.style.display='none'; if(window.speechSynthesis) window.speechSynthesis.cancel(); };
+    document.getElementById('qv-tts-btn').onclick = function() {
+        if(window.speechSynthesis.speaking) { window.speechSynthesis.cancel(); this.innerHTML='🎧 聆听开示'; return; }
+        const u = new SpeechSynthesisUtterance(qvb.innerText.slice(0,5000)); u.lang='zh-CN';
+        window.speechSynthesis.speak(u); this.innerHTML='⏹ 止息聆听';
+        u.onend = () => this.innerHTML='🎧 聆听开示';
+    };
+
+    document.addEventListener('click', e => {
+        const a = e.target.closest('a');
+        if(a && a.href && a.href.includes('threads/')) { e.preventDefault(); open(a.href); }
+    });
 })();
 </script>
-<!-- ================= /观想与仪式引擎 ================= -->
-
 </body></html>
