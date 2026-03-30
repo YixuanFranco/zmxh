@@ -84,18 +84,17 @@ window.addEventListener('DOMContentLoaded', () => {
     // ── 样式覆盖 ─────────────────────────────────────
     const style = document.createElement('style');
     style.innerHTML = `
-        /* 1. 放大镜图标彻底消失 */
-        .pagefind-ui__search-icon,
-        svg.pagefind-ui__search-icon { display: none !important; }
+        /* 1. 放大镜是 ::before 伪元素，必须这样隐 */
+        .pagefind-ui__form::before { display: none !important; }
 
-        /* 2. 搜索框 */
+        /* 2. 搜索框：去掉为放大镜留的左边距 */
         .pagefind-ui__search-input {
             background: rgba(0,0,0,0.5) !important;
             background-image: none !important;
             color: #d5ccbd !important;
             border: 1px solid rgba(212,175,55,0.3) !important;
             border-radius: 12px !important;
-            padding-left: 20px !important;
+            padding: 0 70px 0 20px !important;
             height: 60px !important;
             font-size: 18px !important;
         }
@@ -120,29 +119,20 @@ window.addEventListener('DOMContentLoaded', () => {
         .pagefind-ui__message { display: none !important; }
         .pagefind-ui__button { display: none !important; }
 
-        /* 5. 结果行：紧凑，无大空白 */
+        /* 5. 结果行：紧凑，可点击 */
         .pagefind-ui__result {
             border-bottom: 1px solid rgba(212,175,55,0.1) !important;
-            padding: 0 !important;
+            padding: 12px 10px !important;
             margin: 0 !important;
             display: block !important;
             cursor: pointer;
         }
-        .pagefind-ui__result:hover { background: rgba(212,175,55,0.03); }
+        .pagefind-ui__result:hover { background: rgba(212,175,55,0.04); }
 
-        /* 6. 标题彻底不显示（但 <a> href 保留供 JS 读取） */
-        .pagefind-ui__result-title { display: none !important; }
+        /* 6. 把整个标题链接块隐掉（它是造成大空白的罪魁祸首，同时消除标题） */
+        .pagefind-ui__result-link { display: none !important; }
 
-        /* 7. 内容链接区域：不再有额外的内边距叠加 */
-        .pagefind-ui__result-link {
-            text-decoration: none !important;
-            display: block !important;
-            padding: 16px 10px !important;
-            margin: 0 !important;
-            pointer-events: none; /* 由父级 result 的 onclick 处理点击 */
-        }
-
-        /* 8. 正文摘要 */
+        /* 7. 正文摘要 */
         .pagefind-ui__result-excerpt {
             display: block !important;
             color: #d5ccbd !important;
@@ -233,16 +223,16 @@ window.addEventListener('DOMContentLoaded', () => {
         if (isProcessing) return;
         isProcessing = true;
         try {
-            // 为每个新结果行添加点击（从隐藏的 <a> 取 href）
+            // 为每个新结果行添加点击（先读 href 再隐藏 link）
             document.querySelectorAll('.pagefind-ui__result:not([data-ready])').forEach(result => {
                 result.dataset.ready = 'true';
-                const linkEl = result.querySelector('a');
+                const linkEl = result.querySelector('.pagefind-ui__result-link');
                 if (linkEl && linkEl.href && linkEl.href.includes('threads/')) {
-                    const href = linkEl.href;
-                    result.addEventListener('click', e => {
+                    const href = linkEl.href; // 先拿到 href
+                    result.onclick = e => {
                         e.preventDefault();
                         if (window.openReader) window.openReader(href);
-                    });
+                    };
                 }
             });
             // 全词高亮 + 合并相邻 mark
