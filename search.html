@@ -167,12 +167,14 @@ window.addEventListener('DOMContentLoaded', () => {
             text-decoration: none !important;
             padding: 0 0 8px 0 !important;
             margin: 0 !important;
+            color: var(--primary) !important; /* 强制锁定主色调 */
         }
+        .pagefind-ui__result-link:visited { color: var(--primary) !important; }
 
         /* 7. 标题文字：更优雅的排版 */
         .pagefind-ui__result-title {
             display: block !important;
-            color: var(--primary) !important;
+            color: var(--primary) !important; /* 再次确保不会变蓝 */
             font-size: 18px !important;
             font-weight: 700 !important;
             font-family: 'Noto Serif SC', serif !important;
