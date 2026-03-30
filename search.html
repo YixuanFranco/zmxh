@@ -28,19 +28,43 @@ h1, h2, h3 { font-family: 'Noto Serif SC', serif; }
 
 /* Pagefind Global Styles */
 .pagefind-ui { --pagefind-ui-primary: #d4af37; --pagefind-ui-text: #dfd5c5; --pagefind-ui-background: transparent; --pagefind-ui-border: rgba(212, 175, 55, 0.3); --pagefind-ui-font: inherit; }
-</style>
-<link href="./pagefind/pagefind-ui.css" rel="stylesheet">
+        /* 11. 关键词云样式 */
+        .keyword-cloud {
+            padding: 15px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(212,175,55,0.1);
+        }
+        .kw-tag {
+            background: rgba(212,175,55,0.05);
+            color: var(--text-muted);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            border: 1px solid rgba(212,175,55,0.15);
+            transition: all 0.3s;
+        }
+        .kw-tag:hover {
+            background: rgba(212,175,55,0.15);
+            color: var(--primary);
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+        #qv { backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); background: rgba(13,10,9,0.8); }
+    </style>
 </head>
 <body>
 
-<div class="hero">
-    <h1>藏密修海 ❖ 须弥法眼搜索</h1>
-    <p style="color: var(--text-muted); font-style: italic;">于浩瀚大藏之间，寻觅法缘。</p>
-    <a href="index.html" style="color: var(--primary); text-decoration: none; border: 1px solid var(--primary); padding: 8px 24px; border-radius: 30px; font-size: 14px; margin-top: 20px; display: inline-block; transition: all 0.3s;">❖ 返回法阵首页 ❖</a>
+<div class="navbar">
+    <a href="index.html">← 归转主脉</a>
+    <h1>藏密修海 ❖ 叩问法海</h1>
+    <div style="width:70px"></div>
 </div>
 
 <div class="container">
-    <!-- Word Cloud Section -->
     <div class="cloud-card">
         <h2 style="color: var(--primary); font-size: 20px; letter-spacing: 4px; margin-bottom: 10px;">❖ 万象词典云 ❖</h2>
         <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 25px;">点击法词，即刻照见三千大千世界</p>
@@ -124,35 +148,37 @@ window.addEventListener('DOMContentLoaded', () => {
             border-color: rgba(212,175,55,0.6) !important;
         }
 
-        /* 5. 结果行：紧凑 */
+        /* 5. 结果行：去掉多余线条，保留细腻边界 */
         .pagefind-ui__result {
-            border-bottom: 1px solid rgba(212,175,55,0.1) !important;
-            padding: 14px 10px !important;
+            border-bottom: 1px solid rgba(212,175,55,0.06) !important;
+            padding: 16px 10px !important;
             margin: 0 !important;
             display: block !important;
+            animation: fadeIn 0.4s ease forwards;
+            opacity: 0;
         }
-        .pagefind-ui__result:hover { background: rgba(212,175,55,0.04); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* 6. 标题链接块：显示，不再隐藏 */
+        .pagefind-ui__result:hover { background: rgba(212,175,55,0.03); }
+
+        /* 6. 标题链接块 */
         .pagefind-ui__result-link {
             display: block !important;
             text-decoration: none !important;
-            padding: 0 0 6px 0 !important;
+            padding: 0 0 8px 0 !important;
             margin: 0 !important;
-            cursor: pointer;
         }
-        .pagefind-ui__result-link:hover { opacity: 0.85; }
 
-        /* 7. 标题文字：金色加粗 */
+        /* 7. 标题文字：更优雅的排版 */
         .pagefind-ui__result-title {
             display: block !important;
-            color: var(--primary, #d4af37) !important;
-            font-size: 16px !important;
+            color: var(--primary) !important;
+            font-size: 18px !important;
             font-weight: 700 !important;
             font-family: 'Noto Serif SC', serif !important;
-            letter-spacing: 1px !important;
-            margin: 0 0 4px 0 !important;
-            line-height: 1.5 !important;
+            letter-spacing: 1.5px !important;
+            margin: 0 !important;
+            line-height: 1.4 !important;
         }
 
         /* 8. 摘要正文 */
@@ -242,6 +268,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // ── MutationObserver：结果出现时处理 ───────────
     let isProcessing = false;
+    // 关键词云点击处理
+    document.getElementById('kwCloud').addEventListener('click', e => {
+        if (e.target.classList.contains('kw-tag')) {
+            const kw = e.target.innerText;
+            const input = document.querySelector('.pagefind-ui__search-input');
+            if (input) {
+                input.value = kw;
+                input.dispatchEvent(new Event('input', { bubbles: true }));
+            }
+        }
+    });
+
     const observer = new MutationObserver(() => {
         if (isProcessing) return;
         isProcessing = true;
