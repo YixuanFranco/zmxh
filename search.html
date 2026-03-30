@@ -105,22 +105,21 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         .pagefind-ui__message { display: none !important; }
         .pagefind-ui__button { display: none !important; } /* 彻底去掉“加载更多”按钮 */
-        .pagefind-ui__result { border-bottom: 1px solid rgba(212,175,55,0.1) !important; padding: 20px 0 !important; display: block !important; }
+        .pagefind-ui__result { border-bottom: 1px solid rgba(212,175,55,0.1) !important; padding: 15px 0 !important; display: block !important; }
         .pagefind-ui__result-link { text-decoration: none !important; transition: 0.3s; display: block; }
-        .pagefind-ui__result-title { 
+        
+        /* 彻底干掉标题栏，红框里的东西全部消失 */
+        .pagefind-ui__result-title { display: none !important; }
+        
+        .pagefind-ui__result-excerpt { 
             display: block !important;
-            color: #d4af37 !important; 
-            font-size: 20px !important; 
-            font-weight: 700 !important;
-            margin-bottom: 8px !important; 
-            font-family: 'Noto Serif SC', serif !important; 
-            line-height: 1.4 !important;
-            border-left: 3px solid var(--accent);
-            padding-left: 15px;
+            color: #d5ccbd !important; 
+            line-height: 1.8 !important; 
+            font-size: 16px; 
+            opacity: 0.9; 
+            padding-left: 5px;
+            margin-top: 5px !important;
         }
-        /* 针对无题的文章，直接隐藏整行标题，只看内容 */
-        .pagefind-ui__result-title:empty, 
-        .pagefind-ui__result-title[data-empty="true"] { display: none !important; }
         .pagefind-ui__result-link:hover .pagefind-ui__result-title { color: #fff !important; border-left-color: var(--primary); }
         .pagefind-ui__result-excerpt { 
             display: block !important;
